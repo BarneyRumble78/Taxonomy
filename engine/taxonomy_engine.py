@@ -32,27 +32,59 @@ DEFAULT_WARRANT = {"MA": "W1", "PH": "W4", "CH": "W3", "BI": "W3", "EA": "W4", "
 WARRANT_TO_METHOD = {"W1": "M2", "W2": "M5", "W3": "M4", "W4": "M3", "W5": "M3", "W6": "M6", "W7": "M3",
     "W8": "M6", "W9": "M2", "W10": "M2", "W11": "M7", "W12": "M1", "W13": "M1"}
 LAW_CUE = re.compile(r"\bact (19|20)\d\d\b|\bunder the [a-z ]+act\b")
+# Heuristic only. An instruction-like imperative is not a claim. Failure to
+# classify is not a security guarantee: a later sentence can still look like one.
+INSTRUCTION_HEURISTIC = re.compile(
+    r"\b(?:ignore|disregard|forget)\b.{0,80}\b(?:previous|prior|above)\b"
+    r"|\breveal\b.{0,40}\bsystem prompt\b",
+    re.I,
+)
+CONFIDENCE_NOTE = "Confidence is a ratio of cue-word scores, not a probability."
+# Epistemic verbs. They do not name a mathematical object.
+_PROOF_VERBS = ("prove", "proof")
 
 
 def _score(text, words):
     return sum(1 for w in words if w in text)
 
 
+def _field_score(text, field, skip_kw=()):
+    kw = [w for w in field["kw"] if w not in skip_kw]
+    return _score(text, kw) + 0.5 * sum(_score(text, cl) for cl in field["cells"])
+
+
+def instruction_heuristic(sentence):
+    """True when the wording is an instruction-like imperative, not a claim."""
+    return bool(INSTRUCTION_HEURISTIC.search(sentence or ""))
+
+
 def classify(sentence):
+    # No W1–W5 warrant: there is no claim to place. Heuristic, not a guarantee.
+    if instruction_heuristic(sentence):
+        return None
     t = " " + sentence.lower() + " "
     fields = LEXICON["fields"]
-    scores = {c: _score(t, f["kw"]) + 0.5 * sum(_score(t, cl) for cl in f["cells"]) for c, f in fields.items()}
+    scores = {c: _field_score(t, f) for c, f in fields.items()}
+    # "proves the tax cut works" is not a theorem. Drop bare proof-verbs from
+    # Mathematics when another field has already matched its own cues.
+    other = max((s for c, s in scores.items() if c != "MA"), default=0)
+    if other > 0:
+        scores["MA"] = _field_score(t, fields["MA"], skip_kw=_PROOF_VERBS)
     ranked = sorted(scores.items(), key=lambda kv: -kv[1])
     owner, top = ranked[0]
     if top == 0:
         return None
-    # Ownership tie-breaks (Standard v2 ownership rule)
-    if any(k in t for k in ("theorem", "proof", "question is open")) and scores["MA"] >= top - 1:
+    # A theorem, or an open mathematical question, may keep a near-tie in MA.
+    # The word "proof" alone must not.
+    if any(k in t for k in ("theorem", "question is open")) and scores["MA"] >= top - 1 and scores["MA"] > 0:
         owner = "MA"
     if LAW_CUE.search(t) and scores["LA"] >= top - 2:
         owner = "LA"
     cs = [_score(t, words) for words in fields[owner]["cells"]]
     idx = cs.index(max(cs))
+    # "Integral domain" is a ring (structure), not the integral of analysis.
+    if owner == "MA" and "integral domain" in t:
+        idx = 1
     cell = f"{owner}.O.A{idx + 1}"
     w = {k: _score(t, v) for k, v in LEXICON["warrants"].items()}
     wmax = max(w.values())
@@ -63,12 +95,18 @@ def classify(sentence):
         warrant = DEFAULT_WARRANT[owner]
     m = {k: _score(t, v) for k, v in LEXICON["methods"].items()}
     method = max(m, key=m.get) if max(m.values()) > 0 else WARRANT_TO_METHOD[warrant]
+    # A proof claim is derived (M2). A weak observe cue such as "has a" must not turn it into M3.
+    proof_claim = warrant == "W1" and (w.get("W1", 0) > 0 or any(s in t for s in ("prove", "proof", "theorem", "lemma")))
+    if proof_claim and method == "M3":
+        method = "M2"
     alts = [c for c, s in ranked[1:4] if s > 0 and s >= top - 1 and c != owner]
     second = ranked[1][1] if len(ranked) > 1 else 0
     return {"owner": owner, "owner_name": NAMES.get(owner), "cell": cell, "cell_name": CELLS[owner][idx],
             "warrant": warrant, "warrant_name": WARRANT_NAMES[warrant],
             "method": method, "method_name": METHOD_NAMES[method],
-            "confidence": round(top / (top + second + 1), 2), "contested_with": alts}
+            "confidence": round(top / (top + second + 1), 2),
+            "confidence_note": CONFIDENCE_NOTE,
+            "contested_with": alts}
 
 
 def whole_view(subject):

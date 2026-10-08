@@ -2,7 +2,7 @@
 // The rule-based engine always decides. Workers AI (binding "AI") is optional, only adds a second opinion,
 // and its output is checked against a fixed list of codes before it is returned.
 import data from "./data.json" with { type: "json" };
-import { createEngine } from "./engine.js";
+import { createEngine, instructionHeuristic } from "./engine.js";
 
 const engine = createEngine(data);
 const MAX_CLAIM = 1000, MAX_PASSAGE = 8000, MAX_SUBJECT = 600;
@@ -65,7 +65,12 @@ async function classifyRoute(request, url, env) {
   if (inp.error) return bad(inp.error);
   const r = engine.classify(inp.value);
   if (!r) {
-    const out = { placement: null, note: "No field recognised the wording." };
+    const out = {
+      placement: null,
+      note: instructionHeuristic(inp.value)
+        ? "No warrant assigned. This failure to classify an instruction-like imperative is a heuristic, not a security guarantee."
+        : "No field recognised the wording.",
+    };
     if (url.searchParams.get("assist") === "1") out.assist = await askModel(env, "Pick the field that owns this claim.", inp.value, engine.codes, 2);
     return json(out);
   }

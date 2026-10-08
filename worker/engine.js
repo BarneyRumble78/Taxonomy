@@ -3,6 +3,14 @@
 // audit(), map() and relate() exist only here.
 
 const LAW_CUE = /\bact (19|20)\d\d\b|\bunder the [a-z ]+act\b/;
+// Heuristic only. Failure to classify an instruction-like imperative is not a security guarantee.
+const INSTRUCTION_HEURISTIC = /\b(?:ignore|disregard|forget)\b.{0,80}\b(?:previous|prior|above)\b|\breveal\b.{0,40}\bsystem prompt\b/i;
+const CONFIDENCE_NOTE = "Confidence is a ratio of cue-word scores, not a probability.";
+const PROOF_VERBS = new Set(["prove", "proof"]);
+
+export function instructionHeuristic(sentence) {
+  return INSTRUCTION_HEURISTIC.test(sentence || "");
+}
 
 // Python's round() rounds exact halves to even; mirror it so the two engines agree.
 function pyRound2(x) {
@@ -17,19 +25,26 @@ export function createEngine(D) {
   const fields = D.lexicon.fields;
   const codes = Object.keys(D.names);
 
+  function fieldScore(t, f, skip) {
+    const kw = skip ? f.kw.filter((w) => !skip.has(w)) : f.kw;
+    return score(t, kw) + 0.5 * f.cells.reduce((n, cl) => n + score(t, cl), 0);
+  }
+
   function classify(sentence) {
+    if (instructionHeuristic(sentence)) return null;
     const t = " " + sentence.toLowerCase() + " ";
     const scores = {};
-    for (const [c, f] of Object.entries(fields)) {
-      scores[c] = score(t, f.kw) + 0.5 * f.cells.reduce((n, cl) => n + score(t, cl), 0);
-    }
+    for (const [c, f] of Object.entries(fields)) scores[c] = fieldScore(t, f);
+    const other = Math.max(...Object.entries(scores).filter(([c]) => c !== "MA").map(([, v]) => v));
+    if (other > 0) scores.MA = fieldScore(t, fields.MA, PROOF_VERBS);
     const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]);
     let [owner, top] = ranked[0];
     if (top === 0) return null;
-    if (["theorem", "proof", "question is open"].some((k) => t.includes(k)) && scores.MA >= top - 1) owner = "MA";
+    if (["theorem", "question is open"].some((k) => t.includes(k)) && scores.MA >= top - 1 && scores.MA > 0) owner = "MA";
     if (LAW_CUE.test(t) && scores.LA >= top - 2) owner = "LA";
     const cs = fields[owner].cells.map((w) => score(t, w));
-    const idx = argmaxFirst(cs);
+    let idx = argmaxFirst(cs);
+    if (owner === "MA" && t.includes("integral domain")) idx = 1;
     const cell = `${owner}.O.A${idx + 1}`;
     const w = {};
     for (const [k, v] of Object.entries(D.lexicon.warrants)) w[k] = score(t, v);
@@ -41,13 +56,15 @@ export function createEngine(D) {
     const m = {};
     for (const [k, v] of Object.entries(D.lexicon.methods)) m[k] = score(t, v);
     const mvals = Object.values(m);
-    const method = Math.max(...mvals) > 0 ? Object.keys(m)[argmaxFirst(mvals)] : D.warrantToMethod[warrant];
+    let method = Math.max(...mvals) > 0 ? Object.keys(m)[argmaxFirst(mvals)] : D.warrantToMethod[warrant];
+    const proofClaim = warrant === "W1" && ((w.W1 || 0) > 0 || ["prove", "proof", "theorem", "lemma"].some((s) => t.includes(s)));
+    if (proofClaim && method === "M3") method = "M2";
     const contested = ranked.slice(1, 4).filter(([c, s]) => s > 0 && s >= top - 1 && c !== owner).map(([c]) => c);
     const second = ranked.length > 1 ? ranked[1][1] : 0;
     return {
       owner, owner_name: D.names[owner], cell, cell_name: D.cells[owner][idx],
       warrant, warrant_name: D.warrantNames[warrant], method, method_name: D.methodNames[method],
-      confidence: pyRound2(top / (top + second + 1)), contested_with: contested,
+      confidence: pyRound2(top / (top + second + 1)), confidence_note: CONFIDENCE_NOTE, contested_with: contested,
     };
   }
 
@@ -105,14 +122,20 @@ export function createEngine(D) {
     const shownSet = new Set(shown.map((s) => s.field));
     const vals = rel.map(([, r]) => r), total = vals.reduce((a, b) => a + b, 0);
     const H = total === 0 ? 0 : -vals.filter((v) => v > 0).reduce((s, v) => s + (v / total) * Math.log(v / total), 0) / Math.log(codes.length);
+    const relMap = new Map(rel);
+    const doesNotApply = codes.filter((c) => (relMap.get(c) || 0) === 0).map((c) => ({
+      field: c, name: D.names[c],
+      reason: "No cue from this field matched the subject. The field may not apply, or the wording may not have used its terms. A miss is not a finding that the field is irrelevant.",
+    }));
     return {
       subject, fields: shown,
       not_expanded: codes.filter((c) => !shownSet.has(c)).map((c) => ({ field: c, name: D.names[c] })),
+      does_not_apply: doesNotApply,
       coverage: { fields_matched: chosen.size, of: codes.length, share: pyRound2(chosen.size / codes.length) },
       balance: pyRound2(H),
       note: chosen.size === 0
         ? "No cue words matched, so nothing is expanded. Add detail to the subject, or pass assist=1 to ask the model for candidate fields."
-        : "Relevance counts cue words. A field with no match is not shown to be irrelevant. Check not_expanded before you rely on this view.",
+        : "Relevance counts cue words. A field with no match is not shown to be irrelevant. Coverage under 25 is a short list plus an explicit remainder, not a failed map. Check does_not_apply and not_expanded before you rely on this view.",
     };
   }
 

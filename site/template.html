@@ -533,21 +533,28 @@ const DEFW={MA:"W1",PH:"W4",CH:"W3",BI:"W3",EA:"W4",MD:"W3",EN:"W11",CS:"W1",MS:
 const W2M={W1:"M2",W2:"M5",W3:"M4",W4:"M3",W5:"M3",W6:"M6",W7:"M3",W8:"M6",W9:"M2",W10:"M2",W11:"M7",W12:"M1",W13:"M1"};
 const sc=(t,ws)=>ws.reduce((n,w)=>n+(t.includes(w)?1:0),0);
 function classify(s){
+  if(/\b(?:ignore|disregard|forget)\b.{0,80}\b(?:previous|prior|above)\b|\breveal\b.{0,40}\bsystem prompt\b/i.test(s))return null;
   const t=" "+s.toLowerCase()+" ";const scores={};
   for(const [c,f] of Object.entries(LEX.fields))scores[c]=sc(t,f.kw)+0.5*f.cells.reduce((n,cl)=>n+sc(t,cl),0);
+  const other=Math.max(...Object.entries(scores).filter(([c])=>c!=="MA").map(([,v])=>v));
+  if(other>0){const f=LEX.fields.MA;const kw=f.kw.filter(w=>w!=="prove"&&w!=="proof");scores.MA=sc(t,kw)+0.5*f.cells.reduce((n,cl)=>n+sc(t,cl),0);}
   const ranked=Object.entries(scores).sort((a,b)=>b[1]-a[1]);let [owner,top]=ranked[0];
-  if((t.includes("theorem")||t.includes("proof")||t.includes("question is open"))&&scores.MA>=top-1)owner="MA";
-  if(/act (19|20)\d\d|under the [a-z ]+act/.test(t)&&scores.LA>=top-2)owner="LA";
   if(top===0)return null;
-  const cs=LEX.fields[owner].cells.map(cl=>sc(t,cl));const cell=owner+".O.A"+(cs.indexOf(Math.max(...cs))+1);
+  if((t.includes("theorem")||t.includes("question is open"))&&scores.MA>=top-1&&scores.MA>0)owner="MA";
+  if(/act (19|20)\d\d|under the [a-z ]+act/.test(t)&&scores.LA>=top-2)owner="LA";
+  const cs=LEX.fields[owner].cells.map(cl=>sc(t,cl));let idx=cs.indexOf(Math.max(...cs));
+  if(owner==="MA"&&t.includes("integral domain"))idx=1;
+  const cell=owner+".O.A"+(idx+1);
   const w={};for(const [k,v] of Object.entries(LEX.warrants))w[k]=sc(t,v);
   const wmax=Math.max(...Object.values(w));let warrant=wmax>0?Object.keys(w).find(k=>w[k]===wmax):DEFW[owner];
   if((w[DEFW[owner]]||0)>=wmax)warrant=DEFW[owner];
   if(warrant==="W13"&&owner!=="RE"&&owner!=="IK")warrant=DEFW[owner];
   const m={};for(const [k,v] of Object.entries(LEX.methods))m[k]=sc(t,v);
-  const mmax=Math.max(...Object.values(m));const method=mmax>0?Object.keys(m).find(k=>m[k]===mmax):W2M[warrant];
-  const alts=ranked.slice(1,4).filter(([c,s])=>s>0&&s>=top-1).map(([c])=>c);
-  return {owner,cell,warrant,method,alts,conf:top/(top+ranked[1][1]+1)};
+  const mmax=Math.max(...Object.values(m));let method=mmax>0?Object.keys(m).find(k=>m[k]===mmax):W2M[warrant];
+  const proofClaim=warrant==="W1"&&((w.W1||0)>0||["prove","proof","theorem","lemma"].some(x=>t.includes(x)));
+  if(proofClaim&&method==="M3")method="M2";
+  const alts=ranked.slice(1,4).filter(([c,s])=>s>0&&s>=top-1&&c!==owner).map(([c])=>c);
+  return {owner,cell,warrant,method,alts,conf:top/(top+(ranked[1]?ranked[1][1]:0)+1),confidence_note:"Confidence is a ratio of cue-word scores, not a probability."};
 }
 function fieldsFor(s){const t=" "+s.toLowerCase()+" ";return Object.entries(LEX.fields).map(([c,f])=>{const cs=f.cells.map(cl=>sc(t,cl));return {c,score:sc(t,f.kw)+0.5*cs.reduce((a,b)=>a+b,0),cell:cs.indexOf(Math.max(...cs))}}).sort((a,b)=>b.score-a.score)}
 const $=id=>document.getElementById(id);

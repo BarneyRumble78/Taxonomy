@@ -1,53 +1,2007 @@
 {
-"fields": {
-"MA": {"kw": ["theorem","proof","prove","lemma","conjecture","equation","integral","derivative","prime","group","ring","topolog","manifold","polynomial","matrix","probability distribution","convergent","bounded","fixed-point","axiom","set theory","p vs np","np-complete","sequence","function"], "cells": [["axiom","logic","set theory","category","decidab","gödel","p vs np"],["prime","group","ring","algebra","number","polynomial","matrix"],["geometr","topolog","manifold","space","fixed-point","curve","surface"],["integral","derivative","equation","convergent","limit","sequence","bounded","differential"],["probability","random","statistic","expected","variance","distribution"]]},
-"PH": {"kw": ["quantum","particle","electron","photon","gravity","relativity","energy","entropy","thermodynamic","magnetic","laser","boson","half-life","radiation","plasma","fluid","temperature","momentum","cosmolog","black hole","superconduct","wave"], "cells": [["newton","momentum","force","maxwell","electromagnet","relativity","optics","elastic","stress"],["quantum","electron","photon","particle","boson","atom","spin","half-life","nuclear"],["gravity","black hole","cosmolog","galaxy","star","universe","orbit"],["thermodynamic","entropy","phase","superconduct","crystal","semiconductor","equilibrium"],["plasma","fluid","turbulen","transport","radiation","chaos","flow"]]},
-"CH": {"kw": ["molecule","compound","reaction","bond","catalyst","acid","base","ph ","synthesis","oxidation","ion","solvent","yield","pigment","polymer","spectroscop","chemical","element","hydrolysis","rate constant","equilibrium constant"], "cells": [["element","compound","pigment","composition","isotope","identity"],["bond","structure","crystal","molecular shape","chiral"],["equilibrium constant","enthalpy","gibbs","electrochem","acid","base","ph "],["rate","kinetic","catalyst","mechanism","hydrolysis"],["synthesis","yield","purif","chromatograph","spectroscop","polymer","material"]]},
-"BI": {"kw": ["cell","gene","dna","rna","protein","species","evolution","organism","enzyme","mitochondri","bacteri","ecosystem","population","predator","nesting","habitat","neuron","physiology","descend","phylogen"], "cells": [["gene","dna","rna","inherit","genome","mutation"],["cell","mitochondri","membrane","metabolism","enzyme"],["organism","physiology","immune","behaviour","behavior","development"],["evolution","descend","phylogen","species","fossil","lineage"],["ecosystem","population","predator","habitat","nesting","ecolog"]]},
-"EA": {"kw": ["earthquake","fault","volcano","rock","mineral","sediment","glacier","ocean","climate","atmosphere","groundwater","river","landform","erosion","geolog","tectonic","sea level","soil profile","ocean heat"], "cells": [["mineral","rock","soil","sediment"],["tectonic","fault","earthquake","mantle","volcano"],["deep time","stratigraph","million years","fossil record","ruptured","radiometric"],["ocean","atmosphere","climate","glacier","river","groundwater","weather","ocean heat"],["region","settlement","land use","map","geograph"]]},
-"MD": {"kw": ["patient","disease","disorder","diagnos","treatment","therapy","drug","dose","clinical","trial","placebo","symptom","mortality","hospital","vaccin","infection","heart failure","diabetes","cancer","depress"], "cells": [["disorder","disease","syndrome","classif"],["cause","risk factor","pathogen","mechanism","genetic risk","volume"],["diagnos","test","screen","prognos","sensitivity"],["treatment","drug","dose","therapy","placebo","surgery","reduced"],["prevalence","incidence","epidemi","public health","vaccin","population"]]},
-"EN": {"kw": ["design","load","deflection","bridge","beam","specification","tolerance","engine","circuit","manufactur","safety factor","standard","stress","turbine","structure","pump","design life","reliability"], "cells": [["load","deflection","beam","stress","strain","bridge"],["flow","pump","pressure","momentum","fluid"],["heat","engine","thermal","energy","turbine"],["circuit","voltage","signal","motor","electr"],["material","alloy","corrosion","microstructure","fatigue","design life"]]},
-"CS": {"kw": ["algorithm","software","program","database","network","computer","compute","runtime","o(n","encryption","machine learning","neural","data structure","protocol","cpu","code","model training","schema","transaction","api"], "cells": [["correct","verif","type","specification","bug","semantics"],["o(n","runtime","complexity","algorithm","quicksort","memory","fast"],["distributed","network","concurren","transaction","serialis","consensus","database"],["machine learning","neural","training","model","learn","ai "],["encryption","security","privacy","attack","malware","crypto"]]},
-"MS": {"kw": ["memory","recall","perception","cognition","emotion","personality","attitude","brain","behaviour","behavior","participants","social","group","culture","identity","stereotype","attention","motivation","norm"], "cells": [["memory","recall","perception","attention","cognition","decision"],["brain","neural","hippocamp","cortex","neuron","mice","consolidation"],["personality","identity","emotion","wellbeing","development"],["group","conformity","interaction","relationship","cooperation"],["class","institution","inequality","norm","culture","society"]]},
-"EC": {"kw": ["price","market","wage","inflation","gdp","tax","demand","supply","cost","incentive","trade","monopoly","auction","equilibrium","unemployment","interest rate","welfare","borne","minimum wage","consumers"], "cells": [["choice","preference","utility","risk aversion"],["price","market","demand","supply","wage","borne","consumers","minimum wage"],["auction","mechanism","bargain","contract","institution"],["gdp","inflation","unemployment","growth","interest rate","recession"],["welfare","public good","externality","pareto","social choice"]]},
-"BU": {"kw": ["firm","company","revenue","profit","accounting","ifrs","gaap","balance sheet","audit","marketing","customer","supply chain","gst return","invoice","lease","valuation","shareholder","brand","management"], "cells": [["accounting","ifrs","gaap","audit","balance sheet","lease","ledger"],["valuation","capital","shareholder","finance","dividend"],["supply chain","operations","management","organisation","logistics"],["marketing","customer","brand","sales","pricing"],["gst return","tariff","customs","incoterm","export","import","input tax"]]},
-"ST": {"kw": ["deter","threat","rival","adversary","war","coercion","escalat","strategy","competitor","alliance","bluff","signal","attrition","campaign","military","offensive","defensive","incumbent","challenger"], "cells": [["alliance","actor","commitment","coalition"],["game","attrition","payoff","move","incumbent","rival"],["deter","threat","coercion","escalat","compellence"],["campaign","manoeuvre","offensive","operation","conduct"],["intelligence","deception","bluff","signal","surprise"]]},
-"PO": {"kw": ["parliament","election","vote","party","government","minister","policy","democracy","legitimacy","state","sovereign","coalition","president","referendum","bureaucracy","proportional representation"], "cells": [["legitimacy","sovereign","regime","authority"],["parliament","electoral","party","proportional","constitution","president"],["vote","voter","turnout","public opinion","protest"],["policy","bureaucracy","implementation","agency"],["international","treaty","foreign","war between"]]},
-"LA": {"kw": ["act","statute","court","contract","law","legal","liable","liability","duty","rights","tort","crime","plaintiff","defendant","judgment","must pay","under the","section","misrepresentation","constitution"], "cells": [["statute","legislation","precedent","tikanga","treaty","source"],["contract","property","must pay","duty","obligation","trust"],["tort","crime","remedy","misrepresentation","damages","cancel"],["constitution","judicial review","rights","administrative"],["court","evidence","proof","jurisdiction","procedure"]]},
-"PL": {"kw": ["argument","knowledge","belief","justified","consciousness","ethics","moral","ought","meaning","truth","free will","existence","fails because","gettier","ontolog","epistem","virtue","concept"], "cells": [["existence","being","god","cause","ontolog","regress","cosmological"],["knowledge","belief","justified","gettier","consciousness","mind"],["meaning","reference","logic","inference"],["ethic","moral","ought","virtue","justice","fair"],["science","explanation","mathematics is"]]},
-"HI": {"kw": ["century","in 18","in 19","in 20","signed","dynasty","empire","era","founded","sold","edo","settlement","historical","archive","manuscript","was first","ancestor","minute book","colonial","revolution"], "cells": [["signed","founded","sold","occurred","event","minute book"],["date","dated","radiocarbon","chronolog","century","ce","bce"],["because","cause","led to"],["change","continuity","transition","long-term"],["memory","commemorat","heritage","meaning"]]},
-"LN": {"kw": ["vowel","consonant","grammar","syntax","word","language","dialect","phoneme","morpholog","pronoun","verb","noun","semantic","pragmatic","te reo","linguistic","speakers"], "cells": [["vowel","consonant","phoneme","sound","stress","tone"],["syntax","morpholog","verb","noun","word order","grammar"],["meaning","semantic","pragmatic","pronoun","reference"],["dialect","speakers","register","bilingual","revitalis"],["language family","proto","sound change","typolog"]]},
-"AR": {"kw": ["painting","poem","novel","sonnet","music","film","sculpture","artist","print","aesthetic","style","composition","volta","narrative","great wave","stanza","melody","art"], "cells": [["medium","technique","brushstroke","making","carving"],["form","sonnet","volta","metre","composition","structure"],["meaning","reframes","symbol","interpret","theme"],["reception","audience","context","influence"],["masterpiece","value","beauty","best","greatest"]]},
-"RE": {"kw": ["god","scripture","bible","qur","torah","mishnah","church","prayer","ritual","faith","theolog","religio","sacred","salvation","sin","buddh","hindu","islam","christian","doctrine","aquinas"], "cells": [["god","divine","salvation","ultimate","creation"],["scripture","bible","qur","torah","mishnah","canon","text"],["prayer","ritual","worship","fasting","rite"],["church","community","clergy","sect","schism"]]},
-"ED": {"kw": ["students","teaching","taught","curriculum","school","classroom","learner","pedagog","assessment","exam","teacher","lesson","learning outcomes","tuition","medical students"], "cells": [["curriculum","aims","syllabus"],["learner","prior knowledge","misconception","students"],["taught","teaching","instruction","pedagog","practised","spaced"],["assessment","test","exam","grade"],["school","university","system","equity"]]},
-"DE": {"kw": ["building","architecture","atrium","urban","residents","housing","interior","layout","landscape","planning","street","post-occupancy","user experience","product design","entrance"], "cells": [["need","brief","user","accessib"],["form","layout","atrium","plan","legible"],["comfort","overheating","daylight","usability","post-occupancy"],["urban","site","street","planning","landscape"],["maintenance","reuse","retrofit","heritage"]]},
-"AG": {"kw": ["crop","yield","fertiliser","fertilizer","ryegrass","livestock","dairy farm","herd","pasture","soil fertility","irrigation","veterinary","food safety","harvest","breeding","cultivar","orchard","vineyard"], "cells": [["breeding","cultivar","genetic gain"],["fertiliser","fertilizer","irrigation","pasture","yield","husbandry","ryegrass"],["pest","veterinary","disease in","biosecurity"],["food","processing","food safety","nutrition"],["farm system","productivity","farm management"]]},
-"EV": {"kw": ["pollution","nitrate","emissions","carbon","conservation","biodiversity","1080","possum","restoration","contamination","intensification","coral","bleaching","environmental","waterway","predator control"], "cells": [["emissions","intensification","land use change","pressure"],["concentration","nitrate","water quality","air quality","state of"],["bleaching","impact","harm","decline","loss"],["restoration","conservation","1080","predator control","regulation"],["threshold","limit","tipping point","boundary"]]},
-"IS": {"kw": ["catalogue","catalog","metadata","archive","library","dewey","classification","retrieval","recall on","precision","indexing","records","doi","preservation","search engine","trec"], "cells": [["item","record","dataset","doi","identifier"],["metadata","catalogu","catalog","indexing","description"],["classification","dewey","arrangement","ontology","files mathematics"],["retrieval","recall","precision","search","trec","query"],["preservation","digital archive","conservation of records"]]},
-"IK": {"kw": ["mātauranga","matauranga","kaitiaki","tikanga","whakapapa","iwi","hapū","hapu","mana whenua","marae","māori","maori","indigenous","aboriginal","maramataka","mauri","rangatiratanga"], "cells": [["whakapapa","tapu","noa","ordering"],["kaitiaki","mauri","maramataka","land","river","waters","mana whenua"],["tikanga","rangatiratanga","marae","kawa","custom"],["wānanga","wananga","transmission","kōrero"],["data sovereignty","kaupapa māori","research"]]}
-},
-"warrants": {
-"W1": ["theorem","proof","prove","every ","for all","implies","lemma","open problem","question is open","guarantees"],
-"W2": ["simulat","model predicts","modelled","computed","numerical","would be borne","projected"],
-"W3": ["trial","randomi","placebo","experiment","compared with","intervention","treated","control group","improves","outperformed","increased","reduced"],
-"W4": ["measured","measurement","survey","observed","half-life","±","rose","concentration","show","reported","dates place","has a"],
-"W5": ["caused","due to","linked to","because of","effect of","natural experiment","identified","between 19","between 20"],
-"W6": ["countries","on average","comparative","across","compared to other","descend","lineage"],
-"W7": ["signed","recorded","minute book","manuscript","archive","was sold","redacted","in the 18","in the 19","founded","dated"],
-"W8": ["reframes","interpret","reading","means","argues that","symbolis"],
-"W9": ["argues","because","fails","cannot be","should","ought","only if","must be"],
-"W10": ["under the","act 19","act 20","court","statute","may be cancelled","must pay","liable","section"],
-"W11": ["specification","stays below","complies","meets the","conforms","verified against","design truck"],
-"W12": ["defined as","is defined","under ifrs","classification files","standard","convention","code","nomenclature","design life"],
-"W13": ["scripture says","obliges","sacred","tikanga","according to tradition","doctrine","revealed"]
-},
-"methods": {
-"M1": ["defined","classif","standard","files","recognises","describes","convention"],
-"M2": ["prove","proof","argues","theorem","derive","fails because","implies","guarantees","only if"],
-"M3": ["measured","survey","observed","recorded","show","rose","reported","dates","has a"],
-"M4": ["trial","experiment","randomi","intervention","taught","practised","treated","control"],
-"M5": ["simulat","model","computed","algorithm","runs in"],
-"M6": ["compared","comparative","reconstruct","descend","on average","countries","interpret","reframes"],
-"M7": ["verified","audit","inspection","stays below","complies","certif"]
-}
+ "fields": {
+  "MA": {
+   "kw": [
+    "theorem",
+    "proof",
+    "prove",
+    "lemma",
+    "conjecture",
+    "equation",
+    "integral",
+    "derivative",
+    "prime",
+    "group",
+    "ring",
+    "topolog",
+    "manifold",
+    "polynomial",
+    "matrix",
+    "probability distribution",
+    "convergent",
+    "bounded",
+    "fixed-point",
+    "axiom",
+    "set theory",
+    "p vs np",
+    "np-complete",
+    "sequence",
+    "function",
+    "fundamental theorem",
+    "ramsey's theorem",
+    "spectral theorem",
+    "helly's theorem",
+    "poincaré conjecture",
+    "change and the continuum",
+    "bayes theorem",
+    "modularity theorem"
+   ],
+   "cells": [
+    [
+     "axiom",
+     "logic",
+     "set theory",
+     "category",
+     "decidab",
+     "gödel",
+     "p vs np"
+    ],
+    [
+     "prime",
+     "group",
+     "ring",
+     "algebra",
+     "number",
+     "polynomial",
+     "matrix",
+     "fundamental theorem",
+     "ramsey's theorem",
+     "spectral theorem"
+    ],
+    [
+     "geometr",
+     "topolog",
+     "manifold",
+     "space",
+     "fixed-point",
+     "curve",
+     "surface",
+     "helly's theorem",
+     "poincaré conjecture"
+    ],
+    [
+     "integral",
+     "derivative",
+     "equation",
+     "convergent",
+     "limit",
+     "sequence",
+     "bounded",
+     "differential",
+     "change and the continuum"
+    ],
+    [
+     "probability",
+     "random",
+     "statistic",
+     "expected",
+     "variance",
+     "distribution",
+     "bayes theorem",
+     "modularity theorem"
+    ]
+   ]
+  },
+  "PH": {
+   "kw": [
+    "quantum",
+    "particle",
+    "electron",
+    "photon",
+    "gravity",
+    "relativity",
+    "energy",
+    "entropy",
+    "thermodynamic",
+    "magnetic",
+    "laser",
+    "boson",
+    "half-life",
+    "radiation",
+    "plasma",
+    "fluid",
+    "temperature",
+    "momentum",
+    "cosmolog",
+    "black hole",
+    "superconduct",
+    "wave",
+    "classical motion and fields",
+    "hooke's law",
+    "liouville's theorem",
+    "quantum systems",
+    "schrödinger equation",
+    "gravitation and the cosmos",
+    "clapeyron equation",
+    "matter in equilibrium",
+    "matter out of equilibrium",
+    "planck's law"
+   ],
+   "cells": [
+    [
+     "newton",
+     "momentum",
+     "force",
+     "maxwell",
+     "electromagnet",
+     "relativity",
+     "optics",
+     "elastic",
+     "stress",
+     "classical motion and fields",
+     "hooke's law",
+     "liouville's theorem"
+    ],
+    [
+     "quantum",
+     "electron",
+     "photon",
+     "particle",
+     "boson",
+     "atom",
+     "spin",
+     "half-life",
+     "nuclear",
+     "quantum systems",
+     "schrödinger equation"
+    ],
+    [
+     "gravity",
+     "black hole",
+     "cosmolog",
+     "galaxy",
+     "star",
+     "universe",
+     "orbit",
+     "gravitation and the cosmos"
+    ],
+    [
+     "thermodynamic",
+     "entropy",
+     "phase",
+     "superconduct",
+     "crystal",
+     "semiconductor",
+     "equilibrium",
+     "clapeyron equation",
+     "matter in equilibrium"
+    ],
+    [
+     "plasma",
+     "fluid",
+     "turbulen",
+     "transport",
+     "radiation",
+     "chaos",
+     "flow",
+     "matter out of equilibrium",
+     "planck's law"
+    ]
+   ]
+  },
+  "CH": {
+   "kw": [
+    "molecule",
+    "compound",
+    "reaction",
+    "bond",
+    "catalyst",
+    "acid",
+    "base",
+    "ph ",
+    "synthesis",
+    "oxidation",
+    "ion",
+    "solvent",
+    "yield",
+    "pigment",
+    "polymer",
+    "spectroscop",
+    "chemical",
+    "element",
+    "hydrolysis",
+    "rate constant",
+    "equilibrium constant",
+    "composition and identity",
+    "henry's law",
+    "raoult's law",
+    "structure and bonding",
+    "hess's law",
+    "nernst equation",
+    "rates and mechanisms",
+    "synthesis and analysis"
+   ],
+   "cells": [
+    [
+     "element",
+     "compound",
+     "pigment",
+     "composition",
+     "isotope",
+     "identity",
+     "composition and identity",
+     "henry's law",
+     "raoult's law"
+    ],
+    [
+     "bond",
+     "structure",
+     "crystal",
+     "molecular shape",
+     "chiral",
+     "structure and bonding"
+    ],
+    [
+     "equilibrium constant",
+     "enthalpy",
+     "gibbs",
+     "electrochem",
+     "acid",
+     "base",
+     "ph ",
+     "hess's law",
+     "nernst equation"
+    ],
+    [
+     "rate",
+     "kinetic",
+     "catalyst",
+     "mechanism",
+     "hydrolysis",
+     "rates and mechanisms"
+    ],
+    [
+     "synthesis",
+     "yield",
+     "purif",
+     "chromatograph",
+     "spectroscop",
+     "polymer",
+     "material",
+     "synthesis and analysis"
+    ]
+   ]
+  },
+  "BI": {
+   "kw": [
+    "cell",
+    "gene",
+    "dna",
+    "rna",
+    "protein",
+    "species",
+    "evolution",
+    "organism",
+    "enzyme",
+    "mitochondri",
+    "bacteri",
+    "ecosystem",
+    "population",
+    "predator",
+    "nesting",
+    "habitat",
+    "neuron",
+    "physiology",
+    "descend",
+    "phylogen",
+    "heritable information",
+    "nernst equation",
+    "breeder's equation",
+    "ecological interaction"
+   ],
+   "cells": [
+    [
+     "gene",
+     "dna",
+     "rna",
+     "inherit",
+     "genome",
+     "mutation",
+     "heritable information"
+    ],
+    [
+     "cell",
+     "mitochondri",
+     "membrane",
+     "metabolism",
+     "enzyme",
+     "nernst equation"
+    ],
+    [
+     "organism",
+     "physiology",
+     "immune",
+     "behaviour",
+     "behavior",
+     "development"
+    ],
+    [
+     "evolution",
+     "descend",
+     "phylogen",
+     "species",
+     "fossil",
+     "lineage"
+    ],
+    [
+     "ecosystem",
+     "population",
+     "predator",
+     "habitat",
+     "nesting",
+     "ecolog",
+     "breeder's equation",
+     "ecological interaction"
+    ]
+   ]
+  },
+  "EA": {
+   "kw": [
+    "earthquake",
+    "fault",
+    "volcano",
+    "rock",
+    "mineral",
+    "sediment",
+    "glacier",
+    "ocean",
+    "climate",
+    "atmosphere",
+    "groundwater",
+    "river",
+    "landform",
+    "erosion",
+    "geolog",
+    "tectonic",
+    "sea level",
+    "soil profile",
+    "ocean heat",
+    "internal motion",
+    "darcy's law",
+    "surface and fluid envelopes",
+    "decay law",
+    "gauss's theorem",
+    "human spatial organization"
+   ],
+   "cells": [
+    [
+     "mineral",
+     "rock",
+     "soil",
+     "sediment"
+    ],
+    [
+     "tectonic",
+     "fault",
+     "earthquake",
+     "mantle",
+     "volcano",
+     "internal motion"
+    ],
+    [
+     "deep time",
+     "stratigraph",
+     "million years",
+     "fossil record",
+     "ruptured",
+     "radiometric"
+    ],
+    [
+     "ocean",
+     "atmosphere",
+     "climate",
+     "glacier",
+     "river",
+     "groundwater",
+     "weather",
+     "ocean heat",
+     "darcy's law",
+     "surface and fluid envelopes"
+    ],
+    [
+     "region",
+     "settlement",
+     "land use",
+     "map",
+     "geograph",
+     "decay law",
+     "gauss's theorem",
+     "human spatial organization"
+    ]
+   ]
+  },
+  "MD": {
+   "kw": [
+    "patient",
+    "disease",
+    "disorder",
+    "diagnos",
+    "treatment",
+    "therapy",
+    "drug",
+    "dose",
+    "clinical",
+    "trial",
+    "placebo",
+    "symptom",
+    "mortality",
+    "hospital",
+    "vaccin",
+    "infection",
+    "heart failure",
+    "diabetes",
+    "cancer",
+    "depress",
+    "causes and mechanisms",
+    "bayes theorem",
+    "diagnosis and prognosis",
+    "treatment and drugs",
+    "populations and prevention"
+   ],
+   "cells": [
+    [
+     "disorder",
+     "disease",
+     "syndrome",
+     "classif"
+    ],
+    [
+     "cause",
+     "risk factor",
+     "pathogen",
+     "mechanism",
+     "genetic risk",
+     "volume",
+     "causes and mechanisms"
+    ],
+    [
+     "diagnos",
+     "test",
+     "screen",
+     "prognos",
+     "sensitivity",
+     "bayes theorem",
+     "diagnosis and prognosis"
+    ],
+    [
+     "treatment",
+     "drug",
+     "dose",
+     "therapy",
+     "placebo",
+     "surgery",
+     "reduced",
+     "treatment and drugs"
+    ],
+    [
+     "prevalence",
+     "incidence",
+     "epidemi",
+     "public health",
+     "vaccin",
+     "population",
+     "populations and prevention"
+    ]
+   ]
+  },
+  "EN": {
+   "kw": [
+    "design",
+    "load",
+    "deflection",
+    "bridge",
+    "beam",
+    "specification",
+    "tolerance",
+    "engine",
+    "circuit",
+    "manufactur",
+    "safety factor",
+    "standard",
+    "stress",
+    "turbine",
+    "structure",
+    "pump",
+    "design life",
+    "reliability",
+    "force and deformation",
+    "paris law",
+    "bernoulli equation",
+    "colebrook equation",
+    "darcy's law",
+    "ergun equation",
+    "manning equation",
+    "mass and momentum",
+    "energy and entropy",
+    "fourier's law",
+    "newton's law",
+    "ampère's law",
+    "electromagnetic state",
+    "faraday's law",
+    "ohm's law",
+    "sampling theorem",
+    "composition and microstructure",
+    "constitutive law",
+    "little's law",
+    "nernst equation",
+    "pid law",
+    "raoult's law"
+   ],
+   "cells": [
+    [
+     "load",
+     "deflection",
+     "beam",
+     "stress",
+     "strain",
+     "bridge",
+     "force and deformation",
+     "paris law"
+    ],
+    [
+     "flow",
+     "pump",
+     "pressure",
+     "momentum",
+     "fluid",
+     "bernoulli equation",
+     "colebrook equation",
+     "darcy's law",
+     "ergun equation",
+     "manning equation",
+     "mass and momentum"
+    ],
+    [
+     "heat",
+     "engine",
+     "thermal",
+     "energy",
+     "turbine",
+     "energy and entropy",
+     "fourier's law",
+     "newton's law"
+    ],
+    [
+     "circuit",
+     "voltage",
+     "signal",
+     "motor",
+     "electr",
+     "ampère's law",
+     "electromagnetic state",
+     "faraday's law",
+     "ohm's law",
+     "sampling theorem"
+    ],
+    [
+     "material",
+     "alloy",
+     "corrosion",
+     "microstructure",
+     "fatigue",
+     "design life",
+     "composition and microstructure",
+     "constitutive law",
+     "little's law",
+     "nernst equation",
+     "pid law",
+     "raoult's law"
+    ]
+   ]
+  },
+  "CS": {
+   "kw": [
+    "algorithm",
+    "software",
+    "program",
+    "database",
+    "network",
+    "computer",
+    "compute",
+    "runtime",
+    "o(n",
+    "encryption",
+    "machine learning",
+    "neural",
+    "data structure",
+    "protocol",
+    "cpu",
+    "code",
+    "model training",
+    "schema",
+    "transaction",
+    "api",
+    "rice's theorem",
+    "amdahl's law",
+    "moore's law"
+   ],
+   "cells": [
+    [
+     "correct",
+     "verif",
+     "type",
+     "specification",
+     "bug",
+     "semantics",
+     "rice's theorem"
+    ],
+    [
+     "o(n",
+     "runtime",
+     "complexity",
+     "algorithm",
+     "quicksort",
+     "memory",
+     "fast",
+     "amdahl's law",
+     "moore's law"
+    ],
+    [
+     "distributed",
+     "network",
+     "concurren",
+     "transaction",
+     "serialis",
+     "consensus",
+     "database"
+    ],
+    [
+     "machine learning",
+     "neural",
+     "training",
+     "model",
+     "learn",
+     "ai "
+    ],
+    [
+     "encryption",
+     "security",
+     "privacy",
+     "attack",
+     "malware",
+     "crypto"
+    ]
+   ]
+  },
+  "MS": {
+   "kw": [
+    "memory",
+    "recall",
+    "perception",
+    "cognition",
+    "emotion",
+    "personality",
+    "attitude",
+    "brain",
+    "behaviour",
+    "behavior",
+    "participants",
+    "social",
+    "group",
+    "culture",
+    "identity",
+    "stereotype",
+    "attention",
+    "motivation",
+    "norm",
+    "fechner's law",
+    "mental processes",
+    "weber's law",
+    "nervous systems",
+    "free-rider theorem",
+    "social structures"
+   ],
+   "cells": [
+    [
+     "memory",
+     "recall",
+     "perception",
+     "attention",
+     "cognition",
+     "decision",
+     "fechner's law",
+     "mental processes",
+     "weber's law"
+    ],
+    [
+     "brain",
+     "neural",
+     "hippocamp",
+     "cortex",
+     "neuron",
+     "mice",
+     "consolidation",
+     "nervous systems"
+    ],
+    [
+     "personality",
+     "identity",
+     "emotion",
+     "wellbeing",
+     "development"
+    ],
+    [
+     "group",
+     "conformity",
+     "interaction",
+     "relationship",
+     "cooperation"
+    ],
+    [
+     "class",
+     "institution",
+     "inequality",
+     "norm",
+     "culture",
+     "society",
+     "free-rider theorem",
+     "social structures"
+    ]
+   ]
+  },
+  "EC": {
+   "kw": [
+    "price",
+    "market",
+    "wage",
+    "inflation",
+    "gdp",
+    "tax",
+    "demand",
+    "supply",
+    "cost",
+    "incentive",
+    "trade",
+    "monopoly",
+    "auction",
+    "equilibrium",
+    "unemployment",
+    "interest rate",
+    "welfare",
+    "borne",
+    "minimum wage",
+    "consumers",
+    "aggregate economy",
+    "welfare and public choice"
+   ],
+   "cells": [
+    [
+     "choice",
+     "preference",
+     "utility",
+     "risk aversion"
+    ],
+    [
+     "price",
+     "market",
+     "demand",
+     "supply",
+     "wage",
+     "borne",
+     "consumers",
+     "minimum wage"
+    ],
+    [
+     "auction",
+     "mechanism",
+     "bargain",
+     "contract",
+     "institution"
+    ],
+    [
+     "gdp",
+     "inflation",
+     "unemployment",
+     "growth",
+     "interest rate",
+     "recession",
+     "aggregate economy"
+    ],
+    [
+     "welfare",
+     "public good",
+     "externality",
+     "pareto",
+     "social choice",
+     "welfare and public choice"
+    ]
+   ]
+  },
+  "BU": {
+   "kw": [
+    "firm",
+    "company",
+    "revenue",
+    "profit",
+    "accounting",
+    "ifrs",
+    "gaap",
+    "balance sheet",
+    "audit",
+    "marketing",
+    "customer",
+    "supply chain",
+    "gst return",
+    "invoice",
+    "lease",
+    "valuation",
+    "shareholder",
+    "brand",
+    "management",
+    "little's law",
+    "operations and organisation",
+    "trade and tax"
+   ],
+   "cells": [
+    [
+     "accounting",
+     "ifrs",
+     "gaap",
+     "audit",
+     "balance sheet",
+     "lease",
+     "ledger"
+    ],
+    [
+     "valuation",
+     "capital",
+     "shareholder",
+     "finance",
+     "dividend"
+    ],
+    [
+     "supply chain",
+     "operations",
+     "management",
+     "organisation",
+     "logistics",
+     "little's law",
+     "operations and organisation"
+    ],
+    [
+     "marketing",
+     "customer",
+     "brand",
+     "sales",
+     "pricing"
+    ],
+    [
+     "gst return",
+     "tariff",
+     "customs",
+     "incoterm",
+     "export",
+     "import",
+     "input tax",
+     "trade and tax"
+    ]
+   ]
+  },
+  "ST": {
+   "kw": [
+    "deter",
+    "threat",
+    "rival",
+    "adversary",
+    "war",
+    "coercion",
+    "escalat",
+    "strategy",
+    "competitor",
+    "alliance",
+    "bluff",
+    "signal",
+    "attrition",
+    "campaign",
+    "military",
+    "offensive",
+    "defensive",
+    "incumbent",
+    "challenger",
+    "folk theorem"
+   ],
+   "cells": [
+    [
+     "alliance",
+     "actor",
+     "commitment",
+     "coalition"
+    ],
+    [
+     "game",
+     "attrition",
+     "payoff",
+     "move",
+     "incumbent",
+     "rival",
+     "folk theorem"
+    ],
+    [
+     "deter",
+     "threat",
+     "coercion",
+     "escalat",
+     "compellence"
+    ],
+    [
+     "campaign",
+     "manoeuvre",
+     "offensive",
+     "operation",
+     "conduct"
+    ],
+    [
+     "intelligence",
+     "deception",
+     "bluff",
+     "signal",
+     "surprise"
+    ]
+   ]
+  },
+  "PO": {
+   "kw": [
+    "parliament",
+    "election",
+    "vote",
+    "party",
+    "government",
+    "minister",
+    "policy",
+    "democracy",
+    "legitimacy",
+    "state",
+    "sovereign",
+    "coalition",
+    "president",
+    "referendum",
+    "bureaucracy",
+    "proportional representation",
+    "duverger's law",
+    "political behaviour",
+    "policy and administration",
+    "relations among states"
+   ],
+   "cells": [
+    [
+     "legitimacy",
+     "sovereign",
+     "regime",
+     "authority"
+    ],
+    [
+     "parliament",
+     "electoral",
+     "party",
+     "proportional",
+     "constitution",
+     "president",
+     "duverger's law"
+    ],
+    [
+     "vote",
+     "voter",
+     "turnout",
+     "public opinion",
+     "protest",
+     "political behaviour"
+    ],
+    [
+     "policy",
+     "bureaucracy",
+     "implementation",
+     "agency",
+     "policy and administration"
+    ],
+    [
+     "international",
+     "treaty",
+     "foreign",
+     "war between",
+     "relations among states"
+    ]
+   ]
+  },
+  "LA": {
+   "kw": [
+    "act",
+    "statute",
+    "court",
+    "contract",
+    "law",
+    "legal",
+    "liable",
+    "liability",
+    "duty",
+    "rights",
+    "tort",
+    "crime",
+    "plaintiff",
+    "defendant",
+    "judgment",
+    "must pay",
+    "under the",
+    "section",
+    "misrepresentation",
+    "constitution",
+    "international law",
+    "wrongs and remedies",
+    "administrative law",
+    "constitutional law",
+    "public power",
+    "commercial law",
+    "criminal law",
+    "forums and proof",
+    "indigenous law",
+    "private law",
+    "new zealand law"
+   ],
+   "cells": [
+    [
+     "statute",
+     "legislation",
+     "precedent",
+     "tikanga",
+     "treaty",
+     "source",
+     "international law"
+    ],
+    [
+     "contract",
+     "property",
+     "must pay",
+     "duty",
+     "obligation",
+     "trust"
+    ],
+    [
+     "tort",
+     "crime",
+     "remedy",
+     "misrepresentation",
+     "damages",
+     "cancel",
+     "wrongs and remedies"
+    ],
+    [
+     "constitution",
+     "judicial review",
+     "rights",
+     "administrative",
+     "administrative law",
+     "constitutional law",
+     "public power"
+    ],
+    [
+     "court",
+     "evidence",
+     "proof",
+     "jurisdiction",
+     "procedure",
+     "commercial law",
+     "criminal law",
+     "forums and proof",
+     "indigenous law",
+     "private law"
+    ]
+   ]
+  },
+  "PL": {
+   "kw": [
+    "argument",
+    "knowledge",
+    "belief",
+    "justified",
+    "consciousness",
+    "ethics",
+    "moral",
+    "ought",
+    "meaning",
+    "truth",
+    "free will",
+    "existence",
+    "fails because",
+    "gettier",
+    "ontolog",
+    "epistem",
+    "virtue",
+    "concept",
+    "leibniz's law",
+    "knowledge and mind",
+    "frege's principle",
+    "meaning and inference",
+    "standing of the sciences and mathematics"
+   ],
+   "cells": [
+    [
+     "existence",
+     "being",
+     "god",
+     "cause",
+     "ontolog",
+     "regress",
+     "cosmological",
+     "leibniz's law"
+    ],
+    [
+     "knowledge",
+     "belief",
+     "justified",
+     "gettier",
+     "consciousness",
+     "mind",
+     "knowledge and mind"
+    ],
+    [
+     "meaning",
+     "reference",
+     "logic",
+     "inference",
+     "frege's principle",
+     "meaning and inference"
+    ],
+    [
+     "ethic",
+     "moral",
+     "ought",
+     "virtue",
+     "justice",
+     "fair"
+    ],
+    [
+     "science",
+     "explanation",
+     "mathematics is",
+     "standing of the sciences and mathematics"
+    ]
+   ]
+  },
+  "HI": {
+   "kw": [
+    "century",
+    "in 18",
+    "in 19",
+    "in 20",
+    "signed",
+    "dynasty",
+    "empire",
+    "era",
+    "founded",
+    "sold",
+    "edo",
+    "settlement",
+    "historical",
+    "archive",
+    "manuscript",
+    "was first",
+    "ancestor",
+    "minute book",
+    "colonial",
+    "revolution",
+    "change and continuity",
+    "meaning and memory"
+   ],
+   "cells": [
+    [
+     "signed",
+     "founded",
+     "sold",
+     "occurred",
+     "event",
+     "minute book"
+    ],
+    [
+     "date",
+     "dated",
+     "radiocarbon",
+     "chronolog",
+     "century",
+     "ce",
+     "bce"
+    ],
+    [
+     "because",
+     "cause",
+     "led to"
+    ],
+    [
+     "change",
+     "continuity",
+     "transition",
+     "long-term",
+     "change and continuity"
+    ],
+    [
+     "memory",
+     "commemorat",
+     "heritage",
+     "meaning",
+     "meaning and memory"
+    ]
+   ]
+  },
+  "LN": {
+   "kw": [
+    "vowel",
+    "consonant",
+    "grammar",
+    "syntax",
+    "word",
+    "language",
+    "dialect",
+    "phoneme",
+    "morpholog",
+    "pronoun",
+    "verb",
+    "noun",
+    "semantic",
+    "pragmatic",
+    "te reo",
+    "linguistic",
+    "speakers",
+    "frege's principle",
+    "variation in use",
+    "grimm's law",
+    "verner's law"
+   ],
+   "cells": [
+    [
+     "vowel",
+     "consonant",
+     "phoneme",
+     "sound",
+     "stress",
+     "tone"
+    ],
+    [
+     "syntax",
+     "morpholog",
+     "verb",
+     "noun",
+     "word order",
+     "grammar"
+    ],
+    [
+     "meaning",
+     "semantic",
+     "pragmatic",
+     "pronoun",
+     "reference",
+     "frege's principle"
+    ],
+    [
+     "dialect",
+     "speakers",
+     "register",
+     "bilingual",
+     "revitalis",
+     "variation in use"
+    ],
+    [
+     "language family",
+     "proto",
+     "sound change",
+     "typolog",
+     "grimm's law",
+     "verner's law"
+    ]
+   ]
+  },
+  "AR": {
+   "kw": [
+    "painting",
+    "poem",
+    "novel",
+    "sonnet",
+    "music",
+    "film",
+    "sculpture",
+    "artist",
+    "print",
+    "aesthetic",
+    "style",
+    "composition",
+    "volta",
+    "narrative",
+    "great wave",
+    "stanza",
+    "melody",
+    "art",
+    "medium and making",
+    "context and reception"
+   ],
+   "cells": [
+    [
+     "medium",
+     "technique",
+     "brushstroke",
+     "making",
+     "carving",
+     "medium and making"
+    ],
+    [
+     "form",
+     "sonnet",
+     "volta",
+     "metre",
+     "composition",
+     "structure"
+    ],
+    [
+     "meaning",
+     "reframes",
+     "symbol",
+     "interpret",
+     "theme"
+    ],
+    [
+     "reception",
+     "audience",
+     "context",
+     "influence",
+     "context and reception"
+    ],
+    [
+     "masterpiece",
+     "value",
+     "beauty",
+     "best",
+     "greatest"
+    ]
+   ]
+  },
+  "RE": {
+   "kw": [
+    "god",
+    "scripture",
+    "bible",
+    "qur",
+    "torah",
+    "mishnah",
+    "church",
+    "prayer",
+    "ritual",
+    "faith",
+    "theolog",
+    "religio",
+    "sacred",
+    "salvation",
+    "sin",
+    "buddh",
+    "hindu",
+    "islam",
+    "christian",
+    "doctrine",
+    "aquinas",
+    "ultimate and the human condition",
+    "authoritative text",
+    "community and institution"
+   ],
+   "cells": [
+    [
+     "god",
+     "divine",
+     "salvation",
+     "ultimate",
+     "creation",
+     "ultimate and the human condition"
+    ],
+    [
+     "scripture",
+     "bible",
+     "qur",
+     "torah",
+     "mishnah",
+     "canon",
+     "text",
+     "authoritative text"
+    ],
+    [
+     "prayer",
+     "ritual",
+     "worship",
+     "fasting",
+     "rite"
+    ],
+    [
+     "church",
+     "community",
+     "clergy",
+     "sect",
+     "schism",
+     "community and institution"
+    ]
+   ]
+  },
+  "ED": {
+   "kw": [
+    "students",
+    "teaching",
+    "taught",
+    "curriculum",
+    "school",
+    "classroom",
+    "learner",
+    "pedagog",
+    "assessment",
+    "exam",
+    "teacher",
+    "lesson",
+    "learning outcomes",
+    "tuition",
+    "medical students",
+    "aims and curricula",
+    "campbell's law",
+    "institutions and systems"
+   ],
+   "cells": [
+    [
+     "curriculum",
+     "aims",
+     "syllabus",
+     "aims and curricula"
+    ],
+    [
+     "learner",
+     "prior knowledge",
+     "misconception",
+     "students"
+    ],
+    [
+     "taught",
+     "teaching",
+     "instruction",
+     "pedagog",
+     "practised",
+     "spaced"
+    ],
+    [
+     "assessment",
+     "test",
+     "exam",
+     "grade",
+     "campbell's law"
+    ],
+    [
+     "school",
+     "university",
+     "system",
+     "equity",
+     "institutions and systems"
+    ]
+   ]
+  },
+  "DE": {
+   "kw": [
+    "building",
+    "architecture",
+    "atrium",
+    "urban",
+    "residents",
+    "housing",
+    "interior",
+    "layout",
+    "landscape",
+    "planning",
+    "street",
+    "post-occupancy",
+    "user experience",
+    "product design",
+    "entrance",
+    "use and need",
+    "performance in use",
+    "place and settlement",
+    "life of the built thing",
+    "planning law"
+   ],
+   "cells": [
+    [
+     "need",
+     "brief",
+     "user",
+     "accessib",
+     "use and need"
+    ],
+    [
+     "form",
+     "layout",
+     "atrium",
+     "plan",
+     "legible"
+    ],
+    [
+     "comfort",
+     "overheating",
+     "daylight",
+     "usability",
+     "post-occupancy",
+     "performance in use"
+    ],
+    [
+     "urban",
+     "site",
+     "street",
+     "planning",
+     "landscape",
+     "place and settlement"
+    ],
+    [
+     "maintenance",
+     "reuse",
+     "retrofit",
+     "heritage",
+     "life of the built thing",
+     "planning law"
+    ]
+   ]
+  },
+  "AG": {
+   "kw": [
+    "crop",
+    "yield",
+    "fertiliser",
+    "fertilizer",
+    "ryegrass",
+    "livestock",
+    "dairy farm",
+    "herd",
+    "pasture",
+    "soil fertility",
+    "irrigation",
+    "veterinary",
+    "food safety",
+    "harvest",
+    "breeding",
+    "cultivar",
+    "orchard",
+    "vineyard",
+    "cultivation and husbandry",
+    "liebig's law",
+    "crop and animal health",
+    "breeder's equation",
+    "farming systems"
+   ],
+   "cells": [
+    [
+     "breeding",
+     "cultivar",
+     "genetic gain"
+    ],
+    [
+     "fertiliser",
+     "fertilizer",
+     "irrigation",
+     "pasture",
+     "yield",
+     "husbandry",
+     "ryegrass",
+     "cultivation and husbandry",
+     "liebig's law"
+    ],
+    [
+     "pest",
+     "veterinary",
+     "disease in",
+     "biosecurity",
+     "crop and animal health"
+    ],
+    [
+     "food",
+     "processing",
+     "food safety",
+     "nutrition"
+    ],
+    [
+     "farm system",
+     "productivity",
+     "farm management",
+     "breeder's equation",
+     "farming systems"
+    ]
+   ]
+  },
+  "EV": {
+   "kw": [
+    "pollution",
+    "nitrate",
+    "emissions",
+    "carbon",
+    "conservation",
+    "biodiversity",
+    "1080",
+    "possum",
+    "restoration",
+    "contamination",
+    "intensification",
+    "coral",
+    "bleaching",
+    "environmental",
+    "waterway",
+    "predator control",
+    "precautionary principle"
+   ],
+   "cells": [
+    [
+     "emissions",
+     "intensification",
+     "land use change",
+     "pressure"
+    ],
+    [
+     "concentration",
+     "nitrate",
+     "water quality",
+     "air quality",
+     "state of"
+    ],
+    [
+     "bleaching",
+     "impact",
+     "harm",
+     "decline",
+     "loss"
+    ],
+    [
+     "restoration",
+     "conservation",
+     "1080",
+     "predator control",
+     "regulation"
+    ],
+    [
+     "threshold",
+     "limit",
+     "tipping point",
+     "boundary",
+     "precautionary principle"
+    ]
+   ]
+  },
+  "IS": {
+   "kw": [
+    "catalogue",
+    "catalog",
+    "metadata",
+    "archive",
+    "library",
+    "dewey",
+    "classification",
+    "retrieval",
+    "recall on",
+    "precision",
+    "indexing",
+    "records",
+    "doi",
+    "preservation",
+    "search engine",
+    "trec",
+    "bradford's law",
+    "lotka's law"
+   ],
+   "cells": [
+    [
+     "item",
+     "record",
+     "dataset",
+     "doi",
+     "identifier"
+    ],
+    [
+     "metadata",
+     "catalogu",
+     "catalog",
+     "indexing",
+     "description"
+    ],
+    [
+     "classification",
+     "dewey",
+     "arrangement",
+     "ontology",
+     "files mathematics"
+    ],
+    [
+     "retrieval",
+     "recall",
+     "precision",
+     "search",
+     "trec",
+     "query",
+     "bradford's law",
+     "lotka's law"
+    ],
+    [
+     "preservation",
+     "digital archive",
+     "conservation of records"
+    ]
+   ]
+  },
+  "IK": {
+   "kw": [
+    "mātauranga",
+    "matauranga",
+    "kaitiaki",
+    "tikanga",
+    "whakapapa",
+    "iwi",
+    "hapū",
+    "hapu",
+    "mana whenua",
+    "marae",
+    "māori",
+    "maori",
+    "indigenous",
+    "aboriginal",
+    "maramataka",
+    "mauri",
+    "rangatiratanga",
+    "ordering principles",
+    "relations to land and waters",
+    "governance and custom",
+    "research and data",
+    "treaty law"
+   ],
+   "cells": [
+    [
+     "whakapapa",
+     "tapu",
+     "noa",
+     "ordering",
+     "ordering principles"
+    ],
+    [
+     "kaitiaki",
+     "mauri",
+     "maramataka",
+     "land",
+     "river",
+     "waters",
+     "mana whenua",
+     "relations to land and waters"
+    ],
+    [
+     "tikanga",
+     "rangatiratanga",
+     "marae",
+     "kawa",
+     "custom",
+     "governance and custom"
+    ],
+    [
+     "wānanga",
+     "wananga",
+     "transmission",
+     "kōrero"
+    ],
+    [
+     "data sovereignty",
+     "kaupapa māori",
+     "research",
+     "research and data",
+     "treaty law"
+    ]
+   ]
+  }
+ },
+ "warrants": {
+  "W1": [
+   "theorem",
+   "proof",
+   "prove",
+   "every ",
+   "for all",
+   "implies",
+   "lemma",
+   "open problem",
+   "question is open",
+   "guarantees"
+  ],
+  "W2": [
+   "simulat",
+   "model predicts",
+   "modelled",
+   "computed",
+   "numerical",
+   "would be borne",
+   "projected"
+  ],
+  "W3": [
+   "trial",
+   "randomi",
+   "placebo",
+   "experiment",
+   "compared with",
+   "intervention",
+   "treated",
+   "control group",
+   "improves",
+   "outperformed",
+   "increased",
+   "reduced"
+  ],
+  "W4": [
+   "measured",
+   "measurement",
+   "survey",
+   "observed",
+   "half-life",
+   "±",
+   "rose",
+   "concentration",
+   "show",
+   "reported",
+   "dates place",
+   "has a"
+  ],
+  "W5": [
+   "caused",
+   "due to",
+   "linked to",
+   "because of",
+   "effect of",
+   "natural experiment",
+   "identified",
+   "between 19",
+   "between 20"
+  ],
+  "W6": [
+   "countries",
+   "on average",
+   "comparative",
+   "across",
+   "compared to other",
+   "descend",
+   "lineage"
+  ],
+  "W7": [
+   "signed",
+   "recorded",
+   "minute book",
+   "manuscript",
+   "archive",
+   "was sold",
+   "redacted",
+   "in the 18",
+   "in the 19",
+   "founded",
+   "dated"
+  ],
+  "W8": [
+   "reframes",
+   "interpret",
+   "reading",
+   "means",
+   "argues that",
+   "symbolis"
+  ],
+  "W9": [
+   "argues",
+   "because",
+   "fails",
+   "cannot be",
+   "should",
+   "ought",
+   "only if",
+   "must be"
+  ],
+  "W10": [
+   "under the",
+   "act 19",
+   "act 20",
+   "court",
+   "statute",
+   "may be cancelled",
+   "must pay",
+   "liable",
+   "section"
+  ],
+  "W11": [
+   "specification",
+   "stays below",
+   "complies",
+   "meets the",
+   "conforms",
+   "verified against",
+   "design truck"
+  ],
+  "W12": [
+   "defined as",
+   "is defined",
+   "under ifrs",
+   "classification files",
+   "standard",
+   "convention",
+   "code",
+   "nomenclature",
+   "design life"
+  ],
+  "W13": [
+   "scripture says",
+   "obliges",
+   "sacred",
+   "tikanga",
+   "according to tradition",
+   "doctrine",
+   "revealed"
+  ]
+ },
+ "methods": {
+  "M1": [
+   "defined",
+   "classif",
+   "standard",
+   "files",
+   "recognises",
+   "describes",
+   "convention"
+  ],
+  "M2": [
+   "prove",
+   "proof",
+   "argues",
+   "theorem",
+   "derive",
+   "fails because",
+   "implies",
+   "guarantees",
+   "only if"
+  ],
+  "M3": [
+   "measured",
+   "survey",
+   "observed",
+   "recorded",
+   "show",
+   "rose",
+   "reported",
+   "dates",
+   "has a"
+  ],
+  "M4": [
+   "trial",
+   "experiment",
+   "randomi",
+   "intervention",
+   "taught",
+   "practised",
+   "treated",
+   "control"
+  ],
+  "M5": [
+   "simulat",
+   "model",
+   "computed",
+   "algorithm",
+   "runs in"
+  ],
+  "M6": [
+   "compared",
+   "comparative",
+   "reconstruct",
+   "descend",
+   "on average",
+   "countries",
+   "interpret",
+   "reframes"
+  ],
+  "M7": [
+   "verified",
+   "audit",
+   "inspection",
+   "stays below",
+   "complies",
+   "certif"
+  ]
+ }
 }
