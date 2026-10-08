@@ -1,0 +1,653 @@
+<title>Taxonomy</title>
+<style>
+/* Layout: a 2010-era standards-body site. Fixed 960px sheet on a grey ground, blue banner, tab bar, left sidebar boxes, breadcrumb, footer link columns. Deliberately single light theme. */
+:root{
+  color-scheme:light;
+  --ground:#e6e9ee; --sheet:#ffffff; --ink:#222; --muted:#5a6270; --line:#c9d0da; --pale:#f2f5f9;
+  --navy:#173a6b; --navy2:#25528f; --link:#1a4f9c; --gold:#c9a227; --tab:#e9edf3; --ok:#2e6b2e; --warn:#8a5a00;
+  --serif:Georgia,"Times New Roman",Times,serif; --sans:Arial,Helvetica,sans-serif; --mono:"Courier New",Courier,monospace;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font:13px/1.55 var(--sans);margin:0;padding-inline:0}
+.page{max-width:960px;margin:0 auto;background:var(--sheet);box-shadow:0 0 6px rgba(0,0,0,.18)}
+a{color:var(--link)}
+a:hover{color:#c0392b}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);font-weight:normal;margin:0 0 8px;text-wrap:balance}
+h1{font-size:26px;line-height:1.2}
+h2{font-size:20px;border-bottom:1px solid var(--line);padding-bottom:4px;margin-top:18px}
+h3{font-size:15px;font-weight:bold}
+p{margin:0 0 10px}
+ul{margin:0 0 10px;padding-left:20px}
+li{margin-bottom:4px}
+/* utility bar */
+.util{background:#0f2a50;color:#c8d3e3;font-size:11px;display:flex;justify-content:flex-end;gap:14px;padding:4px 14px;flex-wrap:wrap}
+.util span{white-space:nowrap}
+/* banner */
+.banner{background:linear-gradient(#25528f,#173a6b);color:#fff;display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:3px solid var(--gold);flex-wrap:wrap}
+.menubtn{font:bold 15px var(--sans);color:#173a6b;background:linear-gradient(#ffffff,#dde4ee);border:1px solid #0f2a50;border-radius:4px;padding:12px 18px 12px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:inset 0 1px 0 #fff}
+.menubtn .bars{display:grid;gap:3px}.menubtn .bars i{display:block;width:20px;height:3px;background:#173a6b}
+.menubtn:hover{background:linear-gradient(#fff,#cfd9e8)}
+.seal{width:54px;height:54px;flex:none}
+.brand{display:grid}
+.brand b{font:bold 26px/1.05 var(--serif);letter-spacing:.5px}
+.brand span{font-size:12px;color:#d6e0ee}
+.search{margin-left:auto;display:flex;gap:4px}
+.search input{font:12px var(--sans);padding:4px 6px;border:1px solid #0f2a50;width:170px;max-width:42vw}
+.search button{font:12px var(--sans);background:#e9edf3;border:1px solid #0f2a50;cursor:pointer}
+/* menu drawer */
+.drawer{background:#f7f9fc;border-bottom:2px solid var(--navy);padding:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 18px}
+.drawer a{display:block;padding:6px 4px;border-bottom:1px dotted var(--line);text-decoration:none;font-weight:bold}
+.drawer a small{display:block;font-weight:normal;color:var(--muted)}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:2px;background:var(--navy);padding:6px 8px 0}
+.tabs button{font:bold 12px var(--sans);color:#fff;background:linear-gradient(#3a6aa8,#25528f);border:1px solid #0f2a50;border-bottom:0;border-radius:5px 5px 0 0;padding:7px 12px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:#fff;color:var(--navy)}
+.tabs button:focus-visible,.menubtn:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.crumb{font-size:11px;color:var(--muted);padding:8px 14px;border-bottom:1px solid var(--line);background:var(--pale)}
+/* body grid */
+.body{display:grid;grid-template-columns:210px 1fr;gap:18px;padding:14px}
+.body>*{min-width:0}
+.side{display:grid;gap:12px;align-content:start}
+.box{border:1px solid var(--line);background:#fff}
+.box h4{font:bold 12px var(--sans);color:#fff;background:linear-gradient(#3a6aa8,#25528f);margin:0;padding:6px 8px}
+.box .in{padding:8px;font-size:12px}
+.box ul{list-style:square;padding-left:16px;margin:0}
+.box .news p{border-bottom:1px dotted var(--line);padding-bottom:6px}
+.box .news b{display:block;color:var(--muted);font-size:11px}
+.panel[hidden]{display:none}
+.hero{border:1px solid var(--line);background:linear-gradient(#f7f9fc,#e9eef6);padding:16px;margin-bottom:12px;display:grid;grid-template-columns:1fr 230px;gap:16px}
+.hero>*{min-width:0}
+.hero .lead{font-size:14px}
+.hero .pull{font-family:var(--serif);font-style:italic;color:var(--navy);font-size:15px;border-left:4px solid var(--gold);padding-left:10px}
+.keyfacts{border:1px solid var(--line);background:#fff}
+.keyfacts table{width:100%;border-collapse:collapse;font-size:12px}
+.keyfacts td{padding:5px 8px;border-bottom:1px solid var(--pale)}
+.keyfacts td:first-child{font:bold 16px var(--serif);color:var(--navy);text-align:right;width:70px;font-variant-numeric:tabular-nums}
+.btn{display:inline-block;font:bold 13px var(--sans);color:#fff;background:linear-gradient(#e0b437,#b98f14);border:1px solid #8a6a0c;border-radius:4px;padding:9px 16px;cursor:pointer;text-decoration:none;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+.btn.blue{background:linear-gradient(#3a6aa8,#173a6b);border-color:#0f2a50}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cols2>*,.cols3>*{min-width:0}
+.card{border:1px solid var(--line);padding:10px;background:#fff}
+.card h3{margin-bottom:4px}
+.notice{border:1px solid #e0cf8a;background:#fffbea;padding:10px;font-size:12px;margin:10px 0}
+.tbl{overflow-x:auto;margin:8px 0 12px}
+table.data{border-collapse:collapse;width:100%;font-size:12px}
+table.data th{background:#dfe6f0;color:var(--navy);text-align:left;padding:6px;border:1px solid var(--line);font-weight:bold}
+table.data td{padding:6px;border:1px solid var(--line);vertical-align:top}
+table.data tr:nth-child(even) td{background:#f7f9fc}
+.code{font-family:var(--mono);font-size:12px;white-space:nowrap}
+.ticks{list-style:none;padding-left:0}
+.ticks li{padding-left:20px;position:relative}
+.ticks li:before{content:"\2714";color:var(--ok);position:absolute;left:2px}
+/* pyramid figure */
+.pyr{display:grid;gap:4px;justify-items:center;padding:10px;border:1px solid var(--line);background:#fff}
+.tier{display:flex;gap:4px}
+.chip{font:bold 11px var(--mono);width:40px;height:26px;border:1px solid #8ba3c7;background:linear-gradient(#fff,#e3eaf4);color:var(--navy);cursor:pointer;border-radius:2px}
+.chip.apex{background:linear-gradient(#fff4cf,#e7c763);border-color:#8a6a0c}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff}
+.figcap{font-size:11px;color:var(--muted);text-align:center;margin-top:4px}
+.fielddetail{border:1px solid var(--line);background:var(--pale);padding:10px;margin-top:8px}
+/* minto figure */
+.minto{display:grid;gap:6px;justify-items:center;border:1px solid var(--line);padding:12px;background:#fff}
+.mb{border:1px solid var(--navy);background:#f7f9fc;padding:6px 10px;text-align:center;font-size:12px;max-width:440px}
+.mb.top{border-width:2px;font-weight:bold}
+.mrow{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.mrow .mb{max-width:120px;font-size:11px}
+.ml{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+/* placer */
+.placer select{width:100%;font:12px var(--sans);padding:5px}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.slot{border:1px solid var(--line);background:#f7f9fc;padding:8px}
+.slot .l{font-size:10px;text-transform:uppercase;color:var(--muted)}
+.slot .v{font:bold 15px var(--mono);color:var(--navy)}
+.slot .s{font-size:11px;color:var(--muted)}
+.modes{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 0}.modes button{font:bold 12px var(--sans);background:linear-gradient(#fff,#e3eaf4);border:1px solid #8ba3c7;border-bottom:0;border-radius:4px 4px 0 0;padding:8px 12px;cursor:pointer;color:var(--navy)}.modes button[aria-selected="true"]{background:var(--navy);color:#fff}
+.mode{border-top:3px solid var(--navy)}
+.aiout{border:1px solid #e0cf8a;background:#fffbea;padding:10px;margin-top:10px;font-size:12px}
+.small{font-size:12px;color:var(--muted)}
+.tag{display:inline-block;font-size:10px;color:#fff;background:var(--ok);padding:1px 5px;border-radius:2px;margin-top:3px}
+.ribbon{background:#fffbea;border:1px solid #e0cf8a;padding:6px 10px;margin-bottom:10px;font-size:12px}.ribbon b{background:#c0392b;color:#fff;padding:1px 6px;border-radius:2px;margin-right:6px;font-size:11px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0 12px}.three>div{border:1px solid var(--line);border-top:3px solid var(--gold);padding:10px;background:#fff;min-width:0}.three h3{margin-bottom:4px}
+@media (max-width:760px){.three{grid-template-columns:1fr}}
+pre{background:#f4f4f4;border:1px solid #ccc;padding:10px;overflow-x:auto;font:12px/1.45 var(--mono);margin:0 0 10px}
+form{display:grid;gap:8px;max-width:520px}
+label{font-weight:bold;font-size:12px;display:grid;gap:3px}
+input,textarea,select{font:13px var(--sans);padding:5px;border:1px solid #9aa7b8}
+#formmsg{color:var(--ok);font-weight:bold}
+.faq dt{font-weight:bold;color:var(--navy);margin-top:10px}
+.faq dd{margin:4px 0 0 0}
+.ps{border-top:1px dashed var(--line);margin-top:12px;padding-top:8px;font-size:12px}
+footer{background:#2b3442;color:#c9d1dc;font-size:11px;padding:16px 14px}
+footer .fcols{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px}
+footer b{color:#fff;display:block;margin-bottom:4px}
+footer a{color:#c9d1dc;display:block;text-decoration:none;cursor:pointer}
+footer a:hover{color:#fff;text-decoration:underline}
+@media (max-width:760px){
+  .body{grid-template-columns:1fr}.side{order:2}
+  .hero,.cols2{grid-template-columns:1fr}.cols3{grid-template-columns:1fr}
+  .slots{grid-template-columns:1fr 1fr}footer .fcols{grid-template-columns:1fr 1fr}
+  .search{margin-left:0}
+}
+</style>
+
+<div class="page">
+<div class="util"><span>Standard v2 · Released 9 October 2026</span><span><a href="#about" data-go="about" style="color:#c8d3e3">About</a></span><span><a href="#contact" data-go="contact" style="color:#c8d3e3">Register</a></span></div>
+<div class="banner">
+  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="drawer"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>
+  <svg class="seal" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#173a6b" stroke="#c9a227" stroke-width="3"/><circle cx="30" cy="30" r="22" fill="none" stroke="#c9a227" stroke-width="1"/><polygon points="30,13 45,42 15,42" fill="#c9a227"/><line x1="20.5" y1="31" x2="39.5" y2="31" stroke="#173a6b" stroke-width="1.6"/><line x1="25.5" y1="22" x2="34.5" y2="22" stroke="#173a6b" stroke-width="1.6"/></svg>
+  <div class="brand"><b>Taxonomy</b><span>A standard classification of human knowledge, built on mathematics</span></div>
+  <form class="search" role="search" id="searchf"><label for="q" style="position:absolute;left:-9999px">Search</label><input id="q" placeholder="Search a field, e.g. Law"><button type="submit">Go</button></form>
+</div>
+<nav class="drawer" id="drawer" hidden aria-label="Site menu"></nav>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div class="crumb" id="crumb"></div>
+
+<div class="body">
+<aside class="side">
+  <div class="box"><h4>In this section</h4><div class="in"><ul id="sectionlinks"></ul></div></div>
+  <div class="box"><h4>Quick facts</h4><div class="in">
+    <p><b>25</b> fields of knowledge</p><p><b>984</b> registered identifiers</p><p><b>63 of 63</b> MSC2020 mathematics classes placed</p><p><b>13</b> warrant types</p><p><b>7</b> shared method roles</p></div></div>
+  <div class="box"><h4>Latest news</h4><div class="in news">
+    <p><b>9 October 2026</b>Standard v2 released, covering 25 fields from Mathematics to Indigenous knowledge.</p>
+    <p><b>9 October 2026</b>Crosswalks checked against ANZSRC 2020, JEL, CS2023 and MeSH.</p>
+    <p><b>9 October 2026</b>Placement pilot completed. Human coder study in preparation.</p></div></div>
+  <div class="box"><h4>Register</h4><div class="in"><p>Receive the policy and research briefing papers as they are released.</p><a class="btn" href="#contact" data-go="contact">Register now</a></div></div>
+</aside>
+
+<main>
+<!-- HOME -->
+<section class="panel" id="p-home" role="tabpanel">
+  <div class="ribbon"><b>NEW</b>Introducing Taxonomy, Standard v2: a new instrument for thinking with the whole of human knowledge. <a href="#try" data-go="try">Try it now</a></div>
+  <div class="hero">
+    <div>
+      <h1>A new instrument for thinking with the whole of human knowledge.</h1>
+      <p class="lead">Taxonomy organises everything people know into 25 fields, one standard and 984 linked parts, starting from mathematics. Use it to see what any statement is and what would make it true, to view any subject from the position of all of knowledge at once, and to give an AI system the structure of human knowledge to reason with.</p>
+      <p class="pull">Built for analysts, researchers and policy teams who now read more machine-written text than any person can check by hand.</p>
+      <p><a class="btn" href="#try" data-go="try">Use the tool</a> &nbsp; <a class="btn blue" href="#fields" data-go="fields">Browse the 25 fields</a></p>
+    </div>
+    <div class="keyfacts"><table>
+      <tr><td>25</td><td>fields, one standard</td></tr>
+      <tr><td>63/63</td><td>MSC2020 classes placed once</td></tr>
+      <tr><td>984</td><td>stable identifiers</td></tr>
+      <tr><td>13</td><td>evidence (warrant) types</td></tr>
+      <tr><td>23</td><td>ANZSRC divisions crosswalked</td></tr>
+    </table></div>
+  </div>
+
+  <h2>Three things you can do with it</h2>
+  <div class="three">
+    <div><h3>Classify a statement</h3><p>Type any sentence. See which field owns it, what part of that field it concerns, what evidence it needs and how it was produced.</p></div>
+    <div><h3>See the whole</h3><p>Enter a subject, a product or a problem. See the questions all 25 fields put to it, and the blind spots a single discipline would miss.</p></div>
+    <div><h3>Relate two things</h3><p>Set two things side by side. Find the fields they sit in, the claim that joins them, and where evidence of one kind is being used for the other.</p></div>
+  </div>
+  <h2>Why Taxonomy exists</h2>
+  <p>Machines can now write fluent text on any subject in seconds. They cannot tell you which discipline is qualified to judge a sentence, or what evidence would settle it. Most of the classification systems we rely on cannot either. They were designed to put books on shelves and papers in journals, so they sort by topic. A single report contains dozens of claims of very different strength: a measured figure, a legal duty, a forecast, a value judgement. Topic schemes file them all in the same place.</p>
+  <p>The result is a costly kind of confusion. A minister receives a brief in which an economic estimate, a legal requirement and a political preference read as equally certain. A researcher cites a theorem without the conditions that make it true. An AI system repeats a confident statement whose only source was another AI system. In each case the error lies in the category, not the wording, and no style guide catches it.</p>
+  <p><b>Taxonomy fixes the category.</b> Each claim is assigned to the field whose standard of proof can establish it, the cell inside that field it concerns, and the type of evidence it owes. Once that is done, a reader knows at a glance what kind of statement is in front of them and what checking it would take.</p>
+
+  <h2>What you get</h2>
+  <ul class="ticks">
+    <li><b>One home for every claim.</b> A theorem belongs to mathematics, a measured constant to physics, a statutory duty to law. Other fields cite it by a stable identifier such as <span class="code">EC.O.A5.1</span>.</li>
+    <li><b>The evidence named.</b> Thirteen warrant types, from formal proof to a ruling before a court, tell you what a statement needs before you rely on it.</li>
+    <li><b>Conditions written in.</b> Every named theorem carries its hypotheses in the sentence. Gödel's incompleteness theorem is stated for effectively axiomatised theories, and the welfare theorems for complete markets.</li>
+    <li><b>Clear borders between disciplines.</b> Who bears a tax is economics. The duty to pay it is law. The return a firm files is business practice. Each has its owner.</li>
+    <li><b>Crosswalks to the standards you already use:</b> MSC2020, ANZSRC 2020, JEL, ACM CCS, CS2023, MeSH, ICD-11 and PhilPapers.</li>
+    <li><b>Machine-ready structure.</b> Stable IDs and typed links between fields, designed for retrieval systems, AI agents and an open API.</li>
+  </ul>
+
+  <h2>Mathematics first</h2>
+  <p>Every field that reasons exactly borrows from mathematics, and mathematics borrows from none of them. That is why Taxonomy begins there. The mathematics framework places all 63 top-level classes of the Mathematics Subject Classification (MSC2020) exactly once, checked by script, in five cells ordered by what a proof may assume. Physics, economics, computer science and the rest cite those cells rather than restating results in their own words. <a href="#maths" data-go="maths">Read about the mathematics framework</a>.</p>
+
+  <div class="ps"><b>P.S.</b> The quickest way to judge Taxonomy is to use it. Open <a href="#try" data-go="try">Use the tool</a>, type a subject you care about, and read what 25 fields have to say about it.</div>
+</section>
+
+<!-- MATHEMATICS -->
+<section class="panel" id="p-maths" role="tabpanel" hidden>
+  <h1>Mathematics: the foundation</h1>
+  <p class="lead">Taxonomy places mathematics at the apex because every other exact field depends on it. A physicist's conservation law rests on Noether's theorem. An economist's equilibrium rests on a fixed-point theorem. A cryptographer's protocol rests on a hardness assumption. In each case the theorem is owned once, by mathematics, and cited by the field that uses it.</p>
+  <h2>The five cells of mathematics</h2>
+  <p>Mathematics is divided by dependency: what a proof is allowed to assume. All 63 MSC2020 classes are placed once.</p>
+  <div class="tbl"><table class="data">
+    <tr><th>Cell</th><th>Subject</th><th>What it covers</th><th>MSC2020 classes</th></tr>
+    <tr><td class="code">MA.O.A1</td><td>Foundations</td><td>What a proof may assume: logic, set theory, categories</td><td>03, 18</td></tr>
+    <tr><td class="code">MA.O.A2</td><td>Structure</td><td>Operations, order and number: algebra and number theory</td><td>12 classes</td></tr>
+    <tr><td class="code">MA.O.A3</td><td>Space</td><td>Shape, nearness and dimension: geometry and topology</td><td>8 classes</td></tr>
+    <tr><td class="code">MA.O.A4</td><td>Change and the continuum</td><td>Limits, functions and equations: analysis</td><td>19 classes</td></tr>
+    <tr><td class="code">MA.O.A5</td><td>Chance</td><td>Measures of total mass one: probability and statistics</td><td>60, 62</td></tr>
+  </table></div>
+  <p>The remaining classes are bridges: pure mathematics in other guises (41), probability and statistics in application, computational mathematics (65, 68), mathematical modelling (15 classes), and mathematics as the object of another field's study, such as its history (01) and its teaching (97).</p>
+  <h2>Why this matters outside mathematics</h2>
+  <ul>
+    <li><b>Results are stated with their conditions.</b> A theorem without its hypotheses is recorded as an error. That rule alone removes a large class of misuse in policy and economics writing.</li>
+    <li><b>Open problems are labelled.</b> P versus NP, the smoothness of the Navier–Stokes equations in three dimensions and other open questions are tagged OPEN wherever they are cited.</li>
+    <li><b>Use is separated from proof.</b> The first welfare theorem is proved in mathematics. Its use to argue for a market reform belongs to economics, and the choice of which game the parties are playing belongs to strategy.</li>
+  </ul>
+  <div class="notice"><b>Example.</b> <span class="code">EC.O.A5.1</span> First welfare theorem: with complete markets, price-taking agents, locally non-satiated preferences and no externalities, every competitive equilibrium is Pareto efficient. Proof owned by mathematics; application owned by economics.</div>
+</section>
+
+<!-- FIELDS -->
+<section class="panel" id="p-fields" role="tabpanel" hidden>
+  <h1>The 25 fields</h1>
+  <p class="lead">Each field is divided by one stated dimension into no more than five parts. Select a code in the pyramid, or choose from the list, to see how the field is divided.</p>
+  <div class="cols2">
+    <div><div class="pyr" id="pyr"></div><div class="figcap">Figure 1. The 25 fields. Mathematics at the apex.</div></div>
+    <div>
+      <label for="fieldSel">Choose a field<select id="fieldSel"></select></label>
+      <div class="fielddetail" id="fielddetail" aria-live="polite"></div>
+    </div>
+  </div>
+  <h2>All fields at a glance</h2>
+  <div class="tbl"><table class="data" id="fieldtable"><tr><th>Code</th><th>Field</th><th>Divided by</th></tr></table></div>
+</section>
+
+<!-- HOW -->
+<section class="panel" id="p-how" role="tabpanel" hidden>
+  <h1>How Taxonomy works</h1>
+  <p class="lead">Taxonomy applies the pyramid principle, developed by Barbara Minto at McKinsey &amp; Company for structuring reports, to the structure of knowledge itself.</p>
+  <h2>The pyramid principle</h2>
+  <div class="cols2">
+    <div>
+      <p>Minto's method states the main point first and groups the supporting points beneath it. It rests on four rules.</p>
+      <ul>
+        <li><b>The vertical rule.</b> Every heading states a point that the items beneath it support.</li>
+        <li><b>The horizontal rule.</b> Items at the same level share one dimension and one order.</li>
+        <li><b>Mutually exclusive, collectively exhaustive.</b> No item overlaps another, and together they leave nothing out. There is no "Other" category.</li>
+        <li><b>Situation, complication, question, answer.</b> Each structure opens by explaining why it is cut the way it is.</li>
+      </ul>
+      <p>Each field in Taxonomy follows these rules, with between two and five members at each level so that the structure can be held in mind.</p>
+    </div>
+    <div class="minto" aria-label="Example structure for economics">
+      <span class="ml">Main point</span>
+      <div class="mb top">Economics divides into five scales at which an allocation is settled.</div>
+      <span class="ml">Supporting points: one dimension, one order</span>
+      <div class="mrow"><div class="mb">Choice</div><div class="mb">Markets</div><div class="mb">Mechanisms and institutions</div><div class="mb">The aggregate economy</div><div class="mb">Welfare and public choice</div></div>
+      <span class="ml">Named results beneath each point</span>
+      <div class="mb">Coase: with clear property rights, zero transaction costs and no wealth effects, bargaining reaches an efficient outcome.</div>
+    </div>
+  </div>
+  <h2>Four views of every field</h2>
+  <div class="tbl"><table class="data">
+    <tr><th>View</th><th>Question it answers</th><th>Example from physics</th></tr>
+    <tr><td><b>Objects</b></td><td>What is the claim about?</td><td>Matter in equilibrium</td></tr>
+    <tr><td><b>Methods</b></td><td>How was it produced? (represent, derive, observe, intervene, compute, compare, verify)</td><td>Measurement by interferometry</td></tr>
+    <tr><td><b>Warrants</b></td><td>What evidence licenses it?</td><td>Measurement with stated uncertainty</td></tr>
+    <tr><td><b>Bridges</b></td><td>Which discipline carries it?</td><td>Condensed matter physics</td></tr>
+  </table></div>
+  <h2>The ownership rule</h2>
+  <p>A claim belongs to the field whose standard of evidence can establish it. All other fields cite it. Four sentences about the same tax show the rule at work:</p>
+  <div class="tbl"><table class="data">
+    <tr><th>Statement</th><th>Owner</th><th>Reason</th></tr>
+    <tr><td>Consumers bear most of this tax because demand is inelastic.</td><td class="code">EC.O.A2.5</td><td>Who bears the cost is an allocation question.</td></tr>
+    <tr><td>The importer must pay GST at the border.</td><td class="code">LA.O.A2.5</td><td>The duty rests on statute and is decided by a court.</td></tr>
+    <tr><td>Our March return shows output tax of $42,000.</td><td class="code">BU.O.A5.3</td><td>The calculation is business practice.</td></tr>
+    <tr><td>A competitive equilibrium exists in this model.</td><td class="code">MA</td><td>Existence is a theorem.</td></tr>
+  </table></div>
+  <h2>The thirteen evidence types</h2>
+  <p>Every claim names the type of warrant it owes. A warrant never transfers from one type of claim to another: a court's finding does not settle a scientific fact, and scripture does not license a measurement.</p>
+  <div class="tbl"><table class="data" id="wtable"><tr><th>Code</th><th>Warrant</th><th>Meaning</th></tr></table></div>
+</section>
+
+<!-- AI -->
+<section class="panel" id="p-ai" role="tabpanel" hidden>
+  <h1>AI, hallucination and security</h1>
+  <p class="lead">Large language models produce confident text with no built-in record of where a statement comes from or what kind of evidence it needs. A wrong sentence and a right one look the same. Taxonomy gives people and machines a shared way to tell them apart.</p>
+  <h2>The risks</h2>
+  <ul>
+    <li><b>Hallucination.</b> Models state invented figures, citations and legal rules in the same tone as true ones.</li>
+    <li><b>Category errors.</b> A model blends a forecast, a legal duty and an opinion into one fluent paragraph, and the reader cannot see the joins.</li>
+    <li><b>Contaminated sources.</b> Machine-written text now feeds back into the material future models are trained on and retrieve from.</li>
+    <li><b>Manipulation.</b> Poisoned documents and prompt injection can slip false claims into automated pipelines.</li>
+  </ul>
+  <h2>How Taxonomy helps</h2>
+  <div class="cols2">
+    <div class="card"><h3>Claim tagging</h3><p>Require a model to tag each claim with a field, cell and warrant. A claim tagged as a measurement must point to a measurement; a claim tagged as a proof must point to a proof. Tags that cannot be filled mark the sentences to check first.</p></div>
+    <div class="card"><h3>Retrieval by claim</h3><p>Index sources by claim and evidence type, not by keyword. A question about drug safety returns trial-backed statements on adverse effects, not every page that mentions the drug.</p></div>
+    <div class="card"><h3>Agent routing</h3><p>In multi-agent systems, send each part of a question to the agent qualified to answer it: the incidence question to the economics agent, the duty to the legal agent, the theorem to a proof checker.</p></div>
+    <div class="card"><h3>Evaluation</h3><p>Score AI answers on whether they assign the right field and evidence type, not only on how closely the wording matches a reference answer.</p></div>
+  </div>
+  <h2>Cyber security and threat intelligence</h2>
+  <p>Threat reports combine statements of very different strength. An indicator of compromise is a measurement. Attribution of an attack to a state actor is an inference from comparison and argument, and should be marked as contested until shown. Confirmation that a control is in place is verification against a specification. When these are tagged, a confident attribution can no longer borrow the authority of a file hash.</p>
+  <p>A mismatch between a claim's stated evidence and its actual source, such as a forum post presented as a trial result, is a structural warning that an automated pipeline can detect before the claim reaches a decision.</p>
+  <h2>AI policy and governance</h2>
+  <p>Debates about AI risk mix technical capability (computer science), legal duty (law), public authority (politics) and ethical argument (philosophy). Taxonomy gives each part an owner, so a policy paper can show exactly which statements are evidence and which are judgement.</p>
+</section>
+
+<!-- USES -->
+<section class="panel" id="p-uses" role="tabpanel" hidden>
+  <h1>Uses</h1>
+  <h2>A knowledge layer for AI</h2>
+  <p>Taxonomy can be loaded into an AI system as retrieval context (RAG) alongside a working document. The model then has the structure of human knowledge in front of it: the 25 fields, how each divides, what evidence each requires, and how they connect. It can test a plan against every field rather than the two or three a prompt happens to mention.</p>
+  <div class="notice"><b>In practice: designing AI-enabled sunglasses.</b> Taxonomy standard was uploaded to an AI model together with the design specifications for a pair of AI-enabled sunglasses. The model could then examine the design from every relevant field at once:
+  <ul style="margin:6px 0 0">
+    <li>optics and power (Physics)</li>
+    <li>lens materials (Chemistry)</li>
+    <li>the eye and eye strain (Biology and Medicine)</li>
+    <li>on-device computation and data security (Computer science)</li>
+    <li>how wearers and bystanders behave (Mind and society)</li>
+    <li>privacy and recording law (Law)</li>
+    <li>cost and market (Economics and Business)</li>
+    <li>form and comfort (Design)</li>
+  </ul></div>
+  <h2>Government policy briefs</h2>
+  <p>Divide each recommendation into its parts: the evidence of effect, the legal power to act, the political authority to decide, and the cost. Decision-makers see which parts are measured and which are choices.</p>
+  <div class="tbl"><table class="data">
+    <tr><th>Section of the brief</th><th>Owner</th><th>Evidence expected</th></tr>
+    <tr><td>Expected effect on emissions</td><td class="code">EV</td><td>Causal estimate or trial</td></tr>
+    <tr><td>Cost and who bears it</td><td class="code">EC</td><td>Model with stated assumptions</td></tr>
+    <tr><td>Legal power to impose the measure</td><td class="code">LA</td><td>Statute and case law</td></tr>
+    <tr><td>Who decides, and how</td><td class="code">PO</td><td>Institutional record</td></tr>
+    <tr><td>Whether it is fair</td><td class="code">PL</td><td>Argument</td></tr>
+  </table></div>
+  <h2>Academic briefs and literature reviews</h2>
+  <p>Map a body of research by claim and evidence type. See where one field relies on another's results, and where an entire debate rests on a single contested point.</p>
+  <h2>Research strategy and funding</h2>
+  <p>Crosswalks to ANZSRC 2020 and other official schemes show which classes map cleanly, which split across fields, and where existing schemes leave gaps.</p>
+  <h2>Teaching</h2>
+  <p>Students learn the shape of a field before its details: five parts, one organising idea, and clear signals for when another discipline must be consulted.</p>
+  <h2>Intelligence and strategy</h2>
+  <p>The Strategy field separates actors, the game being played, coercion, conduct and information, and leaves the dated record of each case to History, so lessons drawn from cases stay tied to the facts.</p>
+  <h2>Compared with existing schemes</h2>
+  <div class="tbl"><table class="data">
+    <tr><th></th><th>Library and subject schemes</th><th>Taxonomy</th></tr>
+    <tr><td><b>Unit classified</b></td><td>A book, paper or topic</td><td>A single claim</td></tr>
+    <tr><td><b>Evidence recorded</b></td><td>None</td><td>One of thirteen warrant types</td></tr>
+    <tr><td><b>Links between fields</b></td><td>Separate schemes, no shared rule</td><td>One ownership rule, 984 linked identifiers</td></tr>
+    <tr><td><b>Leftover categories</b></td><td>"Other" and "General" classes</td><td>None; every exclusion names its owner</td></tr>
+    <tr><td><b>Machine use</b></td><td>Shelf marks and subject headings</td><td>Stable IDs, typed links, API</td></tr>
+    <tr><td><b>Indigenous knowledge</b></td><td>A residual class</td><td>Its own field, with two modes of evidence, subject to Māori-led review</td></tr>
+  </table></div>
+</section>
+
+<!-- TRY -->
+<section class="panel" id="p-try" role="tabpanel" hidden>
+  <h1>Use the tool</h1>
+  <p class="lead">Taxonomy works in three ways. Classify a statement to see what it is and what it needs. Take any subject and see it from the position of the whole of knowledge. Or set two things side by side and see how they relate.</p>
+  <div class="modes" role="tablist" aria-label="Tool modes">
+    <button role="tab" id="m-classify" aria-selected="true">1. Classify a statement</button>
+    <button role="tab" id="m-whole" aria-selected="false">2. See the whole</button>
+    <button role="tab" id="m-relate" aria-selected="false">3. Relate two things</button>
+  </div>
+
+  <div class="mode card" id="mode-classify">
+    <label for="stmt">Type or paste a statement<textarea id="stmt" rows="3">The importer must pay GST on goods at the border under the Goods and Services Tax Act 1985.</textarea></label>
+    <p style="margin:6px 0"><label for="claimSel" style="font-weight:normal">or choose an example <select id="claimSel"></select></label></p>
+    <p><button class="btn blue" id="runClassify">Classify</button> <button class="btn ai-only" id="deepClassify" hidden>Deep analysis with Claude</button></p>
+    <div class="slots">
+      <div class="slot"><div class="l">Field</div><div class="v" id="sOwner">–</div><div class="s" id="sOwnerN"></div></div>
+      <div class="slot"><div class="l">Cell</div><div class="v" id="sCell">–</div><div class="s" id="sCellN"></div></div>
+      <div class="slot"><div class="l">Evidence</div><div class="v" id="sW">–</div><div class="s" id="sWN"></div></div>
+      <div class="slot"><div class="l">Method</div><div class="v" id="sM">–</div><div class="s" id="sMN"></div></div>
+    </div>
+    <p id="sNote" class="small"></p>
+    <div id="deepOut" class="aiout" hidden></div>
+  </div>
+
+  <div class="mode card" id="mode-whole" hidden>
+    <label for="subject">A subject, product, problem or question<input id="subject" value="AI-enabled sunglasses"></label>
+    <p><button class="btn blue" id="runWhole">Show all 25 views</button> <button class="btn ai-only" id="deepWhole" hidden>Analyse with Claude</button></p>
+    <p class="small">Every field asks its own questions of the subject. Reading them together shows the particular from the position of the whole: what is measured, what is owed, what is decided and what is believed.</p>
+    <div id="wholeAI" class="aiout" hidden></div>
+    <div class="tbl"><table class="data" id="wholeTable"></table></div>
+  </div>
+
+  <div class="mode card" id="mode-relate" hidden>
+    <div class="cols2">
+      <label for="relA">First thing<input id="relA" value="Facial recognition in public spaces"></label>
+      <label for="relB">Second thing<input id="relB" value="The right to privacy"></label>
+    </div>
+    <p><button class="btn blue" id="runRelate">Relate</button> <button class="btn ai-only" id="deepRelate" hidden>Analyse with Claude</button></p>
+    <div id="relOut"></div>
+    <div id="relAI" class="aiout" hidden></div>
+  </div>
+
+  <p class="small" id="aiStatus">The built-in engine runs in your browser. Deep analysis uses Claude through your own Claude account and asks your permission first.</p>
+</section>
+
+<!-- API -->
+<section class="panel" id="p-api" role="tabpanel" hidden>
+  <h1>API</h1>
+  <p class="lead">Taxonomy is designed to run inside software. Every cell has a stable identifier and typed links to the cells it uses. The interface below is the published design; developer access will open in stages.</p>
+  <h2>Endpoints</h2>
+  <div class="tbl"><table class="data">
+    <tr><th>Call</th><th>Purpose</th></tr>
+    <tr><td class="code">POST /classify</td><td>Send a sentence. Receive its candidate field, cell, warrant and method, with confidence and the rule applied.</td></tr>
+    <tr><td class="code">GET /lookup/{id}</td><td>Retrieve a cell: its statement, conditions, evidence row, and every link in and out.</td></tr>
+    <tr><td class="code">POST /audit</td><td>Send a document. Receive each claim with its placement, and flags for evidence mismatches, missing conditions and borrowing between fields.</td></tr>
+  </table></div>
+  <h2>Example</h2>
+<pre>POST /classify
+{ "text": "Metformin lowers HbA1c in adults with type 2 diabetes." }
+
+200 OK
+{ "owner":   "MD",
+  "cell":    "MD.O.A4",
+  "warrant": "W3",
+  "method":  "M4",
+  "uses":    ["CH.O.A1", "MA.O.A5"],
+  "rule":    "living function is Biology; disorder and treatment of humans is Medicine" }</pre>
+  <h2>Engine</h2>
+  <p>Taxonomy Engine v0.1 is a transparent rule-based classifier, written in Python, that implements <span class="code">/classify</span> and a whole-view function. The same engine runs in your browser on the <a href="#try" data-go="try">Use the tool</a> page. A model-assisted classifier adds depth where cue words are not enough.</p>
+  <h2>Data release</h2>
+  <p>The registry is planned for release in SKOS and JSON, with a persistent identifier and version history, so that libraries, research systems and AI developers can build on it directly.</p>
+  <p><a class="btn" href="#contact" data-go="contact">Register for developer access</a></p>
+</section>
+
+<!-- ABOUT -->
+<section class="panel" id="p-about" role="tabpanel" hidden>
+  <h1>About Taxonomy</h1>
+  <p>Taxonomy was developed by Chris Townsend, an analyst and writer based in Whanganui, New Zealand, working with Claude, Anthropic's AI model. It began as a single structure for mathematics and grew to cover 25 fields under one standard.</p>
+  <h2>The standard</h2>
+  <p>Standard v2 sets twelve rules that every field must meet. They include one home for each claim, exact counts, conditions stated for every theorem, open problems labelled, clear exclusions, and stable identifiers.</p>
+  <h2>Standards it maps to</h2>
+  <ul>
+    <li>Mathematics Subject Classification (MSC2020): all 63 classes</li>
+    <li>Australian and New Zealand Standard Research Classification (ANZSRC 2020): all 23 divisions</li>
+    <li>Journal of Economic Literature codes (JEL): 20 categories</li>
+    <li>ACM Computing Classification System and CS2023 knowledge areas</li>
+    <li>Medical Subject Headings (MeSH) and ICD-11</li>
+    <li>PhilPapers and the Library of Congress Classification</li>
+  </ul>
+  <h2>Indigenous knowledge</h2>
+  <p>Taxonomy includes a field for Indigenous knowledge, with mātauranga Māori in view. Its placements are provisional until reviewed by a Māori-led panel. The review pack has been prepared and invitations will follow.</p>
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>Is this a replacement for library classification?</dt><dd>No. Library schemes shelve documents. Taxonomy classifies the claims inside them, and maps to the major schemes so the two work together.</dd>
+    <dt>Why mathematics first?</dt><dd>Because every exact field depends on it. Placing theorems once, with their conditions, prevents the same result being restated loosely in a dozen places.</dd>
+    <dt>Does it stop AI from making mistakes?</dt><dd>No tool can do that alone. Taxonomy makes unsupported claims visible by asking what evidence each one needs, which is where checking should start.</dd>
+    <dt>Who decides where a claim belongs?</dt><dd>The ownership rule: the field whose standard of evidence can establish the claim. Contested placements are marked as such, with the alternative stated.</dd>
+    <dt>Can I use it now?</dt><dd>Yes. The fields, the rules and the classification examples on this site are available today. Register to receive the full standard, briefing papers and API access.</dd>
+  </dl>
+</section>
+
+<!-- CONTACT -->
+<section class="panel" id="p-contact" role="tabpanel" hidden>
+  <h1>Register</h1>
+  <p class="lead">Register to receive the full Standard v2 document, briefing papers for policy and research teams as they are released, and early access to the API.</p>
+  <form id="interest" novalidate>
+    <label for="fName">Name<input id="fName" autocomplete="name"></label>
+    <label for="fEmail">Email<input id="fEmail" type="email" autocomplete="email"></label>
+    <label for="fOrg">Organisation<input id="fOrg"></label>
+    <label for="fUse">I am interested in<select id="fUse"><option>Policy briefs</option><option>Academic research</option><option>AI and data systems (API)</option><option>Cyber security and intelligence</option><option>Teaching</option><option>Reviewing a field</option></select></label>
+    <label for="fNote">Message<textarea id="fNote" rows="3"></textarea></label>
+    <p><button class="btn" type="submit">Register</button></p>
+    <p id="formmsg" role="status"></p>
+  </form>
+</section>
+</main>
+</div>
+
+<footer>
+  <div class="fcols" id="fcols"></div>
+  <p>Taxonomy · Standard v2 · © 2026 Chris Townsend. The pyramid principle is the work of Barbara Minto. MSC2020, ANZSRC 2020, JEL, ACM CCS, MeSH and ICD-11 are the property of their publishers and are cited for crosswalk purposes only.</p>
+</footer>
+</div>
+
+<script>
+const D={"p": {"MA": {"name": "Mathematics", "cells": ["Foundations", "Structure", "Space", "Change and the continuum", "Chance"], "dim": "dependency of what a proof may assume"}, "PH": {"name": "Physics", "cells": ["Classical motion and fields", "Quantum systems", "Gravitation and the cosmos", "Matter in equilibrium", "Matter out of equilibrium"], "dim": "the governing constants of the claim"}, "CH": {"name": "Chemistry", "cells": ["Composition and identity", "Structure and bonding", "Equilibrium and energy", "Rates and mechanisms", "Synthesis and analysis"], "dim": "the question asked of a substance"}, "BI": {"name": "Biology", "cells": ["Heritable information", "Cell", "Organism", "Descent", "Ecological interaction"], "dim": "the level or process the claim is about"}, "EA": {"name": "Earth: geography and geology", "cells": ["Materials", "Internal motion", "Deep time", "Surface and fluid envelopes", "Human spatial organization"], "dim": "what the claim is about"}, "MD": {"name": "Medicine and the drug", "cells": ["Disorders", "Causes and mechanisms", "Diagnosis and prognosis", "Treatment and drugs", "Populations and prevention"], "dim": "the clinical question asked of a disorder"}, "EN": {"name": "Engineering", "cells": ["Force and deformation", "Mass and momentum", "Energy and entropy", "Electromagnetic state", "Composition and microstructure"], "dim": "the physical balance that closes an artefact model"}, "CS": {"name": "Computer science", "cells": ["Correctness", "Cost", "Coordination", "Learning", "Protection"], "dim": "the property asserted of a computation"}, "MS": {"name": "Mind, brain and society", "cells": ["Mental processes", "Nervous systems", "Persons", "Interactions", "Social structures"], "dim": "the unit the claim is about"}, "EC": {"name": "Economics", "cells": ["Choice", "Markets", "Mechanisms and institutions", "The aggregate economy", "Welfare and public choice"], "dim": "the scale at which an allocation is settled"}, "BU": {"name": "Business, trade, tax and accounting", "cells": ["Accounts", "Finance", "Operations and organisation", "Marketing", "Trade and tax"], "dim": "the practice of the firm"}, "ST": {"name": "Strategy", "cells": ["Actors", "The game", "Coercion", "Conduct", "Information"], "dim": "the feature of the strategic situation that the claim explains"}, "PO": {"name": "Politics", "cells": ["Authority", "Institutions", "Political behaviour", "Policy and administration", "Relations among states"], "dim": "the aspect of power the claim concerns"}, "LA": {"name": "Law", "cells": ["Sources", "Obligations", "Wrongs and remedies", "Public power", "Forums and proof"], "dim": "the legal relation the claim states"}, "PL": {"name": "Philosophy", "cells": ["Being", "Knowledge and mind", "Meaning and inference", "Value", "Standing of the sciences and mathematics"], "dim": "what the question is about"}, "HI": {"name": "History", "cells": ["Occurrence", "Time", "Cause", "Change and continuity", "Meaning and memory"], "dim": "what the sentence asserts about the human past"}, "LN": {"name": "Language", "cells": ["Signal", "Form", "Meaning", "Variation in use", "Diversity"], "dim": "the aspect of language the sentence is about"}, "AR": {"name": "Arts and literature", "cells": ["Medium and making", "Form", "Meaning", "Context and reception", "Value"], "dim": "the stage of production the sentence concerns"}, "RE": {"name": "Religion and theology", "cells": ["The ultimate and the human condition", "Authoritative text", "Practice", "Community and institution"], "dim": "the object of the claim, in two modes: study and theology"}, "ED": {"name": "Education", "cells": ["Aims and curricula", "Learners", "Teaching", "Assessment", "Institutions and systems"], "dim": "the element of an educational arrangement"}, "DE": {"name": "Design and the built environment", "cells": ["Use and need", "Form", "Performance in use", "Place and settlement", "Life of the built thing"], "dim": "the aspect of a designed arrangement for human use"}, "AG": {"name": "Agriculture, veterinary and food", "cells": ["Breeding", "Cultivation and husbandry", "Crop and animal health", "Food", "Farming systems"], "dim": "the stage of the production system"}, "EV": {"name": "Environmental science", "cells": ["Pressures", "States", "Impacts", "Responses", "Limits"], "dim": "the link in the human–environment causal chain"}, "IS": {"name": "Information and the record", "cells": ["Items", "Description", "Arrangement", "Retrieval", "Preservation"], "dim": "the stage in the life of a record"}, "IK": {"name": "Indigenous knowledge", "cells": ["Ordering principles", "Relations to land and waters", "Governance and custom", "Transmission", "Research and data"], "dim": "the aspect of a knowledge system the claim is about"}}, "claims": [{"id": "1", "claim": "Every bounded sequence of real numbers has a convergent subsequence.", "owner": "MA", "cell": "MA.O.A4", "warrant": "W1", "method": "M2", "stratum": "core"}, {"id": "2", "claim": "The measured electron magnetic moment agrees with quantum electrodynamics to better than one part in a trillion.", "owner": "PH", "cell": "PH.O.A2", "warrant": "W4", "method": "M3", "stratum": "core"}, {"id": "3", "claim": "The rate constant of this ester hydrolysis doubles for every 10 °C rise between 20 and 50 °C.", "owner": "CH", "cell": "CH.O.A4", "warrant": "W3", "method": "M4", "stratum": "core"}, {"id": "4", "claim": "Mitochondria in eukaryotic cells descend from an engulfed alphaproteobacterium.", "owner": "BI", "cell": "BI.O.A4", "warrant": "W6", "method": "M6", "stratum": "core"}, {"id": "5", "claim": "The Alpine Fault has ruptured in large earthquakes roughly every 300 years over the last 8,000 years.", "owner": "EA", "cell": "EA.O.A3", "warrant": "W7", "method": "M6", "stratum": "core"}, {"id": "6", "claim": "In adults with heart failure with reduced ejection fraction, dapagliflozin reduced cardiovascular death or worsening heart failure compared with placebo.", "owner": "MD", "cell": "MD.O.A4", "warrant": "W3", "method": "M4", "stratum": "core"}, {"id": "7", "claim": "The bridge deck's mid-span deflection under the design truck load stays below span/800.", "owner": "EN", "cell": "EN.O.A1", "warrant": "W11", "method": "M7", "stratum": "core"}, {"id": "8", "claim": "Quicksort runs in O(n log n) expected time on any input when pivots are chosen uniformly at random.", "owner": "CS", "cell": "CS.O.A2", "warrant": "W1", "method": "M2", "stratum": "core"}, {"id": "9", "claim": "Retrieval practice improves delayed recall of word lists compared with restudy, in laboratory participants.", "owner": "MS", "cell": "MS.O.A1", "warrant": "W3", "method": "M4", "stratum": "core"}, {"id": "10", "claim": "A 10% rise in the minimum wage reduced teen employment by less than 1% in the studied US counties.", "owner": "EC", "cell": "EC.O.A2", "warrant": "W5", "method": "M3", "stratum": "core"}, {"id": "11", "claim": "Under IFRS 16, a lessee recognises a right-of-use asset and a lease liability for most leases.", "owner": "BU", "cell": "BU.O.A1", "warrant": "W12", "method": "M1", "stratum": "core"}, {"id": "12", "claim": "A credible threat to retaliate deters attack only if the defender's commitment is visible to the challenger.", "owner": "ST", "cell": "ST.O.A3", "warrant": "W9", "method": "M2", "stratum": "core"}, {"id": "13", "claim": "Countries using proportional representation have more parties in parliament on average than countries using single-member plurality.", "owner": "PO", "cell": "PO.O.A2", "warrant": "W6", "method": "M6", "stratum": "core"}, {"id": "14", "claim": "Under the Contract and Commercial Law Act 2017, a contract induced by a misrepresentation may be cancelled by the misled party.", "owner": "LA", "cell": "LA.O.A3", "warrant": "W10", "method": "M2", "stratum": "core"}, {"id": "15", "claim": "Knowledge is not simply justified true belief, because Gettier cases satisfy all three conditions without knowledge.", "owner": "PL", "cell": "PL.O.A2", "warrant": "W9", "method": "M2", "stratum": "core"}, {"id": "16", "claim": "Te Tiriti o Waitangi was first signed at Waitangi on 6 February 1840.", "owner": "HI", "cell": "HI.O.A1", "warrant": "W7", "method": "M3", "stratum": "core"}, {"id": "17", "claim": "Te reo Māori has a five-vowel system with contrastive vowel length.", "owner": "LN", "cell": "LN.O.A1", "warrant": "W4", "method": "M3", "stratum": "core"}, {"id": "18", "claim": "The sonnet's volta in Petrarchan form falls between the octave and the sestet.", "owner": "AR", "cell": "AR.O.A2", "warrant": "W8", "method": "M1", "stratum": "core"}, {"id": "19", "claim": "The Mishnah was redacted around 200 CE under Judah ha-Nasi, according to scholarly reconstruction.", "owner": "HI", "cell": "HI.O.A1", "warrant": "W7", "method": "M6", "stratum": "core"}, {"id": "20", "claim": "Students taught fractions with number-line representations outperformed those taught with area models on a delayed transfer test.", "owner": "ED", "cell": "ED.O.A3", "warrant": "W3", "method": "M4", "stratum": "core"}, {"id": "21", "claim": "Post-occupancy surveys show residents of the redesigned housing block report fewer overheating complaints.", "owner": "DE", "cell": "DE.O.A3", "warrant": "W4", "method": "M3", "stratum": "core"}, {"id": "22", "claim": "Nitrogen fertiliser above 150 kg/ha gave no further ryegrass yield gain in the Waikato trials.", "owner": "AG", "cell": "AG.O.A2", "warrant": "W3", "method": "M4", "stratum": "core"}, {"id": "23", "claim": "Dairy intensification increased nitrate concentrations in Canterbury groundwater between 1990 and 2020.", "owner": "EV", "cell": "EV.O.A2", "warrant": "W5", "method": "M3", "stratum": "core"}, {"id": "24", "claim": "Recall on the TREC test collection fell when queries were restricted to title words.", "owner": "IS", "cell": "IS.O.A4", "warrant": "W4", "method": "M3", "stratum": "core"}, {"id": "25", "claim": "Kaitiakitanga obliges mana whenua to guard the mauri of a river for future generations.", "owner": "IK", "cell": "IK.O.A2", "warrant": "W13", "method": "M1", "stratum": "ik"}, {"id": "26", "claim": "The equilibrium existence theorem for an exchange economy relies on Brouwer's fixed-point theorem.", "owner": "MA", "cell": "MA.O.A3", "warrant": "W1", "method": "M2", "stratum": "border"}, {"id": "27", "claim": "A carbon tax of $50 per tonne would be borne mostly by consumers of electricity in the modelled market.", "owner": "EC", "cell": "EC.O.A2", "warrant": "W2", "method": "M5", "stratum": "border"}, {"id": "28", "claim": "The importer must pay GST on goods at the border under the Goods and Services Tax Act 1985.", "owner": "LA", "cell": "LA.O.A2", "warrant": "W10", "method": "M2", "stratum": "border"}, {"id": "29", "claim": "The firm's GST return for March shows output tax of $42,000 and input tax credits of $31,000.", "owner": "BU", "cell": "BU.O.A5", "warrant": "W12", "method": "M1", "stratum": "border"}, {"id": "30", "claim": "By staying silent on price cuts, the incumbent turned a pricing game into a war of attrition its rival could not afford.", "owner": "ST", "cell": "ST.O.A2", "warrant": "W6", "method": "M6", "stratum": "border"}, {"id": "31", "claim": "Medical students who practised diagnosis with spaced cases retained more after a year than those taught in blocks.", "owner": "ED", "cell": "ED.O.A3", "warrant": "W3", "method": "M4", "stratum": "border"}, {"id": "32", "claim": "Spacing repetitions over time strengthens long-term memory consolidation in mice.", "owner": "MS", "cell": "MS.O.A2", "warrant": "W3", "method": "M4", "stratum": "border"}, {"id": "33", "claim": "The hard problem of consciousness cannot be dissolved by functional explanation alone.", "owner": "PL", "cell": "PL.O.A2", "warrant": "W9", "method": "M2", "stratum": "border"}, {"id": "34", "claim": "Patients with major depressive disorder show reduced hippocampal volume on average.", "owner": "MD", "cell": "MD.O.A2", "warrant": "W4", "method": "M3", "stratum": "border"}, {"id": "35", "claim": "Bleaching of Great Barrier Reef corals in 2016 followed marine heatwaves linked to anthropogenic warming.", "owner": "EV", "cell": "EV.O.A3", "warrant": "W5", "method": "M3", "stratum": "border"}, {"id": "36", "claim": "Ocean heat content rose between 1960 and 2020 according to Argo and ship measurements.", "owner": "EA", "cell": "EA.O.A4", "warrant": "W4", "method": "M3", "stratum": "border"}, {"id": "37", "claim": "Radiocarbon dates place the first Polynesian settlement of Aotearoa around 1250–1300 CE.", "owner": "HI", "cell": "HI.O.A2", "warrant": "W4", "method": "M3", "stratum": "border"}, {"id": "38", "claim": "The ¹⁴C half-life is 5,730 ± 40 years.", "owner": "PH", "cell": "PH.O.A5", "warrant": "W4", "method": "M3", "stratum": "border"}, {"id": "39", "claim": "The P vs NP question is open.", "owner": "MA", "cell": "MA.O.A1", "warrant": "W1", "method": "M2", "stratum": "border"}, {"id": "40", "claim": "This database schema guarantees serialisable transactions under the stated isolation level.", "owner": "CS", "cell": "CS.O.A3", "warrant": "W1", "method": "M2", "stratum": "border"}, {"id": "41", "claim": "The bridge's design life is 100 years under the NZ Transport Agency bridge manual.", "owner": "EN", "cell": "EN.O.A5", "warrant": "W12", "method": "M1", "stratum": "border"}, {"id": "42", "claim": "The building's atrium makes the entrance legible to first-time visitors.", "owner": "DE", "cell": "DE.O.A2", "warrant": "W9", "method": "M2", "stratum": "border"}, {"id": "43", "claim": "Hokusai's Great Wave uses Prussian blue pigment.", "owner": "CH", "cell": "CH.O.A1", "warrant": "W4", "method": "M3", "stratum": "border"}, {"id": "44", "claim": "Hokusai's Great Wave was sold in large numbers in Edo print shops in the 1830s.", "owner": "HI", "cell": "HI.O.A1", "warrant": "W7", "method": "M3", "stratum": "border"}, {"id": "45", "claim": "Hokusai's Great Wave reframes Mount Fuji as small and stable against the threatening sea.", "owner": "AR", "cell": "AR.O.A3", "warrant": "W8", "method": "M6", "stratum": "border"}, {"id": "46", "claim": "Aquinas argues that God's existence can be shown from motion in the world.", "owner": "PL", "cell": "PL.O.A1", "warrant": "W9", "method": "M2", "stratum": "border"}, {"id": "47", "claim": "The cosmological argument fails because an infinite regress of causes is not incoherent.", "owner": "PL", "cell": "PL.O.A1", "warrant": "W9", "method": "M2", "stratum": "border"}, {"id": "48", "claim": "Whakapapa recorded in a 1890s Native Land Court minute book names the founding ancestor of the hapū.", "owner": "HI", "cell": "HI.O.A1", "warrant": "W7", "method": "M3", "stratum": "ik"}, {"id": "49", "claim": "Possum control with aerial 1080 increased kererū nesting success in the treated forests.", "owner": "EV", "cell": "EV.O.A4", "warrant": "W3", "method": "M4", "stratum": "border"}, {"id": "50", "claim": "The Dewey Decimal Classification files mathematics under 510.", "owner": "IS", "cell": "IS.O.A3", "warrant": "W12", "method": "M1", "stratum": "border"}]};
+const SECTIONS=[
+ ["home","Home","Overview and why Taxonomy exists",["Why Taxonomy exists","What you get","Mathematics first"]],
+ ["maths","Mathematics","The foundation: 63 MSC classes in five cells",["The five cells of mathematics","Why this matters outside mathematics"]],
+ ["fields","The 25 Fields","Every field and how it is divided",["Figure 1","All fields at a glance"]],
+ ["how","How It Works","The pyramid principle, views and evidence types",["The pyramid principle","Four views of every field","The ownership rule","The thirteen evidence types"]],
+ ["ai","AI and Security","Hallucination, retrieval, agents and cyber",["The risks","How Taxonomy helps","Cyber security and threat intelligence","AI policy and governance"]],
+ ["uses","Uses","Policy briefs, research, teaching, intelligence",["Government policy briefs","Academic briefs and literature reviews","Research strategy and funding","Compared with existing schemes"]],
+ ["try","Use the Tool","Classify, see the whole, relate two things",["1. Classify a statement","2. See the whole","3. Relate two things"]],
+ ["api","API","Endpoints, example and data release",["Endpoints","Example","Data release"]],
+ ["about","About","The standard, crosswalks, FAQ",["The standard","Standards it maps to","Indigenous knowledge","Frequently asked questions"]],
+ ["contact","Register","Briefing papers and developer access",[]]];
+const W={W1:["Proof","from stated assumptions"],W2:["Computation","with a stated error bound"],W3:["Controlled intervention","experiment or trial"],W4:["Measurement","with stated uncertainty"],W5:["Causal identification","from observational data"],W6:["Comparative inference","across cases or lineages"],W7:["Source criticism","of a dated record"],W8:["Interpretation","traced to a record"],W9:["Argument","premises, inference, replies to objections"],W10:["Source and proof before a forum","the warrant of law"],W11:["Verification","against a specification"],W12:["Stipulation","a convention, standard or definition"],W13:["Tradition-internal authority","binding within a tradition only"]};
+const M={M1:"Represent",M2:"Derive",M3:"Observe",M4:"Intervene",M5:"Compute",M6:"Compare and reconstruct",M7:"Verify"};
+const tabs=document.getElementById('tabs'),drawer=document.getElementById('drawer'),crumb=document.getElementById('crumb'),sl=document.getElementById('sectionlinks');
+SECTIONS.forEach(([id,name,desc])=>{
+  const b=document.createElement('button');b.role='tab';b.id='t-'+id;b.textContent=name;b.setAttribute('aria-controls','p-'+id);b.addEventListener('click',()=>go(id));tabs.appendChild(b);
+  const a=document.createElement('a');a.href='#'+id;a.innerHTML=name+'<small>'+desc+'</small>';a.addEventListener('click',e=>{e.preventDefault();go(id)});drawer.appendChild(a);
+});
+document.getElementById('fcols').innerHTML=[["About",["home","about"]],["The Standard",["maths","fields","how"]],["Applications",["ai","uses","try"]],["Developers",["api","contact"]]].map(([h,ids])=>'<div><b>'+h+'</b>'+ids.map(i=>'<a data-go="'+i+'" href="#'+i+'">'+SECTIONS.find(s=>s[0]===i)[1]+'</a>').join('')+'</div>').join('');
+function go(id,noScroll){
+  SECTIONS.forEach(([s])=>{document.getElementById('p-'+s).hidden=s!==id;document.getElementById('t-'+s).setAttribute('aria-selected',s===id?'true':'false')});
+  const S=SECTIONS.find(s=>s[0]===id);
+  crumb.innerHTML='You are here: <a href="#home" data-go="home">Home</a>'+(id==='home'?'':' &gt; '+S[1]);
+  sl.innerHTML=(S[3].length?S[3]:[S[1]]).map(x=>'<li>'+x+'</li>').join('');
+  drawer.hidden=true;document.getElementById('menubtn').setAttribute('aria-expanded','false');
+  try{history.replaceState(null,'','#'+id)}catch(e){}
+  if(!noScroll)window.scrollTo(0,0);
+}
+document.addEventListener('click',e=>{const t=e.target.closest('[data-go]');if(t){e.preventDefault();go(t.dataset.go)}});
+document.getElementById('menubtn').addEventListener('click',function(){const open=drawer.hidden;drawer.hidden=!open;this.setAttribute('aria-expanded',open?'true':'false')});
+document.getElementById('searchf').addEventListener('submit',e=>{e.preventDefault();const q=document.getElementById('q').value.trim().toLowerCase();if(!q)return;const hit=Object.entries(D.p).find(([c,p])=>c.toLowerCase()===q||p.name.toLowerCase().includes(q));if(hit){go('fields');showField(hit[0])}else{const s=SECTIONS.find(s=>s[1].toLowerCase().includes(q));go(s?s[0]:'fields')}});
+// fields
+const tiers=[["MA"],["PH","CH","BI"],["EA","MD","EN","CS","MS"],["EC","BU","ST","PO","LA","PL","HI"],["LN","AR","RE","ED","DE","AG","EV","IS","IK"]];
+const pyr=document.getElementById('pyr'),fsel=document.getElementById('fieldSel'),fd=document.getElementById('fielddetail'),ft=document.getElementById('fieldtable');
+tiers.forEach(t=>{const r=document.createElement('div');r.className='tier';t.forEach(c=>{const b=document.createElement('button');b.className='chip'+(c==='MA'?' apex':'');b.textContent=c;b.dataset.c=c;b.title=D.p[c].name;b.setAttribute('aria-pressed','false');b.addEventListener('click',()=>showField(c));r.appendChild(b)});pyr.appendChild(r)});
+Object.entries(D.p).forEach(([c,p])=>{const o=document.createElement('option');o.value=c;o.textContent=c+' · '+p.name;fsel.appendChild(o);const tr=document.createElement('tr');tr.innerHTML='<td class="code"><a href="#fields" data-c="'+c+'">'+c+'</a></td><td>'+p.name+'</td><td>'+p.dim.charAt(0).toUpperCase()+p.dim.slice(1)+'</td>';ft.appendChild(tr)});
+ft.addEventListener('click',e=>{const a=e.target.closest('[data-c]');if(a){e.preventDefault();showField(a.dataset.c);window.scrollTo(0,0)}});
+fsel.addEventListener('change',()=>showField(fsel.value));
+function showField(c){const p=D.p[c];fsel.value=c;document.querySelectorAll('.chip').forEach(b=>b.setAttribute('aria-pressed',b.dataset.c===c?'true':'false'));fd.innerHTML='<h3><span class="code">'+c+'</span> '+p.name+'</h3><p style="font-size:12px;color:var(--muted)">Divided by '+p.dim+'.</p><ol style="margin:0;padding-left:20px">'+p.cells.map((x,i)=>'<li><span class="code">'+c+'.O.A'+(i+1)+'</span> '+x+'</li>').join('')+'</ol>'}
+showField('MA');
+// warrants
+const wt=document.getElementById('wtable');Object.entries(W).forEach(([k,[a,b]])=>{const tr=document.createElement('tr');tr.innerHTML='<td class="code">'+k+'</td><td>'+a+'</td><td>'+b.charAt(0).toUpperCase()+b.slice(1)+'</td>';wt.appendChild(tr)});
+// ---- Taxonomy Engine (port of taxonomy_engine.py v0.1) ----
+const LEX={"fields": {"MA": {"kw": ["theorem", "proof", "prove", "lemma", "conjecture", "equation", "integral", "derivative", "prime", "group", "ring", "topolog", "manifold", "polynomial", "matrix", "probability distribution", "convergent", "bounded", "fixed-point", "axiom", "set theory", "p vs np", "np-complete", "sequence", "function"], "cells": [["axiom", "logic", "set theory", "category", "decidab", "gödel", "p vs np"], ["prime", "group", "ring", "algebra", "number", "polynomial", "matrix"], ["geometr", "topolog", "manifold", "space", "fixed-point", "curve", "surface"], ["integral", "derivative", "equation", "convergent", "limit", "sequence", "bounded", "differential"], ["probability", "random", "statistic", "expected", "variance", "distribution"]]}, "PH": {"kw": ["quantum", "particle", "electron", "photon", "gravity", "relativity", "energy", "entropy", "thermodynamic", "magnetic", "laser", "boson", "half-life", "radiation", "plasma", "fluid", "temperature", "momentum", "cosmolog", "black hole", "superconduct", "wave"], "cells": [["newton", "momentum", "force", "maxwell", "electromagnet", "relativity", "optics", "elastic", "stress"], ["quantum", "electron", "photon", "particle", "boson", "atom", "spin", "half-life", "nuclear"], ["gravity", "black hole", "cosmolog", "galaxy", "star", "universe", "orbit"], ["thermodynamic", "entropy", "phase", "superconduct", "crystal", "semiconductor", "equilibrium"], ["plasma", "fluid", "turbulen", "transport", "radiation", "chaos", "flow"]]}, "CH": {"kw": ["molecule", "compound", "reaction", "bond", "catalyst", "acid", "base", "ph ", "synthesis", "oxidation", "ion", "solvent", "yield", "pigment", "polymer", "spectroscop", "chemical", "element", "hydrolysis", "rate constant", "equilibrium constant"], "cells": [["element", "compound", "pigment", "composition", "isotope", "identity"], ["bond", "structure", "crystal", "molecular shape", "chiral"], ["equilibrium constant", "enthalpy", "gibbs", "electrochem", "acid", "base", "ph "], ["rate", "kinetic", "catalyst", "mechanism", "hydrolysis"], ["synthesis", "yield", "purif", "chromatograph", "spectroscop", "polymer", "material"]]}, "BI": {"kw": ["cell", "gene", "dna", "rna", "protein", "species", "evolution", "organism", "enzyme", "mitochondri", "bacteri", "ecosystem", "population", "predator", "nesting", "habitat", "neuron", "physiology", "descend", "phylogen"], "cells": [["gene", "dna", "rna", "inherit", "genome", "mutation"], ["cell", "mitochondri", "membrane", "metabolism", "enzyme"], ["organism", "physiology", "immune", "behaviour", "behavior", "development"], ["evolution", "descend", "phylogen", "species", "fossil", "lineage"], ["ecosystem", "population", "predator", "habitat", "nesting", "ecolog"]]}, "EA": {"kw": ["earthquake", "fault", "volcano", "rock", "mineral", "sediment", "glacier", "ocean", "climate", "atmosphere", "groundwater", "river", "landform", "erosion", "geolog", "tectonic", "sea level", "soil profile", "ocean heat"], "cells": [["mineral", "rock", "soil", "sediment"], ["tectonic", "fault", "earthquake", "mantle", "volcano"], ["deep time", "stratigraph", "million years", "fossil record", "ruptured", "radiometric"], ["ocean", "atmosphere", "climate", "glacier", "river", "groundwater", "weather", "ocean heat"], ["region", "settlement", "land use", "map", "geograph"]]}, "MD": {"kw": ["patient", "disease", "disorder", "diagnos", "treatment", "therapy", "drug", "dose", "clinical", "trial", "placebo", "symptom", "mortality", "hospital", "vaccin", "infection", "heart failure", "diabetes", "cancer", "depress"], "cells": [["disorder", "disease", "syndrome", "classif"], ["cause", "risk factor", "pathogen", "mechanism", "genetic risk", "volume"], ["diagnos", "test", "screen", "prognos", "sensitivity"], ["treatment", "drug", "dose", "therapy", "placebo", "surgery", "reduced"], ["prevalence", "incidence", "epidemi", "public health", "vaccin", "population"]]}, "EN": {"kw": ["design", "load", "deflection", "bridge", "beam", "specification", "tolerance", "engine", "circuit", "manufactur", "safety factor", "standard", "stress", "turbine", "structure", "pump", "design life", "reliability"], "cells": [["load", "deflection", "beam", "stress", "strain", "bridge"], ["flow", "pump", "pressure", "momentum", "fluid"], ["heat", "engine", "thermal", "energy", "turbine"], ["circuit", "voltage", "signal", "motor", "electr"], ["material", "alloy", "corrosion", "microstructure", "fatigue", "design life"]]}, "CS": {"kw": ["algorithm", "software", "program", "database", "network", "computer", "compute", "runtime", "o(n", "encryption", "machine learning", "neural", "data structure", "protocol", "cpu", "code", "model training", "schema", "transaction", "api"], "cells": [["correct", "verif", "type", "specification", "bug", "semantics"], ["o(n", "runtime", "complexity", "algorithm", "quicksort", "memory", "fast"], ["distributed", "network", "concurren", "transaction", "serialis", "consensus", "database"], ["machine learning", "neural", "training", "model", "learn", "ai "], ["encryption", "security", "privacy", "attack", "malware", "crypto"]]}, "MS": {"kw": ["memory", "recall", "perception", "cognition", "emotion", "personality", "attitude", "brain", "behaviour", "behavior", "participants", "social", "group", "culture", "identity", "stereotype", "attention", "motivation", "norm"], "cells": [["memory", "recall", "perception", "attention", "cognition", "decision"], ["brain", "neural", "hippocamp", "cortex", "neuron", "mice", "consolidation"], ["personality", "identity", "emotion", "wellbeing", "development"], ["group", "conformity", "interaction", "relationship", "cooperation"], ["class", "institution", "inequality", "norm", "culture", "society"]]}, "EC": {"kw": ["price", "market", "wage", "inflation", "gdp", "tax", "demand", "supply", "cost", "incentive", "trade", "monopoly", "auction", "equilibrium", "unemployment", "interest rate", "welfare", "borne", "minimum wage", "consumers"], "cells": [["choice", "preference", "utility", "risk aversion"], ["price", "market", "demand", "supply", "wage", "borne", "consumers", "minimum wage"], ["auction", "mechanism", "bargain", "contract", "institution"], ["gdp", "inflation", "unemployment", "growth", "interest rate", "recession"], ["welfare", "public good", "externality", "pareto", "social choice"]]}, "BU": {"kw": ["firm", "company", "revenue", "profit", "accounting", "ifrs", "gaap", "balance sheet", "audit", "marketing", "customer", "supply chain", "gst return", "invoice", "lease", "valuation", "shareholder", "brand", "management"], "cells": [["accounting", "ifrs", "gaap", "audit", "balance sheet", "lease", "ledger"], ["valuation", "capital", "shareholder", "finance", "dividend"], ["supply chain", "operations", "management", "organisation", "logistics"], ["marketing", "customer", "brand", "sales", "pricing"], ["gst return", "tariff", "customs", "incoterm", "export", "import", "input tax"]]}, "ST": {"kw": ["deter", "threat", "rival", "adversary", "war", "coercion", "escalat", "strategy", "competitor", "alliance", "bluff", "signal", "attrition", "campaign", "military", "offensive", "defensive", "incumbent", "challenger"], "cells": [["alliance", "actor", "commitment", "coalition"], ["game", "attrition", "payoff", "move", "incumbent", "rival"], ["deter", "threat", "coercion", "escalat", "compellence"], ["campaign", "manoeuvre", "offensive", "operation", "conduct"], ["intelligence", "deception", "bluff", "signal", "surprise"]]}, "PO": {"kw": ["parliament", "election", "vote", "party", "government", "minister", "policy", "democracy", "legitimacy", "state", "sovereign", "coalition", "president", "referendum", "bureaucracy", "proportional representation"], "cells": [["legitimacy", "sovereign", "regime", "authority"], ["parliament", "electoral", "party", "proportional", "constitution", "president"], ["vote", "voter", "turnout", "public opinion", "protest"], ["policy", "bureaucracy", "implementation", "agency"], ["international", "treaty", "foreign", "war between"]]}, "LA": {"kw": ["act", "statute", "court", "contract", "law", "legal", "liable", "liability", "duty", "rights", "tort", "crime", "plaintiff", "defendant", "judgment", "must pay", "under the", "section", "misrepresentation", "constitution"], "cells": [["statute", "legislation", "precedent", "tikanga", "treaty", "source"], ["contract", "property", "must pay", "duty", "obligation", "trust"], ["tort", "crime", "remedy", "misrepresentation", "damages", "cancel"], ["constitution", "judicial review", "rights", "administrative"], ["court", "evidence", "proof", "jurisdiction", "procedure"]]}, "PL": {"kw": ["argument", "knowledge", "belief", "justified", "consciousness", "ethics", "moral", "ought", "meaning", "truth", "free will", "existence", "fails because", "gettier", "ontolog", "epistem", "virtue", "concept"], "cells": [["existence", "being", "god", "cause", "ontolog", "regress", "cosmological"], ["knowledge", "belief", "justified", "gettier", "consciousness", "mind"], ["meaning", "reference", "logic", "inference"], ["ethic", "moral", "ought", "virtue", "justice", "fair"], ["science", "explanation", "mathematics is"]]}, "HI": {"kw": ["century", "in 18", "in 19", "in 20", "signed", "dynasty", "empire", "era", "founded", "sold", "edo", "settlement", "historical", "archive", "manuscript", "was first", "ancestor", "minute book", "colonial", "revolution"], "cells": [["signed", "founded", "sold", "occurred", "event", "minute book"], ["date", "dated", "radiocarbon", "chronolog", "century", "ce", "bce"], ["because", "cause", "led to"], ["change", "continuity", "transition", "long-term"], ["memory", "commemorat", "heritage", "meaning"]]}, "LN": {"kw": ["vowel", "consonant", "grammar", "syntax", "word", "language", "dialect", "phoneme", "morpholog", "pronoun", "verb", "noun", "semantic", "pragmatic", "te reo", "linguistic", "speakers"], "cells": [["vowel", "consonant", "phoneme", "sound", "stress", "tone"], ["syntax", "morpholog", "verb", "noun", "word order", "grammar"], ["meaning", "semantic", "pragmatic", "pronoun", "reference"], ["dialect", "speakers", "register", "bilingual", "revitalis"], ["language family", "proto", "sound change", "typolog"]]}, "AR": {"kw": ["painting", "poem", "novel", "sonnet", "music", "film", "sculpture", "artist", "print", "aesthetic", "style", "composition", "volta", "narrative", "great wave", "stanza", "melody", "art"], "cells": [["medium", "technique", "brushstroke", "making", "carving"], ["form", "sonnet", "volta", "metre", "composition", "structure"], ["meaning", "reframes", "symbol", "interpret", "theme"], ["reception", "audience", "context", "influence"], ["masterpiece", "value", "beauty", "best", "greatest"]]}, "RE": {"kw": ["god", "scripture", "bible", "qur", "torah", "mishnah", "church", "prayer", "ritual", "faith", "theolog", "religio", "sacred", "salvation", "sin", "buddh", "hindu", "islam", "christian", "doctrine", "aquinas"], "cells": [["god", "divine", "salvation", "ultimate", "creation"], ["scripture", "bible", "qur", "torah", "mishnah", "canon", "text"], ["prayer", "ritual", "worship", "fasting", "rite"], ["church", "community", "clergy", "sect", "schism"]]}, "ED": {"kw": ["students", "teaching", "taught", "curriculum", "school", "classroom", "learner", "pedagog", "assessment", "exam", "teacher", "lesson", "learning outcomes", "tuition", "medical students"], "cells": [["curriculum", "aims", "syllabus"], ["learner", "prior knowledge", "misconception", "students"], ["taught", "teaching", "instruction", "pedagog", "practised", "spaced"], ["assessment", "test", "exam", "grade"], ["school", "university", "system", "equity"]]}, "DE": {"kw": ["building", "architecture", "atrium", "urban", "residents", "housing", "interior", "layout", "landscape", "planning", "street", "post-occupancy", "user experience", "product design", "entrance"], "cells": [["need", "brief", "user", "accessib"], ["form", "layout", "atrium", "plan", "legible"], ["comfort", "overheating", "daylight", "usability", "post-occupancy"], ["urban", "site", "street", "planning", "landscape"], ["maintenance", "reuse", "retrofit", "heritage"]]}, "AG": {"kw": ["crop", "yield", "fertiliser", "fertilizer", "ryegrass", "livestock", "dairy farm", "herd", "pasture", "soil fertility", "irrigation", "veterinary", "food safety", "harvest", "breeding", "cultivar", "orchard", "vineyard"], "cells": [["breeding", "cultivar", "genetic gain"], ["fertiliser", "fertilizer", "irrigation", "pasture", "yield", "husbandry", "ryegrass"], ["pest", "veterinary", "disease in", "biosecurity"], ["food", "processing", "food safety", "nutrition"], ["farm system", "productivity", "farm management"]]}, "EV": {"kw": ["pollution", "nitrate", "emissions", "carbon", "conservation", "biodiversity", "1080", "possum", "restoration", "contamination", "intensification", "coral", "bleaching", "environmental", "waterway", "predator control"], "cells": [["emissions", "intensification", "land use change", "pressure"], ["concentration", "nitrate", "water quality", "air quality", "state of"], ["bleaching", "impact", "harm", "decline", "loss"], ["restoration", "conservation", "1080", "predator control", "regulation"], ["threshold", "limit", "tipping point", "boundary"]]}, "IS": {"kw": ["catalogue", "catalog", "metadata", "archive", "library", "dewey", "classification", "retrieval", "recall on", "precision", "indexing", "records", "doi", "preservation", "search engine", "trec"], "cells": [["item", "record", "dataset", "doi", "identifier"], ["metadata", "catalogu", "catalog", "indexing", "description"], ["classification", "dewey", "arrangement", "ontology", "files mathematics"], ["retrieval", "recall", "precision", "search", "trec", "query"], ["preservation", "digital archive", "conservation of records"]]}, "IK": {"kw": ["mātauranga", "matauranga", "kaitiaki", "tikanga", "whakapapa", "iwi", "hapū", "hapu", "mana whenua", "marae", "māori", "maori", "indigenous", "aboriginal", "maramataka", "mauri", "rangatiratanga"], "cells": [["whakapapa", "tapu", "noa", "ordering"], ["kaitiaki", "mauri", "maramataka", "land", "river", "waters", "mana whenua"], ["tikanga", "rangatiratanga", "marae", "kawa", "custom"], ["wānanga", "wananga", "transmission", "kōrero"], ["data sovereignty", "kaupapa māori", "research"]]}}, "warrants": {"W1": ["theorem", "proof", "prove", "every ", "for all", "implies", "lemma", "open problem", "question is open", "guarantees"], "W2": ["simulat", "model predicts", "modelled", "computed", "numerical", "would be borne", "projected"], "W3": ["trial", "randomi", "placebo", "experiment", "compared with", "intervention", "treated", "control group", "improves", "outperformed", "increased", "reduced"], "W4": ["measured", "measurement", "survey", "observed", "half-life", "±", "rose", "concentration", "show", "reported", "dates place", "has a"], "W5": ["caused", "due to", "linked to", "because of", "effect of", "natural experiment", "identified", "between 19", "between 20"], "W6": ["countries", "on average", "comparative", "across", "compared to other", "descend", "lineage"], "W7": ["signed", "recorded", "minute book", "manuscript", "archive", "was sold", "redacted", "in the 18", "in the 19", "founded", "dated"], "W8": ["reframes", "interpret", "reading", "means", "argues that", "symbolis"], "W9": ["argues", "because", "fails", "cannot be", "should", "ought", "only if", "must be"], "W10": ["under the", "act 19", "act 20", "court", "statute", "may be cancelled", "must pay", "liable", "section"], "W11": ["specification", "stays below", "complies", "meets the", "conforms", "verified against", "design truck"], "W12": ["defined as", "is defined", "under ifrs", "classification files", "standard", "convention", "code", "nomenclature", "design life"], "W13": ["scripture says", "obliges", "sacred", "tikanga", "according to tradition", "doctrine", "revealed"]}, "methods": {"M1": ["defined", "classif", "standard", "files", "recognises", "describes", "convention"], "M2": ["prove", "proof", "argues", "theorem", "derive", "fails because", "implies", "guarantees", "only if"], "M3": ["measured", "survey", "observed", "recorded", "show", "rose", "reported", "dates", "has a"], "M4": ["trial", "experiment", "randomi", "intervention", "taught", "practised", "treated", "control"], "M5": ["simulat", "model", "computed", "algorithm", "runs in"], "M6": ["compared", "comparative", "reconstruct", "descend", "on average", "countries", "interpret", "reframes"], "M7": ["verified", "audit", "inspection", "stays below", "complies", "certif"]}}, CODEBOOK="# Codebook for the placement pilot\n\nPlace each claim (one sentence) in four parts.\n1. OWNER: the pyramid whose warrant would establish the claim (two-letter code).\n2. CELL: the Face O cell at A-level in that pyramid, e.g. PH.O.A3.\n3. WARRANT: the warrant type the claim owes (W1–W13).\n4. METHOD: the shared method role that would produce it (M1–M7).\n\nOwnership rule: theorem → MA; law of nature → PH; composition and reaction → CH; living function → BI; disorder of humans → MD; Earth state, place, landform → EA; artefact meeting a specification → EN; computation → CS; mind, behaviour, groups → MS; allocation under scarcity → EC; firm practice, trade, tax computation → BU; contest between opposed wills, choice of game → ST; authority and power → PO; legal validity and duty → LA; concept analysis and normative argument → PL; dated human past → HI; language structure and use → LN; works of art and their interpretation → AR; religious claims → RE; learning under an educational arrangement → ED; designed arrangement for human use → DE; production of organisms and food → AG; human pressure and environmental impact → EV; the record and its retrieval → IS; Indigenous knowledge system as a system → IK.\nBorder rules: incidence is EC, the duty is LA, the computation is BU. Theorem MA, allocation EC, choice of game ST. Delete the arrangement: if the learning claim survives it is MS, if not ED.\n\nWarrants: W1 Proof; W2 Computation with error bound; W3 Controlled intervention; W4 Measurement with uncertainty; W5 Causal identification from observational data; W6 Comparative inference; W7 Source criticism of a dated record; W8 Interpretation traced to a record; W9 Argument; W10 Source plus facts proved before a forum; W11 Verification against a specification; W12 Stipulation or convention; W13 Tradition-internal authority.\nMethods: M1 Represent; M2 Derive; M3 Observe; M4 Intervene; M5 Compute; M6 Compare and reconstruct; M7 Verify.\n\n## Cells\n- MA: MA.O.A1 Foundations; MA.O.A2 Structure; MA.O.A3 Space; MA.O.A4 Change and the continuum; MA.O.A5 Chance\n- PH (Physics): PH.O.A1 Classical motion and fields; PH.O.A2 Quantum systems; PH.O.A3 Gravitation and the cosmos; PH.O.A4 Matter in equilibrium; PH.O.A5 Matter out of equilibrium\n- CH (Chemistry): CH.O.A1 Composition and identity; CH.O.A2 Structure and bonding; CH.O.A3 Equilibrium and energy; CH.O.A4 Rates and mechanisms; CH.O.A5 Synthesis and analysis\n- BI (Biology): BI.O.A1 Heritable information; BI.O.A2 Cell; BI.O.A3 Organism; BI.O.A4 Descent; BI.O.A5 Ecological interaction\n- EA (Earth: geography and geology): EA.O.A1 Materials; EA.O.A2 Internal motion; EA.O.A3 Deep time; EA.O.A4 Surface and fluid envelopes; EA.O.A5 Human spatial organization\n- MD (Medicine and the drug): MD.O.A1 Disorders; MD.O.A2 Causes and mechanisms; MD.O.A3 Diagnosis and prognosis; MD.O.A4 Treatment and drugs; MD.O.A5 Populations and prevention\n- EN (Engineering): EN.O.A1 Force and deformation; EN.O.A2 Mass and momentum; EN.O.A3 Energy and entropy; EN.O.A4 Electromagnetic state; EN.O.A5 Composition and microstructure (each a balance that closes an artefact model)\n- CS (Computer science): CS.O.A1 Correctness; CS.O.A2 Cost; CS.O.A3 Coordination; CS.O.A4 Learning; CS.O.A5 Protection\n- MS (Mind, brain and society): MS.O.A1 Mental processes; MS.O.A2 Nervous systems; MS.O.A3 Persons; MS.O.A4 Interactions; MS.O.A5 Social structures\n- EC (Economics): EC.O.A1 Choice; EC.O.A2 Markets; EC.O.A3 Mechanisms and institutions; EC.O.A4 The aggregate economy; EC.O.A5 Welfare and public choice\n- BU (Business, trade, tax and accounting): BU.O.A1 Accounts; BU.O.A2 Finance; BU.O.A3 Operations and organisation; BU.O.A4 Marketing; BU.O.A5 Trade and tax\n- ST (Strategy): ST.O.A1 Actors; ST.O.A2 The game; ST.O.A3 Coercion; ST.O.A4 Conduct; ST.O.A5 Information\n- PO (Politics): PO.O.A1 Authority; PO.O.A2 Institutions; PO.O.A3 Political behaviour; PO.O.A4 Policy and administration; PO.O.A5 Relations among states\n- LA (Law): LA.O.A1 Sources; LA.O.A2 Obligations; LA.O.A3 Wrongs and remedies; LA.O.A4 Public power; LA.O.A5 Forums and proof\n- PL (Philosophy): PL.O.A1 Being; PL.O.A2 Knowledge and mind; PL.O.A3 Meaning and inference; PL.O.A4 Value; PL.O.A5 Standing of the sciences and mathematics\n- HI (History): HI.O.A1 Occurrence; HI.O.A2 Time; HI.O.A3 Cause; HI.O.A4 Change and continuity; HI.O.A5 Meaning and memory\n- LN (Language): LN.O.A1 Signal; LN.O.A2 Form; LN.O.A3 Meaning; LN.O.A4 Variation in use; LN.O.A5 Diversity\n- AR (Arts and literature): AR.O.A1 Medium and making; AR.O.A2 Form; AR.O.A3 Meaning; AR.O.A4 Context and reception; AR.O.A5 Value\n- RE (Religion and theology): RE.O.A1 The ultimate and the human condition; RE.O.A2 Authoritative text; RE.O.A3 Practice; RE.O.A4 Community and institution\n- ED (Education): ED.O.A1 Aims and curricula; ED.O.A2 Learners; ED.O.A3 Teaching; ED.O.A4 Assessment; ED.O.A5 Institutions and systems\n- DE (Design and the built environment): DE.O.A1 Use and need; DE.O.A2 Form; DE.O.A3 Performance in use; DE.O.A4 Place and settlement; DE.O.A5 Life of the built thing\n- AG (Agriculture, veterinary and food): AG.O.A1 Breeding; AG.O.A2 Cultivation and husbandry; AG.O.A3 Crop and animal health; AG.O.A4 Food; AG.O.A5 Farming systems\n- EV (Environmental science): EV.O.A1 Pressures; EV.O.A2 States; EV.O.A3 Impacts; EV.O.A4 Responses; EV.O.A5 Limits\n- IS (Information and the record): IS.O.A1 Items; IS.O.A2 Description; IS.O.A3 Arrangement; IS.O.A4 Retrieval; IS.O.A5 Preservation\n- IK (Indigenous knowledge (ANZSRC 45)): IK.O.A1 Ordering principles; IK.O.A2 Relations to land and waters; IK.O.A3 Governance and custom; IK.O.A4 Transmission; IK.O.A5 Research and data";
+const DEFW={MA:"W1",PH:"W4",CH:"W3",BI:"W3",EA:"W4",MD:"W3",EN:"W11",CS:"W1",MS:"W3",EC:"W5",BU:"W12",ST:"W9",PO:"W6",LA:"W10",PL:"W9",HI:"W7",LN:"W4",AR:"W8",RE:"W8",ED:"W3",DE:"W4",AG:"W3",EV:"W5",IS:"W4",IK:"W13"};
+const W2M={W1:"M2",W2:"M5",W3:"M4",W4:"M3",W5:"M3",W6:"M6",W7:"M3",W8:"M6",W9:"M2",W10:"M2",W11:"M7",W12:"M1",W13:"M1"};
+const sc=(t,ws)=>ws.reduce((n,w)=>n+(t.includes(w)?1:0),0);
+function classify(s){
+  const t=" "+s.toLowerCase()+" ";const scores={};
+  for(const [c,f] of Object.entries(LEX.fields))scores[c]=sc(t,f.kw)+0.5*f.cells.reduce((n,cl)=>n+sc(t,cl),0);
+  const ranked=Object.entries(scores).sort((a,b)=>b[1]-a[1]);let [owner,top]=ranked[0];
+  if((t.includes("theorem")||t.includes("proof")||t.includes("question is open"))&&scores.MA>=top-1)owner="MA";
+  if(/act (19|20)\d\d|under the [a-z ]+act/.test(t)&&scores.LA>=top-2)owner="LA";
+  if(top===0)return null;
+  const cs=LEX.fields[owner].cells.map(cl=>sc(t,cl));const cell=owner+".O.A"+(cs.indexOf(Math.max(...cs))+1);
+  const w={};for(const [k,v] of Object.entries(LEX.warrants))w[k]=sc(t,v);
+  const wmax=Math.max(...Object.values(w));let warrant=wmax>0?Object.keys(w).find(k=>w[k]===wmax):DEFW[owner];
+  if((w[DEFW[owner]]||0)>=wmax)warrant=DEFW[owner];
+  if(warrant==="W13"&&owner!=="RE"&&owner!=="IK")warrant=DEFW[owner];
+  const m={};for(const [k,v] of Object.entries(LEX.methods))m[k]=sc(t,v);
+  const mmax=Math.max(...Object.values(m));const method=mmax>0?Object.keys(m).find(k=>m[k]===mmax):W2M[warrant];
+  const alts=ranked.slice(1,4).filter(([c,s])=>s>0&&s>=top-1).map(([c])=>c);
+  return {owner,cell,warrant,method,alts,conf:top/(top+ranked[1][1]+1)};
+}
+function fieldsFor(s){const t=" "+s.toLowerCase()+" ";return Object.entries(LEX.fields).map(([c,f])=>{const cs=f.cells.map(cl=>sc(t,cl));return {c,score:sc(t,f.kw)+0.5*cs.reduce((a,b)=>a+b,0),cell:cs.indexOf(Math.max(...cs))}}).sort((a,b)=>b.score-a.score)}
+const $=id=>document.getElementById(id);
+function el(tag,txt,cls){const e=document.createElement(tag);if(txt!=null)e.textContent=txt;if(cls)e.className=cls;return e}
+// ---- modes ----
+const MODES=["classify","whole","relate"];
+MODES.forEach(m=>$("m-"+m).addEventListener("click",()=>{MODES.forEach(x=>{$("mode-"+x).hidden=x!==m;$("m-"+x).setAttribute("aria-selected",x===m?"true":"false")})}));
+// ---- classify ----
+const sel=$("claimSel");const opt0=el("option","Examples from the pilot…");opt0.value="";sel.appendChild(opt0);
+D.claims.forEach(c=>{const o=el("option",c.id+". "+c.claim);o.value=c.id;sel.appendChild(o)});
+sel.addEventListener("change",()=>{const c=D.claims.find(x=>x.id===sel.value);if(c){$("stmt").value=c.claim;runClassify()}});
+function showResult(r,note){
+  const set=(id,v)=>$(id).textContent=v||"–";
+  if(!r){["sOwner","sCell","sW","sM"].forEach(i=>set(i,"?"));["sOwnerN","sCellN","sWN","sMN"].forEach(i=>set(i,""));$("sNote").textContent="The built-in engine found no field cues in this statement. Try a fuller sentence, or use deep analysis.";return}
+  const p=D.p[r.owner]||{name:r.owner,cells:[]};const ci=parseInt(String(r.cell).split(".A")[1]||"1",10)-1;
+  set("sOwner",r.owner);set("sOwnerN",p.name);set("sCell",r.cell);set("sCellN",p.cells[ci]||"");
+  set("sW",r.warrant);set("sWN",(W[r.warrant]||[""])[0]);set("sM",r.method);set("sMN",M[r.method]||"");
+  $("sNote").textContent=note||"";
+}
+function runClassify(){const s=$("stmt").value.trim();if(!s)return;const r=classify(s);
+  let note="";if(r){note=r.alts.length?("Close alternatives: "+r.alts.map(a=>a+" ("+D.p[a].name+")").join(", ")+". The ownership rule decides: the field whose evidence can establish the claim owns it."):"Built-in engine result.";
+  if(/māori|maori|tikanga|whakapapa|iwi|hapū|kaitiaki|mātauranga|indigenous/i.test(s))note+=" Indigenous-knowledge placements are provisional until Māori-led review.";}
+  showResult(r,note);$("deepOut").hidden=true}
+$("runClassify").addEventListener("click",runClassify);
+// ---- whole view ----
+function runWhole(){const s=$("subject").value.trim();if(!s)return;const t=$("wholeTable");t.textContent="";
+  const hr=el("tr");["Field","What this field asks of the subject","Evidence it would need"].forEach(h=>hr.appendChild(el("th",h)));t.appendChild(hr);
+  const rel=fieldsFor(s);const order=[...rel.filter(x=>x.score>0),...rel.filter(x=>x.score===0)];
+  order.forEach(({c,score,cell})=>{const p=D.p[c];const tr=el("tr");const td1=el("td");td1.appendChild(el("span",c,"code"));td1.appendChild(document.createTextNode(" "+p.name));if(score>0)td1.appendChild(el("div","Strong link","tag"));
+    const q=Q[c]?Q[c](s):"What does "+p.name.toLowerCase()+" establish about "+s+"?";
+    tr.appendChild(td1);tr.appendChild(el("td",q));tr.appendChild(el("td",(W[DEFW[c]]||[""])[0]));t.appendChild(tr)});
+  $("wholeAI").hidden=true}
+const Q={
+ MA:s=>"Which quantities in "+s+" can be modelled, and which results (optimisation, probability, geometry) apply with their conditions met?",
+ PH:s=>"Which physical laws bound "+s+": optics, energy, heat, signals? What are the hard limits?",
+ CH:s=>"What is "+s+" made of, and which materials, coatings or reactions matter to safety and durability?",
+ BI:s=>"How does "+s+" interact with living function: the eye, the body, other organisms?",
+ EA:s=>"Where and in which environments will "+s+" exist, and what does place change?",
+ MD:s=>"What health benefits or harms could "+s+" cause, and how would they be detected and tested?",
+ EN:s=>"Which specification must "+s+" meet, under which loads, and how will it be verified?",
+ CS:s=>"What computation does "+s+" require: correctness, cost, coordination, learning and protection?",
+ MS:s=>"How will people perceive, use, trust and behave around "+s+"? What changes socially?",
+ EC:s=>"Who pays, who gains, and how do prices and incentives shape "+s+"?",
+ BU:s=>"What is the business model for "+s+": costs, channels, accounting and trade?",
+ ST:s=>"Who are the rivals and adversaries around "+s+", and what moves would change the game?",
+ PO:s=>"Who has authority to permit, restrict or fund "+s+", and how will that be decided?",
+ LA:s=>"Which legal duties, rights and liabilities attach to "+s+" in each jurisdiction?",
+ PL:s=>"What ethical questions does "+s+" raise, and which arguments bear on them?",
+ HI:s=>"What precedents does the record show for "+s+", and what happened to them?",
+ LN:s=>"How is "+s+" named, described and talked about, and in which languages?",
+ AR:s=>"What form, style and meaning does "+s+" carry, and how will it be received?",
+ RE:s=>"Do any traditions hold views or practices that bear on "+s+"?",
+ ED:s=>"What must people learn to use "+s+" well, and how would that be taught?",
+ DE:s=>"How should "+s+" be shaped for real use, comfort and context?",
+ AG:s=>"Does "+s+" touch food, farming or animals in production?",
+ EV:s=>"What environmental pressures and impacts does "+s+" create across its life?",
+ IS:s=>"What records and data does "+s+" create, and how are they described, kept and retrieved?",
+ IK:s=>"Do Indigenous knowledge holders have standing or interests in "+s+"? (Requires Māori-led and Indigenous-led review.)"};
+$("runWhole").addEventListener("click",runWhole);
+// ---- relate ----
+function runRelate(){const a=$("relA").value.trim(),b=$("relB").value.trim();if(!a||!b)return;const out=$("relOut");out.textContent="";
+  const ra=fieldsFor(a).filter(x=>x.score>0).slice(0,3),rb=fieldsFor(b).filter(x=>x.score>0).slice(0,3);
+  const tbl=el("table");tbl.className="data";const hr=el("tr");["",a,b].forEach(h=>hr.appendChild(el("th",h)));tbl.appendChild(hr);
+  const row=(lab,fa,fb)=>{const tr=el("tr");tr.appendChild(el("td",lab));tr.appendChild(el("td",fa));tr.appendChild(el("td",fb));tbl.appendChild(tr)};
+  const nm=r=>r.length?r.map(x=>x.c+" "+D.p[x.c].name).join("; "):"No strong cue: try a fuller description";
+  row("Owning fields",nm(ra),nm(rb));
+  row("Main cell",ra[0]?ra[0].c+".O.A"+(ra[0].cell+1)+" "+D.p[ra[0].c].cells[ra[0].cell]:"–",rb[0]?rb[0].c+".O.A"+(rb[0].cell+1)+" "+D.p[rb[0].c].cells[rb[0].cell]:"–");
+  row("Evidence it owes",ra[0]?(W[DEFW[ra[0].c]]||[""])[0]:"–",rb[0]?(W[DEFW[rb[0].c]]||[""])[0]:"–");
+  const w=el("div","tbl");w.appendChild(tbl);out.appendChild(w);
+  const shared=ra.filter(x=>rb.some(y=>y.c===x.c)).map(x=>x.c);
+  const p=el("p");p.textContent=shared.length?("Shared ground: both sit in "+shared.map(c=>D.p[c].name).join(" and ")+". The relationship can be tested inside that field's own standard of evidence."):
+   (ra[0]&&rb[0]?("A border relationship: "+D.p[ra[0].c].name+" and "+D.p[rb[0].c].name+" meet here. Each side keeps its own warrant: a claim of the first kind cannot be settled by evidence of the second. Look for the sentence that joins them, and give it one owner."):"");
+  out.appendChild(p);$("relAI").hidden=true}
+$("runRelate").addEventListener("click",runRelate);
+// ---- Claude (sample capability) ----
+let sample=null;const AIERR={not_granted:"Permission was not given, so deep analysis is off for this visit.",rate_limited:"Too many requests just now. Please try again in a minute.",session_expired:"Please sign in to Claude again.",refused:"Claude declined this request. Try rewording it.",invalid_json:"The answer came back in an unexpected form. Please try again."};
+function aiErr(box,e){box.hidden=false;box.textContent=AIERR[e&&e.code]||"Deep analysis is unavailable just now.";if(["not_granted","sampling_disabled","not_declared","capability_disabled","capability_removed"].includes(e&&e.code))document.querySelectorAll(".ai-only").forEach(b=>b.hidden=true)}
+async function ask(box,btn,prompt,render,tier){btn.disabled=true;box.hidden=false;box.textContent="Thinking…";
+  try{const r=await sample.json(prompt,{modelTier:tier||"default"});box.textContent="";render(r,box)}catch(e){aiErr(box,e)}finally{btn.disabled=false}}
+const CTX="You are applying Taxonomy, a classification of human knowledge into 25 fields. Codebook:\n"+CODEBOOK+"\n\n";
+(async()=>{try{if(!window.claude||!claude.use)return;sample=await claude.use("sample");if(sample){document.querySelectorAll(".ai-only").forEach(b=>b.hidden=false);$("aiStatus").textContent="Deep analysis is available. It uses Claude through your own Claude account and asks your permission the first time."}}catch(e){}})();
+$("deepClassify").addEventListener("click",()=>{const s=$("stmt").value.trim();if(!s)return;
+  ask($("deepOut"),$("deepClassify"),CTX+"Classify this statement. Reply with only JSON: {\"owner\":\"XX\",\"cell\":\"XX.O.An\",\"warrant\":\"Wn\",\"method\":\"Mn\",\"reason\":\"one sentence\",\"uses\":[\"other fields or cells it relies on\"],\"hypotheses\":\"conditions under which it holds, or empty\",\"check\":\"what evidence would confirm or defeat it\"}\n\nStatement: "+s,(r,box)=>{
+   showResult({owner:r.owner,cell:r.cell,warrant:r.warrant,method:r.method},"Deep analysis by Claude.");
+   [["Reason",r.reason],["Relies on",(r.uses||[]).join(", ")],["Holds when",r.hypotheses],["How to check it",r.check]].forEach(([k,v])=>{if(v){const p=el("p");p.appendChild(el("b",k+": "));p.appendChild(document.createTextNode(String(v)));box.appendChild(p)}})},"quick")});
+$("deepWhole").addEventListener("click",()=>{const s=$("subject").value.trim();if(!s)return;
+  ask($("wholeAI"),$("deepWhole"),CTX+"Subject: "+s+"\nLook at this subject from the position of the whole of knowledge. Choose the 10 fields with the most to contribute. For each, give the cell, one sharp question, one concrete insight or risk, and the warrant that would settle it. Then name up to 3 blind spots: fields people usually ignore for this subject that matter. Reply with only JSON: {\"views\":[{\"field\":\"XX\",\"cell\":\"XX.O.An\",\"question\":\"...\",\"insight\":\"...\",\"warrant\":\"Wn\"}],\"blind_spots\":[{\"field\":\"XX\",\"why\":\"...\"}],\"synthesis\":\"two sentences\"}",(r,box)=>{
+   box.appendChild(el("h3","Analysis by Claude"));const tb=el("table");tb.className="data";const hr=el("tr");["Field","Question","Insight","Evidence"].forEach(h=>hr.appendChild(el("th",h)));tb.appendChild(hr);
+   (r.views||[]).forEach(v=>{const tr=el("tr");tr.appendChild(el("td",(v.cell||v.field)+" "+((D.p[v.field]||{}).name||"")));tr.appendChild(el("td",v.question));tr.appendChild(el("td",v.insight));tr.appendChild(el("td",(v.warrant||"")+" "+((W[v.warrant]||[""])[0])));tb.appendChild(tr)});
+   const w=el("div","tbl");w.appendChild(tb);box.appendChild(w);
+   if((r.blind_spots||[]).length){box.appendChild(el("h3","Blind spots"));const ul=el("ul");r.blind_spots.forEach(b=>ul.appendChild(el("li",((D.p[b.field]||{}).name||b.field)+": "+b.why)));box.appendChild(ul)}
+   if(r.synthesis){const p=el("p");p.appendChild(el("b","Synthesis: "));p.appendChild(document.createTextNode(r.synthesis));box.appendChild(p)}})});
+$("deepRelate").addEventListener("click",()=>{const a=$("relA").value.trim(),b=$("relB").value.trim();if(!a||!b)return;
+  ask($("relAI"),$("deepRelate"),CTX+"Relate A and B using Taxonomy. A: "+a+"\nB: "+b+"\nReply with only JSON: {\"a\":{\"field\":\"XX\",\"cell\":\"XX.O.An\"},\"b\":{\"field\":\"XX\",\"cell\":\"XX.O.An\"},\"relation\":\"how they connect, two sentences\",\"joining_claim\":\"the single sentence that connects them\",\"joining_owner\":\"XX\",\"warrant_gap\":\"where evidence of one kind is wrongly used for the other, or empty\",\"questions\":[\"three questions that would advance understanding\"]}",(r,box)=>{
+   box.appendChild(el("h3","Analysis by Claude"));
+   [["A sits in",(r.a||{}).cell+" "+(((D.p[(r.a||{}).field]||{}).name)||"")],["B sits in",(r.b||{}).cell+" "+(((D.p[(r.b||{}).field]||{}).name)||"")],["Relationship",r.relation],["The joining claim",(r.joining_claim||"")+(r.joining_owner?" (owner: "+r.joining_owner+")":"")],["Evidence gap",r.warrant_gap]].forEach(([k,v])=>{if(v&&String(v).trim()){const p=el("p");p.appendChild(el("b",k+": "));p.appendChild(document.createTextNode(String(v)));box.appendChild(p)}});
+   if((r.questions||[]).length){const ul=el("ul");r.questions.forEach(q=>ul.appendChild(el("li",q)));box.appendChild(ul)}})});
+runClassify();runWhole();runRelate();
+
+document.getElementById('interest').addEventListener('submit',e=>{e.preventDefault();const n=document.getElementById('fName').value.trim(),m=document.getElementById('fEmail').value.trim();document.getElementById('formmsg').textContent=(n&&m)?('Thank you, '+n+'. Registration opens shortly; this preview does not yet send details.'):'Please enter your name and email.'});
+let start='home';try{const h=(location.hash||'').slice(1);if(SECTIONS.some(s=>s[0]===h))start=h}catch(e){}
+go(start,true);
+</script>
