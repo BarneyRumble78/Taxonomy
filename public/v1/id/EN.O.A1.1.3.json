@@ -1,0 +1,17 @@
+{
+ "id": "EN.O.A1.1.3",
+ "label": "Lumped vibration models",
+ "owner": "EN",
+ "home": "O.A1.1",
+ "uses": [
+  "MA.O.A4"
+ ],
+ "text": "EN.O.A1.1.3 Lumped vibration models: single- and multi-degree-of-freedom systems with linear springs and viscous damping. Natural frequency ωn = √(k/m) for an undamped linear oscillator.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W1, W4, W2",
+  "standard": "Prediction matches test within stated uncertainty; code calibration meets the target reliability index",
+  "defeaters": "Hypothesis outside range (slenderness, small strain, linearity); imperfection sensitivity; residual stress; unmodelled failure mode"
+ },
+ "field_url": "/v1/field/EN.json"
+}

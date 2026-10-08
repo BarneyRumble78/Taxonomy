@@ -1,0 +1,820 @@
+{
+ "code": "PH",
+ "name": "Physics",
+ "dimension": "the governing constants of the claim",
+ "cells": [
+  {
+   "id": "PH.O.A1",
+   "name": "Classical motion and fields"
+  },
+  {
+   "id": "PH.O.A2",
+   "name": "Quantum systems"
+  },
+  {
+   "id": "PH.O.A3",
+   "name": "Gravitation and the cosmos"
+  },
+  {
+   "id": "PH.O.A4",
+   "name": "Matter in equilibrium"
+  },
+  {
+   "id": "PH.O.A5",
+   "name": "Matter out of equilibrium"
+  }
+ ],
+ "objects": [
+  {
+   "id": "PH.O.A1",
+   "label": "Classical motion and fields",
+   "uses": [],
+   "text": "PH.O.A1 Classical motion and fields"
+  },
+  {
+   "id": "PH.O.A1.1",
+   "label": "Particle mechanics",
+   "uses": [],
+   "text": "PH.O.A1.1 Particle mechanics. Newton's laws hold in inertial frames for speeds much below c."
+  },
+  {
+   "id": "PH.O.A1.1.1",
+   "label": "Lagrangian and Hamiltonian mechanics are equivalent where the Legendre",
+   "uses": [],
+   "text": "PH.O.A1.1.1 Lagrangian and Hamiltonian mechanics are equivalent where the Legendre transform is regular."
+  },
+  {
+   "id": "PH.O.A1.1.2",
+   "label": "Liouville's theorem",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "PH.O.A1.1.2 Liouville's theorem: Hamiltonian flow preserves phase-space volume. The theorem is MA.O.A4; its physical use is here."
+  },
+  {
+   "id": "PH.O.A1.1.3",
+   "label": "Rigid-body motion, oscillators and small vibrations.",
+   "uses": [],
+   "text": "PH.O.A1.1.3 Rigid-body motion, oscillators and small vibrations."
+  },
+  {
+   "id": "PH.O.A1.2",
+   "label": "Classical fields",
+   "uses": [],
+   "text": "PH.O.A1.2 Classical fields. Maxwell's equations govern electromagnetic fields in vacuum, and in linear media given constitutive relations."
+  },
+  {
+   "id": "PH.O.A1.2.1",
+   "label": "Electrostatics and magnetostatics, including the quasistatic circuit l",
+   "uses": [],
+   "text": "PH.O.A1.2.1 Electrostatics and magnetostatics, including the quasistatic circuit laws (Kirchhoff) as the limit of slow change."
+  },
+  {
+   "id": "PH.O.A1.2.2",
+   "label": "Electromagnetic waves; c is the propagation speed in vacuum.",
+   "uses": [],
+   "text": "PH.O.A1.2.2 Electromagnetic waves; c is the propagation speed in vacuum."
+  },
+  {
+   "id": "PH.O.A1.2.3",
+   "label": "Classical optics",
+   "uses": [],
+   "text": "PH.O.A1.2.3 Classical optics: geometric optics in the short-wavelength limit; diffraction and interference."
+  },
+  {
+   "id": "PH.O.A1.3",
+   "label": "Special relativity",
+   "uses": [],
+   "text": "PH.O.A1.3 Special relativity. The laws take the same form in all inertial frames, and c is frame-invariant."
+  },
+  {
+   "id": "PH.O.A1.3.1",
+   "label": "Lorentz transformations; time dilation; length contraction.",
+   "uses": [],
+   "text": "PH.O.A1.3.1 Lorentz transformations; time dilation; length contraction."
+  },
+  {
+   "id": "PH.O.A1.3.2",
+   "label": "Mass–energy equivalence, E = mc² for a body at rest.",
+   "uses": [],
+   "text": "PH.O.A1.3.2 Mass–energy equivalence, E = mc² for a body at rest."
+  },
+  {
+   "id": "PH.O.A1.4",
+   "label": "Symmetry and conservation",
+   "uses": [
+    "MA",
+    "MA.O.A4"
+   ],
+   "text": "PH.O.A1.4 Symmetry and conservation. Noether: each continuous symmetry of a local action yields a conserved current. The theorem is MA (uses MA.O.A4); the physical conservation law is PH."
+  },
+  {
+   "id": "PH.O.A1.4.1",
+   "label": "Energy, momentum and angular momentum from time, space and rotation sy",
+   "uses": [],
+   "text": "PH.O.A1.4.1 Energy, momentum and angular momentum from time, space and rotation symmetry."
+  },
+  {
+   "id": "PH.O.A1.4.2",
+   "label": "Charge conservation from the gauge symmetry of electrodynamics.",
+   "uses": [],
+   "text": "PH.O.A1.4.2 Charge conservation from the gauge symmetry of electrodynamics."
+  },
+  {
+   "id": "PH.O.A1.5",
+   "label": "Continuum mechanics",
+   "uses": [],
+   "text": "PH.O.A1.5 Continuum mechanics. Solids and fluids are treated as continua where the medium is smooth on the scale of interest. Cauchy stress gives traction t = σᵀn."
+  },
+  {
+   "id": "PH.O.A1.5.1",
+   "label": "Linear elasticity",
+   "uses": [],
+   "text": "PH.O.A1.5.1 Linear elasticity: Hooke's law for small strain in a linear elastic solid."
+  },
+  {
+   "id": "PH.O.A1.5.2",
+   "label": "Constitutive laws close the balance equations",
+   "uses": [
+    "EN"
+   ],
+   "text": "PH.O.A1.5.2 Constitutive laws close the balance equations. The artefact meeting a specification is EN."
+  },
+  {
+   "id": "PH.O.A2",
+   "label": "Quantum systems",
+   "uses": [],
+   "text": "PH.O.A2 Quantum systems"
+  },
+  {
+   "id": "PH.O.A2.1",
+   "label": "States and dynamics",
+   "uses": [],
+   "text": "PH.O.A2.1 States and dynamics. A closed system's state evolves unitarily by the Schrödinger equation. The Born rule gives outcome probabilities."
+  },
+  {
+   "id": "PH.O.A2.1.1",
+   "label": "The uncertainty relation σ_x σ_p ≥ ħ/2 holds for any state (the theore",
+   "uses": [
+    "MA.O.A2"
+   ],
+   "text": "PH.O.A2.1.1 The uncertainty relation σ_x σ_p ≥ ħ/2 holds for any state (the theorem is MA.O.A2, as operator algebra)."
+  },
+  {
+   "id": "PH.O.A2.1.2",
+   "label": "Decoherence",
+   "uses": [],
+   "text": "PH.O.A2.1.2 Decoherence: interaction with an environment suppresses interference in a preferred basis. It does not by itself select a single outcome."
+  },
+  {
+   "id": "PH.O.A2.1.3",
+   "label": "Tunnelling and bound states.",
+   "uses": [],
+   "text": "PH.O.A2.1.3 Tunnelling and bound states."
+  },
+  {
+   "id": "PH.O.A2.2",
+   "label": "Non-locality",
+   "uses": [],
+   "text": "PH.O.A2.2 Non-locality. Bell: any local hidden-variable theory with measurement independence obeys the CHSH bound S ≤ 2. Quantum mechanics reaches 2√2 (the Tsirelson bound). Loophole-free violations were reported in 2015 (Delft, Vienna, NIST)."
+  },
+  {
+   "id": "PH.O.A2.2.1",
+   "label": "Entanglement as a resource",
+   "uses": [
+    "CS.O.A5"
+   ],
+   "text": "PH.O.A2.2.1 Entanglement as a resource: teleportation, quantum key distribution. Deployed protocols are CS.O.A5."
+  },
+  {
+   "id": "PH.O.A2.2.2",
+   "label": "No-signalling",
+   "uses": [],
+   "text": "PH.O.A2.2.2 No-signalling: entanglement cannot transmit information faster than light."
+  },
+  {
+   "id": "PH.O.A2.3",
+   "label": "Quantum fields and particles",
+   "uses": [],
+   "text": "PH.O.A2.3 Quantum fields and particles. The Standard Model describes three of the four known interactions, with gauge group SU(3)×SU(2)×U(1)."
+  },
+  {
+   "id": "PH.O.A2.3.1",
+   "label": "Spin–statistics and CPT hold for local, Lorentz-invariant quantum fiel",
+   "uses": [],
+   "text": "PH.O.A2.3.1 Spin–statistics and CPT hold for local, Lorentz-invariant quantum field theories with energy bounded below."
+  },
+  {
+   "id": "PH.O.A2.3.2",
+   "label": "The Higgs boson was observed in 2012 (ATLAS and CMS).",
+   "uses": [],
+   "text": "PH.O.A2.3.2 The Higgs boson was observed in 2012 (ATLAS and CMS)."
+  },
+  {
+   "id": "PH.O.A2.3.3",
+   "label": "Neutrino oscillation implies non-zero neutrino masses",
+   "uses": [],
+   "text": "PH.O.A2.3.3 Neutrino oscillation implies non-zero neutrino masses. The mass ordering is OPEN."
+  },
+  {
+   "id": "PH.O.A2.3.4",
+   "label": "Renormalisation",
+   "uses": [],
+   "text": "PH.O.A2.3.4 Renormalisation: physics at low energy is insensitive to most details at high energy, for renormalisable theories and effective field theories."
+  },
+  {
+   "id": "PH.O.A2.4",
+   "label": "Atomic, molecular and optical physics",
+   "uses": [
+    "CH"
+   ],
+   "text": "PH.O.A2.4 Atomic, molecular and optical physics. Atomic level structure, spectra, and the interaction of light with atoms. The chemical bond is CH; PH owns the level structure."
+  },
+  {
+   "id": "PH.O.A2.4.1",
+   "label": "Lasers",
+   "uses": [],
+   "text": "PH.O.A2.4.1 Lasers: stimulated emission in a medium with population inversion."
+  },
+  {
+   "id": "PH.O.A2.4.2",
+   "label": "Laser cooling and Bose–Einstein condensation of dilute gases (first ac",
+   "uses": [],
+   "text": "PH.O.A2.4.2 Laser cooling and Bose–Einstein condensation of dilute gases (first achieved 1995)."
+  },
+  {
+   "id": "PH.O.A2.4.3",
+   "label": "Atomic clocks and precision measurement",
+   "uses": [],
+   "text": "PH.O.A2.4.3 Atomic clocks and precision measurement. The SI second has been defined by the caesium-133 hyperfine transition since 1967."
+  },
+  {
+   "id": "PH.O.A2.5",
+   "label": "Interpretation of quantum mechanics",
+   "uses": [
+    "PL"
+   ],
+   "text": "PH.O.A2.5 Interpretation of quantum mechanics. CONTESTED placement. The empirical content stays here. Copenhagen, many-worlds, pilot-wave and collapse theories, as arguments, are PL."
+  },
+  {
+   "id": "PH.O.A3",
+   "label": "Gravitation and the cosmos",
+   "uses": [],
+   "text": "PH.O.A3 Gravitation and the cosmos"
+  },
+  {
+   "id": "PH.O.A3.1",
+   "label": "Newtonian gravity",
+   "uses": [],
+   "text": "PH.O.A3.1 Newtonian gravity. The inverse-square attraction is valid for weak fields and speeds much below c."
+  },
+  {
+   "id": "PH.O.A3.1.1",
+   "label": "Kepler's laws follow for two point masses.",
+   "uses": [],
+   "text": "PH.O.A3.1.1 Kepler's laws follow for two point masses."
+  },
+  {
+   "id": "PH.O.A3.1.2",
+   "label": "Celestial mechanics",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "PH.O.A3.1.2 Celestial mechanics: perturbation theory for many bodies. The n-body problem's mathematics is MA.O.A4."
+  },
+  {
+   "id": "PH.O.A3.2",
+   "label": "General relativity",
+   "uses": [],
+   "text": "PH.O.A3.2 General relativity. Einstein's field equations relate spacetime curvature to stress-energy. The equivalence principle holds locally."
+  },
+  {
+   "id": "PH.O.A3.2.1",
+   "label": "Classical tests",
+   "uses": [],
+   "text": "PH.O.A3.2.1 Classical tests: Mercury's perihelion, light deflection, gravitational redshift."
+  },
+  {
+   "id": "PH.O.A3.2.2",
+   "label": "Black holes",
+   "uses": [
+    "MA.O.A3"
+   ],
+   "text": "PH.O.A3.2.2 Black holes: the Schwarzschild and Kerr solutions. Singularity theorems (Penrose, Hawking) assume energy conditions and trapped surfaces (uses MA.O.A3)."
+  },
+  {
+   "id": "PH.O.A3.2.3",
+   "label": "Gravitational waves",
+   "uses": [],
+   "text": "PH.O.A3.2.3 Gravitational waves: first detected 14 September 2015, announced February 2016 (LIGO)."
+  },
+  {
+   "id": "PH.O.A3.3",
+   "label": "Astrophysics",
+   "uses": [],
+   "text": "PH.O.A3.3 Astrophysics. Stars, compact objects, galaxies."
+  },
+  {
+   "id": "PH.O.A3.3.1",
+   "label": "Stellar structure and nucleosynthesis.",
+   "uses": [],
+   "text": "PH.O.A3.3.1 Stellar structure and nucleosynthesis."
+  },
+  {
+   "id": "PH.O.A3.3.2",
+   "label": "The Chandrasekhar limit",
+   "uses": [],
+   "text": "PH.O.A3.3.2 The Chandrasekhar limit: about 1.4 solar masses for a non-rotating white dwarf supported by electron degeneracy pressure."
+  },
+  {
+   "id": "PH.O.A3.3.3",
+   "label": "Neutron stars, pulsars, accretion.",
+   "uses": [],
+   "text": "PH.O.A3.3.3 Neutron stars, pulsars, accretion."
+  },
+  {
+   "id": "PH.O.A3.4",
+   "label": "Cosmology",
+   "uses": [],
+   "text": "PH.O.A3.4 Cosmology. ΛCDM fits the expansion history, the cosmic microwave background and large-scale structure."
+  },
+  {
+   "id": "PH.O.A3.4.1",
+   "label": "Hubble–Lemaître expansion",
+   "uses": [],
+   "text": "PH.O.A3.4.1 Hubble–Lemaître expansion. The \"Hubble tension\" between early- and late-universe measurements is OPEN."
+  },
+  {
+   "id": "PH.O.A3.4.2",
+   "label": "The CMB, discovered 1965.",
+   "uses": [],
+   "text": "PH.O.A3.4.2 The CMB, discovered 1965."
+  },
+  {
+   "id": "PH.O.A3.4.3",
+   "label": "Dark matter and dark energy",
+   "uses": [],
+   "text": "PH.O.A3.4.3 Dark matter and dark energy: inferred from gravity; their identities are OPEN."
+  },
+  {
+   "id": "PH.O.A3.4.4",
+   "label": "Inflation",
+   "uses": [],
+   "text": "PH.O.A3.4.4 Inflation: a CONTESTED programme with supporting but not decisive evidence."
+  },
+  {
+   "id": "PH.O.A3.5",
+   "label": "Quantum gravity",
+   "uses": [],
+   "text": "PH.O.A3.5 Quantum gravity. OPEN."
+  },
+  {
+   "id": "PH.O.A3.5.1",
+   "label": "Bekenstein–Hawking entropy S = k_B c³ A / (4Għ) for a black hole of ho",
+   "uses": [],
+   "text": "PH.O.A3.5.1 Bekenstein–Hawking entropy S = k_B c³ A / (4Għ) for a black hole of horizon area A. (The v1 omission of k_B is fixed.)"
+  },
+  {
+   "id": "PH.O.A3.5.2",
+   "label": "Hawking radiation",
+   "uses": [],
+   "text": "PH.O.A3.5.2 Hawking radiation: a semiclassical prediction (quantum fields on a curved background), not yet observed for astrophysical black holes."
+  },
+  {
+   "id": "PH.O.A3.5.3",
+   "label": "Programmes",
+   "uses": [],
+   "text": "PH.O.A3.5.3 Programmes: string theory, loop quantum gravity, asymptotic safety. All lack decisive empirical tests."
+  },
+  {
+   "id": "PH.O.A4",
+   "label": "Matter in equilibrium",
+   "uses": [],
+   "text": "PH.O.A4 Matter in equilibrium"
+  },
+  {
+   "id": "PH.O.A4.1",
+   "label": "Thermodynamics.",
+   "uses": [],
+   "text": "PH.O.A4.1 Thermodynamics."
+  },
+  {
+   "id": "PH.O.A4.1.1",
+   "label": "First law",
+   "uses": [],
+   "text": "PH.O.A4.1.1 First law: the change in internal energy of a closed system equals heat in minus work out (sign convention stated)."
+  },
+  {
+   "id": "PH.O.A4.1.2",
+   "label": "Second law",
+   "uses": [],
+   "text": "PH.O.A4.1.2 Second law: the entropy of an isolated system does not decrease. Carnot efficiency 1 − T_c/T_h bounds any engine between two reservoirs."
+  },
+  {
+   "id": "PH.O.A4.1.3",
+   "label": "Third law",
+   "uses": [],
+   "text": "PH.O.A4.1.3 Third law: entropy approaches a constant as T → 0, for systems with a non-degenerate ground state."
+  },
+  {
+   "id": "PH.O.A4.2",
+   "label": "Statistical mechanics",
+   "uses": [],
+   "text": "PH.O.A4.2 Statistical mechanics. Ensembles derive thermodynamics from microstates. The microcanonical ensemble assumes equilibrium and equal a priori probability."
+  },
+  {
+   "id": "PH.O.A4.2.1",
+   "label": "Boltzmann entropy S = k_B ln W.",
+   "uses": [],
+   "text": "PH.O.A4.2.1 Boltzmann entropy S = k_B ln W."
+  },
+  {
+   "id": "PH.O.A4.2.2",
+   "label": "Quantum statistics",
+   "uses": [],
+   "text": "PH.O.A4.2.2 Quantum statistics: Fermi–Dirac and Bose–Einstein distributions for indistinguishable particles."
+  },
+  {
+   "id": "PH.O.A4.2.3",
+   "label": "Ergodic hypothesis",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "PH.O.A4.2.3 Ergodic hypothesis: CONTESTED as a justification. The ergodic theorems are MA.O.A4."
+  },
+  {
+   "id": "PH.O.A4.3",
+   "label": "Phase transitions.",
+   "uses": [],
+   "text": "PH.O.A4.3 Phase transitions."
+  },
+  {
+   "id": "PH.O.A4.3.1",
+   "label": "Clapeyron equation",
+   "uses": [],
+   "text": "PH.O.A4.3.1 Clapeyron equation: dP/dT = L/(T Δv) on a coexistence line."
+  },
+  {
+   "id": "PH.O.A4.3.2",
+   "label": "Clausius–Clapeyron",
+   "uses": [],
+   "text": "PH.O.A4.3.2 Clausius–Clapeyron: d ln P/dT = L/(RT²). It adds an ideal vapour, negligible condensed-phase volume and constant L. (The v1 mislabel is fixed.)"
+  },
+  {
+   "id": "PH.O.A4.3.3",
+   "label": "Critical phenomena and universality",
+   "uses": [],
+   "text": "PH.O.A4.3.3 Critical phenomena and universality: systems with the same dimension, symmetry and interaction range share critical exponents. Renormalisation-group explanation (Wilson)."
+  },
+  {
+   "id": "PH.O.A4.3.4",
+   "label": "Mermin–Wagner",
+   "uses": [],
+   "text": "PH.O.A4.3.4 Mermin–Wagner: no spontaneous breaking of a continuous symmetry at T > 0 in d ≤ 2 with short-range interactions."
+  },
+  {
+   "id": "PH.O.A4.4",
+   "label": "Condensed states",
+   "uses": [],
+   "text": "PH.O.A4.4 Condensed states. Band structure, superconductivity, magnetism, topological phases, defects."
+  },
+  {
+   "id": "PH.O.A4.4.1",
+   "label": "Quasiparticles",
+   "uses": [],
+   "text": "PH.O.A4.4.1 Quasiparticles: an excitation with decay rate Γ = 1/τ is well defined when ħΓ is much less than its energy. (The v1 lifetime–rate confusion is fixed.)"
+  },
+  {
+   "id": "PH.O.A4.4.2",
+   "label": "BCS theory of conventional superconductivity",
+   "uses": [],
+   "text": "PH.O.A4.4.2 BCS theory of conventional superconductivity: electron pairing mediated by phonons, for weak coupling. High-temperature superconductivity mechanisms are OPEN."
+  },
+  {
+   "id": "PH.O.A4.4.3",
+   "label": "Semiconductors and device physics",
+   "uses": [],
+   "text": "PH.O.A4.4.3 Semiconductors and device physics: drift–diffusion transport in the low-injection regime."
+  },
+  {
+   "id": "PH.O.A4.4.4",
+   "label": "Dislocations as the mechanism of plastic flow in crystals.",
+   "uses": [],
+   "text": "PH.O.A4.4.4 Dislocations as the mechanism of plastic flow in crystals."
+  },
+  {
+   "id": "PH.O.A4.4.5",
+   "label": "Topological phases",
+   "uses": [],
+   "text": "PH.O.A4.4.5 Topological phases: quantum Hall effects (integer 1980, fractional 1982)."
+  },
+  {
+   "id": "PH.O.A5",
+   "label": "Matter out of equilibrium",
+   "uses": [],
+   "text": "PH.O.A5 Matter out of equilibrium"
+  },
+  {
+   "id": "PH.O.A5.1",
+   "label": "Transport near equilibrium.",
+   "uses": [],
+   "text": "PH.O.A5.1 Transport near equilibrium."
+  },
+  {
+   "id": "PH.O.A5.1.1",
+   "label": "Linear response; the fluctuation–dissipation theorem for systems near",
+   "uses": [],
+   "text": "PH.O.A5.1.1 Linear response; the fluctuation–dissipation theorem for systems near equilibrium."
+  },
+  {
+   "id": "PH.O.A5.1.2",
+   "label": "Onsager reciprocity",
+   "uses": [],
+   "text": "PH.O.A5.1.2 Onsager reciprocity: assumes microscopic reversibility, with the magnetic field reversed when one is present."
+  },
+  {
+   "id": "PH.O.A5.1.3",
+   "label": "Diffusion, conduction, viscosity as transport coefficients; Boltzmann",
+   "uses": [],
+   "text": "PH.O.A5.1.3 Diffusion, conduction, viscosity as transport coefficients; Boltzmann transport equation for dilute gases."
+  },
+  {
+   "id": "PH.O.A5.2",
+   "label": "Fluids",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "PH.O.A5.2 Fluids. Navier–Stokes governs Newtonian fluids. Global smoothness in three dimensions is OPEN and owned by MA.O.A4."
+  },
+  {
+   "id": "PH.O.A5.2.1",
+   "label": "Turbulence",
+   "uses": [],
+   "text": "PH.O.A5.2.1 Turbulence: Kolmogorov's 1941 scaling for homogeneous isotropic turbulence at high Reynolds number. A full theory is OPEN."
+  },
+  {
+   "id": "PH.O.A5.2.2",
+   "label": "Dimensionless groups (Reynolds, Mach) set the regime.",
+   "uses": [],
+   "text": "PH.O.A5.2.2 Dimensionless groups (Reynolds, Mach) set the regime."
+  },
+  {
+   "id": "PH.O.A5.3",
+   "label": "Plasmas",
+   "uses": [],
+   "text": "PH.O.A5.3 Plasmas. Quasi-neutral ionised matter, collective behaviour on scales larger than the Debye length."
+  },
+  {
+   "id": "PH.O.A5.3.1",
+   "label": "Magnetohydrodynamics, valid where collisions keep a fluid description.",
+   "uses": [],
+   "text": "PH.O.A5.3.1 Magnetohydrodynamics, valid where collisions keep a fluid description."
+  },
+  {
+   "id": "PH.O.A5.3.2",
+   "label": "Fusion plasmas",
+   "uses": [],
+   "text": "PH.O.A5.3.2 Fusion plasmas: Lawson criterion for net energy gain, given confinement time and density at a stated temperature."
+  },
+  {
+   "id": "PH.O.A5.4",
+   "label": "Radiation and matter.",
+   "uses": [],
+   "text": "PH.O.A5.4 Radiation and matter."
+  },
+  {
+   "id": "PH.O.A5.4.1",
+   "label": "Planck's law for blackbody radiation in thermal equilibrium; Stefan–Bo",
+   "uses": [],
+   "text": "PH.O.A5.4.1 Planck's law for blackbody radiation in thermal equilibrium; Stefan–Boltzmann law as its integral."
+  },
+  {
+   "id": "PH.O.A5.4.2",
+   "label": "Radiative transfer through absorbing and emitting media.",
+   "uses": [],
+   "text": "PH.O.A5.4.2 Radiative transfer through absorbing and emitting media."
+  },
+  {
+   "id": "PH.O.A5.4.3",
+   "label": "Nuclear decay and radiation interaction with matter",
+   "uses": [],
+   "text": "PH.O.A5.4.3 Interaction of ionising radiation with matter (stopping, attenuation). Nuclear decay itself, with its half-lives, moved to PH.O.A2.3.5 after the pilot (claim 38)."
+  },
+  {
+   "id": "PH.O.A5.5",
+   "label": "Nonlinear dynamics and complex systems",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "PH.O.A5.5 Nonlinear dynamics and complex systems. Sensitive dependence on initial conditions; pattern formation; active matter. Theorems are MA.O.A4; the physical system is here."
+  },
+  {
+   "id": "PH.O.A5.5.1",
+   "label": "Non-equilibrium fluctuation theorems (Jarzynski, Crooks) for systems d",
+   "uses": [],
+   "text": "PH.O.A5.5.1 Non-equilibrium fluctuation theorems (Jarzynski, Crooks) for systems driven from an initial equilibrium."
+  }
+ ],
+ "methods": [
+  {
+   "id": "PH.M.1",
+   "label": "Formulate",
+   "role": "M1 Represent",
+   "example": "write the Lagrangian; choose units and variables"
+  },
+  {
+   "id": "PH.M.2",
+   "label": "Solve",
+   "role": "M2 Derive",
+   "example": "perturbation theory, exact solution, symmetry argument"
+  },
+  {
+   "id": "PH.M.3",
+   "label": "Measure",
+   "role": "M3 Observe",
+   "example": "spectroscopy, interferometry, telescope survey"
+  },
+  {
+   "id": "PH.M.4",
+   "label": "Experiment",
+   "role": "M4 Intervene",
+   "example": "collider, cold-atom trap, condensed-matter probe"
+  },
+  {
+   "id": "PH.M.5",
+   "label": "Simulate",
+   "role": "M5 Compute",
+   "example": "lattice QCD, molecular dynamics, N-body, plasma codes"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "PH.O.A1",
+   "warrant": "W4 + W1",
+   "standard": "prediction matches measurement within stated uncertainty; derivation valid",
+   "defeaters": "regime exceeded (speed near c, action near ħ)"
+  },
+  {
+   "cell": "PH.O.A2",
+   "warrant": "W3 + W4",
+   "standard": "controlled experiment with quoted uncertainty; replication; 5σ for discovery claims in particle physics",
+   "defeaters": "loopholes, systematic error, look-elsewhere effect"
+  },
+  {
+   "cell": "PH.O.A3",
+   "warrant": "W4",
+   "standard": "observation with stated uncertainty; independent probes agree",
+   "defeaters": "model dependence, selection effects, cosmic variance"
+  },
+  {
+   "cell": "PH.O.A3.5",
+   "warrant": "W1 only, OPEN",
+   "standard": "internal consistency; no empirical warrant yet",
+   "defeaters": "no testable prediction"
+  },
+  {
+   "cell": "PH.O.A4",
+   "warrant": "W3 + W4 + W1",
+   "standard": "measured property matches a derived value",
+   "defeaters": "finite-size effects, impurities, non-equilibrium"
+  },
+  {
+   "cell": "PH.O.A5",
+   "warrant": "W4 + W2",
+   "standard": "measurement, or simulation with an error bound",
+   "defeaters": "closure assumption, numerical artefact"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "PH.B.C1",
+   "Particle and nuclear physics",
+   "A2.3, A5.4.3",
+   "M.2, M.4, M.5",
+   "accelerators, detectors"
+  ],
+  [
+   "PH.B.C2",
+   "AMO physics and quantum optics",
+   "A2.1, A2.2, A2.4",
+   "M.3, M.4",
+   "atoms, light"
+  ],
+  [
+   "PH.B.C3",
+   "Astrophysics and cosmology",
+   "A3",
+   "M.2, M.3, M.5",
+   "the sky"
+  ],
+  [
+   "PH.B.C4",
+   "Condensed matter physics",
+   "A4, A5.1",
+   "all",
+   "solids, liquids"
+  ],
+  [
+   "PH.B.C5",
+   "Plasma and fluid physics",
+   "A5.2, A5.3",
+   "M.2, M.3, M.5",
+   "plasmas, flows"
+  ],
+  [
+   "PH.B.C6",
+   "Geophysics",
+   "A1, A5",
+   "M.3, M.5",
+   "the Earth (uses EA)"
+  ],
+  [
+   "PH.B.C7",
+   "Biophysics and medical physics",
+   "A4, A5",
+   "M.3, M.4",
+   "cells, patients (uses BI, MD)"
+  ],
+  [
+   "PH.B.C8",
+   "Quantum information",
+   "A2.2",
+   "M.2, M.4",
+   "qubits (protocols CS)"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Physics is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five regimes: classical motion and fields, quantum systems, gravitation and the cosmos, matter in equilibrium, and matter out of equilibrium.",
+  "key_line": "Dimension: **the governing constants of the claim** (which of c, ħ, G and N set its scale). Logic inductive. Order: structural, from fewest constants to most, then the N axis.\n1. Classical motion and fields\n2. Quantum systems\n3. Gravitation and the cosmos\n4. Matter in equilibrium\n5. Matter out of equilibrium\n\n**Cube map.** This is an adaptation of the c–G–ħ cube of physical theories. It is not Bronstein's 1933 scheme, and the attribution of the cube's modern form is left open (UNVERIFIED). N is the author's axis.\n\n| Vertex | Theory | Home |\n|---|---|---|\n| none | Newtonian mechanics | PH.O.A1.1 |\n| c | special relativity; Maxwell electrodynamics | PH.O.A1.2–A1.3 |\n| ħ | non-relativistic quantum mechanics | PH.O.A2.1 |\n| c, ħ | quantum field theory | PH.O.A2.3 |\n| G | Newtonian gravity | PH.O.A3.1 |\n| c, G | general relativity | PH.O.A3.2 |\n| G, ħ | no established theory | REFUSED as a cell. Such claims go to PH.O.A3.5, OPEN |\n| c, G, ħ | quantum gravity | PH.O.A3.5, OPEN |\n| N, equilibrium | thermodynamics, statistical mechanics, condensed matter | PH.O.A4 |\n| N, driven or relaxing | transport, fluids, plasma, radiation in matter, nonlinear dynamics | PH.O.A5 |\n\n**MECE test.** Exclusive: each claim is placed by the largest set of constants its derivation needs. Exhaustive: every vertex of the cube, and both states of the N axis, has a home or a stated refusal.\n**CONTESTED.** Newtonian gravity is placed in A3, not A1, so all gravitation shares one home. The alternative files it in A1 by the \"no c, no ħ\" rule.",
+  "assignment_rules": "1. Place a claim by the largest set of constants its derivation needs. Place N-body claims in A4 or A5 by equilibrium.\n2. A theorem about the equations is MA. The claim that nature obeys them is PH.\n3. A bond, reaction rate or molecular structure is CH. Atomic levels are PH.\n4. A device meeting a specification is EN. The law it relies on is PH.\n5. Quantum interpretation: empirical content in PH.O.A2, argument in PL.\n6. Physics education research is ED (uses PH).\n7. Climate and Earth-system claims are EA. The radiative law they use is PH.O.A5.4.\n8. A claim that crosses regimes goes to the regime with more constants.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| theorems about differential equations and operators | MA.O.A2, MA.O.A4 |\n| chemical bonding and reaction | CH |\n| Earth state, climate record | EA |\n| instrument and device design | EN |\n| meaning of quantum mechanics | PL |\n| physics teaching | ED |",
+  "crosswalk": "**ANZSRC 51** Physical sciences (checked 9 Oct 2026, ABS anzsrc2020_for.xlsx) has 11 groups:\n\n| Group | Home |\n|---|---|\n| 5101 Astronomical sciences | A3, B.C3 |\n| 5102 Atomic, molecular and optical physics | A2.4, B.C2 |\n| 5103 Classical physics | A1 |\n| 5104 Condensed matter physics | A4, B.C4 |\n| 5105 Medical and biological physics | B.C7 |\n| 5106 Nuclear and plasma physics | A2.3, A5.3, B.C1, B.C5 |\n| 5107 Particle and high energy physics | A2.3, B.C1 |\n| 5108 Quantum physics | A2.1, A2.2, B.C8 |\n| 5109 Space sciences | A3, with EA for the near-Earth environment |\n| 5110 Synchrotrons and accelerators | Face M (PH.M.4), instruments EN |\n| 5199 Other physical sciences | not a cell |\n\nCoverage: 9 of 10 substantive groups land as cells or bridges; 5110 lands as method.\n**PhySH** (APS) has five facets: research areas, physical systems, properties, techniques and professional topics. It lists 17 disciplines (checked: Wikipedia summary of physh.aps.org). The 17 names are not yet transcribed, so a discipline-by-discipline map is pending (R4 partial). Professional topics such as education and careers are refused to ED and BU.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 24 sub-cells = 29, with 65 named objects below them. M roles 5. Heuristics 7, outside the count. W rows 6. B bridges 8.\nKey line, word for word: Classical motion and fields. Quantum systems. Gravitation and the cosmos. Matter in equilibrium. Matter out of equilibrium.\nOPEN: quantum gravity (A3.5); dark matter and dark energy; the Hubble tension; neutrino mass ordering; high-temperature superconductivity; turbulence; 3D Navier–Stokes smoothness (MA, cited).\nCONTESTED: interpretation of QM (PH vs PL); Newtonian gravity in A3 rather than A1; inflation; naturalness as a guide; the ergodic justification.\nFixed from the audit: the cube is now named as an adaptation; N is marked as the author's axis; G–ħ is refused and c–G–ħ is OPEN; transport, plasma and radiation have homes; Clapeyron is distinguished from Clausius–Clapeyron; the quasiparticle condition uses rate; k_B is restored; heuristics are outside the count."
+ },
+ "borders": [
+  {
+   "field": "MA",
+   "uses": 9
+  },
+  {
+   "field": "EN",
+   "uses": 1
+  },
+  {
+   "field": "CS",
+   "uses": 1
+  },
+  {
+   "field": "CH",
+   "uses": 1
+  },
+  {
+   "field": "PL",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "EN",
+   "uses": 29
+  },
+  {
+   "field": "EA",
+   "uses": 11
+  },
+  {
+   "field": "CH",
+   "uses": 3
+  },
+  {
+   "field": "CS",
+   "uses": 2
+  },
+  {
+   "field": "ED",
+   "uses": 2
+  },
+  {
+   "field": "PL",
+   "uses": 1
+  },
+  {
+   "field": "HI",
+   "uses": 1
+  },
+  {
+   "field": "LN",
+   "uses": 1
+  },
+  {
+   "field": "AR",
+   "uses": 1
+  },
+  {
+   "field": "DE",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

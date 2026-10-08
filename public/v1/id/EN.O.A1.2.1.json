@@ -1,0 +1,15 @@
+{
+ "id": "EN.O.A1.2.1",
+ "label": "Euler–Bernoulli beam",
+ "owner": "EN",
+ "home": "O.A1.2",
+ "uses": [],
+ "text": "EN.O.A1.2.1 Euler–Bernoulli beam. For a prismatic, linear-elastic member with small slopes and plane sections remaining plane and normal: EI d²v/dx² = M(x). With load q positive downward, dM/dx = V and dV/dx = −q (Gere and Goodno, §4.5; sign convention stated, audit fact check).",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W1, W4, W2",
+  "standard": "Prediction matches test within stated uncertainty; code calibration meets the target reliability index",
+  "defeaters": "Hypothesis outside range (slenderness, small strain, linearity); imperfection sensitivity; residual stress; unmodelled failure mode"
+ },
+ "field_url": "/v1/field/EN.json"
+}

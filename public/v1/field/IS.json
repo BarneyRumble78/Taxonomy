@@ -1,0 +1,370 @@
+{
+ "code": "IS",
+ "name": "Information and the record",
+ "dimension": "the stage in the life of a record",
+ "cells": [
+  {
+   "id": "IS.O.A1",
+   "name": "Items"
+  },
+  {
+   "id": "IS.O.A2",
+   "name": "Description"
+  },
+  {
+   "id": "IS.O.A3",
+   "name": "Arrangement"
+  },
+  {
+   "id": "IS.O.A4",
+   "name": "Retrieval"
+  },
+  {
+   "id": "IS.O.A5",
+   "name": "Preservation"
+  }
+ ],
+ "objects": [
+  {
+   "id": "IS.O.A1",
+   "label": "Items",
+   "uses": [],
+   "text": "IS.O.A1 Items"
+  },
+  {
+   "id": "IS.O.A1.1",
+   "label": "Works and manifestations",
+   "uses": [],
+   "text": "IS.O.A1.1 Works and manifestations — FRBR and its successor LRM distinguish work, expression, manifestation and item."
+  },
+  {
+   "id": "IS.O.A1.2",
+   "label": "Records as evidence",
+   "uses": [
+    "HI"
+   ],
+   "text": "IS.O.A1.2 Records as evidence — an archival record is evidence of an activity. Its source criticism for history is HI."
+  },
+  {
+   "id": "IS.O.A1.3",
+   "label": "Data sets",
+   "uses": [],
+   "text": "IS.O.A1.3 Data sets — research data as items."
+  },
+  {
+   "id": "IS.O.A1.4",
+   "label": "Persistent identifiers",
+   "uses": [],
+   "text": "IS.O.A1.4 Persistent identifiers — DOI, ORCID, ISBN (W12)."
+  },
+  {
+   "id": "IS.O.A2",
+   "label": "Description",
+   "uses": [],
+   "text": "IS.O.A2 Description"
+  },
+  {
+   "id": "IS.O.A2.1",
+   "label": "Metadata standards",
+   "uses": [],
+   "text": "IS.O.A2.1 Metadata standards — Dublin Core, MARC (W12)."
+  },
+  {
+   "id": "IS.O.A2.2",
+   "label": "Cataloguing rules",
+   "uses": [],
+   "text": "IS.O.A2.2 Cataloguing rules — RDA."
+  },
+  {
+   "id": "IS.O.A2.3",
+   "label": "Subject indexing",
+   "uses": [],
+   "text": "IS.O.A2.3 Subject indexing — controlled vocabularies and thesauri (MeSH, LCSH)."
+  },
+  {
+   "id": "IS.O.A2.4",
+   "label": "Linked data",
+   "uses": [
+    "MA.O.A1"
+   ],
+   "text": "IS.O.A2.4 Linked data — SKOS and RDF. The logic is MA.O.A1; the vocabulary is IS."
+  },
+  {
+   "id": "IS.O.A3",
+   "label": "Arrangement",
+   "uses": [],
+   "text": "IS.O.A3 Arrangement"
+  },
+  {
+   "id": "IS.O.A3.1",
+   "label": "Classification schemes",
+   "uses": [],
+   "text": "IS.O.A3.1 Classification schemes — LCC, DDC, UDC, MSC. A scheme is W12; whether it is MECE is testable (W9 with W4)."
+  },
+  {
+   "id": "IS.O.A3.2",
+   "label": "Faceted classification",
+   "uses": [],
+   "text": "IS.O.A3.2 Faceted classification — Ranganathan's Colon Classification (PMEST facets)."
+  },
+  {
+   "id": "IS.O.A3.3",
+   "label": "Archival arrangement",
+   "uses": [],
+   "text": "IS.O.A3.3 Archival arrangement — respect des fonds and original order."
+  },
+  {
+   "id": "IS.O.A3.4",
+   "label": "Ontologies",
+   "uses": [
+    "PL"
+   ],
+   "text": "IS.O.A3.4 Ontologies — BFO and DOLCE. Their philosophical commitments are PL."
+  },
+  {
+   "id": "IS.O.A3.5",
+   "label": "This taxonomy",
+   "uses": [],
+   "text": "IS.O.A3.5 This taxonomy — the Pyramids of Knowledge as a classification of claims. Its reliability is tested by the placement protocol."
+  },
+  {
+   "id": "IS.O.A4",
+   "label": "Retrieval",
+   "uses": [],
+   "text": "IS.O.A4 Retrieval"
+  },
+  {
+   "id": "IS.O.A4.1",
+   "label": "Retrieval effectiveness",
+   "uses": [
+    "CS"
+   ],
+   "text": "IS.O.A4.1 Retrieval effectiveness — precision and recall. The algorithm's cost is CS."
+  },
+  {
+   "id": "IS.O.A4.2",
+   "label": "Relevance",
+   "uses": [],
+   "text": "IS.O.A4.2 Relevance — topical and user relevance; judged by assessors (W4)."
+  },
+  {
+   "id": "IS.O.A4.3",
+   "label": "Bibliometrics",
+   "uses": [],
+   "text": "IS.O.A4.3 Bibliometrics — Lotka's law (author productivity) and Bradford's law (scattering) are empirical regularities within stated literatures."
+  },
+  {
+   "id": "IS.O.A4.4",
+   "label": "Information behaviour",
+   "uses": [
+    "MS"
+   ],
+   "text": "IS.O.A4.4 Information behaviour — how people seek information. The cognitive mechanism is MS."
+  },
+  {
+   "id": "IS.O.A5",
+   "label": "Preservation",
+   "uses": [],
+   "text": "IS.O.A5 Preservation"
+  },
+  {
+   "id": "IS.O.A5.1",
+   "label": "Physical conservation",
+   "uses": [
+    "CH"
+   ],
+   "text": "IS.O.A5.1 Physical conservation — the chemistry of paper and media is CH."
+  },
+  {
+   "id": "IS.O.A5.2",
+   "label": "Digital preservation",
+   "uses": [],
+   "text": "IS.O.A5.2 Digital preservation — the OAIS reference model (ISO 14721, W12)."
+  },
+  {
+   "id": "IS.O.A5.3",
+   "label": "Access and rights",
+   "uses": [
+    "LA"
+   ],
+   "text": "IS.O.A5.3 Access and rights — open access; copyright is LA."
+  },
+  {
+   "id": "IS.O.A5.4",
+   "label": "Indigenous data governance",
+   "uses": [
+    "IK"
+   ],
+   "text": "IS.O.A5.4 Indigenous data governance — the CARE principles; Māori data sovereignty (Te Mana Raraunga). Tradition-internal authority over the data is IK."
+  }
+ ],
+ "methods": [
+  {
+   "id": "IS.M.1",
+   "label": "Describe and classify",
+   "role": "M1 Represent",
+   "example": "cataloguing, indexing"
+  },
+  {
+   "id": "IS.M.2",
+   "label": "Appraise",
+   "role": "M7 Verify",
+   "example": "archival appraisal, quality control"
+  },
+  {
+   "id": "IS.M.3",
+   "label": "Evaluate retrieval",
+   "role": "M3 Observe",
+   "example": "test collections (TREC-style)"
+  },
+  {
+   "id": "IS.M.4",
+   "label": "Measure literatures",
+   "role": "M5 Compute",
+   "example": "bibliometric analysis"
+  },
+  {
+   "id": "IS.M.5",
+   "label": "Study users",
+   "role": "M3 Observe",
+   "example": "user studies"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "IS.O.A1",
+   "warrant": "W12 + W7",
+   "standard": "conformity with identity rules; provenance",
+   "defeaters": "lost provenance"
+  },
+  {
+   "cell": "IS.O.A2",
+   "warrant": "W12 + W4",
+   "standard": "standard followed; indexer consistency measured",
+   "defeaters": "low inter-indexer agreement"
+  },
+  {
+   "cell": "IS.O.A3",
+   "warrant": "W12 + W9 + W4",
+   "standard": "scheme rules; argued MECE; reliability measured",
+   "defeaters": "overlap, residual classes"
+  },
+  {
+   "cell": "IS.O.A4",
+   "warrant": "W4",
+   "standard": "test collection with stated relevance judgements",
+   "defeaters": "assessor disagreement"
+  },
+  {
+   "cell": "IS.O.A5",
+   "warrant": "W11 + W4",
+   "standard": "conformity with OAIS; fixity checks",
+   "defeaters": "format obsolescence"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "IS.B.C1",
+   "Library science",
+   "A1–A3",
+   "M.1",
+   "collections"
+  ],
+  [
+   "IS.B.C2",
+   "Archival science",
+   "A1.2, A3.3, A5",
+   "M.2",
+   "archives"
+  ],
+  [
+   "IS.B.C3",
+   "Information retrieval",
+   "A4.1, A4.2",
+   "M.3",
+   "test collections (uses CS)"
+  ],
+  [
+   "IS.B.C4",
+   "Scientometrics",
+   "A4.3",
+   "M.4",
+   "literatures"
+  ],
+  [
+   "IS.B.C5",
+   "Knowledge organisation",
+   "A3",
+   "M.1",
+   "schemes (ISKO)"
+  ],
+  [
+   "IS.B.C6",
+   "Digital humanities (shared)",
+   "A2, A4",
+   "M.4",
+   "texts (uses HI, AR)"
+  ],
+  [
+   "IS.B.C7",
+   "Museum studies (shared)",
+   "A1, A5",
+   "M.1",
+   "collections (uses HI)"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Information science is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five stages of a record's life: items, description, arrangement, retrieval, and preservation.",
+  "key_line": "Dimension: **the stage in the life of a record.** Order: from creation to keeping.\n1. Items\n2. Description\n3. Arrangement\n4. Retrieval\n5. Preservation",
+  "assignment_rules": "1. Place by the record's life stage.\n2. The algorithm's cost or correctness is CS; the retrieval effectiveness claim is IS.\n3. Source criticism for a historical claim is HI; the archival rule is IS.\n4. Copyright is LA.\n5. Tradition-internal authority over Indigenous data is IK; its governance framework as a records rule is IS.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| algorithms and systems | CS |\n| historical source criticism | HI |\n| copyright and privacy law | LA |\n| media and communication effects | MS |\n| philosophy of information | PL |",
+  "crosswalk": "**ANZSRC 46** (checked 9 Oct 2026 against the ABS file anzsrc2020_for.xlsx) has 14 groups. 4610 Library and information studies lands in A1–A5. 4609 Information systems and 4605 Data management are split: records go to IS, systems to CS. The remaining groups go to CS. Coverage for IS: 1 group whole and 2 in part, of 13 substantive groups.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 21 sub-cells = 26. M roles 5. Heuristics 3. W rows 5. B bridges 7.\nKey line, word for word: Items. Description. Arrangement. Retrieval. Preservation.\nCONTESTED: data management in IS vs CS."
+ },
+ "borders": [
+  {
+   "field": "HI",
+   "uses": 1
+  },
+  {
+   "field": "MA",
+   "uses": 1
+  },
+  {
+   "field": "PL",
+   "uses": 1
+  },
+  {
+   "field": "CS",
+   "uses": 1
+  },
+  {
+   "field": "MS",
+   "uses": 1
+  },
+  {
+   "field": "CH",
+   "uses": 1
+  },
+  {
+   "field": "LA",
+   "uses": 1
+  },
+  {
+   "field": "IK",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "CS",
+   "uses": 1
+  },
+  {
+   "field": "IK",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

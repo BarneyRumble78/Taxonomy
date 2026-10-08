@@ -1,0 +1,272 @@
+{
+ "openapi": "3.0.3",
+ "info": {
+  "title": "Taxonomy API",
+  "version": "2.2.0-api.1",
+  "description": "Place claims, look up identifiers, map a subject across 25 fields and audit wording against evidence. Rule-based; model assist is optional and never overrides the rules."
+ },
+ "paths": {
+  "/v1/classify": {
+   "get": {
+    "summary": "Place one sentence",
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     }
+    },
+    "parameters": [
+     {
+      "name": "text",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string"
+      },
+      "description": "The claim"
+     }
+    ]
+   },
+   "post": {
+    "summary": "Place one sentence",
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     }
+    },
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "type": "object",
+        "required": [
+         "text"
+        ],
+        "properties": {
+         "text": {
+          "type": "string"
+         },
+         "assist": {
+          "type": "boolean"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/audit": {
+   "post": {
+    "summary": "Check a passage: placement per sentence, evidence-type footer, wording flags",
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     }
+    },
+    "requestBody": {
+     "required": true,
+     "content": {
+      "application/json": {
+       "schema": {
+        "type": "object",
+        "required": [
+         "text"
+        ],
+        "properties": {
+         "text": {
+          "type": "string"
+         },
+         "assist": {
+          "type": "boolean"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/v1/map": {
+   "get": {
+    "summary": "Whole view of a subject: fields, their cells, borders, evidence standards",
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     }
+    },
+    "parameters": [
+     {
+      "name": "subject",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string"
+      },
+      "description": "Subject or design brief"
+     },
+     {
+      "name": "top",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "Fields to expand (default 8)"
+     },
+     {
+      "name": "assist",
+      "in": "query",
+      "required": false,
+      "schema": {
+       "type": "string"
+      },
+      "description": "1 = ask the model for extra fields"
+     }
+    ]
+   }
+  },
+  "/v1/view": {
+   "get": {
+    "summary": "Lens questions for all 25 fields",
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     }
+    },
+    "parameters": [
+     {
+      "name": "subject",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string"
+      },
+      "description": "Subject"
+     }
+    ]
+   }
+  },
+  "/v1/relate": {
+   "get": {
+    "summary": "Border strength between two fields or IDs",
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "400": {
+      "description": "Bad request"
+     }
+    },
+    "parameters": [
+     {
+      "name": "a",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string"
+      },
+      "description": "Field code or ID"
+     },
+     {
+      "name": "b",
+      "in": "query",
+      "required": true,
+      "schema": {
+       "type": "string"
+      },
+      "description": "Field code or ID"
+     }
+    ]
+   }
+  },
+  "/v1/lookup/{id}": {
+   "get": {
+    "summary": "One identifier",
+    "parameters": [
+     {
+      "name": "id",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     },
+     "404": {
+      "description": "Unknown ID"
+     }
+    }
+   }
+  },
+  "/v1/field/{code}.json": {
+   "get": {
+    "summary": "A whole field: cells, objects, methods, warrants, bridges",
+    "parameters": [
+     {
+      "name": "code",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string"
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/v1/index.json": {
+   "get": {
+    "summary": "Fields and counts",
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/v1/graph.json": {
+   "get": {
+    "summary": "Field-to-field citation graph with foundational rank",
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  },
+  "/v1/skos.jsonld": {
+   "get": {
+    "summary": "SKOS concept scheme (JSON-LD)",
+    "responses": {
+     "200": {
+      "description": "OK"
+     }
+    }
+   }
+  }
+ }
+}

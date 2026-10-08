@@ -1,0 +1,400 @@
+{
+ "code": "BU",
+ "name": "Business, trade, tax and accounting",
+ "dimension": "the practice of the firm",
+ "cells": [
+  {
+   "id": "BU.O.A1",
+   "name": "Accounts"
+  },
+  {
+   "id": "BU.O.A2",
+   "name": "Finance"
+  },
+  {
+   "id": "BU.O.A3",
+   "name": "Operations and organisation"
+  },
+  {
+   "id": "BU.O.A4",
+   "name": "Marketing"
+  },
+  {
+   "id": "BU.O.A5",
+   "name": "Trade and tax"
+  }
+ ],
+ "objects": [
+  {
+   "id": "BU.O.A1",
+   "label": "Accounts",
+   "uses": [],
+   "text": "BU.O.A1 Accounts"
+  },
+  {
+   "id": "BU.O.A1.1",
+   "label": "The record (double entry)",
+   "uses": [],
+   "text": "BU.O.A1.1 The record — double entry: every transaction posts equal debits and credits, so assets = liabilities + equity. This is an identity of the convention (W12), not an empirical law."
+  },
+  {
+   "id": "BU.O.A1.2",
+   "label": "Reporting standards",
+   "uses": [],
+   "text": "BU.O.A1.2 Reporting standards — IFRS (IASB) and US GAAP (FASB). They differ, for example in that US GAAP permits LIFO inventory and IFRS does not."
+  },
+  {
+   "id": "BU.O.A1.3",
+   "label": "Management accounting",
+   "uses": [],
+   "text": "BU.O.A1.3 Management accounting — costing, budgeting, variance analysis."
+  },
+  {
+   "id": "BU.O.A1.4",
+   "label": "Audit and assurance",
+   "uses": [],
+   "text": "BU.O.A1.4 Audit and assurance — an audit gives reasonable, not absolute, assurance that statements are free of material misstatement (W11)."
+  },
+  {
+   "id": "BU.O.A2",
+   "label": "Finance",
+   "uses": [],
+   "text": "BU.O.A2 Finance"
+  },
+  {
+   "id": "BU.O.A2.1",
+   "label": "Valuation",
+   "uses": [],
+   "text": "BU.O.A2.1 Valuation — net present value at the opportunity cost of capital. Discounted cash flow assumes the forecast and the rate."
+  },
+  {
+   "id": "BU.O.A2.2",
+   "label": "Capital structure (MM)",
+   "uses": [
+    "MA.B.C4"
+   ],
+   "text": "BU.O.A2.2 Capital structure — Modigliani–Miller: with no taxes, no bankruptcy costs, symmetric information and perfect capital markets, firm value does not depend on the debt–equity mix. With corporate tax, debt adds a tax shield. Theorem MA.B.C4; use BU."
+  },
+  {
+   "id": "BU.O.A2.3",
+   "label": "Risk and return (CAPM)",
+   "uses": [
+    "MA.B.C4",
+    "EC.O.A2"
+   ],
+   "text": "BU.O.A2.3 Risk and return — CAPM: with mean–variance investors, homogeneous expectations, frictionless markets and unlimited risk-free borrowing and lending, expected excess return is linear in beta. Empirical support is weak (W4 defeaters)."
+  },
+  {
+   "id": "BU.O.A2.4",
+   "label": "Derivatives (Black–Scholes)",
+   "uses": [
+    "MA.B.C4",
+    "MA.O.A5"
+   ],
+   "text": "BU.O.A2.4 Derivatives — Black–Scholes prices a European option assuming log-normal prices, constant volatility and rate, continuous frictionless trading and no dividends. Theorem MA.B.C4; use BU."
+  },
+  {
+   "id": "BU.O.A2.5",
+   "label": "Market efficiency",
+   "uses": [
+    "EC.O.A2"
+   ],
+   "text": "BU.O.A2.5 Market efficiency — the efficient-market hypothesis comes in weak, semi-strong and strong forms. Tests face the joint-hypothesis problem: each needs a model of normal returns."
+  },
+  {
+   "id": "BU.O.A3",
+   "label": "Operations and organisation",
+   "uses": [],
+   "text": "BU.O.A3 Operations and organisation"
+  },
+  {
+   "id": "BU.O.A3.1",
+   "label": "Operations (Little's law)",
+   "uses": [
+    "MA.O.A5"
+   ],
+   "text": "BU.O.A3.1 Operations — Little's law L = λW holds for any stable queueing system in steady state (theorem MA.O.A5)."
+  },
+  {
+   "id": "BU.O.A3.2",
+   "label": "Supply chains",
+   "uses": [],
+   "text": "BU.O.A3.2 Supply chains — inventory, logistics. The bullwhip effect amplifies demand variance upstream."
+  },
+  {
+   "id": "BU.O.A3.3",
+   "label": "Organisation design",
+   "uses": [
+    "EC.O.A2.3"
+   ],
+   "text": "BU.O.A3.3 Organisation design — structure, governance, agency. The agency problem in principal–agent form is EC.O.A2.3; its corporate remedy is BU."
+  },
+  {
+   "id": "BU.O.A3.4",
+   "label": "People management",
+   "uses": [
+    "MS"
+   ],
+   "text": "BU.O.A3.4 People management — human resources and industrial relations. Group behaviour is MS."
+  },
+  {
+   "id": "BU.O.A3.5",
+   "label": "Entrepreneurship and innovation",
+   "uses": [
+    "ST"
+   ],
+   "text": "BU.O.A3.5 Entrepreneurship and innovation — founding and scaling firms. A rival's response to a move is ST."
+  },
+  {
+   "id": "BU.O.A4",
+   "label": "Marketing",
+   "uses": [],
+   "text": "BU.O.A4 Marketing"
+  },
+  {
+   "id": "BU.O.A4.1",
+   "label": "Customers",
+   "uses": [
+    "MS"
+   ],
+   "text": "BU.O.A4.1 Customers — segmentation, consumer behaviour. The cognition is MS."
+  },
+  {
+   "id": "BU.O.A4.2",
+   "label": "Products and brands",
+   "uses": [],
+   "text": "BU.O.A4.2 Products and brands."
+  },
+  {
+   "id": "BU.O.A4.3",
+   "label": "Pricing practice",
+   "uses": [
+    "EC.O.A2"
+   ],
+   "text": "BU.O.A4.3 Pricing practice — list prices, discounts. Market equilibrium price is EC."
+  },
+  {
+   "id": "BU.O.A4.4",
+   "label": "Channels",
+   "uses": [],
+   "text": "BU.O.A4.4 Channels — retail, digital, distribution."
+  },
+  {
+   "id": "BU.O.A5",
+   "label": "Trade and tax",
+   "uses": [],
+   "text": "BU.O.A5 Trade and tax"
+  },
+  {
+   "id": "BU.O.A5.1",
+   "label": "Trade terms (Incoterms)",
+   "uses": [
+    "LA"
+   ],
+   "text": "BU.O.A5.1 Trade terms — Incoterms 2020 (ICC, eleven rules) allocate delivery tasks, costs and the passing of risk between seller and buyer. They do not allocate title. Title passes under the sale contract and the governing law (LA)."
+  },
+  {
+   "id": "BU.O.A5.2",
+   "label": "Customs and compliance",
+   "uses": [
+    "LA"
+   ],
+   "text": "BU.O.A5.2 Customs and trade compliance — tariff classification (Harmonized System, W12), rules of origin."
+  },
+  {
+   "id": "BU.O.A5.3",
+   "label": "Tax computation",
+   "uses": [
+    "EC.O.A2.5",
+    "LA"
+   ],
+   "text": "BU.O.A5.3 Tax computation — a VAT is charged at each stage on the value added, with credit for input tax. A retail sales tax is charged once at the final sale. New Zealand GST is a VAT-type tax (15%)."
+  },
+  {
+   "id": "BU.O.A5.4",
+   "label": "Transfer pricing",
+   "uses": [
+    "LA"
+   ],
+   "text": "BU.O.A5.4 Transfer pricing — the arm's-length principle (OECD guidelines, W12). Its legal force is LA."
+  },
+  {
+   "id": "BU.O.A5.5",
+   "label": "Payments and trade finance",
+   "uses": [],
+   "text": "BU.O.A5.5 Payments and trade finance — letters of credit (UCP 600, W12)."
+  }
+ ],
+ "methods": [
+  {
+   "id": "BU.M.1",
+   "label": "Record and report",
+   "role": "M1 Represent",
+   "example": "bookkeeping, financial statements"
+  },
+  {
+   "id": "BU.M.2",
+   "label": "Value and plan",
+   "role": "M2 Derive",
+   "example": "DCF, budgeting"
+  },
+  {
+   "id": "BU.M.3",
+   "label": "Survey the market",
+   "role": "M3 Observe",
+   "example": "market research"
+  },
+  {
+   "id": "BU.M.4",
+   "label": "Compare cases",
+   "role": "M6 Compare and reconstruct",
+   "example": "case method, benchmarking"
+  },
+  {
+   "id": "BU.M.5",
+   "label": "Audit",
+   "role": "M7 Verify",
+   "example": "external audit, compliance review"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "BU.O.A1",
+   "warrant": "W12 + W11",
+   "standard": "conformity with the stated standard; audit opinion",
+   "defeaters": "fraud, management estimates"
+  },
+  {
+   "cell": "BU.O.A2",
+   "warrant": "W1 + W4",
+   "standard": "derivation under stated assumptions; market data",
+   "defeaters": "assumptions violated; estimation error"
+  },
+  {
+   "cell": "BU.O.A3",
+   "warrant": "W4 + W6",
+   "standard": "measured performance; comparative cases",
+   "defeaters": "survivorship bias"
+  },
+  {
+   "cell": "BU.O.A4",
+   "warrant": "W4 + W3",
+   "standard": "surveys; A/B tests",
+   "defeaters": "sampling bias"
+  },
+  {
+   "cell": "BU.O.A5",
+   "warrant": "W12 + W10",
+   "standard": "stated rule (ICC, OECD, HS); legal force before a forum",
+   "defeaters": "jurisdictional difference"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "BU.B.C1",
+   "Accounting",
+   "A1",
+   "M.1, M.5",
+   "firms' records"
+  ],
+  [
+   "BU.B.C2",
+   "Corporate finance",
+   "A2",
+   "M.2",
+   "firms"
+  ],
+  [
+   "BU.B.C3",
+   "Operations management",
+   "A3.1, A3.2",
+   "M.2, M.4",
+   "processes"
+  ],
+  [
+   "BU.B.C4",
+   "Management and organisation studies",
+   "A3.3–A3.5",
+   "M.4",
+   "organisations (uses MS)"
+  ],
+  [
+   "BU.B.C5",
+   "Marketing",
+   "A4",
+   "M.3",
+   "customers"
+  ],
+  [
+   "BU.B.C6",
+   "International business",
+   "A5",
+   "M.4",
+   "cross-border firms"
+  ],
+  [
+   "BU.B.C7",
+   "Tax practice",
+   "A5.3, A5.4",
+   "M.1, M.5",
+   "taxpayers"
+  ],
+  [
+   "BU.B.C8",
+   "Tourism and services",
+   "A3, A4",
+   "M.3",
+   "service sectors"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Business is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five practices of the firm: accounts, finance, operations and organisation, marketing, and trade and tax.",
+  "key_line": "Dimension: **the practice of the firm.** Order: from the record outward to customers and borders.\n1. Accounts\n2. Finance\n3. Operations and organisation\n4. Marketing\n5. Trade and tax",
+  "assignment_rules": "1. Place by the firm's practice.\n2. The finance theorem is MA (MSC 91G); its use by the firm is BU; the market price of risk is EC.\n3. The incidence of a tax is EC, the duty is LA, the computation is BU.\n4. Title to goods is LA; Incoterms allocate risk and costs (BU).\n5. A rival's strategic response is ST.\n6. Behaviour of people inside firms is MS; the firm's management practice is BU.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| finance theorems (MM, Black–Scholes proofs) | MA.B.C4 |\n| equilibrium prices and incidence | EC |\n| legal duty, title, enforceability | LA |\n| strategic contest with rivals | ST |\n| group psychology | MS |",
+  "crosswalk": "**ANZSRC 35** (checked 9 Oct 2026 against the ABS file anzsrc2020_for.xlsx) has ten groups:\n- 3501 Accounting, auditing and accountability → A1\n- 3502 Banking, finance and investment → A2\n- 3503 Business systems in context → A3\n- 3504 Commercial services → A4\n- 3505 Human resources and industrial relations → A3.4\n- 3506 Marketing → A4\n- 3507 Strategy, management and organisational behaviour → A3.3 (contest ST)\n- 3508 Tourism → B.C8\n- 3509 Transportation, logistics and supply chains → A3.2\n- 3599 Other → not a cell\n\nCoverage: 9 of 9 substantive groups land.\n**JEL M** maps to A1, A3 and A4.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 23 sub-cells = 28. M roles 5. Heuristics 5. W rows 5. B bridges 8.\nKey line, word for word: Accounts. Finance. Operations and organisation. Marketing. Trade and tax.\nCONTESTED: CAPM and EMH as BU vs EC (alternative: EC.O.A2); entrepreneurship in BU vs ST.\nFixed from the audit: Incoterms (no title), VAT vs sales tax, Modigliani–Miller hypotheses."
+ },
+ "borders": [
+  {
+   "field": "MA",
+   "uses": 5
+  },
+  {
+   "field": "EC",
+   "uses": 5
+  },
+  {
+   "field": "LA",
+   "uses": 4
+  },
+  {
+   "field": "MS",
+   "uses": 2
+  },
+  {
+   "field": "ST",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "EC",
+   "uses": 2
+  },
+  {
+   "field": "LA",
+   "uses": 2
+  },
+  {
+   "field": "EN",
+   "uses": 1
+  },
+  {
+   "field": "ST",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

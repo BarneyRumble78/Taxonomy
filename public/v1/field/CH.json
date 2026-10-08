@@ -1,0 +1,514 @@
+{
+ "code": "CH",
+ "name": "Chemistry",
+ "dimension": "the question asked of a substance",
+ "cells": [
+  {
+   "id": "CH.O.A1",
+   "name": "Composition and identity"
+  },
+  {
+   "id": "CH.O.A2",
+   "name": "Structure and bonding"
+  },
+  {
+   "id": "CH.O.A3",
+   "name": "Equilibrium and energy"
+  },
+  {
+   "id": "CH.O.A4",
+   "name": "Rates and mechanisms"
+  },
+  {
+   "id": "CH.O.A5",
+   "name": "Synthesis and analysis"
+  }
+ ],
+ "objects": [
+  {
+   "id": "CH.O.A1",
+   "label": "Composition and identity",
+   "uses": [],
+   "text": "CH.O.A1 Composition and identity"
+  },
+  {
+   "id": "CH.O.A1.1",
+   "label": "Elements and the periodic table",
+   "uses": [
+    "PH.O.A2.1"
+   ],
+   "text": "CH.O.A1.1 Elements and the periodic table. 118 elements are named and confirmed by IUPAC; the last four names were approved in 2016. Periodicity follows from electron configuration (uses PH.O.A2.1)."
+  },
+  {
+   "id": "CH.O.A1.1.1",
+   "label": "Atomic weights are published by IUPAC (CIAAW), some as intervals refle",
+   "uses": [],
+   "text": "CH.O.A1.1.1 Atomic weights are published by IUPAC (CIAAW), some as intervals reflecting natural variation."
+  },
+  {
+   "id": "CH.O.A1.2",
+   "label": "Compounds and stoichiometry",
+   "uses": [],
+   "text": "CH.O.A1.2 Compounds and stoichiometry. The law of definite proportions holds for daltonide compounds. Berthollide (non-stoichiometric) solids, such as wüstite Fe₁₋ₓO, are the stated exception."
+  },
+  {
+   "id": "CH.O.A1.2.1",
+   "label": "The mole",
+   "uses": [],
+   "text": "CH.O.A1.2.1 The mole: since 2019 defined by fixing the Avogadro constant at 6.022 140 76 × 10²³ mol⁻¹."
+  },
+  {
+   "id": "CH.O.A1.3",
+   "label": "Mixtures and solutions",
+   "uses": [],
+   "text": "CH.O.A1.3 Mixtures and solutions. Composition is stated by mole fraction, molality or concentration."
+  },
+  {
+   "id": "CH.O.A1.3.1",
+   "label": "Raoult's law holds for ideal solutions",
+   "uses": [],
+   "text": "CH.O.A1.3.1 Raoult's law holds for ideal solutions. Henry's law holds for dilute solutes."
+  },
+  {
+   "id": "CH.O.A1.3.2",
+   "label": "Colligative properties depend on solute particle number, for dilute id",
+   "uses": [],
+   "text": "CH.O.A1.3.2 Colligative properties depend on solute particle number, for dilute ideal solutions."
+  },
+  {
+   "id": "CH.O.A1.4",
+   "label": "Nomenclature and identifiers",
+   "uses": [],
+   "text": "CH.O.A1.4 Nomenclature and identifiers. IUPAC names, CAS registry numbers and InChI. Warrant W12."
+  },
+  {
+   "id": "CH.O.A1.5",
+   "label": "Isotopes and isotopic composition",
+   "uses": [
+    "EA",
+    "PH"
+   ],
+   "text": "CH.O.A1.5 Isotopes and isotopic composition. Isotope ratios as identity and tracer. The nuclear structure is PH; radiometric ages are EA."
+  },
+  {
+   "id": "CH.O.A2",
+   "label": "Structure and bonding",
+   "uses": [],
+   "text": "CH.O.A2 Structure and bonding"
+  },
+  {
+   "id": "CH.O.A2.1",
+   "label": "The chemical bond",
+   "uses": [],
+   "text": "CH.O.A2.1 The chemical bond. Covalent, ionic and metallic bonding. The quantum-chemical description uses the Born–Oppenheimer approximation: nuclei treated as fixed relative to electrons."
+  },
+  {
+   "id": "CH.O.A2.1.1",
+   "label": "Molecular orbital theory and valence bond theory as models.",
+   "uses": [],
+   "text": "CH.O.A2.1.1 Molecular orbital theory and valence bond theory as models."
+  },
+  {
+   "id": "CH.O.A2.1.2",
+   "label": "Electronegativity (Pauling scale) as a derived, model-dependent quanti",
+   "uses": [],
+   "text": "CH.O.A2.1.2 Electronegativity (Pauling scale) as a derived, model-dependent quantity."
+  },
+  {
+   "id": "CH.O.A2.2",
+   "label": "Molecular shape and stereochemistry",
+   "uses": [],
+   "text": "CH.O.A2.2 Molecular shape and stereochemistry. Chirality, isomerism, conformational analysis. VSEPR is listed as a heuristic, not a law."
+  },
+  {
+   "id": "CH.O.A2.2.1",
+   "label": "Enantiomers have identical scalar properties in an achiral environment",
+   "uses": [
+    "BI",
+    "MD"
+   ],
+   "text": "CH.O.A2.2.1 Enantiomers have identical scalar properties in an achiral environment. They differ in chiral environments, including living systems (BI, MD)."
+  },
+  {
+   "id": "CH.O.A2.3",
+   "label": "Solid-state and coordination structure",
+   "uses": [],
+   "text": "CH.O.A2.3 Solid-state and coordination structure. Crystal structures; ligand field theory for transition-metal complexes."
+  },
+  {
+   "id": "CH.O.A2.3.1",
+   "label": "Polymorphism",
+   "uses": [],
+   "text": "CH.O.A2.3.1 Polymorphism: one compound, several crystal forms with different properties."
+  },
+  {
+   "id": "CH.O.A2.4",
+   "label": "Intermolecular forces",
+   "uses": [],
+   "text": "CH.O.A2.4 Intermolecular forces. Hydrogen bonding, dipole forces, dispersion; their effect on phase and solubility."
+  },
+  {
+   "id": "CH.O.A3",
+   "label": "Equilibrium and energy",
+   "uses": [],
+   "text": "CH.O.A3 Equilibrium and energy"
+  },
+  {
+   "id": "CH.O.A3.1",
+   "label": "Thermochemistry",
+   "uses": [
+    "EN"
+   ],
+   "text": "CH.O.A3.1 Thermochemistry. Hess's law: the enthalpy change is path-independent because enthalpy is a state function. Enthalpies of reaction enter energy balances in EN."
+  },
+  {
+   "id": "CH.O.A3.2",
+   "label": "Chemical equilibrium",
+   "uses": [],
+   "text": "CH.O.A3.2 Chemical equilibrium. ΔG° = −RT ln K at constant temperature and pressure. Le Chatelier's principle is listed as a heuristic for small perturbations."
+  },
+  {
+   "id": "CH.O.A3.2.1",
+   "label": "The van 't Hoff equation gives the temperature dependence of K, assumi",
+   "uses": [],
+   "text": "CH.O.A3.2.1 The van 't Hoff equation gives the temperature dependence of K, assuming ΔH° constant over the range."
+  },
+  {
+   "id": "CH.O.A3.3",
+   "label": "Electrochemistry",
+   "uses": [
+    "BI",
+    "MS"
+   ],
+   "text": "CH.O.A3.3 Electrochemistry. The Nernst equation E = E° − (RT/nF) ln Q, using activities, for a cell at equilibrium (no current). It gives ion equilibrium potentials used in BI and MS."
+  },
+  {
+   "id": "CH.O.A3.3.1",
+   "label": "Batteries and corrosion as applications",
+   "uses": [
+    "EN"
+   ],
+   "text": "CH.O.A3.3.1 Batteries and corrosion as applications. Device performance is EN."
+  },
+  {
+   "id": "CH.O.A3.4",
+   "label": "Acids and bases",
+   "uses": [],
+   "text": "CH.O.A3.4 Acids and bases. Brønsted–Lowry and Lewis definitions. pKa is stated in a named solvent and at a temperature."
+  },
+  {
+   "id": "CH.O.A3.5",
+   "label": "Free energy in coupled reactions",
+   "uses": [
+    "BI"
+   ],
+   "text": "CH.O.A3.5 Free energy in coupled reactions. A favourable reaction can drive an unfavourable one when they share an intermediate. ATP coupling in cells is the BI application."
+  },
+  {
+   "id": "CH.O.A4",
+   "label": "Rates and mechanisms",
+   "uses": [],
+   "text": "CH.O.A4 Rates and mechanisms"
+  },
+  {
+   "id": "CH.O.A4.1",
+   "label": "Rate laws",
+   "uses": [],
+   "text": "CH.O.A4.1 Rate laws. Reaction order is determined by experiment, not by the balanced equation, except for elementary steps."
+  },
+  {
+   "id": "CH.O.A4.2",
+   "label": "Temperature dependence",
+   "uses": [],
+   "text": "CH.O.A4.2 Temperature dependence. Arrhenius k = A exp(−Ea/RT) is empirical over a stated temperature range. Eyring transition-state theory assumes quasi-equilibrium with the activated complex."
+  },
+  {
+   "id": "CH.O.A4.3",
+   "label": "Mechanisms",
+   "uses": [],
+   "text": "CH.O.A4.3 Mechanisms. Sequences of elementary steps. The steady-state and rate-determining-step approximations hold when one step is much slower than the rest."
+  },
+  {
+   "id": "CH.O.A4.3.1",
+   "label": "Kinetic isotope effects as mechanistic evidence.",
+   "uses": [],
+   "text": "CH.O.A4.3.1 Kinetic isotope effects as mechanistic evidence."
+  },
+  {
+   "id": "CH.O.A4.4",
+   "label": "Catalysis",
+   "uses": [
+    "BI"
+   ],
+   "text": "CH.O.A4.4 Catalysis. A catalyst changes the rate without changing K. Heterogeneous, homogeneous and enzyme catalysis. Michaelis–Menten kinetics assume a steady-state enzyme–substrate complex and substrate in excess. The enzyme's role in life is BI."
+  },
+  {
+   "id": "CH.O.A4.5",
+   "label": "Photochemistry",
+   "uses": [
+    "PH.O.A2.4"
+   ],
+   "text": "CH.O.A4.5 Photochemistry. Reactions initiated by light; quantum yield. The level structure is PH.O.A2.4."
+  },
+  {
+   "id": "CH.O.A5",
+   "label": "Synthesis and analysis",
+   "uses": [],
+   "text": "CH.O.A5 Synthesis and analysis"
+  },
+  {
+   "id": "CH.O.A5.1",
+   "label": "Synthesis",
+   "uses": [],
+   "text": "CH.O.A5.1 Synthesis. Named reactions; retrosynthetic analysis (Corey); yields under stated conditions."
+  },
+  {
+   "id": "CH.O.A5.1.1",
+   "label": "Protecting groups and selectivity.",
+   "uses": [],
+   "text": "CH.O.A5.1.1 Protecting groups and selectivity."
+  },
+  {
+   "id": "CH.O.A5.2",
+   "label": "Separation and purification",
+   "uses": [],
+   "text": "CH.O.A5.2 Separation and purification. Distillation, chromatography, crystallisation."
+  },
+  {
+   "id": "CH.O.A5.3",
+   "label": "Analytical measurement",
+   "uses": [],
+   "text": "CH.O.A5.3 Analytical measurement. Spectroscopy (NMR, IR, UV-vis), mass spectrometry, titration. Every value carries an uncertainty and a detection limit."
+  },
+  {
+   "id": "CH.O.A5.3.1",
+   "label": "The Beer–Lambert law holds for dilute solutions and monochromatic ligh",
+   "uses": [],
+   "text": "CH.O.A5.3.1 The Beer–Lambert law holds for dilute solutions and monochromatic light, without scattering."
+  },
+  {
+   "id": "CH.O.A5.4",
+   "label": "Materials and polymers",
+   "uses": [
+    "EN"
+   ],
+   "text": "CH.O.A5.4 Materials and polymers. Composition–property relations for designed substances. Performance against a specification is EN."
+  },
+  {
+   "id": "CH.O.A5.5",
+   "label": "Green chemistry",
+   "uses": [
+    "EV"
+   ],
+   "text": "CH.O.A5.5 Green chemistry. Atom economy and waste metrics. The environmental impact claim is EV."
+  }
+ ],
+ "methods": [
+  {
+   "id": "CH.M.1",
+   "label": "Name and model",
+   "role": "M1 Represent",
+   "example": "structural formula, nomenclature"
+  },
+  {
+   "id": "CH.M.2",
+   "label": "Calculate",
+   "role": "M2 Derive",
+   "example": "thermodynamic derivation"
+  },
+  {
+   "id": "CH.M.3",
+   "label": "Characterise",
+   "role": "M3 Observe",
+   "example": "NMR, X-ray crystallography"
+  },
+  {
+   "id": "CH.M.4",
+   "label": "Synthesise",
+   "role": "M4 Intervene",
+   "example": "make the compound"
+  },
+  {
+   "id": "CH.M.5",
+   "label": "Compute",
+   "role": "M5 Compute",
+   "example": "DFT, ab initio, molecular dynamics"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "CH.O.A1",
+   "warrant": "W4 + W12",
+   "standard": "elemental analysis within stated error; IUPAC rule followed",
+   "defeaters": "impure sample, misassignment"
+  },
+  {
+   "cell": "CH.O.A2",
+   "warrant": "W4 + W2",
+   "standard": "diffraction or spectroscopic structure; computation with stated basis set and error",
+   "defeaters": "disorder, polymorphism, method artefact"
+  },
+  {
+   "cell": "CH.O.A3",
+   "warrant": "W4 + W1",
+   "standard": "measured K or ΔH agrees with derivation",
+   "defeaters": "non-ideal activity, side reactions"
+  },
+  {
+   "cell": "CH.O.A4",
+   "warrant": "W3",
+   "standard": "controlled kinetic experiment; isotope labelling",
+   "defeaters": "competing pathways, mass-transport limits"
+  },
+  {
+   "cell": "CH.O.A5",
+   "warrant": "W3 + W4",
+   "standard": "reproducible synthesis with characterised product",
+   "defeaters": "irreproducible yield, contamination"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "CH.B.C1",
+   "Organic chemistry",
+   "A2, A4, A5.1",
+   "M.1, M.3, M.4",
+   "carbon compounds"
+  ],
+  [
+   "CH.B.C2",
+   "Inorganic chemistry",
+   "A2.3, A3",
+   "M.3, M.4",
+   "metals, main-group compounds"
+  ],
+  [
+   "CH.B.C3",
+   "Physical chemistry",
+   "A3, A4",
+   "M.2, M.3, M.5",
+   "any"
+  ],
+  [
+   "CH.B.C4",
+   "Analytical chemistry",
+   "A1, A5.3",
+   "M.3",
+   "samples"
+  ],
+  [
+   "CH.B.C5",
+   "Biochemistry and medicinal chemistry",
+   "A2, A4.4",
+   "M.3, M.4",
+   "biomolecules, drugs (uses BI, MD)"
+  ],
+  [
+   "CH.B.C6",
+   "Materials and polymer chemistry",
+   "A5.4",
+   "M.4, M.5",
+   "solids, polymers"
+  ],
+  [
+   "CH.B.C7",
+   "Environmental chemistry",
+   "A1, A4",
+   "M.3",
+   "air, water, soil (EV owns the impact)"
+  ],
+  [
+   "CH.B.C8",
+   "Theoretical and computational chemistry",
+   "A2, A3",
+   "M.2, M.5",
+   "models"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Chemistry is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five questions about a substance: composition and identity, structure and bonding, equilibrium and energy, rates and mechanisms, and synthesis and analysis.",
+  "key_line": "Dimension: **the question asked of a substance.** Logic inductive. Order: structural, from what a substance is to how it is made or found.\n1. Composition and identity\n2. Structure and bonding\n3. Equilibrium and energy\n4. Rates and mechanisms\n5. Synthesis and analysis\n\n**MECE test.** \"The yield of this esterification at 60 °C is 85%\" is A5 (a claim about making). \"Its rate constant at 60 °C is k\" is A4. \"Its equilibrium constant is K\" is A3. The same reaction gets three sentences, each with one home.",
+  "assignment_rules": "1. Place a claim by the question it answers of a substance.\n2. A department is a bridge, never a cell.\n3. Atomic level structure is PH. The bond is CH.\n4. What a molecule does in a living cell is BI. Its structure and reactivity are CH.\n5. A drug's action in a patient is MD. Its synthesis and structure are CH.\n6. A material's fitness for a design is EN. Its composition–property law is CH.\n7. A food standard is AG (uses CH for the molecule).\n8. Environmental harm from a chemical is EV. Its fate and reaction are CH.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| nuclear and atomic level structure | PH.O.A2 |\n| biological function of a molecule | BI |\n| clinical effect of a drug | MD |\n| engineering specification | EN |\n| environmental harm | EV |",
+  "crosswalk": "**ANZSRC 34** Chemical sciences (checked 9 Oct 2026, ABS anzsrc2020_for.xlsx), eight groups:\n\n| Group | Home |\n|---|---|\n| 3401 Analytical chemistry | B.C4, A5.3 |\n| 3402 Inorganic chemistry | B.C2 |\n| 3403 Macromolecular and materials chemistry | B.C6, A5.4 |\n| 3404 Medicinal and biomolecular chemistry | B.C5 (clinical effect MD) |\n| 3405 Organic chemistry | B.C1 |\n| 3406 Physical chemistry | B.C3 |\n| 3407 Theoretical and computational chemistry | B.C8, CH.M.5 |\n| 3499 Other chemical sciences | not a cell |\n\nCoverage: 7 of 7 substantive groups land.\n\n**IUPAC** has eight divisions (per the audit). **ACS** has 32 technical divisions (checked: axial.acs.org). Both are communities, so they map to bridges. A division-by-division ACS map is not yet written, so R4 is partial.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 24 sub-cells = 29. M roles 5. Heuristics 7, outside the count. W rows 5. B bridges 8.\nKey line, word for word: Composition and identity. Structure and bonding. Equilibrium and energy. Rates and mechanisms. Synthesis and analysis.\nCONTESTED: biochemistry as a CH bridge rather than a BI cell (alternative: BI.O.A1); electronegativity as a measured or model quantity.\nOPEN: the mechanism of many heterogeneous catalysts; accurate prediction of crystal structure from composition.\nFixed from the audit: IUPAC divisions are now eight; departments are bridges, not cells."
+ },
+ "borders": [
+  {
+   "field": "BI",
+   "uses": 4
+  },
+  {
+   "field": "PH",
+   "uses": 3
+  },
+  {
+   "field": "EN",
+   "uses": 3
+  },
+  {
+   "field": "EA",
+   "uses": 1
+  },
+  {
+   "field": "MD",
+   "uses": 1
+  },
+  {
+   "field": "MS",
+   "uses": 1
+  },
+  {
+   "field": "EV",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "EN",
+   "uses": 10
+  },
+  {
+   "field": "BI",
+   "uses": 7
+  },
+  {
+   "field": "EA",
+   "uses": 4
+  },
+  {
+   "field": "AR",
+   "uses": 2
+  },
+  {
+   "field": "AG",
+   "uses": 2
+  },
+  {
+   "field": "EV",
+   "uses": 2
+  },
+  {
+   "field": "PH",
+   "uses": 1
+  },
+  {
+   "field": "MD",
+   "uses": 1
+  },
+  {
+   "field": "MS",
+   "uses": 1
+  },
+  {
+   "field": "PL",
+   "uses": 1
+  },
+  {
+   "field": "IS",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

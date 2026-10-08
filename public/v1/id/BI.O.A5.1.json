@@ -1,0 +1,17 @@
+{
+ "id": "BI.O.A5.1",
+ "label": "Population dynamics",
+ "owner": "BI",
+ "home": "O/A5",
+ "uses": [
+  "MA.O.A4"
+ ],
+ "text": "BI.O.A5.1 Population dynamics. Exponential growth dN/dt = rN holds for constant per-capita rate r with unlimited resources and no structure. Logistic growth dN/dt = rN(1 − N/K) adds a fixed carrying capacity K and linear density dependence. K holds only in a stated setting. Human demography is owned by MS.O.A5.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W4, W3 (field experiments), W5, W2",
+  "standard": "Replicated field or mesocosm experiment; time series with stated uncertainty",
+  "defeaters": "Pseudoreplication; scale mismatch; confounded gradients; detection bias"
+ },
+ "field_url": "/v1/field/BI.json"
+}

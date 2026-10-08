@@ -1,0 +1,17 @@
+{
+ "id": "CS.O.A2.1",
+ "label": "Algorithms",
+ "owner": "CS",
+ "home": "O/A2",
+ "uses": [
+  "MA.B.C3"
+ ],
+ "text": "CS.O.A2.1 Algorithms — each algorithm has a stated cost on a stated model. Comparison sorting needs Ω(n log n) comparisons in the worst case (a decision-tree lower bound, uses MA.B.C3).",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W1 + W2",
+  "standard": "proof of bound on a stated model; benchmark with stated variance",
+  "defeaters": "model mismatch with hardware, unrepresentative input"
+ },
+ "field_url": "/v1/field/CS.json"
+}

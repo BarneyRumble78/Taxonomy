@@ -1,0 +1,829 @@
+{
+ "code": "MS",
+ "name": "Mind, brain and society",
+ "dimension": "the unit the claim is about",
+ "cells": [
+  {
+   "id": "MS.O.A1",
+   "name": "Mental processes"
+  },
+  {
+   "id": "MS.O.A2",
+   "name": "Nervous systems"
+  },
+  {
+   "id": "MS.O.A3",
+   "name": "Persons"
+  },
+  {
+   "id": "MS.O.A4",
+   "name": "Interactions"
+  },
+  {
+   "id": "MS.O.A5",
+   "name": "Social structures"
+  }
+ ],
+ "objects": [
+  {
+   "id": "MS.O.A1",
+   "label": "Mental processes",
+   "uses": [],
+   "text": "MS.O.A1 Mental processes"
+  },
+  {
+   "id": "MS.O.A1.1",
+   "label": "Sensation and perception",
+   "uses": [],
+   "text": "MS.O.A1.1 Sensation and perception. A stimulus is transduced; a percept is constructed. Named objects:"
+  },
+  {
+   "id": "MS.O.A1.1.1",
+   "label": "Weber's law",
+   "uses": [],
+   "text": "MS.O.A1.1.1 Weber's law: over a mid-range of intensities, the just-noticeable difference ΔI is a roughly constant fraction k of the base intensity I (Gescheider 1997)."
+  },
+  {
+   "id": "MS.O.A1.1.2",
+   "label": "Fechner's law",
+   "uses": [],
+   "text": "MS.O.A1.1.2 Fechner's law: if Weber's law holds and each JND is a unit step, sensation grows with the logarithm of intensity."
+  },
+  {
+   "id": "MS.O.A1.1.3",
+   "label": "Stevens's power law",
+   "uses": [],
+   "text": "MS.O.A1.1.3 Stevens's power law: for direct magnitude estimation over a stated range, perceived magnitude is a power function of intensity."
+  },
+  {
+   "id": "MS.O.A1.1.4",
+   "label": "Signal detection theory",
+   "uses": [
+    "MA.O.A5"
+   ],
+   "text": "MS.O.A1.1.4 Signal detection theory: under equal-variance Gaussian noise and signal distributions, d′ measures sensitivity and c (or β) measures criterion. A classical threshold confounds the two (Green and Swets 1966)."
+  },
+  {
+   "id": "MS.O.A1.2",
+   "label": "Attention and consciousness",
+   "uses": [],
+   "text": "MS.O.A1.2 Attention and consciousness. Selection has a cost; reportable experience has measurable conditions."
+  },
+  {
+   "id": "MS.O.A1.2.1",
+   "label": "Selective attention",
+   "uses": [],
+   "text": "MS.O.A1.2.1 Selective attention and capacity limits; inattentional blindness."
+  },
+  {
+   "id": "MS.O.A1.2.2",
+   "label": "Consciousness as reportable experience",
+   "uses": [
+    "PL.O.A2"
+   ],
+   "text": "MS.O.A1.2.2 Consciousness as reportable experience, studied with no-report controls. The hard problem is PL.O.A2; MS uses it and does not claim to solve it."
+  },
+  {
+   "id": "MS.O.A1.2.3",
+   "label": "Hypnosis and altered states",
+   "uses": [],
+   "text": "MS.O.A1.2.3 Hypnosis and altered states, as changes in attention and report (APA Div. 30 home)."
+  },
+  {
+   "id": "MS.O.A1.3",
+   "label": "Learning and memory",
+   "uses": [],
+   "text": "MS.O.A1.3 Learning and memory."
+  },
+  {
+   "id": "MS.O.A1.3.1",
+   "label": "Classical conditioning; Rescorla–Wagner",
+   "uses": [],
+   "text": "MS.O.A1.3.1 Classical conditioning: a cue comes to predict an outcome. Rescorla–Wagner model: on each trial, ΔV = αβ(λ − ΣV), where α and β are cue and outcome salience rates in (0,1], λ is the outcome's maximum, and ΣV sums all cues present."
+  },
+  {
+   "id": "MS.O.A1.3.2",
+   "label": "Operant conditioning",
+   "uses": [],
+   "text": "MS.O.A1.3.2 Operant conditioning and schedules of reinforcement."
+  },
+  {
+   "id": "MS.O.A1.3.3",
+   "label": "Memory systems",
+   "uses": [],
+   "text": "MS.O.A1.3.3 Memory systems: declarative (episodic, semantic) and nondeclarative (procedural, priming, classical conditioning, nonassociative) (Squire 2004)."
+  },
+  {
+   "id": "MS.O.A1.3.4",
+   "label": "Working-memory capacity",
+   "uses": [],
+   "text": "MS.O.A1.3.4 Working-memory capacity: about 3–5 chunks when rehearsal and chunking are blocked (Cowan 2001). The 7±2 figure is a heuristic (register)."
+  },
+  {
+   "id": "MS.O.A1.3.5",
+   "label": "Forgetting",
+   "uses": [],
+   "text": "MS.O.A1.3.5 Forgetting. Cue-dependent retrieval failure (Tulving 1974) is one answer. Interference, decay and failed consolidation are rivals (CONTESTED; Wixted 2004)."
+  },
+  {
+   "id": "MS.O.A1.4",
+   "label": "Emotion and motivation",
+   "uses": [],
+   "text": "MS.O.A1.4 Emotion and motivation. A state with a trigger, a bodily change and an action tendency."
+  },
+  {
+   "id": "MS.O.A1.4.1",
+   "label": "Appraisal and basic-emotion accounts",
+   "uses": [],
+   "text": "MS.O.A1.4.1 Appraisal accounts and basic-emotion accounts, as rival answer-families."
+  },
+  {
+   "id": "MS.O.A1.4.2",
+   "label": "Motivation and reward",
+   "uses": [
+    "MS.O.A2.3"
+   ],
+   "text": "MS.O.A1.4.2 Motivation and reward as process claims. The tissue (orbitofrontal cortex, vmPFC, ventral striatum) is MS.O.A2.3."
+  },
+  {
+   "id": "MS.O.A1.5",
+   "label": "Thought, language and judgement",
+   "uses": [],
+   "text": "MS.O.A1.5 Thought, language and judgement."
+  },
+  {
+   "id": "MS.O.A1.5.1",
+   "label": "Concepts and categories",
+   "uses": [],
+   "text": "MS.O.A1.5.1 Concepts and categories."
+  },
+  {
+   "id": "MS.O.A1.5.2",
+   "label": "Judgement heuristics and biases",
+   "uses": [],
+   "text": "MS.O.A1.5.2 Judgement heuristics (availability, representativeness, anchoring; Tversky and Kahneman 1974). They are biases relative to a stated normative model. The rule of thumb used by an analyst is a different sentence, in the register."
+  },
+  {
+   "id": "MS.O.A1.5.3",
+   "label": "Psycholinguistic processing",
+   "uses": [
+    "LN"
+   ],
+   "text": "MS.O.A1.5.3 Psycholinguistic processing (comprehension, production). The grammar itself is LN."
+  },
+  {
+   "id": "MS.O.A1.5.4",
+   "label": "Creativity and problem solving",
+   "uses": [],
+   "text": "MS.O.A1.5.4 Creativity and problem solving (APA Div. 10 home). The aesthetic verdict is AR."
+  },
+  {
+   "id": "MS.O.A1.5.5",
+   "label": "RETIRED: see ED",
+   "uses": [
+    "ED"
+   ],
+   "text": "MS.O.A1.5.5 RETIRED in Phase 2.1 (ID not reused). Learning claims under an educational arrangement, including physics and mathematics education (MSC 97), are ED.O.A2–A4. MS keeps the general mechanism of learning and memory in MS.O.A1.5."
+  },
+  {
+   "id": "MS.O.A2",
+   "label": "Nervous systems",
+   "uses": [],
+   "text": "MS.O.A2 Nervous systems"
+  },
+  {
+   "id": "MS.O.A2.1",
+   "label": "Neurons, glia and synapses",
+   "uses": [
+    "CH.O.A3.3",
+    "BI.O.A2"
+   ],
+   "text": "MS.O.A2.1 Neurons, glia and synapses."
+  },
+  {
+   "id": "MS.O.A2.1.1",
+   "label": "Action potential",
+   "uses": [],
+   "text": "MS.O.A2.1.1 Action potential: an all-or-none spike, given a threshold depolarisation of an excitable membrane."
+  },
+  {
+   "id": "MS.O.A2.1.2",
+   "label": "Chemical and electrical synapses",
+   "uses": [],
+   "text": "MS.O.A2.1.2 Chemical and electrical synapses; excitation and inhibition."
+  },
+  {
+   "id": "MS.O.A2.1.3",
+   "label": "Glia",
+   "uses": [],
+   "text": "MS.O.A2.1.3 Glia: astrocytes, oligodendrocytes, microglia and their signalling roles (SfN Theme B)."
+  },
+  {
+   "id": "MS.O.A2.2",
+   "label": "Plasticity",
+   "uses": [],
+   "text": "MS.O.A2.2 Plasticity."
+  },
+  {
+   "id": "MS.O.A2.2.1",
+   "label": "LTP and LTD",
+   "uses": [],
+   "text": "MS.O.A2.2.1 Long-term potentiation and depression, as candidate mechanisms of learning. A changed synapse is not yet a memory; the memory is MS.O.A1.3."
+  },
+  {
+   "id": "MS.O.A2.3",
+   "label": "Circuits and systems",
+   "uses": [],
+   "text": "MS.O.A2.3 Circuits and systems."
+  },
+  {
+   "id": "MS.O.A2.3.1",
+   "label": "Sensory and motor pathways",
+   "uses": [],
+   "text": "MS.O.A2.3.1 Sensory and motor pathways."
+  },
+  {
+   "id": "MS.O.A2.3.2",
+   "label": "Hypothalamus and homeostasis",
+   "uses": [],
+   "text": "MS.O.A2.3.2 Hypothalamus and homeostasis."
+  },
+  {
+   "id": "MS.O.A2.3.3",
+   "label": "Valuation circuits",
+   "uses": [],
+   "text": "MS.O.A2.3.3 Valuation circuits: orbitofrontal cortex, vmPFC, ventral striatum. \"Limbic system\" is a contested grouping and is not used as a cell."
+  },
+  {
+   "id": "MS.O.A2.3.4",
+   "label": "Localisation",
+   "uses": [],
+   "text": "MS.O.A2.3.4 Localisation as a starting map; a function is usually a circuit."
+  },
+  {
+   "id": "MS.O.A2.4",
+   "label": "Development of the nervous system",
+   "uses": [],
+   "text": "MS.O.A2.4 Development of the nervous system."
+  },
+  {
+   "id": "MS.O.A2.4.1",
+   "label": "Overproduction and pruning",
+   "uses": [],
+   "text": "MS.O.A2.4.1 Overproduction and pruning."
+  },
+  {
+   "id": "MS.O.A2.4.2",
+   "label": "Critical and sensitive periods",
+   "uses": [],
+   "text": "MS.O.A2.4.2 Critical and sensitive periods, with their measured windows."
+  },
+  {
+   "id": "MS.O.A3",
+   "label": "Persons",
+   "uses": [],
+   "text": "MS.O.A3 Persons"
+  },
+  {
+   "id": "MS.O.A3.1",
+   "label": "Personality",
+   "uses": [],
+   "text": "MS.O.A3.1 Personality."
+  },
+  {
+   "id": "MS.O.A3.1.1",
+   "label": "Five-factor model (HEXACO rival)",
+   "uses": [],
+   "text": "MS.O.A3.1.1 Five-factor model as the common answer. HEXACO (six factors; Ashton and Lee 2007) is the rival (CONTESTED)."
+  },
+  {
+   "id": "MS.O.A3.1.2",
+   "label": "Person–situation debate",
+   "uses": [],
+   "text": "MS.O.A3.1.2 Person–situation debate: both variances are measured."
+  },
+  {
+   "id": "MS.O.A3.2",
+   "label": "Intelligence and abilities",
+   "uses": [],
+   "text": "MS.O.A3.2 Intelligence and abilities."
+  },
+  {
+   "id": "MS.O.A3.2.1",
+   "label": "g factor",
+   "uses": [
+    "MA.O.A5"
+   ],
+   "text": "MS.O.A3.2.1 g as a statistical factor (Spearman 1904), not a thing seen."
+  },
+  {
+   "id": "MS.O.A3.2.2",
+   "label": "Heritability of intelligence",
+   "uses": [
+    "BI.O.A4"
+   ],
+   "text": "MS.O.A3.2.2 Heritability of intelligence: a variance fraction in a stated population, environment and time, broad (H²) or narrow (h²). The quantitative-genetics result uses BI.O.A4."
+  },
+  {
+   "id": "MS.O.A3.3",
+   "label": "Life-course development",
+   "uses": [],
+   "text": "MS.O.A3.3 Life-course development."
+  },
+  {
+   "id": "MS.O.A3.3.1",
+   "label": "Stage theories",
+   "uses": [],
+   "text": "MS.O.A3.3.1 Stage theories as ideal types."
+  },
+  {
+   "id": "MS.O.A3.3.2",
+   "label": "Attachment classification",
+   "uses": [],
+   "text": "MS.O.A3.3.2 Attachment classification (Ainsworth; Main and Solomon)."
+  },
+  {
+   "id": "MS.O.A3.3.3",
+   "label": "Ageing",
+   "uses": [],
+   "text": "MS.O.A3.3.3 Ageing and adult development."
+  },
+  {
+   "id": "MS.O.A3.4",
+   "label": "Psychopathology (process account)",
+   "uses": [
+    "MD.O.A1"
+   ],
+   "text": "MS.O.A3.4 Psychopathology. The psychological process account of distress and disability."
+  },
+  {
+   "id": "MS.O.A3.4.1",
+   "label": "DSM-5-TR and ICD-11 categories",
+   "uses": [],
+   "text": "MS.O.A3.4.1 Diagnostic categories as conventions: DSM-5-TR (APA 2022) and ICD-11 (WHO, in force 2022). The category is W12."
+  },
+  {
+   "id": "MS.O.A3.4.2",
+   "label": "RDoC",
+   "uses": [],
+   "text": "MS.O.A3.4.2 RDoC as the process-first alternative (CONTESTED as a basis for classification)."
+  },
+  {
+   "id": "MS.O.A4",
+   "label": "Interactions",
+   "uses": [],
+   "text": "MS.O.A4 Interactions"
+  },
+  {
+   "id": "MS.O.A4.1",
+   "label": "Social influence",
+   "uses": [],
+   "text": "MS.O.A4.1 Social influence. Conformity, obedience and bystander effects, each with its replication record (Burger 2009; Fischer et al. 2011 meta-analysis on bystanders). Environment–behaviour claims (APA Div. 34) sit here."
+  },
+  {
+   "id": "MS.O.A4.2",
+   "label": "Social cognition",
+   "uses": [],
+   "text": "MS.O.A4.2 Social cognition. Attribution; the fundamental attribution error (Ross 1977), flagged as weaker in non-WEIRD samples (Henrich et al. 2010)."
+  },
+  {
+   "id": "MS.O.A4.3",
+   "label": "Attitudes",
+   "uses": [],
+   "text": "MS.O.A4.3 Attitudes. Cognitive dissonance (Festinger 1957), with self-perception as the rival account. Consumer attitudes (APA Div. 23) sit here; BU.O.A4.1 uses them."
+  },
+  {
+   "id": "MS.O.A4.4",
+   "label": "Groups and relationships",
+   "uses": [],
+   "text": "MS.O.A4.4 Groups and relationships. Small groups, roles, norms, status; couples and families; conversation as turn-taking; human–animal interaction (CONTESTED; alternative BI.O.A3)."
+  },
+  {
+   "id": "MS.O.A4.5",
+   "label": "Self and identity",
+   "uses": [],
+   "text": "MS.O.A4.5 Self and identity. The self as a role taken toward others; identity as a claimed category; body and embodiment. The category's distribution is MS.O.A5.1."
+  },
+  {
+   "id": "MS.O.A5",
+   "label": "Social structures",
+   "uses": [],
+   "text": "MS.O.A5 Social structures"
+  },
+  {
+   "id": "MS.O.A5.1",
+   "label": "Positions and inequality",
+   "uses": [],
+   "text": "MS.O.A5.1 Positions and inequality. Status, role, role conflict. Inequality as a residual in life chances after stated controls. Bases include class, race, gender, sexuality and disability."
+  },
+  {
+   "id": "MS.O.A5.2",
+   "label": "Organisations",
+   "uses": [],
+   "text": "MS.O.A5.2 Organisations. Weberian bureaucracy (rule, file, career); informal structure. PO.O.A2 uses it for state bureaucracy."
+  },
+  {
+   "id": "MS.O.A5.3",
+   "label": "Institutions and culture",
+   "uses": [],
+   "text": "MS.O.A5.3 Institutions and culture. An institution is a repeated, taken-for-granted pattern: family, market, state, religion, school, media, science. Culture is shared meaning in use. Consumption as practice sits here. A paper merely set in a church or school is a sector instance."
+  },
+  {
+   "id": "MS.O.A5.4",
+   "label": "Populations",
+   "uses": [],
+   "text": "MS.O.A5.4 Populations. Births, deaths, migration and their rates; life table; cohort. Human population is owned here; non-human population dynamics are BI.O.A5."
+  },
+  {
+   "id": "MS.O.A5.5",
+   "label": "Collective action and change",
+   "uses": [
+    "PO.O.A3.3",
+    "EC.O.A5.3"
+   ],
+   "text": "MS.O.A5.5 Collective action and change. Social movements that target a norm or an organisation. A movement contesting authority is PO.O.A3.3 (CONTESTED target rule). The free-rider result is EC.O.A5.3. Differentiation, diffusion, globalisation. Named theories of history (Marxian, functionalist) are answer-families, reconstructed under MS.M.3."
+  }
+ ],
+ "methods": [
+  {
+   "id": "MS.M.1",
+   "label": "Measure",
+   "home": "M"
+  },
+  {
+   "id": "MS.M.2",
+   "label": "Perturb",
+   "home": "M"
+  },
+  {
+   "id": "MS.M.3",
+   "label": "Compare and interpret",
+   "home": "M"
+  },
+  {
+   "id": "MS.M.4",
+   "label": "Model",
+   "home": "M"
+  },
+  {
+   "id": "MS.M.5",
+   "label": "Replicate and review",
+   "home": "M"
+  },
+  {
+   "id": "MS.M.H",
+   "label": "Heuristics register",
+   "home": "M (outside count)"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "MS.O.A1",
+   "warrant": "W3, W4",
+   "standard": "Effect replicates across paradigms with stated range",
+   "defeaters": "Task artefact; range extrapolation"
+  },
+  {
+   "cell": "MS.O.A1.1",
+   "warrant": "W3, W4",
+   "standard": "Psychophysical function with d′ and c, over a stated range",
+   "defeaters": "Criterion shift read as sensitivity; out-of-range use"
+  },
+  {
+   "cell": "MS.O.A1.2",
+   "warrant": "W3, W4",
+   "standard": "Effect survives no-report and demand controls",
+   "defeaters": "Report confound; demand characteristics"
+  },
+  {
+   "cell": "MS.O.A1.3",
+   "warrant": "W3",
+   "standard": "Double dissociation; acquisition and extinction with controls",
+   "defeaters": "Single dissociation; ceiling or floor; pseudo-conditioning"
+  },
+  {
+   "cell": "MS.O.A1.4",
+   "warrant": "W3, W4",
+   "standard": "Convergent physiological and report measures",
+   "defeaters": "Self-report bias; construct ambiguity"
+  },
+  {
+   "cell": "MS.O.A1.5",
+   "warrant": "W3; W12 for the normative model",
+   "standard": "Bias shown against an explicit norm; learning effect in a controlled trial",
+   "defeaters": "Wrong normative model; ecological rationality; teaching-to-the-test"
+  },
+  {
+   "cell": "MS.O.A2",
+   "warrant": "W3, W4",
+   "standard": "Necessity and sufficiency tests converge with recording",
+   "defeaters": "Correlate taken for mechanism"
+  },
+  {
+   "cell": "MS.O.A2.1",
+   "warrant": "W3, W4",
+   "standard": "Recording with stated noise",
+   "defeaters": "Artefact; slice versus in-vivo gap"
+  },
+  {
+   "cell": "MS.O.A2.2",
+   "warrant": "W3",
+   "standard": "Block and induce tests",
+   "defeaters": "Correlate taken for mechanism"
+  },
+  {
+   "cell": "MS.O.A2.3",
+   "warrant": "W3, W4",
+   "standard": "Lesion or stimulation convergent with recording",
+   "defeaters": "Diaschisis; reverse inference"
+  },
+  {
+   "cell": "MS.O.A2.4",
+   "warrant": "W3, W4, W6",
+   "standard": "Timed manipulation; cross-species comparison",
+   "defeaters": "Species transfer"
+  },
+  {
+   "cell": "MS.O.A3",
+   "warrant": "W4",
+   "standard": "Reliable measurement with invariance across groups",
+   "defeaters": "Method variance"
+  },
+  {
+   "cell": "MS.O.A3.1",
+   "warrant": "W4",
+   "standard": "Reliability; factor invariance",
+   "defeaters": "Culture non-invariance"
+  },
+  {
+   "cell": "MS.O.A3.2",
+   "warrant": "W4, W5",
+   "standard": "g loadings; heritability with stated population",
+   "defeaters": "Flynn effect; range restriction; G×E"
+  },
+  {
+   "cell": "MS.O.A3.3",
+   "warrant": "W4, W6",
+   "standard": "Longitudinal design with attrition stated",
+   "defeaters": "Cohort confound; attrition"
+  },
+  {
+   "cell": "MS.O.A3.4",
+   "warrant": "W12 for the category; W4 for the process",
+   "standard": "Inter-rater reliability; process measure predicts course",
+   "defeaters": "Low validity; comorbidity"
+  },
+  {
+   "cell": "MS.O.A4",
+   "warrant": "W3",
+   "standard": "Preregistered replication",
+   "defeaters": "Replication failure"
+  },
+  {
+   "cell": "MS.O.A4.1",
+   "warrant": "W3",
+   "standard": "Preregistered replication; meta-analysis",
+   "defeaters": "Demand characteristics; small samples"
+  },
+  {
+   "cell": "MS.O.A4.2",
+   "warrant": "W3, W6",
+   "standard": "Cross-cultural replication",
+   "defeaters": "WEIRD sample"
+  },
+  {
+   "cell": "MS.O.A4.3",
+   "warrant": "W3",
+   "standard": "Behavioural, not only self-report, outcome",
+   "defeaters": "Self-perception alternative"
+  },
+  {
+   "cell": "MS.O.A4.4",
+   "warrant": "W4, W8",
+   "standard": "Coded interaction; inter-coder reliability",
+   "defeaters": "Observer effect"
+  },
+  {
+   "cell": "MS.O.A4.5",
+   "warrant": "W8, W4",
+   "standard": "Trace to record; scale validity",
+   "defeaters": "Reification"
+  },
+  {
+   "cell": "MS.O.A5",
+   "warrant": "W4, W6, W8",
+   "standard": "Pattern shown beyond any one member",
+   "defeaters": "Ecological fallacy"
+  },
+  {
+   "cell": "MS.O.A5.1",
+   "warrant": "W5, W4",
+   "standard": "Residual after stated controls",
+   "defeaters": "Omitted variable; bad controls"
+  },
+  {
+   "cell": "MS.O.A5.2",
+   "warrant": "W4, W6, W8",
+   "standard": "Comparative cases plus records",
+   "defeaters": "Selection on outcome"
+  },
+  {
+   "cell": "MS.O.A5.3",
+   "warrant": "W6, W8",
+   "standard": "Comparative-historical trace; practice traced to record",
+   "defeaters": "Functionalist circularity; culture as residual"
+  },
+  {
+   "cell": "MS.O.A5.4",
+   "warrant": "W4; W12 for definitions",
+   "standard": "Registers or census with coverage stated",
+   "defeaters": "Undercount; definition change"
+  },
+  {
+   "cell": "MS.O.A5.5",
+   "warrant": "W6, W7, W9",
+   "standard": "Dated record; rival answer-families tested",
+   "defeaters": "Teleology; unfalsifiable theory"
+  }
+ ],
+ "bridges": [
+  {
+   "id": "MS.B.C1",
+   "label": "Process sciences"
+  },
+  {
+   "id": "MS.B.C2",
+   "label": "Neural sciences"
+  },
+  {
+   "id": "MS.B.C3",
+   "label": "Person sciences"
+  },
+  {
+   "id": "MS.B.C4",
+   "label": "Interaction sciences"
+  },
+  {
+   "id": "MS.B.C5",
+   "label": "Structure sciences"
+  }
+ ],
+ "bridges_table": [
+  [
+   "MS.B.C1",
+   "Cognitive and experimental psychology; psychophysics; cognitive science (with CS and PL); psycholinguistics; learning sciences (mechanism only; education research is ED)",
+   "MS.O.A1",
+   "MS.M.1, .2, .4, .5",
+   "Human performers"
+  ],
+  [
+   "MS.B.C2",
+   "Neuroscience; cognitive neuroscience; neuropsychology; behavioural neuroscience",
+   "MS.O.A2 (with A1 for cognitive neuroscience)",
+   "MS.M.1, .2, .4",
+   "Nervous tissue, human and animal"
+  ],
+  [
+   "MS.B.C3",
+   "Personality, developmental, clinical, counselling, health and forensic psychology",
+   "MS.O.A3",
+   "MS.M.1, .3, .5",
+   "Persons across age; clinics; courts (forensic, with LA)"
+  ],
+  [
+   "MS.B.C4",
+   "Social psychology; industrial-organisational psychology; interpersonal communication",
+   "MS.O.A4",
+   "MS.M.1, .2, .5",
+   "Dyads, groups, workplaces"
+  ],
+  [
+   "MS.B.C5",
+   "Sociology; social and cultural anthropology; demography; criminology; media and communication studies",
+   "MS.O.A5 (with A4)",
+   "MS.M.1, .3, .4",
+   "Organisations, communities, populations, media systems"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Mind, brain and society is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its objects are mental processes, nervous systems, persons, interactions and social structures.",
+  "key_line": "Logic: inductive. Plural noun: units. Dimension: the unit the claim is about. Order: structural, from the smallest unit that bears a mental claim to the largest pattern.\n\n1. Mental processes\n2. Nervous systems\n3. Persons\n4. Interactions\n5. Social structures\n\nBoundary sentences kept from v1. The ion channel is neuroscience. The report of a memory is psychology. The distribution of that report across a class is sociology. Social psychology is the interaction unit asked with psychological methods. Cognitive neuroscience is the process unit asked with neural measures.",
+  "assignment_rules": "1. A neural correlate is evidence for a process claim, not the process. It is labelled a correlate until a mechanism is shown.\n2. The ion channel and the spike are MS.O.A2.1. The cell as a living unit is BI. The equilibrium potential uses CH.O.A3.3.\n3. A diagnostic category is a convention (W12) at MS.O.A3.4.1. Disorder as function failure, treatment and trials are MD.O.A1. Treatment outcome is MD; MS.O.A3.4 cites it.\n4. Psychoanalytic theory is an answer-family at MS.O.A1 or MS.O.A3, reconstructed under MS.M.3. Folk psychology is in the register.\n5. The availability heuristic as a claim about people is MS.O.A1.5.2. The analyst's rule of thumb is MS.M.H. They are two sentences.\n6. Heritability as a quantitative-genetic quantity is owned by BI.O.A4. MS.O.A3.2.2 uses BI.O.A4.\n7. An institution as a pattern is MS.O.A5.3. A paper merely set in a church or school is a sector instance.\n8. A movement targeting a norm or organisation is MS.O.A5.5. A movement contesting authority uses PO.O.A3.3. The free-rider result uses EC.O.A5.3.\n9. Market as allocation is EC.O.A2; market as institution is MS.O.A5.3. Authority is PO.O.A2.\n10. Human population is MS.O.A5.4. EC.O.A2.5 (labour supply) uses it. Non-human population is BI.O.A5.\n11. Reference-dependent choice as a model of the economic agent is EC.O.A1.3. The bias as a mental process is MS.O.A1.5.2. Strategic exploitation of a bias against a reacting party is ST.O.A5.2.\n12. A learning claim under an educational arrangement, including physics and mathematics education research (MSC 97), is ED. A claim about the mechanism of learning, independent of any arrangement, is MS.O.A1.5. The theorem or law taught is MA or PH.\n13. Dated claims about past psychologists are HI. The reconstruction of a past theory as an answer is MS.M.3.\n14. Audit-to-v2 ID map: A1.5 judgement → A1.5.2; A1.4 memory → A1.3; A1.6 emotion → A1.4; A1.7 consciousness → A1.2.2; A2.5 computational → MS.M.4; A5.3 organisation → A5.2; A5.4 institution and A5.5 culture → A5.3; A5.6 population → A5.4; A5.7 change → A5.5.",
+  "scope_boundary": "| Refused claim type | Owner pyramid id |\n|---|---|\n| The hard problem; concept of mind; ethics of research | PL.O.A2 |\n| Cell biology of neurons as cells; heritability as quantitative genetics; human evolution; non-human behaviour | BI.O.A2, BI.O.A4, BI.O.A3 |\n| Disorder as function failure, treatment, drug and trial | MD.O.A1 |\n| Grammar: phonology, syntax, semantics | LN |\n| Authority, the state, movements contesting authority | PO.O.A2, PO.O.A3.3 |\n| Allocation, prices, the free-rider theorem | EC.O.A2, EC.O.A5.3 |\n| Criminal offence as legal definition | LA.O.A3.2 |\n| Dated past events and persons | HI |\n| Aesthetic verdict on a creative work | AR |\n| Theorems used in models (statistics, stochastic processes) | MA.O.A5 |\n| Learning analytics software; information retrieval | CS (bridge \"information and the record\") |\n| Environmental state and coupled human–natural systems | EA |\n| Religious truth claims (theology) | RE·T |\n| Mātauranga Māori and other Indigenous knowledge claims | ANZSRC 45 scope note only; MS studies practice (W6/W8) and never applies W13 |",
+  "crosswalk": "Authorities: APA divisions; ASA sections; SfN themes. Lists and statuses are taken from the audit, which checked apa.org, asanet.org and sfn.org in October 2026. I did not re-check them.\n\n**APA divisions (54; numbered 1–56, 4 and 11 vacant).** Refused (5): Div. 2 Teaching of Psychology (pedagogy), 18 Public Service (guild), 31 State/Provincial Association Affairs (guild), 42 Independent Practice (guild), 52 International (area). The audit's ten \"missing\" divisions now land:\n\n| Div | Name (short) | v2 home |\n|---|---|---|\n| 10 | Aesthetics, Creativity and the Arts | MS.O.A1.5.4 |\n| 14 | Industrial and Organizational | MS.B.C4 |\n| 15 | Educational | refused to ED (uses MS.O.A1.5 for mechanism) |\n| 23 | Consumer | MS.O.A4.3 |\n| 26 | History of Psychology | MS.M.3 (dated claims HI) |\n| 30 | Hypnosis | MS.O.A1.2.3 |\n| 34 | Environmental, Population and Conservation | MS.O.A4.1, MS.O.A5.4 |\n| 38 | Health | MS.B.C3 (disorder MD) |\n| 41 | Psychology-Law | MS.B.C3 (duty LA) |\n| 46 | Media Psychology and Technology | MS.B.C5 |\n\nRemaining divisions keep the audit's homes (§5a). Elsewhere (4): 21 → EN human factors; 24 → PL; 28 and 55 → MD. **Coverage: 49 of 49 eligible land (45 home, 4 elsewhere); 5 of 54 refused.**\n\n**ASA sections (55 listed).** Refused (5): Asia and Asian America (area), Global MENA (area), Creative Sociology (in formation), Sociological Practice and Public Sociology (practice), Teaching and Learning (pedagogy). Elsewhere (3): Peace, War and Social Conflict and Political Sociology → PO; Human Rights → PO/LA. The audit's nine missing sections now land: Animals and Society → MS.O.A4.4 (CONTESTED, BI.O.A3); Communication, IT and Media → MS.B.C5; Consumers and Consumption → MS.O.A5.3; Disability → MS.O.A5.1; Environmental → MS.O.A5.3 (state of the environment EA); Global and Transnational → MS.O.A5.5; History of Sociology → MS.M.3; Science, Knowledge and Technology → MS.O.A5.3 (philosophy of science PL); Body and Embodiment → MS.O.A4.5. **Coverage: 50 of 50 eligible; 5 of 55 refused.**\n\n**SfN themes (A–K, 11).** A, B, E, F, G, H, I land in MS.O.A1–A2; J Techniques lands in Face M; C and D land in MD; K lands in MS.M.3 (history) with ethics refused to PL. **Coverage: 11 of 11.**\n\nNo authority class called \"Other\" is used as a cell.",
+  "validation": "Sizes: key line 5; Face O cells 28 (5 A-level + 23 sub-cells: A1 5, A2 4, A3 4, A4 5, A5 5); named objects at third level 30 (inside sub-cells, sharing their W rows); M roles 5; heuristics 6 (outside count); W rows 28; B bridges 5.\n\nKey-line members, word for word: Mental processes · Nervous systems · Persons · Interactions · Social structures. The governing thought lists the same five in lower case.\n\n- Vertical. Units answer what is claimed. Methods answer how. Lesion, imaging and computational modelling moved out of Face O.\n- Horizontal. One dimension at each level; every key line has 4–5 members.\n- OPEN. Whether consciousness research needs its own warrant beyond W4/W9. Replication status of social-influence effects. Whether RDoC should replace category-first classification.\n- CONTESTED. Psychopathology process account (alternative: MD.O.A1 owns all). Forgetting mechanism. Five-factor versus HEXACO. Movement target rule (alternative: PO owns all movements). Human–animal interaction (alternative: BI.O.A3)."
+ },
+ "borders": [
+  {
+   "field": "MA",
+   "uses": 3
+  },
+  {
+   "field": "PL",
+   "uses": 2
+  },
+  {
+   "field": "BI",
+   "uses": 2
+  },
+  {
+   "field": "MD",
+   "uses": 2
+  },
+  {
+   "field": "LN",
+   "uses": 1
+  },
+  {
+   "field": "ED",
+   "uses": 1
+  },
+  {
+   "field": "CH",
+   "uses": 1
+  },
+  {
+   "field": "PO",
+   "uses": 1
+  },
+  {
+   "field": "EC",
+   "uses": 1
+  },
+  {
+   "field": "CS",
+   "uses": 1
+  },
+  {
+   "field": "LA",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "ED",
+   "uses": 4
+  },
+  {
+   "field": "MD",
+   "uses": 3
+  },
+  {
+   "field": "EA",
+   "uses": 2
+  },
+  {
+   "field": "BU",
+   "uses": 2
+  },
+  {
+   "field": "PL",
+   "uses": 2
+  },
+  {
+   "field": "RE",
+   "uses": 2
+  },
+  {
+   "field": "DE",
+   "uses": 2
+  },
+  {
+   "field": "CH",
+   "uses": 1
+  },
+  {
+   "field": "EN",
+   "uses": 1
+  },
+  {
+   "field": "EC",
+   "uses": 1
+  },
+  {
+   "field": "ST",
+   "uses": 1
+  },
+  {
+   "field": "PO",
+   "uses": 1
+  },
+  {
+   "field": "HI",
+   "uses": 1
+  },
+  {
+   "field": "LN",
+   "uses": 1
+  },
+  {
+   "field": "AR",
+   "uses": 1
+  },
+  {
+   "field": "IS",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

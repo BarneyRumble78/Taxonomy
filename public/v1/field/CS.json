@@ -1,0 +1,444 @@
+{
+ "code": "CS",
+ "name": "Computer science",
+ "dimension": "the property asserted of a computation",
+ "cells": [
+  {
+   "id": "CS.O.A1",
+   "name": "Correctness"
+  },
+  {
+   "id": "CS.O.A2",
+   "name": "Cost"
+  },
+  {
+   "id": "CS.O.A3",
+   "name": "Coordination"
+  },
+  {
+   "id": "CS.O.A4",
+   "name": "Learning"
+  },
+  {
+   "id": "CS.O.A5",
+   "name": "Protection"
+  }
+ ],
+ "objects": [
+  {
+   "id": "CS.O.A1",
+   "label": "Correctness",
+   "uses": [],
+   "text": "CS.O.A1 Correctness"
+  },
+  {
+   "id": "CS.O.A1.1",
+   "label": "Semantics",
+   "uses": [
+    "MA.O.A1"
+   ],
+   "text": "CS.O.A1.1 Semantics of languages — operational, denotational and axiomatic semantics. Lambda calculus and Turing machines are equivalent in power (the theorem is MA.O.A1)."
+  },
+  {
+   "id": "CS.O.A1.2",
+   "label": "Specification and verification",
+   "uses": [
+    "MA.O.A1"
+   ],
+   "text": "CS.O.A1.2 Specification and verification — Hoare logic proves partial correctness; total correctness also needs termination. Model checking decides temporal properties of finite-state models."
+  },
+  {
+   "id": "CS.O.A1.3",
+   "label": "Types",
+   "uses": [],
+   "text": "CS.O.A1.3 Types — well-typed programs do not go wrong (progress and preservation), for languages whose type system is proved sound."
+  },
+  {
+   "id": "CS.O.A1.4",
+   "label": "Testing",
+   "uses": [],
+   "text": "CS.O.A1.4 Testing — testing can show the presence of bugs, never their absence (Dijkstra), for any input space too large to exhaust."
+  },
+  {
+   "id": "CS.O.A1.5",
+   "label": "Limits of correctness (Rice)",
+   "uses": [
+    "MA.O.A1"
+   ],
+   "text": "CS.O.A1.5 Limits of correctness — Rice's theorem: every non-trivial semantic property of programs is undecidable, for Turing-complete languages. Uses MA.O.A1."
+  },
+  {
+   "id": "CS.O.A2",
+   "label": "Cost",
+   "uses": [],
+   "text": "CS.O.A2 Cost"
+  },
+  {
+   "id": "CS.O.A2.1",
+   "label": "Algorithms",
+   "uses": [
+    "MA.B.C3"
+   ],
+   "text": "CS.O.A2.1 Algorithms — each algorithm has a stated cost on a stated model. Comparison sorting needs Ω(n log n) comparisons in the worst case (a decision-tree lower bound, uses MA.B.C3)."
+  },
+  {
+   "id": "CS.O.A2.2",
+   "label": "Data structures",
+   "uses": [],
+   "text": "CS.O.A2.2 Data structures — amortised costs, e.g. union–find with path compression and union by rank runs in O(α(n)) per operation."
+  },
+  {
+   "id": "CS.O.A2.3",
+   "label": "Complexity classes",
+   "uses": [
+    "MA.B.C3"
+   ],
+   "text": "CS.O.A2.3 Complexity classes — P, NP, PSPACE. Whether P = NP is OPEN and owned by MA.B.C3; CS uses it."
+  },
+  {
+   "id": "CS.O.A2.4",
+   "label": "Machines and architecture",
+   "uses": [],
+   "text": "CS.O.A2.4 Machines and architecture — memory hierarchy, pipelines, parallel speed-up. Amdahl's law bounds speed-up by 1/((1−p) + p/s) for a fixed workload whose fraction p is parallelisable by a factor s."
+  },
+  {
+   "id": "CS.O.A2.5",
+   "label": "Physical limits of hardware",
+   "uses": [
+    "PH.O.A4"
+   ],
+   "text": "CS.O.A2.5 Physical limits of hardware — Moore's law is an empirical trend, now slowing; it is not a law. Transistor physics is PH."
+  },
+  {
+   "id": "CS.O.A3",
+   "label": "Coordination",
+   "uses": [],
+   "text": "CS.O.A3 Coordination"
+  },
+  {
+   "id": "CS.O.A3.1",
+   "label": "Concurrency",
+   "uses": [],
+   "text": "CS.O.A3.1 Concurrency — races, deadlock, linearisability."
+  },
+  {
+   "id": "CS.O.A3.2",
+   "label": "Distributed agreement (FLP, Byzantine)",
+   "uses": [
+    "MA.B.C3"
+   ],
+   "text": "CS.O.A3.2 Distributed agreement — FLP (Fischer, Lynch and Paterson, 1985): no deterministic protocol guarantees consensus in an asynchronous system if even one process may crash. This is a proved theorem, not an open problem. Byzantine agreement needs n ≥ 3f + 1 processes to tolerate f faulty ones, with synchronous oral messages and no signatures."
+  },
+  {
+   "id": "CS.O.A3.3",
+   "label": "Consistency under partition (CAP)",
+   "uses": [],
+   "text": "CS.O.A3.3 Consistency under partition — CAP (Gilbert and Lynch, 2002 proof): during a network partition, a system cannot provide both linearisable consistency and availability."
+  },
+  {
+   "id": "CS.O.A3.4",
+   "label": "Networks",
+   "uses": [],
+   "text": "CS.O.A3.4 Networks — protocols, routing, congestion control."
+  },
+  {
+   "id": "CS.O.A3.5",
+   "label": "Data systems",
+   "uses": [
+    "IS.O.A4"
+   ],
+   "text": "CS.O.A3.5 Data systems — databases, transactions (ACID), query optimisation. Information retrieval as a claim about records is IS."
+  },
+  {
+   "id": "CS.O.A4",
+   "label": "Learning",
+   "uses": [],
+   "text": "CS.O.A4 Learning"
+  },
+  {
+   "id": "CS.O.A4.1",
+   "label": "Learning theory",
+   "uses": [
+    "MA.O.A5"
+   ],
+   "text": "CS.O.A4.1 Learning theory — a binary concept class is PAC-learnable if and only if its VC dimension is finite (uses MA.O.A5). No-free-lunch: averaged uniformly over all objective functions, every optimiser performs equally."
+  },
+  {
+   "id": "CS.O.A4.2",
+   "label": "Models and training",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "CS.O.A4.2 Models and training — neural networks; universal approximation holds for one-hidden-layer networks with a non-polynomial activation, approximating continuous functions on compact sets to any accuracy. It says nothing about learnability. Empirical scaling laws are W4 claims within stated ranges."
+  },
+  {
+   "id": "CS.O.A4.3",
+   "label": "Reasoning and planning",
+   "uses": [
+    "MA.B.C3"
+   ],
+   "text": "CS.O.A4.3 Reasoning and planning — search, logic programming, planning. Many planning problems are PSPACE-complete (uses MA.B.C3)."
+  },
+  {
+   "id": "CS.O.A4.4",
+   "label": "Perception and language processing",
+   "uses": [
+    "LN.O.A1"
+   ],
+   "text": "CS.O.A4.4 Perception and language processing — vision, speech, NLP. Claims about language itself are LN."
+  },
+  {
+   "id": "CS.O.A4.5",
+   "label": "Alignment and evaluation",
+   "uses": [],
+   "text": "CS.O.A4.5 Alignment and evaluation of AI systems — whether a trained system pursues its intended objective. Methods are immature; much is OPEN."
+  },
+  {
+   "id": "CS.O.A5",
+   "label": "Protection",
+   "uses": [],
+   "text": "CS.O.A5 Protection"
+  },
+  {
+   "id": "CS.O.A5.1",
+   "label": "Cryptography in use",
+   "uses": [
+    "MA.O.A2",
+    "MA.B.C3"
+   ],
+   "text": "CS.O.A5.1 Cryptography in use — protocols are secure relative to stated hardness assumptions (e.g. factoring). Security proofs are MA; the deployed protocol is CS."
+  },
+  {
+   "id": "CS.O.A5.2",
+   "label": "Systems security",
+   "uses": [],
+   "text": "CS.O.A5.2 Systems security — access control, memory safety, attack surfaces."
+  },
+  {
+   "id": "CS.O.A5.3",
+   "label": "Privacy",
+   "uses": [
+    "MA.O.A5"
+   ],
+   "text": "CS.O.A5.3 Privacy — differential privacy bounds how much one record changes an output distribution, by a stated ε."
+  },
+  {
+   "id": "CS.O.A5.4",
+   "label": "Quantum threats",
+   "uses": [
+    "PH.O.A2",
+    "MA.B.C3"
+   ],
+   "text": "CS.O.A5.4 Quantum threats — Shor's algorithm factors in polynomial time on a fault-tolerant quantum computer. Uses MA.B.C3 and PH.O.A2."
+  }
+ ],
+ "methods": [
+  {
+   "id": "CS.M.1–5",
+   "label": "Method roles",
+   "home": "M"
+  },
+  {
+   "id": "CS.M.1",
+   "label": "Formalise",
+   "role": "M1 Represent",
+   "example": "specify, define a model of computation"
+  },
+  {
+   "id": "CS.M.2",
+   "label": "Prove",
+   "role": "M2 Derive",
+   "example": "correctness or bound proof"
+  },
+  {
+   "id": "CS.M.3",
+   "label": "Build",
+   "role": "M4 Intervene",
+   "example": "implement a system"
+  },
+  {
+   "id": "CS.M.4",
+   "label": "Run and measure",
+   "role": "M5 Compute",
+   "example": "benchmark, simulation, training run"
+  },
+  {
+   "id": "CS.M.5",
+   "label": "Verify",
+   "role": "M7 Verify",
+   "example": "model checking, test suite, audit"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "CS.O.A1",
+   "warrant": "W1 + W11",
+   "standard": "machine-checked proof, or verification against a formal specification",
+   "defeaters": "specification wrong, unsound tool, unmodelled environment"
+  },
+  {
+   "cell": "CS.O.A2",
+   "warrant": "W1 + W2",
+   "standard": "proof of bound on a stated model; benchmark with stated variance",
+   "defeaters": "model mismatch with hardware, unrepresentative input"
+  },
+  {
+   "cell": "CS.O.A3",
+   "warrant": "W1 + W4",
+   "standard": "impossibility or protocol proof; measured behaviour in deployment",
+   "defeaters": "failure model differs from assumed one"
+  },
+  {
+   "cell": "CS.O.A4",
+   "warrant": "W4 + W2",
+   "standard": "held-out evaluation, stated metric and variance, replication",
+   "defeaters": "data leakage, benchmark overfitting, distribution shift"
+  },
+  {
+   "cell": "CS.O.A5",
+   "warrant": "W1 + W11",
+   "standard": "reduction to a stated assumption; penetration test",
+   "defeaters": "broken assumption, side channel, implementation flaw"
+  }
+ ],
+ "bridges": [
+  {
+   "id": "CS.B.C1–C9",
+   "label": "Bridges"
+  }
+ ],
+ "bridges_table": [
+  [
+   "CS.B.C1",
+   "Theory of computation",
+   "A1.5, A2.3",
+   "M.1, M.2",
+   "models (cites MA.B.C3)"
+  ],
+  [
+   "CS.B.C2",
+   "Programming languages",
+   "A1",
+   "M.1, M.2, M.5",
+   "languages"
+  ],
+  [
+   "CS.B.C3",
+   "Computer architecture",
+   "A2.4, A2.5",
+   "M.3, M.4",
+   "hardware (uses PH)"
+  ],
+  [
+   "CS.B.C4",
+   "Operating and distributed systems",
+   "A3",
+   "M.3, M.4",
+   "machines"
+  ],
+  [
+   "CS.B.C5",
+   "Databases",
+   "A3.5",
+   "M.3, M.4",
+   "data"
+  ],
+  [
+   "CS.B.C6",
+   "Artificial intelligence and machine learning",
+   "A4",
+   "M.3, M.4",
+   "data and models"
+  ],
+  [
+   "CS.B.C7",
+   "Security and privacy",
+   "A5",
+   "all",
+   "systems"
+  ],
+  [
+   "CS.B.C8",
+   "Human–computer interaction",
+   "A1, A4",
+   "M.3, M.4",
+   "interfaces (user claims MS)"
+  ],
+  [
+   "CS.B.C9",
+   "Computational science",
+   "A2",
+   "M.4",
+   "other pyramids' models"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Computer science is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five properties of a computation: correctness, cost, coordination, learning, and protection.",
+  "key_line": "Dimension: **the property asserted of a computation.** Order: structural, from the single program outward to many agents and adversaries.\n1. Correctness\n2. Cost\n3. Coordination\n4. Learning\n5. Protection",
+  "assignment_rules": "1. Place by the property claimed: correctness, cost, coordination, learning or protection.\n2. A theorem is MA, even when computer scientists prove it. Complexity theorems sit in MA.B.C3; CS cites \"uses MA.B.C3\".\n3. A program delivered to a customer's specification is EN (EN.B.C5); whether the program is correct is CS.\n4. A claim about users' minds is MS; the interface's measured effect is CS.B.C8.\n5. A claim about the record, the catalogue or retrieval as such is IS; the algorithm's cost is CS.\n6. A claim about language is LN; a system that processes it is CS.O.A4.4.\n7. The legal duty on data is LA; the technical privacy guarantee is CS.O.A5.3.\n8. A claim mixing two properties goes to the one its warrant establishes.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| computability and complexity theorems | MA.O.A1, MA.B.C3 |\n| device physics | PH.O.A4 |\n| software delivery to contract | EN |\n| users' cognition | MS |\n| the record and its retrieval as information | IS |\n| data protection law | LA |\n| ethics of AI as argument | PL |",
+  "crosswalk": "**ACM CCS 2012** has 13 top-level classes. They land as follows:\n- General and reference → refused, not a claim class\n- Hardware → A2.4, A2.5, B.C3\n- Computer systems organisation → A2.4, A3\n- Networks → A3.4\n- Software and its engineering → A1, EN.B.C5\n- Theory of computation → A1.5, A2.3 (cites MA.B.C3)\n- Mathematics of computing → refused to MA\n- Information systems → A3.5, IS\n- Security and privacy → A5\n- Human-centred computing → B.C8\n- Computing methodologies → A4\n- Applied computing → refused, a catalogue\n- Social and professional topics → refused to PL, LA, BU\n\nCoverage: 9 of 13 land.\n\n**CS2023** has 17 knowledge areas (checked: csed.acm.org/knowledge-areas):\n- AL → A2.1–A2.2\n- AR → A2.4\n- AI → A4\n- DM → A3.5\n- FPL → A1.1–A1.3\n- GIT → A4.4 (graphics as CS.B.C9)\n- HCI → B.C8\n- MSF → refused to MA\n- NC → A3.4\n- OS → A3\n- PDC → A3.1–A3.3\n- SEC → A5\n- SEP → refused to PL and LA\n- SDF → A1\n- SE → A1.4 and EN.B.C5\n- SPD → refused, a catalogue of platforms\n- SF → A2.4\n\nCoverage: 14 of 17 land; 3 are refused.\n\n**ANZSRC 46** (checked 9 Oct 2026 against the ABS file anzsrc2020_for.xlsx) has 14 groups. 4601 Applied computing → catalogue. 4602 AI, 4603 Computer vision, 4611 Machine learning → A4. 4604 Cybersecurity → A5. 4605 Data management → A3.5 (records side is IS). 4606 Distributed computing → A3. 4607 Graphics → B.C9. 4608 Human-centred → B.C8. 4609 Information systems → A3.5 and IS. 4610 Library and information studies → IS. 4612 Software engineering → A1 and EN. 4613 Theory of computation → A1.5, A2.3. 4699 Other → not a cell. Coverage: 11 of 13 substantive groups land in CS; 4610 goes to IS; 4601 is refused.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 24 sub-cells = 29. M roles 5. Heuristics 6, outside the count. W rows 5. B bridges 9.\nKey line, word for word: Correctness. Cost. Coordination. Learning. Protection.\nOPEN: P vs NP (owned by MA.B.C3, cited); AI alignment methods (A4.5).\nCONTESTED: software engineering in EN vs CS (alternative: CS.O.A1); HCI as a CS bridge vs an MS cell.\nFixed from the audit: FLP is now stated as proved (1985), with its hypotheses. Heuristics are moved out of the role count."
+ },
+ "borders": [
+  {
+   "field": "MA",
+   "uses": 13
+  },
+  {
+   "field": "PH",
+   "uses": 2
+  },
+  {
+   "field": "IS",
+   "uses": 1
+  },
+  {
+   "field": "LN",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "EN",
+   "uses": 3
+  },
+  {
+   "field": "ST",
+   "uses": 3
+  },
+  {
+   "field": "BI",
+   "uses": 2
+  },
+  {
+   "field": "PL",
+   "uses": 2
+  },
+  {
+   "field": "AR",
+   "uses": 2
+  },
+  {
+   "field": "PH",
+   "uses": 1
+  },
+  {
+   "field": "EA",
+   "uses": 1
+  },
+  {
+   "field": "MS",
+   "uses": 1
+  },
+  {
+   "field": "ED",
+   "uses": 1
+  },
+  {
+   "field": "IS",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

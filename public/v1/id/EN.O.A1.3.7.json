@@ -1,0 +1,17 @@
+{
+ "id": "EN.O.A1.3.7",
+ "label": "Effective stress, Mohr–Coulomb (CONTESTED)",
+ "owner": "EN",
+ "home": "O.A1.3",
+ "uses": [
+  "EA.O.A1"
+ ],
+ "text": "EN.O.A1.3.7 Geomechanics. Terzaghi effective stress σ′ = σ − u for saturated soil. Mohr–Coulomb strength τ = c′ + σ′ tan φ′ for drained soil and rock joints. CONTESTED: EA.O.A1 (rock and soil as earth materials) is the alternative owner; EN keeps the strength closure, EA owns genesis.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W1, W4, W2",
+  "standard": "Prediction matches test within stated uncertainty; code calibration meets the target reliability index",
+  "defeaters": "Hypothesis outside range (slenderness, small strain, linearity); imperfection sensitivity; residual stress; unmodelled failure mode"
+ },
+ "field_url": "/v1/field/EN.json"
+}

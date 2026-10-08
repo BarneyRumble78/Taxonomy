@@ -1,0 +1,19 @@
+{
+ "id": "CS.O.A1.5",
+ "label": "Limits of correctness (Rice)",
+ "owner": "CS",
+ "home": "O/A1",
+ "uses": [
+  "MA.O.A1"
+ ],
+ "text": "CS.O.A1.5 Limits of correctness — Rice's theorem: every non-trivial semantic property of programs is undecidable, for Turing-complete languages. Uses MA.O.A1.",
+ "used_by": [
+  "PL.O.A3.2"
+ ],
+ "warrant": {
+  "warrant": "W1 + W11",
+  "standard": "machine-checked proof, or verification against a formal specification",
+  "defeaters": "specification wrong, unsound tool, unmodelled environment"
+ },
+ "field_url": "/v1/field/CS.json"
+}
