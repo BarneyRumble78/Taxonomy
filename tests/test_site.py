@@ -34,6 +34,7 @@ def test_minerva_keeps_the_tool_and_standard():
     assert "Check an AI answer" in page
     assert "Inspect a claim" in page
     assert "Connect to your agent" in page
+    assert ".drawer[hidden]{display:none !important}" in page
     # The old account of the standard stays on the page.
     assert "Three things you can do with it" in page
     assert "63/63" in page

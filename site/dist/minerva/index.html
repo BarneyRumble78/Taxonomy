@@ -42,6 +42,7 @@ li{margin-bottom:4px}
 .search button{font:12px var(--sans);background:#e9edf3;border:1px solid #0f2a50;cursor:pointer}
 /* menu drawer */
 .drawer{background:#f7f9fc;border-bottom:2px solid var(--navy);padding:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 18px}
+.drawer[hidden]{display:none !important}
 .drawer a{display:block;padding:6px 4px;border-bottom:1px dotted var(--line);text-decoration:none;font-weight:bold}
 .drawer a small{display:block;font-weight:normal;color:var(--muted)}
 /* tabs */
@@ -158,7 +159,7 @@ footer p a{display:inline;color:#c9d1dc}
 <div class="page">
 <div class="util"><span><a href="/">Taxonomy</a></span><span>Minerva · Standard v2 · 9 October 2026</span><span><a href="#about" data-go="about">About the standard</a></span><span><a href="#contact" data-go="contact">Register</a></span><span><a href="/contact/">Contact</a></span></div>
 <div class="banner">
-  <button class="menubtn" id="menubtn" aria-expanded="false" aria-controls="drawer"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>
+  <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="drawer"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>
   <svg class="seal" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#173a6b" stroke="#c9a227" stroke-width="3"/><circle cx="30" cy="30" r="22" fill="none" stroke="#c9a227" stroke-width="1"/><polygon points="30,13 45,42 15,42" fill="#c9a227"/><line x1="20.5" y1="31" x2="39.5" y2="31" stroke="#173a6b" stroke-width="1.6"/><line x1="25.5" y1="22" x2="34.5" y2="22" stroke="#173a6b" stroke-width="1.6"/></svg>
   <a class="brand" href="/minerva/"><b>Minerva</b><span>Truth-seeking for AI · a division of Taxonomy</span></a>
   <form class="search" role="search" id="searchf"><label for="q" style="position:absolute;left:-9999px">Search</label><input id="q" placeholder="Search a field, e.g. Law"><button type="submit">Go</button></form>
