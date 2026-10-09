@@ -1,6 +1,6 @@
 # Handover — Taxonomy, branch `cursor/handover-faults-heldout-2cea`
 
-Cut from `claude/api-worker`. This pass did not open a pull request, choose a licence, tag a release, deploy, merge to `main`, or call live Workers AI.
+Cut from `claude/api-worker`. The owner chose the licence, recorded in `LICENSE`, `LICENSE-CC-BY-4.0` and `NOTICE`. This pass did not tag a release, deploy, merge to `main`, or call live Workers AI.
 
 ## Architecture
 
@@ -95,7 +95,7 @@ The binder was used to compare the 888 count and the ledger wording. Its facts w
 - No human placement study. Do not read the held-out scores as agreement.
 - No live Workers AI run. `scripts/model_assist_eval.py` is offline unless the owner passes `--live`.
 - IK placements are provisional until Māori-led review (`docs/MAORI_REVIEW_PACK.md`).
-- The licence is unset.
+- The licence is set. Apache-2.0 covers `engine/`, `worker/`, `scripts/`, `tests/` and the site build. CC BY 4.0 covers `standard/`, `registry/`, `public/v1/` data, `docs/` and pyramid content. Copyright holder: Chris Townsend, 2026.
 - Audit flags are not findings about truth.
 - Map coverage is not a complete view of a subject.
 - The instruction heuristic is not a security guarantee.
@@ -106,7 +106,7 @@ The binder was used to compare the 888 count and the ledger wording. Its facts w
 
 ## What this pass did not do
 
-- Did not choose a licence, tag a release, deploy, merge, or open a pull request.
+- Did not tag a release, deploy, or merge. The owner chose the licence; this branch records it.
 - Did not call live Workers AI.
 - Did not deepen thin pyramids.
 - Did not implement the Status face or a secondary owner.
@@ -118,7 +118,7 @@ The binder was used to compare the 888 count and the ledger wording. Its facts w
 
 ## Owner checklist
 
-- [ ] Choose a licence. A standard with only "© 2026 Chris Townsend" cannot be adopted.
+- [x] Choose a licence. Apache-2.0 for code (`engine/`, `worker/`, `scripts/`, `tests/`, site build). CC BY 4.0 for the standard, registry, pyramid and documentation text (`standard/`, `registry/`, `public/v1/` data, `docs/`, pyramid content). Copyright holder: Chris Townsend, 2026.
 - [ ] Deploy with `npx wrangler login`, then `npx wrangler deploy`.
 - [ ] Add a rate-limit rule on `/v1/*` before publicising the address.
 - [ ] Convene the Māori-led review (`docs/MAORI_REVIEW_PACK.md`).

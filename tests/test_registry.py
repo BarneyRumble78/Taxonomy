@@ -51,6 +51,9 @@ def test_skos_matches_the_registry():
             continue
         extras.append(ident)
     assert extras == []
+    scheme = next(n for n in skos["@graph"] if n.get("@id") == "urn:taxonomy:scheme")
+    assert scheme["dct:license"] == "https://creativecommons.org/licenses/by/4.0/"
+    assert scheme["dct:rightsHolder"] == "Chris Townsend"
 
 
 def test_index_count_matches_registry_build():
@@ -58,6 +61,9 @@ def test_index_count_matches_registry_build():
     reg = json.loads((ROOT / "registry" / "registry.json").read_text(encoding="utf-8"))
     assert index["version"] == "2.2.0-api.1"
     assert index["ids"] == len(reg) == 984
+    assert index["licence"]["spdx"] == "CC-BY-4.0"
+    assert index["licence"]["copyright"] == "Chris Townsend, 2026"
+    assert index["licence"]["code"] == "Apache-2.0"
 
 
 def test_heldout_file_is_frozen_shape_and_not_the_pilot_set():

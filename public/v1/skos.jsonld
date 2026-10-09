@@ -1,6 +1,7 @@
 {
  "@context": {
-  "skos": "http://www.w3.org/2004/02/skos/core#"
+  "skos": "http://www.w3.org/2004/02/skos/core#",
+  "dct": "http://purl.org/dc/terms/"
  },
  "@graph": [
   {
@@ -83,7 +84,9 @@
     {
      "@id": "urn:taxonomy:IK"
     }
-   ]
+   ],
+   "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+   "dct:rightsHolder": "Chris Townsend"
   },
   {
    "@id": "urn:taxonomy:MA",

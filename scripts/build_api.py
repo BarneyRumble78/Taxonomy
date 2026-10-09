@@ -157,6 +157,13 @@ for r in registry:
 write(PUB / "index.json", {
     "name": "Taxonomy", "version": VERSION, "ids": len(registry), "fields": index_fields,
     "warrants": len(te.WARRANT_NAMES), "methods": len(te.METHOD_NAMES),
+    "licence": {
+        "spdx": "CC-BY-4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "copyright": "Chris Townsend, 2026",
+        "code": "Apache-2.0",
+        "code_url": "https://www.apache.org/licenses/LICENSE-2.0",
+    },
     "status": "Working draft. Placement reliability has not been measured by people. Indigenous placements are provisional."})
 
 # ---- SKOS (JSON-LD, URN identifiers so no host is assumed) ---------------------------------
@@ -164,7 +171,9 @@ def urn(i):
     return {"@id": f"urn:taxonomy:{i}"}
 
 concepts = [{"@id": "urn:taxonomy:scheme", "@type": "skos:ConceptScheme", "skos:prefLabel": "Taxonomy",
-             "skos:hasTopConcept": [urn(c) for c in CODES]}]
+             "skos:hasTopConcept": [urn(c) for c in CODES],
+             "dct:license": "https://creativecommons.org/licenses/by/4.0/",
+             "dct:rightsHolder": "Chris Townsend"}]
 for c in CODES:
     concepts.append({"@id": f"urn:taxonomy:{c}", "@type": "skos:Concept", "skos:prefLabel": te.NAMES[c],
                      "skos:topConceptOf": urn("scheme"), "skos:inScheme": urn("scheme")})
@@ -184,7 +193,8 @@ for r in registry:
     if rel:
         node["skos:related"] = rel
     concepts.append(node)
-write(PUB / "skos.jsonld", {"@context": {"skos": "http://www.w3.org/2004/02/skos/core#"}, "@graph": concepts})
+write(PUB / "skos.jsonld", {"@context": {"skos": "http://www.w3.org/2004/02/skos/core#",
+                                          "dct": "http://purl.org/dc/terms/"}, "@graph": concepts})
 
 # ---- OpenAPI -------------------------------------------------------------------------------
 def op(summary, params=None, body=None):
@@ -200,7 +210,8 @@ def op(summary, params=None, body=None):
 write(ROOT / "public" / "openapi.json", {
     "openapi": "3.0.3",
     "info": {"title": "Taxonomy API", "version": VERSION,
-             "description": "Place claims, look up identifiers, map a subject across 25 fields and audit wording against evidence. Rule-based; model assist is optional and never overrides the rules."},
+             "description": "Place claims, look up identifiers, map a subject across 25 fields and audit wording against evidence. Rule-based; model assist is optional and never overrides the rules. The worker code is Apache-2.0. The taxonomy data is CC BY 4.0.",
+             "license": {"name": "Apache-2.0", "url": "https://www.apache.org/licenses/LICENSE-2.0"}},
     "paths": {
         "/v1/classify": {"get": op("Place one sentence", [("text", True, "The claim")]), "post": op("Place one sentence", body="text")},
         "/v1/audit": {"post": op("Check a passage: placement per sentence, evidence-type footer, wording flags", body="text")},

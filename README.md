@@ -8,4 +8,12 @@ A standard classification of human knowledge, built on mathematics: 25 fields, o
 - API: `npm run build && npm test`, then `npx wrangler deploy` (see `docs/DEPLOY.md`). Docs page and static JSON are in `public/`.
 - Website: `python3 scripts/build_site.py`, then open `site/dist/index.html`
 
-© 2026 Chris Townsend. Built on Barbara Minto's pyramid principle.
+## Licence
+
+Copyright 2026 Chris Townsend.
+
+- Apache-2.0 (`LICENSE`): code in `engine/`, `worker/`, `scripts/`, `tests/`, and the site build (`site/template.html`, `scripts/build_site.py`).
+- CC BY 4.0 (`LICENSE-CC-BY-4.0`): the standard, registry, pyramid and documentation text in `standard/`, `registry/`, `public/v1/` data, `docs/`, and `pyramids/`.
+
+See `NOTICE`.
+
