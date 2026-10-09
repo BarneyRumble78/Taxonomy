@@ -1,0 +1,481 @@
+{
+ "code": "EC",
+ "name": "Economics",
+ "dimension": "the scale at which an allocation is settled",
+ "cells": [
+  {
+   "id": "EC.O.A1",
+   "name": "Choice"
+  },
+  {
+   "id": "EC.O.A2",
+   "name": "Markets"
+  },
+  {
+   "id": "EC.O.A3",
+   "name": "Mechanisms and institutions"
+  },
+  {
+   "id": "EC.O.A4",
+   "name": "The aggregate economy"
+  },
+  {
+   "id": "EC.O.A5",
+   "name": "Welfare and public choice"
+  }
+ ],
+ "objects": [
+  {
+   "id": "EC.O.A1",
+   "label": "Choice",
+   "uses": [],
+   "text": "EC.O.A1 Choice"
+  },
+  {
+   "id": "EC.O.A1.1",
+   "label": "Preferences and demand",
+   "uses": [
+    "MA.O.A3"
+   ],
+   "text": "EC.O.A1.1 Preferences and demand — complete, transitive and continuous preferences have a utility representation (Debreu; proof uses MA). Demand theory follows, with the Slutsky decomposition."
+  },
+  {
+   "id": "EC.O.A1.2",
+   "label": "Choice under risk",
+   "uses": [
+    "MA.O.A5"
+   ],
+   "text": "EC.O.A1.2 Choice under risk — expected utility follows from the von Neumann–Morgenstern axioms (completeness, transitivity, continuity, independence)."
+  },
+  {
+   "id": "EC.O.A1.3",
+   "label": "Behavioural departures",
+   "uses": [
+    "MS.O.A1"
+   ],
+   "text": "EC.O.A1.3 Behavioural departures — the Allais paradox violates independence; prospect theory fits loss aversion. The psychological mechanism is MS; the allocative consequence is EC."
+  },
+  {
+   "id": "EC.O.A1.4",
+   "label": "Intertemporal choice",
+   "uses": [],
+   "text": "EC.O.A1.4 Intertemporal choice — exponential discounting is time-consistent; quasi-hyperbolic discounting is not."
+  },
+  {
+   "id": "EC.O.A2",
+   "label": "Markets",
+   "uses": [],
+   "text": "EC.O.A2 Markets"
+  },
+  {
+   "id": "EC.O.A2.1",
+   "label": "Competitive equilibrium",
+   "uses": [
+    "MA.B.C4",
+    "MA.O.A3"
+   ],
+   "text": "EC.O.A2.1 Competitive equilibrium — a general equilibrium exists given continuous, convex, locally non-satiated preferences, convex production, and endowments in the interior (Arrow–Debreu; proof MA)."
+  },
+  {
+   "id": "EC.O.A2.2",
+   "label": "Market power",
+   "uses": [
+    "MA.B.C4",
+    "ST.O.A2"
+   ],
+   "text": "EC.O.A2.2 Market power — monopoly, oligopoly, entry. The equilibrium of the Cournot or Bertrand game is MA. Which game the firms are in is ST. The resulting prices and quantities are EC."
+  },
+  {
+   "id": "EC.O.A2.3",
+   "label": "Information",
+   "uses": [
+    "MA.B.C4"
+   ],
+   "text": "EC.O.A2.3 Information — adverse selection (Akerlof), moral hazard, signalling. A market can unravel when quality is hidden and sellers know more than buyers."
+  },
+  {
+   "id": "EC.O.A2.4",
+   "label": "Factor markets",
+   "uses": [],
+   "text": "EC.O.A2.4 Factor markets — labour and capital; wages and returns."
+  },
+  {
+   "id": "EC.O.A2.5",
+   "label": "Tax incidence",
+   "uses": [
+    "LA",
+    "BU.O.A5"
+   ],
+   "text": "EC.O.A2.5 Tax incidence — in a competitive market, the burden falls by relative elasticities of supply and demand, not by who legally pays. Incidence is EC; the duty to pay is LA; computing the tax is BU."
+  },
+  {
+   "id": "EC.O.A3",
+   "label": "Mechanisms and institutions",
+   "uses": [],
+   "text": "EC.O.A3 Mechanisms and institutions"
+  },
+  {
+   "id": "EC.O.A3.1",
+   "label": "Mechanism design",
+   "uses": [
+    "MA.B.C4"
+   ],
+   "text": "EC.O.A3.1 Mechanism design — the revelation principle: any equilibrium outcome of a mechanism can be achieved by a direct, truthful mechanism (proof MA). Vickrey auctions make truthful bidding dominant for private values."
+  },
+  {
+   "id": "EC.O.A3.2",
+   "label": "Bargaining (Rubinstein)",
+   "uses": [
+    "MA.B.C4",
+    "ST.O.A2"
+   ],
+   "text": "EC.O.A3.2 Bargaining — Rubinstein: with two players, alternating offers, an infinite horizon, complete information and discount factors below one, there is a unique subgame-perfect equilibrium with immediate agreement. The theorem is MA. The choice of bargaining protocol is ST. The split is EC."
+  },
+  {
+   "id": "EC.O.A3.3",
+   "label": "Transaction costs (Coase)",
+   "uses": [
+    "LA"
+   ],
+   "text": "EC.O.A3.3 Transaction costs — Coase: with well-defined property rights, zero transaction costs and no wealth effects, bargaining reaches an efficient outcome whatever the initial assignment. With positive costs the assignment matters, and that is the theorem's main use."
+  },
+  {
+   "id": "EC.O.A3.4",
+   "label": "Institutions",
+   "uses": [
+    "PO",
+    "LA"
+   ],
+   "text": "EC.O.A3.4 Institutions — property rights, contracts and firms as allocative rules. Political authority is PO; legal validity is LA."
+  },
+  {
+   "id": "EC.O.A3.5",
+   "label": "Repeated interaction (folk theorem)",
+   "uses": [
+    "MA.B.C4",
+    "ST.O.A2"
+   ],
+   "text": "EC.O.A3.5 Repeated interaction — folk theorem: in an infinitely repeated game with a discount factor close enough to one, any feasible, strictly individually rational payoff is sustainable in equilibrium (with a full-dimensionality condition for more than two players). Theorem MA; use in collusion or cooperation EC; choice of game ST."
+  },
+  {
+   "id": "EC.O.A4",
+   "label": "The aggregate economy",
+   "uses": [],
+   "text": "EC.O.A4 The aggregate economy"
+  },
+  {
+   "id": "EC.O.A4.1",
+   "label": "Growth",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "EC.O.A4.1 Growth — the Solow model: with diminishing returns to capital and constant returns to scale, output per worker converges to a steady state, and long-run growth needs technical change."
+  },
+  {
+   "id": "EC.O.A4.2",
+   "label": "Fluctuations",
+   "uses": [],
+   "text": "EC.O.A4.2 Fluctuations — business cycles; unemployment. The Phillips curve is an empirical relation that proved unstable once expectations adjusted."
+  },
+  {
+   "id": "EC.O.A4.3",
+   "label": "Money and inflation",
+   "uses": [],
+   "text": "EC.O.A4.3 Money and inflation — the quantity equation MV = PY is an identity. A theory needs assumptions about V and Y. Central bank rules such as the Taylor rule are heuristics or policy prescriptions."
+  },
+  {
+   "id": "EC.O.A4.4",
+   "label": "Open economies",
+   "uses": [],
+   "text": "EC.O.A4.4 Open economies — comparative advantage (Ricardo): with two goods and differing opportunity costs, both countries gain from specialisation and trade. Heckscher–Ohlin and Stolper–Samuelson hold under their stated factor and technology assumptions."
+  },
+  {
+   "id": "EC.O.A4.5",
+   "label": "Expectations and policy",
+   "uses": [],
+   "text": "EC.O.A4.5 Expectations and policy — the Lucas critique: relations estimated under one policy regime need not hold under another if agents' expectations change."
+  },
+  {
+   "id": "EC.O.A5",
+   "label": "Welfare and public choice",
+   "uses": [],
+   "text": "EC.O.A5 Welfare and public choice"
+  },
+  {
+   "id": "EC.O.A5.1",
+   "label": "First welfare theorem",
+   "uses": [
+    "MA.B.C4"
+   ],
+   "text": "EC.O.A5.1 First welfare theorem — with complete markets, price-taking agents, locally non-satiated preferences and no externalities, every competitive equilibrium is Pareto efficient. Theorem MA; use EC."
+  },
+  {
+   "id": "EC.O.A5.2",
+   "label": "Second welfare theorem",
+   "uses": [
+    "MA.B.C4"
+   ],
+   "text": "EC.O.A5.2 Second welfare theorem — with convex preferences and technologies, continuity and lump-sum transfers, any Pareto-efficient allocation can be supported as a competitive equilibrium. Theorem MA; use EC."
+  },
+  {
+   "id": "EC.O.A5.3",
+   "label": "Market failure",
+   "uses": [
+    "EV.O.A3"
+   ],
+   "text": "EC.O.A5.3 Market failure — externalities, public goods, common pool resources. Pigouvian taxes correct an externality when its marginal damage is known."
+  },
+  {
+   "id": "EC.O.A5.4",
+   "label": "Public finance (VAT vs sales tax)",
+   "uses": [
+    "BU.O.A5",
+    "LA"
+   ],
+   "text": "EC.O.A5.4 Public finance — taxes and spending. A VAT is levied on value added at each stage, with credit for tax paid on inputs. A retail sales tax is levied once, on the final sale. Their economic incidence can be similar, but their collection differs."
+  },
+  {
+   "id": "EC.O.A5.5",
+   "label": "Social choice (Arrow)",
+   "uses": [
+    "MA.B.C4",
+    "PL"
+   ],
+   "text": "EC.O.A5.5 Social choice — Arrow: with at least three alternatives and a finite set of voters, no rule satisfies unrestricted domain, weak Pareto, independence of irrelevant alternatives and non-dictatorship together. Theorem MA; the meaning for collective choice is EC; the normative argument is PL."
+  }
+ ],
+ "methods": [
+  {
+   "id": "EC.M.1",
+   "label": "Model",
+   "role": "M1 Represent, M2 Derive",
+   "example": "specify and solve a model"
+  },
+  {
+   "id": "EC.M.2",
+   "label": "Measure",
+   "role": "M3 Observe",
+   "example": "national accounts, surveys"
+  },
+  {
+   "id": "EC.M.3",
+   "label": "Identify causes",
+   "role": "M3 Observe (causal)",
+   "example": "instruments, difference in differences, regression discontinuity"
+  },
+  {
+   "id": "EC.M.4",
+   "label": "Experiment",
+   "role": "M4 Intervene",
+   "example": "field and laboratory experiments"
+  },
+  {
+   "id": "EC.M.5",
+   "label": "Estimate and simulate",
+   "role": "M5 Compute",
+   "example": "structural estimation, DSGE"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "EC.O.A1",
+   "warrant": "W3 + W4",
+   "standard": "experimental or revealed-preference evidence",
+   "defeaters": "framing effects, hypothetical bias"
+  },
+  {
+   "cell": "EC.O.A2",
+   "warrant": "W5 + W1",
+   "standard": "causal identification against a derived prediction",
+   "defeaters": "omitted variables, misspecified market definition"
+  },
+  {
+   "cell": "EC.O.A3",
+   "warrant": "W1 + W3 + W6",
+   "standard": "theorem plus experimental or comparative evidence",
+   "defeaters": "hypotheses not met in the field"
+  },
+  {
+   "cell": "EC.O.A4",
+   "warrant": "W5 + W2",
+   "standard": "identified macro evidence; model with stated fit",
+   "defeaters": "Lucas critique, small samples, revisions"
+  },
+  {
+   "cell": "EC.O.A5",
+   "warrant": "W1 + W9 + W5",
+   "standard": "theorem; welfare argument; identified effect",
+   "defeaters": "contested welfare weights"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "EC.B.C1",
+   "Microeconomics",
+   "A1, A2",
+   "M.1",
+   "agents, markets"
+  ],
+  [
+   "EC.B.C2",
+   "Industrial organisation",
+   "A2.2",
+   "M.1, M.3",
+   "industries"
+  ],
+  [
+   "EC.B.C3",
+   "Labour economics",
+   "A2.4",
+   "M.3, M.4",
+   "workers"
+  ],
+  [
+   "EC.B.C4",
+   "Macroeconomics",
+   "A4",
+   "M.2, M.5",
+   "economies"
+  ],
+  [
+   "EC.B.C5",
+   "International economics",
+   "A4.4",
+   "M.1, M.3",
+   "trade flows"
+  ],
+  [
+   "EC.B.C6",
+   "Public economics",
+   "A5",
+   "M.1, M.3",
+   "governments"
+  ],
+  [
+   "EC.B.C7",
+   "Development economics",
+   "A4.1, A3.4",
+   "M.3, M.4",
+   "low-income economies"
+  ],
+  [
+   "EC.B.C8",
+   "Behavioural and experimental economics",
+   "A1.3",
+   "M.4",
+   "subjects (uses MS)"
+  ],
+  [
+   "EC.B.C9",
+   "Environmental and resource economics",
+   "A5.3",
+   "M.1, M.3",
+   "resources (EV owns impact)"
+  ],
+  [
+   "EC.B.C10",
+   "Economic history",
+   "A4",
+   "M.2",
+   "the past (dated facts HI)"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Economics is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five scales of allocation: choice, markets, mechanisms and institutions, the aggregate economy, and welfare and public choice.",
+  "key_line": "Dimension: **the scale at which an allocation is settled.** Order: from one agent to the whole society.\n1. Choice\n2. Markets\n3. Mechanisms and institutions\n4. The aggregate economy\n5. Welfare and public choice\n\n**The three-way border (the economics repair).** Take any equilibrium result. The existence proof is MA (uses MA.O.A3 fixed-point theorems, via MA.B.C4). The choice of which game the parties are in, and any move that changes it, is ST. The claim that an actual or counterfactual allocation follows is EC.",
+  "assignment_rules": "1. Place a claim by the scale at which the allocation is settled.\n2. The theorem is MA, the allocation is EC, the choice of game is ST.\n3. Incidence is economics; the duty is law; the computation is business.\n4. A firm's accounts and capital structure are BU. The general-equilibrium price of risk is EC.\n5. A psychological mechanism is MS; its allocative effect is EC.\n6. Political authority over an allocation is PO; the legal rule is LA.\n7. A dated economic event is HI; the explanation of its allocation is EC.\n8. A normative welfare argument is PL; the efficiency claim is EC.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| proofs of equilibrium, welfare, Arrow, folk and bargaining theorems | MA.B.C4 |\n| choice of game and moves that change it | ST |\n| tax duty and legal rules | LA |\n| firm practice, accounts, tax computation | BU |\n| psychological mechanism | MS |\n| normative argument about justice | PL |\n| dated economic events | HI |",
+  "crosswalk": "**JEL** has 20 top-level categories, A–R plus Y and Z (checked: aeaweb.org/jel/guide).\n\n| Category | Home | Note |\n|---|---|---|\n| A General and teaching | ED (teaching) | refused as cell |\n| B History of thought, methodology | HI, PL | refused |\n| C Mathematical and quantitative methods | Face M; MA | refused as cell |\n| D Microeconomics | A1–A3 | lands |\n| E Macro and monetary | A4 | lands |\n| F International | A4.4 | lands |\n| G Financial | A2; BU | lands, split |\n| H Public | A5 | lands |\n| I Health, education, welfare | B.C6 | lands as bridge |\n| J Labour and demographic | A2.4 | lands |\n| K Law and economics | A3.3–A3.4 | lands |\n| L Industrial organisation | A2.2 | lands |\n| M Business, marketing, accounting | BU | refused |\n| N Economic history | B.C10 | lands as bridge |\n| O Development, growth | A4.1 | lands |\n| P Political economy, systems | A3.4 | lands |\n| Q Agricultural, environmental | B.C9; AG, EV | lands as bridge |\n| R Urban, regional, transport | substrate | refused, catalogue |\n| Y Miscellaneous | — | residual, not a cell |\n| Z Other special topics | — | residual, not a cell |\n\nCoverage: 13 of 20 land (D–L, N–Q); 7 are refused (A, B, C, M, R, Y, Z).\n**ANZSRC 38** (checked 9 Oct 2026 against the ABS file anzsrc2020_for.xlsx) has four groups: 3801 Applied economics → A2–A5; 3802 Econometrics → Face M; 3803 Economic theory → A1–A3; 3899 Other → not a cell. Coverage: 2 of 3 substantive groups land as cells, and 1 as method.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 24 sub-cells = 29. M roles 5. Heuristics 5. W rows 5. B bridges 10.\nKey line, word for word: Choice. Markets. Mechanisms and institutions. The aggregate economy. Welfare and public choice.\nOPEN: microfoundations of aggregate fluctuations; the cause of the productivity slowdown.\nCONTESTED: financial economics split between EC and BU (alternative: all to EC.O.A2); the folk theorem in A3 rather than A2."
+ },
+ "borders": [
+  {
+   "field": "MA",
+   "uses": 13
+  },
+  {
+   "field": "LA",
+   "uses": 4
+  },
+  {
+   "field": "ST",
+   "uses": 3
+  },
+  {
+   "field": "BU",
+   "uses": 2
+  },
+  {
+   "field": "MS",
+   "uses": 1
+  },
+  {
+   "field": "PO",
+   "uses": 1
+  },
+  {
+   "field": "EV",
+   "uses": 1
+  },
+  {
+   "field": "PL",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "ST",
+   "uses": 6
+  },
+  {
+   "field": "BU",
+   "uses": 5
+  },
+  {
+   "field": "EA",
+   "uses": 4
+  },
+  {
+   "field": "PO",
+   "uses": 3
+  },
+  {
+   "field": "EN",
+   "uses": 2
+  },
+  {
+   "field": "AG",
+   "uses": 2
+  },
+  {
+   "field": "EV",
+   "uses": 2
+  },
+  {
+   "field": "MD",
+   "uses": 1
+  },
+  {
+   "field": "MS",
+   "uses": 1
+  },
+  {
+   "field": "LA",
+   "uses": 1
+  },
+  {
+   "field": "PL",
+   "uses": 1
+  },
+  {
+   "field": "HI",
+   "uses": 1
+  },
+  {
+   "field": "ED",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

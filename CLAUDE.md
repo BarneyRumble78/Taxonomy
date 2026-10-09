@@ -10,18 +10,22 @@ Taxonomy is a standard classification of human knowledge: 25 fields, each a Mint
 - `site/`: `template.html` (tabbed website, single file), `site_data.json` (field names, key-line cells, pilot claims), `dist/` (build output, published as a claude.ai artifact).
 - `pilot/`: 50-claim placement pilot (AI coders), protocol, codebook.
 - `docs/`: combined v2.2 file, Māori-led review pack, APSA crosswalk, related work, ABS ANZSRC 2020 source file.
-- `tests/`: pytest for the engine.
+- `public/`: the API's documentation page (`index.html`, hand-written) and generated static data (`v1/`, `openapi.json`). Never edit `public/v1` by hand.
+- `worker/`: Cloudflare Worker (`index.js`; `engine.js` is a JS port of the engine plus audit/map/relate; `data.json` generated; `test.mjs`). `wrangler.toml` at the root. See `docs/DEPLOY.md`.
+- `tests/`: pytest for the engine and for JS/Python parity.
 
 ## Commands
 ```
 python3 scripts/check.py            # R1/R2/R7 checks: dangling IDs, sub-cell counts, key-line agreement
 python3 scripts/build_registry.py   # regenerate registry/
 python3 scripts/build_site.py       # regenerate site/dist/index.html
-python3 -m pytest -q tests          # engine tests
+python3 scripts/build_api.py        # regenerate public/v1, openapi.json, worker/data.json (run after build_registry)
+npm test                            # Worker tests (node:test)
+python3 -m pytest -q tests          # engine tests + JS/Python parity
 python3 engine/taxonomy_engine.py "a sentence"      # classify
 python3 engine/taxonomy_engine.py --view "subject"  # 25-field view
 ```
-Run check, registry, tests and site build after any change to a pyramid, the lexicon or the template.
+Run check, registry, api build, both test suites and site build after any change to a pyramid, the lexicon or the template. Commit the regenerated files.
 
 ## Rules that must hold
 - One sentence, one home (R1). Owner = the field whose warrant establishes the claim. Others cite "uses XX.O.An".
@@ -33,6 +37,11 @@ Run check, registry, tests and site build after any change to a pyramid, the lex
 - IK and every Indigenous placement stay provisional until Māori-led review (`docs/MAORI_REVIEW_PACK.md`). Do not mark them final.
 - Mark unchecked facts `(UNVERIFIED)`. Do not invent citations. Record sources checked with the date.
 - Plain academic register, sentences under 25 words, no self-sealing rhetoric (R10).
+
+## API conventions
+- Rules decide. Model assist (Workers AI) only adds a second opinion, picks from a fixed code list, and never replaces the rule-based answer.
+- `worker/engine.js` classify and whole_view must stay a faithful port of `engine/taxonomy_engine.py` (`tests/test_parity.py`). Audit, map and relate exist only in JS.
+- Do not describe `audit` flags as findings about truth, or `map` as complete. Keep the status box on `public/index.html` accurate.
 
 ## Website conventions (site/template.html)
 - Look: circa-2010 government / standards-body site. Fixed 960px sheet, blue banner, big Menu button top left, tab bar, left sidebar boxes, breadcrumb, grey footer. Single light theme. Georgia headings, Arial body.

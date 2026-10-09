@@ -1,0 +1,396 @@
+{
+ "code": "EV",
+ "name": "Environmental science",
+ "dimension": "the link in the human–environment causal chain",
+ "cells": [
+  {
+   "id": "EV.O.A1",
+   "name": "Pressures"
+  },
+  {
+   "id": "EV.O.A2",
+   "name": "States"
+  },
+  {
+   "id": "EV.O.A3",
+   "name": "Impacts"
+  },
+  {
+   "id": "EV.O.A4",
+   "name": "Responses"
+  },
+  {
+   "id": "EV.O.A5",
+   "name": "Limits"
+  }
+ ],
+ "objects": [
+  {
+   "id": "EV.O.A1",
+   "label": "Pressures",
+   "uses": [],
+   "text": "EV.O.A1 Pressures"
+  },
+  {
+   "id": "EV.O.A1.1",
+   "label": "Emissions",
+   "uses": [
+    "CH"
+   ],
+   "text": "EV.O.A1.1 Emissions — greenhouse gases, pollutants. Inventories follow IPCC guidelines (W12 for method)."
+  },
+  {
+   "id": "EV.O.A1.2",
+   "label": "Land and sea use change",
+   "uses": [
+    "EA"
+   ],
+   "text": "EV.O.A1.2 Land and sea use change — clearance, drainage, urbanisation."
+  },
+  {
+   "id": "EV.O.A1.3",
+   "label": "Extraction",
+   "uses": [],
+   "text": "EV.O.A1.3 Extraction — water, fish, minerals."
+  },
+  {
+   "id": "EV.O.A1.4",
+   "label": "Introduced species",
+   "uses": [
+    "BI"
+   ],
+   "text": "EV.O.A1.4 Introduced species — pests and invasives (e.g. possums and mustelids in NZ)."
+  },
+  {
+   "id": "EV.O.A2",
+   "label": "States",
+   "uses": [],
+   "text": "EV.O.A2 States"
+  },
+  {
+   "id": "EV.O.A2.1",
+   "label": "Air quality",
+   "uses": [
+    "CH",
+    "EA"
+   ],
+   "text": "EV.O.A2.1 Air quality — the measurement uses CH and EA."
+  },
+  {
+   "id": "EV.O.A2.2",
+   "label": "Freshwater quality",
+   "uses": [
+    "EA"
+   ],
+   "text": "EV.O.A2.2 Freshwater quality — nitrate, E. coli, sediment."
+  },
+  {
+   "id": "EV.O.A2.3",
+   "label": "Marine environment",
+   "uses": [
+    "EA"
+   ],
+   "text": "EV.O.A2.3 Marine environment — acidification, warming."
+  },
+  {
+   "id": "EV.O.A2.4",
+   "label": "Soil state",
+   "uses": [
+    "EA"
+   ],
+   "text": "EV.O.A2.4 Soil state — contamination, erosion."
+  },
+  {
+   "id": "EV.O.A2.5",
+   "label": "Biodiversity status",
+   "uses": [
+    "BI"
+   ],
+   "text": "EV.O.A2.5 Biodiversity status — threat classifications (IUCN Red List criteria, W12)."
+  },
+  {
+   "id": "EV.O.A3",
+   "label": "Impacts",
+   "uses": [],
+   "text": "EV.O.A3 Impacts"
+  },
+  {
+   "id": "EV.O.A3.1",
+   "label": "Ecosystem harm",
+   "uses": [
+    "BI"
+   ],
+   "text": "EV.O.A3.1 Ecosystem harm — loss of function and species."
+  },
+  {
+   "id": "EV.O.A3.2",
+   "label": "Human health impact",
+   "uses": [
+    "MD"
+   ],
+   "text": "EV.O.A3.2 Human health impact — the exposure–response is MD."
+  },
+  {
+   "id": "EV.O.A3.3",
+   "label": "Attribution",
+   "uses": [
+    "EA"
+   ],
+   "text": "EV.O.A3.3 Attribution — the share of an observed change caused by a stated pressure (e.g. event attribution in climate science). The physical model is EA."
+  },
+  {
+   "id": "EV.O.A3.4",
+   "label": "Ecosystem services",
+   "uses": [
+    "EC"
+   ],
+   "text": "EV.O.A3.4 Ecosystem services — benefits people receive; valuation is EC."
+  },
+  {
+   "id": "EV.O.A4",
+   "label": "Responses",
+   "uses": [],
+   "text": "EV.O.A4 Responses"
+  },
+  {
+   "id": "EV.O.A4.1",
+   "label": "Restoration",
+   "uses": [],
+   "text": "EV.O.A4.1 Restoration — measured recovery after intervention."
+  },
+  {
+   "id": "EV.O.A4.2",
+   "label": "Conservation",
+   "uses": [],
+   "text": "EV.O.A4.2 Conservation — protected areas, predator control (Predator Free 2050 is a stated goal, UNVERIFIED name and date)."
+  },
+  {
+   "id": "EV.O.A4.3",
+   "label": "Regulation and instruments",
+   "uses": [
+    "PO",
+    "EC",
+    "LA"
+   ],
+   "text": "EV.O.A4.3 Regulation and instruments — the policy is PO, the price instrument EC, the duty LA. EV owns the measured environmental effect."
+  },
+  {
+   "id": "EV.O.A4.4",
+   "label": "Kaitiakitanga in practice",
+   "uses": [
+    "IK"
+   ],
+   "text": "EV.O.A4.4 Kaitiakitanga in practice — guardianship as a response; its tradition-internal meaning is IK."
+  },
+  {
+   "id": "EV.O.A5",
+   "label": "Limits",
+   "uses": [],
+   "text": "EV.O.A5 Limits"
+  },
+  {
+   "id": "EV.O.A5.1",
+   "label": "Thresholds and tipping points",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "EV.O.A5.1 Thresholds and tipping points — a regime shift occurs past a critical value, assuming bistable dynamics (theory MA.O.A4)."
+  },
+  {
+   "id": "EV.O.A5.2",
+   "label": "Standards and bottom lines",
+   "uses": [
+    "LA"
+   ],
+   "text": "EV.O.A5.2 Standards and bottom lines — legal or agreed limits (W12; force LA)."
+  },
+  {
+   "id": "EV.O.A5.3",
+   "label": "Planetary boundaries",
+   "uses": [],
+   "text": "EV.O.A5.3 Carrying capacity and planetary boundaries — the planetary boundaries framework (Rockström et al., 2009) is a proposed set, CONTESTED in its numbers."
+  }
+ ],
+ "methods": [
+  {
+   "id": "EV.M.1",
+   "label": "Monitor",
+   "role": "M3 Observe",
+   "example": "state-of-environment monitoring"
+  },
+  {
+   "id": "EV.M.2",
+   "label": "Assess impact",
+   "role": "M6 Compare and reconstruct",
+   "example": "EIA, before–after–control–impact designs"
+  },
+  {
+   "id": "EV.M.3",
+   "label": "Model the coupled system",
+   "role": "M5 Compute",
+   "example": "integrated assessment models"
+  },
+  {
+   "id": "EV.M.4",
+   "label": "Intervene and restore",
+   "role": "M4 Intervene",
+   "example": "restoration trials"
+  },
+  {
+   "id": "EV.M.5",
+   "label": "Account",
+   "role": "M1 Represent",
+   "example": "emissions inventories, life-cycle assessment"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "EV.O.A1",
+   "warrant": "W4 + W12",
+   "standard": "inventory under a stated method",
+   "defeaters": "under-reporting, method change"
+  },
+  {
+   "cell": "EV.O.A2",
+   "warrant": "W4",
+   "standard": "monitoring with stated uncertainty",
+   "defeaters": "sparse sites, drift"
+  },
+  {
+   "cell": "EV.O.A3",
+   "warrant": "W5 + W2",
+   "standard": "causal attribution; model with stated skill",
+   "defeaters": "confounded drivers"
+  },
+  {
+   "cell": "EV.O.A4",
+   "warrant": "W3 + W5",
+   "standard": "BACI design or identified effect",
+   "defeaters": "short records, displacement"
+  },
+  {
+   "cell": "EV.O.A5",
+   "warrant": "W2 + W12",
+   "standard": "modelled threshold; agreed standard",
+   "defeaters": "non-stationarity"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "EV.B.C1",
+   "Climate change impacts and adaptation",
+   "A3, A4",
+   "M.3",
+   "climate (EA owns the physics)"
+  ],
+  [
+   "EV.B.C2",
+   "Conservation biology",
+   "A2.5, A4.2",
+   "M.1, M.4",
+   "species (uses BI)"
+  ],
+  [
+   "EV.B.C3",
+   "Pollution and environmental chemistry",
+   "A1.1, A2",
+   "M.1",
+   "contaminants (uses CH)"
+  ],
+  [
+   "EV.B.C4",
+   "Environmental management",
+   "A4",
+   "M.2",
+   "catchments"
+  ],
+  [
+   "EV.B.C5",
+   "Ecological economics (shared)",
+   "A3.4",
+   "M.3",
+   "services (uses EC)"
+  ],
+  [
+   "EV.B.C6",
+   "Environmental policy (shared)",
+   "A4.3",
+   "M.2",
+   "instruments (uses PO, LA)"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Environmental science is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five links of a coupled system: pressures, states, impacts, responses, and limits.",
+  "key_line": "Dimension: **the link in the human–environment causal chain.** Order: causal.\n1. Pressures\n2. States\n3. Impacts\n4. Responses\n5. Limits",
+  "assignment_rules": "1. Place by the link in the chain.\n2. The process (fluid, chemical, ecological) is EA, CH or BI. The coupled human-caused claim is EV.\n3. The policy is PO; the price is EC; the duty is LA.\n4. A human health exposure–response is MD.\n5. A farming practice is AG; its environmental effect is EV.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| Earth-system physics | EA |\n| ecology without human pressure | BI |\n| environmental law | LA |\n| environmental economics and pricing | EC |\n| environmental politics | PO |",
+  "crosswalk": "**ANZSRC 41** (checked 9 Oct 2026 against the ABS file anzsrc2020_for.xlsx) has seven groups:\n- 4101 Climate change impacts and adaptation → B.C1\n- 4102 Ecological applications → B.C2\n- 4103 Environmental biotechnology → A4.1\n- 4104 Environmental management → B.C4\n- 4105 Pollution and contamination → B.C3\n- 4106 Soil sciences → A2.4 (process → EA)\n- 4199 Other → not a cell\n\nCoverage: 6 of 6 substantive groups land.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 20 sub-cells = 25. M roles 5. Heuristics 3. W rows 5. B bridges 6.\nKey line, word for word: Pressures. States. Impacts. Responses. Limits.\nCONTESTED: planetary boundary numbers; EV as a pyramid rather than an EA cell.\nOPEN: early warning of tipping points in real systems."
+ },
+ "borders": [
+  {
+   "field": "EA",
+   "uses": 6
+  },
+  {
+   "field": "BI",
+   "uses": 3
+  },
+  {
+   "field": "CH",
+   "uses": 2
+  },
+  {
+   "field": "EC",
+   "uses": 2
+  },
+  {
+   "field": "LA",
+   "uses": 2
+  },
+  {
+   "field": "MD",
+   "uses": 1
+  },
+  {
+   "field": "PO",
+   "uses": 1
+  },
+  {
+   "field": "IK",
+   "uses": 1
+  },
+  {
+   "field": "MA",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "CH",
+   "uses": 1
+  },
+  {
+   "field": "MD",
+   "uses": 1
+  },
+  {
+   "field": "EC",
+   "uses": 1
+  },
+  {
+   "field": "DE",
+   "uses": 1
+  },
+  {
+   "field": "AG",
+   "uses": 1
+  },
+  {
+   "field": "IK",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

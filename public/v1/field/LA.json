@@ -1,0 +1,421 @@
+{
+ "code": "LA",
+ "name": "Law",
+ "dimension": "the legal relation the claim states",
+ "cells": [
+  {
+   "id": "LA.O.A1",
+   "name": "Sources"
+  },
+  {
+   "id": "LA.O.A2",
+   "name": "Obligations"
+  },
+  {
+   "id": "LA.O.A3",
+   "name": "Wrongs and remedies"
+  },
+  {
+   "id": "LA.O.A4",
+   "name": "Public power"
+  },
+  {
+   "id": "LA.O.A5",
+   "name": "Forums and proof"
+  }
+ ],
+ "objects": [
+  {
+   "id": "LA.O.A1",
+   "label": "Sources",
+   "uses": [],
+   "text": "LA.O.A1 Sources"
+  },
+  {
+   "id": "LA.O.A1.1",
+   "label": "Legislation",
+   "uses": [],
+   "text": "LA.O.A1.1 Legislation — statutes and delegated legislation, valid when made by the procedure the system recognises."
+  },
+  {
+   "id": "LA.O.A1.2",
+   "label": "Case law",
+   "uses": [],
+   "text": "LA.O.A1.2 Case law — precedent binds lower courts in common-law systems (stare decisis); its weight in civil-law systems is lower."
+  },
+  {
+   "id": "LA.O.A1.3",
+   "label": "Custom and tikanga",
+   "uses": [
+    "IK.O.A2"
+   ],
+   "text": "LA.O.A1.3 Custom and tikanga — in New Zealand, the Supreme Court in Ellis v R (2022) held that tikanga Māori forms part of the common law, as a source to be applied with care (UNVERIFIED wording; Māori-led review required). The tikanga itself, as tradition-internal law, is owned by IK."
+  },
+  {
+   "id": "LA.O.A1.4",
+   "label": "International law",
+   "uses": [],
+   "text": "LA.O.A1.4 International law — treaties and custom (ICJ Statute art. 38). Domestic effect depends on the system."
+  },
+  {
+   "id": "LA.O.A1.5",
+   "label": "Validity",
+   "uses": [
+    "PL"
+   ],
+   "text": "LA.O.A1.5 Validity — what makes a rule law in a system (for example Hart's rule of recognition). The concept analysis is PL; the claim that a rule is valid here is LA."
+  },
+  {
+   "id": "LA.O.A2",
+   "label": "Obligations",
+   "uses": [],
+   "text": "LA.O.A2 Obligations"
+  },
+  {
+   "id": "LA.O.A2.1",
+   "label": "Contract",
+   "uses": [],
+   "text": "LA.O.A2.1 Contract — formation needs offer, acceptance, consideration (in common law) and intention to create legal relations."
+  },
+  {
+   "id": "LA.O.A2.2",
+   "label": "Property",
+   "uses": [
+    "BU.O.A5.1"
+   ],
+   "text": "LA.O.A2.2 Property — title, possession, land registration (Torrens in NZ and Australia). Title to goods sold passes under the sale contract and the governing law, not under Incoterms."
+  },
+  {
+   "id": "LA.O.A2.3",
+   "label": "Trusts and equity",
+   "uses": [],
+   "text": "LA.O.A2.3 Trusts and equity."
+  },
+  {
+   "id": "LA.O.A2.4",
+   "label": "Family and succession",
+   "uses": [],
+   "text": "LA.O.A2.4 Family and succession."
+  },
+  {
+   "id": "LA.O.A2.5",
+   "label": "Tax duty",
+   "uses": [
+    "EC.O.A2.5",
+    "BU.O.A5.3"
+   ],
+   "text": "LA.O.A2.5 Tax duty — the liability to pay, set by statute. Incidence is EC and computation is BU."
+  },
+  {
+   "id": "LA.O.A3",
+   "label": "Wrongs and remedies",
+   "uses": [],
+   "text": "LA.O.A3 Wrongs and remedies"
+  },
+  {
+   "id": "LA.O.A3.1",
+   "label": "Torts",
+   "uses": [],
+   "text": "LA.O.A3.1 Torts — negligence requires a duty of care, breach, causation and damage. New Zealand's accident compensation scheme (ACC) bars most personal-injury suits."
+  },
+  {
+   "id": "LA.O.A3.2",
+   "label": "Crimes",
+   "uses": [],
+   "text": "LA.O.A3.2 Crimes — liability needs the prohibited act and the fault element, unless the offence is strict."
+  },
+  {
+   "id": "LA.O.A3.3",
+   "label": "Remedies",
+   "uses": [],
+   "text": "LA.O.A3.3 Remedies — damages, injunctions, specific performance, sentences."
+  },
+  {
+   "id": "LA.O.A4",
+   "label": "Public power",
+   "uses": [],
+   "text": "LA.O.A4 Public power"
+  },
+  {
+   "id": "LA.O.A4.1",
+   "label": "Constitutional law",
+   "uses": [
+    "PO.O.A2.1"
+   ],
+   "text": "LA.O.A4.1 Constitutional law — New Zealand has no single entrenched constitution; it relies on statutes such as the Constitution Act 1986, conventions and Te Tiriti."
+  },
+  {
+   "id": "LA.O.A4.2",
+   "label": "Administrative law",
+   "uses": [],
+   "text": "LA.O.A4.2 Administrative law — judicial review for illegality, irrationality and procedural impropriety."
+  },
+  {
+   "id": "LA.O.A4.3",
+   "label": "Human rights",
+   "uses": [
+    "PL"
+   ],
+   "text": "LA.O.A4.3 Human rights — NZ Bill of Rights Act 1990: rights may be subject to reasonable limits demonstrably justified in a free and democratic society (s 5)."
+  },
+  {
+   "id": "LA.O.A4.4",
+   "label": "Te Tiriti o Waitangi",
+   "uses": [
+    "IK",
+    "HI"
+   ],
+   "text": "LA.O.A4.4 Te Tiriti o Waitangi (1840) — its legal force depends on incorporation in statute. The Waitangi Tribunal (est. 1975) makes recommendations, mostly not binding."
+  },
+  {
+   "id": "LA.O.A5",
+   "label": "Forums and proof",
+   "uses": [],
+   "text": "LA.O.A5 Forums and proof"
+  },
+  {
+   "id": "LA.O.A5.1",
+   "label": "Jurisdiction and courts",
+   "uses": [],
+   "text": "LA.O.A5.1 Jurisdiction and courts — which forum may hear a claim. The NZ Supreme Court replaced Privy Council appeals from 2004."
+  },
+  {
+   "id": "LA.O.A5.2",
+   "label": "Procedure",
+   "uses": [],
+   "text": "LA.O.A5.2 Procedure — pleadings, appeal."
+  },
+  {
+   "id": "LA.O.A5.3",
+   "label": "Evidence and proof",
+   "uses": [],
+   "text": "LA.O.A5.3 Evidence and standards of proof — beyond reasonable doubt in criminal cases; balance of probabilities in civil cases."
+  },
+  {
+   "id": "LA.O.A5.4",
+   "label": "Arbitration and ADR",
+   "uses": [],
+   "text": "LA.O.A5.4 Arbitration and alternative dispute resolution — awards are enforceable under the New York Convention (1958) in contracting states."
+  }
+ ],
+ "methods": [
+  {
+   "id": "LA.M.1",
+   "label": "State the rule",
+   "role": "M1 Represent",
+   "example": "drafting, codification"
+  },
+  {
+   "id": "LA.M.2",
+   "label": "Interpret",
+   "role": "M2 Derive",
+   "example": "statutory interpretation, legal argument"
+  },
+  {
+   "id": "LA.M.3",
+   "label": "Find facts",
+   "role": "M3 Observe",
+   "example": "evidence before a forum"
+  },
+  {
+   "id": "LA.M.4",
+   "label": "Compare systems",
+   "role": "M6 Compare and reconstruct",
+   "example": "comparative law, legal history"
+  },
+  {
+   "id": "LA.M.5",
+   "label": "Adjudicate",
+   "role": "M7 Verify",
+   "example": "judgment by a forum"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "LA.O.A1",
+   "warrant": "W10 + W12",
+   "standard": "valid source under the system's recognition rule",
+   "defeaters": "repeal, inconsistency with a higher source"
+  },
+  {
+   "cell": "LA.O.A2",
+   "warrant": "W10",
+   "standard": "source plus proved facts",
+   "defeaters": "defences, vitiating factors"
+  },
+  {
+   "cell": "LA.O.A3",
+   "warrant": "W10",
+   "standard": "elements proved to the standard",
+   "defeaters": "defences, limitation periods"
+  },
+  {
+   "cell": "LA.O.A4",
+   "warrant": "W10 + W9",
+   "standard": "source plus argued interpretation before a court",
+   "defeaters": "non-justiciability"
+  },
+  {
+   "cell": "LA.O.A5",
+   "warrant": "W10",
+   "standard": "the forum's own rules of procedure and evidence",
+   "defeaters": "lack of jurisdiction"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "LA.B.C1",
+   "Private law",
+   "A2, A3.1",
+   "M.2",
+   "persons"
+  ],
+  [
+   "LA.B.C2",
+   "Criminal law",
+   "A3.2, A5.3",
+   "M.2, M.3",
+   "offences"
+  ],
+  [
+   "LA.B.C3",
+   "Public law",
+   "A4",
+   "M.2",
+   "the state"
+  ],
+  [
+   "LA.B.C4",
+   "International law",
+   "A1.4",
+   "M.2, M.4",
+   "states"
+  ],
+  [
+   "LA.B.C5",
+   "Commercial and tax law",
+   "A2.1, A2.5",
+   "M.2",
+   "businesses (uses BU)"
+  ],
+  [
+   "LA.B.C6",
+   "Māori and Indigenous law",
+   "A1.3, A4.4",
+   "M.2, M.4",
+   "iwi, hapū (uses IK)"
+  ],
+  [
+   "LA.B.C7",
+   "Jurisprudence (shared)",
+   "A1.5",
+   "M.2",
+   "concepts (argument PL)"
+  ],
+  [
+   "LA.B.C8",
+   "Law and economics",
+   "A2, A3",
+   "M.2",
+   "rules (uses EC)"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Law is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five legal relations: sources, obligations, wrongs and remedies, public power, and forums and proof.",
+  "key_line": "Dimension: **the legal relation the claim states.** Order: from validity to decision.\n1. Sources\n2. Obligations\n3. Wrongs and remedies\n4. Public power\n5. Forums and proof\n\nR7 repair: v1's \"order a remedy\" is now member 3, \"Wrongs and remedies\". v1's \"constitute the forum\" is member 5, \"Forums and proof\". All three places now list the same five members.\n\nEvery legal claim is indexed to a system and a date: \"under New Zealand law at 2026\". A claim without its system is not placeable.",
+  "assignment_rules": "1. Place by the legal relation, indexed to a system and a date.\n2. Incidence is economics; the duty is law.\n3. What law is, as a concept, is PL; what is law in this system is LA.\n4. A dated event in legal history is HI; the rule then in force is LA.\n5. The political cause of a law is PO.\n6. Tikanga as tradition is IK; tikanga as recognised by a state court is LA.\n7. A proved fact is settled for the forum only (W10 does not travel).",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| concept of law, legal philosophy | PL |\n| political effect of laws | PO |\n| tax incidence | EC |\n| tax computation | BU |\n| tikanga as tradition-internal law | IK |\n| dated legal history | HI |",
+  "crosswalk": "**ANZSRC 48** (checked 9 Oct 2026 against the ABS file anzsrc2020_for.xlsx) has eight groups:\n- 4801 Commercial law → A2.1 and B.C5\n- 4802 Environmental and resources law → A4 and EV\n- 4803 International and comparative law → A1.4 and LA.M.4\n- 4804 Law in context → bridges with PO, MS, EC\n- 4805 Legal systems → A1 and A5\n- 4806 Private law and civil obligations → A2 and A3\n- 4807 Public law → A4\n- 4899 Other → not a cell\n\nCoverage: 7 of 7 substantive groups land.\n**LCC K** is organised by jurisdiction, a substrate. It maps to the system index, not to cells.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 21 sub-cells = 26. M roles 5. Heuristics 3. W rows 5. B bridges 8.\nKey line, word for word: Sources. Obligations. Wrongs and remedies. Public power. Forums and proof.\nCONTESTED: the status of tikanga as a source (LA vs IK, with Māori-led review); jurisprudence between LA and PL."
+ },
+ "borders": [
+  {
+   "field": "IK",
+   "uses": 2
+  },
+  {
+   "field": "PL",
+   "uses": 2
+  },
+  {
+   "field": "BU",
+   "uses": 2
+  },
+  {
+   "field": "EC",
+   "uses": 1
+  },
+  {
+   "field": "PO",
+   "uses": 1
+  },
+  {
+   "field": "HI",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "EC",
+   "uses": 4
+  },
+  {
+   "field": "BU",
+   "uses": 4
+  },
+  {
+   "field": "EA",
+   "uses": 3
+  },
+  {
+   "field": "DE",
+   "uses": 3
+  },
+  {
+   "field": "AG",
+   "uses": 3
+  },
+  {
+   "field": "IK",
+   "uses": 3
+  },
+  {
+   "field": "MD",
+   "uses": 2
+  },
+  {
+   "field": "PO",
+   "uses": 2
+  },
+  {
+   "field": "EV",
+   "uses": 2
+  },
+  {
+   "field": "MS",
+   "uses": 1
+  },
+  {
+   "field": "PL",
+   "uses": 1
+  },
+  {
+   "field": "HI",
+   "uses": 1
+  },
+  {
+   "field": "RE",
+   "uses": 1
+  },
+  {
+   "field": "ED",
+   "uses": 1
+  },
+  {
+   "field": "IS",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

@@ -1,0 +1,17 @@
+{
+ "id": "CS.O.A3.2",
+ "label": "Distributed agreement (FLP, Byzantine)",
+ "owner": "CS",
+ "home": "O/A3",
+ "uses": [
+  "MA.B.C3"
+ ],
+ "text": "CS.O.A3.2 Distributed agreement — FLP (Fischer, Lynch and Paterson, 1985): no deterministic protocol guarantees consensus in an asynchronous system if even one process may crash. This is a proved theorem, not an open problem. Byzantine agreement needs n ≥ 3f + 1 processes to tolerate f faulty ones, with synchronous oral messages and no signatures.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W1 + W4",
+  "standard": "impossibility or protocol proof; measured behaviour in deployment",
+  "defeaters": "failure model differs from assumed one"
+ },
+ "field_url": "/v1/field/CS.json"
+}

@@ -1,0 +1,389 @@
+{
+ "code": "ED",
+ "name": "Education",
+ "dimension": "the element of an educational arrangement",
+ "cells": [
+  {
+   "id": "ED.O.A1",
+   "name": "Aims and curricula"
+  },
+  {
+   "id": "ED.O.A2",
+   "name": "Learners"
+  },
+  {
+   "id": "ED.O.A3",
+   "name": "Teaching"
+  },
+  {
+   "id": "ED.O.A4",
+   "name": "Assessment"
+  },
+  {
+   "id": "ED.O.A5",
+   "name": "Institutions and systems"
+  }
+ ],
+ "objects": [
+  {
+   "id": "ED.O.A1",
+   "label": "Aims and curricula",
+   "uses": [],
+   "text": "ED.O.A1 Aims and curricula"
+  },
+  {
+   "id": "ED.O.A1.1",
+   "label": "Aims",
+   "uses": [
+    "PL"
+   ],
+   "text": "ED.O.A1.1 Aims — the stated purposes of education. The normative argument for them is PL; the statement of an adopted aim is ED (W12)."
+  },
+  {
+   "id": "ED.O.A1.2",
+   "label": "Curriculum content",
+   "uses": [
+    "MA",
+    "PH"
+   ],
+   "text": "ED.O.A1.2 Curriculum content — what is taught. The truth of the content stays with its owner (a theorem is MA)."
+  },
+  {
+   "id": "ED.O.A1.3",
+   "label": "Sequence and progression",
+   "uses": [],
+   "text": "ED.O.A1.3 Sequence and progression — learning progressions and prerequisites."
+  },
+  {
+   "id": "ED.O.A1.4",
+   "label": "National curricula",
+   "uses": [
+    "IK"
+   ],
+   "text": "ED.O.A1.4 National curricula — e.g. Te Whāriki (NZ early childhood) and Te Marautanga o Aotearoa (Māori-medium) as stated frameworks (W12)."
+  },
+  {
+   "id": "ED.O.A2",
+   "label": "Learners",
+   "uses": [],
+   "text": "ED.O.A2 Learners"
+  },
+  {
+   "id": "ED.O.A2.1",
+   "label": "Prior knowledge and misconceptions",
+   "uses": [
+    "MS",
+    "PH"
+   ],
+   "text": "ED.O.A2.1 Prior knowledge and misconceptions — e.g. the impetus misconception in force and motion (physics education research). The cognitive mechanism is MS."
+  },
+  {
+   "id": "ED.O.A2.2",
+   "label": "Development",
+   "uses": [
+    "MS"
+   ],
+   "text": "ED.O.A2.2 Development — age-related readiness, cited from MS."
+  },
+  {
+   "id": "ED.O.A2.3",
+   "label": "Motivation",
+   "uses": [
+    "MS"
+   ],
+   "text": "ED.O.A2.3 Motivation and engagement."
+  },
+  {
+   "id": "ED.O.A2.4",
+   "label": "Diversity and learning need",
+   "uses": [],
+   "text": "ED.O.A2.4 Diversity and learning need — inclusion, special education, gifted learners."
+  },
+  {
+   "id": "ED.O.A3",
+   "label": "Teaching",
+   "uses": [],
+   "text": "ED.O.A3 Teaching"
+  },
+  {
+   "id": "ED.O.A3.1",
+   "label": "Instruction",
+   "uses": [],
+   "text": "ED.O.A3.1 Instruction — explicit instruction versus discovery; worked examples help novices (an expertise-reversal effect is a stated defeater for experts)."
+  },
+  {
+   "id": "ED.O.A3.2",
+   "label": "Feedback",
+   "uses": [],
+   "text": "ED.O.A3.2 Feedback — effects vary widely by type; some feedback lowers performance (UNVERIFIED as a meta-analytic figure)."
+  },
+  {
+   "id": "ED.O.A3.3",
+   "label": "Practice and retrieval",
+   "uses": [
+    "MS"
+   ],
+   "text": "ED.O.A3.3 Practice and retrieval — spacing and retrieval practice improve long-term retention. The memory mechanism is MS."
+  },
+  {
+   "id": "ED.O.A3.4",
+   "label": "Technology in teaching",
+   "uses": [
+    "CS"
+   ],
+   "text": "ED.O.A3.4 Technology in teaching — effects depend on use, not presence."
+  },
+  {
+   "id": "ED.O.A3.5",
+   "label": "Culturally sustaining pedagogy",
+   "uses": [
+    "IK"
+   ],
+   "text": "ED.O.A3.5 Culturally sustaining pedagogy — Kaupapa Māori education (kura kaupapa Māori) as an arrangement. The tradition-internal content is IK."
+  },
+  {
+   "id": "ED.O.A4",
+   "label": "Assessment",
+   "uses": [],
+   "text": "ED.O.A4 Assessment"
+  },
+  {
+   "id": "ED.O.A4.1",
+   "label": "Validity",
+   "uses": [],
+   "text": "ED.O.A4.1 Validity — an argument that score interpretations are supported (W9 with W4)."
+  },
+  {
+   "id": "ED.O.A4.2",
+   "label": "Reliability",
+   "uses": [
+    "MA.O.A5"
+   ],
+   "text": "ED.O.A4.2 Reliability — score consistency; the statistics are MA.O.A5 (psychometrics as bridge)."
+  },
+  {
+   "id": "ED.O.A4.3",
+   "label": "Formative assessment",
+   "uses": [],
+   "text": "ED.O.A4.3 Formative assessment — assessment used to change teaching."
+  },
+  {
+   "id": "ED.O.A4.4",
+   "label": "High-stakes testing",
+   "uses": [
+    "PO"
+   ],
+   "text": "ED.O.A4.4 High-stakes testing and accountability — Campbell's law: the more a quantitative indicator drives decisions, the more it is subject to corruption pressures (stated as a tendency)."
+  },
+  {
+   "id": "ED.O.A5",
+   "label": "Institutions and systems",
+   "uses": [],
+   "text": "ED.O.A5 Institutions and systems"
+  },
+  {
+   "id": "ED.O.A5.1",
+   "label": "Schools",
+   "uses": [],
+   "text": "ED.O.A5.1 Schools — school effects, leadership, class size."
+  },
+  {
+   "id": "ED.O.A5.2",
+   "label": "School systems",
+   "uses": [],
+   "text": "ED.O.A5.2 School systems — international comparisons (PISA, TIMSS) are W4 within their sampling designs."
+  },
+  {
+   "id": "ED.O.A5.3",
+   "label": "Higher education",
+   "uses": [],
+   "text": "ED.O.A5.3 Higher education — universities, credentials."
+  },
+  {
+   "id": "ED.O.A5.4",
+   "label": "Equity and access",
+   "uses": [
+    "EC",
+    "LA"
+   ],
+   "text": "ED.O.A5.4 Equity and access — gaps by group. The returns to schooling are EC; the law on schooling is LA."
+  }
+ ],
+ "methods": [
+  {
+   "id": "ED.M.1",
+   "label": "Design curricula and instruments",
+   "role": "M1 Represent",
+   "example": "curriculum framework, test design"
+  },
+  {
+   "id": "ED.M.2",
+   "label": "Observe classrooms",
+   "role": "M3 Observe",
+   "example": "observation protocols, ethnography"
+  },
+  {
+   "id": "ED.M.3",
+   "label": "Trial",
+   "role": "M4 Intervene",
+   "example": "randomised trials of interventions"
+  },
+  {
+   "id": "ED.M.4",
+   "label": "Measure and model",
+   "role": "M5 Compute",
+   "example": "psychometrics, value-added models"
+  },
+  {
+   "id": "ED.M.5",
+   "label": "Synthesise evidence",
+   "role": "M6 Compare and reconstruct",
+   "example": "meta-analysis, systematic review"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "ED.O.A1",
+   "warrant": "W12 + W9",
+   "standard": "stated framework; argued rationale",
+   "defeaters": "contested aims"
+  },
+  {
+   "cell": "ED.O.A2",
+   "warrant": "W4",
+   "standard": "validated diagnostic instrument",
+   "defeaters": "test-specific misconceptions"
+  },
+  {
+   "cell": "ED.O.A3",
+   "warrant": "W3 + W5",
+   "standard": "trial or identified effect, with the learners stated",
+   "defeaters": "Hawthorne effects, implementation drift"
+  },
+  {
+   "cell": "ED.O.A4",
+   "warrant": "W4 + W9",
+   "standard": "reliability and a validity argument",
+   "defeaters": "construct-irrelevant variance"
+  },
+  {
+   "cell": "ED.O.A5",
+   "warrant": "W5 + W4",
+   "standard": "identified system effect; sampled data",
+   "defeaters": "selection into schools"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "ED.B.C1",
+   "Subject education research (physics, maths)",
+   "A2.1, A3",
+   "M.2, M.3",
+   "a discipline (MSC 97; PER)"
+  ],
+  [
+   "ED.B.C2",
+   "Educational psychology",
+   "A2, A3.3",
+   "M.3, M.4",
+   "learners (uses MS)"
+  ],
+  [
+   "ED.B.C3",
+   "Curriculum studies",
+   "A1",
+   "M.1",
+   "curricula"
+  ],
+  [
+   "ED.B.C4",
+   "Psychometrics and assessment",
+   "A4",
+   "M.4",
+   "instruments (uses MA.O.A5)"
+  ],
+  [
+   "ED.B.C5",
+   "Economics of education",
+   "A5.4",
+   "M.4",
+   "systems (uses EC)"
+  ],
+  [
+   "ED.B.C6",
+   "Māori and Indigenous education",
+   "A1.4, A3.5",
+   "all",
+   "kura, wānanga (with IK)"
+  ],
+  [
+   "ED.B.C7",
+   "Higher education studies",
+   "A5.3",
+   "M.2, M.4",
+   "universities"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Education is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five elements of an educational arrangement: aims and curricula, learners, teaching, assessment, and institutions and systems.",
+  "key_line": "Dimension: **the element of an educational arrangement.** Order: from purpose to system.\n1. Aims and curricula\n2. Learners\n3. Teaching\n4. Assessment\n5. Institutions and systems",
+  "assignment_rules": "1. Place by the element of the arrangement.\n2. The truth of what is taught stays with its owner. ED owns the learning claim.\n3. The mind's mechanism is MS. Its educational use is ED.\n4. The economic return is EC. The legal duty is LA. The political decision is PO.\n5. MSC 97 is a bridge: the mathematics is MA; learning it is ED.\n6. The learning line (Phase 2.1). A claim that learners changed under a stated arrangement (teaching, curriculum, assessment, institution) is ED. A claim about how learning or memory works in any mind, with no arrangement in it, is MS.O.A1.5. Test: delete the arrangement from the sentence. If the claim survives, it is MS; if it does not, it is ED. MS.O.A1.5.5 is retired and points here.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| the content's truth | its owner pyramid |\n| general cognition and development | MS |\n| returns to education | EC |\n| education law | LA |\n| philosophy of education | PL |",
+  "crosswalk": "**ANZSRC 39** Education (checked 9 Oct 2026 against the ABS file anzsrc2020_for.xlsx) has five groups:\n- 3901 Curriculum and pedagogy → A1, A3\n- 3902 Education policy, sociology and philosophy → A5 (philosophy → PL)\n- 3903 Education systems → A5\n- 3904 Specialist studies in education → A2.4, A3.5\n- 3999 Other → not a cell\n\nCoverage: 4 of 4 substantive groups land.\n**JEL A2** (teaching of economics) lands in B.C1.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 21 sub-cells = 26. M roles 5. Heuristics 3. W rows 5. B bridges 7.\nKey line, word for word: Aims and curricula. Learners. Teaching. Assessment. Institutions and systems.\nCONTESTED: the size of feedback effects; ED vs MS for educational psychology.\nOPEN: transfer of learning across domains."
+ },
+ "borders": [
+  {
+   "field": "MS",
+   "uses": 4
+  },
+  {
+   "field": "MA",
+   "uses": 2
+  },
+  {
+   "field": "PH",
+   "uses": 2
+  },
+  {
+   "field": "IK",
+   "uses": 2
+  },
+  {
+   "field": "PL",
+   "uses": 1
+  },
+  {
+   "field": "CS",
+   "uses": 1
+  },
+  {
+   "field": "PO",
+   "uses": 1
+  },
+  {
+   "field": "EC",
+   "uses": 1
+  },
+  {
+   "field": "LA",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "MS",
+   "uses": 1
+  },
+  {
+   "field": "PO",
+   "uses": 1
+  },
+  {
+   "field": "IK",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

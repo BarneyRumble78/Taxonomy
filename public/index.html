@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Taxonomy API</title>
+<link rel="icon" href="data:,">
+<meta name="description" content="Place any claim, see what every field of knowledge can say about it, and check wording against the evidence behind it.">
+<style>
+:root{--blue:#1d4f91;--ink:#1c1c1c;--mid:#555;--rule:#c9d3e0;--wash:#f1f5fa}
+*{box-sizing:border-box}
+body{margin:0;background:#e8ecf1;color:var(--ink);font:14px/1.55 Arial,Helvetica,sans-serif}
+.sheet{max-width:960px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 6px rgba(0,0,0,.15)}
+header{background:var(--blue);color:#fff;padding:18px 24px}
+header b{font:bold 26px Georgia,serif;letter-spacing:.5px}
+header span{display:block;opacity:.85;margin-top:2px}
+nav{background:var(--wash);border-bottom:1px solid var(--rule);padding:0 24px}
+nav a{display:inline-block;padding:9px 14px 9px 0;margin-right:10px;color:var(--blue);text-decoration:none;font-weight:bold}
+nav a:hover{text-decoration:underline}
+main{padding:24px}
+h1,h2,h3{font-family:Georgia,serif;color:var(--blue);margin:1.4em 0 .4em}
+h1{font-size:28px;margin-top:.2em}h2{font-size:21px;border-bottom:1px solid var(--rule);padding-bottom:4px}
+p.lead{font-size:16px;max-width:760px}
+table{border-collapse:collapse;width:100%;margin:.6em 0}
+th,td{border:1px solid var(--rule);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:var(--wash)}
+code,pre{font:12.5px/1.45 Consolas,Menlo,monospace}
+pre{background:#101a2b;color:#e6edf7;padding:12px 14px;overflow:auto;border-radius:3px}
+code{background:var(--wash);padding:1px 4px}
+pre code{background:none;padding:0}
+.box{border:1px solid var(--rule);background:var(--wash);padding:12px 16px;margin:14px 0}
+.try textarea,.try input{width:100%;font:14px Arial;padding:7px;border:1px solid #9fb0c7}
+.try button{margin-top:6px;background:var(--blue);color:#fff;border:0;padding:8px 18px;font-weight:bold;cursor:pointer}
+.try button:disabled{opacity:.6}
+#out{margin-top:10px;min-height:2em}
+footer{background:#d9dde3;color:var(--mid);padding:14px 24px;font-size:12px}
+@media(max-width:700px){main{padding:16px}}
+</style></head><body><div class="sheet">
+<header><b>Taxonomy</b><span>API for placing claims and mapping subjects across 25 fields of knowledge</span></header>
+<nav><a href="#try">Try it</a><a href="#endpoints">Endpoints</a><a href="#method">How it works</a><a href="#status">Status</a><a href="/openapi.json">OpenAPI</a></nav>
+<main>
+<h1>Ask what kind of evidence settles a claim.</h1>
+<p class="lead">Send a sentence or a subject. Taxonomy returns the field that owns it, the evidence it must meet, how it would fail, and which other fields bear on it. Mathematics is the base. The same 984 identifiers are served as plain JSON and as SKOS.</p>
+
+<h2 id="try">Try it</h2>
+<div class="try">
+<label for="q"><b>A claim, a passage or a subject</b></label>
+<textarea id="q" rows="3">Every bounded sequence of real numbers has a convergent subsequence.</textarea>
+<label><input type="checkbox" id="assist"> Add model suggestions (works only if the service has a model attached)</label><br>
+<button data-ep="classify">Place this claim</button>
+<button data-ep="audit">Audit this passage</button>
+<button data-ep="map">Map this subject</button>
+<div id="out" aria-live="polite"></div>
+</div>
+
+<h2 id="endpoints">Endpoints</h2>
+<table>
+<tr><th>Call</th><th>Returns</th></tr>
+<tr><td><code>GET|POST /v1/classify</code></td><td>Owner field, cell, warrant, method, the evidence standard for that cell and what defeats it.</td></tr>
+<tr><td><code>POST /v1/audit</code></td><td>Each sentence placed, plus flags where the wording claims more than the evidence type allows, and a count of claims by warrant.</td></tr>
+<tr><td><code>GET /v1/map?subject=</code></td><td>The fields that bear on a subject, their cells, the question each field asks, and the evidence it would need. Also lists fields not expanded.</td></tr>
+<tr><td><code>GET /v1/view?subject=</code></td><td>The lens question for all 25 fields.</td></tr>
+<tr><td><code>GET /v1/relate?a=&amp;b=</code></td><td>How strongly two fields or identifiers cite each other, and the fields they share.</td></tr>
+<tr><td><code>GET /v1/lookup/{id}</code></td><td>One identifier: label, text, owner, citations in both directions.</td></tr>
+<tr><td><code>GET /v1/field/{code}.json</code></td><td>A whole field: cells, objects, methods, warrants, bridges, scope and crosswalk.</td></tr>
+<tr><td><code>GET /v1/index.json</code>, <code>graph.json</code>, <code>skos.jsonld</code></td><td>Fields and counts, the citation graph, the concept scheme.</td></tr>
+</table>
+<pre><code>curl -s -X POST $HOST/v1/classify -H 'content-type: application/json' \
+  -d '{"text":"The importer must pay GST at the border under the Goods and Services Tax Act 1985."}'
+
+curl -s "$HOST/v1/map?subject=AI-enabled+sunglasses"</code></pre>
+
+<h2 id="method">How it works</h2>
+<p>Each claim is placed on four faces: the <b>field</b> whose evidence can establish it, the <b>cell</b> it concerns, the <b>warrant</b> it owes (proof, measurement, a dated record, a stipulation and so on, thirteen types) and the <b>method</b> behind it. The map endpoint runs a subject past every field and reports which ones answered. Tradition-internal authority (W13) is never accepted as evidence for a measurement, a date, a legal duty or the meaning of a word.</p>
+<div class="box"><b>Model assist.</b> Placement is done by fixed rules and gives the same answer every time. If the service has a model attached, <code>assist=1</code> adds a second opinion. It can only choose from a fixed list of field codes, and it never replaces the rule-based answer.</div>
+
+<h2 id="status">Status</h2>
+<ul>
+<li>Working draft for expert review. The classifier is a keyword and rule engine written alongside the 50-claim pilot, so its pilot scores are a regression floor, not a measure of accuracy.</li>
+<li>No human placement study has been run. Treat every placement as a suggestion.</li>
+<li><code>audit</code> flags are prompts for a reader, not findings about truth.</li>
+<li>Indigenous knowledge (IK) and all Indigenous placements are provisional until Māori-led review.</li>
+<li><code>map</code> counts cue words. A field that does not appear has not been shown to be irrelevant.</li>
+</ul>
+</main>
+<footer>© 2026 Chris Townsend. Built on Barbara Minto's pyramid principle. Working draft, version <span id="v">2.2</span>.</footer>
+</div>
+<script>
+const out=document.getElementById('out'),q=document.getElementById('q');
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function ev(e){return e?`<br><i>Evidence:</i> ${esc(e.standard)} <i>Fails on:</i> ${esc(e.defeaters)}`:''}
+function render(ep,r){
+ if(r.error)return `<div class="box">${esc(r.error)}</div>`;
+ if(ep==='classify'){const p=r.placement;if(!p)return `<div class="box">${esc(r.note)}</div>`;
+  return `<div class="box"><b>${esc(p.owner_name)}</b> (${esc(p.owner)}) &rarr; ${esc(p.cell)} ${esc(p.cell_name)}<br>Warrant ${esc(p.warrant)} ${esc(p.warrant_name)}, method ${esc(p.method)} ${esc(p.method_name)}<br>Confidence ${p.confidence}${p.contested_with.length?`, contested with ${esc(p.contested_with.join(', '))}`:''}${ev(r.evidence)}${r.assist?`<br><i>Model second opinion:</i> ${esc((r.assist.codes||[]).join(', ')||'none')}`:''}</div>`;}
+ if(ep==='audit')return `<div class="box">${r.sentences} sentences, ${r.flagged} flagged. Claims by warrant: ${esc(JSON.stringify(r.evidence_footer.by_warrant))}</div>`+r.results.map(x=>`<div class="box"><b>${x.n}.</b> ${esc(x.sentence)}<br>${x.placement?`${esc(x.placement.owner_name)} / ${esc(x.placement.warrant)}`:'not placed'}${x.flags.map(f=>`<br>&#9873; <b>${esc(f.code)}</b>: ${esc(f.detail)}`).join('')}</div>`).join('');
+ if(ep==='map')return `<div class="box">${esc(r.note)}<br>Fields matched: ${r.coverage.fields_matched} of ${r.coverage.of}. Balance ${r.balance}.</div>`+r.fields.map(f=>`<div class="box"><b>${esc(f.name)}</b> (${esc(f.field)}) &middot; <a href="${esc(f.field_url)}">field data</a><br>${f.lenses.map(l=>`${esc(l.cell)} ${esc(l.name)}${ev(l.evidence)}`).join('<br>')}<br><i>Borders:</i> ${f.borders.map(b=>esc(b.field)).join(', ')}</div>`).join('')+`<div class="box"><i>Not expanded:</i> ${r.not_expanded.map(n=>esc(n.field)).join(', ')}</div>`;
+}
+document.querySelectorAll('button[data-ep]').forEach(b=>b.onclick=async()=>{
+ const ep=b.dataset.ep,t=q.value.trim();if(!t)return;document.querySelectorAll('button').forEach(x=>x.disabled=true);out.textContent='Working...';
+ try{const k=ep==='map'?'subject':'text';const res=await fetch('/v1/'+ep,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({[k]:t,assist:document.getElementById('assist').checked})});
+  out.innerHTML=render(ep,await res.json());}catch(e){out.textContent='Request failed.'}
+ document.querySelectorAll('button').forEach(x=>x.disabled=false);});
+fetch('/v1/index.json').then(r=>r.json()).then(d=>{document.getElementById('v').textContent=d.version}).catch(()=>{});
+</script></body></html>

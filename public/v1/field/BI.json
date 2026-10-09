@@ -1,0 +1,506 @@
+{
+ "code": "BI",
+ "name": "Biology",
+ "dimension": "the level or process the claim is about",
+ "cells": [
+  {
+   "id": "BI.O.A1",
+   "name": "Heritable information"
+  },
+  {
+   "id": "BI.O.A2",
+   "name": "Cell"
+  },
+  {
+   "id": "BI.O.A3",
+   "name": "Organism"
+  },
+  {
+   "id": "BI.O.A4",
+   "name": "Descent"
+  },
+  {
+   "id": "BI.O.A5",
+   "name": "Ecological interaction"
+  }
+ ],
+ "objects": [
+  {
+   "id": "BI.O.A1",
+   "label": "Heritable information",
+   "uses": [],
+   "text": "BI.O.A1 Heritable information"
+  },
+  {
+   "id": "BI.O.A1.1",
+   "label": "Replication",
+   "uses": [
+    "CH.O.A3"
+   ],
+   "text": "BI.O.A1.1 Replication. Template copying of DNA, or RNA in some viruses, with stated fidelity. Copying fidelity as heredity is owned here. The template chemistry and base-pair energetics are owned by CH.O.A3 (uses CH.O.A3)."
+  },
+  {
+   "id": "BI.O.A1.2",
+   "label": "Expression and regulation (genetic code, central dogma)",
+   "uses": [],
+   "text": "BI.O.A1.2 Expression and regulation. The genetic code maps codons to amino acids. It is a mapping, nearly universal, with known variant codes. It is owned here; CH.O.A3 cites it. Crick's central dogma (1970) states that sequence information, once in protein, cannot transfer back to nucleic acid or to other protein. Reverse transcription (RNA to DNA) is a \"special transfer\" allowed by it. The slogan DNA → RNA → protein is a heuristic (BI.M.H). Regulation covers transcription factors, chromatin state and noncoding RNA. Epigenetic marks can persist across mitotic divisions. Transgenerational epigenetic inheritance is a separate, narrower claim and is OPEN in many taxa."
+  },
+  {
+   "id": "BI.O.A1.3",
+   "label": "Transmission (Mendel, horizontal transfer)",
+   "uses": [],
+   "text": "BI.O.A1.3 Transmission. Mendel's laws: segregation holds for a diploid locus under regular meiosis; independent assortment holds only for loci that are unlinked. Linkage is the exception that maps chromosomes. Horizontal gene transfer moves sequence between lineages and breaks a strictly branching tree. Plasmids are its common vehicle in prokaryotes."
+  },
+  {
+   "id": "BI.O.A1.4",
+   "label": "Variation",
+   "uses": [],
+   "text": "BI.O.A1.4 Variation. Mutation is a change in sequence: point, indel, copy-number or chromosomal. Its fitness effect is a later claim (BI.O.A4), not part of the definition. Recombination generates new allele combinations. The gene has two definitions, molecular (transcribed region) and classical (unit of inheritance); a sentence must say which."
+  },
+  {
+   "id": "BI.O.A2",
+   "label": "Cell",
+   "uses": [],
+   "text": "BI.O.A2 Cell"
+  },
+  {
+   "id": "BI.O.A2.1",
+   "label": "Cell plans and origin",
+   "uses": [
+    "CH.O.A3",
+    "EA.O.A3"
+   ],
+   "text": "BI.O.A2.1 Cell plans and origin. Cell theory: organisms are cells or assemblages of cells, and cells arise from cells. It is a historical generalisation with one stated exception class: the origin of life. Prokaryotic plans (bacteria, archaea) lack a nucleus. Eukaryotic plans have a nucleus and membrane-bounded organelles. Endosymbiosis explains mitochondria and plastids. Origin of life is an OPEN programme; it uses CH.O.A3 and EA.O.A3."
+  },
+  {
+   "id": "BI.O.A2.2",
+   "label": "Membrane, excitability and signalling",
+   "uses": [
+    "CH.O.A3.3"
+   ],
+   "text": "BI.O.A2.2 Membrane, excitability and signalling. A lipid bilayer sets an inside; transport is passive or pumped. The resting membrane potential is owned here. The Nernst equation that gives each ion's equilibrium potential is owned by chemistry (uses CH.O.A3.3). The action potential is owned here as an excitable-membrane claim. CONTESTED: alternative home MS.O.A2. Signalling covers receptor, second messenger and response. Specificity is binding, not a new force."
+  },
+  {
+   "id": "BI.O.A2.3",
+   "label": "Metabolism",
+   "uses": [
+    "CH.O.A4.2",
+    "CH.O.A3"
+   ],
+   "text": "BI.O.A2.3 Metabolism. Pathways capture and spend energy. ATP and proton-motive force as cell currency are owned here. ATP coupling as free energy (ΔG) is owned by CH.O.A3 (uses CH.O.A3). Enzyme kinetics, including Michaelis–Menten, is owned by CH.O.A4.2. Michaelis–Menten holds under a quasi-steady-state complex, substrate in excess of enzyme, and no product inhibition (uses CH.O.A4.2). Photosynthesis and aerobic respiration are the two dominant planetary routes. Chemosynthesis (chemolithotrophy) and fermentation are other major routes."
+  },
+  {
+   "id": "BI.O.A2.4",
+   "label": "Cycle and division",
+   "uses": [],
+   "text": "BI.O.A2.4 Cycle and division. Replication, segregation and division, with checkpoints. Mitosis preserves ploidy. Meiosis halves ploidy and recombines homologues."
+  },
+  {
+   "id": "BI.O.A2.5",
+   "label": "Acellular replicators",
+   "uses": [],
+   "text": "BI.O.A2.5 Acellular replicators. Viruses, viroids and similar replicators reproduce only inside a host cell. The Baltimore scheme classifies viruses into seven classes by genome type and route to mRNA. Quasispecies theory describes mutant swarms under high mutation rate; its fit to real viral populations is CONTESTED. Virology as a named group is in the catalog register (BI.B.K)."
+  },
+  {
+   "id": "BI.O.A3",
+   "label": "Organism",
+   "uses": [],
+   "text": "BI.O.A3 Organism"
+  },
+  {
+   "id": "BI.O.A3.1",
+   "label": "Homeostasis and exchange",
+   "uses": [],
+   "text": "BI.O.A3.1 Homeostasis and exchange. Regulated variables are held in a range by negative feedback; not every internal value is constant. Exchange of gas, water, solute and heat is constrained by surface-to-volume ratio. Circulation and branching relieve that constraint. Chronobiology (circadian and other clocks) is a homeostatic-control claim and lives here. Normal human physiology is owned here; MD.O.A1 cites it."
+  },
+  {
+   "id": "BI.O.A3.2",
+   "label": "Development and life history",
+   "uses": [
+    "BI.O.A4"
+   ],
+   "text": "BI.O.A3.2 Development and life history. Development turns one cell into a patterned body. Differentiation is change in gene expression under position and history. Morphogen gradients and induction are mechanisms, not universal laws. A stem cell can self-renew and produce differentiated daughters; potency is a measured range. Life history covers growth, reproduction and ageing, with trade-offs as the claim. Evo-devo lives here and cites BI.O.A4."
+  },
+  {
+   "id": "BI.O.A3.3",
+   "label": "Immune defence",
+   "uses": [
+    "CH.O.A3"
+   ],
+   "text": "BI.O.A3.3 Immune defence. Innate and adaptive recognition, and self versus non-self as a functional distinction with known failures. The antibody as a molecule is CH.O.A3; the system is organismal. Normal immune function is owned here; human immune disorder is MD.O.A1.1."
+  },
+  {
+   "id": "BI.O.A3.4",
+   "label": "Behaviour (non-human)",
+   "uses": [],
+   "text": "BI.O.A3.4 Behaviour. Action selected by sensory input and internal state in non-human animals. Ethology and behavioural ecology of individuals live here. Neural circuits and systems are owned by MS.O.A2. Human behaviour is owned by MS.O.A1."
+  },
+  {
+   "id": "BI.O.A3.5",
+   "label": "Production and animal health",
+   "uses": [
+    "MD.O.A4.1",
+    "MD.O.A4.4"
+   ],
+   "text": "BI.O.A3.5 Production and animal health. The organism kept or grown for use: crop, livestock, aquaculture and forestry organisms. Husbandry claims state the conditions, the population and the measure; no universal yield is owned. Disorder, diagnosis and treatment of non-human animals are owned here. The drug substance and its residue in human food are owned by MD.O.A4.1 (uses MD.O.A4.1, MD.O.A4.4). The food molecule is CH; a food standard is W12. Plant form (root, shoot, meristem) sits across A3.1–A3.2 at the same level as animal form."
+  },
+  {
+   "id": "BI.O.A4",
+   "label": "Descent",
+   "uses": [],
+   "text": "BI.O.A4 Descent"
+  },
+  {
+   "id": "BI.O.A4.1",
+   "label": "Population-genetic processes",
+   "uses": [
+    "MA.B.C4",
+    "MA.O.A5"
+   ],
+   "text": "BI.O.A4.1 Population-genetic processes. Natural selection: heritable variation that affects reproductive success changes allele frequencies. Drift is stronger in small effective populations. Hardy–Weinberg principle: with no selection, mutation, migration or drift (very large population), and random mating at an autosomal locus with discrete generations, allele frequencies stay constant. Under the same conditions genotype frequencies reach p², 2pq, q² after one generation. Nonrandom mating alone changes genotype frequencies, not allele frequencies. Hardy–Weinberg is a null model, not a mechanism. The Price equation partitions change in a mean trait into selection and transmission terms; it is an identity given defined fitness and trait values. Hamilton's rule (rB > C) holds under its derivation's assumptions, typically weak selection and additive fitness effects; its generality is CONTESTED. An evolutionarily stable strategy is the MA solution concept applied to fitness payoffs (uses MA.B.C4). Fitness is reproductive success in a stated environment."
+  },
+  {
+   "id": "BI.O.A4.2",
+   "label": "Quantitative genetics",
+   "uses": [
+    "MA.O.A5"
+   ],
+   "text": "BI.O.A4.2 Quantitative genetics. Broad-sense heritability H² = V_G/V_P. Narrow-sense heritability h² = V_A/V_P. Both are variance ratios in a stated population and environment, not individual destinies. The breeder's equation R = h²S holds for a trait under truncation-like selection, with additive effects and no genotype–environment covariance. Human heritability estimates are owned here; MS.O.A3 cites them."
+  },
+  {
+   "id": "BI.O.A4.3",
+   "label": "Speciation",
+   "uses": [],
+   "text": "BI.O.A4.3 Speciation. Lineages cease to exchange genes. Allopatric, parapatric and sympatric routes differ in geography; none is required. Species concepts (biological, phylogenetic, morphological) are naming practice in BI.M.5."
+  },
+  {
+   "id": "BI.O.A4.4",
+   "label": "Phylogenetic pattern",
+   "uses": [],
+   "text": "BI.O.A4.4 Phylogenetic pattern. A phylogeny is a hypothesis of relationship. A clade is a common ancestor and all its descendants. Rank (family, order) is a convention (W12). Horizontal transfer and incomplete lineage sorting make gene trees differ from species trees."
+  },
+  {
+   "id": "BI.O.A4.5",
+   "label": "Macroevolution",
+   "uses": [
+    "EA.O.A3"
+   ],
+   "text": "BI.O.A4.5 Macroevolution. Pattern above the species, read from phylogeny and fossils. It needs no separate mechanism, though rates and constraints differ. The organism biology of fossils is owned here; occurrence in a stratum is EA.O.A3. Mass-extinction tempo is a pattern claim shared by citation with EA.O.A3."
+  },
+  {
+   "id": "BI.O.A5",
+   "label": "Ecological interaction",
+   "uses": [],
+   "text": "BI.O.A5 Ecological interaction"
+  },
+  {
+   "id": "BI.O.A5.1",
+   "label": "Population dynamics",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "BI.O.A5.1 Population dynamics. Exponential growth dN/dt = rN holds for constant per-capita rate r with unlimited resources and no structure. Logistic growth dN/dt = rN(1 − N/K) adds a fixed carrying capacity K and linear density dependence. K holds only in a stated setting. Human demography is owned by MS.O.A5."
+  },
+  {
+   "id": "BI.O.A5.2",
+   "label": "Interactions (incl. Lotka–Volterra)",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "BI.O.A5.2 Interactions. Classified by the sign of the effect on each party: competition (−/−), predation and parasitism (+/−), mutualism (+/+), commensalism (+/0), amensalism (−/0), and neutralism (0/0) as the null. The Lotka–Volterra predator–prey equations assume a well-mixed system, exponential prey growth without predators, and linear functional responses. The equation is owned here; its simulation is BI.M.4."
+  },
+  {
+   "id": "BI.O.A5.3",
+   "label": "Community (incl. microbiome)",
+   "uses": [
+    "BI.O.A3"
+   ],
+   "text": "BI.O.A5.3 Community. Who co-occurs, and the structure of the interaction web. Diversity is a count or a named index; say which. Niche is the set of conditions and resources under which a population persists, fundamental versus realised. The host-associated microbiome is a community claim here, citing BI.O.A3 for host function."
+  },
+  {
+   "id": "BI.O.A5.4",
+   "label": "Ecosystem flux",
+   "uses": [
+    "EA.O.A4.2"
+   ],
+   "text": "BI.O.A5.4 Ecosystem flux. Energy flow and matter cycling through a community plus the abiotic pool. Trophic transfer efficiency measured across ecosystems runs about 5–20 percent (Pauly and Christensen 1995). The 10 percent rule is a heuristic (BI.M.H). Biological carbon and nitrogen fluxes are owned here. CONTESTED: AGU files them in Biogeosciences; alternative home EA.O.A4.3. Water balance is EA.O.A4.2."
+  },
+  {
+   "id": "BI.O.A5.5",
+   "label": "Biogeography",
+   "uses": [
+    "EA.O.A3"
+   ],
+   "text": "BI.O.A5.5 Biogeography. The spatial distribution of life, set by dispersal, barrier, climate and history. Endemism and disjunction are patterns needing a historical explanation. CONTESTED: alternative EA.O.A4 for the map pattern alone. Island biogeography theory (MacArthur–Wilson) holds under a balance of immigration and extinction depending on isolation and area; its equilibrium assumption is CONTESTED."
+  }
+ ],
+ "methods": [
+  {
+   "id": "BI.M.1",
+   "label": "Observation",
+   "home": "M"
+  },
+  {
+   "id": "BI.M.2",
+   "label": "Perturbation",
+   "home": "M"
+  },
+  {
+   "id": "BI.M.3",
+   "label": "Comparison across lineages or gradients",
+   "home": "M"
+  },
+  {
+   "id": "BI.M.4",
+   "label": "Modelling",
+   "home": "M"
+  },
+  {
+   "id": "BI.M.5",
+   "label": "Naming",
+   "home": "M"
+  },
+  {
+   "id": "BI.M.6",
+   "label": "Derivation",
+   "home": "M"
+  },
+  {
+   "id": "BI.M.7",
+   "label": "Verification",
+   "home": "M"
+  },
+  {
+   "id": "BI.M.H",
+   "label": "Heuristics register",
+   "home": "M (outside count)"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "BI.O.A1",
+   "warrant": "W3, W4",
+   "standard": "Replicated cross or edit; sequencing with stated error rate; independent lab confirmation",
+   "defeaters": "Contamination; off-target edits; annotation error; linkage mistaken for causation"
+  },
+  {
+   "cell": "BI.O.A1.2",
+   "warrant": "W3, W4, W12 (code tables, gene nomenclature)",
+   "standard": "Codon assignment confirmed by translation assay; names per HGNC or species committee",
+   "defeaters": "Variant code unrecognised; epigenetic effect not separated from sequence"
+  },
+  {
+   "cell": "BI.O.A2",
+   "warrant": "W3, W4",
+   "standard": "Perturbation with controls; imaging with stated resolution; replication across cell lines",
+   "defeaters": "Fixation artefact; overexpression artefact; cell-line misidentification"
+  },
+  {
+   "cell": "BI.O.A2.5",
+   "warrant": "W4, W3, W12 (ICTV taxonomy)",
+   "standard": "Isolation and sequencing; replication in host cells",
+   "defeaters": "Contaminant sequence; uncultured inference only"
+  },
+  {
+   "cell": "BI.O.A3",
+   "warrant": "W3, W4, W5 (field physiology)",
+   "standard": "Controlled physiology or developmental perturbation; dose–response",
+   "defeaters": "Model-organism generalisation; compensation; small n"
+  },
+  {
+   "cell": "BI.O.A3.5",
+   "warrant": "W3, W4, W12 (husbandry and diagnostic standards)",
+   "standard": "Replicated field or herd trial with stated season, population and measure",
+   "defeaters": "Site and season confounding; non-random herd selection"
+  },
+  {
+   "cell": "BI.O.A4",
+   "warrant": "W6, W7 (fossil record), W2",
+   "standard": "Phylogeny with support values; congruent independent data",
+   "defeaters": "Long-branch attraction; incomplete lineage sorting; horizontal transfer"
+  },
+  {
+   "cell": "BI.O.A4.1",
+   "warrant": "W1 (derivations from stated assumptions), W4, W2",
+   "standard": "Derivation with stated hypotheses; model fit with stated assumptions",
+   "defeaters": "Violated assumptions; ascertainment bias"
+  },
+  {
+   "cell": "BI.O.A4.2",
+   "warrant": "W4, W5",
+   "standard": "Variance-component estimate with stated design and population",
+   "defeaters": "Genotype–environment covariance; assortative mating"
+  },
+  {
+   "cell": "BI.O.A5",
+   "warrant": "W4, W3 (field experiments), W5, W2",
+   "standard": "Replicated field or mesocosm experiment; time series with stated uncertainty",
+   "defeaters": "Pseudoreplication; scale mismatch; confounded gradients; detection bias"
+  }
+ ],
+ "bridges": [
+  {
+   "id": "BI.B.C1",
+   "label": "Molecular and cell biology"
+  },
+  {
+   "id": "BI.B.C2",
+   "label": "Genetics and genomics"
+  },
+  {
+   "id": "BI.B.C3",
+   "label": "Organismal biology"
+  },
+  {
+   "id": "BI.B.C4",
+   "label": "Evolutionary biology"
+  },
+  {
+   "id": "BI.B.C5",
+   "label": "Ecology"
+  },
+  {
+   "id": "BI.B.C6",
+   "label": "Agricultural, veterinary and food-production science"
+  },
+  {
+   "id": "BI.B.C7",
+   "label": "Systems biology"
+  },
+  {
+   "id": "BI.B.C8",
+   "label": "Theoretical biology"
+  },
+  {
+   "id": "BI.B.K",
+   "label": "Catalog register (not cells)"
+  }
+ ],
+ "bridges_table": [
+  [
+   "BI.B.C1",
+   "Molecular and cell biology",
+   "BI.O.A2, with A1 mechanism",
+   "M.1, M.2, M.4",
+   "all organisms"
+  ],
+  [
+   "BI.B.C2",
+   "Genetics and genomics",
+   "BI.O.A1",
+   "M.1, M.2, M.4, M.5",
+   "all organisms"
+  ],
+  [
+   "BI.B.C3",
+   "Organismal biology (physiology, development, immunology, ethology)",
+   "BI.O.A3.1–A3.4",
+   "M.1, M.2, M.3",
+   "multicellular organisms"
+  ],
+  [
+   "BI.B.C4",
+   "Evolutionary biology (incl. population genetics, phylogenetics, paleobiology)",
+   "BI.O.A4",
+   "M.3, M.4, M.6",
+   "all lineages"
+  ],
+  [
+   "BI.B.C5",
+   "Ecology (population, community, ecosystem, biogeography)",
+   "BI.O.A5",
+   "M.1, M.2, M.4",
+   "populations in the field"
+  ],
+  [
+   "BI.B.C6",
+   "Agricultural, veterinary and food-production science",
+   "BI.O.A3.5, A5.1",
+   "M.2, M.1, M.7",
+   "organisms in production"
+  ],
+  [
+   "BI.B.C7",
+   "Systems biology",
+   "BI.O.A2.2–A2.3",
+   "M.4, M.2, M.7",
+   "cells and pathways"
+  ],
+  [
+   "BI.B.C8",
+   "Theoretical biology",
+   "BI.O.A4.1, A5.1–A5.2",
+   "M.6, M.4",
+   "model populations"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Biology is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Every biological claim is about one of five levels or processes: Heritable information · Cell · Organism · Descent · Ecological interaction.",
+  "key_line": "- Logic: inductive.\n- Plural noun: levels or processes of living organisation.\n- Dimension: the level or process the claim is about.\n- Order: structural, from the copied sequence to the interacting community.\n\nMembers (5):\n1. Heritable information\n2. Cell\n3. Organism\n4. Descent\n5. Ecological interaction\n\nAssignment note on the dimension. Heritable information and Descent are processes, not sizes. The dimension is therefore \"level or process\", not \"unit, small to large\" (audit error 5). Population has one home per question: allele-frequency change goes to Descent (BI.O.A4); numbers, rates and growth go to Ecological interaction (BI.O.A5).",
+  "assignment_rules": "1. A relation that predicts a living outcome lives on Face O. A sequencer, stain or mark–recapture protocol lives on Face M.\n2. Tissue, organ and organ system are parts of the Organism level, not extra levels.\n3. Bond, equilibrium and rate law stay in chemistry. Biology starts where reactions are organised into heredity, a cell or a metabolism that reproduces. Uses CH.O.A3.3, CH.O.A4.2, CH.O.A3.\n4. The genetic code and copying fidelity are BI.O.A1. Base-pair energetics, ATP coupling ΔG and enzyme kinetics are CH; BI cites.\n5. Nernst is CH.O.A3.3. Resting potential and action potential are BI.O.A2.2. MS.O.A2 and MD.O.A1.3 cite BI.O.A2.2.\n6. Allele-frequency change is BI.O.A4. Population numbers and growth are BI.O.A5. Human demography is MS.O.A5.\n7. Heritability is BI.O.A4.2. MS.O.A3 cites it.\n8. Virus-as-replicator claims are BI.O.A2.5. Virology is a catalog.\n9. Normal function is BI.O.A3. Human failure, diagnosis and treatment is MD.O.A1. MD cites BI.O.A3 for the normal sentence.\n10. Disorder, diagnosis and treatment of non-human animals is BI.O.A3.5. The drug substance and residue in human food remain MD.O.A4.1.\n11. Neural circuits and systems are MS.O.A2. Non-human animal behaviour is BI.O.A3.4. Human behaviour is MS.O.A1.\n12. Evolution is a claim about descent. A phylogenetic tree is a comparative method (BI.M.3) aimed at that claim.\n13. A fossil's biology is BI.O.A4.5. Its occurrence in a stratum is EA.O.A3.\n14. The ESS concept and its existence theorem are MA (uses MA.B.C4). Its use on fitness payoffs is BI.O.A4.1.\n15. A sequence algorithm is CS. Its use on sequence is BI.M.4.\n16. A food molecule is CH. A food standard is W12 and stays with its stated owner. The organism in production is BI.O.A3.5.\n17. A species concept is BI.M.5. What it entitles a classifier to claim is PL.\n18. Each sentence has one home. Other pyramids cite \"uses BI.O.Ax.y\".",
+  "scope_boundary": "| Refused claim type | Owner pyramid id |\n|---|---|\n| Bond, equilibrium, rate law, molecular structure, Nernst | CH.O.A3.3, CH.O.A4.2, CH.O.A3 |\n| Physical law used in biophysics | PH |\n| Human disorder, diagnosis, treatment; the drug chain | MD.O.A1, MD.O.A4.1 |\n| Neural circuits and systems; human behaviour; learning | MS.O.A2, MS.O.A1 |\n| Human population rates | MS.O.A5 |\n| Sequence algorithm; bioinformatics software claim | CS |\n| Specified engineered biological function (synthetic biology, biomedical devices) | EN |\n| Water balance, landform, stratal occurrence of fossils | EA.O.A4.2, EA.O.A3 |\n| Price of a crop, a drug or an ecosystem service | EC |\n| Conservation or biosecurity policy and authority | PO |\n| Duty under animal-welfare or biosecurity law | LA |\n| What a species or function concept entitles | PL |\n| Theorem used in population genetics | MA |\n| Mātauranga claims about living things | ANZSRC 45 scope note (W13 does not travel to a measurement) |",
+  "crosswalk": "Authority: NSF Directorate for Biological Sciences (BIO). NSF 26-517 (17 Aug 2026) replaced the core programmes of MCB, IOS and DEB with three themes. Source: NSF BIO newsletter, August 2026, as cited in the audit file. Legacy divisions are kept as a second column.\n\n| Authority class | Pyramid home | Status |\n|---|---|---|\n| 2026 theme: Foundations of Life | BI.O.A1, A2, A3 | lands |\n| 2026 theme: Living Systems | BI.O.A4, A5 | lands |\n| 2026 theme: Bioinnovation and Infrastructure | Face M (BI.M.1, M.4, M.5); functional genomics BI.O.A1; synthetic biology refused to EN | lands, with one refusal |\n| Legacy MCB | BI.O.A1, A2 | lands |\n| Legacy IOS | BI.O.A3 | lands |\n| Legacy DEB | BI.O.A4, A5 | lands |\n| Legacy DBI | Face M (collections BI.M.5, informatics BI.M.4); centres refused as institutions, not claims | lands, with one refusal |\n\nCoverage. 2026 themes: 3 of 3 land. Legacy divisions: 4 of 4 land. Two partial refusals, each with reason: synthetic biology (EN owns a specified function) and research centres (an institution is not a claim).\n\nSecondary checks.\n- Levels of organisation (9: molecule, cell, tissue, organ, organ system, organism, population, community, ecosystem; biosphere as tenth). Molecule refused to CH.O.A3. Cell → A2. Tissue to organism → A3. Population → A4 or A5 by question (rule 6). Community, ecosystem, biosphere → A5. Coverage 9 of 10 land, 1 refused with reason.\n- Gene Ontology (3 aspects). Cellular Component → A2. Biological Process → A1–A5 by process. Molecular Function → CH.O.A3 for the activity; BI.O.A2 for its cellular role. Coverage 3 of 3 placed; Molecular Function split by rule 3.\n\nNo authority residual \"Other\" class is treated as a cell.",
+  "validation": "Sizes:\n- Key line: 5.\n- Face O cells: 5 A-level cells and 24 named sub-cells (A1: 4; A2: 5; A3: 5; A4: 5; A5: 5). Total 29.\n- M roles: 7.\n- Heuristics: 4 (outside count).\n- W rows: 10 (each A-level row covers its listed sub-cells; five sub-cells have their own rows).\n- B bridges: 8, plus catalog register BI.B.K (not counted).\n\nKey-line members, word for word: Heritable information · Cell · Organism · Descent · Ecological interaction.\n\nOPEN:\n- Origin of life (BI.O.A2.1).\n- Transgenerational epigenetic inheritance in most taxa (BI.O.A1.2).\n- Scope of the 2026 NSF themes as funded programmes; re-check after the first award cycle (UNVERIFIED beyond the audit's source).\n\nCONTESTED:\n- Action potential: BI.O.A2.2; alternative MS.O.A2.\n- Biological C and N fluxes: BI.O.A5.4; alternative EA.O.A4.3 (AGU Biogeosciences).\n- Biogeography: BI.O.A5.5; alternative EA.O.A4 for the map pattern.\n- Hamilton's rule generality (BI.O.A4.1).\n- Quasispecies fit to viral populations (BI.O.A2.5).\n- Island biogeography equilibrium assumption (BI.O.A5.5).\n- Animal disorder in BI.O.A3.5 rather than MD: set by the Phase 2 brief; alternative MD with a species catalog."
+ },
+ "borders": [
+  {
+   "field": "MA",
+   "uses": 8
+  },
+  {
+   "field": "CH",
+   "uses": 7
+  },
+  {
+   "field": "EA",
+   "uses": 5
+  },
+  {
+   "field": "MD",
+   "uses": 3
+  },
+  {
+   "field": "CS",
+   "uses": 2
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "AG",
+   "uses": 5
+  },
+  {
+   "field": "CH",
+   "uses": 4
+  },
+  {
+   "field": "EA",
+   "uses": 4
+  },
+  {
+   "field": "MD",
+   "uses": 4
+  },
+  {
+   "field": "EV",
+   "uses": 3
+  },
+  {
+   "field": "MS",
+   "uses": 2
+  },
+  {
+   "field": "PL",
+   "uses": 1
+  },
+  {
+   "field": "LN",
+   "uses": 1
+  },
+  {
+   "field": "IK",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

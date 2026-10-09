@@ -1,0 +1,17 @@
+{
+ "id": "EN.O.A4.1.5",
+ "label": "LTI response, state space",
+ "owner": "EN",
+ "home": "O.A4.1",
+ "uses": [
+  "MA.O.A4"
+ ],
+ "text": "EN.O.A4.1.5 Linear time-invariant system response: impulse response, transfer function, frequency response. Fourier and Laplace transforms are MA (uses MA.O.A4). State space ẋ = Ax + Bu, y = Cx + Du and G(s) = C(sI − A)⁻¹B + D, for LTI plants.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W1, W4",
+  "standard": "Prediction matches measurement; compliance test passes",
+  "defeaters": "Lumped assumption fails; parasitics; thermal drift"
+ },
+ "field_url": "/v1/field/EN.json"
+}

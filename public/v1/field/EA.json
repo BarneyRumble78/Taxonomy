@@ -1,0 +1,585 @@
+{
+ "code": "EA",
+ "name": "Earth: geography and geology",
+ "dimension": "what the claim is about",
+ "cells": [
+  {
+   "id": "EA.O.A1",
+   "name": "Materials"
+  },
+  {
+   "id": "EA.O.A2",
+   "name": "Internal motion"
+  },
+  {
+   "id": "EA.O.A3",
+   "name": "Deep time"
+  },
+  {
+   "id": "EA.O.A4",
+   "name": "Surface and fluid envelopes"
+  },
+  {
+   "id": "EA.O.A5",
+   "name": "Human spatial organization"
+  }
+ ],
+ "objects": [
+  {
+   "id": "EA.O.A1",
+   "label": "Materials",
+   "uses": [],
+   "text": "EA.O.A1 Materials"
+  },
+  {
+   "id": "EA.O.A1.1",
+   "label": "Minerals",
+   "uses": [
+    "CH"
+   ],
+   "text": "EA.O.A1.1 Minerals. IMA definition: a mineral is an element or compound, normally crystalline, formed by geological processes (Nickel 1995). Its composition is definite but not necessarily fixed, allowing solid solution. Silicates dominate the crust. Identification is by habit, cleavage, hardness, optics, XRD and microprobe. Names follow IMA (W12)."
+  },
+  {
+   "id": "EA.O.A1.2",
+   "label": "Igneous rocks",
+   "uses": [],
+   "text": "EA.O.A1.2 Igneous rocks. Formed from melt. Texture records cooling rate. Bowen's reaction series is the idealised crystallisation order of a basaltic melt cooling slowly with equilibrium reaction. Few magmas complete it. Classification follows IUGS (W12)."
+  },
+  {
+   "id": "EA.O.A1.3",
+   "label": "Sedimentary rocks",
+   "uses": [],
+   "text": "EA.O.A1.3 Sedimentary rocks. Formed by deposition and lithification. Grain size, sorting and composition are the descriptors. A sedimentary structure (cross-bed, ripple, graded bed) is evidence of the depositing process. Sedimentology is the A1 process claim; the sequence is EA.O.A3."
+  },
+  {
+   "id": "EA.O.A1.4",
+   "label": "Metamorphic rocks",
+   "uses": [
+    "CH"
+   ],
+   "text": "EA.O.A1.4 Metamorphic rocks. Formed by solid-state change. A metamorphic facies (Eskola 1920) is a set of mineral assemblages formed over a stated range of pressure and temperature. Foliation records directed stress. The rock cycle is a path among A1.2–A1.4, not a clock."
+  },
+  {
+   "id": "EA.O.A1.5",
+   "label": "Crustal fluids and element distribution",
+   "uses": [
+    "CH"
+   ],
+   "text": "EA.O.A1.5 Crustal fluids and element distribution. Groundwater, brines, hydrothermal fluids and melts in the crust. Element distribution in Earth reservoirs (geochemistry as distribution) is owned here. Speciation and reaction in a natural matrix is CH (uses CH, environmental chemistry cell). Soil parent material is here; the soil body is EA.O.A4.4."
+  },
+  {
+   "id": "EA.O.A2",
+   "label": "Internal motion",
+   "uses": [],
+   "text": "EA.O.A2 Internal motion"
+  },
+  {
+   "id": "EA.O.A2.1",
+   "label": "Plate kinematics",
+   "uses": [
+    "MA.O.A3"
+   ],
+   "text": "EA.O.A2.1 Plate kinematics. The lithosphere is divided into plates that move relative to one another. Boundaries are divergent, convergent or transform. Evidence: continental fit, rock and fossil correlation, seafloor magnetic anomalies, seismicity, and geodetic motion. Euler-pole description of plate motion holds for rigid plates on a sphere."
+  },
+  {
+   "id": "EA.O.A2.2",
+   "label": "Deformation",
+   "uses": [
+    "PH"
+   ],
+   "text": "EA.O.A2.2 Deformation. Stress and strain in rock. Brittle faulting dominates near the surface; ductile flow dominates at depth. A fold is geometry; a fault is a fracture with offset. Earthquake size: magnitude is a logarithmic measure. Moment magnitude Mw derives from seismic moment M₀ = μAD (rigidity, rupture area, mean slip). Radiated energy rises about 32 times per unit magnitude. Intensity is felt effect (USGS, cited in audit)."
+  },
+  {
+   "id": "EA.O.A2.3",
+   "label": "Interior structure and fields",
+   "uses": [
+    "PH"
+   ],
+   "text": "EA.O.A2.3 Interior structure and fields. Seismology infers layering from travel times. S waves do not pass through the outer core, which is evidence it is liquid. The geodynamo (the field generated in the liquid outer core) is owned here as an Earth-state claim. The MHD equations used are PH. Geodesy as a claim — figure of the Earth, gravity field — is owned here."
+  },
+  {
+   "id": "EA.O.A2.4",
+   "label": "Isostasy and flexure",
+   "uses": [
+    "PH"
+   ],
+   "text": "EA.O.A2.4 Isostasy and flexure. The lithosphere is in buoyant equilibrium on the asthenosphere. Airy compensation uses crustal roots; Pratt compensation uses lateral density change. Many ranges are partly supported by flexure of an elastic plate. Glacial isostatic adjustment is the observable rebound after ice load."
+  },
+  {
+   "id": "EA.O.A2.5",
+   "label": "Magmatism",
+   "uses": [],
+   "text": "EA.O.A2.5 Magmatism. Melt generation at ridges (decompression), subduction zones (flux melting) and hotspots. A hotspot track is evidence of plate motion over a source, interpreted, not seen. Volcanic eruption as a hazard event enters EA.O.A5.5."
+  },
+  {
+   "id": "EA.O.A3",
+   "label": "Deep time",
+   "uses": [],
+   "text": "EA.O.A3 Deep time"
+  },
+  {
+   "id": "EA.O.A3.1",
+   "label": "Relative order",
+   "uses": [],
+   "text": "EA.O.A3.1 Relative order. Steno (1669) gave superposition, original horizontality and lateral continuity. Superposition holds for undisturbed, non-overturned layered sequences. Cross-cutting relations are credited to Steno and Hutton. The principle of inclusions is Lyell's. An unconformity is evidence of missing time."
+  },
+  {
+   "id": "EA.O.A3.2",
+   "label": "Correlation",
+   "uses": [
+    "BI.O.A4.5"
+   ],
+   "text": "EA.O.A3.2 Correlation. Matching strata between places by fossils, lithology, magnetic polarity, stable isotopes or tephra. An index fossil is widespread, short-lived and distinctive. A polarity reversal is a time marker, not a cause."
+  },
+  {
+   "id": "EA.O.A3.3",
+   "label": "Numeric age",
+   "uses": [
+    "PH"
+   ],
+   "text": "EA.O.A3.3 Numeric age. The decay law N = N₀e^(−λt) is owned by PH (uses PH nuclear cell). The dating claim is owned here. It holds when the system closed at a stated time, with known initial daughter and no later gain or loss. Carbon-14 serves late-Quaternary organic matter, to about 50,000 years. U–Pb and other systems serve deep time. Luminescence, dendrochronology and varves are other numeric methods."
+  },
+  {
+   "id": "EA.O.A3.4",
+   "label": "Time-scale convention",
+   "uses": [],
+   "text": "EA.O.A3.4 Time-scale convention. The ICS chart divides eon, era, period, epoch and age. Phanerozoic and Ediacaran boundaries are GSSPs (reference sections). Most Precambrian boundaries are GSSAs, numeric ages such as 2500 Ma for Archean–Proterozoic. Warrant W12."
+  },
+  {
+   "id": "EA.O.A3.5",
+   "label": "Record of life and climate",
+   "uses": [
+    "BI.O.A4.5",
+    "EA.O.A4.3"
+   ],
+   "text": "EA.O.A3.5 Record of life and climate. Occurrence of organisms in strata is owned here; their biology is BI.O.A4.5. Mass extinctions are pattern claims about that record. Paleoclimate and paleoceanography as dated states, read from proxies, are owned here. Their mechanism cites EA.O.A4.3. The Anthropocene as a formal unit was rejected by the IUGS in March 2024 (stratigraphy.org/news/152)."
+  },
+  {
+   "id": "EA.O.A4",
+   "label": "Surface and fluid envelopes",
+   "uses": [],
+   "text": "EA.O.A4 Surface and fluid envelopes"
+  },
+  {
+   "id": "EA.O.A4.1",
+   "label": "Landforms and process",
+   "uses": [],
+   "text": "EA.O.A4.1 Landforms and process. Geomorphology: landforms as products of rock, climate and time. Processes are weathering, mass wasting, fluvial, glacial, aeolian and coastal. A graded river adjusts slope and channel to its water and sediment load. The adjustment is a tendency, not a guarantee. Uniformitarianism is a methodological premise in EA.M.H, cited here."
+  },
+  {
+   "id": "EA.O.A4.2",
+   "label": "Water on and under land",
+   "uses": [
+    "EN.O.A2"
+   ],
+   "text": "EA.O.A4.2 Water on and under land. Water balance for a drainage basin over a period: P = ET + Q + ΔS (precipitation, evapotranspiration, runoff, storage change). Groundwater and aquifer claims (transmissivity, storativity) are owned here. Darcy's law q = −K∇h holds for laminar flow (Reynolds number below about 1–10) in a saturated, rigid porous medium. Its owner is EN transport closure (uses EN.O.A2); CONTESTED, alternative PH continuum. The well is EN."
+  },
+  {
+   "id": "EA.O.A4.3",
+   "label": "Atmosphere, ocean and climate",
+   "uses": [
+    "PH"
+   ],
+   "text": "EA.O.A4.3 Atmosphere, ocean and climate. Climate is the statistics of weather over a stated period, typically 30 years (WMO). Its state, circulation and change as a dated Earth claim are owned here. Controls are latitude, altitude, continentality, ocean currents and circulation. The governing laws (Navier–Stokes, radiative transfer, thermodynamics) are PH. Ocean circulation, sea level and marine biogeochemical state are owned here; marine biology is BI.O.A5. Köppen–Geiger is a classification (W12), not a mechanism. Climate change attribution claims owe W2 and W5. Atmospheric electricity and the upper atmosphere are refused to PH (space physics)."
+  },
+  {
+   "id": "EA.O.A4.4",
+   "label": "Cryosphere",
+   "uses": [
+    "PH"
+   ],
+   "text": "EA.O.A4.4 Cryosphere. Glaciers, ice sheets, sea ice, permafrost and snow as surface mass. Mass balance (accumulation minus ablation) is the core claim. Glacier flow by Glen's flow law assumes power-law creep of polycrystalline ice with exponent near 3 (UNVERIFIED exponent range). Glacial landforms are EA.O.A4.1."
+  },
+  {
+   "id": "EA.O.A4.5",
+   "label": "Soil",
+   "uses": [
+    "EN",
+    "CH",
+    "BI.O.A5.3"
+   ],
+   "text": "EA.O.A4.5 Soil. The soil body: weathered parent material plus organic matter, organised in horizons. Pedology owns the profile here. Soil mechanics (effective stress, Mohr–Coulomb) is EN. Soil chemistry is CH. Soil biota are BI.O.A5.3."
+  },
+  {
+   "id": "EA.O.A5",
+   "label": "Human spatial organization",
+   "uses": [],
+   "text": "EA.O.A5 Human spatial organization"
+  },
+  {
+   "id": "EA.O.A5.1",
+   "label": "Location and interaction",
+   "uses": [
+    "EC"
+   ],
+   "text": "EA.O.A5.1 Location and interaction. Site and situation; absolute and relative location. Distance decay is the claim that interaction falls with distance, modified by origin and destination size. It is owned here. Gravity-model estimation is EA.M.5. In trade, the gravity equation has structural derivations (Anderson 1979; Anderson and van Wincoop 2003); that derivation is EC. In migration, gravity models are mostly reduced-form. CONTESTED for migration."
+  },
+  {
+   "id": "EA.O.A5.2",
+   "label": "Region and place",
+   "uses": [],
+   "text": "EA.O.A5.2 Region and place. A region is a delimited area of stated similarity (formal), flow (functional) or perception (perceptual). Place is a location invested with meaning; its warrant is W8. Area studies as a catalog of regions is refused (sector, not a cell)."
+  },
+  {
+   "id": "EA.O.A5.3",
+   "label": "Economic and urban pattern",
+   "uses": [
+    "EC"
+   ],
+   "text": "EA.O.A5.3 Economic and urban pattern. Where production and exchange happen. Central place theory predicts a hexagonal hierarchy on an isotropic plain with uniform population and transport, and rational, nearest-centre consumers. The spatial pattern is owned here. Bid-rent as allocation is EC. Urban models (concentric, sector, multiple nuclei) are ideal types."
+  },
+  {
+   "id": "EA.O.A5.4",
+   "label": "Political space",
+   "uses": [
+    "PO",
+    "LA"
+   ],
+   "text": "EA.O.A5.4 Political space. Territory and boundary as spatial claims. A boundary is a claim enforced, not a natural line. The authority behind it is PO. Its legal validity is LA."
+  },
+  {
+   "id": "EA.O.A5.5",
+   "label": "Nature–society and risk",
+   "uses": [
+    "EA.O.A2",
+    "EA.O.A4",
+    "MS.O.A5",
+    "PO",
+    "EC",
+    "LA"
+   ],
+   "text": "EA.O.A5.5 Nature–society and risk. Coupled human–natural systems: pressure, state, impact and response, under a stated boundary. This absorbs environmental science claims (Grok \"EV\"). Risk = hazard × exposure × vulnerability (IPCC AR6 WGII glossary). Vulnerability is the propensity to be adversely affected: sensitivity plus lack of capacity to cope and adapt. Exposure is a separate factor. The hazard cites EA.O.A2 or A4. Policy is PO; price is EC; duty is LA. Population counts are MS.O.A5."
+  }
+ ],
+ "methods": [
+  {
+   "id": "EA.M.1",
+   "label": "Field observation",
+   "home": "M"
+  },
+  {
+   "id": "EA.M.2",
+   "label": "Instrumental measurement",
+   "home": "M"
+  },
+  {
+   "id": "EA.M.3",
+   "label": "Dating",
+   "home": "M"
+  },
+  {
+   "id": "EA.M.4",
+   "label": "Representation",
+   "home": "M"
+  },
+  {
+   "id": "EA.M.5",
+   "label": "Modelling",
+   "home": "M"
+  },
+  {
+   "id": "EA.M.6",
+   "label": "Experiment",
+   "home": "M"
+  },
+  {
+   "id": "EA.M.7",
+   "label": "Derivation",
+   "home": "M"
+  },
+  {
+   "id": "EA.M.8",
+   "label": "Verification",
+   "home": "M"
+  },
+  {
+   "id": "EA.M.H",
+   "label": "Heuristics register",
+   "home": "M (outside count)"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "EA.O.A1",
+   "warrant": "W4",
+   "standard": "Analytical identification (XRD, microprobe) with stated precision",
+   "defeaters": "Misidentification; alteration; sampling bias"
+  },
+  {
+   "cell": "EA.O.A1.1",
+   "warrant": "W4, W12 (IMA names)",
+   "standard": "IMA-approved species with type data",
+   "defeaters": "Solid solution misread as new species"
+  },
+  {
+   "cell": "EA.O.A2",
+   "warrant": "W4, W2 (inversions with error), W6 (boundary comparison)",
+   "standard": "Geodetic rates with uncertainty; tomography with resolution test",
+   "defeaters": "Non-unique inversion; model dependence; sparse coverage"
+  },
+  {
+   "cell": "EA.O.A3",
+   "warrant": "W7 (strata as dated record), W6",
+   "standard": "Stratigraphic context; correlation by two independent methods",
+   "defeaters": "Reworked fossils; hiatus; diachronous marker"
+  },
+  {
+   "cell": "EA.O.A3.3",
+   "warrant": "W4 (ages with 2σ)",
+   "standard": "Stated decay constant, closure assumption and uncertainty",
+   "defeaters": "Open-system behaviour; inherited daughter"
+  },
+  {
+   "cell": "EA.O.A3.4",
+   "warrant": "W12 (ICS ratification)",
+   "standard": "Ratified GSSP or GSSA",
+   "defeaters": "Revision of the chart"
+  },
+  {
+   "cell": "EA.O.A4",
+   "warrant": "W4, W2, W5",
+   "standard": "Field or remote measurement with accuracy assessment; process model calibrated and validated",
+   "defeaters": "Equifinality; scale dependence; non-stationarity"
+  },
+  {
+   "cell": "EA.O.A4.3",
+   "warrant": "W4, W2, W5 (attribution)",
+   "standard": "Homogenised records with uncertainty; model ensembles with stated spread; detection and attribution",
+   "defeaters": "Inhomogeneous records; model structural error; internal variability"
+  },
+  {
+   "cell": "EA.O.A5",
+   "warrant": "W4 (census), W5, W6",
+   "standard": "Spatial model with autocorrelation handled",
+   "defeaters": "Ecological fallacy; MAUP; ignored autocorrelation"
+  },
+  {
+   "cell": "EA.O.A5.2",
+   "warrant": "W8",
+   "standard": "Place meaning traced to interview and text",
+   "defeaters": "Researcher position; unrepresentative informants"
+  }
+ ],
+ "bridges": [
+  {
+   "id": "EA.B.C1",
+   "label": "Mineralogy, petrology, geochemistry"
+  },
+  {
+   "id": "EA.B.C2",
+   "label": "Structural geology, tectonics, geophysics"
+  },
+  {
+   "id": "EA.B.C3",
+   "label": "Stratigraphy, sedimentology, paleontology"
+  },
+  {
+   "id": "EA.B.C4",
+   "label": "Physical geography, hydrology, soil science"
+  },
+  {
+   "id": "EA.B.C5",
+   "label": "Atmospheric science, oceanography, glaciology"
+  },
+  {
+   "id": "EA.B.C6",
+   "label": "Human geography"
+  },
+  {
+   "id": "EA.B.C7",
+   "label": "Environmental and hazard science"
+  },
+  {
+   "id": "EA.B.C8",
+   "label": "GIScience and cartography"
+  },
+  {
+   "id": "EA.B.C9",
+   "label": "Planetary geoscience"
+  },
+  {
+   "id": "EA.B.C10",
+   "label": "Health geography and GeoHealth"
+  },
+  {
+   "id": "EA.B.C11",
+   "label": "Geoarchaeology"
+  }
+ ],
+ "bridges_table": [
+  [
+   "EA.B.C1",
+   "Mineralogy, petrology, geochemistry",
+   "EA.O.A1",
+   "M.1, M.2, M.6",
+   "crust and mantle"
+  ],
+  [
+   "EA.B.C2",
+   "Structural geology, tectonics, geophysics, seismology, volcanology, geodesy",
+   "EA.O.A2",
+   "M.2, M.5, M.7",
+   "lithosphere and interior"
+  ],
+  [
+   "EA.B.C3",
+   "Stratigraphy, sedimentology, paleontology, Quaternary geology, paleoclimatology",
+   "EA.O.A1.3, A3",
+   "M.1, M.3",
+   "sedimentary record"
+  ],
+  [
+   "EA.B.C4",
+   "Physical geography, geomorphology, hydrology, hydrogeology, soil science",
+   "EA.O.A4.1, A4.2, A4.5",
+   "M.1, M.2, M.5",
+   "land surface"
+  ],
+  [
+   "EA.B.C5",
+   "Atmospheric science, oceanography, glaciology",
+   "EA.O.A4.3, A4.4",
+   "M.2, M.5, M.8",
+   "fluid envelopes and ice"
+  ],
+  [
+   "EA.B.C6",
+   "Human geography (urban, economic, political, cultural, population)",
+   "EA.O.A5.1–A5.4",
+   "M.1, M.5, M.4",
+   "settled surface"
+  ],
+  [
+   "EA.B.C7",
+   "Environmental science and hazard science",
+   "EA.O.A5.5, citing A2, A4",
+   "M.2, M.5, M.8",
+   "coupled human–natural systems"
+  ],
+  [
+   "EA.B.C8",
+   "GIScience and cartography",
+   "all of EA.O, via EA.M.4",
+   "M.4, M.5, M.8",
+   "representations"
+  ],
+  [
+   "EA.B.C9",
+   "Planetary geoscience (comparative planetology)",
+   "EA.O.A1–A4 on other bodies",
+   "M.2, M.5",
+   "planetary bodies; CONTESTED"
+  ],
+  [
+   "EA.B.C10",
+   "Health geography and GeoHealth",
+   "EA.O.A5.5 × MD.O.A5",
+   "M.4, M.5",
+   "human populations in place"
+  ],
+  [
+   "EA.B.C11",
+   "Geoarchaeology",
+   "EA.O.A3 × HI record",
+   "M.1, M.3",
+   "archaeological sediments"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Earth science (geography and geology) is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Every Earth claim is about one of five questions: Materials · Internal motion · Deep time · Surface and fluid envelopes · Human spatial organization.",
+  "key_line": "- Logic: inductive.\n- Plural noun: questions about the Earth.\n- Dimension: what the claim is about.\n- Order: structural, from rock to settlement.\n\nMembers (5):\n1. Materials\n2. Internal motion\n3. Deep time\n4. Surface and fluid envelopes\n5. Human spatial organization\n\nChange from v1. \"Surface pattern\" becomes \"Surface and fluid envelopes\". This closes the ownership gap for ocean, atmosphere and cryosphere (audit error 11) without a sixth member. The laws used (fluid dynamics, radiative transfer, thermodynamics) remain PH. The dated Earth state and its circulation are EA. CONTESTED: alternative is a PH cell for climate mechanism with EA citing.\n\nDimension fix. v1 said \"what the claim quantifies\". Place meaning is not a quantity. The dimension is \"what the claim is about\" (audit error 5).",
+  "assignment_rules": "1. A landform process is one claim, filed at EA.O.A4.1. The rock record of it is EA.O.A3. The equation is not filed twice.\n2. GIS and cartography are methods (EA.M.4). GIScience is a bridge (EA.B.C8), not a claim about the Earth.\n3. A fossil's biology is BI.O.A4.5. Its occurrence in a stratum is EA.O.A3.5.\n4. Physical laws of fluids and radiation are PH. The dated state and circulation of ocean, atmosphere and ice are EA.O.A4.3–A4.4.\n5. Decay law N = N₀e^(−λt) is PH. The age it gives under closure is EA.O.A3.3. Pharmacokinetic and first-order chemical half-lives are MD and CH; the registry disambiguates.\n6. Groundwater flow claims are EA.O.A4.2. Darcy's law as closure is EN.O.A2 (contested). The well is EN.\n7. Element distribution in Earth reservoirs is EA.O.A1.5. Speciation in a natural matrix is CH. Each cites the other.\n8. Soil body and horizons are EA.O.A4.5. Effective stress and Mohr–Coulomb are EN.\n9. Distance decay is EA.O.A5.1. Gravity-model estimation is EA.M.5. The trade gravity derivation is EC.\n10. Bid-rent as allocation is EC. Its spatial pattern is EA.O.A5.3.\n11. Boundary as spatial claim is EA.O.A5.4. Authority is PO. Validity is LA.\n12. Risk = hazard × exposure × vulnerability is EA.O.A5.5. The hazard cites A2 or A4.\n13. Environmental pressure–state–impact claims are EA.O.A5.5. Policy is PO; price is EC; duty is LA (\"incidence is economics, the duty is law\").\n14. Biogeography is BI.O.A5.5 (contested). Biological C and N fluxes are BI.O.A5.4 (contested). EA cites both.\n15. Human demography is MS.O.A5. Population geography cites it.\n16. Seismic wave equation and elasticity are PH. Earth-structure inference is EA.O.A2.3.\n17. Uniformitarianism is a heuristic (EA.M.H). It is never a cell.\n18. A map projection theorem is MA. Its choice is EA.M.4.\n19. Each sentence has one home. Others cite \"uses EA.O.Ax.y\".",
+  "scope_boundary": "| Refused claim type | Owner pyramid id |\n|---|---|\n| Physical law: decay, elasticity, fluid dynamics, radiative transfer, MHD | PH |\n| Space physics, aeronomy, atmospheric electricity | PH |\n| Bond and speciation chemistry | CH |\n| Organism biology; biogeography; biological C and N fluxes | BI.O.A4.5, BI.O.A5.4, BI.O.A5.5 |\n| Well, foundation, soil mechanics, Darcy closure | EN.O.A2 |\n| Disease burden and treatment in a population | MD.O.A5 |\n| Human demography | MS.O.A5 |\n| Bid-rent allocation; trade gravity derivation; price of a resource | EC |\n| Authority over territory; environmental policy | PO |\n| Duty under environmental or boundary law | LA |\n| Dated human past in a site | HI |\n| Theorem used (projection, inversion) | MA.O.A3, MA.O.A4 |\n| Geoscience education | ED.B.C1 |\n| History and philosophy of geoscience | HI, PL |\n| Area studies (catalog of regions) | refused: sector, not a cell |\n| Mātauranga claims about land and water | ANZSRC 45 scope note (W13 never licenses a measurement) |",
+  "crosswalk": "Primary authority: ANZSRC 2020 Fields of Research, Division 37 Earth sciences. Groups 3701, 3702, 3705, 3706, 3707 and 3709 checked: https://sear.unisq.edu.au/view/for2020/for2020=5F37.html. All nine named groups confirmed (checked 9 Oct 2026, ABS anzsrc2020_for.xlsx). Earlier note: groups 3703, 3704 and 3708 had been recalled, not seen on that page (UNVERIFIED). 3799 \"Other earth sciences\" is a residual, not a cell.\n\n| Group | Home | Status |\n|---|---|---|\n| 3701 Atmospheric sciences | EA.O.A4.3 (upper atmosphere refused to PH) | lands |\n| 3702 Climate change science | EA.O.A4.3, A3.5 | lands |\n| 3703 Geochemistry | EA.O.A1.5; speciation to CH | lands |\n| 3704 Geoinformatics | EA.M.4, EA.B.C8 | lands (method bridge) |\n| 3705 Geology | EA.O.A1–A3 | lands |\n| 3706 Geophysics | EA.O.A2 | lands |\n| 3707 Hydrology | EA.O.A4.2 | lands |\n| 3708 Oceanography | EA.O.A4.3; marine biology to BI | lands |\n| 3709 Physical geography and environmental geoscience | EA.O.A4, A5.5 | lands |\n\nCoverage: 9 of 9 groups land (all confirmed (checked 9 Oct 2026, ABS anzsrc2020_for.xlsx)). Human geography sits in ANZSRC 44 (4406, confirmed) and lands at EA.O.A5.\n\nSecondary authority: AGU sections (25, from the audit's source). Repaired placements:\n\n| Section | Home | Status |\n|---|---|---|\n| Earth and Planetary Surface Processes | EA.O.A4.1 | lands |\n| Geodesy | EA.O.A2.3, EA.M.2 | lands |\n| Hydrology | EA.O.A4.2 | lands |\n| Informatics | EA.M.4–M.5 | lands |\n| Mineral and Rock Physics | EA.O.A1 | lands |\n| Natural Hazards | EA.O.A5.5 | lands |\n| Near-Surface Geophysics | EA.M.2 | lands |\n| Nonlinear Geophysics | EA.M.5 | lands |\n| Seismology | EA.O.A2.2–A2.3 | lands |\n| Study of the Earth's Deep Interior | EA.O.A2.3 | lands |\n| Tectonophysics | EA.O.A2 | lands |\n| Volcanology, Geochemistry and Petrology | EA.O.A1, A2.5 | lands |\n| Cryosphere Sciences | EA.O.A4.4 | lands |\n| Geomagnetism, Paleomagnetism and Electromagnetism | EA.O.A2.3, A3.2 | lands |\n| Global Environmental Change | EA.O.A5.5, A4.3 | lands |\n| Paleoceanography and Paleoclimatology | EA.O.A3.5 | lands |\n| Atmospheric Sciences | EA.O.A4.3 | lands |\n| Ocean Sciences | EA.O.A4.3 | lands |\n| Planetary Sciences | EA.B.C9 (contested) | lands |\n| GeoHealth | EA.B.C10 | lands |\n| Biogeosciences | BI.O.A5.4 (contested) | refused: owned by BI |\n| Atmospheric and Space Electricity | PH | refused: physical law of plasmas |\n| Space Physics and Aeronomy | PH | refused: physical law of plasmas |\n| Education | ED | refused: learning claim |\n| Science and Society | PO, PL | refused: sector, not a claim cell |\n\nAGU coverage: 20 of 25 land; 5 refused with reason; 0 missing. Up from 17 of 25 covered in v1.",
+  "validation": "Sizes:\n- Key line: 5.\n- Face O cells: 5 A-level cells and 25 named sub-cells (5 each). Total 30.\n- M roles: 8.\n- Heuristics: 4 (outside count).\n- W rows: 10.\n- B bridges: 11.\n\nKey-line members, word for word: Materials · Internal motion · Deep time · Surface and fluid envelopes · Human spatial organization.\n\nOPEN:\n- Formal status of the Anthropocene (EA.O.A3.5), UNVERIFIED.\n- Climate sensitivity range (EA.O.A4.3): an open estimate, not a fixed value.\n- Existence of ANZSRC groups 3703, 3704, 3708: confirmed (checked 9 Oct 2026, ABS anzsrc2020_for.xlsx).\n\nCONTESTED:\n- Fluid envelopes in EA.O.A4.3–A4.4; alternative PH cell for climate mechanism with EA citing.\n- Darcy's law owner EN.O.A2; alternative PH continuum bridge.\n- Planetary geoscience in EA.B.C9; alternative PH astrophysics.\n- Biogeography BI.O.A5.5; alternative EA.O.A4.\n- Gravity model in migration (EA.O.A5.1).\n- Environmental science absorbed at EA.O.A5.5 and EA.B.C7; alternative a separate field (refused by the brief)."
+ },
+ "borders": [
+  {
+   "field": "PH",
+   "uses": 11
+  },
+  {
+   "field": "MA",
+   "uses": 5
+  },
+  {
+   "field": "CH",
+   "uses": 4
+  },
+  {
+   "field": "BI",
+   "uses": 4
+  },
+  {
+   "field": "EC",
+   "uses": 4
+  },
+  {
+   "field": "PO",
+   "uses": 3
+  },
+  {
+   "field": "LA",
+   "uses": 3
+  },
+  {
+   "field": "EN",
+   "uses": 2
+  },
+  {
+   "field": "MS",
+   "uses": 2
+  },
+  {
+   "field": "CS",
+   "uses": 1
+  },
+  {
+   "field": "MD",
+   "uses": 1
+  },
+  {
+   "field": "HI",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "EV",
+   "uses": 6
+  },
+  {
+   "field": "BI",
+   "uses": 5
+  },
+  {
+   "field": "EN",
+   "uses": 3
+  },
+  {
+   "field": "HI",
+   "uses": 2
+  },
+  {
+   "field": "AG",
+   "uses": 2
+  },
+  {
+   "field": "IK",
+   "uses": 2
+  },
+  {
+   "field": "CH",
+   "uses": 1
+  },
+  {
+   "field": "AR",
+   "uses": 1
+  },
+  {
+   "field": "DE",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

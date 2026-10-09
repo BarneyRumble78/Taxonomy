@@ -1,0 +1,18 @@
+{
+ "id": "CS.O.A5.1",
+ "label": "Cryptography in use",
+ "owner": "CS",
+ "home": "O/A5",
+ "uses": [
+  "MA.O.A2",
+  "MA.B.C3"
+ ],
+ "text": "CS.O.A5.1 Cryptography in use — protocols are secure relative to stated hardness assumptions (e.g. factoring). Security proofs are MA; the deployed protocol is CS.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W1 + W11",
+  "standard": "reduction to a stated assumption; penetration test",
+  "defeaters": "broken assumption, side channel, implementation flaw"
+ },
+ "field_url": "/v1/field/CS.json"
+}

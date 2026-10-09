@@ -1,0 +1,18 @@
+{
+ "id": "BI.O.A2.3",
+ "label": "Metabolism",
+ "owner": "BI",
+ "home": "O/A2",
+ "uses": [
+  "CH.O.A4.2",
+  "CH.O.A3"
+ ],
+ "text": "BI.O.A2.3 Metabolism. Pathways capture and spend energy. ATP and proton-motive force as cell currency are owned here. ATP coupling as free energy (ΔG) is owned by CH.O.A3 (uses CH.O.A3). Enzyme kinetics, including Michaelis–Menten, is owned by CH.O.A4.2. Michaelis–Menten holds under a quasi-steady-state complex, substrate in excess of enzyme, and no product inhibition (uses CH.O.A4.2). Photosynthesis and aerobic respiration are the two dominant planetary routes. Chemosynthesis (chemolithotrophy) and fermentation are other major routes.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W3, W4",
+  "standard": "Perturbation with controls; imaging with stated resolution; replication across cell lines",
+  "defeaters": "Fixation artefact; overexpression artefact; cell-line misidentification"
+ },
+ "field_url": "/v1/field/BI.json"
+}

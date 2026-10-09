@@ -1,0 +1,372 @@
+{
+ "code": "AG",
+ "name": "Agriculture, veterinary and food",
+ "dimension": "the stage of the production system",
+ "cells": [
+  {
+   "id": "AG.O.A1",
+   "name": "Breeding"
+  },
+  {
+   "id": "AG.O.A2",
+   "name": "Cultivation and husbandry"
+  },
+  {
+   "id": "AG.O.A3",
+   "name": "Crop and animal health"
+  },
+  {
+   "id": "AG.O.A4",
+   "name": "Food"
+  },
+  {
+   "id": "AG.O.A5",
+   "name": "Farming systems"
+  }
+ ],
+ "objects": [
+  {
+   "id": "AG.O.A1",
+   "label": "Breeding",
+   "uses": [],
+   "text": "AG.O.A1 Breeding"
+  },
+  {
+   "id": "AG.O.A1.1",
+   "label": "Selection",
+   "uses": [
+    "BI"
+   ],
+   "text": "AG.O.A1.1 Selection — the breeder's equation R = h²S predicts response to selection, assuming additive inheritance and a stable environment. The genetics is BI."
+  },
+  {
+   "id": "AG.O.A1.2",
+   "label": "Genetic improvement",
+   "uses": [
+    "BI",
+    "LA"
+   ],
+   "text": "AG.O.A1.2 Genetic improvement — hybrids, marker-assisted selection, gene editing. Regulation is LA."
+  },
+  {
+   "id": "AG.O.A1.3",
+   "label": "Genetic resources",
+   "uses": [],
+   "text": "AG.O.A1.3 Genetic resources — seed banks, landraces."
+  },
+  {
+   "id": "AG.O.A2",
+   "label": "Cultivation and husbandry",
+   "uses": [],
+   "text": "AG.O.A2 Cultivation and husbandry"
+  },
+  {
+   "id": "AG.O.A2.1",
+   "label": "Soils and nutrients",
+   "uses": [
+    "EA"
+   ],
+   "text": "AG.O.A2.1 Soils and nutrients — fertiliser response. Liebig's law of the minimum holds as a first approximation, when one nutrient limits growth. The soil's state is EA."
+  },
+  {
+   "id": "AG.O.A2.2",
+   "label": "Water and irrigation",
+   "uses": [
+    "EA"
+   ],
+   "text": "AG.O.A2.2 Water and irrigation."
+  },
+  {
+   "id": "AG.O.A2.3",
+   "label": "Crop management",
+   "uses": [],
+   "text": "AG.O.A2.3 Crop management — rotation, tillage, sowing. A yield claim must state season, site and population."
+  },
+  {
+   "id": "AG.O.A2.4",
+   "label": "Animal husbandry",
+   "uses": [],
+   "text": "AG.O.A2.4 Animal husbandry — pastoral and housed systems, nutrition, welfare. NZ pastoral dairying is a substrate."
+  },
+  {
+   "id": "AG.O.A2.5",
+   "label": "Aquaculture, fisheries, forestry",
+   "uses": [
+    "BI"
+   ],
+   "text": "AG.O.A2.5 Aquaculture, fisheries and forestry production."
+  },
+  {
+   "id": "AG.O.A3",
+   "label": "Crop and animal health",
+   "uses": [],
+   "text": "AG.O.A3 Crop and animal health"
+  },
+  {
+   "id": "AG.O.A3.1",
+   "label": "Plant protection",
+   "uses": [
+    "BI"
+   ],
+   "text": "AG.O.A3.1 Plant protection — pests, weeds, pathogens; integrated pest management."
+  },
+  {
+   "id": "AG.O.A3.2",
+   "label": "Veterinary medicine",
+   "uses": [],
+   "text": "AG.O.A3.2 Veterinary medicine — diagnosis and treatment of animal disorders."
+  },
+  {
+   "id": "AG.O.A3.3",
+   "label": "Biosecurity",
+   "uses": [
+    "LA"
+   ],
+   "text": "AG.O.A3.3 Biosecurity — border and incursion management (e.g. Mycoplasma bovis in NZ from 2017, UNVERIFIED date)."
+  },
+  {
+   "id": "AG.O.A3.4",
+   "label": "Zoonoses",
+   "uses": [
+    "MD"
+   ],
+   "text": "AG.O.A3.4 Zoonoses — the animal side is AG; human disease is MD (One Health is a bridge)."
+  },
+  {
+   "id": "AG.O.A4",
+   "label": "Food",
+   "uses": [],
+   "text": "AG.O.A4 Food"
+  },
+  {
+   "id": "AG.O.A4.1",
+   "label": "Composition and nutrition",
+   "uses": [
+    "CH",
+    "MD"
+   ],
+   "text": "AG.O.A4.1 Composition and nutrition — the molecule is CH; human nutritional need is MD."
+  },
+  {
+   "id": "AG.O.A4.2",
+   "label": "Processing and preservation",
+   "uses": [
+    "CH",
+    "BI"
+   ],
+   "text": "AG.O.A4.2 Processing and preservation — fermentation, pasteurisation, drying."
+  },
+  {
+   "id": "AG.O.A4.3",
+   "label": "Food safety",
+   "uses": [],
+   "text": "AG.O.A4.3 Food safety — HACCP as a control system (W11); pathogen limits."
+  },
+  {
+   "id": "AG.O.A4.4",
+   "label": "Food standards",
+   "uses": [
+    "LA"
+   ],
+   "text": "AG.O.A4.4 Food standards — Codex Alimentarius; FSANZ for Australia and NZ (W12; legal force LA)."
+  },
+  {
+   "id": "AG.O.A5",
+   "label": "Farming systems",
+   "uses": [],
+   "text": "AG.O.A5 Farming systems"
+  },
+  {
+   "id": "AG.O.A5.1",
+   "label": "System productivity",
+   "uses": [
+    "EC"
+   ],
+   "text": "AG.O.A5.1 System productivity — total factor productivity of farms (measurement here; economics EC)."
+  },
+  {
+   "id": "AG.O.A5.2",
+   "label": "Farm management",
+   "uses": [
+    "EC"
+   ],
+   "text": "AG.O.A5.2 Farm management — decisions under weather and price risk."
+  },
+  {
+   "id": "AG.O.A5.3",
+   "label": "Environmental effect of farming",
+   "uses": [
+    "EV"
+   ],
+   "text": "AG.O.A5.3 Environmental effect of farming — nitrate leaching, methane. The impact claim is EV; AG owns the practice that changes it."
+  }
+ ],
+ "methods": [
+  {
+   "id": "AG.M.1",
+   "label": "Field trial",
+   "role": "M4 Intervene",
+   "example": "randomised plot and herd trials"
+  },
+  {
+   "id": "AG.M.2",
+   "label": "Survey and monitor",
+   "role": "M3 Observe",
+   "example": "farm surveys, disease surveillance"
+  },
+  {
+   "id": "AG.M.3",
+   "label": "Breed and select",
+   "role": "M4 Intervene",
+   "example": "breeding programmes"
+  },
+  {
+   "id": "AG.M.4",
+   "label": "Model systems",
+   "role": "M5 Compute",
+   "example": "crop and farm-system models"
+  },
+  {
+   "id": "AG.M.5",
+   "label": "Inspect and certify",
+   "role": "M7 Verify",
+   "example": "food inspection, organic certification"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "AG.O.A1",
+   "warrant": "W3 + W4",
+   "standard": "replicated trials across environments",
+   "defeaters": "genotype-by-environment interaction"
+  },
+  {
+   "cell": "AG.O.A2",
+   "warrant": "W3",
+   "standard": "replicated field trial with stated site and season",
+   "defeaters": "site specificity, weather years"
+  },
+  {
+   "cell": "AG.O.A3",
+   "warrant": "W3 + W4",
+   "standard": "controlled trial; surveillance with stated sensitivity",
+   "defeaters": "under-reporting"
+  },
+  {
+   "cell": "AG.O.A4",
+   "warrant": "W4 + W11 + W12",
+   "standard": "laboratory analysis; conformity with standard",
+   "defeaters": "sampling error"
+  },
+  {
+   "cell": "AG.O.A5",
+   "warrant": "W4 + W2",
+   "standard": "farm data; system model with validation",
+   "defeaters": "model scope"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "AG.B.C1",
+   "Agronomy and crop science",
+   "A1, A2",
+   "M.1, M.3",
+   "crops"
+  ],
+  [
+   "AG.B.C2",
+   "Animal science",
+   "A1, A2.4",
+   "M.1, M.3",
+   "livestock"
+  ],
+  [
+   "AG.B.C3",
+   "Veterinary science",
+   "A3.2, A3.4",
+   "M.1, M.2",
+   "animals"
+  ],
+  [
+   "AG.B.C4",
+   "Food science and technology",
+   "A4",
+   "M.5",
+   "foods (uses CH)"
+  ],
+  [
+   "AG.B.C5",
+   "Horticulture and viticulture",
+   "A2.3",
+   "M.1",
+   "fruit, vines"
+  ],
+  [
+   "AG.B.C6",
+   "Fisheries, aquaculture, forestry",
+   "A2.5",
+   "M.2",
+   "waters, forests"
+  ],
+  [
+   "AG.B.C7",
+   "One Health",
+   "A3.4",
+   "M.2",
+   "animals and people (with MD)"
+  ],
+  [
+   "AG.B.C8",
+   "Brewing and fermentation science",
+   "A4.2",
+   "M.1, M.5",
+   "beverages (yeast biology BI, chemistry CH)"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Agriculture is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five stages of production: breeding, cultivation and husbandry, crop and animal health, food, and farming systems.",
+  "key_line": "Dimension: **the stage of the production system.** Order: from the organism to the whole system.\n1. Breeding\n2. Cultivation and husbandry\n3. Crop and animal health\n4. Food\n5. Farming systems",
+  "assignment_rules": "1. Place by the stage of production.\n2. The taxon and its biology are BI. Its production is AG.\n3. An animal disorder is AG; a human disorder is MD.\n4. The molecule is CH; the food's safety and standard are AG.\n5. Farm economics and prices are EC; environmental impact is EV.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| general biology of the taxon | BI |\n| human disease and nutrition need | MD |\n| chemistry of food molecules | CH |\n| agricultural prices and markets | EC |\n| environmental impact | EV |\n| food law | LA |",
+  "crosswalk": "**ANZSRC 30** (checked 9 Oct 2026 against the ABS file anzsrc2020_for.xlsx) has ten groups:\n- 3001 Agricultural biotechnology → A1.2\n- 3002 Agriculture, land and farm management → A5\n- 3003 Animal production → A2.4\n- 3004 Crop and pasture production → A2.3\n- 3005 Fisheries sciences → A2.5\n- 3006 Food sciences → A4\n- 3007 Forestry sciences → A2.5\n- 3008 Horticultural production → B.C5\n- 3009 Veterinary sciences → A3.2\n- 3099 Other → not a cell\n\nCoverage: 9 of 9 substantive groups land.",
+  "validation": "Sizes: key line 5. Face O 5 cells + 19 sub-cells = 24. M roles 5. Heuristics 3. W rows 5. B bridges 8.\nKey line, word for word: Breeding. Cultivation and husbandry. Crop and animal health. Food. Farming systems.\nCONTESTED: veterinary medicine in AG vs MD (alternative: MD for all disorders)."
+ },
+ "borders": [
+  {
+   "field": "BI",
+   "uses": 5
+  },
+  {
+   "field": "LA",
+   "uses": 3
+  },
+  {
+   "field": "EA",
+   "uses": 2
+  },
+  {
+   "field": "MD",
+   "uses": 2
+  },
+  {
+   "field": "CH",
+   "uses": 2
+  },
+  {
+   "field": "EC",
+   "uses": 2
+  },
+  {
+   "field": "EV",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "MD",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

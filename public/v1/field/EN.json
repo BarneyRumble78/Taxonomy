@@ -1,0 +1,1134 @@
+{
+ "code": "EN",
+ "name": "Engineering",
+ "dimension": "the physical balance that closes an artefact model",
+ "cells": [
+  {
+   "id": "EN.O.A1",
+   "name": "Force and deformation"
+  },
+  {
+   "id": "EN.O.A2",
+   "name": "Mass and momentum"
+  },
+  {
+   "id": "EN.O.A3",
+   "name": "Energy and entropy"
+  },
+  {
+   "id": "EN.O.A4",
+   "name": "Electromagnetic state"
+  },
+  {
+   "id": "EN.O.A5",
+   "name": "Composition and microstructure"
+  }
+ ],
+ "objects": [
+  {
+   "id": "EN.O.A1",
+   "label": "Force and deformation",
+   "uses": [],
+   "text": "EN.O.A1 Force and deformation"
+  },
+  {
+   "id": "EN.O.A1.1",
+   "label": "Rigid bodies",
+   "uses": [
+    "PH.O.A1.1"
+   ],
+   "text": "EN.O.A1.1 Rigid bodies. Statics: ΣF = 0 and ΣM = 0 when inertia is negligible. Dynamics: ΣF = m a and ΣM = dH/dt about the centre of mass or a fixed point. These laws are Newtonian mechanics (uses PH.O.A1.1). EN owns the free-body reduction and determinacy check."
+  },
+  {
+   "id": "EN.O.A1.1.1",
+   "label": "Free-body diagram, determinacy",
+   "uses": [],
+   "text": "EN.O.A1.1.1 Free-body diagram and static determinacy."
+  },
+  {
+   "id": "EN.O.A1.1.2",
+   "label": "Mechanism dynamics",
+   "uses": [
+    "PH.O.A1.1"
+   ],
+   "text": "EN.O.A1.1.2 Rigid-body dynamics of mechanisms (linkages, gears, cams)."
+  },
+  {
+   "id": "EN.O.A1.1.3",
+   "label": "Lumped vibration models",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "EN.O.A1.1.3 Lumped vibration models: single- and multi-degree-of-freedom systems with linear springs and viscous damping. Natural frequency ωn = √(k/m) for an undamped linear oscillator."
+  },
+  {
+   "id": "EN.O.A1.2",
+   "label": "Slender members",
+   "uses": [],
+   "text": "EN.O.A1.2 Slender members. A member whose length greatly exceeds its section is reduced to section resultants plus a kinematic assumption."
+  },
+  {
+   "id": "EN.O.A1.2.1",
+   "label": "Euler–Bernoulli beam",
+   "uses": [],
+   "text": "EN.O.A1.2.1 Euler–Bernoulli beam. For a prismatic, linear-elastic member with small slopes and plane sections remaining plane and normal: EI d²v/dx² = M(x). With load q positive downward, dM/dx = V and dV/dx = −q (Gere and Goodno, §4.5; sign convention stated, audit fact check)."
+  },
+  {
+   "id": "EN.O.A1.2.2",
+   "label": "Timoshenko beam",
+   "uses": [],
+   "text": "EN.O.A1.2.2 Timoshenko beam: adds shear deformation and rotary inertia for deep or short beams."
+  },
+  {
+   "id": "EN.O.A1.2.3",
+   "label": "Torsion of circular shaft",
+   "uses": [],
+   "text": "EN.O.A1.2.3 Torsion of a circular shaft. For a linear-elastic, circular or annular, prismatic bar under small twist: T = G J θ / L and τ = T r / J."
+  },
+  {
+   "id": "EN.O.A1.2.4",
+   "label": "Euler column buckling",
+   "uses": [],
+   "text": "EN.O.A1.2.4 Euler column buckling. For an initially straight, slender, linear-elastic, centrally loaded column: Pcr = π² E I / (K L)². Stocky columns leave this formula for a tangent-modulus or code curve."
+  },
+  {
+   "id": "EN.O.A1.2.5",
+   "label": "Kirchhoff–Love and Mindlin–Reissner plates",
+   "uses": [],
+   "text": "EN.O.A1.2.5 Kirchhoff–Love plate and Mindlin–Reissner plate. Kirchhoff–Love applies to thin plates with normals staying normal; Mindlin–Reissner admits transverse shear for moderately thick plates."
+  },
+  {
+   "id": "EN.O.A1.2.6",
+   "label": "Thin-walled pressure vessel",
+   "uses": [],
+   "text": "EN.O.A1.2.6 Thin-walled pressure vessel. For wall thickness much less than radius, under internal pressure p: hoop stress pr/t and longitudinal stress pr/2t."
+  },
+  {
+   "id": "EN.O.A1.3",
+   "label": "Deformable continua",
+   "uses": [
+    "PH.O.A1.5"
+   ],
+   "text": "EN.O.A1.3 Deformable continua. The parent theory when section assumptions fail."
+  },
+  {
+   "id": "EN.O.A1.3.1",
+   "label": "Cauchy stress and traction",
+   "uses": [
+    "PH.O.A1.5"
+   ],
+   "text": "EN.O.A1.3.1 Cauchy stress and traction t = σᵀn (uses PH.O.A1.5 for the continuum balance laws)."
+  },
+  {
+   "id": "EN.O.A1.3.2",
+   "label": "Isotropic linear elasticity (Hooke)",
+   "uses": [
+    "PH.O.A1.5"
+   ],
+   "text": "EN.O.A1.3.2 Isotropic linear elasticity (Hooke). For small strain, a linear, isotropic material: σ = λ tr(ε) I + 2μ ε, with G = E / 2(1+ν). Uses PH.O.A1.5."
+  },
+  {
+   "id": "EN.O.A1.3.3",
+   "label": "Tresca and von Mises yield",
+   "uses": [],
+   "text": "EN.O.A1.3.3 Yield criteria: Tresca (maximum shear) and von Mises (distortion energy), for isotropic ductile metals under quasi-static load."
+  },
+  {
+   "id": "EN.O.A1.3.4",
+   "label": "Mohr's circle",
+   "uses": [
+    "MA.O.A2"
+   ],
+   "text": "EN.O.A1.3.4 Mohr's circle: principal stresses and maximum shear from the plane-stress transformation."
+  },
+  {
+   "id": "EN.O.A1.3.5",
+   "label": "LEFM, KIc",
+   "uses": [],
+   "text": "EN.O.A1.3.5 Linear-elastic fracture mechanics. Under small-scale yielding, K = Y σ √(π a). Mode I, plane-strain failure occurs when K reaches KIc (ASTM E399)."
+  },
+  {
+   "id": "EN.O.A1.3.6",
+   "label": "Fatigue life, Paris law",
+   "uses": [],
+   "text": "EN.O.A1.3.6 Fatigue life. Basquin (stress-life) and Coffin–Manson (strain-life) relations, fitted per material. Paris law da/dN = C (ΔK)^m holds in region II only; C and m depend on material and R-ratio (Paris and Erdogan 1963)."
+  },
+  {
+   "id": "EN.O.A1.3.7",
+   "label": "Effective stress, Mohr–Coulomb (CONTESTED)",
+   "uses": [
+    "EA.O.A1"
+   ],
+   "text": "EN.O.A1.3.7 Geomechanics. Terzaghi effective stress σ′ = σ − u for saturated soil. Mohr–Coulomb strength τ = c′ + σ′ tan φ′ for drained soil and rock joints. CONTESTED: EA.O.A1 (rock and soil as earth materials) is the alternative owner; EN keeps the strength closure, EA owns genesis."
+  },
+  {
+   "id": "EN.O.A1.4",
+   "label": "Contact interfaces",
+   "uses": [],
+   "text": "EN.O.A1.4 Contact interfaces."
+  },
+  {
+   "id": "EN.O.A1.4.1",
+   "label": "Hertz contact (CONTESTED)",
+   "uses": [],
+   "text": "EN.O.A1.4.1 Hertz contact. For two smooth, elastic, non-conforming bodies with frictionless contact and small contact area: contact radius and peak pressure follow from load, curvatures and moduli. CONTESTED: PH.O.A1.5 is the alternative owner."
+  },
+  {
+   "id": "EN.O.A1.4.2",
+   "label": "Coulomb friction",
+   "uses": [],
+   "text": "EN.O.A1.4.2 Coulomb friction: tangential force bounded by μ times normal force, an empirical closure."
+  },
+  {
+   "id": "EN.O.A1.4.3",
+   "label": "Archard wear",
+   "uses": [],
+   "text": "EN.O.A1.4.3 Archard wear law: worn volume proportional to load times sliding distance over hardness, with a fitted wear coefficient (UNVERIFIED as to standard notation)."
+  },
+  {
+   "id": "EN.O.A1.4.4",
+   "label": "Contact and member concepts",
+   "uses": [],
+   "text": "EN.O.A1.4.4 Concepts: stress concentration, Saint-Venant decay, shear centre, slenderness, ductility, redundancy, mechanism."
+  },
+  {
+   "id": "EN.O.A2",
+   "label": "Mass and momentum",
+   "uses": [
+    "PH.O.A1.5"
+   ],
+   "text": "EN.O.A2 Mass and momentum"
+  },
+  {
+   "id": "EN.O.A2.1",
+   "label": "Internal flows",
+   "uses": [
+    "PH.O.A1.5"
+   ],
+   "text": "EN.O.A2.1 Internal flows."
+  },
+  {
+   "id": "EN.O.A2.1.1",
+   "label": "Bernoulli (applied)",
+   "uses": [
+    "PH.O.A1.5"
+   ],
+   "text": "EN.O.A2.1.1 Bernoulli equation along a streamline, for steady, inviscid, incompressible flow: p/ρ + V²/2 + g z = constant. Uses PH.O.A1.5. A loss term is added, not derived, when the hypotheses fail."
+  },
+  {
+   "id": "EN.O.A2.1.2",
+   "label": "Darcy–Weisbach",
+   "uses": [],
+   "text": "EN.O.A2.1.2 Darcy–Weisbach head loss h_f = f (L/D) V²/2g, where f is the Darcy (Moody) friction factor, four times the Fanning factor."
+  },
+  {
+   "id": "EN.O.A2.1.3",
+   "label": "Colebrook, Moody, minor losses",
+   "uses": [],
+   "text": "EN.O.A2.1.3 Colebrook equation and Moody chart for f in fully developed turbulent pipe flow (empirical closure). Minor losses K V²/2g."
+  },
+  {
+   "id": "EN.O.A2.1.4",
+   "label": "Pump–system matching, affinity laws",
+   "uses": [],
+   "text": "EN.O.A2.1.4 Pump and fan matching: head-capacity curve against system curve. Affinity laws hold only between dynamically similar operating points."
+  },
+  {
+   "id": "EN.O.A2.1.5",
+   "label": "Reynolds lubrication equation",
+   "uses": [],
+   "text": "EN.O.A2.1.5 Reynolds lubrication equation, for thin, viscous, laminar films with negligible inertia (tribology)."
+  },
+  {
+   "id": "EN.O.A2.1.6",
+   "label": "Euler turbomachine equation",
+   "uses": [],
+   "text": "EN.O.A2.1.6 Euler turbomachine equation. For steady flow through a rotor, specific work done on the fluid is w = u₂c_θ2 − u₁c_θ1 (pump or compressor); for a turbine the extracted work is its negative."
+  },
+  {
+   "id": "EN.O.A2.1.7",
+   "label": "Joukowsky surge",
+   "uses": [],
+   "text": "EN.O.A2.1.7 Water hammer (Joukowsky surge Δp = ρ a ΔV for instantaneous valve closure in an elastic pipe)."
+  },
+  {
+   "id": "EN.O.A2.2",
+   "label": "External flows",
+   "uses": [
+    "PH.O.A1.5"
+   ],
+   "text": "EN.O.A2.2 External flows. Drag and lift coefficients; boundary layer; separation as the stall and form-drag mechanism. Reynolds number Re = ρVL/μ = UL/ν (the two forms are equivalent, uses PH.O.A1.5). Flight mechanics and aeroelasticity draw on this cell plus EN.O.A1."
+  },
+  {
+   "id": "EN.O.A2.3",
+   "label": "Free-surface flows",
+   "uses": [],
+   "text": "EN.O.A2.3 Free-surface flows."
+  },
+  {
+   "id": "EN.O.A2.3.1",
+   "label": "Specific energy, Froude number",
+   "uses": [],
+   "text": "EN.O.A2.3.1 Open-channel specific energy and Froude number Fr = V/√(g h) for a rectangular channel."
+  },
+  {
+   "id": "EN.O.A2.3.2",
+   "label": "Manning equation",
+   "uses": [],
+   "text": "EN.O.A2.3.2 Manning equation, an empirical resistance closure for steady, uniform, fully rough open-channel flow."
+  },
+  {
+   "id": "EN.O.A2.3.3",
+   "label": "Ship hydrostatics and stability",
+   "uses": [],
+   "text": "EN.O.A2.3.3 Ship hydrostatics and stability: buoyancy, metacentric height GM, righting arm, for small heel angles (initial stability)."
+  },
+  {
+   "id": "EN.O.A2.3.4",
+   "label": "Hull resistance, seakeeping",
+   "uses": [],
+   "text": "EN.O.A2.3.4 Hull resistance and seakeeping, with Froude scaling of wave resistance."
+  },
+  {
+   "id": "EN.O.A2.4",
+   "label": "Compressible and acoustic flows",
+   "uses": [
+    "PH.O.A4.1"
+   ],
+   "text": "EN.O.A2.4 Compressible and acoustic flows."
+  },
+  {
+   "id": "EN.O.A2.4.1",
+   "label": "Isentropic nozzle, choking",
+   "uses": [],
+   "text": "EN.O.A2.4.1 Isentropic nozzle relations for a calorically perfect gas in adiabatic, reversible, quasi-one-dimensional flow. Choked flow when the throat is sonic (M = 1)."
+  },
+  {
+   "id": "EN.O.A2.4.2",
+   "label": "Normal-shock relations",
+   "uses": [],
+   "text": "EN.O.A2.4.2 Normal-shock relations (Rankine–Hugoniot) for a perfect gas."
+  },
+  {
+   "id": "EN.O.A2.4.3",
+   "label": "Linear acoustics",
+   "uses": [
+    "PH.O.A1.5"
+   ],
+   "text": "EN.O.A2.4.3 Linear acoustics: small-amplitude pressure waves in a quiescent fluid; sound pressure level and transmission loss (noise control)."
+  },
+  {
+   "id": "EN.O.A2.5",
+   "label": "Porous-medium flows",
+   "uses": [],
+   "text": "EN.O.A2.5 Porous-medium flows."
+  },
+  {
+   "id": "EN.O.A2.5.1",
+   "label": "Darcy's law (CONTESTED)",
+   "uses": [],
+   "text": "EN.O.A2.5.1 Darcy's law q = −(k/μ)∇p for slow, laminar flow through a rigid, saturated porous medium. CONTESTED: EA.O.A4 (groundwater) is the alternative owner."
+  },
+  {
+   "id": "EN.O.A2.5.2",
+   "label": "Ergun equation",
+   "uses": [],
+   "text": "EN.O.A2.5.2 Ergun equation for pressure drop through a packed bed of particles."
+  },
+  {
+   "id": "EN.O.A2.5.3",
+   "label": "Terzaghi consolidation",
+   "uses": [],
+   "text": "EN.O.A2.5.3 Consolidation (Terzaghi one-dimensional consolidation) for saturated, linear, laterally confined soil."
+  },
+  {
+   "id": "EN.O.A3",
+   "label": "Energy and entropy",
+   "uses": [
+    "PH.O.A4.1"
+   ],
+   "text": "EN.O.A3 Energy and entropy"
+  },
+  {
+   "id": "EN.O.A3.1",
+   "label": "First-law balances",
+   "uses": [
+    "PH.O.A4.1"
+   ],
+   "text": "EN.O.A3.1 First-law balances."
+  },
+  {
+   "id": "EN.O.A3.1.1",
+   "label": "Steady open first law",
+   "uses": [
+    "PH.O.A4.1"
+   ],
+   "text": "EN.O.A3.1.1 Steady open-system first law: Q̇ − Ẇ = Σṁ(h + V²/2 + g z)out − Σṁ(h + V²/2 + g z)in, with heat in and work out positive. The law is owned by physics (uses PH.O.A4.1)."
+  },
+  {
+   "id": "EN.O.A3.1.2",
+   "label": "Property closures",
+   "uses": [],
+   "text": "EN.O.A3.1.2 Property closures: ideal-gas model, steam and refrigerant tables (data, W12 and W4)."
+  },
+  {
+   "id": "EN.O.A3.1.3",
+   "label": "Power and refrigeration cycles",
+   "uses": [],
+   "text": "EN.O.A3.1.3 Cycles as applications: Rankine, Brayton, Otto, Diesel (air-standard idealisations), vapour-compression refrigeration with COP = Q_cold / W."
+  },
+  {
+   "id": "EN.O.A3.2",
+   "label": "Second-law limits",
+   "uses": [
+    "PH.O.A4.1"
+   ],
+   "text": "EN.O.A3.2 Second-law limits."
+  },
+  {
+   "id": "EN.O.A3.2.1",
+   "label": "Carnot efficiency (applied)",
+   "uses": [
+    "PH.O.A4.1"
+   ],
+   "text": "EN.O.A3.2.1 Carnot efficiency 1 − T_c/T_h, the ceiling for a heat engine between two reservoirs at absolute temperatures. Uses PH.O.A4.1."
+  },
+  {
+   "id": "EN.O.A3.2.2",
+   "label": "Exergy",
+   "uses": [],
+   "text": "EN.O.A3.2.2 Exergy: work potential relative to a stated dead state. Irreversibility located per component, not only totalled."
+  },
+  {
+   "id": "EN.O.A3.2.3",
+   "label": "Pinch analysis",
+   "uses": [],
+   "text": "EN.O.A3.2.3 Pinch analysis: minimum approach temperature in a heat-exchanger network."
+  },
+  {
+   "id": "EN.O.A3.3",
+   "label": "Heat-transfer rates",
+   "uses": [],
+   "text": "EN.O.A3.3 Heat-transfer rates."
+  },
+  {
+   "id": "EN.O.A3.3.1",
+   "label": "Fourier conduction (CONTESTED)",
+   "uses": [],
+   "text": "EN.O.A3.3.1 Fourier's law q = −k∇T for an isotropic conductor; plane wall Q = k A ΔT / L at steady state. CONTESTED: PH.O.A4.1 (transport) is the alternative owner."
+  },
+  {
+   "id": "EN.O.A3.3.2",
+   "label": "Newton cooling, Nusselt correlations",
+   "uses": [],
+   "text": "EN.O.A3.3.2 Newton's law of cooling q = h A (T_s − T_∞), with h from a Nusselt correlation used inside its stated Re and Pr range."
+  },
+  {
+   "id": "EN.O.A3.3.3",
+   "label": "Radiation exchange",
+   "uses": [
+    "PH.O.A4.1"
+   ],
+   "text": "EN.O.A3.3.3 Radiation exchange. Emissive power of a grey surface is ε σ T⁴. Net exchange of a small grey surface with large surroundings is q = ε σ A (T_s⁴ − T_sur⁴), absolute temperatures (Incropera and DeWitt, ch. 1). Enclosures use view factors."
+  },
+  {
+   "id": "EN.O.A3.3.4",
+   "label": "LMTD, effectiveness–NTU",
+   "uses": [],
+   "text": "EN.O.A3.3.4 Heat exchangers: LMTD method, or effectiveness–NTU with NTU = U A / C_min."
+  },
+  {
+   "id": "EN.O.A3.3.5",
+   "label": "Fins",
+   "uses": [],
+   "text": "EN.O.A3.3.5 Fins: added area against a convection boundary, with fin efficiency."
+  },
+  {
+   "id": "EN.O.A3.4",
+   "label": "Reacting energy",
+   "uses": [
+    "CH.O.A3.1"
+   ],
+   "text": "EN.O.A3.4 Reacting energy. Heating value and stoichiometry enter the first law as an enthalpy of reaction (uses CH.O.A3.1). Adiabatic flame temperature is the no-heat-loss limit. Fire growth and smoke models for compartments draw on this cell (fire protection)."
+  },
+  {
+   "id": "EN.O.A4",
+   "label": "Electromagnetic state",
+   "uses": [
+    "PH.O.A1.2b"
+   ],
+   "text": "EN.O.A4 Electromagnetic state"
+  },
+  {
+   "id": "EN.O.A4.1",
+   "label": "Lumped circuits",
+   "uses": [
+    "PH.O.A1.2b"
+   ],
+   "text": "EN.O.A4.1 Lumped circuits. Valid when the circuit is small compared with the shortest relevant wavelength."
+  },
+  {
+   "id": "EN.O.A4.1.1",
+   "label": "Ohm, Kirchhoff (applied)",
+   "uses": [
+    "PH.O.A1.2b"
+   ],
+   "text": "EN.O.A4.1.1 Ohm's law V = I R for a linear resistor; Kirchhoff circuit laws (uses PH.O.A1.2b)."
+  },
+  {
+   "id": "EN.O.A4.1.2",
+   "label": "Impedance and phasors",
+   "uses": [],
+   "text": "EN.O.A4.1.2 Impedance R, jωL and 1/(jωC), with phasors, for linear circuits in sinusoidal steady state."
+  },
+  {
+   "id": "EN.O.A4.1.3",
+   "label": "Thévenin and Norton",
+   "uses": [],
+   "text": "EN.O.A4.1.3 Thévenin and Norton equivalents, for linear networks seen from two terminals."
+  },
+  {
+   "id": "EN.O.A4.1.4",
+   "label": "Maximum power transfer (conjugate)",
+   "uses": [],
+   "text": "EN.O.A4.1.4 Maximum power transfer. For a linear source with impedance Z_s, load power is maximised when Z_L = Z_s* (complex conjugate). A resistive match applies only to DC or purely resistive sources. A theorem, not a universal design rule."
+  },
+  {
+   "id": "EN.O.A4.1.5",
+   "label": "LTI response, state space",
+   "uses": [
+    "MA.O.A4"
+   ],
+   "text": "EN.O.A4.1.5 Linear time-invariant system response: impulse response, transfer function, frequency response. Fourier and Laplace transforms are MA (uses MA.O.A4). State space ẋ = Ax + Bu, y = Cx + Du and G(s) = C(sI − A)⁻¹B + D, for LTI plants."
+  },
+  {
+   "id": "EN.O.A4.1.6",
+   "label": "Sampling theorem (applied)",
+   "uses": [
+    "MA.B.C4"
+   ],
+   "text": "EN.O.A4.1.6 Sampling theorem. A band-limited signal with no content at or above B is recovered from samples taken faster than 2B per second. Uses MA.B.C4 (MSC 94A)."
+  },
+  {
+   "id": "EN.O.A4.1.7",
+   "label": "Circuit concepts",
+   "uses": [],
+   "text": "EN.O.A4.1.7 Concepts: ground and reference, power factor, harmonics, noise figure."
+  },
+  {
+   "id": "EN.O.A4.2",
+   "label": "Electromechanical conversion",
+   "uses": [
+    "PH.O.A1.2b"
+   ],
+   "text": "EN.O.A4.2 Electromechanical conversion."
+  },
+  {
+   "id": "EN.O.A4.2.1",
+   "label": "Magnetic circuit",
+   "uses": [],
+   "text": "EN.O.A4.2.1 Magnetic circuit: Ampère's law with reluctance, for linear core material without saturation."
+  },
+  {
+   "id": "EN.O.A4.2.2",
+   "label": "Ideal transformer",
+   "uses": [],
+   "text": "EN.O.A4.2.2 Ideal transformer V₁/V₂ = N₁/N₂, for zero leakage, zero winding resistance and infinite core permeability."
+  },
+  {
+   "id": "EN.O.A4.2.3",
+   "label": "Machines, synchronous speed, slip",
+   "uses": [],
+   "text": "EN.O.A4.2.3 Machines: torque from current and flux. Synchronous speed n_s = 120 f / p (rpm, p poles). Induction-motor slip."
+  },
+  {
+   "id": "EN.O.A4.2.4",
+   "label": "AC power-flow equations",
+   "uses": [],
+   "text": "EN.O.A4.2.4 Power-flow equations for an AC network in balanced steady state (load flow)."
+  },
+  {
+   "id": "EN.O.A4.3",
+   "label": "Distributed fields",
+   "uses": [
+    "PH.O.A1.2b"
+   ],
+   "text": "EN.O.A4.3 Distributed fields."
+  },
+  {
+   "id": "EN.O.A4.3.1",
+   "label": "Transmission line",
+   "uses": [],
+   "text": "EN.O.A4.3.1 Transmission line: telegrapher's equations; characteristic impedance; reflection coefficient."
+  },
+  {
+   "id": "EN.O.A4.3.2",
+   "label": "Waveguides and antennas",
+   "uses": [],
+   "text": "EN.O.A4.3.2 Waveguides and antennas: modes, gain, radiation pattern."
+  },
+  {
+   "id": "EN.O.A4.3.3",
+   "label": "Friis transmission",
+   "uses": [],
+   "text": "EN.O.A4.3.3 Friis transmission equation for far-field free-space links between matched, polarisation-aligned antennas."
+  },
+  {
+   "id": "EN.O.A4.3.4",
+   "label": "Optical and photonic devices",
+   "uses": [
+    "PH.O.A1.2c"
+   ],
+   "text": "EN.O.A4.3.4 Optical and photonic devices: fibre modes, attenuation, dispersion. Optics as physics (uses PH.O.A1.2c)."
+  },
+  {
+   "id": "EN.O.A4.3.5",
+   "label": "EMC, skin effect",
+   "uses": [],
+   "text": "EN.O.A4.3.5 Electromagnetic compatibility: coupling paths and shielding; skin effect."
+  },
+  {
+   "id": "EN.O.A4.4",
+   "label": "Semiconductor devices",
+   "uses": [
+    "PH.O.A4.4a"
+   ],
+   "text": "EN.O.A4.4 Semiconductor devices."
+  },
+  {
+   "id": "EN.O.A4.4.1",
+   "label": "Diode and MOSFET curves",
+   "uses": [
+    "PH.O.A4.4a"
+   ],
+   "text": "EN.O.A4.4.1 Diode and MOSFET constitutive curves (e.g., Shockley diode equation for an ideal p–n junction with low injection)."
+  },
+  {
+   "id": "EN.O.A4.4.2",
+   "label": "Drift–diffusion device model",
+   "uses": [
+    "PH.O.A4.4a"
+   ],
+   "text": "EN.O.A4.4.2 Drift–diffusion device model (uses PH.O.A4.4a for band theory)."
+  },
+  {
+   "id": "EN.O.A4.4.3",
+   "label": "Digital abstraction",
+   "uses": [
+    "CS.O.A2.4"
+   ],
+   "text": "EN.O.A4.4.3 Digital abstraction: voltage bands treated as logic levels, with noise margins. Above this abstraction the claim is CS (uses CS.O.A2.4 for the Boolean function)."
+  },
+  {
+   "id": "EN.O.A4.4.4",
+   "label": "Switching converters",
+   "uses": [],
+   "text": "EN.O.A4.4.4 Power-electronic switching converters: averaged models of buck and boost stages in continuous conduction."
+  },
+  {
+   "id": "EN.O.A5",
+   "label": "Composition and microstructure",
+   "uses": [],
+   "text": "EN.O.A5 Composition and microstructure"
+  },
+  {
+   "id": "EN.O.A5.1",
+   "label": "Reaction rates",
+   "uses": [
+    "CH.O.A4.2"
+   ],
+   "text": "EN.O.A5.1 Reaction rates."
+  },
+  {
+   "id": "EN.O.A5.1.1",
+   "label": "Species balance",
+   "uses": [],
+   "text": "EN.O.A5.1.1 Species balance: accumulation = in − out + generation."
+  },
+  {
+   "id": "EN.O.A5.1.2",
+   "label": "Ideal reactors, RTD",
+   "uses": [],
+   "text": "EN.O.A5.1.2 Ideal reactors: batch, continuous stirred tank (perfect mixing), plug flow (no axial mixing). Conversion against residence time; residence-time distribution diagnoses real reactors."
+  },
+  {
+   "id": "EN.O.A5.1.3",
+   "label": "Arrhenius (applied)",
+   "uses": [
+    "CH.O.A4.2"
+   ],
+   "text": "EN.O.A5.1.3 Arrhenius rate constant k = A exp(−E_a/RT), for an elementary or effective rate over a stated temperature range. Uses CH.O.A4.2."
+  },
+  {
+   "id": "EN.O.A5.1.4",
+   "label": "Scale-up limits",
+   "uses": [],
+   "text": "EN.O.A5.1.4 Scale-up limits: mixing and heat removal."
+  },
+  {
+   "id": "EN.O.A5.2",
+   "label": "Equilibrium stages",
+   "uses": [
+    "CH.O.A3.1"
+   ],
+   "text": "EN.O.A5.2 Equilibrium stages."
+  },
+  {
+   "id": "EN.O.A5.2.1",
+   "label": "Raoult, fugacity (applied)",
+   "uses": [
+    "CH.O.A3.1"
+   ],
+   "text": "EN.O.A5.2.1 Raoult's law for ideal liquid mixtures, or a fugacity model when non-ideal (uses CH.O.A3.1)."
+  },
+  {
+   "id": "EN.O.A5.2.2",
+   "label": "McCabe–Thiele",
+   "uses": [],
+   "text": "EN.O.A5.2.2 McCabe–Thiele construction for binary distillation, assuming constant molar overflow."
+  },
+  {
+   "id": "EN.O.A5.2.3",
+   "label": "Two-film theory",
+   "uses": [],
+   "text": "EN.O.A5.2.3 Two-film theory: interphase flux = K Δc, with an overall coefficient. Rate-based models apply when stage equilibrium fails."
+  },
+  {
+   "id": "EN.O.A5.2.4",
+   "label": "Flowsheet degrees of freedom",
+   "uses": [],
+   "text": "EN.O.A5.2.4 Flowsheet degrees of freedom, recycle and purge."
+  },
+  {
+   "id": "EN.O.A5.3",
+   "label": "Microstructure–property relations",
+   "uses": [],
+   "text": "EN.O.A5.3 Microstructure–property relations."
+  },
+  {
+   "id": "EN.O.A5.3.1",
+   "label": "Phase diagram (applied)",
+   "uses": [
+    "CH.O.A3.1"
+   ],
+   "text": "EN.O.A5.3.1 Phase diagram as the equilibrium map (uses CH.O.A3.1 for phase equilibrium)."
+  },
+  {
+   "id": "EN.O.A5.3.2",
+   "label": "TTT and CCT diagrams",
+   "uses": [],
+   "text": "EN.O.A5.3.2 TTT and CCT diagrams as kinetic maps for steels."
+  },
+  {
+   "id": "EN.O.A5.3.3",
+   "label": "Hall–Petch",
+   "uses": [],
+   "text": "EN.O.A5.3.3 Hall–Petch relation σ_y = σ₀ + k d^(−1/2), for polycrystals over a stated grain-size range (fails at the nanoscale)."
+  },
+  {
+   "id": "EN.O.A5.3.4",
+   "label": "Rule of mixtures bounds",
+   "uses": [],
+   "text": "EN.O.A5.3.4 Rule of mixtures for composites, as upper (Voigt) and lower (Reuss) bounds, not a point prediction."
+  },
+  {
+   "id": "EN.O.A5.3.5",
+   "label": "Dislocation slip",
+   "uses": [
+    "PH.O.A4.4"
+   ],
+   "text": "EN.O.A5.3.5 Dislocation slip as the mechanism of plastic flow (uses PH.O.A4.4 condensed matter)."
+  },
+  {
+   "id": "EN.O.A5.4",
+   "label": "Electrochemical cells",
+   "uses": [
+    "CH.O.A3.1"
+   ],
+   "text": "EN.O.A5.4 Electrochemical cells."
+  },
+  {
+   "id": "EN.O.A5.4.1",
+   "label": "Faraday's laws of electrolysis (applied)",
+   "uses": [
+    "CH.O.A3.1"
+   ],
+   "text": "EN.O.A5.4.1 Faraday's laws of electrolysis: mass reacted proportional to charge passed (uses CH.O.A3.1). Applied to corrosion rate and plating."
+  },
+  {
+   "id": "EN.O.A5.4.2",
+   "label": "Nernst equation (applied)",
+   "uses": [
+    "CH.O.A3.1"
+   ],
+   "text": "EN.O.A5.4.2 Nernst equation for the reversible cell potential at stated activities (uses CH.O.A3.1)."
+  },
+  {
+   "id": "EN.O.A5.4.3",
+   "label": "Battery and fuel-cell models",
+   "uses": [],
+   "text": "EN.O.A5.4.3 Battery and fuel-cell device models: capacity, polarisation curves, state of charge."
+  },
+  {
+   "id": "EN.O.A5.4.4",
+   "label": "Passivation",
+   "uses": [],
+   "text": "EN.O.A5.4.4 Passivation as a kinetic state, not a permanent property."
+  },
+  {
+   "id": "EN.O.A5.5",
+   "label": "Neutron balances",
+   "uses": [
+    "PH"
+   ],
+   "text": "EN.O.A5.5 Neutron balances."
+  },
+  {
+   "id": "EN.O.A5.5.1",
+   "label": "k_eff, criticality",
+   "uses": [],
+   "text": "EN.O.A5.5.1 Effective multiplication factor k_eff; criticality at k_eff = 1."
+  },
+  {
+   "id": "EN.O.A5.5.2",
+   "label": "Neutron diffusion equation",
+   "uses": [],
+   "text": "EN.O.A5.5.2 One-group neutron diffusion equation, valid away from boundaries and strong absorbers; transport theory otherwise. Cross-section data uses PH."
+  },
+  {
+   "id": "EN.O.A5.5.3",
+   "label": "Decay heat",
+   "uses": [],
+   "text": "EN.O.A5.5.3 Decay heat after shutdown, carried as a source by the energy balance EN.O.A3.1."
+  },
+  {
+   "id": "EN.O.A5.5.4",
+   "label": "Shielding attenuation",
+   "uses": [],
+   "text": "EN.O.A5.5.4 Shielding attenuation for a stated source and geometry."
+  }
+ ],
+ "methods": [
+  {
+   "id": "EN.M.B1",
+   "label": "Specification",
+   "home": "M"
+  },
+  {
+   "id": "EN.M.B2",
+   "label": "Analysis",
+   "home": "M"
+  },
+  {
+   "id": "EN.M.B3",
+   "label": "Synthesis",
+   "home": "M"
+  },
+  {
+   "id": "EN.M.B4",
+   "label": "Making",
+   "home": "M"
+  },
+  {
+   "id": "EN.M.B5",
+   "label": "Assurance",
+   "home": "M"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "EN.O.A1",
+   "warrant": "W1, W4, W2",
+   "standard": "Prediction matches test within stated uncertainty; code calibration meets the target reliability index",
+   "defeaters": "Hypothesis outside range (slenderness, small strain, linearity); imperfection sensitivity; residual stress; unmodelled failure mode"
+  },
+  {
+   "cell": "EN.O.A1.1",
+   "warrant": "W1",
+   "standard": "Equilibrium closes; determinacy checked",
+   "defeaters": "Neglected inertia or flexibility; wrong support idealisation"
+  },
+  {
+   "cell": "EN.O.A1.2",
+   "warrant": "W1 + W4",
+   "standard": "Section assumption holds beyond Saint-Venant distance; test agrees",
+   "defeaters": "Stocky or short member; local buckling; stress concentration; large slope"
+  },
+  {
+   "cell": "EN.O.A1.3",
+   "warrant": "W1 + W2 + W4",
+   "standard": "Mesh convergence plus validation test (ASME V&V 10); fracture and fatigue data to ASTM methods",
+   "defeaters": "Constitutive law out of range; singularities; LEFM used beyond small-scale yielding; Paris law outside region II"
+  },
+  {
+   "cell": "EN.O.A1.4",
+   "warrant": "W1 + W4",
+   "standard": "Measured contact stiffness, friction or wear within scatter band",
+   "defeaters": "Conforming geometry; lubrication regime change; surface roughness; fitted coefficient used off-population"
+  },
+  {
+   "cell": "EN.O.A2",
+   "warrant": "W1, W2, W4",
+   "standard": "Validation against experiment with stated uncertainty (ASME V&V 20)",
+   "defeaters": "Turbulence closure outside calibration; transition; multiphase; non-Newtonian fluid"
+  },
+  {
+   "cell": "EN.O.A2.1",
+   "warrant": "W1 + W4",
+   "standard": "Head-loss prediction within correlation scatter; pump test to standard",
+   "defeaters": "Developing flow; roughness change; cavitation; Fanning–Darcy confusion"
+  },
+  {
+   "cell": "EN.O.A2.2",
+   "warrant": "W2 + W4",
+   "standard": "Wind-tunnel or flight data at matched Re and Mach",
+   "defeaters": "Scale effect; transition location; separation not captured"
+  },
+  {
+   "cell": "EN.O.A2.3",
+   "warrant": "W1 + W4",
+   "standard": "Model basin or field gauging agreement; Froude similarity respected",
+   "defeaters": "Large heel angles; non-uniform flow; scale effect on viscous resistance"
+  },
+  {
+   "cell": "EN.O.A2.4",
+   "warrant": "W1 + W4",
+   "standard": "Nozzle and shock data agree; acoustic measurement to standard",
+   "defeaters": "Real-gas effects; viscous losses; nonlinear acoustics"
+  },
+  {
+   "cell": "EN.O.A2.5",
+   "warrant": "W1 + W4",
+   "standard": "Permeability from test; pressure drop within scatter",
+   "defeaters": "Non-Darcy (inertial) regime; heterogeneity; unsaturated medium"
+  },
+  {
+   "cell": "EN.O.A3",
+   "warrant": "W1, W4",
+   "standard": "Energy balance closes within measurement uncertainty",
+   "defeaters": "Extrapolated correlation; non-equilibrium; wrong dead state"
+  },
+  {
+   "cell": "EN.O.A3.1",
+   "warrant": "W1 + W4 (property data)",
+   "standard": "Balance closes; sign convention stated",
+   "defeaters": "Missing stream; stale property data"
+  },
+  {
+   "cell": "EN.O.A3.2",
+   "warrant": "W1",
+   "standard": "Entropy generation non-negative in every component",
+   "defeaters": "Wrong reservoir temperatures; dead state undefined"
+  },
+  {
+   "cell": "EN.O.A3.3",
+   "warrant": "W1 + W4",
+   "standard": "Correlation used inside its Re/Pr range; test agrees",
+   "defeaters": "Fouling; radiation neglected; emissive power used as net exchange"
+  },
+  {
+   "cell": "EN.O.A3.4",
+   "warrant": "W1 + W4",
+   "standard": "Calorimetry and flame data agree",
+   "defeaters": "Incomplete combustion; dissociation; heat loss"
+  },
+  {
+   "cell": "EN.O.A4",
+   "warrant": "W1, W4",
+   "standard": "Prediction matches measurement; compliance test passes",
+   "defeaters": "Lumped assumption fails; parasitics; thermal drift"
+  },
+  {
+   "cell": "EN.O.A4.1",
+   "warrant": "W1 + W4",
+   "standard": "Measured response within component tolerance",
+   "defeaters": "Frequency too high; nonlinearity; resistive match used for complex source"
+  },
+  {
+   "cell": "EN.O.A4.2",
+   "warrant": "W1 + W4",
+   "standard": "Machine and transformer tests to IEC/IEEE standard",
+   "defeaters": "Saturation; leakage; unbalanced operation"
+  },
+  {
+   "cell": "EN.O.A4.3",
+   "warrant": "W1 + W2 + W4",
+   "standard": "Field-solver convergence plus range or chamber test",
+   "defeaters": "Material dispersion; boundary model; near-field use of Friis"
+  },
+  {
+   "cell": "EN.O.A4.4",
+   "warrant": "W4 + W2",
+   "standard": "Device curves within datasheet limits; TCAD calibrated",
+   "defeaters": "Temperature drift; high injection; process variation; metastability"
+  },
+  {
+   "cell": "EN.O.A5",
+   "warrant": "W4, W3, W2",
+   "standard": "Mass balance closure; pilot-scale agreement; property certificates",
+   "defeaters": "Scale-up; impurities; kinetics confused with equilibrium"
+  },
+  {
+   "cell": "EN.O.A5.1",
+   "warrant": "W4 + W3 (pilot plant)",
+   "standard": "Rate data fitted over the operating range; RTD measured",
+   "defeaters": "Catalyst deactivation; mixing limits; extrapolated temperature"
+  },
+  {
+   "cell": "EN.O.A5.2",
+   "warrant": "W1 + W4",
+   "standard": "Stage efficiency and VLE data agree",
+   "defeaters": "Non-ideal mixture treated as ideal; constant molar overflow fails"
+  },
+  {
+   "cell": "EN.O.A5.3",
+   "warrant": "W4",
+   "standard": "Property test certificates; metallography",
+   "defeaters": "Microstructure variability; grain size outside Hall–Petch range"
+  },
+  {
+   "cell": "EN.O.A5.4",
+   "warrant": "W1 + W4",
+   "standard": "Polarisation and capacity tests",
+   "defeaters": "Side reactions; ageing; temperature"
+  },
+  {
+   "cell": "EN.O.A5.5",
+   "warrant": "W2 + W4",
+   "standard": "Code validated against critical experiments; benchmark agreement",
+   "defeaters": "Cross-section uncertainty; diffusion used near boundaries"
+  }
+ ],
+ "bridges": [
+  {
+   "id": "EN.B.C1",
+   "label": "Civil and environmental engineering"
+  },
+  {
+   "id": "EN.B.C2",
+   "label": "Mechanical, aerospace and marine engineering"
+  },
+  {
+   "id": "EN.B.C3",
+   "label": "Electrical and electronic engineering"
+  },
+  {
+   "id": "EN.B.C4",
+   "label": "Chemical, materials and resources engineering"
+  },
+  {
+   "id": "EN.B.C5",
+   "label": "Industrial and systems engineering"
+  }
+ ],
+ "bridges_table": [
+  [
+   "EN.B.C1",
+   "Civil and environmental engineering: shelter, passage, water and waste on the ground. Sub-bridges: structural, geotechnical, hydraulic, transport, construction, environmental, fire protection, geomatics/surveying, built environment",
+   "O.A1, O.A2, O.A3.4, O.A5.1",
+   "M.B1, B2, B4 (construction), B5 (partial-factor codes)",
+   "ground, buildings, catchments, cities; site claims use EA; aesthetic verdict uses AR; price uses EC"
+  ],
+  [
+   "EN.B.C2",
+   "Mechanical, aerospace and marine engineering: controlled motion and work. Sub-bridges: machine design, thermal-fluid systems, automotive, aerospace (flight mechanics, aeroelasticity, propulsion, airworthiness), naval architecture and ocean, mechatronics and robotics, acoustics and tribology",
+   "O.A1, O.A2, O.A3",
+   "M.B2, B3 (control), B4 (manufacture), B5 (type test, certification)",
+   "machines, vehicles, aircraft, vessels; orbital mechanics uses PH"
+  ],
+  [
+   "EN.B.C3",
+   "Electrical and electronic engineering: power and signal transfer. Sub-bridges: power systems, electronics, communications, signal processing, photonics, control implementation, computer engineering (hardware below the ISA), cybersecurity engineering of devices",
+   "O.A4",
+   "M.B2 (circuit and load-flow), B3, B5 (EMC, IEC/IEEE type test)",
+   "grids, devices, links; above the ISA uses CS.O.A2.4; compilers use CS.M.3; protocols use CS.O.A3.4"
+  ],
+  [
+   "EN.B.C4",
+   "Chemical, materials and resources engineering: change of composition or a specified microstructure, with containment. Sub-bridges: process, separations, reaction, materials and metallurgy, nuclear, petroleum, mining and extractive metallurgy, energy storage",
+   "O.A5, with O.A1 (vessel, rock mechanics), O.A3 (heat)",
+   "M.B2, B4 (plant), B5 (HAZOP, relief sizing, criticality)",
+   "plants, reactors, mines, wells; ore genesis uses EA"
+  ],
+  [
+   "EN.B.C5",
+   "Industrial and systems engineering: coordinated operation of a human–technical system. Sub-bridges: systems engineering (life-cycle processes, MBSE, interface management, V-model), operations research applied, reliability and safety engineering, human factors, engineering management, manufacturing systems",
+   "any O cell as a constraint",
+   "M.B1, B3 (optimisation), B5",
+   "enterprises, supply chains, fleets; queueing uses MA.O.A5; optimisation uses MA.B.C4; human performance uses MS; cost uses EC/BU"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Engineering is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its object claims divide into five balances: force and deformation, mass and momentum, energy and entropy, electromagnetic state, and composition and microstructure.",
+  "key_line": "This is the key line of Face O, the claim partition of the pyramid.\n\n- Logic: inductive.\n- Plural noun: balances.\n- Dimension: the quantity whose balance or constitutive closure finishes the predictive model of an artefact.\n- Order: structural, from load path to material.\n- Members (5):\n  1. force and deformation\n  2. mass and momentum\n  3. energy and entropy\n  4. electromagnetic state\n  5. composition and microstructure\n\nTest for a new member (repairs audit EN #18). A sixth balance is warranted only if an artefact model needs a closing quantity none of the five carries. Information state passes that test and is therefore not an EN balance: it is owned by CS (uses CS.O.A2.4). Failure probability also passes it, and is owned by MA (uses MA.O.A5). Neither is held in EN by fiat.",
+  "assignment_rules": "1. A formula that predicts behaviour lives on Face O. A discretisation, optimiser or test protocol for it lives on Face M.\n2. A law owned by another pyramid is cited, not re-filed: \"uses PH.O.A1.5\" for Navier–Stokes, Bernoulli, Reynolds number and Hooke.\n3. Maxwell's equations, Faraday's law of induction and the Kirchhoff circuit laws: uses PH.O.A1.2b.\n4. Second law and Carnot limit: uses PH.O.A4.1. First law in engineering form is cited from the same owner.\n5. Arrhenius: uses CH.O.A4.2. Raoult, Nernst and Faraday's laws of electrolysis: uses CH.O.A3.1.\n6. Semiconductor band theory: uses PH.O.A4.4a. EN owns the device curve and drift–diffusion device model.\n7. Shannon–Hartley capacity and the sampling theorem: uses MA.B.C4 (MSC 94A).\n8. Little's law, utilisation ρ = λ/(cμ), Weibull and system reliability: uses MA.O.A5.\n9. LP duality, nonlinear optimisation theory and stability criteria: uses MA.B.C4 (MSC 90, 93).\n10. Error and convergence of FE, FV and Monte Carlo: uses MA.B.C3. Running them is EN.M.B2.\n11. Control theory is a synthesis method (EN.M.B3) on a plant model. It does not add a balance.\n12. A code is a calibrated verification shortcut (EN.M.B5, W12). Using a code outside its scope fails verification.\n13. Commissioning goes in EN.M.B5; startup goes in EN.M.B4. Prototype test for a closure goes in EN.M.B2; type test against a requirement goes in EN.M.B5.\n14. Design choices (endianness, state encoding, degree of reaction) are EN.M.B3 acts, not Face O facts.\n15. Software, compilers, protocols and algorithms are CS: EN.B.C3 lists them only as \"uses CS.…\".\n16. Device below the ISA is EN.O.A4.4; the Boolean function is CS.O.A2.4.\n17. Biomedical and agricultural engineering are substrate rules on C1–C4, not bridges.\n18. Built environment: the artefact meeting its use specification is EN.B.C1; the aesthetic verdict is AR; the site is EA; the price is EC.\n19. Contract, liability, product regulation and licensure duty are LA. The engineer's sign-off as a procedure is EN.M.B5.\n20. Name collisions are resolved by full names: Euler–Bernoulli beam vs Euler column buckling; Kirchhoff–Love plate vs Kirchhoff circuit laws; Faraday's law of induction vs Faraday's laws of electrolysis.",
+  "scope_boundary": "| refused claim type | owner pyramid id |\n|---|---|\n| Physical law and constant (Newton, Navier–Stokes, Maxwell, second law) | PH (PH.O.A1.1, A1.2, A1.3, A1.4b) |\n| Band theory and device physics below the device curve | PH.O.A4.4a |\n| Reaction mechanism, thermochemistry, electrochemical equilibrium | CH.O.A3.1, CH.O.A4.2 |\n| Rock and soil genesis, site history, groundwater as earth state | EA.O.A1, EA.O.A4 |\n| Theorem: probability, queueing, optimisation, control stability, information theory, numerical error | MA.O.A5, MA.B.C4, MA.B.C3 |\n| Software, algorithm, protocol, information state | CS.O.A2.4, CS.M.3 |\n| Tissue function, organism in production | BI |\n| Clinical outcome of a device | MD |\n| Human performance | MS |\n| Engineering education research | ED.B.C1 |\n| Cost, price, allocation | EC; firm accounts and procurement practice BU |\n| Contract, liability, regulation, licensure | LA |\n| Public policy on infrastructure | PO |\n| Engineering ethics as normative argument | PL |\n| Engineering history and heritage | HI |\n| Architectural aesthetic judgement | AR |\n| Teamwork, communication, lifelong learning (Washington Accord WA8, WA9, WA11) | not claims; refused as competences |",
+  "crosswalk": "Primary authority: ANZSRC 2020 Fields of Research, Division 40 Engineering (checked: https://sear.unisq.edu.au/view/for2020/for2020=5F40.html). Secondary: ABET Criteria for Accrediting Engineering Programs 2025–26, 31 program criteria (audit §5).\n\nANZSRC Division 40 groups. \"4099 Other engineering\" is a residual and is not a cell. All 19 named groups, 4001–4019, confirmed (checked 9 Oct 2026, ABS anzsrc2020_for.xlsx).\n\n| ANZSRC group | EN home | status |\n|---|---|---|\n| 4001 Aerospace engineering | EN.B.C2 | lands |\n| 4002 Automotive engineering | EN.B.C2 | lands |\n| 4003 Biomedical engineering | substrate rule on C1–C4 | lands (substrate) |\n| 4004 Chemical engineering | EN.B.C4 | lands |\n| 4005 Civil engineering | EN.B.C1 | lands |\n| 4006 Communications engineering | EN.B.C3; capacity uses MA.B.C4 | lands |\n| 4007 Control engineering, mechatronics and robotics | EN.M.B3 + EN.B.C2 | lands |\n| 4008 Electrical engineering | EN.B.C3 | lands |\n| 4009 Electronics, sensors and digital hardware | EN.O.A4.4 + EN.B.C3 | lands |\n| 4010 Engineering practice and education | practice → EN.M.B5; education research → ED | split, lands |\n| 4011 Environmental engineering | EN.B.C1 | lands |\n| 4012 Fluid mechanics and thermal engineering | EN.O.A2, EN.O.A3 | lands |\n| 4013 Geomatic engineering | EN.B.C1 (surveying); geodesy uses EA | lands |\n| 4014 Manufacturing engineering | EN.M.B4 + EN.B.C5 | lands |\n| 4015 Maritime engineering | EN.B.C2 (marine), EN.O.A2.3 | lands |\n| 4016 Materials engineering | EN.O.A5.3 + EN.B.C4 | lands |\n| 4017 Mechanical engineering | EN.B.C2 | lands |\n| 4018 Nanotechnology | EN.O.A5.3 at nanoscale; physics of the effect uses PH | partial: no nanoscale sub-cell yet |\n| 4019 Resources engineering and extractive metallurgy | EN.B.C4 | lands |\n\nCoverage: 18 of 19 named groups land fully; 1 partial (4018). 0 refused. 4099 is residual and excluded.\n\nABET program criteria (31). After the re-cut, the seven \"missing\" criteria in the audit now land: cybersecurity engineering (C3, uses CS), engineering physics (curriculum; its claims land on Face O cells; no bridge), fire protection (C1, EN.O.A3.4), geological (C4 with rock mechanics; genesis uses EA), naval architecture/marine/ocean (C2, EN.O.A2.3), optical/photonic (C3, EN.O.A4.3.4), surveying (C1). Mining now has rock mechanics (EN.O.A1.3.7). Coverage: 30 of 31 land on a cell, bridge or substrate rule; engineering physics is accounted for as a curriculum, not a bridge. Partial placements remaining: architectural (building services only via C1/A3), engineering management (C5; finance uses BU). These counts are from the audit list and are not re-checked against abet.org here.",
+  "validation": "Sizes:\n- Key line (Face O): 5.\n- Face O cells: 5 A-level + 22 sub-cells = 27 (A1: 4, A2: 5, A3: 4, A4: 4, A5: 5). Named objects (EN.O.Ax.y.z) are leaves, not counted as cells.\n- M roles: 5. Sub-groups: B1 3, B2 4, B3 4, B4 4, B5 3.\n- Heuristics: 10 (outside count).\n- W rows: 27.\n- B bridges: 5.\n\nAll groups lie within 2–5.\n\nKey-line members, word for word: force and deformation; mass and momentum; energy and entropy; electromagnetic state; composition and microstructure.\n\nOpen problems (OPEN):\n- OPEN: turbulence closure — no general predictive model of turbulent stress for engineering flows; RANS closures are calibrated models (EN.O.A2).\n- OPEN: fatigue under variable-amplitude loading — sequence effects lack a general predictive law (EN.O.A1.3.6).\n- OPEN: human reliability quantification — current numbers are heuristic (EN.B.C5; uses MS).\n\nContested placements (CONTESTED, with alternative):\n- CONTESTED: Fourier conduction EN.O.A3.3.1; alternative PH.O.A4.1.\n- CONTESTED: Darcy's law EN.O.A2.5.1; alternative EA.O.A4.\n- CONTESTED: Hertz contact EN.O.A1.4.1; alternative PH.O.A1.5.\n- CONTESTED: Mohr–Coulomb and effective stress EN.O.A1.3.7; alternative EA.O.A1.\n- CONTESTED: information state refused to CS; alternative is a sixth EN balance (v1). Rejected because CS owns the state models and a sixth member is not needed.\n- CONTESTED: operation folded into EN.M.B4 (actions) and EN.M.B5 (in-service integrity); alternative is a separate \"operate and sustain\" role, which would give six roles and need regrouping.\n- CONTESTED: biomedical and agricultural as substrate rules; alternative is separate bridges (ABET and ANZSRC list biomedical separately)."
+ },
+ "borders": [
+  {
+   "field": "PH",
+   "uses": 29
+  },
+  {
+   "field": "CH",
+   "uses": 10
+  },
+  {
+   "field": "MA",
+   "uses": 9
+  },
+  {
+   "field": "EA",
+   "uses": 3
+  },
+  {
+   "field": "CS",
+   "uses": 3
+  },
+  {
+   "field": "EC",
+   "uses": 2
+  },
+  {
+   "field": "AR",
+   "uses": 1
+  },
+  {
+   "field": "MS",
+   "uses": 1
+  },
+  {
+   "field": "BU",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "CH",
+   "uses": 3
+  },
+  {
+   "field": "EA",
+   "uses": 2
+  },
+  {
+   "field": "AR",
+   "uses": 2
+  },
+  {
+   "field": "DE",
+   "uses": 2
+  },
+  {
+   "field": "PH",
+   "uses": 1
+  },
+  {
+   "field": "ST",
+   "uses": 1
+  }
+ ],
+ "status": "working draft for expert review"
+}

@@ -1,0 +1,310 @@
+{
+ "code": "RE",
+ "name": "Religion and theology",
+ "dimension": "the object of the claim, in two modes: study and theology",
+ "cells": [
+  {
+   "id": "RE.O.A1",
+   "name": "The ultimate and the human condition"
+  },
+  {
+   "id": "RE.O.A2",
+   "name": "Authoritative text"
+  },
+  {
+   "id": "RE.O.A3",
+   "name": "Practice"
+  },
+  {
+   "id": "RE.O.A4",
+   "name": "Community and institution"
+  }
+ ],
+ "objects": [
+  {
+   "id": "RE.O.A1",
+   "label": "The ultimate and the human condition",
+   "uses": [],
+   "text": "RE.O.A1 The ultimate and the human condition"
+  },
+  {
+   "id": "RE.O.A1.1",
+   "label": "The ultimate itself",
+   "uses": [
+    "PL (arguments from shared premises)"
+   ],
+   "text": "RE.O.A1.1 | The ultimate itself | O/A1 | PL (arguments from shared premises) |"
+  },
+  {
+   "id": "RE.O.A1.2",
+   "label": "The world's relation to the ultimate",
+   "uses": [
+    "IK (whakapapa cosmogony)"
+   ],
+   "text": "RE.O.A1.2 | The world's relation to the ultimate | O/A1 | IK (whakapapa cosmogony) |"
+  },
+  {
+   "id": "RE.O.A1.3",
+   "label": "The human end",
+   "uses": [],
+   "text": "RE.O.A1.3 | The human end | O/A1 | — |"
+  },
+  {
+   "id": "RE.O.A2",
+   "label": "Authoritative text",
+   "uses": [],
+   "text": "RE.O.A2 Authoritative text"
+  },
+  {
+   "id": "RE.O.A2.1",
+   "label": "Canon and status",
+   "uses": [],
+   "text": "RE.O.A2.1 | Canon and status | O/A2 | — |"
+  },
+  {
+   "id": "RE.O.A2.2",
+   "label": "Transmission and establishment",
+   "uses": [
+    "HI.O.A1.4",
+    "LN.O.A5"
+   ],
+   "text": "RE.O.A2.2 | Transmission and establishment | O/A2 | HI.O.A1.4, LN.O.A5 |"
+  },
+  {
+   "id": "RE.O.A2.3",
+   "label": "Interpretation",
+   "uses": [
+    "LN.O.A3"
+   ],
+   "text": "RE.O.A2.3 | Interpretation | O/A2 | LN.O.A3 |"
+  },
+  {
+   "id": "RE.O.A3",
+   "label": "Practice",
+   "uses": [],
+   "text": "RE.O.A3 Practice"
+  },
+  {
+   "id": "RE.O.A3.1",
+   "label": "Worship and rite",
+   "uses": [
+    "AR (icon form)"
+   ],
+   "text": "RE.O.A3.1 | Worship and rite | O/A3 | AR (icon form) |"
+  },
+  {
+   "id": "RE.O.A3.2",
+   "label": "Discipline and formation",
+   "uses": [
+    "MS"
+   ],
+   "text": "RE.O.A3.2 | Discipline and formation | O/A3 | MS |"
+  },
+  {
+   "id": "RE.O.A3.3",
+   "label": "Conduct and law",
+   "uses": [
+    "LA.O.A1.3",
+    "PL"
+   ],
+   "text": "RE.O.A3.3 | Conduct and law | O/A3 | LA.O.A1.3, PL |"
+  },
+  {
+   "id": "RE.O.A4",
+   "label": "Community and institution",
+   "uses": [],
+   "text": "RE.O.A4 Community and institution"
+  },
+  {
+   "id": "RE.O.A4.1",
+   "label": "Authority and office",
+   "uses": [],
+   "text": "RE.O.A4.1 | Authority and office | O/A4 | — |"
+  },
+  {
+   "id": "RE.O.A4.2",
+   "label": "Membership and boundary",
+   "uses": [
+    "MS"
+   ],
+   "text": "RE.O.A4.2 | Membership and boundary | O/A4 | MS |"
+  },
+  {
+   "id": "RE.O.A4.3",
+   "label": "Continuity and division",
+   "uses": [
+    "HI"
+   ],
+   "text": "RE.O.A4.3 | Continuity and division | O/A4 | HI |"
+  }
+ ],
+ "methods": [
+  {
+   "id": "RE.M.B1",
+   "label": "Establish the text",
+   "role": "M3 Observe, M6",
+   "example": "textual criticism, manuscript study"
+  },
+  {
+   "id": "RE.M.B2",
+   "label": "Interpret",
+   "role": "M2 Derive, M6",
+   "example": "historical-critical exegesis"
+  },
+  {
+   "id": "RE.M.B3",
+   "label": "Observe practice",
+   "role": "M3 Observe",
+   "example": "ethnography, surveys of belief"
+  },
+  {
+   "id": "RE.M.B4",
+   "label": "Compare",
+   "role": "M6 Compare and reconstruct",
+   "example": "comparative religion, typology"
+  },
+  {
+   "id": "RE.M.B5",
+   "label": "Systematise and argue",
+   "role": "M1 Represent, M2 Derive",
+   "example": "theory of religion"
+  }
+ ],
+ "warrants": [
+  {
+   "cell": "RE.O.A1",
+   "warrant": "W6 + W8",
+   "standard": "W13 + W9",
+   "defeaters": "·S: comparison traced to sources; ·T: consistency with creed and argument"
+  },
+  {
+   "cell": "RE.O.A2",
+   "warrant": "W7 + W8",
+   "standard": "W13 + W8",
+   "defeaters": "·S: source criticism; ·T: reception by the community"
+  },
+  {
+   "cell": "RE.O.A3",
+   "warrant": "W4 + W8",
+   "standard": "W13 + W9",
+   "defeaters": "·S: ethnography, survey; ·T: authority of the law school or rule"
+  },
+  {
+   "cell": "RE.O.A4",
+   "warrant": "W7 + W4",
+   "standard": "W13",
+   "defeaters": "·S: dated record, sociology; ·T: the tradition's ecclesiology"
+  }
+ ],
+ "bridges": [],
+ "bridges_table": [
+  [
+   "RE.B.C1",
+   "Biblical studies",
+   "A2",
+   "B1, B2",
+   "Hebrew Bible, New Testament"
+  ],
+  [
+   "RE.B.C2",
+   "Qurʾanic and ḥadīth studies",
+   "A2",
+   "B1, B2",
+   "Qurʾan, ḥadīth"
+  ],
+  [
+   "RE.B.C3",
+   "Indology and Buddhist studies",
+   "A1–A3",
+   "B1, B2, B4",
+   "South and East Asian traditions"
+  ],
+  [
+   "RE.B.C4",
+   "Systematic theology (·T)",
+   "A1",
+   "B5",
+   "a named tradition"
+  ],
+  [
+   "RE.B.C5",
+   "Liturgical studies",
+   "A3.1",
+   "B2, B3",
+   "rites"
+  ],
+  [
+   "RE.B.C6",
+   "Anthropology and sociology of religion (·S)",
+   "A3, A4",
+   "B3",
+   "communities (uses MS)"
+  ],
+  [
+   "RE.B.C7",
+   "Comparative religion (·S)",
+   "A1–A4",
+   "B4",
+   "several traditions"
+  ],
+  [
+   "RE.B.C8",
+   "Church and religious history (·S)",
+   "A4.3",
+   "B1",
+   "the dated record (uses HI)"
+  ],
+  [
+   "RE.B.C9",
+   "Māori religious traditions",
+   "A1–A4",
+   "B1, B3",
+   "iwi, hapū (with IK; Māori-led review)"
+  ]
+ ],
+ "sections": {
+  "governing_thought": "Religion and theology is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its objects are claims about four objects of the claim: the ultimate and the human condition, authoritative text, practice, and community and institution.",
+  "key_line": "- **Logic.** Inductive.\n- **Plural noun.** objects of the claim.\n- **Dimension.** What the sentence is about.\n- **Order.** Structural, from the referent to its carriers: what is ultimate, the text that discloses it, the practice that answers it, the community that carries it.\n\n1. The ultimate and the human condition\n2. Authoritative text\n3. Practice\n4. Community and institution\n\n**MECE test.** Exclusive: by the subject rule, each sentence has one subject. \"Genesis 1 is a priestly composition\" is about a text (A2). \"God created from nothing\" is about the ultimate (A1), even when its warrant is a text. Exhaustive: religious experience is A3.2 as discipline, or MS.O.A1 as mental process. Sacred place is A1.2 (status), A3.1 (use in rite) or A4.1 (governance). Ethics and religious law are A3.3. Oral text is inside A2, which prevents a bias toward written scripture.\n\n**CONTESTED (order).** An anthropological order would run community first. The order is structural, not a ranking.",
+  "assignment_rules": "1. Place by the subject of the sentence (the ultimate, the text, the practice, the community), then by mode.\n2. ·S and ·T are never merged. The same sentence, asserted as true within a tradition, is ·T. Reported as held, it is ·S.\n3. An argument from premises any reasoner may grant (cosmological, ontological, problem of evil) is PL. The same argument from scripture is RE ·T.\n4. The dated event of a tradition's past is HI, cited by RE ·S.\n5. A civil duty arising from a religion is LA. A canon-internal duty is RE ·T.\n6. The neural or psychological process of religious experience is MS. The discipline as practice is RE.O.A3.2.\n7. A measurement offered as doctrine is refused. Its measurement goes to its science; the doctrine stays in ·T without the measurement's warrant.\n8. Comparison does not inherit any canon's W13.\n9. Māori and other Indigenous religious claims follow p2_ANZSRC45.md and need Māori-led review.\n10. Pilot repair (claim 19). A dated event in a text's history (when the Mishnah was redacted) is HI.O.A1. RE.O.A2.2 keeps claims about the transmitted text as text: variants, recensions and readings.\n11. Pilot repair (claim 46). Reporting what a theologian held is RE·S. Evaluating an argument whose premises any reasoner may grant is PL, even when a theologian made it.",
+  "scope_boundary": "| Refused | Owner |\n|---|---|\n| philosophy of religion from shared premises | PL |\n| psychology and neuroscience of religion | MS |\n| dated events of religious history | HI |\n| legal status of religion, religious freedom | LA |\n| sacred art as making and form | AR |\n| tradition-internal Indigenous knowledge outside religion | IK |",
+  "crosswalk": "**LCC class B** (Philosophy, psychology, religion): BL (religions, mythology, rationalism), BM (Judaism), BP (Islam, Bahaism, theosophy), BQ (Buddhism), BR–BX (Christianity, split across five subclasses by topic: BR, BS, BT, BV, BX). Each lands in A1–A4 as substrate. The asymmetry, with Christianity divided by topic and others by name, is refused: here every tradition is a substrate on the same four cells. The B–BJ philosophy and BF psychology subclasses are refused to PL and MS.\nCoverage: 9 of 9 religion subclasses land (BL, BM, BP, BQ, BR, BS, BT, BV, BX); BF and B–BJ are refused.\n**ANZSRC 50** Philosophy and religious studies: religious studies (5004) and theology (5005) land here, confirmed (checked 9 Oct 2026, ABS anzsrc2020_for.xlsx). 5099 Other is not a cell. Coverage: 2 of 5 substantive groups land in RE; 5001, 5002 and 5003 go to PL; applied ethics, history and philosophy of specific fields, and philosophy go to PL.",
+  "validation": "Sizes: key line 4 members. Face O 4 cells + 12 sub-cells (A1.1–A4.3), with named objects under each. M roles 5. Heuristics 4. W rows 4, each split ·S/·T. B bridges 9.\nKey line, word for word: The ultimate and the human condition. Authoritative text. Practice. Community and institution.\nFour members, not five. Comparison is a method (RE.M.B4), not an object: a comparative sentence is about one of the four objects.\nCONTESTED: Io's pre-contact antiquity; the axial age; the order canon-before-composition; acts addressed to two recipients; the place of tikanga (RE, IK or LA).\nOPEN: none at master level."
+ },
+ "borders": [
+  {
+   "field": "PL",
+   "uses": 2
+  },
+  {
+   "field": "HI",
+   "uses": 2
+  },
+  {
+   "field": "LN",
+   "uses": 2
+  },
+  {
+   "field": "MS",
+   "uses": 2
+  },
+  {
+   "field": "IK",
+   "uses": 1
+  },
+  {
+   "field": "AR",
+   "uses": 1
+  },
+  {
+   "field": "LA",
+   "uses": 1
+  }
+ ],
+ "cited_by": [
+  {
+   "field": "IK",
+   "uses": 3
+  }
+ ],
+ "status": "working draft for expert review"
+}

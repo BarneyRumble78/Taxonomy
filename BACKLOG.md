@@ -17,10 +17,19 @@
 - [ ] Build a held-out test set; the current pilot set was in view when the lexicon was written, so its scores are a regression floor only.
 - [ ] Grow the lexicon from the pyramid texts automatically (named objects, key-line terms).
 - [ ] Add a model-assisted classifier behind the same interface.
-- [ ] Serve /classify, /lookup/{id}, /audit (FastAPI suggested), backed by registry/registry.json.
-- [ ] SKOS and JSON export of the registry; DOI.
+- [x] /classify, /lookup/{id}, /audit, /map, /relate built as a Cloudflare Worker (`docs/DEPLOY.md`). Still open: deploy it and add a rate-limit rule.
+- [x] SKOS (JSON-LD) and JSON export of the registry (`public/v1`). Still open: DOI, licence, version tag.
 
 ## Website
 - [ ] Working registration (needs a backend or form service outside the artifact sandbox).
 - [ ] Real endorsements; downloadable policy and academic sample briefs.
 - [ ] Own domain.
+
+## Truth-seeking and map uses (from the owner's brief)
+- [ ] `map` finds few fields for design briefs (a test sunglasses brief matched 3 of 25). Grow the lexicon from pyramid text, then re-test on a held-out set of briefs.
+- [ ] Tools and theories per field: add a register of named objects (theorems, laws, methods, standards) to each pyramid's registry rows so `map` can list them, not only cells.
+- [ ] Rosetta view: a `translate` call that restates one concept in each adjacent field's terms, using the `uses` edges and bridges. Needs ID-level `uses` (most are field-level now).
+- [ ] Status face (current, contested, retracted, superseded), and Toulmin qualifier and rebuttal on claims.
+- [ ] Primary and secondary owner for claims with two legitimate warrants.
+- [ ] Engine faults seen in use: a "proves" claim about a tax cut went to Mathematics (the `proof` tie-break); a proof of a field result got method M3, not M2; "every finite integral domain is a field" went to analysis, not algebra. Fix them and add them as tests.
+- [ ] Reconcile the registry count. The uploaded Phase 2 file says 888 IDs; the repo builds 984.

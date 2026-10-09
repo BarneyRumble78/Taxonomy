@@ -7682,43 +7682,44 @@ One row per pyramid against R1–R12.
 
 | Pyramid | Rule | Failing sentence (quoted) and repair |
 |---|---|---|
-| PH | R11 | Dates (2012 Higgs, 1995 BEC, 1965 CMB, 1980/1982 quantum Hall, 1967 SI second) are standard but not cited to sources here. Repair: add citations. |
-| CH | R11 | The 2016 element names and the 2019 mole definition are standard but not cited here. Repair: cite IUPAC and BIPM. |
-| BI | R5 | "Island biogeography theory (MacArthur–Wilson) holds under a balance of immigration and extinction depending on isolation and area." The species-pool and independence assumptions are not stated. Repair: add "with a fixed mainland species pool and species-independent rates". Hamilton's rule hypotheses are given as "typically", which is weak; repair in v3 with a cited derivation. |
+| PH | R11 | Dates (2012 Higgs, 1995 BEC, 1965 CMB, 1980/1982 quantum Hall, 1967 SI second) are standard but not cited to sources here. Repair: add citations. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| CH | R11 | The 2016 element names and the 2019 mole definition are standard but not cited here. Repair: cite IUPAC and BIPM. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| BI | R5 | "Island biogeography theory (MacArthur–Wilson) holds under a balance of immigration and extinction depending on isolation and area." The species-pool and independence assumptions are not stated. Repair: add "with a fixed mainland species pool and species-independent rates". Hamilton's rule hypotheses are given as "typically", which is weak; repair in v3 with a cited derivation. Walked 8 October 2026. No source added. (UNVERIFIED). |
 | BI | R10 | Some table cells and rule 3 approach 25 words. "Bond, equilibrium and rate law stay in chemistry." is fine, but the Hardy–Weinberg sentence runs long. Repair: split at "with discrete generations" (done as two sentences; re-check in copy-edit). |
-| BI | R11 | Trophic efficiency, Crick 1970, codes and NSF 26-517 are sourced via the audit. Breeder's equation and Baltimore classes are standard but not checked against a cited text here. Repair: cite Falconer and Mackay; ICTV. NSF theme details beyond the audit are UNVERIFIED. |
-| EA | R5 | "Glacier flow by Glen's flow law assumes power-law creep of polycrystalline ice with exponent near 3 (UNVERIFIED exponent range)." Repair: cite Cuffey and Paterson for the exponent and temperature dependence. Darcy, Steno, central place and decay law carry hypotheses. |
-| EA | R11 | Anthropocene rejection now cited: joint IUGS–ICS statement, March 2024 (stratigraphy.org/news/152). Remaining: WMO 30-year normal and C-14 limit are standard but uncited here. |
+| BI | R11 | Trophic efficiency, Crick 1970, codes and NSF 26-517 are sourced via the audit. Breeder's equation and Baltimore classes are standard but not checked against a cited text here. Repair: cite Falconer and Mackay; ICTV. NSF theme details beyond the audit are UNVERIFIED. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| EA | R5 | "Glacier flow by Glen's flow law assumes power-law creep of polycrystalline ice with exponent near 3 (UNVERIFIED exponent range)." Repair: cite Cuffey and Paterson for the exponent and temperature dependence. Darcy, Steno, central place and decay law carry hypotheses. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| EA | R11 | Anthropocene rejection now cited: joint IUGS–ICS statement, March 2024 (stratigraphy.org/news/152). Remaining: WMO 30-year normal and C-14 limit are standard but uncited here. Walked 8 October 2026. No source added. (UNVERIFIED). |
 | EA | R12 | Cited PH, CH, EN and EC IDs are pyramid-level only, e.g. "uses PH nuclear cell". Repair: fill sub-cell IDs at registry merge. |
-| MD | R11 | The DSM-5-TR date (2022) and ICD-11 effective date are standard but not cited here. Repair: cite WHO and APA. |
+| MD | R11 | The DSM-5-TR date (2022) and ICD-11 effective date are standard but not cited here. Repair: cite WHO and APA. Walked 8 October 2026. No source added. (UNVERIFIED). |
 | EN | R1 | "Claim 41 (design life) found no cell." Repair: add a requirements home (see Pilot finding). |
-| EN | R5 | "Basquin (stress-life) and Coffin–Manson (strain-life) relations, fitted per material." Repair: add hypotheses (constant-amplitude, fully reversed loading, specimen conditions). Also "Archard wear law" lacks the regime hypothesis (dry sliding, mild wear). |
+| EN | R5 | "Basquin (stress-life) and Coffin–Manson (strain-life) relations, fitted per material." Repair: add hypotheses (constant-amplitude, fully reversed loading, specimen conditions). Also "Archard wear law" lacks the regime hypothesis (dry sliding, mild wear). Walked 8 October 2026. No source added. (UNVERIFIED). |
 | EN | R10 | Some table cells and list items exceed 25 words, e.g. the EN.B.C1 "named field" cell. Repair: split sub-bridge lists into a separate column or list. |
-| EN | R11 | Archard notation is UNVERIFIED; Joukowsky and Shockley statements are from general knowledge without a cited text. Repair: cite a standard text (e.g., Wylie and Streeter for surge; Sze for diodes). |
-| CS | R11 | Dates for FLP (1985) and the CAP proof (2002) are from memory. Repair: cite the original papers. |
-| MS | R11 | "Burger 2009; Fischer et al. 2011 meta-analysis on bystanders" is taken from the audit's production list, not a checked row. Repair: verify both citations against the journals. |
-| BU | R11 | NZ GST at 15% and UCP 600 are from memory. Repair: cite IRD and the ICC. |
+| EN | R11 | Archard notation is UNVERIFIED; Joukowsky and Shockley statements are from general knowledge without a cited text. Repair: cite a standard text (e.g., Wylie and Streeter for surge; Sze for diodes). Walked 8 October 2026. No source added. (UNVERIFIED). |
+| CS | R11 | Dates for FLP (1985) and the CAP proof (2002) are from memory. Repair: cite the original papers. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| MS | R11 | "Burger 2009; Fischer et al. 2011 meta-analysis on bystanders" is taken from the audit's production list, not a checked row. Repair: verify both citations against the journals. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| BU | R11 | NZ GST at 15% and UCP 600 are from memory. Repair: cite IRD and the ICC. Walked 8 October 2026. No source added. (UNVERIFIED). |
 | ST | R10 | Some named-object lines exceed 25 words, e.g. the A4.3 air-theory sentence listing eight cards. Repair: break card lists into separate sentences in v3. |
-| ST | R11 | "I have not verified the codex content against the source books themselves." Repair: verify each card against its source file; re-check LCC outlines and JEL rows. |
-| PO | R11 | Selectorate date (2003) and Tsebelis are from memory. Repair: cite the books. |
-| LA | R11 | The Ellis v R holding and other NZ citations are from memory. Repair: check each against the NZ Supreme Court and legislation.govt.nz. |
-| PL | R5 | "Putnam's model-theoretic argument assumes that reference is fixed only by total theory plus operational constraints (UNVERIFIED wording)." Hypothesis wording not verified. Repair: check against Putnam, "Models and Reality" (1980) before release. |
+| ST | R11 | "I have not verified the codex content against the source books themselves." Repair: verify each card against its source file; re-check LCC outlines and JEL rows. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| PO | R11 | Selectorate date (2003) and Tsebelis are from memory. Repair: cite the books. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| LA | R11 | The Ellis v R holding and other NZ citations are from memory. Repair: check each against the NZ Supreme Court and legislation.govt.nz. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| PL | R5 | "Putnam's model-theoretic argument assumes that reference is fixed only by total theory plus operational constraints (UNVERIFIED wording)." Hypothesis wording not verified. Repair: check against Putnam, "Models and Reality" (1980) before release. Walked 8 October 2026. No source added. (UNVERIFIED). |
 | PL | R10 | Some table cells exceed 25 words, e.g. the PL.B.C1 substrate list. Repair: split substrate lists into a per-bridge register in v3. |
-| PL | R11 | Several attributions carry (UNVERIFIED): Frankfurt 1969, Carnap's explication, Cohen's dates, Stoic placement, al-Ghazālī date. Repair: web-check before release. |
-| HI | R11 | Dates for Valla, Braudel, Halbwachs and Nora are from memory. Repair: check against standard references. |
-| LN | R11 | Dates for Stokoe, Fant, Labov, Grimm and Verner are from memory. Repair: check references. |
-| AR | R4 | "RILM top-level list: OPEN (not verified)." Repair: count RILM classes and land them; verify ANZSRC 4705 and the 3602 split. LCC and ANZSRC 36 coverage are stated. |
+| PL | R11 | Several attributions carry (UNVERIFIED): Frankfurt 1969, Carnap's explication, Cohen's dates, Stoic placement, al-Ghazālī date. Repair: web-check before release. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| HI | R11 | Dates for Valla, Braudel, Halbwachs and Nora are from memory. Repair: check against standard references. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| LN | R11 | Dates for Stokoe, Fant, Labov, Grimm and Verner are from memory. Repair: check references. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| AR | R4 | "RILM top-level list: OPEN (not verified)." Repair: count RILM classes and land them; verify ANZSRC 4705 and the 3602 split. LCC and ANZSRC 36 coverage are stated. Walked 8 October 2026. No source added. (UNVERIFIED). |
 | AR | R10 | Some table cells run long, e.g. the AR.B.C1 row. Repair: split long table cells into notes at v3. No self-sealing rhetoric found. |
-| AR | R11 | Dates for Alberti, Genette, Jauss, Iser, Panofsky, Baxandall, Greg, Booth, Moretti, Laban, Eliot and the *Sight and Sound* poll are from the prototype's reference knowledge, not rechecked. Repair: spot-check before v3; Rembrandt Research Project dates marked UNVERIFIED. |
-| RE | R11 | Several dates are marked UNVERIFIED in Face O (miḥna 833, Otto 1917, van Gennep 1909, Shulchan Aruch 1565, Ringatū c. 1868, Rātana 1925). Repair: check each. |
-| ED | R11 | Feedback effect claims are UNVERIFIED. Repair: cite a meta-analysis. |
-| AG | R11 | Mycoplasma bovis date UNVERIFIED. Repair: cite MPI. |
-| EV | R11 | Predator Free 2050 and the Rockström date are from memory. Repair: cite DOC and the paper. |
-| IK | R11 | Wai 262 report date UNVERIFIED. Repair: cite the Waitangi Tribunal. |
+| AR | R11 | Dates for Alberti, Genette, Jauss, Iser, Panofsky, Baxandall, Greg, Booth, Moretti, Laban, Eliot and the *Sight and Sound* poll are from the prototype's reference knowledge, not rechecked. Repair: spot-check before v3; Rembrandt Research Project dates marked UNVERIFIED. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| RE | R11 | Several dates are marked UNVERIFIED in Face O (miḥna 833, Otto 1917, van Gennep 1909, Shulchan Aruch 1565, Ringatū c. 1868, Rātana 1925). Repair: check each. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| ED | R11 | Feedback effect claims are UNVERIFIED. Repair: cite a meta-analysis. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| AG | R11 | Mycoplasma bovis date UNVERIFIED. Repair: cite MPI. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| EV | R11 | Predator Free 2050 and the Rockström date are from memory. Repair: cite DOC and the paper. Walked 8 October 2026. No source added. (UNVERIFIED). |
+| IK | R11 | Wai 262 report date UNVERIFIED. Repair: cite the Waitangi Tribunal. Walked 8 October 2026. No source added. (UNVERIFIED). |
 | IK | Review gate | "Every placement is provisional until Māori-led review." Repair: convene the review (Part 7). |
 
----
+Fact rows in the repair table were walked on 8 October 2026. Where a row still has no checked source, it stays (UNVERIFIED). This pass added no citation.
 
+---
 # Part 5 — Placement protocol
 
 This is a protocol, not a study. No coding has been done and no α is reported. Every number below is a design parameter or a comparator, not a result.

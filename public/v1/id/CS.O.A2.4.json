@@ -1,0 +1,18 @@
+{
+ "id": "CS.O.A2.4",
+ "label": "Machines and architecture",
+ "owner": "CS",
+ "home": "O/A2",
+ "uses": [],
+ "text": "CS.O.A2.4 Machines and architecture — memory hierarchy, pipelines, parallel speed-up. Amdahl's law bounds speed-up by 1/((1−p) + p/s) for a fixed workload whose fraction p is parallelisable by a factor s.",
+ "used_by": [
+  "EN.B.C3",
+  "EN.O.A4.4.3"
+ ],
+ "warrant": {
+  "warrant": "W1 + W2",
+  "standard": "proof of bound on a stated model; benchmark with stated variance",
+  "defeaters": "model mismatch with hardware, unrepresentative input"
+ },
+ "field_url": "/v1/field/CS.json"
+}

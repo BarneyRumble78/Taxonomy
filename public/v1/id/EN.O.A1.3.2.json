@@ -1,0 +1,17 @@
+{
+ "id": "EN.O.A1.3.2",
+ "label": "Isotropic linear elasticity (Hooke)",
+ "owner": "EN",
+ "home": "O.A1.3",
+ "uses": [
+  "PH.O.A1.5"
+ ],
+ "text": "EN.O.A1.3.2 Isotropic linear elasticity (Hooke). For small strain, a linear, isotropic material: σ = λ tr(ε) I + 2μ ε, with G = E / 2(1+ν). Uses PH.O.A1.5.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W1, W4, W2",
+  "standard": "Prediction matches test within stated uncertainty; code calibration meets the target reliability index",
+  "defeaters": "Hypothesis outside range (slenderness, small strain, linearity); imperfection sensitivity; residual stress; unmodelled failure mode"
+ },
+ "field_url": "/v1/field/EN.json"
+}

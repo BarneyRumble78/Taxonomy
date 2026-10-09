@@ -1,0 +1,13 @@
+{
+  "name": "taxonomy-api",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build_registry.py && python3 scripts/build_api.py",
+    "test": "node --test worker/test.mjs worker/audit.test.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": { "wrangler": "^4" }
+}

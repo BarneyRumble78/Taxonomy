@@ -1,0 +1,15 @@
+{
+ "id": "CS.O.A3.3",
+ "label": "Consistency under partition (CAP)",
+ "owner": "CS",
+ "home": "O/A3",
+ "uses": [],
+ "text": "CS.O.A3.3 Consistency under partition — CAP (Gilbert and Lynch, 2002 proof): during a network partition, a system cannot provide both linearisable consistency and availability.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W1 + W4",
+  "standard": "impossibility or protocol proof; measured behaviour in deployment",
+  "defeaters": "failure model differs from assumed one"
+ },
+ "field_url": "/v1/field/CS.json"
+}

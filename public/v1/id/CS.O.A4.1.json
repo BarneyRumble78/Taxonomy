@@ -1,0 +1,17 @@
+{
+ "id": "CS.O.A4.1",
+ "label": "Learning theory",
+ "owner": "CS",
+ "home": "O/A4",
+ "uses": [
+  "MA.O.A5"
+ ],
+ "text": "CS.O.A4.1 Learning theory — a binary concept class is PAC-learnable if and only if its VC dimension is finite (uses MA.O.A5). No-free-lunch: averaged uniformly over all objective functions, every optimiser performs equally.",
+ "used_by": [],
+ "warrant": {
+  "warrant": "W4 + W2",
+  "standard": "held-out evaluation, stated metric and variance, replication",
+  "defeaters": "data leakage, benchmark overfitting, distribution shift"
+ },
+ "field_url": "/v1/field/CS.json"
+}
