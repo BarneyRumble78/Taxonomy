@@ -5,6 +5,6 @@ A standard classification of human knowledge, built on mathematics: 25 fields, o
 - Standard: `standard/STANDARD_V2.md`
 - Fields: `pyramids/`
 - Engine: `python3 engine/taxonomy_engine.py "a sentence"`
-- Website: `python3 scripts/build_site.py`, then open `site/dist/index.html`
+- Website: `python3 scripts/build_site.py`, then open `site/dist/index.html` (company) and `site/dist/minerva/index.html` (Minerva)
 
 © 2026 Chris Townsend. Built on Barbara Minto's pyramid principle.
