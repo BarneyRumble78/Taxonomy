@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Chris Townsend, founder and CEO of Taxonomy, AI architect, New Zealand.">
-<title>About · Taxonomy</title>
+<meta name="description" content="Writing.">
+<title>Writing · Chris Townsend</title>
 <style>
 /* Layout: a 2010-era standards-body site. Fixed 960px sheet on a grey ground, blue banner, tab bar, left sidebar boxes, breadcrumb, footer link columns. Deliberately single light theme. */
 :root{
@@ -63,6 +63,7 @@ li{margin-bottom:4px}
 .box .news b{display:block;color:var(--muted);font-size:11px}
 .panel[hidden]{display:none}
 .hero{border:1px solid var(--line);background:linear-gradient(#f7f9fc,#e9eef6);padding:16px;margin-bottom:12px;display:grid;grid-template-columns:1fr 230px;gap:16px}
+.hero.solo{grid-template-columns:1fr}
 .hero>*{min-width:0}
 .hero .lead{font-size:14px}
 .hero .pull{font-family:var(--serif);font-style:italic;color:var(--navy);font-size:15px;border-left:4px solid var(--gold);padding-left:10px}
@@ -146,6 +147,8 @@ footer p a{display:inline;color:#c9d1dc}
 .badge{display:inline-block;font:bold 10px var(--sans);letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--warn);padding:1px 6px;border-radius:2px;vertical-align:middle}
 .badge.soon{background:#5a6270}
 .placeholder{border:1px dashed #8a6a0c;background:#fffbea;padding:8px 10px;margin:8px 0;font-size:12px}
+.tbc{background:#fff3cd;border:1px dashed #8a6a0c;color:#6b4e00;padding:1px 5px;font-weight:bold}
+.tbc.block{display:block;padding:8px 10px;margin:8px 0}
 .actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 @media (max-width:760px){
   .body{grid-template-columns:1fr}.side{order:2}
@@ -159,55 +162,42 @@ footer p a{display:inline;color:#c9d1dc}
 </head>
 <body>
 <div class="page">
-<div class="util"><span>Taxonomy · New Zealand</span><span><a href="/minerva/">Minerva</a></span><span><a href="/about/">About</a></span><span><a href="/contact/">Contact</a></span></div>
+<div class="util"><span>Taxonomy · New Zealand</span><span><a href="/minerva/">Minerva</a></span><span><a href="/chris-townsend/">Chris Townsend</a></span><span><a href="/contact/">Contact</a></span></div>
 <div class="banner">
   <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="drawer"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>
   <svg class="seal" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#173a6b" stroke="#c9a227" stroke-width="3"/><circle cx="30" cy="30" r="22" fill="none" stroke="#c9a227" stroke-width="1"/><polygon points="30,13 45,42 15,42" fill="#c9a227"/><line x1="20.5" y1="31" x2="39.5" y2="31" stroke="#173a6b" stroke-width="1.6"/><line x1="25.5" y1="22" x2="34.5" y2="22" stroke="#173a6b" stroke-width="1.6"/></svg>
   <a class="brand" href="/"><b>Taxonomy</b><span>An AI company · New Zealand</span></a>
   <form class="search" role="search" action="/minerva/" method="get"><label for="q" style="position:absolute;left:-9999px">Search a field</label><input id="q" name="q" placeholder="Search a field, e.g. Law"><button type="submit">Go</button></form>
 </div>
-<nav class="drawer" id="drawer" hidden aria-label="Site menu"><a href="/">Taxonomy<small>The company</small></a><a href="/minerva/">Minerva<small>Lead division</small></a><a href="/defence/">Defence<small>Division</small></a><a href="/skynet/">Skynet<small>Division</small></a><a href="/blade-runner/">Blade Runner<small>AI-agent security</small></a><a href="/about/">About<small>Chris Townsend</small></a><a href="/contact/">Contact<small>Speaking, writing, advisory</small></a></nav>
-<nav class="tabs" aria-label="Taxonomy"><a class="tab" href="/">Taxonomy</a><a class="tab" href="/minerva/">Minerva</a><a class="tab" href="/defence/">Defence</a><a class="tab" href="/skynet/">Skynet</a><a class="tab" href="/blade-runner/">Blade Runner</a><a class="tab" href="/about/" aria-current="page">About</a><a class="tab" href="/contact/">Contact</a></nav>
-<div class="crumb">You are here: <a href="/">Home</a> &gt; About</div>
+<nav class="drawer" id="drawer" hidden aria-label="Site menu"><a href="/">Home<small>Company</small></a><a href="/approach/">Approach<small>How we work</small></a><a href="/minerva/">Minerva<small>Truth-seeking and mapping</small></a><a href="/minerva/standard/">Standard<small>Minerva</small></a><a href="/minerva/browser/">Browser tool<small>Minerva</small></a><a href="/minerva/api/">API<small>Minerva</small></a><a href="/minerva/mathematics/">Mathematics<small>Minerva</small></a><a href="/minerva/claimguard/">ClaimGuard<small>Minerva</small></a><a href="/minerva/evaluation/">Evaluation<small>Minerva</small></a><a href="/minerva/changelog/">Changelog<small>Minerva</small></a><a href="/skynet/">Skynet<small>Division</small></a><a href="/defence/">Defence<small>Division</small></a><a href="/blade-runner/">Blade Runner<small>Division</small></a><a href="/medical/">Medical<small>Division</small></a><a href="/tech/">Tech<small>Division</small></a><a href="/chris-townsend/">Chris Townsend<small>Founder</small></a><a href="/chris-townsend/speaking/">Speaking<small>Chris Townsend</small></a><a href="/chris-townsend/writing/">Writing<small>Chris Townsend</small></a><a href="/chris-townsend/video/">Video<small>Chris Townsend</small></a><a href="/chris-townsend/advisory/">Advisory<small>Chris Townsend</small></a><a href="/contact/">Contact<small>Enquiry</small></a><a href="/privacy/">Privacy<small>Notice</small></a><a href="/terms/">Terms<small>Notice</small></a></nav>
+<nav class="tabs" aria-label="Taxonomy"><a class="tab" href="/">Home</a><a class="tab" href="/approach/">Approach</a><a class="tab" href="/minerva/">Minerva</a><a class="tab" href="/skynet/">Skynet</a><a class="tab" href="/defence/">Defence</a><a class="tab" href="/blade-runner/">Blade Runner</a><a class="tab" href="/medical/">Medical</a><a class="tab" href="/tech/">Tech</a><a class="tab" href="/chris-townsend/" aria-current="page">Chris</a><a class="tab" href="/contact/">Contact</a></nav>
+<div class="crumb">You are here: <a href="/">Home</a> &gt; <a href="/chris-townsend/">Chris Townsend</a> &gt; Writing</div>
 <div class="body">
 <aside class="side">
-  <div class="box"><h4>In this section</h4><div class="in"><ul>
-    <li><a href="#speaking">Speaking</a></li>
-    <li><a href="#writing">Writing</a></li>
-    <li><a href="#video">Video</a></li>
-    <li><a href="#advisory">Advisory</a></li>
+  <div class="box"><h4>Chris Townsend</h4><div class="in"><ul>
+    <li><a href="/chris-townsend/">About</a></li>
+    <li><a href="/chris-townsend/speaking/">Speaking</a></li>
+    <li><a href="/chris-townsend/writing/">Writing</a></li>
+    <li><a href="/chris-townsend/video/">Video</a></li>
+    <li><a href="/chris-townsend/advisory/">Advisory</a></li>
   </ul></div></div>
-  <div class="box"><h4>Taxonomy</h4><div class="in">
-    <p>Chris Townsend, founder and CEO. AI architect. New Zealand.</p>
-    <p><a href="/contact/">Contact</a></p>
-  </div></div>
 </aside>
 <main>
-  <h1>About Chris Townsend</h1>
-  <p class="lead">Chris Townsend is the founder and CEO of Taxonomy, and an AI architect. Taxonomy is based in New Zealand.</p>
-  <p>The knowledge standard is published by Minerva, the lead division. <a href="/minerva/">Open Minerva</a>.</p>
-
-  <h2 id="speaking">Speaking</h2>
-  <p class="placeholder"><b>Placeholder.</b> Speaking topics and booking details have not been added.</p>
-
-  <h2 id="writing">Writing</h2>
-  <p class="placeholder"><b>Placeholder.</b> Selected writing has not been added.</p>
-
-  <h2 id="video">Video</h2>
-  <p class="placeholder"><b>Placeholder.</b> Video links have not been added.</p>
-
-  <h2 id="advisory">Advisory</h2>
-  <p class="placeholder"><b>Placeholder.</b> Advisory scope has not been added.</p>
+  <h1>Writing</h1>
+  <p class="lead">Articles, essays and commissioned pieces.</p>
+  <p class="tbc block">[[LINK TO PUBLISHED WORK]]</p>
 </main>
 </div>
 <footer>
   <div class="fcols">
-    <div><b>Taxonomy</b><a href="/">Company</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
-    <div><b>Divisions</b><a href="/minerva/">Minerva</a><a href="/defence/">Defence</a><a href="/skynet/">Skynet</a><a href="/blade-runner/">Blade Runner</a></div>
-    <div><b>Minerva</b><a href="/minerva/#maths">Mathematics</a><a href="/minerva/#fields">The 25 fields</a><a href="/minerva/#try">Use the tool</a><a href="/minerva/#api">API</a></div>
-    <div><b>The standard</b><a href="/minerva/#how">How it works</a><a href="/minerva/#about">About the standard</a><a href="/minerva/#contact">Register</a></div>
+    <div><b>Taxonomy</b><a href="/">Home</a><a href="/approach/">Approach</a><a href="/chris-townsend/">About Chris</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+    <div><b>Divisions</b><a href="/minerva/">Minerva</a><a href="/skynet/">Skynet</a><a href="/defence/">Defence</a><a href="/blade-runner/">Blade Runner</a><a href="/medical/">Medical</a><a href="/tech/">Tech</a></div>
+    <div><b>Minerva</b><a href="/minerva/standard/">Standard</a><a href="/minerva/browser/">Browser tool</a><a href="/minerva/api/">API</a><a href="/minerva/mathematics/">Mathematics</a><a href="/minerva/claimguard/">ClaimGuard</a><a href="/minerva/evaluation/">Evaluation</a><a href="/minerva/changelog/">Changelog</a></div>
+    <div><b>Chris Townsend</b><a href="/chris-townsend/speaking/">Speaking</a><a href="/chris-townsend/writing/">Writing</a><a href="/chris-townsend/video/">Video</a><a href="/chris-townsend/advisory/">Advisory</a></div>
   </div>
-  <p>Taxonomy · New Zealand · © 2026 Chris Townsend. Minerva publishes the knowledge standard.</p>
+  <p>Taxonomy Ltd <span class="tbc">[[CONFIRM legal entity name]]</span> · New Zealand<br>
+  <a href="/minerva/">Minerva</a> · <a href="/skynet/">Skynet</a> · <a href="/defence/">Defence</a> · <a href="/blade-runner/">Blade Runner</a> · <a href="/medical/">Medical</a> · <a href="/tech/">Tech</a> · <a href="/chris-townsend/">About Chris</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a><br>
+  <em>Know what the evidence can actually support.</em></p>
 </footer>
 </div>
 <script>

@@ -63,6 +63,7 @@ li{margin-bottom:4px}
 .box .news b{display:block;color:var(--muted);font-size:11px}
 .panel[hidden]{display:none}
 .hero{border:1px solid var(--line);background:linear-gradient(#f7f9fc,#e9eef6);padding:16px;margin-bottom:12px;display:grid;grid-template-columns:1fr 230px;gap:16px}
+.hero.solo{grid-template-columns:1fr}
 .hero>*{min-width:0}
 .hero .lead{font-size:14px}
 .hero .pull{font-family:var(--serif);font-style:italic;color:var(--navy);font-size:15px;border-left:4px solid var(--gold);padding-left:10px}
@@ -146,6 +147,8 @@ footer p a{display:inline;color:#c9d1dc}
 .badge{display:inline-block;font:bold 10px var(--sans);letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--warn);padding:1px 6px;border-radius:2px;vertical-align:middle}
 .badge.soon{background:#5a6270}
 .placeholder{border:1px dashed #8a6a0c;background:#fffbea;padding:8px 10px;margin:8px 0;font-size:12px}
+.tbc{background:#fff3cd;border:1px dashed #8a6a0c;color:#6b4e00;padding:1px 5px;font-weight:bold}
+.tbc.block{display:block;padding:8px 10px;margin:8px 0}
 .actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 @media (max-width:760px){
   .body{grid-template-columns:1fr}.side{order:2}
@@ -165,19 +168,29 @@ footer p a{display:inline;color:#c9d1dc}
   <form class="search" role="search" id="searchf"><label for="q" style="position:absolute;left:-9999px">Search</label><input id="q" placeholder="Search a field, e.g. Law"><button type="submit">Go</button></form>
 </div>
 <nav class="drawer" id="drawer" hidden aria-label="Site menu"></nav>
-<nav class="tabs" aria-label="Taxonomy"><a class="tab" href="/">Taxonomy</a><a class="tab" href="/minerva/" aria-current="page">Minerva</a><a class="tab" href="/defence/">Defence</a><a class="tab" href="/skynet/">Skynet</a><a class="tab" href="/blade-runner/">Blade Runner</a><a class="tab" href="/about/">About</a><a class="tab" href="/contact/">Contact</a></nav>
+<nav class="tabs" aria-label="Taxonomy"><a class="tab" href="/">Home</a><a class="tab" href="/approach/">Approach</a><a class="tab" href="/minerva/" aria-current="page">Minerva</a><a class="tab" href="/skynet/">Skynet</a><a class="tab" href="/defence/">Defence</a><a class="tab" href="/blade-runner/">Blade Runner</a><a class="tab" href="/medical/">Medical</a><a class="tab" href="/tech/">Tech</a><a class="tab" href="/chris-townsend/">Chris</a><a class="tab" href="/contact/">Contact</a></nav>
 <div class="tabs" role="tablist" id="tabs" aria-label="Minerva"></div>
 <div class="crumb" id="crumb"></div>
 
 <div class="body">
 <aside class="side">
   <div class="box"><h4>Taxonomy</h4><div class="in"><ul>
-    <li><a href="/">Company</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/approach/">Approach</a></li>
     <li><a href="/minerva/">Minerva</a></li>
-    <li><a href="/defence/">Defence</a></li>
+    <li><a href="/minerva/standard/">Standard</a></li>
+    <li><a href="/minerva/browser/">Browser tool</a></li>
+    <li><a href="/minerva/api/">API</a></li>
+    <li><a href="/minerva/mathematics/">Mathematics</a></li>
+    <li><a href="/minerva/claimguard/">ClaimGuard</a></li>
+    <li><a href="/minerva/evaluation/">Evaluation</a></li>
+    <li><a href="/minerva/changelog/">Changelog</a></li>
     <li><a href="/skynet/">Skynet</a></li>
+    <li><a href="/defence/">Defence</a></li>
     <li><a href="/blade-runner/">Blade Runner</a></li>
-    <li><a href="/about/">About</a></li>
+    <li><a href="/medical/">Medical</a></li>
+    <li><a href="/tech/">Tech</a></li>
+    <li><a href="/chris-townsend/">Chris Townsend</a></li>
     <li><a href="/contact/">Contact</a></li>
   </ul></div></div>
   <div class="box"><h4>In this section</h4><div class="in"><ul id="sectionlinks"></ul></div></div>
@@ -518,7 +531,7 @@ footer p a{display:inline;color:#c9d1dc}
 <!-- ABOUT -->
 <section class="panel" id="p-about" role="tabpanel" hidden>
   <h1>About the Taxonomy</h1>
-  <p class="notice">This page is about the knowledge standard. Minerva, the lead division of Taxonomy, publishes it. The company site is <a href="/">Taxonomy</a>. A short account of Chris Townsend is on the <a href="/about/">About page</a>.</p>
+  <p class="notice">This page is about the knowledge standard. Minerva, the lead division of Taxonomy, publishes it. The company site is <a href="/">Taxonomy</a>. A short account of Chris Townsend is on the <a href="/chris-townsend/">Chris Townsend page</a>.</p>
   <p>The Taxonomy was developed by Chris Townsend, an analyst and writer based in Whanganui, New Zealand, working with Claude, Anthropic's AI model. It began as a single structure for mathematics and grew to cover 25 fields under one standard.</p>
   <h2>The standard</h2>
   <p>Standard v2 sets twelve rules that every field must meet. They include one home for each claim, exact counts, conditions stated for every theorem, open problems labelled, clear exclusions, and stable identifiers.</p>
@@ -587,8 +600,8 @@ SECTIONS.forEach(([id,name,desc])=>{
   const b=document.createElement('button');b.role='tab';b.id='t-'+id;b.textContent=name;b.setAttribute('aria-controls','p-'+id);b.addEventListener('click',()=>go(id));tabs.appendChild(b);
   const a=document.createElement('a');a.href='#'+id;a.innerHTML=name+'<small>'+desc+'</small>';a.addEventListener('click',e=>{e.preventDefault();go(id)});drawer.appendChild(a);
 });
-[['/','Taxonomy','The company'],['/minerva/','Minerva','This division'],['/defence/','Defence','Division'],['/skynet/','Skynet','Division'],['/blade-runner/','Blade Runner','AI-agent security'],['/about/','About','Chris Townsend'],['/contact/','Contact','Company contact']].slice().reverse().forEach(([href,name,desc])=>{const a=document.createElement('a');a.href=href;a.innerHTML=name+'<small>'+desc+'</small>';drawer.insertBefore(a,drawer.firstChild)});
-document.getElementById('fcols').innerHTML='<div><b>Taxonomy</b><a href="/">Company</a><a href="/minerva/">Minerva</a><a href="/defence/">Defence</a><a href="/skynet/">Skynet</a><a href="/blade-runner/">Blade Runner</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>'+[["The standard",["home","about"]],["The fields",["maths","fields","how"]],["Applications",["ai","uses","try"]],["Developers",["api","contact"]]].map(([h,ids])=>'<div><b>'+h+'</b>'+ids.map(i=>'<a data-go="'+i+'" href="#'+i+'">'+SECTIONS.find(s=>s[0]===i)[1]+'</a>').join('')+'</div>').join('');
+[['/','Home','Company'],['/approach/','Approach','How we work'],['/minerva/','Minerva','Truth-seeking and mapping'],['/minerva/standard/','Standard','Minerva'],['/minerva/browser/','Browser tool','Minerva'],['/minerva/api/','API','Minerva'],['/minerva/mathematics/','Mathematics','Minerva'],['/minerva/claimguard/','ClaimGuard','Minerva'],['/minerva/evaluation/','Evaluation','Minerva'],['/minerva/changelog/','Changelog','Minerva'],['/skynet/','Skynet','Division'],['/defence/','Defence','Division'],['/blade-runner/','Blade Runner','Division'],['/medical/','Medical','Division'],['/tech/','Tech','Division'],['/chris-townsend/','Chris Townsend','Founder'],['/chris-townsend/speaking/','Speaking','Chris Townsend'],['/chris-townsend/writing/','Writing','Chris Townsend'],['/chris-townsend/video/','Video','Chris Townsend'],['/chris-townsend/advisory/','Advisory','Chris Townsend'],['/contact/','Contact','Enquiry'],['/privacy/','Privacy','Notice'],['/terms/','Terms','Notice']].slice().reverse().forEach(([href,name,desc])=>{const a=document.createElement('a');a.href=href;a.innerHTML=name+'<small>'+desc+'</small>';drawer.insertBefore(a,drawer.firstChild)});
+document.getElementById('fcols').innerHTML='<div><b>Taxonomy</b><a href="/">Home</a><a href="/approach/">Approach</a><a href="/chris-townsend/">Chris Townsend</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div><div><b>Divisions</b><a href="/minerva/">Minerva</a><a href="/skynet/">Skynet</a><a href="/defence/">Defence</a><a href="/blade-runner/">Blade Runner</a><a href="/medical/">Medical</a><a href="/tech/">Tech</a></div>'+[["The standard",["home","about"]],["The fields",["maths","fields","how"]],["Applications",["ai","uses","try"]],["Developers",["api","contact"]]].map(([h,ids])=>'<div><b>'+h+'</b>'+ids.map(i=>'<a data-go="'+i+'" href="#'+i+'">'+SECTIONS.find(s=>s[0]===i)[1]+'</a>').join('')+'</div>').join('');
 function go(id,noScroll){
   SECTIONS.forEach(([s])=>{document.getElementById('p-'+s).hidden=s!==id;document.getElementById('t-'+s).setAttribute('aria-selected',s===id?'true':'false')});
   const S=SECTIONS.find(s=>s[0]===id);

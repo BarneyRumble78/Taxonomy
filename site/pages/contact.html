@@ -1,18 +1,41 @@
 <aside class="side">
   <div class="box"><h4>In this section</h4><div class="in"><ul>
-    <li>Company contact</li>
+    <li>Enquiry</li>
     <li><a href="/minerva/#contact">Minerva register</a></li>
   </ul></div></div>
-  <div class="box"><h4>About</h4><div class="in">
-    <p>Chris Townsend, founder and CEO. AI architect. New Zealand.</p>
-    <p><a href="/about/">About page</a></p>
-  </div></div>
 </aside>
 <main>
-  <h1>Contact</h1>
-  <p class="lead">Use this page to reach Taxonomy about the company, a division, or Chris Townsend's speaking, writing, video and advisory work.</p>
-  <p class="placeholder"><b>Placeholder.</b> No public email address has been added.</p>
-  <p class="placeholder"><b>Placeholder.</b> No public phone number has been added.</p>
-  <p class="placeholder"><b>Placeholder.</b> No postal address has been added.</p>
-  <p>The Minerva register, for the standard's briefing list, is separate. It does not send messages yet either. <a href="/minerva/#contact">Open the register</a>.</p>
+  <h1>Got a claim that matters? Let's see what it rests on.</h1>
+  <p class="lead">Tell us what you're working on: a division you're interested in, a talk, an advisory question or a press enquiry. You'll get a reply from a person, not a bot. <span class="tbc">[[CONFIRM response promise, e.g. "within two working days"]]</span></p>
+  <form id="enquiry" novalidate>
+    <label for="eName">Name<input id="eName" name="name" autocomplete="name"></label>
+    <label for="eEmail">Email<input id="eEmail" name="email" type="email" autocomplete="email"></label>
+    <label for="eOrg">Organisation<input id="eOrg" name="organisation" autocomplete="organization"></label>
+    <label for="eType">Enquiry type<select id="eType" name="enquiry">
+      <option>Division</option>
+      <option>Speaking</option>
+      <option>Advisory</option>
+      <option>Press</option>
+    </select></label>
+    <label for="eDiv">Division, if that is the enquiry<select id="eDiv" name="division">
+      <option>Minerva</option>
+      <option>Skynet</option>
+      <option>Defence</option>
+      <option>Blade Runner</option>
+      <option>Medical</option>
+      <option>Tech</option>
+    </select></label>
+    <label for="eNote">Message<textarea id="eNote" name="message" rows="4"></textarea></label>
+    <p><button class="btn" type="submit">Start a conversation →</button></p>
+    <p id="emsg" role="status"></p>
+  </form>
+  <p>The Minerva register, for the standard's briefing list, is separate. <a href="/minerva/#contact">Open the register</a>.</p>
 </main>
+<script>
+document.getElementById('enquiry').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=document.getElementById('eName').value.trim();
+  var m=document.getElementById('eEmail').value.trim();
+  document.getElementById('emsg').textContent=(n&&m)?('Thank you, '+n+'. This form does not send yet. Nothing has been delivered.'):'Please enter your name and email.';
+});
+</script>

@@ -1,10 +1,37 @@
-"""The built site keeps Minerva intact and adds the company pages."""
+"""The built site keeps Minerva intact and follows the company site map."""
 import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "site" / "dist"
+
+PAGES = [
+    "index.html",
+    "approach/index.html",
+    "minerva/index.html",
+    "minerva/standard/index.html",
+    "minerva/browser/index.html",
+    "minerva/api/index.html",
+    "minerva/mathematics/index.html",
+    "minerva/claimguard/index.html",
+    "minerva/evaluation/index.html",
+    "minerva/changelog/index.html",
+    "skynet/index.html",
+    "defence/index.html",
+    "blade-runner/index.html",
+    "medical/index.html",
+    "tech/index.html",
+    "chris-townsend/index.html",
+    "chris-townsend/speaking/index.html",
+    "chris-townsend/writing/index.html",
+    "chris-townsend/video/index.html",
+    "chris-townsend/advisory/index.html",
+    "contact/index.html",
+    "privacy/index.html",
+    "terms/index.html",
+    "404.html",
+]
 
 
 def setup_module():
@@ -35,38 +62,76 @@ def test_minerva_keeps_the_tool_and_standard():
     assert "Inspect a claim" in page
     assert "Connect to your agent" in page
     assert ".drawer[hidden]{display:none !important}" in page
-    # The old account of the standard stays on the page.
     assert "Three things you can do with it" in page
     assert "63/63" in page
     assert "The Taxonomy" not in page
+    assert 'href="/chris-townsend/"' in page
+    assert 'href="/about/"' not in page
 
 
-def test_company_pages_and_old_paths():
+def test_homepage_follows_the_draft():
     home = read("index.html")
-    assert "Taxonomy is an AI company. Minerva leads." in home
+    assert "Know what the evidence can actually support." in home
+    assert "Taxonomy is a New Zealand AI company." in home
+    assert 'href="/minerva/standard/">Explore the standard →' in home
+    assert 'href="/contact/">Talk to Chris →' in home
+    assert "You're handed claims all day." in home
+    assert "We put a label on every claim." in home
+    assert "Three reasons to work with us." in home
+    assert "62.1%" in home and "37.9%" in home and "203 claims" in home
+    assert 'href="/minerva/evaluation/">See the evaluation →' in home
+    assert "One method. Six divisions." in home
+    assert "I'm Chris Townsend, founder and CEO of Taxonomy" in home
+    assert "Got a claim that matters?" in home
+    assert "[[CONFIRM final evidence-type list from the standard]]" in home
+    assert "[[ONE-LINE OFFER TO CONFIRM]]" in home
+    assert "[[PHOTO OF CHRIS]]" in home
+    assert "[[BAIT PIECE:" in home
+    assert 'class="tbc"' in home
+    assert "Formula:" not in home
+    assert "trademark" not in home.lower()
     assert 'location.replace("/minerva/#"+h)' in home
-    assert "Chris Townsend" in home
-    assert "ClaimGuard" in home
-    for rel, line in (
-        ("defence/index.html", "Defence is a division of Taxonomy."),
-        ("skynet/index.html", "Skynet is a division of Taxonomy."),
-        ("blade-runner/index.html", "Blade Runner is Taxonomy's division for AI-agent security."),
-        ("about/index.html", "Placeholder."),
-        ("contact/index.html", "No public email address has been added."),
-        ("404.html", "Page not found"),
+    assert "How sure should you be?" not in home
+    assert "<h3>The rule</h3>" not in home
+
+
+def test_site_map_pages_and_redirects():
+    for rel in PAGES:
+        assert (DIST / rel).is_file(), rel
+    assert not (DIST / "about" / "index.html").exists()
+    redirects = read("_redirects")
+    for line in (
+        "/try /minerva/#try 301",
+        "/api /minerva/#api 301",
+        "/maths /minerva/#maths 301",
+        "/fields /minerva/#fields 301",
+        "/how /minerva/#how 301",
+        "/ai /minerva/#ai 301",
+        "/uses /minerva/#uses 301",
+        "/register /minerva/#contact 301",
+        "/defense /defence/ 301",
+        "/about /chris-townsend/ 301",
+        "/about/ /chris-townsend/ 301",
     ):
-        text = read(rel)
-        assert line in text
-        assert "Coming soon." in text or rel in ("about/index.html", "contact/index.html", "404.html")
+        assert line in redirects
     skynet = read("skynet/index.html")
     assert "trademark" not in skynet.lower()
-    main = skynet.split("<main>", 1)[1].split("</main>", 1)[0]
-    assert main.count("Skynet") == 2
-    assert "Coming soon." in main
-    redirects = read("_redirects")
-    assert "/try /minerva/#try 301" in redirects
-    assert "/api /minerva/#api 301" in redirects
-    assert "/defense /defence/ 301" in redirects
-    about = read("about/index.html")
+    assert "[[NAME UNDER REVIEW]]" in skynet
+    assert "[[NAME CHECK]]" in read("blade-runner/index.html")
+    evaluation = read("minerva/evaluation/index.html")
+    assert "62.1%" in evaluation and "37.9%" in evaluation
+    contact = read("contact/index.html")
+    for option in ("Division", "Speaking", "Advisory", "Press"):
+        assert f"<option>{option}</option>" in contact
+    assert "This form does not send yet." in contact
+    assert "[[CONFIRM contact address]]" not in contact
+    chris = read("chris-townsend/index.html")
     for heading in ("Speaking", "Writing", "Video", "Advisory"):
-        assert heading in about
+        assert heading in chris
+    for rel in PAGES:
+        if rel == "minerva/index.html":
+            continue
+        page = read(rel)
+        assert ".drawer[hidden]{display:none !important}" in page
+        assert 'id="menubtn"' in page
+        assert "Formula:" not in page
