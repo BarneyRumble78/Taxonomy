@@ -6,7 +6,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "engine"))
 import taxonomy_engine as te
 from adjudicator import (
-    SYSTEM, agree_samples, adjudication_messages, message_id, parse_sample, provider_from_env,
+    REQUIRED_WARRANT, SYSTEM, AnthropicChat, ProviderError, agree_samples, adjudication_messages,
+    catalog_text, message_id, parse_sample, provider_from_env, thinking_config,
 )
 
 CASES = json.loads((ROOT / "tests" / "adjudication_cases.json").read_text(encoding="utf-8"))
@@ -45,6 +46,11 @@ def test_prompt_keeps_the_claim_in_data():
     assert body["claim"] == claim
     assert body["definitions"] == definitions
     assert claim not in messages[0]["content"]
+    assert "MA Mathematics." in catalog_text()
+    assert "MA.O.A1 Foundations" in catalog_text()
+    assert "W4 Measurement or observation with stated uncertainty." in catalog_text()
+    assert "legal requires W10." in catalog_text()
+    assert catalog_text() in messages[0]["content"]
     assert len(message_id(messages)) == 64
 
 
@@ -155,3 +161,114 @@ def test_parse_rejects_a_non_object():
     assert parse_sample("[1, 2, 3]") is None
     assert parse_sample('{"owner": "MA"}')["owner"] == "MA"
     assert parse_sample('{"owner": "MA"}')["warrant"] is None
+
+
+def test_anthropic_omits_temperature_and_caches_the_catalogue(monkeypatch):
+    captured = {}
+
+    def fake_post(url, headers, body, timeout=60):
+        captured["url"] = url
+        captured["body"] = body
+        return {
+            "content": [{"type": "tool_use", "name": "place_claim", "input": {
+                "owner": "LA", "cell": "LA.O.A2", "warrant": "W10", "claim_type": "legal",
+            }}],
+            "usage": {"input_tokens": 10, "output_tokens": 8},
+            "model": "claude-haiku-4-5",
+        }
+
+    monkeypatch.setattr("adjudicator._post", fake_post)
+    text, _usage = AnthropicChat("test-key", "claude-haiku-4-5")(adjudication_messages("A statute.", []))
+    body = captured["body"]
+    assert "temperature" not in body
+    assert body["thinking"] == {"type": "disabled"}
+    assert body["max_tokens"] == 1024
+    assert body["tool_choice"] == {"type": "tool", "name": "place_claim"}
+    schema = body["tools"][0]["input_schema"]
+    assert schema["properties"]["owner"]["enum"][0] == "MA"
+    assert "LA.O.A2" in schema["properties"]["cell"]["enum"]
+    assert "PH.2.1" not in schema["properties"]["cell"]["enum"]
+    assert body["system"][0]["cache_control"] == {"type": "ephemeral"}
+    assert "MA.O.A1 Foundations" in body["system"][0]["text"]
+    assert "claim_type" in body["system"][1]["text"]
+    parsed = parse_sample(text)
+    assert parsed["claim_type"] == "legal"
+    assert REQUIRED_WARRANT["legal"] == "W10"
+
+
+def test_sonnet_55_thinking_is_configurable(monkeypatch):
+    assert thinking_config("claude-sonnet-5.5") == {"type": "between_tools"}
+    assert thinking_config("claude-sonnet-5-5") == {"type": "between_tools"}
+    assert thinking_config("claude-haiku-4-5") == {"type": "disabled"}
+    monkeypatch.setenv("TAXONOMY_THINKING", "off")
+    assert thinking_config("claude-sonnet-5.5") is None
+    monkeypatch.setenv("TAXONOMY_THINKING", "disabled")
+    assert thinking_config("claude-sonnet-5.5") == {"type": "disabled"}
+    monkeypatch.setenv("TAXONOMY_ADJUDICATE_MAX_TOKENS", "2048")
+    from adjudicator import max_tokens_for
+    assert max_tokens_for("claude-sonnet-5.5") == 2048
+
+
+def test_provider_error_is_not_an_abstention(monkeypatch, tmp_path):
+    monkeypatch.setattr(te, "embed_queries", lambda texts: [[1.0] + [0.0] * 383 for _ in texts])
+
+    def fake(messages):
+        raise ProviderError("HTTP 400: `temperature` is deprecated")
+
+    detail = te.place_detail("The particle has a gene.", adjudicator=fake)
+    assert detail["placement"] is None
+    assert detail["reason"] == "error"
+    assert detail["adjudication"]["status"] == "error"
+    assert "temperature" in detail["adjudication"]["error"]
+    path = tmp_path / "one.tsv"
+    path.write_text(
+        "id\tclaim\towner\tcell\twarrant\tmethod\n"
+        "X\tThe particle has a gene.\tBI\tBI.O.A1\tW3\tM4\n",
+        encoding="utf-8",
+    )
+    report = te.evaluate(path, adjudicator=fake)
+    assert report["errors"] == 1
+    assert report["abstain"] == 0
+    assert report["reasons"]["error"] == 1
+    assert "low_confidence" not in report["reasons"]
+
+
+def test_selected_fields_are_verified_and_carry_required_warrant(monkeypatch):
+    monkeypatch.setattr(te, "embed_queries", lambda texts: [[0.0] * 384 for _ in texts])
+    monkeypatch.setattr(te, "retrieve_field", lambda vector, index=None: "LA")
+    gst = "The importer must pay GST at the border under the Goods and Services Tax Act 1985."
+
+    def confirm(messages):
+        body = json.loads(messages[1]["content"])
+        assert body["proposal"]["owner"] == "LA"
+        assert "MA.O.A1 Foundations" in messages[0]["content"]
+        return '{"owner":"LA","cell":"LA.O.A2","warrant":"W9","claim_type":"legal"}'
+
+    detail = te.place_detail(gst, adjudicator=confirm)
+    assert detail["placement"]["owner"] == "LA"
+    assert detail["placement"]["claim_type"] == "legal"
+    assert detail["placement"]["required_warrant"] == "W10"
+    assert detail["placement"]["warrant"] == "W9"
+    assert detail["retrieval"]["status"] == "verified"
+
+    owners = ["ST", "PO", "EC"]
+    n = {"i": 0}
+
+    def split(messages):
+        owner = owners[n["i"] % 3]
+        n["i"] += 1
+        return f'{{"owner":"{owner}","cell":"none","warrant":"W9","claim_type":"event"}}'
+
+    kept = te.place_detail(gst, adjudicator=split)
+    assert kept["placement"]["owner"] == "LA"
+    assert kept["placement"]["adjudicated"] is False
+    assert kept["adjudication"]["status"] == "disagree"
+    assert kept["reason"] is None
+
+    def boom(messages):
+        raise ProviderError("HTTP 400")
+
+    still = te.place_detail(gst, adjudicator=boom)
+    assert still["placement"]["owner"] == "LA"
+    assert still["reason"] is None
+    assert still["adjudication"]["status"] == "error"

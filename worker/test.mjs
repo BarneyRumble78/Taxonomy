@@ -133,6 +133,50 @@ test("an agreed placement is not overridden by the adjudicator", async () => {
   assert.equal(body.placement.adjudicated, false);
 });
 
+test("a law placement is verified and carries the required warrant", async () => {
+  const la = index.vectors[index.fields.indexOf("LA")];
+  let n = 0;
+  const env = {
+    embedQuery: async () => la,
+    adjudicate: async (messages) => {
+      n += 1;
+      const body = JSON.parse(messages[1].content);
+      assert.equal(body.proposal.owner, "LA");
+      assert.equal(messages[0].content.includes("MA.O.A1 Foundations"), true);
+      return '{"owner":"LA","cell":"LA.O.A2","warrant":"W10","claim_type":"legal"}';
+    },
+  };
+  const res = await post("The importer must pay GST at the border under the Goods and Services Tax Act 1985.", {}, env);
+  const body = await res.json();
+  assert.equal(n, 3);
+  assert.equal(body.placement.owner, "LA");
+  assert.equal(body.placement.required_warrant, "W10");
+  assert.equal(body.placement.claim_type, "legal");
+  assert.equal(body.retrieval.status, "verified");
+});
+
+test("a provider error is not reported as an abstention", async () => {
+  const env = { adjudicate: async () => { throw new Error("HTTP 400"); } };
+  const res = await post("The particle has a gene.", {}, env);
+  const body = await res.json();
+  assert.equal(body.placement, null);
+  assert.equal(body.reason, "error");
+  assert.equal(body.adjudication.status, "error");
+});
+
+test("a verification error keeps the rule placement", async () => {
+  const la = index.vectors[index.fields.indexOf("LA")];
+  const env = {
+    embedQuery: async () => la,
+    adjudicate: async () => { throw new Error("HTTP 400"); },
+  };
+  const res = await post("The importer must pay GST at the border under the Goods and Services Tax Act 1985.", {}, env);
+  const body = await res.json();
+  assert.equal(body.placement.owner, "LA");
+  assert.equal(body.reason, undefined);
+  assert.equal(body.adjudication.status, "error");
+});
+
 test("input limit", async () => {
   const res = await post("a".repeat(1001), {}, {});
   assert.equal(res.status, 400);

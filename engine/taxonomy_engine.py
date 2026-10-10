@@ -4,9 +4,11 @@ rule_placement matches a cue at a left boundary. A light inflection may follow
 (theorem/theorems). A truncated stem may continue a word (topolog/topology).
 An exact cue may not: "force" does not match "forces".
 classify abstains when the cue-score ratio is under 0.40 or retrieval disagrees,
-then may ask a pluggable model to adjudicate that queue. Samples must agree.
+then may ask a pluggable model to adjudicate that queue. Placements in
+PO, ST, IS, EC, HI, LA and CS are sent for verification as well. Samples must agree.
 A warrant cue is recorded as such. If none fired, the field default is reported
-and default_applied is true. The method is the one that warrant uses.
+and default_applied is true. required_warrant is the warrant the claim type requires.
+The method is the one that warrant uses.
 
 The browser page runs stage_rule only. It has no retrieval model.
 engine/rules.mjs is the JavaScript copy of the rule stage. Keep them in step.
@@ -396,6 +398,8 @@ def _decorate(p):
         "warrant": warrant,
         "warrant_name": WARRANT_NAMES.get(warrant) if warrant else None,
         "default_applied": bool(p.get("default_applied")),
+        "claim_type": p.get("claim_type"),
+        "required_warrant": p.get("required_warrant"),
         "method": method,
         "method_name": METHOD_NAMES.get(method) if method else None,
         "confidence": p["confidence"],
@@ -406,6 +410,8 @@ def _decorate(p):
 
 
 QUEUE_REASONS = ("low_confidence", "stages_disagree", "no_cue")
+# Rule placements in these fields are checked by the model, not only abstentions.
+VERIFY_OWNERS = frozenset({"PO", "ST", "IS", "EC", "HI", "LA", "CS"})
 _CHUNKS = None
 _OFF = {"0", "false", "off", "no"}
 
@@ -503,32 +509,45 @@ def _complete(call, messages):
     return raw, {}
 
 
+def _model_reason(item):
+    """Why a configured model should see this sentence, or None."""
+    if item["reason"] in QUEUE_REASONS:
+        return item["reason"]
+    placement = item.get("placement")
+    if placement and placement.get("owner") in VERIFY_OWNERS:
+        return "verify"
+    return None
+
+
 def place_many(sentences, adjudicator=None):
-    """Full cascade. The model runs only on the abstention queue, and only if configured.
+    """Full cascade. The model runs on the abstention queue and on selected placements.
 
     low_confidence, stages_disagree and no_cue are the queue. An instruction
-    heuristic hit and a multi-sentence split are not. Three samples must agree
-    on the owner. If the embedding model cannot be loaded, a sentence that
-    passed the rule stage is kept and retrieval is marked unavailable.
+    heuristic hit and a multi-sentence split are not. A rule placement in
+    PO, ST, IS, EC, HI, LA or CS is verified as well. Three samples must agree
+    on the owner. A provider error is reported as reason "error", not as an
+    abstention. If verification fails, the rule placement is kept.
+    If the embedding model cannot be loaded, a sentence that passed the rule
+    stage is kept and retrieval is marked unavailable.
     """
     call = _caller(adjudicator)
     prepared = _prepare(sentences, embed_queue=call is not None)
     from adjudicator import N_SAMPLES, adjudication_messages, agree_samples
     out = []
     for sentence, item in zip(sentences, prepared):
-        if item["placement"]:
-            out.append({
-                "placement": _decorate(item["placement"]),
-                "reason": None,
-                "retrieval": item["retrieval"],
-            })
-            continue
-        reason = item["reason"]
-        if call is None or reason not in QUEUE_REASONS:
-            out.append({"placement": None, "reason": reason})
+        reason = _model_reason(item) if call is not None else None
+        if reason is None:
+            if item["placement"]:
+                out.append({
+                    "placement": _decorate(item["placement"]),
+                    "reason": None,
+                    "retrieval": item["retrieval"],
+                })
+            else:
+                out.append({"placement": None, "reason": item["reason"]})
             continue
         definitions = retrieve_definitions(item["vector"]) if item.get("vector") is not None else []
-        messages = adjudication_messages(sentence, definitions)
+        messages = adjudication_messages(sentence, definitions, proposal=item.get("placement"))
         samples, usage = [], []
         try:
             for _ in range(N_SAMPLES):
@@ -539,35 +558,54 @@ def place_many(sentences, adjudicator=None):
         except Exception as exc:
             if isinstance(exc, AssertionError):
                 raise
-            out.append({"placement": None, "reason": reason, "adjudication": {"status": "error"}})
+            record = {"status": "error", "error": str(exc)[:500]}
+            if item["placement"]:
+                out.append({
+                    "placement": _decorate(item["placement"]),
+                    "reason": None,
+                    "retrieval": item["retrieval"],
+                    "adjudication": record,
+                })
+            else:
+                out.append({"placement": None, "reason": "error", "adjudication": record})
             continue
         agreed = agree_samples(samples)
         if not agreed:
-            out.append({"placement": None, "reason": reason, "adjudication": {"status": "disagree"}})
+            record = {"status": "disagree"}
+            if item["placement"]:
+                out.append({
+                    "placement": _decorate(item["placement"]),
+                    "reason": None,
+                    "retrieval": item["retrieval"],
+                    "adjudication": record,
+                })
+            else:
+                out.append({"placement": None, "reason": item["reason"], "adjudication": record})
             continue
         out.append({
             "placement": _decorate(agreed),
             "reason": None,
-            "retrieval": {"status": "adjudicated"},
+            "retrieval": {"status": "verified" if reason == "verify" else "adjudicated"},
             "adjudication": {"status": "agree", "usage": usage},
         })
     return out
 
 
 def adjudication_jobs(sentences):
-    """Prompts for the queue. Does not call a model."""
+    """Prompts for the queue and for fields that are verified. Does not call a model."""
     from adjudicator import adjudication_messages, message_id
     prepared = _prepare(sentences, embed_queue=True)
     jobs = []
     for i, (sentence, item) in enumerate(zip(sentences, prepared)):
-        if item["placement"] or item["reason"] not in QUEUE_REASONS:
+        reason = _model_reason(item)
+        if reason is None:
             continue
         definitions = retrieve_definitions(item["vector"]) if item.get("vector") is not None else []
-        messages = adjudication_messages(sentence, definitions)
+        messages = adjudication_messages(sentence, definitions, proposal=item.get("placement"))
         jobs.append({
             "index": i,
             "claim": sentence,
-            "reason": item["reason"],
+            "reason": reason,
             "messages": messages,
             "id": message_id(messages),
         })
@@ -616,12 +654,21 @@ def evaluate(path, adjudicator=None):
     answered_hit = {"owner": 0, "cell": 0, "warrant": 0, "method": 0}
     reasons = {}
     n_default = n_cue = w_default = w_cue = 0
+    errors = 0
+    provider_errors = 0
     for r, d in zip(rows, placed):
-        key = "placed" if d.get("placement") else (d.get("reason") or "abstain")
-        reasons[key] = reasons.get(key, 0) + 1
+        if (d.get("adjudication") or {}).get("status") == "error":
+            provider_errors += 1
         p = d.get("placement")
         if not p:
+            if d.get("reason") == "error":
+                errors += 1
+                reasons["error"] = reasons.get("error", 0) + 1
+            else:
+                key = d.get("reason") or "abstain"
+                reasons[key] = reasons.get(key, 0) + 1
             continue
+        reasons["placed"] = reasons.get("placed", 0) + 1
         answered += 1
         if p.get("default_applied"):
             n_default += 1
@@ -636,7 +683,9 @@ def evaluate(path, adjudicator=None):
     n = len(rows)
     return {
         "n": n,
-        "abstain": n - answered,
+        "abstain": n - answered - errors,
+        "errors": errors,
+        "provider_errors": provider_errors,
         "reasons": reasons,
         "headline_counts": hit,
         "headline": {k: v / n for k, v in hit.items()},
@@ -662,7 +711,10 @@ if __name__ == "__main__":
     elif a[0] == "--eval":
         report = evaluate(a[1])
         n, answered = report["n"], report["answered_n"]
-        print(f"n {n} answered {answered} abstain {report['abstain']} ({report['abstain'] / n:.1%})")
+        print(
+            f"n {n} answered {answered} abstain {report['abstain']} ({report['abstain'] / n:.1%})"
+            f" errors {report['errors']}"
+        )
         print("reasons " + " ".join(f"{k}={v}" for k, v in sorted(report["reasons"].items())))
         for k in report["headline"]:
             h, ans = report["headline_counts"][k], report["answered_counts"][k]

@@ -12,7 +12,7 @@ import {
   adjudicate, instructionHeuristic, retrieveField, stageRule,
 } from "../engine/rules.mjs";
 import {
-  QUEUE_REASONS, SAMPLE_COUNT, adjudicationMessages, agreeSamples, retrieveDefinitions,
+  QUEUE_REASONS, SAMPLE_COUNT, VERIFY_OWNERS, adjudicationMessages, agreeSamples, retrieveDefinitions,
 } from "../engine/adjudicate.mjs";
 import texts from "../engine/retrieval_text.json" with { type: "json" };
 
@@ -21,6 +21,7 @@ const EMBED_MODEL = "@cf/baai/bge-small-en-v1.5";
 const ASSIST_MODEL = "@cf/meta/llama-3.1-8b-instruct";
 const ADJUDICATE_MODEL = "@cf/meta/llama-3.1-8b-instruct-fp8";
 const QUEUE = new Set(QUEUE_REASONS);
+const VERIFY = new Set(VERIFY_OWNERS);
 const CODES = Object.keys(site.p);
 
 const CORS = {
@@ -40,6 +41,7 @@ const NOTES = {
   low_confidence: "Cue scores are too close. No field is assigned. " + CONFIDENCE_NOTE,
   multi_sentence: "The sentences do not share one owner. No field is assigned.",
   stages_disagree: "The rule stage and the retrieval stage disagree. No field is assigned.",
+  error: "The model could not be asked. No field is assigned. This is not an abstention.",
 };
 
 const json = (obj, status = 200) =>
@@ -60,6 +62,8 @@ function decorate(p) {
     warrant: p.warrant,
     warrant_name: p.warrant ? (WARRANT_NAMES[p.warrant] || null) : null,
     default_applied: !!p.default_applied,
+    claim_type: p.claim_type || null,
+    required_warrant: p.required_warrant || null,
     method: p.method,
     method_name: p.method ? (METHOD_NAMES[p.method] || null) : null,
     confidence: p.confidence ?? null,
@@ -90,11 +94,18 @@ async function sampleOnce(env, messages) {
 
 async function takeSamples(env, messages) {
   const runs = [];
-  for (let i = 0; i < SAMPLE_COUNT; i++) {
-    try { runs.push(await sampleOnce(env, messages)); }
-    catch { runs.push(""); }
-  }
+  for (let i = 0; i < SAMPLE_COUNT; i++) runs.push(await sampleOnce(env, messages));
   return runs;
+}
+
+function applySamples(decision, samples) {
+  const agreed = agreeSamples(samples);
+  if (!agreed) {
+    if (decision.placement) return { ...decision, adjudication: { status: "disagree" } };
+    return { placement: null, reason: decision.reason, adjudication: { status: "disagree" } };
+  }
+  const status = decision.placement ? "verified" : "adjudicated";
+  return { placement: agreed, reason: null, retrieval: { status }, adjudication: { status: "agree" } };
 }
 
 async function readInput(request, url) {
@@ -176,14 +187,20 @@ async function classifyRoute(request, url, env) {
   let decision = staged.reason
     ? { placement: null, reason: staged.reason }
     : adjudicate(staged, vector ? retrieveField(vector, index) : null);
-  if (!decision.placement && on && QUEUE.has(decision.reason)) {
+  const verify = decision.placement && VERIFY.has(decision.placement.owner);
+  if (on && ((decision.reason && QUEUE.has(decision.reason)) || verify)) {
     const definitions = vector ? retrieveDefinitions(vector, index, texts) : [];
-    const samples = await takeSamples(env, adjudicationMessages(inp.value, definitions));
-    const agreed = agreeSamples(samples);
-    if (agreed) decision = { placement: agreed, reason: null, retrieval: { status: "adjudicated" } };
+    try {
+      const samples = await takeSamples(env, adjudicationMessages(inp.value, definitions, decision.placement));
+      decision = applySamples(decision, samples);
+    } catch {
+      if (decision.placement) decision = { ...decision, adjudication: { status: "error" } };
+      else decision = { placement: null, reason: "error", adjudication: { status: "error" } };
+    }
   }
   if (!decision.placement) {
     const out = { placement: null, reason: decision.reason, note: NOTES[decision.reason] || NOTES.no_cue };
+    if (decision.adjudication) out.adjudication = { status: decision.adjudication.status };
     return json(await withAssist(out, env, url, inp.value));
   }
   const placement = decorate(decision.placement);
@@ -192,6 +209,7 @@ async function classifyRoute(request, url, env) {
     retrieval: decision.retrieval,
     method_note: placement.confidence_note || CONFIDENCE_NOTE,
   };
+  if (decision.adjudication) out.adjudication = { status: decision.adjudication.status };
   return json(await withAssist(out, env, url, inp.value, placement.owner));
 }
 
