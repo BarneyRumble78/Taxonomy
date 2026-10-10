@@ -206,6 +206,18 @@ test("a disagreeing retrieval lets the model place", async () => {
   assert.equal(body.placement.required_warrant, "W7");
 });
 
+test("a default worker does not call a model", async () => {
+  const env = {
+    AI: { run: async () => { throw new Error("must not spend"); } },
+  };
+  const res = await post("Russian forces control Zarichne.", {}, env);
+  const body = await res.json();
+  assert.equal(body.placement.owner, "ST");
+  assert.notEqual(body.placement.owner, "PH");
+  assert.equal(body.placement.adjudicated, false);
+  assert.equal(body.retrieval.status, "unavailable");
+});
+
 test("input limit", async () => {
   const res = await post("a".repeat(1001), {}, {});
   assert.equal(res.status, 400);

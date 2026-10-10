@@ -150,13 +150,19 @@ def test_no_key_and_off_flag_do_not_build_a_provider(monkeypatch):
     ):
         monkeypatch.delenv(key, raising=False)
     assert provider_from_env() is None
-    monkeypatch.setenv("TAXONOMY_ADJUDICATE", "0")
     monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-ant-test")
+    monkeypatch.setenv("CLOUDFLARE_API_TOKEN", "token")
+    monkeypatch.setenv("CLOUDFLARE_ACCOUNT_ID", "account")
+    assert provider_from_env() is None
+    monkeypatch.setenv("TAXONOMY_ADJUDICATE", "0")
     assert provider_from_env() is None
     monkeypatch.setenv("TAXONOMY_ADJUDICATE", "1")
-    monkeypatch.setenv("CLOUDFLARE_API_TOKEN", "token")
     monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    monkeypatch.delenv("CLOUDFLARE_ACCOUNT_ID", raising=False)
     assert provider_from_env() is None
+    monkeypatch.setenv("CLOUDFLARE_API_TOKEN", "token")
     monkeypatch.setenv("CLOUDFLARE_ACCOUNT_ID", "account")
     got = provider_from_env()
     assert got is not None and got.model.endswith("llama-3.1-8b-instruct-fp8")

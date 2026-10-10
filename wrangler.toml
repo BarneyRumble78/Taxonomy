@@ -2,10 +2,7 @@ name = "taxonomy-api"
 main = "worker/index.js"
 compatibility_date = "2026-10-01"
 
-# Embeddings, the abstention adjudicator, and optional assist.
-# assist=1 cannot change a placement. ADJUDICATE=1 may fill the queue when three samples agree.
-[ai]
-binding = "AI"
-
-[vars]
-ADJUDICATE = "1"
+# The Worker ships with no AI binding and no adjudicator flag.
+# A binding plus ADJUDICATE=1 calls a model and spends money. Leave both unset
+# until that spend is intended. assist=1 is a second opinion and cannot change a placement.
+# RETRIEVE=1 allows Workers AI embeddings. Without it, retrieval stays off.

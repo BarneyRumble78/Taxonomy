@@ -1,6 +1,7 @@
 // Taxonomy classify API. The rule stage lives in engine/rules.mjs.
 // Retrieval uses the committed bge-small index. Workers AI embeds the query
 // (@cf/baai/bge-small-en-v1.5). Tests pass env.embedQuery instead.
+// Workers AI is off unless ADJUDICATE or RETRIEVE is explicitly "1".
 // When ADJUDICATE=1, the abstention queue is sent to a model. Three samples
 // must agree on a valid owner or the claim stays abstained. assist=1 is a
 // second opinion and cannot change a placement. Tests pass env.adjudicate.
@@ -73,11 +74,19 @@ function decorate(p) {
   };
 }
 
+function flagOn(value) {
+  const flag = String(value ?? "").toLowerCase();
+  return flag === "1" || flag === "true" || flag === "on" || flag === "yes";
+}
+
 function adjudicationOn(env) {
-  const flag = String(env.ADJUDICATE ?? "").toLowerCase();
-  if (flag === "0" || flag === "false" || flag === "off") return false;
   if (typeof env.adjudicate === "function") return true;
-  return (flag === "1" || flag === "true") && env.AI && typeof env.AI.run === "function";
+  return flagOn(env.ADJUDICATE) && env.AI && typeof env.AI.run === "function";
+}
+
+function retrievalOn(env) {
+  if (typeof env.embedQuery === "function") return true;
+  return (flagOn(env.RETRIEVE) || flagOn(env.ADJUDICATE)) && env.AI && typeof env.AI.run === "function";
 }
 
 async function sampleOnce(env, messages) {
@@ -143,7 +152,7 @@ function asVector(out) {
 
 async function embedQuery(env, text) {
   if (typeof env.embedQuery === "function") return await env.embedQuery(text);
-  if (!env.AI) return null;
+  if (!retrievalOn(env)) return null;
   const out = await env.AI.run(env.EMBED_MODEL || EMBED_MODEL, { text: [text] });
   return asVector(out);
 }

@@ -81,7 +81,6 @@ TASK = (
     "Do not call a source, an argument, or a legal record an observation."
 )
 _CELL = re.compile(r"^([A-Z]{2})\.O\.A(\d+)$")
-_OFF = {"0", "false", "off", "no"}
 _CATALOG = None
 
 
@@ -446,9 +445,9 @@ class AnthropicChat:
 
 
 def provider_from_env():
-    """None when the stage is off or no credential is set. Never raises for a missing key."""
+    """None unless TAXONOMY_ADJUDICATE is explicitly on. A key alone does not spend."""
     flag = os.environ.get("TAXONOMY_ADJUDICATE", "").strip().lower()
-    if flag in _OFF:
+    if flag not in {"1", "true", "on", "yes"}:
         return None
     url = os.environ.get("TAXONOMY_ADJUDICATOR_URL", "").strip()
     if url:

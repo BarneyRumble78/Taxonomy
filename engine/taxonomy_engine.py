@@ -414,7 +414,6 @@ QUEUE_REASONS = ("low_confidence", "stages_disagree", "no_cue")
 # Rule placements in these fields are checked by the model, not only abstentions.
 VERIFY_OWNERS = frozenset({"PO", "ST", "IS", "EC", "HI", "LA", "CS"})
 _CHUNKS = None
-_OFF = {"0", "false", "off", "no"}
 
 
 def aligned_chunks():
@@ -455,7 +454,8 @@ def _caller(adjudicator):
         return None
     if callable(adjudicator):
         return adjudicator
-    if os.environ.get("TAXONOMY_ADJUDICATE", "").strip().lower() in _OFF:
+    flag = os.environ.get("TAXONOMY_ADJUDICATE", "").strip().lower()
+    if flag not in {"1", "true", "on", "yes"}:
         return None
     from adjudicator import provider_from_env
     return provider_from_env()
