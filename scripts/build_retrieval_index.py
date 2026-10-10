@@ -30,7 +30,13 @@ def main():
         raise SystemExit("embedding dimension is not 384")
     out = ROOT / "engine" / "retrieval_index.json"
     out.write_text(json.dumps(index, separators=(",", ":")), encoding="utf-8")
+    text_path = ROOT / "engine" / "retrieval_text.json"
+    text_path.write_text(
+        json.dumps({"chunks_sha256": digest, "chunks": chunks}, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
     print(f"wrote {out} chunks={len(chunks)} sha256={digest}")
+    print(f"wrote {text_path}")
 
 
 if __name__ == "__main__":

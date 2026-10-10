@@ -1,8 +1,9 @@
 // Taxonomy classify API. The rule stage lives in engine/rules.mjs.
 // Retrieval uses the committed bge-small index. Workers AI embeds the query
 // (@cf/baai/bge-small-en-v1.5). Tests pass env.embedQuery instead.
-// A model is consulted only when the client sends assist=1. It cannot change
-// the placement, and it is not called because a score was weak.
+// When ADJUDICATE=1, the abstention queue is sent to a model. Three samples
+// must agree on a valid owner or the claim stays abstained. assist=1 is a
+// second opinion and cannot change a placement. Tests pass env.adjudicate.
 import lex from "../engine/lexicon.json" with { type: "json" };
 import site from "../site/site_data.json" with { type: "json" };
 import index from "../engine/retrieval_index.json" with { type: "json" };
@@ -10,10 +11,16 @@ import {
   CONFIDENCE_NOTE, METHOD_NAMES, WARRANT_NAMES,
   adjudicate, instructionHeuristic, retrieveField, stageRule,
 } from "../engine/rules.mjs";
+import {
+  QUEUE_REASONS, SAMPLE_COUNT, adjudicationMessages, agreeSamples, retrieveDefinitions,
+} from "../engine/adjudicate.mjs";
+import texts from "../engine/retrieval_text.json" with { type: "json" };
 
 const MAX_CLAIM = 1000;
 const EMBED_MODEL = "@cf/baai/bge-small-en-v1.5";
 const ASSIST_MODEL = "@cf/meta/llama-3.1-8b-instruct";
+const ADJUDICATE_MODEL = "@cf/meta/llama-3.1-8b-instruct-fp8";
+const QUEUE = new Set(QUEUE_REASONS);
 const CODES = Object.keys(site.p);
 
 const CORS = {
@@ -52,12 +59,42 @@ function decorate(p) {
     cell_name: idx == null || !info ? null : info.cells[idx],
     warrant: p.warrant,
     warrant_name: p.warrant ? (WARRANT_NAMES[p.warrant] || null) : null,
+    default_applied: !!p.default_applied,
     method: p.method,
     method_name: p.method ? (METHOD_NAMES[p.method] || null) : null,
-    confidence: p.confidence,
-    confidence_note: CONFIDENCE_NOTE,
+    confidence: p.confidence ?? null,
+    confidence_note: p.confidence_note || CONFIDENCE_NOTE,
     contested_with: p.contested_with,
+    adjudicated: !!p.adjudicated,
   };
+}
+
+function adjudicationOn(env) {
+  const flag = String(env.ADJUDICATE ?? "").toLowerCase();
+  if (flag === "0" || flag === "false" || flag === "off") return false;
+  if (typeof env.adjudicate === "function") return true;
+  return (flag === "1" || flag === "true") && env.AI && typeof env.AI.run === "function";
+}
+
+async function sampleOnce(env, messages) {
+  if (typeof env.adjudicate === "function") {
+    const out = await env.adjudicate(messages);
+    if (typeof out === "string") return out;
+    return String((out && out.text) || "");
+  }
+  const model = env.ADJUDICATE_MODEL || ADJUDICATE_MODEL;
+  const raw = await env.AI.run(model, { messages, max_tokens: 120, temperature: 0.7 });
+  const content = raw?.choices?.[0]?.message?.content ?? raw?.response ?? "";
+  return typeof content === "string" ? content : JSON.stringify(content);
+}
+
+async function takeSamples(env, messages) {
+  const runs = [];
+  for (let i = 0; i < SAMPLE_COUNT; i++) {
+    try { runs.push(await sampleOnce(env, messages)); }
+    catch { runs.push(""); }
+  }
+  return runs;
 }
 
 async function readInput(request, url) {
@@ -110,40 +147,52 @@ async function askModel(env, text, allowed) {
   }
 }
 
+async function withAssist(out, env, url, text, owner) {
+  if (url.searchParams.get("assist") !== "1") return out;
+  const a = await askModel(env, text, CODES);
+  if (!out.placement) {
+    out.assist = { ...a, note: "Second opinion only. It does not fill an abstention." };
+  } else {
+    out.assist = { ...a, agrees: a.codes?.[0] === owner, note: "Second opinion only. The placement above is the answer." };
+  }
+  return out;
+}
+
 async function classifyRoute(request, url, env) {
   const inp = await readInput(request, url);
   if (inp.error) return bad(inp.error);
   const staged = stageRule(inp.value, lex);
-  let retrieved = null;
-  if (!staged.reason) {
-    try {
-      const vec = await embedQuery(env, inp.value);
-      retrieved = vec ? retrieveField(vec, index) : null;
-    } catch {
-      retrieved = null;
-    }
+  const on = adjudicationOn(env);
+  const queued = QUEUE.has(staged.reason);
+  if (staged.reason && !(queued && on)) {
+    const out = { placement: null, reason: staged.reason, note: NOTES[staged.reason] || NOTES.no_cue };
+    return json(await withAssist(out, env, url, inp.value));
   }
-  const decision = adjudicate(staged, staged.reason ? undefined : retrieved);
-  const assistOn = url.searchParams.get("assist") === "1";
+  let vector = null;
+  if (!staged.reason || queued) {
+    try { vector = await embedQuery(env, inp.value); }
+    catch { vector = null; }
+  }
+  let decision = staged.reason
+    ? { placement: null, reason: staged.reason }
+    : adjudicate(staged, vector ? retrieveField(vector, index) : null);
+  if (!decision.placement && on && QUEUE.has(decision.reason)) {
+    const definitions = vector ? retrieveDefinitions(vector, index, texts) : [];
+    const samples = await takeSamples(env, adjudicationMessages(inp.value, definitions));
+    const agreed = agreeSamples(samples);
+    if (agreed) decision = { placement: agreed, reason: null, retrieval: { status: "adjudicated" } };
+  }
   if (!decision.placement) {
     const out = { placement: null, reason: decision.reason, note: NOTES[decision.reason] || NOTES.no_cue };
-    if (assistOn) {
-      out.assist = await askModel(env, inp.value, CODES);
-      if (out.assist) out.assist.note = "Second opinion only. It does not fill an abstention.";
-    }
-    return json(out);
+    return json(await withAssist(out, env, url, inp.value));
   }
   const placement = decorate(decision.placement);
   const out = {
     placement,
     retrieval: decision.retrieval,
-    method_note: CONFIDENCE_NOTE,
+    method_note: placement.confidence_note || CONFIDENCE_NOTE,
   };
-  if (assistOn) {
-    const a = await askModel(env, inp.value, CODES);
-    out.assist = { ...a, agrees: a.codes?.[0] === placement.owner, note: "Second opinion only. The placement above is the answer." };
-  }
-  return json(out);
+  return json(await withAssist(out, env, url, inp.value, placement.owner));
 }
 
 export default {
@@ -153,7 +202,12 @@ export default {
     const url = new URL(request.url);
     const p = url.pathname.replace(/\/+$/, "") || "/";
     try {
-      if (p === "/v1/health") return json({ ok: true, embed_model: EMBED_MODEL, assist: "only when assist=1" });
+      if (p === "/v1/health") return json({
+        ok: true,
+        embed_model: EMBED_MODEL,
+        assist: "only when assist=1",
+        adjudicate: "three agreeing samples when ADJUDICATE=1, otherwise off",
+      });
       if (p === "/v1/classify") return await classifyRoute(request, url, env || {});
       return bad("Not found.", 404);
     } catch {

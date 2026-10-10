@@ -38,7 +38,7 @@ def _rows():
 def _core(p):
     if not p:
         return None
-    return {k: p.get(k) for k in ("owner", "cell", "warrant", "method", "confidence", "contested_with")}
+    return {k: p.get(k) for k in ("owner", "cell", "warrant", "method", "confidence", "contested_with", "default_applied")}
 
 
 def _js(claims, vectors=None):
@@ -63,6 +63,10 @@ def test_index_matches_pyramid_text():
     assert index["model"] == "BAAI/bge-small-en-v1.5"
     assert len(index["fields"]) == len(chunks) == 332
     assert all(len(v) == 384 for v in index["vectors"])
+    text = json.loads((ROOT / "engine" / "retrieval_text.json").read_text(encoding="utf-8"))
+    assert text["chunks_sha256"] == digest
+    assert [c["field"] for c in text["chunks"]] == index["fields"]
+    assert [c["text"] for c in text["chunks"]] == [c["text"] for c in chunks]
 
 
 def test_rule_and_browser_parity_on_frozen_set():
@@ -127,7 +131,7 @@ def test_geopolitics_probe_is_not_hard_science():
         assert owner is None or owner == preferred or owner == "ST", (text, owner, preferred)
     # A later cue list may place this as Politics. It must not come back as Physics.
     zarichne = details[0].get("placement")
-    assert zarichne is None or zarichne["owner"] == "PO"
+    assert zarichne is None or zarichne["owner"] in ("PO", "ST")
 
 
 def test_answered_owner_accuracy():

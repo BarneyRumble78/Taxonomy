@@ -496,7 +496,7 @@ footer p a{display:inline;color:#c9d1dc}
     <div id="relAI" class="aiout" hidden></div>
   </div>
 
-  <p class="small" id="aiStatus">The built-in engine runs in your browser. It abstains when cue scores are weak, or when the sentences do not share an owner. The API also abstains when retrieval disagrees, and it does not call a model to fill that gap. Deep analysis uses Claude through your own Claude account and asks your permission first.</p>
+  <p class="small" id="aiStatus">The built-in engine runs in your browser. It abstains when cue scores are weak, or when the sentences do not share an owner. The API may ask a model to adjudicate an abstention. It assigns a field only when several samples agree, and it treats the claim as data. Deep analysis uses Claude through your own Claude account and asks your permission first.</p>
 </section>
 
 <!-- API -->
@@ -506,7 +506,7 @@ footer p a{display:inline;color:#c9d1dc}
   <h2>Endpoints</h2>
   <div class="tbl"><table class="data">
     <tr><th>Call</th><th>Purpose</th></tr>
-    <tr><td class="code">POST /classify</td><td>Send a sentence. Receive its field, cell, warrant and method when the checks agree. A weak score or a disagreement returns no placement. A model is not called to fill that gap.</td></tr>
+    <tr><td class="code">POST /classify</td><td>Send a sentence. Receive its field, cell, warrant and method when the checks agree. A weak score or a disagreement may be sent to a model. The model assigns a field only when its samples agree, and the claim is treated as data. Sentences that do not share an owner stay unassigned.</td></tr>
     <tr><td class="code">GET /lookup/{id}</td><td>Retrieve a cell: its statement, conditions, evidence row, and every link in and out.</td></tr>
     <tr><td class="code">POST /audit</td><td>Send a document. Receive each claim with its placement, and flags for evidence mismatches, missing conditions and borrowing between fields.</td></tr>
   </table></div>
@@ -522,7 +522,7 @@ footer p a{display:inline;color:#c9d1dc}
   "uses":    ["CH.O.A1", "MA.O.A5"],
   "rule":    "living function is Biology; disorder and treatment of humans is Medicine" }</pre>
   <h2>Engine</h2>
-  <p>The Taxonomy Engine v0.1 is a transparent rule-based classifier, written in Python, that implements <span class="code">/classify</span> and a whole-view function. The same engine runs in your browser on the <a href="#try" data-go="try">Use the tool</a> page. A model-assisted classifier adds depth where cue words are not enough.</p>
+  <p>The Taxonomy Engine v0.1 is a transparent rule-based classifier, written in Python, that implements <span class="code">/classify</span> and a whole-view function. The same rule stage runs in your browser on the <a href="#try" data-go="try">Use the tool</a> page. Where cue words are not enough, the API can ask a model to adjudicate, and it keeps a placement only when the samples agree.</p>
   <h2>Data release</h2>
   <p>The registry is planned for release in SKOS and JSON, with a persistent identifier and version history, so that libraries, research systems and AI developers can build on it directly.</p>
   <p><a class="btn" href="#contact" data-go="contact">Register for developer access</a></p>
@@ -635,7 +635,7 @@ function classify(s){
   const d=stageRule(s, LEX);
   if(!d.placement) return null;
   const p=d.placement;
-  return {owner:p.owner,cell:p.cell,warrant:p.warrant,method:p.method,alts:p.contested_with||[],conf:p.confidence};
+  return {owner:p.owner,cell:p.cell,warrant:p.warrant,method:p.method,alts:p.contested_with||[],conf:p.confidence,default_applied:!!p.default_applied};
 }
 function fieldsFor(s){
   const t=" "+s.toLowerCase()+" ";
@@ -670,7 +670,7 @@ function runClassify(){const s=$("stmt").value.trim();if(!s)return;
     showResult(null, why[d.reason]||why.no_cue);return}
   const r=classify(s);
   let note=r.alts.length?("Close alternatives: "+r.alts.map(a=>a+" ("+D.p[a].name+")").join(", ")+". The ownership rule decides: the field whose evidence can establish the claim owns it."):"Built-in engine result.";
-  if(!r.warrant) note+=" No warrant cue fired, so no evidence type is stated.";
+  if(r.default_applied) note+=" No warrant cue fired. The warrant shown is this field's default.";
   if(/māori|maori|tikanga|whakapapa|iwi|hapū|kaitiaki|mātauranga|indigenous/i.test(s))note+=" Indigenous-knowledge placements are provisional until Māori-led review.";
   showResult(r,note)}
 $("runClassify").addEventListener("click",runClassify);

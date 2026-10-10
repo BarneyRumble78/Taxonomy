@@ -15,7 +15,16 @@ export const WARRANT_NAMES = {W1:"Proof",W2:"Computation with error bound",W3:"C
 export const METHOD_NAMES = {M1:"Represent",M2:"Derive",M3:"Observe",M4:"Intervene",M5:"Compute",M6:"Compare and reconstruct",M7:"Verify"};
 
 const CUE_RE = new Map();
-const META = /[.*+?^${}()|[\]\\]/g;
+const STEMS = new Set(["topolog","diagnos","electromagnet","bacteri","mitochondri","descend","phylogen","geolog","manufactur","simulat","randomi","catalogu","morpholog","theolog","religio","pedagog","classif","certif","turbulen","concurren","serialis","hippocamp","ontolog","epistem","commemorat","revitalis","accessib","purif","chromatograph","spectroscop","electr","cosmolog","vaccin","escalat","kaitiaki","depress","axiom","reconstruct","interpret","convention"]);
+const EXACT = new Set(["force"]);
+const SUFFIX = "(?:led|ies|ing|ers|ally|es|ed|er|s)";
+const MILITARY = /\b(?:armed forces|air force|ground forces|military|troops?|soldiers?|armies|army|navies|navy|brigades?|battalions?|artillery|missiles?|airstrikes?|air strikes?|warships?|naval mines?|sea mines?|minefields?|minelaying|battlefield|invasions?|invaded|bombard(?:ment|ed|ing)?|casualt(?:y|ies)|enem(?:y|ies)|offensives?|garrisons?|warplanes?|drone strikes?|shelling|blockades?|weapons?|flanks?|munitions?)\b/;
+const NAVAL_MINE = /\b(?:naval mines?|sea mines?|minefields?|minelaying)\b|\b(?:naval|sea|harbour|harbor|strait|shipping|waterway|channel)\b(?:\W+\w+){0,6}?\W+\bmines?\b|\bmines?\b(?:\W+\w+){0,6}?\W+\b(?:strait|shipping|harbour|harbor|naval|waterway|laid)\b/;
+const PHYSICS_FORCE = /\b(?:newtons?|particles?|mass|gravity|gravitational|momentum|acceleration|electromagnetic|intermolecular|net force|inertial|torque|vectors?)\b/;
+const NOT_ARMED = /\b(?:labour|labor|work)\s+forces?\b|\bworkforce\b|\bmarket forces\b|\bcompetitive forces\b|\beconomic forces\b|\bsocial forces\b|\bdriving forces\b/;
+const CYBER = /\b(?:malware|ransomware|phishing|phish|zero-day|passwords?|encrypt(?:ion|ed)?)\b/;
+const YEAR = /\b(?:1[0-9]{3}|20[0-9]{2})\b/;
+const MINE_CUES = ["naval mine", "sea mine", "minefield", "minelaying"];
 
 // Python round(x, 2): exact halves go to even.
 export function pyRound2(x) {
@@ -25,34 +34,126 @@ export function pyRound2(x) {
   return Math.round(r) / 100;
 }
 
-// Left boundary: a cue may continue into a longer word ("force" in "forces",
-// "topolog" in "topology") and must not begin inside one ("ion" in "inflation").
-// A cue that already ends in a space keeps that space and is a substring.
+function escapeRe(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+// Left boundary, then a word boundary or a light inflection. Stems may continue
+// the word. "force" is exact, so it does not match "forces".
 export function cueHit(text, cue) {
-  if (cue.endsWith(" ")) return text.includes(cue);
   let re = CUE_RE.get(cue);
   if (!re) {
-    re = new RegExp("(?<![a-z0-9])" + cue.replace(META, "\\$&"));
+    const raw = cue.toLowerCase();
+    let body;
+    if (raw.endsWith(" ")) body = "(?<![a-z0-9])" + escapeRe(raw);
+    else if (/^[a-z0-9]+$/.test(raw)) {
+      if (STEMS.has(raw)) body = "(?<![a-z0-9])" + escapeRe(raw);
+      else if (EXACT.has(raw)) body = "(?<![a-z0-9])" + escapeRe(raw) + "(?![a-z0-9])";
+      else body = "(?<![a-z0-9])" + escapeRe(raw) + SUFFIX + "?(?![a-z0-9])";
+    } else {
+      const parts = raw.split(" ");
+      const head = parts.slice(0, -1);
+      const last = parts[parts.length - 1];
+      let prefix = head.map(escapeRe).join("\\s+");
+      if (prefix) prefix += "\\s+";
+      let lastRe;
+      if (/^\d+$/.test(last)) lastRe = escapeRe(last) + "(?![a-z])";
+      else if (STEMS.has(last)) lastRe = escapeRe(last);
+      else lastRe = escapeRe(last) + SUFFIX + "?(?![a-z0-9])";
+      body = "(?<![a-z0-9])" + prefix + lastRe;
+    }
+    re = new RegExp(body);
     CUE_RE.set(cue, re);
   }
   return re.test(text);
 }
 
-export function scoreCues(text, words) {
+export function scoreCues(text, words, skip) {
   let n = 0;
-  for (const w of words) if (cueHit(text, w)) n += 1;
+  for (const w of words) {
+    if (skip && skip.has(w)) continue;
+    if (cueHit(text, w)) n += 1;
+  }
   return n;
 }
 
 function fieldScore(text, field, skip) {
-  let n = 0;
-  for (const w of field.kw) {
-    if (skip && skip.has(w)) continue;
-    if (cueHit(text, w)) n += 1;
+  const cells = field.cells.map((cl) => scoreCues(text, cl, skip));
+  const score = scoreCues(text, field.kw, skip) + 0.5 * cells.reduce((a, b) => a + b, 0);
+  return { score, cells };
+}
+
+function sense(text, lex, scores, cells) {
+  const fields = lex.fields;
+  if (/\bprime ministers?\b/.test(text)) {
+    const skip = new Set(["prime"]);
+    const other = Math.max(...Object.entries(scores).filter(([c]) => c !== "MA").map(([, v]) => v));
+    if (other > 0) for (const w of PROOF_VERBS) skip.add(w);
+    const again = fieldScore(text, fields.MA, skip);
+    scores.MA = again.score;
+    cells.MA = again.cells;
   }
-  let cells = 0;
-  for (const cl of field.cells) cells += scoreCues(text, cl);
-  return n + 0.5 * cells;
+  const physics = PHYSICS_FORCE.test(text);
+  const labour = NOT_ARMED.test(text);
+  const military = MILITARY.test(text) || NAVAL_MINE.test(text);
+  const pluralForces = /\bforces\b/.test(text);
+  if (!physics && !labour && (pluralForces || (military && /\bforce\b/.test(text)))) {
+    const again = fieldScore(text, fields.PH, new Set(["force"]));
+    scores.PH = again.score;
+    cells.PH = again.cells;
+  }
+  const foreignAct = /\bforeign (?:state|power|government|military|attack|forces)\b/.test(text) || (
+    /\b(?:prime ministers?|foreign ministers?|government)\b/.test(text) && /\b(?:foreign|attacked|attack)\b/.test(text)
+  );
+  const claimed = /\bclaimed responsibility\b/.test(text) && /\battacks?\b/.test(text);
+  const computerish = CYBER.test(text) || /\b(?:software|computer|server|cyber|database|network)\b/.test(text);
+  if ((military || foreignAct || claimed) && !CYBER.test(text)) {
+    const again = fieldScore(text, fields.CS, new Set(["attack"]));
+    scores.CS = again.score;
+    cells.CS = again.cells;
+  }
+  if (claimed && scores.ST === 0 && !computerish) {
+    cells.ST[3] += 1;
+    scores.ST += 1.5;
+  }
+  if (NAVAL_MINE.test(text) && !MINE_CUES.some((cue) => cueHit(text, cue))) {
+    cells.ST[3] += 1;
+    scores.ST += 1.5;
+  }
+  if (military && scores.ST === 0) {
+    cells.ST[3] += 1;
+    scores.ST += 1.5;
+  }
+  if (/\b(?:prime ministers?|foreign ministers?|the government)\b/.test(text) && /\bforeign\b/.test(text)) scores.PO += 0.5;
+  if (/\bland court\b/.test(text)) {
+    const again = fieldScore(text, fields.IK, new Set(["land"]));
+    scores.IK = again.score;
+    cells.IK = again.cells;
+  }
+  if (YEAR.test(text) && scores.HI > 0 && !military && !pluralForces) {
+    const again = fieldScore(text, fields.ST, new Set(["war"]));
+    scores.ST = again.score;
+    cells.ST = again.cells;
+  }
+}
+
+function scoreAll(text, lex) {
+  const scores = {};
+  const cells = {};
+  for (const [c, f] of Object.entries(lex.fields)) {
+    const got = fieldScore(text, f);
+    scores[c] = got.score;
+    cells[c] = got.cells;
+  }
+  const others = Object.entries(scores).filter(([c]) => c !== "MA").map(([, v]) => v);
+  const other = others.length ? Math.max(...others) : 0;
+  if (other > 0) {
+    const again = fieldScore(text, lex.fields.MA, PROOF_VERBS);
+    scores.MA = again.score;
+    cells.MA = again.cells;
+  }
+  sense(text, lex, scores, cells);
+  return { scores, cells };
 }
 
 export function instructionHeuristic(sentence) {
@@ -97,19 +198,17 @@ export function rulePlacement(sentence, lex) {
   if (instructionHeuristic(sentence)) return null;
   const t = " " + String(sentence || "").toLowerCase() + " ";
   const fields = lex.fields;
-  const scores = {};
-  for (const [c, f] of Object.entries(fields)) scores[c] = fieldScore(t, f);
-  const others = Object.entries(scores).filter(([c]) => c !== "MA").map(([, v]) => v);
-  const other = others.length ? Math.max(...others) : 0;
-  if (other > 0) scores.MA = fieldScore(t, fields.MA, PROOF_VERBS);
+  const scored = scoreAll(t, lex);
+  const scores = scored.scores;
+  const cells = scored.cells;
   const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]);
   let owner = ranked[0][0];
   const top = ranked[0][1];
   if (top === 0) return null;
-  if ((t.includes("theorem") || t.includes("question is open")) && scores.MA >= top - 1 && scores.MA > 0) owner = "MA";
+  if ((cueHit(t, "theorem") || cueHit(t, "question is open")) && scores.MA >= top - 1 && scores.MA > 0) owner = "MA";
   if (LAW_CUE.test(t) && scores.LA >= top - 2) owner = "LA";
-  const cellScores = fields[owner].cells.map((cl) => scoreCues(t, cl));
-  const cellMax = Math.max(...cellScores);
+  const cellScores = cells[owner] || [];
+  const cellMax = cellScores.length ? Math.max(...cellScores) : 0;
   let idx = cellScores.indexOf(cellMax);
   let cell = null;
   if (owner === "MA" && t.includes("integral domain")) {
@@ -123,13 +222,27 @@ export function rulePlacement(sentence, lex) {
   const keys = warrantKeys(lex);
   const wvals = keys.map((k) => scoreCues(t, lex.warrants[k] || []));
   const wmax = Math.max(...wvals);
-  let warrant = wmax > 0 ? keys[wvals.indexOf(wmax)] : null;
-  if (warrant === "W13" && owner !== "RE" && owner !== "IK") warrant = null;
+  const fallback = DEFAULT_WARRANT[owner] || null;
+  let warrant;
+  let defaultApplied;
+  if (wmax > 0) {
+    warrant = keys[wvals.indexOf(wmax)];
+    const di = keys.indexOf(fallback);
+    if (di >= 0 && wvals[di] >= wmax) warrant = fallback;
+    defaultApplied = false;
+    if (warrant === "W13" && owner !== "RE" && owner !== "IK") {
+      warrant = fallback;
+      defaultApplied = true;
+    }
+  } else {
+    warrant = fallback;
+    defaultApplied = true;
+  }
   const method = warrant ? (WARRANT_TO_METHOD[warrant] || null) : null;
   const second = ranked.length > 1 ? ranked[1][1] : 0;
   const contested = ranked.slice(1, 4).filter(([c, s]) => s > 0 && s >= top - 1 && c !== owner).map(([c]) => c);
   return {
-    owner, cell, cell_index: cell ? idx : null, warrant, method,
+    owner, cell, cell_index: cell ? idx : null, warrant, default_applied: defaultApplied, method,
     confidence: pyRound2(top / (top + second + 1)),
     contested_with: contested,
   };

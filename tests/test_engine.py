@@ -15,12 +15,16 @@ def test_lexicon_cells_match_key_lines():
         assert len(te.LEXICON["fields"][c]["cells"]) == len(te.CELLS[c]), c
 
 def test_left_boundary():
-    assert te.cue_hit(" forces ", "force")
+    assert not te.cue_hit(" forces ", "force")
+    assert te.cue_hit(" forces ", "forces")
+    assert te.cue_hit(" theorems ", "theorem")
     assert te.cue_hit(" topology ", "topolog")
     assert not te.cue_hit(" inflation ", "ion")
+    assert not te.cue_hit(" national ", "ion")
     assert not te.cue_hit(" defence ", "ce")
     assert not te.cue_hit(" assigned ", "signed")
     assert not te.cue_hit(" christchurch ", "church")
+    assert not te.cue_hit(" neighbouring ", "ring")
     assert te.cue_hit(" every bounded ", "every ")
 
 def test_w13_never_travels():
@@ -37,12 +41,12 @@ def test_known_border_cases():
     assert te.rule_placement(seq)["method"] == "M2"
     assert te.rule_placement("Every finite integral domain is a field")["cell"] == "MA.O.A2"
 
-def test_warrant_only_when_a_cue_fired():
+def test_warrant_default_is_flagged():
     r = te.rule_placement("Russian forces control Zarichne.")
-    assert r["owner"] == "PH"
-    assert r["warrant"] is None and r["method"] is None
+    assert r["owner"] == "ST"
+    assert r["warrant"] == "W9" and r["default_applied"] is True and r["method"] == "M2"
     proved = te.rule_placement("Prove that every finite integral domain is a field.")
-    assert proved["warrant"] == "W1" and proved["method"] == "M2"
+    assert proved["warrant"] == "W1" and proved["default_applied"] is False and proved["method"] == "M2"
 
 def test_weak_band_abstains_before_retrieval(monkeypatch):
     def explode(texts):
