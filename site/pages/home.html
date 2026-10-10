@@ -1,65 +1,116 @@
 <aside class="side">
-  <div class="box"><h4>In this section</h4><div class="in"><ul>
+  <div class="box"><h4>On this page</h4><div class="in"><ul>
+    <li><a href="#problem">The problem</a></li>
+    <li><a href="#what">What we do</a></li>
+    <li><a href="#why">Why Taxonomy</a></li>
+    <li><a href="#baseline">The baseline</a></li>
     <li><a href="#divisions">Divisions</a></li>
-    <li><a href="#minerva">Minerva</a></li>
-    <li><a href="#founder">Founder</a></li>
+    <li><a href="#chris">Chris Townsend</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul></div></div>
-  <div class="box"><h4>The company</h4><div class="in">
-    <p><b>Taxonomy</b><br>An AI company, New Zealand.</p>
-    <p>Chris Townsend, AI architect, is founder and CEO.</p>
-  </div></div>
-  <div class="box"><h4>Lead division</h4><div class="in">
-    <p>Minerva carries the knowledge standard, the browser tool and the API design.</p>
-    <p><a class="btn" href="/minerva/">Open Minerva</a></p>
+  <div class="box"><h4>Start here</h4><div class="in">
+    <p><a class="btn" href="/minerva/standard/">Explore the standard</a></p>
+    <p><a href="/contact/">Talk to Chris</a></p>
   </div></div>
 </aside>
 <main>
-  <noscript><p class="notice">Section links from the former single-page site open in <a href="/minerva/">Minerva</a>.</p></noscript>
-  <div class="hero">
+  <div class="hero solo">
     <div>
-      <h1>Taxonomy is an AI company. Minerva leads.</h1>
-      <p class="lead">Taxonomy is the company. Minerva is the lead division: a truth-seeking layer that gives a claim an owner, a warrant and a dependency trail. Defence, Skynet and Blade Runner are the other divisions.</p>
-      <p class="pull">Know what the evidence can actually support.</p>
-      <p class="actions"><a class="btn" href="/minerva/">Open Minerva</a><a class="btn blue" href="/about/">About Chris Townsend</a><a class="btn blue" href="/contact/">Contact</a></p>
-    </div>
-    <div class="card">
-      <h3>Chris Townsend</h3>
-      <p>Founder and CEO. AI architect. New Zealand.</p>
-      <p><a href="/about/">About</a> · <a href="/contact/">Contact</a></p>
+      <h1>Know what the evidence can actually support.</h1>
+      <p class="lead">Taxonomy is a New Zealand AI company. We sort claims by the field that owns them, the kind of evidence behind them, their status and what they rest on. Then you can see how much weight each one will really bear.</p>
+      <p class="actions"><a class="btn" href="/minerva/standard/">Explore the standard →</a><a class="btn blue" href="/contact/">Talk to Chris →</a></p>
     </div>
   </div>
 
-  <h2 id="divisions">Divisions</h2>
-  <p>Minerva is the division with a public standard and a working browser tool. The other three divisions have a page each, and no further public description yet.</p>
+  <h2 id="problem">You're handed claims all day. Few of them come labelled.</h2>
+  <p>A report says it's "established". A model answers with total confidence. A briefing slides a guess in beside a measured fact, in the same font and the same tone.</p>
+  <p>Which parts are proven? Which are observed, estimated or simply assumed? And if one of them falls, what falls with it?</p>
+  <p>Usually you can't tell. Not quickly, anyway. So you either trust too much or check everything by hand.</p>
+
+  <h2 id="what">We put a label on every claim. A precise one.</h2>
+  <p>Taxonomy works at the level of the claim. Each claim gets four things:</p>
+  <ul>
+    <li><b>Owner field.</b> Which discipline is responsible for it. A statistical claim is answerable to statistics, not to whoever repeats it.</li>
+    <li><b>Warrant.</b> The type of evidence behind it: proof, measurement, observation, expert consensus, model output and so on. <span class="tbc">[[CONFIRM final evidence-type list from the standard]]</span></li>
+    <li><b>Status.</b> Where it stands right now: settled, contested, provisional, retracted. <span class="tbc">[[CONFIRM status vocabulary]]</span></li>
+    <li><b>Dependencies.</b> What else has to be true for it to hold.</li>
+  </ul>
+  <p>With that in front of you, you can see what's solid and what's soft. You can state each claim as strongly as its evidence allows, and no stronger.</p>
+  <p><b>What we don't do:</b> we don't claim to decide what's true. We show what kind of support a claim has, and we make it hard to overstate it. The judgement stays with you.</p>
+
+  <h2 id="why">Three reasons to work with us.</h2>
+  <div class="three">
+    <div>
+      <h3>1. Truth-seeking is the job, not a slogan.</h3>
+      <p>Our rule is simple: a claim must not be stated with greater certainty than its evidence warrants. Everything we build enforces that rule, and that includes how we talk about our own results.</p>
+    </div>
+    <div>
+      <h3>2. Built on mathematics.</h3>
+      <p>Mathematics is our reference domain because it's the field where warrant is clearest. A proof is a proof and a conjecture is a conjecture. We test our methods there first, then carry them into messier fields.</p>
+    </div>
+    <div>
+      <h3>3. Open, stable and citable.</h3>
+      <p>The Minerva standard is open. It covers 25 fields and gives 984 stable IDs to the concepts inside them, so a claim you tag today points to the same place next year. <span class="tbc">[[CONFIRM ID stability policy wording]]</span></p>
+    </div>
+  </div>
+
+  <h2 id="baseline">We hold ourselves to the same rule.</h2>
+  <p>We built a frozen test set of 203 claims and scored our own early classifier against it. The honest baseline: <b>62.1%</b> on owner field and <b>37.9%</b> on warrant. That's a starting point, not a finish line. We publish it because a company that asks you not to overstate claims shouldn't overstate its own. <a href="/minerva/evaluation/">See the evaluation →</a></p>
+
+  <h2 id="divisions">One method. Six divisions.</h2>
+  <p>Each division has its own site. Pick the one that fits your problem.</p>
   <div class="divcards">
-    <div class="divcard lead" id="minerva">
-      <h3>Minerva <span class="badge">Lead</span></h3>
-      <p>Project Minerva is the knowledge standard: 25 fields, stable identifiers, evidence types, a browser tool and an API design. Truth-seeking comes first. Mathematics is the reference domain. The pyramids are the substrate underneath that check.</p>
-      <p>ClaimGuard is the working name for the claim-inspection product. <span class="badge soon">In development</span></p>
-      <p>Minerva does not decide whether a claim is true. It shows what the evidence can support.</p>
-      <p><a class="btn" href="/minerva/">Enter Minerva</a></p>
+    <div class="divcard">
+      <h3>Minerva: Truth-seeking and mapping</h3>
+      <p><b>Offer:</b> Map any claim to its field, its evidence and its status, using an open standard you can browse, cite and call by API.</p>
+      <p>The knowledge standard: 25 pyramids (fields), 984 stable IDs, defined evidence types, a browser tool and an API. Mathematics is the reference domain. <b>ClaimGuard</b>, which checks claims against the standard, is in development.</p>
+      <p><a href="/minerva/">Visit Minerva →</a> · <a href="/minerva/claimguard/">Register interest in ClaimGuard →</a></p>
+    </div>
+    <div class="divcard">
+      <h3>Skynet: Imagery intelligence <span class="tbc">[[NAME UNDER REVIEW]]</span></h3>
+      <p><b>Offer:</b> Satellite and imagery intelligence. <span class="tbc">[[ONE-LINE OFFER TO CONFIRM]]</span></p>
+      <p><a href="/skynet/">Visit →</a></p>
     </div>
     <div class="divcard">
       <h3>Defence</h3>
-      <p>Defence is a division of Taxonomy.</p>
-      <p><span class="badge soon">Coming soon</span></p>
-      <p><a href="/defence/">Defence page</a> · <a href="/contact/">Contact</a></p>
+      <p><b>Offer:</b> <span class="tbc">[[ONE-LINE OFFER TO CONFIRM]]</span> <span class="tbc">Suggested: Know which parts of an assessment rest on evidence, and which rest on assumption.</span></p>
+      <p><a href="/defence/">Visit Defence →</a></p>
     </div>
     <div class="divcard">
-      <h3>Skynet</h3>
-      <p>Skynet is a division of Taxonomy.</p>
-      <p><span class="badge soon">Coming soon</span></p>
-      <p><a href="/skynet/">Skynet page</a> · <a href="/contact/">Contact</a></p>
+      <h3>Blade Runner: AI-agent security <span class="tbc">[[NAME CHECK]]</span></h3>
+      <p><b>Offer:</b> Security research for AI agents: see what an agent can reach, what it can do and where it can be turned against you.</p>
+      <p>Prototype stage. <a href="/blade-runner/">Follow the work →</a></p>
     </div>
     <div class="divcard">
-      <h3>Blade Runner</h3>
-      <p>Blade Runner is Taxonomy's division for AI-agent security.</p>
-      <p><span class="badge soon">Coming soon</span></p>
-      <p><a href="/blade-runner/">Blade Runner page</a> · <a href="/contact/">Contact</a></p>
+      <h3>Medical</h3>
+      <p><b>Offer:</b> <span class="tbc">[[ONE-LINE OFFER TO CONFIRM]]</span> <span class="tbc">Suggested: See the evidence grade behind a clinical claim before it reaches a decision.</span></p>
+      <p><a href="/medical/">Visit Medical →</a></p>
+    </div>
+    <div class="divcard">
+      <h3>Tech</h3>
+      <p><b>Offer:</b> <span class="tbc">[[ONE-LINE OFFER TO CONFIRM]]</span> <span class="tbc">Suggested: Engineering and AI architecture built to say what it knows, and no more.</span></p>
+      <p><a href="/tech/">Visit Tech →</a></p>
     </div>
   </div>
 
-  <h2 id="founder">Founder</h2>
-  <p>Chris Townsend is founder and CEO of Taxonomy, and an AI architect. The company is based in New Zealand.</p>
-  <p>Speaking, writing, video and advisory details are not published yet. The placeholders are on the <a href="/about/">About page</a>.</p>
+  <h2 id="chris">Meet the founder.</h2>
+  <p>I'm Chris Townsend, founder and CEO of Taxonomy and an AI architect based in New Zealand.</p>
+  <p>I started Taxonomy because I kept running into the same problem. Smart systems and smart people state things more firmly than the evidence lets them. So I set out to build tools that keep track of the difference.</p>
+  <p>If that problem matters in your organisation, I can help in four ways:</p>
+  <ul>
+    <li><b>Speaking.</b> Keynotes and workshops on AI, evidence and knowing what you know. <span class="tbc">[[TOPICS / FORMATS TO CONFIRM]]</span></li>
+    <li><b>Writing.</b> Articles, essays and commissioned pieces. <span class="tbc">[[LINK TO PUBLISHED WORK]]</span></li>
+    <li><b>Video.</b> Explainers and talks. <span class="tbc">[[LINK TO CHANNEL]]</span></li>
+    <li><b>Advisory.</b> Hands-on help with AI architecture and evidence-aware systems. <span class="tbc">[[ENGAGEMENT FORMAT TO CONFIRM; no pricing on page]]</span></li>
+  </ul>
+  <p><a href="/chris-townsend/speaking/">Book Chris to speak →</a> · <a href="/chris-townsend/advisory/">Ask about advisory →</a></p>
+  <p class="tbc block">[[PHOTO OF CHRIS]]</p>
+  <p class="tbc block">[[OPTIONAL: one real credential or past talk, only if verifiable]]</p>
+
+  <h2 id="contact">Got a claim that matters? Let's see what it rests on.</h2>
+  <p>Tell us what you're working on: a division you're interested in, a talk, an advisory question or a press enquiry. You'll get a reply from a person, not a bot. <span class="tbc">[[CONFIRM response promise, e.g. "within two working days"]]</span></p>
+  <p><a class="btn" href="/contact/">Start a conversation →</a></p>
+  <p><b>Not ready to talk? Start here instead.</b></p>
+  <p class="tbc block">[[BAIT PIECE: e.g. a free one-page "Claim-check card": the four questions to ask of any claim, i.e. who owns it, what warrants it, what's its status and what does it depend on]]</p>
+  <p class="tbc">Get the card →</p>
 </main>

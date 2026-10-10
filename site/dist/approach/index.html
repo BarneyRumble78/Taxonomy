@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Contact Taxonomy.">
-<title>Contact · Taxonomy</title>
+<meta name="description" content="How Taxonomy works: owner field, warrant, status and dependencies.">
+<title>Approach · Taxonomy</title>
 <style>
 /* Layout: a 2010-era standards-body site. Fixed 960px sheet on a grey ground, blue banner, tab bar, left sidebar boxes, breadcrumb, footer link columns. Deliberately single light theme. */
 :root{
@@ -170,50 +170,31 @@ footer p a{display:inline;color:#c9d1dc}
   <form class="search" role="search" action="/minerva/" method="get"><label for="q" style="position:absolute;left:-9999px">Search a field</label><input id="q" name="q" placeholder="Search a field, e.g. Law"><button type="submit">Go</button></form>
 </div>
 <nav class="drawer" id="drawer" hidden aria-label="Site menu"><a href="/">Home<small>Company</small></a><a href="/approach/">Approach<small>How we work</small></a><a href="/minerva/">Minerva<small>Truth-seeking and mapping</small></a><a href="/minerva/standard/">Standard<small>Minerva</small></a><a href="/minerva/browser/">Browser tool<small>Minerva</small></a><a href="/minerva/api/">API<small>Minerva</small></a><a href="/minerva/mathematics/">Mathematics<small>Minerva</small></a><a href="/minerva/claimguard/">ClaimGuard<small>Minerva</small></a><a href="/minerva/evaluation/">Evaluation<small>Minerva</small></a><a href="/minerva/changelog/">Changelog<small>Minerva</small></a><a href="/skynet/">Skynet<small>Division</small></a><a href="/defence/">Defence<small>Division</small></a><a href="/blade-runner/">Blade Runner<small>Division</small></a><a href="/medical/">Medical<small>Division</small></a><a href="/tech/">Tech<small>Division</small></a><a href="/chris-townsend/">Chris Townsend<small>Founder</small></a><a href="/chris-townsend/speaking/">Speaking<small>Chris Townsend</small></a><a href="/chris-townsend/writing/">Writing<small>Chris Townsend</small></a><a href="/chris-townsend/video/">Video<small>Chris Townsend</small></a><a href="/chris-townsend/advisory/">Advisory<small>Chris Townsend</small></a><a href="/contact/">Contact<small>Enquiry</small></a><a href="/privacy/">Privacy<small>Notice</small></a><a href="/terms/">Terms<small>Notice</small></a></nav>
-<nav class="tabs" aria-label="Taxonomy"><a class="tab" href="/">Home</a><a class="tab" href="/approach/">Approach</a><a class="tab" href="/minerva/">Minerva</a><a class="tab" href="/skynet/">Skynet</a><a class="tab" href="/defence/">Defence</a><a class="tab" href="/blade-runner/">Blade Runner</a><a class="tab" href="/medical/">Medical</a><a class="tab" href="/tech/">Tech</a><a class="tab" href="/chris-townsend/">Chris</a><a class="tab" href="/contact/" aria-current="page">Contact</a></nav>
-<div class="crumb">You are here: <a href="/">Home</a> &gt; Contact</div>
+<nav class="tabs" aria-label="Taxonomy"><a class="tab" href="/">Home</a><a class="tab" href="/approach/" aria-current="page">Approach</a><a class="tab" href="/minerva/">Minerva</a><a class="tab" href="/skynet/">Skynet</a><a class="tab" href="/defence/">Defence</a><a class="tab" href="/blade-runner/">Blade Runner</a><a class="tab" href="/medical/">Medical</a><a class="tab" href="/tech/">Tech</a><a class="tab" href="/chris-townsend/">Chris</a><a class="tab" href="/contact/">Contact</a></nav>
+<div class="crumb">You are here: <a href="/">Home</a> &gt; Approach</div>
 <div class="body">
 <aside class="side">
   <div class="box"><h4>In this section</h4><div class="in"><ul>
-    <li>Enquiry</li>
-    <li><a href="/minerva/#contact">Minerva register</a></li>
+    <li><a href="#labels">The four labels</a></li>
+    <li><a href="#limit">What we don't claim</a></li>
   </ul></div></div>
+  <div class="box"><h4>Minerva</h4><div class="in"><p>The standard and the browser tool live in Minerva.</p><p><a href="/minerva/">Open Minerva</a></p></div></div>
 </aside>
 <main>
-  <h1>Got a claim that matters? Let's see what it rests on.</h1>
-  <p class="lead">Tell us what you're working on: a division you're interested in, a talk, an advisory question or a press enquiry. You'll get a reply from a person, not a bot. <span class="tbc">[[CONFIRM response promise, e.g. "within two working days"]]</span></p>
-  <form id="enquiry" novalidate>
-    <label for="eName">Name<input id="eName" name="name" autocomplete="name"></label>
-    <label for="eEmail">Email<input id="eEmail" name="email" type="email" autocomplete="email"></label>
-    <label for="eOrg">Organisation<input id="eOrg" name="organisation" autocomplete="organization"></label>
-    <label for="eType">Enquiry type<select id="eType" name="enquiry">
-      <option>Division</option>
-      <option>Speaking</option>
-      <option>Advisory</option>
-      <option>Press</option>
-    </select></label>
-    <label for="eDiv">Division, if that is the enquiry<select id="eDiv" name="division">
-      <option>Minerva</option>
-      <option>Skynet</option>
-      <option>Defence</option>
-      <option>Blade Runner</option>
-      <option>Medical</option>
-      <option>Tech</option>
-    </select></label>
-    <label for="eNote">Message<textarea id="eNote" name="message" rows="4"></textarea></label>
-    <p><button class="btn" type="submit">Start a conversation →</button></p>
-    <p id="emsg" role="status"></p>
-  </form>
-  <p>The Minerva register, for the standard's briefing list, is separate. <a href="/minerva/#contact">Open the register</a>.</p>
+  <h1>How we work</h1>
+  <p class="lead">Taxonomy works at the level of the claim. Each claim gets an owner field, a warrant, a status and its dependencies.</p>
+  <h2 id="labels">The four labels</h2>
+  <ul>
+    <li><b>Owner field.</b> Which discipline is responsible for it. A statistical claim is answerable to statistics, not to whoever repeats it.</li>
+    <li><b>Warrant.</b> The type of evidence behind it: proof, measurement, observation, expert consensus, model output and so on. <span class="tbc">[[CONFIRM final evidence-type list from the standard]]</span></li>
+    <li><b>Status.</b> Where it stands right now: settled, contested, provisional, retracted. <span class="tbc">[[CONFIRM status vocabulary]]</span></li>
+    <li><b>Dependencies.</b> What else has to be true for it to hold.</li>
+  </ul>
+  <p>With that in front of you, you can see what's solid and what's soft. You can state each claim as strongly as its evidence allows, and no stronger.</p>
+  <h2 id="limit">What we don't claim</h2>
+  <p>We don't claim to decide what's true. We show what kind of support a claim has, and we make it hard to overstate it. The judgement stays with you.</p>
+  <p><a href="/minerva/standard/">Explore the standard →</a></p>
 </main>
-<script>
-document.getElementById('enquiry').addEventListener('submit',function(e){
-  e.preventDefault();
-  var n=document.getElementById('eName').value.trim();
-  var m=document.getElementById('eEmail').value.trim();
-  document.getElementById('emsg').textContent=(n&&m)?('Thank you, '+n+'. This form does not send yet. Nothing has been delivered.'):'Please enter your name and email.';
-});
-</script>
 </div>
 <footer>
   <div class="fcols">
