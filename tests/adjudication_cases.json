@@ -1,0 +1,120 @@
+[
+  {
+    "name": "unanimous cell and warrant",
+    "samples": [
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A2\",\"warrant\":\"W3\"}",
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A2\",\"warrant\":\"W3\"}",
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A2\",\"warrant\":\"W3\"}"
+    ],
+    "owner": "BI",
+    "cell": "BI.O.A2",
+    "warrant": "W3",
+    "default_applied": false,
+    "method": "M4"
+  },
+  {
+    "name": "owners disagree",
+    "samples": [
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W3\"}",
+      "{\"owner\":\"PH\",\"cell\":\"PH.O.A1\",\"warrant\":\"W4\"}",
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W3\"}"
+    ],
+    "owner": null
+  },
+  {
+    "name": "invalid sample abstains",
+    "samples": [
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W3\"}",
+      "not json",
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W3\"}"
+    ],
+    "owner": null
+  },
+  {
+    "name": "unknown owner abstains",
+    "samples": [
+      "{\"owner\":\"ZZ\",\"cell\":null,\"warrant\":\"W1\"}",
+      "{\"owner\":\"ZZ\",\"cell\":null,\"warrant\":\"W1\"}",
+      "{\"owner\":\"ZZ\",\"cell\":null,\"warrant\":\"W1\"}"
+    ],
+    "owner": null
+  },
+  {
+    "name": "cell split keeps the owner",
+    "samples": [
+      "{\"owner\":\"MA\",\"cell\":\"MA.O.A1\",\"warrant\":\"W1\"}",
+      "{\"owner\":\"MA\",\"cell\":\"MA.O.A2\",\"warrant\":\"W1\"}",
+      "{\"owner\":\"MA\",\"cell\":\"MA.O.A1\",\"warrant\":\"W1\"}"
+    ],
+    "owner": "MA",
+    "cell": null,
+    "warrant": "W1",
+    "default_applied": false,
+    "method": "M2"
+  },
+  {
+    "name": "illegal cell is dropped",
+    "samples": [
+      "{\"owner\":\"RE\",\"cell\":\"RE.O.A5\",\"warrant\":\"W8\"}",
+      "{\"owner\":\"RE\",\"cell\":\"RE.O.A5\",\"warrant\":\"W8\"}",
+      "{\"owner\":\"RE\",\"cell\":\"RE.O.A5\",\"warrant\":\"W8\"}"
+    ],
+    "owner": "RE",
+    "cell": null,
+    "warrant": "W8",
+    "default_applied": false,
+    "method": "M6"
+  },
+  {
+    "name": "warrant split uses the field default",
+    "samples": [
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W1\"}",
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W4\"}",
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W9\"}"
+    ],
+    "owner": "BI",
+    "cell": "BI.O.A1",
+    "warrant": "W3",
+    "default_applied": true,
+    "method": "M4"
+  },
+  {
+    "name": "w13 outside religion and indigenous knowledge is rewritten",
+    "samples": [
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W13\"}",
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W13\"}",
+      "{\"owner\":\"BI\",\"cell\":\"BI.O.A1\",\"warrant\":\"W13\"}"
+    ],
+    "owner": "BI",
+    "cell": "BI.O.A1",
+    "warrant": "W3",
+    "default_applied": true,
+    "method": "M4"
+  },
+  {
+    "name": "w13 may stand for indigenous knowledge",
+    "samples": [
+      "{\"owner\":\"IK\",\"cell\":\"IK.O.A1\",\"warrant\":\"W13\"}",
+      "{\"owner\":\"IK\",\"cell\":\"IK.O.A1\",\"warrant\":\"W13\"}",
+      "{\"owner\":\"IK\",\"cell\":\"IK.O.A1\",\"warrant\":\"W13\"}"
+    ],
+    "owner": "IK",
+    "cell": "IK.O.A1",
+    "warrant": "W13",
+    "default_applied": false,
+    "method": "M1"
+  },
+  {
+    "name": "preamble around json",
+    "samples": [
+      "Here you go {\"owner\":\"PO\",\"cell\":\"PO.O.A5\",\"warrant\":\"W6\"}",
+      "{\"owner\":\"PO\",\"cell\":\"PO.O.A5\",\"warrant\":\"W6\"} thanks",
+      "Answer: {\"owner\":\"po\",\"cell\":\"po.o.a5\",\"warrant\":\"w6\"}"
+    ],
+    "owner": "PO",
+    "cell": "PO.O.A5",
+    "warrant": "W6",
+    "default_applied": false,
+    "method": "M6"
+  }
+]
