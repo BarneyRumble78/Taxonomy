@@ -26,3 +26,15 @@ def test_pilot_regression():
     # NOTE: lexicon was written with these claims in view; this is a regression floor, not a validity measure.
     s = te.evaluate(ROOT / "pilot" / "key.tsv")
     assert s["owner"] >= 0.90 and s["cell"] >= 0.80
+
+
+def test_short_cues_do_not_fire_inside_other_words():
+    # "force" is physics; "forces" is not. "ion", "ring", "prime" and "sin" are not parts of ordinary words.
+    assert te.classify("In an inertial frame, the net force on a particle equals its mass times its acceleration.")["owner"] == "PH"
+    assert te.classify("The unemployment rate is the share of the labour force that is without work and seeking work.")["owner"] == "EC"
+    assert te.classify("Prime numbers are infinite.")["owner"] == "MA"
+    assert te.classify("A national mobilisation followed the invasion.")["owner"] == "ST"
+    assert te.classify("Neighbouring states signed a ceasefire.")["owner"] != "MA"
+    single = te.classify("Using a single press statement, the ministry described the withdrawal of its forces.")
+    assert single["owner"] != "RE"
+    assert single["warrant"] == "W7"

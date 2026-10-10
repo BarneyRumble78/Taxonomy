@@ -618,25 +618,75 @@ const wt=document.getElementById('wtable');Object.entries(W).forEach(([k,[a,b]])
 const LEX=__LEX__, CODEBOOK=__CODEBOOK__;
 const DEFW={MA:"W1",PH:"W4",CH:"W3",BI:"W3",EA:"W4",MD:"W3",EN:"W11",CS:"W1",MS:"W3",EC:"W5",BU:"W12",ST:"W9",PO:"W6",LA:"W10",PL:"W9",HI:"W7",LN:"W4",AR:"W8",RE:"W8",ED:"W3",DE:"W4",AG:"W3",EV:"W5",IS:"W4",IK:"W13"};
 const W2M={W1:"M2",W2:"M5",W3:"M4",W4:"M3",W5:"M3",W6:"M6",W7:"M3",W8:"M6",W9:"M2",W10:"M2",W11:"M7",W12:"M1",W13:"M1"};
-const sc=(t,ws)=>ws.reduce((n,w)=>n+(t.includes(w)?1:0),0);
+// Boundary-aware port of engine/taxonomy_engine.py. A cue matches a word, not a string buried in another word.
+const STEMS=new Set("topolog diagnos electromagnet bacteri mitochondri descend phylogen geolog manufactur simulat randomi catalogu morpholog theolog religio pedagog classif certif turbulen concurren serialis hippocamp ontolog epistem commemorat revitalis accessib purif chromatograph spectroscop electr cosmolog vaccin escalat kaitiaki depress axiom reconstruct interpret convention".split(" "));
+const EXACT=new Set(["force"]);
+const SUFFIX="(?:led|ies|ing|ers|ally|es|ed|er|s)";
+const cueCache=new Map();
+function cueRe(cue){
+  let compiled=cueCache.get(cue);if(compiled)return compiled;
+  const raw=cue.toLowerCase();
+  let src;
+  if(raw.endsWith(" "))src="(?<![a-z0-9])"+raw.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  else if(/^[a-z0-9]+$/.test(raw)){
+    const esc=raw.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+    if(STEMS.has(raw))src="(?<![a-z0-9])"+esc;
+    else if(EXACT.has(raw))src="(?<![a-z0-9])"+esc+"(?![a-z0-9])";
+    else src="(?<![a-z0-9])"+esc+SUFFIX+"?(?![a-z0-9])";
+  }else{
+    const parts=raw.split(" ");const last=parts.pop();
+    const body=parts.map(p=>p.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("\\s+")+(parts.length?"\\s+":"");
+    const esc=last.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+    const lastRe=/^\d+$/.test(last)?esc+"(?![a-z])":STEMS.has(last)?esc:esc+SUFFIX+"?(?![a-z0-9])";
+    src="(?<![a-z0-9])"+body+lastRe;
+  }
+  compiled=new RegExp(src);cueCache.set(cue,compiled);return compiled;
+}
+const cueIn=(text,cue)=>cueRe(cue).test(text);
+function scoreWords(text,words,skip){let n=0;for(const w of words){if(skip&&skip.has(w))continue;if(cueIn(text,w))n++;}return n;}
+function scoreField(text,field,skip){const cells=field.cells.map(cl=>scoreWords(text,cl,skip));return [scoreWords(text,field.kw,skip)+0.5*cells.reduce((a,b)=>a+b,0),cells];}
+const MILITARY=/\b(?:armed forces|air force|ground forces|military|troops?|soldiers?|armies|army|navies|navy|brigades?|battalions?|artillery|missiles?|airstrikes?|air strikes?|warships?|naval mines?|sea mines?|minefields?|minelaying|battlefield|invasions?|invaded|bombard(?:ment|ed|ing)?|casualt(?:y|ies)|enem(?:y|ies)|offensives?|garrisons?|warplanes?|drone strikes?|shelling|blockades?|weapons?|flanks?|munitions?)\b/;
+const NAVAL_MINE=/\b(?:naval mines?|sea mines?|minefields?|minelaying)\b|\b(?:naval|sea|harbour|harbor|strait|shipping|waterway|channel)\b(?:\W+\w+){0,6}?\W+\bmines?\b|\bmines?\b(?:\W+\w+){0,6}?\W+\b(?:strait|shipping|harbour|harbor|naval|waterway|laid)\b/;
+const PHYSICS_FORCE=/\b(?:newtons?|particles?|mass|gravity|gravitational|momentum|acceleration|electromagnetic|intermolecular|net force|inertial|torque|vectors?)\b/;
+const NOT_ARMED=/\b(?:labour|labor|work)\s+forces?\b|\bworkforce\b|\bmarket forces\b|\bcompetitive forces\b|\beconomic forces\b|\bsocial forces\b|\bdriving forces\b/;
+const CYBER=/\b(?:malware|ransomware|phishing|phish|zero-day|passwords?|encrypt(?:ion|ed)?)\b/;
+const YEAR=/\b(?:1[0-9]{3}|20[0-9]{2})\b/;
+const MINE_CUES=["naval mine","sea mine","minefield","minelaying"];
+function placement(s){
+  const t=" "+s.toLowerCase()+" ";const scores={},cells={};
+  for(const [c,f] of Object.entries(LEX.fields)){const pair=scoreField(t,f);scores[c]=pair[0];cells[c]=pair[1];}
+  if(/\bprime ministers?\b/.test(t)){const pair=scoreField(t,LEX.fields.MA,new Set(["prime"]));scores.MA=pair[0];cells.MA=pair[1];}
+  const physics=PHYSICS_FORCE.test(t),labour=NOT_ARMED.test(t),military=MILITARY.test(t)||NAVAL_MINE.test(t),plural=/\bforces\b/.test(t);
+  if(!physics&&!labour&&(plural||(military&&/\bforce\b/.test(t)))){const pair=scoreField(t,LEX.fields.PH,new Set(["force"]));scores.PH=pair[0];cells.PH=pair[1];}
+  const foreignAct=/\bforeign (?:state|power|government|military|attack|forces)\b/.test(t)||(/\b(?:prime ministers?|foreign ministers?|government)\b/.test(t)&&/\b(?:foreign|attacked|attack)\b/.test(t));
+  const claimed=/\bclaimed responsibility\b/.test(t)&&/\battacks?\b/.test(t);
+  const computerish=CYBER.test(t)||/\b(?:software|computer|server|cyber|database|network)\b/.test(t);
+  if((military||foreignAct||claimed)&&!CYBER.test(t)){const pair=scoreField(t,LEX.fields.CS,new Set(["attack"]));scores.CS=pair[0];cells.CS=pair[1];}
+  if(claimed&&scores.ST===0&&!computerish){cells.ST[3]+=1;scores.ST+=1.5;}
+  if(NAVAL_MINE.test(t)&&!MINE_CUES.some(c=>cueIn(t,c))){cells.ST[3]+=1;scores.ST+=1.5;}
+  if(military&&scores.ST===0){cells.ST[3]+=1;scores.ST+=1.5;}
+  if(/\b(?:prime ministers?|foreign ministers?|the government)\b/.test(t)&&/\bforeign\b/.test(t))scores.PO+=0.5;
+  if(/\bland court\b/.test(t)){const pair=scoreField(t,LEX.fields.IK,new Set(["land"]));scores.IK=pair[0];cells.IK=pair[1];}
+  if(YEAR.test(t)&&scores.HI>0&&!military&&!plural){const pair=scoreField(t,LEX.fields.ST,new Set(["war"]));scores.ST=pair[0];cells.ST=pair[1];}
+  return {t,scores,cells};
+}
 function classify(s){
-  const t=" "+s.toLowerCase()+" ";const scores={};
-  for(const [c,f] of Object.entries(LEX.fields))scores[c]=sc(t,f.kw)+0.5*f.cells.reduce((n,cl)=>n+sc(t,cl),0);
+  const {t,scores,cells}=placement(s);
   const ranked=Object.entries(scores).sort((a,b)=>b[1]-a[1]);let [owner,top]=ranked[0];
-  if((t.includes("theorem")||t.includes("proof")||t.includes("question is open"))&&scores.MA>=top-1)owner="MA";
-  if(/act (19|20)\d\d|under the [a-z ]+act/.test(t)&&scores.LA>=top-2)owner="LA";
   if(top===0)return null;
-  const cs=LEX.fields[owner].cells.map(cl=>sc(t,cl));const cell=owner+".O.A"+(cs.indexOf(Math.max(...cs))+1);
-  const w={};for(const [k,v] of Object.entries(LEX.warrants))w[k]=sc(t,v);
+  if(["theorem","proof","question is open"].some(k=>cueIn(t,k))&&scores.MA>=top-1)owner="MA";
+  if(/act (19|20)\d\d|under the [a-z ]+act/.test(t)&&scores.LA>=top-2)owner="LA";
+  const cs=cells[owner];const cell=owner+".O.A"+(cs.indexOf(Math.max(...cs))+1);
+  const w={};for(const [k,v] of Object.entries(LEX.warrants))w[k]=scoreWords(t,v);
   const wmax=Math.max(...Object.values(w));let warrant=wmax>0?Object.keys(w).find(k=>w[k]===wmax):DEFW[owner];
   if((w[DEFW[owner]]||0)>=wmax)warrant=DEFW[owner];
   if(warrant==="W13"&&owner!=="RE"&&owner!=="IK")warrant=DEFW[owner];
-  const m={};for(const [k,v] of Object.entries(LEX.methods))m[k]=sc(t,v);
+  const m={};for(const [k,v] of Object.entries(LEX.methods))m[k]=scoreWords(t,v);
   const mmax=Math.max(...Object.values(m));const method=mmax>0?Object.keys(m).find(k=>m[k]===mmax):W2M[warrant];
-  const alts=ranked.slice(1,4).filter(([c,s])=>s>0&&s>=top-1).map(([c])=>c);
+  const alts=ranked.slice(1,4).filter(([c,sc])=>sc>0&&sc>=top-1).map(([c])=>c);
   return {owner,cell,warrant,method,alts,conf:top/(top+ranked[1][1]+1)};
 }
-function fieldsFor(s){const t=" "+s.toLowerCase()+" ";return Object.entries(LEX.fields).map(([c,f])=>{const cs=f.cells.map(cl=>sc(t,cl));return {c,score:sc(t,f.kw)+0.5*cs.reduce((a,b)=>a+b,0),cell:cs.indexOf(Math.max(...cs))}}).sort((a,b)=>b.score-a.score)}
+function fieldsFor(s){const {scores,cells}=placement(s);return Object.keys(LEX.fields).map(c=>({c,score:scores[c],cell:cells[c].indexOf(Math.max(...cells[c]))})).sort((a,b)=>b.score-a.score);}
 const $=id=>document.getElementById(id);
 function el(tag,txt,cls){const e=document.createElement(tag);if(txt!=null)e.textContent=txt;if(cls)e.className=cls;return e}
 // ---- modes ----
