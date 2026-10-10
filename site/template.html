@@ -496,7 +496,7 @@ footer p a{display:inline;color:#c9d1dc}
     <div id="relAI" class="aiout" hidden></div>
   </div>
 
-  <p class="small" id="aiStatus">The built-in engine runs in your browser. Deep analysis uses Claude through your own Claude account and asks your permission first.</p>
+  <p class="small" id="aiStatus">The built-in engine runs in your browser. It abstains when cue scores are weak, or when the sentences do not share an owner. The API also abstains when retrieval disagrees, and it does not call a model to fill that gap. Deep analysis uses Claude through your own Claude account and asks your permission first.</p>
 </section>
 
 <!-- API -->
@@ -506,7 +506,7 @@ footer p a{display:inline;color:#c9d1dc}
   <h2>Endpoints</h2>
   <div class="tbl"><table class="data">
     <tr><th>Call</th><th>Purpose</th></tr>
-    <tr><td class="code">POST /classify</td><td>Send a sentence. Receive its candidate field, cell, warrant and method, with confidence and the rule applied.</td></tr>
+    <tr><td class="code">POST /classify</td><td>Send a sentence. Receive its field, cell, warrant and method when the checks agree. A weak score or a disagreement returns no placement. A model is not called to fill that gap.</td></tr>
     <tr><td class="code">GET /lookup/{id}</td><td>Retrieve a cell: its statement, conditions, evidence row, and every link in and out.</td></tr>
     <tr><td class="code">POST /audit</td><td>Send a document. Receive each claim with its placement, and flags for evidence mismatches, missing conditions and borrowing between fields.</td></tr>
   </table></div>
@@ -627,29 +627,24 @@ function showField(c){const p=D.p[c];fsel.value=c;document.querySelectorAll('.ch
 showField('MA');
 // warrants
 const wt=document.getElementById('wtable');Object.entries(W).forEach(([k,[a,b]])=>{const tr=document.createElement('tr');tr.innerHTML='<td class="code">'+k+'</td><td>'+a+'</td><td>'+b.charAt(0).toUpperCase()+b.slice(1)+'</td>';wt.appendChild(tr)});
-// ---- Taxonomy Engine (port of taxonomy_engine.py v0.1) ----
+// ---- Taxonomy Engine. The rule stage is inlined from engine/rules.mjs. ----
 const LEX=__LEX__, CODEBOOK=__CODEBOOK__;
 const DEFW={MA:"W1",PH:"W4",CH:"W3",BI:"W3",EA:"W4",MD:"W3",EN:"W11",CS:"W1",MS:"W3",EC:"W5",BU:"W12",ST:"W9",PO:"W6",LA:"W10",PL:"W9",HI:"W7",LN:"W4",AR:"W8",RE:"W8",ED:"W3",DE:"W4",AG:"W3",EV:"W5",IS:"W4",IK:"W13"};
-const W2M={W1:"M2",W2:"M5",W3:"M4",W4:"M3",W5:"M3",W6:"M6",W7:"M3",W8:"M6",W9:"M2",W10:"M2",W11:"M7",W12:"M1",W13:"M1"};
-const sc=(t,ws)=>ws.reduce((n,w)=>n+(t.includes(w)?1:0),0);
+/*__RULES_JS__*/
 function classify(s){
-  const t=" "+s.toLowerCase()+" ";const scores={};
-  for(const [c,f] of Object.entries(LEX.fields))scores[c]=sc(t,f.kw)+0.5*f.cells.reduce((n,cl)=>n+sc(t,cl),0);
-  const ranked=Object.entries(scores).sort((a,b)=>b[1]-a[1]);let [owner,top]=ranked[0];
-  if((t.includes("theorem")||t.includes("proof")||t.includes("question is open"))&&scores.MA>=top-1)owner="MA";
-  if(/act (19|20)\d\d|under the [a-z ]+act/.test(t)&&scores.LA>=top-2)owner="LA";
-  if(top===0)return null;
-  const cs=LEX.fields[owner].cells.map(cl=>sc(t,cl));const cell=owner+".O.A"+(cs.indexOf(Math.max(...cs))+1);
-  const w={};for(const [k,v] of Object.entries(LEX.warrants))w[k]=sc(t,v);
-  const wmax=Math.max(...Object.values(w));let warrant=wmax>0?Object.keys(w).find(k=>w[k]===wmax):DEFW[owner];
-  if((w[DEFW[owner]]||0)>=wmax)warrant=DEFW[owner];
-  if(warrant==="W13"&&owner!=="RE"&&owner!=="IK")warrant=DEFW[owner];
-  const m={};for(const [k,v] of Object.entries(LEX.methods))m[k]=sc(t,v);
-  const mmax=Math.max(...Object.values(m));const method=mmax>0?Object.keys(m).find(k=>m[k]===mmax):W2M[warrant];
-  const alts=ranked.slice(1,4).filter(([c,s])=>s>0&&s>=top-1).map(([c])=>c);
-  return {owner,cell,warrant,method,alts,conf:top/(top+ranked[1][1]+1)};
+  const d=stageRule(s, LEX);
+  if(!d.placement) return null;
+  const p=d.placement;
+  return {owner:p.owner,cell:p.cell,warrant:p.warrant,method:p.method,alts:p.contested_with||[],conf:p.confidence};
 }
-function fieldsFor(s){const t=" "+s.toLowerCase()+" ";return Object.entries(LEX.fields).map(([c,f])=>{const cs=f.cells.map(cl=>sc(t,cl));return {c,score:sc(t,f.kw)+0.5*cs.reduce((a,b)=>a+b,0),cell:cs.indexOf(Math.max(...cs))}}).sort((a,b)=>b.score-a.score)}
+function fieldsFor(s){
+  const t=" "+s.toLowerCase()+" ";
+  return Object.entries(LEX.fields).map(([c,f])=>{
+    const cs=f.cells.map(cl=>scoreCues(t,cl));
+    const mx=Math.max(...cs);
+    return {c,score:scoreCues(t,f.kw)+0.5*cs.reduce((a,b)=>a+b,0),cell:mx>0?cs.indexOf(mx):null};
+  }).sort((a,b)=>b.score-a.score);
+}
 const $=id=>document.getElementById(id);
 function el(tag,txt,cls){const e=document.createElement(tag);if(txt!=null)e.textContent=txt;if(cls)e.className=cls;return e}
 // ---- modes ----
@@ -661,16 +656,23 @@ D.claims.forEach(c=>{const o=el("option",c.id+". "+c.claim);o.value=c.id;sel.app
 sel.addEventListener("change",()=>{const c=D.claims.find(x=>x.id===sel.value);if(c){$("stmt").value=c.claim;runClassify()}});
 function showResult(r,note){
   const set=(id,v)=>$(id).textContent=v||"–";
-  if(!r){["sOwner","sCell","sW","sM"].forEach(i=>set(i,"?"));["sOwnerN","sCellN","sWN","sMN"].forEach(i=>set(i,""));$("sNote").textContent="The built-in engine found no field cues in this statement. Try a fuller sentence, or use deep analysis.";return}
-  const p=D.p[r.owner]||{name:r.owner,cells:[]};const ci=parseInt(String(r.cell).split(".A")[1]||"1",10)-1;
-  set("sOwner",r.owner);set("sOwnerN",p.name);set("sCell",r.cell);set("sCellN",p.cells[ci]||"");
-  set("sW",r.warrant);set("sWN",(W[r.warrant]||[""])[0]);set("sM",r.method);set("sMN",M[r.method]||"");
+  if(!r){["sOwner","sCell","sW","sM"].forEach(i=>set(i,"?"));["sOwnerN","sCellN","sWN","sMN"].forEach(i=>set(i,""));$("sNote").textContent=note||"The built-in engine found no field cues in this statement. Try a fuller sentence, or use deep analysis.";return}
+  const p=D.p[r.owner]||{name:r.owner,cells:[]};
+  const m=String(r.cell||"").match(/\.A(\d+)$/);const ci=m?parseInt(m[1],10)-1:-1;
+  set("sOwner",r.owner);set("sOwnerN",p.name);set("sCell",r.cell);set("sCellN",ci>=0?(p.cells[ci]||""):"");
+  set("sW",r.warrant);set("sWN",r.warrant?(W[r.warrant]||[""])[0]:"");set("sM",r.method);set("sMN",r.method?(M[r.method]||""):"");
   $("sNote").textContent=note||"";
 }
-function runClassify(){const s=$("stmt").value.trim();if(!s)return;const r=classify(s);
-  let note="";if(r){note=r.alts.length?("Close alternatives: "+r.alts.map(a=>a+" ("+D.p[a].name+")").join(", ")+". The ownership rule decides: the field whose evidence can establish the claim owns it."):"Built-in engine result.";
-  if(/māori|maori|tikanga|whakapapa|iwi|hapū|kaitiaki|mātauranga|indigenous/i.test(s))note+=" Indigenous-knowledge placements are provisional until Māori-led review.";}
-  showResult(r,note);$("deepOut").hidden=true}
+function runClassify(){const s=$("stmt").value.trim();if(!s)return;
+  const d=stageRule(s, LEX);$("deepOut").hidden=true;
+  if(!d.placement){
+    const why={instruction:"This reads as an instruction, not a claim. No field is assigned. The check is a heuristic, not a security guarantee.",low_confidence:"The cue scores are too close. No field is assigned.",multi_sentence:"These sentences do not share one owner. No field is assigned.",no_cue:"The built-in engine found no field cues in this statement. Try a fuller sentence, or use deep analysis."};
+    showResult(null, why[d.reason]||why.no_cue);return}
+  const r=classify(s);
+  let note=r.alts.length?("Close alternatives: "+r.alts.map(a=>a+" ("+D.p[a].name+")").join(", ")+". The ownership rule decides: the field whose evidence can establish the claim owns it."):"Built-in engine result.";
+  if(!r.warrant) note+=" No warrant cue fired, so no evidence type is stated.";
+  if(/māori|maori|tikanga|whakapapa|iwi|hapū|kaitiaki|mātauranga|indigenous/i.test(s))note+=" Indigenous-knowledge placements are provisional until Māori-led review.";
+  showResult(r,note)}
 $("runClassify").addEventListener("click",runClassify);
 // ---- whole view ----
 function runWhole(){const s=$("subject").value.trim();if(!s)return;const t=$("wholeTable");t.textContent="";
@@ -714,7 +716,8 @@ function runRelate(){const a=$("relA").value.trim(),b=$("relB").value.trim();if(
   const row=(lab,fa,fb)=>{const tr=el("tr");tr.appendChild(el("td",lab));tr.appendChild(el("td",fa));tr.appendChild(el("td",fb));tbl.appendChild(tr)};
   const nm=r=>r.length?r.map(x=>x.c+" "+D.p[x.c].name).join("; "):"No strong cue: try a fuller description";
   row("Owning fields",nm(ra),nm(rb));
-  row("Main cell",ra[0]?ra[0].c+".O.A"+(ra[0].cell+1)+" "+D.p[ra[0].c].cells[ra[0].cell]:"–",rb[0]?rb[0].c+".O.A"+(rb[0].cell+1)+" "+D.p[rb[0].c].cells[rb[0].cell]:"–");
+  const cellTxt=r=>r&&r.cell!=null?r.c+".O.A"+(r.cell+1)+" "+D.p[r.c].cells[r.cell]:"–";
+  row("Main cell",cellTxt(ra[0]),cellTxt(rb[0]));
   row("Evidence it owes",ra[0]?(W[DEFW[ra[0].c]]||[""])[0]:"–",rb[0]?(W[DEFW[rb[0].c]]||[""])[0]:"–");
   const w=el("div","tbl");w.appendChild(tbl);out.appendChild(w);
   const shared=ra.filter(x=>rb.some(y=>y.c===x.c)).map(x=>x.c);

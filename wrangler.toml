@@ -1,0 +1,7 @@
+name = "taxonomy-api"
+main = "worker/index.js"
+compatibility_date = "2026-10-01"
+
+# Embeddings and optional assist. A placement never depends on the assist model.
+[ai]
+binding = "AI"
