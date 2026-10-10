@@ -1,0 +1,11 @@
+name = "taxonomy-api"
+main = "worker/index.js"
+compatibility_date = "2026-10-01"
+
+# Embeddings, the abstention adjudicator, and optional assist.
+# assist=1 cannot change a placement. ADJUDICATE=1 may fill the queue when three samples agree.
+[ai]
+binding = "AI"
+
+[vars]
+ADJUDICATE = "1"
