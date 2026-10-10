@@ -6,6 +6,7 @@ An exact cue may not: "force" does not match "forces".
 classify abstains when the cue-score ratio is under 0.40 or retrieval disagrees,
 then may ask a pluggable model to adjudicate that queue. Placements in
 PO, ST, IS, EC, HI, LA and CS are sent for verification as well. Samples must agree.
+The model replaces a rule owner only when retrieval names a different field.
 A warrant cue is recorded as such. If none fired, the field default is reported
 and default_applied is true. required_warrant is the warrant the claim type requires.
 The method is the one that warrant uses.
@@ -509,6 +510,25 @@ def _complete(call, messages):
     return raw, {}
 
 
+def _apply_agreed(item, agreed, reason):
+    """Keep a rule owner unless retrieval names a different field.
+
+    A unanimous sample may still record the claim type on a placement it does not own.
+    """
+    rule = item.get("placement")
+    if not rule or agreed.get("owner") == rule.get("owner"):
+        status = "verified" if rule and reason == "verify" else "adjudicated"
+        return agreed, {"status": status}, "agree"
+    retrieved = (item.get("retrieval") or {}).get("field")
+    if retrieved is not None and retrieved != rule.get("owner"):
+        return agreed, {"status": "adjudicated"}, "agree"
+    kept = dict(rule)
+    if agreed.get("claim_type"):
+        kept["claim_type"] = agreed["claim_type"]
+        kept["required_warrant"] = agreed["required_warrant"]
+    return kept, item.get("retrieval"), "kept"
+
+
 def _model_reason(item):
     """Why a configured model should see this sentence, or None."""
     if item["reason"] in QUEUE_REASONS:
@@ -527,6 +547,8 @@ def place_many(sentences, adjudicator=None):
     PO, ST, IS, EC, HI, LA or CS is verified as well. Three samples must agree
     on the owner. A provider error is reported as reason "error", not as an
     abstention. If verification fails, the rule placement is kept.
+    A different model owner replaces the rule owner only when retrieval
+    already names a different field.
     If the embedding model cannot be loaded, a sentence that passed the rule
     stage is kept and retrieval is marked unavailable.
     """
@@ -582,11 +604,13 @@ def place_many(sentences, adjudicator=None):
             else:
                 out.append({"placement": None, "reason": item["reason"], "adjudication": record})
             continue
+        placement, retrieval, adj_status = _apply_agreed(item, agreed, reason)
+        record = {"status": adj_status, "usage": usage}
         out.append({
-            "placement": _decorate(agreed),
+            "placement": _decorate(placement),
             "reason": None,
-            "retrieval": {"status": "verified" if reason == "verify" else "adjudicated"},
-            "adjudication": {"status": "agree", "usage": usage},
+            "retrieval": retrieval,
+            "adjudication": record,
         })
     return out
 

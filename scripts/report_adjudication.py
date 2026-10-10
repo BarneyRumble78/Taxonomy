@@ -104,16 +104,27 @@ def _print_block(title, report):
 
 def _usage(items):
     prompt = completion = neurons = calls = 0
+    cache_read = cache_create = 0
     models = {}
     for item in items:
         for u in item.get("usage") or []:
             calls += 1
             prompt += int(u.get("prompt_tokens") or 0)
             completion += int(u.get("completion_tokens") or 0)
+            cache_read += int(u.get("cache_read_input_tokens") or 0)
+            cache_create += int(u.get("cache_creation_input_tokens") or 0)
             neurons += float(u.get("neurons") or 0)
             if u.get("model"):
                 models[u["model"]] = models.get(u["model"], 0) + 1
-    return {"calls": calls, "prompt_tokens": prompt, "completion_tokens": completion, "neurons": neurons, "models": models}
+    return {
+        "calls": calls,
+        "prompt_tokens": prompt,
+        "completion_tokens": completion,
+        "cache_read_input_tokens": cache_read,
+        "cache_creation_input_tokens": cache_create,
+        "neurons": neurons,
+        "models": models,
+    }
 
 
 def _cost(neurons, n_claims):
@@ -183,6 +194,8 @@ def report(run_path):
     print(
         f"  frozen llm calls {frozen_usage['calls']}  prompt_tokens {frozen_usage['prompt_tokens']}"
         f"  completion_tokens {frozen_usage['completion_tokens']}  neurons {frozen_usage['neurons']:.3f}"
+        f"  cache_read_input_tokens {frozen_usage['cache_read_input_tokens']}"
+        f"  cache_creation_input_tokens {frozen_usage['cache_creation_input_tokens']}"
     )
     print(f"  frozen llm on these {n} claims ${llm_usd:.4f}  per 1,000 claims ${llm_per:.4f}")
     if frozen_usage["prompt_tokens"]:

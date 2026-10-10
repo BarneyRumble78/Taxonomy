@@ -50,6 +50,11 @@ def test_prompt_keeps_the_claim_in_data():
     assert "MA.O.A1 Foundations" in catalog_text()
     assert "W4 Measurement or observation with stated uncertainty." in catalog_text()
     assert "legal requires W10." in catalog_text()
+    assert "This is W10, not a measurement." in catalog_text()
+    assert "Military operations, force posture, coercion and deterrence are ST." in catalog_text()
+    assert "Governance, elections, diplomacy and domestic policy are PO." in catalog_text()
+    assert "Information security of a computer system is CS, not PO and not MD." in catalog_text()
+    assert "MoD means Ministry of Defence." in catalog_text()
     assert catalog_text() in messages[0]["content"]
     assert len(message_id(messages)) == 64
 
@@ -183,7 +188,7 @@ def test_anthropic_omits_temperature_and_caches_the_catalogue(monkeypatch):
     assert "temperature" not in body
     assert body["thinking"] == {"type": "disabled"}
     assert body["max_tokens"] == 1024
-    assert body["tool_choice"] == {"type": "tool", "name": "place_claim"}
+    assert body["tool_choice"] == {"type": "auto"}
     schema = body["tools"][0]["input_schema"]
     assert schema["properties"]["owner"]["enum"][0] == "MA"
     assert "LA.O.A2" in schema["properties"]["cell"]["enum"]
@@ -272,3 +277,72 @@ def test_selected_fields_are_verified_and_carry_required_warrant(monkeypatch):
     assert still["placement"]["owner"] == "LA"
     assert still["reason"] is None
     assert still["adjudication"]["status"] == "error"
+
+
+def test_sonnet_accepts_auto_tool_choice_text_json_and_cache_tokens(monkeypatch):
+    from adjudicator import anthropic_reply, tool_choice_for
+    captured = {}
+
+    def fake_post(url, headers, body, timeout=60):
+        captured["body"] = body
+        return {
+            "content": [{
+                "type": "text",
+                "text": 'Here is the placement.\n{"owner":"ST","cell":"ST.O.A4","warrant":"W9","claim_type":"attribution"}',
+            }],
+            "usage": {
+                "input_tokens": 100,
+                "output_tokens": 20,
+                "cache_read_input_tokens": 80,
+                "cache_creation_input_tokens": 12,
+            },
+            "model": "claude-sonnet-5.5",
+        }
+
+    monkeypatch.setattr("adjudicator._post", fake_post)
+    text, usage = AnthropicChat("test-key", "claude-sonnet-5.5")(adjudication_messages("A claim.", []))
+    assert captured["body"]["tool_choice"] == {"type": "auto"}
+    assert tool_choice_for("claude-haiku-4-5") == {"type": "auto"}
+    parsed = parse_sample(text)
+    assert parsed["owner"] == "ST"
+    assert parsed["claim_type"] == "attribution"
+    tool_text = anthropic_reply({"content": [{"type": "tool_use", "name": "place_claim", "input": {"owner": "LA"}}]})
+    assert parse_sample(tool_text)["owner"] == "LA"
+    assert usage["cache_read_input_tokens"] == 80
+    assert usage["cache_creation_input_tokens"] == 12
+    assert usage["prompt_tokens"] == 100
+    assert usage["completion_tokens"] == 20
+
+
+def test_agreed_retrieval_keeps_a_strategy_owner(monkeypatch):
+    monkeypatch.setattr(te, "embed_queries", lambda texts: [[0.0] * 384 for _ in texts])
+    monkeypatch.setattr(te, "retrieve_field", lambda vector, index=None: "ST")
+    claim = "Russian forces control Zarichne."
+
+    def po(messages):
+        assert "coercion and deterrence are ST" in messages[0]["content"]
+        return '{"owner":"PO","cell":"PO.O.A5","warrant":"W6","claim_type":"attribution"}'
+
+    detail = te.place_detail(claim, adjudicator=po)
+    assert detail["placement"]["owner"] == "ST"
+    assert detail["placement"]["adjudicated"] is False
+    assert detail["placement"]["claim_type"] == "attribution"
+    assert detail["placement"]["required_warrant"] == "W7"
+    assert detail["placement"]["warrant"] != "W4"
+    assert detail["adjudication"]["status"] == "kept"
+    assert detail["retrieval"]["status"] == "agree"
+    assert detail["retrieval"]["field"] == "ST"
+
+
+def test_retrieval_disagreement_lets_the_model_replace_the_owner(monkeypatch):
+    monkeypatch.setattr(te, "embed_queries", lambda texts: [[1.0] + [0.0] * 383 for _ in texts])
+    monkeypatch.setattr(te, "retrieve_field", lambda vector, index=None: "PO")
+    claim = "Russian forces control Zarichne."
+
+    def po(messages):
+        return '{"owner":"PO","cell":"PO.O.A5","warrant":"W6","claim_type":"event"}'
+
+    detail = te.place_detail(claim, adjudicator=po)
+    assert detail["placement"]["owner"] == "PO"
+    assert detail["placement"]["required_warrant"] == "W7"
+    assert detail["retrieval"]["status"] == "adjudicated"

@@ -177,6 +177,35 @@ test("a verification error keeps the rule placement", async () => {
   assert.equal(body.adjudication.status, "error");
 });
 
+test("an agreed strategy placement is not flipped to politics", async () => {
+  const st = index.vectors[index.fields.indexOf("ST")];
+  const env = {
+    embedQuery: async () => st,
+    adjudicate: async () => '{"owner":"PO","cell":"PO.O.A5","warrant":"W6","claim_type":"attribution"}',
+  };
+  const res = await post("Russian forces control Zarichne.", {}, env);
+  const body = await res.json();
+  assert.equal(body.placement.owner, "ST");
+  assert.equal(body.placement.adjudicated, false);
+  assert.equal(body.placement.claim_type, "attribution");
+  assert.equal(body.placement.required_warrant, "W7");
+  assert.equal(body.adjudication.status, "kept");
+  assert.equal(body.retrieval.status, "agree");
+});
+
+test("a disagreeing retrieval lets the model place", async () => {
+  const po = index.vectors[index.fields.indexOf("PO")];
+  const env = {
+    embedQuery: async () => po,
+    adjudicate: async () => '{"owner":"PO","cell":"PO.O.A5","warrant":"W6","claim_type":"event"}',
+  };
+  const res = await post("Russian forces control Zarichne.", {}, env);
+  const body = await res.json();
+  assert.equal(body.placement.owner, "PO");
+  assert.equal(body.retrieval.status, "adjudicated");
+  assert.equal(body.placement.required_warrant, "W7");
+});
+
 test("input limit", async () => {
   const res = await post("a".repeat(1001), {}, {});
   assert.equal(res.status, 400);

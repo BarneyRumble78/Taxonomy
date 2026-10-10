@@ -104,8 +104,21 @@ function applySamples(decision, samples) {
     if (decision.placement) return { ...decision, adjudication: { status: "disagree" } };
     return { placement: null, reason: decision.reason, adjudication: { status: "disagree" } };
   }
-  const status = decision.placement ? "verified" : "adjudicated";
-  return { placement: agreed, reason: null, retrieval: { status }, adjudication: { status: "agree" } };
+  const rule = decision.placement;
+  if (!rule || agreed.owner === rule.owner) {
+    const status = rule ? "verified" : "adjudicated";
+    return { placement: agreed, reason: null, retrieval: { status }, adjudication: { status: "agree" } };
+  }
+  const retrieved = decision.retrieval && decision.retrieval.field;
+  if (retrieved && retrieved !== rule.owner) {
+    return { placement: agreed, reason: null, retrieval: { status: "adjudicated" }, adjudication: { status: "agree" } };
+  }
+  const kept = { ...rule };
+  if (agreed.claim_type) {
+    kept.claim_type = agreed.claim_type;
+    kept.required_warrant = agreed.required_warrant;
+  }
+  return { ...decision, placement: kept, adjudication: { status: "kept" } };
 }
 
 async function readInput(request, url) {
