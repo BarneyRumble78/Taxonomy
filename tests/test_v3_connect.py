@@ -18,6 +18,29 @@ def test_schema_counts():
     cards = json.loads((ROOT / "cards" / "toolkit" / "MA.json").read_text(encoding="utf-8"))
     assert len(cards) == 63
 
+def test_empty_facet_does_not_crash():
+    from connect import score
+    assert score({"task": []}, {"signature": {"task": ["infer"]}})[0] == 0.0
+    assert score({"task": "infer"}, {"signature": {"task": ["infer"]}})[0] > 0
+
+
+def test_unknown_field_is_rejected():
+    try:
+        connect({"task": ["infer"]}, field="../secrets")
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("connect accepted a path as a field")
+
+
+def test_cards_map_and_msc_licence():
+    import subprocess
+    subprocess.check_call([sys.executable, str(ROOT / "scripts" / "validate_cards.py")])
+    data = json.loads((ROOT / "maps" / "MA" / "msc2020.json").read_text(encoding="utf-8"))
+    assert "CC BY-NC-SA" in data["licence"]
+    assert data["source"].startswith("https://")
+
+
 def test_retrodiction_top5():
     misses = []
     for name, sig, want in CASES:

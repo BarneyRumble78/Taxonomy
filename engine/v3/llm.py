@@ -1,11 +1,12 @@
 """Model backends for v3 (Survey, Consult, Connect, Frame).
 
-Choose with TAXONOMY_LLM:
-  anthropic  Claude via the Messages API (needs ANTHROPIC_API_KEY; model TAXONOMY_MODEL,
-             default claude-sonnet-5-5)
-  ollama     a local model (TAXONOMY_MODEL, default gemma3:12b; host OLLAMA_HOST)
+Choose with TAXONOMY_LLM. The default is ollama, a local model. A key in the
+environment does not by itself call a paid API.
+  ollama     local model (TAXONOMY_MODEL, default gemma3:12b; host OLLAMA_HOST)
   manual     no model: writes each prompt to runs/prompts/ and reads the answer you paste
              back from a .answer.json file. Useful inside Claude chat or for auditing.
+  anthropic  Claude via the Messages API. Refused unless TAXONOMY_ADJUDICATE_PAID is on.
+             Needs ANTHROPIC_API_KEY. Model TAXONOMY_MODEL, default claude-sonnet-5-5.
 Every backend returns parsed JSON. No other dependencies.
 """
 import json, os, re, time, urllib.request
@@ -88,6 +89,23 @@ class Manual:
         return parse_json(a.read_text(encoding="utf-8"))
 
 
+_ON = {"1", "true", "on", "yes"}
+
+
 def get_llm(name=None):
-    name = name or os.environ.get("TAXONOMY_LLM", "anthropic")
-    return {"anthropic": Anthropic, "ollama": Ollama, "manual": Manual}[name]()
+    """Local Ollama unless TAXONOMY_LLM names another backend.
+
+    Anthropic is built only when TAXONOMY_ADJUDICATE_PAID is on, the same switch
+    the claim adjudicator uses. Naming anthropic without that switch raises.
+    """
+    name = (name or os.environ.get("TAXONOMY_LLM") or "ollama").strip().lower()
+    if name == "anthropic" and os.environ.get("TAXONOMY_ADJUDICATE_PAID", "").strip().lower() not in _ON:
+        raise LLMError(
+            "Anthropic is a paid API and is off. Set TAXONOMY_ADJUDICATE_PAID=1 to allow it. "
+            "The default backend is local Ollama."
+        )
+    try:
+        cls = {"anthropic": Anthropic, "ollama": Ollama, "manual": Manual}[name]
+    except KeyError:
+        raise LLMError("TAXONOMY_LLM must be ollama, manual, or anthropic") from None
+    return cls()
