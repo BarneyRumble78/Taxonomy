@@ -1,0 +1,219 @@
+[
+ {
+  "id": "HI",
+  "field": "HI",
+  "name": "History",
+  "question": "What does history establish about this subject, divided by what the sentence asserts about the human past?",
+  "scqa_question": "What partition places every claim about the human past once, so that other pyramids can cite one owner of the dated fact?",
+  "look_for": [
+   "HI.O.A1 Occurrence",
+   "HI.O.A2 Time",
+   "HI.O.A3 Cause",
+   "HI.O.A4 Change and continuity",
+   "HI.O.A5 Meaning and memory"
+  ],
+  "find_out": [
+   "Find and authenticate (M3 Observe)",
+   "Date and order (M3 Observe)",
+   "Reconstruct and interpret (M6 Compare and reconstruct)",
+   "Compare and quantify (M6, M5 Compute)",
+   "Narrate and edit (M1 Represent)"
+  ],
+  "settles": [
+   "W2",
+   "W4",
+   "W6",
+   "W7",
+   "W8",
+   "W9"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Read against the grain",
+   "ask who wrote it and why",
+   "beware hindsight",
+   "follow the money and the paper."
+  ],
+  "collisions": [
+   "The dated fact is history's. That an event occurred, and when, is HI; every other pyramid cites it.",
+   "The model-explained path is the model's (EC, PO, ST); HI supplies the record.",
+   "A mathematician's life is HI; the theorem is MA; MSC 01 is the bridge.",
+   "A physical date (radiocarbon) is a measurement in EA or PH; its use for a human event is HI.",
+   "A strategic lesson drawn from a case is ST; the case's facts are HI.",
+   "A tradition-internal account of the past is IK or RE under W13; it enters HI.O.A1 only by W7.",
+   "A legal rule in force at a date is LA; the history of that rule is HI.",
+   "the theorem, law or mechanism itself → MA, PH, BI and others",
+   "the strategic lesson → ST",
+   "economic explanation by model → EC",
+   "tradition-internal authority over the past → IK, RE (W13)",
+   "prehistory without human records (geologic time) → EA.O.A3"
+  ],
+  "open": [
+   "oral tradition as W7 or W13 (alternative: a sui generis warrant; Māori-led review required). Counterfactual history as a cell or a heuristic."
+  ],
+  "status": "draft",
+  "source": "pyramids/HI.md"
+ },
+ {
+  "id": "HI.O.A1",
+  "field": "HI",
+  "name": "Occurrence",
+  "question": "What makes \"this happened\" acceptable?",
+  "look_for": [
+   "The event — the unit of record, separated from its interpretation (the fact–interpretation distinction, E. H. Carr, *What Is History?*, 1961).",
+   "The actor — persons and groups; prosopography (collective biography).",
+   "The place — located with EA tools; the claim of human presence is HI.",
+   "Authenticity of the record — forgery and interpolation. Lorenzo Valla showed the Donation of Constantine to be a forgery (c. 1440) by philology."
+  ],
+  "find_out": [
+   "Find and authenticate (M3 Observe)",
+   "Date and order (M3 Observe)",
+   "Reconstruct and interpret (M6 Compare and reconstruct)",
+   "Compare and quantify (M6, M5 Compute)",
+   "Narrate and edit (M1 Represent)"
+  ],
+  "settles": [
+   "W4",
+   "W7"
+  ],
+  "breaks": [
+   "forgery, single source, interpolation"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "A tradition-internal account of the past is IK or RE under W13; it enters HI.O.A1 only by W7."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/HI.md"
+ },
+ {
+  "id": "HI.O.A2",
+  "field": "HI",
+  "name": "Time",
+  "question": "When did it happen?",
+  "look_for": [
+   "Absolute date — calendars and eras: Julian, Gregorian (introduced 1582), AH, BCE/CE.",
+   "Relative order — terminus post quem and ante quem.",
+   "Synchronism — aligning independent records of the same moment.",
+   "Periodisation — labels such as \"the Renaissance\" are conventions (W12), not discoveries.",
+   "Scientific dating — radiocarbon and dendrochronology dates are measurements owned by EA and PH; HI uses them."
+  ],
+  "find_out": [
+   "Find and authenticate (M3 Observe)",
+   "Date and order (M3 Observe)",
+   "Reconstruct and interpret (M6 Compare and reconstruct)",
+   "Compare and quantify (M6, M5 Compute)",
+   "Narrate and edit (M1 Represent)"
+  ],
+  "settles": [
+   "W4",
+   "W7"
+  ],
+  "breaks": [
+   "calendar confusion, reused material"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/HI.md"
+ },
+ {
+  "id": "HI.O.A3",
+  "field": "HI",
+  "name": "Cause",
+  "question": "What makes a causal claim about the past acceptable?",
+  "look_for": [
+   "Reasons of actors — Collingwood's re-enactment of thought (*The Idea of History*, 1946).",
+   "Conditions and structures — necessary and sufficient conditions; structural causes.",
+   "Contingency and chance.",
+   "Counterfactual claims — they owe W7 for their premises and W9 for the inference. Unconstrained counterfactuals are a heuristic.",
+   "Model-explained paths — when a growth path is explained by an economic model, the explanation is EC and HI supplies the record (cliometrics is a bridge)."
+  ],
+  "find_out": [
+   "Find and authenticate (M3 Observe)",
+   "Date and order (M3 Observe)",
+   "Reconstruct and interpret (M6 Compare and reconstruct)",
+   "Compare and quantify (M6, M5 Compute)",
+   "Narrate and edit (M1 Represent)"
+  ],
+  "settles": [
+   "W6",
+   "W7",
+   "W9"
+  ],
+  "breaks": [
+   "post hoc reasoning, hindsight, teleology"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/HI.md"
+ },
+ {
+  "id": "HI.O.A4",
+  "field": "HI",
+  "name": "Change and continuity",
+  "question": "What does this subject show about change and continuity?",
+  "look_for": [
+   "Durations — Braudel's three: longue durée, conjoncture and événement (*La Méditerranée*, 1949).",
+   "Processes — industrialisation, state formation. A demographic transition is cited from MS.",
+   "Structures over time — institutions, economies, environments in human time.",
+   "Comparison across places — comparative history; world and global history."
+  ],
+  "find_out": [
+   "Find and authenticate (M3 Observe)",
+   "Date and order (M3 Observe)",
+   "Reconstruct and interpret (M6 Compare and reconstruct)",
+   "Compare and quantify (M6, M5 Compute)",
+   "Narrate and edit (M1 Represent)"
+  ],
+  "settles": [
+   "W2",
+   "W6",
+   "W7"
+  ],
+  "breaks": [
+   "survivorship of records, anachronism"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/HI.md"
+ },
+ {
+  "id": "HI.O.A5",
+  "field": "HI",
+  "name": "Meaning and memory",
+  "question": "What does this subject show about meaning and memory?",
+  "look_for": [
+   "Meaning to participants — the history of mentalités.",
+   "Collective memory — Halbwachs (1925); lieux de mémoire (Nora, 1984–92).",
+   "Heritage and commemoration — monuments, museums. A heritage-law duty is LA.",
+   "Historiography — what later historians made of the past. Schools of interpretation are answer-families, not cells.",
+   "Oral history — a dated account owes W7 like any record. A tradition-internal account (whakapapa as authority) is IK under W13 and does not travel into A1 without W7."
+  ],
+  "find_out": [
+   "Find and authenticate (M3 Observe)",
+   "Date and order (M3 Observe)",
+   "Reconstruct and interpret (M6 Compare and reconstruct)",
+   "Compare and quantify (M6, M5 Compute)",
+   "Narrate and edit (M1 Represent)"
+  ],
+  "settles": [
+   "W7",
+   "W8"
+  ],
+  "breaks": [
+   "presentism, projection"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/HI.md"
+ }
+]

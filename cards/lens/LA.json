@@ -1,0 +1,207 @@
+[
+ {
+  "id": "LA",
+  "field": "LA",
+  "name": "Law",
+  "question": "What does law establish about this subject, divided by the legal relation the claim states?",
+  "scqa_question": "By what dimension can every legal claim be placed once, with all members stated identically?",
+  "look_for": [
+   "LA.O.A1 Sources",
+   "LA.O.A2 Obligations",
+   "LA.O.A3 Wrongs and remedies",
+   "LA.O.A4 Public power",
+   "LA.O.A5 Forums and proof"
+  ],
+  "find_out": [
+   "State the rule (M1 Represent)",
+   "Interpret (M2 Derive)",
+   "Find facts (M3 Observe)",
+   "Compare systems (M6 Compare and reconstruct)",
+   "Adjudicate (M7 Verify)"
+  ],
+  "settles": [
+   "W9",
+   "W10",
+   "W12"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Canons of construction (expressio unius, ejusdem generis)",
+   "\"hard cases make bad law\"",
+   "read the statute first."
+  ],
+  "collisions": [
+   "Place by the legal relation, indexed to a system and a date.",
+   "Incidence is economics; the duty is law.",
+   "What law is, as a concept, is PL; what is law in this system is LA.",
+   "A dated event in legal history is HI; the rule then in force is LA.",
+   "The political cause of a law is PO.",
+   "Tikanga as tradition is IK; tikanga as recognised by a state court is LA.",
+   "A proved fact is settled for the forum only (W10 does not travel).",
+   "concept of law, legal philosophy → PL",
+   "political effect of laws → PO",
+   "tax incidence → EC",
+   "tax computation → BU",
+   "tikanga as tradition-internal law → IK",
+   "dated legal history → HI"
+  ],
+  "open": [
+   "the status of tikanga as a source (LA vs IK, with Māori-led review); jurisprudence between LA and PL."
+  ],
+  "status": "draft",
+  "source": "pyramids/LA.md"
+ },
+ {
+  "id": "LA.O.A1",
+  "field": "LA",
+  "name": "Sources",
+  "question": "What is law in this system?",
+  "look_for": [
+   "Legislation — statutes and delegated legislation, valid when made by the procedure the system recognises.",
+   "Case law — precedent binds lower courts in common-law systems (stare decisis); its weight in civil-law systems is lower.",
+   "Custom and tikanga — in New Zealand, the Supreme Court in Ellis v R (2022) held that tikanga Māori forms part of the common law, as a source to be applied with care (UNVERIFIED wording; Māori-led review required). The tikanga itself, as tra",
+   "International law — treaties and custom (ICJ Statute art. 38). Domestic effect depends on the system.",
+   "Validity — what makes a rule law in a system (for example Hart's rule of recognition). The concept analysis is PL; the claim that a rule is valid here is LA."
+  ],
+  "find_out": [
+   "State the rule (M1 Represent)",
+   "Interpret (M2 Derive)",
+   "Find facts (M3 Observe)",
+   "Compare systems (M6 Compare and reconstruct)",
+   "Adjudicate (M7 Verify)"
+  ],
+  "settles": [
+   "W10",
+   "W12"
+  ],
+  "breaks": [
+   "repeal, inconsistency with a higher source"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LA.md"
+ },
+ {
+  "id": "LA.O.A2",
+  "field": "LA",
+  "name": "Obligations",
+  "question": "What is owed, and by whom?",
+  "look_for": [
+   "Contract — formation needs offer, acceptance, consideration (in common law) and intention to create legal relations.",
+   "Property — title, possession, land registration (Torrens in NZ and Australia). Title to goods sold passes under the sale contract and the governing law, not under Incoterms.",
+   "Trusts and equity.",
+   "Family and succession.",
+   "Tax duty — the liability to pay, set by statute. Incidence is EC and computation is BU."
+  ],
+  "find_out": [
+   "State the rule (M1 Represent)",
+   "Interpret (M2 Derive)",
+   "Find facts (M3 Observe)",
+   "Compare systems (M6 Compare and reconstruct)",
+   "Adjudicate (M7 Verify)"
+  ],
+  "settles": [
+   "W10"
+  ],
+  "breaks": [
+   "defences, vitiating factors"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LA.md"
+ },
+ {
+  "id": "LA.O.A3",
+  "field": "LA",
+  "name": "Wrongs and remedies",
+  "question": "What does this subject show about wrongs and remedies?",
+  "look_for": [
+   "Torts — negligence requires a duty of care, breach, causation and damage. New Zealand's accident compensation scheme (ACC) bars most personal-injury suits.",
+   "Crimes — liability needs the prohibited act and the fault element, unless the offence is strict.",
+   "Remedies — damages, injunctions, specific performance, sentences."
+  ],
+  "find_out": [
+   "State the rule (M1 Represent)",
+   "Interpret (M2 Derive)",
+   "Find facts (M3 Observe)",
+   "Compare systems (M6 Compare and reconstruct)",
+   "Adjudicate (M7 Verify)"
+  ],
+  "settles": [
+   "W10"
+  ],
+  "breaks": [
+   "defences, limitation periods"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LA.md"
+ },
+ {
+  "id": "LA.O.A4",
+  "field": "LA",
+  "name": "Public power",
+  "question": "What may public power do?",
+  "look_for": [
+   "Constitutional law — New Zealand has no single entrenched constitution; it relies on statutes such as the Constitution Act 1986, conventions and Te Tiriti.",
+   "Administrative law — judicial review for illegality, irrationality and procedural impropriety.",
+   "Human rights — NZ Bill of Rights Act 1990: rights may be subject to reasonable limits demonstrably justified in a free and democratic society (s 5).",
+   "Te Tiriti o Waitangi (1840) — its legal force depends on incorporation in statute. The Waitangi Tribunal (est. 1975) makes recommendations, mostly not binding."
+  ],
+  "find_out": [
+   "State the rule (M1 Represent)",
+   "Interpret (M2 Derive)",
+   "Find facts (M3 Observe)",
+   "Compare systems (M6 Compare and reconstruct)",
+   "Adjudicate (M7 Verify)"
+  ],
+  "settles": [
+   "W9",
+   "W10"
+  ],
+  "breaks": [
+   "non-justiciability"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LA.md"
+ },
+ {
+  "id": "LA.O.A5",
+  "field": "LA",
+  "name": "Forums and proof",
+  "question": "What forum decides, and how?",
+  "look_for": [
+   "Jurisdiction and courts — which forum may hear a claim. The NZ Supreme Court replaced Privy Council appeals from 2004.",
+   "Procedure — pleadings, appeal.",
+   "Evidence and standards of proof — beyond reasonable doubt in criminal cases; balance of probabilities in civil cases.",
+   "Arbitration and alternative dispute resolution — awards are enforceable under the New York Convention (1958) in contracting states."
+  ],
+  "find_out": [
+   "State the rule (M1 Represent)",
+   "Interpret (M2 Derive)",
+   "Find facts (M3 Observe)",
+   "Compare systems (M6 Compare and reconstruct)",
+   "Adjudicate (M7 Verify)"
+  ],
+  "settles": [
+   "W10"
+  ],
+  "breaks": [
+   "lack of jurisdiction"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LA.md"
+ }
+]

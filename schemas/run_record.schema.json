@@ -1,0 +1,10 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Run record","type":"object",
+ "required":["id","mode","input","created"],
+ "properties":{"id":{"type":"string"},"mode":{"enum":["survey","consult","connect","check","zoom"]},
+  "input":{"type":"string"},"framed":{"type":"object"},"signature":{"type":"object"},
+  "consulted":{"type":"array","items":{"type":"string"}},
+  "set_aside":{"type":"array","items":{"type":"object"}},
+  "routes":{"type":"array","items":{"type":"object","required":["summary","nodes","status"],
+    "properties":{"summary":{"type":"string"},"nodes":{"type":"array"},"conditions":{"type":"array"},
+      "sources":{"type":"array"},"status":{"enum":["proposed","conditions_checked","source_found","tested"]}}}},
+  "synthesis":{"type":"string"},"model":{"type":"string"},"created":{"type":"string"}}}

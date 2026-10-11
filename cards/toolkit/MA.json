@@ -1,0 +1,2503 @@
+[
+ {
+  "id": "MA.TK.00",
+  "field": "MA",
+  "node": "MSC:00-XX",
+  "name": "General and overarching topics; collections",
+  "taxonomy_cell": "MA.B.C5",
+  "solves": [
+   "orient a newcomer to a broad area"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "cross_uses": [],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.01",
+  "field": "MA",
+  "node": "MSC:01-XX",
+  "name": "History and biography",
+  "taxonomy_cell": "MA.B.C5",
+  "solves": [
+   "trace how a result or field developed"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [],
+  "cross_uses": [
+   "history of science (HI)"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.03",
+  "field": "MA",
+  "node": "MSC:03-XX",
+  "name": "Mathematical logic and foundations",
+  "taxonomy_cell": "MA.O.A1",
+  "solves": [
+   "decide whether a statement is provable or decidable",
+   "reason about formal languages and models"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "decide_existence"
+   ],
+   "structure": [
+    "logical"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Compactness theorem",
+    "does": "a set of first-order sentences has a model if every finite subset does",
+    "hypotheses": [
+     "first-order logic"
+    ]
+   },
+   {
+    "name": "Gödel incompleteness",
+    "does": "limits what a consistent theory can prove about itself",
+    "hypotheses": [
+     "effectively axiomatised",
+     "consistent",
+     "interprets enough arithmetic"
+    ]
+   },
+   {
+    "name": "Model checking and SAT/SMT",
+    "does": "decides properties of finite or bounded systems",
+    "hypotheses": [
+     "finite or bounded state space"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "software verification",
+   "database query theory",
+   "type systems"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.05",
+  "field": "MA",
+  "node": "MSC:05-XX",
+  "name": "Combinatorics",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "count, construct or prove existence of finite configurations",
+   "optimise over discrete structures"
+  ],
+  "signature": {
+   "task": [
+    "count",
+    "construct",
+    "decide_existence",
+    "optimise"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "structure": [
+    "graph_network",
+    "set"
+   ],
+   "linearity": [
+    "combinatorial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Generating functions",
+    "does": "turn counting into algebra or analysis",
+    "hypotheses": [
+     "counting sequence with recursive structure"
+    ]
+   },
+   {
+    "name": "Probabilistic method",
+    "does": "proves existence by showing a random object works with positive probability",
+    "hypotheses": [
+     "a well-defined random construction"
+    ]
+   },
+   {
+    "name": "Graph algorithms and max-flow/min-cut",
+    "does": "find optimal routes, matchings and cuts",
+    "hypotheses": [
+     "finite graph",
+     "capacities non-negative"
+    ]
+   },
+   {
+    "name": "Ramsey and extremal theory",
+    "does": "large enough structures must contain order",
+    "hypotheses": [
+     "sufficiently large size"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "network design",
+   "scheduling",
+   "error-correcting codes",
+   "genome assembly"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.06",
+  "field": "MA",
+  "node": "MSC:06-XX",
+  "name": "Order, lattices, ordered algebraic structures",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "reason about orderings, hierarchies and lattices"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "optimise"
+   ],
+   "structure": [
+    "hierarchy_tree",
+    "algebraic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lattice theory and Galois connections",
+    "does": "relate two ordered structures",
+    "hypotheses": [
+     "partial orders"
+    ]
+   },
+   {
+    "name": "Formal concept analysis",
+    "does": "extracts hierarchies of concepts from data tables",
+    "hypotheses": [
+     "binary object–attribute table"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "ontology design",
+   "knowledge organisation",
+   "program analysis"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.08",
+  "field": "MA",
+  "node": "MSC:08-XX",
+  "name": "General algebraic systems",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "find what all structures of a kind share"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "prove"
+   ],
+   "structure": [
+    "algebraic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Universal algebra and varieties",
+    "does": "classify algebraic structures by equations they satisfy",
+    "hypotheses": [
+     "equationally defined structures"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "programming language semantics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.11",
+  "field": "MA",
+  "node": "MSC:11-XX",
+  "name": "Number theory",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "solve problems about integers, primes and Diophantine equations"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "decide_existence",
+    "count"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "structure": [
+    "algebraic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Modular arithmetic",
+    "does": "reduces problems to finite residue systems",
+    "hypotheses": [
+     "integer data"
+    ]
+   },
+   {
+    "name": "Analytic number theory",
+    "does": "uses complex analysis to count primes",
+    "hypotheses": [
+     "suitable Dirichlet series"
+    ]
+   },
+   {
+    "name": "Elliptic curves",
+    "does": "group structure on curve points",
+    "hypotheses": [
+     "non-singular cubic"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "public-key cryptography",
+   "pseudorandom number generation",
+   "hashing"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.12",
+  "field": "MA",
+  "node": "MSC:12-XX",
+  "name": "Field theory and polynomials",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "understand solvability of polynomial equations and field extensions"
+  ],
+  "signature": {
+   "task": [
+    "decide_existence",
+    "classify"
+   ],
+   "structure": [
+    "algebraic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Galois theory",
+    "does": "decides solvability by radicals and constructibility via symmetry groups",
+    "hypotheses": [
+     "polynomial over a field"
+    ]
+   },
+   {
+    "name": "Finite fields",
+    "does": "exact arithmetic with finitely many elements",
+    "hypotheses": [
+     "prime-power order"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "coding theory",
+   "cryptography",
+   "impossibility proofs (angle trisection)"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.13",
+  "field": "MA",
+  "node": "MSC:13-XX",
+  "name": "Commutative algebra",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "study polynomial rings and ideals"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "decide_existence"
+   ],
+   "structure": [
+    "algebraic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gröbner bases",
+    "does": "solve and simplify systems of polynomial equations",
+    "hypotheses": [
+     "polynomial system over a field"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "robot kinematics",
+   "algebraic statistics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.14",
+  "field": "MA",
+  "node": "MSC:14-XX",
+  "name": "Algebraic geometry",
+  "taxonomy_cell": "MA.O.A3",
+  "solves": [
+   "study solution sets of polynomial equations geometrically"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "count"
+   ],
+   "structure": [
+    "geometric_space",
+    "algebraic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bézout's theorem",
+    "does": "counts intersections of plane curves",
+    "hypotheses": [
+     "projective plane, multiplicity counted, no common component"
+    ]
+   },
+   {
+    "name": "Tropical geometry",
+    "does": "turns polynomial problems into piecewise-linear ones",
+    "hypotheses": [
+     "valued field"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "coding theory",
+   "phylogenetics",
+   "string theory"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.15",
+  "field": "MA",
+  "node": "MSC:15-XX",
+  "name": "Linear and multilinear algebra; matrix theory",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "solve linear systems, decompose matrices, analyse spectra"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer",
+    "optimise"
+   ],
+   "structure": [
+    "algebraic"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Singular value decomposition",
+    "does": "best low-rank approximation of any matrix (Eckart–Young)",
+    "hypotheses": [
+     "Frobenius or spectral norm"
+    ]
+   },
+   {
+    "name": "Spectral theorem",
+    "does": "diagonalises symmetric matrices with real eigenvalues",
+    "hypotheses": [
+     "real symmetric or normal matrix"
+    ]
+   },
+   {
+    "name": "Perron–Frobenius",
+    "does": "positive matrices have a dominant positive eigenvector",
+    "hypotheses": [
+     "non-negative irreducible matrix"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "PageRank",
+   "principal component analysis",
+   "recommender systems",
+   "quantum mechanics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.16",
+  "field": "MA",
+  "node": "MSC:16-XX",
+  "name": "Associative rings and algebras",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "study non-commutative rings and modules"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "algebraic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Module theory",
+    "does": "linear algebra over rings",
+    "hypotheses": [
+     "ring with identity"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "quantum groups"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.17",
+  "field": "MA",
+  "node": "MSC:17-XX",
+  "name": "Nonassociative rings and algebras",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "study Lie algebras and non-associative structures"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "algebraic"
+   ],
+   "symmetry": [
+    "rotation",
+    "gauge_or_local"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lie algebra classification",
+    "does": "classifies infinitesimal continuous symmetries",
+    "hypotheses": [
+     "finite-dimensional semisimple over C"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "particle physics",
+   "control theory"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.18",
+  "field": "MA",
+  "node": "MSC:18-XX",
+  "name": "Category theory; homological algebra",
+  "taxonomy_cell": "MA.O.A1",
+  "solves": [
+   "find the same pattern across different areas",
+   "compose systems from parts"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "construct"
+   ],
+   "structure": [
+    "algebraic",
+    "logical"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Functors and natural transformations",
+    "does": "transport results between areas",
+    "hypotheses": [
+     "structure-preserving maps exist"
+    ]
+   },
+   {
+    "name": "Universal properties",
+    "does": "characterise objects by their relations",
+    "hypotheses": [
+     "the relevant category is fixed"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "functional programming",
+   "database migration",
+   "compositional systems design"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.19",
+  "field": "MA",
+  "node": "MSC:19-XX",
+  "name": "\\(K\\)-theory",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "study K-theory and related invariants"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "algebraic",
+    "manifold"
+   ]
+  },
+  "tools": [
+   {
+    "name": "K-theory",
+    "does": "algebraic invariants of spaces and rings",
+    "hypotheses": [
+     "suitable category of bundles or modules"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "topological phases of matter"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.20",
+  "field": "MA",
+  "node": "MSC:20-XX",
+  "name": "Group theory and generalizations",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "describe and exploit symmetry"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "count"
+   ],
+   "structure": [
+    "algebraic"
+   ],
+   "symmetry": [
+    "permutation",
+    "rotation",
+    "translation"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Burnside / Pólya counting",
+    "does": "counts objects up to symmetry",
+    "hypotheses": [
+     "finite group action"
+    ]
+   },
+   {
+    "name": "Classification of finite simple groups",
+    "does": "lists building blocks of finite symmetry",
+    "hypotheses": [
+     "finite groups"
+    ]
+   },
+   {
+    "name": "Representation theory",
+    "does": "turns symmetry into linear algebra",
+    "hypotheses": [
+     "group over a suitable field"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "crystallography",
+   "chemistry (molecular symmetry)",
+   "puzzle solving",
+   "cryptanalysis"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.22",
+  "field": "MA",
+  "node": "MSC:22-XX",
+  "name": "Topological groups, Lie groups",
+  "taxonomy_cell": "MA.O.A2",
+  "solves": [
+   "study continuous symmetry groups"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "manifold",
+    "algebraic"
+   ],
+   "symmetry": [
+    "rotation",
+    "translation",
+    "gauge_or_local"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lie groups and harmonic analysis on groups",
+    "does": "analyse functions with continuous symmetry",
+    "hypotheses": [
+     "locally compact group"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "robotics",
+   "relativity",
+   "signal processing on spheres"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.26",
+  "field": "MA",
+  "node": "MSC:26-XX",
+  "name": "Real functions",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "analyse real functions, derivatives and integrals"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "prove"
+   ],
+   "domain_type": [
+    "continuous"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Mean value theorem",
+    "does": "bounds change by derivative",
+    "hypotheses": [
+     "continuous on closed interval, differentiable inside"
+    ]
+   },
+   {
+    "name": "Inequalities (Jensen, Cauchy–Schwarz)",
+    "does": "bound quantities without solving",
+    "hypotheses": [
+     "convexity / inner product"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "error analysis everywhere"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.28",
+  "field": "MA",
+  "node": "MSC:28-XX",
+  "name": "Measure and integration",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "measure size, define integration rigorously"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "prove"
+   ],
+   "structure": [
+    "probability_space"
+   ],
+   "domain_type": [
+    "continuous"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lebesgue integration and dominated convergence",
+    "does": "exchange limits and integrals",
+    "hypotheses": [
+     "dominating integrable function"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "probability theory",
+   "fractal dimension"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.30",
+  "field": "MA",
+  "node": "MSC:30-XX",
+  "name": "Functions of a complex variable",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "analyse complex functions"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "prove"
+   ],
+   "domain_type": [
+    "continuous"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Residue theorem",
+    "does": "evaluates real integrals via complex contours",
+    "hypotheses": [
+     "meromorphic, suitable contour"
+    ]
+   },
+   {
+    "name": "Conformal maps",
+    "does": "transform hard domains into simple ones",
+    "hypotheses": [
+     "simply connected domain (Riemann mapping)"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "fluid flow",
+   "electrostatics",
+   "signal processing"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.31",
+  "field": "MA",
+  "node": "MSC:31-XX",
+  "name": "Potential theory",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "solve Laplace-type potential problems"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Harmonic functions, maximum principle",
+    "does": "bounds solutions by boundary values",
+    "hypotheses": [
+     "harmonic in a bounded domain"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "electrostatics",
+   "random walks"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.32",
+  "field": "MA",
+  "node": "MSC:32-XX",
+  "name": "Several complex variables and analytic spaces",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "analyse functions of several complex variables"
+  ],
+  "signature": {
+   "task": [
+    "prove"
+   ],
+   "domain_type": [
+    "continuous"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Several complex variables",
+    "does": "holomorphic geometry in higher dimension",
+    "hypotheses": [
+     "complex manifold"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "string theory"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.33",
+  "field": "MA",
+  "node": "MSC:33-XX",
+  "name": "Special functions",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "evaluate and use special functions"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "construct"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hypergeometric, Bessel, orthogonal polynomials",
+    "does": "closed forms for recurring solutions",
+    "hypotheses": [
+     "equation of the matching type"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "wave propagation",
+   "quantum mechanics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.34",
+  "field": "MA",
+  "node": "MSC:34-XX",
+  "name": "Ordinary differential equations",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "model change in time by ordinary differential equations"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "control"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "domain_type": [
+    "continuous"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Existence and uniqueness (Picard–Lindelöf)",
+    "does": "guarantees a unique local solution",
+    "hypotheses": [
+     "Lipschitz right-hand side"
+    ]
+   },
+   {
+    "name": "Linear stability analysis",
+    "does": "decides stability of equilibria from eigenvalues",
+    "hypotheses": [
+     "hyperbolic equilibrium"
+    ]
+   },
+   {
+    "name": "Phase-plane analysis",
+    "does": "qualitative behaviour without solving",
+    "hypotheses": [
+     "two-dimensional autonomous system"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "epidemics",
+   "population dynamics",
+   "circuits",
+   "pharmacokinetics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.35",
+  "field": "MA",
+  "node": "MSC:35-XX",
+  "name": "Partial differential equations",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "model fields varying in space and time by partial differential equations"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Separation of variables and Fourier series",
+    "does": "solve linear PDEs on simple domains",
+    "hypotheses": [
+     "linear, separable geometry"
+    ]
+   },
+   {
+    "name": "Energy estimates",
+    "does": "prove stability and uniqueness",
+    "hypotheses": [
+     "suitable energy functional"
+    ]
+   },
+   {
+    "name": "Weak solutions (Sobolev spaces)",
+    "does": "solve where classical solutions fail",
+    "hypotheses": [
+     "appropriate function space"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "heat, waves, fluids",
+   "option pricing (Black–Scholes)",
+   "image denoising"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.37",
+  "field": "MA",
+  "node": "MSC:37-XX",
+  "name": "Dynamical systems and ergodic theory",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "understand long-run behaviour of evolving systems"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "dynamics": [
+    "dynamic_deterministic",
+    "dynamic_stochastic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ergodic theorems",
+    "does": "time averages equal space averages",
+    "hypotheses": [
+     "measure-preserving, ergodic"
+    ]
+   },
+   {
+    "name": "Chaos and Lyapunov exponents",
+    "does": "measure sensitivity to initial conditions",
+    "hypotheses": [
+     "smooth dynamics"
+    ]
+   },
+   {
+    "name": "Bifurcation theory",
+    "does": "classifies how behaviour changes with parameters",
+    "hypotheses": [
+     "generic parameter families"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "climate",
+   "ecology",
+   "cardiac rhythms",
+   "orbital mechanics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.39",
+  "field": "MA",
+  "node": "MSC:39-XX",
+  "name": "Difference and functional equations",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "solve difference and functional equations"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "construct"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linear recurrences and z-transforms",
+    "does": "closed forms for discrete-time systems",
+    "hypotheses": [
+     "linear constant coefficients"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "digital signal processing",
+   "economics models"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.40",
+  "field": "MA",
+  "node": "MSC:40-XX",
+  "name": "Sequences, series, summability",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "sum series and accelerate convergence"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Summation methods, convergence acceleration",
+    "does": "assign or speed up sums",
+    "hypotheses": [
+     "suitable growth conditions"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "numerical physics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.41",
+  "field": "MA",
+  "node": "MSC:41-XX",
+  "name": "Approximations and expansions",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "approximate functions with simpler ones"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "goal_quality": [
+    "approximate",
+    "bound"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Chebyshev and spline approximation",
+    "does": "near-optimal uniform approximation",
+    "hypotheses": [
+     "continuous on interval"
+    ]
+   },
+   {
+    "name": "Universal approximation",
+    "does": "networks approximate continuous functions",
+    "hypotheses": [
+     "compact domain, non-polynomial activation"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "computer graphics",
+   "neural networks",
+   "numerical methods"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.42",
+  "field": "MA",
+  "node": "MSC:42-XX",
+  "name": "Harmonic analysis on Euclidean spaces",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "decompose signals into frequencies or scales"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "structure": [
+    "time_series",
+    "function_space"
+   ],
+   "symmetry": [
+    "translation"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fourier transform",
+    "does": "turns convolution into multiplication, reveals frequencies",
+    "hypotheses": [
+     "integrable or square-integrable"
+    ]
+   },
+   {
+    "name": "Wavelets",
+    "does": "localised time-frequency analysis",
+    "hypotheses": [
+     "admissible wavelet"
+    ]
+   },
+   {
+    "name": "Compressed sensing",
+    "does": "recovers sparse signals from few measurements",
+    "hypotheses": [
+     "sparsity",
+     "restricted isometry property"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "MRI",
+   "audio compression",
+   "number theory",
+   "quantum mechanics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.43",
+  "field": "MA",
+  "node": "MSC:43-XX",
+  "name": "Abstract harmonic analysis",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "harmonic analysis on groups"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "symmetry": [
+    "translation",
+    "rotation"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Abstract harmonic analysis",
+    "does": "Fourier analysis on groups",
+    "hypotheses": [
+     "locally compact abelian group"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "crystallography",
+   "signal processing"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.44",
+  "field": "MA",
+  "node": "MSC:44-XX",
+  "name": "Integral transforms, operational calculus",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "transform problems into easier spaces"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Laplace, Radon and Mellin transforms",
+    "does": "solve equations or reconstruct from projections",
+    "hypotheses": [
+     "transform exists and is invertible"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "CT scanning (Radon)",
+   "control engineering"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.45",
+  "field": "MA",
+  "node": "MSC:45-XX",
+  "name": "Integral equations",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "solve integral equations"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fredholm theory",
+    "does": "solvability of linear integral equations",
+    "hypotheses": [
+     "compact operator"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "inverse scattering",
+   "radiative transfer"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.46",
+  "field": "MA",
+  "node": "MSC:46-XX",
+  "name": "Functional analysis",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "work in infinite-dimensional spaces of functions"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "decide_existence"
+   ],
+   "structure": [
+    "function_space"
+   ],
+   "scale": [
+    "infinite"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hilbert and Banach spaces",
+    "does": "geometry for functions",
+    "hypotheses": [
+     "completeness"
+    ]
+   },
+   {
+    "name": "Fixed-point theorems (Banach, Schauder)",
+    "does": "existence of solutions",
+    "hypotheses": [
+     "contraction / compact convex set"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "quantum mechanics",
+   "machine learning (kernel methods)"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.47",
+  "field": "MA",
+  "node": "MSC:47-XX",
+  "name": "Operator theory",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "study linear operators and their spectra"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "classify"
+   ],
+   "structure": [
+    "function_space"
+   ],
+   "linearity": [
+    "linear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Spectral theory of operators",
+    "does": "eigenvalue decomposition in infinite dimensions",
+    "hypotheses": [
+     "self-adjoint or compact operator"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "quantum mechanics",
+   "vibration analysis"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.49",
+  "field": "MA",
+  "node": "MSC:49-XX",
+  "name": "Calculus of variations and optimal control; optimization",
+  "taxonomy_cell": "MA.O.A4",
+  "solves": [
+   "optimise over functions and control trajectories"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "control"
+   ],
+   "structure": [
+    "function_space"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Calculus of variations (Euler–Lagrange)",
+    "does": "conditions for optimal functions",
+    "hypotheses": [
+     "smooth functional"
+    ]
+   },
+   {
+    "name": "Pontryagin maximum principle",
+    "does": "necessary conditions for optimal control",
+    "hypotheses": [
+     "controlled ODE system"
+    ]
+   },
+   {
+    "name": "Dynamic programming (Bellman)",
+    "does": "solve sequential decisions backwards",
+    "hypotheses": [
+     "Markov structure, principle of optimality"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "rocket trajectories",
+   "economics",
+   "reinforcement learning"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.51",
+  "field": "MA",
+  "node": "MSC:51-XX",
+  "name": "Geometry",
+  "taxonomy_cell": "MA.O.A3",
+  "solves": [
+   "classical and discrete geometry problems"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "optimise"
+   ],
+   "structure": [
+    "geometric_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Packing and covering",
+    "does": "densest arrangements",
+    "hypotheses": [
+     "specified shapes and space"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "coding theory",
+   "materials science"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.52",
+  "field": "MA",
+  "node": "MSC:52-XX",
+  "name": "Convex and discrete geometry",
+  "taxonomy_cell": "MA.O.A3",
+  "solves": [
+   "convex sets, polytopes and discrete geometry"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "count"
+   ],
+   "structure": [
+    "geometric_space"
+   ],
+   "linearity": [
+    "convex"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Convex duality and separation",
+    "does": "certificates of optimality or infeasibility",
+    "hypotheses": [
+     "convex sets"
+    ]
+   },
+   {
+    "name": "Polytope theory",
+    "does": "structure of feasible regions",
+    "hypotheses": [
+     "finitely many linear inequalities"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "linear programming",
+   "machine learning (support vector machines)"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.53",
+  "field": "MA",
+  "node": "MSC:53-XX",
+  "name": "Differential geometry",
+  "taxonomy_cell": "MA.O.A3",
+  "solves": [
+   "measure curvature and geometry of curves, surfaces and manifolds"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "classify"
+   ],
+   "structure": [
+    "manifold"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gauss–Bonnet",
+    "does": "ties total curvature to topology",
+    "hypotheses": [
+     "compact oriented surface"
+    ]
+   },
+   {
+    "name": "Riemannian geometry, geodesics",
+    "does": "shortest paths in curved spaces",
+    "hypotheses": [
+     "smooth metric"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "general relativity",
+   "computer vision",
+   "information geometry in statistics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.54",
+  "field": "MA",
+  "node": "MSC:54-XX",
+  "name": "General topology",
+  "taxonomy_cell": "MA.O.A3",
+  "solves": [
+   "reason about nearness and continuity in general"
+  ],
+  "signature": {
+   "task": [
+    "prove"
+   ],
+   "structure": [
+    "geometric_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Compactness and connectedness",
+    "does": "guarantee extrema and intermediate values",
+    "hypotheses": [
+     "topological space with the property"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "analysis everywhere"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.55",
+  "field": "MA",
+  "node": "MSC:55-XX",
+  "name": "Algebraic topology",
+  "taxonomy_cell": "MA.O.A3",
+  "solves": [
+   "detect holes and shape invariants"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ],
+   "structure": [
+    "geometric_space",
+    "manifold"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Homology and persistent homology",
+    "does": "measures shape of data across scales",
+    "hypotheses": [
+     "finite sample with a distance"
+    ]
+   },
+   {
+    "name": "Fixed-point theorems (Brouwer, Lefschetz)",
+    "does": "existence of fixed points",
+    "hypotheses": [
+     "continuous map on suitable space"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "topological data analysis",
+   "sensor coverage",
+   "equilibrium existence in economics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.57",
+  "field": "MA",
+  "node": "MSC:57-XX",
+  "name": "Manifolds and cell complexes",
+  "taxonomy_cell": "MA.O.A3",
+  "solves": [
+   "classify manifolds, knots and low-dimensional shapes"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "manifold"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Knot invariants",
+    "does": "distinguish knots",
+    "hypotheses": [
+     "tame knots"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "DNA topology",
+   "polymer physics",
+   "quantum computing"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.58",
+  "field": "MA",
+  "node": "MSC:58-XX",
+  "name": "Global analysis, analysis on manifolds",
+  "taxonomy_cell": "MA.O.A3",
+  "solves": [
+   "global analysis on manifolds"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "estimate"
+   ],
+   "structure": [
+    "manifold",
+    "function_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Morse theory",
+    "does": "relates critical points to topology",
+    "hypotheses": [
+     "Morse function on compact manifold"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "optimisation landscapes",
+   "physics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.60",
+  "field": "MA",
+  "node": "MSC:60-XX",
+  "name": "Probability theory and stochastic processes",
+  "taxonomy_cell": "MA.O.A5",
+  "solves": [
+   "model random phenomena and their limits"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "structure": [
+    "probability_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Law of large numbers and central limit theorem",
+    "does": "averages concentrate and become Gaussian",
+    "hypotheses": [
+     "independent, finite variance (CLT)"
+    ]
+   },
+   {
+    "name": "Markov chains",
+    "does": "model memoryless random evolution",
+    "hypotheses": [
+     "Markov property"
+    ]
+   },
+   {
+    "name": "Martingales",
+    "does": "fair-game processes with strong limit theorems",
+    "hypotheses": [
+     "integrable, adapted"
+    ]
+   },
+   {
+    "name": "Concentration inequalities",
+    "does": "bound deviations",
+    "hypotheses": [
+     "boundedness or sub-Gaussian tails"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "finance",
+   "queues",
+   "physics",
+   "machine learning theory"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.62",
+  "field": "MA",
+  "node": "MSC:62-XX",
+  "name": "Statistics",
+  "taxonomy_cell": "MA.O.A5",
+  "solves": [
+   "learn from data under uncertainty"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate",
+    "predict",
+    "compare"
+   ],
+   "uncertainty": [
+    "noise",
+    "unknown_distribution"
+   ],
+   "data": [
+    "data_rich",
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Maximum likelihood and Bayesian inference",
+    "does": "estimate parameters with uncertainty",
+    "hypotheses": [
+     "specified model"
+    ]
+   },
+   {
+    "name": "Hypothesis testing and confidence intervals",
+    "does": "decide against noise",
+    "hypotheses": [
+     "sampling assumptions met"
+    ]
+   },
+   {
+    "name": "Regression and causal inference designs",
+    "does": "estimate effects",
+    "hypotheses": [
+     "identification assumptions"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "medicine (trials)",
+   "economics",
+   "AI evaluation"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.65",
+  "field": "MA",
+  "node": "MSC:65-XX",
+  "name": "Numerical analysis",
+  "taxonomy_cell": "MA.B.C3",
+  "solves": [
+   "compute numerical solutions with error control"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "goal_quality": [
+    "approximate",
+    "bound"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Finite elements and finite differences",
+    "does": "discretise PDEs",
+    "hypotheses": [
+     "stability and consistency (Lax equivalence)"
+    ]
+   },
+   {
+    "name": "Iterative linear solvers",
+    "does": "solve large sparse systems",
+    "hypotheses": [
+     "conditioning"
+    ]
+   },
+   {
+    "name": "Monte Carlo",
+    "does": "integrate by sampling",
+    "hypotheses": [
+     "finite variance"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "engineering simulation",
+   "weather prediction",
+   "graphics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.68",
+  "field": "MA",
+  "node": "MSC:68-XX",
+  "name": "Computer science",
+  "taxonomy_cell": "MA.B.C3",
+  "solves": [
+   "design algorithms and analyse computation"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "construct",
+    "decide_existence"
+   ],
+   "domain_type": [
+    "discrete"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Complexity classes and reductions",
+    "does": "classify difficulty",
+    "hypotheses": [
+     "model of computation fixed"
+    ]
+   },
+   {
+    "name": "Approximation algorithms",
+    "does": "guaranteed near-optimal answers",
+    "hypotheses": [
+     "problem-specific"
+    ]
+   },
+   {
+    "name": "Learning theory (PAC, VC)",
+    "does": "sample bounds for learning",
+    "hypotheses": [
+     "i.i.d. data"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "every computing field"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.70",
+  "field": "MA",
+  "node": "MSC:70-XX",
+  "name": "Mechanics of particles and systems",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "mechanics of particles and systems"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "symmetry": [
+    "conserved_quantity"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lagrangian and Hamiltonian mechanics",
+    "does": "equations from energy and symmetry",
+    "hypotheses": [
+     "holonomic constraints"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "robotics",
+   "molecular dynamics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.74",
+  "field": "MA",
+  "node": "MSC:74-XX",
+  "name": "Mechanics of deformable solids",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "mechanics of deformable solids"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Elasticity theory",
+    "does": "stress and strain fields",
+    "hypotheses": [
+     "small strain for linear theory"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "structural engineering",
+   "biomechanics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.76",
+  "field": "MA",
+  "node": "MSC:76-XX",
+  "name": "Fluid mechanics",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "fluid mechanics"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Navier–Stokes and dimensional analysis",
+    "does": "flow behaviour and regimes",
+    "hypotheses": [
+     "Newtonian fluid"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "weather",
+   "blood flow",
+   "aerodynamics"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.78",
+  "field": "MA",
+  "node": "MSC:78-XX",
+  "name": "Optics, electromagnetic theory",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "optics and electromagnetic theory"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Maxwell's equations, wave optics",
+    "does": "propagation and scattering",
+    "hypotheses": [
+     "linear media"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "imaging",
+   "antennas"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.80",
+  "field": "MA",
+  "node": "MSC:80-XX",
+  "name": "Classical thermodynamics, heat transfer",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "classical thermodynamics and heat transfer"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Heat equation",
+    "does": "diffusion of heat",
+    "hypotheses": [
+     "Fourier's law"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "climate",
+   "electronics cooling"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.81",
+  "field": "MA",
+  "node": "MSC:81-XX",
+  "name": "Quantum theory",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "quantum theory"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "structure": [
+    "function_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hilbert-space quantum mechanics",
+    "does": "states, operators, spectra",
+    "hypotheses": [
+     "closed system for unitary evolution"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "quantum computing",
+   "chemistry"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.82",
+  "field": "MA",
+  "node": "MSC:82-XX",
+  "name": "Statistical mechanics, structure of matter",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "statistical mechanics and the structure of matter"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Partition functions",
+    "does": "macroscopic properties from microstates",
+    "hypotheses": [
+     "equilibrium"
+    ]
+   },
+   {
+    "name": "Renormalisation group",
+    "does": "explains universality at critical points",
+    "hypotheses": [
+     "scale invariance near criticality"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "machine learning (Boltzmann machines)",
+   "social dynamics models",
+   "neural networks theory"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.83",
+  "field": "MA",
+  "node": "MSC:83-XX",
+  "name": "Relativity and gravitational theory",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "relativity and gravitational theory"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "manifold"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Einstein field equations",
+    "does": "spacetime curvature from matter",
+    "hypotheses": [
+     "classical regime"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "GPS timing"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.85",
+  "field": "MA",
+  "node": "MSC:85-XX",
+  "name": "Astronomy and astrophysics",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "astronomy and astrophysics models"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "infer"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Stellar structure equations",
+    "does": "model stars",
+    "hypotheses": [
+     "hydrostatic equilibrium"
+    ]
+   }
+  ],
+  "cross_uses": [],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.86",
+  "field": "MA",
+  "node": "MSC:86-XX",
+  "name": "Geophysics",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "geophysics models"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "predict"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Inverse problems in geophysics",
+    "does": "infer interior from surface data",
+    "hypotheses": [
+     "regularisation"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "medical imaging"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.90",
+  "field": "MA",
+  "node": "MSC:90-XX",
+  "name": "Operations research, mathematical programming",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "optimise decisions and operations"
+  ],
+  "signature": {
+   "task": [
+    "optimise"
+   ],
+   "constraints": [
+    "inequality",
+    "integrality",
+    "resource_budget"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linear and integer programming",
+    "does": "optimise linear objectives under constraints",
+    "hypotheses": [
+     "linearity; integrality for IP"
+    ]
+   },
+   {
+    "name": "Convex optimisation and duality",
+    "does": "global optima with certificates",
+    "hypotheses": [
+     "convex objective and feasible set"
+    ]
+   },
+   {
+    "name": "Queueing theory",
+    "does": "waiting times and capacity",
+    "hypotheses": [
+     "arrival and service distributions"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "logistics",
+   "airline scheduling",
+   "energy grids",
+   "machine learning training"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.91",
+  "field": "MA",
+  "node": "MSC:91-XX",
+  "name": "Game theory, economics, finance, and other social and behavioral sciences",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "analyse strategic interaction and economic allocation"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design",
+    "explain"
+   ],
+   "agents": [
+    "multiple_competing",
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Nash equilibrium existence",
+    "does": "stable strategy profiles",
+    "hypotheses": [
+     "finite game, mixed strategies"
+    ]
+   },
+   {
+    "name": "Mechanism design",
+    "does": "design rules so that truth-telling is optimal",
+    "hypotheses": [
+     "private values, quasi-linear utility for VCG"
+    ]
+   },
+   {
+    "name": "Social choice theorems (Arrow)",
+    "does": "limits of aggregating preferences",
+    "hypotheses": [
+     "three or more alternatives, finite voters"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "auctions",
+   "evolutionary biology",
+   "network routing",
+   "AI multi-agent systems"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.92",
+  "field": "MA",
+  "node": "MSC:92-XX",
+  "name": "Biology and other natural sciences",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "mathematical biology"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "dynamics": [
+    "dynamic_deterministic",
+    "dynamic_stochastic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Population and epidemic models (SIR)",
+    "does": "dynamics of spread",
+    "hypotheses": [
+     "well-mixed population"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "epidemiology",
+   "ecology"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.93",
+  "field": "MA",
+  "node": "MSC:93-XX",
+  "name": "Systems theory; control",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "control systems"
+  ],
+  "signature": {
+   "task": [
+    "control",
+    "design"
+   ],
+   "dynamics": [
+    "dynamic_deterministic",
+    "dynamic_stochastic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Feedback and stability (Nyquist, Lyapunov)",
+    "does": "keep systems stable",
+    "hypotheses": [
+     "linear time-invariant for Nyquist"
+    ]
+   },
+   {
+    "name": "Kalman filter",
+    "does": "optimal state estimation",
+    "hypotheses": [
+     "linear Gaussian"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "aircraft",
+   "robotics",
+   "economics policy rules"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.94",
+  "field": "MA",
+  "node": "MSC:94-XX",
+  "name": "Information and communication theory, circuits",
+  "taxonomy_cell": "MA.B.C4",
+  "solves": [
+   "information, communication and coding"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Shannon capacity",
+    "does": "limits of reliable communication",
+    "hypotheses": [
+     "discrete memoryless channel"
+    ]
+   },
+   {
+    "name": "Error-correcting codes",
+    "does": "detect and correct errors",
+    "hypotheses": [
+     "channel model"
+    ]
+   },
+   {
+    "name": "Entropy and information measures",
+    "does": "quantify uncertainty",
+    "hypotheses": [
+     "probability distribution"
+    ]
+   }
+  ],
+  "cross_uses": [
+   "machine learning",
+   "cryptography",
+   "genomics",
+   "neuroscience"
+  ],
+  "status": "draft"
+ },
+ {
+  "id": "MA.TK.97",
+  "field": "MA",
+  "node": "MSC:97-XX",
+  "name": "Mathematics education",
+  "taxonomy_cell": "MA.B.C5",
+  "solves": [
+   "teach and learn mathematics"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "cross_uses": [
+   "education research (ED)"
+  ],
+  "status": "draft"
+ }
+]

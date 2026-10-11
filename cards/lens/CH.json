@@ -1,0 +1,232 @@
+[
+ {
+  "id": "CH",
+  "field": "CH",
+  "name": "Chemistry",
+  "question": "What does chemistry establish about this subject, divided by the question asked of a substance?",
+  "scqa_question": "By what single dimension can every chemical claim be placed once?",
+  "look_for": [
+   "CH.O.A1 Composition and identity",
+   "CH.O.A2 Structure and bonding",
+   "CH.O.A3 Equilibrium and energy",
+   "CH.O.A4 Rates and mechanisms",
+   "CH.O.A5 Synthesis and analysis"
+  ],
+  "find_out": [
+   "Name and model (M1 Represent)",
+   "Calculate (M2 Derive)",
+   "Characterise (M3 Observe)",
+   "Synthesise (M4 Intervene)",
+   "Compute (M5 Compute)"
+  ],
+  "settles": [
+   "W1",
+   "W2",
+   "W3",
+   "W4",
+   "W12"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "VSEPR",
+   "Le Chatelier's principle",
+   "\"Like dissolves like\"",
+   "Hammond's postulate",
+   "Electron-pushing arrows",
+   "The octet rule (with stated exceptions)",
+   "The 18-electron rule"
+  ],
+  "collisions": [
+   "Place a claim by the question it answers of a substance.",
+   "A department is a bridge, never a cell.",
+   "Atomic level structure is PH. The bond is CH.",
+   "What a molecule does in a living cell is BI. Its structure and reactivity are CH.",
+   "A drug's action in a patient is MD. Its synthesis and structure are CH.",
+   "A material's fitness for a design is EN. Its composition–property law is CH.",
+   "A food standard is AG (uses CH for the molecule).",
+   "Environmental harm from a chemical is EV. Its fate and reaction are CH.",
+   "nuclear and atomic level structure → PH.O.A2",
+   "biological function of a molecule → BI",
+   "clinical effect of a drug → MD",
+   "engineering specification → EN",
+   "environmental harm → EV"
+  ],
+  "open": [
+   "the mechanism of many heterogeneous catalysts; accurate prediction of crystal structure from composition.",
+   "biochemistry as a CH bridge rather than a BI cell (alternative: BI.O.A1); electronegativity as a measured or model quantity."
+  ],
+  "status": "draft",
+  "source": "pyramids/CH.md"
+ },
+ {
+  "id": "CH.O.A1",
+  "field": "CH",
+  "name": "Composition and identity",
+  "question": "What is it?",
+  "look_for": [
+   "Elements and the periodic table. 118 elements are named and confirmed by IUPAC; the last four names were approved in 2016. Periodicity follows from electron configuration (uses PH.O.A2.1).",
+   "Atomic weights are published by IUPAC (CIAAW), some as intervals reflecting natural variation.",
+   "Compounds and stoichiometry. The law of definite proportions holds for daltonide compounds. Berthollide (non-stoichiometric) solids, such as wüstite Fe₁₋ₓO, are the stated exception.",
+   "The mole: since 2019 defined by fixing the Avogadro constant at 6.022 140 76 × 10²³ mol⁻¹.",
+   "Mixtures and solutions. Composition is stated by mole fraction, molality or concentration.",
+   "Raoult's law holds for ideal solutions. Henry's law holds for dilute solutes.",
+   "Colligative properties depend on solute particle number, for dilute ideal solutions.",
+   "Nomenclature and identifiers. IUPAC names, CAS registry numbers and InChI. Warrant W12.",
+   "Isotopes and isotopic composition. Isotope ratios as identity and tracer. The nuclear structure is PH; radiometric ages are EA."
+  ],
+  "find_out": [
+   "Name and model (M1 Represent)",
+   "Calculate (M2 Derive)",
+   "Characterise (M3 Observe)",
+   "Synthesise (M4 Intervene)",
+   "Compute (M5 Compute)"
+  ],
+  "settles": [
+   "W4",
+   "W12"
+  ],
+  "breaks": [
+   "impure sample, misassignment"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/CH.md"
+ },
+ {
+  "id": "CH.O.A2",
+  "field": "CH",
+  "name": "Structure and bonding",
+  "question": "What is claimed about structure, and by which model?",
+  "look_for": [
+   "The chemical bond. Covalent, ionic and metallic bonding. The quantum-chemical description uses the Born–Oppenheimer approximation: nuclei treated as fixed relative to electrons.",
+   "Molecular orbital theory and valence bond theory as models.",
+   "Electronegativity (Pauling scale) as a derived, model-dependent quantity.",
+   "Molecular shape and stereochemistry. Chirality, isomerism, conformational analysis. VSEPR is listed as a heuristic, not a law.",
+   "Enantiomers have identical scalar properties in an achiral environment. They differ in chiral environments, including living systems (BI, MD).",
+   "Solid-state and coordination structure. Crystal structures; ligand field theory for transition-metal complexes.",
+   "Polymorphism: one compound, several crystal forms with different properties.",
+   "Intermolecular forces. Hydrogen bonding, dipole forces, dispersion; their effect on phase and solubility."
+  ],
+  "find_out": [
+   "Name and model (M1 Represent)",
+   "Calculate (M2 Derive)",
+   "Characterise (M3 Observe)",
+   "Synthesise (M4 Intervene)",
+   "Compute (M5 Compute)"
+  ],
+  "settles": [
+   "W2",
+   "W4"
+  ],
+  "breaks": [
+   "disorder, polymorphism, method artefact"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/CH.md"
+ },
+ {
+  "id": "CH.O.A3",
+  "field": "CH",
+  "name": "Equilibrium and energy",
+  "question": "What is claimed about the direction and extent of change?",
+  "look_for": [
+   "Thermochemistry. Hess's law: the enthalpy change is path-independent because enthalpy is a state function. Enthalpies of reaction enter energy balances in EN.",
+   "Chemical equilibrium. ΔG° = −RT ln K at constant temperature and pressure. Le Chatelier's principle is listed as a heuristic for small perturbations.",
+   "The van 't Hoff equation gives the temperature dependence of K, assuming ΔH° constant over the range.",
+   "Electrochemistry. The Nernst equation E = E° − (RT/nF) ln Q, using activities, for a cell at equilibrium (no current). It gives ion equilibrium potentials used in BI and MS.",
+   "Batteries and corrosion as applications. Device performance is EN.",
+   "Acids and bases. Brønsted–Lowry and Lewis definitions. pKa is stated in a named solvent and at a temperature.",
+   "Free energy in coupled reactions. A favourable reaction can drive an unfavourable one when they share an intermediate. ATP coupling in cells is the BI application."
+  ],
+  "find_out": [
+   "Name and model (M1 Represent)",
+   "Calculate (M2 Derive)",
+   "Characterise (M3 Observe)",
+   "Synthesise (M4 Intervene)",
+   "Compute (M5 Compute)"
+  ],
+  "settles": [
+   "W1",
+   "W4"
+  ],
+  "breaks": [
+   "non-ideal activity, side reactions"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/CH.md"
+ },
+ {
+  "id": "CH.O.A4",
+  "field": "CH",
+  "name": "Rates and mechanisms",
+  "question": "What is claimed about speed and pathway?",
+  "look_for": [
+   "Rate laws. Reaction order is determined by experiment, not by the balanced equation, except for elementary steps.",
+   "Temperature dependence. Arrhenius k = A exp(−Ea/RT) is empirical over a stated temperature range. Eyring transition-state theory assumes quasi-equilibrium with the activated complex.",
+   "Mechanisms. Sequences of elementary steps. The steady-state and rate-determining-step approximations hold when one step is much slower than the rest.",
+   "Kinetic isotope effects as mechanistic evidence.",
+   "Catalysis. A catalyst changes the rate without changing K. Heterogeneous, homogeneous and enzyme catalysis. Michaelis–Menten kinetics assume a steady-state enzyme–substrate complex and substrate in excess. The enzyme's role in life is BI.",
+   "Photochemistry. Reactions initiated by light; quantum yield. The level structure is PH.O.A2.4."
+  ],
+  "find_out": [
+   "Name and model (M1 Represent)",
+   "Calculate (M2 Derive)",
+   "Characterise (M3 Observe)",
+   "Synthesise (M4 Intervene)",
+   "Compute (M5 Compute)"
+  ],
+  "settles": [
+   "W3"
+  ],
+  "breaks": [
+   "competing pathways, mass-transport limits"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/CH.md"
+ },
+ {
+  "id": "CH.O.A5",
+  "field": "CH",
+  "name": "Synthesis and analysis",
+  "question": "What was made, how, and how do we know what is there?",
+  "look_for": [
+   "Synthesis. Named reactions; retrosynthetic analysis (Corey); yields under stated conditions.",
+   "Protecting groups and selectivity.",
+   "Separation and purification. Distillation, chromatography, crystallisation.",
+   "Analytical measurement. Spectroscopy (NMR, IR, UV-vis), mass spectrometry, titration. Every value carries an uncertainty and a detection limit.",
+   "The Beer–Lambert law holds for dilute solutions and monochromatic light, without scattering.",
+   "Materials and polymers. Composition–property relations for designed substances. Performance against a specification is EN.",
+   "Green chemistry. Atom economy and waste metrics. The environmental impact claim is EV."
+  ],
+  "find_out": [
+   "Name and model (M1 Represent)",
+   "Calculate (M2 Derive)",
+   "Characterise (M3 Observe)",
+   "Synthesise (M4 Intervene)",
+   "Compute (M5 Compute)"
+  ],
+  "settles": [
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "irreproducible yield, contamination"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/CH.md"
+ }
+]

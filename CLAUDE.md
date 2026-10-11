@@ -44,5 +44,14 @@ Run check, registry, tests and site build after any change to a pyramid, the lex
 - The page runs in a sandbox: no external fetches, only allowlisted CDNs, no Python in the browser. The JS engine in the template must stay a faithful port of `engine/taxonomy_engine.py`.
 - Deep analysis uses the claude.ai `sample` capability (declared at publish: `{"sample": {}}`).
 
+## v3 (branch v3-foundations): applying knowledge
+- Purpose and modes: `standard/STANDARD_V3.md` (Survey, Consult, Connect, Check, Zoom). R1 one-home applies to Check only.
+- `maps/<FIELD>/`: subfield maps from authority schemes (MSC2020 for MA; record licence per map).
+- `cards/lens/`: lens cards per field and cell (`python3 scripts/build_lens_cards.py`; MA written by hand).
+- `cards/toolkit/`: toolkit cards with problem signatures (`python3 scripts/build_toolkit_cards.py`).
+- `signatures/vocabulary.json`: controlled facets for problem signatures. `schemas/`: JSON schemas.
+- `engine/v3/connect.py`: signature → ranked toolkit cards. Tests: `tests/test_v3_connect.py`.
+- Plan and progress: `ROADMAP_V3.md`.
+
 ## Known open work
 See `BACKLOG.md`.

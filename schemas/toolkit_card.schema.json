@@ -1,0 +1,12 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Toolkit card","type":"object",
+ "required":["id","field","node","name","solves","signature","tools","status"],
+ "properties":{
+  "id":{"type":"string"},"field":{"type":"string"},"node":{"type":"string","description":"Map node id, e.g. MSC:05Cxx"},
+  "name":{"type":"string"},
+  "solves":{"type":"array","items":{"type":"string"},"description":"Kinds of problem this subfield solves, stated without subject matter"},
+  "signature":{"type":"object","description":"Facet -> list of values from signatures/vocabulary.json"},
+  "tools":{"type":"array","items":{"type":"object","required":["name","does","hypotheses"],
+     "properties":{"name":{"type":"string"},"does":{"type":"string"},"hypotheses":{"type":"array","items":{"type":"string"}}}}},
+  "inputs":{"type":"array","items":{"type":"string"}},"outputs":{"type":"array","items":{"type":"string"}},
+  "cross_uses":{"type":"array","items":{"type":"string"},"description":"Famous applications outside the home subfield"},
+  "status":{"enum":["draft","reviewed"]},"notes":{"type":"string"}}}

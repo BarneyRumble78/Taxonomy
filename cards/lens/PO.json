@@ -1,0 +1,215 @@
+[
+ {
+  "id": "PO",
+  "field": "PO",
+  "name": "Politics",
+  "question": "What does politics establish about this subject, divided by the aspect of power the claim concerns?",
+  "scqa_question": "By what dimension can every empirical claim about political power be placed once?",
+  "look_for": [
+   "PO.O.A1 Authority",
+   "PO.O.A2 Institutions",
+   "PO.O.A3 Political behaviour",
+   "PO.O.A4 Policy and administration",
+   "PO.O.A5 Relations among states"
+  ],
+  "find_out": [
+   "Theorise and model (M1 Represent, M2 Derive)",
+   "Survey and measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Compare cases (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W1",
+   "W3",
+   "W4",
+   "W5",
+   "W6",
+   "W7"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "\"All politics is local\"",
+   "follow the coalition",
+   "\"where you stand depends on where you sit\"",
+   "the iron law of oligarchy (CONTESTED as a law)."
+  ],
+  "collisions": [
+   "Place an empirical claim by the aspect of power.",
+   "Whether rule is justified is PL; whether people believe it is justified is PO.",
+   "Legal validity is LA; the political cause or effect of a law is PO.",
+   "The policy's causal effect belongs to its outcome field; its political origin is PO.",
+   "The conduct of war, coercion and the choice of game are ST; war onset and the international order are PO.",
+   "The theorem is MA; its political use is PO.",
+   "A dated political event is HI; its explanation is PO.",
+   "normative political theory → PL",
+   "legal validity of rules and treaties → LA",
+   "conduct of war and coercion → ST",
+   "dated political events → HI",
+   "median voter and social choice theorems → MA.B.C4",
+   "policy outcomes in health, economy, education → MD, EC, ED"
+  ],
+  "open": [
+   "conditions of democratic backsliding.",
+   "international relations paradigms; causes of the democratic peace; political theory between PO and PL."
+  ],
+  "status": "draft",
+  "source": "pyramids/PO.md"
+ },
+ {
+  "id": "PO.O.A1",
+  "field": "PO",
+  "name": "Authority",
+  "question": "What is claimed about authority?",
+  "look_for": [
+   "States and sovereignty — Weber's state: a community that successfully claims a monopoly of legitimate force in a territory.",
+   "Legitimacy as belief — measured acceptance of a ruler's right. Whether the rule is justified is PL.",
+   "Regimes — democracy, autocracy, hybrid regimes, classified by stated criteria (V-Dem, Polity: W12 for coding rules)."
+  ],
+  "find_out": [
+   "Theorise and model (M1 Represent, M2 Derive)",
+   "Survey and measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Compare cases (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W4",
+   "W6"
+  ],
+  "breaks": [
+   "coder bias, concept stretching"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PO.md"
+ },
+ {
+  "id": "PO.O.A2",
+  "field": "PO",
+  "name": "Institutions",
+  "question": "Which rules produce which outcomes?",
+  "look_for": [
+   "Constitutional design — presidential and parliamentary systems, federalism. The legal text is LA; its political effect is PO.",
+   "Electoral systems — Duverger's law: plurality rule in single-member districts tends toward two-party competition. It is a tendency with known exceptions (e.g. India, Canada).",
+   "Parties — party systems, organisation, cleavages.",
+   "Legislatures and executives — veto players: policy stability rises with the number and ideological distance of veto players (Tsebelis).",
+   "Selectorate theory — leaders keep office by rewarding a winning coalition W drawn from a selectorate S. When W is small relative to S, leaders favour private goods over public ones (Bueno de Mesquita et al., 2003)."
+  ],
+  "find_out": [
+   "Theorise and model (M1 Represent, M2 Derive)",
+   "Survey and measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Compare cases (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W1",
+   "W5",
+   "W6"
+  ],
+  "breaks": [
+   "endogenous institutions"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PO.md"
+ },
+ {
+  "id": "PO.O.A3",
+  "field": "PO",
+  "name": "Political behaviour",
+  "question": "What explains their political action?",
+  "look_for": [
+   "Voting — the median voter theorem: with one policy dimension, single-peaked preferences and majority rule, the median voter's ideal point beats any other. Theorem MA.B.C4; use PO.",
+   "Public opinion — attitudes measured by survey. The cognitive mechanism is MS.",
+   "Participation and social movements — turnout, collective action. Olson: large groups under-provide collective goods without selective incentives.",
+   "Conflict within states — civil war onset, coups, revolution. The conduct of the fighting is ST."
+  ],
+  "find_out": [
+   "Theorise and model (M1 Represent, M2 Derive)",
+   "Survey and measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Compare cases (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W3",
+   "W4",
+   "W5"
+  ],
+  "breaks": [
+   "social desirability bias"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PO.md"
+ },
+ {
+  "id": "PO.O.A4",
+  "field": "PO",
+  "name": "Policy and administration",
+  "question": "How is policy made and delivered?",
+  "look_for": [
+   "Agenda and decision — punctuated equilibrium; the multiple streams model (a framework, W9).",
+   "Bureaucracy — delegation, principal–agent control (theory EC.O.A2.3).",
+   "Implementation — the gap between decision and delivery.",
+   "Policy effects — the causal effect of a policy is owned by the field of the outcome (EC, MD, ED), and PO cites it. The political cause of the policy is PO."
+  ],
+  "find_out": [
+   "Theorise and model (M1 Represent, M2 Derive)",
+   "Survey and measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Compare cases (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W6",
+   "W7"
+  ],
+  "breaks": [
+   "selection on the dependent variable"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PO.md"
+ },
+ {
+  "id": "PO.O.A5",
+  "field": "PO",
+  "name": "Relations among states",
+  "question": "What patterns hold among them?",
+  "look_for": [
+   "International order — anarchy, balance of power, hegemony. Realist, liberal and constructivist claims are competing programmes (CONTESTED).",
+   "Cooperation and international institutions — regimes, alliances, the UN. The treaty's legal force is LA.",
+   "War and peace — the democratic peace: pairs of democracies rarely fight each other. It is an empirical regularity; its causes are CONTESTED. The strategy of coercion and conduct is ST."
+  ],
+  "find_out": [
+   "Theorise and model (M1 Represent, M2 Derive)",
+   "Survey and measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Compare cases (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W5",
+   "W6"
+  ],
+  "breaks": [
+   "few cases, rare events"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PO.md"
+ }
+]

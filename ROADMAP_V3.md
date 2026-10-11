@@ -10,14 +10,14 @@ Three modes on one design:
 Classification stays as one operation (Check), not the purpose.
 
 ## A. Decisions to settle first
-- [ ] A1. Rewrite the purpose in `STANDARD_V2.md` → `STANDARD_V3.md`. Apply mode is primary; R1 (one home) applies to Check mode only.
+- [x] A1. Rewrite the purpose in `STANDARD_V2.md` → `STANDARD_V3.md`. Apply mode is primary; R1 (one home) applies to Check mode only.
 - [ ] A2. Fix the scales: knowledge → field → subfield → topic → tool, and the depth target per field.
 - [ ] A3. Choose the subfield skeleton per field (authority scheme or our own). See C.
 - [ ] A4. Choose the AI backend(s) and cost limits per run (Claude API; local model optional).
 - [ ] A5. Licensing for the published maps and cards (CC BY 4.0) and code (MIT).
 
 ## B. Data model
-- [ ] B1. **Lens card** (per field and per key-line cell), with six parts:
+- [x] B1. **Lens card** (per field and per key-line cell), with six parts:
   - question
   - what to look for
   - how to find out (methods)
@@ -25,14 +25,14 @@ Classification stays as one operation (Check), not the purpose.
   - rules of thumb
   - collisions (borders, uses, OPEN)
 - [ ] B2. **Subfield node:** id, name, parent, authority code, short scope, key results.
-- [ ] B3. **Toolkit card** (per subfield and per major tool), with six parts:
+- [x] B3. **Toolkit card** (per subfield and per major tool), with six parts:
   - problems it solves
   - problem signature
   - flagship methods and theorems, each with its hypotheses
   - inputs needed
   - outputs given
   - typical surprises and famous cross-uses
-- [ ] B4. **Problem signature schema**, a controlled vocabulary covering:
+- [x] B4. **Problem signature schema**, a controlled vocabulary covering:
   - discrete or continuous
   - task: optimise, count, decide existence, assess stability, predict, infer, design, explain
   - symmetry and invariants
@@ -50,7 +50,7 @@ Classification stays as one operation (Check), not the purpose.
 - [ ] B6. JSON schemas for B1–B5, with validators in `scripts/check.py`.
 
 ## C. Content: the maps (depth)
-- [ ] C1. Mathematics: import the MSC2020 hierarchy (63 two-digit, 529 three-digit, ~6,000 five-digit) from msc2020.org, under its own licence.
+- [x] C1. Mathematics: import the MSC2020 hierarchy (63 two-digit, 529 three-digit, ~6,000 five-digit) from msc2020.org, under its own licence.
 - [ ] C2. Physics: PhySH disciplines and facets; ANZSRC 51 fields.
 - [ ] C3. Medicine and biology: MeSH trees C, D and G; ICD-11 chapters.
 - [ ] C4. Computer science: ACM CCS 2012 full tree; CS2023 knowledge units.
@@ -60,8 +60,8 @@ Classification stays as one operation (Check), not the purpose.
 - [ ] C8. Check licences for every imported scheme before redistributing.
 
 ## D. Content: cards
-- [ ] D1. Convert the existing pyramids into lens cards: 25 field cards and 124 cell cards, mostly drawn from existing text.
-- [ ] D2. Mathematics toolkit cards for all 529 three-digit MSC classes. Draft with AI, then review.
+- [~] D1. Convert the existing pyramids into lens cards: 25 field cards and 124 cell cards, mostly drawn from existing text.
+- [~] D2. Mathematics toolkit cards for all 529 three-digit MSC classes. Draft with AI, then review.
 - [ ] D3. Physics toolkit cards for each PhySH discipline, then deeper.
 - [ ] D4. Toolkit cards for the remaining fields, at their first two levels.
 - [ ] D5. Famous cross-connection catalogue, a seed set of 100 or more. Each entry gives problem, source field, tool field and date. Examples:
@@ -79,7 +79,7 @@ Classification stays as one operation (Check), not the purpose.
 - [ ] E2. **Router:** picks the relevant fields (Survey) or subfields (Consult). The keyword engine is a fast first pass; the AI makes the final choice; coverage rules prevent skipping.
 - [ ] E3. **Sweeper:** sends the framed problem to every selected node in parallel, each with its card as context. It returns applicability, approach, known results and conditions.
 - [ ] E4. **Deepener:** expands the top nodes to their children, recursively, to a set depth and budget.
-- [ ] E5. **Matcher:** scores signature against toolkit cards across the whole field; similarity on signature features plus embeddings; returns distant candidates with an explanation of the mapping.
+- [~] E5. **Matcher:** scores signature against toolkit cards across the whole field; similarity on signature features plus embeddings; returns distant candidates with an explanation of the mapping.
 - [ ] E6. **Hypothesis checker:** for each proposed tool, lists the conditions and whether the problem meets them (yes / no / unknown).
 - [ ] E7. **Synthesiser:** builds the Minto output (governing answer, key line of routes, evidence for each) and ranks routes by promise, cost and certainty.
 - [ ] E8. **Verifier:** literature search for each route, a suggested small test, and OPEN/CONTESTED flags.
@@ -124,3 +124,11 @@ Classification stays as one operation (Check), not the purpose.
 4. F3 MCP and F2 API
 5. C2, D3, H2 (physics)
 6. The remaining fields, F6 website, G4 study, H3–H4
+
+## Progress log
+- 2026-10-11: Standard v3 draft; schemas for lens card, map node, toolkit card, run record; signature vocabulary (14 facets).
+- MSC2020 map imported: 63 / 534 / 6,006 nodes, each attached to a Taxonomy cell. The licence is CC BY-NC-SA, so commercial use needs permission.
+- 149 draft lens cards: 143 parsed from pyramids plus 6 written for MA.
+- 63 draft toolkit cards (two-digit MSC, 109 tools with hypotheses).
+- Minimal Connect matcher and 5 seed retrodiction cases. These cases are not independent (same author wrote cards and cases), so they are smoke tests only.
+- Next: B6 validators for lens and toolkit cards; E1 framer (AI); D2 three-digit cards; E3/E7 sweep and synthesis.

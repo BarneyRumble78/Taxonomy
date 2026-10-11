@@ -1,0 +1,291 @@
+[
+ {
+  "id": "PH",
+  "field": "PH",
+  "name": "Physics",
+  "question": "What does physics establish about this subject, divided by the governing constants of the claim?",
+  "scqa_question": "Into which regimes does every physical claim fall, so that each law has one home and each empty vertex is filled or refused?",
+  "look_for": [
+   "PH.O.A1 Classical motion and fields",
+   "PH.O.A2 Quantum systems",
+   "PH.O.A3 Gravitation and the cosmos",
+   "PH.O.A4 Matter in equilibrium",
+   "PH.O.A5 Matter out of equilibrium"
+  ],
+  "find_out": [
+   "Formulate (M1 Represent)",
+   "Solve (M2 Derive)",
+   "Measure (M3 Observe)",
+   "Experiment (M4 Intervene)",
+   "Simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W1",
+   "W2",
+   "W3",
+   "W4"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Dimensional analysis",
+   "Order-of-magnitude estimation",
+   "Symmetry first",
+   "Limiting cases",
+   "The correspondence principle",
+   "Naturalness (CONTESTED as a guide since no new physics appeared at the LHC)",
+   "\"Shut up and calculate\""
+  ],
+  "collisions": [
+   "Place a claim by the largest set of constants its derivation needs. Place N-body claims in A4 or A5 by equilibrium.",
+   "A theorem about the equations is MA. The claim that nature obeys them is PH.",
+   "A bond, reaction rate or molecular structure is CH. Atomic levels are PH.",
+   "A device meeting a specification is EN. The law it relies on is PH.",
+   "Quantum interpretation: empirical content in PH.O.A2, argument in PL.",
+   "Physics education research is ED (uses PH).",
+   "Climate and Earth-system claims are EA. The radiative law they use is PH.O.A5.4.",
+   "A claim that crosses regimes goes to the regime with more constants.",
+   "theorems about differential equations and operators → MA.O.A2, MA.O.A4",
+   "chemical bonding and reaction → CH",
+   "Earth state, climate record → EA",
+   "instrument and device design → EN",
+   "meaning of quantum mechanics → PL",
+   "physics teaching → ED"
+  ],
+  "open": [
+   "quantum gravity (A3.5); dark matter and dark energy; the Hubble tension; neutrino mass ordering; high-temperature superconductivity; turbulence; 3D Navier–Stokes smoothness (MA, cited).",
+   "; transport, plasma and radiation have homes; Clapeyron is distinguished from Clausius–Clapeyron; the quasiparticle condition uses rate; k_B is restored; heuristics are outside the count.",
+   "interpretation of QM (PH vs PL); Newtonian gravity in A3 rather than A1; inflation; naturalness as a guide; the ergodic justification."
+  ],
+  "status": "draft",
+  "source": "pyramids/PH.md"
+ },
+ {
+  "id": "PH.O.A1",
+  "field": "PH",
+  "name": "Classical motion and fields",
+  "question": "Which laws are claimed, and within what limits?",
+  "look_for": [
+   "Particle mechanics. Newton's laws hold in inertial frames for speeds much below c.",
+   "Lagrangian and Hamiltonian mechanics are equivalent where the Legendre transform is regular.",
+   "Liouville's theorem: Hamiltonian flow preserves phase-space volume. The theorem is MA.O.A4; its physical use is here.",
+   "Rigid-body motion, oscillators and small vibrations.",
+   "Classical fields. Maxwell's equations govern electromagnetic fields in vacuum, and in linear media given constitutive relations.",
+   "Electrostatics and magnetostatics, including the quasistatic circuit laws (Kirchhoff) as the limit of slow change.",
+   "Electromagnetic waves; c is the propagation speed in vacuum.",
+   "Classical optics: geometric optics in the short-wavelength limit; diffraction and interference.",
+   "Special relativity. The laws take the same form in all inertial frames, and c is frame-invariant.",
+   "Lorentz transformations; time dilation; length contraction.",
+   "Mass–energy equivalence, E = mc² for a body at rest.",
+   "Symmetry and conservation. Noether: each continuous symmetry of a local action yields a conserved current. The theorem is MA (uses MA.O.A4); the physical conservation law is PH.",
+   "Energy, momentum and angular momentum from time, space and rotation symmetry.",
+   "Charge conservation from the gauge symmetry of electrodynamics.",
+   "Continuum mechanics. Solids and fluids are treated as continua where the medium is smooth on the scale of interest. Cauchy stress gives traction t = σᵀn.",
+   "Linear elasticity: Hooke's law for small strain in a linear elastic solid.",
+   "Constitutive laws close the balance equations. The artefact meeting a specification is EN."
+  ],
+  "find_out": [
+   "Formulate (M1 Represent)",
+   "Solve (M2 Derive)",
+   "Measure (M3 Observe)",
+   "Experiment (M4 Intervene)",
+   "Simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W1",
+   "W4"
+  ],
+  "breaks": [
+   "regime exceeded (speed near c, action near ħ)"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PH.md"
+ },
+ {
+  "id": "PH.O.A2",
+  "field": "PH",
+  "name": "Quantum systems",
+  "question": "What is claimed, and what is left to philosophy?",
+  "look_for": [
+   "States and dynamics. A closed system's state evolves unitarily by the Schrödinger equation. The Born rule gives outcome probabilities.",
+   "The uncertainty relation σ_x σ_p ≥ ħ/2 holds for any state (the theorem is MA.O.A2, as operator algebra).",
+   "Decoherence: interaction with an environment suppresses interference in a preferred basis. It does not by itself select a single outcome.",
+   "Tunnelling and bound states.",
+   "Non-locality. Bell: any local hidden-variable theory with measurement independence obeys the CHSH bound S ≤ 2. Quantum mechanics reaches 2√2 (the Tsirelson bound). Loophole-free violations were reported in 2015 (Delft, Vienna, NIST).",
+   "Entanglement as a resource: teleportation, quantum key distribution. Deployed protocols are CS.O.A5.",
+   "No-signalling: entanglement cannot transmit information faster than light.",
+   "Quantum fields and particles. The Standard Model describes three of the four known interactions, with gauge group SU(3)×SU(2)×U(1).",
+   "Spin–statistics and CPT hold for local, Lorentz-invariant quantum field theories with energy bounded below.",
+   "The Higgs boson was observed in 2012 (ATLAS and CMS).",
+   "Neutrino oscillation implies non-zero neutrino masses. The mass ordering is OPEN.",
+   "Nuclear structure and decay: half-lives are measured constants (W4), e.g. the ¹⁴C half-life of 5,730 ± 40 years. Radiometric ages built on them are EA.",
+   "Renormalisation: physics at low energy is insensitive to most details at high energy, for renormalisable theories and effective field theories.",
+   "Atomic, molecular and optical physics. Atomic level structure, spectra, and the interaction of light with atoms. The chemical bond is CH; PH owns the level structure.",
+   "Lasers: stimulated emission in a medium with population inversion.",
+   "Laser cooling and Bose–Einstein condensation of dilute gases (first achieved 1995).",
+   "Atomic clocks and precision measurement. The SI second has been defined by the caesium-133 hyperfine transition since 1967.",
+   "Interpretation of quantum mechanics. CONTESTED placement. The empirical content stays here. Copenhagen, many-worlds, pilot-wave and collapse theories, as arguments, are PL."
+  ],
+  "find_out": [
+   "Formulate (M1 Represent)",
+   "Solve (M2 Derive)",
+   "Measure (M3 Observe)",
+   "Experiment (M4 Intervene)",
+   "Simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "loopholes, systematic error, look-elsewhere effect"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Quantum interpretation: empirical content in PH.O.A2, argument in PL."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PH.md"
+ },
+ {
+  "id": "PH.O.A3",
+  "field": "PH",
+  "name": "Gravitation and the cosmos",
+  "question": "What is claimed, and what is still open?",
+  "look_for": [
+   "Newtonian gravity. The inverse-square attraction is valid for weak fields and speeds much below c.",
+   "Kepler's laws follow for two point masses.",
+   "Celestial mechanics: perturbation theory for many bodies. The n-body problem's mathematics is MA.O.A4.",
+   "General relativity. Einstein's field equations relate spacetime curvature to stress-energy. The equivalence principle holds locally.",
+   "Classical tests: Mercury's perihelion, light deflection, gravitational redshift.",
+   "Black holes: the Schwarzschild and Kerr solutions. Singularity theorems (Penrose, Hawking) assume energy conditions and trapped surfaces (uses MA.O.A3).",
+   "Gravitational waves: first detected 14 September 2015, announced February 2016 (LIGO).",
+   "Astrophysics. Stars, compact objects, galaxies.",
+   "Stellar structure and nucleosynthesis.",
+   "The Chandrasekhar limit: about 1.4 solar masses for a non-rotating white dwarf supported by electron degeneracy pressure.",
+   "Neutron stars, pulsars, accretion.",
+   "Cosmology. ΛCDM fits the expansion history, the cosmic microwave background and large-scale structure.",
+   "Hubble–Lemaître expansion. The \"Hubble tension\" between early- and late-universe measurements is OPEN.",
+   "The CMB, discovered 1965.",
+   "Dark matter and dark energy: inferred from gravity; their identities are OPEN.",
+   "Inflation: a CONTESTED programme with supporting but not decisive evidence.",
+   "Quantum gravity. OPEN.",
+   "Bekenstein–Hawking entropy S = k_B c³ A / (4Għ) for a black hole of horizon area A. (The v1 omission of k_B is fixed.)",
+   "Hawking radiation: a semiclassical prediction (quantum fields on a curved background), not yet observed for astrophysical black holes.",
+   "Programmes: string theory, loop quantum gravity, asymptotic safety. All lack decisive empirical tests."
+  ],
+  "find_out": [
+   "Formulate (M1 Represent)",
+   "Solve (M2 Derive)",
+   "Measure (M3 Observe)",
+   "Experiment (M4 Intervene)",
+   "Simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W4"
+  ],
+  "breaks": [
+   "model dependence, selection effects, cosmic variance"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PH.md"
+ },
+ {
+  "id": "PH.O.A4",
+  "field": "PH",
+  "name": "Matter in equilibrium",
+  "question": "What is claimed?",
+  "look_for": [
+   "Thermodynamics.",
+   "First law: the change in internal energy of a closed system equals heat in minus work out (sign convention stated).",
+   "Second law: the entropy of an isolated system does not decrease. Carnot efficiency 1 − T_c/T_h bounds any engine between two reservoirs.",
+   "Third law: entropy approaches a constant as T → 0, for systems with a non-degenerate ground state.",
+   "Statistical mechanics. Ensembles derive thermodynamics from microstates. The microcanonical ensemble assumes equilibrium and equal a priori probability.",
+   "Boltzmann entropy S = k_B ln W.",
+   "Quantum statistics: Fermi–Dirac and Bose–Einstein distributions for indistinguishable particles.",
+   "Ergodic hypothesis: CONTESTED as a justification. The ergodic theorems are MA.O.A4.",
+   "Phase transitions.",
+   "Clapeyron equation: dP/dT = L/(T Δv) on a coexistence line.",
+   "Clausius–Clapeyron: d ln P/dT = L/(RT²). It adds an ideal vapour, negligible condensed-phase volume and constant L. (The v1 mislabel is fixed.)",
+   "Critical phenomena and universality: systems with the same dimension, symmetry and interaction range share critical exponents. Renormalisation-group explanation (Wilson).",
+   "Mermin–Wagner: no spontaneous breaking of a continuous symmetry at T > 0 in d ≤ 2 with short-range interactions.",
+   "Condensed states. Band structure, superconductivity, magnetism, topological phases, defects.",
+   "Quasiparticles: an excitation with decay rate Γ = 1/τ is well defined when ħΓ is much less than its energy. (The v1 lifetime–rate confusion is fixed.)",
+   "BCS theory of conventional superconductivity: electron pairing mediated by phonons, for weak coupling. High-temperature superconductivity mechanisms are OPEN.",
+   "Semiconductors and device physics: drift–diffusion transport in the low-injection regime.",
+   "Dislocations as the mechanism of plastic flow in crystals.",
+   "Topological phases: quantum Hall effects (integer 1980, fractional 1982)."
+  ],
+  "find_out": [
+   "Formulate (M1 Represent)",
+   "Solve (M2 Derive)",
+   "Measure (M3 Observe)",
+   "Experiment (M4 Intervene)",
+   "Simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W1",
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "finite-size effects, impurities, non-equilibrium"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PH.md"
+ },
+ {
+  "id": "PH.O.A5",
+  "field": "PH",
+  "name": "Matter out of equilibrium",
+  "question": "Which laws hold away from equilibrium, and how far away?",
+  "look_for": [
+   "Transport near equilibrium.",
+   "Linear response; the fluctuation–dissipation theorem for systems near equilibrium.",
+   "Onsager reciprocity: assumes microscopic reversibility, with the magnetic field reversed when one is present.",
+   "Diffusion, conduction, viscosity as transport coefficients; Boltzmann transport equation for dilute gases.",
+   "Fluids. Navier–Stokes governs Newtonian fluids. Global smoothness in three dimensions is OPEN and owned by MA.O.A4.",
+   "Turbulence: Kolmogorov's 1941 scaling for homogeneous isotropic turbulence at high Reynolds number. A full theory is OPEN.",
+   "Dimensionless groups (Reynolds, Mach) set the regime.",
+   "Plasmas. Quasi-neutral ionised matter, collective behaviour on scales larger than the Debye length.",
+   "Magnetohydrodynamics, valid where collisions keep a fluid description.",
+   "Fusion plasmas: Lawson criterion for net energy gain, given confinement time and density at a stated temperature.",
+   "Radiation and matter.",
+   "Planck's law for blackbody radiation in thermal equilibrium; Stefan–Boltzmann law as its integral.",
+   "Radiative transfer through absorbing and emitting media.",
+   "Interaction of ionising radiation with matter (stopping, attenuation). Nuclear decay itself, with its half-lives, moved to PH.O.A2.3.5 after the pilot (claim 38).",
+   "Nonlinear dynamics and complex systems. Sensitive dependence on initial conditions; pattern formation; active matter. Theorems are MA.O.A4; the physical system is here.",
+   "Non-equilibrium fluctuation theorems (Jarzynski, Crooks) for systems driven from an initial equilibrium."
+  ],
+  "find_out": [
+   "Formulate (M1 Represent)",
+   "Solve (M2 Derive)",
+   "Measure (M3 Observe)",
+   "Experiment (M4 Intervene)",
+   "Simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W2",
+   "W4"
+  ],
+  "breaks": [
+   "closure assumption, numerical artefact"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Climate and Earth-system claims are EA. The radiative law they use is PH.O.A5.4."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PH.md"
+ }
+]

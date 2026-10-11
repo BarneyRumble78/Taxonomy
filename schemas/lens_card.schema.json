@@ -1,0 +1,14 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Lens card","type":"object",
+ "required":["id","field","name","question","look_for","find_out","settles","breaks","rules_of_thumb","collisions","status"],
+ "properties":{
+  "id":{"type":"string","pattern":"^[A-Z]{2}(\\.O\\.A[0-9]+)?$"},
+  "field":{"type":"string","pattern":"^[A-Z]{2}$"},"name":{"type":"string"},
+  "question":{"type":"string","description":"The question this lens asks of any subject"},
+  "look_for":{"type":"array","items":{"type":"string"}},
+  "find_out":{"type":"array","items":{"type":"string"},"description":"Methods, mapped to M1-M7"},
+  "settles":{"type":"array","items":{"type":"string"},"description":"Warrant types W1-W13 that settle claims here"},
+  "breaks":{"type":"array","items":{"type":"string"},"description":"Typical defeaters"},
+  "rules_of_thumb":{"type":"array","items":{"type":"string"}},
+  "collisions":{"type":"array","items":{"type":"string"},"description":"Borders, uses edges, OPEN items"},
+  "open":{"type":"array","items":{"type":"string"}},
+  "status":{"enum":["draft","reviewed"]},"source":{"type":"string"}}}

@@ -1,0 +1,20 @@
+{
+ "version": "0.1",
+ "description": "Controlled vocabulary for problem signatures. A signature is the abstract shape of a problem with its subject stripped away. Each facet takes one or more values.",
+ "facets": {
+  "task": ["optimise", "count", "decide_existence", "construct", "classify", "predict", "infer", "estimate", "control", "explain", "prove", "design", "verify", "compare"],
+  "domain_type": ["discrete", "continuous", "mixed", "symbolic"],
+  "structure": ["set", "sequence", "graph_network", "grid_lattice", "geometric_space", "manifold", "algebraic", "logical", "function_space", "probability_space", "text_language", "hierarchy_tree", "time_series", "field_spatial"],
+  "dynamics": ["static", "dynamic_deterministic", "dynamic_stochastic", "evolving_structure"],
+  "uncertainty": ["none", "noise", "probabilistic_model", "unknown_distribution", "adversarial"],
+  "linearity": ["linear", "nonlinear", "convex", "nonconvex", "combinatorial"],
+  "symmetry": ["none_known", "translation", "rotation", "permutation", "scaling", "gauge_or_local", "duality", "conserved_quantity"],
+  "scope": ["local", "global", "multiscale"],
+  "direction": ["forward", "inverse", "both"],
+  "agents": ["none", "single_decision_maker", "multiple_cooperative", "multiple_competing"],
+  "data": ["data_rich", "data_poor", "no_data", "streaming"],
+  "constraints": ["none", "equality", "inequality", "integrality", "resource_budget", "physical_law", "legal_or_normative"],
+  "scale": ["small", "large", "high_dimensional", "infinite"],
+  "goal_quality": ["exact", "approximate", "bound", "existence_only", "qualitative"]
+ }
+}

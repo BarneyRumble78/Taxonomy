@@ -1,0 +1,274 @@
+[
+ {
+  "id": "MS",
+  "field": "MS",
+  "name": "Mind, brain and society",
+  "question": "What does mind, brain and society establish about this subject, divided by the unit the claim is about?",
+  "scqa_question": "Which single partition places every claim about mind, brain and society exactly once, with methods, warrants and bridges kept apart?",
+  "look_for": [
+   "MS.O.A1 Mental processes",
+   "MS.O.A2 Nervous systems",
+   "MS.O.A3 Persons",
+   "MS.O.A4 Interactions",
+   "MS.O.A5 Social structures"
+  ],
+  "find_out": [
+   "Measure (M3 Observe (construct specification M1 inside it))",
+   "Perturb (M4 Intervene)",
+   "Compare and interpret (M6 Compare and reconstruct)",
+   "Model (M5 Compute (analytic models M2))",
+   "Replicate and review (M7 Verify)"
+  ],
+  "settles": [
+   "W3",
+   "W4",
+   "W6",
+   "W8"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "MS.M.H. The 7±2 rule for working memory. Stages of grief as a fixed sequence (Kübler-Ross 1969 proposed stages for dying patients",
+   "evidence for a fixed order is weak, Maciejewski et al. 2007). \"Society made them do it\" without a mechanism. Folk psychology. Analysts' \"people judge by ease of recall\" when used as a rule of thumb. Useful",
+   "never evidence."
+  ],
+  "collisions": [
+   "A neural correlate is evidence for a process claim, not the process. It is labelled a correlate until a mechanism is shown.",
+   "The ion channel and the spike are MS.O.A2.1. The cell as a living unit is BI. The equilibrium potential uses CH.O.A3.3.",
+   "A diagnostic category is a convention (W12) at MS.O.A3.4.1. Disorder as function failure, treatment and trials are MD.O.A1. Treatment outcome is MD; MS.O.A3.4 cites it.",
+   "Psychoanalytic theory is an answer-family at MS.O.A1 or MS.O.A3, reconstructed under MS.M.3. Folk psychology is in the register.",
+   "The availability heuristic as a claim about people is MS.O.A1.5.2. The analyst's rule of thumb is MS.M.H. They are two sentences.",
+   "Heritability as a quantitative-genetic quantity is owned by BI.O.A4. MS.O.A3.2.2 uses BI.O.A4.",
+   "An institution as a pattern is MS.O.A5.3. A paper merely set in a church or school is a sector instance.",
+   "A movement targeting a norm or organisation is MS.O.A5.5. A movement contesting authority uses PO.O.A3.3. The free-rider result uses EC.O.A5.3.",
+   "Market as allocation is EC.O.A2; market as institution is MS.O.A5.3. Authority is PO.O.A2.",
+   "Human population is MS.O.A5.4. EC.O.A2.5 (labour supply) uses it. Non-human population is BI.O.A5.",
+   "Reference-dependent choice as a model of the economic agent is EC.O.A1.3. The bias as a mental process is MS.O.A1.5.2. Strategic exploitation of a bias against a reacting party is ST.O.A5.2.",
+   "A learning claim under an educational arrangement, including physics and mathematics education research (MSC 97), is ED. A claim about the mechanism of learning, independent of any arrangement, is MS.O.A1.5. The theorem or law taught is MA or PH.",
+   "The hard problem; concept of mind; ethics of research → PL.O.A2",
+   "Cell biology of neurons as cells; heritability as quantitative genetics; human evolution; non-human behaviour → BI.O.A2, BI.O.A4, BI.O.A3",
+   "Disorder as function failure, treatment, drug and trial → MD.O.A1",
+   "Grammar: phonology, syntax, semantics → LN",
+   "Authority, the state, movements contesting authority → PO.O.A2, PO.O.A3.3",
+   "Allocation, prices, the free-rider theorem → EC.O.A2, EC.O.A5.3",
+   "Criminal offence as legal definition → LA.O.A3.2",
+   "Dated past events and persons → HI"
+  ],
+  "open": [
+   ". Whether consciousness research needs its own warrant beyond W4/W9. Replication status of social-influence effects. Whether RDoC should replace category-first classification.",
+   ". Psychopathology process account (alternative: MD.O.A1 owns all). Forgetting mechanism. Five-factor versus HEXACO. Movement target rule (alternative: PO owns all movements). Human–animal interaction (alternative: BI.O.A3)."
+  ],
+  "status": "draft",
+  "source": "pyramids/MS.md"
+ },
+ {
+  "id": "MS.O.A1",
+  "field": "MS",
+  "name": "Mental processes",
+  "question": "Which processes does a claim about the working mind concern?",
+  "look_for": [
+   "Sensation and perception. A stimulus is transduced; a percept is constructed. Named objects:",
+   "Weber's law: over a mid-range of intensities, the just-noticeable difference ΔI is a roughly constant fraction k of the base intensity I (Gescheider 1997).",
+   "Fechner's law: if Weber's law holds and each JND is a unit step, sensation grows with the logarithm of intensity.",
+   "Stevens's power law: for direct magnitude estimation over a stated range, perceived magnitude is a power function of intensity.",
+   "Signal detection theory: under equal-variance Gaussian noise and signal distributions, d′ measures sensitivity and c (or β) measures criterion. A classical threshold confounds the two (Green and Swets 1966).",
+   "Attention and consciousness. Selection has a cost; reportable experience has measurable conditions.",
+   "Selective attention and capacity limits; inattentional blindness.",
+   "Consciousness as reportable experience, studied with no-report controls. The hard problem is PL.O.A2; MS uses it and does not claim to solve it.",
+   "Hypnosis and altered states, as changes in attention and report (APA Div. 30 home).",
+   "Learning and memory.",
+   "Classical conditioning: a cue comes to predict an outcome. Rescorla–Wagner model: on each trial, ΔV = αβ(λ − ΣV), where α and β are cue and outcome salience rates in (0,1], λ is the outcome's maximum, and ΣV sums all cues present.",
+   "Operant conditioning and schedules of reinforcement.",
+   "Memory systems: declarative (episodic, semantic) and nondeclarative (procedural, priming, classical conditioning, nonassociative) (Squire 2004).",
+   "Working-memory capacity: about 3–5 chunks when rehearsal and chunking are blocked (Cowan 2001). The 7±2 figure is a heuristic (register).",
+   "Forgetting. Cue-dependent retrieval failure (Tulving 1974) is one answer. Interference, decay and failed consolidation are rivals (CONTESTED; Wixted 2004).",
+   "Emotion and motivation. A state with a trigger, a bodily change and an action tendency.",
+   "Appraisal accounts and basic-emotion accounts, as rival answer-families.",
+   "Motivation and reward as process claims. The tissue (orbitofrontal cortex, vmPFC, ventral striatum) is MS.O.A2.3.",
+   "Thought, language and judgement.",
+   "Concepts and categories.",
+   "Judgement heuristics (availability, representativeness, anchoring; Tversky and Kahneman 1974). They are biases relative to a stated normative model. The rule of thumb used by an analyst is a different sentence, in the register.",
+   "Psycholinguistic processing (comprehension, production). The grammar itself is LN.",
+   "Creativity and problem solving (APA Div. 10 home). The aesthetic verdict is AR.",
+   "RETIRED in Phase 2.1 (ID not reused). Learning claims under an educational arrangement, including physics and mathematics education (MSC 97), are ED.O.A2–A4. MS keeps the general mechanism of learning and memory in MS.O.A1.5."
+  ],
+  "find_out": [
+   "Measure (M3 Observe (construct specification M1 inside it))",
+   "Perturb (M4 Intervene)",
+   "Compare and interpret (M6 Compare and reconstruct)",
+   "Model (M5 Compute (analytic models M2))",
+   "Replicate and review (M7 Verify)"
+  ],
+  "settles": [
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "Task artefact; range extrapolation"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Psychoanalytic theory is an answer-family at MS.O.A1 or MS.O.A3, reconstructed under MS.M.3. Folk psychology is in the register.",
+   "The availability heuristic as a claim about people is MS.O.A1.5.2. The analyst's rule of thumb is MS.M.H. They are two sentences.",
+   "Reference-dependent choice as a model of the economic agent is EC.O.A1.3. The bias as a mental process is MS.O.A1.5.2. Strategic exploitation of a bias against a reacting party is ST.O.A5.2.",
+   "A learning claim under an educational arrangement, including physics and mathematics education research (MSC 97), is ED. A claim about the mechanism of learning, independent of any arrangement, is MS.O.A1.5. The theorem or law taught is MA or PH."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MS.md"
+ },
+ {
+  "id": "MS.O.A2",
+  "field": "MS",
+  "name": "Nervous systems",
+  "question": "What does this subject show about nervous systems, and what would settle it?",
+  "look_for": [
+   "Neurons, glia and synapses.",
+   "Action potential: an all-or-none spike, given a threshold depolarisation of an excitable membrane.",
+   "Chemical and electrical synapses; excitation and inhibition.",
+   "Glia: astrocytes, oligodendrocytes, microglia and their signalling roles (SfN Theme B).",
+   "Plasticity.",
+   "Long-term potentiation and depression, as candidate mechanisms of learning. A changed synapse is not yet a memory; the memory is MS.O.A1.3.",
+   "Circuits and systems.",
+   "Sensory and motor pathways.",
+   "Hypothalamus and homeostasis.",
+   "Valuation circuits: orbitofrontal cortex, vmPFC, ventral striatum. \"Limbic system\" is a contested grouping and is not used as a cell.",
+   "Localisation as a starting map; a function is usually a circuit.",
+   "Development of the nervous system.",
+   "Overproduction and pruning.",
+   "Critical and sensitive periods, with their measured windows."
+  ],
+  "find_out": [
+   "Measure (M3 Observe (construct specification M1 inside it))",
+   "Perturb (M4 Intervene)",
+   "Compare and interpret (M6 Compare and reconstruct)",
+   "Model (M5 Compute (analytic models M2))",
+   "Replicate and review (M7 Verify)"
+  ],
+  "settles": [
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "Correlate taken for mechanism"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "The ion channel and the spike are MS.O.A2.1. The cell as a living unit is BI. The equilibrium potential uses CH.O.A3.3."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MS.md"
+ },
+ {
+  "id": "MS.O.A3",
+  "field": "MS",
+  "name": "Persons",
+  "question": "Which claims concern the person as the unit?",
+  "look_for": [
+   "Personality.",
+   "Five-factor model as the common answer. HEXACO (six factors; Ashton and Lee 2007) is the rival (CONTESTED).",
+   "Person–situation debate: both variances are measured.",
+   "Intelligence and abilities.",
+   "g as a statistical factor (Spearman 1904), not a thing seen.",
+   "Heritability of intelligence: a variance fraction in a stated population, environment and time, broad (H²) or narrow (h²). The quantitative-genetics result uses BI.O.A4.",
+   "Life-course development.",
+   "Stage theories as ideal types.",
+   "Attachment classification (Ainsworth; Main and Solomon).",
+   "Ageing and adult development.",
+   "Psychopathology. The psychological process account of distress and disability.",
+   "Diagnostic categories as conventions: DSM-5-TR (APA 2022) and ICD-11 (WHO, in force 2022). The category is W12.",
+   "RDoC as the process-first alternative (CONTESTED as a basis for classification)."
+  ],
+  "find_out": [
+   "Measure (M3 Observe (construct specification M1 inside it))",
+   "Perturb (M4 Intervene)",
+   "Compare and interpret (M6 Compare and reconstruct)",
+   "Model (M5 Compute (analytic models M2))",
+   "Replicate and review (M7 Verify)"
+  ],
+  "settles": [
+   "W4"
+  ],
+  "breaks": [
+   "Method variance"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "A diagnostic category is a convention (W12) at MS.O.A3.4.1. Disorder as function failure, treatment and trials are MD.O.A1. Treatment outcome is MD; MS.O.A3.4 cites it.",
+   "Psychoanalytic theory is an answer-family at MS.O.A1 or MS.O.A3, reconstructed under MS.M.3. Folk psychology is in the register.",
+   "Heritability as a quantitative-genetic quantity is owned by BI.O.A4. MS.O.A3.2.2 uses BI.O.A4."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MS.md"
+ },
+ {
+  "id": "MS.O.A4",
+  "field": "MS",
+  "name": "Interactions",
+  "question": "Which claims concern what passes between persons?",
+  "look_for": [
+   "Social influence. Conformity, obedience and bystander effects, each with its replication record (Burger 2009; Fischer et al. 2011 meta-analysis on bystanders). Environment–behaviour claims (APA Div. 34) sit here.",
+   "Social cognition. Attribution; the fundamental attribution error (Ross 1977), flagged as weaker in non-WEIRD samples (Henrich et al. 2010).",
+   "Attitudes. Cognitive dissonance (Festinger 1957), with self-perception as the rival account. Consumer attitudes (APA Div. 23) sit here; BU.O.A4.1 uses them.",
+   "Groups and relationships. Small groups, roles, norms, status; couples and families; conversation as turn-taking; human–animal interaction (CONTESTED; alternative BI.O.A3).",
+   "Self and identity. The self as a role taken toward others; identity as a claimed category; body and embodiment. The category's distribution is MS.O.A5.1."
+  ],
+  "find_out": [
+   "Measure (M3 Observe (construct specification M1 inside it))",
+   "Perturb (M4 Intervene)",
+   "Compare and interpret (M6 Compare and reconstruct)",
+   "Model (M5 Compute (analytic models M2))",
+   "Replicate and review (M7 Verify)"
+  ],
+  "settles": [
+   "W3"
+  ],
+  "breaks": [
+   "Replication failure"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MS.md"
+ },
+ {
+  "id": "MS.O.A5",
+  "field": "MS",
+  "name": "Social structures",
+  "question": "Which claims concern a pattern no single person carries?",
+  "look_for": [
+   "Positions and inequality. Status, role, role conflict. Inequality as a residual in life chances after stated controls. Bases include class, race, gender, sexuality and disability.",
+   "Organisations. Weberian bureaucracy (rule, file, career); informal structure. PO.O.A2 uses it for state bureaucracy.",
+   "Institutions and culture. An institution is a repeated, taken-for-granted pattern: family, market, state, religion, school, media, science. Culture is shared meaning in use. Consumption as practice sits here. A paper merely set in a church ",
+   "Populations. Births, deaths, migration and their rates; life table; cohort. Human population is owned here; non-human population dynamics are BI.O.A5.",
+   "Collective action and change. Social movements that target a norm or an organisation. A movement contesting authority is PO.O.A3.3 (CONTESTED target rule). The free-rider result is EC.O.A5.3. Differentiation, diffusion, globalisation. Named"
+  ],
+  "find_out": [
+   "Measure (M3 Observe (construct specification M1 inside it))",
+   "Perturb (M4 Intervene)",
+   "Compare and interpret (M6 Compare and reconstruct)",
+   "Model (M5 Compute (analytic models M2))",
+   "Replicate and review (M7 Verify)"
+  ],
+  "settles": [
+   "W4",
+   "W6",
+   "W8"
+  ],
+  "breaks": [
+   "Ecological fallacy"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "An institution as a pattern is MS.O.A5.3. A paper merely set in a church or school is a sector instance.",
+   "A movement targeting a norm or organisation is MS.O.A5.5. A movement contesting authority uses PO.O.A3.3. The free-rider result uses EC.O.A5.3.",
+   "Market as allocation is EC.O.A2; market as institution is MS.O.A5.3. Authority is PO.O.A2.",
+   "Human population is MS.O.A5.4. EC.O.A2.5 (labour supply) uses it. Non-human population is BI.O.A5."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MS.md"
+ }
+]

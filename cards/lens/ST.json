@@ -1,0 +1,237 @@
+[
+ {
+  "id": "ST",
+  "field": "ST",
+  "name": "Strategy",
+  "question": "What does strategy establish about this subject, divided by the feature of the strategic situation that the claim explains?",
+  "scqa_question": ": what single partition places every strategic claim, method and heuristic exactly once, with clean borders to MA, EC, BU, PO, MS, LA, PL and HI?",
+  "look_for": [
+   "ST.O.A1 Actors",
+   "ST.O.A2 The game",
+   "ST.O.A3 Coercion",
+   "ST.O.A4 Conduct",
+   "ST.O.A5 Information"
+  ],
+  "find_out": [
+   "Diagnose (M1 Represent (M3))",
+   "Model (M2 Derive (M1))",
+   "Simulate and play (M5 Compute (M4))",
+   "Compare cases (M6 Compare and reconstruct (M3))",
+   "Estimate and score (M7 Verify (M5))"
+  ],
+  "settles": [
+   "W1",
+   "W4",
+   "W6",
+   "W7"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "A heuristic is a rule of thumb with known failures. It is not a result and not a role. IDs renamed from ST.H.n to ST.M.H.n. | ID | Heuristic | Source | Known failure | |---|---|---|---| | ST.M.H.1 | Supreme excellence is to break resistance without fighting. | [suntzu-c04] | Fails against an actor with existential stakes (M05). | | ST.M.H.2 | Know the enemy and know yourself. | [suntzu-c04] | Says nothing about how to know. | | ST.M.H.3 | All warfare is based on deception. | [suntzu-c02] | A stance",
+   "the claim about deception's effect is ST.O.A5.5. | | ST.M.H.4 | The obvious course is the anticipated one",
+   "prefer the bad road. | [luttwak-c01] | Holds only when the adversary reacts. | | ST.M.H.5 | The principles of war (mass, surprise, economy of force). | [brodie-c02], [wylie-c04] | Principles conflict with each other. | | ST.M.H.6 | Attack needs three-to-one. | [luttwak-c10] | Depends on level and on the measure of force. | | ST.M.H.7 | Never let survival ride on one engagement. | [mao-c12] | Can forfeit a fleeting decisive opportunity. | | ST.M.H.8 | Think from the end. | [can_we_win-c04] | Slogan form of M12",
+   "fails where rollback fails [gos-c03]. | | ST.M.H.9 | Five dangerous faults of a general. | [suntzu-c09] | A character checklist, not a predictor. | | ST.M.H.10 | Weinberger's six tests",
+   "Blair's five tests. | [freedman_strategists-c01], [freedman_strategists-c02] | Satisfiable by rhetoric. | | ST.M.H.11 | The dicta of strategy",
+   "fourteen trinities. | [gray-c04], [gray-c05], [gray-c07] | Each dictum needs a case to bite. | | ST.M.H.12 | Ten commandments for superforecasters. | [tetlock-c16] | Validated only on short-horizon tournament questions. | | ST.M.H.13 | Via negativa: remove before you add. | [taleb_af-c03] | Can justify inaction where action is required. | | ST.M.H.14 | Mirror-imaging is the default sin. | [heuer-c03] | An adversary can share one's logic. | | ST.M.H.15 | The five-question mental firewall",
+   "\"which game are you trapped in?\" | [can_we_win-c01], [can_we_win-c02] | No scored evidence. | | ST.M.H.16 | Do not rely on the enemy's command errors. | [mao-c11] | A caution, not a rule for exploiting them. | | ST.M.H.17 | Tactical negotiation playbooks (\"read the opponent\"). | [negot-c19] | The corpus records a game-theoretic verdict against them. |"
+  ],
+  "collisions": [
+   "Unit is the claim. A codex card can hold two claims; each gets its own home. Five cards sit in two Concordance rows and are split by claim (section 11).",
+   "Adaptive-other rule. A claim belongs here only if its truth depends on an opponent, rival or counterpart who reacts. A choice against a non-reacting environment is EC.O.A1 (decision) or MA.B.C4 (operations research). CONTESTED exception: ST.O.A5.3 and ST.O.A5.4 are kept, because the corpus treats markets and nature as environments whose response to exposure is adversarial in effect. Alternative: move both to EC.O.A1.",
+   "Threat rule. If the operative move is a conditional threat to impose cost, the claim is ST.O.A3, whatever the instrument. A move that restructures the game without a threat is ST.O.A2.",
+   "Medium rule. Land, sea, air, space, cyber and the information environment are substrates. Coercion through a medium is A3; force applied in it is A4; information created, stolen or corrupted in it is A5.5.",
+   "Level rule. Tactical, operational, strategic and grand-strategic are a scale, not cells [luttwak-c17]. A claim about the levels themselves is ST.O.A4.1.",
+   "Case rule. A dated event (Cannae, Barbarossa, Cuba 1962) is a case. It is evidence handled by ST.M.B4; its historical truth uses HI.O.A1.",
+   "Game rule (from MA and EC). The theorem is MA, the allocation is EC, the choice of game is ST. Test: does the claim change if the opponent can change the game? If yes, ST.",
+   "Politics rule. Why polities go to war is PO.O.A5.1 (Fearon's bargaining failure). How a party coerces or fights is ST.",
+   "Business rule. The firm's conversion, cost, capital and governance are BU.O.A3. Positioning against rivals who react is ST.",
+   "Mind rule. A cognitive bias as a process is MS. Its exploitation or correction against a counterpart is ST.O.A5.2.",
+   "Law and philosophy rule. Whether a use of force is lawful is LA. Whether it is just is PL. Whether it works is ST.",
+   "Artefact rule. How a weapon or exploit works is EN or CS. What it does to the contest is ST.",
+   "Existence and solution theorems of games (minimax, Nash, Shapley, Rubinstein, folk theorem, Blotto, Lanchester) → MA.B.C4 (91A)",
+   "Equilibrium as market allocation; Cournot, Bertrand; adverse selection as market failure → EC.O.A2",
+   "Decision against a non-reacting environment; loss-aversion coefficient → EC.O.A1",
+   "Contract and principal–agent theorems → EC.O.A3.1",
+   "The firm's operations, cost, capital and governance → BU.O.A3",
+   "Theory of the international system; anarchy; war onset as bargaining failure → PO.O.A5.1",
+   "Civil-war onset (greed versus grievance) [future_of_war-c16]; climate and conflict [future_of_war-c23] → PO.O.A3 (climate system: EA)",
+   "Cognitive biases as processes → MS"
+  ],
+  "open": [
+   ".",
+   "whether deterrence success can be warranted at all beyond W6 on non-events.",
+   "the corpus's silences — logistics, operational art, alliance theory, economic statecraft, civil–military relations, strategic culture, arms control, space power, AI and autonomy. Each has a home (section 4) but no card.",
+   "codex card content not yet verified against the source books (R11).",
+   "the Encyclopedia's Panel reaches 14 of 27 Concordance rows by name; 13 rows are reachable only by tag (prototype section 13).",
+   "placements, with alternative."
+  ],
+  "status": "draft",
+  "source": "pyramids/ST.md"
+ },
+ {
+  "id": "ST.O.A1",
+  "field": "ST",
+  "name": "Actors",
+  "question": "What does strategy claim about the players themselves?",
+  "look_for": [
+   "— Revolution, plot and insurgency as three ways to take power [galula-c01]. Asymmetry of tangible and intangible assets [galula-c02]. The cause [galula-c03]. Population support as the shared objective, gained through an active minority [gal",
+   "— Five competitive forces [porter-c01]; barriers to entry [porter-c02]; strategic groups and mobility barriers [porter-c07]. Balancing versus buck-passing as a choice set by structure and geography [mearsheimer-c08]. The offshore balancer [",
+   "— Coalition value by marginal contribution (M26) [can_we_win-c14], [negot-c06]. Shapley value: in a transferable-utility cooperative game, it is the unique allocation satisfying efficiency, symmetry, null player and additivity (Shapley 1953",
+   "— Delegation and mediation as strategic moves [soc-c05]. Career concerns [advanced-c13] (its reputation claim is M10, ST.O.A2.3). Moral hazard under a bonus-plus-fine contract [aos-c11]; the contract theorem is EC.O.A3.1. The succession pro"
+  ],
+  "find_out": [
+   "Diagnose (M1 Represent (M3))",
+   "Model (M2 Derive (M1))",
+   "Simulate and play (M5 Compute (M4))",
+   "Compare cases (M6 Compare and reconstruct (M3))",
+   "Estimate and score (M7 Verify (M5))"
+  ],
+  "settles": [
+   "W1",
+   "W6"
+  ],
+  "breaks": [
+   "Unitary-actor assumption; selection on survivors."
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/ST.md"
+ },
+ {
+  "id": "ST.O.A2",
+  "field": "ST",
+  "name": "The game",
+  "question": "What does strategy claim about the game?",
+  "look_for": [
+   "— Zero-sum versus mixed-motive as the first diagnosis (M11) [gos-c01], [soc-c03], [can_we_win-c07], [negot-c08]. Payoffs beneath declared positions [can_we_win-c08]. The four 2×2 coordination and anti-coordination games [gos-c15]. Stag hunt",
+   "— Focal points and tacit coordination (M09) [soc-c03], [arms-c05], [negot-c03]. Correlated equilibrium [advanced-c10]. Global games [advanced-c11]. Two-sided markets and tipping [advanced-c16]; the market allocation itself is EC.O.A2.",
+   "— Reason backward from the end-state (M12) [aos-c01], [gos-c02], [can_we_win-c04], with its experimental limit [gos-c03]. Repetition and the shadow of the future (M10) [gos-c10], [negot-c11], [can_we_win-c12], [advanced-c13]. Rubinstein bar",
+   "— Self-binding commitment (M01) [soc-c01], [soc-c02], [aos-c03], [advanced-c15]. Randomized commitment [soc-c06]. Mixed strategy when predictability is punished [gos-c06]. Issue linkage [kissinger-c09]. The negotiation as a designable tuple"
+  ],
+  "find_out": [
+   "Diagnose (M1 Represent (M3))",
+   "Model (M2 Derive (M1))",
+   "Simulate and play (M5 Compute (M4))",
+   "Compare cases (M6 Compare and reconstruct (M3))",
+   "Estimate and score (M7 Verify (M5))"
+  ],
+  "settles": [
+   "W1",
+   "W6"
+  ],
+  "breaks": [
+   "Payoffs asserted, not evidenced."
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Threat rule. If the operative move is a conditional threat to impose cost, the claim is ST.O.A3, whatever the instrument. A move that restructures the game without a threat is ST.O.A2."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/ST.md"
+ },
+ {
+  "id": "ST.O.A3",
+  "field": "ST",
+  "name": "Coercion",
+  "question": "What does strategy claim about coercion?",
+  "look_for": [
+   "— Deterrence (M06) [arms-c02], [soc-c09], [brodie-c09], [kaplan-c08], [luttwak-c15]; relinquishing the initiative [soc-c04]. Compellence (M07) [arms-c03], [soc-c09], [buchanan-c08]. Action as message (M03) [arms-c04], [kaplan-c14], [buchana",
+   "— Brinkmanship (M08) [soc-c07], [soc-c08], [aos-c07], [gos-c11], [can_we_win-c18]; the Cuban case [aos-c06] (the dated event uses HI.O.A1).",
+   "— Escalation as a bounded, stepped structure (M19) [kahn-c04], [kaplan-c09], [soc-c08], with its limit [freedman_strategists-c19]. Measures of escalation [kahn-c05]. The nuclear/conventional threshold as symbolic [soc-c10]. The nuclear tabo",
+   "— The security-dilemma spiral (M04) [soc-c11], [arms-c07], [soc-c12], [mearsheimer-c02], [freedman_strategists-c16], [jervis-c03]. Survivable second strike (M18) [arms-c06], [brodie-c09], [kaplan-c04]. Accidental war from arms-race growth ["
+  ],
+  "find_out": [
+   "Diagnose (M1 Represent (M3))",
+   "Model (M2 Derive (M1))",
+   "Simulate and play (M5 Compute (M4))",
+   "Compare cases (M6 Compare and reconstruct (M3))",
+   "Estimate and score (M7 Verify (M5))"
+  ],
+  "settles": [
+   "W1",
+   "W6"
+  ],
+  "breaks": [
+   "Success is a non-event; few cases."
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Threat rule. If the operative move is a conditional threat to impose cost, the claim is ST.O.A3, whatever the instrument. A move that restructures the game without a threat is ST.O.A2."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/ST.md"
+ },
+ {
+  "id": "ST.O.A4",
+  "field": "ST",
+  "name": "Conduct",
+  "question": "What does strategy claim about conduct?",
+  "look_for": [
+   "— War as the continuation of policy (M14) [clausewitz-c02], [mao-c06], [wylie-c15], [gray-c01]. The trinity [clausewitz-c03]. Positive and negative purpose [clausewitz-c05]; the object of war [mao-c05]. Strategy as control [wylie-c03], [wyl",
+   "— Concentration at the decisive point (M13) [clausewitz-c08], [suntzu-c07], [mao-c07], [advanced-c07]. Colonel Blotto: two players divide fixed budgets across battlefields, each won by the larger allocation; its mixed-strategy solution is o",
+   "— Defence as the stronger form (M17) [clausewitz-c09], [luttwak-c10], [mearsheimer-c03]. Attrition versus annihilation (M16) [freedman-c10], [mao-c10], [luttwak-c09]. Mobile, guerrilla and positional war [mao-c09]. Maritime theory [wylie-c0",
+   "— Culminating point (M15) [clausewitz-c10], [luttwak-c03], [luttwak-c04]. Sequential versus cumulative strategy (M21) [wylie-c05], [wylie-c06], [galula-c10]. Mission command under a fixed intent (M20) [tetlock-c14], [gray-c02], [mao-c08]. F"
+  ],
+  "find_out": [
+   "Diagnose (M1 Represent (M3))",
+   "Model (M2 Derive (M1))",
+   "Simulate and play (M5 Compute (M4))",
+   "Compare cases (M6 Compare and reconstruct (M3))",
+   "Estimate and score (M7 Verify (M5))"
+  ],
+  "settles": [
+   "W6",
+   "W7"
+  ],
+  "breaks": [
+   "Hindsight; unstated service assumptions."
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Level rule. Tactical, operational, strategic and grand-strategic are a scale, not cells [luttwak-c17]. A claim about the levels themselves is ST.O.A4.1."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/ST.md"
+ },
+ {
+  "id": "ST.O.A5",
+  "field": "ST",
+  "name": "Information",
+  "question": "What does this subject show about information, and what would settle it?",
+  "look_for": [
+   "— Costly signalling separates types [aos-c04], [negot-c18], [advanced-c13]: a separating equilibrium exists when the signal's cost differs enough between types (uses MA.B.C4 (91A)). Adverse selection [aos-c05], [gos-c07] (as market failure ",
+   "— Psychological versus operational milieu [jervis-c01]. Situational versus dispositional inference [jervis-c02]. Consistency, evoked sets, centrality, wishful thinking, dissonance [jervis-c04], [jervis-c05], [jervis-c08], [jervis-c11], [jer",
+   "— Confidence outruns accuracy (M24) [heuer-c04], [tetlock-c03], [negot-c09]. Outside view before inside view (M25) [tetlock-c08], [gsbs-c07], [gsbs-c08]. Forecasting as a learnable skill [tetlock-c01], [tetlock-c05], [tetlock-c07], [tetlock",
+   "— Black Swan attributes [taleb_bs-c01]; Mediocristan and Extremistan [taleb_bs-c03]; the turkey problem [taleb_bs-c04]; narrative fallacy [taleb_bs-c05]; the antilibrary [taleb_bs-c02]. Fragile, robust, antifragile [taleb_af-c01]. Mitigate ",
+   "— All warfare is based on deception [suntzu-c02]; the artifice of deviation [suntzu-c08]. Spies and foreknowledge [suntzu-c13]; reading signs [suntzu-c10]. Active measures: definition, misconceptions, craft, epistemic erosion, asymmetry, di"
+  ],
+  "find_out": [
+   "Diagnose (M1 Represent (M3))",
+   "Model (M2 Derive (M1))",
+   "Simulate and play (M5 Compute (M4))",
+   "Compare cases (M6 Compare and reconstruct (M3))",
+   "Estimate and score (M7 Verify (M5))"
+  ],
+  "settles": [
+   "W1",
+   "W4",
+   "W6"
+  ],
+  "breaks": [
+   "As the sub-cell rows."
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Adaptive-other rule. A claim belongs here only if its truth depends on an opponent, rival or counterpart who reacts. A choice against a non-reacting environment is EC.O.A1 (decision) or MA.B.C4 (operations research). CONTESTED exception: ST.O.A5.3 and ST.O.A5.4 are kept, because the corpus treats markets and nature as environments whose response to exposure is adversarial in effect. Alternative: move both to EC.O.A1.",
+   "Mind rule. A cognitive bias as a process is MS. Its exploitation or correction against a counterpart is ST.O.A5.2."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/ST.md"
+ }
+]

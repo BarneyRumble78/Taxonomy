@@ -1,0 +1,208 @@
+[
+ {
+  "id": "AG",
+  "field": "AG",
+  "name": "Agriculture, veterinary and food",
+  "question": "What does agriculture, veterinary and food establish about this subject, divided by the stage of the production system?",
+  "scqa_question": "By what dimension can each claim about producing and keeping organisms and food be placed once?",
+  "look_for": [
+   "AG.O.A1 Breeding",
+   "AG.O.A2 Cultivation and husbandry",
+   "AG.O.A3 Crop and animal health",
+   "AG.O.A4 Food",
+   "AG.O.A5 Farming systems"
+  ],
+  "find_out": [
+   "Field trial (M4 Intervene)",
+   "Survey and monitor (M3 Observe)",
+   "Breed and select (M4 Intervene)",
+   "Model systems (M5 Compute)",
+   "Inspect and certify (M7 Verify)"
+  ],
+  "settles": [
+   "W2",
+   "W3",
+   "W4",
+   "W11",
+   "W12"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "\"Feed the soil, not the plant\"",
+   "right product, right rate, right time, right place",
+   "farmer knowledge as a first guess."
+  ],
+  "collisions": [
+   "Place by the stage of production.",
+   "The taxon and its biology are BI. Its production is AG.",
+   "An animal disorder is AG; a human disorder is MD.",
+   "The molecule is CH; the food's safety and standard are AG.",
+   "Farm economics and prices are EC; environmental impact is EV.",
+   "general biology of the taxon → BI",
+   "human disease and nutrition need → MD",
+   "chemistry of food molecules → CH",
+   "agricultural prices and markets → EC",
+   "environmental impact → EV",
+   "food law → LA"
+  ],
+  "open": [
+   "veterinary medicine in AG vs MD (alternative: MD for all disorders)."
+  ],
+  "status": "draft",
+  "source": "pyramids/AG.md"
+ },
+ {
+  "id": "AG.O.A1",
+  "field": "AG",
+  "name": "Breeding",
+  "question": "How are they improved?",
+  "look_for": [
+   "Selection — the breeder's equation R = h²S predicts response to selection, assuming additive inheritance and a stable environment. The genetics is BI.",
+   "Genetic improvement — hybrids, marker-assisted selection, gene editing. Regulation is LA.",
+   "Genetic resources — seed banks, landraces."
+  ],
+  "find_out": [
+   "Field trial (M4 Intervene)",
+   "Survey and monitor (M3 Observe)",
+   "Breed and select (M4 Intervene)",
+   "Model systems (M5 Compute)",
+   "Inspect and certify (M7 Verify)"
+  ],
+  "settles": [
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "genotype-by-environment interaction"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/AG.md"
+ },
+ {
+  "id": "AG.O.A2",
+  "field": "AG",
+  "name": "Cultivation and husbandry",
+  "question": "What management gives what result?",
+  "look_for": [
+   "Soils and nutrients — fertiliser response. Liebig's law of the minimum holds as a first approximation, when one nutrient limits growth. The soil's state is EA.",
+   "Water and irrigation.",
+   "Crop management — rotation, tillage, sowing. A yield claim must state season, site and population.",
+   "Animal husbandry — pastoral and housed systems, nutrition, welfare. NZ pastoral dairying is a substrate.",
+   "Aquaculture, fisheries and forestry production."
+  ],
+  "find_out": [
+   "Field trial (M4 Intervene)",
+   "Survey and monitor (M3 Observe)",
+   "Breed and select (M4 Intervene)",
+   "Model systems (M5 Compute)",
+   "Inspect and certify (M7 Verify)"
+  ],
+  "settles": [
+   "W3"
+  ],
+  "breaks": [
+   "site specificity, weather years"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/AG.md"
+ },
+ {
+  "id": "AG.O.A3",
+  "field": "AG",
+  "name": "Crop and animal health",
+  "question": "How is their health kept?",
+  "look_for": [
+   "Plant protection — pests, weeds, pathogens; integrated pest management.",
+   "Veterinary medicine — diagnosis and treatment of animal disorders.",
+   "Biosecurity — border and incursion management (e.g. Mycoplasma bovis in NZ from 2017, UNVERIFIED date).",
+   "Zoonoses — the animal side is AG; human disease is MD (One Health is a bridge)."
+  ],
+  "find_out": [
+   "Field trial (M4 Intervene)",
+   "Survey and monitor (M3 Observe)",
+   "Breed and select (M4 Intervene)",
+   "Model systems (M5 Compute)",
+   "Inspect and certify (M7 Verify)"
+  ],
+  "settles": [
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "under-reporting"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/AG.md"
+ },
+ {
+  "id": "AG.O.A4",
+  "field": "AG",
+  "name": "Food",
+  "question": "What makes food safe, nutritious and stable?",
+  "look_for": [
+   "Composition and nutrition — the molecule is CH; human nutritional need is MD.",
+   "Processing and preservation — fermentation, pasteurisation, drying.",
+   "Food safety — HACCP as a control system (W11); pathogen limits.",
+   "Food standards — Codex Alimentarius; FSANZ for Australia and NZ (W12; legal force LA)."
+  ],
+  "find_out": [
+   "Field trial (M4 Intervene)",
+   "Survey and monitor (M3 Observe)",
+   "Breed and select (M4 Intervene)",
+   "Model systems (M5 Compute)",
+   "Inspect and certify (M7 Verify)"
+  ],
+  "settles": [
+   "W4",
+   "W11",
+   "W12"
+  ],
+  "breaks": [
+   "sampling error"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/AG.md"
+ },
+ {
+  "id": "AG.O.A5",
+  "field": "AG",
+  "name": "Farming systems",
+  "question": "What does this subject show about farming systems?",
+  "look_for": [
+   "System productivity — total factor productivity of farms (measurement here; economics EC).",
+   "Farm management — decisions under weather and price risk.",
+   "Environmental effect of farming — nitrate leaching, methane. The impact claim is EV; AG owns the practice that changes it."
+  ],
+  "find_out": [
+   "Field trial (M4 Intervene)",
+   "Survey and monitor (M3 Observe)",
+   "Breed and select (M4 Intervene)",
+   "Model systems (M5 Compute)",
+   "Inspect and certify (M7 Verify)"
+  ],
+  "settles": [
+   "W2",
+   "W4"
+  ],
+  "breaks": [
+   "model scope"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/AG.md"
+ }
+]
