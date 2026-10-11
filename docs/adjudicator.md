@@ -1,6 +1,6 @@
 # Adjudicator
 
-The rule stage and the retrieval stage still decide a placement when they agree. A model runs only when `TAXONOMY_ADJUDICATE=1`. With that flag off, which is the default in CI and in `wrangler.toml`, nothing is called and nothing is spent.
+The rule stage and the retrieval stage still decide a placement when they agree. A model runs only when `TAXONOMY_ADJUDICATE=1`. With that flag off, which is the default in CI and in `wrangler.toml`, nothing is called and nothing is spent. `python3 taxonomy.py check` uses that same switch. It does not force the model off, and it does not turn the model on by itself.
 
 The default chain is a local Ollama model, then Workers AI inside its free daily allowance, then abstain. Anthropic and OpenAI are used only when `TAXONOMY_ADJUDICATE_PAID=1` and the chain names them.
 

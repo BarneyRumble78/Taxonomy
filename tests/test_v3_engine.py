@@ -91,11 +91,11 @@ def test_unsource_status_is_downgraded():
         {"summary": "d", "status": "proposed"},
     ]}
     core.guard_status(rec)
-    assert rec["routes"][0]["status"] == "proposed"
+    assert rec["routes"][0]["status"] == "unverified (model reasoning)"
     assert rec["routes"][1]["status"] == "source_found"
-    assert rec["routes"][2]["status"] == "proposed"
-    assert rec["routes"][3]["status"] == "proposed"
-    assert "status_note" not in rec["routes"][3]
+    assert rec["routes"][2]["status"] == "unverified (model reasoning)"
+    assert rec["routes"][3]["status"] == "unverified (model reasoning)"
+    assert rec["routes"][3]["status_note"] == "unverified (model reasoning)"
 
 
 def _drop(path):
@@ -134,7 +134,8 @@ def test_partial_run_keeps_earlier_findings():
 def test_string_signature_is_coerced():
     assert core.clean_signature('{"task": ["infer"], "bogus": ["x"]}') == {"task": ["infer"]}
     assert core.clean_signature("not json") == {}
-    assert core.clean_signature(["infer"]) == {}
+    assert core.clean_signature(["infer"]) == {"task": ["infer"]}
+    assert core.clean_signature(["not-a-facet-value"]) == {}
     assert core.clean_signature(None) == {}
 
     class StringSig(FakeLLM):
@@ -246,3 +247,125 @@ def test_default_backend_is_local(monkeypatch):
         assert "ANTHROPIC_API_KEY" in str(exc)
     else:
         raise AssertionError("Anthropic was built with no key")
+
+
+def test_signature_accepts_common_shapes():
+    assert core.clean_signature({"facet": ["count", "permutation"]}) == {
+        "task": ["count"], "symmetry": ["permutation"],
+    }
+    assert core.clean_signature({"Task": "Count", "symmetry": "permutation"})["task"] == ["count"]
+    assert core.clean_signature([{"facet": "task", "values": ["infer"]}]) == {"task": ["infer"]}
+    llm = FakeLLM()
+    core.frame("x", llm)
+    assert '{"task": ["count"], "symmetry": ["permutation"]}' in llm.calls[0]
+    assert "{facet:" not in llm.calls[0]
+
+
+def test_field_cell_and_msc_aliases():
+    assert core.field_code("ST Strategy") == "ST"
+    assert core.field_code("Strategy") == "ST"
+    assert core.field_code("Law") == "LA"
+    assert core.clean_cell("MA.O.A2") == "MA.O.A2"
+    assert core.clean_cell("MA.0.A2") == "MA.O.A2"
+    assert core.clean_cell("PH.3.E") is None
+    assert core.clean_cell("MA.4.C") is None
+    assert core.canon_node("MSC30XX", "MA") == "MSC:30-XX"
+    assert core.canon_node("30", "MA") == "MSC:30-XX"
+    assert core.canon_node("03", "MA") == "MSC:03-XX"
+    assert core.canon_node("3", "MA") is None
+    assert core.canon_node("10", "MA") is None
+    assert core.canon_node("11", "MA") == "MSC:11-XX"
+    assert core.canon_node("MSC:42-XX", "MA") == "MSC:42-XX"
+
+
+def test_survey_normalises_codes_and_drops_invented_cells():
+    class Messy(FakeLLM):
+        def __call__(self, prompt, max_tokens=4000):
+            if "Apply the whole of human knowledge" in prompt:
+                assert "knowledge cutoff" in prompt
+                return {"views": [
+                    {"field": "ST Strategy", "cell": "ST.O.A4", "sees": "control"},
+                    {"field": "PH", "cell": "PH.3.E", "sees": "invented"},
+                    {"field": "MA", "cell": "MA.4.C", "sees": "invented"},
+                ], "set_aside": [{"field": "Law", "reason": "not this"}]}
+            return super().__call__(prompt, max_tokens)
+
+    rec = core.survey("x", Messy(), fields=["ST", "PH", "MA", "LA"])
+    views = {v["field"]: v for v in rec["result"]["views"]}
+    assert views["ST"]["cell"] == "ST.O.A4"
+    assert views["PH"]["cell"] is None and views["PH"]["cell_note"] == "unknown cell"
+    assert views["MA"]["cell"] is None
+    assert rec["result"]["set_aside"][0]["field"] == "LA"
+    assert rec["not_returned"] == []
+    _drop(str(ROOT / "runs" / f"{rec['id']}.json"))
+
+
+def test_consult_normalises_msc_ids():
+    class Alias(FakeLLM):
+        def __call__(self, prompt, max_tokens=4000):
+            if "Consider EACH subfield" in prompt:
+                assert "two-digit" in prompt
+                return {"nodes": [
+                    {"id": "MSC30XX", "applies": "yes", "approach": "a", "promise": 1, "cost": 1},
+                    {"id": "11", "applies": "no", "approach": "b", "promise": 0, "cost": 1},
+                    {"id": "10", "applies": "yes", "approach": "c", "promise": 5, "cost": 0},
+                    {"id": "nope", "applies": "yes", "approach": "d", "promise": 5, "cost": 0},
+                ]}
+            return super().__call__(prompt, max_tokens)
+
+    rec = core.consult("x", "MA", Alias(), batch=63, deepen=0)
+    assert "MSC:30-XX" in rec["findings"]
+    assert "MSC:11-XX" in rec["findings"]
+    assert "MSC:10-XX" not in rec["findings"]
+    assert "nope" not in rec["findings"]
+    assert rec["result"]["unresolved_ids"] == ["10", "nope"]
+    assert "two-digit" in rec["result"]["id_note"]
+    assert "MSC:42-XX" in rec["not_returned"]
+    _drop(str(ROOT / "runs" / f"{rec['id']}.json"))
+
+
+def test_connect_keeps_only_real_cards_and_skips_the_obvious():
+    class Invent(FakeLLM):
+        def __call__(self, prompt, max_tokens=4000):
+            if "Candidate tools" in prompt:
+                ids = re.findall(r'"(MA\.TK\.\d+)"', prompt)
+                top, other = ids[0], ids[1]
+                return {"candidates": [
+                    {"card": "[]", "promise": 9, "status": "tested", "mapping": "no"},
+                    {"card": top, "promise": 5, "mapping": "obvious"},
+                    {"card": "MA.TK.999", "mapping": "invented"},
+                    {"card": other, "promise": 1, "mapping": "far"},
+                ], "most_surprising": top}
+            return super().__call__(prompt, max_tokens)
+
+    rec = core.connect_run("x", "MA", Invent())
+    top = rec["consulted"][0]
+    cards = [c["card"] for c in rec["result"]["candidates"]]
+    assert cards
+    assert "[]" not in cards and "MA.TK.999" not in cards
+    assert set(cards) <= set(rec["consulted"])
+    assert rec["result"]["most_surprising"] in cards
+    assert rec["result"]["most_surprising"] != top
+    _drop(str(ROOT / "runs" / f"{rec['id']}.json"))
+
+
+def test_diophantine_claim_is_checked_and_not_settled():
+    report = core.check_equations("The only integer solution of x^2 - 2y^2 = 7 is (3, 1).")
+    found = {tuple(p) for eq in report["equations"] for p in eq["solutions"]}
+    assert (3, 1) in found and (13, 9) in found
+    assert report["consistent"] is False
+
+    class Sure(FakeLLM):
+        def __call__(self, prompt, max_tokens=4000):
+            if prompt.startswith("Synthesise"):
+                return {"governing_thought": "The only integer solution is (3, 1).",
+                        "routes": [{"summary": "only (3, 1)", "status": "tested", "nodes": []}]}
+            return super().__call__(prompt, max_tokens)
+
+    rec = core.consult("Solve x^2 - 2y^2 = 7 in integers.", "MA", Sure(), batch=63, deepen=0)
+    assert rec["result"]["status"] == "contradicted (small cases)"
+    assert rec["result"]["routes"][0]["status"] == "contradicted (small cases)"
+    plain = core.consult("How should a town store its records?", "MA", FakeLLM(), batch=63, deepen=0)
+    assert plain["result"]["status"] == "unverified (model reasoning)"
+    _drop(str(ROOT / "runs" / f"{rec['id']}.json"))
+    _drop(str(ROOT / "runs" / f"{plain['id']}.json"))

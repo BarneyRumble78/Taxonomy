@@ -8,7 +8,9 @@
 
 Backend: TAXONOMY_LLM=ollama (default, local) | manual | anthropic.
 Anthropic also needs TAXONOMY_ADJUDICATE_PAID=1 (see engine/v3/llm.py).
-check never calls the adjudicator. survey, consult and connect save a run record in runs/.
+check uses the same adjudicator switch as the engine: a model runs only when
+TAXONOMY_ADJUDICATE=1, and the default chain is local. Paid models still need
+TAXONOMY_ADJUDICATE_PAID=1. survey, consult and connect save a run record in runs/.
 A failed run is saved before the error is reported, and the message is one line plus that path.
 """
 import argparse, json, sys
@@ -56,8 +58,8 @@ def _main(argv=None):
     a = ap.parse_args(argv)
     if a.mode == "check":
         import taxonomy_engine as te
-        # Check stays on the local cascade. It does not follow TAXONOMY_ADJUDICATE.
-        detail = te.place_detail(a.text, adjudicator=False)
+        # None follows TAXONOMY_ADJUDICATE. Off, the default, calls no model.
+        detail = te.place_detail(a.text)
         placed = detail.get("placement")
         if not placed:
             print(abstain_line(detail.get("reason")))
