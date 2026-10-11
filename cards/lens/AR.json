@@ -1,0 +1,296 @@
+[
+ {
+  "id": "AR",
+  "field": "AR",
+  "name": "Arts and literature",
+  "question": "What does arts and literature establish about this subject, divided by its key line?",
+  "scqa_question": "Which single partition places every claim about a work of art exactly once, by what the claim is about?",
+  "look_for": [
+   "AR.O.A1 Medium and making",
+   "AR.O.A2 Form",
+   "AR.O.A3 Meaning",
+   "AR.O.A4 Context and reception",
+   "AR.O.A5 Value"
+  ],
+  "find_out": [
+   "Description and notation (M1 Represent)",
+   "Close reading and formal analysis (M2 Derive)",
+   "Technical and archival examination (M3 Observe)",
+   "Making and realization (M4 Intervene)",
+   "Comparison and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W4",
+   "W6",
+   "W7",
+   "W8",
+   "W9",
+   "W12"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "AR.M.H1 Form follows function (Sullivan, 1896). A design maxim, not a law.",
+   "AR.M.H2 The rule of thirds. A composition habit, not a finding.",
+   "AR.M.H3 The golden section in the Parthenon or in Mozart. Mostly unmeasured; a heuristic or myth until measured.",
+   "AR.M.H4 Chekhov's gun. A dramaturgical economy rule.",
+   "AR.M.H5 Show, don't tell. A workshop rule.",
+   "AR.M.H6 \"The test of time.\" Hume's argument (1757) is PL.O.A4.4; the slogan is a heuristic.",
+   "AR.M.H7 \"The author is dead\" (Barthes, 1967). The argument is PL; the slogan settles nothing.",
+   "AR.M.H8 The intentional fallacy (Wimsatt and Beardsley, 1946) used as a veto. The argument is PL; the veto is a heuristic.",
+   "AR.M.H9 Morellian details (ears, hands). A cue for AR.M.3 and AR.M.5, not a proof."
+  ],
+  "collisions": [
+   "The work is not a claim. A score, novel, painting or film is a substrate. Only sentences about works are filed.",
+   "Medium is a substrate. Music, painting, verse and film name bridges, never Face O cells.",
+   "Direction of evidence decides arts versus history. If the past is evidence for the work, the sentence is AR. If the work is evidence for the past, it is HI. \"The contract required ultramarine\" is AR.O.A4.1. \"Guild records show pigment prices rising\" is HI or EC.",
+   "Value divides with philosophy at generality. What merit is, and which properties confer it on any work, is PL.O.A4.4. Applying a stated criterion to named works is AR.O.A5.",
+   "Valued is not valuable. That a work is canonical, sold or polled is AR.O.A4. That it ought to be is AR.O.A5.",
+   "Response mechanism is mind. How perceivers process works in general is MS.O.A1. That a named work was received in a named way is AR.O.A4.3.",
+   "Structure stays in engineering. Whether a shell or vault stands is EN.O.A1. Its form and meaning are AR.O.A2 and AR.O.A3.",
+   "Material identity stays in chemistry. That a pigment is lead-tin yellow type I is CH.O.A1. That this panel used it is AR.O.A1.1, which uses CH.O.A1.",
+   "The language system is linguistics. English stress phonology is LN.O.A1. The metrical scheme of a poem is AR.O.A2.1. A poem's syntax as a fact of the language is LN.O.A2.",
+   "Markets, rights and rule are elsewhere. Prices and auction effects are EC.O.A2. Copyright and moral rights are LA.O.A2.2. Censorship as an act of authority is PO; its effect on the work is AR.O.A4.2.",
+   "Sacred art splits. An icon's form and making are AR. Its veneration and theological status are RE.O.A3.1. The ruling of Nicaea II (787) is an RE·T sentence.",
+   "Style labels split. \"Baroque\" as shared formal traits is AR.O.A2.1. \"Baroque\" as a span of dates is HI.O.A2. CONTESTED.",
+   "What artistic value is; general aesthetic criteria; ontology of the work → PL.O.A4.4; PL.O.A1",
+   "How perceivers process works in general → MS.O.A1",
+   "Claims about society with art as evidence → MS.O.A5",
+   "Identity and composition of a material → CH.O.A1",
+   "Physics of an instrument, acoustics → PH",
+   "Stability of a structure; design to a stated use → EN.O.A1",
+   "Prices, art markets, auction results → EC.O.A2",
+   "A firm's accounts (a gallery, a label) → BU"
+  ],
+  "open": [
+   "the warrant of practice-as-research. Is a made work evidence (W8), an experiment (W3), or neither?",
+   "the full RILM top-level classes and their landing.",
+   "the ANZSRC 4705 group number and the 3602 professional-writing split.",
+   "style labels. AR.O.A2.1 as traits; alternative HI.O.A2 as dates.",
+   "Affektenlehre. AR.O.A3.2 as code; alternative AR.O.A3.3 as expression.",
+   "historically informed performance claims (AR.O.A1.3.5). Alternative: the treatise is prescriptive, so the claim is A2.1 norm, not A1.3 practice.",
+   "Sistine restoration judgment (AR.O.A5.3.2). Alternative: the secco question is a material fact, AR.O.A1.1, before any verdict.",
+   "the golden-section heuristic (AR.M.H3). Alternative: once measured, it becomes an AR.O.A2.2 claim.",
+   "ethnomusicology's society claims. Alternative home MS.O.A5 is adopted; some practitioners would keep them in AR."
+  ],
+  "status": "draft",
+  "source": "pyramids/AR.md"
+ },
+ {
+  "id": "AR.O.A1",
+  "field": "AR",
+  "name": "Medium and making",
+  "question": "Which making claims are distinct?",
+  "look_for": [
+   "Buon fresco versus secco. Pigment bound by lime as plaster sets, versus pigment applied to dry plaster with a binder.",
+   "Oil glazing in fifteenth-century Netherlandish panels.",
+   "Lost-wax casting. A wax model is invested, melted out and replaced by metal.",
+   "Pentimento. A change of composition visible under the paint layer.",
+   "Dendrochronological date of a panel. A felling date is a lower bound on the painting date. It holds only if the board's outer rings survive or sapwood is estimated. The method's chronology is EA (uses EA, UNVERIFIED cell id).",
+   "Whakairo technique. Māori carving technique, as a making claim. See T/p2_ANZSRC45.md.",
+   "Workshop attribution grades. \"Rembrandt\", \"studio of\", \"circle of\", \"follower of\".",
+   "Rembrandt Research Project (1968–2014) as an attribution programme (UNVERIFIED dates; from the prototype's link, not rechecked).",
+   "Stylometric attribution. An authorship claim supported by function-word frequencies. The model is CS's; the attribution is here.",
+   "Whakairo lineage of training. Which carving school trained a carver.",
+   "Tuning and temperament of a performance. Twelve-tone equal temperament divides the octave into twelve equal frequency ratios of 2^(1/12). The ratio fact uses MA; that a named instrument was so tuned is here.",
+   "Figured bass. A notation the performer realizes in chords.",
+   "Labanotation record (Laban, 1928) of a named choreography.",
+   "Stemma and copy-text. Lachmann's stemma assumes descent by copying with shared errors. Greg's copy-text rationale (1950) chooses the text for accidentals. Each yields a claim about the authorial reading.",
+   "Historically informed performance claims. Example: the extent of continuous vibrato in eighteenth-century string playing. CONTESTED; the alternative reads treatises as prescriptive, not descriptive."
+  ],
+  "find_out": [
+   "Description and notation (M1 Represent)",
+   "Close reading and formal analysis (M2 Derive)",
+   "Technical and archival examination (M3 Observe)",
+   "Making and realization (M4 Intervene)",
+   "Comparison and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W4",
+   "W7"
+  ],
+  "breaks": [
+   "Sample or document not from the work"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Material identity stays in chemistry. That a pigment is lead-tin yellow type I is CH.O.A1. That this panel used it is AR.O.A1.1, which uses CH.O.A1.",
+   "No miscellaneous bucket. Non-Western forms are filed by aspect. Raga is AR.O.A2.1; rasa is AR.O.A3.3; a haka's performance is AR.O.A1.3."
+  ],
+  "open": [
+   "historically informed performance claims (AR.O.A1.3.5). Alternative: the treatise is prescriptive, so the claim is A2.1 norm, not A1.3 practice.",
+   "Sistine restoration judgment (AR.O.A5.3.2). Alternative: the secco question is a material fact, AR.O.A1.1, before any verdict."
+  ],
+  "status": "draft",
+  "source": "pyramids/AR.md"
+ },
+ {
+  "id": "AR.O.A2",
+  "field": "AR",
+  "name": "Form",
+  "question": "Which formal claims are distinct?",
+  "look_for": [
+   "Meter and prosody. Iambic pentameter; quantitative meter; the mora in Japanese verse.",
+   "Tonality. A hierarchy of pitches around a tonic, with functional harmony. Twelve-tone serialism (Schoenberg, early 1920s) is an alternative system.",
+   "Raga and maqam as melodic-modal systems.",
+   "Sonata form (textbook model). Abstracted from existing works by Reicha (1826), Marx (1845) and Czerny (1848). Koch (1793) described it by modulation. It is an analytic model, not a rule composers followed.",
+   "Linear perspective. A central projection onto a plane. It assumes one fixed eye, a planar picture surface and straight light paths. Under these, parallel lines not parallel to the plane meet at a vanishing point. The projective geometry use",
+   "Focalization (Genette, 1972): who sees versus who speaks. Free indirect discourse.",
+   "Fabula and syuzhet (Russian Formalists): story order versus telling order.",
+   "Continuity editing and montage in film.",
+   "Genre as formal definition. The sonnet's fourteen lines and volta. Genre as history is AR.O.A4.3.",
+   "Style as shared formal traits. \"Baroque\" as traits. CONTESTED; \"Baroque\" as dates is HI.O.A2.",
+   "The recapitulation of a named movement.",
+   "The volta of a named sonnet.",
+   "The Sydney Opera House as a design. Its form; its stability is EN."
+  ],
+  "find_out": [
+   "Description and notation (M1 Represent)",
+   "Close reading and formal analysis (M2 Derive)",
+   "Technical and archival examination (M3 Observe)",
+   "Making and realization (M4 Intervene)",
+   "Comparison and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W8",
+   "W12"
+  ],
+  "breaks": [
+   "System imposed where the work departs"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Structure stays in engineering. Whether a shell or vault stands is EN.O.A1. Its form and meaning are AR.O.A2 and AR.O.A3.",
+   "The language system is linguistics. English stress phonology is LN.O.A1. The metrical scheme of a poem is AR.O.A2.1. A poem's syntax as a fact of the language is LN.O.A2.",
+   "Style labels split. \"Baroque\" as shared formal traits is AR.O.A2.1. \"Baroque\" as a span of dates is HI.O.A2. CONTESTED.",
+   "No miscellaneous bucket. Non-Western forms are filed by aspect. Raga is AR.O.A2.1; rasa is AR.O.A3.3; a haka's performance is AR.O.A1.3."
+  ],
+  "open": [
+   "style labels. AR.O.A2.1 as traits; alternative HI.O.A2 as dates.",
+   "the golden-section heuristic (AR.M.H3). Alternative: once measured, it becomes an AR.O.A2.2 claim."
+  ],
+  "status": "draft",
+  "source": "pyramids/AR.md"
+ },
+ {
+  "id": "AR.O.A3",
+  "field": "AR",
+  "name": "Meaning",
+  "question": "By which routes does content attach to a work?",
+  "look_for": [
+   "Subject and mimesis. What a painting depicts; the story a ballet tells.",
+   "Program music. Music tied to a stated extra-musical subject.",
+   "Iconographic type. Saint Catherine identified by the wheel. Panofsky's levels (1939) are a method (AR.M.5).",
+   "Allegory and emblem.",
+   "Leitmotif in Wagner as an in-work code.",
+   "Affektenlehre as conventional affects of Baroque figures. CONTESTED: code (A3.2) when conventional; expression (A3.3) when the claim is the felt quality.",
+   "Rasa (Nāṭyaśāstra): the aesthetic flavour a drama presents.",
+   "Irony and the unreliable narrator (Booth, 1961).",
+   "Intertextuality (Kristeva, 1966; published 1969) as a theory of meaning by relation. The dated fact of a borrowing is AR.O.A4.3.",
+   "Allusion, parody, pastiche and musical quotation."
+  ],
+  "find_out": [
+   "Description and notation (M1 Represent)",
+   "Close reading and formal analysis (M2 Derive)",
+   "Technical and archival examination (M3 Observe)",
+   "Making and realization (M4 Intervene)",
+   "Comparison and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W6",
+   "W8"
+  ],
+  "breaks": [
+   "Imported code; critic's mood as the work's"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Structure stays in engineering. Whether a shell or vault stands is EN.O.A1. Its form and meaning are AR.O.A2 and AR.O.A3.",
+   "No miscellaneous bucket. Non-Western forms are filed by aspect. Raga is AR.O.A2.1; rasa is AR.O.A3.3; a haka's performance is AR.O.A1.3."
+  ],
+  "open": [
+   "Affektenlehre. AR.O.A3.2 as code; alternative AR.O.A3.3 as expression."
+  ],
+  "status": "draft",
+  "source": "pyramids/AR.md"
+ },
+ {
+  "id": "AR.O.A4",
+  "field": "AR",
+  "name": "Context and reception",
+  "question": "Which stages of that life are distinct?",
+  "look_for": [
+   "Patronage contract. Baxandall (1972) on contracts specifying pigments, such as ultramarine for the Virgin's robe.",
+   "Provenance. The chain of ownership of a named object.",
+   "Publication history. The serial novel; folio and quarto.",
+   "Premiere and performance history. The 1913 Paris premiere of *The Rite of Spring*.",
+   "Horizon of expectations (Jauss, 1967) and the implied reader (Iser, 1972).",
+   "Influence and borrowing as dated facts. Joyce's use of the *Odyssey*. Bloom's anxiety of influence (1973) is a contested theory of it.",
+   "Distant reading (Moretti, 2000). Counts over a corpus as reception evidence. The corpus model is CS's.",
+   "Genre as history. The Gothic novel's emergence and audience.",
+   "The canon as a reading list. Anthologies, syllabi, museum holdings. A count, not a verdict.",
+   "Critics' polls as data. The *Sight and Sound* poll, decennial since 1952. The result is here; each ballot is AR.O.A5.2."
+  ],
+  "find_out": [
+   "Description and notation (M1 Represent)",
+   "Close reading and formal analysis (M2 Derive)",
+   "Technical and archival examination (M3 Observe)",
+   "Making and realization (M4 Intervene)",
+   "Comparison and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W7"
+  ],
+  "breaks": [
+   "Gaps filled by assumption"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Direction of evidence decides arts versus history. If the past is evidence for the work, the sentence is AR. If the work is evidence for the past, it is HI. \"The contract required ultramarine\" is AR.O.A4.1. \"Guild records show pigment prices rising\" is HI or EC.",
+   "Valued is not valuable. That a work is canonical, sold or polled is AR.O.A4. That it ought to be is AR.O.A5.",
+   "Response mechanism is mind. How perceivers process works in general is MS.O.A1. That a named work was received in a named way is AR.O.A4.3.",
+   "Markets, rights and rule are elsewhere. Prices and auction effects are EC.O.A2. Copyright and moral rights are LA.O.A2.2. Censorship as an act of authority is PO; its effect on the work is AR.O.A4.2."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/AR.md"
+ },
+ {
+  "id": "AR.O.A5",
+  "field": "AR",
+  "name": "Value",
+  "question": "Which applied verdicts are distinct?",
+  "look_for": [
+   "Eliot on *Hamlet* (\"Hamlet and His Problems\", 1919): \"most certainly an artistic failure\".",
+   "Architecture criticism of a named building.",
+   "Xie He's six principles applied to a named painting. The principles as general criteria are PL.O.A4.4.",
+   "Canon arguments. Bloom, *The Western Canon* (1994), and its critics.",
+   "A prize jury's reasons; a critic's poll ballot.",
+   "Record review of a named performance. Tempo and balance judgments.",
+   "Judgment of a restoration. Whether the Sistine ceiling cleaning (1980–94) removed original secco work. CONTESTED."
+  ],
+  "find_out": [
+   "Description and notation (M1 Represent)",
+   "Close reading and formal analysis (M2 Derive)",
+   "Technical and archival examination (M3 Observe)",
+   "Making and realization (M4 Intervene)",
+   "Comparison and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W9"
+  ],
+  "breaks": [
+   "Unstated criterion"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Value divides with philosophy at generality. What merit is, and which properties confer it on any work, is PL.O.A4.4. Applying a stated criterion to named works is AR.O.A5.",
+   "Valued is not valuable. That a work is canonical, sold or polled is AR.O.A4. That it ought to be is AR.O.A5.",
+   "Built environment (gap claim absorbed). Design to a stated use is EN. Its aesthetic verdict is AR.O.A5. Its site is EA; its price is EC."
+  ],
+  "open": [
+   "Sistine restoration judgment (AR.O.A5.3.2). Alternative: the secco question is a material fact, AR.O.A1.1, before any verdict."
+  ],
+  "status": "draft",
+  "source": "pyramids/AR.md"
+ }
+]

@@ -44,5 +44,17 @@ Run check, registry, tests and site build after any change to a pyramid, the lex
 - The page runs in a sandbox: no external fetches, only allowlisted CDNs, no Python in the browser. The JS engine in the template must stay a faithful port of `engine/taxonomy_engine.py`.
 - Deep analysis uses the claude.ai `sample` capability (declared at publish: `{"sample": {}}`).
 
+## v3 (branch v3-foundations): applying knowledge
+- Purpose and modes: `standard/STANDARD_V3.md` (Survey, Consult, Connect, Check, Zoom). R1 one-home applies to Check only.
+- `maps/<FIELD>/`: subfield maps from authority schemes (MSC2020 for MA; record licence per map).
+- `cards/lens/`: lens cards per field and cell (`python3 scripts/build_lens_cards.py`; MA written by hand).
+- `cards/toolkit/`: toolkit cards with problem signatures (`python3 scripts/build_toolkit_cards.py`).
+- `signatures/vocabulary.json`: controlled facets for problem signatures. `schemas/`: JSON schemas.
+- `engine/v3/connect.py`: signature → ranked toolkit cards. Tests: `tests/test_v3_connect.py`.
+- `engine/v3/core.py`: frame, survey, consult, connect_run. Backends in `engine/v3/llm.py`. Default is local Ollama. `manual` takes a pasted answer. Anthropic runs only when `TAXONOMY_LLM=anthropic` and `TAXONOMY_ADJUDICATE_PAID=1`.
+- CLI: `python3 taxonomy.py frame|survey|consult|connect|check "text" [--field MA]`. Runs are saved in `runs/` (git-ignored).
+- Draft more toolkit cards: `python3 scripts/draft_toolkit_cards.py --field MA --level 2`. Validate: `python3 scripts/validate_cards.py`.
+- Plan and progress: `ROADMAP_V3.md`.
+
 ## Known open work
 See `BACKLOG.md`.

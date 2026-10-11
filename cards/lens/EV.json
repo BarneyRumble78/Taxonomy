@@ -1,0 +1,208 @@
+[
+ {
+  "id": "EV",
+  "field": "EV",
+  "name": "Environmental science",
+  "question": "What does environmental science establish about this subject, divided by the link in the human–environment causal chain?",
+  "scqa_question": "By what dimension can each coupled claim be placed once, with the process science left to EA, BI and CH?",
+  "look_for": [
+   "EV.O.A1 Pressures",
+   "EV.O.A2 States",
+   "EV.O.A3 Impacts",
+   "EV.O.A4 Responses",
+   "EV.O.A5 Limits"
+  ],
+  "find_out": [
+   "Monitor (M3 Observe)",
+   "Assess impact (M6 Compare and reconstruct)",
+   "Model the coupled system (M5 Compute)",
+   "Intervene and restore (M4 Intervene)",
+   "Account (M1 Represent)"
+  ],
+  "settles": [
+   "W2",
+   "W3",
+   "W4",
+   "W5",
+   "W12"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Precautionary principle (a decision rule, not evidence)",
+   "polluter pays",
+   "\"think globally, act locally\"."
+  ],
+  "collisions": [
+   "Place by the link in the chain.",
+   "The process (fluid, chemical, ecological) is EA, CH or BI. The coupled human-caused claim is EV.",
+   "The policy is PO; the price is EC; the duty is LA.",
+   "A human health exposure–response is MD.",
+   "A farming practice is AG; its environmental effect is EV.",
+   "Earth-system physics → EA",
+   "ecology without human pressure → BI",
+   "environmental law → LA",
+   "environmental economics and pricing → EC",
+   "environmental politics → PO"
+  ],
+  "open": [
+   "early warning of tipping points in real systems.",
+   "planetary boundary numbers; EV as a pyramid rather than an EA cell."
+  ],
+  "status": "draft",
+  "source": "pyramids/EV.md"
+ },
+ {
+  "id": "EV.O.A1",
+  "field": "EV",
+  "name": "Pressures",
+  "question": "What load, from what activity?",
+  "look_for": [
+   "Emissions — greenhouse gases, pollutants. Inventories follow IPCC guidelines (W12 for method).",
+   "Land and sea use change — clearance, drainage, urbanisation.",
+   "Extraction — water, fish, minerals.",
+   "Introduced species — pests and invasives (e.g. possums and mustelids in NZ)."
+  ],
+  "find_out": [
+   "Monitor (M3 Observe)",
+   "Assess impact (M6 Compare and reconstruct)",
+   "Model the coupled system (M5 Compute)",
+   "Intervene and restore (M4 Intervene)",
+   "Account (M1 Represent)"
+  ],
+  "settles": [
+   "W4",
+   "W12"
+  ],
+  "breaks": [
+   "under-reporting, method change"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EV.md"
+ },
+ {
+  "id": "EV.O.A2",
+  "field": "EV",
+  "name": "States",
+  "question": "What is the measured state?",
+  "look_for": [
+   "Air quality — the measurement uses CH and EA.",
+   "Freshwater quality — nitrate, E. coli, sediment.",
+   "Marine environment — acidification, warming.",
+   "Soil state — contamination, erosion.",
+   "Biodiversity status — threat classifications (IUCN Red List criteria, W12)."
+  ],
+  "find_out": [
+   "Monitor (M3 Observe)",
+   "Assess impact (M6 Compare and reconstruct)",
+   "Model the coupled system (M5 Compute)",
+   "Intervene and restore (M4 Intervene)",
+   "Account (M1 Represent)"
+  ],
+  "settles": [
+   "W4"
+  ],
+  "breaks": [
+   "sparse sites, drift"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EV.md"
+ },
+ {
+  "id": "EV.O.A3",
+  "field": "EV",
+  "name": "Impacts",
+  "question": "What harm, attributed how?",
+  "look_for": [
+   "Ecosystem harm — loss of function and species.",
+   "Human health impact — the exposure–response is MD.",
+   "Attribution — the share of an observed change caused by a stated pressure (e.g. event attribution in climate science). The physical model is EA.",
+   "Ecosystem services — benefits people receive; valuation is EC."
+  ],
+  "find_out": [
+   "Monitor (M3 Observe)",
+   "Assess impact (M6 Compare and reconstruct)",
+   "Model the coupled system (M5 Compute)",
+   "Intervene and restore (M4 Intervene)",
+   "Account (M1 Represent)"
+  ],
+  "settles": [
+   "W2",
+   "W5"
+  ],
+  "breaks": [
+   "confounded drivers"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EV.md"
+ },
+ {
+  "id": "EV.O.A4",
+  "field": "EV",
+  "name": "Responses",
+  "question": "Which responses change pressures or states?",
+  "look_for": [
+   "Restoration — measured recovery after intervention.",
+   "Conservation — protected areas, predator control (Predator Free 2050 is a stated goal, UNVERIFIED name and date).",
+   "Regulation and instruments — the policy is PO, the price instrument EC, the duty LA. EV owns the measured environmental effect.",
+   "Kaitiakitanga in practice — guardianship as a response; its tradition-internal meaning is IK."
+  ],
+  "find_out": [
+   "Monitor (M3 Observe)",
+   "Assess impact (M6 Compare and reconstruct)",
+   "Model the coupled system (M5 Compute)",
+   "Intervene and restore (M4 Intervene)",
+   "Account (M1 Represent)"
+  ],
+  "settles": [
+   "W3",
+   "W5"
+  ],
+  "breaks": [
+   "short records, displacement"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EV.md"
+ },
+ {
+  "id": "EV.O.A5",
+  "field": "EV",
+  "name": "Limits",
+  "question": "Where are the limits?",
+  "look_for": [
+   "Thresholds and tipping points — a regime shift occurs past a critical value, assuming bistable dynamics (theory MA.O.A4).",
+   "Standards and bottom lines — legal or agreed limits (W12; force LA).",
+   "Carrying capacity and planetary boundaries — the planetary boundaries framework (Rockström et al., 2009) is a proposed set, CONTESTED in its numbers."
+  ],
+  "find_out": [
+   "Monitor (M3 Observe)",
+   "Assess impact (M6 Compare and reconstruct)",
+   "Model the coupled system (M5 Compute)",
+   "Intervene and restore (M4 Intervene)",
+   "Account (M1 Represent)"
+  ],
+  "settles": [
+   "W2",
+   "W12"
+  ],
+  "breaks": [
+   "non-stationarity"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EV.md"
+ }
+]

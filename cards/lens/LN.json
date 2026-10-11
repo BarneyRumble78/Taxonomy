@@ -1,0 +1,214 @@
+[
+ {
+  "id": "LN",
+  "field": "LN",
+  "name": "Language",
+  "question": "What does language establish about this subject, divided by the aspect of language the sentence is about?",
+  "scqa_question": "What partition places every claim about language once, with stated borders to PL, MS, CS and AR?",
+  "look_for": [
+   "LN.O.A1 Signal",
+   "LN.O.A2 Form",
+   "LN.O.A3 Meaning",
+   "LN.O.A4 Variation in use",
+   "LN.O.A5 Diversity"
+  ],
+  "find_out": [
+   "Elicit and document (M3 Observe)",
+   "Analyse a corpus (M3 Observe, M5 Compute)",
+   "Experiment (M4 Intervene)",
+   "Compare and reconstruct (M6 Compare and reconstruct)",
+   "Model formally and computationally (M1 Represent, M2 Derive)"
+  ],
+  "settles": [
+   "W1",
+   "W3",
+   "W4",
+   "W5",
+   "W6",
+   "W7",
+   "W9"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Glottochronology (CONTESTED, filed here as a heuristic)",
+   "the native speaker's intuition as a first guess",
+   "look for the minimal pair."
+  ],
+  "collisions": [
+   "The system is linguistics; the process is mind (MS).",
+   "Meaning as a concept is PL; meaning in a language is LN.",
+   "Formal languages are MA; their use to class natural languages is LN.",
+   "Language models are CS; whether their outputs show a grammatical generalisation is LN.",
+   "The poem is AR; the metrical phonology it uses is LN.",
+   "A scripture's doctrinal sense is RE; its grammar is LN.",
+   "A word in te reo is LN; its tradition-internal meaning in tikanga is IK.",
+   "philosophy of language → PL",
+   "real-time processing → MS",
+   "language technology → CS",
+   "literary value → AR",
+   "doctrinal meaning → RE",
+   "tradition-internal meaning of Indigenous terms → IK"
+  ],
+  "open": [
+   "origin of language (A5.4).",
+   "the mild context-sensitivity of natural language; glottochronology."
+  ],
+  "status": "draft",
+  "source": "pyramids/LN.md"
+ },
+ {
+  "id": "LN.O.A1",
+  "field": "LN",
+  "name": "Signal",
+  "question": "How is the signal produced, perceived and organised?",
+  "look_for": [
+   "Phonetics — articulation, acoustics, perception. Source–filter theory of speech (Fant, 1960) cites PH acoustics.",
+   "Phonology — the phoneme and the minimal pair; distinctive features (Chomsky and Halle, *The Sound Pattern of English*, 1968); Optimality Theory (Prince and Smolensky, 1993).",
+   "Sign phonology — handshape, location and movement as parameters (Stokoe, 1960). Sign languages are full natural languages.",
+   "Writing systems — the IPA is a convention (W12); orthography is not sound."
+  ],
+  "find_out": [
+   "Elicit and document (M3 Observe)",
+   "Analyse a corpus (M3 Observe, M5 Compute)",
+   "Experiment (M4 Intervene)",
+   "Compare and reconstruct (M6 Compare and reconstruct)",
+   "Model formally and computationally (M1 Represent, M2 Derive)"
+  ],
+  "settles": [
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "recording artefacts, one speaker"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LN.md"
+ },
+ {
+  "id": "LN.O.A2",
+  "field": "LN",
+  "name": "Form",
+  "question": "How are they built?",
+  "look_for": [
+   "Morphology — morphemes; inflection versus derivation.",
+   "Syntax — constituency and recursion; dependency versus phrase structure; agreement.",
+   "The lexicon — word classes, argument structure.",
+   "Formal grammars — the Chomsky hierarchy is MA.O.A1; LN uses it to class natural-language phenomena. Whether natural languages are mildly context-sensitive is CONTESTED."
+  ],
+  "find_out": [
+   "Elicit and document (M3 Observe)",
+   "Analyse a corpus (M3 Observe, M5 Compute)",
+   "Experiment (M4 Intervene)",
+   "Compare and reconstruct (M6 Compare and reconstruct)",
+   "Model formally and computationally (M1 Represent, M2 Derive)"
+  ],
+  "settles": [
+   "W1",
+   "W4"
+  ],
+  "breaks": [
+   "researcher's intuition as sole data"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LN.md"
+ },
+ {
+  "id": "LN.O.A3",
+  "field": "LN",
+  "name": "Meaning",
+  "question": "What do expressions mean?",
+  "look_for": [
+   "Lexical semantics — sense relations; Saussure's arbitrariness of the sign (*Cours*, 1916).",
+   "Compositional semantics — Frege's principle (concept cited from PL); Montague grammar.",
+   "Pragmatics — Grice's cooperative principle and implicature (concept PL, empirical patterns LN); presupposition; deixis; politeness.",
+   "Grammaticalised meaning — e.g. te reo Māori pronouns distinguish dual from plural, and inclusive from exclusive."
+  ],
+  "find_out": [
+   "Elicit and document (M3 Observe)",
+   "Analyse a corpus (M3 Observe, M5 Compute)",
+   "Experiment (M4 Intervene)",
+   "Compare and reconstruct (M6 Compare and reconstruct)",
+   "Model formally and computationally (M1 Represent, M2 Derive)"
+  ],
+  "settles": [
+   "W4",
+   "W9"
+  ],
+  "breaks": [
+   "translation standing in for meaning"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LN.md"
+ },
+ {
+  "id": "LN.O.A4",
+  "field": "LN",
+  "name": "Variation in use",
+  "question": "How and why?",
+  "look_for": [
+   "Social variation — the sociolinguistic variable (Labov, 1966).",
+   "Register and genre — situational variation; diglossia (Ferguson, 1959).",
+   "Contact and multilingualism — code-switching; pidgins and creoles.",
+   "Endangerment and revitalisation — language shift. Te reo Māori: kōhanga reo from 1982; the Māori Language Act 1987 made it an official language of New Zealand."
+  ],
+  "find_out": [
+   "Elicit and document (M3 Observe)",
+   "Analyse a corpus (M3 Observe, M5 Compute)",
+   "Experiment (M4 Intervene)",
+   "Compare and reconstruct (M6 Compare and reconstruct)",
+   "Model formally and computationally (M1 Represent, M2 Derive)"
+  ],
+  "settles": [
+   "W4",
+   "W5"
+  ],
+  "breaks": [
+   "convenience samples"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LN.md"
+ },
+ {
+  "id": "LN.O.A5",
+  "field": "LN",
+  "name": "Diversity",
+  "question": "What does this subject show about diversity?",
+  "look_for": [
+   "Change — regular sound change (the Neogrammarian hypothesis, 1870s); Grimm's law (1822); Verner's law (1875); grammaticalisation.",
+   "Descent and families — the comparative method; Proto-Indo-European; Austronesian, which includes te reo Māori.",
+   "Typology and universals — Greenberg's universals (1963), most of them statistical tendencies rather than exceptionless laws.",
+   "Origin of language — OPEN."
+  ],
+  "find_out": [
+   "Elicit and document (M3 Observe)",
+   "Analyse a corpus (M3 Observe, M5 Compute)",
+   "Experiment (M4 Intervene)",
+   "Compare and reconstruct (M6 Compare and reconstruct)",
+   "Model formally and computationally (M1 Represent, M2 Derive)"
+  ],
+  "settles": [
+   "W6",
+   "W7"
+  ],
+  "breaks": [
+   "chance resemblance, borrowing"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/LN.md"
+ }
+]

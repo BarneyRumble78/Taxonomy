@@ -1,0 +1,216 @@
+[
+ {
+  "id": "BU",
+  "field": "BU",
+  "name": "Business, trade, tax and accounting",
+  "question": "What does business, trade, tax and accounting establish about this subject, divided by the practice of the firm?",
+  "scqa_question": "By what dimension can each business claim be placed once, with economic theory in EC and legal duty in LA?",
+  "look_for": [
+   "BU.O.A1 Accounts",
+   "BU.O.A2 Finance",
+   "BU.O.A3 Operations and organisation",
+   "BU.O.A4 Marketing",
+   "BU.O.A5 Trade and tax"
+  ],
+  "find_out": [
+   "Record and report (M1 Represent)",
+   "Value and plan (M2 Derive)",
+   "Survey the market (M3 Observe)",
+   "Compare cases (M6 Compare and reconstruct)",
+   "Audit (M7 Verify)"
+  ],
+  "settles": [
+   "W1",
+   "W3",
+   "W4",
+   "W6",
+   "W10",
+   "W11",
+   "W12"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Rules of thumb for payback",
+   "the 80/20 rule",
+   "SWOT",
+   "Porter's five forces (a framework, not a law)",
+   "\"cash is king\"."
+  ],
+  "collisions": [
+   "Place by the firm's practice.",
+   "The finance theorem is MA (MSC 91G); its use by the firm is BU; the market price of risk is EC.",
+   "The incidence of a tax is EC, the duty is LA, the computation is BU.",
+   "Title to goods is LA; Incoterms allocate risk and costs (BU).",
+   "A rival's strategic response is ST.",
+   "Behaviour of people inside firms is MS; the firm's management practice is BU.",
+   "finance theorems (MM, Black–Scholes proofs) → MA.B.C4",
+   "equilibrium prices and incidence → EC",
+   "legal duty, title, enforceability → LA",
+   "strategic contest with rivals → ST",
+   "group psychology → MS"
+  ],
+  "open": [
+   "CAPM and EMH as BU vs EC (alternative: EC.O.A2); entrepreneurship in BU vs ST."
+  ],
+  "status": "draft",
+  "source": "pyramids/BU.md"
+ },
+ {
+  "id": "BU.O.A1",
+  "field": "BU",
+  "name": "Accounts",
+  "question": "What do accounts claim, and under which rules?",
+  "look_for": [
+   "The record — double entry: every transaction posts equal debits and credits, so assets = liabilities + equity. This is an identity of the convention (W12), not an empirical law.",
+   "Reporting standards — IFRS (IASB) and US GAAP (FASB). They differ, for example in that US GAAP permits LIFO inventory and IFRS does not.",
+   "Management accounting — costing, budgeting, variance analysis.",
+   "Audit and assurance — an audit gives reasonable, not absolute, assurance that statements are free of material misstatement (W11)."
+  ],
+  "find_out": [
+   "Record and report (M1 Represent)",
+   "Value and plan (M2 Derive)",
+   "Survey the market (M3 Observe)",
+   "Compare cases (M6 Compare and reconstruct)",
+   "Audit (M7 Verify)"
+  ],
+  "settles": [
+   "W11",
+   "W12"
+  ],
+  "breaks": [
+   "fraud, management estimates"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/BU.md"
+ },
+ {
+  "id": "BU.O.A2",
+  "field": "BU",
+  "name": "Finance",
+  "question": "How should a firm value projects and choose its funding?",
+  "look_for": [
+   "Valuation — net present value at the opportunity cost of capital. Discounted cash flow assumes the forecast and the rate.",
+   "Capital structure — Modigliani–Miller: with no taxes, no bankruptcy costs, symmetric information and perfect capital markets, firm value does not depend on the debt–equity mix. With corporate tax, debt adds a tax shield. Theorem MA.B.C4; us",
+   "Risk and return — CAPM: with mean–variance investors, homogeneous expectations, frictionless markets and unlimited risk-free borrowing and lending, expected excess return is linear in beta. Empirical support is weak (W4 defeaters).",
+   "Derivatives — Black–Scholes prices a European option assuming log-normal prices, constant volatility and rate, continuous frictionless trading and no dividends. Theorem MA.B.C4; use BU.",
+   "Market efficiency — the efficient-market hypothesis comes in weak, semi-strong and strong forms. Tests face the joint-hypothesis problem: each needs a model of normal returns."
+  ],
+  "find_out": [
+   "Record and report (M1 Represent)",
+   "Value and plan (M2 Derive)",
+   "Survey the market (M3 Observe)",
+   "Compare cases (M6 Compare and reconstruct)",
+   "Audit (M7 Verify)"
+  ],
+  "settles": [
+   "W1",
+   "W4"
+  ],
+  "breaks": [
+   "assumptions violated; estimation error"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/BU.md"
+ },
+ {
+  "id": "BU.O.A3",
+  "field": "BU",
+  "name": "Operations and organisation",
+  "question": "What makes operations and organisations perform?",
+  "look_for": [
+   "Operations — Little's law L = λW holds for any stable queueing system in steady state (theorem MA.O.A5).",
+   "Supply chains — inventory, logistics. The bullwhip effect amplifies demand variance upstream.",
+   "Organisation design — structure, governance, agency. The agency problem in principal–agent form is EC.O.A2.3; its corporate remedy is BU.",
+   "People management — human resources and industrial relations. Group behaviour is MS.",
+   "Entrepreneurship and innovation — founding and scaling firms. A rival's response to a move is ST."
+  ],
+  "find_out": [
+   "Record and report (M1 Represent)",
+   "Value and plan (M2 Derive)",
+   "Survey the market (M3 Observe)",
+   "Compare cases (M6 Compare and reconstruct)",
+   "Audit (M7 Verify)"
+  ],
+  "settles": [
+   "W4",
+   "W6"
+  ],
+  "breaks": [
+   "survivorship bias"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/BU.md"
+ },
+ {
+  "id": "BU.O.A4",
+  "field": "BU",
+  "name": "Marketing",
+  "question": "What do marketing claims state?",
+  "look_for": [
+   "Customers — segmentation, consumer behaviour. The cognition is MS.",
+   "Products and brands.",
+   "Pricing practice — list prices, discounts. Market equilibrium price is EC.",
+   "Channels — retail, digital, distribution."
+  ],
+  "find_out": [
+   "Record and report (M1 Represent)",
+   "Value and plan (M2 Derive)",
+   "Survey the market (M3 Observe)",
+   "Compare cases (M6 Compare and reconstruct)",
+   "Audit (M7 Verify)"
+  ],
+  "settles": [
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "sampling bias"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/BU.md"
+ },
+ {
+  "id": "BU.O.A5",
+  "field": "BU",
+  "name": "Trade and tax",
+  "question": "What does the firm's practice of trade and tax claim?",
+  "look_for": [
+   "Trade terms — Incoterms 2020 (ICC, eleven rules) allocate delivery tasks, costs and the passing of risk between seller and buyer. They do not allocate title. Title passes under the sale contract and the governing law (LA).",
+   "Customs and trade compliance — tariff classification (Harmonized System, W12), rules of origin.",
+   "Tax computation — a VAT is charged at each stage on the value added, with credit for input tax. A retail sales tax is charged once at the final sale. New Zealand GST is a VAT-type tax (15%).",
+   "Transfer pricing — the arm's-length principle (OECD guidelines, W12). Its legal force is LA.",
+   "Payments and trade finance — letters of credit (UCP 600, W12)."
+  ],
+  "find_out": [
+   "Record and report (M1 Represent)",
+   "Value and plan (M2 Derive)",
+   "Survey the market (M3 Observe)",
+   "Compare cases (M6 Compare and reconstruct)",
+   "Audit (M7 Verify)"
+  ],
+  "settles": [
+   "W10",
+   "W12"
+  ],
+  "breaks": [
+   "jurisdictional difference"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/BU.md"
+ }
+]

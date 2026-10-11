@@ -1,0 +1,209 @@
+[
+ {
+  "id": "IS",
+  "field": "IS",
+  "name": "Information and the record",
+  "question": "What does information and the record establish about this subject, divided by the stage in the life of a record?",
+  "scqa_question": "By what dimension can each claim about records be placed once?",
+  "look_for": [
+   "IS.O.A1 Items",
+   "IS.O.A2 Description",
+   "IS.O.A3 Arrangement",
+   "IS.O.A4 Retrieval",
+   "IS.O.A5 Preservation"
+  ],
+  "find_out": [
+   "Describe and classify (M1 Represent)",
+   "Appraise (M7 Verify)",
+   "Evaluate retrieval (M3 Observe)",
+   "Measure literatures (M5 Compute)",
+   "Study users (M3 Observe)"
+  ],
+  "settles": [
+   "W4",
+   "W7",
+   "W9",
+   "W11",
+   "W12"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Literary warrant (classify by what is published)",
+   "\"more product, less process\" in archives",
+   "collect broadly, weed later."
+  ],
+  "collisions": [
+   "Place by the record's life stage.",
+   "The algorithm's cost or correctness is CS; the retrieval effectiveness claim is IS.",
+   "Source criticism for a historical claim is HI; the archival rule is IS.",
+   "Copyright is LA.",
+   "Tradition-internal authority over Indigenous data is IK; its governance framework as a records rule is IS.",
+   "algorithms and systems → CS",
+   "historical source criticism → HI",
+   "copyright and privacy law → LA",
+   "media and communication effects → MS",
+   "philosophy of information → PL"
+  ],
+  "open": [
+   "data management in IS vs CS."
+  ],
+  "status": "draft",
+  "source": "pyramids/IS.md"
+ },
+ {
+  "id": "IS.O.A1",
+  "field": "IS",
+  "name": "Items",
+  "question": "What is the item?",
+  "look_for": [
+   "Works and manifestations — FRBR and its successor LRM distinguish work, expression, manifestation and item.",
+   "Records as evidence — an archival record is evidence of an activity. Its source criticism for history is HI.",
+   "Data sets — research data as items.",
+   "Persistent identifiers — DOI, ORCID, ISBN (W12)."
+  ],
+  "find_out": [
+   "Describe and classify (M1 Represent)",
+   "Appraise (M7 Verify)",
+   "Evaluate retrieval (M3 Observe)",
+   "Measure literatures (M5 Compute)",
+   "Study users (M3 Observe)"
+  ],
+  "settles": [
+   "W7",
+   "W12"
+  ],
+  "breaks": [
+   "lost provenance"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/IS.md"
+ },
+ {
+  "id": "IS.O.A2",
+  "field": "IS",
+  "name": "Description",
+  "question": "How are they described?",
+  "look_for": [
+   "Metadata standards — Dublin Core, MARC (W12).",
+   "Cataloguing rules — RDA.",
+   "Subject indexing — controlled vocabularies and thesauri (MeSH, LCSH).",
+   "Linked data — SKOS and RDF. The logic is MA.O.A1; the vocabulary is IS."
+  ],
+  "find_out": [
+   "Describe and classify (M1 Represent)",
+   "Appraise (M7 Verify)",
+   "Evaluate retrieval (M3 Observe)",
+   "Measure literatures (M5 Compute)",
+   "Study users (M3 Observe)"
+  ],
+  "settles": [
+   "W4",
+   "W12"
+  ],
+  "breaks": [
+   "low inter-indexer agreement"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/IS.md"
+ },
+ {
+  "id": "IS.O.A3",
+  "field": "IS",
+  "name": "Arrangement",
+  "question": "How is knowledge arranged?",
+  "look_for": [
+   "Classification schemes — LCC, DDC, UDC, MSC. A scheme is W12; whether it is MECE is testable (W9 with W4).",
+   "Faceted classification — Ranganathan's Colon Classification (PMEST facets).",
+   "Archival arrangement — respect des fonds and original order.",
+   "Ontologies — BFO and DOLCE. Their philosophical commitments are PL.",
+   "This taxonomy — the Pyramids of Knowledge as a classification of claims. Its reliability is tested by the placement protocol."
+  ],
+  "find_out": [
+   "Describe and classify (M1 Represent)",
+   "Appraise (M7 Verify)",
+   "Evaluate retrieval (M3 Observe)",
+   "Measure literatures (M5 Compute)",
+   "Study users (M3 Observe)"
+  ],
+  "settles": [
+   "W4",
+   "W9",
+   "W12"
+  ],
+  "breaks": [
+   "overlap, residual classes"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/IS.md"
+ },
+ {
+  "id": "IS.O.A4",
+  "field": "IS",
+  "name": "Retrieval",
+  "question": "How well can they be found?",
+  "look_for": [
+   "Retrieval effectiveness — precision and recall. The algorithm's cost is CS.",
+   "Relevance — topical and user relevance; judged by assessors (W4).",
+   "Bibliometrics — Lotka's law (author productivity) and Bradford's law (scattering) are empirical regularities within stated literatures.",
+   "Information behaviour — how people seek information. The cognitive mechanism is MS."
+  ],
+  "find_out": [
+   "Describe and classify (M1 Represent)",
+   "Appraise (M7 Verify)",
+   "Evaluate retrieval (M3 Observe)",
+   "Measure literatures (M5 Compute)",
+   "Study users (M3 Observe)"
+  ],
+  "settles": [
+   "W4"
+  ],
+  "breaks": [
+   "assessor disagreement"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/IS.md"
+ },
+ {
+  "id": "IS.O.A5",
+  "field": "IS",
+  "name": "Preservation",
+  "question": "How are they kept usable?",
+  "look_for": [
+   "Physical conservation — the chemistry of paper and media is CH.",
+   "Digital preservation — the OAIS reference model (ISO 14721, W12).",
+   "Access and rights — open access; copyright is LA.",
+   "Indigenous data governance — the CARE principles; Māori data sovereignty (Te Mana Raraunga). Tradition-internal authority over the data is IK."
+  ],
+  "find_out": [
+   "Describe and classify (M1 Represent)",
+   "Appraise (M7 Verify)",
+   "Evaluate retrieval (M3 Observe)",
+   "Measure literatures (M5 Compute)",
+   "Study users (M3 Observe)"
+  ],
+  "settles": [
+   "W4",
+   "W11"
+  ],
+  "breaks": [
+   "format obsolescence"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/IS.md"
+ }
+]

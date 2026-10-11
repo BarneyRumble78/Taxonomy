@@ -1,0 +1,340 @@
+[
+ {
+  "id": "EN",
+  "field": "EN",
+  "name": "Engineering",
+  "question": "What does engineering establish about this subject, divided by the quantity whose balance or constitutive closure finishes the predictive model of an artefact?",
+  "scqa_question": "Which single partition places every engineering claim, procedure and discipline exactly once, with each law cited to its owner?",
+  "look_for": [
+   "EN.O.A1 Force and deformation",
+   "EN.O.A2 Mass and momentum",
+   "EN.O.A3 Energy and entropy",
+   "EN.O.A4 Electromagnetic state",
+   "EN.O.A5 Composition and microstructure"
+  ],
+  "find_out": [
+   "Specification: states function, constraints and acceptance tests before a form is chosen (M1 Represent)",
+   "Analysis: turns a Face O model into a number for a stated form (M2 Derive (closed form, dimensional analysis); M5 Compute (FE, FV, circuit solvers, Monte Carlo); M3 Observe (model or prototype test where the closure is unknown))",
+   "Synthesis: chooses or generates the form, including optimisation and controller design (M4 Intervene (construct a form); M5 Compute (optimisation))",
+   "Making: physical acts on the artefact across its life, from manufacture to retirement (M4 Intervene)",
+   "Assurance: checks the artefact against specification (verification), need (validation) and in-service condition (M7 Verify; M3 Observe (metrology, NDT, condition monitoring))"
+  ],
+  "settles": [
+   "W1",
+   "W2",
+   "W3",
+   "W4"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "EN.H.1 Factor of safety = capacity / demand, defined only on one failure mode.",
+   "EN.H.2 Partial factors and allowable stresses, as calibrated heuristics inside a code's stated scope.",
+   "EN.H.3 Derating below catalogue limits.",
+   "EN.H.4 Miner's linear damage sum, pending sequence effects.",
+   "EN.H.5 Rules of thumb: span-to-depth, pipe velocity, approach temperature, current density.",
+   "EN.H.6 Order-of-magnitude (Fermi) estimates before software.",
+   "EN.H.7 Risk index = likelihood × consequence, as a screening device.",
+   "EN.H.8 TRIZ and quality function deployment, as idea and mapping catalogues.",
+   "EN.H.9 Prefer the statically determinate load path you can check by hand.",
+   "EN.H.10 Change one thing between prototypes."
+  ],
+  "collisions": [
+   "A formula that predicts behaviour lives on Face O. A discretisation, optimiser or test protocol for it lives on Face M.",
+   "A law owned by another pyramid is cited, not re-filed: \"uses PH.O.A1.5\" for Navier–Stokes, Bernoulli, Reynolds number and Hooke.",
+   "Maxwell's equations, Faraday's law of induction and the Kirchhoff circuit laws: uses PH.O.A1.2b.",
+   "Second law and Carnot limit: uses PH.O.A4.1. First law in engineering form is cited from the same owner.",
+   "Arrhenius: uses CH.O.A4.2. Raoult, Nernst and Faraday's laws of electrolysis: uses CH.O.A3.1.",
+   "Semiconductor band theory: uses PH.O.A4.4a. EN owns the device curve and drift–diffusion device model.",
+   "Shannon–Hartley capacity and the sampling theorem: uses MA.B.C4 (MSC 94A).",
+   "Little's law, utilisation ρ = λ/(cμ), Weibull and system reliability: uses MA.O.A5.",
+   "LP duality, nonlinear optimisation theory and stability criteria: uses MA.B.C4 (MSC 90, 93).",
+   "Error and convergence of FE, FV and Monte Carlo: uses MA.B.C3. Running them is EN.M.B2.",
+   "Control theory is a synthesis method (EN.M.B3) on a plant model. It does not add a balance.",
+   "A code is a calibrated verification shortcut (EN.M.B5, W12). Using a code outside its scope fails verification.",
+   "Physical law and constant (Newton, Navier–Stokes, Maxwell, second law) → PH (PH.O.A1.1, A1.2, A1.3, A1.4b)",
+   "Band theory and device physics below the device curve → PH.O.A4.4a",
+   "Reaction mechanism, thermochemistry, electrochemical equilibrium → CH.O.A3.1, CH.O.A4.2",
+   "Rock and soil genesis, site history, groundwater as earth state → EA.O.A1, EA.O.A4",
+   "Theorem: probability, queueing, optimisation, control stability, information theory, numerical error → MA.O.A5, MA.B.C4, MA.B.C3",
+   "Software, algorithm, protocol, information state → CS.O.A2.4, CS.M.3",
+   "Tissue function, organism in production → BI",
+   "Clinical outcome of a device → MD"
+  ],
+  "open": [
+   "):",
+   "turbulence closure — no general predictive model of turbulent stress for engineering flows; RANS closures are calibrated models (EN.O.A2).",
+   "fatigue under variable-amplitude loading — sequence effects lack a general predictive law (EN.O.A1.3.6).",
+   "human reliability quantification — current numbers are heuristic (EN.B.C5; uses MS).",
+   ", with alternative):",
+   "Fourier conduction EN.O.A3.3.1; alternative PH.O.A4.1.",
+   "Darcy's law EN.O.A2.5.1; alternative EA.O.A4.",
+   "Hertz contact EN.O.A1.4.1; alternative PH.O.A1.5.",
+   "Mohr–Coulomb and effective stress EN.O.A1.3.7; alternative EA.O.A1.",
+   "information state refused to CS; alternative is a sixth EN balance (v1). Rejected because CS owns the state models and a sixth member is not needed.",
+   "operation folded into EN.M.B4 (actions) and EN.M.B5 (in-service integrity); alternative is a separate \"operate and sustain\" role, which would give six roles and need regrouping.",
+   "biomedical and agricultural as substrate rules; alternative is separate bridges (ABET and ANZSRC list biomedical separately)."
+  ],
+  "status": "draft",
+  "source": "pyramids/EN.md"
+ },
+ {
+  "id": "EN.O.A1",
+  "field": "EN",
+  "name": "Force and deformation",
+  "question": "Which idealisations exhaust force-and-deformation models?",
+  "look_for": [
+   "Rigid bodies. Statics: ΣF = 0 and ΣM = 0 when inertia is negligible. Dynamics: ΣF = m a and ΣM = dH/dt about the centre of mass or a fixed point. These laws are Newtonian mechanics (uses PH.O.A1.1). EN owns the free-body reduction and deter",
+   "Free-body diagram and static determinacy.",
+   "Rigid-body dynamics of mechanisms (linkages, gears, cams).",
+   "Lumped vibration models: single- and multi-degree-of-freedom systems with linear springs and viscous damping. Natural frequency ωn = √(k/m) for an undamped linear oscillator.",
+   "Slender members. A member whose length greatly exceeds its section is reduced to section resultants plus a kinematic assumption.",
+   "Euler–Bernoulli beam. For a prismatic, linear-elastic member with small slopes and plane sections remaining plane and normal: EI d²v/dx² = M(x). With load q positive downward, dM/dx = V and dV/dx = −q (Gere and Goodno, §4.5; sign convention",
+   "Timoshenko beam: adds shear deformation and rotary inertia for deep or short beams.",
+   "Torsion of a circular shaft. For a linear-elastic, circular or annular, prismatic bar under small twist: T = G J θ / L and τ = T r / J.",
+   "Euler column buckling. For an initially straight, slender, linear-elastic, centrally loaded column: Pcr = π² E I / (K L)². Stocky columns leave this formula for a tangent-modulus or code curve.",
+   "Kirchhoff–Love plate and Mindlin–Reissner plate. Kirchhoff–Love applies to thin plates with normals staying normal; Mindlin–Reissner admits transverse shear for moderately thick plates.",
+   "Thin-walled pressure vessel. For wall thickness much less than radius, under internal pressure p: hoop stress pr/t and longitudinal stress pr/2t.",
+   "Deformable continua. The parent theory when section assumptions fail.",
+   "Cauchy stress and traction t = σᵀn (uses PH.O.A1.5 for the continuum balance laws).",
+   "Isotropic linear elasticity (Hooke). For small strain, a linear, isotropic material: σ = λ tr(ε) I + 2μ ε, with G = E / 2(1+ν). Uses PH.O.A1.5.",
+   "Yield criteria: Tresca (maximum shear) and von Mises (distortion energy), for isotropic ductile metals under quasi-static load.",
+   "Mohr's circle: principal stresses and maximum shear from the plane-stress transformation.",
+   "Linear-elastic fracture mechanics. Under small-scale yielding, K = Y σ √(π a). Mode I, plane-strain failure occurs when K reaches KIc (ASTM E399).",
+   "Fatigue life. Basquin (stress-life) and Coffin–Manson (strain-life) relations, fitted per material. Paris law da/dN = C (ΔK)^m holds in region II only; C and m depend on material and R-ratio (Paris and Erdogan 1963).",
+   "Geomechanics. Terzaghi effective stress σ′ = σ − u for saturated soil. Mohr–Coulomb strength τ = c′ + σ′ tan φ′ for drained soil and rock joints. CONTESTED: EA.O.A1 (rock and soil as earth materials) is the alternative owner; EN keeps the s",
+   "Contact interfaces.",
+   "Hertz contact. For two smooth, elastic, non-conforming bodies with frictionless contact and small contact area: contact radius and peak pressure follow from load, curvatures and moduli. CONTESTED: PH.O.A1.5 is the alternative owner.",
+   "Coulomb friction: tangential force bounded by μ times normal force, an empirical closure.",
+   "Archard wear law: worn volume proportional to load times sliding distance over hardness, with a fitted wear coefficient (UNVERIFIED as to standard notation).",
+   "Concepts: stress concentration, Saint-Venant decay, shear centre, slenderness, ductility, redundancy, mechanism."
+  ],
+  "find_out": [
+   "Specification: states function, constraints and acceptance tests before a form is chosen (M1 Represent)",
+   "Analysis: turns a Face O model into a number for a stated form (M2 Derive (closed form, dimensional analysis); M5 Compute (FE, FV, circuit solvers, Monte Carlo); M3 Observe (model or prototype test where the closure is unknown))",
+   "Synthesis: chooses or generates the form, including optimisation and controller design (M4 Intervene (construct a form); M5 Compute (optimisation))",
+   "Making: physical acts on the artefact across its life, from manufacture to retirement (M4 Intervene)",
+   "Assurance: checks the artefact against specification (verification), need (validation) and in-service condition (M7 Verify; M3 Observe (metrology, NDT, condition monitoring))"
+  ],
+  "settles": [
+   "W1",
+   "W2",
+   "W4"
+  ],
+  "breaks": [
+   "Hypothesis outside range (slenderness, small strain, linearity); imperfection sensitivity; residual stress; unmodelled failure mode"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [
+   "fatigue under variable-amplitude loading — sequence effects lack a general predictive law (EN.O.A1.3.6).",
+   "Hertz contact EN.O.A1.4.1; alternative PH.O.A1.5.",
+   "Mohr–Coulomb and effective stress EN.O.A1.3.7; alternative EA.O.A1."
+  ],
+  "status": "draft",
+  "source": "pyramids/EN.md"
+ },
+ {
+  "id": "EN.O.A2",
+  "field": "EN",
+  "name": "Mass and momentum",
+  "question": "Which flow domains exhaust mass-and-momentum models in engineering?",
+  "look_for": [
+   "Internal flows.",
+   "Bernoulli equation along a streamline, for steady, inviscid, incompressible flow: p/ρ + V²/2 + g z = constant. Uses PH.O.A1.5. A loss term is added, not derived, when the hypotheses fail.",
+   "Darcy–Weisbach head loss h_f = f (L/D) V²/2g, where f is the Darcy (Moody) friction factor, four times the Fanning factor.",
+   "Colebrook equation and Moody chart for f in fully developed turbulent pipe flow (empirical closure). Minor losses K V²/2g.",
+   "Pump and fan matching: head-capacity curve against system curve. Affinity laws hold only between dynamically similar operating points.",
+   "Reynolds lubrication equation, for thin, viscous, laminar films with negligible inertia (tribology).",
+   "Euler turbomachine equation. For steady flow through a rotor, specific work done on the fluid is w = u₂c_θ2 − u₁c_θ1 (pump or compressor); for a turbine the extracted work is its negative.",
+   "Water hammer (Joukowsky surge Δp = ρ a ΔV for instantaneous valve closure in an elastic pipe).",
+   "External flows. Drag and lift coefficients; boundary layer; separation as the stall and form-drag mechanism. Reynolds number Re = ρVL/μ = UL/ν (the two forms are equivalent, uses PH.O.A1.5). Flight mechanics and aeroelasticity draw on this ",
+   "Free-surface flows.",
+   "Open-channel specific energy and Froude number Fr = V/√(g h) for a rectangular channel.",
+   "Manning equation, an empirical resistance closure for steady, uniform, fully rough open-channel flow.",
+   "Ship hydrostatics and stability: buoyancy, metacentric height GM, righting arm, for small heel angles (initial stability).",
+   "Hull resistance and seakeeping, with Froude scaling of wave resistance.",
+   "Compressible and acoustic flows.",
+   "Isentropic nozzle relations for a calorically perfect gas in adiabatic, reversible, quasi-one-dimensional flow. Choked flow when the throat is sonic (M = 1).",
+   "Normal-shock relations (Rankine–Hugoniot) for a perfect gas.",
+   "Linear acoustics: small-amplitude pressure waves in a quiescent fluid; sound pressure level and transmission loss (noise control).",
+   "Porous-medium flows.",
+   "Darcy's law q = −(k/μ)∇p for slow, laminar flow through a rigid, saturated porous medium. CONTESTED: EA.O.A4 (groundwater) is the alternative owner.",
+   "Ergun equation for pressure drop through a packed bed of particles.",
+   "Consolidation (Terzaghi one-dimensional consolidation) for saturated, linear, laterally confined soil."
+  ],
+  "find_out": [
+   "Specification: states function, constraints and acceptance tests before a form is chosen (M1 Represent)",
+   "Analysis: turns a Face O model into a number for a stated form (M2 Derive (closed form, dimensional analysis); M5 Compute (FE, FV, circuit solvers, Monte Carlo); M3 Observe (model or prototype test where the closure is unknown))",
+   "Synthesis: chooses or generates the form, including optimisation and controller design (M4 Intervene (construct a form); M5 Compute (optimisation))",
+   "Making: physical acts on the artefact across its life, from manufacture to retirement (M4 Intervene)",
+   "Assurance: checks the artefact against specification (verification), need (validation) and in-service condition (M7 Verify; M3 Observe (metrology, NDT, condition monitoring))"
+  ],
+  "settles": [
+   "W1",
+   "W2",
+   "W4"
+  ],
+  "breaks": [
+   "Turbulence closure outside calibration; transition; multiphase; non-Newtonian fluid"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [
+   "turbulence closure — no general predictive model of turbulent stress for engineering flows; RANS closures are calibrated models (EN.O.A2).",
+   "Darcy's law EN.O.A2.5.1; alternative EA.O.A4."
+  ],
+  "status": "draft",
+  "source": "pyramids/EN.md"
+ },
+ {
+  "id": "EN.O.A3",
+  "field": "EN",
+  "name": "Energy and entropy",
+  "question": "Which mechanisms exhaust energy-and-entropy models in engineering?",
+  "look_for": [
+   "First-law balances.",
+   "Steady open-system first law: Q̇ − Ẇ = Σṁ(h + V²/2 + g z)out − Σṁ(h + V²/2 + g z)in, with heat in and work out positive. The law is owned by physics (uses PH.O.A4.1).",
+   "Property closures: ideal-gas model, steam and refrigerant tables (data, W12 and W4).",
+   "Cycles as applications: Rankine, Brayton, Otto, Diesel (air-standard idealisations), vapour-compression refrigeration with COP = Q_cold / W.",
+   "Second-law limits.",
+   "Carnot efficiency 1 − T_c/T_h, the ceiling for a heat engine between two reservoirs at absolute temperatures. Uses PH.O.A4.1.",
+   "Exergy: work potential relative to a stated dead state. Irreversibility located per component, not only totalled.",
+   "Pinch analysis: minimum approach temperature in a heat-exchanger network.",
+   "Heat-transfer rates.",
+   "Fourier's law q = −k∇T for an isotropic conductor; plane wall Q = k A ΔT / L at steady state. CONTESTED: PH.O.A4.1 (transport) is the alternative owner.",
+   "Newton's law of cooling q = h A (T_s − T_∞), with h from a Nusselt correlation used inside its stated Re and Pr range.",
+   "Radiation exchange. Emissive power of a grey surface is ε σ T⁴. Net exchange of a small grey surface with large surroundings is q = ε σ A (T_s⁴ − T_sur⁴), absolute temperatures (Incropera and DeWitt, ch. 1). Enclosures use view factors.",
+   "Heat exchangers: LMTD method, or effectiveness–NTU with NTU = U A / C_min.",
+   "Fins: added area against a convection boundary, with fin efficiency.",
+   "Reacting energy. Heating value and stoichiometry enter the first law as an enthalpy of reaction (uses CH.O.A3.1). Adiabatic flame temperature is the no-heat-loss limit. Fire growth and smoke models for compartments draw on this cell (fire p"
+  ],
+  "find_out": [
+   "Specification: states function, constraints and acceptance tests before a form is chosen (M1 Represent)",
+   "Analysis: turns a Face O model into a number for a stated form (M2 Derive (closed form, dimensional analysis); M5 Compute (FE, FV, circuit solvers, Monte Carlo); M3 Observe (model or prototype test where the closure is unknown))",
+   "Synthesis: chooses or generates the form, including optimisation and controller design (M4 Intervene (construct a form); M5 Compute (optimisation))",
+   "Making: physical acts on the artefact across its life, from manufacture to retirement (M4 Intervene)",
+   "Assurance: checks the artefact against specification (verification), need (validation) and in-service condition (M7 Verify; M3 Observe (metrology, NDT, condition monitoring))"
+  ],
+  "settles": [
+   "W1",
+   "W4"
+  ],
+  "breaks": [
+   "Extrapolated correlation; non-equilibrium; wrong dead state"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [
+   "Fourier conduction EN.O.A3.3.1; alternative PH.O.A4.1."
+  ],
+  "status": "draft",
+  "source": "pyramids/EN.md"
+ },
+ {
+  "id": "EN.O.A4",
+  "field": "EN",
+  "name": "Electromagnetic state",
+  "question": "Which reductions of electromagnetic theory exhaust EN models of power and signal?",
+  "look_for": [
+   "Lumped circuits. Valid when the circuit is small compared with the shortest relevant wavelength.",
+   "Ohm's law V = I R for a linear resistor; Kirchhoff circuit laws (uses PH.O.A1.2b).",
+   "Impedance R, jωL and 1/(jωC), with phasors, for linear circuits in sinusoidal steady state.",
+   "Thévenin and Norton equivalents, for linear networks seen from two terminals.",
+   "Maximum power transfer. For a linear source with impedance Z_s, load power is maximised when Z_L = Z_s* (complex conjugate). A resistive match applies only to DC or purely resistive sources. A theorem, not a universal design rule.",
+   "Linear time-invariant system response: impulse response, transfer function, frequency response. Fourier and Laplace transforms are MA (uses MA.O.A4). State space ẋ = Ax + Bu, y = Cx + Du and G(s) = C(sI − A)⁻¹B + D, for LTI plants.",
+   "Sampling theorem. A band-limited signal with no content at or above B is recovered from samples taken faster than 2B per second. Uses MA.B.C4 (MSC 94A).",
+   "Concepts: ground and reference, power factor, harmonics, noise figure.",
+   "Electromechanical conversion.",
+   "Magnetic circuit: Ampère's law with reluctance, for linear core material without saturation.",
+   "Ideal transformer V₁/V₂ = N₁/N₂, for zero leakage, zero winding resistance and infinite core permeability.",
+   "Machines: torque from current and flux. Synchronous speed n_s = 120 f / p (rpm, p poles). Induction-motor slip.",
+   "Power-flow equations for an AC network in balanced steady state (load flow).",
+   "Distributed fields.",
+   "Transmission line: telegrapher's equations; characteristic impedance; reflection coefficient.",
+   "Waveguides and antennas: modes, gain, radiation pattern.",
+   "Friis transmission equation for far-field free-space links between matched, polarisation-aligned antennas.",
+   "Optical and photonic devices: fibre modes, attenuation, dispersion. Optics as physics (uses PH.O.A1.2c).",
+   "Electromagnetic compatibility: coupling paths and shielding; skin effect.",
+   "Semiconductor devices.",
+   "Diode and MOSFET constitutive curves (e.g., Shockley diode equation for an ideal p–n junction with low injection).",
+   "Drift–diffusion device model (uses PH.O.A4.4a for band theory).",
+   "Digital abstraction: voltage bands treated as logic levels, with noise margins. Above this abstraction the claim is CS (uses CS.O.A2.4 for the Boolean function).",
+   "Power-electronic switching converters: averaged models of buck and boost stages in continuous conduction."
+  ],
+  "find_out": [
+   "Specification: states function, constraints and acceptance tests before a form is chosen (M1 Represent)",
+   "Analysis: turns a Face O model into a number for a stated form (M2 Derive (closed form, dimensional analysis); M5 Compute (FE, FV, circuit solvers, Monte Carlo); M3 Observe (model or prototype test where the closure is unknown))",
+   "Synthesis: chooses or generates the form, including optimisation and controller design (M4 Intervene (construct a form); M5 Compute (optimisation))",
+   "Making: physical acts on the artefact across its life, from manufacture to retirement (M4 Intervene)",
+   "Assurance: checks the artefact against specification (verification), need (validation) and in-service condition (M7 Verify; M3 Observe (metrology, NDT, condition monitoring))"
+  ],
+  "settles": [
+   "W1",
+   "W4"
+  ],
+  "breaks": [
+   "Lumped assumption fails; parasitics; thermal drift"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Device below the ISA is EN.O.A4.4; the Boolean function is CS.O.A2.4."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EN.md"
+ },
+ {
+  "id": "EN.O.A5",
+  "field": "EN",
+  "name": "Composition and microstructure",
+  "question": "Which closures exhaust composition-and-microstructure models?",
+  "look_for": [
+   "Reaction rates.",
+   "Species balance: accumulation = in − out + generation.",
+   "Ideal reactors: batch, continuous stirred tank (perfect mixing), plug flow (no axial mixing). Conversion against residence time; residence-time distribution diagnoses real reactors.",
+   "Arrhenius rate constant k = A exp(−E_a/RT), for an elementary or effective rate over a stated temperature range. Uses CH.O.A4.2.",
+   "Scale-up limits: mixing and heat removal.",
+   "Equilibrium stages.",
+   "Raoult's law for ideal liquid mixtures, or a fugacity model when non-ideal (uses CH.O.A3.1).",
+   "McCabe–Thiele construction for binary distillation, assuming constant molar overflow.",
+   "Two-film theory: interphase flux = K Δc, with an overall coefficient. Rate-based models apply when stage equilibrium fails.",
+   "Flowsheet degrees of freedom, recycle and purge.",
+   "Microstructure–property relations.",
+   "Phase diagram as the equilibrium map (uses CH.O.A3.1 for phase equilibrium).",
+   "TTT and CCT diagrams as kinetic maps for steels.",
+   "Hall–Petch relation σ_y = σ₀ + k d^(−1/2), for polycrystals over a stated grain-size range (fails at the nanoscale).",
+   "Rule of mixtures for composites, as upper (Voigt) and lower (Reuss) bounds, not a point prediction.",
+   "Dislocation slip as the mechanism of plastic flow (uses PH.O.A4.4 condensed matter).",
+   "Electrochemical cells.",
+   "Faraday's laws of electrolysis: mass reacted proportional to charge passed (uses CH.O.A3.1). Applied to corrosion rate and plating.",
+   "Nernst equation for the reversible cell potential at stated activities (uses CH.O.A3.1).",
+   "Battery and fuel-cell device models: capacity, polarisation curves, state of charge.",
+   "Passivation as a kinetic state, not a permanent property.",
+   "Neutron balances.",
+   "Effective multiplication factor k_eff; criticality at k_eff = 1.",
+   "One-group neutron diffusion equation, valid away from boundaries and strong absorbers; transport theory otherwise. Cross-section data uses PH.",
+   "Decay heat after shutdown, carried as a source by the energy balance EN.O.A3.1.",
+   "Shielding attenuation for a stated source and geometry."
+  ],
+  "find_out": [
+   "Specification: states function, constraints and acceptance tests before a form is chosen (M1 Represent)",
+   "Analysis: turns a Face O model into a number for a stated form (M2 Derive (closed form, dimensional analysis); M5 Compute (FE, FV, circuit solvers, Monte Carlo); M3 Observe (model or prototype test where the closure is unknown))",
+   "Synthesis: chooses or generates the form, including optimisation and controller design (M4 Intervene (construct a form); M5 Compute (optimisation))",
+   "Making: physical acts on the artefact across its life, from manufacture to retirement (M4 Intervene)",
+   "Assurance: checks the artefact against specification (verification), need (validation) and in-service condition (M7 Verify; M3 Observe (metrology, NDT, condition monitoring))"
+  ],
+  "settles": [
+   "W2",
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "Scale-up; impurities; kinetics confused with equilibrium"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EN.md"
+ }
+]

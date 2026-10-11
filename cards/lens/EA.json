@@ -1,0 +1,268 @@
+[
+ {
+  "id": "EA",
+  "field": "EA",
+  "name": "Earth: geography and geology",
+  "question": "What does earth: geography and geology establish about this subject, divided by what the claim is about?",
+  "scqa_question": "What single partition places every claim about the Earth and its surface exactly once, including its fluid envelopes and coupled human–natural systems?",
+  "look_for": [
+   "EA.O.A1 Materials",
+   "EA.O.A2 Internal motion",
+   "EA.O.A3 Deep time",
+   "EA.O.A4 Surface and fluid envelopes",
+   "EA.O.A5 Human spatial organization"
+  ],
+  "find_out": [
+   "Field observation (M3 Observe)",
+   "Instrumental measurement (M3 Observe)",
+   "Dating (M3 Observe (numeric) and M6 Compare and reconstruct (relative order, correlation))",
+   "Representation (M1 Represent)",
+   "Modelling (M5 Compute (plate reconstruction also M6))",
+   "Experiment (M4 Intervene)",
+   "Derivation (M2 Derive)",
+   "Verification (M7 Verify)"
+  ],
+  "settles": [
+   "W2",
+   "W4",
+   "W5",
+   "W6",
+   "W7"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Uniformitarianism: \"the present is the key to the past\", within the range of present processes. Fails for impacts and for early-Earth conditions.",
+   "Water flows downhill. Fails in a pumped aquifer.",
+   "Contour V's point upstream. Fails at an overhang or karst.",
+   "Tobler's first law: near things are more related than distant things. Fails across barriers."
+  ],
+  "collisions": [
+   "A landform process is one claim, filed at EA.O.A4.1. The rock record of it is EA.O.A3. The equation is not filed twice.",
+   "GIS and cartography are methods (EA.M.4). GIScience is a bridge (EA.B.C8), not a claim about the Earth.",
+   "A fossil's biology is BI.O.A4.5. Its occurrence in a stratum is EA.O.A3.5.",
+   "Physical laws of fluids and radiation are PH. The dated state and circulation of ocean, atmosphere and ice are EA.O.A4.3–A4.4.",
+   "Decay law N = N₀e^(−λt) is PH. The age it gives under closure is EA.O.A3.3. Pharmacokinetic and first-order chemical half-lives are MD and CH; the registry disambiguates.",
+   "Groundwater flow claims are EA.O.A4.2. Darcy's law as closure is EN.O.A2 (contested). The well is EN.",
+   "Element distribution in Earth reservoirs is EA.O.A1.5. Speciation in a natural matrix is CH. Each cites the other.",
+   "Soil body and horizons are EA.O.A4.5. Effective stress and Mohr–Coulomb are EN.",
+   "Distance decay is EA.O.A5.1. Gravity-model estimation is EA.M.5. The trade gravity derivation is EC.",
+   "Bid-rent as allocation is EC. Its spatial pattern is EA.O.A5.3.",
+   "Boundary as spatial claim is EA.O.A5.4. Authority is PO. Validity is LA.",
+   "Risk = hazard × exposure × vulnerability is EA.O.A5.5. The hazard cites A2 or A4.",
+   "Physical law: decay, elasticity, fluid dynamics, radiative transfer, MHD → PH",
+   "Space physics, aeronomy, atmospheric electricity → PH",
+   "Bond and speciation chemistry → CH",
+   "Organism biology; biogeography; biological C and N fluxes → BI.O.A4.5, BI.O.A5.4, BI.O.A5.5",
+   "Well, foundation, soil mechanics, Darcy closure → EN.O.A2",
+   "Disease burden and treatment in a population → MD.O.A5",
+   "Human demography → MS.O.A5",
+   "Bid-rent allocation; trade gravity derivation; price of a resource → EC"
+  ],
+  "open": [
+   "- Formal status of the Anthropocene (EA.O.A3.5), UNVERIFIED.",
+   "- Fluid envelopes in EA.O.A4.3–A4.4; alternative PH cell for climate mechanism with EA citing."
+  ],
+  "status": "draft",
+  "source": "pyramids/EA.md"
+ },
+ {
+  "id": "EA.O.A1",
+  "field": "EA",
+  "name": "Materials",
+  "question": "What does this subject show about materials, and what would settle it?",
+  "look_for": [
+   "Minerals. IMA definition: a mineral is an element or compound, normally crystalline, formed by geological processes (Nickel 1995). Its composition is definite but not necessarily fixed, allowing solid solution. Silicates dominate the crust.",
+   "Igneous rocks. Formed from melt. Texture records cooling rate. Bowen's reaction series is the idealised crystallisation order of a basaltic melt cooling slowly with equilibrium reaction. Few magmas complete it. Classification follows IUGS (",
+   "Sedimentary rocks. Formed by deposition and lithification. Grain size, sorting and composition are the descriptors. A sedimentary structure (cross-bed, ripple, graded bed) is evidence of the depositing process. Sedimentology is the A1 proce",
+   "Metamorphic rocks. Formed by solid-state change. A metamorphic facies (Eskola 1920) is a set of mineral assemblages formed over a stated range of pressure and temperature. Foliation records directed stress. The rock cycle is a path among A1",
+   "Crustal fluids and element distribution. Groundwater, brines, hydrothermal fluids and melts in the crust. Element distribution in Earth reservoirs (geochemistry as distribution) is owned here. Speciation and reaction in a natural matrix is "
+  ],
+  "find_out": [
+   "Field observation (M3 Observe)",
+   "Instrumental measurement (M3 Observe)",
+   "Dating (M3 Observe (numeric) and M6 Compare and reconstruct (relative order, correlation))",
+   "Representation (M1 Represent)",
+   "Modelling (M5 Compute (plate reconstruction also M6))",
+   "Experiment (M4 Intervene)",
+   "Derivation (M2 Derive)",
+   "Verification (M7 Verify)"
+  ],
+  "settles": [
+   "W4"
+  ],
+  "breaks": [
+   "Misidentification; alteration; sampling bias"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Element distribution in Earth reservoirs is EA.O.A1.5. Speciation in a natural matrix is CH. Each cites the other."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EA.md"
+ },
+ {
+  "id": "EA.O.A2",
+  "field": "EA",
+  "name": "Internal motion",
+  "question": "What does this subject show about internal motion, and what would settle it?",
+  "look_for": [
+   "Plate kinematics. The lithosphere is divided into plates that move relative to one another. Boundaries are divergent, convergent or transform. Evidence: continental fit, rock and fossil correlation, seafloor magnetic anomalies, seismicity, ",
+   "Deformation. Stress and strain in rock. Brittle faulting dominates near the surface; ductile flow dominates at depth. A fold is geometry; a fault is a fracture with offset. Earthquake size: magnitude is a logarithmic measure. Moment magnitu",
+   "Interior structure and fields. Seismology infers layering from travel times. S waves do not pass through the outer core, which is evidence it is liquid. The geodynamo (the field generated in the liquid outer core) is owned here as an Earth-",
+   "Isostasy and flexure. The lithosphere is in buoyant equilibrium on the asthenosphere. Airy compensation uses crustal roots; Pratt compensation uses lateral density change. Many ranges are partly supported by flexure of an elastic plate. Gla",
+   "Magmatism. Melt generation at ridges (decompression), subduction zones (flux melting) and hotspots. A hotspot track is evidence of plate motion over a source, interpreted, not seen. Volcanic eruption as a hazard event enters EA.O.A5.5."
+  ],
+  "find_out": [
+   "Field observation (M3 Observe)",
+   "Instrumental measurement (M3 Observe)",
+   "Dating (M3 Observe (numeric) and M6 Compare and reconstruct (relative order, correlation))",
+   "Representation (M1 Represent)",
+   "Modelling (M5 Compute (plate reconstruction also M6))",
+   "Experiment (M4 Intervene)",
+   "Derivation (M2 Derive)",
+   "Verification (M7 Verify)"
+  ],
+  "settles": [
+   "W2",
+   "W4",
+   "W6"
+  ],
+  "breaks": [
+   "Non-unique inversion; model dependence; sparse coverage"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Seismic wave equation and elasticity are PH. Earth-structure inference is EA.O.A2.3."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EA.md"
+ },
+ {
+  "id": "EA.O.A3",
+  "field": "EA",
+  "name": "Deep time",
+  "question": "What does this subject show about deep time, and what would settle it?",
+  "look_for": [
+   "Relative order. Steno (1669) gave superposition, original horizontality and lateral continuity. Superposition holds for undisturbed, non-overturned layered sequences. Cross-cutting relations are credited to Steno and Hutton. The principle o",
+   "Correlation. Matching strata between places by fossils, lithology, magnetic polarity, stable isotopes or tephra. An index fossil is widespread, short-lived and distinctive. A polarity reversal is a time marker, not a cause.",
+   "Numeric age. The decay law N = N₀e^(−λt) is owned by PH (uses PH nuclear cell). The dating claim is owned here. It holds when the system closed at a stated time, with known initial daughter and no later gain or loss. Carbon-14 serves late-Q",
+   "Time-scale convention. The ICS chart divides eon, era, period, epoch and age. Phanerozoic and Ediacaran boundaries are GSSPs (reference sections). Most Precambrian boundaries are GSSAs, numeric ages such as 2500 Ma for Archean–Proterozoic. ",
+   "Record of life and climate. Occurrence of organisms in strata is owned here; their biology is BI.O.A4.5. Mass extinctions are pattern claims about that record. Paleoclimate and paleoceanography as dated states, read from proxies, are owned "
+  ],
+  "find_out": [
+   "Field observation (M3 Observe)",
+   "Instrumental measurement (M3 Observe)",
+   "Dating (M3 Observe (numeric) and M6 Compare and reconstruct (relative order, correlation))",
+   "Representation (M1 Represent)",
+   "Modelling (M5 Compute (plate reconstruction also M6))",
+   "Experiment (M4 Intervene)",
+   "Derivation (M2 Derive)",
+   "Verification (M7 Verify)"
+  ],
+  "settles": [
+   "W6",
+   "W7"
+  ],
+  "breaks": [
+   "Reworked fossils; hiatus; diachronous marker"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "A landform process is one claim, filed at EA.O.A4.1. The rock record of it is EA.O.A3. The equation is not filed twice.",
+   "A fossil's biology is BI.O.A4.5. Its occurrence in a stratum is EA.O.A3.5.",
+   "Decay law N = N₀e^(−λt) is PH. The age it gives under closure is EA.O.A3.3. Pharmacokinetic and first-order chemical half-lives are MD and CH; the registry disambiguates."
+  ],
+  "open": [
+   "- Formal status of the Anthropocene (EA.O.A3.5), UNVERIFIED."
+  ],
+  "status": "draft",
+  "source": "pyramids/EA.md"
+ },
+ {
+  "id": "EA.O.A4",
+  "field": "EA",
+  "name": "Surface and fluid envelopes",
+  "question": "What does this subject show about surface and fluid envelopes, and what would settle it?",
+  "look_for": [
+   "Landforms and process. Geomorphology: landforms as products of rock, climate and time. Processes are weathering, mass wasting, fluvial, glacial, aeolian and coastal. A graded river adjusts slope and channel to its water and sediment load. T",
+   "Water on and under land. Water balance for a drainage basin over a period: P = ET + Q + ΔS (precipitation, evapotranspiration, runoff, storage change). Groundwater and aquifer claims (transmissivity, storativity) are owned here. Darcy's law",
+   "Atmosphere, ocean and climate. Climate is the statistics of weather over a stated period, typically 30 years (WMO). Its state, circulation and change as a dated Earth claim are owned here. Controls are latitude, altitude, continentality, oc",
+   "Cryosphere. Glaciers, ice sheets, sea ice, permafrost and snow as surface mass. Mass balance (accumulation minus ablation) is the core claim. Glacier flow by Glen's flow law assumes power-law creep of polycrystalline ice with exponent near ",
+   "Soil. The soil body: weathered parent material plus organic matter, organised in horizons. Pedology owns the profile here. Soil mechanics (effective stress, Mohr–Coulomb) is EN. Soil chemistry is CH. Soil biota are BI.O.A5.3."
+  ],
+  "find_out": [
+   "Field observation (M3 Observe)",
+   "Instrumental measurement (M3 Observe)",
+   "Dating (M3 Observe (numeric) and M6 Compare and reconstruct (relative order, correlation))",
+   "Representation (M1 Represent)",
+   "Modelling (M5 Compute (plate reconstruction also M6))",
+   "Experiment (M4 Intervene)",
+   "Derivation (M2 Derive)",
+   "Verification (M7 Verify)"
+  ],
+  "settles": [
+   "W2",
+   "W4",
+   "W5"
+  ],
+  "breaks": [
+   "Equifinality; scale dependence; non-stationarity"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "A landform process is one claim, filed at EA.O.A4.1. The rock record of it is EA.O.A3. The equation is not filed twice.",
+   "Physical laws of fluids and radiation are PH. The dated state and circulation of ocean, atmosphere and ice are EA.O.A4.3–A4.4.",
+   "Groundwater flow claims are EA.O.A4.2. Darcy's law as closure is EN.O.A2 (contested). The well is EN.",
+   "Soil body and horizons are EA.O.A4.5. Effective stress and Mohr–Coulomb are EN."
+  ],
+  "open": [
+   "- Fluid envelopes in EA.O.A4.3–A4.4; alternative PH cell for climate mechanism with EA citing."
+  ],
+  "status": "draft",
+  "source": "pyramids/EA.md"
+ },
+ {
+  "id": "EA.O.A5",
+  "field": "EA",
+  "name": "Human spatial organization",
+  "question": "What does this subject show about human spatial organization, and what would settle it?",
+  "look_for": [
+   "Location and interaction. Site and situation; absolute and relative location. Distance decay is the claim that interaction falls with distance, modified by origin and destination size. It is owned here. Gravity-model estimation is EA.M.5. I",
+   "Region and place. A region is a delimited area of stated similarity (formal), flow (functional) or perception (perceptual). Place is a location invested with meaning; its warrant is W8. Area studies as a catalog of regions is refused (secto",
+   "Economic and urban pattern. Where production and exchange happen. Central place theory predicts a hexagonal hierarchy on an isotropic plain with uniform population and transport, and rational, nearest-centre consumers. The spatial pattern i",
+   "Political space. Territory and boundary as spatial claims. A boundary is a claim enforced, not a natural line. The authority behind it is PO. Its legal validity is LA.",
+   "Nature–society and risk. Coupled human–natural systems: pressure, state, impact and response, under a stated boundary. This absorbs environmental science claims (Grok \"EV\"). Risk = hazard × exposure × vulnerability (IPCC AR6 WGII glossary)."
+  ],
+  "find_out": [
+   "Field observation (M3 Observe)",
+   "Instrumental measurement (M3 Observe)",
+   "Dating (M3 Observe (numeric) and M6 Compare and reconstruct (relative order, correlation))",
+   "Representation (M1 Represent)",
+   "Modelling (M5 Compute (plate reconstruction also M6))",
+   "Experiment (M4 Intervene)",
+   "Derivation (M2 Derive)",
+   "Verification (M7 Verify)"
+  ],
+  "settles": [
+   "W4",
+   "W5",
+   "W6"
+  ],
+  "breaks": [
+   "Ecological fallacy; MAUP; ignored autocorrelation"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Distance decay is EA.O.A5.1. Gravity-model estimation is EA.M.5. The trade gravity derivation is EC.",
+   "Bid-rent as allocation is EC. Its spatial pattern is EA.O.A5.3.",
+   "Boundary as spatial claim is EA.O.A5.4. Authority is PO. Validity is LA.",
+   "Risk = hazard × exposure × vulnerability is EA.O.A5.5. The hazard cites A2 or A4.",
+   "Environmental pressure–state–impact claims are EA.O.A5.5. Policy is PO; price is EC; duty is LA (\"incidence is economics, the duty is law\")."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EA.md"
+ }
+]

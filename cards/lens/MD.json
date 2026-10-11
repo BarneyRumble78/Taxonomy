@@ -1,0 +1,225 @@
+[
+ {
+  "id": "MD",
+  "field": "MD",
+  "name": "Medicine and the drug",
+  "question": "What does medicine and the drug establish about this subject, divided by the clinical question asked of a disorder?",
+  "scqa_question": "By what single dimension can each medical claim be placed once, with normal function left to BI and the molecule left to CH?",
+  "look_for": [
+   "MD.O.A1 Disorders",
+   "MD.O.A2 Causes and mechanisms",
+   "MD.O.A3 Diagnosis and prognosis",
+   "MD.O.A4 Treatment and drugs",
+   "MD.O.A5 Populations and prevention"
+  ],
+  "find_out": [
+   "Classify (M1 Represent)",
+   "Examine (M3 Observe)",
+   "Trial (M4 Intervene)",
+   "Study populations (M3 Observe)",
+   "Synthesise evidence (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W3",
+   "W4",
+   "W5",
+   "W12"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Common things are common",
+   "Occam's razor in diagnosis, with Hickam's dictum against it",
+   "Red-flag checklists",
+   "Clinical judgement",
+   "First, do no harm",
+   "Bradford Hill viewpoints (guides to causal judgement, not tests)"
+  ],
+  "collisions": [
+   "Normal function is BI; the disorder is MD.",
+   "The molecule is CH; its action in a patient is MD.",
+   "A cost-effectiveness claim is EC; the effect size it uses is MD.",
+   "Consent, liability and regulatory authority are LA. The ethics argument is PL.",
+   "An animal disorder is AG; a zoonosis's human side is MD.",
+   "A diagnostic test's mathematics is MA; its accuracy in a population is MD.",
+   "Rongoā and hauora: tradition-internal claims are IK; efficacy for a named condition is MD under W3.",
+   "normal physiology and immunology → BI",
+   "drug synthesis and structure → CH",
+   "health economics → EC",
+   "medical law and regulation → LA",
+   "bioethics argument → PL",
+   "veterinary medicine → AG",
+   "normal cognition → MS"
+  ],
+  "open": [
+   "mechanisms of many chronic diseases (e.g. Alzheimer's disease); the transportability of polygenic scores across ancestries.",
+   "the concept of mental disorder (MD vs PL vs MS); categorical vs dimensional classification; traditional medicine in ICD-11 chapter 26 and ANZSRC 4208."
+  ],
+  "status": "draft",
+  "source": "pyramids/MD.md"
+ },
+ {
+  "id": "MD.O.A1",
+  "field": "MD",
+  "name": "Disorders",
+  "question": "What is a disorder, and which ones are there?",
+  "look_for": [
+   "Disease entities. A disorder is a departure from BI function that harms the person. The concept itself is debated in PL; MD uses a working definition.",
+   "Immune disorders: autoimmunity, immunodeficiency, allergy. Normal immune function is BI.",
+   "Neoplasms: the clinical entity is here; the cell biology is BI.",
+   "Classification. ICD-11 (in effect from 1 January 2022) and DSM-5-TR (2022). Classification rules are W12.",
+   "Diagnostic thresholds, such as HbA1c for diabetes, are conventions set by expert bodies.",
+   "Mental disorder. The diagnosis is MD; normal cognition is MS; the concept of mental disorder is PL (CONTESTED).",
+   "Categorical against dimensional models (RDoC, HiTOP) as competing classification programmes.",
+   "Syndromes and multimorbidity. Co-occurring conditions; frailty."
+  ],
+  "find_out": [
+   "Classify (M1 Represent)",
+   "Examine (M3 Observe)",
+   "Trial (M4 Intervene)",
+   "Study populations (M3 Observe)",
+   "Synthesise evidence (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W4",
+   "W12"
+  ],
+  "breaks": [
+   "low reliability; shifting thresholds"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MD.md"
+ },
+ {
+  "id": "MD.O.A2",
+  "field": "MD",
+  "name": "Causes and mechanisms",
+  "question": "Why does the disorder occur?",
+  "look_for": [
+   "Pathogens. Germ theory. Koch's postulates are a historical heuristic, not a test for all pathogens (asymptomatic carriers and unculturable agents fail them).",
+   "Antimicrobial resistance: selection under drug exposure (the evolutionary mechanism is BI).",
+   "Genetic causes. Monogenic disorders with Mendelian inheritance; polygenic risk scores, whose predictive power varies by ancestry.",
+   "Pathophysiology. The mechanism of a disordered process (e.g. atherosclerosis, insulin resistance).",
+   "Environmental and social determinants. Exposures (tobacco, air pollution); deprivation. The social structure is MS; the exposure source is EV."
+  ],
+  "find_out": [
+   "Classify (M1 Represent)",
+   "Examine (M3 Observe)",
+   "Trial (M4 Intervene)",
+   "Study populations (M3 Observe)",
+   "Synthesise evidence (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W3",
+   "W5"
+  ],
+  "breaks": [
+   "confounding, reverse causation"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MD.md"
+ },
+ {
+  "id": "MD.O.A3",
+  "field": "MD",
+  "name": "Diagnosis and prognosis",
+  "question": "How is the disorder recognised, and how will it go?",
+  "look_for": [
+   "Signs, symptoms and tests. Clinical examination, imaging, laboratory tests.",
+   "Test accuracy. Sensitivity and specificity. Predictive values depend on prevalence (Bayes' theorem, owned by MA.O.A5).",
+   "Likelihood ratios combine with pre-test odds to give post-test odds, assuming test independence.",
+   "Prognosis. Survival, course, prognostic models. A model's calibration and discrimination are stated in a named population.",
+   "Screening tests. Testing people without symptoms. The programme decision is A5.3."
+  ],
+  "find_out": [
+   "Classify (M1 Represent)",
+   "Examine (M3 Observe)",
+   "Trial (M4 Intervene)",
+   "Study populations (M3 Observe)",
+   "Synthesise evidence (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W4"
+  ],
+  "breaks": [
+   "spectrum bias, verification bias"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MD.md"
+ },
+ {
+  "id": "MD.O.A4",
+  "field": "MD",
+  "name": "Treatment and drugs",
+  "question": "What changes the course of a disorder?",
+  "look_for": [
+   "Pharmacology. Pharmacokinetics: absorption, distribution, metabolism and excretion. Pharmacodynamics: dose–response. The molecule is CH.",
+   "First-order elimination: half-life t½ = ln 2 / k, for linear kinetics.",
+   "Therapeutic index as the ratio of toxic to effective dose.",
+   "Pharmacogenomics: genotype-dependent drug response.",
+   "Surgery and procedures.",
+   "Psychological and rehabilitative therapy. Cognitive behavioural therapy; physiotherapy. The mental mechanism is MS.",
+   "Drug safety. Adverse effects; pharmacovigilance after approval.",
+   "Residues of veterinary drugs in human food: the safety limit is MD; the animal treatment is AG.",
+   "Drug development and regulation. Trial phases I–IV; approval by bodies such as Medsafe (NZ), the FDA and EMA. The legal authority is LA."
+  ],
+  "find_out": [
+   "Classify (M1 Represent)",
+   "Examine (M3 Observe)",
+   "Trial (M4 Intervene)",
+   "Study populations (M3 Observe)",
+   "Synthesise evidence (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W3"
+  ],
+  "breaks": [
+   "surrogate endpoints, publication bias, short follow-up"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MD.md"
+ },
+ {
+  "id": "MD.O.A5",
+  "field": "MD",
+  "name": "Populations and prevention",
+  "question": "What is claimed?",
+  "look_for": [
+   "Epidemiology. Incidence, prevalence, relative and absolute risk.",
+   "Transmission. R0 holds for a fully susceptible population under a stated contact model. The herd-immunity threshold 1 − 1/R0 assumes homogeneous mixing.",
+   "Prevention and screening programmes. Vaccines; screening. Lead-time and length bias are stated defeaters for screening benefit.",
+   "Health systems. Delivery, access and quality. Price and finance are EC; law is LA; policy is PO.",
+   "Global and Māori health. Health inequities by population. Under the two-mode rule, the tradition-internal side of rongoā and hauora is IK. Its clinical efficacy for a named condition is MD under W3."
+  ],
+  "find_out": [
+   "Classify (M1 Represent)",
+   "Examine (M3 Observe)",
+   "Trial (M4 Intervene)",
+   "Study populations (M3 Observe)",
+   "Synthesise evidence (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W4",
+   "W5"
+  ],
+  "breaks": [
+   "ecological fallacy, surveillance artefact"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/MD.md"
+ }
+]

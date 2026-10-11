@@ -1,0 +1,4 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Map node","type":"object",
+ "required":["id","code","name","level"],
+ "properties":{"id":{"type":"string"},"code":{"type":"string"},"name":{"type":"string"},"level":{"type":"integer","minimum":1},
+  "parent":{"type":["string","null"]},"taxonomy_cell":{"type":["string","null"]}}}

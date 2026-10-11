@@ -1,0 +1,226 @@
+[
+ {
+  "id": "CS",
+  "field": "CS",
+  "name": "Computer science",
+  "question": "What does computer science establish about this subject, divided by the property asserted of a computation?",
+  "scqa_question": "By what single dimension can every claim about a computation be placed once, with the theorems left in MA?",
+  "look_for": [
+   "CS.O.A1 Correctness",
+   "CS.O.A2 Cost",
+   "CS.O.A3 Coordination",
+   "CS.O.A4 Learning",
+   "CS.O.A5 Protection"
+  ],
+  "find_out": [
+   "Formalise (M1 Represent)",
+   "Prove (M2 Derive)",
+   "Build (M4 Intervene)",
+   "Run and measure (M5 Compute)",
+   "Verify (M7 Verify)"
+  ],
+  "settles": [
+   "W1",
+   "W2",
+   "W4",
+   "W11"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Premature optimisation is the root of all evil",
+   "worse is better",
+   "end-to-end argument",
+   "design patterns",
+   "\"make it work, make it right, make it fast\"",
+   "ablation as a habit."
+  ],
+  "collisions": [
+   "Place by the property claimed: correctness, cost, coordination, learning or protection.",
+   "A theorem is MA, even when computer scientists prove it. Complexity theorems sit in MA.B.C3; CS cites \"uses MA.B.C3\".",
+   "A program delivered to a customer's specification is EN (EN.B.C5); whether the program is correct is CS.",
+   "A claim about users' minds is MS; the interface's measured effect is CS.B.C8.",
+   "A claim about the record, the catalogue or retrieval as such is IS; the algorithm's cost is CS.",
+   "A claim about language is LN; a system that processes it is CS.O.A4.4.",
+   "The legal duty on data is LA; the technical privacy guarantee is CS.O.A5.3.",
+   "A claim mixing two properties goes to the one its warrant establishes.",
+   "computability and complexity theorems → MA.O.A1, MA.B.C3",
+   "device physics → PH.O.A4",
+   "software delivery to contract → EN",
+   "users' cognition → MS",
+   "the record and its retrieval as information → IS",
+   "data protection law → LA",
+   "ethics of AI as argument → PL"
+  ],
+  "open": [
+   "P vs NP (owned by MA.B.C3, cited); AI alignment methods (A4.5).",
+   "software engineering in EN vs CS (alternative: CS.O.A1); HCI as a CS bridge vs an MS cell."
+  ],
+  "status": "draft",
+  "source": "pyramids/CS.md"
+ },
+ {
+  "id": "CS.O.A1",
+  "field": "CS",
+  "name": "Correctness",
+  "question": "What can be claimed about correctness, and how?",
+  "look_for": [
+   "Semantics of languages — operational, denotational and axiomatic semantics. Lambda calculus and Turing machines are equivalent in power (the theorem is MA.O.A1).",
+   "Specification and verification — Hoare logic proves partial correctness; total correctness also needs termination. Model checking decides temporal properties of finite-state models.",
+   "Types — well-typed programs do not go wrong (progress and preservation), for languages whose type system is proved sound.",
+   "Testing — testing can show the presence of bugs, never their absence (Dijkstra), for any input space too large to exhaust.",
+   "Limits of correctness — Rice's theorem: every non-trivial semantic property of programs is undecidable, for Turing-complete languages. Uses MA.O.A1."
+  ],
+  "find_out": [
+   "Formalise (M1 Represent)",
+   "Prove (M2 Derive)",
+   "Build (M4 Intervene)",
+   "Run and measure (M5 Compute)",
+   "Verify (M7 Verify)"
+  ],
+  "settles": [
+   "W1",
+   "W11"
+  ],
+  "breaks": [
+   "specification wrong, unsound tool, unmodelled environment"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [
+   "software engineering in EN vs CS (alternative: CS.O.A1); HCI as a CS bridge vs an MS cell."
+  ],
+  "status": "draft",
+  "source": "pyramids/CS.md"
+ },
+ {
+  "id": "CS.O.A2",
+  "field": "CS",
+  "name": "Cost",
+  "question": "Which costs can be bounded, and by what?",
+  "look_for": [
+   "Algorithms — each algorithm has a stated cost on a stated model. Comparison sorting needs Ω(n log n) comparisons in the worst case (a decision-tree lower bound, uses MA.B.C3).",
+   "Data structures — amortised costs, e.g. union–find with path compression and union by rank runs in O(α(n)) per operation.",
+   "Complexity classes — P, NP, PSPACE. Whether P = NP is OPEN and owned by MA.B.C3; CS uses it.",
+   "Machines and architecture — memory hierarchy, pipelines, parallel speed-up. Amdahl's law bounds speed-up by 1/((1−p) + p/s) for a fixed workload whose fraction p is parallelisable by a factor s.",
+   "Physical limits of hardware — Moore's law is an empirical trend, now slowing; it is not a law. Transistor physics is PH."
+  ],
+  "find_out": [
+   "Formalise (M1 Represent)",
+   "Prove (M2 Derive)",
+   "Build (M4 Intervene)",
+   "Run and measure (M5 Compute)",
+   "Verify (M7 Verify)"
+  ],
+  "settles": [
+   "W1",
+   "W2"
+  ],
+  "breaks": [
+   "model mismatch with hardware, unrepresentative input"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/CS.md"
+ },
+ {
+  "id": "CS.O.A3",
+  "field": "CS",
+  "name": "Coordination",
+  "question": "What can and cannot be coordinated?",
+  "look_for": [
+   "Concurrency — races, deadlock, linearisability.",
+   "Distributed agreement — FLP (Fischer, Lynch and Paterson, 1985): no deterministic protocol guarantees consensus in an asynchronous system if even one process may crash. This is a proved theorem, not an open problem. Byzantine agreement need",
+   "Consistency under partition — CAP (Gilbert and Lynch, 2002 proof): during a network partition, a system cannot provide both linearisable consistency and availability.",
+   "Networks — protocols, routing, congestion control.",
+   "Data systems — databases, transactions (ACID), query optimisation. Information retrieval as a claim about records is IS."
+  ],
+  "find_out": [
+   "Formalise (M1 Represent)",
+   "Prove (M2 Derive)",
+   "Build (M4 Intervene)",
+   "Run and measure (M5 Compute)",
+   "Verify (M7 Verify)"
+  ],
+  "settles": [
+   "W1",
+   "W4"
+  ],
+  "breaks": [
+   "failure model differs from assumed one"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/CS.md"
+ },
+ {
+  "id": "CS.O.A4",
+  "field": "CS",
+  "name": "Learning",
+  "question": "What can such systems learn, and how well?",
+  "look_for": [
+   "Learning theory — a binary concept class is PAC-learnable if and only if its VC dimension is finite (uses MA.O.A5). No-free-lunch: averaged uniformly over all objective functions, every optimiser performs equally.",
+   "Models and training — neural networks; universal approximation holds for one-hidden-layer networks with a non-polynomial activation, approximating continuous functions on compact sets to any accuracy. It says nothing about learnability. Emp",
+   "Reasoning and planning — search, logic programming, planning. Many planning problems are PSPACE-complete (uses MA.B.C3).",
+   "Perception and language processing — vision, speech, NLP. Claims about language itself are LN.",
+   "Alignment and evaluation of AI systems — whether a trained system pursues its intended objective. Methods are immature; much is OPEN."
+  ],
+  "find_out": [
+   "Formalise (M1 Represent)",
+   "Prove (M2 Derive)",
+   "Build (M4 Intervene)",
+   "Run and measure (M5 Compute)",
+   "Verify (M7 Verify)"
+  ],
+  "settles": [
+   "W2",
+   "W4"
+  ],
+  "breaks": [
+   "data leakage, benchmark overfitting, distribution shift"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "A claim about language is LN; a system that processes it is CS.O.A4.4."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/CS.md"
+ },
+ {
+  "id": "CS.O.A5",
+  "field": "CS",
+  "name": "Protection",
+  "question": "What can be protected, from whom, and on what assumptions?",
+  "look_for": [
+   "Cryptography in use — protocols are secure relative to stated hardness assumptions (e.g. factoring). Security proofs are MA; the deployed protocol is CS.",
+   "Systems security — access control, memory safety, attack surfaces.",
+   "Privacy — differential privacy bounds how much one record changes an output distribution, by a stated ε.",
+   "Quantum threats — Shor's algorithm factors in polynomial time on a fault-tolerant quantum computer. Uses MA.B.C3 and PH.O.A2."
+  ],
+  "find_out": [
+   "Formalise (M1 Represent)",
+   "Prove (M2 Derive)",
+   "Build (M4 Intervene)",
+   "Run and measure (M5 Compute)",
+   "Verify (M7 Verify)"
+  ],
+  "settles": [
+   "W1",
+   "W11"
+  ],
+  "breaks": [
+   "broken assumption, side channel, implementation flaw"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "The legal duty on data is LA; the technical privacy guarantee is CS.O.A5.3."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/CS.md"
+ }
+]

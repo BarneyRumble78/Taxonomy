@@ -1,0 +1,226 @@
+[
+ {
+  "id": "EC",
+  "field": "EC",
+  "name": "Economics",
+  "question": "What does economics establish about this subject, divided by the scale at which an allocation is settled?",
+  "scqa_question": "How can every economic claim be placed once, with the theorem, the allocation and the game kept apart?",
+  "look_for": [
+   "EC.O.A1 Choice",
+   "EC.O.A2 Markets",
+   "EC.O.A3 Mechanisms and institutions",
+   "EC.O.A4 The aggregate economy",
+   "EC.O.A5 Welfare and public choice"
+  ],
+  "find_out": [
+   "Model (M1 Represent, M2 Derive)",
+   "Measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Estimate and simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W1",
+   "W2",
+   "W3",
+   "W4",
+   "W5",
+   "W6",
+   "W9"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "Ceteris paribus",
+   "\"follow the money\"",
+   "incentives matter",
+   "there is no free lunch",
+   "the representative agent as a convenience (flagged)."
+  ],
+  "collisions": [
+   "Place a claim by the scale at which the allocation is settled.",
+   "The theorem is MA, the allocation is EC, the choice of game is ST.",
+   "Incidence is economics; the duty is law; the computation is business.",
+   "A firm's accounts and capital structure are BU. The general-equilibrium price of risk is EC.",
+   "A psychological mechanism is MS; its allocative effect is EC.",
+   "Political authority over an allocation is PO; the legal rule is LA.",
+   "A dated economic event is HI; the explanation of its allocation is EC.",
+   "A normative welfare argument is PL; the efficiency claim is EC.",
+   "proofs of equilibrium, welfare, Arrow, folk and bargaining theorems → MA.B.C4",
+   "choice of game and moves that change it → ST",
+   "tax duty and legal rules → LA",
+   "firm practice, accounts, tax computation → BU",
+   "psychological mechanism → MS",
+   "normative argument about justice → PL",
+   "dated economic events → HI"
+  ],
+  "open": [
+   "microfoundations of aggregate fluctuations; the cause of the productivity slowdown.",
+   "financial economics split between EC and BU (alternative: all to EC.O.A2); the folk theorem in A3 rather than A2."
+  ],
+  "status": "draft",
+  "source": "pyramids/EC.md"
+ },
+ {
+  "id": "EC.O.A1",
+  "field": "EC",
+  "name": "Choice",
+  "question": "What is claimed about how agents choose?",
+  "look_for": [
+   "Preferences and demand — complete, transitive and continuous preferences have a utility representation (Debreu; proof uses MA). Demand theory follows, with the Slutsky decomposition.",
+   "Choice under risk — expected utility follows from the von Neumann–Morgenstern axioms (completeness, transitivity, continuity, independence).",
+   "Behavioural departures — the Allais paradox violates independence; prospect theory fits loss aversion. The psychological mechanism is MS; the allocative consequence is EC.",
+   "Intertemporal choice — exponential discounting is time-consistent; quasi-hyperbolic discounting is not."
+  ],
+  "find_out": [
+   "Model (M1 Represent, M2 Derive)",
+   "Measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Estimate and simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W3",
+   "W4"
+  ],
+  "breaks": [
+   "framing effects, hypothetical bias"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EC.md"
+ },
+ {
+  "id": "EC.O.A2",
+  "field": "EC",
+  "name": "Markets",
+  "question": "When do markets clear, and with what result?",
+  "look_for": [
+   "Competitive equilibrium — a general equilibrium exists given continuous, convex, locally non-satiated preferences, convex production, and endowments in the interior (Arrow–Debreu; proof MA).",
+   "Market power — monopoly, oligopoly, entry. The equilibrium of the Cournot or Bertrand game is MA. Which game the firms are in is ST. The resulting prices and quantities are EC.",
+   "Information — adverse selection (Akerlof), moral hazard, signalling. A market can unravel when quality is hidden and sellers know more than buyers.",
+   "Factor markets — labour and capital; wages and returns.",
+   "Tax incidence — in a competitive market, the burden falls by relative elasticities of supply and demand, not by who legally pays. Incidence is EC; the duty to pay is LA; computing the tax is BU."
+  ],
+  "find_out": [
+   "Model (M1 Represent, M2 Derive)",
+   "Measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Estimate and simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W1",
+   "W5"
+  ],
+  "breaks": [
+   "omitted variables, misspecified market definition"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [
+   "financial economics split between EC and BU (alternative: all to EC.O.A2); the folk theorem in A3 rather than A2."
+  ],
+  "status": "draft",
+  "source": "pyramids/EC.md"
+ },
+ {
+  "id": "EC.O.A3",
+  "field": "EC",
+  "name": "Mechanisms and institutions",
+  "question": "Which rules produce which allocations?",
+  "look_for": [
+   "Mechanism design — the revelation principle: any equilibrium outcome of a mechanism can be achieved by a direct, truthful mechanism (proof MA). Vickrey auctions make truthful bidding dominant for private values.",
+   "Bargaining — Rubinstein: with two players, alternating offers, an infinite horizon, complete information and discount factors below one, there is a unique subgame-perfect equilibrium with immediate agreement. The theorem is MA. The choice o",
+   "Transaction costs — Coase: with well-defined property rights, zero transaction costs and no wealth effects, bargaining reaches an efficient outcome whatever the initial assignment. With positive costs the assignment matters, and that is the",
+   "Institutions — property rights, contracts and firms as allocative rules. Political authority is PO; legal validity is LA.",
+   "Repeated interaction — folk theorem: in an infinitely repeated game with a discount factor close enough to one, any feasible, strictly individually rational payoff is sustainable in equilibrium (with a full-dimensionality condition for more"
+  ],
+  "find_out": [
+   "Model (M1 Represent, M2 Derive)",
+   "Measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Estimate and simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W1",
+   "W3",
+   "W6"
+  ],
+  "breaks": [
+   "hypotheses not met in the field"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EC.md"
+ },
+ {
+  "id": "EC.O.A4",
+  "field": "EC",
+  "name": "The aggregate economy",
+  "question": "What determines them?",
+  "look_for": [
+   "Growth — the Solow model: with diminishing returns to capital and constant returns to scale, output per worker converges to a steady state, and long-run growth needs technical change.",
+   "Fluctuations — business cycles; unemployment. The Phillips curve is an empirical relation that proved unstable once expectations adjusted.",
+   "Money and inflation — the quantity equation MV = PY is an identity. A theory needs assumptions about V and Y. Central bank rules such as the Taylor rule are heuristics or policy prescriptions.",
+   "Open economies — comparative advantage (Ricardo): with two goods and differing opportunity costs, both countries gain from specialisation and trade. Heckscher–Ohlin and Stolper–Samuelson hold under their stated factor and technology assumpt",
+   "Expectations and policy — the Lucas critique: relations estimated under one policy regime need not hold under another if agents' expectations change."
+  ],
+  "find_out": [
+   "Model (M1 Represent, M2 Derive)",
+   "Measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Estimate and simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W2",
+   "W5"
+  ],
+  "breaks": [
+   "Lucas critique, small samples, revisions"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EC.md"
+ },
+ {
+  "id": "EC.O.A5",
+  "field": "EC",
+  "name": "Welfare and public choice",
+  "question": "When is an allocation good, and can a collective choose consistently?",
+  "look_for": [
+   "First welfare theorem — with complete markets, price-taking agents, locally non-satiated preferences and no externalities, every competitive equilibrium is Pareto efficient. Theorem MA; use EC.",
+   "Second welfare theorem — with convex preferences and technologies, continuity and lump-sum transfers, any Pareto-efficient allocation can be supported as a competitive equilibrium. Theorem MA; use EC.",
+   "Market failure — externalities, public goods, common pool resources. Pigouvian taxes correct an externality when its marginal damage is known.",
+   "Public finance — taxes and spending. A VAT is levied on value added at each stage, with credit for tax paid on inputs. A retail sales tax is levied once, on the final sale. Their economic incidence can be similar, but their collection diffe",
+   "Social choice — Arrow: with at least three alternatives and a finite set of voters, no rule satisfies unrestricted domain, weak Pareto, independence of irrelevant alternatives and non-dictatorship together. Theorem MA; the meaning for colle"
+  ],
+  "find_out": [
+   "Model (M1 Represent, M2 Derive)",
+   "Measure (M3 Observe)",
+   "Identify causes (M3 Observe (causal))",
+   "Experiment (M4 Intervene)",
+   "Estimate and simulate (M5 Compute)"
+  ],
+  "settles": [
+   "W1",
+   "W5",
+   "W9"
+  ],
+  "breaks": [
+   "contested welfare weights"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/EC.md"
+ }
+]

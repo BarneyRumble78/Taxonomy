@@ -1,0 +1,278 @@
+[
+ {
+  "id": "PL",
+  "field": "PL",
+  "name": "Philosophy",
+  "question": "What does philosophy establish about this subject, divided by what the question is about · order structural (being, knowing, saying, valuing, the sciences)?",
+  "scqa_question": "What single partition places every philosophical claim, practice and tradition exactly once, and states what PL owns against MA, MS, PO, LA, AR and RE?",
+  "look_for": [
+   "PL.O.A1 Being",
+   "PL.O.A2 Knowledge and mind",
+   "PL.O.A3 Meaning and inference",
+   "PL.O.A4 Value",
+   "PL.O.A5 Standing of the sciences and mathematics"
+  ],
+  "find_out": [
+   "Argument (M2 Derive)",
+   "Analysis (M1 Represent)",
+   "Formalization (M1 Represent (with M2 inside the calculus))",
+   "Description (M3 Observe)",
+   "Reconstruction and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W1",
+   "W8",
+   "W9"
+  ],
+  "breaks": [],
+  "rules_of_thumb": [
+   "PL.M.H. Appeal to intuition. Appeal to a canon. \"Category mistake\" as a diagnosis that still needs an argument. A definition that settles a dispute by vocabulary is a stipulation and must say so. The named-fallacies list. Burden of proof as a dialectical convention."
+  ],
+  "collisions": [
+   "A claim is placed by the sentence it makes, not by the department or century it comes from.",
+   "Logic as a claim about consequence is PL.O.A3.2. Calculi and metatheorems are MA.O.A1, cited as \"uses MA.O.A1\".",
+   "History of philosophy is reconstruction (PL.M.B5) of answers already placed on Face O. That a philosopher held a view at a date is HI.O.A1; whether the argument succeeds is PL.",
+   "Philosophy of X: entitlement to assert is A5; what X may enforce or ought to do is A4; what the X-object is, A1 or A2.",
+   "Philosophy of religion is PL. An argument from premises any reasoner may grant is PL.O.A1.1. Religious epistemology is PL.O.A2.2. The same conclusion argued from a creed is RE.O·T.",
+   "A moral claim argued from shared premises is PL.O.A4. One citing scripture, creed or school is RE·T. One reporting what a tradition holds is RE·S.",
+   "Normative legitimacy, obligation and justice are PL.O.A4.3. PO cites them; PO owns who holds power and how (PO).",
+   "The concept of law is PL.O.A4.3. Whether a norm is valid in a given legal system is LA (W10).",
+   "Causation in general is PL.O.A1.3. A legal causation test is LA; causal identification from data is EC (EC.B2 design), cited.",
+   "The hard problem and intentionality are PL.O.A2.3. Processing, measured, is MS.",
+   "Probability as measure is MA.O.A5; as an agent's choice model, EC.O.A1; its interpretation, PL.O.A5.3.",
+   "Curry–Howard is CS.O.A1.5; PL.O.A3.2 uses it, with the intuitionistic hypothesis stated.",
+   "A theorem, calculus or metatheorem of logic → MA.O.A1",
+   "A probability measure or limit theorem → MA.O.A5",
+   "Curry–Howard and type-theoretic programs → CS.O.A1.5",
+   "Measured cognition, perception or processing → MS",
+   "Who holds power, how institutions work → PO",
+   "Validity and duty under a named legal system → LA",
+   "A law of nature or physical formalism → PH",
+   "Population genetics, species data → BI"
+  ],
+  "open": [
+   ".",
+   "whether experimental philosophy needs its own role (M3/M4) rather than sitting under PL.M.B4.",
+   "whether computational philosophy (M5) is a sixth role; the count would then break the 2–5 rule and need a merge.",
+   "full leaf descent (v3): one reconstruction each for Plato, Aristotle, a medieval synthesis, Descartes, Hume, Kant, Hegel, early analytic, phenomenology, Nyāya, a Buddhist no-self argument, a Confucian role argument, and Māori philosophy written with Māori philosophers.",
+   "(with alternative)."
+  ],
+  "status": "draft",
+  "source": "pyramids/PL.md"
+ },
+ {
+  "id": "PL.O.A1",
+  "field": "PL",
+  "name": "Being",
+  "question": ": which metaphysical questions are distinct and jointly exhaustive?",
+  "look_for": [
+   "Ontology and existence. Particular and universal; object and property; tropes; substance; mereology; abstract objects against nominalism. Existence answers: materialism, idealism, dualism, neutral monism. These are answers, not further ques",
+   "also holds the god question argued from shared premises. Cosmological, design and ontological arguments are arguments here (W9). The logical problem of evil holds only if a god is defined as omnipotent, omniscient and wholly good. The ontol",
+   "holds Māori whakapapa read as an ontology of relational descent (Stewart, *Māori Philosophy*, 2021, per audit). The claim, not the community, sits here.",
+   "Modality. Possible worlds as a device; de re and de dicto; essentialism. Rule: a necessity claim must say which type it is: logical, metaphysical or nomological. Modal systems K, T, S4 and S5 as calculi are MA.O.A1; which one models metaphy",
+   "Causation, persistence and identity. Causation answers: regularity, counterfactual dependence, process, interventionist (Woodward 2003). Persistence answers: endurance, perdurance (Lewis 1986).",
+   "identity. Leibniz's law (the indiscernibility of identicals) holds for numerical identity in extensional contexts. It fails as a test inside belief and other opaque contexts. Trouble case: the statue and the clay.",
+   "personal identity is the identity question asked of persons. The psychology of the self is MS.",
+   "free will. Whether responsibility is compatible with determinism. Frankfurt cases (1969) (UNVERIFIED) target the principle of alternate possibilities. The empirical psychology of choice stays in MS (audit error 5).",
+   "holds al-Ghazālī's occasionalist critique of necessary causal connection (audit item; date UNVERIFIED).",
+   "Realism and anti-realism. Whether the world has a structure apart from our concepts. Putnam's model-theoretic argument assumes that reference is fixed only by total theory plus operational constraints (UNVERIFIED wording). Underdeterminatio"
+  ],
+  "find_out": [
+   "Argument (M2 Derive)",
+   "Analysis (M1 Represent)",
+   "Formalization (M1 Represent (with M2 inside the calculus))",
+   "Description (M3 Observe)",
+   "Reconstruction and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W9"
+  ],
+  "breaks": [
+   "Counterexample; conflict with an owner science"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Philosophy of religion is PL. An argument from premises any reasoner may grant is PL.O.A1.1. Religious epistemology is PL.O.A2.2. The same conclusion argued from a creed is RE.O·T.",
+   "Causation in general is PL.O.A1.3. A legal causation test is LA; causal identification from data is EC (EC.B2 design), cited."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PL.md"
+ },
+ {
+  "id": "PL.O.A2",
+  "field": "PL",
+  "name": "Knowledge and mind",
+  "question": ": which questions does this claim-type contain?",
+  "look_for": [
+   "Knowledge. The analysis is a deductive group: truth, belief, and a further condition. Truth: a known falsehood is not knowledge.",
+   "belief condition. CONTESTED: Radford's unconfident examinee (1966) denies that knowledge entails belief. Williamson's knowledge-first view (2000) denies that knowledge is analysable at all.",
+   "further condition. Justified true belief is the standard post-Gettier framing; whether it was ever the received view is disputed (Dutant 2015).",
+   "Gettier cases (1963) assume two things. A false belief can be justified. Justification is closed under deduction the subject performs. Given both, justified true belief is not sufficient for knowledge.",
+   "replies to Gettier: one inductive group of five. No false lemmas (Clark 1963); causal connection (Goldman 1967); reliability; tracking (Nozick 1981); virtue (Sosa). This list replaces v1's two lists (audit error 6).",
+   "scepticism is not a member of that group. It claims the further condition is never met for a stated domain.",
+   "structure of justification: foundationalism, coherentism, externalism, as answers to the regress.",
+   "Sources of entitlement. Perception, memory, testimony, reason, introspection. Rationalism and empiricism are answers about source. A priori is a way of being entitled, not a place.",
+   "social epistemology: testimony and peer disagreement. Disagreement alone does not prescribe a unique revision.",
+   "epistemology of religion (audit error 19): religious experience, reformed epistemology (Plantinga), Hume on testimony to miracles. Boundary: the argument that scriptural authority is rational to accept is PL.O.A2.2. A claim resting on that ",
+   "Mind. Identity theory, functionalism, eliminativism, dualism, as answers. Intentionality.",
+   "the hard problem (Chalmers 1995): why physical processing is accompanied by experience. Stated as a problem, not as a proof of dualism. MS defers here.",
+   "Searle's Chinese room (1980) assumes that running a program is purely syntactic manipulation. It concludes that syntax does not suffice for semantics.",
+   "the extended mind (Clark and Chalmers 1998); machine consciousness; perception (veridical and not); action as doing for a reason. Action sits here when the question is the mental cause, and in A4 when it is the reason's worth.",
+   "Yogācāra read as a theory of mind and appearance (audit item; CONTESTED, alternative A1.4)."
+  ],
+  "find_out": [
+   "Argument (M2 Derive)",
+   "Analysis (M1 Represent)",
+   "Formalization (M1 Represent (with M2 inside the calculus))",
+   "Description (M3 Observe)",
+   "Reconstruction and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W9"
+  ],
+  "breaks": [
+   "Case counterexamples"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Philosophy of religion is PL. An argument from premises any reasoner may grant is PL.O.A1.1. Religious epistemology is PL.O.A2.2. The same conclusion argued from a creed is RE.O·T.",
+   "The hard problem and intentionality are PL.O.A2.3. Processing, measured, is MS."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PL.md"
+ },
+ {
+  "id": "PL.O.A3",
+  "field": "PL",
+  "name": "Meaning and inference",
+  "question": ": which questions does this claim-type contain, and where is the line with MA and LN?",
+  "look_for": [
+   "Meaning. Reference and sense (Frege's puzzle: \"a = a\" is trivial, \"a = b\" can be informative). Use as meaning. Speech acts. Literal and implicated content as concepts.",
+   "truth-conditional semantics (Davidson 1967): to know a sentence's meaning is to know under which conditions it is true. It assumes a recursive truth theory for the language.",
+   "names: descriptivism against direct reference. Kripke's modal argument (1980) assumes proper names are rigid designators across possible worlds.",
+   "compositionality (Frege's principle) as a concept. Its empirical testing in a named language is LN.O.A3.",
+   "Grice's cooperative principle as a concept of conversational rationality. Implicature patterns in a language are LN.O.A3.",
+   "Consequence. Deduction preserves truth if valid. Induction does not, and can still be reasonable. Abduction infers to an explanation. Validity is form; soundness adds true premises.",
+   "explosion: from a contradiction anything follows, in classical and intuitionistic logic. Relevance and paraconsistent logics reject it.",
+   "holds which logic is correct, logical pluralism, and the significance of the liar and sorites paradoxes.",
+   "uses MA.O.A1 for metatheorems. Gödel's first incompleteness theorem holds for a consistent, effectively axiomatised theory that interprets elementary arithmetic. What it shows about mind or truth is PL.",
+   "uses CS.O.A1.5 for Curry–Howard. It pairs intuitionistic natural deduction with the simply typed lambda calculus. Classical logic needs control operators (Griffin 1990).",
+   "holds Mohist logic and Mīmāṃsā's hermeneutics of injunction as reconstructed consequence and meaning claims (audit items; Mīmāṃsā CONTESTED, alternative A3.1).",
+   "decision under uncertainty, when it is a consequence relation on credences. When the utilities are values, it is A4.2."
+  ],
+  "find_out": [
+   "Argument (M2 Derive)",
+   "Analysis (M1 Represent)",
+   "Formalization (M1 Represent (with M2 inside the calculus))",
+   "Description (M3 Observe)",
+   "Reconstruction and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W1",
+   "W9"
+  ],
+  "breaks": [
+   "Paradox; counter-model"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Logic as a claim about consequence is PL.O.A3.2. Calculi and metatheorems are MA.O.A1, cited as \"uses MA.O.A1\".",
+   "Curry–Howard is CS.O.A1.5; PL.O.A3.2 uses it, with the intuitionistic hypothesis stated.",
+   "Meaning as a concept is PL.O.A3.1. Meaning in a particular language is LN.O.A3."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PL.md"
+ },
+ {
+  "id": "PL.O.A4",
+  "field": "PL",
+  "name": "Value",
+  "question": ": which value questions are distinct?",
+  "look_for": [
+   "Metaethics. Cognitivism, expressivism, realism. The Frege–Geach problem: expressivism must explain how \"lying is wrong\" keeps its meaning inside a conditional.",
+   "Moore's open-question argument (1903, §13). It assumes a correct analysis of \"good\" would make \"is N good?\" closed to a competent speaker. Moore offered it for non-naturalism. Main reply: synthetic property identity (Putnam; Boyd).",
+   "Normative ethics, worked descent kept from v1. Key line inductive · answer-families · dimension the bearer of value · order outcome, constraint, character: consequentialism, deontology, virtue ethics.",
+   "a hybrid theory is not a fourth family until it says which bearer decides a conflict.",
+   "Kant's categorical imperative is one deontic construction; rights theories are another. A constraint that forbids a small harm and permits a disaster needs a threshold or an admission.",
+   "virtue rightness criterion (Hursthouse 1999): an act is right if a virtuous agent would characteristically do it in the circumstances.",
+   "applied ethics (audit error 15): life, war, animals, environment, technology, professional ethics, AI moral status and alignment ethics. A case is not a new theory.",
+   "owns the normative claim in professional and AI ethics. The professional duty as a legal duty is LA; the constraint on a specification is CS or EN.",
+   "Political and legal philosophy. Legitimacy of coercion, political obligation, liberty, equality, authority, justice. Owner for PO.O.A1 and LA.O.A1, which cite it.",
+   "Rawls (1971): parties behind a veil of ignorance, mutually disinterested and choosing under uncertainty, would choose the two principles. The maximin step assumes they cannot assign probabilities.",
+   "Nozick (1974): entitlement theory, assuming self-ownership and a just initial acquisition. Berlin (1958): negative and positive liberty. Cohen on egalitarian justice (UNVERIFIED work date).",
+   "the concept of law: positivism (Hart), interpretivism (Dworkin), natural law (Finnis 1980). CONTESTED: \"what makes a norm law\" is an entitlement question and fits A5 under the restated rule. Kept at A4.3 to keep PO and LA citing one cell.",
+   "philosophy of gender, race and sexuality, when the claim is about a social category and a harm. When the claim is about what the category picks out, it is A1.1.",
+   "Dussel's philosophy of liberation and critical theory's emancipation claim, as reconstructed political claims.",
+   "African personhood debate: Menkiti against Gyekye on whether personhood is acquired in community (audit item; CONTESTED, alternative A1.3).",
+   "Aesthetics. What a work is and why it merits attention. Intention, form, reception as answers. Hume's standard of taste (1757). Owner for AR, which applies criteria to named works.",
+   "the ontology of a musical work (type and token) is A1.1, as the AR prototype already cites."
+  ],
+  "find_out": [
+   "Argument (M2 Derive)",
+   "Analysis (M1 Represent)",
+   "Formalization (M1 Represent (with M2 inside the calculus))",
+   "Description (M3 Observe)",
+   "Reconstruction and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W9"
+  ],
+  "breaks": [
+   "Counterexample intuitions"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "A moral claim argued from shared premises is PL.O.A4. One citing scripture, creed or school is RE·T. One reporting what a tradition holds is RE·S.",
+   "Normative legitimacy, obligation and justice are PL.O.A4.3. PO cites them; PO owns who holds power and how (PO).",
+   "The concept of law is PL.O.A4.3. Whether a norm is valid in a given legal system is LA (W10).",
+   "General aesthetic value is PL.O.A4.4. A verdict on a named work is AR."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PL.md"
+ },
+ {
+  "id": "PL.O.A5",
+  "field": "PL",
+  "name": "Standing of the sciences and mathematics",
+  "question": ": which entitlement questions does this cell hold, without absorbing any science?",
+  "look_for": [
+   "General philosophy of science. Explanation, confirmation, law, model, reduction. A model is not the system.",
+   "underdetermination: more than one theory can fit the same finite evidence. It is a limit, not a licence to ignore evidence.",
+   "holds logical empiricism and naturalism as answers about entitlement (see PL.B.C5).",
+   "Natural sciences. Philosophy of physics: time, probability in physics, the measurement problem. The formalism stays in PH.",
+   "philosophy of chemistry (audit error 10): reduction of chemistry to physics; the chemical bond as a kind. The bond itself is CH.",
+   "philosophy of biology: function, species, units of selection. Population genetics stays in BI.",
+   "Formal sciences. Philosophy of mathematics: platonism, nominalism, structuralism, as answers to what a theorem is about. The proof stays in MA.",
+   "philosophy of probability: frequency, propensity, subjective and logical interpretations. The measure is MA.O.A5; the agent model is EC.O.A1. CONTESTED: alternative home A3.2.",
+   "philosophy of computing and information: what computation is, and whether information is physical. Cites CS.",
+   "Mind and social sciences. Philosophy of cognitive science: representation and explanation in cognitive models. Cites MS.",
+   "philosophy of social science: whether reasons are causes, and whether a social kind is like a natural kind. The data stay in MS, EC or PO.",
+   "philosophy of history: whether historical explanation is causal or interpretive. Cites HI; HI's historiography bridge cites this cell."
+  ],
+  "find_out": [
+   "Argument (M2 Derive)",
+   "Analysis (M1 Represent)",
+   "Formalization (M1 Represent (with M2 inside the calculus))",
+   "Description (M3 Observe)",
+   "Reconstruction and interpretation (M6 Compare and reconstruct)"
+  ],
+  "settles": [
+   "W8",
+   "W9"
+  ],
+  "breaks": [
+   "Misdescription of the science"
+  ],
+  "rules_of_thumb": [],
+  "collisions": [
+   "Probability as measure is MA.O.A5; as an agent's choice model, EC.O.A1; its interpretation, PL.O.A5.3."
+  ],
+  "open": [],
+  "status": "draft",
+  "source": "pyramids/PL.md"
+ }
+]
