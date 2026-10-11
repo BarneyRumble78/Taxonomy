@@ -51,6 +51,9 @@ Run check, registry, tests and site build after any change to a pyramid, the lex
 - `cards/toolkit/`: toolkit cards with problem signatures (`python3 scripts/build_toolkit_cards.py`).
 - `signatures/vocabulary.json`: controlled facets for problem signatures. `schemas/`: JSON schemas.
 - `engine/v3/connect.py`: signature → ranked toolkit cards. Tests: `tests/test_v3_connect.py`.
+- `engine/v3/core.py`: frame, survey, consult, connect_run. Backends in `engine/v3/llm.py` (TAXONOMY_LLM=anthropic|ollama|manual).
+- CLI: `python3 taxonomy.py frame|survey|consult|connect|check "text" [--field MA]`. Runs are saved in `runs/` (git-ignored).
+- Draft more toolkit cards: `python3 scripts/draft_toolkit_cards.py --field MA --level 2`. Validate: `python3 scripts/validate_cards.py`.
 - Plan and progress: `ROADMAP_V3.md`.
 
 ## Known open work

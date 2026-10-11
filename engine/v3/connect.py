@@ -16,7 +16,10 @@ WEIGHTS = {"task": 3.0, "structure": 2.0, "direction": 1.5, "uncertainty": 1.5, 
 
 
 def load_cards(field="MA"):
-    return json.loads((ROOT / "cards" / "toolkit" / f"{field}.json").read_text(encoding="utf-8"))
+    cards = []
+    for p in sorted((ROOT / "cards" / "toolkit").glob(f"{field}*.json")):
+        cards += json.loads(p.read_text(encoding="utf-8"))
+    return cards
 
 
 def score(problem, card):

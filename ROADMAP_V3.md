@@ -47,7 +47,7 @@ Classification stays as one operation (Check), not the purpose.
   - data-rich or data-poor
   - constraint types
 - [ ] B5. **Run record:** the problem, its signature, the fields and subfields consulted, findings, sources, verification status. This gives provenance for every answer.
-- [ ] B6. JSON schemas for B1–B5, with validators in `scripts/check.py`.
+- [~] B6. JSON schemas for B1–B5, with validators in `scripts/check.py`.
 
 ## C. Content: the maps (depth)
 - [x] C1. Mathematics: import the MSC2020 hierarchy (63 two-digit, 529 three-digit, ~6,000 five-digit) from msc2020.org, under its own licence.
@@ -75,13 +75,13 @@ Classification stays as one operation (Check), not the purpose.
 - [ ] D7. Mark every card's verification status, and record sources and dates.
 
 ## E. Engine (apply, consult, connect)
-- [ ] E1. **Framer:** turns a user's input into a precise problem statement, its SCQA and its signature. Asks clarifying questions when the input is vague.
-- [ ] E2. **Router:** picks the relevant fields (Survey) or subfields (Consult). The keyword engine is a fast first pass; the AI makes the final choice; coverage rules prevent skipping.
-- [ ] E3. **Sweeper:** sends the framed problem to every selected node in parallel, each with its card as context. It returns applicability, approach, known results and conditions.
-- [ ] E4. **Deepener:** expands the top nodes to their children, recursively, to a set depth and budget.
+- [~] E1. **Framer:** turns a user's input into a precise problem statement, its SCQA and its signature. Asks clarifying questions when the input is vague.
+- [~] E2. **Router:** picks the relevant fields (Survey) or subfields (Consult). The keyword engine is a fast first pass; the AI makes the final choice; coverage rules prevent skipping.
+- [~] E3. **Sweeper:** sends the framed problem to every selected node in parallel, each with its card as context. It returns applicability, approach, known results and conditions.
+- [~] E4. **Deepener:** expands the top nodes to their children, recursively, to a set depth and budget.
 - [~] E5. **Matcher:** scores signature against toolkit cards across the whole field; similarity on signature features plus embeddings; returns distant candidates with an explanation of the mapping.
-- [ ] E6. **Hypothesis checker:** for each proposed tool, lists the conditions and whether the problem meets them (yes / no / unknown).
-- [ ] E7. **Synthesiser:** builds the Minto output (governing answer, key line of routes, evidence for each) and ranks routes by promise, cost and certainty.
+- [~] E6. **Hypothesis checker:** for each proposed tool, lists the conditions and whether the problem meets them (yes / no / unknown).
+- [~] E7. **Synthesiser:** builds the Minto output (governing answer, key line of routes, evidence for each) and ranks routes by promise, cost and certainty.
 - [ ] E8. **Verifier:** literature search for each route, a suggested small test, and OPEN/CONTESTED flags.
 - [ ] E9. **Zoom operations:** Steve Andreas's moves (example of, examples, part of, parts), over the maps.
 - [ ] E10. Keep the Check operation (the current classifier) as a module.
@@ -89,7 +89,7 @@ Classification stays as one operation (Check), not the purpose.
 - [ ] E12. Safety: prompt-injection guards on retrieved text; no route marked "verified" without a source.
 
 ## F. Interfaces
-- [ ] F1. Python library and CLI: `taxonomy survey|consult|connect|check "…" [--field PH] [--depth 2]`.
+- [~] F1. Python library and CLI: `taxonomy survey|consult|connect|check "…" [--field PH] [--depth 2]`.
 - [ ] F2. **API:** `/survey`, `/consult/{field}`, `/connect`, `/check`, `/cards/{id}`, `/maps/{field}`; with keys, rate limits and an OpenAPI page.
 - [ ] F3. MCP server exposing the same tools, so it works inside Claude, Claude Code and other assistants.
 - [ ] F4. Claude skill: "apply Taxonomy" with the procedures, for use without the API.
@@ -132,3 +132,4 @@ Classification stays as one operation (Check), not the purpose.
 - 63 draft toolkit cards (two-digit MSC, 109 tools with hypotheses).
 - Minimal Connect matcher and 5 seed retrodiction cases. These cases are not independent (same author wrote cards and cases), so they are smoke tests only.
 - Next: B6 validators for lens and toolkit cards; E1 framer (AI); D2 three-digit cards; E3/E7 sweep and synthesis.
+- 2026-10-11 (2): model backends (Claude API, Ollama, manual), framer, survey, consult (full sweep with coverage report, deepening into MSC level 2), connect (matcher then model condition check), run records in runs/, CLI `taxonomy.py`, card validator, resumable model drafter for toolkit cards (`scripts/draft_toolkit_cards.py`). Tested with a fake model only; no live model run yet.
