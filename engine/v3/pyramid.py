@@ -152,7 +152,7 @@ KIND_PATTERNS = (
     ("institution", re.compile(r"\b(agenc(?:y|ies)|laws?|programmes?|programs?|measures?|standards?|lev(?:y|ies))\b", re.I), "institutions"),
 )
 KIND_PLURAL = {key: plural for key, _pat, plural in KIND_PATTERNS}
-ROLE_CELL = {"response": "EV.O.A4", "state": "EV.O.A2"}
+ROLE_CELL = {"response": "EV.O.A4", "state": "EV.O.A2", "driver": "EV.O.A1"}
 
 
 def is_filler(statement):
@@ -167,15 +167,19 @@ def _term_pattern(term):
 
 
 def dpsir_role(name, rules):
-    """Response words, resource stocks, and ambiguous phrases, in that order.
+    """Response words, then drivers, then ambiguous phrases, then resource stocks.
 
     The cell definitions in rules['dpsir'] are applied before any embedding.
+    A driver is an industry or activity. Drivers are folded into pressures.
     """
     text = name or ""
     for term in rules.get("response_terms") or []:
         if _term_pattern(term).search(text):
             return "response"
     low = text.lower()
+    for phrase in rules.get("driver_phrases") or []:
+        if phrase.lower() in low:
+            return "driver"
     for phrase in rules.get("ambiguous_phrases") or []:
         if phrase.lower() in low:
             return "ambiguous"
@@ -204,6 +208,23 @@ def apply_dpsir(concepts, rules):
                 "candidates": [
                     {"cell": cell, "facet": None, "score": None}
                     for cell in ("EV.O.A1", "EV.O.A2", "EV.O.A3", "EV.O.A4", "EV.O.A5")
+                ],
+            })
+        elif role == "driver":
+            concept["cell"] = ROLE_CELL["driver"]
+            concept["dpsir_note"] = rules.get("driver_note") or "A driver is folded into pressures."
+            concept["dpsir_skip"] = True
+            queued.append({
+                "task": "place",
+                "node_id": concept["id"],
+                "name": concept["name"],
+                "cell": ROLE_CELL["driver"],
+                "reason": "a driver is folded into pressures",
+                "dpsir": "driver",
+                "note": concept["dpsir_note"],
+                "margin": None,
+                "candidates": [
+                    {"cell": ROLE_CELL["driver"], "facet": None, "score": None},
                 ],
             })
         elif role in ROLE_CELL:
@@ -251,7 +272,7 @@ def common_word(names):
         shared &= set(tokens)
     if not shared:
         return None
-    return max(shared, key=len)
+    return max(shared, key=lambda token: (len(token), token))
 
 
 def _noun_plural(noun):
@@ -395,6 +416,7 @@ class IdBook:
         self.by_anchor = {}
         self.retired = []
         self._seen = set()
+        self._loaded = set()
         if previous:
             self.retired = list(previous.get("retired") or [])
             for item in self.retired:
@@ -404,6 +426,16 @@ class IdBook:
                 if anchor:
                     self.by_anchor[anchor] = point["id"]
                     self.used.add(point["id"])
+                    self._loaded.add(anchor)
+
+    def abandon(self, anchor):
+        """Forget an anchor allocated in this run and then not used. Do not retire it."""
+        self._seen.discard(anchor)
+        if anchor in self._loaded:
+            return
+        pid = self.by_anchor.pop(anchor, None)
+        if pid:
+            self.used.discard(pid)
 
     def get(self, parent_id, anchor):
         self._seen.add(anchor)
@@ -1087,7 +1119,7 @@ def build_pyramid(field, embed=True):
             fid = ids.get(cid, anchor)
             if len(members) < 2:
                 if len(members) != 1:
-                    ids._seen.discard(anchor)
+                    ids.abandon(anchor)
                     continue
                 concept_id = members[0]
                 _note(concept_id)
@@ -1099,7 +1131,7 @@ def build_pyramid(field, embed=True):
                 placed, by_id, children, facet["key"], ids, fid, cell["noun"], vectors,
             )
             if not 2 <= len(packed["points"]) <= 5:
-                ids._seen.discard(anchor)
+                ids.abandon(anchor)
                 for concept_id in members:
                     if any(item["node_id"] == concept_id for item in queue):
                         continue

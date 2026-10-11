@@ -143,7 +143,9 @@
       "node_id": "GEMET:3376",
       "name": "food processing industry",
       "cell": "EV.O.A1",
-      "reason": "the DPSIR role is ambiguous",
+      "reason": "a driver is folded into pressures",
+      "dpsir": "driver",
+      "note": "A driver is an industry or activity that creates a load, and drivers are folded into pressures.",
       "margin": null,
       "candidates": [
         {
@@ -152,34 +154,6 @@
           "score": null,
           "group_id": "EV.P.1",
           "statement": "Pressures are the loads that human activity places on the environment."
-        },
-        {
-          "cell": "EV.O.A2",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.2",
-          "statement": "States are the measured conditions of air, water, soil, and living systems."
-        },
-        {
-          "cell": "EV.O.A3",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.3",
-          "statement": "Impacts are the harms a changed state causes, and the way those harms are attributed."
-        },
-        {
-          "cell": "EV.O.A4",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.4",
-          "statement": "Responses are the actions taken to change a pressure or a state."
-        },
-        {
-          "cell": "EV.O.A5",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.5",
-          "statement": "Limits are the thresholds a measured state is not meant to cross."
         }
       ]
     },
@@ -275,10 +249,12 @@
     },
     {
       "task": "place",
-      "node_id": "GEMET:7327",
-      "name": "rubber processing industry",
+      "node_id": "GEMET:7326",
+      "name": "rubber processing",
       "cell": "EV.O.A1",
-      "reason": "the DPSIR role is ambiguous",
+      "reason": "a driver is folded into pressures",
+      "dpsir": "driver",
+      "note": "A driver is an industry or activity that creates a load, and drivers are folded into pressures.",
       "margin": null,
       "candidates": [
         {
@@ -287,34 +263,25 @@
           "score": null,
           "group_id": "EV.P.1",
           "statement": "Pressures are the loads that human activity places on the environment."
-        },
+        }
+      ]
+    },
+    {
+      "task": "place",
+      "node_id": "GEMET:7327",
+      "name": "rubber processing industry",
+      "cell": "EV.O.A1",
+      "reason": "a driver is folded into pressures",
+      "dpsir": "driver",
+      "note": "A driver is an industry or activity that creates a load, and drivers are folded into pressures.",
+      "margin": null,
+      "candidates": [
         {
-          "cell": "EV.O.A2",
+          "cell": "EV.O.A1",
           "facet": null,
           "score": null,
-          "group_id": "EV.P.2",
-          "statement": "States are the measured conditions of air, water, soil, and living systems."
-        },
-        {
-          "cell": "EV.O.A3",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.3",
-          "statement": "Impacts are the harms a changed state causes, and the way those harms are attributed."
-        },
-        {
-          "cell": "EV.O.A4",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.4",
-          "statement": "Responses are the actions taken to change a pressure or a state."
-        },
-        {
-          "cell": "EV.O.A5",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.5",
-          "statement": "Limits are the thresholds a measured state is not meant to cross."
+          "group_id": "EV.P.1",
+          "statement": "Pressures are the loads that human activity places on the environment."
         }
       ]
     },
@@ -323,7 +290,9 @@
       "node_id": "GEMET:9103",
       "name": "waste processing industry",
       "cell": "EV.O.A1",
-      "reason": "the DPSIR role is ambiguous",
+      "reason": "a driver is folded into pressures",
+      "dpsir": "driver",
+      "note": "A driver is an industry or activity that creates a load, and drivers are folded into pressures.",
       "margin": null,
       "candidates": [
         {
@@ -332,34 +301,6 @@
           "score": null,
           "group_id": "EV.P.1",
           "statement": "Pressures are the loads that human activity places on the environment."
-        },
-        {
-          "cell": "EV.O.A2",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.2",
-          "statement": "States are the measured conditions of air, water, soil, and living systems."
-        },
-        {
-          "cell": "EV.O.A3",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.3",
-          "statement": "Impacts are the harms a changed state causes, and the way those harms are attributed."
-        },
-        {
-          "cell": "EV.O.A4",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.4",
-          "statement": "Responses are the actions taken to change a pressure or a state."
-        },
-        {
-          "cell": "EV.O.A5",
-          "facet": null,
-          "score": null,
-          "group_id": "EV.P.5",
-          "statement": "Limits are the thresholds a measured state is not meant to cross."
         }
       ]
     },
@@ -20219,40 +20160,6 @@
         {
           "facet": "introduced",
           "score": 0.4852,
-          "group_id": "EV.P.1.4",
-          "statement": "Introduced species are the loads from pests and organisms people bring in."
-        }
-      ],
-      "task": "place"
-    },
-    {
-      "node_id": "GEMET:7326",
-      "name": "rubber processing",
-      "cell": "EV.O.A1",
-      "reason": "embedding score 0.5732 is below 0.6200",
-      "margin": 0.0705,
-      "candidates": [
-        {
-          "facet": "extraction",
-          "score": 0.5732,
-          "group_id": "EV.P.1.3",
-          "statement": "Extraction is the load from taking water, fish, or minerals."
-        },
-        {
-          "facet": "land",
-          "score": 0.5027,
-          "group_id": "EV.P.1.2",
-          "statement": "Land and sea use changes are the loads from clearance, drainage, and building."
-        },
-        {
-          "facet": "emissions",
-          "score": 0.4987,
-          "group_id": "EV.P.1.1",
-          "statement": "Emissions are the loads from greenhouse gases and other pollutants."
-        },
-        {
-          "facet": "introduced",
-          "score": 0.4614,
           "group_id": "EV.P.1.4",
           "statement": "Introduced species are the loads from pests and organisms people bring in."
         }

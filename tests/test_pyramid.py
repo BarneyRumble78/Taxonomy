@@ -122,11 +122,24 @@ def test_queue_request_disables_thinking():
     assert body["model"] == "qwen3:30b-a3b"
     assert body["think"] is False
     schema = body["response_format"]["json_schema"]["schema"]
-    assert schema["properties"]["group_id"]["enum"] == ["EV.P.1.1", "EV.P.1.2", "unsure"]
-    assert "reason" in schema["required"]
+    assert "items" in schema["properties"]
+    item_schema = schema["properties"]["items"]["items"]
+    assert "group_id" in item_schema["properties"]
+    assert "reason" in item_schema["required"]
+    payload = json.loads(body["messages"][1]["content"])
+    assert payload["items"][0]["choices"] == ["EV.P.1.1", "EV.P.1.2"]
+    assert body["messages"][0]["content"] == module.SYSTEM_PLACE
+    other = module.request_batch([{
+        "node_id": "GEMET:2",
+        "name": "restoration",
+        "cell": "EV.O.A4",
+        "candidates": [{"cell": "EV.O.A4", "group_id": "EV.P.4", "statement": "Responses are actions."}],
+    }])
+    assert other["messages"][0]["content"] == body["messages"][0]["content"]
+    assert other["response_format"] == body["response_format"]
     unsure = module.request_body({"node_id": "X", "name": "x", "cell": "EV.O.A1", "candidates": []})
     assert unsure["think"] is False
-    assert unsure["response_format"]["json_schema"]["schema"]["properties"]["group_id"]["enum"] == ["unsure"]
+    assert json.loads(unsure["messages"][1]["content"])["items"][0]["choices"] == ["unsure"]
 
 
 def test_ev_section_12():
@@ -253,7 +266,11 @@ def test_dpsir_role_and_kind():
     assert dpsir_role("pest control", rules) == "response"
     assert dpsir_role("grain", rules) == "state"
     assert dpsir_role("urban waste water", rules) == "ambiguous"
-    assert dpsir_role("waste processing industry", rules) == "ambiguous"
+    assert dpsir_role("food processing", rules) == "driver"
+    assert dpsir_role("food processing industry", rules) == "driver"
+    assert dpsir_role("rubber processing", rules) == "driver"
+    assert dpsir_role("waste processing industry", rules) == "driver"
+    assert dpsir_role("data processing", rules) != "driver"
     assert kind_of("animal husbandry") == "activity"
     assert kind_of("working population engaged in agriculture") == "population"
     assert kind_of("urban flows") == "flow"
@@ -344,9 +361,11 @@ def test_summary_request_asks_for_a_sentence():
     })
     assert body["think"] is False
     schema = body["response_format"]["json_schema"]["schema"]
-    assert "summary" in schema["properties"]
-    assert "group_id" not in schema["properties"]
+    item_schema = schema["properties"]["items"]["items"]
+    assert "summary" in item_schema["properties"]
+    assert "group_id" not in item_schema["properties"]
     assert "is the class that holds" not in body["messages"][0]["content"]
+    assert body["messages"][0]["content"] == module.SYSTEM_SUMMARY
 
 
 def _blob(point):
@@ -404,10 +423,226 @@ def test_dpsir_placement_on_ev():
     place_items = [item for item in queue["items"] if item.get("task", "place") == "place"]
     ambiguous = [item["name"].lower() for item in place_items if item.get("reason") == "the DPSIR role is ambiguous"]
     assert any("urban waste water" in name for name in ambiguous)
-    assert any("waste processing" in name for name in ambiguous)
+    assert not any("waste processing" in name for name in ambiguous)
+    drivers = [item for item in place_items if item.get("dpsir") == "driver"]
+    driver_names = {item["name"].lower() for item in drivers}
+    assert {"food processing industry", "rubber processing industry", "waste processing industry", "rubber processing"} <= driver_names
+    assert {item["cell"] for item in drivers} == {"EV.O.A1"}
+    assert {item["candidates"][0]["group_id"] for item in drivers} == {"EV.P.1"}
+    assert len({item.get("note") for item in drivers}) == 1
     responses = _blob(by_cell["EV.O.A4"]).lower()
     states = _blob(by_cell["EV.O.A2"]).lower()
     queued_names = "\n".join(item["name"].lower() for item in place_items)
     assert "pest control" in responses
     assert "waste water treatment" in responses
     assert re.search(r"\bgrain\b", states) or re.search(r"\bgrain\b", queued_names)
+
+
+def _queue_root(tmp_path, items, previous=None):
+    queue_dir = tmp_path / "pyramids" / "queues"
+    queue_dir.mkdir(parents=True)
+    (queue_dir / "EV.json").write_text(json.dumps({"field": "EV", "items": items}), encoding="utf-8")
+    if previous is not None:
+        (queue_dir / "EV.placed.json").write_text(
+            json.dumps({"field": "EV", "model": "qwen3:30b-a3b", "items": previous}),
+            encoding="utf-8",
+        )
+    return tmp_path
+
+
+def _place_item(number):
+    return {
+        "task": "place",
+        "node_id": f"N{number}",
+        "name": f"concept {number}",
+        "cell": "EV.O.A1",
+        "candidates": [
+            {"facet": "emissions", "group_id": "EV.P.1.1", "statement": "Emissions are loads."},
+            {"cell": "EV.O.A4", "group_id": "EV.P.4", "statement": "Responses are actions."},
+        ],
+    }
+
+
+def _model_reply(body):
+    payload = json.loads(body["messages"][1]["content"])
+    rows = []
+    for item in payload["items"]:
+        if "children" in item:
+            rows.append({"id": item["id"], "summary": "These ideas share a feature.", "reason": "shared"})
+        else:
+            choice = (item.get("choices") or ["unsure"])[0]
+            rows.append({"id": item["id"], "group_id": choice, "reason": "fit"})
+    return {"choices": [{"message": {"content": json.dumps({"items": rows})}}]}
+
+
+def test_batch_size_stays_between_15_and_25():
+    module = _queue_module()
+    assert module.BATCH_SIZE == 20
+    assert module.clamp_batch(5) == 15
+    assert module.clamp_batch(20) == 20
+    assert module.clamp_batch(100) == 25
+    assert module.clamp_workers(8) == 4
+    assert module.clamp_workers(3) == 3
+    assert len(module.SYSTEM_PLACE) < 500
+
+
+def test_prompt_keeps_only_the_likely_cell():
+    module = _queue_module()
+    body = module.request_batch([{
+        "node_id": "G1",
+        "name": "acid rain",
+        "cell": "EV.O.A1",
+        "candidates": [
+            {"cell": "EV.O.A1", "group_id": "EV.P.1", "statement": "Pressures are loads."},
+            {"cell": "EV.O.A4", "group_id": "EV.P.4", "statement": "Responses are actions."},
+            {"cell": "EV.O.A2", "group_id": "EV.P.2", "statement": "States are conditions."},
+        ],
+    }])
+    user = body["messages"][1]["content"]
+    assert "EV.P.1" in user
+    assert "EV.P.4" not in user
+    assert "EV.P.2" not in user
+    assert body["messages"][0]["content"] == module.SYSTEM_PLACE
+
+
+def test_fake_model_batches_concurrently_and_appends_jsonl(tmp_path, capsys):
+    import threading
+    import time
+    module = _queue_module()
+    items = [_place_item(number) for number in range(40)]
+    items.extend([
+        {
+            "task": "place",
+            "node_id": "FOOD",
+            "name": "food processing industry",
+            "cell": "EV.O.A1",
+            "candidates": [
+                {"cell": "EV.O.A1", "group_id": "EV.P.1", "statement": "Pressures are loads."},
+                {"cell": "EV.O.A4", "group_id": "EV.P.4", "statement": "Responses are actions."},
+            ],
+        },
+        {
+            "task": "place",
+            "node_id": "RUBBER",
+            "name": "rubber processing",
+            "cell": "EV.O.A1",
+            "candidates": [{"facet": "extraction", "group_id": "EV.P.1.3", "statement": "Extraction is a load."}],
+        },
+        {
+            "task": "place",
+            "node_id": "WASTE",
+            "name": "waste processing industry",
+            "cell": "EV.O.A2",
+            "candidates": [
+                {"cell": "EV.O.A1", "group_id": "EV.P.1", "statement": "Pressures are loads."},
+                {"cell": "EV.O.A2", "group_id": "EV.P.2", "statement": "States are conditions."},
+            ],
+        },
+    ])
+    root = _queue_root(tmp_path, items, previous=[{"node_id": "N0", "group_id": "EV.P.1.1", "name": "concept 0"}])
+    calls = []
+    inflight = {"n": 0, "max": 0}
+    lock = threading.Lock()
+
+    def post(body):
+        with lock:
+            inflight["n"] += 1
+            inflight["max"] = max(inflight["max"], inflight["n"])
+        time.sleep(0.1)
+        with lock:
+            inflight["n"] -= 1
+            calls.append(body)
+        text = body["messages"][1]["content"]
+        assert "EV.P.4" not in text
+        assert body["messages"][0]["content"] == module.SYSTEM_PLACE
+        assert len(json.loads(text)["items"]) <= 20
+        return _model_reply(body)
+
+    args = module.parse_args(["--field", "EV", "--batch", "20", "--workers", "2", "--progress", "20"])
+    result = module.run(args, post=post, root=root)
+    path = root / "pyramids" / "queues" / "EV.placed.jsonl"
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()]
+    assert result["wrote"] == 42
+    assert len(rows) == 42
+    assert inflight["max"] >= 2
+    assert any(len(json.loads(call["messages"][1]["content"])["items"]) == 20 for call in calls)
+    drivers = [row for row in rows if row.get("dpsir") == "driver"]
+    assert {row["name"] for row in drivers} == {
+        "food processing industry", "rubber processing", "waste processing industry",
+    }
+    assert {row["group_id"] for row in drivers} == {"EV.P.1"}
+    assert {row["status"] for row in drivers} == {"placed"}
+    assert {row["note"] for row in drivers} == {drivers[0]["note"]}
+    asked = [item["name"] for call in calls for item in json.loads(call["messages"][1]["content"])["items"]]
+    assert "food processing industry" not in asked
+    assert "rubber processing" not in asked
+    assert "waste processing industry" not in asked
+    assert "eta " in capsys.readouterr().out
+    before = path.read_text(encoding="utf-8")
+    again = module.run(args, post=post, root=root)
+    assert again["wrote"] == 0
+    assert path.read_text(encoding="utf-8") == before
+
+
+def test_bad_json_retries_splits_and_marks_unsure(tmp_path):
+    module = _queue_module()
+    items = [_place_item(number) for number in range(4)]
+    root = _queue_root(tmp_path, items)
+    calls = {"n": 0}
+
+    def post(body):
+        calls["n"] += 1
+        return {"choices": [{"message": {"content": "not json"}}]}
+
+    args = module.parse_args(["--field", "EV", "--batch", "15", "--workers", "1", "--progress", "100"])
+    module.run(args, post=post, root=root)
+    rows = [json.loads(line) for line in (root / "pyramids" / "queues" / "EV.placed.jsonl").read_text().splitlines()]
+    assert len(rows) == 4
+    assert {row["status"] for row in rows} == {"unsure"}
+    assert {row["group_id"] for row in rows} == {"unsure"}
+    assert calls["n"] > 4
+
+
+def test_unknown_group_needs_review(tmp_path):
+    module = _queue_module()
+    root = _queue_root(tmp_path, [_place_item(1)])
+
+    def post(body):
+        payload = json.loads(body["messages"][1]["content"])
+        rows = [{"id": item["id"], "group_id": "NOPE", "reason": "guess"} for item in payload["items"]]
+        return {"choices": [{"message": {"content": json.dumps({"items": rows})}}]}
+
+    args = module.parse_args(["--field", "EV", "--workers", "1", "--progress", "100"])
+    module.run(args, post=post, root=root)
+    row = json.loads((root / "pyramids" / "queues" / "EV.placed.jsonl").read_text().strip())
+    assert row["status"] == "needs_review"
+    assert row["group_id"] == "NOPE"
+
+
+def test_limit_and_dry_run_do_not_call_the_model(tmp_path, capsys):
+    module = _queue_module()
+    root = _queue_root(tmp_path, [_place_item(number) for number in range(10)])
+
+    def post(body):
+        raise AssertionError("dry-run must not call the model")
+
+    args = module.parse_args(["--field", "EV", "--limit", "5", "--dry-run", "--batch", "20", "--workers", "3"])
+    result = module.run(args, post=post, root=root)
+    assert result["wrote"] == 0
+    assert result["pending"] == 5
+    assert result["batch"] == 20
+    output = capsys.readouterr().out
+    assert "dry-run" in output
+    assert "OLLAMA_NUM_PARALLEL=3" in output
+    assert not (root / "pyramids" / "queues" / "EV.placed.jsonl").exists()
+
+    seen = []
+
+    def limited(body):
+        seen.append(body)
+        return _model_reply(body)
+
+    limited_args = module.parse_args(["--field", "EV", "--limit", "2", "--workers", "1", "--progress", "100"])
+    module.run(limited_args, post=limited, root=root)
+    assert len(seen) == 1
+    assert len(json.loads(seen[0]["messages"][1]["content"])["items"]) == 2
