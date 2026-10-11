@@ -755,3 +755,188 @@ def test_limit_and_dry_run_do_not_call_the_model(tmp_path, capsys):
     module.run(limited_args, post=limited, root=root)
     assert len(seen) == 1
     assert len(json.loads(seen[0]["messages"][1]["content"])["items"]) == 2
+
+
+def test_sonnet_list_price_per_thousand_items():
+    module = _queue_module()
+    assert module.parse_args(["--field", "EV"]).backend == "ollama"
+    assert module.parse_args(["--field", "EV"]).max_cost == 10
+    assert module.resolve_model("ollama", "") == "qwen3:30b-a3b"
+    assert module.resolve_model("anthropic", "") == "claude-sonnet-5-5"
+    assert module.resolve_model("anthropic", "claude-sonnet-4-5") == "claude-sonnet-4-5"
+    assert module.price_rates("claude-sonnet-5-5") == (2.0, 10.0, 2.5, 0.10)
+    assert module.price_rates("claude-sonnet-4-5") == (3.0, 15.0, 3.75, 0.30)
+    assert module.price_rates("claude-sonnet-5")[3] == 0.20
+    per_thousand = module.expected_usd_per_thousand("claude-sonnet-5-5")
+    assert abs(per_thousand - 0.3725) < 1e-9
+    assert abs(module.output_cap_usd_per_thousand("claude-sonnet-5-5") - 1.6125) < 1e-9
+    assert module.expected_usd_per_thousand("claude-sonnet-4-5") > per_thousand
+
+
+def test_ev_place_prefix_can_clear_the_cache_minimum():
+    module = _queue_module()
+    queue = _load(ROOT / "pyramids" / "queues" / "EV.json")
+    items = [item for item in queue["items"] if module.item_task(item) == "place"]
+    prefix = module.stable_prefix(module.cell_catalog("EV"), items)
+    assert "Do not force a fit." in prefix
+    assert "EV.P.1" in prefix and "EV.P.5" in prefix
+    assert len(prefix) >= 2048
+
+
+def test_anthropic_dry_run_prints_the_cached_request(tmp_path, capsys, monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    module = _queue_module()
+    root = _queue_root(tmp_path, [_place_item(number) for number in range(5)])
+
+    def post(body):
+        raise AssertionError("dry-run must not call the model")
+
+    args = module.parse_args([
+        "--field", "EV", "--backend", "anthropic", "--dry-run", "--limit", "5", "--max-cost", "10",
+    ])
+    result = module.run(args, post=post, root=root)
+    output = capsys.readouterr().out
+    assert result["wrote"] == 0
+    assert "backend=anthropic" in output
+    assert "model=claude-sonnet-5-5" in output
+    assert "expected $0.37 per 1000 items" in output
+    assert '"cache_control": {"type": "ephemeral"}' in output
+    assert "Do not force a fit." in output
+    assert not (root / "pyramids" / "queues" / "EV.placed.jsonl").exists()
+
+
+def test_anthropic_requires_a_key(tmp_path, monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    module = _queue_module()
+    root = _queue_root(tmp_path, [_place_item(1)])
+    args = module.parse_args(["--field", "EV", "--backend", "anthropic", "--workers", "1"])
+    try:
+        module.run(args, root=root)
+    except SystemExit as exc:
+        assert "ANTHROPIC_API_KEY" in str(exc)
+    else:
+        raise AssertionError("a live Anthropic run without a key must stop")
+    assert not (root / "pyramids" / "queues" / "EV.placed.jsonl").exists()
+
+
+def _anthropic_client(group_id, usage):
+    def client(payload):
+        assert payload["model"]
+        assert "temperature" not in payload
+        user = json.loads(payload["messages"][0]["content"])
+        rows = [
+            {"id": item["id"], "group_id": group_id, "reason": "not a load"}
+            for item in user["items"]
+        ]
+        return {
+            "content": [{"type": "tool_use", "name": payload["tools"][0]["name"], "input": {"items": rows}}],
+            "usage": usage,
+            "model": payload["model"],
+        }
+    return client
+
+
+def test_anthropic_fake_client_places_and_caches(tmp_path, capsys):
+    module = _queue_module()
+    root = _queue_root(tmp_path, [_pressure_item("drug (medicine)", "EV.P.1.4", "Introduced species are loads.")])
+    seen = []
+
+    def client(payload):
+        seen.append(payload)
+        assert payload["model"] == "claude-sonnet-5-5"
+        assert payload["max_tokens"] == 3000
+        assert "temperature" not in payload
+        assert payload["thinking"] == {"type": "between_tools"}
+        assert payload["output_config"] == {"effort": "high"}
+        assert payload["tool_choice"] == {"type": "auto"}
+        tool = payload["tools"][0]
+        assert tool["name"] == "record_placements"
+        assert tool["strict"] is True
+        assert tool["cache_control"] == {"type": "ephemeral"}
+        assert "items" in tool["input_schema"]["properties"]
+        assert payload["system"][0]["cache_control"] == {"type": "ephemeral"}
+        assert "Do not force a fit." in payload["system"][0]["text"]
+        user = payload["messages"][0]["content"]
+        choices = json.loads(user)["items"][0]["choices"]
+        assert choices[:5] == ["EV.P.1", "EV.P.2", "EV.P.3", "EV.P.4", "EV.P.5"]
+        assert choices[-2:] == ["unsure", "out_of_scope"]
+        return _anthropic_client("out_of_scope", {
+            "input_tokens": 1000,
+            "output_tokens": 400,
+            "cache_read_input_tokens": 500,
+            "cache_creation_input_tokens": 80,
+        })(payload)
+
+    args = module.parse_args([
+        "--field", "EV", "--backend", "anthropic", "--workers", "1", "--progress", "1", "--max-cost", "10",
+    ])
+    result = module.run(args, post=client, root=root)
+    assert len(seen) == 1
+    assert result["stopped"] is False
+    assert abs(result["cost"] - module.list_usd(
+        "claude-sonnet-5-5", input_tokens=1000, output_tokens=400, cache_read=500, cache_write=80,
+    )) < 1e-9
+    row = json.loads((root / "pyramids" / "queues" / "EV.placed.jsonl").read_text().strip())
+    assert row["status"] == "out_of_scope"
+    output = capsys.readouterr().out
+    assert "cost $" in output
+    assert "cache_read 500" in output
+    again = module.run(args, post=client, root=root)
+    assert again["wrote"] == 0
+    assert len(seen) == 1
+
+
+def test_anthropic_accepts_json_text_and_sonnet_45_forces_the_tool():
+    module = _queue_module()
+    item = _pressure_item("dust removal", "EV.P.1.3", "Extraction is a load.")
+    older = module.to_anthropic(
+        module.request_batch([item], catalog=[]),
+        "claude-sonnet-4-5",
+        module.stable_prefix([], [item]),
+    )
+    assert older["model"] == "claude-sonnet-4-5"
+    assert older["tool_choice"] == {"type": "tool", "name": "record_placements"}
+    assert "thinking" not in older
+    assert "temperature" not in older
+    text = json.dumps({"items": [{"id": "dust removal", "group_id": "unsure", "reason": "not a load"}]})
+    assert module.anthropic_content({"content": [{"type": "text", "text": text}]}) == text
+    parsed = module.parse_model_json(module.anthropic_content({
+        "content": [{"type": "tool_use", "name": "record_placements", "input": {"items": [
+            {"id": "dust removal", "group_id": "EV.P.4", "reason": "an action"},
+        ]}}],
+    }))
+    assert parsed[0]["group_id"] == "EV.P.4"
+
+
+def test_max_cost_stops_before_the_next_batch(tmp_path, capsys):
+    module = _queue_module()
+    items = [_place_item(number) for number in range(30)]
+    root = _queue_root(tmp_path, items)
+    calls = {"n": 0}
+
+    def client(payload):
+        calls["n"] += 1
+        user = json.loads(payload["messages"][0]["content"])
+        rows = [
+            {"id": item["id"], "group_id": "unsure", "reason": "no home"}
+            for item in user["items"]
+        ]
+        return {
+            "content": [{"type": "tool_use", "name": "record_placements", "input": {"items": rows}}],
+            "usage": {"input_tokens": 1_000_000, "output_tokens": 100},
+            "model": payload["model"],
+        }
+
+    args = module.parse_args([
+        "--field", "EV", "--backend", "anthropic", "--batch", "15", "--workers", "1",
+        "--max-cost", "1", "--progress", "100",
+    ])
+    result = module.run(args, post=client, root=root)
+    assert calls["n"] == 1
+    assert result["stopped"] is True
+    assert result["wrote"] == 15
+    assert result["cost"] > 1
+    rows = [json.loads(line) for line in (root / "pyramids" / "queues" / "EV.placed.jsonl").read_text().splitlines()]
+    assert {row["node_id"] for row in rows} == {f"N{number}" for number in range(15)}
+    assert "the model reply was not usable" not in (root / "pyramids" / "queues" / "EV.placed.jsonl").read_text()
+    assert "stopped at max-cost $1.00" in capsys.readouterr().out
