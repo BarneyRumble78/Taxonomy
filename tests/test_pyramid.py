@@ -417,7 +417,17 @@ def test_summary_request_asks_for_a_sentence():
     assert "summary" in item_schema["properties"]
     assert "group_id" not in item_schema["properties"]
     assert "is the class that holds" not in body["messages"][0]["content"]
+    assert "Both are" in body["messages"][0]["content"]
     assert body["messages"][0]["content"] == module.SYSTEM_SUMMARY
+    weak = module.row_from_model(
+        {"task": "summarise", "point_id": "EV.P.2.2.2", "node_id": "EV.P.2.2.2", "cell": "EV.O.A2"},
+        {"summary": "Both are freshwater bodies that are measured as states.", "reason": "same"},
+    )
+    assert weak["status"] == "needs_review"
+    assert not module.result_matches(
+        {"task": "summarise", "point_id": "EV.P.2.2.2", "node_id": "EV.P.2.2.2"},
+        weak,
+    )
 
 
 def _blob(point):
@@ -535,26 +545,37 @@ def test_batch_size_stays_between_15_and_25():
     assert module.clamp_batch(100) == 25
     assert module.clamp_workers(8) == 4
     assert module.clamp_workers(3) == 3
-    assert len(module.SYSTEM_PLACE) < 500
+    assert len(module.SYSTEM_PLACE) < 1200
+    assert "belong in State or Impact" in module.SYSTEM_PLACE
+    assert "clearly not environmental" in module.SYSTEM_PLACE
 
 
 def test_prompt_offers_every_cell_and_an_escape():
     module = _queue_module()
     catalog = module.cell_catalog("EV")
-    assert [row["group_id"] for row in catalog] == ["EV.P.1", "EV.P.2", "EV.P.3", "EV.P.4", "EV.P.5"]
+    by_id = {row["group_id"]: row for row in catalog}
+    assert by_id["EV.P.1"]["cell"] == "EV.O.A1"
+    assert by_id["EV.P.2.4"]["cell"] == "EV.O.A2"
+    assert by_id["EV.P.3.1"]["cell"] == "EV.O.A3"
+    assert by_id["EV.P.4.3"]["cell"] == "EV.O.A4"
+    assert by_id["EV.P.5.1"]["cell"] == "EV.O.A5"
     forced = [
         ("drug (medicine)", "EV.P.1.4", "Introduced species are the loads from pests."),
         ("dust removal", "EV.P.1.3", "Extraction is the load from taking a resource."),
         ("East-West trade", "EV.P.1.2", "Land and sea use changes are loads."),
         ("dual economy", "EV.P.1.2", "Land and sea use changes are loads."),
         ("dry deposition", "EV.P.1.1", "Emissions are the loads from pollutants."),
+        ("seismic activity", "EV.P.1.1", "Emissions are the loads from pollutants."),
     ]
+    top_groups = {"EV.P.1.1", "EV.P.2.1", "EV.P.2.4", "EV.P.3.1", "EV.P.4.2", "EV.P.5.3"}
     for name, group_id, statement in forced:
         body = module.request_batch([_pressure_item(name, group_id, statement)], catalog=catalog)
         choices = json.loads(body["messages"][1]["content"])["items"][0]["choices"]
-        assert choices[:5] == ["EV.P.1", "EV.P.2", "EV.P.3", "EV.P.4", "EV.P.5"]
+        assert {"EV.P.1", "EV.P.2", "EV.P.3", "EV.P.4", "EV.P.5"} <= set(choices)
+        assert top_groups <= set(choices)
         assert group_id in choices
         assert choices[-2:] == ["unsure", "out_of_scope"]
+        assert "belong in State or Impact" in body["messages"][0]["content"]
         assert "Do not force a fit." in body["messages"][0]["content"]
 
 
@@ -768,8 +789,8 @@ def test_sonnet_list_price_per_thousand_items():
     assert module.price_rates("claude-sonnet-4-5") == (3.0, 15.0, 3.75, 0.30)
     assert module.price_rates("claude-sonnet-5")[3] == 0.20
     per_thousand = module.expected_usd_per_thousand("claude-sonnet-5-5")
-    assert abs(per_thousand - 0.3725) < 1e-9
-    assert abs(module.output_cap_usd_per_thousand("claude-sonnet-5-5") - 1.6125) < 1e-9
+    assert abs(per_thousand - 0.90) < 1e-9
+    assert abs(module.output_cap_usd_per_thousand("claude-sonnet-5-5") - 1.80) < 1e-9
     assert module.expected_usd_per_thousand("claude-sonnet-4-5") > per_thousand
 
 
@@ -799,7 +820,7 @@ def test_anthropic_dry_run_prints_the_cached_request(tmp_path, capsys, monkeypat
     assert result["wrote"] == 0
     assert "backend=anthropic" in output
     assert "model=claude-sonnet-5-5" in output
-    assert "expected $0.37 per 1000 items" in output
+    assert "expected $0.90 per 1000 items" in output
     assert '"cache_control": {"type": "ephemeral"}' in output
     assert "Do not force a fit." in output
     assert not (root / "pyramids" / "queues" / "EV.placed.jsonl").exists()
@@ -858,7 +879,7 @@ def test_anthropic_fake_client_places_and_caches(tmp_path, capsys):
         assert "Do not force a fit." in payload["system"][0]["text"]
         user = payload["messages"][0]["content"]
         choices = json.loads(user)["items"][0]["choices"]
-        assert choices[:5] == ["EV.P.1", "EV.P.2", "EV.P.3", "EV.P.4", "EV.P.5"]
+        assert {"EV.P.1", "EV.P.2", "EV.P.3", "EV.P.4", "EV.P.5", "EV.P.1.1", "EV.P.2.4"} <= set(choices)
         assert choices[-2:] == ["unsure", "out_of_scope"]
         return _anthropic_client("out_of_scope", {
             "input_tokens": 1000,
@@ -940,3 +961,92 @@ def test_max_cost_stops_before_the_next_batch(tmp_path, capsys):
     assert {row["node_id"] for row in rows} == {f"N{number}" for number in range(15)}
     assert "the model reply was not usable" not in (root / "pyramids" / "queues" / "EV.placed.jsonl").read_text()
     assert "stopped at max-cost $1.00" in capsys.readouterr().out
+
+
+def test_cell_comes_from_the_chosen_group():
+    module = _queue_module()
+    catalog = module.cell_catalog("EV")
+    item = _pressure_item("compaction", "EV.P.1.1", "Emissions are loads.")
+    item["cell"] = "EV.O.A1"
+    row = module.row_from_model(item, {"group_id": "EV.P.2.4", "reason": "a soil condition"}, catalog)
+    assert row["status"] == "placed"
+    assert row["group_id"] == "EV.P.2.4"
+    assert row["cell"] == "EV.O.A2"
+    hazard = module.row_from_model(
+        _pressure_item("seismic activity", "EV.P.1.1", "Emissions are loads."),
+        {"group_id": "EV.P.3.1", "reason": "a natural harm"},
+        catalog,
+    )
+    assert hazard["status"] == "placed"
+    assert hazard["cell"] == "EV.O.A3"
+
+
+def test_resume_drops_duplicate_jsonl_rows(tmp_path):
+    module = _queue_module()
+    item = _place_item(1)
+    root = _queue_root(tmp_path, [item])
+    path = root / "pyramids" / "queues" / "EV.placed.jsonl"
+    first = {"node_id": "N1", "name": "concept 1", "group_id": "EV.P.1.1", "status": "needs_review", "cell": "EV.O.A1", "reason": "first"}
+    second = {"node_id": "N1", "name": "concept 1", "group_id": "EV.P.1.1", "status": "needs_review", "cell": "EV.O.A1", "reason": "second"}
+    path.write_text(json.dumps(first) + "\n" + json.dumps(second) + "\n", encoding="utf-8")
+    assert module.compact_jsonl(path) == 1
+    kept = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()]
+    assert len(kept) == 1
+    assert kept[0]["reason"] == "second"
+    saved = module.load_previous(root / "pyramids" / "queues" / "EV.placed.json", path)
+    assert len(saved) == 1
+    assert saved[0]["reason"] == "second"
+
+
+def test_only_status_reruns_the_named_rows(tmp_path):
+    module = _queue_module()
+    items = [
+        _pressure_item("seismic activity", "EV.P.1.1", "Emissions are loads."),
+        _pressure_item("banking", "EV.P.1.2", "Land use is a load."),
+        _place_item(3),
+    ]
+    items[0]["node_id"] = "SEISMIC"
+    items[1]["node_id"] = "BANK"
+    items[2]["node_id"] = "N3"
+    previous = [
+        {"node_id": "SEISMIC", "name": "seismic activity", "group_id": "out_of_scope", "status": "out_of_scope", "cell": "EV.O.A1", "reason": "a natural process"},
+        {"node_id": "BANK", "name": "banking", "group_id": "EV.P.4.3", "status": "needs_review", "cell": "EV.O.A1", "reason": "outside the list"},
+        {"node_id": "N3", "name": "concept 3", "group_id": "EV.P.1.1", "status": "placed", "cell": "EV.O.A1", "reason": "kept"},
+    ]
+    root = _queue_root(tmp_path, items, previous=previous)
+    # The runner reads placed.json and the jsonl. Put the duplicate only in the jsonl.
+    jsonl = root / "pyramids" / "queues" / "EV.placed.jsonl"
+    jsonl.write_text(
+        json.dumps({"node_id": "BANK", "name": "banking", "group_id": "unsure", "status": "unsure", "cell": "EV.O.A1", "reason": "older"}) + "\n",
+        encoding="utf-8",
+    )
+    asked = []
+
+    def post(body):
+        payload = json.loads(body["messages"][1]["content"])
+        asked.extend(item["id"] for item in payload["items"])
+        rows = []
+        for item in payload["items"]:
+            group = "EV.P.3.1" if item["id"] == "SEISMIC" else "out_of_scope"
+            rows.append({"id": item["id"], "group_id": group, "reason": "again"})
+        return {"choices": [{"message": {"content": json.dumps({"items": rows})}}]}
+
+    args = module.parse_args([
+        "--field", "EV", "--workers", "1", "--progress", "100",
+        "--only-status", "out_of_scope,needs_review,unsure",
+    ])
+    result = module.run(args, post=post, root=root)
+    assert set(asked) == {"SEISMIC", "BANK"}
+    assert "N3" not in asked
+    assert result["wrote"] == 2
+    rows = [json.loads(line) for line in jsonl.read_text(encoding="utf-8").splitlines()]
+    by_id = {row["node_id"]: row for row in rows}
+    assert len(rows) == len(by_id)
+    assert by_id["SEISMIC"]["status"] == "placed"
+    assert by_id["SEISMIC"]["cell"] == "EV.O.A3"
+    assert by_id["SEISMIC"]["group_id"] == "EV.P.3.1"
+    assert by_id["BANK"]["status"] == "out_of_scope"
+    assert by_id["BANK"]["reason"] == "again"
+    again = module.run(args, post=post, root=root)
+    assert again["wrote"] == 1
+    assert again["pending"] == 1

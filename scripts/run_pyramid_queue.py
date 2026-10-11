@@ -28,6 +28,8 @@ that key is set.
     python3 scripts/run_pyramid_queue.py --field EV --batch 20 --workers 3
     python3 scripts/run_pyramid_queue.py --field EV --api openai
     python3 scripts/run_pyramid_queue.py --field EV --backend anthropic --max-cost 10
+    python3 scripts/run_pyramid_queue.py --field EV --backend anthropic --max-cost 10 \\
+        --only-status out_of_scope,needs_review,unsure
 """
 import argparse
 import json
@@ -61,26 +63,30 @@ ANTHROPIC_RATES = (
     ("sonnet-5", 2.00, 10.00, 2.50, 0.20),
     ("sonnet", 3.00, 15.00, 3.75, 0.30),
 )
-# Mean EV place batch of 20, measured 11 Oct 2026 from pyramids/queues/EV.json.
-# 4,500 characters in the request (~1,125 tokens) and 2,080 in a short reply (~520).
+# Fitted to the EV Sonnet run of 12 Oct 2026 (83f86ef): $4.50 for about 5,060 items,
+# which is $0.90 per 1,000. A character count of the prompt had put the bill at $0.37.
+# These counts reproduce $0.90 at claude-sonnet-5-5 list prices ($2 and $10 per million).
 MEASURED_BATCH_ITEMS = 20
-MEASURED_BATCH_INPUT_TOKENS = 1125
-MEASURED_BATCH_OUTPUT_TOKENS = 520
+MEASURED_BATCH_INPUT_TOKENS = 3000
+MEASURED_BATCH_OUTPUT_TOKENS = 1200
 
 SYSTEM_PLACE = (
     "DPSIR. Driver: an industry or activity that creates a load; fold it into pressures. "
     "Pressure: a load from human activity. "
     "State: a measured condition. "
     "Impact: a harm, or the attribution of that harm. "
+    "Natural drivers, hazards, processes, and species or ecosystem concepts belong in State or Impact. "
     "Response: an action that changes a pressure or a state. "
     "Limit: a threshold a state is not meant to cross. "
     "Place each item on one group_id from its choices. "
-    "If none of the groups is the right home, choose unsure or out_of_scope. Do not force a fit."
+    "out_of_scope is only for a concept that is clearly not environmental. "
+    "If none of the groups is the right home, choose unsure. Do not force a fit."
 )
 ESCAPE = ("unsure", "out_of_scope")
 SYSTEM_SUMMARY = (
-    "Write one sentence on what these ideas have in common. "
-    "State the shared feature. Do not only name the topic. "
+    "Write one sentence that states the insight these ideas share. "
+    "Name the shared feature. Do not open with 'Both are' or 'All are'. "
+    "Do not only list the members. "
     "Reply with the schema only."
 )
 PLACE_SCHEMA = {
@@ -151,7 +157,9 @@ def result_matches(item, row, catalog=None):
     if item_task(row) != item_task(item):
         return False
     if item_task(item) == "summarise":
-        return bool(item.get("point_id")) and row.get("point_id") == item.get("point_id")
+        if not item.get("point_id") or row.get("point_id") != item.get("point_id"):
+            return False
+        return not summary_is_weak(row.get("summary"))
     if row.get("node_id") != item.get("node_id"):
         return False
     if row.get("dpsir") == "driver":
@@ -191,8 +199,20 @@ def _short_statement(statement):
     return text
 
 
+def _point_cell(point, parent_cell=None):
+    cell = point.get("cell") or parent_cell
+    anchor = str(point.get("anchor") or "")
+    if not cell and anchor.startswith("cell:"):
+        cell = anchor.split(":", 1)[1]
+    if not cell and anchor.startswith("facet:"):
+        parts = anchor.split(":")
+        if len(parts) >= 2:
+            cell = parts[1]
+    return cell
+
+
 def cell_catalog(field="EV", root=None):
-    """The DPSIR cells, one group each. Facet groups are added per item."""
+    """Each DPSIR cell, then the top group under it. Every item is offered this whole set."""
     root = Path(root) if root else ROOT
     key = (field, str(root))
     if key in _CATALOG_CACHE:
@@ -204,26 +224,61 @@ def cell_catalog(field="EV", root=None):
     if pyramid.exists():
         data = json.loads(pyramid.read_text(encoding="utf-8"))
         for point in (data.get("key_line") or {}).get("points") or []:
+            cell = _point_cell(point)
             if point.get("id"):
                 groups.append({
                     "group_id": point["id"],
-                    "cell": point.get("cell"),
+                    "cell": cell,
                     "statement": point.get("statement") or "",
                 })
+            for child in (point.get("support") or {}).get("points") or []:
+                if child.get("id"):
+                    groups.append({
+                        "group_id": child["id"],
+                        "cell": _point_cell(child, cell),
+                        "statement": child.get("statement") or "",
+                    })
     if not groups:
         rules = load_rules(field, root)
         for index, cell in enumerate(rules.get("cells") or [], start=1):
+            parent = f"{field}.P.{index}"
             groups.append({
-                "group_id": f"{field}.P.{index}",
+                "group_id": parent,
                 "cell": cell.get("cell"),
                 "statement": cell.get("statement") or "",
             })
+            for facet_index, facet in enumerate(cell.get("facets") or [], start=1):
+                groups.append({
+                    "group_id": f"{parent}.{facet_index}",
+                    "cell": cell.get("cell"),
+                    "statement": facet.get("statement") or "",
+                })
     _CATALOG_CACHE[key] = groups
     return groups
 
 
+def cell_for_group(group_id, catalog=None, item=None):
+    """The cell that owns this group. A facet inherits the cell of its parent."""
+    by_id = {}
+    for row in catalog or []:
+        if row.get("group_id"):
+            by_id[row["group_id"]] = row.get("cell")
+    if by_id.get(group_id):
+        return by_id[group_id]
+    best = None
+    for gid, cell in by_id.items():
+        if cell and group_id.startswith(gid + ".") and (best is None or len(gid) > len(best[0])):
+            best = (gid, cell)
+    if best:
+        return best[1]
+    for cand in (item or {}).get("candidates") or []:
+        if cand.get("group_id") == group_id and cand.get("cell"):
+            return cand["cell"]
+    return None
+
+
 def choice_groups(item, catalog=None):
-    """Every DPSIR cell, then this item's own groups. No cell is dropped."""
+    """Top groups from every DPSIR cell, then this item's own groups."""
     groups = []
     seen = set()
 
@@ -405,12 +460,21 @@ def offered_ids(item, catalog=None):
     return {row["group_id"] for row in choice_groups(item, catalog)} | set(ESCAPE)
 
 
+def summary_is_weak(text):
+    """A summary that only says the members are the same kind of thing."""
+    low = (text or "").lstrip().lower()
+    return low.startswith("both are") or low.startswith("all are")
+
+
 def row_from_model(item, raw, catalog=None):
     row = _base_row(item, raw.get("reason"))
     if item_task(item) == "summarise":
         summary = str(raw.get("summary") or "").strip()
         row["summary"] = summary
-        row["status"] = "placed" if summary else "needs_review"
+        if not summary or summary_is_weak(summary):
+            row["status"] = "needs_review"
+        else:
+            row["status"] = "placed"
         return row
     group_id = str(raw.get("group_id") or "").strip()
     offered = offered_ids(item, catalog)
@@ -423,6 +487,9 @@ def row_from_model(item, raw, catalog=None):
     elif group_id in offered:
         row["group_id"] = group_id
         row["status"] = "placed"
+        cell = cell_for_group(group_id, catalog, item)
+        if cell:
+            row["cell"] = cell
     else:
         row["group_id"] = group_id
         row["status"] = "needs_review"
@@ -485,16 +552,68 @@ def resolve_batch(items, post, allow_retry=True, api="native", catalog=None):
     return good
 
 
+def row_key(row):
+    """One saved answer per placed node, and one per summary point."""
+    if item_task(row) == "summarise":
+        return ("summarise", str(row.get("point_id") or ""))
+    return ("place", str(row.get("node_id") or ""))
+
+
+def row_status(row):
+    """A summary that only says 'Both are' counts as needs_review."""
+    if item_task(row) == "summarise" and summary_is_weak(row.get("summary")):
+        return "needs_review"
+    return row.get("status") or ""
+
+
+def dedupe_rows(rows):
+    """Last row for each item wins. Earlier copies of the same node are dropped."""
+    order = []
+    latest = {}
+    for row in rows:
+        key = row_key(row)
+        if key not in latest:
+            order.append(key)
+        latest[key] = row
+    return [latest[key] for key in order]
+
+
+def read_jsonl(path):
+    rows = []
+    if not path.exists():
+        return rows
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            rows.append(json.loads(line))
+    return rows
+
+
+def compact_jsonl(path):
+    """Rewrite the JSONL so each item appears once. Returns how many copies were dropped."""
+    rows = read_jsonl(path)
+    kept = dedupe_rows(rows)
+    if len(kept) == len(rows):
+        return 0
+    path.write_text(
+        "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in kept),
+        encoding="utf-8",
+    )
+    return len(rows) - len(kept)
+
+
 def load_previous(json_path, jsonl_path):
     rows = []
     if json_path.exists():
         previous = json.loads(json_path.read_text(encoding="utf-8"))
         rows.extend(previous.get("items") or [])
-    if jsonl_path.exists():
-        for line in jsonl_path.read_text(encoding="utf-8").splitlines():
-            if line.strip():
-                rows.append(json.loads(line))
-    return rows
+    rows.extend(read_jsonl(jsonl_path))
+    return dedupe_rows(rows)
+
+
+def parse_only_status(value):
+    if not value:
+        return ()
+    return tuple(part.strip() for part in str(value).split(",") if part.strip())
 
 
 def chunks(items, size):
@@ -558,7 +677,7 @@ def list_usd(model, input_tokens=0, output_tokens=0, cache_read=0, cache_write=0
 
 
 def expected_usd_per_thousand(model=None):
-    """Expected list price for 1,000 placed items, with no thinking tokens and no cache."""
+    """List price for 1,000 items, fitted to the EV Sonnet run at $0.90 per 1,000."""
     model = model or DEFAULT_ANTHROPIC_MODEL
     calls = 1000 / MEASURED_BATCH_ITEMS
     return list_usd(
@@ -820,6 +939,11 @@ def parse_args(argv=None):
         default=DEFAULT_MAX_COST,
         help="Stop before a call that would pass this many USD. 0 means no cap. Default 10.",
     )
+    parser.add_argument(
+        "--only-status",
+        default="",
+        help="Ask again only for these statuses, comma-separated. Example: out_of_scope,needs_review,unsure.",
+    )
     return parser.parse_args(argv)
 
 
@@ -855,8 +979,18 @@ def run(args, post=None, root=None):
         max_cost = float(max_cost)
     except (TypeError, ValueError):
         max_cost = DEFAULT_MAX_COST
+    if not args.dry_run:
+        compact_jsonl(dest_jsonl)
     saved = load_previous(dest_json, dest_jsonl)
-    pending = [item for item in items if not any(result_matches(item, row, catalog) for row in saved)]
+    only = parse_only_status(getattr(args, "only_status", ""))
+    if only:
+        latest = {row_key(row): row for row in saved}
+        pending = [
+            item for item in items
+            if (latest.get(row_key(item)) is not None and row_status(latest[row_key(item)]) in only)
+        ]
+    else:
+        pending = [item for item in items if not any(result_matches(item, row, catalog) for row in saved)]
     if args.limit and args.limit > 0:
         pending = pending[:args.limit]
     if args.dry_run:
@@ -867,20 +1001,21 @@ def run(args, post=None, root=None):
                 drivers += 1
             else:
                 model_preview.append(item)
+        only_bit = f" only-status={','.join(only)}" if only else ""
         if backend == "anthropic":
             per_thousand = expected_usd_per_thousand(model)
             print(
                 f"dry-run field={field} pending={len(pending)} drivers={drivers} "
                 f"model_items={len(model_preview)} batch={batch_size} workers={workers} "
                 f"backend=anthropic model={model} max-cost={max_cost:.2f} "
-                f"expected ${per_thousand:.2f} per 1000 items"
+                f"expected ${per_thousand:.2f} per 1000 items{only_bit}"
             )
         else:
             print(
                 f"dry-run field={field} pending={len(pending)} drivers={drivers} "
                 f"model={len(model_preview)} batch={batch_size} workers={workers} api={api} "
                 f"endpoint={chat_url('http://localhost:11434', api)} "
-                f"(set OLLAMA_NUM_PARALLEL={workers} before ollama serve)"
+                f"(set OLLAMA_NUM_PARALLEL={workers} before ollama serve){only_bit}"
             )
         if model_preview:
             sample = list(chunks(model_preview, batch_size))[0]
@@ -962,17 +1097,18 @@ def run(args, post=None, root=None):
                 counts["since"] = 0
                 progress_line()
 
+    only_bit = f" only-status={','.join(only)}" if only else ""
     if backend == "anthropic":
         print(
             f"field={field} pending={total} batch={batch_size} workers={workers} "
             f"backend=anthropic model={model} max-cost={max_cost:.2f} "
-            f"expected ${expected_usd_per_thousand(model):.2f} per 1000 items",
+            f"expected ${expected_usd_per_thousand(model):.2f} per 1000 items{only_bit}",
             flush=True,
         )
     else:
         print(
             f"field={field} pending={total} batch={batch_size} workers={workers} api={api} "
-            f"endpoint={url} (set OLLAMA_NUM_PARALLEL={workers} before ollama serve)",
+            f"endpoint={url} (set OLLAMA_NUM_PARALLEL={workers} before ollama serve){only_bit}",
             flush=True,
         )
     local = []
@@ -1005,6 +1141,7 @@ def run(args, post=None, root=None):
                     record([unsure_row(item) for item in batch])
     if counts["done"] and counts["since"]:
         progress_line()
+    compact_jsonl(dest_jsonl)
     print(f"wrote {counts['done']} items to {dest_jsonl}", flush=True)
     if tracker is not None:
         print(tracker.line(), flush=True)
