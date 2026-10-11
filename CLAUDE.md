@@ -46,7 +46,8 @@ Run check, registry, tests and site build after any change to a pyramid, the lex
 
 ## v3 (branch v3-foundations): applying knowledge
 - Purpose and modes: `standard/STANDARD_V3.md` (Survey, Consult, Connect, Check, Zoom). R1 one-home applies to Check only.
-- `maps/<FIELD>/`: subfield maps from authority schemes (MSC2020 for MA; record licence per map).
+- `maps/<FIELD>/`: subfield maps copied from published taxonomies, every node placed under a cell of its owning field. ANZSRC 2020 for all fields; MSC2020 (MA), PhySH (PH), JEL (EC), GCMD (EA), MeSH 2026, ACM CCS 2012 and LCC outlines split by owner. `maps/index.json` names each field's primary map. Raw downloads in `sources/`. Rebuild: `python3 scripts/build_maps.py && python3 scripts/build_maps_more.py`; check: `python3 scripts/check_coverage.py`.
+- `bench/`: retrodiction problems, the locked answer key and the 100-case cross-connection catalogue (`python3 scripts/build_bench.py`). Never put `bench/retrodiction_answers.json` or `bench/cross_connections.json` into a prompt, card or lexicon.
 - `cards/lens/`: lens cards per field and cell (`python3 scripts/build_lens_cards.py`; MA written by hand).
 - `cards/toolkit/`: toolkit cards with problem signatures (`python3 scripts/build_toolkit_cards.py`).
 - `signatures/vocabulary.json`: controlled facets for problem signatures. `schemas/`: JSON schemas.

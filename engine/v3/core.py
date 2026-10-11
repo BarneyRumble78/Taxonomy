@@ -157,6 +157,10 @@ def _nodes(field):
         nodes = []
         if folder.is_dir():
             files = sorted(p for p in folder.glob("*.json") if p.is_file())
+            index = ROOT / "maps" / "index.json"
+            if index.exists():
+                primary = json.loads(index.read_text(encoding="utf-8")).get(field, {}).get("primary")
+                files = [p for p in files if p.name == primary] + [p for p in files if p.name != primary]
             if files:
                 nodes = json.loads(files[0].read_text(encoding="utf-8")).get("nodes") or []
         _MAPS[key] = nodes
