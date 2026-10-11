@@ -8,6 +8,8 @@ source_found or tested unless the model reply included a source.
 import json, re, time
 from pathlib import Path
 
+from llm import LLMError
+
 ROOT = Path(__file__).resolve().parents[2]
 VOCAB = json.loads((ROOT / "signatures" / "vocabulary.json").read_text())["facets"]
 FIELDS = "MA PH CH BI EA MD EN CS MS EC BU ST PO LA PL HI LN AR RE ED DE AG EV IS IK".split()
@@ -178,8 +180,16 @@ def _listing(nodes, tk):
 
 
 def clean_signature(sig):
+    """Keep known facet values. A string is parsed as JSON; anything else empty is dropped."""
+    if isinstance(sig, str):
+        try:
+            sig = json.loads(sig)
+        except json.JSONDecodeError:
+            return {}
+    if not isinstance(sig, dict):
+        return {}
     out = {}
-    for facet, vals in (sig or {}).items():
+    for facet, vals in sig.items():
         vals = [vals] if isinstance(vals, str) else vals
         if not isinstance(vals, list):
             continue
@@ -211,6 +221,43 @@ def save(record):
     return record
 
 
+def run_path(record):
+    return str(ROOT / "runs" / f"{record['id']}.json")
+
+
+def _keep(exc, record):
+    """Save a partial run (R16) and re-raise with the file path on the exception."""
+    if not getattr(exc, "path", None):
+        record = dict(record)
+        text = str(exc).strip()
+        record["error"] = text.splitlines()[0] if text else exc.__class__.__name__
+        try:
+            saved = save(record)
+        except Exception:
+            raise exc
+        exc.path = run_path(saved)
+    raise exc
+
+
+def fit_batch(n_nodes, batch, deepen, framing, call_limit):
+    """Enlarge the batch so framing, the batches, deepening and synthesis fit the cap.
+
+    The count is one call to frame (when framing), one call per batch, up to
+    `deepen` child calls, and one synthesis. A cap too small for that overhead
+    is left alone, and the run stops when the cap is hit.
+    """
+    if n_nodes <= 0 or batch < 1:
+        return batch
+    overhead = (1 if framing else 0) + max(0, deepen) + 1
+    room = call_limit - overhead
+    if room < 1:
+        return batch
+    batches = (n_nodes + batch - 1) // batch
+    if batches <= room:
+        return batch
+    return (n_nodes + room - 1) // room
+
+
 def _rows(raw):
     return raw if isinstance(raw, list) else []
 
@@ -218,9 +265,10 @@ def _rows(raw):
 # ---------- E1 Frame ----------
 def frame(text, llm, call_limit=24):
     llm = bound(llm, call_limit)
-    cues = cue_hint(text)
-    cue_line = f"Keyword cues, a first pass only, not a decision: {', '.join(cues)}.\n" if cues else ""
-    prompt = f"""You frame problems for a knowledge instrument. Turn the user's input into a precise problem.
+    try:
+        cues = cue_hint(text)
+        cue_line = f"Keyword cues, a first pass only, not a decision: {', '.join(cues)}.\n" if cues else ""
+        prompt = f"""You frame problems for a knowledge instrument. Turn the user's input into a precise problem.
 {DATA}
 
 Input:
@@ -233,22 +281,17 @@ Input:
   "fields": ["up to 8 two-letter field codes most likely to matter, from {FIELDS}"],
   "unknowns": ["facts that would change the answer"],
   "clarifying_questions": ["at most 3, only if the input is genuinely ambiguous"]}}"""
-    r = llm(prompt)
-    r["signature"] = clean_signature(r.get("signature"))
-    r["fields"] = [f for f in _rows(r.get("fields")) if f in FIELDS]
-    return r
+        r = llm(prompt)
+        r["signature"] = clean_signature(r.get("signature"))
+        r["fields"] = [f for f in _rows(r.get("fields")) if f in FIELDS]
+        return r
+    except Exception as exc:
+        _keep(exc, {"mode": "frame", "input": text})
 
 
 # ---------- Survey (all of knowledge) ----------
-def survey(text, llm, fields=None, framed=None, call_limit=24):
-    chosen = known_fields(fields)
-    llm = bound(llm, call_limit)
-    framed = framed or frame(text, llm)
-    cards = {f: lens_cards(f) for f in chosen}
-    lens_txt = "\n".join(
-        f"- {f} {plain(c[0]['name'])}: {c[0]['question']} Cells: " + "; ".join(plain(x["name"]) for x in c[1:])
-        for f, c in cards.items() if c)
-    prompt = f"""Apply the whole of human knowledge to this problem, field by field.
+def _survey_prompt(framed, lens_txt):
+    return f"""Apply the whole of human knowledge to this problem, field by field.
 {DATA}
 Problem:
 {fence("user", framed.get("problem", ""))}
@@ -266,12 +309,34 @@ Return only JSON:
   "collisions": ["where two fields pull against each other"],
   "blind_spots": ["fields people usually ignore here that matter"],
   "synthesis": {{"governing_thought": "", "key_line": ["2-5 supporting points"], "next_steps": [""]}}}}"""
-    r = llm(prompt, max_tokens=8000)
-    views, aside = _rows(r.get("views")), _rows(r.get("set_aside"))
-    covered = {v.get("field") for v in views if isinstance(v, dict)} | {s.get("field") for s in aside if isinstance(s, dict)}
-    r["uncovered"] = [f for f in chosen if f not in covered]
-    return save({"mode": "survey", "input": text, "framed": framed, "signature": framed.get("signature"),
-                 "consulted": chosen, "result": r})
+
+
+def survey(text, llm, fields=None, framed=None, call_limit=24):
+    chosen = known_fields(fields)
+    llm = bound(llm, call_limit)
+    got = framed
+    try:
+        got = got or frame(text, llm)
+        cards = {f: lens_cards(f) for f in chosen}
+        lens_txt = "\n".join(
+            f"- {f} {plain(c[0]['name'])}: {c[0]['question']} Cells: " + "; ".join(plain(x["name"]) for x in c[1:])
+            for f, c in cards.items() if c)
+        try:
+            r = llm(_survey_prompt(got, lens_txt), max_tokens=8000)
+        except RuntimeError:
+            raise
+        except (LLMError, ValueError) as exc:
+            r = {"views": [], "set_aside": [], "error": str(exc)}
+        views, aside = _rows(r.get("views")), _rows(r.get("set_aside"))
+        covered = {v.get("field") for v in views if isinstance(v, dict)} | {s.get("field") for s in aside if isinstance(s, dict)}
+        missed = [f for f in chosen if f not in covered]
+        r["uncovered"] = missed
+        r["not_returned"] = missed
+        return save({"mode": "survey", "input": text, "framed": got, "signature": got.get("signature"),
+                     "consulted": chosen, "not_returned": missed, "result": r})
+    except Exception as exc:
+        _keep(exc, {"mode": "survey", "input": text, "framed": got, "signature": (got or {}).get("signature") if isinstance(got, dict) else None,
+                    "consulted": chosen, "not_returned": list(chosen), "result": None})
 
 
 # ---------- Consult (a whole field) ----------
@@ -282,15 +347,8 @@ def _nodes_for(field):
     return [{"id": c["id"], "name": c["name"]} for c in lens_cards(field)[1:]]
 
 
-def consult(text, field, llm, batch=16, deepen=3, framed=None, call_limit=24):
-    field = _one_field(field)
-    llm = bound(llm, call_limit)
-    framed = framed or frame(text, llm)
-    nodes, tk = _nodes_for(field), toolkit(field)
-    findings = {}
-    for i in range(0, len(nodes), batch):
-        part = nodes[i:i + batch]
-        prompt = f"""You are the whole of the field {field}, every specialist at once.
+def _consult_batch_prompt(field, framed, part, tk):
+    return f"""You are the whole of the field {field}, every specialist at once.
 {DATA}
 Problem:
 {fence("user", framed.get("problem", ""))}
@@ -300,36 +358,61 @@ Consider EACH subfield below. For each, say whether it applies, and if so how a 
 {fence("card", _listing(part, tk))}
 {RULES}
 Return only JSON: {{"nodes": [{{"id": "", "applies": "yes|maybe|no", "approach": "", "known_results": [""], "conditions": [{{"condition": "", "met": "yes|no|unknown"}}], "promise": 0-5, "cost": 0-5}}]}}"""
-        for n in _rows(llm(prompt, max_tokens=6000).get("nodes")):
-            if isinstance(n, dict):
-                findings[n.get("id")] = n
-    missing = [n["id"] for n in nodes if n["id"] not in findings]
-    ranked = sorted((f for f in findings.values() if f.get("applies") in ("yes", "maybe")),
-                    key=lambda f: (-num(f.get("promise")), num(f.get("cost"))))
+
+
+def consult(text, field, llm, batch=16, deepen=3, framed=None, call_limit=24):
+    field = _one_field(field)
+    llm = bound(llm, call_limit)
+    nodes, tk = _nodes_for(field), toolkit(field)
+    batch = fit_batch(len(nodes), batch, deepen, framed is None, call_limit)
+    got = framed
+    findings = {}
     deeper = []
-    for f in ranked[:deepen]:
-        kids = children(field, f["id"])
-        if not kids:
-            continue
-        prompt = f"""Go deeper inside {f['id']} for this problem:
-{fence("user", framed.get("problem", ""))}
+    try:
+        got = got or frame(text, llm)
+        for i in range(0, len(nodes), batch):
+            part = nodes[i:i + batch]
+            try:
+                raw = llm(_consult_batch_prompt(field, got, part, tk), max_tokens=6000)
+            except RuntimeError:
+                raise
+            except (LLMError, ValueError):
+                continue
+            for n in _rows(raw.get("nodes")):
+                if isinstance(n, dict):
+                    findings[n.get("id")] = n
+        missing = [n["id"] for n in nodes if n["id"] not in findings]
+        ranked = sorted((f for f in findings.values() if f.get("applies") in ("yes", "maybe")),
+                        key=lambda f: (-num(f.get("promise")), num(f.get("cost"))))
+        for f in ranked[:deepen]:
+            kids = children(field, f["id"])
+            if not kids:
+                continue
+            prompt = f"""Go deeper inside {f['id']} for this problem:
+{fence("user", got.get("problem", ""))}
 Earlier view: {f.get("approach")}
 Sub-areas: {"; ".join(k["code"] + " " + plain(k["name"]) for k in kids)}
 Pick the 1-3 most useful sub-areas and give specific methods or theorems with their conditions.
 {RULES}
 Return only JSON: {{"node": "{f['id']}", "picks": [{{"code": "", "method": "", "conditions": [{{"condition": "", "met": "yes|no|unknown"}}], "first_step": ""}}]}}"""
-        deeper.append(llm(prompt, max_tokens=3000))
-    prompt = f"""Synthesise a Minto answer for the problem:
-{fence("user", framed.get("problem", ""))}
+            deeper.append(llm(prompt, max_tokens=3000))
+        prompt = f"""Synthesise a Minto answer for the problem:
+{fence("user", got.get("problem", ""))}
 Field consulted: {field}. Findings: {clip_json(ranked[:12], 20000)}
 Deeper work: {clip_json(deeper, 12000)}
 {DATA}
 {RULES}
 Return only JSON: {{"governing_thought": "", "routes": [{{"summary": "", "nodes": [""], "why": "", "conditions_open": [""], "status": "proposed|conditions_checked", "promise": 0-5, "cost": 0-5}}], "surprises": ["routes from unexpected subfields"], "verify_next": [""]}}"""
-    synth = llm(prompt, max_tokens=5000)
-    return save({"mode": "consult", "input": text, "field": field, "framed": framed, "signature": framed.get("signature"),
-                 "consulted": [n["id"] for n in nodes], "not_returned": missing, "findings": findings,
-                 "deeper": deeper, "result": synth})
+        synth = llm(prompt, max_tokens=5000)
+        return save({"mode": "consult", "input": text, "field": field, "framed": got, "signature": got.get("signature"),
+                     "consulted": [n["id"] for n in nodes], "not_returned": missing, "findings": findings,
+                     "deeper": deeper, "result": synth})
+    except Exception as exc:
+        missing = [n["id"] for n in nodes if n["id"] not in findings]
+        _keep(exc, {"mode": "consult", "input": text, "field": field,
+                    "framed": got, "signature": got.get("signature") if isinstance(got, dict) else None,
+                    "consulted": [n["id"] for n in nodes], "not_returned": missing, "findings": findings,
+                    "deeper": deeper, "result": None})
 
 
 # ---------- Connect (distant tools with the same shape) ----------
@@ -339,17 +422,24 @@ def connect_run(text, field, llm, top=8, framed=None, call_limit=24):
     from connect import connect as match
     field = _one_field(field)
     llm = bound(llm, call_limit)
-    framed = framed or frame(text, llm)
-    cands = match(framed.get("signature", {}), field, top)
-    prompt = f"""Problem:
-{fence("user", framed.get("problem", ""))}
+    got = framed
+    cands = []
+    try:
+        got = got or frame(text, llm)
+        cands = match(got.get("signature", {}), field, top)
+        prompt = f"""Problem:
+{fence("user", got.get("problem", ""))}
 {DATA}
-Signature: {json.dumps(framed.get("signature", {}))}
+Signature: {json.dumps(got.get("signature", {}))}
 Candidate tools from across {field}, chosen by matching the problem's shape (some may be from distant subfields):
 {fence("card", clip_json(cands, 20000))}
 For each candidate: explain the mapping (what in the problem corresponds to what in the tool), check each condition (yes/no/unknown), and rate promise 0-5. Flag the most surprising viable candidate.
 {RULES}
 Return only JSON: {{"candidates": [{{"card": "", "mapping": "", "conditions": [{{"condition": "", "met": "yes|no|unknown"}}], "promise": 0-5, "status": "proposed|conditions_checked"}}], "most_surprising": "", "verify_next": [""]}}"""
-    r = llm(prompt, max_tokens=5000)
-    return save({"mode": "connect", "input": text, "field": field, "framed": framed, "signature": framed.get("signature"),
-                 "consulted": [c["card"] for c in cands], "matcher": cands, "result": r})
+        r = llm(prompt, max_tokens=5000)
+        return save({"mode": "connect", "input": text, "field": field, "framed": got, "signature": got.get("signature"),
+                     "consulted": [c["card"] for c in cands], "matcher": cands, "result": r})
+    except Exception as exc:
+        _keep(exc, {"mode": "connect", "input": text, "field": field,
+                    "framed": got, "signature": got.get("signature") if isinstance(got, dict) else None,
+                    "consulted": [c["card"] for c in cands], "matcher": cands, "result": None})

@@ -98,13 +98,108 @@ def test_unsource_status_is_downgraded():
     assert "status_note" not in rec["routes"][3]
 
 
+def _drop(path):
+    if path:
+        Path(path).unlink(missing_ok=True)
+
+
 def test_call_budget_stops_the_run():
     try:
         core.consult("x", "MA", FakeLLM(), call_limit=1)
     except RuntimeError as exc:
         assert "model calls" in str(exc)
+        assert exc.path and Path(exc.path).is_file()
+        saved = json.loads(Path(exc.path).read_text(encoding="utf-8"))
+        assert saved["mode"] == "consult"
+        assert saved["not_returned"]
+        assert "model calls" in saved["error"]
+        _drop(exc.path)
     else:
         raise AssertionError("the run was not capped")
+
+
+def test_partial_run_keeps_earlier_findings():
+    try:
+        core.consult("x", "MA", FakeLLM(), batch=16, deepen=1, call_limit=2)
+    except RuntimeError as exc:
+        saved = json.loads(Path(exc.path).read_text(encoding="utf-8"))
+        assert "MSC:00-XX" in saved["findings"]
+        assert "MSC:20-XX" in saved["findings"]
+        assert "MSC:22-XX" in saved["not_returned"]
+        _drop(exc.path)
+    else:
+        raise AssertionError("the cap did not stop the second batch")
+
+
+def test_string_signature_is_coerced():
+    assert core.clean_signature('{"task": ["infer"], "bogus": ["x"]}') == {"task": ["infer"]}
+    assert core.clean_signature("not json") == {}
+    assert core.clean_signature(["infer"]) == {}
+    assert core.clean_signature(None) == {}
+
+    class StringSig(FakeLLM):
+        def __call__(self, prompt, max_tokens=4000):
+            if prompt.startswith("You frame problems"):
+                return {"problem": "p", "signature": '{"task": ["infer"], "nope": 1}', "fields": ["MA", "ZZ"]}
+            return super().__call__(prompt, max_tokens)
+
+    r = core.frame("x", StringSig())
+    assert r["signature"] == {"task": ["infer"]}
+    assert r["fields"] == ["MA"]
+
+
+def test_failed_batch_is_recorded_and_the_run_continues():
+    from llm import LLMError
+
+    class DropFirst(FakeLLM):
+        def __init__(self):
+            super().__init__()
+            self.batches = 0
+
+        def __call__(self, prompt, max_tokens=4000):
+            if "Consider EACH subfield" in prompt:
+                self.batches += 1
+                if self.batches == 1:
+                    raise LLMError("connection refused")
+            return super().__call__(prompt, max_tokens)
+
+    rec = core.consult("x", "MA", DropFirst(), batch=16, deepen=1)
+    first = [n["id"] for n in core._nodes_for("MA")[:16]]
+    assert all(i in rec["not_returned"] for i in first)
+    assert "MSC:42-XX" in rec["findings"]
+    assert rec["result"]["governing_thought"] == "g"
+    _drop(str(ROOT / "runs" / f"{rec['id']}.json"))
+
+
+def test_failed_survey_is_recorded_and_saved():
+    from llm import LLMError
+
+    class BoomSurvey(FakeLLM):
+        def __call__(self, prompt, max_tokens=4000):
+            if "Apply the whole of human knowledge" in prompt:
+                raise LLMError("connection refused")
+            return super().__call__(prompt, max_tokens)
+
+    rec = core.survey("x", BoomSurvey(), fields=["MA", "LA"])
+    assert rec["not_returned"] == ["MA", "LA"]
+    assert rec["result"]["uncovered"] == ["MA", "LA"]
+    _drop(str(ROOT / "runs" / f"{rec['id']}.json"))
+
+
+def test_ma_consult_fits_the_default_cap():
+    n = len(core.map_nodes("MA"))
+    assert n == 63
+    batch = core.fit_batch(n, 16, 3, True, 24)
+    assert 1 + (n + batch - 1) // batch + 3 + 1 <= 24
+    tight = core.fit_batch(n, 1, 3, True, 24)
+    assert tight > 1
+    assert 1 + (n + tight - 1) // tight + 3 + 1 <= 24
+    assert core.fit_batch(n, 16, 3, True, 1) == 16
+    llm = FakeLLM()
+    rec = core.consult("x", "MA", llm, deepen=3)
+    assert len(llm.calls) <= 24
+    assert len(rec["consulted"]) == 63
+    _drop(str(ROOT / "runs" / f"{rec['id']}.json"))
 
 
 def test_model_list_is_rejected():
@@ -116,6 +211,8 @@ def test_model_list_is_rejected():
         core.frame("x", ListLLM())
     except ValueError as exc:
         assert "object" in str(exc)
+        if getattr(exc, "path", None):
+            Path(exc.path).unlink(missing_ok=True)
     else:
         raise AssertionError("a JSON list was accepted")
 

@@ -2,8 +2,9 @@
 
 Labels follow the standard: conduct of force is Strategy, relations among states
 are Politics. An official statement, testimony or a claim of responsibility is W7.
-Imagery and a count of events are W4. A bare situation report keeps the field
-default and says so. None of these sentences is a lexicon cue.
+Imagery, a count of events, territorial control and a mine-laying report are W4.
+Conduct and coercion with no such cue keep the field default. None of these
+sentences is a lexicon cue.
 """
 import csv, json, sys
 from pathlib import Path
@@ -30,8 +31,10 @@ def test_geopolitical_heldout_matches_standard_labels():
         assert got["owner"] == r["owner"], (r["id"], got["owner"], r["claim"])
         assert got["cell"] == r["cell"], (r["id"], got["cell"], r["claim"])
         assert got["warrant"] == r["warrant"], (r["id"], got["warrant"], r["claim"])
-        if r["warrant"] == "W9" and r["id"] == "G01":
-            assert got["default_applied"] is True
+        if r["id"] in ("G01", "G03"):
+            assert got["default_applied"] is False and got["method"] == "M3"
+        if r["id"] in ("G06", "G13"):
+            assert got["warrant"] == "W9" and got["default_applied"] is True
 
 
 def test_heldout_claims_are_not_lexicon_cues():
