@@ -6,8 +6,9 @@
   python3 taxonomy.py connect "problem" --field MA            [--top 8]
   python3 taxonomy.py check   "a single claim"                (v2 classifier)
 
-Backend: set TAXONOMY_LLM=anthropic|ollama|manual (see engine/v3/llm.py).
-Results print as JSON and are saved in runs/.
+Backend: TAXONOMY_LLM=ollama (default, local) | manual | anthropic.
+Anthropic also needs TAXONOMY_ADJUDICATE_PAID=1 (see engine/v3/llm.py).
+check never calls the adjudicator. survey, consult and connect save a run record in runs/.
 """
 import argparse, json, sys
 from pathlib import Path
@@ -29,7 +30,9 @@ def main():
     a = ap.parse_args()
     if a.mode == "check":
         import taxonomy_engine as te
-        print(json.dumps(te.classify(a.text), indent=1, ensure_ascii=False))
+        # Check stays on the local cascade. It does not follow TAXONOMY_ADJUDICATE.
+        placed = te.place_detail(a.text, adjudicator=False).get("placement")
+        print(json.dumps(placed, indent=1, ensure_ascii=False))
         return
     import core
     from llm import get_llm

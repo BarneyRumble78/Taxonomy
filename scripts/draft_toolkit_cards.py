@@ -1,6 +1,7 @@
 """Draft toolkit cards for a field's map nodes with a model (Roadmap D2-D4).
 
-  TAXONOMY_LLM=anthropic python3 scripts/draft_toolkit_cards.py --field MA --level 2 --batch 12
+  python3 scripts/draft_toolkit_cards.py --field MA --level 2 --batch 12
+  TAXONOMY_LLM=anthropic TAXONOMY_ADJUDICATE_PAID=1 python3 scripts/draft_toolkit_cards.py --field MA --level 2
 Resumable: writes cards/toolkit/<FIELD>_L<level>.json and skips nodes already drafted.
 Every card is validated against the signature vocabulary; status is "draft" until reviewed.
 """

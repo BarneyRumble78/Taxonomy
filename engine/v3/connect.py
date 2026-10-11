@@ -10,23 +10,38 @@ import argparse, json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+FIELDS = "MA PH CH BI EA MD EN CS MS EC BU ST PO LA PL HI LN AR RE ED DE AG EV IS IK".split()
 WEIGHTS = {"task": 3.0, "structure": 2.0, "direction": 1.5, "uncertainty": 1.5, "linearity": 1.5,
            "symmetry": 1.5, "dynamics": 1.5, "agents": 1.5, "constraints": 1.0, "domain_type": 1.0,
            "data": 1.0, "scale": 1.0, "scope": 0.5, "goal_quality": 0.5}
 
 
+def _vals(raw):
+    if raw is None:
+        return []
+    if isinstance(raw, str):
+        return [raw] if raw else []
+    return [v for v in raw if v]
+
+
 def load_cards(field="MA"):
+    if field not in FIELDS:
+        raise ValueError("unknown field code")
     cards = []
     for p in sorted((ROOT / "cards" / "toolkit").glob(f"{field}*.json")):
-        cards += json.loads(p.read_text(encoding="utf-8"))
+        if p.name.startswith(field):
+            cards += json.loads(p.read_text(encoding="utf-8"))
     return cards
 
 
 def score(problem, card):
     s, why = 0.0, []
-    for facet, vals in problem.items():
-        have = set(card["signature"].get(facet, []))
-        hit = set(vals) & have
+    signature = card.get("signature") or {}
+    for facet, raw in (problem or {}).items():
+        vals = _vals(raw)
+        if not vals:
+            continue
+        hit = set(vals) & set(_vals(signature.get(facet)))
         if hit:
             s += WEIGHTS.get(facet, 1.0) * len(hit) / len(vals)
             why.append(f"{facet}: {', '.join(sorted(hit))}")
