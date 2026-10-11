@@ -50,7 +50,7 @@ The object has six parts.
 
 1. **Introduction.** Situation, complication, question, and question type, as in the method's output schema. The question for a field is the question already on its lens card.
 2. **Governing thought.** One declarative sentence that answers that question. It is a summary of the key line, not a topic label.
-3. **Key line.** The two to five cells already registered for the field (`cards/lens/<FIELD>.json`). Each point is a full sentence. The group records `logic_type` (inductive or deductive), the plural noun if inductive, the single MECE dimension, and one of the four orders (deductive, chronological, structural, comparative).
+3. **Key line.** The two to five cells already registered for the field (`cards/lens/<FIELD>.json`). Each point is a full sentence. The group records `logic_type` (inductive or deductive; induction is preferred at the key line, Minto Chapter 5) and one order from Minto Chapter 6: time, structure, or degree. An inductive group also records the plural noun and the single MECE dimension (Chapter 7).
 4. **Groups below the key line.** Each source node that survives deduplication becomes a point under the cell it was placed in, then under a group of like kind. A group is inductive or deductive, never both. It has two to five members. It has no member named Other.
 5. **Provenance.** Every pyramid point lists the source nodes it came from: scheme, id, code, and the map file. A point with no source is not written.
 6. **Stable ids.** A pyramid point id has the form `<FIELD>.P.<path>`, for example `EV.P.2.3`. R12 applies. An id is never renumbered and never reused. A retired point keeps its id, is marked RETIRED, and points at the new home.
@@ -99,7 +99,7 @@ Automated, and failing the test:
 - No point is named Other.
 - Each group has one logic type, not a mixture.
 - An inductive group has a plural noun. A deductive group has three steps.
-- Each group names one order from the four.
+- Each group names one order from Minto Chapter 6: time, structure, or degree.
 - Each parent names the question the children answer.
 - Every point id matches `<FIELD>.P.` and no id repeats.
 - A RETIRED id is not reused.

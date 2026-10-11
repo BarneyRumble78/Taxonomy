@@ -1,0 +1,107 @@
+{
+  "field": "EV",
+  "margin": 0.02,
+  "embed_floor": 0.62,
+  "governing_thought": "Environmental science places each coupled human–environment claim on one link of the causal chain: pressure, state, impact, response, or limit.",
+  "audience": {
+    "who": "A reader placing a coupled human–environment claim.",
+    "what_they_already_know": "Process science in EA, BI, and CH describes how the system works.",
+    "what_they_must_decide": "Which link of the causal chain the claim belongs to."
+  },
+  "introduction": {
+    "form": "standard",
+    "situation": "Environmental science studies coupled human and natural systems, from the load people apply to the response that follows.",
+    "complication": "Process science in EA and BI does not own the claim that a human pressure causes a harm.",
+    "question": "By what dimension can each coupled claim be placed once, with the process science left to EA, BI and CH?",
+    "question_type": "which_option"
+  },
+  "key_line": {
+    "logic_type": "inductive",
+    "plural_noun": "links",
+    "mece_dimension": "the link in the human–environment causal chain",
+    "order": "time",
+    "question_raised": "which_ones"
+  },
+  "cells": [
+    {
+      "cell": "EV.O.A1",
+      "question": "What load, from what activity?",
+      "statement": "Pressures are the loads that human activity places on the environment.",
+      "question_raised": "which_ones",
+      "plural_noun": "loads",
+      "mece_dimension": "the kind of load",
+      "order": "structure",
+      "noun": "pressure",
+      "facets": [
+        {"key": "emissions", "statement": "Emissions are the loads from greenhouse gases and other pollutants.", "keywords": ["emission", "pollutant", "greenhouse", "exhaust", "effluent", "sewage", "discharge", "pesticide", "fertilis", "fertiliz", "combustion", "exhaust gas"]},
+        {"key": "land", "statement": "Land and sea use changes are the loads from clearance, drainage, and building.", "keywords": ["land use", "land-use", "clearance", "drainage", "deforestation", "deforest", "urban", "agriculture", "farming", "livestock", "husbandry", "forestry", "logging"]},
+        {"key": "extraction", "statement": "Extraction is the load from taking water, fish, or minerals.", "keywords": ["extract", "mining", "quarry", "harvest", "fishery", "fishing", "water use", "abstraction", "resource use"]},
+        {"key": "introduced", "statement": "Introduced species are the loads from pests and organisms people bring in.", "keywords": ["invasive", "introduced", "alien species", "non-native", "non native", "pest"]}
+      ]
+    },
+    {
+      "cell": "EV.O.A2",
+      "question": "What is the measured state?",
+      "statement": "States are the measured conditions of air, water, soil, and living systems.",
+      "question_raised": "which_ones",
+      "plural_noun": "states",
+      "mece_dimension": "the medium that is measured",
+      "order": "structure",
+      "noun": "measured state",
+      "facets": [
+        {"key": "air", "statement": "Air quality is the measured state of the atmosphere.", "keywords": ["air", "atmosphere", "ozone", "ambient air", "climate"]},
+        {"key": "freshwater", "statement": "Freshwater quality is the measured state of rivers, lakes, and groundwater.", "keywords": ["freshwater", "fresh water", "river", "lake", "groundwater", "aquifer", "inland water"]},
+        {"key": "marine", "statement": "The marine environment is the measured state of the sea.", "keywords": ["marine", "ocean", "sea", "coastal", "acidification"]},
+        {"key": "soil", "statement": "Soil state is the measured condition of the land surface.", "keywords": ["soil", "erosion", "sediment", "pedolog"]},
+        {"key": "biodiversity", "statement": "Biodiversity status is the measured condition of species and habitats.", "keywords": ["biodiversity", "species", "habitat", "biota", "wildlife", "vegetation", "ecosystem"]}
+      ]
+    },
+    {
+      "cell": "EV.O.A3",
+      "question": "What harm, attributed how?",
+      "statement": "Impacts are the harms a changed state causes, and the way those harms are attributed.",
+      "question_raised": "how",
+      "plural_noun": "effects",
+      "mece_dimension": "what is harmed, and how the harm is attributed",
+      "order": "structure",
+      "noun": "impact",
+      "facets": [
+        {"key": "ecosystem", "statement": "Ecosystem harm is the loss of function or species after a changed state.", "keywords": ["ecosystem", "habitat loss", "degradation", "biodiversity loss"]},
+        {"key": "health", "statement": "Human health impact is the harm to people that follows an exposure.", "keywords": ["health", "disease", "exposure", "mortality", "morbidity"]},
+        {"key": "attribution", "statement": "Attribution is the share of an observed change assigned to a stated pressure.", "keywords": ["attribution", "cause", "causal"]},
+        {"key": "services", "statement": "Ecosystem services are the benefits people receive from a living system.", "keywords": ["ecosystem service", "service", "benefit"]}
+      ]
+    },
+    {
+      "cell": "EV.O.A4",
+      "question": "Which responses change pressures or states?",
+      "statement": "Responses are the actions taken to change a pressure or a state.",
+      "question_raised": "which_ones",
+      "plural_noun": "responses",
+      "mece_dimension": "the kind of response",
+      "order": "structure",
+      "noun": "response",
+      "facets": [
+        {"key": "restoration", "statement": "Restoration is the response that aims at measured recovery.", "keywords": ["restor", "rehabilitat", "remediat", "reclamation"]},
+        {"key": "conservation", "statement": "Conservation is the response that protects areas and cuts pressures on them.", "keywords": ["conserv", "protected area", "reserve", "sanctuary", "protection"]},
+        {"key": "regulation", "statement": "Regulation is the response whose environmental effect is what this field measures.", "keywords": ["regulat", "policy", "management", "planning", "assessment", "monitor", "control", "treatment", "legislation"]},
+        {"key": "guardianship", "statement": "Guardianship in practice is care for a place, with its tradition-internal meaning left to IK.", "keywords": ["kaitiaki", "guardianship", "stewardship"]}
+      ]
+    },
+    {
+      "cell": "EV.O.A5",
+      "question": "Where are the limits?",
+      "statement": "Limits are the thresholds a measured state is not meant to cross.",
+      "question_raised": "which_ones",
+      "plural_noun": "limits",
+      "mece_dimension": "the kind of limit",
+      "order": "structure",
+      "noun": "limit",
+      "facets": [
+        {"key": "threshold", "statement": "Thresholds are the critical values past which a system shifts.", "keywords": ["threshold", "tipping", "critical", "regime"]},
+        {"key": "standard", "statement": "Standards are the agreed limits a measured state is held to.", "keywords": ["standard", "limit value", "bottom line", "guideline", "norm"]},
+        {"key": "capacity", "statement": "Carrying capacity is the limit of what a system can sustain.", "keywords": ["carrying", "capacity", "planetary", "boundary", "scarcity"]}
+      ]
+    }
+  ]
+}
