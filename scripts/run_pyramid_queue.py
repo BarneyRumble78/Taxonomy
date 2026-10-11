@@ -12,12 +12,15 @@ at once. Before starting Ollama, set the server parallelism to the same number:
 
     OLLAMA_NUM_PARALLEL=3 ollama serve
 
-The call is OpenAI-compatible: POST http://localhost:11434/v1/chat/completions,
-model qwen3:30b-a3b, think false, JSON schema. The system prefix is the same
-on every place call so the server can cache it.
+The default call is Ollama's native API: POST http://localhost:11434/api/chat
+with think false, stream false, and format set to the JSON schema. The OpenAI-
+compatible /v1/chat/completions path ignores think false under a strict schema,
+so qwen3 keeps thinking until the timeout. Use it only with --api openai.
+The system prefix is the same on every place call so the server can cache it.
 
     python3 scripts/run_pyramid_queue.py --field EV --limit 20 --dry-run
     python3 scripts/run_pyramid_queue.py --field EV --batch 20 --workers 3
+    python3 scripts/run_pyramid_queue.py --field EV --api openai
 """
 import argparse
 import json
@@ -43,8 +46,10 @@ SYSTEM_PLACE = (
     "Impact: a harm, or the attribution of that harm. "
     "Response: an action that changes a pressure or a state. "
     "Limit: a threshold a state is not meant to cross. "
-    "Place each item on one group_id from its choices, or unsure. Reply with the schema only."
+    "Place each item on one group_id from its choices. "
+    "If none of the groups is the right home, choose unsure or out_of_scope. Do not force a fit."
 )
+ESCAPE = ("unsure", "out_of_scope")
 SYSTEM_SUMMARY = (
     "Write one sentence on what these ideas have in common. "
     "State the shared feature. Do not only name the topic. "
@@ -107,12 +112,13 @@ def item_ref(item):
     return str(item.get("node_id") or "")
 
 
-def result_matches(item, row):
+def result_matches(item, row, catalog=None):
     """True when a saved row still answers this item.
 
-    A place row from an older queue counts only when its group_id is still
-    one of the candidates, or is unsure. A driver row always counts for that
-    node. A summary is a different task.
+    A place row from an older queue counts when its group_id is still offered:
+    a candidate, any DPSIR cell, unsure, or out_of_scope. A driver row always
+    counts for that node. An empty reply is not final, so it is asked again.
+    A summary is a different task.
     """
     if item_task(row) != item_task(item):
         return False
@@ -122,10 +128,13 @@ def result_matches(item, row):
         return False
     if row.get("dpsir") == "driver":
         return True
+    if row.get("reason") == "the model reply was not usable":
+        return False
     chosen = row.get("group_id")
-    if chosen == "unsure" or row.get("status") == "unsure":
+    if chosen in ESCAPE or row.get("status") in ESCAPE:
         return True
-    offered = [cand.get("group_id") for cand in (item.get("candidates") or []) if cand.get("group_id")]
+    offered = {cand.get("group_id") for cand in (item.get("candidates") or []) if cand.get("group_id")}
+    offered.update(group.get("group_id") for group in (catalog or []) if group.get("group_id"))
     return chosen in offered
 
 
@@ -144,21 +153,62 @@ def is_driver(name, rules):
     return any(phrase.lower() in low for phrase in (rules.get("driver_phrases") or []))
 
 
-def likely_groups(item):
-    """Candidate groups for this item's cell. Other cells are left out of the prompt."""
-    cell = item.get("cell")
+_CATALOG_CACHE = {}
+
+
+def _short_statement(statement):
+    text = " ".join(str(statement or "").split())
+    if len(text) > 80:
+        text = text[:77] + "..."
+    return text
+
+
+def cell_catalog(field="EV", root=None):
+    """The DPSIR cells, one group each. Facet groups are added per item."""
+    root = Path(root) if root else ROOT
+    key = (field, str(root))
+    if key in _CATALOG_CACHE:
+        return _CATALOG_CACHE[key]
     groups = []
+    pyramid = root / "pyramids" / f"{field}.json"
+    if not pyramid.exists():
+        pyramid = ROOT / "pyramids" / f"{field}.json"
+    if pyramid.exists():
+        data = json.loads(pyramid.read_text(encoding="utf-8"))
+        for point in (data.get("key_line") or {}).get("points") or []:
+            if point.get("id"):
+                groups.append({
+                    "group_id": point["id"],
+                    "cell": point.get("cell"),
+                    "statement": point.get("statement") or "",
+                })
+    if not groups:
+        rules = load_rules(field, root)
+        for index, cell in enumerate(rules.get("cells") or [], start=1):
+            groups.append({
+                "group_id": f"{field}.P.{index}",
+                "cell": cell.get("cell"),
+                "statement": cell.get("statement") or "",
+            })
+    _CATALOG_CACHE[key] = groups
+    return groups
+
+
+def choice_groups(item, catalog=None):
+    """Every DPSIR cell, then this item's own groups. No cell is dropped."""
+    groups = []
+    seen = set()
+
+    def add(group_id, statement):
+        if not group_id or group_id in seen or group_id in ESCAPE:
+            return
+        seen.add(group_id)
+        groups.append({"group_id": group_id, "statement": _short_statement(statement)})
+
+    for row in catalog or []:
+        add(row.get("group_id"), row.get("statement"))
     for cand in item.get("candidates") or []:
-        if cell and cand.get("cell") and cand.get("cell") != cell:
-            continue
-        group_id = cand.get("group_id")
-        if not group_id or any(row["group_id"] == group_id for row in groups):
-            continue
-        statement = cand.get("statement") or cand.get("facet") or ""
-        statement = " ".join(str(statement).split())
-        if len(statement) > 80:
-            statement = statement[:77] + "..."
-        groups.append({"group_id": group_id, "statement": statement})
+        add(cand.get("group_id"), cand.get("statement") or cand.get("facet"))
     return groups
 
 
@@ -191,26 +241,50 @@ def driver_row(item, rules):
     }
 
 
-def _schema_body(schema, name, system, payload):
+def _schema_body(schema, name, system, payload, api="native"):
+    """Native /api/chat by default. OpenAI /v1/chat/completions is optional.
+
+    Ollama's OpenAI route ignores think:false when response_format is a strict
+    schema, so the model thinks until the timeout and content comes back empty.
+    """
+    messages = [
+        {"role": "system", "content": system},
+        {"role": "user", "content": json.dumps(payload, ensure_ascii=False, separators=(",", ":"))},
+    ]
+    if api == "openai":
+        return {
+            "model": MODEL,
+            "think": False,
+            "temperature": 0,
+            "response_format": {
+                "type": "json_schema",
+                "json_schema": {"name": name, "strict": True, "schema": schema},
+            },
+            "messages": messages,
+        }
     return {
         "model": MODEL,
+        "messages": messages,
+        "stream": False,
         "think": False,
-        "temperature": 0,
-        "response_format": {
-            "type": "json_schema",
-            "json_schema": {"name": name, "strict": True, "schema": schema},
-        },
-        "messages": [
-            {"role": "system", "content": system},
-            {"role": "user", "content": json.dumps(payload, ensure_ascii=False, separators=(",", ":"))},
-        ],
+        "format": schema,
+        "options": {"temperature": 0, "num_predict": 3000},
     }
 
 
-def request_batch(items):
+def _field_of(items):
+    cell = (items[0].get("cell") or "") if items else ""
+    if cell and "." in cell:
+        return cell.split(".")[0]
+    return "EV"
+
+
+def request_batch(items, api="native", catalog=None):
     """One batch, thinking off. Place and summary batches use a fixed system prefix."""
     if not items:
         raise ValueError("empty batch")
+    if catalog is None and item_task(items[0]) != "summarise":
+        catalog = cell_catalog(_field_of(items))
     if item_task(items[0]) == "summarise":
         payload = {
             "items": [
@@ -221,20 +295,41 @@ def request_batch(items):
                 for item in items
             ]
         }
-        return _schema_body(SUMMARY_SCHEMA, "summaries", SYSTEM_SUMMARY, payload)
+        return _schema_body(SUMMARY_SCHEMA, "summaries", SYSTEM_SUMMARY, payload, api)
     groups = {}
     packed = []
     for item in items:
-        choices = [row["group_id"] for row in likely_groups(item)] or ["unsure"]
-        for row in likely_groups(item):
+        rows = choice_groups(item, catalog)
+        choices = [row["group_id"] for row in rows] + list(ESCAPE)
+        for row in rows:
             groups.setdefault(row["group_id"], row["statement"])
         packed.append({"id": item_ref(item), "name": item.get("name") or "", "choices": choices})
-    return _schema_body(PLACE_SCHEMA, "placements", SYSTEM_PLACE, {"groups": groups, "items": packed})
+    return _schema_body(PLACE_SCHEMA, "placements", SYSTEM_PLACE, {"groups": groups, "items": packed}, api)
 
 
-def request_body(item):
+def request_body(item, api="native", catalog=None):
     """One item, as a batch of one. Kept for callers that still pass a single concept."""
-    return request_batch([item])
+    return request_batch([item], api=api, catalog=catalog)
+
+
+def chat_url(host, api="native"):
+    host = (host or "http://localhost:11434").rstrip("/")
+    if api == "openai":
+        return host + "/v1/chat/completions"
+    return host + "/api/chat"
+
+
+def message_content(reply):
+    """Native /api/chat uses message.content. The OpenAI route uses choices."""
+    if not isinstance(reply, dict):
+        return ""
+    message = reply.get("message")
+    if isinstance(message, dict) and "content" in message:
+        return message.get("content") or ""
+    choices = reply.get("choices") or []
+    if choices and isinstance(choices[0], dict):
+        return ((choices[0].get("message") or {}).get("content")) or ""
+    return ""
 
 
 def _short_lines(lines, limit=8):
@@ -278,7 +373,11 @@ def _base_row(item, reason):
     return row
 
 
-def row_from_model(item, raw):
+def offered_ids(item, catalog=None):
+    return {row["group_id"] for row in choice_groups(item, catalog)} | set(ESCAPE)
+
+
+def row_from_model(item, raw, catalog=None):
     row = _base_row(item, raw.get("reason"))
     if item_task(item) == "summarise":
         summary = str(raw.get("summary") or "").strip()
@@ -286,8 +385,11 @@ def row_from_model(item, raw):
         row["status"] = "placed" if summary else "needs_review"
         return row
     group_id = str(raw.get("group_id") or "").strip()
-    offered = {cand["group_id"] for cand in likely_groups(item)}
-    if not group_id or group_id == "unsure":
+    offered = offered_ids(item, catalog)
+    if group_id == "out_of_scope":
+        row["group_id"] = "out_of_scope"
+        row["status"] = "out_of_scope"
+    elif not group_id or group_id == "unsure":
         row["group_id"] = "unsure"
         row["status"] = "unsure"
     elif group_id in offered:
@@ -309,22 +411,24 @@ def unsure_row(item, reason="the model reply was not usable"):
     return row
 
 
-def resolve_batch(items, post, allow_retry=True):
+def resolve_batch(items, post, allow_retry=True, api="native", catalog=None):
     """Call the model. On a bad reply, retry, then split, then mark the item unsure."""
     if not items:
         return []
     try:
-        reply = post(request_batch(items))
-        content = ((reply.get("choices") or [{}])[0].get("message") or {}).get("content")
-        parsed = parse_model_json(content)
+        reply = post(request_batch(items, api=api, catalog=catalog))
+        parsed = parse_model_json(message_content(reply))
         if not isinstance(parsed, list):
             raise ValueError("missing items")
     except (ValueError, KeyError, TypeError, json.JSONDecodeError, urllib.error.URLError, TimeoutError, OSError):
         if allow_retry:
-            return resolve_batch(items, post, allow_retry=False)
+            return resolve_batch(items, post, allow_retry=False, api=api, catalog=catalog)
         if len(items) > 1:
             mid = len(items) // 2
-            return resolve_batch(items[:mid], post, True) + resolve_batch(items[mid:], post, True)
+            return (
+                resolve_batch(items[:mid], post, True, api, catalog)
+                + resolve_batch(items[mid:], post, True, api, catalog)
+            )
         return [unsure_row(items[0])]
     by_id = {}
     for raw in parsed:
@@ -337,16 +441,19 @@ def resolve_batch(items, post, allow_retry=True):
         if raw is None:
             missing.append(item)
         else:
-            good.append(row_from_model(item, raw))
+            good.append(row_from_model(item, raw, catalog))
     if len(missing) == len(items):
         if allow_retry:
-            return resolve_batch(items, post, allow_retry=False)
+            return resolve_batch(items, post, allow_retry=False, api=api, catalog=catalog)
         if len(items) > 1:
             mid = len(items) // 2
-            return resolve_batch(items[:mid], post, True) + resolve_batch(items[mid:], post, True)
+            return (
+                resolve_batch(items[:mid], post, True, api, catalog)
+                + resolve_batch(items[mid:], post, True, api, catalog)
+            )
         return [unsure_row(items[0])]
     if missing:
-        good.extend(resolve_batch(missing, post, True))
+        good.extend(resolve_batch(missing, post, True, api, catalog))
     return good
 
 
@@ -398,7 +505,7 @@ def _fmt_span(seconds):
 def _post(url, body):
     data = json.dumps(body).encode("utf-8")
     req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=300) as resp:
+    with urllib.request.urlopen(req, timeout=180) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
@@ -410,6 +517,12 @@ def parse_args(argv=None):
     parser.add_argument("--limit", type=int, default=0, help="Stop after this many pending items. 0 means all.")
     parser.add_argument("--dry-run", action="store_true", help="Print the first batch and do not call the model.")
     parser.add_argument("--progress", type=int, default=PROGRESS_EVERY, help="Print a progress line every N items.")
+    parser.add_argument(
+        "--api",
+        choices=("native", "openai"),
+        default=os.environ.get("TAXONOMY_QUEUE_API", "native"),
+        help="native is Ollama /api/chat (default). openai is /v1/chat/completions.",
+    )
     return parser.parse_args(argv)
 
 
@@ -424,8 +537,12 @@ def run(args, post=None, root=None):
     data = json.loads(src.read_text(encoding="utf-8"))
     items = data["items"] if isinstance(data, dict) else data
     rules = load_rules(field, root)
+    catalog = cell_catalog(field, root)
+    api = getattr(args, "api", None) or "native"
+    if api not in ("native", "openai"):
+        api = "native"
     saved = load_previous(dest_json, dest_jsonl)
-    pending = [item for item in items if not any(result_matches(item, row) for row in saved)]
+    pending = [item for item in items if not any(result_matches(item, row, catalog) for row in saved)]
     if args.limit and args.limit > 0:
         pending = pending[:args.limit]
     if args.dry_run:
@@ -434,18 +551,17 @@ def run(args, post=None, root=None):
         for item in pending:
             if driver_row(item, rules):
                 drivers += 1
-            elif item_task(item) == "place" and not likely_groups(item):
-                continue
             else:
                 model_preview.append(item)
         print(
             f"dry-run field={field} pending={len(pending)} drivers={drivers} "
-            f"model={len(model_preview)} batch={batch_size} workers={workers} "
+            f"model={len(model_preview)} batch={batch_size} workers={workers} api={api} "
+            f"endpoint={chat_url('http://localhost:11434', api)} "
             f"(set OLLAMA_NUM_PARALLEL={workers} before ollama serve)"
         )
         if model_preview:
             sample = list(chunks(model_preview, batch_size))[0]
-            body = request_batch(sample)
+            body = request_batch(sample, api=api, catalog=catalog)
             print(f"system prefix cached ({len(body['messages'][0]['content'])} chars)")
             print(json.dumps(body, ensure_ascii=False))
         return {
@@ -453,11 +569,12 @@ def run(args, post=None, root=None):
             "batch": batch_size,
             "workers": workers,
             "drivers": drivers,
+            "api": api,
             "wrote": 0,
         }
 
     host = os.environ.get("OLLAMA_HOST", "http://localhost:11434").rstrip("/")
-    url = host + "/v1/chat/completions"
+    url = chat_url(host, api)
 
     def send(body):
         if post:
@@ -466,7 +583,7 @@ def run(args, post=None, root=None):
 
     dest_jsonl.parent.mkdir(parents=True, exist_ok=True)
     lock = threading.Lock()
-    counts = {"done": 0, "placed": 0, "unsure": 0, "needs_review": 0, "since": 0}
+    counts = {"done": 0, "placed": 0, "unsure": 0, "out_of_scope": 0, "needs_review": 0, "since": 0}
     started = time.monotonic()
     progress_every = max(1, int(args.progress or PROGRESS_EVERY))
     total = len(pending)
@@ -478,7 +595,8 @@ def run(args, post=None, root=None):
         eta = remaining / rate if rate else 0
         print(
             f"progress {counts['done']}/{total} placed {counts['placed']} "
-            f"unsure {counts['unsure']} needs_review {counts['needs_review']} "
+            f"unsure {counts['unsure']} out_of_scope {counts['out_of_scope']} "
+            f"needs_review {counts['needs_review']} "
             f"elapsed {_fmt_span(elapsed)} eta {_fmt_span(eta)}",
             flush=True,
         )
@@ -503,8 +621,8 @@ def run(args, post=None, root=None):
                 progress_line()
 
     print(
-        f"field={field} pending={total} batch={batch_size} workers={workers} "
-        f"(set OLLAMA_NUM_PARALLEL={workers} before ollama serve)",
+        f"field={field} pending={total} batch={batch_size} workers={workers} api={api} "
+        f"endpoint={url} (set OLLAMA_NUM_PARALLEL={workers} before ollama serve)",
         flush=True,
     )
     local = []
@@ -513,15 +631,15 @@ def run(args, post=None, root=None):
         decided = driver_row(item, rules)
         if decided:
             local.append(decided)
-        elif not likely_groups(item) and item_task(item) == "place":
-            local.append(unsure_row(item, "no candidate group"))
         else:
             model_items.append(item)
     record(local)
     batches = list(chunks(model_items, batch_size))
     if batches:
         with ThreadPoolExecutor(max_workers=min(workers, len(batches))) as pool:
-            future_batch = {pool.submit(resolve_batch, batch, send): batch for batch in batches}
+            future_batch = {
+                pool.submit(resolve_batch, batch, send, True, api, catalog): batch for batch in batches
+            }
             for future in as_completed(future_batch):
                 batch = future_batch[future]
                 try:

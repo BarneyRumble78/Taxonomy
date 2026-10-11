@@ -107,8 +107,21 @@ def test_pack_keeps_a_wide_facet():
         assert point["statement"].count(".") == 1
 
 
+def _pressure_item(name, group_id, statement):
+    return {
+        "node_id": name,
+        "name": name,
+        "cell": "EV.O.A1",
+        "candidates": [{"cell": "EV.O.A1", "group_id": group_id, "statement": statement}],
+    }
+
+
 def test_queue_request_disables_thinking():
     module = _queue_module()
+    catalog = [
+        {"group_id": "EV.P.1", "statement": "Pressures are loads."},
+        {"group_id": "EV.P.2", "statement": "States are conditions."},
+    ]
     body = module.request_body({
         "node_id": "GEMET:1",
         "name": "acid rain",
@@ -118,28 +131,55 @@ def test_queue_request_disables_thinking():
             {"facet": "emissions", "group_id": "EV.P.1.1", "statement": "Emissions are loads."},
             {"facet": "land", "group_id": "EV.P.1.2", "statement": "Land use is a load."},
         ],
-    })
+    }, catalog=catalog)
     assert body["model"] == "qwen3:30b-a3b"
+    assert body["stream"] is False
     assert body["think"] is False
-    schema = body["response_format"]["json_schema"]["schema"]
+    assert body["format"] is module.PLACE_SCHEMA
+    assert body["options"] == {"temperature": 0, "num_predict": 3000}
+    assert "response_format" not in body
+    schema = body["format"]
     assert "items" in schema["properties"]
     item_schema = schema["properties"]["items"]["items"]
     assert "group_id" in item_schema["properties"]
     assert "reason" in item_schema["required"]
     payload = json.loads(body["messages"][1]["content"])
-    assert payload["items"][0]["choices"] == ["EV.P.1.1", "EV.P.1.2"]
+    assert payload["items"][0]["choices"] == ["EV.P.1", "EV.P.2", "EV.P.1.1", "EV.P.1.2", "unsure", "out_of_scope"]
     assert body["messages"][0]["content"] == module.SYSTEM_PLACE
+    assert "Do not force a fit." in module.SYSTEM_PLACE
+    assert module.chat_url("http://localhost:11434").endswith("/api/chat")
     other = module.request_batch([{
         "node_id": "GEMET:2",
         "name": "restoration",
         "cell": "EV.O.A4",
         "candidates": [{"cell": "EV.O.A4", "group_id": "EV.P.4", "statement": "Responses are actions."}],
-    }])
+    }], catalog=catalog)
     assert other["messages"][0]["content"] == body["messages"][0]["content"]
-    assert other["response_format"] == body["response_format"]
-    unsure = module.request_body({"node_id": "X", "name": "x", "cell": "EV.O.A1", "candidates": []})
+    assert other["format"] == body["format"]
+    assert module.message_content({"message": {"content": "{\"items\":[]}"}}) == "{\"items\":[]}"
+    assert module.message_content({"choices": [{"message": {"content": "abc"}}]}) == "abc"
+    unsure = module.request_body(
+        {"node_id": "X", "name": "x", "cell": "EV.O.A1", "candidates": []},
+        catalog=catalog,
+    )
     assert unsure["think"] is False
-    assert json.loads(unsure["messages"][1]["content"])["items"][0]["choices"] == ["unsure"]
+    assert json.loads(unsure["messages"][1]["content"])["items"][0]["choices"] == [
+        "EV.P.1", "EV.P.2", "unsure", "out_of_scope",
+    ]
+
+
+def test_openai_path_is_optional():
+    module = _queue_module()
+    item = _pressure_item("acid rain", "EV.P.1.1", "Emissions are loads.")
+    body = module.request_batch([item], api="openai", catalog=[])
+    assert body["think"] is False
+    assert body["temperature"] == 0
+    schema = body["response_format"]["json_schema"]["schema"]
+    assert schema is module.PLACE_SCHEMA
+    assert "format" not in body
+    assert module.chat_url("http://localhost:11434", "openai").endswith("/v1/chat/completions")
+    assert module.parse_args(["--field", "EV", "--api", "openai"]).api == "openai"
+    assert module.parse_args(["--field", "EV", "--api", "native"]).api == "native"
 
 
 def test_ev_section_12():
@@ -336,9 +376,20 @@ def test_resume_respects_task_and_candidates():
         "node_id": "N1",
         "candidates": [{"group_id": "EV.P.1.1"}, {"group_id": "EV.P.1.2"}],
     }
+    catalog = [{"group_id": "EV.P.1"}, {"group_id": "EV.P.2"}, {"group_id": "EV.P.4"}]
     assert module.result_matches(item, {"node_id": "N1", "group_id": "EV.P.1.1"})
     assert module.result_matches(item, {"node_id": "N1", "group_id": "unsure"})
-    assert not module.result_matches(item, {"node_id": "N1", "group_id": "EV.P.9.9"})
+    assert module.result_matches(item, {"node_id": "N1", "group_id": "out_of_scope", "status": "out_of_scope"})
+    assert module.result_matches(item, {"node_id": "N1", "group_id": "EV.P.2", "status": "placed"}, catalog)
+    assert not module.result_matches(item, {"node_id": "N1", "group_id": "EV.P.9.9"}, catalog)
+    assert not module.result_matches(
+        item,
+        {"node_id": "N1", "group_id": "unsure", "status": "unsure", "reason": "the model reply was not usable"},
+    )
+    assert module.result_matches(
+        item,
+        {"node_id": "N1", "group_id": "unsure", "status": "unsure", "reason": "medicine is not a pressure"},
+    )
     summary = {
         "task": "summarise",
         "needs_summary": True,
@@ -360,7 +411,8 @@ def test_summary_request_asks_for_a_sentence():
         "children": ["Alpha is a pressure.", "Beta is a pressure."],
     })
     assert body["think"] is False
-    schema = body["response_format"]["json_schema"]["schema"]
+    assert body["stream"] is False
+    schema = body["format"]
     item_schema = schema["properties"]["items"]["items"]
     assert "summary" in item_schema["properties"]
     assert "group_id" not in item_schema["properties"]
@@ -486,23 +538,24 @@ def test_batch_size_stays_between_15_and_25():
     assert len(module.SYSTEM_PLACE) < 500
 
 
-def test_prompt_keeps_only_the_likely_cell():
+def test_prompt_offers_every_cell_and_an_escape():
     module = _queue_module()
-    body = module.request_batch([{
-        "node_id": "G1",
-        "name": "acid rain",
-        "cell": "EV.O.A1",
-        "candidates": [
-            {"cell": "EV.O.A1", "group_id": "EV.P.1", "statement": "Pressures are loads."},
-            {"cell": "EV.O.A4", "group_id": "EV.P.4", "statement": "Responses are actions."},
-            {"cell": "EV.O.A2", "group_id": "EV.P.2", "statement": "States are conditions."},
-        ],
-    }])
-    user = body["messages"][1]["content"]
-    assert "EV.P.1" in user
-    assert "EV.P.4" not in user
-    assert "EV.P.2" not in user
-    assert body["messages"][0]["content"] == module.SYSTEM_PLACE
+    catalog = module.cell_catalog("EV")
+    assert [row["group_id"] for row in catalog] == ["EV.P.1", "EV.P.2", "EV.P.3", "EV.P.4", "EV.P.5"]
+    forced = [
+        ("drug (medicine)", "EV.P.1.4", "Introduced species are the loads from pests."),
+        ("dust removal", "EV.P.1.3", "Extraction is the load from taking a resource."),
+        ("East-West trade", "EV.P.1.2", "Land and sea use changes are loads."),
+        ("dual economy", "EV.P.1.2", "Land and sea use changes are loads."),
+        ("dry deposition", "EV.P.1.1", "Emissions are the loads from pollutants."),
+    ]
+    for name, group_id, statement in forced:
+        body = module.request_batch([_pressure_item(name, group_id, statement)], catalog=catalog)
+        choices = json.loads(body["messages"][1]["content"])["items"][0]["choices"]
+        assert choices[:5] == ["EV.P.1", "EV.P.2", "EV.P.3", "EV.P.4", "EV.P.5"]
+        assert group_id in choices
+        assert choices[-2:] == ["unsure", "out_of_scope"]
+        assert "Do not force a fit." in body["messages"][0]["content"]
 
 
 def test_fake_model_batches_concurrently_and_appends_jsonl(tmp_path, capsys):
@@ -553,8 +606,16 @@ def test_fake_model_batches_concurrently_and_appends_jsonl(tmp_path, capsys):
             inflight["n"] -= 1
             calls.append(body)
         text = body["messages"][1]["content"]
-        assert "EV.P.4" not in text
-        assert body["messages"][0]["content"] == module.SYSTEM_PLACE
+        assert body["stream"] is False
+        assert body["think"] is False
+        assert body["format"] is module.PLACE_SCHEMA
+        assert body["options"]["num_predict"] == 3000
+        for row in json.loads(text)["items"]:
+            assert "unsure" in row["choices"]
+            assert "out_of_scope" in row["choices"]
+            assert "EV.P.2" in row["choices"]
+            assert "EV.P.4" in row["choices"]
+        assert "Do not force a fit." in body["messages"][0]["content"]
         assert len(json.loads(text)["items"]) <= 20
         return _model_reply(body)
 
@@ -601,6 +662,54 @@ def test_bad_json_retries_splits_and_marks_unsure(tmp_path):
     assert {row["status"] for row in rows} == {"unsure"}
     assert {row["group_id"] for row in rows} == {"unsure"}
     assert calls["n"] > 4
+
+
+def test_native_reply_can_leave_the_pressure_facets(tmp_path):
+    module = _queue_module()
+    item = _pressure_item("drug (medicine)", "EV.P.1.4", "Introduced species are the loads from pests.")
+    root = _queue_root(tmp_path, [item])
+
+    def post(body):
+        assert body["stream"] is False
+        assert body["think"] is False
+        assert body["format"]["required"] == ["items"]
+        assert body["options"] == {"temperature": 0, "num_predict": 3000}
+        return {"message": {"content": json.dumps({"items": [
+            {"id": "drug (medicine)", "group_id": "out_of_scope", "reason": "a medicine is not an environmental load"},
+        ]})}}
+
+    args = module.parse_args(["--field", "EV", "--api", "native", "--workers", "1", "--progress", "100"])
+    module.run(args, post=post, root=root)
+    row = json.loads((root / "pyramids" / "queues" / "EV.placed.jsonl").read_text().strip())
+    assert row["status"] == "out_of_scope"
+    assert row["group_id"] == "out_of_scope"
+    again = module.run(args, post=post, root=root)
+    assert again["wrote"] == 0
+
+
+def test_unusable_reply_is_asked_again(tmp_path):
+    module = _queue_module()
+    item = _pressure_item("dry deposition", "EV.P.1.1", "Emissions are the loads from pollutants.")
+    item["node_id"] = "N1"
+    previous = [{
+        "node_id": "N1",
+        "group_id": "unsure",
+        "status": "unsure",
+        "reason": "the model reply was not usable",
+    }]
+    root = _queue_root(tmp_path, [item], previous=previous)
+
+    def post(body):
+        return {"message": {"content": json.dumps({"items": [
+            {"id": "N1", "group_id": "EV.P.2", "reason": "a measured transfer, not a load"},
+        ]})}}
+
+    args = module.parse_args(["--field", "EV", "--api", "native", "--workers", "1", "--progress", "100"])
+    result = module.run(args, post=post, root=root)
+    assert result["wrote"] == 1
+    row = json.loads((root / "pyramids" / "queues" / "EV.placed.jsonl").read_text().strip())
+    assert row["status"] == "placed"
+    assert row["group_id"] == "EV.P.2"
 
 
 def test_unknown_group_needs_review(tmp_path):
