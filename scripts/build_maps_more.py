@@ -360,6 +360,7 @@ def philpapers():
 
     for n in parser.nodes:
         n["taxonomy_cell"] = cell(n)
+    for n in parser.nodes:
         n.pop("_own", None)
     meta = {"scheme": "PhilPapers categories",
             "source": "https://web.archive.org/web/20240924181241/https://philpapers.org/browse/all",
