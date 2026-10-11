@@ -2,7 +2,8 @@
 
 Choose with TAXONOMY_LLM. The default is ollama, a local model. A key in the
 environment does not by itself call a paid API.
-  ollama     local model (TAXONOMY_MODEL, default gemma3:12b; host OLLAMA_HOST)
+  ollama     local model (TAXONOMY_MODEL, default qwen3:30b-a3b; gemma3:12b if that
+             model fails; host OLLAMA_HOST)
   manual     no model: writes each prompt to runs/prompts/ and reads the answer you paste
              back from a .answer.json file. Useful inside Claude chat or for auditing.
   anthropic  Claude via the Messages API. Refused unless TAXONOMY_ADJUDICATE_PAID is on.
@@ -14,6 +15,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 _REASK = "Return valid JSON only"
+DEFAULT_MODEL = "qwen3:30b-a3b"
+FALLBACK_MODEL = "gemma3:12b"
 
 
 class LLMError(Exception):
@@ -123,6 +126,16 @@ def _read_retry(do, attempts=3):
     raise LLMError(str(last))
 
 
+def _reply_text(data):
+    """Prefer the answer. A thinking model may leave response empty and put the text in thinking."""
+    if not isinstance(data, dict):
+        return ""
+    text = data.get("response")
+    if text is None or not str(text).strip():
+        text = data.get("thinking") or ""
+    return str(text)
+
+
 def _complete_text(fetch_text, prompt):
     text = _read_retry(lambda: fetch_text(prompt))
     try:
@@ -152,19 +165,26 @@ class Anthropic:
 
 class Ollama:
     def __init__(self, model=None):
-        self.model = model or os.environ.get("TAXONOMY_MODEL", "gemma3:12b")
+        chosen = model or os.environ.get("TAXONOMY_MODEL") or DEFAULT_MODEL
+        self.model = chosen.strip()
+        self.fallback = FALLBACK_MODEL if self.model == DEFAULT_MODEL else None
         self.host = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
         self.timeout = ollama_timeout()
 
-    def __call__(self, prompt, max_tokens=4000):
-        def fetch(p):
-            data = _post(f"{self.host}/api/generate",
-                         {"model": self.model, "prompt": p, "stream": False,
-                          "format": "json", "options": {"num_predict": max_tokens}},
-                         {"content-type": "application/json"}, timeout=self.timeout)
-            return data.get("response", "")
+    def _fetch(self, prompt, model, max_tokens):
+        data = _post(f"{self.host}/api/generate",
+                     {"model": model, "prompt": prompt, "stream": False, "format": "json",
+                      "think": False, "options": {"num_predict": max_tokens}},
+                     {"content-type": "application/json"}, timeout=self.timeout)
+        return _reply_text(data)
 
-        return _complete_text(fetch, prompt)
+    def __call__(self, prompt, max_tokens=4000):
+        try:
+            return _complete_text(lambda p: self._fetch(p, self.model, max_tokens), prompt)
+        except LLMError:
+            if not self.fallback:
+                raise
+            return _complete_text(lambda p: self._fetch(p, self.fallback, max_tokens), prompt)
 
 
 class Manual:

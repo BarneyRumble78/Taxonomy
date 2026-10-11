@@ -16,10 +16,24 @@ def test_check_prints_the_abstention_reason(capsys):
     assert out != "null"
 
 
+def test_check_follows_the_adjudicator_switch(capsys, monkeypatch):
+    import taxonomy_engine as te
+    seen = {}
+
+    def fake(text, query_vector=None, adjudicator=None):
+        seen["adjudicator"] = adjudicator
+        return {"placement": None, "reason": "no_cue"}
+
+    monkeypatch.setattr(te, "place_detail", fake)
+    taxonomy.main(["check", "hello"])
+    assert seen["adjudicator"] is None
+    assert capsys.readouterr().out.strip() == "unsure, sent to review"
+
+
 def test_check_prints_a_placement(capsys, monkeypatch):
     import taxonomy_engine as te
 
-    monkeypatch.setattr(te, "place_detail", lambda text, adjudicator=False: {
+    monkeypatch.setattr(te, "place_detail", lambda text, query_vector=None, adjudicator=None: {
         "placement": {"owner": "MA", "warrant": "W1"}, "reason": None,
     })
     taxonomy.main(["check", "a claim"])

@@ -85,16 +85,36 @@ def num(value):
         return 0.0
 
 
+_CHECKED = {"checked (small cases)", "contradicted (small cases)"}
+_UNVERIFIED = "unverified (model reasoning)"
+_CONCLUSION = ("summary", "governing_thought", "sees", "approach", "known_results", "mapping")
+
+
+def _sourced(obj):
+    sources = obj.get("sources") if isinstance(obj, dict) else None
+    return isinstance(sources, list) and any(str(s).strip() for s in sources)
+
+
+def _is_conclusion(obj):
+    return isinstance(obj, dict) and any(k in obj for k in _CONCLUSION)
+
+
 def guard_status(obj):
-    """R15: source_found and tested require a source. Anything else stays proposed."""
+    """A sourced established status may stand. Anything else a model concluded is unverified.
+
+    source_found and tested without a source are not left standing. A code check
+    (checked or contradicted on small cases) is left as the checker wrote it.
+    """
     if isinstance(obj, dict):
         status = obj.get("status")
-        if isinstance(status, str):
-            sources = obj.get("sources")
-            sourced = isinstance(sources, list) and any(str(s).strip() for s in sources)
-            if status in _ESTABLISHED and sourced:
+        if status not in _CHECKED:
+            if isinstance(status, str) and status in _ESTABLISHED and _sourced(obj):
                 pass
-            elif status not in _OPEN:
+            elif _is_conclusion(obj):
+                if status != _UNVERIFIED:
+                    obj["status"] = _UNVERIFIED
+                    obj["status_note"] = _UNVERIFIED
+            elif isinstance(status, str) and status not in _OPEN and status != _UNVERIFIED:
                 obj["status"] = "proposed"
                 obj["status_note"] = "downgraded: not established without a source"
         for value in obj.values():
@@ -179,24 +199,327 @@ def _listing(nodes, tk):
     return "\n".join(lines)
 
 
+def _value_list(vals):
+    if isinstance(vals, str):
+        return [p.strip() for p in re.split(r"[,;/]", vals) if p.strip()]
+    if isinstance(vals, list):
+        out = []
+        for v in vals:
+            if isinstance(v, str):
+                out.extend(p.strip() for p in re.split(r"[,;/]", v) if p.strip())
+        return out
+    return []
+
+
+def _canon_value(facet, raw):
+    if not isinstance(raw, str):
+        return None
+    v = raw.strip().lower().replace(" ", "_").replace("-", "_")
+    return v if v in VOCAB.get(facet, []) else None
+
+
+def _place_loose(values):
+    """Put bare values into the facet that lists them. The first matching facet wins."""
+    out = {}
+    for raw in values:
+        for facet in VOCAB:
+            canon = _canon_value(facet, raw)
+            if not canon:
+                continue
+            out.setdefault(facet, [])
+            if canon not in out[facet]:
+                out[facet].append(canon)
+            break
+    return out
+
+
 def clean_signature(sig):
-    """Keep known facet values. A string is parsed as JSON; anything else empty is dropped."""
+    """Keep known facet values. A string, a list, or a literal 'facet' key is coerced."""
     if isinstance(sig, str):
-        try:
-            sig = json.loads(sig)
-        except json.JSONDecodeError:
+        text = sig.strip()
+        if text[:1] in "{[":
+            try:
+                sig = json.loads(text)
+            except json.JSONDecodeError:
+                return {}
+        else:
             return {}
+    if isinstance(sig, list):
+        if all(isinstance(x, str) for x in sig):
+            return _place_loose(sig)
+        merged = {}
+        for item in sig:
+            if not isinstance(item, dict):
+                continue
+            facet = item.get("facet") or item.get("name") or item.get("key")
+            vals = item.get("values", item.get("value"))
+            if facet:
+                merged[str(facet)] = vals
+        sig = merged
     if not isinstance(sig, dict):
         return {}
+    loose = []
     out = {}
     for facet, vals in sig.items():
-        vals = [vals] if isinstance(vals, str) else vals
-        if not isinstance(vals, list):
+        key = str(facet).strip().lower()
+        vals = _value_list(vals)
+        if key not in VOCAB:
+            loose.extend(vals)
             continue
-        ok = [v for v in vals if v in VOCAB.get(facet, [])]
+        ok = []
+        for raw in vals:
+            canon = _canon_value(key, raw)
+            if canon and canon not in ok:
+                ok.append(canon)
         if ok:
-            out[facet] = ok
+            out[key] = ok
+    for facet, vals in _place_loose(loose).items():
+        out.setdefault(facet, [])
+        for v in vals:
+            if v not in out[facet]:
+                out[facet].append(v)
     return out
+
+
+_FIELD_NAMES = {}
+_NODE_INDEX = {}
+_CELL_IDS = {}
+
+
+def field_names():
+    key = str(ROOT)
+    if key not in _FIELD_NAMES:
+        names = {}
+        for f in FIELDS:
+            cards = lens_cards(f)
+            names[f] = (cards[0].get("name") if cards else f) or f
+        _FIELD_NAMES[key] = names
+    return _FIELD_NAMES[key]
+
+
+def field_code(raw):
+    """ST, 'ST Strategy', and 'Strategy' all become ST. Unknown text does not."""
+    if raw is None:
+        return None
+    text = str(raw).strip()
+    if not text:
+        return None
+    m = re.match(r"^([A-Za-z]{2})\b", text)
+    if m and m.group(1).upper() in FIELDS:
+        return m.group(1).upper()
+    low = re.sub(r"\s+", " ", text.lower())
+    for code, name in field_names().items():
+        nlow = str(name).lower()
+        if low == nlow or low.startswith(nlow + " "):
+            return code
+    return None
+
+
+def _cell_ids(field):
+    key = (str(ROOT), field)
+    if key not in _CELL_IDS:
+        ids = set()
+        for card in lens_cards(field):
+            cid = card.get("id")
+            if isinstance(cid, str) and ".O.A" in cid:
+                ids.add(cid)
+        _CELL_IDS[key] = ids
+    return _CELL_IDS[key]
+
+
+def clean_cell(raw):
+    """A lens id such as PH.O.A2. Invented ids are dropped. A zero in the middle is the letter O."""
+    if not isinstance(raw, str) or not raw.strip():
+        return None
+    text = raw.strip().upper().replace(" ", "").replace(".0.", ".O.")
+    m = re.match(r"^([A-Z]{2})\.O\.A([1-5])\b", text)
+    if not m or m.group(1) not in FIELDS:
+        return None
+    cell = f"{m.group(1)}.O.A{m.group(2)}"
+    if cell not in _cell_ids(m.group(1)):
+        return None
+    return cell
+
+
+def scrub_cells(obj):
+    if isinstance(obj, dict):
+        if "cell" in obj and obj.get("cell") is not None:
+            clean = clean_cell(obj.get("cell"))
+            if not clean:
+                obj["cell_note"] = "unknown cell"
+                obj["cell"] = None
+            else:
+                obj["cell"] = clean
+        for value in obj.values():
+            scrub_cells(value)
+    elif isinstance(obj, list):
+        for value in obj:
+            scrub_cells(value)
+
+
+def node_index(field):
+    key = (str(ROOT), field)
+    if key not in _NODE_INDEX:
+        idx = {}
+        for n in _nodes(field):
+            nid = n.get("id")
+            if not nid:
+                continue
+            idx[str(nid).upper()] = nid
+            code = str(n.get("code") or "").upper()
+            if code:
+                idx[code] = nid
+                idx[code.replace("-", "")] = nid
+        _NODE_INDEX[key] = idx
+    return _NODE_INDEX[key]
+
+
+def canon_node(raw, field):
+    """MSC:30-XX, MSC30XX, 30-XX and 30 name that level-1 node when it exists.
+
+    A one-digit number is not expanded, and a two-digit code with no node is left unresolved.
+    """
+    if raw is None:
+        return None
+    s = str(raw).strip().upper().replace(" ", "")
+    if not s or s in {"[]", "{}"}:
+        return None
+    idx = node_index(field)
+    if s in idx:
+        return idx[s]
+    bare = s[4:] if s.startswith("MSC:") else (s[3:] if s.startswith("MSC") else s)
+    if bare in idx:
+        return idx[bare]
+    m = re.fullmatch(r"(\d{2})-?XX", bare)
+    if m and f"{m.group(1)}-XX" in idx:
+        return idx[f"{m.group(1)}-XX"]
+    # A one-digit number is not an area code. Ask for the two digits (03, not 3).
+    m = re.fullmatch(r"(\d{2})", bare)
+    if m and f"{m.group(1)}-XX" in idx:
+        return idx[f"{m.group(1)}-XX"]
+    return None
+
+
+_EQ = re.compile(
+    r"(?P<a>-?\d*)\s*\*?\s*(?P<x>[a-z])\s*(?:\^|\*\*|²)\s*2?\s*"
+    r"(?P<sign>[+-])\s*(?P<b>\d*)\s*\*?\s*(?P<y>[a-z])\s*(?:\^|\*\*|²)\s*2?\s*"
+    r"=\s*(?P<c>-?\d+)",
+    re.I,
+)
+_NONE = re.compile(r"\bno\b.{0,40}\bsolutions?\b", re.I)
+_ONLY = re.compile(r"\bonly\b|\bunique\b", re.I)
+_PAIR = re.compile(r"\(\s*(-?\d+)\s*,\s*(-?\d+)\s*\)")
+
+
+def _coef(raw):
+    raw = (raw or "").strip()
+    if raw in ("", "+"):
+        return 1
+    if raw == "-":
+        return -1
+    return int(raw)
+
+
+def check_equations(text, limit=40):
+    """Search small integers for a two-variable quadratic. Not a proof of the full set."""
+    if not text:
+        return None
+    seen = set()
+    reports = []
+    for m in _EQ.finditer(text):
+        a = _coef(m.group("a"))
+        b = (1 if m.group("sign") == "+" else -1) * (int(m.group("b")) if m.group("b") else 1)
+        c = int(m.group("c"))
+        key = (a, b, c)
+        if key in seen or (a == 0 and b == 0):
+            continue
+        seen.add(key)
+        found = []
+        for x in range(-limit, limit + 1):
+            for y in range(-limit, limit + 1):
+                if a * x * x + b * y * y == c:
+                    found.append([x, y])
+                    if len(found) >= 32:
+                        break
+            if len(found) >= 32:
+                break
+        reports.append({"equation": f"{a}*x^2 + ({b})*y^2 = {c}", "range": limit, "solutions": found,
+                        "truncated": len(found) >= 32})
+    if not reports:
+        return None
+    claimed_none = _NONE.search(text) is not None
+    pairs = {(int(x), int(y)) for x, y in _PAIR.findall(text)}
+    claimed_only = pairs if _ONLY.search(text) and pairs else None
+    found = {tuple(p) for rep in reports for p in rep["solutions"]}
+    consistent = True
+    if claimed_none and found:
+        consistent = False
+    if claimed_only is not None and found - claimed_only:
+        consistent = False
+    if claimed_only is not None and not found:
+        consistent = False
+    note = (
+        "Small integers were searched. That can catch a false 'none' or 'only' claim. "
+        "It does not prove how many solutions exist."
+    )
+    return {"equations": reports, "consistent": consistent, "note": note,
+            "model_claim": "none" if claimed_none else ("only" if claimed_only else None)}
+
+
+def apply_check(result, *parts):
+    """Attach a small-case check when the problem or the answer states a quadratic equation.
+
+    Framing often rewrites the user's sentence, so the original input is checked too.
+    """
+    if not isinstance(result, dict):
+        return result
+    blob = "\n".join(str(p or "") for p in parts)
+    blob = f"{blob}\n{json.dumps(result, ensure_ascii=False)}"
+    report = check_equations(blob)
+    if not report:
+        return result
+    result["check"] = report
+    # A search with no solution-set claim does not settle the conclusion.
+    if report.get("model_claim") or report["consistent"] is False:
+        status = "contradicted (small cases)" if report["consistent"] is False else "checked (small cases)"
+        result["status"] = status
+        result["status_note"] = report["note"]
+        for item in _rows(result.get("routes")) + _rows(result.get("candidates")):
+            if isinstance(item, dict):
+                item["status"] = status
+                item["status_note"] = report["note"]
+    return result
+
+
+def keep_candidates(result, cands):
+    """Drop invented cards. most_surprising is not the top-ranked match."""
+    if not isinstance(result, dict):
+        return result
+    allowed = [c.get("card") for c in cands if isinstance(c, dict) and c.get("card")]
+    allowed_set = set(allowed)
+    top = allowed[0] if allowed else None
+    kept, rejected = [], []
+    for item in _rows(result.get("candidates")):
+        if not isinstance(item, dict):
+            rejected.append(item)
+            continue
+        card = str(item.get("card") or "").strip()
+        if card in allowed_set:
+            item = dict(item)
+            item["card"] = card
+            kept.append(item)
+        else:
+            rejected.append(card or item.get("card"))
+    result["candidates"] = kept
+    if rejected:
+        result["rejected_cards"] = rejected
+    surprise = str(result.get("most_surprising") or "").strip()
+    others = [item["card"] for item in kept if item.get("card") != top]
+    if surprise not in allowed_set or surprise == top:
+        result["most_surprising"] = others[0] if others else ""
+        if surprise == top:
+            result["most_surprising_note"] = "cleared: that card is the top-ranked match"
+    return result
 
 
 def cue_hint(text):
@@ -274,16 +597,21 @@ def frame(text, llm, call_limit=24):
 Input:
 {fence("user", text)}
 
-{cue_line}Return only JSON:
+{cue_line}Return only JSON. signature is an object whose keys are facet names, for example {{"task": ["count"], "symmetry": ["permutation"]}}. Use only facets and values from this list: {json.dumps(VOCAB)}
 {{"problem": "one precise sentence: what is sought, given what, under which constraints",
   "scqa": {{"situation": "", "complication": "", "question": "", "answer_form": "what a good answer looks like"}},
-  "signature": {{facet: [values]}}  using ONLY these facets and values: {json.dumps(VOCAB)},
-  "fields": ["up to 8 two-letter field codes most likely to matter, from {FIELDS}"],
+  "signature": {{"task": ["count"], "symmetry": ["permutation"]}},
+  "fields": ["up to 8 two-letter field codes, such as MA or ST, from {FIELDS}"],
   "unknowns": ["facts that would change the answer"],
   "clarifying_questions": ["at most 3, only if the input is genuinely ambiguous"]}}"""
         r = llm(prompt)
         r["signature"] = clean_signature(r.get("signature"))
-        r["fields"] = [f for f in _rows(r.get("fields")) if f in FIELDS]
+        fields = []
+        for f in _rows(r.get("fields")) or _value_list(r.get("fields")):
+            code = field_code(f)
+            if code and code not in fields:
+                fields.append(code)
+        r["fields"] = fields
         return r
     except Exception as exc:
         _keep(exc, {"mode": "frame", "input": text})
@@ -301,6 +629,8 @@ Lenses (field: question; cells):
 {fence("card", lens_txt)}
 
 For EVERY field listed, either apply it or set it aside with a reason (no silent skipping).
+Frame how one would find out; don't predict or refuse because of a knowledge cutoff.
+Use the two-letter field code (ST, not 'ST Strategy') and a cell id from the lens (ST.O.A4, letter O).
 {RULES}
 Return only JSON:
 {{"views": [{{"field": "XX", "cell": "XX.O.An", "sees": "the specific point this field makes", "question": "the hardest question it asks",
@@ -327,11 +657,32 @@ def survey(text, llm, fields=None, framed=None, call_limit=24):
             raise
         except (LLMError, ValueError) as exc:
             r = {"views": [], "set_aside": [], "error": str(exc)}
-        views, aside = _rows(r.get("views")), _rows(r.get("set_aside"))
-        covered = {v.get("field") for v in views if isinstance(v, dict)} | {s.get("field") for s in aside if isinstance(s, dict)}
+        views, aside = [], []
+        for v in _rows(r.get("views")):
+            if not isinstance(v, dict):
+                continue
+            code = field_code(v.get("field"))
+            if not code or code not in chosen:
+                continue
+            v = dict(v)
+            v["field"] = code
+            views.append(v)
+        for s in _rows(r.get("set_aside")):
+            if not isinstance(s, dict):
+                continue
+            code = field_code(s.get("field"))
+            if not code or code not in chosen:
+                continue
+            s = dict(s)
+            s["field"] = code
+            aside.append(s)
+        r["views"], r["set_aside"] = views, aside
+        scrub_cells(r)
+        covered = {v.get("field") for v in views} | {s.get("field") for s in aside}
         missed = [f for f in chosen if f not in covered]
         r["uncovered"] = missed
         r["not_returned"] = missed
+        apply_check(r, text, got.get("problem") if isinstance(got, dict) else "")
         return save({"mode": "survey", "input": text, "framed": got, "signature": got.get("signature"),
                      "consulted": chosen, "not_returned": missed, "result": r})
     except Exception as exc:
@@ -355,6 +706,7 @@ Problem:
 Signature: {json.dumps(framed.get("signature", {}))}
 
 Consider EACH subfield below. For each, say whether it applies, and if so how a specialist there would attack the problem.
+Use the id as written. A two-digit area code such as 30 means MSC:30-XX. One digit is not enough: give both digits (03, not 3). Do not invent a cell id; use only ids from the lens, such as MA.O.A2.
 {fence("card", _listing(part, tk))}
 {RULES}
 Return only JSON: {{"nodes": [{{"id": "", "applies": "yes|maybe|no", "approach": "", "known_results": [""], "conditions": [{{"condition": "", "met": "yes|no|unknown"}}], "promise": 0-5, "cost": 0-5}}]}}"""
@@ -367,6 +719,7 @@ def consult(text, field, llm, batch=16, deepen=3, framed=None, call_limit=24):
     batch = fit_batch(len(nodes), batch, deepen, framed is None, call_limit)
     got = framed
     findings = {}
+    unresolved = []
     deeper = []
     try:
         got = got or frame(text, llm)
@@ -379,8 +732,17 @@ def consult(text, field, llm, batch=16, deepen=3, framed=None, call_limit=24):
             except (LLMError, ValueError):
                 continue
             for n in _rows(raw.get("nodes")):
-                if isinstance(n, dict):
-                    findings[n.get("id")] = n
+                if not isinstance(n, dict):
+                    continue
+                nid = canon_node(n.get("id"), field)
+                if not nid:
+                    raw_id = str(n.get("id") or "").strip()
+                    if raw_id:
+                        unresolved.append(raw_id)
+                    continue
+                n = dict(n)
+                n["id"] = nid
+                findings[nid] = n
         missing = [n["id"] for n in nodes if n["id"] not in findings]
         ranked = sorted((f for f in findings.values() if f.get("applies") in ("yes", "maybe")),
                         key=lambda f: (-num(f.get("promise")), num(f.get("cost"))))
@@ -402,8 +764,18 @@ Field consulted: {field}. Findings: {clip_json(ranked[:12], 20000)}
 Deeper work: {clip_json(deeper, 12000)}
 {DATA}
 {RULES}
+Do not state a solution set as complete. A numeric claim is checked on small cases in code, or left unverified.
 Return only JSON: {{"governing_thought": "", "routes": [{{"summary": "", "nodes": [""], "why": "", "conditions_open": [""], "status": "proposed|conditions_checked", "promise": 0-5, "cost": 0-5}}], "surprises": ["routes from unexpected subfields"], "verify_next": [""]}}"""
         synth = llm(prompt, max_tokens=5000)
+        scrub_cells(findings)
+        scrub_cells(deeper)
+        scrub_cells(synth)
+        if unresolved:
+            synth["unresolved_ids"] = unresolved
+            synth["id_note"] = (
+                "Some ids are not nodes in this map. Use the two-digit area code, such as 30 for MSC:30-XX."
+            )
+        apply_check(synth, text, got.get("problem") if isinstance(got, dict) else "")
         return save({"mode": "consult", "input": text, "field": field, "framed": got, "signature": got.get("signature"),
                      "consulted": [n["id"] for n in nodes], "not_returned": missing, "findings": findings,
                      "deeper": deeper, "result": synth})
@@ -433,10 +805,13 @@ def connect_run(text, field, llm, top=8, framed=None, call_limit=24):
 Signature: {json.dumps(got.get("signature", {}))}
 Candidate tools from across {field}, chosen by matching the problem's shape (some may be from distant subfields):
 {fence("card", clip_json(cands, 20000))}
-For each candidate: explain the mapping (what in the problem corresponds to what in the tool), check each condition (yes/no/unknown), and rate promise 0-5. Flag the most surprising viable candidate.
+For each candidate: explain the mapping (what in the problem corresponds to what in the tool), check each condition (yes/no/unknown), and rate promise 0-5. Flag the most surprising viable candidate, which must not be the first card in the list. Use only card ids from the list.
 {RULES}
 Return only JSON: {{"candidates": [{{"card": "", "mapping": "", "conditions": [{{"condition": "", "met": "yes|no|unknown"}}], "promise": 0-5, "status": "proposed|conditions_checked"}}], "most_surprising": "", "verify_next": [""]}}"""
         r = llm(prompt, max_tokens=5000)
+        keep_candidates(r, cands)
+        scrub_cells(r)
+        apply_check(r, text, got.get("problem") if isinstance(got, dict) else "")
         return save({"mode": "connect", "input": text, "field": field, "framed": got, "signature": got.get("signature"),
                      "consulted": [c["card"] for c in cands], "matcher": cands, "result": r})
     except Exception as exc:

@@ -136,6 +136,42 @@ def test_bad_json_is_asked_once_more(monkeypatch):
     assert prompts[1].startswith("classify this")
 
 
+def test_qwen_is_the_default_and_gemma_is_the_fallback(monkeypatch):
+    monkeypatch.delenv("TAXONOMY_MODEL", raising=False)
+    assert llm.Ollama().model == "qwen3:30b-a3b"
+    assert llm.Ollama().fallback == "gemma3:12b"
+    monkeypatch.setenv("TAXONOMY_MODEL", "gemma3:12b")
+    assert llm.Ollama().model == "gemma3:12b"
+    assert llm.Ollama().fallback is None
+    monkeypatch.delenv("TAXONOMY_MODEL", raising=False)
+    models = []
+
+    def fake_urlopen(req, timeout=None):
+        body = json.loads(req.data.decode())
+        models.append(body["model"])
+        assert body["think"] is False
+        if body["model"] == "qwen3:30b-a3b":
+            raise urllib.error.URLError("down")
+        return _Body(json.dumps({"response": '{"a": 1}'}).encode())
+
+    monkeypatch.setattr(llm.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.setattr(llm.time, "sleep", lambda _s: None)
+    assert llm.Ollama()("prompt") == {"a": 1}
+    assert models[:3] == ["qwen3:30b-a3b"] * 3
+    assert models[3] == "gemma3:12b"
+
+
+def test_empty_response_uses_thinking_text(monkeypatch):
+    def fake_urlopen(req, timeout=None):
+        body = json.loads(req.data.decode())
+        assert body["think"] is False
+        return _Body(json.dumps({"response": "  ", "thinking": '{"a": 2}'}).encode())
+
+    monkeypatch.setattr(llm.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.delenv("TAXONOMY_MODEL", raising=False)
+    assert llm.Ollama()("prompt") == {"a": 2}
+
+
 def test_cutoff_json_does_not_reask(monkeypatch):
     calls = {"n": 0}
 
