@@ -122,6 +122,13 @@ def test_distractors_abstain_or_keep_gold_owner():
             assert p is None or p["owner"] == r["owner"], (name, r["id"], p["owner"] if p else None)
 
 
+def test_no_thirty_claim_real_set_so_the_probe_is_the_gate():
+    """A labelled 30-claim real set is not in the repo. The geopolitics probe stands in."""
+    found = [p for p in ROOT.rglob("*.tsv") if "real" in p.name.lower() and p.stat().st_size]
+    assert found == []
+    assert len(GEO) == 13
+
+
 def test_geopolitics_probe_is_not_hard_science():
     details = te.place_many([text for text, _ in GEO])
     for (text, preferred), d in zip(GEO, details):

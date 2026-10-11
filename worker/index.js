@@ -10,10 +10,10 @@ import site from "../site/site_data.json" with { type: "json" };
 import index from "../engine/retrieval_index.json" with { type: "json" };
 import {
   CONFIDENCE_NOTE, METHOD_NAMES, WARRANT_NAMES,
-  adjudicate, instructionHeuristic, retrieveField, stageRule,
+  adjudicate, candidateFields, instructionHeuristic, retrieveField, stageRule,
 } from "../engine/rules.mjs";
 import {
-  QUEUE_REASONS, SAMPLE_COUNT, VERIFY_OWNERS, adjudicationMessages, agreeSamples, retrieveDefinitions,
+  QUEUE_REASONS, SAMPLE_COUNT, SYSTEM, VERIFY_OWNERS, adjudicationMessages, agreeSamples, retrieveDefinitions,
 } from "../engine/adjudicate.mjs";
 import texts from "../engine/retrieval_text.json" with { type: "json" };
 
@@ -35,6 +35,32 @@ const SECURITY = {
   "x-content-type-options": "nosniff",
   "referrer-policy": "no-referrer",
 };
+
+let promptVersionPromise;
+function promptVersion() {
+  if (!promptVersionPromise) {
+    const bytes = new TextEncoder().encode(SYSTEM);
+    promptVersionPromise = crypto.subtle.digest("SHA-256", bytes).then((buf) =>
+      [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 12)
+    );
+  }
+  return promptVersionPromise;
+}
+
+async function stamp(out, model) {
+  const version = await promptVersion();
+  out.prompt_version = version;
+  out.model = model;
+  if (out.placement) {
+    out.placement.prompt_version = version;
+    out.placement.model = model;
+  }
+  if (out.adjudication) {
+    out.adjudication.prompt_version = version;
+    out.adjudication.model = model;
+  }
+  return out;
+}
 
 const NOTES = {
   instruction: "No warrant assigned. This failure to classify an instruction-like imperative is a heuristic, not a security guarantee.",
@@ -110,8 +136,8 @@ async function takeSamples(env, messages) {
 function applySamples(decision, samples) {
   const agreed = agreeSamples(samples);
   if (!agreed) {
-    if (decision.placement) return { ...decision, adjudication: { status: "disagree" } };
-    return { placement: null, reason: decision.reason, adjudication: { status: "disagree" } };
+    if (decision.placement) return { ...decision, adjudication: { status: "needs_review" } };
+    return { placement: null, reason: decision.reason, adjudication: { status: "needs_review" } };
   }
   const rule = decision.placement;
   if (!rule || agreed.owner === rule.owner) {
@@ -197,9 +223,10 @@ async function classifyRoute(request, url, env) {
   const staged = stageRule(inp.value, lex);
   const on = adjudicationOn(env);
   const queued = QUEUE.has(staged.reason);
+  let model = null;
   if (staged.reason && !(queued && on)) {
     const out = { placement: null, reason: staged.reason, note: NOTES[staged.reason] || NOTES.no_cue };
-    return json(await withAssist(out, env, url, inp.value));
+    return json(await stamp(await withAssist(out, env, url, inp.value), model));
   }
   let vector = null;
   if (!staged.reason || queued) {
@@ -211,9 +238,12 @@ async function classifyRoute(request, url, env) {
     : adjudicate(staged, vector ? retrieveField(vector, index) : null);
   const verify = decision.placement && VERIFY.has(decision.placement.owner);
   if (on && ((decision.reason && QUEUE.has(decision.reason)) || verify)) {
+    model = typeof env.adjudicate === "function" ? "mock" : (env.ADJUDICATE_MODEL || ADJUDICATE_MODEL);
     const definitions = vector ? retrieveDefinitions(vector, index, texts) : [];
+    const retrieved = decision.retrieval && decision.retrieval.field;
+    const fields = candidateFields(inp.value, lex, retrieved, definitions);
     try {
-      const samples = await takeSamples(env, adjudicationMessages(inp.value, definitions, decision.placement));
+      const samples = await takeSamples(env, adjudicationMessages(inp.value, definitions, decision.placement, fields));
       decision = applySamples(decision, samples);
     } catch {
       if (decision.placement) decision = { ...decision, adjudication: { status: "error" } };
@@ -223,7 +253,7 @@ async function classifyRoute(request, url, env) {
   if (!decision.placement) {
     const out = { placement: null, reason: decision.reason, note: NOTES[decision.reason] || NOTES.no_cue };
     if (decision.adjudication) out.adjudication = { status: decision.adjudication.status };
-    return json(await withAssist(out, env, url, inp.value));
+    return json(await stamp(await withAssist(out, env, url, inp.value), model));
   }
   const placement = decorate(decision.placement);
   const out = {
@@ -232,7 +262,7 @@ async function classifyRoute(request, url, env) {
     method_note: placement.confidence_note || CONFIDENCE_NOTE,
   };
   if (decision.adjudication) out.adjudication = { status: decision.adjudication.status };
-  return json(await withAssist(out, env, url, inp.value, placement.owner));
+  return json(await stamp(await withAssist(out, env, url, inp.value, placement.owner), model));
 }
 
 export default {

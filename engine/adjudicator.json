@@ -1,0 +1,10 @@
+{
+  "chain": ["ollama:gemma3:12b", "workers-ai:@cf/meta/llama-3.1-8b-instruct-fp8", "abstain"],
+  "paid": false,
+  "keep_alive": "10m",
+  "ollama_host": "http://127.0.0.1:11434",
+  "ollama_timeout": 120,
+  "quotas": {
+    "workers-ai": {"neurons_per_day": 10000}
+  }
+}

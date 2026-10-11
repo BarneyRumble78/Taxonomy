@@ -19,6 +19,23 @@ BGE_USD_PER_M = 0.020
 # when the routed model is that id. Measured neurons are the bill.
 FP8_IN_PER_M = 0.152
 FP8_OUT_PER_M = 0.287
+# Anthropic list prices, USD per million tokens. Standard global tier.
+# https://platform.claude.com/docs/en/about-claude/pricing checked 10 Oct 2026.
+# Columns: input, output, 5-minute cache write, cache read.
+ANTHROPIC_PRICES = (
+    ("haiku-5.5", 0.10, 0.50, 0.125, 0.01),
+    ("haiku-4.5", 1.00, 5.00, 1.25, 0.10),
+    ("haiku-4-5", 1.00, 5.00, 1.25, 0.10),
+    ("sonnet-5.5", 2.00, 10.00, 2.50, 0.10),
+    ("sonnet-5-5", 2.00, 10.00, 2.50, 0.10),
+    ("sonnet", 3.00, 15.00, 3.75, 0.30),
+    ("opus-5.5", 4.00, 20.00, 5.00, 0.20),
+    ("opus-5-5", 4.00, 20.00, 5.00, 0.20),
+    ("opus", 5.00, 25.00, 6.25, 0.50),
+    ("haiku", 1.00, 5.00, 1.25, 0.10),
+)
+# A local Ollama process is not billed.
+OLLAMA_USD = 0.0
 FROZEN = ROOT / "pilot" / "heldout.tsv"
 HARD = {"MA", "PH", "CH", "BI", "EA", "MD", "EN", "CS"}
 GEO = [
@@ -102,12 +119,24 @@ def _print_block(title, report):
     )
 
 
+def usage_rows(item):
+    """Samples on the agree, disagree, and error paths. None of them are dropped."""
+    rows = []
+    direct = item.get("usage")
+    if isinstance(direct, list):
+        rows.extend(direct)
+    nested = (item.get("adjudication") or {}).get("usage")
+    if isinstance(nested, list):
+        rows.extend(nested)
+    return rows
+
+
 def _usage(items):
     prompt = completion = neurons = calls = 0
     cache_read = cache_create = 0
     models = {}
     for item in items:
-        for u in item.get("usage") or []:
+        for u in usage_rows(item):
             calls += 1
             prompt += int(u.get("prompt_tokens") or 0)
             completion += int(u.get("completion_tokens") or 0)
@@ -125,6 +154,26 @@ def _usage(items):
         "neurons": neurons,
         "models": models,
     }
+
+
+def anthropic_usd(model, prompt, completion, cache_read=0, cache_write=0):
+    """List-price estimate. Haiku 5.5 uses the at-or-under 100k prompt rate."""
+    name = (model or "").lower().replace("claude-", "")
+    rate = None
+    for key, inp, out, write, read in ANTHROPIC_PRICES:
+        if key in name:
+            rate = (inp, out, write, read)
+            break
+    if rate is None:
+        return None
+    inp, out, write, read = rate
+    return (
+        prompt * inp + completion * out + cache_write * write + cache_read * read
+    ) / 1_000_000
+
+
+def ollama_usd(*_args):
+    return OLLAMA_USD
 
 
 def _cost(neurons, n_claims):
@@ -198,6 +247,29 @@ def report(run_path):
         f"  cache_creation_input_tokens {frozen_usage['cache_creation_input_tokens']}"
     )
     print(f"  frozen llm on these {n} claims ${llm_usd:.4f}  per 1,000 claims ${llm_per:.4f}")
+    anthropic_total = 0.0
+    saw_anthropic = False
+    for item in frozen_items:
+        for row in usage_rows(item):
+            provider = str(row.get("provider") or "")
+            model = str(row.get("model") or "")
+            if provider == "anthropic" or "claude" in model.lower():
+                saw_anthropic = True
+                est = anthropic_usd(
+                    model,
+                    int(row.get("prompt_tokens") or 0),
+                    int(row.get("completion_tokens") or 0),
+                    int(row.get("cache_read_input_tokens") or 0),
+                    int(row.get("cache_creation_input_tokens") or 0),
+                )
+                if est is not None:
+                    anthropic_total += est
+    print(f"  Ollama list price ${OLLAMA_USD:.2f}. A local model is not billed.")
+    if saw_anthropic:
+        print(
+            f"  Anthropic list-price estimate ${anthropic_total:.4f} on the frozen calls"
+            "  (https://platform.claude.com/docs/en/about-claude/pricing, checked 10 Oct 2026)"
+        )
     if frozen_usage["prompt_tokens"]:
         cross = (frozen_usage["prompt_tokens"] * FP8_IN_PER_M + frozen_usage["completion_tokens"] * FP8_OUT_PER_M) / 1_000_000
         print(f"  fp8 token-table cross-check ${cross:.4f} on these {n} claims (published $0.152 / $0.287 per million)")
