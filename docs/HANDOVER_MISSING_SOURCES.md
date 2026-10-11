@@ -46,3 +46,55 @@ ERIC assessment terms into ED.O.A4). Note any re-placement in the placement tabl
 3. These all pass: `python3 scripts/check_coverage.py`, `python3 scripts/check.py`, `python3 scripts/validate_cards.py`, `python3 -m pytest -q tests`.
 4. A short list at the end of this file: what was added (node counts), what is still blocked and why.
 5. Commit on `v3-content` and push. Do not merge to main.
+
+## Added (2026-10-11)
+
+Licences are recorded as published. Nothing was blocked on a licence. Maps were not converted into Minto pyramids.
+
+| Source | Nodes | Where |
+|---|---:|---|
+| PhilPapers categories | 5,938 | PL 5,937, ED 1 (Teaching Philosophy) |
+| APA PsycInfo classification | 157 | MS 144, ED 9, CS 3, LN 1 |
+| LCC classes E and F | 310 | HI, folded into `lcc.json` |
+| UNESCO Thesaurus, Politics and government (mt6.15) | 92 | ST |
+| GEMET 4.2.3 | 5,573 | EV |
+| Getty AAT, top levels | 605 | DE 408, AR 197 |
+| ISKO Encyclopedia of Knowledge Organization | 132 | IS |
+| Glottolog families | 4,853 | LN, all on LN.O.A5 |
+| ERIC Thesaurus (main terms) | 4,520 | ED |
+| AGROVOC top concepts | 1,036 | AG |
+| ChEBI role ontology | 1,649 | CH (1,205 on A4, 444 on A5) |
+| IEEE Taxonomy, January 2026 | 8,037 | EN 6,849, CS 884, EA 233, ED 71 |
+
+ANZSRC 440804 Defence studies and 440810 Peace studies were already in `maps/ST/anzsrc2020.json` (ST.O.A3 and ST.O.A4). They were not copied again.
+
+Re-placements, in the placement tables:
+
+- MeSH rate prefixes under G02 (kinetics, catalysis, hydrolysis, organic chemistry phenomena, oxidation-reduction, photochemical processes, polymerization, pyrolysis): 45 nodes moved from CH.O.A3 to CH.O.A4. The rest of G02 stays on CH.O.A3.
+- ChEBI biological role and chemical role are CH.O.A4. Application is CH.O.A5.
+- LCC CC 72–81 and the heading Historiography (E175–175.7) are HI.O.A3. The outline has no narrower lines under those spans, so the cell holds 3 nodes.
+- LCC UB 250–277, UG 570–582 and UG 760–765 are ST.O.A5 (5 nodes).
+- ANZSRC 470410 Phonetics is LN.O.A1. 470405 Discourse and pragmatics and 470408 Lexicography and semantics are LN.O.A3. 390402 Education assessment and evaluation is ED.O.A4.
+- APA 2227 is ED.O.A4. APA 2720 is LN.O.A1. The 3500 block is ED. APA 4120, 4140 and 4160 are CS.O.A4.
+- ERIC groups 820 and 830 are ED.O.A4.
+- GEMET tops for impact, hazard, health and effect are EV.O.A3. Resource, risk and safety are EV.O.A5.
+- AAT Physical Attributes is AR.O.A2. The critical-concepts branch is AR.O.A5.
+
+Cells that were empty and now hold nodes: CH.O.A4, HI.O.A3, LN.O.A1, LN.O.A3, AR.O.A5, ED.O.A4, EV.O.A3, EV.O.A5, ST.O.A5. `check_coverage.py` reports no empty key-line cell. Total map nodes: 123,790.
+
+Files kept out of git, with the extract that was committed:
+
+- `agrovoc_core.nt.zip`, 74,107,876 bytes, from https://agrovoc.fao.org/latestAgrovoc/agrovoc_core.nt.zip. Committed file: `sources/agrovoc_top.nt`.
+- `chebi.obo.gz` (ChEBI data-version 256) from https://ftp.ebi.ac.uk/pub/databases/chebi/ontology/chebi.obo.gz. Committed file: `sources/chebi_roles.obo`.
+- Glottolog `values.csv` (about 21 MB). Committed file: `sources/glottolog_classification.tsv`, joined to `sources/glottolog_languages.csv`.
+
+Checks on this tree: `check_coverage.py` passed, `check.py` passed, `validate_cards.py` printed `valid`, `pytest` 87 passed.
+
+## Still blocked
+
+None of the thirteen sources is still blocked. These alternates were used:
+
+- https://philpapers.org/browse/all and https://philpapers.org/categories.pl return HTTP 403 to curl. The API wants a free key, which was not requested. The tree is the Internet Archive snapshot https://web.archive.org/web/20240924181241/https://philpapers.org/browse/all (24 September 2024): 5,938 categories after dropping repeated entries. A later live page has claimed 6,164.
+- https://www.apa.org/pubs/databases/training/class-codes returns HTTP 200 as a 212-byte Incapsula page. The December 2022 printer-friendly PDF of the same chart was saved (157 codes).
+- ieee.org taxonomy URLs return HTTP 202. The January 2026 Widen share https://ieee-org.widen.net/s/dr9nl9n8kw/ieee-taxonomy_jan_2026_pdf returns HTTP 404. The PDF is the file served by https://ieee-org.widen.net/content/umbnbirtxs/original/ieee-taxonomy.pdf (version 1.05, created 14 January 2026).
+- The LSA subfield list was not fetched. ANZSRC 4704, with the three field overrides above, is the linguistics list the handover allowed instead.

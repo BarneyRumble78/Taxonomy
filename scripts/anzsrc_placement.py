@@ -100,4 +100,10 @@ FIELD = {
     "500313": "PL.O.A4", "500314": "PL.O.A3", "500315": "PL.O.A2", "500316": "RE.O.A1",
     "500317": "PL.O.A5", "500318": "PL.O.A1", "500319": "PL.O.A3", "500320": "PL.O.A2",
     "500321": "PL.O.A4",
+    # Linguistics: signal, meaning. The 4704 group stays Form (LN.O.A2).
+    "470405": "LN.O.A3",  # Discourse and pragmatics
+    "470408": "LN.O.A3",  # Lexicography and semantics
+    "470410": "LN.O.A1",  # Phonetics and speech science
+    # Education: assessment was sitting with the 3904 specialist-studies group.
+    "390402": "ED.O.A4",  # Education assessment and evaluation
 }
