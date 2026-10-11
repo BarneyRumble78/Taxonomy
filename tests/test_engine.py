@@ -42,9 +42,20 @@ def test_known_border_cases():
     assert te.rule_placement("Every finite integral domain is a field")["cell"] == "MA.O.A2"
 
 def test_warrant_default_is_flagged():
-    r = te.rule_placement("Russian forces control Zarichne.")
+    r = te.rule_placement("Armed forces struck targets in Yemen.")
     assert r["owner"] == "ST"
     assert r["warrant"] == "W9" and r["default_applied"] is True and r["method"] == "M2"
+    held = te.rule_placement("Russian forces control Zarichne.")
+    assert held["owner"] == "ST" and held["cell"] == "ST.O.A4"
+    assert held["warrant"] == "W4" and held["default_applied"] is False and held["method"] == "M3"
+    mines = te.rule_placement("Iran laid mines in the Strait of Hormuz.")
+    assert mines["owner"] == "ST" and mines["warrant"] == "W4" and mines["default_applied"] is False
+    stated = te.rule_placement("The defence ministry stated that its forces control Zarichne.")
+    assert stated["warrant"] == "W7" and stated["default_applied"] is False
+    one = te.rule_placement("The ministry stated that its forces control the town.")
+    assert one["warrant"] == "W7" and one["default_applied"] is False
+    reported = te.rule_placement("A spokesperson said that mines have been laid in the channel.")
+    assert reported["owner"] == "ST" and reported["warrant"] == "W7"
     proved = te.rule_placement("Prove that every finite integral domain is a field.")
     assert proved["warrant"] == "W1" and proved["default_applied"] is False and proved["method"] == "M2"
 

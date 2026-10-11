@@ -9,35 +9,127 @@ environment does not by itself call a paid API.
              Needs ANTHROPIC_API_KEY. Model TAXONOMY_MODEL, default claude-sonnet-5-5.
 Every backend returns parsed JSON. No other dependencies.
 """
-import json, os, re, time, urllib.request
+import json, os, re, socket, time, urllib.error, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+_REASK = "Return valid JSON only"
 
 
 class LLMError(Exception):
     pass
 
 
+def ollama_timeout(default=120):
+    """Seconds for one local generate call. TAXONOMY_OLLAMA_TIMEOUT overrides the default."""
+    raw = os.environ.get("TAXONOMY_OLLAMA_TIMEOUT", "").strip()
+    if not raw:
+        return default
+    try:
+        n = int(raw)
+    except ValueError:
+        return default
+    return n if n > 0 else default
+
+
+def _salvage(text):
+    """Close a cut-off JSON value. Returns an object, or None when it cannot."""
+    out = []
+    stack = []
+    in_str = False
+    esc = False
+    for ch in text:
+        out.append(ch)
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+            continue
+        if ch == '"':
+            in_str = True
+        elif ch == "{":
+            stack.append("}")
+        elif ch == "[":
+            stack.append("]")
+        elif ch in "}]" and stack and stack[-1] == ch:
+            stack.pop()
+    if not stack and not in_str:
+        return None
+    if in_str:
+        if esc:
+            out.append("\\")
+        out.append('"')
+    body = "".join(out).rstrip()
+    body = re.sub(r":\s*$", ": null", body)
+    body = re.sub(r",\s*$", "", body)
+    body = re.sub(r',\s*"[^"]*"\s*$', "", body)
+    body = re.sub(r'\{\s*"[^"]*"\s*$', "{", body)
+    body = re.sub(r",\s*$", "", body)
+    closed = body + "".join(reversed(stack))
+    try:
+        return json.loads(closed)
+    except json.JSONDecodeError:
+        return None
+
+
 def parse_json(text):
-    text = text.strip()
-    m = re.search(r"```(?:json)?\s*(.*?)```", text, re.S)
-    if m:
-        text = m.group(1)
-    for opener, closer in (("{", "}"), ("[", "]")):
-        i, j = text.find(opener), text.rfind(closer)
-        if i != -1 and j > i:
-            try:
-                return json.loads(text[i:j + 1])
-            except json.JSONDecodeError:
-                continue
+    """First JSON value in the reply. A later object is ignored. A cut-off value is closed."""
+    text = (text or "").strip()
+    fenced = re.search(r"```(?:json)?\s*(.*?)```", text, re.S)
+    if fenced:
+        text = fenced.group(1).strip()
+    decoder = json.JSONDecoder()
+    for i, ch in enumerate(text):
+        if ch not in "{[":
+            continue
+        try:
+            obj, _end = decoder.raw_decode(text[i:])
+        except json.JSONDecodeError:
+            obj = _salvage(text[i:])
+        if obj is not None:
+            return obj
     raise LLMError("model reply was not JSON: " + text[:200])
 
 
 def _post(url, body, headers, timeout=180):
     req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=headers, method="POST")
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read())
+        raw = r.read()
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise LLMError("model transport was not JSON") from exc
+
+
+def _read_retry(do, attempts=3):
+    """Up to three tries. Backoff on connection errors, timeouts and HTTP 5xx. A 4xx is not retried."""
+    last = None
+    for attempt in range(attempts):
+        try:
+            return do()
+        except urllib.error.HTTPError as exc:
+            last = exc
+            if exc.code < 500 or attempt == attempts - 1:
+                raise LLMError(str(exc)) from exc
+            time.sleep(2 ** attempt)
+        except (urllib.error.URLError, TimeoutError, socket.timeout, ConnectionError, OSError) as exc:
+            last = exc
+            if attempt == attempts - 1:
+                raise LLMError(str(exc)) from exc
+            time.sleep(2 ** attempt)
+    raise LLMError(str(last))
+
+
+def _complete_text(fetch_text, prompt):
+    text = _read_retry(lambda: fetch_text(prompt))
+    try:
+        return parse_json(text)
+    except LLMError:
+        text = _read_retry(lambda: fetch_text(prompt + "\n" + _REASK))
+        return parse_json(text)
 
 
 class Anthropic:
@@ -48,29 +140,31 @@ class Anthropic:
         self.model = model or os.environ.get("TAXONOMY_MODEL", "claude-sonnet-5-5")
 
     def __call__(self, prompt, max_tokens=4000):
-        for attempt in range(3):
-            try:
-                data = _post("https://api.anthropic.com/v1/messages",
-                             {"model": self.model, "max_tokens": max_tokens,
-                              "messages": [{"role": "user", "content": prompt}]},
-                             {"x-api-key": self.key, "anthropic-version": "2023-06-01", "content-type": "application/json"})
-                text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
-                return parse_json(text)
-            except (urllib.error.HTTPError, urllib.error.URLError) as e:
-                if attempt == 2:
-                    raise LLMError(str(e))
-                time.sleep(2 ** attempt)
+        def fetch(p):
+            data = _post("https://api.anthropic.com/v1/messages",
+                         {"model": self.model, "max_tokens": max_tokens,
+                          "messages": [{"role": "user", "content": p}]},
+                         {"x-api-key": self.key, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+            return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+
+        return _complete_text(fetch, prompt)
 
 
 class Ollama:
     def __init__(self, model=None):
         self.model = model or os.environ.get("TAXONOMY_MODEL", "gemma3:12b")
         self.host = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434")
+        self.timeout = ollama_timeout()
 
     def __call__(self, prompt, max_tokens=4000):
-        data = _post(f"{self.host}/api/generate", {"model": self.model, "prompt": prompt, "stream": False,
-                                                    "format": "json", "options": {"num_predict": max_tokens}}, {"content-type": "application/json"}, timeout=600)
-        return parse_json(data.get("response", ""))
+        def fetch(p):
+            data = _post(f"{self.host}/api/generate",
+                         {"model": self.model, "prompt": p, "stream": False,
+                          "format": "json", "options": {"num_predict": max_tokens}},
+                         {"content-type": "application/json"}, timeout=self.timeout)
+            return data.get("response", "")
+
+        return _complete_text(fetch, prompt)
 
 
 class Manual:

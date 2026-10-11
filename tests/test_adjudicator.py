@@ -340,7 +340,7 @@ def test_agreed_retrieval_keeps_a_strategy_owner(monkeypatch):
     assert detail["placement"]["adjudicated"] is False
     assert detail["placement"]["claim_type"] == "attribution"
     assert detail["placement"]["required_warrant"] == "W7"
-    assert detail["placement"]["warrant"] != "W4"
+    assert detail["placement"]["warrant"] == "W4"
     assert detail["adjudication"]["status"] == "kept"
     assert detail["retrieval"]["status"] == "agree"
     assert detail["retrieval"]["field"] == "ST"

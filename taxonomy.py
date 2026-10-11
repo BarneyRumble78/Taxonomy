@@ -9,6 +9,7 @@
 Backend: TAXONOMY_LLM=ollama (default, local) | manual | anthropic.
 Anthropic also needs TAXONOMY_ADJUDICATE_PAID=1 (see engine/v3/llm.py).
 check never calls the adjudicator. survey, consult and connect save a run record in runs/.
+A failed run is saved before the error is reported, and the message is one line plus that path.
 """
 import argparse, json, sys
 from pathlib import Path
@@ -17,8 +18,33 @@ ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "engine" / "v3"))
 sys.path.insert(0, str(ROOT / "engine"))
 
+# Queue reasons are the ones a reviewer would see. The phrase is the public line.
+_REVIEW = {"low_confidence", "stages_disagree", "no_cue"}
+_OTHER = {
+    "instruction": "This reads as an instruction, not a claim.",
+    "multi_sentence": "These sentences do not share one owner.",
+}
 
-def main():
+
+def abstain_line(reason):
+    if reason in _OTHER:
+        return _OTHER[reason]
+    return "unsure, sent to review"
+
+
+def main(argv=None):
+    try:
+        _main(argv)
+    except SystemExit:
+        raise
+    except Exception as exc:
+        line = str(exc).strip().splitlines()[0] if str(exc).strip() else exc.__class__.__name__
+        path = getattr(exc, "path", None)
+        print(f"{line} ({path})" if path else line, file=sys.stderr)
+        sys.exit(1)
+
+
+def _main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("mode", choices=["frame", "survey", "consult", "connect", "check"])
     ap.add_argument("text")
@@ -27,11 +53,15 @@ def main():
     ap.add_argument("--deepen", type=int, default=3)
     ap.add_argument("--top", type=int, default=8)
     ap.add_argument("--llm")
-    a = ap.parse_args()
+    a = ap.parse_args(argv)
     if a.mode == "check":
         import taxonomy_engine as te
         # Check stays on the local cascade. It does not follow TAXONOMY_ADJUDICATE.
-        placed = te.place_detail(a.text, adjudicator=False).get("placement")
+        detail = te.place_detail(a.text, adjudicator=False)
+        placed = detail.get("placement")
+        if not placed:
+            print(abstain_line(detail.get("reason")))
+            return
         print(json.dumps(placed, indent=1, ensure_ascii=False))
         return
     import core
