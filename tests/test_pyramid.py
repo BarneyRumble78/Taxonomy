@@ -11,7 +11,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "engine" / "v3"))
-from pyramid import IdBook, _walk_points, dedupe_nodes, pack_concepts
+from pyramid import IdBook, _walk_points, dedupe_nodes, dpsir_role, is_filler, kind_of, pack_concepts, summarise_names
 
 WORD = re.compile(r"[A-Za-z0-9]+(?:[-–][A-Za-z0-9]+)?")
 ORDERS = {"time", "structure", "degree"}
@@ -205,11 +205,209 @@ def test_ev_section_12():
         assert item["status"] == "RETIRED"
         assert item["id"] not in live
 
-    queued_ids = [item["node_id"] for item in queue["items"]]
+    place_items = [item for item in queue["items"] if item.get("task", "place") == "place"]
+    summary_items = [item for item in queue["items"] if item.get("task") == "summarise"]
+    queued_ids = [item["node_id"] for item in place_items]
     assert len(queued_ids) == len(set(queued_ids)) == build["queued"]
+    assert len(summary_items) == build["needs_summary"]
+    assert all(item.get("needs_summary") and item.get("point_id") for item in summary_items)
     placed_nodes = {
         point["anchor"][5:]
         for point in _walk_points(key["points"])
         if point.get("anchor", "").startswith("node:")
     }
     assert placed_nodes.isdisjoint(queued_ids)
+
+
+def _concept(cid, name, parent=None):
+    return {
+        "id": cid,
+        "name": name,
+        "cell": "EV.O.A1",
+        "parent": parent,
+        "sources": [{"scheme": "GEMET", "id": cid, "code": cid, "file": "maps/EV/gemet.json"}],
+    }
+
+
+def test_filler_patterns_fail():
+    assert is_filler("Alternative fuel is the class that holds the ideas grouped with it.")
+    assert is_filler("Pest control is a pressure.")
+    assert not is_filler("These substances are the sewage pressures.")
+    assert not is_filler("Extraction is the load from taking water, fish, or minerals.")
+    statement, needs, _feature = summarise_names(
+        ["Nitrogenous fertiliser", "Nitrogenous waste"], "pressure", "substance",
+    )
+    assert needs is False
+    assert not is_filler(statement)
+    assert "nitrogenous" in statement
+    weak, flagged, _feature = summarise_names(["Alpha", "Beta"], "pressure", "activity")
+    assert flagged is True
+    assert not is_filler(weak)
+    assert weak.count(".") == 1
+    assert len(WORD.findall(weak)) <= 25
+
+
+def test_dpsir_role_and_kind():
+    rules = _load(ROOT / "pyramids" / "rules" / "EV.json")
+    assert dpsir_role("waste water treatment", rules) == "response"
+    assert dpsir_role("pest control", rules) == "response"
+    assert dpsir_role("grain", rules) == "state"
+    assert dpsir_role("urban waste water", rules) == "ambiguous"
+    assert dpsir_role("waste processing industry", rules) == "ambiguous"
+    assert kind_of("animal husbandry") == "activity"
+    assert kind_of("working population engaged in agriculture") == "population"
+    assert kind_of("urban flows") == "flow"
+    assert kind_of("cities urban geography") == "place"
+
+
+def test_pack_keeps_one_kind():
+    book = IdBook("EV", None)
+    by_id = {}
+    children = defaultdict(list)
+    placed = {}
+    rows = [
+        ("A", "Animal husbandry", None),
+        ("B", "Crop farming", None),
+        ("C", "Working population engaged in agriculture", None),
+        ("D", "Urban flows", None),
+    ]
+    for cid, name, parent in rows:
+        by_id[cid] = _concept(cid, name, parent)
+        placed[cid] = {"facet": "land", "method": "rule"}
+    packed = pack_concepts(placed, by_id, children, "land", book, "EV.P.1.2", "pressure", {})
+    assert {point["kind"] for point in packed["points"]} == {"activity"}
+    queued = {item["name"] for item in packed["queued"]}
+    assert "Working population engaged in agriculture" in queued
+    assert "Urban flows" in queued
+    for point in packed["points"]:
+        assert not is_filler(point["statement"]) or not point.get("support")
+
+
+def test_parent_gets_a_summary():
+    book = IdBook("EV", None)
+    by_id = {}
+    children = defaultdict(list)
+    placed = {}
+    rows = [
+        ("P", "Animal husbandry", None),
+        ("C1", "Livestock farming", "P"),
+        ("C2", "Crop farming", "P"),
+        ("Q", "Timber logging", None),
+    ]
+    for cid, name, parent in rows:
+        by_id[cid] = _concept(cid, name, parent)
+        placed[cid] = {"facet": "land", "method": "rule"}
+        if parent:
+            children[parent].append(cid)
+    packed = pack_concepts(placed, by_id, children, "land", book, "EV.P.1.2", "pressure", {})
+    parents = [point for point in packed["points"] if point.get("support")]
+    assert parents
+    assert {point["kind"] for point in packed["points"]} == {"activity"}
+    for point in parents:
+        assert not is_filler(point["statement"])
+        kids = point["support"]["points"]
+        assert len({kid["kind"] for kid in kids}) == 1
+    assert any(item.get("needs_summary") for item in packed["summaries"]) or all(
+        not point.get("needs_summary") for point in parents
+    )
+
+
+def test_resume_respects_task_and_candidates():
+    module = _queue_module()
+    item = {
+        "task": "place",
+        "node_id": "N1",
+        "candidates": [{"group_id": "EV.P.1.1"}, {"group_id": "EV.P.1.2"}],
+    }
+    assert module.result_matches(item, {"node_id": "N1", "group_id": "EV.P.1.1"})
+    assert module.result_matches(item, {"node_id": "N1", "group_id": "unsure"})
+    assert not module.result_matches(item, {"node_id": "N1", "group_id": "EV.P.9.9"})
+    summary = {
+        "task": "summarise",
+        "needs_summary": True,
+        "node_id": "EV.P.1.1",
+        "point_id": "EV.P.1.1",
+    }
+    assert not module.result_matches(summary, {"node_id": "EV.P.1.1", "group_id": "EV.P.1.1"})
+    assert module.result_matches(summary, {"task": "summarise", "point_id": "EV.P.1.1", "node_id": "EV.P.1.1"})
+
+
+def test_summary_request_asks_for_a_sentence():
+    module = _queue_module()
+    body = module.request_body({
+        "task": "summarise",
+        "needs_summary": True,
+        "node_id": "EV.P.1.1.1",
+        "point_id": "EV.P.1.1.1",
+        "cell": "EV.O.A1",
+        "children": ["Alpha is a pressure.", "Beta is a pressure."],
+    })
+    assert body["think"] is False
+    schema = body["response_format"]["json_schema"]["schema"]
+    assert "summary" in schema["properties"]
+    assert "group_id" not in schema["properties"]
+    assert "is the class that holds" not in body["messages"][0]["content"]
+
+
+def _blob(point):
+    parts = [point.get("statement") or "", point.get("name") or ""]
+    for child in (point.get("support") or {}).get("points") or []:
+        parts.append(_blob(child))
+    return "\n".join(parts)
+
+
+def test_parents_are_not_filler():
+    pyramid = _load(ROOT / "pyramids" / "EV.json")
+    markdown = (ROOT / "pyramids" / "EV_minto.md").read_text(encoding="utf-8")
+    assert "is the class that holds" not in markdown
+    for point in _walk_points(pyramid["key_line"]["points"]):
+        if point.get("support"):
+            assert not is_filler(point["statement"]), point["statement"]
+
+
+def test_facet_groups_are_one_kind():
+    pyramid = _load(ROOT / "pyramids" / "EV.json")
+    for cell in pyramid["key_line"]["points"]:
+        for facet in (cell.get("support") or {}).get("points") or []:
+            _assert_one_kind(facet)
+
+
+def _assert_one_kind(point):
+    support = point.get("support") or {}
+    kids = support.get("points") or []
+    if not kids:
+        return
+    kinds = {kid.get("kind") for kid in kids}
+    assert len(kinds) == 1, point.get("statement")
+    for kid in kids:
+        if kid.get("support"):
+            _assert_one_kind(kid)
+
+
+def test_dpsir_placement_on_ev():
+    pyramid = _load(ROOT / "pyramids" / "EV.json")
+    queue = _load(ROOT / "pyramids" / "queues" / "EV.json")
+    by_cell = {point["cell"]: point for point in pyramid["key_line"]["points"]}
+    pressures = _blob(by_cell["EV.O.A1"]).lower()
+    assert "waste water treatment" not in pressures
+    assert "pest control" not in pressures
+    assert not re.search(r"\bgrain\b", pressures)
+    assert "urban waste water" not in pressures
+    assert "waste processing" not in pressures
+    placed_names = {
+        (point.get("name") or "").lower()
+        for point in _walk_points(pyramid["key_line"]["points"])
+        if str(point.get("anchor") or "").startswith("node:")
+    }
+    assert "urban waste water" not in placed_names
+    assert "waste processing industry" not in placed_names
+    place_items = [item for item in queue["items"] if item.get("task", "place") == "place"]
+    ambiguous = [item["name"].lower() for item in place_items if item.get("reason") == "the DPSIR role is ambiguous"]
+    assert any("urban waste water" in name for name in ambiguous)
+    assert any("waste processing" in name for name in ambiguous)
+    responses = _blob(by_cell["EV.O.A4"]).lower()
+    states = _blob(by_cell["EV.O.A2"]).lower()
+    queued_names = "\n".join(item["name"].lower() for item in place_items)
+    assert "pest control" in responses
+    assert "waste water treatment" in responses
+    assert re.search(r"\bgrain\b", states) or re.search(r"\bgrain\b", queued_names)

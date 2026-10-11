@@ -132,6 +132,172 @@ def _article(noun):
     return "an" if (noun or "")[:1].lower() in "aeiou" else "a"
 
 
+FILLER = re.compile(
+    r"is the class that holds|\bis (?:a|an) (?:pressure|measured state|impact|response|limit)\b",
+    re.I,
+)
+STOP = {
+    "the", "a", "an", "of", "and", "or", "in", "on", "for", "to", "from", "with",
+    "by", "at", "as", "into", "over", "under", "its", "their", "this", "that",
+}
+KIND_PATTERNS = (
+    ("response", re.compile(r"\b(treatments?|controls?|management|polic(?:y|ies)|protections?|regulations?|remediations?|remediat\w*|legislations?|plannings?|directives?)\b", re.I), "responses"),
+    ("population", re.compile(r"\b(populations?|peoples?|people|demographics?|workforces?|inhabitants?)\b", re.I), "populations"),
+    ("flow", re.compile(r"\b(flows?|fluxes|flux|runoffs?)\b", re.I), "flows"),
+    ("activity", re.compile(r"\b(industr(?:y|ies)|husbandry|farming|agricultures?|logging|harvests?|mining|fishings?|fisher(?:y|ies)|cultivations?|grazings?|extractions?|abstractions?)\b", re.I), "activities"),
+    ("place", re.compile(r"\b(city|cities|oceans?|lakes?|basins?|rivers?|seas?|coasts?|coastal|regions?|geograph\w*|zones?|settlements?|areas?)\b", re.I), "places"),
+    ("organism", re.compile(r"\b(species|pests?|animals?|plants?|biota|fauna|flora|organisms?|wildlife)\b", re.I), "organisms"),
+    ("substance", re.compile(r"\b(wastes?|pollutants?|fertilisers?|fertilizers?|sewage|chemicals?|fuels?|sludges?|pesticides?|emissions?|effluents?)\b", re.I), "substances"),
+    ("condition", re.compile(r"\b(levels?|concentrations?|quality|composition|temperatures?|climates?|ozone|status)\b", re.I), "conditions"),
+    ("institution", re.compile(r"\b(agenc(?:y|ies)|laws?|programmes?|programs?|measures?|standards?|lev(?:y|ies))\b", re.I), "institutions"),
+)
+KIND_PLURAL = {key: plural for key, _pat, plural in KIND_PATTERNS}
+ROLE_CELL = {"response": "EV.O.A4", "state": "EV.O.A2"}
+
+
+def is_filler(statement):
+    """A parent that only names its topic, or calls itself a class that holds its members."""
+    return bool(FILLER.search(statement or ""))
+
+
+def _term_pattern(term):
+    if term.endswith("y"):
+        return re.compile(r"\b" + re.escape(term[:-1]) + r"(?:y|ies)\b", re.I)
+    return re.compile(r"\b" + re.escape(term) + r"s?\b", re.I)
+
+
+def dpsir_role(name, rules):
+    """Response words, resource stocks, and ambiguous phrases, in that order.
+
+    The cell definitions in rules['dpsir'] are applied before any embedding.
+    """
+    text = name or ""
+    for term in rules.get("response_terms") or []:
+        if _term_pattern(term).search(text):
+            return "response"
+    low = text.lower()
+    for phrase in rules.get("ambiguous_phrases") or []:
+        if phrase.lower() in low:
+            return "ambiguous"
+    for term in rules.get("state_resources") or []:
+        if _term_pattern(term).search(text):
+            return "state"
+    return None
+
+
+def apply_dpsir(concepts, rules):
+    """Move concepts whose wording contradicts the map cell. Ambiguous names are queued."""
+    queued = []
+    for concept in concepts:
+        role = dpsir_role(concept["name"], rules)
+        concept["dpsir_role"] = role
+        concept["dpsir_skip"] = False
+        if role == "ambiguous":
+            concept["dpsir_skip"] = True
+            queued.append({
+                "task": "place",
+                "node_id": concept["id"],
+                "name": concept["name"],
+                "cell": concept.get("cell"),
+                "reason": "the DPSIR role is ambiguous",
+                "margin": None,
+                "candidates": [
+                    {"cell": cell, "facet": None, "score": None}
+                    for cell in ("EV.O.A1", "EV.O.A2", "EV.O.A3", "EV.O.A4", "EV.O.A5")
+                ],
+            })
+        elif role in ROLE_CELL:
+            concept["cell"] = ROLE_CELL[role]
+    by_id = {concept["id"]: concept for concept in concepts}
+    for concept in concepts:
+        parent = concept.get("parent")
+        if (
+            not parent
+            or parent not in by_id
+            or by_id[parent].get("cell") != concept.get("cell")
+            or by_id[parent].get("dpsir_skip")
+            or concept.get("dpsir_skip")
+        ):
+            concept["parent"] = None
+    return queued
+
+
+def kind_of(name):
+    """One kind of thing. Response words win, then population, flow, activity, and the rest."""
+    for key, pattern, _plural in KIND_PATTERNS:
+        if pattern.search(name or ""):
+            return key
+    return "unsorted"
+
+
+def kind_plural(kind):
+    if kind in KIND_PLURAL:
+        return KIND_PLURAL[kind]
+    if kind.startswith("word:"):
+        return kind.split(":", 1)[1]
+    return "ideas"
+
+
+def _tokens(name):
+    return [token.lower() for token in WORD.findall(name or "") if token.lower() not in STOP and len(token) > 2]
+
+
+def common_word(names):
+    lists = [_tokens(name) for name in names]
+    if not lists or any(not tokens for tokens in lists):
+        return None
+    shared = set(lists[0])
+    for tokens in lists[1:]:
+        shared &= set(tokens)
+    if not shared:
+        return None
+    return max(shared, key=len)
+
+
+def _noun_plural(noun):
+    parts = (noun or "idea").split()
+    if not parts[-1].endswith("s"):
+        parts[-1] += "s"
+    return " ".join(parts)
+
+
+def _leaf_names(points):
+    """Concept names under a group, skipping labels this builder wrote onto class points."""
+    names = []
+    for point in points:
+        anchor = str(point.get("anchor") or "")
+        if anchor.startswith("node:"):
+            names.append(point.get("name") or "")
+            continue
+        below = (point.get("support") or {}).get("points") or []
+        found = _leaf_names(below)
+        names.extend(found or [point.get("name") or ""])
+    return names
+
+
+def summarise_names(names, noun, kind):
+    """A sentence about the children's common feature. Weak cases are flagged, not filled with a topic label."""
+    plural = kind_plural(kind)
+    feature = common_word(names)
+    banned = {plural.lower(), kind.lower()}
+    if kind.startswith("word:"):
+        banned.add(kind.split(":", 1)[1].lower())
+    banned_stems = {word.rstrip("s") for word in banned}
+    if feature and (feature.lower() in banned or feature.lower().rstrip("s") in banned_stems):
+        feature = None
+    noun_p = _noun_plural(noun)
+    if feature:
+        statement = f"These {plural} are the {feature} {noun_p}."
+        needs = False
+    else:
+        statement = f"These {plural} are alike as {noun_p}."
+        needs = True
+    if is_filler(statement) or not _sentence(statement) or len(WORD.findall(statement)) > 25:
+        statement = f"These {plural} are alike as {noun_p}."
+        needs = True
+    return statement, needs, feature or plural
+
+
 def assign_facets(concepts, cell_rule, margin, vectors, floor):
     """Place concepts into the cell's facets. Returns (placed, queued).
 
@@ -151,7 +317,12 @@ def assign_facets(concepts, cell_rule, margin, vectors, floor):
     placed = {}
     ambiguous = []
     for concept in in_cell:
-        if OTHER.search(concept["name"]):
+        if concept.get("dpsir_skip") or OTHER.search(concept["name"]):
+            continue
+        role = concept.get("dpsir_role")
+        if role == "response" and cell_rule["cell"] != "EV.O.A4":
+            continue
+        if role == "state" and cell_rule["cell"] != "EV.O.A2":
             continue
         facet = keyword_facet(concept["name"], facets)
         if facet:
@@ -163,7 +334,14 @@ def assign_facets(concepts, cell_rule, margin, vectors, floor):
     while changed:
         changed = False
         for concept in in_cell:
-            if concept["id"] in placed or OTHER.search(concept["name"]):
+            if concept["id"] in placed or concept.get("dpsir_skip") or OTHER.search(concept["name"]):
+                continue
+            role = concept.get("dpsir_role")
+            if role == "ambiguous":
+                continue
+            if role == "response" and cell_rule["cell"] != "EV.O.A4":
+                continue
+            if role == "state" and cell_rule["cell"] != "EV.O.A2":
                 continue
             parent = concept.get("parent")
             if parent in placed and placed[parent]["method"] == "rule":
@@ -383,18 +561,22 @@ def pack_concepts(placed, by_id, children, facet_key, ids, parent_id, noun, vect
                 "margin": None,
                 "candidates": [],
             })
-        return {"points": [], "queued": queued, "collapsed": [], "order": "structure",
+        return {"points": [], "queued": queued, "collapsed": [], "summaries": [], "order": "structure",
                 "plural_noun": "kinds", "mece_dimension": f"parts of {facet_key}"}
 
     used = set()
     collapsed = []
+    summary_items = []
+    absorbed_by = {}
+    queued_ids = set()
 
     def order_ids(cids):
         return sorted(cids, key=lambda i: (by_id[i]["name"].lower(), by_id[i]["id"]))
 
     def queue(cid, reason):
-        if cid in used or cid not in by_id:
+        if cid in queued_ids or cid in used or cid not in by_id:
             return
+        queued_ids.add(cid)
         concept = by_id[cid]
         queued.append({
             "node_id": cid,
@@ -449,6 +631,109 @@ def pack_concepts(placed, by_id, children, facet_key, ids, parent_id, noun, vect
             clusters = _chunk(cids, k, by_id)
         return clusters
 
+    def _leaf_statements(points):
+        lines = []
+        for point in points:
+            kids = (point.get("support") or {}).get("points") or []
+            if kids:
+                lines.extend(_leaf_statements(kids))
+            else:
+                lines.append(point["statement"])
+        return lines
+
+    def note_summary(point, below):
+        if not point.get("needs_summary"):
+            return
+        cell = point.get("cell")
+        if not cell:
+            for child in below:
+                if child.get("cell"):
+                    cell = child["cell"]
+                    break
+        summary_items.append({
+            "task": "summarise",
+            "needs_summary": True,
+            "node_id": point["id"],
+            "point_id": point["id"],
+            "name": point["statement"],
+            "cell": cell,
+            "reason": "needs a summary of the children",
+            "children": _leaf_statements(below),
+            "candidates": [],
+        })
+
+    def apply_summary(point, below, kind, order):
+        names = _leaf_names(below)
+        statement, needs, feature = summarise_names(names, noun, kind)
+        point["statement"] = statement
+        point["kind"] = kind
+        point["name"] = feature
+        point["needs_summary"] = needs
+        point["question_raised"] = "which_ones"
+        point["support"] = _group(below, kind_plural(kind), f"the {kind_plural(kind)}", order, "which_ones")
+        note_summary(point, below)
+
+    def one_kind(cids):
+        """Keep the largest single kind. Other kinds are queued, not mixed in."""
+        grouped = defaultdict(list)
+        unsorted = []
+        for cid in cids:
+            kind = kind_of(by_id[cid]["name"])
+            if kind == "unsorted":
+                unsorted.append(cid)
+            else:
+                grouped[kind].append(cid)
+        if unsorted:
+            counts = defaultdict(int)
+            token_sets = {}
+            for cid in unsorted:
+                token_sets[cid] = set(_tokens(by_id[cid]["name"]))
+                for token in token_sets[cid]:
+                    counts[token] += 1
+            rest = list(unsorted)
+            if counts:
+                token = max(counts, key=lambda item: (counts[item], item))
+                bucket = [cid for cid in unsorted if token in token_sets[cid]]
+                if len(bucket) >= 2:
+                    grouped["word:" + token] = bucket
+                    rest = [cid for cid in unsorted if cid not in set(bucket)]
+            for cid in rest:
+                queue(cid, "no shared kind with another idea")
+        for kind, group in list(grouped.items()):
+            if len(group) < 2:
+                for cid in group:
+                    queue(cid, "fewer than two ideas of this kind")
+                del grouped[kind]
+        if not grouped:
+            return [], None
+        kind = max(grouped, key=lambda item: (len(grouped[item]), item))
+        for other, group in grouped.items():
+            if other == kind:
+                continue
+            for cid in group:
+                queue(cid, "different kind from the group")
+        return grouped[kind], kind
+
+    def release(points):
+        """Drop a subtree that is a different kind from its parent. Those ideas go back to the queue."""
+        drop = {point["id"] for point in _walk_points(points)}
+        cids = []
+        for point in _walk_points(points):
+            anchor = point.get("anchor") or ""
+            if anchor.startswith("node:"):
+                cids.append(anchor[5:])
+        released = set()
+        for cid in cids:
+            for extra in absorbed_by.get(cid, []):
+                used.discard(extra)
+                released.add(extra)
+                queue(extra, "different kind from the group")
+            used.discard(cid)
+            released.add(cid)
+            queue(cid, "different kind from the group")
+        collapsed[:] = [cid for cid in collapsed if cid not in released]
+        summary_items[:] = [item for item in summary_items if item.get("point_id") not in drop]
+
     def make_point(cid, pid_parent, link):
         if cid in used:
             return None
@@ -473,6 +758,7 @@ def pack_concepts(placed, by_id, children, facet_key, ids, parent_id, noun, vect
                     kids = nxt
                 break
         used.add(cid)
+        absorbed_by[cid] = list(absorbed_local)
         for extra in absorbed_local:
             used.add(extra)
             collapsed.append(extra)
@@ -483,20 +769,116 @@ def pack_concepts(placed, by_id, children, facet_key, ids, parent_id, noun, vect
         pid = ids.get(pid_parent, f"node:{cid}")
         point = _point(pid, f"node:{cid}", statement, sources)
         point["placement"] = placed[cid]["method"]
+        point["kind"] = kind_of(by_id[cid]["name"])
+        point["name"] = by_id[cid]["name"]
+        point["cell"] = by_id[cid]["cell"]
+        point["needs_summary"] = False
         if len(kids) >= 2:
-            below = split_into_points(kids, pid, True)
-            if 2 <= len(below) <= 5:
-                point["question_raised"] = "which_ones"
-                if all(p["anchor"].startswith("node:") for p in below):
-                    plural, dimension, order = "kinds", f"parts of {_short(by_id[cid]['name'])}", "structure"
-                else:
-                    plural, dimension, order = "classes", f"classes under {_short(by_id[cid]['name'])}", "degree"
-                point["support"] = _group(below, plural, dimension, order, "which_ones")
+            kept, child_kind = one_kind(list(kids))
+            if child_kind == point["kind"] and len(kept) >= 2:
+                below = split_into_points(kept, pid, True)
+                if 2 <= len(below) <= 5 and {child.get("kind") for child in below} == {point["kind"]}:
+                    order = "structure" if all(child["anchor"].startswith("node:") for child in below) else "degree"
+                    apply_summary(point, below, point["kind"], order)
+                elif below:
+                    release(below)
+            else:
+                for child_id in kept:
+                    queue(child_id, "different kind from the group")
         return point
+
+    def _summarise_class(sid, anchor, below, kind):
+        if not 2 <= len(below) <= 5:
+            if below:
+                release(below)
+            return None
+        summary = _point(
+            sid,
+            anchor,
+            f"These {kind_plural(kind)} are alike as {_noun_plural(noun)}.",
+            _dedupe_sources([src for point in _walk_points(below) for src in point["sources"]]),
+        )
+        summary["placement"] = "embedding"
+        summary["cell"] = below[0].get("cell")
+        apply_summary(summary, below, kind, "degree")
+        return summary
+
+    def _bucket_point(bucket, pid_parent, link, kind):
+        bucket = [cid for cid in bucket if cid not in used]
+        if len(bucket) < 2:
+            return None
+        medoid = min(bucket, key=lambda cid: (by_id[cid]["name"].lower(), cid))
+        anchor = f"class:{pid_parent}:{medoid}"
+        sid = ids.get(pid_parent, anchor)
+        if len(bucket) <= 5:
+            below = []
+            for cid in order_ids(bucket):
+                point = make_point(cid, sid, link)
+                if point is not None:
+                    below.append(point)
+            return _summarise_class(sid, anchor, below, kind)
+        ordered = order_ids(bucket)
+        k = min(5, max(2, len(ordered) // 2))
+        size = len(ordered) // k
+        extra = len(ordered) % k
+        below = []
+        start = 0
+        for index in range(k):
+            stop = start + size + (1 if index < extra else 0)
+            chunk = ordered[start:stop]
+            start = stop
+            if len(chunk) < 2:
+                continue
+            child = _bucket_point(chunk, sid, link, kind)
+            if child:
+                below.append(child)
+        return _summarise_class(sid, anchor, below, kind)
+
+    def _feature_points(cids, pid_parent, link, kind):
+        """Up to five groups that each share a content word, so the summary can name it."""
+        token_sets = {cid: set(_tokens(by_id[cid]["name"])) for cid in cids}
+        counts = defaultdict(int)
+        for cid in cids:
+            for token in token_sets[cid]:
+                counts[token] += 1
+        tokens = sorted(
+            (token for token, count in counts.items() if count >= 2),
+            key=lambda token: (-counts[token], -len(token), token),
+        )
+        groups = []
+        taken = set()
+        for token in tokens:
+            bucket = [cid for cid in cids if cid not in taken and token in token_sets[cid]]
+            if len(bucket) >= 2:
+                groups.append(bucket)
+                taken.update(bucket)
+        if len(groups) < 2:
+            return None
+        groups.sort(key=lambda bucket: (-len(bucket), by_id[bucket[0]]["name"].lower(), bucket[0]))
+        kept, extra_groups = groups[:5], groups[5:]
+        points = []
+        for bucket in kept:
+            point = _bucket_point(bucket, pid_parent, link, kind)
+            if point:
+                points.append(point)
+        if not 2 <= len(points) <= 5:
+            for point in points:
+                release([point])
+            return None
+        for bucket in extra_groups:
+            for cid in bucket:
+                queue(cid, "not in a group of two to five")
+        for cid in cids:
+            if cid not in taken:
+                queue(cid, "no shared feature with another idea")
+        return points
 
     def split_into_points(cids, pid_parent, link):
         cids = [cid for cid in cids if cid not in used]
         if len(cids) < 2:
+            return []
+        cids, kind = one_kind(cids)
+        if len(cids) < 2 or not kind:
             return []
         if len(cids) <= 5:
             points = []
@@ -505,6 +887,9 @@ def pack_concepts(placed, by_id, children, facet_key, ids, parent_id, noun, vect
                 if point is not None:
                     points.append(point)
             return points
+        featured = _feature_points(cids, pid_parent, link, kind)
+        if featured:
+            return featured
         clusters = partition(cids)
         clusters = sorted(clusters, key=lambda cl: (-len(cl), by_id[cl[0]]["name"].lower(), cl[0]))
         points = []
@@ -522,23 +907,18 @@ def pack_concepts(placed, by_id, children, facet_key, ids, parent_id, noun, vect
             else:
                 below = split_into_points(cluster, sid, link)
             if not 2 <= len(below) <= 5:
+                if below:
+                    release(below)
                 continue
             summary = _point(
                 sid,
                 anchor,
-                _fit_statement(by_id[medoid]["name"], "is the class that holds the ideas grouped with it"),
+                f"These {kind_plural(kind)} are alike as {_noun_plural(noun)}.",
                 _dedupe_sources([src for point in _walk_points(below) for src in point["sources"]]),
             )
             summary["placement"] = "embedding"
-            summary["question_raised"] = "which_ones"
-            noun_group = "classes" if any(p["anchor"].startswith("class:") for p in below) else "kinds"
-            summary["support"] = _group(
-                below,
-                noun_group,
-                f"similarity to {_short(by_id[medoid]['name'])}",
-                "degree",
-                "which_ones",
-            )
+            summary["cell"] = below[0].get("cell")
+            apply_summary(summary, below, kind, "degree")
             points.append(summary)
         return points
 
@@ -565,7 +945,7 @@ def pack_concepts(placed, by_id, children, facet_key, ids, parent_id, noun, vect
         for cid in members:
             if cid not in used:
                 queue(cid, "the facet did not form a group of two to five")
-        return {"points": [], "queued": queued, "collapsed": [], "order": "structure",
+        return {"points": [], "queued": queued, "collapsed": [], "summaries": [], "order": "structure",
                 "plural_noun": "kinds", "mece_dimension": f"parts of {facet_key}"}
     for cid in members:
         if cid not in used:
@@ -581,6 +961,7 @@ def pack_concepts(placed, by_id, children, facet_key, ids, parent_id, noun, vect
         "order": order,
         "plural_noun": plural,
         "mece_dimension": dimension,
+        "summaries": summary_items,
     }
 
 
@@ -648,6 +1029,8 @@ def build_pyramid(field, embed=True):
     rules = _load_json(ROOT / "pyramids" / "rules" / f"{field}.json")
     nodes, _primary = load_field_nodes(field)
     concepts = dedupe_nodes(nodes)
+    # Cell definitions in rules["dpsir"] move or queue a concept before any embedding.
+    dpsir_queue = apply_dpsir(concepts, rules)
     previous = None
     path = ROOT / "pyramids" / f"{field}.json"
     if path.exists():
@@ -669,7 +1052,8 @@ def build_pyramid(field, embed=True):
         embedded = _embed(ordered)
         vectors = dict(zip(ordered, embedded))
     key_points = []
-    queue = []
+    queue = list(dpsir_queue)
+    summary_items = []
     rule_ids = set()
     embed_ids = set()
     def _note(concept_id):
@@ -730,6 +1114,7 @@ def build_pyramid(field, embed=True):
                     })
                 continue
             queue.extend(packed["queued"])
+            summary_items.extend(packed.get("summaries") or [])
             noted = set()
             for point in _walk_points(packed["points"]):
                 if point.get("anchor", "").startswith("node:"):
@@ -770,20 +1155,28 @@ def build_pyramid(field, embed=True):
         print(f"{cell['cell']}: {len(facet_points)} facets", file=sys.stderr)
     # Fill candidate group ids now that facet ids exist.
     facet_ids = {}
+    cell_ids = {}
     for point in key_points:
+        cell_ids[point["cell"]] = {"group_id": point["id"], "statement": point["statement"]}
         for facet in point["support"]["points"]:
             facet_ids[(point["cell"], facet.get("facet"))] = {
                 "group_id": facet["id"],
                 "statement": facet["statement"],
             }
     for item in queue:
-        if item.get("candidates") and "group_id" not in item["candidates"][0]:
-            enriched = []
-            for cand in item["candidates"]:
-                found = facet_ids.get((item["cell"], cand.get("facet")))
-                if found:
-                    enriched.append({**cand, **found})
-            item["candidates"] = enriched or item["candidates"]
+        item.setdefault("task", "place")
+        enriched = []
+        for cand in item.get("candidates") or []:
+            cell = cand.get("cell") or item.get("cell")
+            facet = cand.get("facet")
+            if facet:
+                found = facet_ids.get((cell, facet))
+            elif cell:
+                found = cell_ids.get(cell)
+            else:
+                found = None
+            enriched.append({**cand, **found} if found else cand)
+        item["candidates"] = enriched
     retired = ids.finish()
     pyramid = {
         "field": field,
@@ -837,6 +1230,7 @@ def build_pyramid(field, embed=True):
     deduped = []
     seen_q = set()
     for item in queue:
+        item.setdefault("task", "place")
         if not item.get("candidates"):
             item["candidates"] = []
         if item["node_id"] in seen_q or item["node_id"] in placed_ids:
@@ -854,7 +1248,18 @@ def build_pyramid(field, embed=True):
     pyramid["build"]["placed_by_embeddings"] = len(embed_ids)
     pyramid["build"]["queued"] = len(deduped)
     pyramid["build"]["queue_reasons"] = reasons
-    return pyramid, deduped
+    seen_summary = set()
+    unique_summaries = []
+    for item in summary_items:
+        point_id = item.get("point_id")
+        if not point_id or point_id in seen_summary:
+            continue
+        seen_summary.add(point_id)
+        item["task"] = "summarise"
+        item["needs_summary"] = True
+        unique_summaries.append(item)
+    pyramid["build"]["needs_summary"] = len(unique_summaries)
+    return pyramid, deduped + unique_summaries
 
 
 def render_markdown(pyramid, depth=3):
