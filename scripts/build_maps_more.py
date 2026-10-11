@@ -3,18 +3,20 @@
   MeSH 2026 trees   sources/mesh_trees_2026.json (from NLM desc2026.xml)  -> maps/<FIELD>/mesh2026.json
   ACM CCS 2012      sources/acm_ccs2012.xml (ACM)                          -> maps/<FIELD>/acm_ccs2012.json
   LCC outlines      sources/lcco_*.pdf (Library of Congress)               -> maps/<FIELD>/lcc.json
-  PhilPapers        sources/philpapers_browse_20240924.html                -> maps/<FIELD>/philpapers.json
+  PhilPapers        sources/philpapers_browse_20250630.html                -> maps/<FIELD>/philpapers.json
   APA PsycInfo      sources/apa_psycinfo_class.pdf                         -> maps/<FIELD>/psycinfo.json
   UNESCO Thesaurus  sources/unesco-thesaurus.rdf (Politics and government) -> maps/<FIELD>/unesco_politics.json
   GEMET             sources/gemet.rdf.gz                                   -> maps/<FIELD>/gemet.json
-  Getty AAT         sources/aat_top.json (SPARQL, top levels)              -> maps/<FIELD>/aat.json
+  Getty AAT         sources/aat_deeper.json (SPARQL, further levels)       -> maps/<FIELD>/aat.json
   ISKO IEKO         sources/isko_cyclo.html                                -> maps/<FIELD>/isko.json
   Glottolog         sources/glottolog_languages.csv + classification       -> maps/<FIELD>/glottolog.json
   ERIC Thesaurus    sources/eric_thesaurus.zip                             -> maps/<FIELD>/eric.json
-  AGROVOC           sources/agrovoc_top.nt (top concepts from the core)    -> maps/<FIELD>/agrovoc.json
+  AGROVOC           sources/agrovoc_hierarchy.json (full English hierarchy) -> maps/<FIELD>/agrovoc.json
   ChEBI roles       sources/chebi_roles.obo                                -> maps/<FIELD>/chebi_roles.json
   IEEE Taxonomy     sources/ieee_taxonomy_jan2026.pdf                      -> maps/<FIELD>/ieee.json
 Nodes whose parent sits in another field are re-rooted (level 1 in that field, with moved_from).
+scripts/build_maps_deep.py adds PACS, the Gold Book, ChEBI entities, NAICS, ISIC,
+the LCC full schedules, DTIC, APSA and further UNESCO slices.
 Run after scripts/build_maps.py; updates maps/index.json.
 """
 import json, re, subprocess, gzip, csv, zipfile
@@ -115,23 +117,33 @@ ACM_TOP = {"General and reference": "CS.O.A1", "Hardware": "EN.O.A4", "Computer 
 
 
 def acm():
-    import rdflib
-    from rdflib.namespace import SKOS, RDF
-    g = rdflib.Graph()
-    g.parse(SRC / "acm_ccs2012.xml", format="xml")
-    lab = {s: str(o) for s, o in g.subject_objects(SKOS.prefLabel)}
-    sid = lambda u: "ACM:" + str(u).rsplit("/", 1)[-1].rsplit("#", 1)[-1]
-    tops = {c for s in g.subjects(RDF.type, SKOS.ConceptScheme) for c in g.objects(s, SKOS.hasTopConcept)}
-    parent = {}
-    for c, b in g.subject_objects(SKOS.broader):
-        parent.setdefault(c, b)  # polyhierarchy: keep first broader
+    # The file writes prefLabel as <skos:prefLabel lang="en">, not xml:lang.
+    # rdflib reads that as a blank node, so the names were ids such as Nb5f3ca.
+    skos = "{http://www.w3.org/2004/02/skos/core#}"
+    rdf = "{http://www.w3.org/1999/02/22-rdf-syntax-ns#}"
+    root = ET.parse(SRC / "acm_ccs2012.xml").getroot()
+    lab, parent, tops = {}, {}, set()
+    for el in root:
+        about = el.get(rdf + "about") or ""
+        if el.tag == skos + "ConceptScheme":
+            for t in el.findall(skos + "hasTopConcept"):
+                tops.add(t.get(rdf + "resource"))
+        elif el.tag == skos + "Concept" and about:
+            pref = el.find(skos + "prefLabel")
+            if pref is not None and (pref.text or "").strip():
+                lab[about] = pref.text.strip()
+            broad = el.find(skos + "broader")
+            if broad is not None and broad.get(rdf + "resource"):
+                parent[about] = broad.get(rdf + "resource")
+
     def top_of(c, k=0):
         return c if c in tops or c not in parent or k > 20 else top_of(parent[c], k + 1)
+
     nodes = []
-    for c in lab:
+    for c in sorted(lab):
         t = top_of(c)
-        nodes.append({"id": sid(c), "code": sid(c)[4:], "name": lab[c], "level": 1,
-                      "parent": sid(parent[c]) if c in parent and c not in tops else None,
+        nodes.append({"id": "ACM:" + c, "code": c, "name": lab[c], "level": 1,
+                      "parent": ("ACM:" + parent[c]) if c in parent and c not in tops else None,
                       "taxonomy_cell": ACM_TOP.get(lab.get(t, ""), "CS.O.A1")})
     meta = {"scheme": "ACM Computing Classification System 2012", "source": "https://dl.acm.org/ccs (acm_ccs2012 SKOS XML)",
             "retrieved": DATE, "licence": "ACM: free for non-commercial and educational use",
@@ -192,6 +204,8 @@ LCC = {
 for _s in ("DA DAW DB DC DD DE DF DG DH DJ DJK DK DL DP DQ DR DS DT DU DX").split():
     LCC[_s] = "HI.O.A4"
 LINE = re.compile(r"^([A-Z]{1,3})([\d.]+(?:-[\d.]+)?)?(\s+)(\S.*)$")
+# Outline files without a "Subclass" header use cutter suffixes such as KB70.A-Z.
+WIDE = re.compile(r"^([A-Z]{1,3})(\d[\d.A-Z-]*)(\s{2,})(\S.*)$")
 # A node moves only when its own numeric span sits wholly inside the override.
 LCC_SPAN = (("UB", 250, 277, "ST.O.A5"), ("UG", 570, 582, "ST.O.A5"), ("UG", 760, 765, "ST.O.A5"),
             ("CC", 72, 81, "HI.O.A3"))
@@ -248,7 +262,7 @@ def lcc():
                     nodes.append({"id": sid, "code": sub, "name": "", "level": 1, "parent": None, "taxonomy_cell": LCC[sub]})
                 stack = []
                 continue
-            m = LINE.match(raw)
+            m = WIDE.match(raw) if not has_header else LINE.match(raw)
             if not m or not m.group(2):
                 continue
             letters = m.group(1)
@@ -350,7 +364,7 @@ class _Phil(HTMLParser):
 
 def philpapers():
     parser = _Phil()
-    parser.feed((SRC / "philpapers_browse_20240924.html").read_text(encoding="utf-8", errors="replace"))
+    parser.feed((SRC / "philpapers_browse_20250630.html").read_text(encoding="utf-8", errors="replace"))
     by = {n["id"]: n for n in parser.nodes}
 
     def cell(n, seen=0):
@@ -363,10 +377,11 @@ def philpapers():
     for n in parser.nodes:
         n.pop("_own", None)
     meta = {"scheme": "PhilPapers categories",
-            "source": "https://web.archive.org/web/20240924181241/https://philpapers.org/browse/all",
+            "source": "https://web.archive.org/web/20250630084731/https://philpapers.org/browse/all",
             "retrieved": NEW, "licence": "PhilPapers category tree as published at philpapers.org/browse/all. "
             "Live curl to https://philpapers.org/browse/all and https://philpapers.org/categories.pl returned HTTP 403. "
-            "Copied from the Internet Archive snapshot 20240924181241 (24 September 2024). "
+            "Copied from the Internet Archive snapshot 20250630084731 (30 June 2025), the latest 200 capture in the CDX index checked on 11 October 2026. "
+            "The September 2024 snapshot remains at sources/philpapers_browse_20240924.html. "
             "The PhilPapers API asks for a free key and was not used.",
             "note": "First occurrence of each category is kept. Children take the cell of the nearest mapped ancestor. "
                     "History of philosophy stays on PL.O.A1. Teaching Philosophy is ED.O.A3. Aesthetics stays in philosophy (PL.O.A4)."}
@@ -459,12 +474,12 @@ def unesco_politics():
             return "ST.O.A4"
         if _word(name, ("defence", "defense", "military", "war", "weapon", "armed", "conflict", "army", "navy", "warfare")):
             return "ST.O.A3"
-        if _word(name, ("party", "leader", "president", "minister")):
-            return "ST.O.A1"
+        if _word(name, ("party", "leader", "president", "minister", "election", "parliament", "government")):
+            return "PO.O.A1"
         parent = broader.get(uri)
         if parent in members and seen < 30:
             return cell_for(parent, seen + 1)
-        return "ST.O.A2"
+        return "PO.O.A2"
 
     nodes = []
     for uri in sorted(members):
@@ -476,7 +491,7 @@ def unesco_politics():
     meta = {"scheme": "UNESCO Thesaurus (Politics and government)",
             "source": "https://vocabularies.unesco.org/exports/thesaurus/latest/unesco-thesaurus.rdf",
             "retrieved": NEW, "licence": "http://creativecommons.org/licenses/by-sa/3.0/igo/ (dct:license). Rights holder UNESCO.",
-            "note": "Microthesaurus mt6.15 Politics and government only. ANZSRC 440804 Defence studies and 440810 Peace studies were already placed (ST.O.A3 and ST.O.A4)."}
+            "note": "Microthesaurus mt6.15 Politics and government. Defence, war and weapons stay on ST.O.A3, peace and disarmament on ST.O.A4, intelligence on ST.O.A5. Government, parties and elections are PO.O.A1; the remaining terms are PO.O.A2."}
     return split_write("unesco_politics.json", meta, nodes)
 
 
@@ -551,7 +566,10 @@ AAT_CELL = {"physical": "AR.O.A2", "value": "AR.O.A5", "styles": "DE.O.A2", "act
 
 
 def aat():
-    data = json.loads((SRC / "aat_top.json").read_text(encoding="utf-8"))
+    path = SRC / "aat_deeper.json"
+    if not path.exists():
+        path = SRC / "aat_top.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
     nums = {n["id"].rstrip("/").rsplit("/", 1)[-1] for n in data["nodes"]}
     nodes = []
     for n in data["nodes"]:
@@ -563,7 +581,7 @@ def aat():
                 parent = "AAT:" + pnum
         nodes.append({"id": "AAT:" + num, "code": num, "name": n["name"], "level": 1, "parent": parent,
                       "taxonomy_cell": AAT_CELL[n["branch"]]})
-    meta = {"scheme": "Getty AAT (top levels)", "source": "https://vocab.getty.edu/sparql",
+    meta = {"scheme": "Getty AAT", "source": "https://vocab.getty.edu/sparql",
             "retrieved": NEW, "licence": "No licence or rights triple on the AAT concept scheme returned by the SPARQL endpoint (UNVERIFIED).",
             "note": data.get("note", "Top levels only.") + " Physical Attributes is AR.O.A2. The critical-concepts branch is AR.O.A5. Styles, activities and furnishings are DE."}
     return split_write("aat.json", meta, nodes)
@@ -705,40 +723,31 @@ AG_TOP = {"organisms": "AG.O.A1", "activities": "AG.O.A2", "methods": "AG.O.A2",
 
 
 def agrovoc():
-    labels, broader, tops = {}, {}, set()
-    trip = re.compile(r'<([^>]+)>\s+<([^>]+)>\s+(?:<([^>]+)>|"((?:[^"\\]|\\.)*)"@en)\s+\.')
-    for m in trip.finditer((SRC / "agrovoc_top.nt").read_text(encoding="utf-8")):
-        s, p, o, lit = m.group(1), m.group(2), m.group(3), m.group(4)
-        if p.endswith("prefLabel") and lit is not None:
-            labels[s] = lit.replace('\\"', '"')
-        elif p.endswith("broader") and o:
-            broader.setdefault(s, o)
-        elif p.endswith("hasTopConcept") and o:
-            tops.add(o)
-    top_name = {uri: labels[uri] for uri in tops if uri in labels}
+    rows = json.loads((SRC / "agrovoc_hierarchy.json").read_text(encoding="utf-8"))
+    by = {r["c"]: r for r in rows}
 
-    def cell_of(uri, seen=0):
-        if uri in top_name:
-            return AG_TOP.get(top_name[uri], "AG.O.A5")
-        parent = broader.get(uri)
-        if parent and seen < 10:
+    def cell_of(code, seen=0):
+        row = by[code]
+        if row.get("t"):
+            return AG_TOP.get(row["n"], "AG.O.A5")
+        parent = row.get("p")
+        if parent in by and seen < 40:
             return cell_of(parent, seen + 1)
         return "AG.O.A5"
 
     nodes = []
-    for uri, name in sorted(labels.items(), key=lambda kv: kv[1].lower()):
-        code = uri.rstrip("/").rsplit("/", 1)[-1]
-        parent = broader.get(uri)
-        if parent not in labels or uri in tops:
-            parent = None
-        nodes.append({"id": "AGROVOC:" + code, "code": code, "name": name, "level": 1,
-                      "parent": ("AGROVOC:" + parent.rstrip("/").rsplit("/", 1)[-1]) if parent else None,
-                      "taxonomy_cell": cell_of(uri)})
-    meta = {"scheme": "AGROVOC top concepts",
+    for row in rows:
+        parent = row.get("p") if row.get("p") in by and not row.get("t") else None
+        nodes.append({"id": "AGROVOC:" + row["c"], "code": row["c"], "name": row["n"], "level": 1,
+                      "parent": ("AGROVOC:" + parent) if parent else None,
+                      "taxonomy_cell": cell_of(row["c"])})
+    meta = {"scheme": "AGROVOC",
             "source": "https://agrovoc.fao.org/latestAgrovoc/agrovoc_core.nt.zip",
             "retrieved": NEW,
-            "licence": "No licence triple in the extracted top-concept slice of agrovoc_core.nt.zip (UNVERIFIED). The core zip is 74107876 bytes.",
-            "note": "English labels of the 25 top concepts and their direct narrower concepts. Organisms is AG.O.A1; activities, methods, processes, technology and objects are AG.O.A2; phenomena and substances are AG.O.A3; products is AG.O.A4; the other tops are AG.O.A5."}
+            "licence": "No licence triple was copied into the hierarchy extract (UNVERIFIED). The core zip is 74107876 bytes.",
+            "note": "Every concept with an English skos-xl prefLabel, with its first broader concept. "
+                    "Organisms is AG.O.A1; activities, methods, processes, technology and objects are AG.O.A2; "
+                    "phenomena and substances are AG.O.A3; products is AG.O.A4; the other tops are AG.O.A5. Descendants inherit."}
     return split_write("agrovoc.json", meta, nodes)
 
 
@@ -904,11 +913,11 @@ def main():
         ("psycinfo.json", psycinfo, "APA PsycInfo classification"),
         ("unesco_politics.json", unesco_politics, "UNESCO Thesaurus (Politics and government)"),
         ("gemet.json", gemet, "GEMET"),
-        ("aat.json", aat, "Getty AAT (top levels)"),
+        ("aat.json", aat, "Getty AAT"),
         ("isko.json", isko, "ISKO Encyclopedia of Knowledge Organization"),
         ("glottolog.json", glottolog, "Glottolog families"),
         ("eric.json", eric, "ERIC Thesaurus"),
-        ("agrovoc.json", agrovoc, "AGROVOC top concepts"),
+        ("agrovoc.json", agrovoc, "AGROVOC"),
         ("chebi_roles.json", chebi_roles, "ChEBI role ontology"),
         ("ieee.json", ieee, "IEEE Taxonomy"),
     )
@@ -924,6 +933,8 @@ def main():
     for f, p in (("EV", "gemet.json"), ("ED", "eric.json"), ("PL", "philpapers.json"), ("EN", "ieee.json"),
                  ("AG", "agrovoc.json")):
         index[f]["primary"] = p
+    import build_maps_deep
+    build_maps_deep.deepen(index)
     (ROOT / "maps" / "index.json").write_text(json.dumps(index, indent=1, ensure_ascii=False), encoding="utf-8")
     for f, v in index.items():
         print(f, v["primary"], v["maps"])

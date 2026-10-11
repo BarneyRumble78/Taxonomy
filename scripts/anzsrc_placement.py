@@ -102,8 +102,12 @@ FIELD = {
     "500321": "PL.O.A4",
     # Linguistics: signal, meaning. The 4704 group stays Form (LN.O.A2).
     "470405": "LN.O.A3",  # Discourse and pragmatics
+    "470406": "LN.O.A5",  # Historical, comparative and typological linguistics
     "470408": "LN.O.A3",  # Lexicography and semantics
     "470410": "LN.O.A1",  # Phonetics and speech science
+    "470411": "LN.O.A4",  # Sociolinguistics
+    "480401": "LA.O.A3",  # Criminal law
+    "480605": "LA.O.A3",  # Tort law
     # Education: assessment was sitting with the 3904 specialist-studies group.
     "390402": "ED.O.A4",  # Education assessment and evaluation
 }
