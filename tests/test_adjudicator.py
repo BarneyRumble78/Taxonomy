@@ -100,7 +100,7 @@ def test_disagreement_and_multi_sentence_stay_abstained(monkeypatch):
 
     detail = te.place_detail("The particle has a gene.", adjudicator=fake)
     assert detail["placement"] is None and detail["reason"] == "low_confidence"
-    assert detail["adjudication"]["status"] == "disagree"
+    assert detail["adjudication"]["status"] == "needs_review"
 
     def boom(messages):
         raise AssertionError("multi-sentence must not be adjudicated")
@@ -160,12 +160,16 @@ def test_no_key_and_off_flag_do_not_build_a_provider(monkeypatch):
     monkeypatch.setenv("TAXONOMY_ADJUDICATE", "1")
     monkeypatch.delenv("OPENAI_API_KEY", raising=False)
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
-    monkeypatch.delenv("CLOUDFLARE_ACCOUNT_ID", raising=False)
-    assert provider_from_env() is None
+    monkeypatch.delenv("TAXONOMY_ADJUDICATE_PAID", raising=False)
+    monkeypatch.delenv("TAXONOMY_ADJUDICATE_CHAIN", raising=False)
+    got = provider_from_env()
+    assert got is not None
+    assert any(name.startswith("ollama:") for name in got.names)
+    assert not any(name.startswith("openai") or name.startswith("anthropic") for name in got.names)
     monkeypatch.setenv("CLOUDFLARE_API_TOKEN", "token")
     monkeypatch.setenv("CLOUDFLARE_ACCOUNT_ID", "account")
     got = provider_from_env()
-    assert got is not None and got.model.endswith("llama-3.1-8b-instruct-fp8")
+    assert any(name.startswith("workers-ai") for name in got.names)
 
 
 def test_parse_rejects_a_non_object():
@@ -252,7 +256,9 @@ def test_selected_fields_are_verified_and_carry_required_warrant(monkeypatch):
     def confirm(messages):
         body = json.loads(messages[1]["content"])
         assert body["proposal"]["owner"] == "LA"
-        assert "MA.O.A1 Foundations" in messages[0]["content"]
+        assert "Only these candidate fields are in play." in messages[0]["content"]
+        assert "LA Law." in messages[0]["content"]
+        assert "transits, exports, or output, is EC." in messages[0]["content"]
         return '{"owner":"LA","cell":"LA.O.A2","warrant":"W9","claim_type":"legal"}'
 
     detail = te.place_detail(gst, adjudicator=confirm)
@@ -273,7 +279,7 @@ def test_selected_fields_are_verified_and_carry_required_warrant(monkeypatch):
     kept = te.place_detail(gst, adjudicator=split)
     assert kept["placement"]["owner"] == "LA"
     assert kept["placement"]["adjudicated"] is False
-    assert kept["adjudication"]["status"] == "disagree"
+    assert kept["adjudication"]["status"] == "needs_review"
     assert kept["reason"] is None
 
     def boom(messages):
@@ -352,3 +358,225 @@ def test_retrieval_disagreement_lets_the_model_replace_the_owner(monkeypatch):
     assert detail["placement"]["owner"] == "PO"
     assert detail["placement"]["required_warrant"] == "W7"
     assert detail["retrieval"]["status"] == "adjudicated"
+    assert detail["prompt_version"]
+
+
+def test_short_catalogue_falls_back_when_the_shortlist_is_empty():
+    short = catalog_text(["EC", "ST"])
+    assert "EC Economics." in short
+    assert "ST Strategy." in short
+    assert "MA Mathematics." not in short
+    assert "transits, exports, or output, is EC." in short
+    assert "An influence operation, and a claim about its reach, is IS." in short
+    assert catalog_text([]) == catalog_text(None)
+    assert "MA Mathematics." in catalog_text(None)
+    empty = te.candidate_fields("zzzz", None, None)
+    assert empty == []
+    messages = adjudication_messages("zzzz", [], fields=empty or None)
+    assert "MA Mathematics." in messages[0]["content"]
+
+
+def test_ollama_requests_schema_without_thinking(monkeypatch):
+    from adjudicator import OllamaChat
+    captured = {}
+
+    def fake_post(url, headers, body, timeout=60, attempts=None):
+        captured["url"] = url
+        captured["body"] = body
+        captured["timeout"] = timeout
+        return {
+            "message": {"content": '{"owner":"ST","cell":"ST.O.A4","warrant":"W9","claim_type":"event"}'},
+            "prompt_eval_count": 4,
+            "eval_count": 2,
+            "model": "gemma3:12b",
+        }
+
+    monkeypatch.setattr("adjudicator._post", fake_post)
+    text, usage = OllamaChat("qwen3:8b", keep_alive="10m", timeout=30)([{"role": "user", "content": "{}"}])
+    assert captured["url"].endswith("/api/chat")
+    assert captured["body"]["think"] is False
+    assert captured["body"]["keep_alive"] == "10m"
+    assert captured["body"]["format"]["properties"]["owner"]["enum"][0] == "MA"
+    assert captured["body"]["stream"] is False
+    assert captured["timeout"] == 30
+    assert usage["provider"] == "ollama"
+    assert usage["neurons"] == 0
+    assert parse_sample(text)["owner"] == "ST"
+
+
+def test_retries_cover_timeouts_and_5xx_only(monkeypatch):
+    import io, urllib.error, urllib.request
+    from email.message import Message
+    from adjudicator import _post
+    calls = {"n": 0}
+
+    class Resp:
+        def __enter__(self):
+            return self
+        def __exit__(self, *args):
+            return False
+        def read(self):
+            return b'{"ok": 1}'
+
+    def urlopen(req, timeout=60):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            raise urllib.error.HTTPError("http://example.test", 503, "down", Message(), io.BytesIO(b"busy"))
+        if calls["n"] == 2:
+            raise TimeoutError("timed out")
+        return Resp()
+
+    monkeypatch.setattr(urllib.request, "urlopen", urlopen)
+    monkeypatch.setattr("adjudicator._SLEEP", lambda _seconds: None)
+    assert _post("http://example.test", {}, {"a": 1}, attempts=3) == {"ok": 1}
+    assert calls["n"] == 3
+
+    def reject(req, timeout=60):
+        calls["n"] += 1
+        raise urllib.error.HTTPError("http://example.test", 400, "no", Message(), io.BytesIO(b"bad"))
+
+    calls["n"] = 0
+    monkeypatch.setattr(urllib.request, "urlopen", reject)
+    try:
+        _post("http://example.test", {}, {"a": 1}, attempts=3)
+        raised = False
+    except ProviderError as exc:
+        raised = True
+        assert "HTTP 400" in str(exc)
+    assert raised and calls["n"] == 1
+
+
+def test_chain_falls_back_and_quota_abstains(monkeypatch, tmp_path):
+    from adjudicator import ProviderChain, QuotaExceeded
+    monkeypatch.setenv("TAXONOMY_QUOTA_PATH", str(tmp_path / "quota.json"))
+
+    class Down:
+        name = "ollama:gemma3:12b"
+        def __call__(self, messages):
+            raise ProviderError("HTTP 500: down")
+
+    class Workers:
+        name = "workers-ai"
+        quota_neurons = 10
+        def __call__(self, messages):
+            return '{"owner":"ST"}', {"model": "llama", "neurons": 4, "provider": "workers-ai"}
+
+    chain = ProviderChain([
+        ("ollama:gemma3:12b", Down()),
+        ("workers-ai", Workers()),
+        ("abstain", None),
+    ])
+    _text, usage = chain([{"role": "user", "content": "x"}])
+    assert usage["neurons"] == 4
+    assert usage["provider"] == "workers-ai"
+    blocked = ProviderChain([("workers-ai", Workers())])
+    from adjudicator import record_quota
+    record_quota("workers-ai", {"neurons": 10})
+    try:
+        blocked([{"role": "user", "content": "x"}])
+        raised = False
+    except QuotaExceeded:
+        raised = True
+    assert raised
+
+
+def test_paid_providers_stay_out_until_enabled(monkeypatch):
+    monkeypatch.setenv("TAXONOMY_ADJUDICATE", "1")
+    monkeypatch.setenv("OPENAI_API_KEY", "sk-test")
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-ant")
+    monkeypatch.setenv("TAXONOMY_ADJUDICATE_CHAIN", "openai:gpt-4o-mini,anthropic:claude-haiku-4-5,abstain")
+    monkeypatch.setenv("TAXONOMY_ADJUDICATE_PAID", "0")
+    assert provider_from_env() is None
+    monkeypatch.setenv("TAXONOMY_ADJUDICATE_PAID", "1")
+    got = provider_from_env()
+    assert any(name.startswith("openai:") for name in got.names)
+    assert any(name.startswith("anthropic:") for name in got.names)
+
+
+def test_cache_and_review_queue(monkeypatch, tmp_path):
+    monkeypatch.setattr(te, "embed_queries", lambda texts: [[1.0] + [0.0] * 383 for _ in texts])
+    monkeypatch.setenv("TAXONOMY_CACHE_PATH", str(tmp_path / "cache.json"))
+    monkeypatch.setenv("TAXONOMY_REVIEW_PATH", str(tmp_path / "review.jsonl"))
+    calls = {"n": 0}
+
+    def agree(messages):
+        calls["n"] += 1
+        return '{"owner":"BI","cell":"BI.O.A2","warrant":"W3","claim_type":"observation"}', {
+            "model": "gemma3:12b", "prompt_tokens": 5, "completion_tokens": 2, "provider": "ollama", "neurons": 0,
+        }
+
+    claim = "The particle has a gene."
+    first = te.place_detail(claim, adjudicator=agree)
+    assert calls["n"] == 3
+    assert first["model"] == "gemma3:12b"
+    assert first["prompt_version"]
+    second = te.place_detail("  the   particle has a gene. ", adjudicator=agree)
+    assert calls["n"] == 3
+    assert second["adjudication"]["cached"] is True
+    assert second["placement"]["owner"] == "BI"
+
+    owners = ["PH", "CH", "BI"]
+
+    def split(messages):
+        owner = owners.pop(0)
+        return f'{{"owner":"{owner}","cell":"none","warrant":"W4","claim_type":"event"}}', {
+            "model": "gemma3:12b", "prompt_tokens": 1, "completion_tokens": 1,
+        }
+
+    other = "A photon carries quantum energy and little else is said here about genes."
+    # Use the weak particle claim again under a fresh cache key by changing the callable model.
+    split.model = "qwen3:8b"
+    reviewed = te.place_detail(claim, adjudicator=split)
+    assert reviewed["adjudication"]["status"] == "needs_review"
+    assert reviewed["adjudication"]["usage"]
+    line = json.loads((tmp_path / "review.jsonl").read_text(encoding="utf-8").splitlines()[0])
+    assert line["status"] == "needs_review"
+    assert line["prompt_version"] == reviewed["prompt_version"]
+    reviewed_tsv = tmp_path / "reviewed.tsv"
+    reviewed_tsv.write_text(
+        "claim\towner\tcell\twarrant\tmethod\n"
+        "The particle has a gene.\tBI\tBI.O.A2\tW3\tM4\n",
+        encoding="utf-8",
+    )
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("fold_reviews", ROOT / "scripts" / "fold_reviews.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    out = tmp_path / "labels.tsv"
+    rows = mod.fold(tmp_path / "review.jsonl", reviewed_tsv, out)
+    assert rows[0]["owner"] == "BI"
+    assert "heldout" not in out.name
+    try:
+        mod.fold(tmp_path / "review.jsonl", reviewed_tsv, ROOT / "pilot" / "heldout.tsv")
+        refused = False
+    except SystemExit:
+        refused = True
+    assert refused
+
+
+def test_error_usage_is_kept_and_prices_are_labelled(monkeypatch):
+    monkeypatch.setattr(te, "embed_queries", lambda texts: [[1.0] + [0.0] * 383 for _ in texts])
+    state = {"n": 0}
+
+    def flaky(messages):
+        state["n"] += 1
+        if state["n"] == 1:
+            return "not json", {"model": "gemma3:12b", "prompt_tokens": 9, "completion_tokens": 1, "provider": "ollama"}
+        raise ProviderError("HTTP 500: down")
+
+    detail = te.place_detail("The particle has a gene.", adjudicator=flaky)
+    assert detail["reason"] == "error"
+    assert detail["adjudication"]["usage"][0]["prompt_tokens"] == 9
+    assert detail["model"] == "gemma3:12b"
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("report_adjudication", ROOT / "scripts" / "report_adjudication.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    rows = mod.usage_rows({
+        "usage": [{"prompt_tokens": 1, "model": "gemma3:12b", "provider": "ollama"}],
+        "adjudication": {"status": "needs_review", "usage": [{"prompt_tokens": 2, "model": "claude-sonnet-5.5", "provider": "anthropic"}]},
+    })
+    assert [row["prompt_tokens"] for row in rows] == [1, 2]
+    assert mod.ollama_usd() == 0
+    assert mod.anthropic_usd("claude-sonnet-5.5", 1_000_000, 1_000_000) == 12
+    assert mod.anthropic_usd("claude-haiku-4-5", 1_000_000, 0) == 1

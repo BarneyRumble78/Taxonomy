@@ -645,6 +645,7 @@ const DEFAULT_WARRANT = {MA:"W1",PH:"W4",CH:"W3",BI:"W3",EA:"W4",MD:"W3",EN:"W11
 const WARRANT_TO_METHOD = {W1:"M2",W2:"M5",W3:"M4",W4:"M3",W5:"M3",W6:"M6",W7:"M3",W8:"M6",W9:"M2",W10:"M2",W11:"M7",W12:"M1",W13:"M1"};
 const WARRANT_NAMES = {W1:"Proof",W2:"Computation with error bound",W3:"Controlled intervention",W4:"Measurement with uncertainty",W5:"Causal identification",W6:"Comparative inference",W7:"Source criticism of a dated record",W8:"Interpretation traced to a record",W9:"Argument",W10:"Source and proof before a forum",W11:"Verification against a specification",W12:"Stipulation or convention",W13:"Tradition-internal authority"};
 const METHOD_NAMES = {M1:"Represent",M2:"Derive",M3:"Observe",M4:"Intervene",M5:"Compute",M6:"Compare and reconstruct",M7:"Verify"};
+const FIELD_CODES = ["MA","PH","CH","BI","EA","MD","EN","CS","MS","EC","BU","ST","PO","LA","PL","HI","LN","AR","RE","ED","DE","AG","EV","IS","IK"];
 
 const CUE_RE = new Map();
 const STEMS = new Set(["topolog","diagnos","electromagnet","bacteri","mitochondri","descend","phylogen","geolog","manufactur","simulat","randomi","catalogu","morpholog","theolog","religio","pedagog","classif","certif","turbulen","concurren","serialis","hippocamp","ontolog","epistem","commemorat","revitalis","accessib","purif","chromatograph","spectroscop","electr","cosmolog","vaccin","escalat","kaitiaki","depress","axiom","reconstruct","interpret","convention"]);
@@ -790,6 +791,27 @@ function scoreAll(text, lex) {
 
 function instructionHeuristic(sentence) {
   return INSTRUCTION_HEURISTIC.test(sentence || "");
+}
+
+// Top cue fields, then the retrieval neighbours. An empty list means the full catalogue.
+function candidateFields(sentence, lex, retrieved, definitions, k = 5) {
+  const text = " " + String(sentence || "").toLowerCase() + " ";
+  const { scores } = scoreAll(text, lex);
+  const ranked = Object.entries(scores)
+    .filter(([, score]) => score > 0)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, k)
+    .map(([code]) => code);
+  const extra = [];
+  if (retrieved) extra.push(retrieved);
+  for (const row of definitions || []) {
+    if (row && row.field) extra.push(row.field);
+  }
+  const out = [];
+  for (const code of ranked.concat(extra)) {
+    if (FIELD_CODES.includes(code) && !out.includes(code)) out.push(code);
+  }
+  return out;
 }
 
 // A trailing "under the … Act 1985" is its own segment. A statute glued onto

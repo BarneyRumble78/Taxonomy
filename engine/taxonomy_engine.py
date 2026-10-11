@@ -529,6 +529,24 @@ def _apply_agreed(item, agreed, reason):
     return kept, item.get("retrieval"), "kept"
 
 
+def candidate_fields(sentence, retrieved=None, definitions=None, k=5):
+    """Top cue fields, plus the retrieval neighbours. Empty means the full catalogue."""
+    text = " " + (sentence or "").lower() + " "
+    scores, _cells = _score_all(text)
+    ranked = [code for code, score in sorted(scores.items(), key=lambda kv: -kv[1]) if score > 0][:k]
+    extra = []
+    if retrieved:
+        extra.append(retrieved)
+    for row in definitions or []:
+        if row.get("field"):
+            extra.append(row["field"])
+    out = []
+    for code in ranked + extra:
+        if code in FIELD_CODES and code not in out:
+            out.append(code)
+    return out
+
+
 def _model_reason(item):
     """Why a configured model should see this sentence, or None."""
     if item["reason"] in QUEUE_REASONS:
@@ -537,6 +555,28 @@ def _model_reason(item):
     if placement and placement.get("owner") in VERIFY_OWNERS:
         return "verify"
     return None
+
+
+def _stamp(result, model):
+    """Every result names the prompt version. A model call also names the model."""
+    from adjudicator import PROMPT_VERSION
+    result["model"] = model
+    result["prompt_version"] = PROMPT_VERSION
+    if result.get("placement"):
+        result["placement"] = dict(result["placement"])
+        result["placement"]["model"] = model
+        result["placement"]["prompt_version"] = PROMPT_VERSION
+    if result.get("adjudication") is not None:
+        result["adjudication"]["model"] = model
+        result["adjudication"]["prompt_version"] = PROMPT_VERSION
+    return result
+
+
+def _answered_model(usage, fallback):
+    for row in usage or []:
+        if row.get("model"):
+            return row["model"]
+    return fallback
 
 
 def place_many(sentences, adjudicator=None):
@@ -554,22 +594,40 @@ def place_many(sentences, adjudicator=None):
     """
     call = _caller(adjudicator)
     prepared = _prepare(sentences, embed_queue=call is not None)
-    from adjudicator import N_SAMPLES, adjudication_messages, agree_samples
+    from adjudicator import (
+        N_SAMPLES, PROMPT_VERSION, QuotaExceeded, adjudication_messages, agree_samples,
+        cache_get, cache_put, write_review,
+    )
+    model_id = getattr(call, "model", None) or "mock"
     out = []
     for sentence, item in zip(sentences, prepared):
         reason = _model_reason(item) if call is not None else None
         if reason is None:
             if item["placement"]:
-                out.append({
+                out.append(_stamp({
                     "placement": _decorate(item["placement"]),
                     "reason": None,
                     "retrieval": item["retrieval"],
-                })
+                }, None))
             else:
-                out.append({"placement": None, "reason": item["reason"]})
+                out.append(_stamp({"placement": None, "reason": item["reason"]}, None))
+            continue
+        cached = cache_get(sentence, PROMPT_VERSION, model_id)
+        if cached:
+            restored = {
+                "placement": cached.get("placement"),
+                "reason": cached.get("reason"),
+                "retrieval": cached.get("retrieval"),
+                "adjudication": {"status": cached.get("status") or "agree", "usage": [], "cached": True},
+            }
+            out.append(_stamp(restored, cached.get("model") or model_id))
             continue
         definitions = retrieve_definitions(item["vector"]) if item.get("vector") is not None else []
-        messages = adjudication_messages(sentence, definitions, proposal=item.get("placement"))
+        retrieved = (item.get("retrieval") or {}).get("field")
+        fields = candidate_fields(sentence, retrieved, definitions)
+        messages = adjudication_messages(
+            sentence, definitions, proposal=item.get("placement"), fields=fields or None,
+        )
         samples, usage = [], []
         try:
             for _ in range(N_SAMPLES):
@@ -577,41 +635,74 @@ def place_many(sentences, adjudicator=None):
                 samples.append(text)
                 if meta:
                     usage.append(meta)
+        except QuotaExceeded as exc:
+            record = {"status": "quota", "error": str(exc)[:500], "usage": usage}
+            if item["placement"]:
+                result = {
+                    "placement": _decorate(item["placement"]),
+                    "reason": None,
+                    "retrieval": item["retrieval"],
+                    "adjudication": record,
+                }
+            else:
+                result = {"placement": None, "reason": "quota", "adjudication": record}
+            out.append(_stamp(result, _answered_model(usage, model_id)))
+            continue
         except Exception as exc:
             if isinstance(exc, AssertionError):
                 raise
-            record = {"status": "error", "error": str(exc)[:500]}
+            record = {"status": "error", "error": str(exc)[:500], "usage": usage}
             if item["placement"]:
-                out.append({
+                result = {
                     "placement": _decorate(item["placement"]),
                     "reason": None,
                     "retrieval": item["retrieval"],
                     "adjudication": record,
-                })
+                }
             else:
-                out.append({"placement": None, "reason": "error", "adjudication": record})
+                result = {"placement": None, "reason": "error", "adjudication": record}
+            out.append(_stamp(result, _answered_model(usage, model_id)))
             continue
         agreed = agree_samples(samples)
+        answered = _answered_model(usage, model_id)
         if not agreed:
-            record = {"status": "disagree"}
+            record = {"status": "needs_review", "usage": usage}
+            write_review({
+                "claim": sentence,
+                "status": "needs_review",
+                "model": answered,
+                "prompt_version": PROMPT_VERSION,
+                "reason": item.get("reason") or reason,
+                "samples": samples,
+            })
             if item["placement"]:
-                out.append({
+                result = {
                     "placement": _decorate(item["placement"]),
                     "reason": None,
                     "retrieval": item["retrieval"],
                     "adjudication": record,
-                })
+                }
             else:
-                out.append({"placement": None, "reason": item["reason"], "adjudication": record})
+                result = {"placement": None, "reason": item["reason"], "adjudication": record}
+            out.append(_stamp(result, answered))
             continue
         placement, retrieval, adj_status = _apply_agreed(item, agreed, reason)
         record = {"status": adj_status, "usage": usage}
-        out.append({
+        result = {
             "placement": _decorate(placement),
             "reason": None,
             "retrieval": retrieval,
             "adjudication": record,
+        }
+        stamped = _stamp(result, answered)
+        cache_put(sentence, PROMPT_VERSION, model_id, {
+            "placement": stamped["placement"],
+            "reason": None,
+            "retrieval": retrieval,
+            "status": adj_status,
+            "model": answered,
         })
+        out.append(stamped)
     return out
 
 
@@ -625,7 +716,11 @@ def adjudication_jobs(sentences):
         if reason is None:
             continue
         definitions = retrieve_definitions(item["vector"]) if item.get("vector") is not None else []
-        messages = adjudication_messages(sentence, definitions, proposal=item.get("placement"))
+        retrieved = (item.get("retrieval") or {}).get("field")
+        fields = candidate_fields(sentence, retrieved, definitions)
+        messages = adjudication_messages(
+            sentence, definitions, proposal=item.get("placement"), fields=fields or None,
+        )
         jobs.append({
             "index": i,
             "claim": sentence,

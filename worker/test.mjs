@@ -110,6 +110,7 @@ test("disagreeing samples stay abstained and are not echoed", async () => {
   const body = await res.json();
   assert.equal(body.placement, null);
   assert.equal(body.reason, "low_confidence");
+  assert.equal(body.adjudication.status, "needs_review");
   assert.equal(JSON.stringify(body).includes("BI"), false);
 });
 
@@ -142,7 +143,10 @@ test("a law placement is verified and carries the required warrant", async () =>
       n += 1;
       const body = JSON.parse(messages[1].content);
       assert.equal(body.proposal.owner, "LA");
-      assert.equal(messages[0].content.includes("MA.O.A1 Foundations"), true);
+      assert.equal(messages[0].content.includes("Only these candidate fields are in play."), true);
+      assert.equal(messages[0].content.includes("LA Law."), true);
+      assert.equal(messages[0].content.includes("transits, exports, or output, is EC."), true);
+      assert.equal(messages[0].content.includes("An influence operation, and a claim about its reach, is IS."), true);
       return '{"owner":"LA","cell":"LA.O.A2","warrant":"W10","claim_type":"legal"}';
     },
   };
