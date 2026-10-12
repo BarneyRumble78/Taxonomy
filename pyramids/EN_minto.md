@@ -4,57 +4,75 @@ Built by scripts/minto_pass.py from the grouped classification. Three rules (Min
 
 ## Introduction
 
-**Situation.** Engineering knowledge describes artefacts whose behaviour must be predicted before they are built or operated.
+**Situation.** Engineering models of artefacts must be completed by closing some governing balance or constitutive relation before they can predict behaviour.
 
-**Complication.** Existing groups mix library schemes, fields, devices and methods, so no single subject-matter dimension is visible.
+**Complication.** The inputs mix many fields, sources and scales, so the same kind of closure appears under different headings and some groups mix several quantities.
 
-**Question.** How is everything in engineering divided by the quantity whose balance closes the model of an artefact?
+**Question.** How is everything in engineering divided by the quantity that closes the predictive model of an artefact?
 
-**Answer.** Engineering's object claims are divided by the quantity whose balance or constitutive closure finishes the predictive model of an artefact, running from load path to material: force and deformation, mass and momentum, energy and entropy, electromagnetic state, and composition and microstructure.
+**Answer.** Engineering's object claims are divided by the quantity whose balance or constitutive closure finishes an artefact's predictive model, running from load path to material as force and deformation, mass and momentum, energy and entropy, electromagnetic state, and composition and microstructure.
 
 ## Governing thought
 
-Engineering's object claims are divided by the quantity whose balance or constitutive closure finishes the predictive model of an artefact, running from load path to material: force and deformation, mass and momentum, energy and entropy, electromagnetic state, and composition and microstructure.
+Engineering's object claims are divided by the quantity whose balance or constitutive closure finishes an artefact's predictive model, running from load path to material as force and deformation, mass and momentum, energy and entropy, electromagnetic state, and composition and microstructure.
 
 ## Key line
 
-Group of balances. Basis: kinds. Dimension: the quantity whose balance or constitutive closure finishes the predictive model of an artefact. Order: structure. The pillars run from load path to material, from the macroscopic mechanical balance down to the constitution of matter.
+Group of balances. Basis: kinds. Dimension: the quantity whose balance or constitutive closure finishes the predictive model of an artefact. Order: structure. The pillars run from the load path through flow and energy and field quantities to the material itself.
 
-1. Force and deformation is the balance of loads, moments and displacement that closes the model of vehicles, structures and machines. `EN.K1`
-2. Mass and momentum is the balance of material flow and momentum that closes the model of fluids, process streams and bulk matter. `EN.K2`
-3. Energy and entropy is the balance of energy, heat and conversion losses that closes the model of power, nuclear and production systems. `EN.K3`
-4. Electromagnetic state is the balance of charge, field, signal and power that closes the model of circuits, communication, sensing and optical devices. `EN.K4`
-5. Composition and microstructure is the constitutive closure of material makeup and fine structure that completes the model of an artefact built from matter. `EN.K5`
+1. Force and deformation is the closing quantity for artefacts whose models are finished by load, moment, displacement and geometric balance along the load path. `EN.K1`
+2. Mass and momentum is the closing quantity for artefacts whose models are finished by species, flow and momentum balances of fluids, grains and process streams. `EN.K2`
+3. Energy and entropy is the closing quantity for artefacts whose models are finished by energy, heat and dose balances in conversion, power, plasma and radiation systems. `EN.K3`
+4. Electromagnetic state is the closing quantity for artefacts whose models are finished by voltage, current, field, signal and optical balances. `EN.K4`
+5. Composition and microstructure is the closing quantity for artefacts whose models are finished by the constitutive properties of the material and its structure. `EN.K5`
 
 ## Groups
 
-### 1. Force and deformation is the balance of loads, moments and displacement that closes the model of vehicles, structures and machines.
+### 1. Force and deformation is the closing quantity for artefacts whose models are finished by load, moment, displacement and geometric balance along the load path.
 
-- **Aerospace vehicle fields close the model of an aircraft or spacecraft through force, moment and structural balance.**
-  _basis: kinds, order: structure. Ordered from flight motion and vehicle disciplines to structure and materials._
-  - **Aircraft motion and vehicle disciplines close the model through force and moment balance on trajectory, attitude, lift and thrust.**
-    _basis: kinds, order: structure. Ordered from flight motion to vehicle disciplines._
-    - **Aerospace motion and control fields close the predictive model of an aircraft through force and moment balance on its trajectory and attitude.**
-      _basis: kinds, order: structure. Ordered from the general aerospace field to its flight-mechanics subfields._
-      - Aerospace engineering
-      - Aircraft performance and flight control systems
-      - Avionics
-      - Flight dynamics
-    - **Aerospace vehicle disciplines are kinds of engineering whose predictive models close on lift, thrust, weight and structural balance of aircraft and spacecraft.**
-      _basis: kinds, order: structure. Ordered structurally from the overall vehicle engineering to its materials, manufacture and propulsion._
-      - Aerospace and electronic systems
-      - Aerospace engineering
-      - Aerospace materials
-      - Aircraft manufacture
-      - Aircraft propulsion
-  - **Aerospace structure, material and space vehicle topics close the model through structural and load balance of airframes, spacecraft and hypersonic vehicles.**
-    _basis: kinds, order: structure. Ordered from materials and structures to hypersonic and space vehicles._
+- **Aerospace and automotive vehicle fields are finished by force and moment balance on the trajectory, attitude and structure of a vehicle.**
+  _basis: kinds, order: structure. Sections run from air and space to road vehicles and propulsion._
+  - **Aerospace motion and control fields close the predictive model of an aircraft through force and moment balance on its trajectory and attitude.**
+    _basis: kinds, order: structure. Ordered from the general aerospace field to its flight-mechanics subfields._
+    - Aerospace engineering
+    - Aircraft performance and flight control systems
+    - Avionics
+    - Flight dynamics
+  - **Aerospace vehicle disciplines are kinds of engineering whose predictive models close on lift, thrust, weight and structural balance of aircraft and spacecraft.**
+    _basis: kinds, order: structure. Ordered structurally from the overall vehicle engineering to its materials, manufacture and propulsion._
+    - Aerospace and electronic systems
+    - Aerospace engineering
     - Aerospace materials
-    - Aerospace structures
-    - Hypersonic propulsion and hypersonic aerothermodynamics
-    - Satellite, space vehicle and missile design and testing
-- **Marine craft and vehicle fields close the model through buoyancy, hydrodynamic load and guidance forces on a moving craft.**
-  _basis: kinds, order: structure. Ordered from craft and platforms to vehicle safety to guidance and transport._
+    - Aircraft manufacture
+    - Aircraft propulsion
+  - **Automotive material, safety and control fields close the predictive model of a vehicle through constitutive behaviour, crash energy absorption and control feedback.**
+    _basis: kinds, order: structure. Ordered from materials to safety to control systems._
+    - Automotive engineering materials
+    - Automotive mechatronics and autonomous systems
+    - Automotive safety engineering
+  - **Propulsion and intelligent vehicles are the artefacts and drive mechanisms that give a vehicle its motion.**
+    _basis: kinds, order: structure. Ordered by structure, from the drive mechanism to the vehicle it moves._
+    - Propulsion
+    - Intelligent vehicles
+  - **IEEE topics about vehicles and transport systems cover the artefacts that carry people and goods and the technologies that support them.**
+    _basis: kinds, order: degree. Ranked from the broad field (Vehicular and wireless technologies) to its narrower topics (Vehicles, then Transportation)._
+    - Vehicular and wireless technologies
+    - Vehicles
+    - Transportation
+- **Aerospace materials, structures, hypersonic and spacecraft design topics are finished by structural load and deformation balance of air and space vehicles.**
+  _basis: kinds, order: structure. Topics run from materials and structures to propulsion and vehicle design._
+  - Aerospace materials
+  - Aerospace structures
+  - Hypersonic propulsion and hypersonic aerothermodynamics
+  - Satellite, space vehicle and missile design and testing
+- **Maritime and external-flow load fields are finished by balancing buoyancy, hydrodynamic and aerodynamic forces on bodies and structures.**
+  _basis: kinds, order: structure. Groups run from flow loads to vessels and platforms to ocean and ship technology._
+  - **External-flow and flow-structure fields close the model of an artefact by balancing the forces and acoustic loads exerted by a moving fluid on a body.**
+    _basis: kinds, order: structure. Ordered by structure from aerodynamics to fluid-structure coupling to hydraulics and maritime._
+    - Aerodynamics (excl. hypersonic aerodynamics)
+    - Fluid-structure interaction and aeroacoustics
+    - Hydrodynamics and hydraulic engineering
+    - Maritime engineering
   - **Maritime craft and platform disciplines are kinds of engineering whose predictive models close on buoyancy, hydrodynamic load and structural balance of vessels and offshore structures.**
     _basis: kinds, order: structure. Ordered structurally from general vessel engineering to specialised platforms and vehicles._
     - Marine engineering
@@ -65,11 +83,20 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
     _basis: kinds, order: structure_
     - Special vehicles
     - Naval architecture
-  - **Automotive material, safety and control fields close the predictive model of a vehicle through constitutive behaviour, crash energy absorption and control feedback.**
-    _basis: kinds, order: structure. Ordered from materials to safety to control systems._
-    - Automotive engineering materials
-    - Automotive mechatronics and autonomous systems
-    - Automotive safety engineering
+  - **Marine and ocean engineering concepts cover the measurement, understanding and building of structures and systems in the ocean.**
+    _basis: kinds, order: structure. Ordered by structure, from the broad field to specific techniques and quantities._
+    - Oceanic engineering and marine technology
+    - Marine technology
+    - Ocean temperature
+    - Oceanographic techniques
+    - Hydraulic engineering. Ocean engineering
+  - **Vehicle and ship technology groups cover motor and air vehicles, navigation and the design and building of ships.**
+    _basis: kinds, order: degree. Ranked from broadest (motor vehicles, aeronautics, astronautics) to narrower marine classes (navigation, then naval architecture)._
+    - Motor vehicles. Aeronautics. Astronautics
+    - Navigation. Merchant marine
+    - Naval architecture. Shipbuilding. Marine engineering
+- **Machines that act and are steered close their models on actuation, motion and feedback of mechanical state, including the control ideas that return measured behaviour.**
+  _basis: kinds, order: structure. Groups run from robots to guidance to control and systems behaviour._
   - **Guidance and command disciplines are kinds of engineering that close the predictive model of a vehicle through the balance of sensed state, control action and command decisions.**
     _basis: kinds, order: structure. Ordered structurally from onboard control to navigation and then to command-level supervision._
     - Aerospace control
@@ -77,25 +104,6 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
     - Command and control systems
     - Automotive engineering
     - Automated highways
-  - **Marine and ocean engineering concepts are kinds of knowledge and technique used to measure, understand and build in the ocean.**
-    _basis: kinds, order: structure. Ordered by structure, from the broad field to specific techniques and quantities._
-    - Oceanic engineering and marine technology
-    - Marine technology
-    - Ocean temperature
-    - Oceanographic techniques
-    - Hydraulic engineering. Ocean engineering
-- **Vehicle technology and machine fields close the model through force, buoyancy, actuation and displacement balance of moving mechanisms.**
-  _basis: kinds, order: structure. Ordered from vehicle classes to robots to operating practice._
-  - **Motor vehicles, aeronautics, navigation and shipbuilding are kinds of vehicle and ship technology whose motion is set by force and buoyancy balance.**
-    _basis: kinds, order: degree. Ranked from broadest (motor vehicles, aeronautics, astronautics) to narrower marine classes (navigation, then naval architecture)._
-    - Motor vehicles. Aeronautics. Astronautics
-    - Navigation. Merchant marine
-    - Naval architecture. Shipbuilding. Marine engineering
-  - **IEEE topics about vehicles and transport systems cover the artefacts that carry people and goods and the technologies that support them.**
-    _basis: kinds, order: degree. Ranked from the broad field (Vehicular and wireless technologies) to its narrower topics (Vehicles, then Transportation)._
-    - Vehicular and wireless technologies
-    - Vehicles
-    - Transportation
   - **Robotic and automated machine disciplines are kinds of engineering whose predictive models close on actuation, computation and task-level balance of machines that act with limited human input.**
     _basis: kinds, order: structure. Ordered structurally from the individual machine to automation in general and then to networked cloud-based robots._
     - Animatronics
@@ -127,14 +135,6 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
       - Control engineering
       - Mechatronics hardware design and architecture
       - Simulation, modelling, and programming of mechatronics systems
-- **Fabrication and operating topics fix the geometry and working behaviour of mechanisms through positioning, control and dependable practice.**
-  _basis: kinds, order: structure. Ordered from fabrication and positioning to operational practice._
-  - **Fabrication and positioning fields close the model through a process balance, such as exposure dose, pattern transfer, and displacement control, that fixes the geometry of the artefact.**
-    _basis: kinds, order: structure. Ordered by structure, from writing patterns to placing and packaging the result._
-    - Nanolithography
-    - Nanopatterning
-    - Nanopositioning
-    - Nanopackaging
   - **Operational topics are the device types, control ideas, systems behaviour and working practices through which an artefact is built, steered and kept dependable.**
     _basis: kinds, order: structure. Ordered by structure, from devices to control, systems and practice._
     - **Device and equipment concepts are artefact types whose predictive model is completed by a physical balance, a measured signal or a clinical action.**
@@ -529,167 +529,8 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
           - Identification of persons
           - Inclusive language
           - International relations
-
-### 2. Mass and momentum is the balance of material flow and momentum that closes the model of fluids, process streams and bulk matter.
-
-- **Fluid flow fields close the model through momentum and mass balance of liquids, gases and grains moving around or through a body.**
-  _basis: kinds, order: structure. Ordered from external flow to small-scale flow to theory and method to particulate flow._
-  - **External-flow and flow-structure fields close the model of an artefact by balancing the forces and acoustic loads exerted by a moving fluid on a body.**
-    _basis: kinds, order: structure. Ordered by structure from aerodynamics to fluid-structure coupling to hydraulics and maritime._
-    - Aerodynamics (excl. hypersonic aerodynamics)
-    - Fluid-structure interaction and aeroacoustics
-    - Hydrodynamics and hydraulic engineering
-    - Maritime engineering
-  - **Biological and small-scale flow fields close the model of a device by supplying the constitutive closure of fluids in tissue, vessels and micro-channels.**
-    _basis: kinds, order: structure. Ordered by structure from bio-fluids to biomedical to micro and nano scale to non-Newtonian rheology._
-    - Bio-fluids
-    - Biomedical fluid mechanics
-    - Microfluidics and nanofluidics
-    - Non-Newtonian fluid flows (incl. rheology)
-  - **Computational and experimental method fields close the predictive model by supplying numerical solution or measurement of the flow, heat and mass transfer balances.**
-    _basis: kinds, order: structure. Ordered by structure from computational to experimental to the general category._
-    - Computational methods in fluid flow, heat and mass transfer (incl. computational fluid dynamics)
-    - Experimental methods in fluid flow, heat and mass transfer
-    - Fluid mechanics and thermal engineering
-    - Fluid mechanics and thermal engineering not elsewhere classified
-  - **Fundamental flow-physics fields close the model through the governing balances and closures for turbulent, multiphase, reacting and geophysical flows.**
-    _basis: kinds, order: structure. Ordered by structure from theoretical foundations to turbulence to multiphysics to geophysical flows._
-    - Fundamental and theoretical fluid dynamics
-    - Turbulent flows
-    - Multiphysics flows (incl. multiphase and reacting flows)
-    - Geophysical and environmental fluid flows
-  - **Particulate and granular fields close the predictive model through momentum balance and constitutive laws for the contact and flow behaviour of solids.**
-    _basis: kinds, order: structure. Ordered by structure, a single field type._
-    - **Fields that treat bulk particulate matter, where mass and momentum balances plus constitutive laws for grains close the model of a machine or process.**
-      _basis: kinds, order: structure. Ordered from general particle technology to granular mechanics to agricultural engineering._
-      - Powder and particle technology
-      - Granular mechanics
-      - Agricultural engineering
-    - **Radiation-based devices and applications whose models are closed by balancing charged-particle or radiation quantities such as beam energy, luminosity and absorbed dose.**
-      _basis: kinds, order: structure. Ordered from beam-physics devices to biomedical uses of radiation._
-      - Colliding beam devices
-      - Biomedical applications of radiation
-    - **Particle physics topics provide the constitutive laws and conservation closures that underlie nuclear and accelerator models.**
-      _basis: kinds, order: structure. Ordered from fundamental particles to nuclear physics and the computing that supports instrumentation._
-      - Elementary particles
-      - Nuclear physics
-      - High energy physics instrumentation computing
-- **Process and environmental fields close the model through species and pollutant mass balances across streams and reactors.**
-  _basis: kinds, order: structure. Ordered from environment to reaction to separation to nanoscale mass transport._
-  - **Environmental engineering fields close the predictive model of an engineered system through mass and energy balances of pollutants and resources in the surrounding environment.**
-    _basis: kinds, order: structure. Ordered from the general field to air, sustainability and global scales._
-    - Environmental engineering
-    - Air pollution modelling and control
-    - Environmentally sustainable engineering
-    - Global and planetary environmental engineering
-  - **Environmental engineering fields close the model of an artefact by balancing risk, material flows and waste burden over its life cycle.**
-    _basis: kinds, order: structure. Ordered by structure from risk assessment to life cycle to waste to residual._
-    - Health and ecological risk assessment
-    - Life cycle assessment and industrial ecology
-    - Waste management, reduction, reuse and recycling
-    - Environmental engineering not elsewhere classified
-  - **Reaction and design fields close the model through species mass balances, rate laws and overall process synthesis.**
-    _basis: kinds, order: structure. Ordered by structure, from the umbrella discipline to reactor and design specifics._
-    - Chemical engineering
-    - Reaction engineering (excl. nuclear reactions)
-    - Chemical engineering design
-    - Chemical engineering not elsewhere classified
-  - **Separation and water treatment fields close the model through component mass balances and phase or transport equilibria between streams.**
-    _basis: kinds, order: structure. Ordered by structure, from general separations to specific water treatment applications._
-    - Separation technologies
-    - Wastewater treatment processes
-    - Water treatment processes
-    - Food engineering
-  - **Fluid and self-organizing fields close the model through a mass, momentum, or free-energy balance that governs how matter moves or assembles at the nanoscale.**
-    _basis: kinds, order: structure. Ordered by structure, from flow to assembly to replication._
-    - Nanofluidics
-    - Self-assembly
-    - Self-replicating machines
-- **Resource fields close the model through the mass balance of material recovered from ores, rock and reservoirs.**
-  _basis: kinds, order: structure. Ordered from metallurgy to extraction._
-  - **Extractive metallurgy routes are process pathways that recover metals from ores by electrical, aqueous, physical or thermal means.**
-    _basis: kinds, order: structure. Ordered by structure from the umbrella field to its individual process routes._
-    - Resources engineering and extractive metallurgy
-    - Electrometallurgy
-    - Hydrometallurgy
-    - Mineral processing/beneficiation
-    - Pyrometallurgy
-  - **Resource-extraction engineering disciplines design and analyse the mines, reservoirs, rock masses and nuclear systems from which resources are obtained.**
-    _basis: kinds, order: structure. Ordered by structure from ground mechanics to extraction systems and the residual category._
-    - Geomechanics and resources geotechnical engineering
-    - Mining engineering
-    - Nuclear engineering (incl. fuel enrichment and waste processing and storage)
-    - Petroleum and reservoir engineering
-    - Resources engineering and extractive metallurgy not elsewhere classified
-
-### 3. Energy and entropy is the balance of energy, heat and conversion losses that closes the model of power, nuclear and production systems.
-
-- **Power and conversion fields close the model through energy balance of generation, powertrain, propulsion and switching of electrical energy.**
-  _basis: kinds, order: structure. Ordered from energy fields to automotive and propulsion artefacts._
-  - **Energy and radiation engineering fields are the kinds of field that close an artefact's predictive model through a balanced or constitutively closed quantity.**
-    _basis: kinds, order: structure. Ordered by structure, from energy conversion through power engineering to radiation protection; no ranking is implied._
-    - **Energy-conversion fields close the predictive model through energy and heat balances coupled with reaction or electrochemical kinetics.**
-      _basis: kinds, order: structure. Ordered by structure, from combustion thermal processes to electrochemical storage._
-      - Chemical and thermal processes in energy and combustion
-      - Electrochemical energy storage and conversion
-      - Carbon capture engineering (excl. sequestration)
-    - **Power and energy engineering fields cover the generation, transmission and mechanical conversion of energy in engineered artefacts.**
-      _basis: kinds, order: structure. Ordered by structure, from the broad field to its subfields and the mechanical parent discipline._
-      - Power engineering and energy
-      - Power engineering
-      - Power generation
-      - Power systems
-      - Mechanical engineering and machinery
-    - **Radiation protection and measurement topics concern detecting, monitoring and controlling radiation so that people and instruments are kept safe.**
-      _basis: kinds, order: structure. Ordered by structure, from the general phenomenon to the protective and measuring practices built around it._
-      - Radiation effects
-      - Radiation monitoring
-      - Radiation safety
-      - Radiation hardening (electronics)
-  - **Energy and electrical control topics close a device model through the balance of energy and electric variables.**
-    _basis: kinds, order: structure. Ordered from the whole field to its energy and electrical control quantities._
-    - Nuclear and plasma sciences
-    - Energy
-    - Electric variables control
-  - **Automotive energy conversion fields close the predictive model of a vehicle through the balance of fuel, electrical and mechanical energy in its powertrain.**
-    _basis: kinds, order: structure. Ordered from the general automotive field to its energy and powertrain subfields._
-    - Automotive engineering
-    - Automotive combustion and fuel engineering
-    - Hybrid and electric vehicles and powertrains
-    - Automotive engineering not elsewhere classified
-  - **Propulsion and intelligent vehicles are the artefacts and drive mechanisms that give a vehicle its motion.**
-    _basis: kinds, order: structure. Ordered by structure, from the drive mechanism to the vehicle it moves._
-    - Propulsion
-    - Intelligent vehicles
-- **Nuclear and plasma fields close the model through energy, particle and dose balance of reactors, plasmas, beams and radiation instruments.**
-  _basis: kinds, order: structure. Ordered from plasma and fusion to beams to radiation measurement._
-  - **Fusion and plasma systems are artefacts whose predictive model is closed by the balance of plasma energy and particles.**
-    _basis: kinds, order: structure. Ordered from the plasma medium to the reactors and power generation built on it._
-    - Plasmas
-    - Fusion reactors
-    - Fusion power generation
-    - Gas discharge devices
-    - Helioseismology
-  - **Beam and accelerator topics are devices whose model is closed by the balance of charge and momentum in a particle beam.**
-    _basis: kinds, order: structure. Ordered along the beam path from emission and injection to handling, accelerators and applications._
-    - Electron emission
-    - Particle beam injection
-    - Particle beam handling
-    - Particle accelerators
-    - Ion beam applications
-  - **Radiation detection and medical topics are artefacts whose model is closed by the balance of radiation signal and dose.**
-    _basis: kinds, order: structure. Ordered from radiation and its electronics to imaging and medical use._
-    - Gamma-rays
-    - Nuclear electronics
-    - Nuclear imaging
-    - Nuclear medicine
-  - **Nuclear and plasma devices and phenomena are the instruments and physical emission processes used to sense and drive nuclear and plasma systems.**
-    _basis: kinds, order: structure. Ordered by structure, from the reactor-level instrumentation to the detector and the underlying emission process._
-    - Reactor instrumentation
-    - Scintillation counters
-    - Thermionic emission
-- **Manufacturing fields close the model through energy and resource balance of the routes, equipment, organisation and precision by which artefacts are made.**
-  _basis: kinds, order: structure. Ordered from process routes to equipment to organisation to precision._
+- **Manufacturing fields fix the geometry, tolerance and mechanical form of an artefact through the routes, tools, organisation and processes of making it.**
+  _basis: kinds, order: structure. Groups run from making routes to tools to organisation to tolerance to production processes._
   - **Process-forming fields are the manufacturing routes that shape material into an artefact by adding, removing or otherwise forming it.**
     _basis: kinds, order: structure. Ordered by structure, from additive routes to subtractive routes to general processes._
     - Additive manufacturing
@@ -720,270 +561,526 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
     - Environmentally friendly manufacturing techniques
     - Nanofabrication
 
-### 4. Electromagnetic state is the balance of charge, field, signal and power that closes the model of circuits, communication, sensing and optical devices.
+### 2. Mass and momentum is the closing quantity for artefacts whose models are finished by species, flow and momentum balances of fluids, grains and process streams.
 
-- **Circuit and device fields close the model through voltage, current, field and charge balance of electrical, magnetic and semiconductor components.**
-  _basis: kinds, order: structure. Ordered from electrical practice to hardware to nanoscale devices._
-  - **Electrical and magnetic fields close the model through the limit quantity or constitutive relation of a device or component.**
-    _basis: kinds, order: structure. Ordered from electrical practice to semiconductor physics._
-    - **Electrical engineering fields are kinds of field, magnetic and nonlinear practice whose limit quantity or constitutive relation closes the model of a device or component.**
-      _basis: kinds, order: structure. Ordered structurally from the field overview to magnetic relations and magnetic devices._
-      - **Electrical engineering fields are kinds of electrical practice divided by the energy, circuit or transduction quantity whose balance closes their model.**
+- **Fluid mechanics fields close the model through mass and momentum balance and constitutive closure of moving fluids.**
+  _basis: kinds, order: structure. Groups run from biological flows to methods to fundamentals._
+  - **Biological and small-scale flow fields close the model of a device by supplying the constitutive closure of fluids in tissue, vessels and micro-channels.**
+    _basis: kinds, order: structure. Ordered by structure from bio-fluids to biomedical to micro and nano scale to non-Newtonian rheology._
+    - Bio-fluids
+    - Biomedical fluid mechanics
+    - Microfluidics and nanofluidics
+    - Non-Newtonian fluid flows (incl. rheology)
+  - **Computational and experimental method fields close the predictive model by supplying numerical solution or measurement of the flow, heat and mass transfer balances.**
+    _basis: kinds, order: structure. Ordered by structure from computational to experimental to the general category._
+    - Computational methods in fluid flow, heat and mass transfer (incl. computational fluid dynamics)
+    - Experimental methods in fluid flow, heat and mass transfer
+    - Fluid mechanics and thermal engineering
+    - Fluid mechanics and thermal engineering not elsewhere classified
+  - **Fundamental flow-physics fields close the model through the governing balances and closures for turbulent, multiphase, reacting and geophysical flows.**
+    _basis: kinds, order: structure. Ordered by structure from theoretical foundations to turbulence to multiphysics to geophysical flows._
+    - Fundamental and theoretical fluid dynamics
+    - Turbulent flows
+    - Multiphysics flows (incl. multiphase and reacting flows)
+    - Geophysical and environmental fluid flows
+- **Environmental and chemical process fields close the model through mass balances of pollutants, species and streams.**
+  _basis: kinds, order: structure. Groups run from environment to reaction to separation._
+  - **Environmental engineering fields close the predictive model of an engineered system through mass and energy balances of pollutants and resources in the surrounding environment.**
+    _basis: kinds, order: structure. Ordered from the general field to air, sustainability and global scales._
+    - Environmental engineering
+    - Air pollution modelling and control
+    - Environmentally sustainable engineering
+    - Global and planetary environmental engineering
+  - **Environmental engineering fields close the model of an artefact by balancing risk, material flows and waste burden over its life cycle.**
+    _basis: kinds, order: structure. Ordered by structure from risk assessment to life cycle to waste to residual._
+    - Health and ecological risk assessment
+    - Life cycle assessment and industrial ecology
+    - Waste management, reduction, reuse and recycling
+    - Environmental engineering not elsewhere classified
+  - **Reaction and design fields close the model through species mass balances, rate laws and overall process synthesis.**
+    _basis: kinds, order: structure. Ordered by structure, from the umbrella discipline to reactor and design specifics._
+    - Chemical engineering
+    - Reaction engineering (excl. nuclear reactions)
+    - Chemical engineering design
+    - Chemical engineering not elsewhere classified
+  - **Separation and water treatment fields close the model through component mass balances and phase or transport equilibria between streams.**
+    _basis: kinds, order: structure. Ordered by structure, from general separations to specific water treatment applications._
+    - Separation technologies
+    - Wastewater treatment processes
+    - Water treatment processes
+    - Food engineering
+- **Particulate, extraction and resource fields close the model through mass and momentum balance of grains, ores, rock and reservoirs.**
+  _basis: kinds, order: structure. Groups run from grains to ores to resource systems._
+  - **Particulate and granular fields close the predictive model through momentum balance and constitutive laws for the contact and flow behaviour of solids.**
+    _basis: kinds, order: structure. Ordered by structure, a single field type._
+    - **Fields that treat bulk particulate matter, where mass and momentum balances plus constitutive laws for grains close the model of a machine or process.**
+      _basis: kinds, order: structure. Ordered from general particle technology to granular mechanics to agricultural engineering._
+      - Powder and particle technology
+      - Granular mechanics
+      - Agricultural engineering
+    - **Radiation-based devices and applications whose models are closed by balancing charged-particle or radiation quantities such as beam energy, luminosity and absorbed dose.**
+      _basis: kinds, order: structure. Ordered from beam-physics devices to biomedical uses of radiation._
+      - Colliding beam devices
+      - Biomedical applications of radiation
+    - **Particle physics topics provide the constitutive laws and conservation closures that underlie nuclear and accelerator models.**
+      _basis: kinds, order: structure. Ordered from fundamental particles to nuclear physics and the computing that supports instrumentation._
+      - Elementary particles
+      - Nuclear physics
+      - High energy physics instrumentation computing
+  - **Extractive metallurgy routes are process pathways that recover metals from ores by electrical, aqueous, physical or thermal means.**
+    _basis: kinds, order: structure. Ordered by structure from the umbrella field to its individual process routes._
+    - Resources engineering and extractive metallurgy
+    - Electrometallurgy
+    - Hydrometallurgy
+    - Mineral processing/beneficiation
+    - Pyrometallurgy
+  - **Resource-extraction engineering disciplines design and analyse the mines, reservoirs, rock masses and nuclear systems from which resources are obtained.**
+    _basis: kinds, order: structure. Ordered by structure from ground mechanics to extraction systems and the residual category._
+    - Geomechanics and resources geotechnical engineering
+    - Mining engineering
+    - Nuclear engineering (incl. fuel enrichment and waste processing and storage)
+    - Petroleum and reservoir engineering
+    - Resources engineering and extractive metallurgy not elsewhere classified
+
+### 3. Energy and entropy is the closing quantity for artefacts whose models are finished by energy, heat and dose balances in conversion, power, plasma and radiation systems.
+
+- **Conversion and power fields close the model through the balance of fuel, electrical and mechanical energy, written with the mathematical and balance relations that complete them.**
+  _basis: kinds, order: structure. Groups run from vehicles to energy conversion to power to the closure relations._
+  - **Automotive energy conversion fields close the predictive model of a vehicle through the balance of fuel, electrical and mechanical energy in its powertrain.**
+    _basis: kinds, order: structure. Ordered from the general automotive field to its energy and powertrain subfields._
+    - Automotive engineering
+    - Automotive combustion and fuel engineering
+    - Hybrid and electric vehicles and powertrains
+    - Automotive engineering not elsewhere classified
+  - **Energy and radiation engineering fields are the kinds of field that close an artefact's predictive model through a balanced or constitutively closed quantity.**
+    _basis: kinds, order: structure. Ordered by structure, from energy conversion through power engineering to radiation protection; no ranking is implied._
+    - **Energy-conversion fields close the predictive model through energy and heat balances coupled with reaction or electrochemical kinetics.**
+      _basis: kinds, order: structure. Ordered by structure, from combustion thermal processes to electrochemical storage._
+      - Chemical and thermal processes in energy and combustion
+      - Electrochemical energy storage and conversion
+      - Carbon capture engineering (excl. sequestration)
+    - **Power and energy engineering fields cover the generation, transmission and mechanical conversion of energy in engineered artefacts.**
+      _basis: kinds, order: structure. Ordered by structure, from the broad field to its subfields and the mechanical parent discipline._
+      - Power engineering and energy
+      - Power engineering
+      - Power generation
+      - Power systems
+      - Mechanical engineering and machinery
+    - **Radiation protection and measurement topics concern detecting, monitoring and controlling radiation so that people and instruments are kept safe.**
+      _basis: kinds, order: structure. Ordered by structure, from the general phenomenon to the protective and measuring practices built around it._
+      - Radiation effects
+      - Radiation monitoring
+      - Radiation safety
+      - Radiation hardening (electronics)
+  - **Energy and electrical control topics close a device model through the balance of energy and electric variables.**
+    _basis: kinds, order: structure. Ordered from the whole field to its energy and electrical control quantities._
+    - Nuclear and plasma sciences
+    - Energy
+    - Electric variables control
+  - **Mathematical and closure resources are the formal tools, concepts and balance relations used to write, complete and solve the predictive model of an artefact.**
+    _basis: kinds, order: structure. Ordered structurally from mathematical foundations, to tools, to closure relations, to the framing concepts that use them._
+    - **Mathematical foundations are the numerical methods, abstract concepts and branches of mathematics that supply the structures for formulating and computing models.**
+      _basis: kinds, order: structure. Ordered from computational methods to abstract concepts to broad mathematical branches._
+      - **Numerical and series methods approximate the behaviour of physical systems by discretizing or decomposing them into computable pieces.**
+        _basis: kinds, order: structure. Kinds ordered by structure, not by degree._
+        - Finite difference methods
+        - Finite element analysis
+        - Fourier series
+        - Fluctuations
+      - **Abstract mathematical concepts supply the spaces, distances, and shapes in which models of an artefact are formulated.**
+        _basis: kinds, order: structure. Kinds ordered by structure, not by degree._
+        - Euclidean distance
+        - Functional analysis
+        - Geometry
+        - Gaze tracking
+      - **Mathematical topics are branches of mathematics that supply methods and structures for analysis and optimisation.**
+        _basis: kinds, order: structure. Ordered by structure, from methods to structures._
+        - Gradient methods
+        - Graph theory
+        - Harmonic analysis
+        - Hypercomplex
+        - IEEE organization
+    - **Mathematical resources are kinds of formal tool used to build, state, approximate and solve the predictive model of an artefact.**
+      _basis: kinds, order: structure. Ordered by structure, from abstract objects through formulation and linear analysis to numerical solution._
+      - **Abstract mathematical structures supply the formal objects, such as kernels, lattices and Lie groups, from which a model's closure is built.**
+        _basis: kinds, order: structure. Ordered by structure from the algebraic objects to the field equation._
+        - Kernel
+        - Lattices
+        - Lie groups
+        - Laplace equations
+      - **Mathematical formulation concepts supply the equations and optimisation frameworks in which a predictive model of an artefact is stated and closed.**
+        _basis: kinds, order: structure. Ordered by structure, from the general field to specific formulation tools._
+        - Mathematics
+        - Mathematical models
+        - Mathematical programming
+        - Minimization
+      - **Linear analysis tools, such as linear systems, linearization and linear matrix inequalities, approximate and bound an artefact's dynamic behaviour.**
+        _basis: kinds, order: structure. Ordered by structure from the system description to the techniques and inequality tools applied to it._
+        - Linear systems
+        - Linearization techniques
+        - Linear matrix inequalities
+        - Limit-cycles
+      - **Numerical solution methods are techniques that enforce boundary or constitutive closure so that a field model can be solved for an artefact.**
+        _basis: kinds, order: structure. Ordered by structure, from the general method to the specific matching technique._
+        - Method of moments
+        - Mode matching methods
+        - Mechanical variables control
+        - Medical control systems
+        - Missile control
+    - **Closure types are the kinds of balance or constitutive relation that finish a predictive model so it can be solved or bounded.**
+      _basis: kinds, order: degree. Ordered from most formal (mathematical) to most human-facing (social and ethical)._
+      - **Mathematical closure finishes a predictive model by supplying the probabilistic, piecewise or population-balance relations that make its equations solvable.**
+        _basis: kinds, order: structure. Ordered from general mathematical tools to a specific dynamic model._
+        - Probability
+        - Piecewise linear techniques
+        - Predator prey systems
+        - Precision engineering
+      - **Control and protection closure finishes a model by balancing pressure, flow and safety limits within regulated machines and networks.**
+        _basis: kinds, order: structure. Ordered from fluid actuation to rail and power protection._
+        - Pneumatic systems
+        - Pressure control
+        - Positive train control
+        - Power system protection
+      - **Design and planning closure finishes a model by fixing the resources, layout and pervasive-system constraints that must balance before an artefact is built.**
+        _basis: kinds, order: structure. Ordered from planning to physical design and pervasive deployment._
+        - Planning
+        - Physical design
+        - Pervasive computing
+        - Portfolios
+      - **Human and social closure finishes a model by accounting for the ethical, philosophical and attribution quantities that bound an artefact's use.**
+        _basis: kinds, order: structure. Ordered from social implications to the posthuman and authorship._
+        - Peace technology
+        - Philosophical considerations
+        - Posthuman
+        - Plagiarism
+    - **Modelling and closure concepts supply the mathematical, stochastic, and balance-based means by which a predictive model of an artefact is written and completed.**
+      _basis: kinds, order: structure. Ordered from formal tools to closure principles_
+      - **Mathematical methods and constructs are the formal tools used to smooth, describe, and reason about quantities in a predictive model.**
+        _basis: kinds, order: structure. Ordered by structure, from specific constructs to general methods._
+        - Smoothing methods
+        - Spirals
+        - Superposition calculus
+        - Statistics
+      - **Stochastic modelling concepts treat random behaviour in processes and systems so that predictions can account for uncertainty.**
+        _basis: kinds, order: structure. Ordered by structure, from the mathematical theory to its application in systems._
+        - Stochastic processes
+        - Stochastic systems
+        - Stability
+        - Software reliability
+        - Supervisory control
+      - **Each of these members names a quantity whose balance or constitutive closure completes the predictive model of an engineered artefact, so that its behaviour can be forecast from the specification.**
         _basis: kinds, order: structure_
-        - **Electrical engineering subfields are kinds of electrical practice concerned with circuits, systems and the energy they carry.**
-          _basis: kinds, order: structure. Ordered by structure of the classification, from the parent field to circuits and energy generation._
-          - Electrical engineering
-          - Circuits and systems
-          - Electrical circuits and systems
-          - Electrical energy generation (incl. renewables, excl. photovoltaics)
-        - **Energy storage, transmission and residual categories are the remaining parts that close the classification of engineering fields.**
-          _basis: parts, order: structure. Ordered by structure, from storage and transmission to the not-elsewhere-classified residuals._
-          - Electrical energy storage
-          - Electrical energy transmission, networks and systems
-          - Communications engineering not elsewhere classified
-          - Control engineering, mechatronics and robotics not elsewhere classified
-        - **Energy conversion and power fields are closed by the balance of electrical, magnetic and mechanical energy flowing through a device.**
-          _basis: kinds, order: structure. Ordered by structure, from machines and fields to solar and power conversion._
-          - Electrical machines and drives
-          - Engineering electromagnetics
-          - Photovoltaic power systems
-          - Photovoltaic devices (solar cells)
-          - Power electronics
-        - **Signal and circuit fields are closed by the balance of voltage, current and frequency response in electronic circuits.**
-          _basis: kinds, order: structure. Ordered by structure, from analog and digital circuits to integrated, RF and industrial systems._
-          - Analog electronics and interfaces
-          - Digital electronic devices
-          - Microelectronics
-          - Radio frequency engineering
-          - Industrial electronics
-        - **Sensing and transduction fields are closed by the constitutive relation linking a measured physical quantity to an electrical output.**
-          _basis: kinds, order: structure. Ordered by structure, from general instrumentation to specific sensor types._
-          - Electronic instrumentation
-          - Electronic sensors
-          - Photonic and electro-optical devices, sensors and systems (excl. communications)
-          - Acoustic sensors
-      - **Field, magnetic and nonlinear topics are kinds of constitutive or field-level description whose limit quantity or nonlinear response closes the model of a device or component.**
-        _basis: kinds, order: structure. Ordered structurally from material limits to fields, nonlinear behaviour and magnetic quantities._
-        - **Superconducting and magnetic topics close the model of a device through a material limit quantity such as critical current density or magnetization state.**
-          _basis: kinds, order: structure. Ordered from the current limit to the magnetic state and the devices that restrict current._
-          - Critical current density
-          - Current limiters
-          - Demagnetization
-          - Cryogenic electronics
-        - **Electromagnetic field topics are kinds of field-level descriptions whose propagation and interference balance closes the model of how an artefact interacts with its electromagnetic environment.**
-          _basis: kinds, order: structure. Ordered by structure, from the general field discipline to compatibility and propagation._
-          - Electromagnetic compatibility
-          - Electromagnetic compatibility and interference
-          - Electromagnetic propagation
-          - Electromagnetics
-        - **Nonlinear circuit and material topics are kinds of constitutive behaviour whose nonlinear response closes the model of a circuit or component.**
-          _basis: kinds, order: structure. Ordered by structure, from the circuit to the material and resonance behaviour._
-          - FET circuits
-          - Ferroelectric materials
-          - Ferroresonance
-        - **Magnetic field-level quantities and their effects are the state variables whose balance fixes the behaviour of a magnetic artefact.**
-          _basis: kinds, order: structure. Ordered by structure from field to flux to force to levitation._
-          - Magnetic fields
-          - Magnetic flux
-          - Magnetic forces
-          - Magnetic levitation
-      - **Magnetic constitutive closure concepts are the material relations, dynamics and couplings that close the model between field and magnetization in a magnetic body.**
-        _basis: kinds, order: structure. Ordered from static material relations to dynamics to cross-domain couplings._
-        - **Constitutive material properties of magnetic media supply the closure relations such as anisotropy, hysteresis and loss that a magnetic model needs.**
-          _basis: kinds, order: structure. Ordered by structure from material to its anisotropy, hysteresis and loss._
-          - Magnetic materials
-          - Magnetic anisotropy
-          - Magnetic hysteresis
-          - Magnetic losses
-        - **Constitutive material properties and structures supply the closing relations between field and magnetization in a magnetic body.**
-          _basis: kinds, order: structure. Ordered from the general field to specific structures and materials._
-          - Magnetics
-          - Magnetic properties
-          - Magnetic susceptibility
-          - Magnetic multilayers
-          - Magnetic particles
-        - **Dynamic magnetization processes are the balance behaviours that govern how magnetization changes, switches and propagates over time.**
-          _basis: kinds, order: structure. Ordered from quasi-static processes to resonant and wave dynamics._
-          - Magnetization processes
-          - Magnetic switching
-          - Magnetic resonance
-          - Magnonics
-        - **Coupled magnetic effects close the model by linking magnetic quantities to acoustic, electric, mechanical and optical quantities.**
-          _basis: kinds, order: structure. Ordered by coupled domain: acoustic, electric, mechanical, optical._
-          - Magnetoacoustic effects
-          - Magnetoelectric effects
-          - Magnetomechanical effects
-          - Magnetooptic effects
-        - **Magnetic and nanoscale concepts are closed by the constitutive relation between magnetic field and material response, including nonlinear magnetization and nanoscale sensing.**
-          _basis: kinds, order: structure. Ordered structurally from material response to its sensing application._
-          - Nanomagnetics
-          - Nonlinear magnetics
-          - Nanosensors
-          - Photoelectricity
-      - **Magnetic artefacts and tools are the devices, sensors, magnets and measurement methods through which magnetic quantities are realised, read and checked.**
-        _basis: kinds, order: structure. Ordered from characterisation devices to sensing and imaging to magnets and manufacturing._
-        - **Magnetic devices and the analysis and microscopy methods used to characterise them make up the artefacts and tools of the magnetics field.**
-          _basis: kinds, order: structure. Ordered by structure from device to analysis to microscopy._
-          - Magnetic devices
-          - Magnetic analysis
-          - Magnetic force microscopy
-        - **Magnetic sensing and imaging devices turn magnetic quantities into readable signals or spatial maps.**
-          _basis: kinds, order: structure. Ordered from sensors to imaging techniques._
-          - Magnetic sensors
-          - Magnetic sensors
-          - Magnetic resonance imaging
-          - Magneto electrical resistivity imaging technique
-        - **Magnets, measurement and manufacturing automation are the artefacts and practices through which magnetic quantities are realised and checked.**
-          _basis: kinds, order: structure. Ordered from the magnet artefact to measurement and then production practice._
-          - Magnets
-          - Measurement
-          - Manufacturing automation
-    - **Device physics and materials are the semiconductor, vacuum, quantum and thin-film effects whose charge behaviour and constitutive properties determine how components work.**
-      _basis: kinds, order: structure. Ordered structurally from device effects to material systems._
-      - **Device-physics and electron-device topics are kinds of semiconductor or vacuum effect whose charge behaviour limits or enables how an electronic component works.**
-        _basis: kinds, order: structure. Ordered structurally from material and semiconductor effects to electron-emission devices._
-        - **Device-physics phenomena are kinds of material or semiconductor effect that limit or enable how electronic components behave.**
-          _basis: kinds, order: structure. Ordered by structure, from material effects to device-level circuits._
-          - Flux pinning
-          - Gyromagnetism
-          - Gate leakage
-          - Gate drivers
-        - **Electron device topics are kinds of vacuum and charge-emission components whose electron flow balance closes the predictive model of the device.**
-          _basis: kinds, order: structure. Ordered by structure, from the general device class to its specific components._
-          - Electron devices
-          - Electron guns
-          - Electron multipliers
-          - Electron tubes
-      - **Quantum, material and film concepts are kinds of physical system whose constitutive properties close the model of a device.**
-        _basis: kinds, order: structure. Ordered structurally from quantum devices to material properties, superconductors and deposited films._
-        - **Quantum technologies are devices and sensors whose operation depends on quantum-mechanical behaviour of matter.**
-          _basis: kinds, order: structure. Ordered structurally from computing and sensing applications to the underlying well devices._
-          - Quantum computing
-          - Quantum sensing
-          - Quantum sensors
-          - Quantum well devices
-        - **Resonance and material-property concepts form a kind in which a constitutive property of a magnetic, optical or semiconductor material closes the model of a device.**
-          _basis: kinds, order: structure. Ordered from resonance phenomena to material and device properties._
-          - Resonance
-          - Resonance light scattering
-          - Remanence
-          - Semiconductivity
-        - **Physical-material concepts are kinds of quantum, magnetic, superconducting or high-frequency systems studied at the device level.**
-          _basis: kinds, order: degree. Ranked from fundamental spin systems to engineered films and devices to wave technology._
-          - Spin systems
-          - Superconducting films
-          - Superconducting devices
-          - Submillimeter wave technology
-        - **Superconductivity topics are kinds of superconducting artefact, material or effect whose predictive model is closed by quantities such as transition temperature or stored energy.**
-          _basis: kinds, order: structure. Ordered by structure from the general field down to specific devices and effects._
-          - Superconducting integrated circuits
-          - Superconducting magnetic energy storage
-          - Superconducting materials
-          - Superconducting transition temperature
-        - **Film technologies are kinds of devices and sensors built from thin or thick deposited layers whose constitutive properties close the model.**
-          _basis: kinds, order: structure. Ordered by structure: devices first, then sensors, thin before thick._
-          - Thick film devices
-          - Thick film sensors
-          - Thin film devices
-          - Thin film sensors
-    - **Hardware design and assurance covers the physical components of electronic artefacts and the design, layout and verification work that makes them correct and resilient.**
-      _basis: parts, order: structure_
-      - **Physical hardware components are the tangible building blocks of an electronic artefact, from the whole field to boards, circuits and interfaces.**
-        _basis: kinds, order: structure. Ordered by structure, from the overall field to the specific physical components._
-        - Hardware
-        - Printed circuit boards
-        - Integrated circuits
-        - Communication hardware, interfaces and storage
-      - **Chip design and automation covers the methods and tools used to lay out and design very large scale integrated circuits.**
-        _basis: kinds, order: structure. Ordered by structure, from design practice to the tools supporting it._
-        - Very large scale integration design
-        - Electronic design automation
-      - **Verification and resilience concerns checking that hardware meets its specification and keeps working under faults, energy limits and new technologies.**
-        _basis: kinds, order: structure. Ordered by structure, from checking before fabrication to behaviour under stress._
-        - Hardware validation
-        - Hardware test
-        - Robustness
-        - Power and energy
-        - Emerging technologies
-  - **Electronic and nanoscale device fields close the model through power, charge and conversion balance of engineered components.**
-    _basis: kinds, order: structure. Ordered from engineered devices to circuit hardware to nanoscale devices._
-    - **Engineered electronic, mechanical and energy-conversion artefacts are devices whose models close on force, field, power or conversion balances.**
-      _basis: kinds, order: structure. Ordered from general electronic systems to micro-mechanical, microwave, power and transduction devices._
-      - **Electronic device and system concepts cover lasers, logic, low power design and machine control as engineered artefacts.**
-        _basis: kinds, order: structure. Ordered by structure from optical devices to logic, power and control._
-        - Lasers
-        - Lasers and electrooptics
-        - Logic devices
-        - Low power electronics
-        - Machine control
-      - **Micro-scale mechanical and fluidic devices are artefacts whose models close on force, displacement, and flow balances.**
-        _basis: kinds, order: structure. Ordered from sensing and system-level fields to micro-scale device fields._
-        - Mechanical sensors
-        - Mechatronics
-        - Microelectromechanical systems
-        - Microfluidics
-        - Micromechanical devices
-      - **Microwave and millimeter-wave fields are artefacts whose models close on electromagnetic field and power balance at high frequency.**
-        _basis: kinds, order: structure. Ordered from general theory to specific technologies and applications._
-        - Microwave theory and techniques
-        - Microwave technology
-        - Millimeter wave technology
-        - Microwave magnetics
-        - Microwave ovens
-      - **Power electronics topics are the field and its device and conditioning components that switch and convert electrical energy.**
-        _basis: kinds, order: structure. Ordered structurally from the whole field down to its specific device types._
-        - Power electronics
-        - Power conditioning
-        - Power semiconductor devices
-        - Power semiconductor switches
-      - **Transduction phenomena are materials effects that convert between mechanical, thermal, optical and electrical quantities.**
-        _basis: kinds, order: structure. Ordered structurally by the physical quantity converted into electricity._
-        - Photovoltaic cells
-        - Piezoelectricity
-        - Pyroelectricity
-        - Pressure sensors
-    - **Circuit and radio-frequency hardware concepts are kinds of electrical or electronic artefact whose models close on power, bandwidth, acoustic energy or an adjustable parameter.**
-      _basis: kinds, order: structure. Ordered structurally from circuits and power devices to radio-frequency, ultrasonic and tunable hardware._
-      - **Solid-state and power circuit concepts are kinds of electronic circuit design and protection for devices.**
-        _basis: kinds, order: degree. Ranked from the general circuit field to specialised protection and small-scale devices._
-        - Solid state circuits
-        - Solid state circuit design
-        - Snubbers
-        - Single electron devices
-        - Single electron devices
-      - **Power and communication devices are kinds of electrical artefact whose predictive model is closed by power balance or device characteristics.**
-        _basis: kinds, order: structure. Ordered by structure from the communication appliance to power systems to the transistor._
-        - TV
-        - Three-phase electric power
-        - Transistors
-      - **Radio-frequency band technologies are artefacts whose models close on electromagnetic power and bandwidth balance across a frequency range.**
-        _basis: kinds, order: structure. Ordered structurally by frequency band; no ranking implied._
-        - UHF technology
-        - Ultra wideband technology
-        - VHF devices
-      - **Ultrasonic and electron-device physics artefacts are those whose models close on acoustic energy or charge-carrier balance within a material or vacuum.**
-        _basis: kinds, order: structure. Ordered structurally by physical medium; no ranking implied._
-        - Ultrasonic imaging
-        - Ultrasonic transducers
-        - Ultrasonics, ferroelectrics, and frequency control
-        - Tunneling
-        - Vacuum technology
-      - **Sensing and tunable hardware are artefacts whose models close on the signal transduced from a physical stimulus or on an adjustable circuit parameter.**
-        _basis: kinds, order: structure. Ordered structurally by function; no ranking implied._
-        - Tunable circuits and devices
-        - Vision sensors
-        - Wearable sensors
-    - **Nanoscale electronic and molecular device fields concern charge transport and electronic behaviour in structures of nanometre dimensions.**
-      _basis: kinds, order: structure. Ordered by structure, from molecular electronics to nanoelectronic devices._
-      - Molecular and organic electronics
-      - Nanoelectronics
-      - Nanophotonics
-    - **Nanoelectronics and nanoelectromechanical systems are nanoscale device domains whose predictive models are completed once the governing quantity, such as charge or mechanical force, is balanced or closed by a constitutive relation.**
+        - Synthetic biology
+        - Standardization
+      - **Mathematical formalisms supply the algebraic and geometric structures in which an artefact's predictive model is written and closed.**
+        _basis: kinds, order: structure. Ordered by structure, from abstract objects to numerical methods._
+        - Tensors
+        - Topology
+        - Transforms
+        - Transmission line matrix methods
+      - **Uncertainty and balance theories close a predictive model by fixing what is conserved or unknown and how choices are valued.**
+        _basis: kinds, order: degree. Ranked by how far each theory models uncertainty: Thermodynamics is least uncertain, Uncertain systems most._
+        - Thermodynamics
+        - Utility theory
+        - Uncertain systems
+    - **Mathematics and science framing concepts provide the formal tools and the general statements used to reason about and communicate knowledge of artefacts.**
+      _basis: kinds, order: structure. Grouped by structure: formal tools, then communication of knowledge._
+      - **Mathematical concepts are formal tools for describing quantities and for searching or averaging within a model.**
+        _basis: kinds, order: structure. Ordered from basic structures to computational methods._
+        - Root mean square
+        - Sequences
+        - Set theory
+        - Simulated annealing
+      - **Science and communication concepts frame how knowledge about artefacts is persuaded, warned about and stated generally.**
+        _basis: kinds, order: structure. Ordered from general science to communicative practice._
+        - Science – general
+        - Rhetoric
+        - Safety
+- **Plasma, beam and radiation systems close the model through the balance of plasma energy, particles and radiation signal and dose.**
+  _basis: kinds, order: structure. Groups run from plasma to beams to detection and instrumentation._
+  - **Fusion and plasma systems are artefacts whose predictive model is closed by the balance of plasma energy and particles.**
+    _basis: kinds, order: structure. Ordered from the plasma medium to the reactors and power generation built on it._
+    - Plasmas
+    - Fusion reactors
+    - Fusion power generation
+    - Gas discharge devices
+    - Helioseismology
+  - **Beam and accelerator topics are devices whose model is closed by the balance of charge and momentum in a particle beam.**
+    _basis: kinds, order: structure. Ordered along the beam path from emission and injection to handling, accelerators and applications._
+    - Electron emission
+    - Particle beam injection
+    - Particle beam handling
+    - Particle accelerators
+    - Ion beam applications
+  - **Radiation detection and medical topics are artefacts whose model is closed by the balance of radiation signal and dose.**
+    _basis: kinds, order: structure. Ordered from radiation and its electronics to imaging and medical use._
+    - Gamma-rays
+    - Nuclear electronics
+    - Nuclear imaging
+    - Nuclear medicine
+  - **Nuclear and plasma devices and phenomena are the instruments and physical emission processes used to sense and drive nuclear and plasma systems.**
+    _basis: kinds, order: structure. Ordered by structure, from the reactor-level instrumentation to the detector and the underlying emission process._
+    - Reactor instrumentation
+    - Scintillation counters
+    - Thermionic emission
+  - **Measurement, control and radiation-device fields close the model through signal, information and charged-particle or dose quantities rather than material balances.**
+    _basis: kinds, order: structure. Ordered by structure, from process control and instrumentation to radiation and beam devices._
+    - Process control and simulation
+    - Engineering instrumentation
+    - Other engineering
+    - Other engineering not elsewhere classified
+
+### 4. Electromagnetic state is the closing quantity for artefacts whose models are finished by voltage, current, field, signal and optical balances.
+
+- **Electrical, magnetic and device-physics fields close the model through field, charge and constitutive electromagnetic relations of components and devices.**
+  _basis: kinds, order: structure. Groups run from hardware to fields to devices._
+  - **Hardware design and assurance covers the physical components of electronic artefacts and the design, layout and verification work that makes them correct and resilient.**
+    _basis: parts, order: structure_
+    - **Physical hardware components are the tangible building blocks of an electronic artefact, from the whole field to boards, circuits and interfaces.**
+      _basis: kinds, order: structure. Ordered by structure, from the overall field to the specific physical components._
+      - Hardware
+      - Printed circuit boards
+      - Integrated circuits
+      - Communication hardware, interfaces and storage
+    - **Chip design and automation covers the methods and tools used to lay out and design very large scale integrated circuits.**
+      _basis: kinds, order: structure. Ordered by structure, from design practice to the tools supporting it._
+      - Very large scale integration design
+      - Electronic design automation
+    - **Verification and resilience concerns checking that hardware meets its specification and keeps working under faults, energy limits and new technologies.**
+      _basis: kinds, order: structure. Ordered by structure, from checking before fabrication to behaviour under stress._
+      - Hardware validation
+      - Hardware test
+      - Robustness
+      - Power and energy
+      - Emerging technologies
+  - **Electrical engineering fields are kinds of field, magnetic and nonlinear practice whose limit quantity or constitutive relation closes the model of a device or component.**
+    _basis: kinds, order: structure. Ordered structurally from the field overview to magnetic relations and magnetic devices._
+    - **Electrical engineering fields are kinds of electrical practice divided by the energy, circuit or transduction quantity whose balance closes their model.**
       _basis: kinds, order: structure_
-      - Nanoelectronics
-      - Nanoelectromechanical systems
-- **Communication and signal fields close the model through the balance of information-bearing signal power across channels and processing chains.**
-  _basis: kinds, order: structure. Ordered from systems to signal chains to signal creation to acquisition._
+      - **Electrical engineering subfields are kinds of electrical practice concerned with circuits, systems and the energy they carry.**
+        _basis: kinds, order: structure. Ordered by structure of the classification, from the parent field to circuits and energy generation._
+        - Electrical engineering
+        - Circuits and systems
+        - Electrical circuits and systems
+        - Electrical energy generation (incl. renewables, excl. photovoltaics)
+      - **Energy storage, transmission and residual categories are the remaining parts that close the classification of engineering fields.**
+        _basis: parts, order: structure. Ordered by structure, from storage and transmission to the not-elsewhere-classified residuals._
+        - Electrical energy storage
+        - Electrical energy transmission, networks and systems
+        - Communications engineering not elsewhere classified
+        - Control engineering, mechatronics and robotics not elsewhere classified
+      - **Energy conversion and power fields are closed by the balance of electrical, magnetic and mechanical energy flowing through a device.**
+        _basis: kinds, order: structure. Ordered by structure, from machines and fields to solar and power conversion._
+        - Electrical machines and drives
+        - Engineering electromagnetics
+        - Photovoltaic power systems
+        - Photovoltaic devices (solar cells)
+        - Power electronics
+      - **Signal and circuit fields are closed by the balance of voltage, current and frequency response in electronic circuits.**
+        _basis: kinds, order: structure. Ordered by structure, from analog and digital circuits to integrated, RF and industrial systems._
+        - Analog electronics and interfaces
+        - Digital electronic devices
+        - Microelectronics
+        - Radio frequency engineering
+        - Industrial electronics
+      - **Sensing and transduction fields are closed by the constitutive relation linking a measured physical quantity to an electrical output.**
+        _basis: kinds, order: structure. Ordered by structure, from general instrumentation to specific sensor types._
+        - Electronic instrumentation
+        - Electronic sensors
+        - Photonic and electro-optical devices, sensors and systems (excl. communications)
+        - Acoustic sensors
+    - **Field, magnetic and nonlinear topics are kinds of constitutive or field-level description whose limit quantity or nonlinear response closes the model of a device or component.**
+      _basis: kinds, order: structure. Ordered structurally from material limits to fields, nonlinear behaviour and magnetic quantities._
+      - **Superconducting and magnetic topics close the model of a device through a material limit quantity such as critical current density or magnetization state.**
+        _basis: kinds, order: structure. Ordered from the current limit to the magnetic state and the devices that restrict current._
+        - Critical current density
+        - Current limiters
+        - Demagnetization
+        - Cryogenic electronics
+      - **Electromagnetic field topics are kinds of field-level descriptions whose propagation and interference balance closes the model of how an artefact interacts with its electromagnetic environment.**
+        _basis: kinds, order: structure. Ordered by structure, from the general field discipline to compatibility and propagation._
+        - Electromagnetic compatibility
+        - Electromagnetic compatibility and interference
+        - Electromagnetic propagation
+        - Electromagnetics
+      - **Nonlinear circuit and material topics are kinds of constitutive behaviour whose nonlinear response closes the model of a circuit or component.**
+        _basis: kinds, order: structure. Ordered by structure, from the circuit to the material and resonance behaviour._
+        - FET circuits
+        - Ferroelectric materials
+        - Ferroresonance
+      - **Magnetic field-level quantities and their effects are the state variables whose balance fixes the behaviour of a magnetic artefact.**
+        _basis: kinds, order: structure. Ordered by structure from field to flux to force to levitation._
+        - Magnetic fields
+        - Magnetic flux
+        - Magnetic forces
+        - Magnetic levitation
+    - **Magnetic constitutive closure concepts are the material relations, dynamics and couplings that close the model between field and magnetization in a magnetic body.**
+      _basis: kinds, order: structure. Ordered from static material relations to dynamics to cross-domain couplings._
+      - **Constitutive material properties of magnetic media supply the closure relations such as anisotropy, hysteresis and loss that a magnetic model needs.**
+        _basis: kinds, order: structure. Ordered by structure from material to its anisotropy, hysteresis and loss._
+        - Magnetic materials
+        - Magnetic anisotropy
+        - Magnetic hysteresis
+        - Magnetic losses
+      - **Constitutive material properties and structures supply the closing relations between field and magnetization in a magnetic body.**
+        _basis: kinds, order: structure. Ordered from the general field to specific structures and materials._
+        - Magnetics
+        - Magnetic properties
+        - Magnetic susceptibility
+        - Magnetic multilayers
+        - Magnetic particles
+      - **Dynamic magnetization processes are the balance behaviours that govern how magnetization changes, switches and propagates over time.**
+        _basis: kinds, order: structure. Ordered from quasi-static processes to resonant and wave dynamics._
+        - Magnetization processes
+        - Magnetic switching
+        - Magnetic resonance
+        - Magnonics
+      - **Coupled magnetic effects close the model by linking magnetic quantities to acoustic, electric, mechanical and optical quantities.**
+        _basis: kinds, order: structure. Ordered by coupled domain: acoustic, electric, mechanical, optical._
+        - Magnetoacoustic effects
+        - Magnetoelectric effects
+        - Magnetomechanical effects
+        - Magnetooptic effects
+      - **Magnetic and nanoscale concepts are closed by the constitutive relation between magnetic field and material response, including nonlinear magnetization and nanoscale sensing.**
+        _basis: kinds, order: structure. Ordered structurally from material response to its sensing application._
+        - Nanomagnetics
+        - Nonlinear magnetics
+        - Nanosensors
+        - Photoelectricity
+    - **Magnetic artefacts and tools are the devices, sensors, magnets and measurement methods through which magnetic quantities are realised, read and checked.**
+      _basis: kinds, order: structure. Ordered from characterisation devices to sensing and imaging to magnets and manufacturing._
+      - **Magnetic devices and the analysis and microscopy methods used to characterise them make up the artefacts and tools of the magnetics field.**
+        _basis: kinds, order: structure. Ordered by structure from device to analysis to microscopy._
+        - Magnetic devices
+        - Magnetic analysis
+        - Magnetic force microscopy
+      - **Magnetic sensing and imaging devices turn magnetic quantities into readable signals or spatial maps.**
+        _basis: kinds, order: structure. Ordered from sensors to imaging techniques._
+        - Magnetic sensors
+        - Magnetic sensors
+        - Magnetic resonance imaging
+        - Magneto electrical resistivity imaging technique
+      - **Magnets, measurement and manufacturing automation are the artefacts and practices through which magnetic quantities are realised and checked.**
+        _basis: kinds, order: structure. Ordered from the magnet artefact to measurement and then production practice._
+        - Magnets
+        - Measurement
+        - Manufacturing automation
+  - **Device physics and materials are the semiconductor, vacuum, quantum and thin-film effects whose charge behaviour and constitutive properties determine how components work.**
+    _basis: kinds, order: structure. Ordered structurally from device effects to material systems._
+    - **Device-physics and electron-device topics are kinds of semiconductor or vacuum effect whose charge behaviour limits or enables how an electronic component works.**
+      _basis: kinds, order: structure. Ordered structurally from material and semiconductor effects to electron-emission devices._
+      - **Device-physics phenomena are kinds of material or semiconductor effect that limit or enable how electronic components behave.**
+        _basis: kinds, order: structure. Ordered by structure, from material effects to device-level circuits._
+        - Flux pinning
+        - Gyromagnetism
+        - Gate leakage
+        - Gate drivers
+      - **Electron device topics are kinds of vacuum and charge-emission components whose electron flow balance closes the predictive model of the device.**
+        _basis: kinds, order: structure. Ordered by structure, from the general device class to its specific components._
+        - Electron devices
+        - Electron guns
+        - Electron multipliers
+        - Electron tubes
+    - **Quantum, material and film concepts are kinds of physical system whose constitutive properties close the model of a device.**
+      _basis: kinds, order: structure. Ordered structurally from quantum devices to material properties, superconductors and deposited films._
+      - **Quantum technologies are devices and sensors whose operation depends on quantum-mechanical behaviour of matter.**
+        _basis: kinds, order: structure. Ordered structurally from computing and sensing applications to the underlying well devices._
+        - Quantum computing
+        - Quantum sensing
+        - Quantum sensors
+        - Quantum well devices
+      - **Resonance and material-property concepts form a kind in which a constitutive property of a magnetic, optical or semiconductor material closes the model of a device.**
+        _basis: kinds, order: structure. Ordered from resonance phenomena to material and device properties._
+        - Resonance
+        - Resonance light scattering
+        - Remanence
+        - Semiconductivity
+      - **Physical-material concepts are kinds of quantum, magnetic, superconducting or high-frequency systems studied at the device level.**
+        _basis: kinds, order: degree. Ranked from fundamental spin systems to engineered films and devices to wave technology._
+        - Spin systems
+        - Superconducting films
+        - Superconducting devices
+        - Submillimeter wave technology
+      - **Superconductivity topics are kinds of superconducting artefact, material or effect whose predictive model is closed by quantities such as transition temperature or stored energy.**
+        _basis: kinds, order: structure. Ordered by structure from the general field down to specific devices and effects._
+        - Superconducting integrated circuits
+        - Superconducting magnetic energy storage
+        - Superconducting materials
+        - Superconducting transition temperature
+      - **Film technologies are kinds of devices and sensors built from thin or thick deposited layers whose constitutive properties close the model.**
+        _basis: kinds, order: structure. Ordered by structure: devices first, then sensors, thin before thick._
+        - Thick film devices
+        - Thick film sensors
+        - Thin film devices
+        - Thin film sensors
+  - **Engineered electronic, mechanical and energy-conversion artefacts are devices whose models close on force, field, power or conversion balances.**
+    _basis: kinds, order: structure. Ordered from general electronic systems to micro-mechanical, microwave, power and transduction devices._
+    - **Electronic device and system concepts cover lasers, logic, low power design and machine control as engineered artefacts.**
+      _basis: kinds, order: structure. Ordered by structure from optical devices to logic, power and control._
+      - Lasers
+      - Lasers and electrooptics
+      - Logic devices
+      - Low power electronics
+      - Machine control
+    - **Micro-scale mechanical and fluidic devices are artefacts whose models close on force, displacement, and flow balances.**
+      _basis: kinds, order: structure. Ordered from sensing and system-level fields to micro-scale device fields._
+      - Mechanical sensors
+      - Mechatronics
+      - Microelectromechanical systems
+      - Microfluidics
+      - Micromechanical devices
+    - **Microwave and millimeter-wave fields are artefacts whose models close on electromagnetic field and power balance at high frequency.**
+      _basis: kinds, order: structure. Ordered from general theory to specific technologies and applications._
+      - Microwave theory and techniques
+      - Microwave technology
+      - Millimeter wave technology
+      - Microwave magnetics
+      - Microwave ovens
+    - **Power electronics topics are the field and its device and conditioning components that switch and convert electrical energy.**
+      _basis: kinds, order: structure. Ordered structurally from the whole field down to its specific device types._
+      - Power electronics
+      - Power conditioning
+      - Power semiconductor devices
+      - Power semiconductor switches
+    - **Transduction phenomena are materials effects that convert between mechanical, thermal, optical and electrical quantities.**
+      _basis: kinds, order: structure. Ordered structurally by the physical quantity converted into electricity._
+      - Photovoltaic cells
+      - Piezoelectricity
+      - Pyroelectricity
+      - Pressure sensors
+  - **Circuit and radio-frequency hardware concepts are kinds of electrical or electronic artefact whose models close on power, bandwidth, acoustic energy or an adjustable parameter.**
+    _basis: kinds, order: structure. Ordered structurally from circuits and power devices to radio-frequency, ultrasonic and tunable hardware._
+    - **Solid-state and power circuit concepts are kinds of electronic circuit design and protection for devices.**
+      _basis: kinds, order: degree. Ranked from the general circuit field to specialised protection and small-scale devices._
+      - Solid state circuits
+      - Solid state circuit design
+      - Snubbers
+      - Single electron devices
+      - Single electron devices
+    - **Power and communication devices are kinds of electrical artefact whose predictive model is closed by power balance or device characteristics.**
+      _basis: kinds, order: structure. Ordered by structure from the communication appliance to power systems to the transistor._
+      - TV
+      - Three-phase electric power
+      - Transistors
+    - **Radio-frequency band technologies are artefacts whose models close on electromagnetic power and bandwidth balance across a frequency range.**
+      _basis: kinds, order: structure. Ordered structurally by frequency band; no ranking implied._
+      - UHF technology
+      - Ultra wideband technology
+      - VHF devices
+    - **Ultrasonic and electron-device physics artefacts are those whose models close on acoustic energy or charge-carrier balance within a material or vacuum.**
+      _basis: kinds, order: structure. Ordered structurally by physical medium; no ranking implied._
+      - Ultrasonic imaging
+      - Ultrasonic transducers
+      - Ultrasonics, ferroelectrics, and frequency control
+      - Tunneling
+      - Vacuum technology
+    - **Sensing and tunable hardware are artefacts whose models close on the signal transduced from a physical stimulus or on an adjustable circuit parameter.**
+      _basis: kinds, order: structure. Ordered structurally by function; no ranking implied._
+      - Tunable circuits and devices
+      - Vision sensors
+      - Wearable sensors
+- **Communication and signal topics close the model through the balance of transmitted, processed and conditioned signal quantities.**
+  _basis: kinds, order: structure. Groups run from systems to processing to quality._
   - **Communication and signal systems are kinds of artefacts and methods that carry, shape, condition or radiate information-bearing signals.**
     _basis: kinds, order: structure_
     - **Transmission media and signal engineering covers the physical channels and signal handling by which information is carried between points.**
@@ -1120,8 +1217,35 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
       - Testing
       - Testing
       - Tracking loops
-- **Sensing and optical fields close the model through the measured electromagnetic or optical quantity that detects and locates a target.**
-  _basis: kinds, order: structure. Ordered from transducing artefacts to navigation and defence to optical and nanophotonic response and measurement._
+- **Sensing, navigation and imaging topics close the model through the measured electromagnetic or optical quantity they transduce.**
+  _basis: kinds, order: structure. Groups run from navigation to sensing to applied systems._
+  - **Navigation, sensing and defence fields are kinds of artefact that locate a vehicle and detect, relay or counter signals.**
+    _basis: kinds, order: structure. Ordered by structure, from positioning to signalling and monitoring._
+    - **Navigation and geographic positioning systems are kinds of artefact that determine where a vehicle or user is and guide its route.**
+      _basis: kinds, order: structure. Ordered by structure, from general transportation systems to specific navigation kinds._
+      - Geographic information systems
+      - Intelligent transportation systems
+      - Navigation
+      - Navigation
+      - Marine navigation
+    - **Sensing, signalling and defence equipment are kinds of electronic artefact that detect, communicate or counter signals.**
+      _basis: kinds, order: structure. Ordered by structure, from sensing to communication to military equipment._
+      - Electronic warfare
+      - Sensor systems
+      - Sonar
+      - Military equipment
+      - Land mobile radio equipment
+    - **The full LCC schedule entries pair each marine class heading with its own subordinate entry, so each heading and its sub-entry are parts of one schedule.**
+      _basis: parts, order: structure_
+      - NAVIGATION. MERCHANT MARINE
+      - Navigation. Merchant marine
+      - NAVAL ARCHITECTURE. SHIPBUILDING. MARINE ENGINEERING
+      - Naval architecture. Shipbuilding. Marine engineering
+    - **IEEE topics on sensing and monitoring describe how measurements and environmental conditions are gathered and relayed from a system.**
+      _basis: kinds, order: degree. Ranked from remote data relay (Telemetry) to networked sensing (Wireless sensor networks) to the monitored environmental condition (Water pollution)._
+      - Telemetry
+      - Wireless sensor networks
+      - Water pollution
   - **Sensing, measurement and imaging topics are kinds of transducing artefact that convert a physical quantity or scene into a measurable electrical or optical representation.**
     _basis: kinds, order: structure. Ordered structurally from sensing devices to sensors, electro-optic coupling, imaging methods and imaging components._
     - **Sensing devices are kinds of transducer that convert a physical or chemical quantity into a measurable electrical signal.**
@@ -1264,33 +1388,20 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
         - Soft sensors
         - Stereo vision
         - Stochastic resonance
-  - **Navigation, sensing and defence fields are kinds of artefact that locate a vehicle and detect, relay or counter signals.**
-    _basis: kinds, order: structure. Ordered by structure, from positioning to signalling and monitoring._
-    - **Navigation and geographic positioning systems are kinds of artefact that determine where a vehicle or user is and guide its route.**
-      _basis: kinds, order: structure. Ordered by structure, from general transportation systems to specific navigation kinds._
-      - Geographic information systems
-      - Intelligent transportation systems
-      - Navigation
-      - Navigation
-      - Marine navigation
-    - **Sensing, signalling and defence equipment are kinds of electronic artefact that detect, communicate or counter signals.**
-      _basis: kinds, order: structure. Ordered by structure, from sensing to communication to military equipment._
-      - Electronic warfare
-      - Sensor systems
-      - Sonar
-      - Military equipment
-      - Land mobile radio equipment
-    - **The full LCC schedule entries pair each marine class heading with its own subordinate entry, so each heading and its sub-entry are parts of one schedule.**
-      _basis: parts, order: structure_
-      - NAVIGATION. MERCHANT MARINE
-      - Navigation. Merchant marine
-      - NAVAL ARCHITECTURE. SHIPBUILDING. MARINE ENGINEERING
-      - Naval architecture. Shipbuilding. Marine engineering
-    - **IEEE topics on sensing and monitoring describe how measurements and environmental conditions are gathered and relayed from a system.**
-      _basis: kinds, order: degree. Ranked from remote data relay (Telemetry) to networked sensing (Wireless sensor networks) to the monitored environmental condition (Water pollution)._
-      - Telemetry
-      - Wireless sensor networks
-      - Water pollution
+- **Dielectric and optical-field topics close the model through the insulating medium and the confined or magnetic field.**
+  _basis: kinds, order: structure. Groups run from dielectrics to packaging to fields._
+  - **Dielectric topics cover insulating materials and the electric breakdown that limits their performance.**
+    _basis: kinds, order: structure. Ordered by structure from the field to its materials and failure mode._
+    - Dielectrics and electrical insulation
+    - Dielectrics
+    - Electric breakdown
+  - **Dielectric concepts name the field and the insulating medium whose balance closes the predictive model of an insulated artefact.**
+    _basis: kinds, order: structure. Ordered from the field to the insulating medium that bounds it._
+    - Electromagnetic fields
+    - Insulation
+    - Electronic components
+    - Electronics packaging
+    - Integrated circuit packaging
   - **Optical and electromagnetic fields close the model through an energy or field balance, such as light confinement, plasmon response, and magnetic moment balance.**
     _basis: kinds, order: structure. Ordered by structure, from light to plasmons to magnetism._
     - Nanophotonics
@@ -1298,17 +1409,270 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
     - Nanomagnetics
     - Manufactures
     - Mining engineering. Metallurgy
-  - **Measurement, control and radiation-device fields close the model through signal, information and charged-particle or dose quantities rather than material balances.**
-    _basis: kinds, order: structure. Ordered by structure, from process control and instrumentation to radiation and beam devices._
-    - Process control and simulation
-    - Engineering instrumentation
-    - Other engineering
-    - Other engineering not elsewhere classified
 
-### 5. Composition and microstructure is the constitutive closure of material makeup and fine structure that completes the model of an artefact built from matter.
+### 5. Composition and microstructure is the closing quantity for artefacts whose models are finished by the constitutive properties of the material and its structure.
 
-- **Material class fields close the model through the constitutive behaviour set by the composition and processing of each class of material.**
-  _basis: kinds, order: structure. Ordered from general classes to bulk structural to functional and basic constituents._
+- **Foundational concepts and framing contexts supply the scientific and mathematical ideas about matter from which models of materials are set up.**
+  _basis: kinds, order: structure. Groups run from fields and concepts to setting._
+  - **Engineering fields are disciplines that close the predictive model of an artefact, a body or a built asset through constitutive relations and balances of load, energy, motion and signal.**
+    _basis: kinds, order: structure. Ordered by structure from biomedical to civil to mechanical fields, then the supporting infrastructure and practice fields._
+    - **Biomedical and rehabilitation engineering fields close the predictive model of an artefact through constitutive relations and balances of mass, energy, signal, force and load between engineered materials, devices and living bodies.**
+      _basis: kinds, order: structure. Ordered by structure from materials, to devices, to physiology, to rehabilitation._
+      - **Material-construction fields close the model through constitutive relations and mass transport balances of engineered biological materials.**
+        _basis: kinds, order: structure. Ordered by structure from material to built tissue._
+        - Biofabrication
+        - Biomaterials
+        - Tissue engineering
+        - Biomedical engineering
+      - **Device and signal fields close the model through energy and signal balances between an instrument and the body.**
+        _basis: kinds, order: structure. Ordered by structure from imaging and instruments to devices._
+        - Biomedical imaging
+        - Biomedical instrumentation
+        - Medical devices
+        - Biomedical engineering not elsewhere classified
+      - **Physiological and mechanical fields close the model through force, momentum and cell-response balances in living systems.**
+        _basis: kinds, order: structure. Ordered by structure from cell to body to neural system._
+        - Biomechanical engineering
+        - Computational physiology
+        - Mechanobiology
+        - Neural engineering
+      - **Rehabilitation and construction-process fields close the model through human-machine load balances and the sequencing of built assets.**
+        _basis: kinds, order: structure. Ordered by structure from assistive device to constructed works._
+        - Rehabilitation engineering
+        - Architectural engineering
+        - Complex civil systems
+        - Construction engineering
+    - **Civil and structural engineering fields close the predictive model of a built asset through soil and material constitutive laws and balances of load, fire and dynamic forces against resistance.**
+      _basis: kinds, order: structure. Ordered by structure from ground and seismic fields to structural fields._
+      - **Ground, material and seismic fields of civil engineering close the model through soil and material constitutive laws and dynamic load balances.**
+        _basis: kinds, order: structure. Ordered by structure from ground to material to seismic loading._
+        - Civil engineering
+        - Civil geotechnical engineering
+        - Construction materials
+        - Earthquake engineering
+      - **Structural engineering fields predict how a built structure behaves by balancing the loads, fire exposure and dynamic forces acting on it against the resistance of its materials, such as timber.**
+        _basis: kinds, order: structure. Ordered by structure, from the whole structure to its specific loading and material cases._
+        - Fire safety engineering
+        - Structural dynamics
+        - Structural engineering
+        - Timber engineering
+    - **Mechanical engineering fields close the predictive model of a machine through balances of motion, vibration, energy, stress and wear, together with numerical prediction and lifecycle management.**
+      _basis: kinds, order: structure. Ordered by structure from dynamics and waves, to energy and materials, to modelling and management._
+      - **Mechanical dynamics and wave fields are kinds of mechanical engineering concerned with motion, vibration and sound in artefacts.**
+        _basis: kinds, order: structure. Ordered by structure, from the parent field to its dynamic specialisms._
+        - Mechanical engineering
+        - Acoustics and noise control (excl. architectural acoustics)
+        - Dynamics, vibration and vibration control
+        - Mechanical engineering not elsewhere classified
+      - **Mechanical energy, material and component fields are kinds of mechanical engineering that treat energy conversion, stress, wear and small devices.**
+        _basis: kinds, order: structure. Ordered by structure, from energy systems to materials and microdevices._
+        - Energy generation, conversion and storage (excl. chemical and electrical)
+        - Microelectromechanical systems (MEMS)
+        - Solid mechanics
+        - Tribology
+      - **Modelling and management fields are kinds of mechanical engineering that predict artefact behaviour numerically and manage the lifecycle of mechanical assets.**
+        _basis: kinds, order: structure. Ordered by structure, from numerical modelling to asset management._
+        - Numerical modelling and mechanical characterisation
+        - Mechanical engineering asset management
+        - Adaptive systems
+        - Admittance control
+    - **Infrastructure, design practice, education and geomatic fields cover planning and managing networks, professional engineering work, the human side of engineering, and the capture of spatial information.**
+      _basis: kinds, order: structure. Ordered by structure from infrastructure and practice, to human aspects, to geomatics._
+      - **Infrastructure and resource engineering fields plan, build and manage the transport networks, water systems and assets that serve communities.**
+        _basis: kinds, order: structure. Ordered by structure, from asset management to specific infrastructure networks._
+        - Infrastructure engineering and asset management
+        - Transport engineering
+        - Water resources engineering
+        - Civil engineering not elsewhere classified
+      - **Fields of engineering design and practice cover how engineers create solutions, carry out professional work and manage risk.**
+        _basis: kinds, order: structure. Ordered by structure, from design to practice to risk._
+        - Engineering design
+        - Engineering practice
+        - Risk engineering
+        - Engineering practice and education not elsewhere classified
+        - Engineering practice and education
+      - **Fields concerned with the education of engineers, humanitarian aims and whole-system integration address the human and organisational side of engineering.**
+        _basis: kinds, order: structure. Ordered by structure, from education to humanitarian application to systems integration._
+        - Engineering education
+        - Humanitarian engineering
+        - Systems engineering
+      - **Geomatic engineering fields capture, model and use spatial information to map places and fix positions.**
+        _basis: kinds, order: structure. Ordered by structure, from mapping to data modelling to positioning._
+        - Geomatic engineering
+        - Cartography and digital mapping
+        - Geospatial information systems and geospatial data modelling
+        - Navigation and position fixing
+      - **Geomatic measurement fields are kinds of engineering that determine position and spatial form of objects from observations.**
+        _basis: kinds, order: structure. Ordered by structure, from sensing methods to the residual category._
+        - Photogrammetry and remote sensing
+        - Satellite-based positioning
+        - Surveying (incl. hydrographic surveying)
+        - Geomatic engineering not elsewhere classified
+  - **Foundational and domain concepts are the mathematical, scientific, application-domain and organisational ideas from which engineering work is framed and its models written down.**
+    _basis: kinds, order: structure. Ordered by structure from foundations to application domains to organisational practice._
+    - **Foundational concepts are the mathematical methods, physical-science balances and applied engineering topics from which a predictive model is written down, closed and solved.**
+      _basis: kinds, order: structure. Ordered structurally from formal mathematical tools to physical domains and then applied practice._
+      - **Mathematical foundations are formal methods and quantities from which predictive models of artefacts are built and closed.**
+        _basis: kinds, order: structure. Kinds of mathematical foundation, listed in structural order._
+        - Algorithms
+        - Arithmetic
+        - Azimuth
+        - Availability
+      - **Mathematical methods are the formal tools by which a predictive model is written down, closed and solved.**
+        _basis: kinds, order: structure. Ordered structurally from basic calculus to specialised solution methods._
+        - Calculus
+        - Boundary value problems
+        - Closed-form solutions
+        - Combinatorial mathematics
+      - **Physical-science domains describe natural systems whose balances supply the quantities that complete a predictive model.**
+        _basis: kinds, order: structure. Kinds of general science domain, listed in structural order._
+        - Astronomy
+        - Atmospheric science
+        - Biology
+        - Bio-inspired engineering
+      - **Applied and general engineering topics are kinds of engineering practice that apply mathematics and domain knowledge to safety, acoustics and agriculture.**
+        _basis: kinds, order: structure. Ordered by structure, from mathematical foundations to applied domains._
+        - Algebra
+        - Accident prevention
+        - Acoustical engineering
+        - Agricultural engineering
+    - **Application-field concepts are the biomedical, biological and chemical process domains where measured quantities and balances of a system are modelled.**
+      _basis: kinds, order: structure. Ordered structurally from medical artefacts to biological fields and process engineering._
+      - **Biomedical engineering topics cover the communication, computing, and equipment that make up medical artefacts.**
+        _basis: kinds, order: structure. Kinds of biomedical engineering topic, listed in structural order._
+        - Biomedical communication
+        - Biomedical computing
+        - Biomedical engineering
+        - Biomedical equipment
+      - **Biomedical and biological fields are the kinds of application where the measured quantities of living systems are modelled and balanced.**
+        _basis: kinds, order: structure. Ordered structurally from imaging to nanoscale to threat applications._
+        - Biomedical imaging
+        - Bionanotechnology
+        - Bioterrorism
+        - CAMAC
+      - **Chemical and process fields are the kinds of engineering where mass and reaction balances give the constitutive closure of a model.**
+        _basis: kinds, order: structure. Ordered structurally from theory to applied practice._
+        - Chemical reaction network theory
+        - Chemistry
+        - Chemical engineering
+        - Chemical technology
+    - **Organisational concepts are the management, systems and communication practices through which engineering work is framed, coordinated and conveyed.**
+      _basis: kinds, order: structure. Ordered structurally from organisational framing to systems coordination and communication._
+      - **Organisational and engineering-management concepts are the kinds of practice that frame how artefacts and capabilities are built and delivered.**
+        _basis: kinds, order: structure. Ordered structurally from engineering disciplines to the organisational practices around them._
+        - Business
+        - Capability engineering
+        - Civil engineering
+        - Collaboration
+      - **Systems and management concepts describe how complex engineering work is organized, coordinated and brought to market.**
+        _basis: kinds, order: structure. From the complex system itself to the organization around it._
+        - Complex systems
+        - Configuration management
+        - Concurrent engineering
+        - Commercialization
+        - Consortia
+      - **Communication concepts describe the means, symbols, context and effectiveness through which professional meaning is conveyed.**
+        _basis: kinds, order: structure. From the means of communicating to the quality of the result._
+        - Communication aids
+        - Communication effectiveness
+        - Communication symbols
+        - Context
+    - **Practice and general-equipment concepts cover design disciplines, physical equipment and supply categories that frame how artefacts are specified, held and used.**
+      _basis: kinds, order: structure. Listed structurally from design practice to equipment to supplies._
+      - **Design practice concepts are the methods and disciplines used to specify and build an artefact, along with the social and informational context around it.**
+        _basis: kinds, order: structure. Ordered by structure of the design process._
+        - Design automation
+        - Design engineering
+        - Design methodology
+        - Databases
+        - Cultural aspects
+      - **Physical equipment concepts are material artefacts and the cultural framing of them, defined by the conditions they hold or the contexts in which they are used.**
+        _basis: kinds, order: structure. Ordered by structure of the equipment type._
+        - Equipment and Supplies
+        - Air Filters
+        - Atmosphere Exposure Chambers
+        - Cultural differences
+      - **General supply categories are broad groupings of consumable and facility items, defined by how they are used and replaced rather than by one mechanism.**
+        _basis: kinds, order: structure. Listed by structure: broad umbrella categories of supplies._
+        - Equipment and Supplies, Hospital
+        - Disposable Equipment
+        - Hygiene Products
+  - **Setting and context topics describe the fields, frameworks and general conditions in which an artefact is built, used and judged.**
+    _basis: kinds, order: structure. Ordered structurally from application domains, to general settings, to organising frameworks._
+    - **Application and industrial domains are the fields, sectors and organisations in which engineered artefacts are used, made and judged.**
+      _basis: kinds, order: structure. Ordered from social use to broad fields to industry to institutional output._
+      - **Application and social domains show where engineered artefacts are used and what ethical questions their use raises.**
+        _basis: kinds, order: structure. Kinds ordered by structure, not by degree._
+        - Ethical aspects
+        - Ethics
+        - Food technology
+        - Genetic engineering
+      - **Broad domain categories name the general fields of technology, industry and agriculture, plus the life sciences, in which artefacts are situated.**
+        _basis: kinds, order: structure. Ordered by structure from the general domain headings to the more specific facility category._
+        - Technology, Industry, and Agriculture
+        - Technology, Industry, and Agriculture
+        - Non-Medical Public and Private Facilities
+        - Life sciences
+      - **Industrial topics cover the sectors, engineering practices and inspection work through which products are made and checked in industry.**
+        _basis: kinds, order: structure. Ordered by structure from the broad application area to its specific practices._
+        - Industry applications
+        - Industries
+        - Industrial engineering
+        - Inspection
+      - **Output and application headings cover what IEEE does and produces, together with high-temperature industrial techniques.**
+        _basis: kinds, order: structure. Ordered by structure, from activities to products and applications._
+        - IEEE activities
+        - IEEE indexing
+        - IEEE products
+        - IEEE entities
+        - IEEE governance
+    - **Settings and general concepts are kinds of context in which an artefact is built, used, maintained and modelled, each naming a quantity that completes its model.**
+      _basis: kinds, order: structure. Ordered by structure, from application domains through upkeep and governance to the general closure concepts._
+      - **Application-domain concepts are the engineering, industrial, medical, military and organisational settings in which such artefacts are built and used.**
+        _basis: kinds, order: structure. Ordered by structure, from physical engineering fields to organisational activities._
+        - Manufacturing
+        - Marine engineering
+        - Mechanical engineering
+        - Medical services
+        - Medical specialties
+      - **Upkeep and governance concepts cover the maintenance, documentation and legal constraints that keep an artefact working over its life.**
+        _basis: kinds, order: structure. Ordered by structure from maintenance activities to the documents and rules that support them._
+        - Maintenance
+        - Maintenance engineering
+        - Manuals
+        - Legal factors
+      - **Each of these concepts names the quantity whose balance or constitutive closure completes the predictive model of an artefact, whether a meeting, a market study, or a military system.**
+        _basis: kinds, order: structure_
+        - Meetings
+        - Market research
+        - Military systems
+    - **Framework and context concepts describe how a system is organised and how it sits within human, social, and applied settings.**
+      _basis: kinds, order: structure. Ordered from system structure to human and applied context_
+      - **Structural and conceptual frameworks are the ways of organising and viewing a system, from its architecture to its place within larger wholes.**
+        _basis: parts, order: structure_
+        - Systems architecture
+        - System of systems
+        - Systems thinking
+        - Systems engineering and theory
+      - **Societal and cross-disciplinary concepts cover the social context, standards, sustainability, and biological engineering that surround technological artefacts.**
+        _basis: kinds, order: structure. Ordered by structure, from social context to specific engineering domains._
+        - Social factors
+        - Social implications of technology
+        - Social sciences
+        - Sustainable development
+      - **Human-centred technology concepts cover the artefact as used, managed and extended by people.**
+        _basis: kinds, order: degree. Ranked by how far each concept reaches beyond the individual artefact: User interfaces narrowest, Transhuman broadest._
+        - User interfaces
+        - Technical management
+        - Technology
+        - Transhuman
+      - **Applied practice areas are the settings where artefact models are tested, exploited and reported.**
+        _basis: parts, order: structure. Ordered by structure, from physical testing through industry to written reporting._
+        - Vehicle crash testing
+        - Wine industry
+        - Writing
+- **Material classes and constituents close the model through composition, processing and the constitutive behaviour of the substance.**
+  _basis: kinds, order: structure. Groups run from classes to functional materials to constituents._
   - **Materials fields are the classes of material whose constitutive behaviour closes the predictive model of an artefact's performance.**
     _basis: kinds, order: structure. Ordered by structure, from structural materials to composites to semiconductor classes._
     - Materials engineering
@@ -1340,41 +1704,37 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
     - Materials science and technology
     - Metals
     - Material storage
-- **Insulating and packaged media close the model through the dielectric constitution that limits electric field in components.**
-  _basis: kinds, order: structure. Ordered from dielectrics to field and packaging to broad components._
-  - **Dielectric topics cover insulating materials and the electric breakdown that limits their performance.**
-    _basis: kinds, order: structure. Ordered by structure from the field to its materials and failure mode._
-    - Dielectrics and electrical insulation
-    - Dielectrics
-    - Electric breakdown
-  - **Dielectric concepts name the field and the insulating medium whose balance closes the predictive model of an insulated artefact.**
-    _basis: kinds, order: structure. Ordered from the field to the insulating medium that bounds it._
-    - Electromagnetic fields
-    - Insulation
-    - Electronic components
-    - Electronics packaging
-    - Integrated circuit packaging
-  - **Small-scale and component-level topics address how nanoscale phenomena and component architectures shape manufactured devices.**
-    _basis: kinds, order: structure. Ordered by structure from nanoscale phenomena to component-level packaging._
-    - Bionanotechnology
-    - Casimir effect
-    - Component architectures
-    - Components, packaging, and manufacturing technology
-  - **Broad technology domains and device-packaging fields close the model through heat and mass balances at the system level, covering whole fields and the thermal and packaging limits of devices.**
-    _basis: kinds, order: structure. Ordered by structure, from broad fields to specific packaging and thermal topics._
-    - Nanotechnology
-    - Nanoscale technology
-    - Semiconductor device packaging
-    - Thermal management of electronics
-    - Chemical technology
-- **Nanoscale material fields and framing resources close the model through the constitutive properties and structure of engineered matter and the formal closures written for it.**
-  _basis: kinds, order: structure. Ordered from nanoscale objects to constitutive relations to making and measuring to framing._
+- **Nanoscale devices and systems close the model through quantum, charge and constitutive behaviour of nanostructured matter.**
+  _basis: kinds, order: structure. Groups run from devices to systems to concepts._
+  - **Nanoscale electronic and molecular device fields concern charge transport and electronic behaviour in structures of nanometre dimensions.**
+    _basis: kinds, order: structure. Ordered by structure, from molecular electronics to nanoelectronic devices._
+    - Molecular and organic electronics
+    - Nanoelectronics
+    - Nanophotonics
   - **Nanoscale systems and nanomaterials are the engineered objects themselves, built from micro- and nano-sized components or nanostructured matter.**
     _basis: kinds, order: structure. Ordered by structure, from the field as a whole to systems, mechanical devices and materials._
     - Nanotechnology
     - Micro- and nanosystems
     - Nanoelectromechanical systems
     - Nanomaterials
+  - **Nanoscale device concepts name the molecular and nanoscopic systems whose quantum and constitutive closure completes the predictive model of a nano-artefact.**
+    _basis: kinds, order: structure. Ordered from molecular-scale systems to nanoscale devices and applications._
+    - Molecular computing
+    - Molecular electronics
+    - Nanobioscience
+    - Nanocommunication
+  - **Nanoelectronics and nanoelectromechanical systems are nanoscale device domains whose predictive models are completed once the governing quantity, such as charge or mechanical force, is balanced or closed by a constitutive relation.**
+    _basis: kinds, order: structure_
+    - Nanoelectronics
+    - Nanoelectromechanical systems
+  - **Material-constitutive fields supply the constitutive relations, such as stress-strain and property laws, that close the model of a nanoscale material or structure.**
+    _basis: kinds, order: structure. Ordered by structure, from bulk materials to the structures built from them._
+    - Nanomaterials
+    - Nanostructured materials
+    - Nanostructures
+    - Nanosensors
+- **Nanoscale making and assembly fields fix the microstructure of an artefact through fabrication, self-assembly and component packaging.**
+  _basis: kinds, order: structure. Groups run from measuring to fabricating to assembling._
   - **Nanoscale making and measuring fields cover the fabrication, manufacture and characterisation processes by which nanostructures are produced and verified.**
     _basis: kinds, order: structure. Ordered by structure, from fabrication to manufacturing to measurement and residual categories._
     - Nanofabrication, growth and self assembly
@@ -1382,398 +1742,32 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
     - Nanometrology
     - Nanoscale characterisation
     - Nanotechnology not elsewhere classified
-  - **Nanoscale device concepts name the molecular and nanoscopic systems whose quantum and constitutive closure completes the predictive model of a nano-artefact.**
-    _basis: kinds, order: structure. Ordered from molecular-scale systems to nanoscale devices and applications._
-    - Molecular computing
-    - Molecular electronics
-    - Nanobioscience
-    - Nanocommunication
-  - **Material-constitutive fields supply the constitutive relations, such as stress-strain and property laws, that close the model of a nanoscale material or structure.**
-    _basis: kinds, order: structure. Ordered by structure, from bulk materials to the structures built from them._
-    - Nanomaterials
-    - Nanostructured materials
-    - Nanostructures
-    - Nanosensors
-  - **Framing resources are the fields, foundational concepts, mathematical tools and contexts from which engineering models are set up and written down.**
-    _basis: kinds, order: structure. Ordered by structure, from fields to concepts, resources and settings._
-    - **Engineering fields are disciplines that close the predictive model of an artefact, a body or a built asset through constitutive relations and balances of load, energy, motion and signal.**
-      _basis: kinds, order: structure. Ordered by structure from biomedical to civil to mechanical fields, then the supporting infrastructure and practice fields._
-      - **Biomedical and rehabilitation engineering fields close the predictive model of an artefact through constitutive relations and balances of mass, energy, signal, force and load between engineered materials, devices and living bodies.**
-        _basis: kinds, order: structure. Ordered by structure from materials, to devices, to physiology, to rehabilitation._
-        - **Material-construction fields close the model through constitutive relations and mass transport balances of engineered biological materials.**
-          _basis: kinds, order: structure. Ordered by structure from material to built tissue._
-          - Biofabrication
-          - Biomaterials
-          - Tissue engineering
-          - Biomedical engineering
-        - **Device and signal fields close the model through energy and signal balances between an instrument and the body.**
-          _basis: kinds, order: structure. Ordered by structure from imaging and instruments to devices._
-          - Biomedical imaging
-          - Biomedical instrumentation
-          - Medical devices
-          - Biomedical engineering not elsewhere classified
-        - **Physiological and mechanical fields close the model through force, momentum and cell-response balances in living systems.**
-          _basis: kinds, order: structure. Ordered by structure from cell to body to neural system._
-          - Biomechanical engineering
-          - Computational physiology
-          - Mechanobiology
-          - Neural engineering
-        - **Rehabilitation and construction-process fields close the model through human-machine load balances and the sequencing of built assets.**
-          _basis: kinds, order: structure. Ordered by structure from assistive device to constructed works._
-          - Rehabilitation engineering
-          - Architectural engineering
-          - Complex civil systems
-          - Construction engineering
-      - **Civil and structural engineering fields close the predictive model of a built asset through soil and material constitutive laws and balances of load, fire and dynamic forces against resistance.**
-        _basis: kinds, order: structure. Ordered by structure from ground and seismic fields to structural fields._
-        - **Ground, material and seismic fields of civil engineering close the model through soil and material constitutive laws and dynamic load balances.**
-          _basis: kinds, order: structure. Ordered by structure from ground to material to seismic loading._
-          - Civil engineering
-          - Civil geotechnical engineering
-          - Construction materials
-          - Earthquake engineering
-        - **Structural engineering fields predict how a built structure behaves by balancing the loads, fire exposure and dynamic forces acting on it against the resistance of its materials, such as timber.**
-          _basis: kinds, order: structure. Ordered by structure, from the whole structure to its specific loading and material cases._
-          - Fire safety engineering
-          - Structural dynamics
-          - Structural engineering
-          - Timber engineering
-      - **Mechanical engineering fields close the predictive model of a machine through balances of motion, vibration, energy, stress and wear, together with numerical prediction and lifecycle management.**
-        _basis: kinds, order: structure. Ordered by structure from dynamics and waves, to energy and materials, to modelling and management._
-        - **Mechanical dynamics and wave fields are kinds of mechanical engineering concerned with motion, vibration and sound in artefacts.**
-          _basis: kinds, order: structure. Ordered by structure, from the parent field to its dynamic specialisms._
-          - Mechanical engineering
-          - Acoustics and noise control (excl. architectural acoustics)
-          - Dynamics, vibration and vibration control
-          - Mechanical engineering not elsewhere classified
-        - **Mechanical energy, material and component fields are kinds of mechanical engineering that treat energy conversion, stress, wear and small devices.**
-          _basis: kinds, order: structure. Ordered by structure, from energy systems to materials and microdevices._
-          - Energy generation, conversion and storage (excl. chemical and electrical)
-          - Microelectromechanical systems (MEMS)
-          - Solid mechanics
-          - Tribology
-        - **Modelling and management fields are kinds of mechanical engineering that predict artefact behaviour numerically and manage the lifecycle of mechanical assets.**
-          _basis: kinds, order: structure. Ordered by structure, from numerical modelling to asset management._
-          - Numerical modelling and mechanical characterisation
-          - Mechanical engineering asset management
-          - Adaptive systems
-          - Admittance control
-      - **Infrastructure, design practice, education and geomatic fields cover planning and managing networks, professional engineering work, the human side of engineering, and the capture of spatial information.**
-        _basis: kinds, order: structure. Ordered by structure from infrastructure and practice, to human aspects, to geomatics._
-        - **Infrastructure and resource engineering fields plan, build and manage the transport networks, water systems and assets that serve communities.**
-          _basis: kinds, order: structure. Ordered by structure, from asset management to specific infrastructure networks._
-          - Infrastructure engineering and asset management
-          - Transport engineering
-          - Water resources engineering
-          - Civil engineering not elsewhere classified
-        - **Fields of engineering design and practice cover how engineers create solutions, carry out professional work and manage risk.**
-          _basis: kinds, order: structure. Ordered by structure, from design to practice to risk._
-          - Engineering design
-          - Engineering practice
-          - Risk engineering
-          - Engineering practice and education not elsewhere classified
-          - Engineering practice and education
-        - **Fields concerned with the education of engineers, humanitarian aims and whole-system integration address the human and organisational side of engineering.**
-          _basis: kinds, order: structure. Ordered by structure, from education to humanitarian application to systems integration._
-          - Engineering education
-          - Humanitarian engineering
-          - Systems engineering
-        - **Geomatic engineering fields capture, model and use spatial information to map places and fix positions.**
-          _basis: kinds, order: structure. Ordered by structure, from mapping to data modelling to positioning._
-          - Geomatic engineering
-          - Cartography and digital mapping
-          - Geospatial information systems and geospatial data modelling
-          - Navigation and position fixing
-        - **Geomatic measurement fields are kinds of engineering that determine position and spatial form of objects from observations.**
-          _basis: kinds, order: structure. Ordered by structure, from sensing methods to the residual category._
-          - Photogrammetry and remote sensing
-          - Satellite-based positioning
-          - Surveying (incl. hydrographic surveying)
-          - Geomatic engineering not elsewhere classified
-    - **Foundational and domain concepts are the mathematical, scientific, application-domain and organisational ideas from which engineering work is framed and its models written down.**
-      _basis: kinds, order: structure. Ordered by structure from foundations to application domains to organisational practice._
-      - **Foundational concepts are the mathematical methods, physical-science balances and applied engineering topics from which a predictive model is written down, closed and solved.**
-        _basis: kinds, order: structure. Ordered structurally from formal mathematical tools to physical domains and then applied practice._
-        - **Mathematical foundations are formal methods and quantities from which predictive models of artefacts are built and closed.**
-          _basis: kinds, order: structure. Kinds of mathematical foundation, listed in structural order._
-          - Algorithms
-          - Arithmetic
-          - Azimuth
-          - Availability
-        - **Mathematical methods are the formal tools by which a predictive model is written down, closed and solved.**
-          _basis: kinds, order: structure. Ordered structurally from basic calculus to specialised solution methods._
-          - Calculus
-          - Boundary value problems
-          - Closed-form solutions
-          - Combinatorial mathematics
-        - **Physical-science domains describe natural systems whose balances supply the quantities that complete a predictive model.**
-          _basis: kinds, order: structure. Kinds of general science domain, listed in structural order._
-          - Astronomy
-          - Atmospheric science
-          - Biology
-          - Bio-inspired engineering
-        - **Applied and general engineering topics are kinds of engineering practice that apply mathematics and domain knowledge to safety, acoustics and agriculture.**
-          _basis: kinds, order: structure. Ordered by structure, from mathematical foundations to applied domains._
-          - Algebra
-          - Accident prevention
-          - Acoustical engineering
-          - Agricultural engineering
-      - **Application-field concepts are the biomedical, biological and chemical process domains where measured quantities and balances of a system are modelled.**
-        _basis: kinds, order: structure. Ordered structurally from medical artefacts to biological fields and process engineering._
-        - **Biomedical engineering topics cover the communication, computing, and equipment that make up medical artefacts.**
-          _basis: kinds, order: structure. Kinds of biomedical engineering topic, listed in structural order._
-          - Biomedical communication
-          - Biomedical computing
-          - Biomedical engineering
-          - Biomedical equipment
-        - **Biomedical and biological fields are the kinds of application where the measured quantities of living systems are modelled and balanced.**
-          _basis: kinds, order: structure. Ordered structurally from imaging to nanoscale to threat applications._
-          - Biomedical imaging
-          - Bionanotechnology
-          - Bioterrorism
-          - CAMAC
-        - **Chemical and process fields are the kinds of engineering where mass and reaction balances give the constitutive closure of a model.**
-          _basis: kinds, order: structure. Ordered structurally from theory to applied practice._
-          - Chemical reaction network theory
-          - Chemistry
-          - Chemical engineering
-          - Chemical technology
-      - **Organisational concepts are the management, systems and communication practices through which engineering work is framed, coordinated and conveyed.**
-        _basis: kinds, order: structure. Ordered structurally from organisational framing to systems coordination and communication._
-        - **Organisational and engineering-management concepts are the kinds of practice that frame how artefacts and capabilities are built and delivered.**
-          _basis: kinds, order: structure. Ordered structurally from engineering disciplines to the organisational practices around them._
-          - Business
-          - Capability engineering
-          - Civil engineering
-          - Collaboration
-        - **Systems and management concepts describe how complex engineering work is organized, coordinated and brought to market.**
-          _basis: kinds, order: structure. From the complex system itself to the organization around it._
-          - Complex systems
-          - Configuration management
-          - Concurrent engineering
-          - Commercialization
-          - Consortia
-        - **Communication concepts describe the means, symbols, context and effectiveness through which professional meaning is conveyed.**
-          _basis: kinds, order: structure. From the means of communicating to the quality of the result._
-          - Communication aids
-          - Communication effectiveness
-          - Communication symbols
-          - Context
-      - **Practice and general-equipment concepts cover design disciplines, physical equipment and supply categories that frame how artefacts are specified, held and used.**
-        _basis: kinds, order: structure. Listed structurally from design practice to equipment to supplies._
-        - **Design practice concepts are the methods and disciplines used to specify and build an artefact, along with the social and informational context around it.**
-          _basis: kinds, order: structure. Ordered by structure of the design process._
-          - Design automation
-          - Design engineering
-          - Design methodology
-          - Databases
-          - Cultural aspects
-        - **Physical equipment concepts are material artefacts and the cultural framing of them, defined by the conditions they hold or the contexts in which they are used.**
-          _basis: kinds, order: structure. Ordered by structure of the equipment type._
-          - Equipment and Supplies
-          - Air Filters
-          - Atmosphere Exposure Chambers
-          - Cultural differences
-        - **General supply categories are broad groupings of consumable and facility items, defined by how they are used and replaced rather than by one mechanism.**
-          _basis: kinds, order: structure. Listed by structure: broad umbrella categories of supplies._
-          - Equipment and Supplies, Hospital
-          - Disposable Equipment
-          - Hygiene Products
-    - **Mathematical and closure resources are the formal tools, concepts and balance relations used to write, complete and solve the predictive model of an artefact.**
-      _basis: kinds, order: structure. Ordered structurally from mathematical foundations, to tools, to closure relations, to the framing concepts that use them._
-      - **Mathematical foundations are the numerical methods, abstract concepts and branches of mathematics that supply the structures for formulating and computing models.**
-        _basis: kinds, order: structure. Ordered from computational methods to abstract concepts to broad mathematical branches._
-        - **Numerical and series methods approximate the behaviour of physical systems by discretizing or decomposing them into computable pieces.**
-          _basis: kinds, order: structure. Kinds ordered by structure, not by degree._
-          - Finite difference methods
-          - Finite element analysis
-          - Fourier series
-          - Fluctuations
-        - **Abstract mathematical concepts supply the spaces, distances, and shapes in which models of an artefact are formulated.**
-          _basis: kinds, order: structure. Kinds ordered by structure, not by degree._
-          - Euclidean distance
-          - Functional analysis
-          - Geometry
-          - Gaze tracking
-        - **Mathematical topics are branches of mathematics that supply methods and structures for analysis and optimisation.**
-          _basis: kinds, order: structure. Ordered by structure, from methods to structures._
-          - Gradient methods
-          - Graph theory
-          - Harmonic analysis
-          - Hypercomplex
-          - IEEE organization
-      - **Mathematical resources are kinds of formal tool used to build, state, approximate and solve the predictive model of an artefact.**
-        _basis: kinds, order: structure. Ordered by structure, from abstract objects through formulation and linear analysis to numerical solution._
-        - **Abstract mathematical structures supply the formal objects, such as kernels, lattices and Lie groups, from which a model's closure is built.**
-          _basis: kinds, order: structure. Ordered by structure from the algebraic objects to the field equation._
-          - Kernel
-          - Lattices
-          - Lie groups
-          - Laplace equations
-        - **Mathematical formulation concepts supply the equations and optimisation frameworks in which a predictive model of an artefact is stated and closed.**
-          _basis: kinds, order: structure. Ordered by structure, from the general field to specific formulation tools._
-          - Mathematics
-          - Mathematical models
-          - Mathematical programming
-          - Minimization
-        - **Linear analysis tools, such as linear systems, linearization and linear matrix inequalities, approximate and bound an artefact's dynamic behaviour.**
-          _basis: kinds, order: structure. Ordered by structure from the system description to the techniques and inequality tools applied to it._
-          - Linear systems
-          - Linearization techniques
-          - Linear matrix inequalities
-          - Limit-cycles
-        - **Numerical solution methods are techniques that enforce boundary or constitutive closure so that a field model can be solved for an artefact.**
-          _basis: kinds, order: structure. Ordered by structure, from the general method to the specific matching technique._
-          - Method of moments
-          - Mode matching methods
-          - Mechanical variables control
-          - Medical control systems
-          - Missile control
-      - **Closure types are the kinds of balance or constitutive relation that finish a predictive model so it can be solved or bounded.**
-        _basis: kinds, order: degree. Ordered from most formal (mathematical) to most human-facing (social and ethical)._
-        - **Mathematical closure finishes a predictive model by supplying the probabilistic, piecewise or population-balance relations that make its equations solvable.**
-          _basis: kinds, order: structure. Ordered from general mathematical tools to a specific dynamic model._
-          - Probability
-          - Piecewise linear techniques
-          - Predator prey systems
-          - Precision engineering
-        - **Control and protection closure finishes a model by balancing pressure, flow and safety limits within regulated machines and networks.**
-          _basis: kinds, order: structure. Ordered from fluid actuation to rail and power protection._
-          - Pneumatic systems
-          - Pressure control
-          - Positive train control
-          - Power system protection
-        - **Design and planning closure finishes a model by fixing the resources, layout and pervasive-system constraints that must balance before an artefact is built.**
-          _basis: kinds, order: structure. Ordered from planning to physical design and pervasive deployment._
-          - Planning
-          - Physical design
-          - Pervasive computing
-          - Portfolios
-        - **Human and social closure finishes a model by accounting for the ethical, philosophical and attribution quantities that bound an artefact's use.**
-          _basis: kinds, order: structure. Ordered from social implications to the posthuman and authorship._
-          - Peace technology
-          - Philosophical considerations
-          - Posthuman
-          - Plagiarism
-      - **Modelling and closure concepts supply the mathematical, stochastic, and balance-based means by which a predictive model of an artefact is written and completed.**
-        _basis: kinds, order: structure. Ordered from formal tools to closure principles_
-        - **Mathematical methods and constructs are the formal tools used to smooth, describe, and reason about quantities in a predictive model.**
-          _basis: kinds, order: structure. Ordered by structure, from specific constructs to general methods._
-          - Smoothing methods
-          - Spirals
-          - Superposition calculus
-          - Statistics
-        - **Stochastic modelling concepts treat random behaviour in processes and systems so that predictions can account for uncertainty.**
-          _basis: kinds, order: structure. Ordered by structure, from the mathematical theory to its application in systems._
-          - Stochastic processes
-          - Stochastic systems
-          - Stability
-          - Software reliability
-          - Supervisory control
-        - **Each of these members names a quantity whose balance or constitutive closure completes the predictive model of an engineered artefact, so that its behaviour can be forecast from the specification.**
-          _basis: kinds, order: structure_
-          - Synthetic biology
-          - Standardization
-        - **Mathematical formalisms supply the algebraic and geometric structures in which an artefact's predictive model is written and closed.**
-          _basis: kinds, order: structure. Ordered by structure, from abstract objects to numerical methods._
-          - Tensors
-          - Topology
-          - Transforms
-          - Transmission line matrix methods
-        - **Uncertainty and balance theories close a predictive model by fixing what is conserved or unknown and how choices are valued.**
-          _basis: kinds, order: degree. Ranked by how far each theory models uncertainty: Thermodynamics is least uncertain, Uncertain systems most._
-          - Thermodynamics
-          - Utility theory
-          - Uncertain systems
-      - **Mathematics and science framing concepts provide the formal tools and the general statements used to reason about and communicate knowledge of artefacts.**
-        _basis: kinds, order: structure. Grouped by structure: formal tools, then communication of knowledge._
-        - **Mathematical concepts are formal tools for describing quantities and for searching or averaging within a model.**
-          _basis: kinds, order: structure. Ordered from basic structures to computational methods._
-          - Root mean square
-          - Sequences
-          - Set theory
-          - Simulated annealing
-        - **Science and communication concepts frame how knowledge about artefacts is persuaded, warned about and stated generally.**
-          _basis: kinds, order: structure. Ordered from general science to communicative practice._
-          - Science – general
-          - Rhetoric
-          - Safety
-    - **Setting and context topics describe the fields, frameworks and general conditions in which an artefact is built, used and judged.**
-      _basis: kinds, order: structure. Ordered structurally from application domains, to general settings, to organising frameworks._
-      - **Application and industrial domains are the fields, sectors and organisations in which engineered artefacts are used, made and judged.**
-        _basis: kinds, order: structure. Ordered from social use to broad fields to industry to institutional output._
-        - **Application and social domains show where engineered artefacts are used and what ethical questions their use raises.**
-          _basis: kinds, order: structure. Kinds ordered by structure, not by degree._
-          - Ethical aspects
-          - Ethics
-          - Food technology
-          - Genetic engineering
-        - **Broad domain categories name the general fields of technology, industry and agriculture, plus the life sciences, in which artefacts are situated.**
-          _basis: kinds, order: structure. Ordered by structure from the general domain headings to the more specific facility category._
-          - Technology, Industry, and Agriculture
-          - Technology, Industry, and Agriculture
-          - Non-Medical Public and Private Facilities
-          - Life sciences
-        - **Industrial topics cover the sectors, engineering practices and inspection work through which products are made and checked in industry.**
-          _basis: kinds, order: structure. Ordered by structure from the broad application area to its specific practices._
-          - Industry applications
-          - Industries
-          - Industrial engineering
-          - Inspection
-        - **Output and application headings cover what IEEE does and produces, together with high-temperature industrial techniques.**
-          _basis: kinds, order: structure. Ordered by structure, from activities to products and applications._
-          - IEEE activities
-          - IEEE indexing
-          - IEEE products
-          - IEEE entities
-          - IEEE governance
-      - **Settings and general concepts are kinds of context in which an artefact is built, used, maintained and modelled, each naming a quantity that completes its model.**
-        _basis: kinds, order: structure. Ordered by structure, from application domains through upkeep and governance to the general closure concepts._
-        - **Application-domain concepts are the engineering, industrial, medical, military and organisational settings in which such artefacts are built and used.**
-          _basis: kinds, order: structure. Ordered by structure, from physical engineering fields to organisational activities._
-          - Manufacturing
-          - Marine engineering
-          - Mechanical engineering
-          - Medical services
-          - Medical specialties
-        - **Upkeep and governance concepts cover the maintenance, documentation and legal constraints that keep an artefact working over its life.**
-          _basis: kinds, order: structure. Ordered by structure from maintenance activities to the documents and rules that support them._
-          - Maintenance
-          - Maintenance engineering
-          - Manuals
-          - Legal factors
-        - **Each of these concepts names the quantity whose balance or constitutive closure completes the predictive model of an artefact, whether a meeting, a market study, or a military system.**
-          _basis: kinds, order: structure_
-          - Meetings
-          - Market research
-          - Military systems
-      - **Framework and context concepts describe how a system is organised and how it sits within human, social, and applied settings.**
-        _basis: kinds, order: structure. Ordered from system structure to human and applied context_
-        - **Structural and conceptual frameworks are the ways of organising and viewing a system, from its architecture to its place within larger wholes.**
-          _basis: parts, order: structure_
-          - Systems architecture
-          - System of systems
-          - Systems thinking
-          - Systems engineering and theory
-        - **Societal and cross-disciplinary concepts cover the social context, standards, sustainability, and biological engineering that surround technological artefacts.**
-          _basis: kinds, order: structure. Ordered by structure, from social context to specific engineering domains._
-          - Social factors
-          - Social implications of technology
-          - Social sciences
-          - Sustainable development
-        - **Human-centred technology concepts cover the artefact as used, managed and extended by people.**
-          _basis: kinds, order: degree. Ranked by how far each concept reaches beyond the individual artefact: User interfaces narrowest, Transhuman broadest._
-          - User interfaces
-          - Technical management
-          - Technology
-          - Transhuman
-        - **Applied practice areas are the settings where artefact models are tested, exploited and reported.**
-          _basis: parts, order: structure. Ordered by structure, from physical testing through industry to written reporting._
-          - Vehicle crash testing
-          - Wine industry
-          - Writing
+  - **Small-scale and component-level topics address how nanoscale phenomena and component architectures shape manufactured devices.**
+    _basis: kinds, order: structure. Ordered by structure from nanoscale phenomena to component-level packaging._
+    - Bionanotechnology
+    - Casimir effect
+    - Component architectures
+    - Components, packaging, and manufacturing technology
+  - **Fluid and self-organizing fields close the model through a mass, momentum, or free-energy balance that governs how matter moves or assembles at the nanoscale.**
+    _basis: kinds, order: structure. Ordered by structure, from flow to assembly to replication._
+    - Nanofluidics
+    - Self-assembly
+    - Self-replicating machines
+  - **Fabrication and positioning fields close the model through a process balance, such as exposure dose, pattern transfer, and displacement control, that fixes the geometry of the artefact.**
+    _basis: kinds, order: structure. Ordered by structure, from writing patterns to placing and packaging the result._
+    - Nanolithography
+    - Nanopatterning
+    - Nanopositioning
+    - Nanopackaging
+  - **Broad technology domains and device-packaging fields close the model through heat and mass balances at the system level, covering whole fields and the thermal and packaging limits of devices.**
+    _basis: kinds, order: structure. Ordered by structure, from broad fields to specific packaging and thermal topics._
+    - Nanotechnology
+    - Nanoscale technology
+    - Semiconductor device packaging
+    - Thermal management of electronics
+    - Chemical technology
 
 ## Checks
 
 - minto_check: clean
-- field_check holds: False — Pillars contain catch-all sections (P4.3.5 "Other engineering", P5.3.5 framing resources, P1.4.2 operational topics) and library-scheme sections such as P1.3.1 LCC headings and P4.3.3.3.
+- field_check holds: False — Pillars overlap and use catch-alls and catalogue schemes (P1.3.5 LCC headings, P4.3.1.3, NEC groups, P5.1 framing); P1 mixes manufacturing and robotics under force.
