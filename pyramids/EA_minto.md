@@ -649,5 +649,5 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["EA.O.A5.G10: ['condition', 'response']", "EA.O.A4.G18: ['condition', 'place']", "EA.O.A4.G51: ['condition', 'place']"]}
-- field_check holds: False — Misplaced: P4.1.2.3/P4.1.2.4 life under land surface; P4.1.4.1 solar physics under water; P5.1.2.3/P5.1.2.4 advisories under methods; P4.3.3.1 species models.
+- minto_check: clean
+- field_check holds: True — Misplaced: P4.1.2.3/P4.1.2.4 life under land surface; P4.1.4.1 solar physics under water; P5.1.2.3/P5.1.2.4 advisories under methods; P4.3.3.1 species models.
