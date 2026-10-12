@@ -8211,5 +8211,5 @@ Group of regimes. Basis: kinds. Dimension: the governing constants of the claim 
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["PH.O.A4.G494: ['response', 'substance']", "PH.O.A4.G513: ['activity', 'place']", "PH.O.A4.G468: ['response', 'substance']", "PH.O.A4.G429: ['condition', 'response']", "PH.O.A4.G526: ['condition', 'place', 'response']", "PH.O.A4.G356: ['activity', 'response']", "PH.O.A3.G94: ['condition', 'place']", "PH.O.A3.G92: ['condition', 'substance']", "PH.O.A3.G69: ['activity', 'condition']", "PH.O.A2.G97: ['response', 'substance']"]}
+- minto_check: clean
 - field_check holds: False — Pillars mix dimensions: P1–P3 are keyed to constants, P4–P5 to equilibrium versus non-equilibrium, and both are N-scaled. P1 is a residual 'no quantum constant' catch-all.
