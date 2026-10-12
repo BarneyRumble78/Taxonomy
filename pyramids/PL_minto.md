@@ -4,46 +4,79 @@ Built by scripts/minto_pass.py from the grouped classification. Three rules (Min
 
 ## Introduction
 
-**Situation.** Philosophy asks questions about reality, thought, language, value and inquiry, and its literature has grown in many separately labelled areas.
+**Situation.** Philosophy asks questions about reality, knowledge, language, value and inquiry.
 
-**Complication.** The areas are labelled by overlapping schemes, with duplicates, residual headings and mixed groupings that hide what each question is actually about.
+**Complication.** Its literature is catalogued by schools, periods, regions and teaching levels rather than by what each question is about.
 
 **Question.** How is everything in philosophy divided by what its questions are about?
 
-**Answer.** Philosophy is divided by what its questions are about into being, knowledge and mind, meaning and inference, value, and the standing of the sciences and of philosophy itself.
+**Answer.** Philosophy's questions divide by the kind of claim at issue into being, knowledge and mind, meaning and inference, value, and the standing of the sciences and mathematics.
 
 ## Governing thought
 
-Philosophy is divided by what its questions are about into being, knowledge and mind, meaning and inference, value, and the standing of the sciences and of philosophy itself.
+Philosophy's questions divide by the kind of claim at issue into being, knowledge and mind, meaning and inference, value, and the standing of the sciences and mathematics.
 
 ## Key line
 
-Group of kinds of philosophical question. Basis: kinds. Dimension: what the question is about. Order: structure. The pillars run from being, to knowing, to saying, to valuing, to the sciences and disciplines that study the world.
+Group of claim-types. Basis: kinds. Dimension: what the philosophical question is about. Order: structure. The pillars run from being, to knowing, to saying, to valuing, and finally to the sciences.
 
-1. Being is the kind of question that asks what exists and what the fundamental nature of reality is. `PL.K1`
-2. Knowledge and mind is the kind of question that asks how we know, what the mind is, how consciousness arises and how mental life can fail. `PL.K2`
-3. Meaning and inference is the kind of question that asks how valid reasoning works and how meaning is produced and understood. `PL.K3`
-4. Value is the kind of question that asks what is good, right, just, beautiful or worth loving, in private life and in society. `PL.K4`
-5. The standing of the sciences and disciplines is the kind of question that asks what the methods, foundations and history of inquiry, including philosophy itself, are worth. `PL.K5`
+1. Being is the claim-type concerned with what exists, the fundamental nature of reality, the ultimate and the traditions that have shaped such questions. `PL.K1`
+2. Knowledge and mind is the claim-type concerned with how we know, what the mind is and how consciousness and its disorders work. `PL.K2`
+3. Meaning and inference is the claim-type concerned with valid reasoning and how language expresses and interprets meaning. `PL.K3`
+4. Value is the claim-type concerned with what is good, right, beautiful and just in individual and social life. `PL.K4`
+5. The standing of the sciences and mathematics is the claim-type concerned with the foundations and methods of organised inquiry in the formal, natural, social and humanistic disciplines. `PL.K5`
 
 ## Groups
 
-### 1. Being is the kind of question that asks what exists and what the fundamental nature of reality is.
+### 1. Being is the claim-type concerned with what exists, the fundamental nature of reality, the ultimate and the traditions that have shaped such questions.
 
-- **Metaphysics and speculative philosophy cover questions about the fundamental nature of reality and being.**
-  _basis: kinds, order: structure. Listed from the specific metaphysics heading to the broader speculative and miscellaneous headings._
-  - Metaphysics
-  - Speculative philosophy
-  - M&E, Misc
-- **Core theoretical branches of philosophy ask what exists and how we know it.**
-  _basis: kinds, order: structure. Ordered from metaphysics alone to its pairing with epistemology._
-  - Metaphysics
-  - Metaphysics and Epistemology
+- **Metaphysics asks what exists and what the fundamental nature of reality is.**
+  _basis: kinds, order: structure. Speculative and core metaphysics come first._
+  - **Metaphysics and speculative philosophy cover questions about the fundamental nature of reality and being.**
+    _basis: kinds, order: structure. Listed from the specific metaphysics heading to the broader speculative and miscellaneous headings._
+    - Metaphysics
+    - Speculative philosophy
+    - M&E, Misc
+  - **Core theoretical branches of philosophy ask what exists and how we know it.**
+    _basis: kinds, order: structure. Ordered from metaphysics alone to its pairing with epistemology._
+    - Metaphysics
+    - Metaphysics and Epistemology
+- **Religion asks about the divine, belief and spirituality as questions about what ultimately is.**
+  _basis: kinds, order: structure. Adult philosophy of religion comes before the children's version._
+  - Philosophy of Religion
+  - Philosophy for Children: Religion and Spirituality
+- **Philosophical traditions and their history record how answers about reality and thought have developed across periods and cultures.**
+  _basis: kinds, order: structure. General history comes before periods, and periods before regional traditions._
+  - **History of ideas and of philosophy traces how thought and philosophical doctrines developed over time.**
+    _basis: kinds, order: structure. General history comes before children's treatment of specific philosophers._
+    - **This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.**
+      _basis: kinds, order: structure. Grouped by the field studied; no ranking._
+      - History of ideas
+      - History of philosophy
+      - History and philosophy of science
+      - Philosophy of science (excl. history and philosophy of specific fields)
+      - Science (General)
+    - History of Western Philosophy
+    - Philosophy for Children: Specific Philosophers
+  - **Historical periods of Western philosophy follow the development of thought from antiquity to the twentieth century.**
+    _basis: kinds, order: structure. Periods run in chronological order._
+    - Ancient Greek and Roman Philosophy
+    - Medieval and Renaissance Philosophy
+    - 17th/18th Century Philosophy
+    - 19th Century Philosophy
+    - 20th Century Philosophy
+  - **Regional and cultural traditions of philosophy develop distinct bodies of thought outside or alongside the Western canon.**
+    _basis: kinds, order: structure. European traditions come before other regions._
+    - European Philosophy
+    - Asian Philosophy
+    - African/Africana Philosophy
+    - Philosophy of specific cultures (incl. comparative philosophy)
+    - Philosophy of the Americas
 
-### 2. Knowledge and mind is the kind of question that asks how we know, what the mind is, how consciousness arises and how mental life can fail.
+### 2. Knowledge and mind is the claim-type concerned with how we know, what the mind is and how consciousness and its disorders work.
 
-- **Knowledge and the philosophy of mind ask about the nature of belief, justification, experience, cognition and action.**
-  _basis: kinds, order: structure. Knowledge comes first, then experience, then mind._
+- **Epistemology and philosophy of mind ask about belief, knowledge, cognition and action.**
+  _basis: kinds, order: structure. Knowledge precedes mind._
   - **Epistemology addresses questions about the nature, sources, justification, and limits of knowledge and belief.**
     _basis: kinds, order: structure. Both entries name the same knowledge-focused field, listed by source._
     - Epistemology
@@ -58,12 +91,9 @@ Group of kinds of philosophical question. Basis: kinds. Dimension: what the ques
     - Philosophy of mind (excl. cognition)
     - Psychoanalytic philosophy
     - Philosophy of Mind
-  - **Topical subfields take up a specific philosophical subject, such as intentional action or religious belief.**
-    _basis: kinds, order: structure. Ordered by structure of topic: action first, then religion._
-    - Philosophy of Action
-    - Philosophy of Religion
-- **Consciousness research asks how awareness appears and how it relates to brain, biology, physics and psychology.**
-  _basis: kinds, order: structure. General appearances come first, then the natural and psychological sciences of consciousness._
+  - Philosophy of Action
+- **Consciousness is studied through brain, psychology, lived experience and the natural sciences.**
+  _basis: kinds, order: structure. Experience and psychology come before the brain and natural sciences._
   - **Questions about how consciousness appears and is studied, through brain processes, its various states, psychological methods and lived experience.**
     _basis: kinds, order: structure. Ordered by structure, from brain correlates through forms of consciousness and methods of study to experiential approaches._
     - **Neural correlates of consciousness research asks which brain processes, timing patterns and synchrony accompany conscious experience.**
@@ -108,62 +138,70 @@ Group of kinds of philosophical question. Basis: kinds. Dimension: what the ques
     - Philosophy of Psychology
     - Science of Consciousness, Miscellaneous
     - Science of Visual Consciousness, Misc
-- **Clinical disorders of mind ask how illness and impairment alter awareness, personality and social understanding.**
-  _basis: kinds, order: structure. Group-level clinical conditions come first, then the general philosophy of psychiatry._
-  - **Questions about clinical conditions and disorders that alter or impair mind, awareness and social understanding.**
-    _basis: kinds, order: structure. Ordered by structure, from broad mind-and-brain questions to specific conditions and syndromes._
-    - **This group covers questions about the mind and brain, including consciousness, action, and disorders of cognition and awareness such as dementia, autism and bipolar disorders.**
-      _basis: kinds, order: structure. Grouped by the psychological or clinical topic; no ranking._
-      - Action and Consciousness in Psychology
-      - Alzheimer's Disease
-      - Bipolar Disorders
-      - Cerebral Hemispheres and Consciousness
-      - Cognitive Disabilities and Disorders, Misc
-    - **Autism and anosognosia are both conditions of altered self-awareness and social understanding, which is what the question is about.**
-      _basis: kinds, order: structure_
-      - Autism
-      - Anosognosia
-    - **Clinical conditions and disorders cover questions about illnesses that affect mind and consciousness.**
-      _basis: kinds, order: structure. Ordered by structure, from general disorder categories to specific conditions._
-      - Disorders and Syndromes of Consciousness
-      - Mental Disorders, Misc
-      - Mental Illness
-      - Delirium
-      - Dementia
-    - **Clinical disorders and syndromes concern impairments of attention, personality and mental functioning that are studied as conditions of patients.**
-      _basis: kinds, order: structure. Listed without ranking; each is a distinct type of condition._
-      - Neglect and Extinction
-      - Other Disorders and Syndromes
-      - Other Mental Disorders
-      - Personality Disorders
-  - Philosophy of Psychiatry
-  - Philosophy of Psychiatry and Psychopathology, Misc
-- **Named psychopathologies ask what particular conditions such as psychopathy and schizophrenia reveal about the mind.**
-  _basis: kinds, order: structure. General psychopathology comes first, then specific conditions._
-  - Psychopathology, Misc
-  - Psychopathy
-  - Schizophrenia
+- **Disorders of mind raise questions about impaired awareness, personality and mental functioning.**
+  _basis: kinds, order: structure. Clinical groups come before individual conditions._
+  - **Clinical conditions that alter or impair mind, awareness and social understanding raise questions about the nature of mental disorder.**
+    _basis: kinds, order: structure. Clinical groups are listed in the order of their group ids._
+    - **Questions about clinical conditions and disorders that alter or impair mind, awareness and social understanding.**
+      _basis: kinds, order: structure. Ordered by structure, from broad mind-and-brain questions to specific conditions and syndromes._
+      - **This group covers questions about the mind and brain, including consciousness, action, and disorders of cognition and awareness such as dementia, autism and bipolar disorders.**
+        _basis: kinds, order: structure. Grouped by the psychological or clinical topic; no ranking._
+        - Action and Consciousness in Psychology
+        - Alzheimer's Disease
+        - Bipolar Disorders
+        - Cerebral Hemispheres and Consciousness
+        - Cognitive Disabilities and Disorders, Misc
+      - **Autism and anosognosia are both conditions of altered self-awareness and social understanding, which is what the question is about.**
+        _basis: kinds, order: structure_
+        - Autism
+        - Anosognosia
+      - **Clinical conditions and disorders cover questions about illnesses that affect mind and consciousness.**
+        _basis: kinds, order: structure. Ordered by structure, from general disorder categories to specific conditions._
+        - Disorders and Syndromes of Consciousness
+        - Mental Disorders, Misc
+        - Mental Illness
+        - Delirium
+        - Dementia
+      - **Clinical disorders and syndromes concern impairments of attention, personality and mental functioning that are studied as conditions of patients.**
+        _basis: kinds, order: structure. Listed without ranking; each is a distinct type of condition._
+        - Neglect and Extinction
+        - Other Disorders and Syndromes
+        - Other Mental Disorders
+        - Personality Disorders
+    - Philosophy of Psychiatry
+    - Philosophy of Psychiatry and Psychopathology, Misc
+  - **Particular psychopathologies such as psychopathy and schizophrenia raise questions about impaired personality and mental functioning.**
+    _basis: kinds, order: structure. General psychopathology comes before particular conditions._
+    - Psychopathology, Misc
+    - Psychopathy
+    - Schizophrenia
 
-### 3. Meaning and inference is the kind of question that asks how valid reasoning works and how meaning is produced and understood.
+### 3. Meaning and inference is the claim-type concerned with valid reasoning and how language expresses and interprets meaning.
 
-- **Logic concepts are fields whose central question is the nature of valid inference and formal reasoning.**
-  _basis: kinds, order: structure. Parallel logic-focused categories drawn from different classification schemes; no ranking._
-  - Logic
-  - Logic
-  - Logic and Philosophy of Logic
-- **Language and interpretation concepts are fields whose central question is how meaning is produced, expressed, and understood in language and texts.**
-  _basis: kinds, order: structure. Parallel meaning-focused categories covering language, interpretation, and critical theory; no ranking._
-  - Philosophy of language
-  - Philosophy of Language
-  - Hermeneutics
-  - Poststructuralism
+- **Logic asks what makes inference valid and reasoning sound.**
+  _basis: kinds, order: structure. Formal logic comes before reasoning for children._
+  - **Logic concepts are fields whose central question is the nature of valid inference and formal reasoning.**
+    _basis: kinds, order: structure. Parallel logic-focused categories drawn from different classification schemes; no ranking._
+    - Logic
+    - Logic
+    - Logic and Philosophy of Logic
+  - Philosophy for Children: Reasoning
+- **Language and interpretation ask how meaning is produced and understood.**
+  _basis: kinds, order: structure. Philosophy of language comes before the continental interpretive tradition._
+  - **Language and interpretation concepts are fields whose central question is how meaning is produced, expressed, and understood in language and texts.**
+    _basis: kinds, order: structure. Parallel meaning-focused categories covering language, interpretation, and critical theory; no ranking._
+    - Philosophy of language
+    - Philosophy of Language
+    - Hermeneutics
+    - Poststructuralism
+  - Continental Philosophy
 
-### 4. Value is the kind of question that asks what is good, right, just, beautiful or worth loving, in private life and in society.
+### 4. Value is the claim-type concerned with what is good, right, beautiful and just in individual and social life.
 
-- **Ethics and aesthetics ask about moral and aesthetic value in general and in applied settings.**
-  _basis: kinds, order: structure. General theory comes before applied ethics._
-  - **Value and formal theory covers abstract questions of moral and aesthetic value together with formal, queer and aesthetic theoretical fields.**
-    _basis: kinds, order: structure. Kinds of abstract theory, ordered by structure from general value to specific theoretical fields._
+- **Ethics and aesthetics ask what is good, right and beautiful.**
+  _basis: kinds, order: structure. Core value theory comes before applied ethics._
+  - **Core value theory asks abstract questions about moral and aesthetic value, choice and beauty.**
+    _basis: kinds, order: structure. General value theory comes before children's versions._
     - **General normative and evaluative theory concerns abstract questions of value, choice, beauty and our relation to nature.**
       _basis: kinds, order: structure. Ordered from ethical theory to decision, aesthetic and environmental theory._
       - Ethical theory
@@ -182,8 +220,10 @@ Group of kinds of philosophical question. Basis: kinds. Dimension: what the ques
       - Queer Theory
       - Aesthetics
       - Aesthetics
-  - **Applied ethics addresses the moral duties and dilemmas that arise within professions, institutions, medicine, biology and technology.**
-    _basis: kinds, order: structure. Kinds of applied ethics, ordered by structure from occupational to biomedical._
+    - Philosophy for Children: Ethics
+    - Philosophy for Children: Aesthetics
+  - **Applied ethics asks about the moral duties that arise in professions, institutions, medicine and technology.**
+    _basis: kinds, order: structure. Professional ethics comes before life and technology ethics._
     - **Professional and institutional ethics concerns the moral duties that arise within occupations, businesses and legal practice.**
       _basis: kinds, order: structure. Ordered from the general applied ethics heading to specific professions._
       - Applied ethics
@@ -196,27 +236,33 @@ Group of kinds of philosophical question. Basis: kinds. Dimension: what the ques
       - Bioethics
       - Medical ethics
       - Ethical use of new technology
-- **Social and political philosophy asks about justice, rights, power, law, gender and race in society.**
-  _basis: kinds, order: structure. Political theory comes first, then justice and social relations, then law, gender and race._
-  - **Political theory and thought concerns the foundational ideas, concepts and traditions that shape how politics is understood.**
-    _basis: kinds, order: structure. Ordered from general foundations to specific national thought._
-    - Foundations of Political Theory
-    - Political theory and political philosophy
-    - Ideas, Knowledge and Politics
-    - American Political Thought
-  - **Justice, rights and social philosophy concerns questions of fairness, rights, power and social relations in society.**
-    _basis: kinds, order: structure. Ordered from rights and justice to critical and gender perspectives._
-    - Human rights and justice issues (excl. law)
-    - Social and political philosophy
-    - Critical theory
-    - Philosophy of gender
-  - Philosophy of Law
-  - Philosophy of Race
-  - Feminist Philosophy
-- **Love and sexuality ask what love, sex and sexual orientation are and how they are morally valued.**
-  _basis: kinds, order: structure. Love comes first, then sex and sexual orientation._
-  - **Love asks what love is, what features and varieties it has, and how it is valued in relationships.**
-    _basis: kinds, order: structure. Definitions and theories come first, then ethics and relationships._
+- **Political and social philosophy ask about justice, rights, power, law, gender and race in society.**
+  _basis: kinds, order: structure. Political theory comes before specific social questions._
+  - **Political theory and justice concern the foundational ideas of politics, rights, power and law.**
+    _basis: kinds, order: structure. Theory comes before law and children's political philosophy._
+    - **Political theory and thought concerns the foundational ideas, concepts and traditions that shape how politics is understood.**
+      _basis: kinds, order: structure. Ordered from general foundations to specific national thought._
+      - Foundations of Political Theory
+      - Political theory and political philosophy
+      - Ideas, Knowledge and Politics
+      - American Political Thought
+    - **Justice, rights and social philosophy concerns questions of fairness, rights, power and social relations in society.**
+      _basis: kinds, order: structure. Ordered from rights and justice to critical and gender perspectives._
+      - Human rights and justice issues (excl. law)
+      - Social and political philosophy
+      - Critical theory
+      - Philosophy of gender
+    - Philosophy of Law
+    - Philosophy for Children: Political Philosophy
+  - **Gender and race ask how social identity shapes fairness and power.**
+    _basis: kinds, order: structure. Gender comes before race._
+    - Philosophy of Gender
+    - Feminist Philosophy
+    - Philosophy of Race
+- **Love, sex and relationships ask what these are and how they are morally valued.**
+  _basis: kinds, order: structure. Love comes before sex and orientation._
+  - **Love asks what love is, what features it has and how it is valued in relationships.**
+    _basis: kinds, order: structure. Defining love comes before its ethics._
     - **Questions about love ask what love is, what varieties it takes, and how it is valued.**
       _basis: kinds, order: structure. Ordered from theories of love, to its varieties, to the value-theoretic framing._
       - Theories of Love
@@ -227,9 +273,8 @@ Group of kinds of philosophical question. Basis: kinds. Dimension: what the ques
     - Features of Love
     - Philosophy of Love, Misc
     - Ethics of Love
-  - **Sex and sexual orientation ask what sexual activity and orientation are and how they are morally and politically assessed.**
-    _basis: kinds, order: structure. Relationships come first, then sexual activity, then orientation._
-    - Relationships and Marriage
+  - **Sex, sexual orientation and marriage ask what they are and how they bear on morality and politics.**
+    _basis: kinds, order: structure. Sex comes before orientation and relationships._
     - **Questions about sexual activity, its moral standing, and its general philosophical treatment.**
       _basis: parts, order: structure. Ordered from activities to ethics to miscellany._
       - Sexual Activities
@@ -247,24 +292,27 @@ Group of kinds of philosophical question. Basis: kinds. Dimension: what the ques
       - Sexual Orientation, Politics, and the Law
       - The Nature of Sexual Orientation
       - Topics in the Philosophy of Sexual Orientation
-    - Philosophy of Gender
+    - Relationships and Marriage
 
-### 5. The standing of the sciences and disciplines is the kind of question that asks what the methods, foundations and history of inquiry, including philosophy itself, are worth.
+### 5. The standing of the sciences and mathematics is the claim-type concerned with the foundations and methods of organised inquiry in the formal, natural, social and humanistic disciplines.
 
-- **Philosophy of science and of the formal and natural sciences asks about the foundations and methods of scientific inquiry.**
-  _basis: kinds, order: structure. General science comes first, then particular scientific fields._
-  - **This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.**
-    _basis: kinds, order: structure. Grouped by the field studied; no ranking._
-    - History of ideas
-    - History of philosophy
-    - History and philosophy of science
-    - Philosophy of science (excl. history and philosophy of specific fields)
-    - Science (General)
+- **General philosophy of science and philosophy itself ask about the methods and foundations of inquiry.**
+  _basis: kinds, order: structure. General questions come before metaphilosophy for children._
   - **Philosophy of science and philosophy itself cover questions about the methods and foundations of inquiry.**
     _basis: kinds, order: structure. Ordered by structure, from the formal sciences to science in general, then philosophy itself._
     - Formal Sciences
     - General Philosophy of Science
     - Metaphilosophy
+  - **Philosophy of the formal and physical sciences examines the foundations of mathematics, probability, physical science, and science in general.**
+    _basis: kinds, order: structure. Not ranked; arranged by structure._
+    - Philosophy of Mathematics
+    - Philosophy of Probability
+    - Philosophy of Physical Science
+    - Philosophy of Science, Misc
+    - Science, Logic, and Mathematics
+  - Philosophy for Children: Metaphilosophy
+- **Philosophy of the special sciences and broad academic areas asks foundational questions about the concepts and methods of particular fields of study.**
+  _basis: kinds, order: structure. Broad and natural fields come before cognitive fields and applied professions._
   - **Philosophy of special sciences and disciplines asks foundational questions about the methods and concepts of particular fields of study.**
     _basis: kinds, order: structure. Listed without ranking; each is a distinct discipline._
     - Philosophy of Anthropology
@@ -272,24 +320,16 @@ Group of kinds of philosophical question. Basis: kinds. Dimension: what the ques
     - Philosophy of Biology
     - Philosophy of Economics
     - Philosophy of Education
-  - **Philosophy of the social and historical sciences examines how we study human societies, places, and the past.**
-    _basis: kinds, order: structure. Not ranked; arranged by structure._
-    - Philosophy of Geography
-    - Philosophy of History
-    - Philosophy of Social Science, Miscellaneous
-    - Philosophy of Sociology
+  - **Broad academic areas are general or residual fields of study that are not tied to a single specific philosophical question.**
+    _basis: kinds, order: structure. Listed without ranking; they are catch-all academic categories._
+    - Natural Sciences
+    - Other Academic Areas
+    - Other Academic Areas, Misc
   - **Philosophy of cognitive and computing sciences asks conceptual questions about minds, machines and information.**
     _basis: kinds, order: structure. Listed without ranking; each is a distinct subfield._
     - Philosophy of Artificial Intelligence
     - Philosophy of Cognitive Science, Miscellaneous
     - Philosophy of Computing and Information
-- **Philosophy of the humanities and professions asks about the foundations of non-scientific disciplines and applied fields.**
-  _basis: kinds, order: structure. Humanities and social sciences come first, then applied professions and formal sciences._
-  - **This group covers history and philosophy of the academic disciplines of the humanities and social sciences, together with the broad arts and humanities area.**
-    _basis: kinds, order: structure. Grouped by the field studied; no ranking._
-    - History and philosophy of the humanities
-    - History and philosophy of the social sciences
-    - Arts and Humanities
   - **This group covers history and philosophy of applied and professional fields, such as engineering, law and medicine, which concern how those practices developed and what they rest on.**
     _basis: kinds, order: structure. Grouped by the field studied; no ranking._
     - History and philosophy of specific fields
@@ -301,64 +341,21 @@ Group of kinds of philosophical question. Basis: kinds. Dimension: what the ques
     _basis: kinds, order: structure. Not ranked; arranged by structure._
     - Professional Areas
     - Psychotherapy and Psychoanalysis
-  - **Philosophy of the formal and physical sciences examines the foundations of mathematics, probability, physical science, and science in general.**
+- **History and philosophy of the humanities and social sciences ask how those disciplines justify their methods and claims.**
+  _basis: kinds, order: structure. Humanities come before the social and historical sciences._
+  - **This group covers history and philosophy of the academic disciplines of the humanities and social sciences, together with the broad arts and humanities area.**
+    _basis: kinds, order: structure. Grouped by the field studied; no ranking._
+    - History and philosophy of the humanities
+    - History and philosophy of the social sciences
+    - Arts and Humanities
+  - **Philosophy of the social and historical sciences examines how we study human societies, places, and the past.**
     _basis: kinds, order: structure. Not ranked; arranged by structure._
-    - Philosophy of Mathematics
-    - Philosophy of Probability
-    - Philosophy of Physical Science
-    - Philosophy of Science, Misc
-    - Science, Logic, and Mathematics
-  - **Broad academic areas are general or residual fields of study that are not tied to a single specific philosophical question.**
-    _basis: kinds, order: structure. Listed without ranking; they are catch-all academic categories._
-    - Natural Sciences
-    - Other Academic Areas
-    - Other Academic Areas, Misc
-- **The history, traditions and teaching of philosophy ask how philosophical thought has developed across periods and cultures and how it is introduced to learners.**
-  _basis: kinds, order: structure. Historical periods come first, then cultural traditions, then teaching._
-  - **Historical periods of Western philosophy trace how philosophical thought developed from antiquity to the nineteenth century.**
-    _basis: kinds, order: structure. Periods run in chronological order._
-    - History of Western Philosophy
-    - Ancient Greek and Roman Philosophy
-    - Medieval and Renaissance Philosophy
-    - 17th/18th Century Philosophy
-    - 19th Century Philosophy
-  - **Regional and cultural traditions of philosophy ask how thought has developed in different places and schools.**
-    _basis: kinds, order: structure. Twentieth-century and European traditions come first, then other regions._
-    - 20th Century Philosophy
-    - European Philosophy
-    - Continental Philosophy
-    - Asian Philosophy
-    - African/Africana Philosophy
-  - **Comparative traditions and regional contexts place philosophy within particular cultures and introduce it to newcomers.**
-    _basis: kinds, order: structure. Comparative work comes first, then regional contexts, then traditions, then introductions._
-    - Philosophy of specific cultures (incl. comparative philosophy)
-    - **Contextual areas are defined by a region or an educational activity rather than by a single philosophical topic.**
-      _basis: kinds, order: structure. Ordered by structure of context: region first, then teaching._
-      - Philosophy of the Americas
-      - Teaching Philosophy, Misc
-    - Philosophical Traditions, Miscellaneous
-    - **Introductory and school-based works present philosophy to newcomers and place it in educational settings.**
-      _basis: kinds, order: structure. Ordered from introductions to schools._
-      - Philosophy for Children: Introductions
-      - Philosophy in Schools
-      - Philosophy, Introductions and Anthologies
-      - Philosophical Traditions
-  - **Teaching philosophy to children presents philosophical themes such as ethics, aesthetics, politics and reasoning to learners.**
-    _basis: kinds, order: structure. Themes come first, then the general children's heading._
-    - Philosophy for Children: Aesthetics
-    - Philosophy for Children: Ethics
-    - Philosophy for Children: Political Philosophy
-    - Philosophy for Children: Reasoning
-    - Philosophy for Children, Misc
-  - **Philosophy for children also treats religion, community of inquiry, educational method, metaphilosophy and specific philosophers.**
-    _basis: kinds, order: structure. Content comes first, then method, community and philosophers._
-    - Philosophy for Children: Religion and Spirituality
-    - Philosophy for Children: Community of Inquiry
-    - Philosophy for Children: Educational Theory and Methods
-    - Philosophy for Children: Metaphilosophy
-    - Philosophy for Children: Specific Philosophers
+    - Philosophy of Geography
+    - Philosophy of History
+    - Philosophy of Social Science, Miscellaneous
+    - Philosophy of Sociology
 
 ## Checks
 
 - minto_check: clean
-- field_check holds: False — P5 is a mixed pillar: P5.3 is organised by period and region, P5.2.5 is a residual catch-all, and several sections are Misc/NEC catalogue buckets.
+- field_check holds: False — P1 mixes being with religion and philosophical history/traditions, which are not claim-types; P5 has catch-all 'Other Academic Areas' and residual groups.
