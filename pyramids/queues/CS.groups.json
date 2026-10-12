@@ -2365,6 +2365,7 @@
                         "statement": "Artificial intelligence",
                         "name": "Artificial intelligence",
                         "aliases": [
+                          "ANZSRC:4602",
                           "ANZSRC:4602"
                         ]
                       },
@@ -2976,18 +2977,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Computer science divides by the property asserted of a computation, ordered from the single program outward to many agents and adversaries: correctness, cost, coordination, learning, and protection.",
+    "governing_thought": "Computer science is divided by the property asserted of a computation, running from the single program outward to many agents and adversaries: correctness, cost, coordination, learning and protection.",
     "key_line": [
-      "Correctness is the property that a computation does what its specification, formal model or mathematical foundation says it should.",
-      "Cost is the property of how much time, energy, information capacity or algorithmic effort a computation requires.",
-      "Coordination is the property of how a computation cooperates with other components, machines, networks and people.",
-      "Learning is the property that a computation improves its behaviour, reasons or acts intelligently from data and experience.",
-      "Protection is the property that a computation and its data resist attack, misuse and failure."
+      "Correctness is the property that a computation meets its specification, shown through formal theory, mathematical foundations, verification and sound software construction.",
+      "Cost is the property of how much time, energy, space or information a computation consumes, and how that consumption is measured and traded off.",
+      "Coordination is the property of how a computation works with other components, machines, agents and people through shared structure and interaction.",
+      "Learning is the property that a computation improves or exhibits intelligent behaviour from data, experience and reasoning rather than fixed rules.",
+      "Protection is the property that a computation resists attack, keeps information confidential and can be trusted by the people it affects."
     ],
-    "holds": false,
-    "note": "P1.3 is a catch-all mixing dependability with General/reference/Document types; P2.3 media/graphics and P3.2 application/human areas are topics, not cost or coordination properties.",
-    "review": true,
-    "misplaced": 8,
-    "problems": 109
+    "holds": true,
+    "note": "Worst misplacements: P2.2.2 Virtual machine monitors, P2.1.2 cryptography, P2.3.2.3 Technology acceptance model, P3.2.2.1 Networking, P3.3.1.5 Evolutionary computation, P5.3.2.3 Mixed initiative, P4.2.2.2 Data systems.",
+    "review": false,
+    "misplaced": 12,
+    "problems": 12
   }
 }
