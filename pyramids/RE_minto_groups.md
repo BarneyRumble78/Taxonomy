@@ -56,8 +56,8 @@
     - Studies in eastern religious traditions
     - Studies in religious traditions (excl. Eastern, Jewish, Christian and Islamic traditions)
     - Religious studies not elsewhere classified
-  - **Buddhism and the study of religion, society and culture are concepts concerned with religious belief and practice and their place in human life.**
-    _basis: kinds, order: structure_
+  - **Buddhism and the study of religion, society and culture are two subjects of religious inquiry, one a specific tradition and the other a broad field.**
+    _basis: kinds, order: structure. Ordered from the specific tradition to the broader field of study._
     - Buddhism
     - Religion, society and culture
 
