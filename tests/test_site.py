@@ -83,11 +83,25 @@ def test_homepage_follows_the_draft():
     assert "One method. Six divisions." in home
     assert "I'm Chris Townsend, founder and CEO of Taxonomy" in home
     assert "Got a claim that matters?" in home
-    assert "[[CONFIRM final evidence-type list from the standard]]" in home
-    assert "[[ONE-LINE OFFER TO CONFIRM]]" in home
-    assert "[[PHOTO OF CHRIS]]" in home
-    assert "[[BAIT PIECE:" in home
-    assert 'class="tbc"' in home
+    assert "proof, measurement, observation, expert consensus, model output and so on." in home
+    assert "settled, contested, provisional, retracted." in home
+    assert "25 fields and gives 984 stable IDs" in home
+    assert "Satellite and imagery intelligence." in home
+    assert "Know which parts of an assessment rest on evidence, and which rest on assumption." in home
+    assert "See the evidence grade behind a clinical claim before it reaches a decision." in home
+    assert "Engineering and AI architecture built to say what it knows, and no more." in home
+    assert "Security research for AI agents:" in home
+    assert "Keynotes and workshops on AI, evidence and knowing what you know." in home
+    assert "You'll get a reply from a person, not a bot." in home
+    assert "Taxonomy · New Zealand" in home
+    assert "Taxonomy Ltd" not in home
+    assert "[[" not in home
+    assert 'class="tbc"' not in home
+    assert "PHOTO OF CHRIS" not in home
+    assert "BAIT PIECE" not in home
+    assert "Get the card" not in home
+    assert "NAME UNDER REVIEW" not in home
+    assert "NAME CHECK" not in home
     assert "Formula:" not in home
     assert "trademark" not in home.lower()
     assert 'location.replace("/minerva/#"+h)' in home
