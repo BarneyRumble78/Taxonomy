@@ -3922,10 +3922,17 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Medicine is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five clinical questions: disorders, causes and mechanisms, diagnosis and prognosis, treatment and drugs, and populations and prevention.",
-    "key_line": "Dimension: **the clinical question asked of a disorder.** Logic inductive. Order: the clinical sequence.\n1. Disorders\n2. Causes and mechanisms\n3. Diagnosis and prognosis\n4. Treatment and drugs\n5. Populations and prevention\n\n**MECE test.** \"Type 2 diabetes is defined by HbA1c ≥ 48 mmol/mol\" is A1 (a classification rule, W12). \"Insulin resistance drives it\" is A2. \"HbA1c has sensitivity s\" is A3. \"Metformin lowers HbA1c\" is A4. \"Prevalence is rising\" is A5.",
+    "governing_thought": "Medicine is divided by the clinical question asked of a disorder, in the order of the clinical sequence: the disorders themselves, their causes and mechanisms, their diagnosis and prognosis, their treatment and drugs, and the populations and prevention in which they occur.",
+    "key_line": [
+      "Disorders is the clinical question of what illness is present, grouping the kinds of disease by body system, disease class and mental function.",
+      "Causes and mechanisms is the clinical question of why a disorder arises, covering immune responses, body systems and molecular agents, and the viruses that cause disease.",
+      "Diagnosis and prognosis is the clinical question of what a disorder is and how it is detected and judged, through investigation, measurement and assessment.",
+      "Treatment and drugs is the clinical question of how a disorder is managed, through physical treatment, patient support, medicines, biotechnology, dental care and rehabilitation.",
+      "Populations and prevention is the clinical question of how a disorder is distributed, prevented and cared for across communities, through nutrition, epidemiology, patient groups, health systems and public health."
+    ],
     "holds": false,
-    "note": "The five cells do not state the key line's five clinical questions; they give unrelated or mismatched partitions (immune areas, three-way split, generic fields).",
-    "review": true
+    "note": "P3.1 'fields of understanding' duplicates causes (P2); P2.1 and P3.2 both cover immune response; P1.1 and P1.2 both hold medical specialties.",
+    "review": true,
+    "problems": 8
   }
 }
