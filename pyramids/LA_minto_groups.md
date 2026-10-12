@@ -21,11 +21,13 @@
       - Nationality
       - Legal status
       - Rights of states
-    - **Branches of law that govern relations between private parties, such as individuals, businesses and users of digital spaces.**
-      _basis: kinds, order: structure. Ordered by structure, from general private law to specialised fields._
+    - **Branches of substantive law whose claims state rights and duties between private parties, whether in general civil life, trade, or online activity.**
+      _basis: kinds, order: structure. Ordered by structure, from general private law to specialised domains; no ranking implied._
       - Civil law
       - Commercial law
       - Cyberspace law
+    - **Fields that treat whole legal orders as their object, describing how legal systems are built and how they relate to or differ from one another.**
+      _basis: kinds, order: structure. Ordered by structure, from the systems themselves to their comparison; no ranking implied._
       - Legal systems
       - Comparative law
   - **Authority and institutions cover the relation between the state and the individual through the settling of disputes, enforcement, practice and the making of law.**

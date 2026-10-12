@@ -129,10 +129,10 @@
                   }
                 },
                 {
-                  "id": "LA.O.A1.G12",
-                  "anchor": "group:LA.O.A1.G12",
-                  "statement": "Branches of law that govern relations between private parties, such as individuals, businesses and users of digital spaces.",
-                  "name": "Branches of law that govern relations between private parties, such as individuals, businesses and users of digital spaces.",
+                  "id": "LA.O.A1.G25",
+                  "anchor": "group:LA.O.A1.G25",
+                  "statement": "Branches of substantive law whose claims state rights and duties between private parties, whether in general civil life, trade, or online activity.",
+                  "name": "Branches of substantive law whose claims state rights and duties between private parties, whether in general civil life, trade, or online activity.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -156,7 +156,22 @@
                         "anchor": "node:UNESCO:5752",
                         "statement": "Cyberspace law",
                         "name": "Cyberspace law"
-                      },
+                      }
+                    ],
+                    "rank_note": "Ordered by structure, from general private law to specialised domains; no ranking implied."
+                  }
+                },
+                {
+                  "id": "LA.O.A1.G26",
+                  "anchor": "group:LA.O.A1.G26",
+                  "statement": "Fields that treat whole legal orders as their object, describing how legal systems are built and how they relate to or differ from one another.",
+                  "name": "Fields that treat whole legal orders as their object, describing how legal systems are built and how they relate to or differ from one another.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
                       {
                         "id": "UNESCO:5906",
                         "anchor": "node:UNESCO:5906",
@@ -170,9 +185,8 @@
                         "name": "Comparative law"
                       }
                     ],
-                    "rank_note": "Ordered by structure, from general private law to specialised fields."
-                  },
-                  "further": true
+                    "rank_note": "Ordered by structure, from the systems themselves to their comparison; no ranking implied."
+                  }
                 }
               ],
               "rank_note": "Ordered from the individual's own entitlements to relations among private parties."
@@ -1664,5 +1678,12 @@
         "rank_note": "Ordered structurally from institutions to procedures to activities to field-level categories."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Law is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five legal relations: sources, obligations, wrongs and remedies, public power, and forums and proof.",
+    "key_line": "Dimension: **the legal relation the claim states.** Order: from validity to decision.\n1. Sources\n2. Obligations\n3. Wrongs and remedies\n4. Public power\n5. Forums and proof\n\nR7 repair: v1's \"order a remedy\" is now member 3, \"Wrongs and remedies\". v1's \"constitute the forum\" is member 5, \"Forums and proof\". All three places now list the same five members.\n\nEvery legal claim is indexed to a system and a date: \"under New Zealand law at 2026\". A claim without its system is not placeable.",
+    "holds": false,
+    "note": "Cells share the legal-relation dimension but none states the five members (sources, obligations, wrongs and remedies, public power, forums and proof); A5 says four.",
+    "review": true
+  }
 }
