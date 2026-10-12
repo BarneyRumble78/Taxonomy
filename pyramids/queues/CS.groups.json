@@ -2973,10 +2973,17 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Computer science is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five properties of a computation: correctness, cost, coordination, learning, and protection.",
-    "key_line": "Dimension: **the property asserted of a computation.** Order: structural, from the single program outward to many agents and adversaries.\n1. Correctness\n2. Cost\n3. Coordination\n4. Learning\n5. Protection",
+    "governing_thought": "Computer science divides by the property asserted of a computation into correctness, cost, coordination, learning and protection, moving from the single program outward to many agents and adversaries.",
+    "key_line": [
+      "Correctness is the property that a computation does what it is specified, expressed and proved to do, covering program structure, verification, process quality and formal theory.",
+      "Cost is the property of how much time, space, bandwidth or effort a computation consumes and how that is traded off against quality.",
+      "Coordination is the property of how a computation interacts with other systems, agents and the world through networks, reasoning, language and perception.",
+      "Learning is the property that a computation improves its behaviour from data or produces content and products for users, alongside cross-cutting reference tools.",
+      "Protection is the property that a computation resists attack and safeguards data, spanning formal and human aspects and the concrete systems that are defended."
+    ],
     "holds": false,
-    "note": "The cells offer five incompatible partitions of computation properties and never state the five-point key line of correctness, cost, coordination, learning and protection.",
-    "review": true
+    "note": "Pillars are not mutually exclusive values of one dimension: P2 mixes coding theory, human-facing and methodology groups under \"cost\" (P2.1-P2.3); P1.4/P1.5 overlap on theory; P4.2/P4.3 are not learning.",
+    "review": true,
+    "problems": 8
   }
 }
