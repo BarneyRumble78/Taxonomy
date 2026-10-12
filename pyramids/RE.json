@@ -1,54 +1,155 @@
 {
   "field": "RE",
   "introduction": {
-    "situation": "Religion and theology study how humans relate to the ultimate through belief, texts, acts and organised communities.",
-    "complication": "The existing groups mix library classes with research-field labels, and the same traditions appear several times.",
+    "situation": "Religion and theology study how people understand the ultimate and the human condition and how that understanding is carried in texts, practices and communities.",
+    "complication": "The existing groups mix library classes, research codes and duplicated topics, so the real objects of study are hidden.",
     "question": "How is everything in religion and theology divided?",
-    "answer": "Religion and theology are divided by what the study is about, namely the ultimate and the human condition, authoritative text, practice, and community and institution, moving from the referent to its carriers."
+    "answer": "Religion and theology are divided by what the inquiry is about: the ultimate and the human condition, authoritative text, practice, and community and institution, moving from the referent to its carriers."
   },
-  "governing_thought": "Religion and theology are divided by what the study is about, namely the ultimate and the human condition, authoritative text, practice, and community and institution, moving from the referent to its carriers.",
+  "governing_thought": "Religion and theology are divided by what the inquiry is about: the ultimate and the human condition, authoritative text, practice, and community and institution, moving from the referent to its carriers.",
   "key_line": {
     "logic_type": "inductive",
-    "plural_noun": "objects of religious study",
-    "mece_dimension": "what the study of religion is about",
+    "plural_noun": "objects of religious inquiry",
+    "mece_dimension": "what the sentence is about",
     "basis": "kinds",
     "order": "structure",
-    "rank_note": "The pillars run from the referent of religion to the texts, acts and communities that carry it.",
+    "rank_note": "The pillars run from the referent of religion to the texts, practices and communities that carry it.",
     "points": [
       {
         "id": "RE.K1",
         "anchor": "pillar:RE.K1",
-        "statement": "The ultimate and the human condition is the object of study when the subject is what is believed about the divine, the sacred and human nature.",
-        "name": "The ultimate and the human condition is the object of study when the subject is what is believed about the divine, the sacred and human nature.",
+        "statement": "The ultimate and the human condition is what religious thought is about, including its doctrines, its philosophy and the particular religions that hold beliefs about it.",
+        "name": "The ultimate and the human condition is what religious thought is about, including its doctrines, its philosophy and the particular religions that hold beliefs about it.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "structure",
-          "rank_note": "From doctrine and philosophical reflection to the comparative study of religions.",
+          "rank_note": "General inquiry comes before the particular traditions it is applied to.",
           "points": [
             {
-              "id": "LCC:BT",
-              "anchor": "node:LCC:BT",
-              "statement": "Doctrinal Theology",
-              "name": "Doctrinal Theology"
+              "id": "RE.K1.S1",
+              "anchor": "section:RE.K1.S1",
+              "statement": "General inquiry into religion examines belief, myth, doctrine and the philosophy of the ultimate across traditions.",
+              "name": "General inquiry into religion examines belief, myth, doctrine and the philosophy of the ultimate across traditions.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From the broad study of religions to doctrine and philosophy.",
+                "points": [
+                  {
+                    "id": "LCC:BL",
+                    "anchor": "node:LCC:BL",
+                    "statement": "Religions. Mythology. Rationalism",
+                    "name": "Religions. Mythology. Rationalism"
+                  },
+                  {
+                    "id": "LCC:BT",
+                    "anchor": "node:LCC:BT",
+                    "statement": "Doctrinal Theology",
+                    "name": "Doctrinal Theology"
+                  },
+                  {
+                    "id": "ANZSRC:500316",
+                    "anchor": "node:ANZSRC:500316",
+                    "statement": "Philosophy of religion",
+                    "name": "Philosophy of religion"
+                  },
+                  {
+                    "id": "ANZSRC:500402",
+                    "anchor": "node:ANZSRC:500402",
+                    "statement": "Comparative religious studies",
+                    "name": "Comparative religious studies"
+                  }
+                ]
+              }
             },
             {
-              "id": "ANZSRC:500316",
-              "anchor": "node:ANZSRC:500316",
-              "statement": "Philosophy of religion",
-              "name": "Philosophy of religion"
-            },
-            {
-              "id": "LCC:BL",
-              "anchor": "node:LCC:BL",
-              "statement": "Religions. Mythology. Rationalism",
-              "name": "Religions. Mythology. Rationalism"
-            },
-            {
-              "id": "ANZSRC:500402",
-              "anchor": "node:ANZSRC:500402",
-              "statement": "Comparative religious studies",
-              "name": "Comparative religious studies"
+              "id": "RE.K1.S2",
+              "anchor": "section:RE.K1.S2",
+              "statement": "Particular religious traditions each hold a distinct understanding of the ultimate and the human condition.",
+              "name": "Particular religious traditions each hold a distinct understanding of the ultimate and the human condition.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "The Abrahamic traditions come first, then Buddhism, eastern and other traditions.",
+                "points": [
+                  {
+                    "id": "RE.K1.S2.U1",
+                    "anchor": "section:RE.K1.S2.U1",
+                    "statement": "The Abrahamic traditions of Christianity, Judaism and Islam understand the ultimate through a single God and a shared lineage of revelation.",
+                    "name": "The Abrahamic traditions of Christianity, Judaism and Islam understand the ultimate through a single God and a shared lineage of revelation.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from Christianity to Judaism to Islam, following the original grouping.",
+                      "points": [
+                        {
+                          "id": "LCC:BR",
+                          "anchor": "node:LCC:BR",
+                          "statement": "Christianity",
+                          "name": "Christianity",
+                          "aliases": [
+                            "ANZSRC:500401"
+                          ]
+                        },
+                        {
+                          "id": "LCC:BM",
+                          "anchor": "node:LCC:BM",
+                          "statement": "Judaism",
+                          "name": "Judaism",
+                          "aliases": [
+                            "ANZSRC:500404"
+                          ]
+                        },
+                        {
+                          "id": "LCC:BP",
+                          "anchor": "node:LCC:BP",
+                          "statement": "Islam. Bahaism. Theosophy, etc.",
+                          "name": "Islam. Bahaism. Theosophy, etc.",
+                          "aliases": [
+                            "ANZSRC:500403"
+                          ]
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "RE.K1.S2.U2",
+                    "anchor": "section:RE.K1.S2.U2",
+                    "statement": "Buddhism, the eastern traditions and other religious traditions understand the ultimate and the human condition outside the Abrahamic lineage.",
+                    "name": "Buddhism, the eastern traditions and other religious traditions understand the ultimate and the human condition outside the Abrahamic lineage.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From Buddhism to the wider eastern traditions and then to other traditions.",
+                      "points": [
+                        {
+                          "id": "LCC:BQ",
+                          "anchor": "node:LCC:BQ",
+                          "statement": "Buddhism",
+                          "name": "Buddhism"
+                        },
+                        {
+                          "id": "ANZSRC:500406",
+                          "anchor": "node:ANZSRC:500406",
+                          "statement": "Studies in eastern religious traditions",
+                          "name": "Studies in eastern religious traditions"
+                        },
+                        {
+                          "id": "ANZSRC:500407",
+                          "anchor": "node:ANZSRC:500407",
+                          "statement": "Studies in religious traditions (excl. Eastern, Jewish, Christian and Islamic traditions)",
+                          "name": "Studies in religious traditions (excl. Eastern, Jewish, Christian and Islamic traditions)"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
           ]
         },
@@ -57,77 +158,37 @@
       {
         "id": "RE.K2",
         "anchor": "pillar:RE.K2",
-        "statement": "Authoritative text is the object of study when the subject is the scriptures and the binding legal corpora of religious traditions.",
-        "name": "Authoritative text is the object of study when the subject is the scriptures and the binding legal corpora of religious traditions.",
+        "statement": "Authoritative text is what scripture and religious law are about, since both are bodies of writing that carry binding religious authority.",
+        "name": "Authoritative text is what scripture and religious law are about, since both are bodies of writing that carry binding religious authority.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "structure",
-          "rank_note": "From scripture and general religious law to the particular legal traditions.",
+          "rank_note": "Scripture comes before the law derived from it, from general to tradition-specific law.",
           "points": [
             {
-              "id": "RE.K2.S1",
-              "anchor": "section:RE.K2.S1",
-              "statement": "Scripture and general religious law are the foundational texts and the comparative frame for all religious legal reasoning.",
-              "name": "Scripture and general religious law are the foundational texts and the comparative frame for all religious legal reasoning.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From scripture to law in general.",
-                "points": [
-                  {
-                    "id": "LCC:BS",
-                    "anchor": "node:LCC:BS",
-                    "statement": "The Bible",
-                    "name": "The Bible"
-                  },
-                  {
-                    "id": "LCC:KB",
-                    "anchor": "node:LCC:KB",
-                    "statement": "Religious law in general. Comparative religious law. Jurisprudence",
-                    "name": "Religious law in general. Comparative religious law. Jurisprudence"
-                  }
-                ]
-              }
+              "id": "LCC:BS",
+              "anchor": "node:LCC:BS",
+              "statement": "The Bible",
+              "name": "The Bible"
             },
             {
-              "id": "RE.K2.S2",
-              "anchor": "section:RE.K2.S2",
-              "statement": "Particular legal traditions are the binding legal corpora developed within the Jewish, Islamic and Catholic traditions.",
-              "name": "Particular legal traditions are the binding legal corpora developed within the Jewish, Islamic and Catholic traditions.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From Jewish and Islamic law to the Catholic canon law.",
-                "points": [
-                  {
-                    "id": "LCC:KBM",
-                    "anchor": "node:LCC:KBM",
-                    "statement": "Jewish law",
-                    "name": "Jewish law"
-                  },
-                  {
-                    "id": "LCC:KBP",
-                    "anchor": "node:LCC:KBP",
-                    "statement": "Islamic law",
-                    "name": "Islamic law"
-                  },
-                  {
-                    "id": "LCC:KBR",
-                    "anchor": "node:LCC:KBR",
-                    "statement": "History of canon law",
-                    "name": "History of canon law"
-                  },
-                  {
-                    "id": "LCC:KBU",
-                    "anchor": "node:LCC:KBU",
-                    "statement": "Law of the Roman Catholic Church. The Holy See",
-                    "name": "Law of the Roman Catholic Church. The Holy See"
-                  }
-                ]
-              }
+              "id": "LCC:KB",
+              "anchor": "node:LCC:KB",
+              "statement": "Religious law in general. Comparative religious law. Jurisprudence",
+              "name": "Religious law in general. Comparative religious law. Jurisprudence"
+            },
+            {
+              "id": "LCC:KBM",
+              "anchor": "node:LCC:KBM",
+              "statement": "Jewish law",
+              "name": "Jewish law"
+            },
+            {
+              "id": "LCC:KBP",
+              "anchor": "node:LCC:KBP",
+              "statement": "Islamic law",
+              "name": "Islamic law"
             }
           ]
         },
@@ -136,13 +197,13 @@
       {
         "id": "RE.K3",
         "anchor": "pillar:RE.K3",
-        "statement": "Practice is the object of study when the subject is how religion is lived out in ministry, conduct, society and culture.",
-        "name": "Practice is the object of study when the subject is how religion is lived out in ministry, conduct, society and culture.",
+        "statement": "Practice is what ministry, worship and the lived expression of religion in society and culture are about.",
+        "name": "Practice is what ministry, worship and the lived expression of religion in society and culture are about.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "structure",
-          "rank_note": "From the practice of ministry to religion's wider social and cultural expression.",
+          "rank_note": "From the practical work of ministry to religion as lived in wider culture.",
           "points": [
             {
               "id": "LCC:BV",
@@ -163,106 +224,31 @@
       {
         "id": "RE.K4",
         "anchor": "pillar:RE.K4",
-        "statement": "Community and institution is the object of study when the subject is the religious traditions as organised bodies of adherents.",
-        "name": "Community and institution is the object of study when the subject is the religious traditions as organised bodies of adherents.",
+        "statement": "Community and institution is what denominations and the church's own governing law are about, as the organised bodies that carry religion.",
+        "name": "Community and institution is what denominations and the church's own governing law are about, as the organised bodies that carry religion.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "structure",
-          "rank_note": "From Christian communities to Abrahamic neighbours and then to Eastern and other traditions.",
+          "rank_note": "From the communities themselves to the law that governs them.",
           "points": [
             {
-              "id": "RE.K4.S1",
-              "anchor": "section:RE.K4.S1",
-              "statement": "Christian communities are the churches and denominations that carry the Christian tradition.",
-              "name": "Christian communities are the churches and denominations that carry the Christian tradition.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From Christianity as a whole to its denominations.",
-                "points": [
-                  {
-                    "id": "LCC:BR",
-                    "anchor": "node:LCC:BR",
-                    "statement": "Christianity",
-                    "name": "Christianity",
-                    "aliases": [
-                      "ANZSRC:500401"
-                    ]
-                  },
-                  {
-                    "id": "LCC:BX",
-                    "anchor": "node:LCC:BX",
-                    "statement": "Christian Denominations",
-                    "name": "Christian Denominations"
-                  }
-                ]
-              }
+              "id": "LCC:BX",
+              "anchor": "node:LCC:BX",
+              "statement": "Christian Denominations",
+              "name": "Christian Denominations"
             },
             {
-              "id": "RE.K4.S2",
-              "anchor": "section:RE.K4.S2",
-              "statement": "Jewish and Islamic communities are the Abrahamic bodies of adherents studied as traditions with their own institutions.",
-              "name": "Jewish and Islamic communities are the Abrahamic bodies of adherents studied as traditions with their own institutions.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "In order of historical emergence.",
-                "points": [
-                  {
-                    "id": "LCC:BM",
-                    "anchor": "node:LCC:BM",
-                    "statement": "Judaism",
-                    "name": "Judaism",
-                    "aliases": [
-                      "ANZSRC:500404"
-                    ]
-                  },
-                  {
-                    "id": "LCC:BP",
-                    "anchor": "node:LCC:BP",
-                    "statement": "Islam. Bahaism. Theosophy, etc.",
-                    "name": "Islam. Bahaism. Theosophy, etc.",
-                    "aliases": [
-                      "ANZSRC:500403"
-                    ]
-                  }
-                ]
-              }
+              "id": "LCC:KBR",
+              "anchor": "node:LCC:KBR",
+              "statement": "History of canon law",
+              "name": "History of canon law"
             },
             {
-              "id": "RE.K4.S3",
-              "anchor": "section:RE.K4.S3",
-              "statement": "Eastern and other religious communities are the Buddhist and further traditions studied as organised bodies of adherents.",
-              "name": "Eastern and other religious communities are the Buddhist and further traditions studied as organised bodies of adherents.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From Buddhism to Eastern and other traditions.",
-                "points": [
-                  {
-                    "id": "LCC:BQ",
-                    "anchor": "node:LCC:BQ",
-                    "statement": "Buddhism",
-                    "name": "Buddhism"
-                  },
-                  {
-                    "id": "ANZSRC:500406",
-                    "anchor": "node:ANZSRC:500406",
-                    "statement": "Studies in eastern religious traditions",
-                    "name": "Studies in eastern religious traditions"
-                  },
-                  {
-                    "id": "ANZSRC:500407",
-                    "anchor": "node:ANZSRC:500407",
-                    "statement": "Studies in religious traditions (excl. Eastern, Jewish, Christian and Islamic traditions)",
-                    "name": "Studies in religious traditions (excl. Eastern, Jewish, Christian and Islamic traditions)"
-                  }
-                ]
-              }
+              "id": "LCC:KBU",
+              "anchor": "node:LCC:KBU",
+              "statement": "Law of the Roman Catholic Church. The Holy See",
+              "name": "Law of the Roman Catholic Church. The Holy See"
             }
           ]
         },
@@ -299,18 +285,18 @@
   },
   "minto_issues": {},
   "field_check": {
-    "governing_thought": "Religion and theology are divided by what the study is about, namely the ultimate and the human condition, authoritative text, practice, and community and institution, moving from the referent to its carriers.",
+    "governing_thought": "Religion and theology are divided by what the inquiry is about: the ultimate and the human condition, authoritative text, practice, and community and institution, moving from the referent to its carriers.",
     "key_line": [
-      "The ultimate and the human condition is the object of study when the subject is what is believed about the divine, the sacred and human nature.",
-      "Authoritative text is the object of study when the subject is the scriptures and the binding legal corpora of religious traditions.",
-      "Practice is the object of study when the subject is how religion is lived out in ministry, conduct, society and culture.",
-      "Community and institution is the object of study when the subject is the religious traditions as organised bodies of adherents."
+      "The ultimate and the human condition is what religious thought is about, including its doctrines, its philosophy and the particular religions that hold beliefs about it.",
+      "Authoritative text is what scripture and religious law are about, since both are bodies of writing that carry binding religious authority.",
+      "Practice is what ministry, worship and the lived expression of religion in society and culture are about.",
+      "Community and institution is what denominations and the church's own governing law are about, as the organised bodies that carry religion."
     ],
     "holds": true,
-    "note": "Key line holds; P1.3 (Religions. Mythology. Rationalism) and P4.1.1 (Christianity) are broad headings that sit loosely under their pillars.",
+    "note": "P4.2 History of canon law and P4.3 Roman Catholic Church law arguably belong with the law items under P2 (authoritative text).",
     "review": false,
     "misplaced": 2,
     "problems": 2
   },
-  "cost_usd": 0.0474
+  "cost_usd": 0.0765
 }
