@@ -707,7 +707,17 @@
                   "id": "ANZSRC:4905",
                   "anchor": "node:ANZSRC:4905",
                   "statement": "Statistics",
-                  "name": "Statistics"
+                  "name": "Statistics",
+                  "aliases": [
+                    "LCC:HA",
+                    "MSC:62-XX",
+                    "LCC:HA",
+                    "MSC:62-XX",
+                    "LCC:HA",
+                    "MSC:62-XX",
+                    "LCC:HA",
+                    "MSC:62-XX"
+                  ]
                 },
                 {
                   "id": "LCC:HA",
@@ -889,10 +899,15 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Mathematics is exhausted by two sides of one pyramid: claims about a mathematical object — the assumptions of proof, structure, space, change and the continuum, or chance — and practices that define, prove, compute, infer from data, or model a claim from another field. Every MSC class is a bridge: a community working one object cell with a characteristic subset of those practices. An application in physics or economics is that field's claim, written in this language.",
-    "key_line": "Logic inductive · plural noun partitions · dimension role in the taxonomy (object / practice / community) · order structural.\n1. Every theorem is about one object: the assumptions of proof, structure, space, change and the continuum, or chance.\n2. Every practice is one role: define, prove, compute, infer from data, or model an outside claim.\n3. Every MSC class is a bridge: an object cell worked by a subset of the roles, or mathematics as the object of another pyramid.",
+    "governing_thought": "Mathematics is divided by the role its knowledge plays into the structures it studies, the computation and inference it performs, the modelling of other fields' claims, and the discipline as a human activity.",
+    "key_line": [
+      "Structures are the role in which mathematics studies abstract objects such as algebraic systems, spaces, functions and the foundations of proof for their own sake.",
+      "Computation and inference is the role in which mathematics computes results by algorithms and infers conclusions from chance and data.",
+      "Modelling is the role in which mathematics expresses another field's claims about physical, living, social and decision systems in mathematical language.",
+      "The discipline is the role in which mathematics is a human activity with a history, a teaching practice and a general literature."
+    ],
     "holds": false,
-    "note": "Cells mostly subdivide individual fields by domain, subfield, or algebra relation, not the object, practice and bridge key line.",
+    "note": "P1.1 \"neighbouring areas\" (combinatorial, order, arithmetic, K-theory) and P4.1 \"collections\" follow subject-classification adjacency; homological algebra in P1.4 fits P1.1 better.",
     "review": true
   }
 }
