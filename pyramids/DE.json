@@ -1,654 +1,117 @@
 {
   "field": "DE",
   "introduction": {
-    "situation": "People design buildings, places and objects so that they can be used for human purposes.",
-    "complication": "Sources describe designed arrangements through activity vocabularies, object lists, planning schemes and building schemes that overlap and mix catch-all headings.",
-    "question": "How is everything in the field of designed arrangements for human use divided?",
-    "answer": "Design's objects divide, from the need to the life of the result, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing."
+    "situation": "People shape objects, spaces, services and settlements to meet their needs, and this work is studied across many specialised design and building disciplines.",
+    "complication": "The same design knowledge is scattered across overlapping schemes of professions, artefact types and activities, so the same topic appears under several labels.",
+    "question": "How is everything in the field of design divided?",
+    "answer": "Design's objects divide, from need to outcome, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing."
   },
-  "governing_thought": "Design's objects divide, from the need to the life of the result, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.",
+  "governing_thought": "Design's objects divide, from need to outcome, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.",
   "key_line": {
     "logic_type": "inductive",
     "plural_noun": "aspects",
     "mece_dimension": "the aspect of a designed arrangement for human use",
     "basis": "cause_effect",
     "order": "time",
-    "rank_note": "The aspects run in time from the need that prompts a design to the later life of what is built.",
+    "rank_note": "The aspects run from the human need that starts a design to the long life of the thing that results.",
     "points": [
       {
         "id": "DE.K1",
         "anchor": "pillar:DE.K1",
-        "title": "Use and need",
-        "statement": "Use and need is the aspect in which human activity and purpose call a designed arrangement into being and define the kinds of design.",
-        "name": "Use and need is the aspect in which human activity and purpose call a designed arrangement into being and define the kinds of design.",
+        "statement": "Use and need is the aspect of design concerned with the people, purposes, activities and problems that a designed arrangement must answer.",
+        "name": "Use and need is the aspect of design concerned with the people, purposes, activities and problems that a designed arrangement must answer.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
-          "order": "structure",
-          "rank_note": "The broad framing of activity comes before the particular kinds of design it gives rise to.",
+          "order": "degree",
+          "rank_note": "Sections run from the human activities and purposes to the people and problems that design responds to.",
           "points": [
             {
-              "id": "DE.O.A1.G8",
-              "anchor": "group:DE.O.A1.G8",
-              "statement": "Framing concepts give the activity vocabulary and the overall field of design within which designed arrangements for human use are studied.",
-              "name": "Framing concepts give the activity vocabulary and the overall field of design within which designed arrangements for human use are studied.",
+              "id": "DE.K1.S1",
+              "anchor": "section:DE.K1.S1",
+              "statement": "Activities, functions and events are the human doings and purposes that call for a designed arrangement.",
+              "name": "Activities, functions and events are the human doings and purposes that call for a designed arrangement.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "DE.O.A1.G1",
-                    "anchor": "group:DE.O.A1.G1",
-                    "statement": "Getty hierarchies of activity kinds name the broad classes of human doing, from techniques to events, that a designed arrangement serves.",
-                    "name": "Getty hierarchies of activity kinds name the broad classes of human doing, from techniques to events, that a designed arrangement serves.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "AAT:300053001",
-                          "anchor": "node:AAT:300053001",
-                          "statement": "Processes and Techniques (hierarchy name)",
-                          "name": "Processes and Techniques (hierarchy name)"
-                        },
-                        {
-                          "id": "AAT:300054134",
-                          "anchor": "node:AAT:300054134",
-                          "statement": "Disciplines (hierarchy name)",
-                          "name": "Disciplines (hierarchy name)"
-                        },
-                        {
-                          "id": "AAT:300054593",
-                          "anchor": "node:AAT:300054593",
-                          "statement": "Functions (hierarchy name)",
-                          "name": "Functions (hierarchy name)"
-                        },
-                        {
-                          "id": "AAT:300054722",
-                          "anchor": "node:AAT:300054722",
-                          "statement": "Events (hierarchy name)",
-                          "name": "Events (hierarchy name)"
-                        },
-                        {
-                          "id": "AAT:300222468",
-                          "anchor": "node:AAT:300222468",
-                          "statement": "Physical and Mental Activities (hierarchy name)",
-                          "name": "Physical and Mental Activities (hierarchy name)"
-                        }
-                      ],
-                      "rank_note": "Ordered by the position of each hierarchy in the Getty AAT Activities facet."
-                    }
-                  },
-                  {
-                    "id": "DE.O.A1.G2",
-                    "anchor": "group:DE.O.A1.G2",
-                    "statement": "The Activities facet and its general-context term are the overarching Getty labels under which the activity hierarchies sit.",
-                    "name": "The Activities facet and its general-context term are the overarching Getty labels under which the activity hierarchies sit.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "AAT:300264090",
-                          "anchor": "node:AAT:300264090",
-                          "statement": "Activities Facet",
-                          "name": "Activities Facet"
-                        },
-                        {
-                          "id": "AAT:300404112",
-                          "anchor": "node:AAT:300404112",
-                          "statement": "activities (general context)",
-                          "name": "activities (general context)"
-                        }
-                      ],
-                      "rank_note": "Ranked from the most inclusive term, the facet, to the narrower general-context term."
-                    }
-                  },
-                  {
-                    "id": "DE.O.A1.G3",
-                    "anchor": "group:DE.O.A1.G3",
-                    "statement": "Design as a whole field, together with its history, theory and management, frames the study of designed arrangements.",
-                    "name": "Design as a whole field, together with its history, theory and management, frames the study of designed arrangements.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3303",
-                          "anchor": "node:ANZSRC:3303",
-                          "statement": "Design",
-                          "name": "Design"
-                        },
-                        {
-                          "id": "ANZSRC:330304",
-                          "anchor": "node:ANZSRC:330304",
-                          "statement": "Design history, theory and criticism",
-                          "name": "Design history, theory and criticism"
-                        },
-                        {
-                          "id": "ANZSRC:330305",
-                          "anchor": "node:ANZSRC:330305",
-                          "statement": "Design management",
-                          "name": "Design management"
-                        },
-                        {
-                          "id": "ANZSRC:330311",
-                          "anchor": "node:ANZSRC:330311",
-                          "statement": "Models and simulations of design",
-                          "name": "Models and simulations of design"
-                        }
-                      ],
-                      "rank_note": "Ordered from the field itself to its reflective and organisational subfields."
-                    }
-                  }
-                ],
-                "rank_note": "Ordered from the specific activity hierarchies to the overarching labels and then the whole field of design."
-              }
-            },
-            {
-              "id": "DE.O.A1.G9",
-              "anchor": "group:DE.O.A1.G9",
-              "statement": "Design subfields are the particular kinds of design distinguished by their practice, their human concern, their medium, or their purpose.",
-              "name": "Design subfields are the particular kinds of design distinguished by their practice, their human concern, their medium, or their purpose.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "DE.O.A1.G4",
-                    "anchor": "group:DE.O.A1.G4",
-                    "statement": "Design subfields centred on making and shaping products, services and experiences for people are the practice-oriented kinds of design.",
-                    "name": "Design subfields centred on making and shaping products, services and experiences for people are the practice-oriented kinds of design.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "ANZSRC:330306",
-                          "anchor": "node:ANZSRC:330306",
-                          "statement": "Design practice and methods",
-                          "name": "Design practice and methods"
-                        },
-                        {
-                          "id": "ANZSRC:330309",
-                          "anchor": "node:ANZSRC:330309",
-                          "statement": "Industrial and product design",
-                          "name": "Industrial and product design"
-                        },
-                        {
-                          "id": "ANZSRC:330310",
-                          "anchor": "node:ANZSRC:330310",
-                          "statement": "Interaction and experience design",
-                          "name": "Interaction and experience design"
-                        },
-                        {
-                          "id": "ANZSRC:330312",
-                          "anchor": "node:ANZSRC:330312",
-                          "statement": "Service design",
-                          "name": "Service design"
-                        },
-                        {
-                          "id": "ANZSRC:330301",
-                          "anchor": "node:ANZSRC:330301",
-                          "statement": "Data visualisation and computational (incl. parametric and generative) design",
-                          "name": "Data visualisation and computational (incl. parametric and generative) design"
-                        }
-                      ],
-                      "rank_note": "Ranked from the general methods of practice to the most specific design outputs."
-                    }
-                  },
-                  {
-                    "id": "DE.O.A1.G5",
-                    "anchor": "group:DE.O.A1.G5",
-                    "statement": "Design subfields that address human needs, safety and context are the human-centred kinds of design.",
-                    "name": "Design subfields that address human needs, safety and context are the human-centred kinds of design.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:330302",
-                          "anchor": "node:ANZSRC:330302",
-                          "statement": "Design anthropology",
-                          "name": "Design anthropology"
-                        },
-                        {
-                          "id": "ANZSRC:330307",
-                          "anchor": "node:ANZSRC:330307",
-                          "statement": "Ergonomics design",
-                          "name": "Ergonomics design"
-                        },
-                        {
-                          "id": "ANZSRC:330308",
-                          "anchor": "node:ANZSRC:330308",
-                          "statement": "Fire safety design",
-                          "name": "Fire safety design"
-                        },
-                        {
-                          "id": "ANZSRC:330303",
-                          "anchor": "node:ANZSRC:330303",
-                          "statement": "Design for disaster relief",
-                          "name": "Design for disaster relief"
-                        }
-                      ],
-                      "rank_note": "Ordered from the human body and culture to hazards and relief situations."
-                    }
-                  },
-                  {
-                    "id": "DE.O.A1.G6",
-                    "anchor": "group:DE.O.A1.G6",
-                    "statement": "Medium-based design fields are defined by the kind of material or artefact they shape for human use, such as cloth, images, or uncategorised products.",
-                    "name": "Medium-based design fields are defined by the kind of material or artefact they shape for human use, such as cloth, images, or uncategorised products.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:330315",
-                          "anchor": "node:ANZSRC:330315",
-                          "statement": "Textile and fashion design",
-                          "name": "Textile and fashion design"
-                        },
-                        {
-                          "id": "ANZSRC:330316",
-                          "anchor": "node:ANZSRC:330316",
-                          "statement": "Visual communication design (incl. graphic design)",
-                          "name": "Visual communication design (incl. graphic design)"
-                        },
-                        {
-                          "id": "ANZSRC:330399",
-                          "anchor": "node:ANZSRC:330399",
-                          "statement": "Design not elsewhere classified",
-                          "name": "Design not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from specific media to the residual category."
-                    }
-                  },
-                  {
-                    "id": "DE.O.A1.G7",
-                    "anchor": "group:DE.O.A1.G7",
-                    "statement": "Purpose-based design fields are defined by the human or societal concern that the arrangement is meant to serve, such as community wellbeing, sustainability, or household living.",
-                    "name": "Purpose-based design fields are defined by the human or societal concern that the arrangement is meant to serve, such as community wellbeing, sustainability, or household living.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:330313",
-                          "anchor": "node:ANZSRC:330313",
-                          "statement": "Social design",
-                          "name": "Social design"
-                        },
-                        {
-                          "id": "ANZSRC:330314",
-                          "anchor": "node:ANZSRC:330314",
-                          "statement": "Sustainable design",
-                          "name": "Sustainable design"
-                        },
-                        {
-                          "id": "LCC:TX",
-                          "anchor": "node:LCC:TX",
-                          "statement": "Home economics",
-                          "name": "Home economics"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from societal concerns to household management."
-                    }
-                  }
-                ],
-                "rank_note": "Ordered from practice-oriented and human-centred fields to medium-based and purpose-based fields."
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "DE.K2",
-        "anchor": "pillar:DE.K2",
-        "title": "Form",
-        "statement": "Form is the aspect in which designed arrangements take shape as named kinds of objects, buildings and urban forms.",
-        "name": "Form is the aspect in which designed arrangements take shape as named kinds of objects, buildings and urban forms.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "parts",
-          "order": "structure",
-          "rank_note": "The broadest divisions come first, then the kinds of objects, then the form of cities.",
-          "points": [
-            {
-              "id": "DE.O.A2.G1",
-              "anchor": "group:DE.O.A2.G1",
-              "statement": "The two Art and Architecture Thesaurus top-level facets are the broadest divisions that organise styles and objects.",
-              "name": "The two Art and Architecture Thesaurus top-level facets are the broadest divisions that organise styles and objects.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "AAT:300264088",
-                    "anchor": "node:AAT:300264088",
-                    "statement": "Styles and Periods Facet",
-                    "name": "Styles and Periods Facet"
-                  },
-                  {
-                    "id": "AAT:300264092",
-                    "anchor": "node:AAT:300264092",
-                    "statement": "Objects Facet",
-                    "name": "Objects Facet"
-                  },
-                  {
-                    "id": "AAT:300015646",
-                    "anchor": "node:AAT:300015646",
-                    "statement": "Styles and Periods (hierarchy name)",
-                    "name": "Styles and Periods (hierarchy name)"
-                  },
-                  {
-                    "id": "ANZSRC:3301",
-                    "anchor": "node:ANZSRC:3301",
-                    "statement": "Architecture",
-                    "name": "Architecture"
-                  }
-                ],
-                "rank_note": "facet level of the AAT"
-              }
-            },
-            {
-              "id": "DE.O.A2.G8",
-              "anchor": "group:DE.O.A2.G8",
-              "statement": "The object hierarchies name the kinds of designed things made for human use, from buildings to furnishings and communication.",
-              "name": "The object hierarchies name the kinds of designed things made for human use, from buildings to furnishings and communication.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "degree",
+                "rank_note": "Ordered from general activities to the specific functions and occasions.",
                 "points": [
                   {
-                    "id": "DE.O.A2.G2",
-                    "anchor": "group:DE.O.A2.G2",
-                    "statement": "The Art and Architecture Thesaurus hierarchies for objects name the kinds of designed things made for human use, from buildings to furnishings and communication.",
-                    "name": "The Art and Architecture Thesaurus hierarchies for objects name the kinds of designed things made for human use, from buildings to furnishings and communication.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "AAT:300185711",
-                          "anchor": "node:AAT:300185711",
-                          "statement": "Object Genres (hierarchy name)",
-                          "name": "Object Genres (hierarchy name)"
-                        },
-                        {
-                          "id": "AAT:300241489",
-                          "anchor": "node:AAT:300241489",
-                          "statement": "Object Groupings and Systems (hierarchy name)",
-                          "name": "Object Groupings and Systems (hierarchy name)"
-                        },
-                        {
-                          "id": "AAT:300241490",
-                          "anchor": "node:AAT:300241490",
-                          "statement": "Components (hierarchy name)",
-                          "name": "Components (hierarchy name)"
-                        },
-                        {
-                          "id": "AAT:300264551",
-                          "anchor": "node:AAT:300264551",
-                          "statement": "Furnishings and Equipment (hierarchy name)",
-                          "name": "Furnishings and Equipment (hierarchy name)"
-                        }
-                      ],
-                      "rank_note": "hierarchies under the Objects facet"
-                    }
+                    "id": "AAT:300222468",
+                    "anchor": "node:AAT:300222468",
+                    "statement": "Physical and Mental Activities (hierarchy name)",
+                    "name": "Physical and Mental Activities (hierarchy name)"
                   },
                   {
-                    "id": "DE.O.A2.G3",
-                    "anchor": "group:DE.O.A2.G3",
-                    "statement": "The design-practice subfields of architecture are the parts concerned with shaping arrangements of space for people to use.",
-                    "name": "The design-practice subfields of architecture are the parts concerned with shaping arrangements of space for people to use.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "parts",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:330102",
-                          "anchor": "node:ANZSRC:330102",
-                          "statement": "Architectural design",
-                          "name": "Architectural design"
-                        },
-                        {
-                          "id": "ANZSRC:330108",
-                          "anchor": "node:ANZSRC:330108",
-                          "statement": "Interior design",
-                          "name": "Interior design"
-                        },
-                        {
-                          "id": "ANZSRC:330109",
-                          "anchor": "node:ANZSRC:330109",
-                          "statement": "Landscape architecture",
-                          "name": "Landscape architecture"
-                        },
-                        {
-                          "id": "ANZSRC:330110",
-                          "anchor": "node:ANZSRC:330110",
-                          "statement": "Sustainable architecture",
-                          "name": "Sustainable architecture"
-                        }
-                      ],
-                      "rank_note": "design practice subfields"
-                    }
+                    "id": "AAT:300054593",
+                    "anchor": "node:AAT:300054593",
+                    "statement": "Functions (hierarchy name)",
+                    "name": "Functions (hierarchy name)"
                   },
                   {
-                    "id": "DE.O.A2.G6",
-                    "anchor": "group:DE.O.A2.G6",
-                    "statement": "Fields of designed arrangement for human use range from the architecture of buildings and spaces to the decorative arts of crafted objects.",
-                    "name": "Fields of designed arrangement for human use range from the architecture of buildings and spaces to the decorative arts of crafted objects.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:330199",
-                          "anchor": "node:ANZSRC:330199",
-                          "statement": "Architecture not elsewhere classified",
-                          "name": "Architecture not elsewhere classified"
-                        },
-                        {
-                          "id": "LCC:NA",
-                          "anchor": "node:LCC:NA",
-                          "statement": "Architecture",
-                          "name": "Architecture"
-                        },
-                        {
-                          "id": "LCC:NK",
-                          "anchor": "node:LCC:NK",
-                          "statement": "Decorative arts",
-                          "name": "Decorative arts"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from the general architecture classification to architecture proper and then decorative arts."
-                    }
-                  },
-                  {
-                    "id": "DE.O.A2.G9",
-                    "anchor": "group:DE.O.A2.G9",
-                    "statement": "Built-environment aspects concern the designed physical settings, buildings, and their practice that people use and occupy.",
-                    "name": "Built-environment aspects concern the designed physical settings, buildings, and their practice that people use and occupy.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "AAT:300264550",
-                          "anchor": "node:AAT:300264550",
-                          "statement": "Built Environment (hierarchy name)",
-                          "name": "Built Environment (hierarchy name)"
-                        },
-                        {
-                          "id": "ANZSRC:330106",
-                          "anchor": "node:ANZSRC:330106",
-                          "statement": "Architecture for disaster relief",
-                          "name": "Architecture for disaster relief"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure: the general built environment hierarchy first, then architecture for disaster relief as a specific kind of built setting."
-                    }
-                  },
-                  {
-                    "id": "DE.O.A2.G10",
-                    "anchor": "group:DE.O.A2.G10",
-                    "statement": "Communication and management aspects concern how designed arrangements are conveyed, organized, and run for the people who use them.",
-                    "name": "Communication and management aspects concern how designed arrangements are conveyed, organized, and run for the people who use them.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "AAT:300264552",
-                          "anchor": "node:AAT:300264552",
-                          "statement": "Visual and Verbal Communication (hierarchy name)",
-                          "name": "Visual and Verbal Communication (hierarchy name)"
-                        },
-                        {
-                          "id": "ANZSRC:330107",
-                          "anchor": "node:ANZSRC:330107",
-                          "statement": "Architecture management",
-                          "name": "Architecture management"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure: visual and verbal communication first, then architecture management as the organizing practice."
-                    }
+                    "id": "AAT:300054722",
+                    "anchor": "node:AAT:300054722",
+                    "statement": "Events (hierarchy name)",
+                    "name": "Events (hierarchy name)"
                   }
-                ],
-                "rank_note": "Intermediate level, narrower than the facets and broader than individual aspects."
+                ]
               }
             },
             {
-              "id": "DE.O.A4.G4",
-              "anchor": "group:DE.O.A4.G4",
-              "statement": "Urban form, analysis and knowledge covers the design, study, theory and data-driven analysis of the built environment of cities.",
-              "name": "Urban form, analysis and knowledge covers the design, study, theory and data-driven analysis of the built environment of cities.",
+              "id": "DE.K1.S2",
+              "anchor": "section:DE.K1.S2",
+              "statement": "Human-centred and social design responds to the people, experiences and services that a design is made for.",
+              "name": "Human-centred and social design responds to the people, experiences and services that a design is made for.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
-                "order": "structure",
+                "order": "degree",
+                "rank_note": "Ordered from the study of people to the services and experiences built for them.",
                 "points": [
                   {
-                    "id": "ANZSRC:330402",
-                    "anchor": "node:ANZSRC:330402",
-                    "statement": "History and theory of the built environment (excl. architecture)",
-                    "name": "History and theory of the built environment (excl. architecture)"
+                    "id": "ANZSRC:330302",
+                    "anchor": "node:ANZSRC:330302",
+                    "statement": "Design anthropology",
+                    "name": "Design anthropology"
                   },
                   {
-                    "id": "ANZSRC:330410",
-                    "anchor": "node:ANZSRC:330410",
-                    "statement": "Urban analysis and development",
-                    "name": "Urban analysis and development"
+                    "id": "ANZSRC:330313",
+                    "anchor": "node:ANZSRC:330313",
+                    "statement": "Social design",
+                    "name": "Social design"
                   },
                   {
-                    "id": "ANZSRC:330411",
-                    "anchor": "node:ANZSRC:330411",
-                    "statement": "Urban design",
-                    "name": "Urban design"
+                    "id": "ANZSRC:330312",
+                    "anchor": "node:ANZSRC:330312",
+                    "statement": "Service design",
+                    "name": "Service design"
                   },
                   {
-                    "id": "ANZSRC:330412",
-                    "anchor": "node:ANZSRC:330412",
-                    "statement": "Urban informatics",
-                    "name": "Urban informatics"
+                    "id": "ANZSRC:330310",
+                    "anchor": "node:ANZSRC:330310",
+                    "statement": "Interaction and experience design",
+                    "name": "Interaction and experience design"
+                  },
+                  {
+                    "id": "LCC:TX",
+                    "anchor": "node:LCC:TX",
+                    "statement": "Home economics",
+                    "name": "Home economics"
                   }
-                ],
-                "rank_note": "Grouped by structural aspect; no ranking implied."
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "DE.K3",
-        "anchor": "pillar:DE.K3",
-        "title": "Performance in use",
-        "statement": "Performance in use is the aspect in which a designed arrangement works for the people who occupy it, through technical systems and human wellbeing.",
-        "name": "Performance in use is the aspect in which a designed arrangement works for the people who occupy it, through technical systems and human wellbeing.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "parts",
-          "order": "structure",
-          "rank_note": "The technical workings come first, followed by the human experience of them.",
-          "points": [
-            {
-              "id": "DE.O.A5.G2",
-              "anchor": "group:DE.O.A5.G2",
-              "statement": "Technical and systems fields cover the technologies, digital models and scientific principles used to produce and operate buildings.",
-              "name": "Technical and systems fields cover the technologies, digital models and scientific principles used to produce and operate buildings.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:330201",
-                    "anchor": "node:ANZSRC:330201",
-                    "statement": "Automation and technology in building and construction",
-                    "name": "Automation and technology in building and construction"
-                  },
-                  {
-                    "id": "ANZSRC:330204",
-                    "anchor": "node:ANZSRC:330204",
-                    "statement": "Building information modelling and management",
-                    "name": "Building information modelling and management"
-                  },
-                  {
-                    "id": "ANZSRC:330206",
-                    "anchor": "node:ANZSRC:330206",
-                    "statement": "Building science, technologies and systems",
-                    "name": "Building science, technologies and systems"
-                  }
-                ],
-                "rank_note": "Ordered by structure: automation, then information modelling, then building science and systems."
+                ]
               }
             },
             {
-              "id": "DE.O.A4.G2",
-              "anchor": "group:DE.O.A4.G2",
-              "statement": "Community-centred planning concerns the people who use a place, including their participation, local planning and health and wellbeing.",
-              "name": "Community-centred planning concerns the people who use a place, including their participation, local planning and health and wellbeing.",
+              "id": "DE.K1.S3",
+              "anchor": "section:DE.K1.S3",
+              "statement": "Community needs identify the shared goals and voices of the people for whom places and things are designed.",
+              "name": "Community needs identify the shared goals and voices of the people for whom places and things are designed.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
-                "order": "structure",
+                "order": "degree",
+                "rank_note": "Ordered from community planning to public participation.",
                 "points": [
                   {
                     "id": "ANZSRC:330401",
@@ -668,47 +131,309 @@
                     "statement": "Urban planning and health",
                     "name": "Urban planning and health"
                   }
-                ],
-                "rank_note": "Grouped by structural aspect; no ranking implied."
+                ]
               }
             }
           ]
-        }
+        },
+        "title": "Use and need"
+      },
+      {
+        "id": "DE.K2",
+        "anchor": "pillar:DE.K2",
+        "statement": "Form is the aspect of design concerned with the shape, material make-up and style of designed objects, spaces and images.",
+        "name": "Form is the aspect of design concerned with the shape, material make-up and style of designed objects, spaces and images.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "degree",
+          "rank_note": "Sections run from individual objects and their parts to the designed spaces and the tools used to model them.",
+          "points": [
+            {
+              "id": "DE.K2.S1",
+              "anchor": "section:DE.K2.S1",
+              "statement": "Designed objects and their parts are the artefacts, components and furnishings that take a definite physical shape.",
+              "name": "Designed objects and their parts are the artefacts, components and furnishings that take a definite physical shape.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "degree",
+                "rank_note": "Ordered from whole object types to the components and equipment within them.",
+                "points": [
+                  {
+                    "id": "DE.K2.S1.U1",
+                    "anchor": "section:DE.K2.S1.U1",
+                    "statement": "Object types and groupings are the recognised kinds and systems of designed artefacts that take a definite shape.",
+                    "name": "Object types and groupings are the recognised kinds and systems of designed artefacts that take a definite shape.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "degree",
+                      "rank_note": "Ordered from general object genres to the systems and products made from them.",
+                      "points": [
+                        {
+                          "id": "AAT:300185711",
+                          "anchor": "node:AAT:300185711",
+                          "statement": "Object Genres (hierarchy name)",
+                          "name": "Object Genres (hierarchy name)"
+                        },
+                        {
+                          "id": "AAT:300241489",
+                          "anchor": "node:AAT:300241489",
+                          "statement": "Object Groupings and Systems (hierarchy name)",
+                          "name": "Object Groupings and Systems (hierarchy name)"
+                        },
+                        {
+                          "id": "ANZSRC:330309",
+                          "anchor": "node:ANZSRC:330309",
+                          "statement": "Industrial and product design",
+                          "name": "Industrial and product design"
+                        },
+                        {
+                          "id": "ANZSRC:330315",
+                          "anchor": "node:ANZSRC:330315",
+                          "statement": "Textile and fashion design",
+                          "name": "Textile and fashion design"
+                        },
+                        {
+                          "id": "LCC:NK",
+                          "anchor": "node:LCC:NK",
+                          "statement": "Decorative arts",
+                          "name": "Decorative arts"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "DE.K2.S1.U2",
+                    "anchor": "section:DE.K2.S1.U2",
+                    "statement": "Components and furnishings are the parts and fittings from which objects and spaces are assembled and equipped.",
+                    "name": "Components and furnishings are the parts and fittings from which objects and spaces are assembled and equipped.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "degree",
+                      "rank_note": "Ordered from structural components to movable equipment.",
+                      "points": [
+                        {
+                          "id": "AAT:300241490",
+                          "anchor": "node:AAT:300241490",
+                          "statement": "Components (hierarchy name)",
+                          "name": "Components (hierarchy name)"
+                        },
+                        {
+                          "id": "AAT:300264551",
+                          "anchor": "node:AAT:300264551",
+                          "statement": "Furnishings and Equipment (hierarchy name)",
+                          "name": "Furnishings and Equipment (hierarchy name)"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "DE.K2.S2",
+              "anchor": "section:DE.K2.S2",
+              "statement": "Designed spaces, images and their styles give shape to interiors, buildings and visual messages.",
+              "name": "Designed spaces, images and their styles give shape to interiors, buildings and visual messages.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "degree",
+                "rank_note": "Ordered from visual communication to the spatial design of interiors and buildings.",
+                "points": [
+                  {
+                    "id": "ANZSRC:330316",
+                    "anchor": "node:ANZSRC:330316",
+                    "statement": "Visual communication design (incl. graphic design)",
+                    "name": "Visual communication design (incl. graphic design)"
+                  },
+                  {
+                    "id": "AAT:300264552",
+                    "anchor": "node:AAT:300264552",
+                    "statement": "Visual and Verbal Communication (hierarchy name)",
+                    "name": "Visual and Verbal Communication (hierarchy name)"
+                  },
+                  {
+                    "id": "ANZSRC:330108",
+                    "anchor": "node:ANZSRC:330108",
+                    "statement": "Interior design",
+                    "name": "Interior design"
+                  },
+                  {
+                    "id": "ANZSRC:330102",
+                    "anchor": "node:ANZSRC:330102",
+                    "statement": "Architectural design",
+                    "name": "Architectural design"
+                  },
+                  {
+                    "id": "AAT:300015646",
+                    "anchor": "node:AAT:300015646",
+                    "statement": "Styles and Periods (hierarchy name)",
+                    "name": "Styles and Periods (hierarchy name)"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "DE.K2.S3",
+              "anchor": "section:DE.K2.S3",
+              "statement": "Computational modelling of form uses digital methods to generate, visualise and test design shapes before they are made.",
+              "name": "Computational modelling of form uses digital methods to generate, visualise and test design shapes before they are made.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "degree",
+                "rank_note": "Ordered from general computational design to the models and simulations that test it.",
+                "points": [
+                  {
+                    "id": "ANZSRC:330301",
+                    "anchor": "node:ANZSRC:330301",
+                    "statement": "Data visualisation and computational (incl. parametric and generative) design",
+                    "name": "Data visualisation and computational (incl. parametric and generative) design"
+                  },
+                  {
+                    "id": "ANZSRC:330101",
+                    "anchor": "node:ANZSRC:330101",
+                    "statement": "Architectural computing and visualisation methods",
+                    "name": "Architectural computing and visualisation methods"
+                  },
+                  {
+                    "id": "ANZSRC:330311",
+                    "anchor": "node:ANZSRC:330311",
+                    "statement": "Models and simulations of design",
+                    "name": "Models and simulations of design"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Form"
+      },
+      {
+        "id": "DE.K3",
+        "anchor": "pillar:DE.K3",
+        "statement": "Performance in use is the aspect of design concerned with how well a designed arrangement behaves for its users, in safety, comfort, energy and resilience.",
+        "name": "Performance in use is the aspect of design concerned with how well a designed arrangement behaves for its users, in safety, comfort, energy and resilience.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "degree",
+          "rank_note": "Sections run from the human body and safety to environmental and technical performance.",
+          "points": [
+            {
+              "id": "DE.K3.S1",
+              "anchor": "section:DE.K3.S1",
+              "statement": "Human safety and comfort in design covers how designs fit the body and protect people from harm.",
+              "name": "Human safety and comfort in design covers how designs fit the body and protect people from harm.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "degree",
+                "rank_note": "Ordered from everyday fit to the body to protection from fire and disaster.",
+                "points": [
+                  {
+                    "id": "ANZSRC:330307",
+                    "anchor": "node:ANZSRC:330307",
+                    "statement": "Ergonomics design",
+                    "name": "Ergonomics design"
+                  },
+                  {
+                    "id": "ANZSRC:330308",
+                    "anchor": "node:ANZSRC:330308",
+                    "statement": "Fire safety design",
+                    "name": "Fire safety design"
+                  },
+                  {
+                    "id": "ANZSRC:330106",
+                    "anchor": "node:ANZSRC:330106",
+                    "statement": "Architecture for disaster relief",
+                    "name": "Architecture for disaster relief"
+                  },
+                  {
+                    "id": "ANZSRC:330303",
+                    "anchor": "node:ANZSRC:330303",
+                    "statement": "Design for disaster relief",
+                    "name": "Design for disaster relief"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "DE.K3.S2",
+              "anchor": "section:DE.K3.S2",
+              "statement": "Environmental and technical performance covers the scientific and sustainability measures of how buildings and designs work.",
+              "name": "Environmental and technical performance covers the scientific and sustainability measures of how buildings and designs work.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "degree",
+                "rank_note": "Ordered from technical science to the wider sustainability outcomes.",
+                "points": [
+                  {
+                    "id": "ANZSRC:330105",
+                    "anchor": "node:ANZSRC:330105",
+                    "statement": "Architectural science and technology",
+                    "name": "Architectural science and technology"
+                  },
+                  {
+                    "id": "ANZSRC:330206",
+                    "anchor": "node:ANZSRC:330206",
+                    "statement": "Building science, technologies and systems",
+                    "name": "Building science, technologies and systems"
+                  },
+                  {
+                    "id": "ANZSRC:330314",
+                    "anchor": "node:ANZSRC:330314",
+                    "statement": "Sustainable design",
+                    "name": "Sustainable design"
+                  },
+                  {
+                    "id": "ANZSRC:330110",
+                    "anchor": "node:ANZSRC:330110",
+                    "statement": "Sustainable architecture",
+                    "name": "Sustainable architecture"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Performance in use"
       },
       {
         "id": "DE.K4",
         "anchor": "pillar:DE.K4",
-        "title": "Place and settlement",
-        "statement": "Place and settlement is the aspect in which designed arrangements are set within land, regions and communities and governed by plans and rules.",
-        "name": "Place and settlement is the aspect in which designed arrangements are set within land, regions and communities and governed by plans and rules.",
+        "statement": "Place and settlement is the aspect of design concerned with arranging sites, cities, regions and the land and services they depend on.",
+        "name": "Place and settlement is the aspect of design concerned with arranging sites, cities, regions and the land and services they depend on.",
         "support": {
           "logic_type": "inductive",
-          "basis": "parts",
-          "order": "structure",
-          "rank_note": "Strategic and regulatory planning comes first, then the land and housing systems it governs.",
+          "basis": "kinds",
+          "order": "degree",
+          "rank_note": "Sections run from the planning of whole regions to the design and analysis of particular urban places.",
           "points": [
             {
-              "id": "DE.O.A4.G1",
-              "anchor": "group:DE.O.A4.G1",
-              "statement": "Strategic and regulatory planning covers the overarching field and the formal plans, rules and assessments that govern how places develop.",
-              "name": "Strategic and regulatory planning covers the overarching field and the formal plans, rules and assessments that govern how places develop.",
+              "id": "DE.K4.S1",
+              "anchor": "section:DE.K4.S1",
+              "statement": "Planning of land, regions and systems sets the strategic and regulatory frame for where and how settlement grows.",
+              "name": "Planning of land, regions and systems sets the strategic and regulatory frame for where and how settlement grows.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
-                "order": "structure",
+                "order": "degree",
+                "rank_note": "Ordered from broad strategic plans to specific rules and systems.",
                 "points": [
                   {
                     "id": "ANZSRC:3304",
                     "anchor": "node:ANZSRC:3304",
                     "statement": "Urban and regional planning",
-                    "name": "Urban and regional planning"
-                  },
-                  {
-                    "id": "ANZSRC:330407",
-                    "anchor": "node:ANZSRC:330407",
-                    "statement": "Regulatory planning and development assessment",
-                    "name": "Regulatory planning and development assessment"
+                    "name": "Urban and regional planning",
+                    "aliases": [
+                      "ANZSRC:330499"
+                    ]
                   },
                   {
                     "id": "ANZSRC:330408",
@@ -717,31 +442,10 @@
                     "name": "Strategic, metropolitan and regional planning"
                   },
                   {
-                    "id": "ANZSRC:330499",
-                    "anchor": "node:ANZSRC:330499",
-                    "statement": "Urban and regional planning not elsewhere classified",
-                    "name": "Urban and regional planning not elsewhere classified"
-                  }
-                ],
-                "rank_note": "Grouped by structural aspect; no ranking implied."
-              }
-            },
-            {
-              "id": "DE.O.A4.G3",
-              "anchor": "group:DE.O.A4.G3",
-              "statement": "Land, housing and regional systems planning addresses how land, housing markets and regional economies are used, managed and developed.",
-              "name": "Land, housing and regional systems planning addresses how land, housing markets and regional economies are used, managed and developed.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:330403",
-                    "anchor": "node:ANZSRC:330403",
-                    "statement": "Housing markets, development and management",
-                    "name": "Housing markets, development and management"
+                    "id": "ANZSRC:330407",
+                    "anchor": "node:ANZSRC:330407",
+                    "statement": "Regulatory planning and development assessment",
+                    "name": "Regulatory planning and development assessment"
                   },
                   {
                     "id": "ANZSRC:330404",
@@ -750,92 +454,274 @@
                     "name": "Land use and environmental planning"
                   },
                   {
+                    "id": "ANZSRC:330409",
+                    "anchor": "node:ANZSRC:330409",
+                    "statement": "Transport planning",
+                    "name": "Transport planning"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "DE.K4.S2",
+              "anchor": "section:DE.K4.S2",
+              "statement": "Urban and regional analysis studies the housing, economies and data of settlements to understand how places function.",
+              "name": "Urban and regional analysis studies the housing, economies and data of settlements to understand how places function.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "degree",
+                "rank_note": "Ordered from regional economics to the detailed analysis of cities.",
+                "points": [
+                  {
+                    "id": "ANZSRC:330403",
+                    "anchor": "node:ANZSRC:330403",
+                    "statement": "Housing markets, development and management",
+                    "name": "Housing markets, development and management"
+                  },
+                  {
                     "id": "ANZSRC:330406",
                     "anchor": "node:ANZSRC:330406",
                     "statement": "Regional analysis and development",
                     "name": "Regional analysis and development"
                   },
                   {
-                    "id": "ANZSRC:330409",
-                    "anchor": "node:ANZSRC:330409",
-                    "statement": "Transport planning",
-                    "name": "Transport planning"
+                    "id": "ANZSRC:330410",
+                    "anchor": "node:ANZSRC:330410",
+                    "statement": "Urban analysis and development",
+                    "name": "Urban analysis and development"
+                  },
+                  {
+                    "id": "ANZSRC:330412",
+                    "anchor": "node:ANZSRC:330412",
+                    "statement": "Urban informatics",
+                    "name": "Urban informatics"
                   }
-                ],
-                "rank_note": "Grouped by structural aspect; no ranking implied."
+                ]
+              }
+            },
+            {
+              "id": "DE.K4.S3",
+              "anchor": "section:DE.K4.S3",
+              "statement": "Design of places and landscapes gives physical shape to cities, open spaces and the wider built environment.",
+              "name": "Design of places and landscapes gives physical shape to cities, open spaces and the wider built environment.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "degree",
+                "rank_note": "Ordered from urban design to landscape and the whole built environment.",
+                "points": [
+                  {
+                    "id": "ANZSRC:330411",
+                    "anchor": "node:ANZSRC:330411",
+                    "statement": "Urban design",
+                    "name": "Urban design"
+                  },
+                  {
+                    "id": "ANZSRC:330109",
+                    "anchor": "node:ANZSRC:330109",
+                    "statement": "Landscape architecture",
+                    "name": "Landscape architecture"
+                  },
+                  {
+                    "id": "AAT:300264550",
+                    "anchor": "node:AAT:300264550",
+                    "statement": "Built Environment (hierarchy name)",
+                    "name": "Built Environment (hierarchy name)"
+                  },
+                  {
+                    "id": "ANZSRC:3399",
+                    "anchor": "node:ANZSRC:3399",
+                    "statement": "Other built environment and design",
+                    "name": "Other built environment and design",
+                    "aliases": [
+                      "ANZSRC:339999"
+                    ]
+                  }
+                ]
               }
             }
           ]
-        }
+        },
+        "title": "Place and settlement"
       },
       {
         "id": "DE.K5",
         "anchor": "pillar:DE.K5",
-        "title": "Life of the built thing",
-        "statement": "Life of the built thing is the aspect in which a built arrangement is managed, costed, conserved and protected over its existence.",
-        "name": "Life of the built thing is the aspect in which a built arrangement is managed, costed, conserved and protected over its existence.",
+        "statement": "Life of the built thing is the aspect of design concerned with how buildings are practised, constructed, managed, conserved and understood over time.",
+        "name": "Life of the built thing is the aspect of design concerned with how buildings are practised, constructed, managed, conserved and understood over time.",
         "support": {
           "logic_type": "inductive",
-          "basis": "parts",
-          "order": "structure",
-          "rank_note": "The organisation of building work comes first, followed by the care of what results.",
+          "basis": "cause_effect",
+          "order": "time",
+          "rank_note": "Sections run from the practice of designing, through making and managing the building, to remembering and conserving it.",
           "points": [
             {
-              "id": "DE.O.A5.G1",
-              "anchor": "group:DE.O.A5.G1",
-              "statement": "Managerial and organisational fields study how building work, firms and costs are planned, run and understood as an industry.",
-              "name": "Managerial and organisational fields study how building work, firms and costs are planned, run and understood as an industry.",
+              "id": "DE.K5.S1",
+              "anchor": "section:DE.K5.S1",
+              "statement": "Design practice and its disciplines cover the general methods and processes by which designers work from first idea to finished work.",
+              "name": "Design practice and its disciplines cover the general methods and processes by which designers work from first idea to finished work.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
+                "basis": "cause_effect",
+                "order": "time",
+                "rank_note": "Ordered from design as a whole to its disciplines and the processes that carry it out.",
                 "points": [
                   {
-                    "id": "ANZSRC:330202",
-                    "anchor": "node:ANZSRC:330202",
-                    "statement": "Building construction management and project planning",
-                    "name": "Building construction management and project planning"
+                    "id": "ANZSRC:3303",
+                    "anchor": "node:ANZSRC:3303",
+                    "statement": "Design",
+                    "name": "Design",
+                    "aliases": [
+                      "ANZSRC:330399"
+                    ]
                   },
                   {
-                    "id": "ANZSRC:330203",
-                    "anchor": "node:ANZSRC:330203",
-                    "statement": "Building industry studies",
-                    "name": "Building industry studies"
+                    "id": "ANZSRC:330306",
+                    "anchor": "node:ANZSRC:330306",
+                    "statement": "Design practice and methods",
+                    "name": "Design practice and methods"
                   },
                   {
-                    "id": "ANZSRC:330205",
-                    "anchor": "node:ANZSRC:330205",
-                    "statement": "Building organisational studies",
-                    "name": "Building organisational studies"
+                    "id": "AAT:300054134",
+                    "anchor": "node:AAT:300054134",
+                    "statement": "Disciplines (hierarchy name)",
+                    "name": "Disciplines (hierarchy name)"
                   },
                   {
-                    "id": "ANZSRC:330207",
-                    "anchor": "node:ANZSRC:330207",
-                    "statement": "Quantity surveying",
-                    "name": "Quantity surveying"
+                    "id": "AAT:300053001",
+                    "anchor": "node:AAT:300053001",
+                    "statement": "Processes and Techniques (hierarchy name)",
+                    "name": "Processes and Techniques (hierarchy name)"
                   }
-                ],
-                "rank_note": "Ordered by structure: project level, then industry and organisation, then cost."
+                ]
               }
             },
             {
-              "id": "DE.O.A2.G4",
-              "anchor": "group:DE.O.A2.G4",
-              "statement": "The supporting subfields of architecture are the parts that study, compute, conserve, manage and protect designed arrangements.",
-              "name": "The supporting subfields of architecture are the parts that study, compute, conserve, manage and protect designed arrangements.",
+              "id": "DE.K5.S2",
+              "anchor": "section:DE.K5.S2",
+              "statement": "Construction and its technology cover the building of a structure and the tools and systems used to make it.",
+              "name": "Construction and its technology cover the building of a structure and the tools and systems used to make it.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "parts",
-                "order": "structure",
+                "basis": "cause_effect",
+                "order": "time",
+                "rank_note": "Ordered from the building as a whole to the technology that delivers it.",
                 "points": [
                   {
-                    "id": "ANZSRC:330101",
-                    "anchor": "node:ANZSRC:330101",
-                    "statement": "Architectural computing and visualisation methods",
-                    "name": "Architectural computing and visualisation methods"
+                    "id": "ANZSRC:3302",
+                    "anchor": "node:ANZSRC:3302",
+                    "statement": "Building",
+                    "name": "Building",
+                    "aliases": [
+                      "LCC:TH",
+                      "ANZSRC:330299"
+                    ]
                   },
+                  {
+                    "id": "ANZSRC:330201",
+                    "anchor": "node:ANZSRC:330201",
+                    "statement": "Automation and technology in building and construction",
+                    "name": "Automation and technology in building and construction"
+                  },
+                  {
+                    "id": "ANZSRC:330204",
+                    "anchor": "node:ANZSRC:330204",
+                    "statement": "Building information modelling and management",
+                    "name": "Building information modelling and management"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "DE.K5.S3",
+              "anchor": "section:DE.K5.S3",
+              "statement": "Management and economics of building cover the organisation, costing and running of design and construction work.",
+              "name": "Management and economics of building cover the organisation, costing and running of design and construction work.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "cause_effect",
+                "order": "time",
+                "rank_note": "Ordered from the organising of building work to the management of design practice.",
+                "points": [
+                  {
+                    "id": "DE.K5.S3.U1",
+                    "anchor": "section:DE.K5.S3.U1",
+                    "statement": "Building organisation and economics cover how construction projects are planned, staffed, studied and costed.",
+                    "name": "Building organisation and economics cover how construction projects are planned, staffed, studied and costed.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "cause_effect",
+                      "order": "time",
+                      "rank_note": "Ordered from project planning to industry study and costing.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:330202",
+                          "anchor": "node:ANZSRC:330202",
+                          "statement": "Building construction management and project planning",
+                          "name": "Building construction management and project planning"
+                        },
+                        {
+                          "id": "ANZSRC:330203",
+                          "anchor": "node:ANZSRC:330203",
+                          "statement": "Building industry studies",
+                          "name": "Building industry studies"
+                        },
+                        {
+                          "id": "ANZSRC:330205",
+                          "anchor": "node:ANZSRC:330205",
+                          "statement": "Building organisational studies",
+                          "name": "Building organisational studies"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "DE.K5.S3.U2",
+                    "anchor": "section:DE.K5.S3.U2",
+                    "statement": "Management of design and architecture practice covers how design work and the firms doing it are run and costed.",
+                    "name": "Management of design and architecture practice covers how design work and the firms doing it are run and costed.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "cause_effect",
+                      "order": "time",
+                      "rank_note": "Ordered from costing building work to managing design and architecture practice.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:330207",
+                          "anchor": "node:ANZSRC:330207",
+                          "statement": "Quantity surveying",
+                          "name": "Quantity surveying"
+                        },
+                        {
+                          "id": "ANZSRC:330107",
+                          "anchor": "node:ANZSRC:330107",
+                          "statement": "Architecture management",
+                          "name": "Architecture management"
+                        },
+                        {
+                          "id": "ANZSRC:330305",
+                          "anchor": "node:ANZSRC:330305",
+                          "statement": "Design management",
+                          "name": "Design management"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "DE.K5.S4",
+              "anchor": "section:DE.K5.S4",
+              "statement": "History, heritage and theory record and interpret how designed and built things were made, valued and conserved.",
+              "name": "History, heritage and theory record and interpret how designed and built things were made, valued and conserved.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "cause_effect",
+                "order": "time",
+                "rank_note": "Ordered from conservation of existing works to the histories and theories that interpret them.",
+                "points": [
                   {
                     "id": "ANZSRC:330103",
                     "anchor": "node:ANZSRC:330103",
@@ -849,44 +735,55 @@
                     "name": "Architectural history, theory and criticism"
                   },
                   {
-                    "id": "ANZSRC:330105",
-                    "anchor": "node:ANZSRC:330105",
-                    "statement": "Architectural science and technology",
-                    "name": "Architectural science and technology"
+                    "id": "ANZSRC:330304",
+                    "anchor": "node:ANZSRC:330304",
+                    "statement": "Design history, theory and criticism",
+                    "name": "Design history, theory and criticism"
+                  },
+                  {
+                    "id": "ANZSRC:330402",
+                    "anchor": "node:ANZSRC:330402",
+                    "statement": "History and theory of the built environment (excl. architecture)",
+                    "name": "History and theory of the built environment (excl. architecture)"
+                  },
+                  {
+                    "id": "LCC:NA",
+                    "anchor": "node:LCC:NA",
+                    "statement": "Architecture",
+                    "name": "Architecture",
+                    "aliases": [
+                      "ANZSRC:3301",
+                      "ANZSRC:330199"
+                    ]
                   }
-                ],
-                "rank_note": "supporting and study subfields"
+                ]
               }
             }
           ]
-        }
+        },
+        "title": "Life of the built thing"
       }
     ]
   },
   "retired": [
     {
-      "id": "ANZSRC:3302",
-      "name": "Building",
+      "id": "AAT:300264088",
+      "name": "Styles and Periods Facet",
       "reason": "container heading for the whole field, not a topic"
     },
     {
-      "id": "LCC:TH",
-      "name": "Building construction",
+      "id": "AAT:300264092",
+      "name": "Objects Facet",
       "reason": "container heading for the whole field, not a topic"
     },
     {
-      "id": "ANZSRC:3399",
-      "name": "Other built environment and design",
+      "id": "AAT:300264090",
+      "name": "Activities Facet",
       "reason": "container heading for the whole field, not a topic"
     },
     {
-      "id": "ANZSRC:339999",
-      "name": "Other built environment and design not elsewhere classified",
-      "reason": "container heading for the whole field, not a topic"
-    },
-    {
-      "id": "ANZSRC:330299",
-      "name": "Building not elsewhere classified",
+      "id": "AAT:300404112",
+      "name": "activities (general context)",
       "reason": "container heading for the whole field, not a topic"
     }
   ],
@@ -897,22 +794,23 @@
   },
   "minto_issues": {
     "mixed_kinds": [
-      "DE.O.A5.G1: ['activity', 'response']"
+      "DE.K5.S3.U1: ['activity', 'response']"
     ]
   },
   "field_check": {
-    "governing_thought": "Design's objects divide, from the need to the life of the result, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.",
+    "governing_thought": "Design's objects divide, from need to outcome, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.",
     "key_line": [
-      "Use and need is the aspect in which human activity and purpose call a designed arrangement into being and define the kinds of design.",
-      "Form is the aspect in which designed arrangements take shape as named kinds of objects, buildings and urban forms.",
-      "Performance in use is the aspect in which a designed arrangement works for the people who occupy it, through technical systems and human wellbeing.",
-      "Place and settlement is the aspect in which designed arrangements are set within land, regions and communities and governed by plans and rules.",
-      "Life of the built thing is the aspect in which a built arrangement is managed, costed, conserved and protected over its existence."
+      "Use and need is the aspect of design concerned with the people, purposes, activities and problems that a designed arrangement must answer.",
+      "Form is the aspect of design concerned with the shape, material make-up and style of designed objects, spaces and images.",
+      "Performance in use is the aspect of design concerned with how well a designed arrangement behaves for its users, in safety, comfort, energy and resilience.",
+      "Place and settlement is the aspect of design concerned with arranging sites, cities, regions and the land and services they depend on.",
+      "Life of the built thing is the aspect of design concerned with how buildings are practised, constructed, managed, conserved and understood over time."
     ],
     "holds": false,
-    "note": "P2.1 is organised by the Art and Architecture Thesaurus catalogue facets; also P2.3 and P3.2 fit P4 equally well, and P5.2 is a catch-all.",
-    "review": true,
-    "problems": 6
+    "note": "Key line holds; misplaced include P1.3.3 (urban planning and health), P5.2.3 (BIM), P5.4.5 and the generic leaves P5.1.1, P5.1.3, P4.3.3 and P4.3.4.",
+    "review": false,
+    "misplaced": 8,
+    "problems": 9
   },
-  "cost_usd": 0.2751
+  "cost_usd": 0.45
 }

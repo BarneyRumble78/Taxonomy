@@ -4,163 +4,149 @@ Built by scripts/minto_pass.py from the grouped classification. Three rules (Min
 
 ## Introduction
 
-**Situation.** People design buildings, places and objects so that they can be used for human purposes.
+**Situation.** People shape objects, spaces, services and settlements to meet their needs, and this work is studied across many specialised design and building disciplines.
 
-**Complication.** Sources describe designed arrangements through activity vocabularies, object lists, planning schemes and building schemes that overlap and mix catch-all headings.
+**Complication.** The same design knowledge is scattered across overlapping schemes of professions, artefact types and activities, so the same topic appears under several labels.
 
-**Question.** How is everything in the field of designed arrangements for human use divided?
+**Question.** How is everything in the field of design divided?
 
-**Answer.** Design's objects divide, from the need to the life of the result, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.
+**Answer.** Design's objects divide, from need to outcome, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.
 
 ## Governing thought
 
-Design's objects divide, from the need to the life of the result, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.
+Design's objects divide, from need to outcome, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.
 
 ## Key line
 
-Group of aspects. Basis: cause_effect. Dimension: the aspect of a designed arrangement for human use. Order: time. The aspects run in time from the need that prompts a design to the later life of what is built.
+Group of aspects. Basis: cause_effect. Dimension: the aspect of a designed arrangement for human use. Order: time. The aspects run from the human need that starts a design to the long life of the thing that results.
 
-1. Use and need is the aspect in which human activity and purpose call a designed arrangement into being and define the kinds of design. `DE.K1`
-2. Form is the aspect in which designed arrangements take shape as named kinds of objects, buildings and urban forms. `DE.K2`
-3. Performance in use is the aspect in which a designed arrangement works for the people who occupy it, through technical systems and human wellbeing. `DE.K3`
-4. Place and settlement is the aspect in which designed arrangements are set within land, regions and communities and governed by plans and rules. `DE.K4`
-5. Life of the built thing is the aspect in which a built arrangement is managed, costed, conserved and protected over its existence. `DE.K5`
+1. Use and need is the aspect of design concerned with the people, purposes, activities and problems that a designed arrangement must answer. `DE.K1`
+2. Form is the aspect of design concerned with the shape, material make-up and style of designed objects, spaces and images. `DE.K2`
+3. Performance in use is the aspect of design concerned with how well a designed arrangement behaves for its users, in safety, comfort, energy and resilience. `DE.K3`
+4. Place and settlement is the aspect of design concerned with arranging sites, cities, regions and the land and services they depend on. `DE.K4`
+5. Life of the built thing is the aspect of design concerned with how buildings are practised, constructed, managed, conserved and understood over time. `DE.K5`
 
 ## Groups
 
-### 1. Use and need is the aspect in which human activity and purpose call a designed arrangement into being and define the kinds of design.
+### 1. Use and need is the aspect of design concerned with the people, purposes, activities and problems that a designed arrangement must answer.
 
-- **Framing concepts give the activity vocabulary and the overall field of design within which designed arrangements for human use are studied.**
-  _basis: kinds, order: structure. Ordered from the specific activity hierarchies to the overarching labels and then the whole field of design._
-  - **Getty hierarchies of activity kinds name the broad classes of human doing, from techniques to events, that a designed arrangement serves.**
-    _basis: kinds, order: structure. Ordered by the position of each hierarchy in the Getty AAT Activities facet._
-    - Processes and Techniques (hierarchy name)
-    - Disciplines (hierarchy name)
-    - Functions (hierarchy name)
-    - Events (hierarchy name)
-    - Physical and Mental Activities (hierarchy name)
-  - **The Activities facet and its general-context term are the overarching Getty labels under which the activity hierarchies sit.**
-    _basis: kinds, order: degree. Ranked from the most inclusive term, the facet, to the narrower general-context term._
-    - Activities Facet
-    - activities (general context)
-  - **Design as a whole field, together with its history, theory and management, frames the study of designed arrangements.**
-    _basis: kinds, order: structure. Ordered from the field itself to its reflective and organisational subfields._
-    - Design
-    - Design history, theory and criticism
-    - Design management
-    - Models and simulations of design
-- **Design subfields are the particular kinds of design distinguished by their practice, their human concern, their medium, or their purpose.**
-  _basis: kinds, order: structure. Ordered from practice-oriented and human-centred fields to medium-based and purpose-based fields._
-  - **Design subfields centred on making and shaping products, services and experiences for people are the practice-oriented kinds of design.**
-    _basis: kinds, order: degree. Ranked from the general methods of practice to the most specific design outputs._
-    - Design practice and methods
-    - Industrial and product design
-    - Interaction and experience design
-    - Service design
-    - Data visualisation and computational (incl. parametric and generative) design
-  - **Design subfields that address human needs, safety and context are the human-centred kinds of design.**
-    _basis: kinds, order: structure. Ordered from the human body and culture to hazards and relief situations._
-    - Design anthropology
-    - Ergonomics design
-    - Fire safety design
-    - Design for disaster relief
-  - **Medium-based design fields are defined by the kind of material or artefact they shape for human use, such as cloth, images, or uncategorised products.**
-    _basis: kinds, order: structure. Ordered by structure, from specific media to the residual category._
-    - Textile and fashion design
-    - Visual communication design (incl. graphic design)
-    - Design not elsewhere classified
-  - **Purpose-based design fields are defined by the human or societal concern that the arrangement is meant to serve, such as community wellbeing, sustainability, or household living.**
-    _basis: kinds, order: structure. Ordered by structure, from societal concerns to household management._
-    - Social design
-    - Sustainable design
-    - Home economics
-
-### 2. Form is the aspect in which designed arrangements take shape as named kinds of objects, buildings and urban forms.
-
-- **The two Art and Architecture Thesaurus top-level facets are the broadest divisions that organise styles and objects.**
-  _basis: kinds, order: structure. facet level of the AAT_
-  - Styles and Periods Facet
-  - Objects Facet
-  - Styles and Periods (hierarchy name)
-  - Architecture
-- **The object hierarchies name the kinds of designed things made for human use, from buildings to furnishings and communication.**
-  _basis: kinds, order: degree. Intermediate level, narrower than the facets and broader than individual aspects._
-  - **The Art and Architecture Thesaurus hierarchies for objects name the kinds of designed things made for human use, from buildings to furnishings and communication.**
-    _basis: kinds, order: structure. hierarchies under the Objects facet_
-    - Object Genres (hierarchy name)
-    - Object Groupings and Systems (hierarchy name)
-    - Components (hierarchy name)
-    - Furnishings and Equipment (hierarchy name)
-  - **The design-practice subfields of architecture are the parts concerned with shaping arrangements of space for people to use.**
-    _basis: parts, order: structure. design practice subfields_
-    - Architectural design
-    - Interior design
-    - Landscape architecture
-    - Sustainable architecture
-  - **Fields of designed arrangement for human use range from the architecture of buildings and spaces to the decorative arts of crafted objects.**
-    _basis: kinds, order: structure. Ordered by structure, from the general architecture classification to architecture proper and then decorative arts._
-    - Architecture not elsewhere classified
-    - Architecture
-    - Decorative arts
-  - **Built-environment aspects concern the designed physical settings, buildings, and their practice that people use and occupy.**
-    _basis: kinds, order: structure. Ordered by structure: the general built environment hierarchy first, then architecture for disaster relief as a specific kind of built setting._
-    - Built Environment (hierarchy name)
-    - Architecture for disaster relief
-  - **Communication and management aspects concern how designed arrangements are conveyed, organized, and run for the people who use them.**
-    _basis: kinds, order: structure. Ordered by structure: visual and verbal communication first, then architecture management as the organizing practice._
-    - Visual and Verbal Communication (hierarchy name)
-    - Architecture management
-- **Urban form, analysis and knowledge covers the design, study, theory and data-driven analysis of the built environment of cities.**
-  _basis: kinds, order: structure. Grouped by structural aspect; no ranking implied._
-  - History and theory of the built environment (excl. architecture)
-  - Urban analysis and development
-  - Urban design
-  - Urban informatics
-
-### 3. Performance in use is the aspect in which a designed arrangement works for the people who occupy it, through technical systems and human wellbeing.
-
-- **Technical and systems fields cover the technologies, digital models and scientific principles used to produce and operate buildings.**
-  _basis: kinds, order: structure. Ordered by structure: automation, then information modelling, then building science and systems._
-  - Automation and technology in building and construction
-  - Building information modelling and management
-  - Building science, technologies and systems
-- **Community-centred planning concerns the people who use a place, including their participation, local planning and health and wellbeing.**
-  _basis: kinds, order: structure. Grouped by structural aspect; no ranking implied._
+- **Activities, functions and events are the human doings and purposes that call for a designed arrangement.**
+  _basis: kinds, order: degree. Ordered from general activities to the specific functions and occasions._
+  - Physical and Mental Activities (hierarchy name)
+  - Functions (hierarchy name)
+  - Events (hierarchy name)
+- **Human-centred and social design responds to the people, experiences and services that a design is made for.**
+  _basis: kinds, order: degree. Ordered from the study of people to the services and experiences built for them._
+  - Design anthropology
+  - Social design
+  - Service design
+  - Interaction and experience design
+  - Home economics
+- **Community needs identify the shared goals and voices of the people for whom places and things are designed.**
+  _basis: kinds, order: degree. Ordered from community planning to public participation._
   - Community planning
   - Public participation and community engagement
   - Urban planning and health
 
-### 4. Place and settlement is the aspect in which designed arrangements are set within land, regions and communities and governed by plans and rules.
+### 2. Form is the aspect of design concerned with the shape, material make-up and style of designed objects, spaces and images.
 
-- **Strategic and regulatory planning covers the overarching field and the formal plans, rules and assessments that govern how places develop.**
-  _basis: kinds, order: structure. Grouped by structural aspect; no ranking implied._
-  - Urban and regional planning
-  - Regulatory planning and development assessment
-  - Strategic, metropolitan and regional planning
-  - Urban and regional planning not elsewhere classified
-- **Land, housing and regional systems planning addresses how land, housing markets and regional economies are used, managed and developed.**
-  _basis: kinds, order: structure. Grouped by structural aspect; no ranking implied._
-  - Housing markets, development and management
-  - Land use and environmental planning
-  - Regional analysis and development
-  - Transport planning
-
-### 5. Life of the built thing is the aspect in which a built arrangement is managed, costed, conserved and protected over its existence.
-
-- **Managerial and organisational fields study how building work, firms and costs are planned, run and understood as an industry.**
-  _basis: kinds, order: structure. Ordered by structure: project level, then industry and organisation, then cost._
-  - Building construction management and project planning
-  - Building industry studies
-  - Building organisational studies
-  - Quantity surveying
-- **The supporting subfields of architecture are the parts that study, compute, conserve, manage and protect designed arrangements.**
-  _basis: parts, order: structure. supporting and study subfields_
+- **Designed objects and their parts are the artefacts, components and furnishings that take a definite physical shape.**
+  _basis: kinds, order: degree. Ordered from whole object types to the components and equipment within them._
+  - **Object types and groupings are the recognised kinds and systems of designed artefacts that take a definite shape.**
+    _basis: kinds, order: degree. Ordered from general object genres to the systems and products made from them._
+    - Object Genres (hierarchy name)
+    - Object Groupings and Systems (hierarchy name)
+    - Industrial and product design
+    - Textile and fashion design
+    - Decorative arts
+  - **Components and furnishings are the parts and fittings from which objects and spaces are assembled and equipped.**
+    _basis: kinds, order: degree. Ordered from structural components to movable equipment._
+    - Components (hierarchy name)
+    - Furnishings and Equipment (hierarchy name)
+- **Designed spaces, images and their styles give shape to interiors, buildings and visual messages.**
+  _basis: kinds, order: degree. Ordered from visual communication to the spatial design of interiors and buildings._
+  - Visual communication design (incl. graphic design)
+  - Visual and Verbal Communication (hierarchy name)
+  - Interior design
+  - Architectural design
+  - Styles and Periods (hierarchy name)
+- **Computational modelling of form uses digital methods to generate, visualise and test design shapes before they are made.**
+  _basis: kinds, order: degree. Ordered from general computational design to the models and simulations that test it._
+  - Data visualisation and computational (incl. parametric and generative) design
   - Architectural computing and visualisation methods
+  - Models and simulations of design
+
+### 3. Performance in use is the aspect of design concerned with how well a designed arrangement behaves for its users, in safety, comfort, energy and resilience.
+
+- **Human safety and comfort in design covers how designs fit the body and protect people from harm.**
+  _basis: kinds, order: degree. Ordered from everyday fit to the body to protection from fire and disaster._
+  - Ergonomics design
+  - Fire safety design
+  - Architecture for disaster relief
+  - Design for disaster relief
+- **Environmental and technical performance covers the scientific and sustainability measures of how buildings and designs work.**
+  _basis: kinds, order: degree. Ordered from technical science to the wider sustainability outcomes._
+  - Architectural science and technology
+  - Building science, technologies and systems
+  - Sustainable design
+  - Sustainable architecture
+
+### 4. Place and settlement is the aspect of design concerned with arranging sites, cities, regions and the land and services they depend on.
+
+- **Planning of land, regions and systems sets the strategic and regulatory frame for where and how settlement grows.**
+  _basis: kinds, order: degree. Ordered from broad strategic plans to specific rules and systems._
+  - Urban and regional planning
+  - Strategic, metropolitan and regional planning
+  - Regulatory planning and development assessment
+  - Land use and environmental planning
+  - Transport planning
+- **Urban and regional analysis studies the housing, economies and data of settlements to understand how places function.**
+  _basis: kinds, order: degree. Ordered from regional economics to the detailed analysis of cities._
+  - Housing markets, development and management
+  - Regional analysis and development
+  - Urban analysis and development
+  - Urban informatics
+- **Design of places and landscapes gives physical shape to cities, open spaces and the wider built environment.**
+  _basis: kinds, order: degree. Ordered from urban design to landscape and the whole built environment._
+  - Urban design
+  - Landscape architecture
+  - Built Environment (hierarchy name)
+  - Other built environment and design
+
+### 5. Life of the built thing is the aspect of design concerned with how buildings are practised, constructed, managed, conserved and understood over time.
+
+- **Design practice and its disciplines cover the general methods and processes by which designers work from first idea to finished work.**
+  _basis: cause_effect, order: time. Ordered from design as a whole to its disciplines and the processes that carry it out._
+  - Design
+  - Design practice and methods
+  - Disciplines (hierarchy name)
+  - Processes and Techniques (hierarchy name)
+- **Construction and its technology cover the building of a structure and the tools and systems used to make it.**
+  _basis: cause_effect, order: time. Ordered from the building as a whole to the technology that delivers it._
+  - Building
+  - Automation and technology in building and construction
+  - Building information modelling and management
+- **Management and economics of building cover the organisation, costing and running of design and construction work.**
+  _basis: cause_effect, order: time. Ordered from the organising of building work to the management of design practice._
+  - **Building organisation and economics cover how construction projects are planned, staffed, studied and costed.**
+    _basis: cause_effect, order: time. Ordered from project planning to industry study and costing._
+    - Building construction management and project planning
+    - Building industry studies
+    - Building organisational studies
+  - **Management of design and architecture practice covers how design work and the firms doing it are run and costed.**
+    _basis: cause_effect, order: time. Ordered from costing building work to managing design and architecture practice._
+    - Quantity surveying
+    - Architecture management
+    - Design management
+- **History, heritage and theory record and interpret how designed and built things were made, valued and conserved.**
+  _basis: cause_effect, order: time. Ordered from conservation of existing works to the histories and theories that interpret them._
   - Architectural heritage and conservation
   - Architectural history, theory and criticism
-  - Architectural science and technology
+  - Design history, theory and criticism
+  - History and theory of the built environment (excl. architecture)
+  - Architecture
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["DE.O.A5.G1: ['activity', 'response']"]}
-- field_check holds: False — P2.1 is organised by the Art and Architecture Thesaurus catalogue facets; also P2.3 and P3.2 fit P4 equally well, and P5.2 is a catch-all.
+- minto_check: {'mixed_kinds': ["DE.K5.S3.U1: ['activity', 'response']"]}
+- field_check holds: False — Key line holds; misplaced include P1.3.3 (urban planning and health), P5.2.3 (BIM), P5.4.5 and the generic leaves P5.1.1, P5.1.3, P4.3.3 and P4.3.4.

@@ -520,7 +520,10 @@
                         "id": "LCC:NA",
                         "anchor": "node:LCC:NA",
                         "statement": "Architecture",
-                        "name": "Architecture"
+                        "name": "Architecture",
+                        "aliases": [
+                          "ANZSRC:3301"
+                        ]
                       },
                       {
                         "id": "LCC:NK",
@@ -923,17 +926,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Design's objects divide, from the need to the life of the result, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.",
+    "governing_thought": "Design's objects divide, from need to outcome, into five aspects of a designed arrangement for human use: use and need, form, performance in use, place and settlement, and the life of the built thing.",
     "key_line": [
-      "Use and need is the aspect in which human activity and purpose call a designed arrangement into being and define the kinds of design.",
-      "Form is the aspect in which designed arrangements take shape as named kinds of objects, buildings and urban forms.",
-      "Performance in use is the aspect in which a designed arrangement works for the people who occupy it, through technical systems and human wellbeing.",
-      "Place and settlement is the aspect in which designed arrangements are set within land, regions and communities and governed by plans and rules.",
-      "Life of the built thing is the aspect in which a built arrangement is managed, costed, conserved and protected over its existence."
+      "Use and need is the aspect of design concerned with the people, purposes, activities and problems that a designed arrangement must answer.",
+      "Form is the aspect of design concerned with the shape, material make-up and style of designed objects, spaces and images.",
+      "Performance in use is the aspect of design concerned with how well a designed arrangement behaves for its users, in safety, comfort, energy and resilience.",
+      "Place and settlement is the aspect of design concerned with arranging sites, cities, regions and the land and services they depend on.",
+      "Life of the built thing is the aspect of design concerned with how buildings are practised, constructed, managed, conserved and understood over time."
     ],
     "holds": false,
-    "note": "P2.1 is organised by the Art and Architecture Thesaurus catalogue facets; also P2.3 and P3.2 fit P4 equally well, and P5.2 is a catch-all.",
-    "review": true,
-    "problems": 6
+    "note": "Key line holds; misplaced include P1.3.3 (urban planning and health), P5.2.3 (BIM), P5.4.5 and the generic leaves P5.1.1, P5.1.3, P4.3.3 and P4.3.4.",
+    "review": false,
+    "misplaced": 8,
+    "problems": 9
   }
 }
