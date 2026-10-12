@@ -825,5 +825,5 @@ Group of practices of the firm. Basis: kinds. Dimension: the practice of the fir
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["BU.O.A2.G3: ['condition', 'response']", "BU.O.A1.G1: ['limit', 'response']"]}
-- field_check holds: False — Misplaced: P1.1.1 and P1.2.1 (core accounting under context-specific), P2.3.2 (insurance under asset-holding), P3.3.2.3 (valuation), P5.1.2.3 (retail under wholesale), P3.3.3.
+- minto_check: clean
+- field_check holds: True — Misplaced: P1.1.1 and P1.2.1 (core accounting under context-specific), P2.3.2 (insurance under asset-holding), P3.3.2.3 (valuation), P5.1.2.3 (retail under wholesale), P3.3.3.
