@@ -106,12 +106,14 @@
       - Tourism economics
       - Transport economics
       - Health economics
-    - **Each of these classification categories covers a field of economic activity or inquiry defined by the scale at which resources are allocated, from whole industries and sectors to specific markets.**
-      _basis: kinds, order: structure_
+    - **Broad economic and sectoral fields settle the allocation of land, labor, industry and general applied economic activity at the aggregate scale.**
+      _basis: kinds, order: structure. Aggregate, economy-wide scale of allocation._
       - Applied economics not elsewhere classified
       - Industries. Land use. Labor
-      - Transportation and communications
+    - **Specific markets and networks settle allocation at a narrower scale, through financial market trading and through transportation and communications systems.**
+      _basis: kinds, order: structure. Market- and network-level scale of allocation._
       - General Financial Markets
+      - Transportation and communications
     - **Market structure, firm objectives, nonprofit forms, and antitrust describe allocation settled by firms' strategies, ownership, and competition enforcement.**
       _basis: kinds, order: structure. Ordered by structure from firm strategy to competition policy._
       - Market Structure, Firm Strategy, and Market Performance

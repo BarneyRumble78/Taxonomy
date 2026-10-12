@@ -678,10 +678,10 @@
                   }
                 },
                 {
-                  "id": "EC.O.A2.G10",
-                  "anchor": "group:EC.O.A2.G10",
-                  "statement": "Each of these classification categories covers a field of economic activity or inquiry defined by the scale at which resources are allocated, from whole industries and sectors to specific markets.",
-                  "name": "Each of these classification categories covers a field of economic activity or inquiry defined by the scale at which resources are allocated, from whole industries and sectors to specific markets.",
+                  "id": "EC.O.A2.G23",
+                  "anchor": "group:EC.O.A2.G23",
+                  "statement": "Broad economic and sectoral fields settle the allocation of land, labor, industry and general applied economic activity at the aggregate scale.",
+                  "name": "Broad economic and sectoral fields settle the allocation of land, labor, industry and general applied economic activity at the aggregate scale.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -699,22 +699,37 @@
                         "anchor": "node:LCC:HD",
                         "statement": "Industries. Land use. Labor",
                         "name": "Industries. Land use. Labor"
+                      }
+                    ],
+                    "rank_note": "Aggregate, economy-wide scale of allocation."
+                  }
+                },
+                {
+                  "id": "EC.O.A2.G24",
+                  "anchor": "group:EC.O.A2.G24",
+                  "statement": "Specific markets and networks settle allocation at a narrower scale, through financial market trading and through transportation and communications systems.",
+                  "name": "Specific markets and networks settle allocation at a narrower scale, through financial market trading and through transportation and communications systems.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "JEL:G1",
+                        "anchor": "node:JEL:G1",
+                        "statement": "General Financial Markets",
+                        "name": "General Financial Markets"
                       },
                       {
                         "id": "LCC:HE",
                         "anchor": "node:LCC:HE",
                         "statement": "Transportation and communications",
                         "name": "Transportation and communications"
-                      },
-                      {
-                        "id": "JEL:G1",
-                        "anchor": "node:JEL:G1",
-                        "statement": "General Financial Markets",
-                        "name": "General Financial Markets"
                       }
-                    ]
-                  },
-                  "further": true
+                    ],
+                    "rank_note": "Market- and network-level scale of allocation."
+                  }
                 },
                 {
                   "id": "EC.O.A2.G12",
@@ -2388,5 +2403,12 @@
         ]
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Economics is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five scales of allocation: choice, markets, mechanisms and institutions, the aggregate economy, and welfare and public choice.",
+    "key_line": "Dimension: **the scale at which an allocation is settled.** Order: from one agent to the whole society.\n1. Choice\n2. Markets\n3. Mechanisms and institutions\n4. The aggregate economy\n5. Welfare and public choice\n\n**The three-way border (the economics repair).** Take any equilibrium result. The existence proof is MA (uses MA.O.A3 fixed-point theorems, via MA.B.C4). The choice of which game the parties are in, and any move that changes it, is ST. The claim that an actual or counterfactual allocation follows is EC.",
+    "holds": false,
+    "note": "Cells restate the scale dimension as ranges or a two-way split, not the five named scales; A1 uses an unrelated division and A5 conflicts.",
+    "review": true
+  }
 }
