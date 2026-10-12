@@ -37,10 +37,11 @@ Rules you must follow exactly:
 5. Every node (pillar, section, subsection) has EITHER 2 to 5 ids in "members" OR 2 to 5 children (a pillar's children are "sections", a section's children are "subsections"), never both, never exactly one. Build the tree top-down: decide the pillars first, then split each pillar on one dimension of its own, then split again if needed. A pillar may NOT have exactly one item: if only one group fits a pillar, rethink the pillars.
 6. Every statement (governing thought, pillar, section) is one plain declarative sentence ending with a full stop, at least eight words, saying what the members have in common and why they belong together (the summary idea, not a heading). Never start with "These", "Both are" or "All are". Never mention MSC, LCC, ANZSRC, MeSH, catalogue, taxonomy or codes.
 9. "rewrites": for any input group whose statement describes a library, catalogue or code scheme instead of subject matter, give {id, statement} with a new subject-matter summary sentence (same rules as 6). Leave it empty when nothing needs rewriting.
-10. "retired": ids of items with is_leaf true that are only container headings for the whole field (e.g. "Mathematics", "Pure mathematics", "General"), not topics. At most five. Retired ids are not placed under any pillar.
+10. "retired": ids of items with is_leaf true that are only container headings for the whole field (e.g. "Mathematics", "Pure mathematics", "General"), not topics. At most twelve. Retired ids are not placed under any pillar.
 11. "dissolve": ids of input groups that are catch-alls or mix values of your dimension (e.g. "neighbouring areas"). Their listed children (by child id) then become items you must place individually, exactly once each; the dissolved group id itself is not placed.
 12. "merge": when two leaf items name the same topic from different published sources (e.g. "Numerical analysis" and "Numerical and computational mathematics", or "Statistics" twice), give {keep, drop}; the drop id is folded into the keep id and is not placed. Only leaf ids. Never leave the same topic in two places.
 13. A field may legitimately have a pillar for the discipline studied as a human activity (its history, teaching and community) and a pillar for its use in other fields' systems, if the dimension is the role the knowledge plays. Put every applied, computational or modelling topic in ONE pillar only.
+14. Forbidden at every level (pillar, section, subsection): catch-all or residual nodes ("other", "general", "miscellaneous", "related topics", "reference", "methods and general works", "frameworks"), and nodes that copy a library or industry catalogue class (LCC, NAICS, ISIC, IEEE topic lists, "not elsewhere classified"). Every pillar must be a distinct value of ONE dimension; do not mix dimensions (e.g. stages with themes, functions with industry sectors, scale with kinds of thing). If an item fits nowhere, rethink the dimension rather than adding a bucket. Generic leaf items (e.g. "General", "Other ... not elsewhere classified") should be put in "retired".
 7. Pillar statements must restate the key-line dimension: each names its own value of the dimension (e.g. "Practice is ...").
 8. basis is cause_effect (order must be time), parts (order must be structure) or kinds (order structure, or degree with a rank_note). rank_note is one sentence explaining the order.
 Call the tool record_pyramid exactly once."""
@@ -280,7 +281,7 @@ def validate(r, ids, leaf_ids=(), all_group_ids=()):
         if not is_definition(t) or TEMPLATE.search(t) or BAN.search(t):
             errs.append(f"statement not allowed (blank, template or names a source scheme): {t[:90]}")
     ret = r.get("retired") or []
-    if len(ret) > 5: errs.append("more than five retired ids")
+    if len(ret) > 12: errs.append("more than twelve retired ids")
     for x in ret:
         if x not in leaf_ids: errs.append(f"retired id {x} is not a leaf item")
     seen += ret
@@ -401,7 +402,8 @@ def run(field, field_cap, stage_cap, dry=False):
             continue
         pyr = build(field, r, its)
         iss = minto_issues(pyr)
-        bad = {k: v for k, v in iss.items() if v}
+        # mixed_kinds is a DPSIR word heuristic (response, limit, place...) built for EV; it misfires elsewhere.
+        bad = {k: v for k, v in iss.items() if v and (field == "EV" or k != "mixed_kinds")}
         pyr["minto_issues"] = bad
         def vw(n, pos, depth):
             sup = (n.get("support") or {}).get("points")
