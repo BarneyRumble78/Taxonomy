@@ -128,7 +128,13 @@
                         "id": "LCC:CC",
                         "anchor": "node:LCC:CC",
                         "statement": "Archaeology",
-                        "name": "Archaeology"
+                        "name": "Archaeology",
+                        "aliases": [
+                          "LCCf:CC",
+                          "LCCf:CC:archaeology",
+                          "ANZSRC:4301",
+                          "UNESCO:298"
+                        ]
                       },
                       {
                         "id": "LCCf:CC",
@@ -209,7 +215,12 @@
                         "id": "LCC:CJ",
                         "anchor": "node:LCC:CJ",
                         "statement": "Numismatics",
-                        "name": "Numismatics"
+                        "name": "Numismatics",
+                        "aliases": [
+                          "LCCf:CJ",
+                          "LCCf:CJ:numismatics",
+                          "UNESCO:304"
+                        ]
                       },
                       {
                         "id": "LCCf:CJ",
@@ -302,7 +313,11 @@
                         "id": "LCC:CS",
                         "anchor": "node:LCC:CS",
                         "statement": "Genealogy",
-                        "name": "Genealogy"
+                        "name": "Genealogy",
+                        "aliases": [
+                          "LCCf:CS",
+                          "LCCf:CS:genealogy"
+                        ]
                       },
                       {
                         "id": "LCCf:CS",
@@ -320,7 +335,10 @@
                         "id": "LCC:CT",
                         "anchor": "node:LCC:CT",
                         "statement": "Biography",
-                        "name": "Biography"
+                        "name": "Biography",
+                        "aliases": [
+                          "ANZSRC:430303"
+                        ]
                       }
                     ],
                     "rank_note": "Ordered by structure: lineage-level accounts first, then individual life accounts."
@@ -386,7 +404,11 @@
                   "id": "LCC:CE",
                   "anchor": "node:LCC:CE",
                   "statement": "Technical Chronology. Calendar",
-                  "name": "Technical Chronology. Calendar"
+                  "name": "Technical Chronology. Calendar",
+                  "aliases": [
+                    "LCCf:CE",
+                    "LCCf:CE:technical-chronology-calendar"
+                  ]
                 },
                 {
                   "id": "LCCf:CE",
@@ -2051,7 +2073,11 @@
                   "id": "LCC:CR",
                   "anchor": "node:LCC:CR",
                   "statement": "Heraldry",
-                  "name": "Heraldry"
+                  "name": "Heraldry",
+                  "aliases": [
+                    "LCCf:CR",
+                    "LCCf:CR:heraldry"
+                  ]
                 },
                 {
                   "id": "LCCf:CR",
@@ -2075,10 +2101,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "History is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five assertions about the past: occurrence, time, cause, change and continuity, and meaning and memory.",
-    "key_line": "Dimension: **what the sentence asserts about the human past.** Order: from the single fact to its meaning.\n1. Occurrence\n2. Time\n3. Cause\n4. Change and continuity\n5. Meaning and memory\n\nA period, region or nation is a catalogue (substrate), not a cell. \"Medieval Europe\" indexes claims; it does not hold them.",
+    "governing_thought": "History's objects divide by what a statement asserts about the human past, running from the single fact to its meaning: occurrence, time, cause, change and continuity, and meaning and memory.",
+    "key_line": [
+      "Occurrence is the assertion that something happened, established from the material and documentary traces left by people.",
+      "Time is the assertion that the past can be placed in dated eras, calendars and successive periods.",
+      "Cause is the assertion that the past is explained by particular forces, such as power, social structures and human concerns, that made events happen.",
+      "Change and continuity is the assertion that the human past moves and persists across peoples, regions, borders and generations as a connected whole.",
+      "Meaning and memory is the assertion that the past is remembered, interpreted, kept and passed on to living audiences."
+    ],
     "holds": false,
-    "note": "The cells describe disciplines, subject classes, regional catalogues and storage sub-areas, not the five assertions about the past (occurrence, time, cause, change and continuity, meaning and memory).",
-    "review": true
+    "note": "P4 'change and continuity' is really a geographic/general catch-all, and several sections (P4.3.4.2, P4.1.3, P5.2.4, P5.3.5) follow Library of Congress catalogue classes and residual categories.",
+    "review": true,
+    "misplaced": 7,
+    "problems": 107
   }
 }
