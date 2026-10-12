@@ -533,10 +533,10 @@
                   }
                 },
                 {
-                  "id": "DE.O.A2.G5",
-                  "anchor": "group:DE.O.A2.G5",
-                  "statement": "Each of these is an aspect of a designed arrangement for human use, such as the built environment, visual and verbal communication, and the architectural practices of disaster relief and management.",
-                  "name": "Each of these is an aspect of a designed arrangement for human use, such as the built environment, visual and verbal communication, and the architectural practices of disaster relief and management.",
+                  "id": "DE.O.A2.G9",
+                  "anchor": "group:DE.O.A2.G9",
+                  "statement": "Built-environment aspects concern the designed physical settings, buildings, and their practice that people use and occupy.",
+                  "name": "Built-environment aspects concern the designed physical settings, buildings, and their practice that people use and occupy.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -550,16 +550,31 @@
                         "name": "Built Environment (hierarchy name)"
                       },
                       {
-                        "id": "AAT:300264552",
-                        "anchor": "node:AAT:300264552",
-                        "statement": "Visual and Verbal Communication (hierarchy name)",
-                        "name": "Visual and Verbal Communication (hierarchy name)"
-                      },
-                      {
                         "id": "ANZSRC:330106",
                         "anchor": "node:ANZSRC:330106",
                         "statement": "Architecture for disaster relief",
                         "name": "Architecture for disaster relief"
+                      }
+                    ],
+                    "rank_note": "Ordered by structure: the general built environment hierarchy first, then architecture for disaster relief as a specific kind of built setting."
+                  }
+                },
+                {
+                  "id": "DE.O.A2.G10",
+                  "anchor": "group:DE.O.A2.G10",
+                  "statement": "Communication and management aspects concern how designed arrangements are conveyed, organized, and run for the people who use them.",
+                  "name": "Communication and management aspects concern how designed arrangements are conveyed, organized, and run for the people who use them.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "AAT:300264552",
+                        "anchor": "node:AAT:300264552",
+                        "statement": "Visual and Verbal Communication (hierarchy name)",
+                        "name": "Visual and Verbal Communication (hierarchy name)"
                       },
                       {
                         "id": "ANZSRC:330107",
@@ -567,9 +582,9 @@
                         "statement": "Architecture management",
                         "name": "Architecture management"
                       }
-                    ]
-                  },
-                  "further": true
+                    ],
+                    "rank_note": "Ordered by structure: visual and verbal communication first, then architecture management as the organizing practice."
+                  }
                 }
               ],
               "rank_note": "Intermediate level, narrower than the facets and broader than individual aspects."
@@ -906,5 +921,12 @@
         "rank_note": "Kinds are listed in structural order: managerial, technical, then umbrella categories."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Design is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five aspects of a designed arrangement: use and need, form, performance in use, place and settlement, and life of the built thing.",
+    "key_line": "Dimension: **the aspect of a designed arrangement for human use.** Order: from the need to the life of the result.\n1. Use and need\n2. Form\n3. Performance in use\n4. Place and settlement\n5. Life of the built thing",
+    "holds": false,
+    "note": "The cells describe framing concepts, residual categories, planning and managerial/technical splits, not the five aspects from use and need to life of the built thing.",
+    "review": true
+  }
 }

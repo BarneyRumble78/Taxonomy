@@ -84,11 +84,13 @@
       - Architecture not elsewhere classified
       - Architecture
       - Decorative arts
-    - **Each of these is an aspect of a designed arrangement for human use, such as the built environment, visual and verbal communication, and the architectural practices of disaster relief and management.**
-      _basis: kinds, order: structure_
+    - **Built-environment aspects concern the designed physical settings, buildings, and their practice that people use and occupy.**
+      _basis: kinds, order: structure. Ordered by structure: the general built environment hierarchy first, then architecture for disaster relief as a specific kind of built setting._
       - Built Environment (hierarchy name)
-      - Visual and Verbal Communication (hierarchy name)
       - Architecture for disaster relief
+    - **Communication and management aspects concern how designed arrangements are conveyed, organized, and run for the people who use them.**
+      _basis: kinds, order: structure. Ordered by structure: visual and verbal communication first, then architecture management as the organizing practice._
+      - Visual and Verbal Communication (hierarchy name)
       - Architecture management
 
 ## DE.O.A3
