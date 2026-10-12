@@ -3993,5 +3993,5 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["ED.O.A2.G45: ['limit', 'response']", "ED.O.A1.G124: ['condition', 'substance']"]}
-- field_check holds: False — Key line holds; misplaced include P3.3.4 and P3.1.3.2 (assessment/training under Teaching), P1.3.5.2, P5.5.2.4, P2.4.2, P2.1.2.3, P5.5.5.2.
+- minto_check: clean
+- field_check holds: True — Key line holds; misplaced include P3.3.4 and P3.1.3.2 (assessment/training under Teaching), P1.3.5.2, P5.5.2.4, P2.4.2, P2.1.2.3, P5.5.5.2.
