@@ -30,11 +30,11 @@ that key is set.
     python3 scripts/run_pyramid_queue.py --field EV --backend anthropic --max-cost 10
     python3 scripts/run_pyramid_queue.py --field EV --backend anthropic --max-cost 10 \\
         --only-status out_of_scope,needs_review,unsure
-    python3 scripts/run_pyramid_queue.py --field EV --backend hybrid --max-cost 10 --global-max-cost 90
+    python3 scripts/run_pyramid_queue.py --field EV --backend hybrid --max-cost 10 --global-max-cost 60
 
 Hybrid runs the first pass on Ollama (native /api/chat, think false). Only rows
 left as unsure or needs_review are sent to Claude. --max-cost is the cap for
-this field. --global-max-cost is the cap for the whole programme (default $90).
+this field. --global-max-cost is the cap for the whole programme (default $60).
 Ollama costs nothing. A dry run does not call either model.
 """
 import argparse

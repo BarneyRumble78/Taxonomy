@@ -9,10 +9,17 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-GLOBAL_BUDGET = 90.0
+GLOBAL_BUDGET = 60.0
+# Assigned per-field caps stay at or under this. The rest of the global cap is reserve.
+ALLOCATION = 55.0
+RESERVE = 5.0
 FIELD_BUDGET = 10.0
 # Measured on the EV Sonnet run of 12 Oct 2026: $0.90 per 1,000 items.
 USD_PER_THOUSAND = 0.90
+# Planning default for a first pass: unsure plus needs_review.
+# The EV widened re-run left about 25% unsure. Where a rule already places
+# the row, the rate is zero. This is not a new measurement of Qwen.
+UNSURE_RATE = 0.25
 ESCALATE_STATUS = frozenset({"unsure", "needs_review"})
 
 

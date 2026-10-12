@@ -1,30 +1,52 @@
 {
   "fields": [
-    "MD",
+    "AG",
+    "AR",
     "BI",
+    "BU",
     "CH",
+    "EA",
+    "ED",
+    "EN",
+    "IS",
+    "MD",
     "MS",
-    "AG"
+    "PH"
   ],
   "key": "MeSH descriptor UI",
-  "descriptor_rows": 28832,
-  "tree_copies": 61070,
-  "shared_descriptors": 3404,
+  "descriptor_rows": 31108,
+  "tree_copies": 65360,
+  "shared_descriptors": 4347,
   "agreed": 0,
-  "conflicts": 5199,
-  "cross_field_conflicts": 3404,
+  "conflicts": 6071,
+  "cross_field_conflicts": 4347,
+  "resolved": 6071,
+  "unresolved": 0,
+  "focus_fields": [
+    "AG",
+    "BI",
+    "CH",
+    "MD",
+    "MS"
+  ],
+  "focus_cross_conflicts": 3404,
+  "focus_resolved": 3404,
   "conflict_sample": [
     {
       "ui": "D000016",
       "name": "Abnormalities, Radiation-Induced",
       "fields": [
-        "MD"
+        "MD",
+        "PH"
       ],
       "cells": [
         "MD.O.A1",
-        "MD.O.A5"
+        "MD.O.A5",
+        "PH.O.A1"
       ],
-      "status": "model"
+      "primary_code": "C16.131.080",
+      "home": "MD",
+      "status": "ruled"
     },
     {
       "ui": "D000022",
@@ -37,7 +59,9 @@
         "BI.O.A3",
         "MD.O.A1"
       ],
-      "status": "model"
+      "primary_code": "C12.050.703.039",
+      "home": "MD",
+      "status": "ruled"
     },
     {
       "ui": "D000036",
@@ -50,7 +74,9 @@
         "BI.O.A2",
         "CH.O.A1"
       ],
-      "status": "model"
+      "primary_code": "D08.811.277.450.430.700.750.111",
+      "home": "CH",
+      "status": "ruled"
     },
     {
       "ui": "D000038",
@@ -62,21 +88,42 @@
         "MD.O.A1",
         "MD.O.A3"
       ],
-      "status": "model"
+      "primary_code": "C01.830.025",
+      "home": "MD",
+      "status": "ruled"
     },
     {
       "ui": "D000042",
       "name": "Absorption",
       "fields": [
         "BI",
-        "CH"
+        "CH",
+        "PH"
       ],
       "cells": [
         "BI.O.A2",
         "BI.O.A3",
-        "CH.O.A3"
+        "CH.O.A3",
+        "PH.O.A1"
       ],
-      "status": "model"
+      "primary_code": "G01.015",
+      "home": "PH",
+      "status": "ruled"
+    },
+    {
+      "ui": "D000044",
+      "name": "Dental Abutments",
+      "fields": [
+        "EN",
+        "MD"
+      ],
+      "cells": [
+        "EN.O.A1",
+        "MD.O.A3"
+      ],
+      "primary_code": "E06.780.346.500",
+      "home": "MD",
+      "status": "ruled"
     },
     {
       "ui": "D000050",
@@ -89,7 +136,9 @@
         "BI.O.A2",
         "MD.O.A2"
       ],
-      "status": "model"
+      "primary_code": "A11.118.290.330.100",
+      "home": "BI",
+      "status": "ruled"
     },
     {
       "ui": "D000051",
@@ -101,7 +150,9 @@
         "MD.O.A1",
         "MD.O.A3"
       ],
-      "status": "model"
+      "primary_code": "C17.800.865.070",
+      "home": "MD",
+      "status": "ruled"
     },
     {
       "ui": "D000064",
@@ -113,7 +164,9 @@
         "BI.O.A3",
         "BI.O.A4"
       ],
-      "status": "model"
+      "primary_code": "G07.025.133",
+      "home": "BI",
+      "status": "ruled"
     },
     {
       "ui": "D000066448",
@@ -125,7 +178,24 @@
         "MS.O.A3",
         "MS.O.A5"
       ],
-      "status": "model"
+      "primary_code": "F01.145.250.250",
+      "home": "MS",
+      "status": "ruled"
+    },
+    {
+      "ui": "D000066494",
+      "name": "Cognitive Neuroscience",
+      "fields": [
+        "IS",
+        "MS"
+      ],
+      "cells": [
+        "IS.O.A3",
+        "MS.O.A4"
+      ],
+      "primary_code": "F04.096.628.255.500",
+      "home": "MS",
+      "status": "ruled"
     },
     {
       "ui": "D000066502",
@@ -137,19 +207,25 @@
         "MS.O.A3",
         "MS.O.A5"
       ],
-      "status": "model"
+      "primary_code": "F01.829.263.403",
+      "home": "MS",
+      "status": "ruled"
     },
     {
       "ui": "D000066530",
       "name": "Neurological Rehabilitation",
       "fields": [
+        "IS",
         "MD"
       ],
       "cells": [
+        "IS.O.A3",
         "MD.O.A4",
         "MD.O.A5"
       ],
-      "status": "model"
+      "primary_code": "E02.760.169.063.500.477",
+      "home": "MD",
+      "status": "ruled"
     },
     {
       "ui": "D000066608",
@@ -161,7 +237,9 @@
         "MS.O.A3",
         "MS.O.A5"
       ],
-      "status": "model"
+      "primary_code": "F01.145.022.750",
+      "home": "MS",
+      "status": "ruled"
     },
     {
       "ui": "D000066673",
@@ -174,7 +252,9 @@
         "BI.O.A2",
         "BI.O.A3"
       ],
-      "status": "model"
+      "primary_code": "G04.144.220.235",
+      "home": "BI",
+      "status": "ruled"
     },
     {
       "ui": "D000066792",
@@ -187,7 +267,9 @@
         "MD.O.A5",
         "MS.O.A5"
       ],
-      "status": "model"
+      "primary_code": "M01.526.485.330.330.655",
+      "home": "MS",
+      "status": "ruled"
     },
     {
       "ui": "D000066794",
@@ -200,7 +282,9 @@
         "MD.O.A5",
         "MS.O.A5"
       ],
-      "status": "model"
+      "primary_code": "M01.526.485.330.330.483",
+      "home": "MS",
+      "status": "ruled"
     },
     {
       "ui": "D000067010",
@@ -213,7 +297,9 @@
         "MD.O.A5",
         "MS.O.A3"
       ],
-      "status": "model"
+      "primary_code": "F01.145.209.429",
+      "home": "MS",
+      "status": "ruled"
     },
     {
       "ui": "D000067029",
@@ -226,7 +312,9 @@
         "BI.O.A3",
         "MD.O.A3"
       ],
-      "status": "model"
+      "primary_code": "E01.370.600.115.450",
+      "home": "MD",
+      "status": "ruled"
     },
     {
       "ui": "D000067030",
@@ -239,35 +327,9 @@
         "AG.O.A4",
         "BI.O.A3"
       ],
-      "status": "model"
-    },
-    {
-      "ui": "D000067048",
-      "name": "Ghee",
-      "fields": [
-        "AG",
-        "BI",
-        "CH"
-      ],
-      "cells": [
-        "AG.O.A4",
-        "BI.O.A3",
-        "CH.O.A1"
-      ],
-      "status": "model"
-    },
-    {
-      "ui": "D000067075",
-      "name": "Vegetable Products",
-      "fields": [
-        "AG",
-        "BI"
-      ],
-      "cells": [
-        "AG.O.A4",
-        "BI.O.A3"
-      ],
-      "status": "model"
+      "primary_code": "G07.203.100.606",
+      "home": "BI",
+      "status": "ruled"
     }
   ],
   "rows": []

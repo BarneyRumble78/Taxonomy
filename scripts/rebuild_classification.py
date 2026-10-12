@@ -3,7 +3,7 @@
 
     python3 scripts/rebuild_classification.py --field MA --dry-run
     python3 scripts/rebuild_classification.py --field MA --write
-    python3 scripts/rebuild_classification.py --shared MD,BI,CH,MS,AG --write
+    python3 scripts/rebuild_classification.py --shared all --write
 
 The dry run is the default. It files shelf numbers and deep thesaurus levels
 under their parent and prints how many tops would still need a model.
@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "engine" / "v3"))
 from cost_cap import FIELD_BUDGET, GLOBAL_BUDGET
 from crosslinks import check as cross_check
-from field_rebuild import prepare, shared_queue
+from field_rebuild import mesh_fields, prepare, shared_queue
 
 PYRAMID = {
     "EV": ROOT / "pyramids" / "EV.json",
@@ -67,7 +67,7 @@ def parse_args(argv=None):
     parser.add_argument("--field", default="", help="Field code, for example MA.")
     parser.add_argument("--dry-run", action="store_true", help="Print counts and do not write. This is the default.")
     parser.add_argument("--write", action="store_true", help="Write pyramids/queues/<FIELD>.cap.json. Never writes the pyramid.")
-    parser.add_argument("--shared", default="", help="Comma-separated fields whose MeSH terms share one queue.")
+    parser.add_argument("--shared", default="", help="Comma-separated MeSH fields, or 'all' for every MeSH map. One shared queue.")
     parser.add_argument("--root", default="", help="Repository root. Tests pass a temporary directory.")
     return parser.parse_args(argv)
 
@@ -92,13 +92,21 @@ def main(argv=None):
             if dest.resolve() == PYRAMID.get("EV", Path("/none")).resolve():
                 raise SystemExit("refusing to overwrite pyramids/EV.json")
     if args.shared:
-        fields = [part.strip() for part in args.shared.split(",") if part.strip()]
-        summary = shared_queue(fields, root, include_rows=False)
+        from budget import MESH_FOCUS
+
+        if args.shared.strip().lower() == "all":
+            fields = mesh_fields(root)
+        else:
+            fields = [part.strip() for part in args.shared.split(",") if part.strip()]
+        summary = shared_queue(fields, root, include_rows=False, focus=MESH_FOCUS)
         print(
             f"shared fields={','.join(fields)} descriptors={summary['descriptor_rows']} "
             f"tree_copies={summary['tree_copies']} shared={summary['shared_descriptors']} "
             f"agreed={summary['agreed']} conflicts={summary['conflicts']} "
-            f"cross_field_conflicts={summary['cross_field_conflicts']}"
+            f"cross_field_conflicts={summary['cross_field_conflicts']} "
+            f"resolved={summary['resolved']} unresolved={summary['unresolved']} "
+            f"focus_cross_conflicts={summary['focus_cross_conflicts']} "
+            f"focus_resolved={summary['focus_resolved']}"
         )
         if args.write:
             dest = root / "pyramids" / "queues" / "shared_mesh.json"

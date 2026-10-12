@@ -311,15 +311,34 @@ def prepare(field, root, keep_rows=False):
     return report
 
 
-def shared_queue(fields, root, include_rows=False, sample=20):
+def mesh_fields(root):
+    """Every field that holds a MeSH map."""
+    root = Path(root)
+    found = []
+    for path in sorted((root / "maps").glob("*/mesh2026.json")):
+        found.append(path.parent.name)
+    return found
+
+
+def _primary_copy(copies):
+    """The lexicographic first tree number. NLM lists tree numbers in that order."""
+    coded = [copy for copy in copies if str(copy.get("code") or "").strip()]
+    if not coded:
+        return None
+    return min(coded, key=lambda copy: (str(copy["code"]), copy.get("field") or "", copy.get("id") or ""))
+
+
+def shared_queue(fields, root, include_rows=False, sample=20, focus=None):
     """One queue row per MeSH descriptor UI. Tree copies stay on that row.
 
     The same descriptor is often filed under medicine, biology, chemistry,
     and the other life-science maps. The UI is the dedupe key, not the tree id.
-    Agreeing cells have one home. Disagreeing cells stay for a model, with
-    those cells as the candidates.
+    Agreeing cells have one home. Disagreeing cells take the cell of the
+    primary tree number. A row stays for a model only when that tree number
+    does not decide a single cell.
     """
     root = Path(root)
+    focus = set(focus or [])
     buckets = {}
     for field in fields:
         path = root / "maps" / field / "mesh2026.json"
@@ -336,45 +355,81 @@ def shared_queue(fields, root, include_rows=False, sample=20):
             row["copies"].append({
                 "field": field,
                 "id": node.get("id"),
-                "code": node.get("code"),
+                "code": node.get("code") or "",
                 "cell": node.get("taxonomy_cell") or "",
             })
     rows = []
     shared = agreed = conflicts = cross_field_conflicts = 0
+    resolved = unresolved = focus_cross_conflicts = focus_resolved = 0
     conflict_sample = []
     for ui in sorted(buckets):
         bucket = buckets[ui]
         copies = bucket["copies"]
         present = sorted({copy["field"] for copy in copies})
         cells = sorted({copy["cell"] for copy in copies if copy["cell"]})
+        primary = _primary_copy(copies)
+        primary_code = str((primary or {}).get("code") or "")
+        in_focus = len(set(present) & focus) > 1
         if len(present) > 1:
             shared += 1
         if len(cells) > 1:
-            status = "model"
-            home = ""
             conflicts += 1
             if len(present) > 1:
                 cross_field_conflicts += 1
+            if in_focus:
+                focus_cross_conflicts += 1
+            winners = [
+                copy for copy in copies
+                if primary_code and str(copy.get("code") or "") == primary_code and copy.get("cell")
+            ]
+            winner_cells = sorted({copy["cell"] for copy in winners})
+            if len(winner_cells) == 1:
+                status = "ruled"
+                cell = winner_cells[0]
+                home = cell.split(".")[0]
+                resolved += 1
+                if in_focus:
+                    focus_resolved += 1
+            else:
+                status = "model"
+                cell = ""
+                home = ""
+                unresolved += 1
             if len(conflict_sample) < sample:
                 conflict_sample.append({
                     "ui": ui,
                     "name": bucket["name"],
                     "fields": present,
                     "cells": cells,
-                    "status": "model",
+                    "primary_code": primary_code,
+                    "home": home,
+                    "status": status,
                 })
         else:
             status = "home"
-            home = cells[0].split(".")[0] if cells else (present[0] if present else "")
+            cell = cells[0] if cells else ""
+            home = cell.split(".")[0] if cell else (present[0] if present else "")
             if len(present) > 1:
                 agreed += 1
-        if include_rows:
+        if include_rows and status == "model":
             rows.append({
                 "ui": ui,
                 "name": bucket["name"],
                 "status": status,
                 "home": home,
                 "cells": cells,
+                "primary_code": primary_code,
+                "copies": copies,
+            })
+        elif include_rows:
+            rows.append({
+                "ui": ui,
+                "name": bucket["name"],
+                "status": status,
+                "home": home,
+                "cell": cell if len(cells) > 1 or cells else "",
+                "cells": cells,
+                "primary_code": primary_code,
                 "copies": copies,
             })
     return {
@@ -386,6 +441,11 @@ def shared_queue(fields, root, include_rows=False, sample=20):
         "agreed": agreed,
         "conflicts": conflicts,
         "cross_field_conflicts": cross_field_conflicts,
+        "resolved": resolved,
+        "unresolved": unresolved,
+        "focus_fields": sorted(focus),
+        "focus_cross_conflicts": focus_cross_conflicts,
+        "focus_resolved": focus_resolved,
         "conflict_sample": conflict_sample,
         "rows": rows,
     }

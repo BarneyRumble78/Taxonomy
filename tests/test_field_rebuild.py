@@ -124,23 +124,30 @@ def test_mesh_ui_is_one_row_when_two_fields_share_it(tmp_path):
         (folder / "mesh2026.json").write_text(json.dumps({"nodes": nodes}), encoding="utf-8")
 
     write("MD", [
-        {"id": "MeSH:D001", "ui": "D001", "code": "C01", "name": "Shared term", "level": 2, "taxonomy_cell": "MD.O.A1"},
+        {"id": "MeSH:C01", "ui": "D001", "code": "C01", "name": "Shared term", "level": 2, "taxonomy_cell": "MD.O.A1"},
         {"id": "MeSH:C01.001", "ui": "D002", "code": "C01.001", "name": "Twice", "level": 3, "taxonomy_cell": "MD.O.A1"},
         {"id": "MeSH:C02.001", "ui": "D002", "code": "C02.001", "name": "Twice", "level": 3, "taxonomy_cell": "MD.O.A1"},
+        {"id": "MeSH:plain-md", "ui": "D009", "code": "", "name": "No tree", "level": 2, "taxonomy_cell": "MD.O.A1"},
     ])
     write("BI", [
-        {"id": "MeSH:D001", "ui": "D001", "code": "G01", "name": "Shared term", "level": 2, "taxonomy_cell": "BI.O.A3"},
+        {"id": "MeSH:G01", "ui": "D001", "code": "G01", "name": "Shared term", "level": 2, "taxonomy_cell": "BI.O.A3"},
+        {"id": "MeSH:plain-bi", "ui": "D009", "code": "", "name": "No tree", "level": 2, "taxonomy_cell": "BI.O.A3"},
     ])
     summary = shared_queue(["MD", "BI"], tmp_path, include_rows=True)
-    assert summary["descriptor_rows"] == 2
-    assert summary["tree_copies"] == 4
-    assert summary["shared_descriptors"] == 1
-    assert summary["conflicts"] == 1
-    assert summary["cross_field_conflicts"] == 1
+    assert summary["descriptor_rows"] == 3
+    assert summary["tree_copies"] == 6
+    assert summary["shared_descriptors"] == 2
+    assert summary["conflicts"] == 2
+    assert summary["cross_field_conflicts"] == 2
+    assert summary["resolved"] == 1
+    assert summary["unresolved"] == 1
     shared = next(row for row in summary["rows"] if row["ui"] == "D001")
-    assert shared["status"] == "model"
+    assert shared["status"] == "ruled"
+    assert shared["home"] == "MD"
+    assert shared["primary_code"] == "C01"
     assert len(shared["copies"]) == 2
-    assert set(shared["cells"]) == {"MD.O.A1", "BI.O.A3"}
+    open_row = next(row for row in summary["rows"] if row["ui"] == "D009")
+    assert open_row["status"] == "model"
     twice = next(row for row in summary["rows"] if row["ui"] == "D002")
     assert twice["status"] == "home"
     assert len(twice["copies"]) == 2
@@ -278,7 +285,7 @@ def test_hybrid_dry_run_prices_only_escalated_rows(tmp_path, capsys):
         raise AssertionError("dry-run must not call the model")
 
     args = module.parse_args(["--field", "EV", "--backend", "hybrid", "--dry-run"])
-    assert args.global_max_cost == 90
+    assert args.global_max_cost == 60
     assert args.max_cost == 10
     result = module.run(args, post=post, root=root)
     assert result["cost"] == 0
