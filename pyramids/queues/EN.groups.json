@@ -11409,10 +11409,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Engineering is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its object claims divide into five balances: force and deformation, mass and momentum, energy and entropy, electromagnetic state, and composition and microstructure.",
-    "key_line": "This is the key line of Face O, the claim partition of the pyramid.\n\n- Logic: inductive.\n- Plural noun: balances.\n- Dimension: the quantity whose balance or constitutive closure finishes the predictive model of an artefact.\n- Order: structural, from load path to material.\n- Members (5):\n  1. force and deformation\n  2. mass and momentum\n  3. energy and entropy\n  4. electromagnetic state\n  5. composition and microstructure\n\nTest for a new member (repairs audit EN #18). A sixth balance is warranted only if an artefact model needs a closing quantity none of the five carries. Information state passes that test and is therefore not an EN balance: it is owned by CS (uses CS.O.A2.4). Failure probability also passes it, and is owned by MA (uses MA.O.A5). Neither is held in EN by fiat.",
+    "governing_thought": "Engineering's object claims are divided by the quantity whose balance or constitutive closure finishes an artefact's predictive model, in order from load path to material: force and deformation, mass and momentum, energy and entropy, electromagnetic state, and composition and microstructure.",
+    "key_line": [
+      "Force and deformation is the balance that closes the models of vehicles, vessels, machines and structures through load, motion and attitude.",
+      "Mass and momentum is the balance that closes the models of flowing fluids, granular solids, reacting streams and extracted resources.",
+      "Energy and entropy is the balance that closes the models of power, heat, plasma, radiation and environmental systems.",
+      "Electromagnetic state is the balance that closes the models of circuits, signals, sensors, magnetic devices and the control that steers them.",
+      "Composition and microstructure is the balance that closes the models of materials, nanostructures and the manufacturing routes that fix an artefact's make-up."
+    ],
     "holds": false,
-    "note": "Cells restate the dimension or assert two groups or one governing quantity; none states the five balances, and A4 says five kinds without naming them.",
-    "review": true
+    "note": "Pillars are not clean distinct values: P3.4 is a catch-all, P1.4.3/P1.4.4 are LCC schemes, P1.3.4 is \"IEEE topics\", and P4 and P5 each bundle unrelated fields.",
+    "review": true,
+    "misplaced": 14,
+    "problems": 116
   }
 }
