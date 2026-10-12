@@ -133,6 +133,10 @@
                           "LCCf:CC",
                           "LCCf:CC:archaeology",
                           "ANZSRC:4301",
+                          "UNESCO:298",
+                          "LCCf:CC",
+                          "LCCf:CC:archaeology",
+                          "ANZSRC:4301",
                           "UNESCO:298"
                         ]
                       },
@@ -217,6 +221,9 @@
                         "statement": "Numismatics",
                         "name": "Numismatics",
                         "aliases": [
+                          "LCCf:CJ",
+                          "LCCf:CJ:numismatics",
+                          "UNESCO:304",
                           "LCCf:CJ",
                           "LCCf:CJ:numismatics",
                           "UNESCO:304"
@@ -316,6 +323,8 @@
                         "name": "Genealogy",
                         "aliases": [
                           "LCCf:CS",
+                          "LCCf:CS:genealogy",
+                          "LCCf:CS",
                           "LCCf:CS:genealogy"
                         ]
                       },
@@ -337,6 +346,7 @@
                         "statement": "Biography",
                         "name": "Biography",
                         "aliases": [
+                          "ANZSRC:430303",
                           "ANZSRC:430303"
                         ]
                       }
@@ -406,6 +416,8 @@
                   "statement": "Technical Chronology. Calendar",
                   "name": "Technical Chronology. Calendar",
                   "aliases": [
+                    "LCCf:CE",
+                    "LCCf:CE:technical-chronology-calendar",
                     "LCCf:CE",
                     "LCCf:CE:technical-chronology-calendar"
                   ]
@@ -2076,6 +2088,8 @@
                   "name": "Heraldry",
                   "aliases": [
                     "LCCf:CR",
+                    "LCCf:CR:heraldry",
+                    "LCCf:CR",
                     "LCCf:CR:heraldry"
                   ]
                 },
@@ -2101,18 +2115,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "History's objects divide by what a statement asserts about the human past, running from the single fact to its meaning: occurrence, time, cause, change and continuity, and meaning and memory.",
+    "governing_thought": "History's objects divide by what a sentence asserts about the human past, running from the single fact to its meaning: occurrence, time, cause, change and continuity, and meaning and memory.",
     "key_line": [
-      "Occurrence is the assertion that something happened, established from the material and documentary traces left by people.",
-      "Time is the assertion that the past can be placed in dated eras, calendars and successive periods.",
-      "Cause is the assertion that the past is explained by particular forces, such as power, social structures and human concerns, that made events happen.",
-      "Change and continuity is the assertion that the human past moves and persists across peoples, regions, borders and generations as a connected whole.",
-      "Meaning and memory is the assertion that the past is remembered, interpreted, kept and passed on to living audiences."
+      "Occurrence is the assertion that something happened, established from the material, written and personal evidence the past left behind.",
+      "Time is the assertion that events belong to a particular moment, ordered by calendars and divided into eras.",
+      "Cause is the assertion that events happened because of political, social, imperial or other human forces that shaped them.",
+      "Change and continuity is the assertion that peoples, states and the human past as a whole persisted or were transformed over time, within places and across borders.",
+      "Meaning and memory is the assertion that the past matters through how it is remembered, interpreted, kept and passed on."
     ],
-    "holds": false,
-    "note": "P4 'change and continuity' is really a geographic/general catch-all, and several sections (P4.3.4.2, P4.1.3, P5.2.4, P5.3.5) follow Library of Congress catalogue classes and residual categories.",
-    "review": true,
-    "misplaced": 7,
-    "problems": 107
+    "holds": true,
+    "note": "Archaeological sociology (P1.2.1.4), History of religion (P3.2.5), Historical periods (P4.3.1.2) and era histories P2.2.1-P2.2.2 sit awkwardly.",
+    "review": false,
+    "misplaced": 4,
+    "problems": 4
   }
 }
