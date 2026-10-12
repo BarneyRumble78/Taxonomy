@@ -517,10 +517,10 @@
         "order": "structure",
         "points": [
           {
-            "id": "PL.O.A2.G1",
-            "anchor": "group:PL.O.A2.G1",
-            "statement": "Epistemology covers questions about the nature, sources, justification and limits of knowledge and belief.",
-            "name": "Epistemology covers questions about the nature, sources, justification and limits of knowledge and belief.",
+            "id": "PL.O.A2.G3",
+            "anchor": "group:PL.O.A2.G3",
+            "statement": "Epistemology addresses questions about the nature, sources, justification, and limits of knowledge and belief.",
+            "name": "Epistemology addresses questions about the nature, sources, justification, and limits of knowledge and belief.",
             "support": {
               "logic_type": "inductive",
               "plural_noun": "members",
@@ -538,7 +538,22 @@
                   "anchor": "node:PP:epistemology",
                   "statement": "Epistemology",
                   "name": "Epistemology"
-                },
+                }
+              ],
+              "rank_note": "Both entries name the same knowledge-focused field, listed by source."
+            }
+          },
+          {
+            "id": "PL.O.A2.G4",
+            "anchor": "group:PL.O.A2.G4",
+            "statement": "Phenomenology and philosophical psychology are fields of philosophy defined by their focus on the mind, conscious lived experience, and the sources of human action and moral thought.",
+            "name": "Phenomenology and philosophical psychology are fields of philosophy defined by their focus on the mind, conscious lived experience, and the sources of human action and moral thought.",
+            "support": {
+              "logic_type": "inductive",
+              "plural_noun": "members",
+              "basis": "kinds",
+              "order": "structure",
+              "points": [
                 {
                   "id": "ANZSRC:500310",
                   "anchor": "node:ANZSRC:500310",
@@ -552,9 +567,8 @@
                   "name": "Philosophical psychology (incl. moral psychology and philosophy of action)"
                 }
               ],
-              "rank_note": "No ranking; the members are equivalent labels for the same subject."
-            },
-            "further": true
+              "rank_note": "Both are mind-focused fields, listed by source order."
+            }
           },
           {
             "id": "PL.O.A2.G2",
@@ -2208,5 +2222,12 @@
         "rank_note": "Ordered by structure, moving from fields of practice and study, to minds and machines, to consciousness, to clinical conditions, then to remaining areas."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Philosophy is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its objects divide into five claim-types: being, knowledge and mind, meaning and inference, value, and the standing of the sciences and mathematics.",
+    "key_line": "Logic inductive · plural noun claim-types · dimension what the question is about · order structural (being, knowing, saying, valuing, the sciences).\n\n1. Being\n2. Knowledge and mind\n3. Meaning and inference\n4. Value\n5. Standing of the sciences and mathematics\n\nPhase 2 repair (R7, owner's brief item 3): the earlier draft put the four faces in the key line. The key line is now the Face O partition; the faces are named in the governing thought.",
+    "holds": false,
+    "note": "Cells omit being, A1 is a generic classification rule, and A5 mixes sciences with mind, overlapping A2; the five-point key line is not matched.",
+    "review": true
+  }
 }

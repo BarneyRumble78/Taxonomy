@@ -81,10 +81,12 @@
 ## PL.O.A2
 - **Epistemology and philosophy of mind are branches of philosophy distinguished by whether the question concerns knowledge and belief or the nature of mind and mental life.**
   _basis: kinds, order: structure_
-  - **Epistemology covers questions about the nature, sources, justification and limits of knowledge and belief.**
-    _basis: kinds, order: structure. No ranking; the members are equivalent labels for the same subject._
+  - **Epistemology addresses questions about the nature, sources, justification, and limits of knowledge and belief.**
+    _basis: kinds, order: structure. Both entries name the same knowledge-focused field, listed by source._
     - Epistemology
     - Epistemology
+  - **Phenomenology and philosophical psychology are fields of philosophy defined by their focus on the mind, conscious lived experience, and the sources of human action and moral thought.**
+    _basis: kinds, order: structure. Both are mind-focused fields, listed by source order._
     - Phenomenology
     - Philosophical psychology (incl. moral psychology and philosophy of action)
   - **Philosophy of mind covers questions about the nature of mind, cognition, conscious experience, mental life and action.**
