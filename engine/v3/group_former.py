@@ -377,11 +377,26 @@ def _least_similar_member(group, names):
 
 
 def _peel(group, names, count):
-    moving = []
-    while len(moving) < count and len(group["members"]) > 2:
-        member = _least_similar_member(group, names)
-        group["members"].remove(member)
-        moving.append(member)
+    """Move out the count members least like the rest. One pass, leave-one-out scores."""
+    members = group["members"]
+    keep_min = 2
+    count = min(count, max(len(members) - keep_min, 0))
+    if count <= 0:
+        return []
+    vecs = [embed_text(names.get(m) or m) for m in members]
+    total = {}
+    for vec in vecs:
+        for key, value in vec.items():
+            total[key] = total.get(key, 0.0) + value
+    scored = []
+    for index, (member, vec) in enumerate(zip(members, vecs)):
+        rest = {key: total[key] - vec.get(key, 0.0) for key in total}
+        rest = {key: value for key, value in rest.items() if value > 0}
+        scored.append(((round(_cosine(vec, rest), 6), -index), member))
+    scored.sort()
+    moving = [member for _, member in scored[:count]]
+    chosen = set(moving)
+    group["members"] = [m for m in members if m not in chosen]
     return moving
 
 
