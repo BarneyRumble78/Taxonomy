@@ -3922,17 +3922,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Medicine is divided by the clinical question asked of a disorder, in the order of the clinical sequence: the disorders themselves, their causes and mechanisms, their diagnosis and prognosis, their treatment and drugs, and the populations and prevention in which they occur.",
+    "governing_thought": "Medicine's knowledge is divided by the clinical question asked of a disorder, in the order of the clinical sequence: the disorders themselves, their causes and mechanisms, their diagnosis and prognosis, their treatment and drugs, and the populations and prevention in which they are met.",
     "key_line": [
-      "Disorders is the clinical question of what illness is present, grouping the kinds of disease by body system, disease class and mental function.",
-      "Causes and mechanisms is the clinical question of why a disorder arises, covering immune responses, body systems and molecular agents, and the viruses that cause disease.",
-      "Diagnosis and prognosis is the clinical question of what a disorder is and how it is detected and judged, through investigation, measurement and assessment.",
-      "Treatment and drugs is the clinical question of how a disorder is managed, through physical treatment, patient support, medicines, biotechnology, dental care and rehabilitation.",
-      "Populations and prevention is the clinical question of how a disorder is distributed, prevented and cared for across communities, through nutrition, epidemiology, patient groups, health systems and public health."
+      "Disorders are the clinical question of what the condition is, grouped by the organ system, regulatory process, mental function or external cause affected.",
+      "Causes and mechanisms are the clinical question of why a disorder arises, covering immune, infectious, biochemical and physiological explanations.",
+      "Diagnosis and prognosis are the clinical question of how a disorder is detected, identified and its course judged.",
+      "Treatment and drugs are the clinical question of how a disorder is managed, by medicines, procedures, therapy and care.",
+      "Populations and prevention are the clinical question of how a disorder is distributed, prevented and cared for across groups of people."
     ],
-    "holds": false,
-    "note": "P3.1 'fields of understanding' duplicates causes (P2); P2.1 and P3.2 both cover immune response; P1.1 and P1.2 both hold medical specialties.",
-    "review": true,
-    "problems": 8
+    "holds": true,
+    "note": "Misplaced: P3.1.2 vaccine under cancer detection; P4.5.1.1-3 nursing under alternative medicine; P4.3.4.1 rural; P2.3.5 body-system lists; P5.4.3 sports science; duplicate surgery/dentistry/neoplasm entries.",
+    "review": false,
+    "misplaced": 15,
+    "problems": 15
   }
 }
