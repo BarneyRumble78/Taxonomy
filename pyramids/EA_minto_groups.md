@@ -11,10 +11,12 @@
       - Exploration geochemistry
       - Inorganic geochemistry
       - Isotope geochemistry
-    - **Earth-science concepts that describe either the chemical makeup of geological materials or the remote-sensing instruments used to observe them.**
-      _basis: kinds, order: structure_
+    - **Geochemistry research categories cover the chemistry of Earth materials, including a general residual class and the organic subfield.**
+      _basis: kinds, order: structure. Ordered by structure: the general residual category first, then the organic subfield._
       - Geochemistry not elsewhere classified
       - Organic geochemistry
+    - **Remote sensing technologies are instruments that observe the Earth by emitting or detecting electromagnetic radiation such as microwaves and laser light.**
+      _basis: kinds, order: structure. Ordered by structure: microwave sensing first, then optical laser-based lidar._
       - Microwave
       - Lidar
     - **Other earth sciences collects residual and integrative categories that do not fit the named earth science disciplines.**
@@ -575,13 +577,15 @@
       - Human geography not elsewhere classified
   - **Agriculture and natural resource subjects concern what is grown, raised or harvested from land, animals, forests, waters and plants.**
     _basis: kinds, order: structure. Ordered by structure, from crops and land to animals to forest, aquatic and food resources._
-    - **Crop and land-based agricultural subjects deal with growing plants, the soils that support them, and the chemicals and machinery used in farming.**
-      _basis: kinds, order: structure. Kinds are ordered by structure, from the plants and soil to the inputs and engineering applied to them._
+    - **Claims about the living and land-based natural resources that agriculture depends on, including crops, soil, and the habitat altered by land use.**
+      _basis: kinds, order: structure. Ordered structurally from the plants grown, to the soil beneath them, to the habitat around them._
       - Agricultural Plant Science
       - Soils
+      - Habitat Conversion/Fragmentation
+    - **Claims about the human-made inputs and engineered methods that farmers apply to produce and protect crops.**
+      _basis: kinds, order: structure. Ordered structurally from chemical inputs to engineered systems._
       - Agricultural Chemicals
       - Agricultural Engineering
-      - Habitat Conversion/Fragmentation
     - **Animal-related subjects cover the science of raising animals along with the animal products and feed they depend on.**
       _basis: kinds, order: structure. Kinds are ordered by structure, from animal science to animal commodities and the feed that sustains them._
       - Animal Science

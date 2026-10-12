@@ -63,10 +63,10 @@
                   }
                 },
                 {
-                  "id": "EA.O.A1.G5",
-                  "anchor": "group:EA.O.A1.G5",
-                  "statement": "Earth-science concepts that describe either the chemical makeup of geological materials or the remote-sensing instruments used to observe them.",
-                  "name": "Earth-science concepts that describe either the chemical makeup of geological materials or the remote-sensing instruments used to observe them.",
+                  "id": "EA.O.A1.G10",
+                  "anchor": "group:EA.O.A1.G10",
+                  "statement": "Geochemistry research categories cover the chemistry of Earth materials, including a general residual class and the organic subfield.",
+                  "name": "Geochemistry research categories cover the chemistry of Earth materials, including a general residual class and the organic subfield.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -84,7 +84,22 @@
                         "anchor": "node:ANZSRC:370304",
                         "statement": "Organic geochemistry",
                         "name": "Organic geochemistry"
-                      },
+                      }
+                    ],
+                    "rank_note": "Ordered by structure: the general residual category first, then the organic subfield."
+                  }
+                },
+                {
+                  "id": "EA.O.A1.G11",
+                  "anchor": "group:EA.O.A1.G11",
+                  "statement": "Remote sensing technologies are instruments that observe the Earth by emitting or detecting electromagnetic radiation such as microwaves and laser light.",
+                  "name": "Remote sensing technologies are instruments that observe the Earth by emitting or detecting electromagnetic radiation such as microwaves and laser light.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
                       {
                         "id": "GCMD:66700628-2b62-4466-999e-faeb15ca4da5",
                         "anchor": "node:GCMD:66700628-2b62-4466-999e-faeb15ca4da5",
@@ -97,9 +112,9 @@
                         "statement": "Lidar",
                         "name": "Lidar"
                       }
-                    ]
-                  },
-                  "further": true
+                    ],
+                    "rank_note": "Ordered by structure: microwave sensing first, then optical laser-based lidar."
+                  }
                 },
                 {
                   "id": "EA.O.A1.G2",
@@ -3736,10 +3751,10 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "EA.O.A5.G6",
-                  "anchor": "group:EA.O.A5.G6",
-                  "statement": "Crop and land-based agricultural subjects deal with growing plants, the soils that support them, and the chemicals and machinery used in farming.",
-                  "name": "Crop and land-based agricultural subjects deal with growing plants, the soils that support them, and the chemicals and machinery used in farming.",
+                  "id": "EA.O.A5.G18",
+                  "anchor": "group:EA.O.A5.G18",
+                  "statement": "Claims about the living and land-based natural resources that agriculture depends on, including crops, soil, and the habitat altered by land use.",
+                  "name": "Claims about the living and land-based natural resources that agriculture depends on, including crops, soil, and the habitat altered by land use.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -3759,6 +3774,27 @@
                         "name": "Soils"
                       },
                       {
+                        "id": "GCMD:f1682ed1-2d9c-41ec-9553-49b9ab55df9b",
+                        "anchor": "node:GCMD:f1682ed1-2d9c-41ec-9553-49b9ab55df9b",
+                        "statement": "Habitat Conversion/Fragmentation",
+                        "name": "Habitat Conversion/Fragmentation"
+                      }
+                    ],
+                    "rank_note": "Ordered structurally from the plants grown, to the soil beneath them, to the habitat around them."
+                  }
+                },
+                {
+                  "id": "EA.O.A5.G19",
+                  "anchor": "group:EA.O.A5.G19",
+                  "statement": "Claims about the human-made inputs and engineered methods that farmers apply to produce and protect crops.",
+                  "name": "Claims about the human-made inputs and engineered methods that farmers apply to produce and protect crops.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
                         "id": "GCMD:afd084b9-1f4c-4eb5-a58e-689a360e7abf",
                         "anchor": "node:GCMD:afd084b9-1f4c-4eb5-a58e-689a360e7abf",
                         "statement": "Agricultural Chemicals",
@@ -3769,17 +3805,10 @@
                         "anchor": "node:GCMD:b8018326-a186-4847-961d-8bd0727bbd5e",
                         "statement": "Agricultural Engineering",
                         "name": "Agricultural Engineering"
-                      },
-                      {
-                        "id": "GCMD:f1682ed1-2d9c-41ec-9553-49b9ab55df9b",
-                        "anchor": "node:GCMD:f1682ed1-2d9c-41ec-9553-49b9ab55df9b",
-                        "statement": "Habitat Conversion/Fragmentation",
-                        "name": "Habitat Conversion/Fragmentation"
                       }
                     ],
-                    "rank_note": "Kinds are ordered by structure, from the plants and soil to the inputs and engineering applied to them."
-                  },
-                  "further": true
+                    "rank_note": "Ordered structurally from chemical inputs to engineered systems."
+                  }
                 },
                 {
                   "id": "EA.O.A5.G7",
@@ -3993,5 +4022,12 @@
         "rank_note": "Subjects are ordered by structure, moving from spatial methods and physical setting to human geography, resources, and human-environment systems."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Earth science (geography and geology) is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Every Earth claim is about one of five questions: Materials · Internal motion · Deep time · Surface and fluid envelopes · Human spatial organization.",
+    "key_line": "- Logic: inductive.\n- Plural noun: questions about the Earth.\n- Dimension: what the claim is about.\n- Order: structural, from rock to settlement.\n\nMembers (5):\n1. Materials\n2. Internal motion\n3. Deep time\n4. Surface and fluid envelopes\n5. Human spatial organization\n\nChange from v1. \"Surface pattern\" becomes \"Surface and fluid envelopes\". This closes the ownership gap for ocean, atmosphere and cryosphere (audit error 11) without a sixth member. The laws used (fluid dynamics, radiative transfer, thermodynamics) remain PH. The dated Earth state and its circulation are EA. CONTESTED: alternative is a PH cell for climate mechanism with EA citing.\n\nDimension fix. v1 said \"what the claim quantifies\". Place meaning is not a quantity. The dimension is \"what the claim is about\" (audit error 5).",
+    "holds": false,
+    "note": "Cells describe how to classify or study earth science, not answer the five questions (materials, internal motion, deep time, surface envelopes, human organization); they don't map onto them.",
+    "review": true
+  }
 }
