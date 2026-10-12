@@ -3971,3 +3971,4219 @@
           - Mathematical and relativistic aspects of cosmology
           - Quantum cosmology (see also 04.60.-m Quantum gravity—in General relativity and gravitation)
 
+## PH.O.A4
+- **Claims across condensed matter, applied topics and energy are classified by which governing constants among c, ħ, G and N set their scale.**
+  _basis: kinds, order: structure. Kinds are arranged by structure, from fundamental condensed matter study to applied topics to energy and specialized fields._
+  - **Claims about condensed matter, from fluids and solids to quantum gases, surfaces, electrons and light-matter probes, are kinds of study classified by the constants that set their scale.**
+    _basis: kinds, order: structure. Ordered from the constants-based classification to the subfields of matter._
+    - **Claims classified directly by which constants (ħ, N or neither) set their scale, whether quantum, classical many-particle, or set by geometry and coupling.**
+      _basis: kinds, order: structure. Ordered by structure from quantum claims to classical claims to the residual kind._
+      - **Quantum-scale claims take their scale from Planck's constant ħ, either alone or together with a large particle number N in many-body and condensed-matter settings.**
+        _basis: kinds, order: structure. Ordered from ħ alone to ħ with N and collective behaviour._
+        - **Claims whose scale is set directly by Planck's constant ħ, through quantum statistics, semiclassical limits, wave coherence and quantized probe energies.**
+          _basis: kinds, order: degree. Ranked from the most to the least direct dependence on ħ as the sole scale-setting constant._
+          - **Quantum statistical mechanics treats systems whose scale is set by Planck's constant ħ through quantum statistics of fermions, bosons, and anyons.**
+            _basis: kinds, order: structure. Ordered by structure from general quantum theory to specific particle statistics._
+            - Quantum statistical mechanics (for quantum fluids aspects, see 67.10.Fj)
+            - Quantum ensemble theory
+            - Fermion systems and electron gas (see also 71.10.-w Theories and models of many-electron systems; see also 67.10.Db Fermion degeneracy in quantum fluids)
+            - Boson systems (for static and dynamic properties of Bose-Einstein condensates, see 03.75.Hh and 03.75.Kk; see also 67.10.Ba Boson degeneracy in quantum fluids)
+            - Fractional statistics systems (anyons, etc.)
+          - **Quantum-scale topics and the numerical and time-series methods used on them have their scale set by Planck's constant ħ through the semiclassical limit.**
+            _basis: kinds, order: degree. ħ sets the scale._
+            - Quantum chaos; semiclassical methods
+            - Quantum transport
+            - Numerical simulations of chaotic systems
+            - Time series analysis
+          - **Quantum-coherent methods and phenomena have scales set directly by Planck's constant ħ, through band structure, orbit quantization and wave diffraction.**
+            _basis: kinds, order: degree. Strongest ħ dependence: scale fixed by ħ-controlled quantum effects._
+            - Band structure methods
+            - Quantum oscillation techniques
+            - Positron diffraction
+            - Mesoscopics
+          - **Experimental probing techniques are kinds of methods whose scale is set by ħ-level energy quanta and the wave speed of the probe, as in terahertz, acoustic and mechanical measurement.**
+            _basis: kinds, order: structure. Ordered by structure from electromagnetic to acoustic to mechanical probes._
+            - Terahertz techniques
+            - Acoustic techniques
+            - Mechanical spectroscopy
+            - Cryogenics
+        - **Claims whose scale requires both ħ and a large particle number N, or a large N together with the thermal scale, as in many-body and macroscopic matter.**
+          _basis: kinds, order: degree. Ranked from the strongest combined dependence on ħ and N to dependence on N and thermal energy alone._
+          - **Quantum phase transitions and the materials and probes that realize them have scales set jointly by ħ and the many-body particle number N.**
+            _basis: kinds, order: structure. Ordered by structure from the transition concept to the materials and techniques that realize it._
+            - Quantum phase transitions (see also 64.70.Tg Quantum phase transitions in specific phase transitions; and 73.43.Nq Quantum phase transitions in Quantum Hall effects)
+            - Topological materials
+            - Magnetic techniques
+          - **Quantum many-body frameworks are kinds of theory whose scale is set by ħ together with a large particle number N.**
+            _basis: kinds, order: structure. Ordered by structure from general statistical framework to correlated-system settings._
+            - Many-body techniques
+            - Quantum statistical mechanics
+            - Strongly correlated systems
+            - Superconductors
+          - **Thermodynamics and classical transport describe macroscopic matter whose scale is set by the very large particle number N together with the thermal scale.**
+            _basis: kinds, order: degree. Most dependent: macroscopic N plus thermal scale._
+            - Transport processes
+            - Classical transport
+            - Thermodynamics (see also section 64 Equations of state, phase equilibria, and phase transitions, and section 65 Thermal properties of condensed matter; for chemical thermodynamics, see 82.60.-s; for thermodynamics of plasmas, see 52.25.Kn; for thermodynamic properties of quantum fluids, see 67.25.bd, and 67.30.ef; for thermodynamics of nanoparticles, see 82.60.Qr, and 65.80.-g; for thermodynamic processes in astrophysics, see 95.30.Tg; for thermodynamics in volcanology, see 91.40.Pc)
+            - Thermodynamic functions and equations of state (see also 51.30.+i Thermodynamic properties, equations of state in physics of gases; for equations of state of specific substances, see 64.30.-t; for equations of state of nuclear matter, and of neutron-star matter, see 21.65.Mn and 26.60.Kp, respectively; see also 95.30.Tg in astronomy; for thermodynamic properties of superconductors, see 74.25.Bt)
+            - Phase transitions: general studies (see also 05.30.Rt Quantum phase transitions in quantum statistical mechanics; 64.70.Tg Quantum phase transitions in specific phase transitions; 73.43.Nq Quantum phase transitions in quantum Hall effects; for superconductivity phase diagrams, see 74.25.Dw; for magnetic phase boundaries, see 75.30.Kz; for ferroelectric phase transitions, see 77.80.B-)
+          - **Thermodynamic phenomena are macroscopic claims whose scale is set mainly by the particle number N and the thermal energy, with no need for c, ħ or G.**
+            _basis: kinds, order: structure. Ordered by structure from bulk transitions to nonequilibrium and interface cases._
+            - Critical point phenomena (for quantum critical phenomena in superconductivity, see 74.40.Kb)
+            - Nonequilibrium and irreversible thermodynamics (see also 82.40.Bj Oscillations, chaos, and bifurcations in physical chemistry and chemical physics)
+            - Interface and surface thermodynamics (see also 68.35.Md Surface thermodynamics, surface energies in surfaces and interfaces)
+            - Information theory
+            - Combinatorics
+        - **Field-level headings and electronic or magnetic properties of condensed matter take their scale from ħ, with c or N entering through coupling and collective behaviour.**
+          _basis: kinds, order: structure. Listed from electromagnetic and transport properties to electronic and magnetic properties to field and technique headings._
+          - **Electromagnetic and transport properties of matter are scaled by c and ħ through the electromagnetic coupling and electronic response of materials.**
+            _basis: kinds, order: degree. Strong c and ħ dependence via electromagnetic response, weaker than pure quantum coherence._
+            - Optical & microwave phenomena
+            - Electrical properties
+            - Levitation
+            - Pressure techniques
+            - Numerical techniques
+          - **Electronic and magnetic properties of condensed matter, whose scale is set by ħ through quantum mechanics, with N entering through collective behaviour such as superconductivity.**
+            _basis: kinds, order: degree. Ranked from the most strongly ħ-dominated quantum phenomena to the more collective ones._
+            - Electronic and magnetic properties of condensed matter; superconductivity
+            - Magnetic systems
+            - Condensed matter modelling and density functional theory
+          - **Field-level headings for condensed matter physics, whose scale is set jointly by ħ and N through many-body quantum behaviour of large numbers of particles.**
+            _basis: kinds, order: degree. Ranked from the broadest heading to the residual catch-all category, by breadth of scope._
+            - Condensed matter physics
+            - CONDENSED MATTER: STRUCTURAL, MECHANICAL, AND THERMAL PROPERTIES
+            - Condensed matter physics not elsewhere classified
+          - **Techniques and structural studies of condensed matter, whose scale is set by ħ and N through atomic-scale length and energy scales of measurement and structure.**
+            _basis: kinds, order: degree. Ranked from experimental techniques to structural and surface characterisation, by how directly each is set by atomic-scale constants._
+            - Condensed matter characterisation technique development
+            - Condensed matter imaging
+            - Structural properties of condensed matter
+            - Surface properties of condensed matter
+            - Radio frequency techniques
+      - **Classical claims about many-particle systems take their scale from the particle number N alone, with no role for ħ, covering statistical, collective and bulk mechanical behaviour.**
+        _basis: kinds, order: structure. Ordered from general N-only claims to specific statistical topics to bulk solids._
+        - **Classical claims whose scale is set only by the number of particles or degrees of freedom N, with no role for ħ.**
+          _basis: kinds, order: degree. Ranked from the strongest dependence on N to the weakest, ending with methods that carry no intrinsic scale._
+          - **Classical statistical mechanics describes many-particle systems whose scale is set by the particle number N with no role for ħ.**
+            _basis: kinds, order: structure. Ordered by structure from general classical theory to specific classical applications._
+            - Classical statistical mechanics
+            - Kinetic theory (see also 51.10.+y Kinetic and transport theory of gases)
+            - Classical ensemble theory
+            - Statistical mechanics of classical fluids (see also 47.10.-g General theory in fluid dynamics)
+            - Classical fluids
+          - **Fluctuation and stochastic descriptions have scales set by the number of degrees of freedom N that averages out random noise.**
+            _basis: kinds, order: structure. Ordered by structure from the general topic to specific noise and stochastic methods._
+            - Fluctuation phenomena, random processes, noise, and Brownian motion (for fluctuations in superconductivity, see 74.40.-n; for statistical theory and fluctuations in nuclear reactions, see 24.60.-k; for fluctuations in plasma, see 52.25.Gj; for nonlinear dynamics and chaos, see 05.45.-a)
+            - Noise
+            - Stochastic analysis methods (Fokker-Planck, Langevin, etc.)
+          - **Stochastic and high-dimensional topics are scale-free in c, ħ and G and are governed only by the number of steps or degrees of freedom N.**
+            _basis: kinds, order: degree. Least dependent: only N enters._
+            - Random walks and Levy flights
+            - Brownian motion
+            - High-dimensional chaos
+          - **General and computational methods in statistical physics are tools that carry no intrinsic scale from c, ħ, G, or N.**
+            _basis: kinds, order: structure. Ordered by structure from the broad field to specific computational methods._
+            - Statistical physics, thermodynamics, and nonlinear dynamical systems (see also 02.50.-r Probability theory, stochastic processes, and statistics)
+            - Computational methods in statistical physics and nonlinear dynamics (see also 02.70.-c in mathematical methods in physics)
+            - Renormalization group methods
+            - Monte Carlo methods (see also 02.70.Tt, Uu in mathematical methods in physics; for Monte Carlo methods extensively used in subdivisions of physics, see the appropriate section; for example, see 52.65.Pp in plasma simulation)
+        - **Statistical, growth and collective-system topics are classical many-body subjects whose scale is set mainly by the particle number N.**
+          _basis: kinds, order: structure. Listed from statistical frameworks to social systems to growth models to macroscopic descriptions._
+          - **Statistical-mechanical frameworks and models of complex matter are governed by the number of particles N and by thermodynamic limits rather than by ħ, c or G.**
+            _basis: kinds, order: degree. N-dominated scaling with no explicit dependence on ħ, c or G._
+            - Statistical Physics & Thermodynamics
+            - Classical statistical mechanics
+            - Mean-field & cluster methods
+            - Ergodic theory
+            - Large deviation & rare event statistics
+          - **Disordered, constrained and collective living or social systems have scales set purely by the population size N and their interaction rules, with no fundamental constants involved.**
+            _basis: kinds, order: degree. Weakest fundamental-constant dependence: scale set by N alone._
+            - Disordered systems
+            - Social dynamics
+            - Polydisperse systems
+            - Population dynamics
+          - **Growth processes and kinetically constrained models are classical many-body topics whose claims take their scale from the particle number N rather than from the constants c, ħ or G.**
+            _basis: kinds, order: structure_
+            - Growth processes
+            - Kinetically constrained models
+          - **Statistical and macroscopic descriptions of matter whose scale is set mainly by N, with ħ entering only through the microscopic details of the state.**
+            _basis: kinds, order: degree. Ranked from the most N-dominated, purely statistical description to those with more microscopic input._
+            - Thermodynamics and statistical physics
+            - Equations of state
+            - Self-avoiding walks
+            - Stochastic analysis methods
+            - Synchronization
+        - **Bulk-solid mechanical headings are kinds of mechanical behaviour and property of solids, set by collective atomic number N and many-atom bonding.**
+          _basis: kinds, order: structure. Ordered by structure: the broad field, then general behaviours, measurable properties, deformation, and failure._
+          - **Mechanical and acoustical properties of condensed matter form a broad field whose mechanical-properties branch and nanocrystalline radiation topic head the remaining entries.**
+            _basis: kinds, order: structure. Ordered by the sequence of the PACS classification listing_
+            - Nanocrystalline materials
+            - Mechanical and acoustical properties of condensed matter (for mechanical properties of tissues and organs, see 87.19.R-; for mechanical properties of nanoscale systems, see 62.25.-g; for nonlinear acoustics of solids, see 43.25.Dc—in Acoustics Appendix; for mechanical and acoustical properties of interfaces and thin films, see 68.35.Gy, 68.35.Iv, and 68.60.Bs; for mechanical properties related to treatment conditions, see 81.40.Jj, Lm, Np—in materials science; for mechanical and acoustical properties of superconductors, see 74.25.Ld; for mechanical and acoustical properties of rocks and minerals, see 91.60.Ba, Dc, and Lj)
+            - Mechanical properties of solids
+          - **Reversible and time-dependent responses of a solid to applied load are kinds of mechanical behaviour characterized by elastic and plastic deformation.**
+            _basis: kinds, order: structure. Ordered by the sequence of the PACS classification listing_
+            - Elasticity (for materials treatment effects on elastic properties, see 81.40.Jj)
+            - Deformation and plasticity (see also 83.50.-v Deformation and flow in rheology; for materials treatment effects on deformation, see 81.40.Lm)
+            - Creep
+          - **Failure, surface contact and elastic-constant headings are kinds of measurable mechanical properties of solids.**
+            _basis: kinds, order: structure. Ordered by the sequence of the PACS classification listing_
+            - Structural failure of materials (for materials treatment effects on microstructure, see 81.40.Np)
+            - Friction, tribology, and hardness (see also 46.55.+d Tribology and mechanical contacts in continuum mechanics of solids; for materials treatment effects on friction related properties, see 81.40.Pq)
+            - Elastic moduli
+            - Poisson's ratio
+          - **Elastic and plastic deformation behaviors of bulk solids are kinds of response to stress governed by collective atomic number N.**
+            _basis: kinds, order: structure. ordered from elastic constants to yield and plastic flow_
+            - Other elastic constants
+            - Shape-memory effect; yield stress; superelasticity
+            - Ductility, malleability
+            - Plasticity and superplasticity
+          - **Failure modes of bulk solids are kinds of mechanical breakdown under load, set by many-atom bonding rather than by c, ħ or G.**
+            _basis: kinds, order: structure. ordered from progressive damage to sudden rupture_
+            - Fatigue
+            - Brittleness
+            - Fracture
+            - Buckling
+            - Cracks
+        - **Extreme-loading and equation-of-state topics are kinds of study of how pressure, shock and volume-temperature relations change the state of matter.**
+          _basis: kinds, order: structure. Ordered by structure: loading effects, then equation-of-state relations._
+          - **Pressure and shock effects are kinds of extreme mechanical loading that change the state of solids and liquids.**
+            _basis: kinds, order: structure. Ordered by PACS listing: static pressure first, then shock waves._
+            - High-pressure effects in solids and liquids (for high pressure apparatus and techniques, see 07.35.+k; for high-pressure behavior of rocks and minerals, see 91.60.Gf; for pressure treatments, see 81.40.Vw in materials science; for effects of pressure on superconducting transition temperature, see 74.62.Fj)
+            - Shock wave effects in solids and liquids (for shock wave initiated high-pressure chemistry, see 82.40.Fp; see also 47.40.Nm Shock wave interactions and shock effects in fluid dynamics)
+          - **Equation-of-state topics describe how pressure, volume and temperature relate for specific substances such as metals and nonmetals.**
+            _basis: kinds, order: structure. Ordered by structure; no degree ranking applies._
+            - Equations of state, phase equilibria, and phase transitions (see also 82.60.-s Chemical thermodynamics)
+            - Equations of state of specific substances
+            - Equations of state of pure metals and alloys
+            - Equations of state of nonmetals
+      - **Claims set by geometry, coupling, nonlinearity or counting rather than by any of c, ħ, G or N form their own kind, including nanoscale systems and probe types.**
+        _basis: kinds, order: structure. Ordered from general non-constant claims to probes to nanoscale systems._
+        - **Claims whose scale is set by geometry, coupling, nonlinearity or counting rather than by any of c, ħ, G or N.**
+          _basis: kinds, order: degree. Ranked from the most dynamical scale-setting parameters to purely structural or abstract ones._
+          - **Applied and collective nonlinear phenomena have scales fixed by coupling and nonlinearity among a few interacting units rather than by c, ħ or G.**
+            _basis: kinds, order: degree. Scale set by finite coupling among units, a small N._
+            - Control of chaos, applications of chaos
+            - Coupled map lattices
+            - Synchronization; coupled oscillators
+            - Solitons (see 52.35.Sb for solitons in plasma; for solitons in acoustics, see 43.25.Rq—in Acoustics Appendix; see 42.50.Md, 42.65.Tg, 42.81.Dp for solitons in optics; see also 03.75.Lm in matter waves; for solitons in space plasma physics, see 94.05.Fg; for solitary waves in fluid dynamics, see 47.35.Fg)
+            - Communication using chaos
+          - **Nonlinear and stochastic dynamics concepts are kinds of claims that are classical and scale-free, set by system parameters rather than by c, ħ or G.**
+            _basis: kinds, order: structure. Ordered by structure from deterministic bifurcations to chaos and noise-driven transport._
+            - Bifurcation analysis
+            - Chaos & nonlinear dynamics
+            - Brownian ratchet
+          - **Classical low-dimensional chaos and fractals are purely geometric and dynamical, with no dimensional constant among c, ħ, G or N setting their scale.**
+            _basis: kinds, order: degree. No constant enters at all._
+            - Nonlinear dynamics and chaos (see also section 45 Classical mechanics of discrete systems; for chaos in fluid dynamics, see 47.52.+j; for chaos in superconductivity, see 74.40.De)
+            - Low-dimensional chaos
+            - Fractals (see also 47.53.+n Fractals in fluid dynamics; 61.43.Hv Fractals; macroscopic aggregates in structure of solids)
+          - **Structural and abstract descriptions are kinds of claims set by counting, geometry or information content, with no physical constant fixing their scale.**
+            _basis: kinds, order: structure. Ordered by structure from geometric arrangement to abstract counting and information._
+            - Crystalline systems
+            - Structural properties
+            - 1-dimensional systems
+            - Thermal properties
+        - **Structural probes differ in kind by the particle used, which determines how ħ, c and the particle mass set the probe wavelength and energy.**
+          _basis: kinds, order: degree. Ranked from strongest dependence on c (X-ray photons) to weakest (neutrons), then atom and resonance methods and the general diffraction heading._
+          - **X-ray techniques use massless photons, so both c and ħ set the wavelength and energy scale of the probe.**
+            _basis: kinds, order: degree. Strongest dependence on c: photon energy E = ħck._
+            - X-ray scattering (including small-angle scattering)
+            - X-ray absorption spectroscopy: EXAFS, NEXAFS, XANES, etc. (for x-ray and EXAFS applications in biological physics, see 87.64.kd)
+            - X-ray reflectometry (surfaces, interfaces, films)
+            - X-ray diffraction
+            - X-ray photoelectron diffraction
+          - **Electron techniques use light charged particles, so ħ and the relativistic electron energy (involving c) set the de Broglie wavelength.**
+            _basis: kinds, order: degree. Intermediate dependence on c: relativistic corrections matter at high energies._
+            - Electron diffraction and scattering (for electron diffractometers, see 07.78.+s)
+            - Low-energy electron diffraction (LEED) and reflection high-energy electron diffraction (RHEED)
+            - Convergent-beam electron diffraction, selected-area electron diffraction, nanodiffraction
+            - Electron holography
+          - **Neutron techniques use slow massive neutral particles, so ħ and the neutron mass set the wavelength with little dependence on c.**
+            _basis: kinds, order: degree. Weak dependence on c: non-relativistic de Broglie wavelength._
+            - Neutron imaging; neutron tomography
+            - Neutron scattering (including small-angle scattering)
+            - Neutron reflectometry
+            - Neutron diffraction
+          - **Atom, ion and resonance methods are set by atomic masses and nuclear transition energies, so ħ and the particle mass set their scale.**
+            _basis: kinds, order: degree. Non-relativistic matter-wave or nuclear-level scales, little dependence on c._
+            - Atom, molecule, and ion scattering (for structure determination only)
+            - Magnetic resonance techniques; Mössbauer spectroscopy (for structure determination only)
+          - **Diffraction and scattering probes of structure, whose scale is set by ħ through the probe wavelength, with c entering for X-ray photons but not for neutrons.**
+            _basis: kinds, order: degree. Ranked from the probe with the most constants involved (X-rays: c and ħ) to fewer (neutrons: ħ)._
+            - X-ray diffraction and scattering (for x-ray diffractometers, see 07.85.Jy; for x-ray studies of crystal defects, see 61.72.Dd, Ff)
+            - Neutron diffraction and scattering
+            - Techniques for structure determination
+            - Structure of solids and liquids; crystallography (for surface, interface, and thin film structure, see section 68)
+        - **Nanoscale-system topics are kinds of nanosystem distinguished by their geometry, composite construction, or mechanical response.**
+          _basis: kinds, order: structure. Ordered by structure: low-dimensional classes, composite structures, then mechanical properties._
+          - **Low-dimensional nanoscale structural classes are kinds of nanosystem defined by their geometry and confinement dimensionality.**
+            _basis: kinds, order: structure. ordered from the generic class heading to zero-, one- and two-dimensional shapes_
+            - Structural classes of nanoscale systems (see also 81.07.-b Nanoscale materials and structures: fabrication and characterization in materials science)
+            - Nanodots
+            - Nanowires
+            - Nanosheets
+          - **Composite and complex nanostructures are kinds of nanosystem built by embedding or assembling nanoscale units into larger structures.**
+            _basis: kinds, order: structure. ordered from embedded composites to patterned assemblies_
+            - Composites (nanosystems embedded in a larger structure)
+            - Complex nanostructures, including patterned or assembled structures
+          - **Mechanical properties of nanoscale systems are kinds of response covering static coefficients, dynamic responses, vibrational modes and fracture.**
+            _basis: kinds, order: structure. ordered from the general heading through low- and high-frequency response to modes and fracture_
+            - Mechanical properties of nanoscale systems (for structure of nanoscale systems, see 61.46.-w; for structural transitions in nanoscale materials, see 64.70.Nd; for electronic transport in nanoscale systems, see 73.63.-b)
+            - Low-frequency properties: response coefficients
+            - High-frequency properties, responses to resonant or transient (time-dependent) fields
+            - Mechanical modes of vibration
+            - Fracture/brittleness
+    - **Topics on fluids, solid structure, phase transitions and many-body or quantum-fluid systems, treated as kinds of study of the states and structure of matter.**
+      _basis: kinds, order: structure. Ordered by structure from liquids and solids to transitions and many-body systems._
+      - **Liquid and liquid-crystal topics are kinds of study of fluid and partially ordered matter, from general theory of liquid structure to specific liquid types and liquid crystals.**
+        _basis: kinds, order: structure. Ordered from general liquid theory to specific liquids to liquid crystals._
+        - **Theoretical and general treatments of liquid structure are methods and properties that apply across liquid types and depend on scattering theory and particle number.**
+          _basis: kinds, order: structure. Listed from formal theory to general methods and properties._
+          - **Theoretical treatments and liquid-structure descriptions depend on the formal scattering theory and on the particle number N of the many-body system.**
+            _basis: kinds, order: degree. Dependence on N becomes dominant, as the claim concerns statistical many-body structure rather than a single probe._
+            - Theories of x-ray diffraction and scattering
+            - Theories of neutron diffraction and scattering
+            - Theories of electron diffraction and scattering
+            - Structure of liquids
+            - Theory and models of liquid structure
+          - **General methods and properties for studying liquid structure cover simulation, relaxation dynamics, and the structure of simple and associated liquids.**
+            _basis: kinds, order: structure. Ordered by structure: general approaches before specific liquids._
+            - Computer simulation of liquid structure
+            - Time-dependent properties; relaxation (for glass transitions, see 64.70.P-)
+            - Structure of simple liquids
+            - Structure of associated liquids: electrolytes, molten salts, etc
+        - **Specific liquid types are studied individually, ranging from simple atomic and molecular liquids to polymeric liquid systems.**
+          _basis: kinds, order: structure. Listed from simple liquids to polymeric liquids._
+          - **Simple atomic and molecular liquids are specific liquid types, such as noble gases, molecules, metals and alloys, whose structures are studied individually.**
+            _basis: kinds, order: structure. Ordered by structure: umbrella heading for specific liquid structures first, then individual liquid types._
+            - Studies of specific liquid structures
+            - Liquid noble gases
+            - Molecular liquids
+            - Liquid metals and alloys
+          - **Polymeric liquid systems include macromolecular solutions, polymer melts and blends, and swelling and cross-linked polymer networks.**
+            _basis: kinds, order: structure. Ordered by structure: umbrella heading first, then its subtypes._
+            - Macromolecular and polymers solutions; polymer melts
+            - Polymer solutions
+            - Polymer melts and blends
+            - Polymer swelling, cross linking
+        - **Liquid crystal topics are the parts of the study of partially ordered soft phases: theory and measurement, order and defects, and confined or polymeric systems.**
+          _basis: parts, order: structure. Ordered from general models, to ordering and defects, to specific system types._
+          - **Theories and measurements of liquid crystal structure comprise molecular and continuum models together with experimental determinations of the phases.**
+            _basis: kinds, order: structure. Ordered by structure: umbrella heading, then models, then experiments._
+            - Liquid crystals (for phase transitions in liquid crystals, see 64.70.M-; for liquid crystals as dielectric materials, see 77.84.Nh; for liquid crystals as optical materials, see 42.70.Df; for liquid crystal devices, see 42.79.Kr)
+            - Molecular and microscopic models and theories of liquid crystal structure
+            - Continuum models and theories of liquid crystal structure
+            - Experimental determinations of smectic, nematic, cholesteric, and other structures
+          - **Order, surface effects, and defects in liquid crystals concern orientational ordering, alignment at surfaces, defects, and defect-based blue phases.**
+            _basis: kinds, order: structure. Ordered by structure: ordering first, then surfaces, then defects._
+            - Orientational order of liquid crystals; electric and magnetic field effects on order
+            - Surface phenomena: alignment, anchoring, anchoring transitions, surface-induced layering, surface-induced ordering, wetting, prewetting transitions, and wetting transitions
+            - Defects in liquid crystals
+            - Blue phases and other defect-phases
+          - **Liquid-crystal systems are partially ordered soft phases whose structure depends on confinement, solvent, or polymer character.**
+            _basis: kinds, order: structure. Ordered by structure, from confined to solvent-based to polymeric liquid crystals._
+            - Microconfined liquid crystals: droplets, cylinders, randomly confined liquid crystals, polymer dispersed liquid crystals, and porous systems
+            - Lyotropic phases
+            - Polymer liquid crystals
+            - Nanocrystals
+            - Nanotubes
+        - **Crystal structure knowledge has two parts: general principles common to all crystals and the specific solids classified by chemical makeup.**
+          _basis: parts, order: structure. General principles come first, then specific materials._
+          - **General principles of bulk crystal structure cover the symmetry, binding, stoichiometry and transformation behaviour common to all crystals.**
+            _basis: kinds, order: structure. Ordered by structure: from the general field to theory, transformations, binding and composition._
+            - Structure of bulk crystals
+            - Theory of crystal structure, crystal symmetry; calculations and modeling
+            - Crystallographic aspects of phase transformations; pressure effects (see also 81.30.Hd in materials science)
+            - Crystal binding; cohesive energy
+            - Crystal stoichiometry
+          - **Specific crystalline solids are kinds of materials classified by their chemical makeup, from pure elements to organic compounds.**
+            _basis: kinds, order: structure. Ordered by structure: general heading, then elements, alloys, inorganic and organic compounds._
+            - Structure of specific crystalline solids (for surface structure, see 68.35.B-)
+            - Elemental solids
+            - Alloys
+            - Inorganic compounds
+            - Organic compounds
+        - **Crystal defect subject matter is divided into kinds by defect size, foreign atoms and host material.**
+          _basis: kinds, order: structure. Ordered from point defects and extended defects to impurities and host materials._
+          - **Point defects are localized disruptions of the lattice at the scale of a single site or atom.**
+            _basis: kinds, order: structure. Ordered structurally from missing atoms to extra atoms to electronically trapping centers._
+            - Vacancies
+            - Interstitials
+            - Color centers
+          - **Extended defects are lattice irregularities spanning many atoms, such as lines, boundaries, planes and voids, together with their mutual interactions.**
+            _basis: kinds, order: structure. Ordered structurally from one-dimensional lines to planar boundaries to three-dimensional voids and their interactions._
+            - Linear defects: dislocations, disclinations
+            - Grain and twin boundaries
+            - Stacking faults and other planar or extended defects
+            - Microscopic defects (voids, inclusions, etc.)
+            - Interaction between different crystal defects; gettering effect (for magnetic impurity interactions, see 75.30.Hx)
+          - **Impurities and doping concern foreign atoms in a crystal and how their amount, distribution and gradients are described.**
+            _basis: kinds, order: structure. Ordered structurally from the impurities and their introduction to their concentration, distribution and gradients._
+            - Impurities in crystals
+            - Doping and impurity implantation
+            - Impurity concentration
+            - Impurity distribution
+            - Impurity gradients
+          - **Defect studies are organized by the host material in which defects occur, such as elemental semiconductors, compound semiconductors and other solids.**
+            _basis: kinds, order: structure. Ordered structurally from elemental semiconductors to compound semiconductors to other materials._
+            - Ge and Si
+            - III-V and II-VI semiconductors
+            - Other materials
+      - **Solid-state structure and defect topics are kinds of study of crystalline and non-crystalline solids, their defects, radiation effects and lattice vibrations.**
+        _basis: kinds, order: structure. Ordered from structure types to defects to radiation effects to phonons._
+        - **Non-crystalline and nanoscale solids are kinds of structures that differ from ordinary periodic crystals, ranked from least ordered to smallest in scale.**
+          _basis: kinds, order: degree. Ranked from least ordered (disordered, amorphous) through semi-periodic to nanoscale and carbon structures._
+          - **General disordered solids are materials and models whose structure lacks long-range order, including porous, powder and fractal forms.**
+            _basis: kinds, order: structure. Ordered by structure, from the general category to modeling and to porous and fractal forms._
+            - Disordered solids (see also 81.05.Gc Amorphous semiconductors, 81.05.Kf Glasses, and 81.05.Rm Porous materials; granular materials in materials science; for photoluminescence of disordered solids, see 78.55.Mb and 78.55.Qr)
+            - Structural modeling: serial-addition models, computer simulation
+            - Powders, porous materials
+            - Fractals; macroscopic aggregates (including diffusion-limited aggregates)
+          - **Amorphous solids are materials such as metals, alloys, glasses and other solids that have no crystalline periodicity.**
+            _basis: kinds, order: structure. Ordered by structure, from amorphous metals and semiconductors to glasses and other amorphous solids._
+            - Amorphous semiconductors, metals, and alloys
+            - Other amorphous solids
+            - Glasses
+          - **Semi-periodic solids are ordered but non-periodic structures, such as quasicrystals and incommensurate crystals.**
+            _basis: kinds, order: structure. Ordered by structure, from the general class to its two main examples._
+            - Semi-periodic solids
+            - Quasicrystals
+            - Incommensurate crystals
+          - **Nanoscale materials are structures whose size is of the order of nanometers, ranging from clusters and nanoparticles to nanowires and nanotubes.**
+            _basis: kinds, order: structure. Ordered by structure, from zero-dimensional clusters and particles to one-dimensional wires and tubes._
+            - Structure of nanoscale materials (for thermal properties of nanocrystals and nanotubes, see 65.80.-g; for mechanical properties of nanoscale systems, see 62.25.-g; for electronic transport in nanoscale materials, see 73.63.-b; see also 62.23.-c Structural classes of nanoscale systems; 64.70.Nd Structural transitions in nanoscale materials; for magnetic properties of nanostructures, see 75.75.-c)
+            - Structure of clusters (e.g., metcars; not fragments of crystals; free or loosely aggregated or loosely attached to a substrate) (see also 61.48.-c for structure of fullerenes)
+            - Structure of nanocrystals and nanoparticles ("colloidal" quantum dots but not gate-isolated embedded quantum dots)
+            - Structure of nanowires and nanorods (long, free or loosely attached, quantum wires and quantum rods, but not gate-isolated embedded quantum wires)
+            - Structure of nanotubes (hollow nanowires) (see 61.48.De for carbon nanotubes, boron nanotubes, and other related systems)
+          - **Carbon-based hollow and planar molecular structures are kinds of low-dimensional carbon networks, distinguished by their geometry.**
+            _basis: kinds, order: structure. Ordered by structure: closed cages, tubes, then flat sheets._
+            - Structure of fullerenes and related hollow and planar molecular structures (see also 81.05.ub Fullerenes and related materials in materials science)
+            - Structure of carbon nanotubes, boron nanotubes, and other related systems (for structure of hollow nanowires, see 61.46.Np)
+            - Structure of graphene
+        - **Defect processes form a sequence in which defects arise and anneal, are detected by experiment, and are also produced by incident radiation.**
+          _basis: cause_effect, order: time. Ordered from defect formation and annealing, to detection, to radiation as an external cause._
+          - **Defect theory and kinetics describe how imperfections in crystals arise, form and anneal over time.**
+            _basis: cause_effect, order: time. Ordered in time: general defect field, then models, then formation and annealing, then point defects._
+            - Defects and impurities in crystals; microstructure (for radiation induced defects, see 61.80.-x; for defects in surfaces, interfaces, and thin films, see 68.35.Dv and 68.55.Ln; see also 85.40.Ry Impurity doping, diffusion, and ion implantation technology; for effects of crystal defects and doping on superconducting transition temperature, see 74.62.Dh)
+            - Theories and models of crystal defects
+            - Kinetics of defect formation and annealing
+            - Point defects and defect clusters
+          - **Experimental methods for detecting crystal defects are kinds of probes, separated into diffraction, direct observation and indirect evidence.**
+            _basis: kinds, order: structure. Ordered by structure: diffraction, then direct imaging, then indirect property measurements._
+            - Experimental determination of defects by diffraction and scattering
+            - Direct observation of dislocations and other defects (etch pits, decoration, electron microscopy, x-ray topography, etc.)
+            - Indirect evidence of dislocations and other defects (resistivity, slip, creep, strains, internal friction, EPR, NMR, etc.)
+          - **Radiation effects are changes in materials caused by incident radiation, covering general theory and specific radiation types.**
+            _basis: kinds, order: structure. Ordered structurally from general and theoretical treatments to specific radiation types by increasing photon energy._
+            - Physical radiation effects, radiation damage (for photochemical reactions, see 82.50.-m; for effects of ionizing radiation on biological systems, see 87.53.-j)
+            - Theory and models of radiation effects
+            - Ultraviolet, visible, and infrared radiation effects (including laser radiation)
+            - X-ray effects
+        - **Radiation-effects headings are kinds of topic divided by the type of incident radiation or the class of irradiated material.**
+          _basis: kinds, order: structure. Ordered by structure: incident radiation kind, then irradiated material class._
+          - **Radiation-effects headings are distinguished by the kind of incident radiation, such as photons, electrons, neutrons, ions or neutral atoms.**
+            _basis: kinds, order: structure. Ordered by the sequence of the PACS classification listing_
+            - γ-ray effects
+            - Electron and positron radiation effects
+            - Neutron radiation effects
+            - Ion radiation effects (for ion implantation, see 61.72.U-)
+            - Atom and molecule irradiation effects
+          - **Radiation effects on specific materials are divided into kinds by the class of material that is irradiated.**
+            _basis: kinds, order: structure. Ordered by the sequence of the PACS classification listing_
+            - Radiation effects on specific materials
+            - Metals and alloys
+            - Semiconductors
+            - Insulators
+            - Polymers, organic compounds
+        - **Phonon and lattice-vibration topics are kinds of study of crystal vibrations, covering basic states, methods, interactions, low-dimensional structures and special solids.**
+          _basis: kinds, order: structure. Ordered by structure: basic states, methods, interactions, then specific systems._
+          - **Lattice dynamics and phonon states describe the basic vibrational modes of crystal lattices and their dispersion.**
+            _basis: kinds, order: structure. Ordered from the general field to specific mode types._
+            - Lattice dynamics (see also 78.30.-j Infrared and Raman spectra; for surface and interface vibrations, see 68.35.Ja; for adsorbate vibrations, see 68.43.Pq; for lattice dynamics of quantum solids, see 67.80.de)
+            - Phonons in crystal lattices (for phonons in superconductors, see 74.25.Kc; see also 43.35.Gk Phonons in crystal lattice, quantum acoustics—in Acoustics Appendix)
+            - Phonon states and bands, normal modes, and phonon dispersion
+            - Localized modes
+            - Anharmonic lattice modes
+          - **Methodological approaches are the kinds of investigation used to study phonons: measurement, fitted theory and first-principles theory.**
+            _basis: kinds, order: structure. Ordered by PACS listing: measurements, fitted theory, first-principles theory._
+            - Measurements
+            - Fitted theory
+            - First-principles theory
+          - **Phonon interactions are kinds of coupling between phonons and electrons, other phonons, other quasiparticles, or defects.**
+            _basis: kinds, order: structure. Ordered by PACS listing of interaction partners._
+            - Phonon interactions
+            - Phonon-electron interactions
+            - Phonon-phonon interactions
+            - Phonon interactions with other quasiparticles
+            - Phonon-defect interactions
+          - **Low-dimensional structures are kinds of nanoscale systems whose vibrational states differ from those of bulk crystals.**
+            _basis: kinds, order: structure. Ordered by PACS listing of nanostructure types._
+            - Phonons or vibrational states in low-dimensional structures and nanoscale materials
+            - Free films
+            - Nanotubes and nanowires
+            - Clusters and nanocrystals
+            - Layered systems
+          - **Phonon and vibrational-state topics cover lattice vibrations in graphene and in disordered, alloyed or amorphous solids.**
+            _basis: kinds, order: structure. Ordered by structure; no degree ranking applies._
+            - Phonons in graphene
+            - Vibrational states in disordered systems
+            - Disordered crystalline alloys
+            - Glasses and amorphous solids
+      - **Phase-transition claims are classified by whether their scale comes from general theory, event processes, ordered or quantum states, or a specific material.**
+        _basis: kinds, order: structure. ordered from general theory to material-specific_
+        - **General theoretical frameworks are material-independent theories of phase transitions whose scale is set by system size N and scale invariance.**
+          _basis: kinds, order: structure. Ordered by structure from broad theory to the critical region._
+          - **General theoretical frameworks for phase transitions include broad theory, model systems and studies of specific substances.**
+            _basis: kinds, order: structure. Ordered by structure; no degree ranking applies._
+            - General studies of phase transitions (see also 63.70.+h Statistical mechanics of lattice vibrations and displacive phase transitions; for critical phenomena in solid surfaces and interfaces, and in magnetism, see 68.35.Rh, and 75.40.-s, respectively)
+            - Specific approaches applied to studies of phase transitions
+            - General theory of phase transitions
+            - Statistical mechanics of model systems (Ising model, Potts model, field-theory models, Monte Carlo techniques, etc.)
+            - Studies/theory of phase transitions of specific substances (for phase transitions in ferroelectric and antiferroelectric materials, see 77.80.B-)
+          - **General theoretical frameworks of the critical region are those whose scale is set by the system size N and by scale invariance rather than by any particular material.**
+            _basis: kinds, order: degree. Most general: scale set by N and scaling laws alone._
+            - Renormalization-group theory
+            - General theory of critical region behavior
+            - Finite-size systems
+            - Convolution
+          - **General theoretical frameworks describe phase transitions through thermodynamics, statistical mechanics, dynamics and criticality, with scale set by N.**
+            _basis: kinds, order: structure. Ordered by structure, from equilibrium theory to dynamics._
+            - Thermodynamics and statistical mechanics
+            - Dynamics and criticality
+            - Phase equilibria (see also 82.60.Lf Thermodynamics of solutions; 47.51.+a Mixing in fluid dynamics; for properties of solutions of biomolecules, see 87.15.N- in biological physics)
+            - Thermal properties of condensed matter (see also section 44 Heat transfer; for thermodynamic properties of quantum fluids and solids, see section 67; for thermal properties of thin films, see 68.60.Dv; for nonelectronic thermal conduction, see 66.25.+g and 66.70.-f; for thermal properties of rocks and minerals, see 91.60.Ki; for thermodynamic properties of superconductors, see 74.25.Bt; see also 87.19.Pp Biothermics and thermal processes in biological physics)
+          - **Critical-point topics concern behavior near critical and multicritical points, including exponents and dynamic critical phenomena.**
+            _basis: kinds, order: structure. Ordered by structure; no degree ranking applies._
+            - Equilibrium properties near critical points, critical exponents
+            - Dynamic critical phenomena (for quantum critical phenomena in superconductivity, see 74.40.Kb)
+            - Multicritical points
+        - **Event-driven and geometric processes are transitions whose scale is set by the number of elements N together with connectivity or energy barriers.**
+          _basis: kinds, order: structure. Ordered by structure from network models to avalanches and metastability._
+          - **Geometric and network models describe critical behavior whose scale is set by the number of sites N and by connectivity structure.**
+            _basis: kinds, order: degree. Next most general: N-dependent geometry of connectivity._
+            - Percolation
+            - Fractal and multifractal systems (see also 61.43.Hv Fractals; macroscopic aggregates)
+            - Networks
+          - **Avalanche and nucleation phenomena are event-driven processes whose scale is set by the number of participating elements N and by energy barriers.**
+            _basis: kinds, order: degree. Intermediate: dynamics of events set by N and barriers._
+            - Cracks, sandpiles, avalanches, and earthquakes (for general studies of sandpiles and avalanches, see 45.70.Cc, Ht in classical mechanics of discrete systems; see also 91.30.Px Earthquakes in geophysics)
+            - General theory and computer simulations of nucleation
+            - Studies of nucleation in specific substances
+            - Solid-solid transitions (see also 61.50.Ks Crystallographic aspects of phase transformations; pressure effects; 75.30.Kz and 77.80.B- for magnetic and ferroelectric transitions, respectively; for materials science aspects, see 81.30.-t)
+            - Specific phase transitions
+          - **Topics on ordering, metastability and nucleation concern how systems change state away from simple equilibrium.**
+            _basis: kinds, order: structure. Ordered by structure; no degree ranking applies._
+            - Order-disorder transformations (see also 81.30.Hd Constant-composition solid-solid phase transformations: polymorphic, massive, and order-disorder in materials science; for effects of disorder on superconducting transition temperature, see 74.62.En)
+            - Metastable phases
+            - Nucleation (see also 82.60.Nh Thermodynamics of nucleation in physical chemistry and chemical physics)
+            - Nonequilibrium systems
+        - **Ordered-phase and quantum transitions are changes of state whose scale is set by thermodynamic constants, ħ, or competing ground-state length scales.**
+          _basis: kinds, order: structure. Ordered by structure from general state changes to quantum, solid-liquid and glass transitions._
+          - **Transitions between the states of matter are phase changes whose scale is set by thermodynamic constants and the identity of the two phases involved.**
+            _basis: kinds, order: degree. More specific: defined by the pair of phases involved._
+            - Solid-liquid transitions
+            - Liquid-vapor transitions
+            - Solid-vapor transitions
+            - Liquid-liquid transitions
+          - **Quantum and commensurate-incommensurate transitions are changes of order whose scale is set by ħ or by competing length scales in the ground state.**
+            _basis: kinds, order: degree. Highest degree of quantum character: ħ directly sets the scale at zero temperature._
+            - Quantum phase transitions (for quantum Hall effects aspects, see 73.43.Nq in electronic structure of surfaces, interfaces, thin films, and low dimensional structures)
+            - Commensurate-incommensurate transitions
+            - Boiling and bubble dynamics (for bubble formation, bubble dynamics, boiling and cavitation, see section 47.55.D-; for acoustic cavitation, see 43.35.Ei in Acoustics Appendix)
+            - Thermodynamics studies of evaporation and condensation (for evaporation and condensation on surfaces, see 68.03.Fg)
+            - Liquids
+          - **Solid-liquid transition topics treat melting and crystallization as thermodynamic changes between ordered and disordered phases in many-particle systems.**
+            _basis: kinds, order: degree. Classical thermodynamic limit with large N; general theory ranks above specific substances._
+            - General theory of the solid-liquid transition
+            - Crystallization of specific substances
+            - Melting of specific substances
+          - **Glass-transition topics concern the kinetic arrest of disordered amorphous materials and the theory that models it.**
+            _basis: kinds, order: degree. Classical and non-equilibrium, where large N and kinetics dominate over quantum scales._
+            - Theory and modeling of the glass transition
+            - Glasses
+            - Metallic glasses
+            - Nonmetallic glasses (silicates, oxides, selenides, etc.)
+            - Polymers
+        - **Material-specific transitions are phase changes whose scale depends on the particular substance, such as liquid crystals, polymers or semiconductors.**
+          _basis: kinds, order: structure. Ordered by structure from specialized systems to specific material classes._
+          - **Transitions in specialized systems are those whose scale depends on the particular material, such as liquid crystals, nanoscale structures, glasses or specific substances near criticality.**
+            _basis: kinds, order: degree. Most specific: scale set by the particular material._
+            - Transitions in liquid crystals
+            - Structural transitions in nanoscale materials
+            - Glass transitions of specific systems
+            - Studies of specific substances in the critical region
+          - **Transitions in specific material classes and liquid crystals are studied for particular crystalline, polymeric or mesogenic substances.**
+            _basis: kinds, order: degree. Most system-specific and classical: material details dominate over fundamental constants._
+            - Metals and alloys
+            - Ionic crystals
+            - Molecular crystals
+            - Theory and modeling of specific liquid crystal transitions, including computer simulation
+            - Experimental studies of liquid crystal transitions
+          - **Polymers and semiconductors are kinds of materials whose phase transitions are classified by the type of substance involved, each with its own scale set by the governing constants of the claim.**
+            _basis: kinds, order: structure_
+            - Polymers
+            - Semiconductors
+      - **Many-body and condensed-matter claims are scaled by particle number N, Boltzmann's constant and sometimes ħ.**
+        _basis: kinds, order: structure. ordered from soft matter to general condensed matter_
+        - **Many-particle mixtures and soft matter are systems whose phase behavior is set by the collective statistics of N particles.**
+          _basis: kinds, order: structure. Ordered by structure from soft matter to fluid mixtures to solid segregation._
+          - **Soft-matter systems are complex fluids and divided materials whose phase behavior depends on the collective statistics of many particles N.**
+            _basis: kinds, order: structure. Ordered by structure, from liquid crystals to colloids._
+            - Liquid crystals (see also 64.70.M- Transitions in liquid crystals)
+            - Granules
+            - Colloids
+          - **Mixture equilibria concern how components dissolve, mix and coexist as fluids or solutions, governed by the number of particles N.**
+            _basis: kinds, order: structure. Ordered by structure, from solubility to mixing._
+            - Solubility
+            - Phase equilibria of fluid mixtures, including gases, hydrates, etc
+            - Mixing
+          - **Segregation in solid and inorganic materials covers the separation of phases in solids, alloys, oxides, semiconductors and thin films, with scale set by N.**
+            _basis: kinds, order: structure. Ordered by structure, from bulk solids to thin films._
+            - Phase separation and segregation in oxidation (for general surface oxidation studies in surface treatments, see 81.65.Mq)
+            - Phase separation and segregation in solid solutions
+            - Phase separation and segregation in alloying
+            - Phase separation and segregation in semiconductors
+            - Phase separation and segregation in thin films
+        - **Phase separation and self-assembly in model, nanoscale, polymer and colloidal systems are scaled by the particle number N.**
+          _basis: kinds, order: degree. Ranked from most classical (N only) to Boltzmann constant plus N._
+          - **Model and mesoscale segregation covers phase separation in idealized models, nanoscale systems, polymers and colloids, together with self-assembly, with scale set by N.**
+            _basis: kinds, order: structure. Ordered by structure, from idealized models to assembled structures._
+            - Phase separation and segregation in model systems (hard spheres, Lennard-Jones, etc.)
+            - Phase separation and segregation in nanoscale systems (for general nanoscale materials studies, see 81.07.-b in materials science)
+            - Phase separation and segregation in polymer blends/polymeric solutions
+            - Phase separation and segregation in colloidal systems
+            - Self-assembly
+          - **Self-diffusion and ionic conduction in particular solid materials are set by atomic hopping statistics (N) in each host lattice.**
+            _basis: kinds, order: structure. Ordered by host material class, from metals to nonmetals and then the specific nonmetal types._
+            - Self-diffusion in metals, semimetals, and alloys
+            - Self-diffusion and ionic conduction in nonmetals
+            - Ionic crystals
+            - Glasses
+            - Molecular crystals
+        - **Statistical and general-theory entries for thermal properties are scaled by Boltzmann's constant and N with no quantum or gravitational constant.**
+          _basis: kinds, order: degree. Ranked from most classical (N only) to Boltzmann constant plus N._
+          - **Lattice thermal properties of crystals are scaled by ħ together with Boltzmann's constant and N, because quantized vibrations set the heat capacity and expansion.**
+            _basis: kinds, order: structure. Ordered from the general crystal heading to heat capacity and thermal expansion._
+            - Thermal properties of crystalline solids
+            - Heat capacity (for specific heat of magnetic materials, see 75.40.-s)
+            - Thermal expansion; thermomechanical effects
+          - **Nonelectronic transport in liquids, covering diffusion, ionic conduction and viscosity, is scaled classically by Boltzmann's constant and N, with ħ and G playing no role.**
+            _basis: kinds, order: structure. Ordered from the general transport heading to specific diffusion, conduction and viscosity._
+            - Diffusion and ionic conduction in liquids
+            - Diffusion and thermal diffusion (for osmosis in biological systems, see 82.39.Wj in physical chemistry; for cellular transport, see 87.16.dp and 87.16.Uv in biological physics)
+            - Thermal diffusion and diffusive energy transport
+            - Mass diffusion, including self-diffusion, mutual diffusion, tracer diffusion, etc
+            - Viscosity of liquids; diffusive momentum transport
+          - **Diffusion of specific species and heat in solid media is set by thermal and statistical scales (N) of the medium, not by c, ħ or G.**
+            _basis: kinds, order: structure. Ordered from thermal diffusivity to polymers, gases and water._
+            - Thermal diffusivity
+            - Polymers
+            - Diffusion of gases
+            - Diffusion of water
+        - **Claims about condensed-matter systems, from superfluid helium flow to diffusion, thermodynamics and finite-size surface effects, are grouped by which constants (ħ, Boltzmann's constant and the particle number N) set their scale.**
+          _basis: kinds, order: structure_
+          - **Bulk superfluid helium-4 phenomena are described by the two-fluid picture, its excitations, relaxation, and quantized vortex flow.**
+            _basis: kinds, order: structure. Ordered by structure within bulk helium-4._
+            - Vortices and turbulence
+            - Two-fluid model; phenomenology
+            - Sound and excitations
+            - Relaxation phenomena
+          - **Flow phenomena of superfluid helium-4 cover the superfluid phase heading, its transport and superflow, and thin films and restricted geometries.**
+            _basis: kinds, order: structure. Ordered by structure following the PACS numbering within the superfluid phase._
+            - Superfluid phase
+            - Transport, hydrodynamics
+            - Films and restricted geometries
+            - Transport, hydrodynamics, and superflow
+          - **General and theoretical treatments of diffusion in solids, including the quantum case, are set by many-body statistics (N), with ħ entering only where quantum solids are involved.**
+            _basis: kinds, order: structure. Ordered from the general heading to theory and then to quantum solids._
+            - Diffusion in solids (for surface and interface diffusion, see 68.35.Fx)
+            - Theory of diffusion and ionic conduction in solids
+            - Diffusion in quantum solids (supersolidity) (see also 67.80.dj Defects, impurities, and diffusion in quantum fluids and solids)
+          - **Thermodynamic state functions of solids such as entropy, work function and electrochemical quantities are scaled by Boltzmann's constant, N and electron-scale quantum constants including ħ.**
+            _basis: kinds, order: structure. Ordered from the general heading to specific quantities._
+            - Other thermodynamical quantities (for magnetocaloric effect, see 75.30.Sg)
+            - Entropy
+            - Work functions
+            - Electrochemical properties (for general electrochemistry, see 82.45.-h)
+          - **Surface energy and nanoscale thermal systems are scaled by ħ, Boltzmann's constant and a small N, because finite size makes quantum and counting effects matter.**
+            _basis: kinds, order: structure. Ordered from surface energy to nanosystems to graphene._
+            - Surface energy (see also 68.35.Md Surface thermodynamics, surface energies in surfaces and interfaces)
+            - Thermal properties of small particles, nanocrystals, nanotubes, and other related systems
+            - Thermal properties of graphene
+        - **Claims about fluids and solids that are classified by which governing constants set their scale, either many-particle classical averages over molecular or atomic scales or quantum statistics through ħ.**
+          _basis: kinds, order: structure_
+          - **Viscosity and momentum transport in liquids are governed by many-particle statistical averages (N) over classical molecular scales, with no role for c, ħ or G.**
+            _basis: kinds, order: structure. Ordered from theory and modeling, to specific liquids, to diffusive momentum transport._
+            - Theory and modeling of viscosity and rheological properties, including computer simulation
+            - Studies of viscosity and rheological properties of specific liquids
+            - Diffusive momentum transport
+          - **The equilibrium properties of liquid helium-4 include its normal phase, its thermodynamics and its superfluid transition.**
+            _basis: kinds, order: structure. Ordered by structure following the PACS numbering through the normal phase and the thermodynamic and critical categories._
+            - Normal phase of 4 He
+            - Thermodynamic properties
+            - Thermodynamic properties
+            - Superfluid transition and critical phenomena
+          - **Diffusion of foreign species, defects and driven or confined carriers in solids is set by classical atomic-scale rates, not by c, ħ or G.**
+            _basis: kinds, order: structure. Ordered from impurities and defects to interdiffusion, nanoscale solids and electromigration._
+            - Diffusion of impurities (for surface diffusion, hopping, sorption, etc., see 68.35.Fx; see section 72 for carrier diffusion and electron-hole diffusion)
+            - Diffusion of other defects
+            - Chemical interdiffusion; diffusion barriers
+            - Diffusion in nanoscale solids
+            - Electromigration
+          - **General properties of quantum fluids cover the statistical theory, quantum effects on non-degenerate fluids and the transport behavior common to them.**
+            _basis: kinds, order: structure. Ordered by structure following the PACS numbering within the general quantum fluid properties heading._
+            - Quantum fluids: general properties
+            - Quantum statistical theory
+            - Quantum effects on the structure and dynamics of non-degenerate fluids
+            - Transport properties and hydrodynamics
+          - **Degenerate quantum matter is organized by the quantum statistics of its particles, whether bosons or fermions.**
+            _basis: kinds, order: structure. Ordered by structure: the top-level quantum fluids heading, then boson and fermion degeneracy._
+            - Quantum fluids and solids (see also 05.30.-d Quantum statistical mechanics; for cryogenics, refrigerators, low-temperature detectors, and other low-temperature equipment, see 07.20.Mc; see also 47.37.+q Hydrodynamic aspects of superfluidity; quantum fluids—in fluid dynamics)
+            - Boson degeneracy (for ultracold, trapped gases, see 67.85.-d)
+            - Fermion degeneracy
+      - **Helium and quantum-fluid claims are scaled by ħ together with confinement or particle number, plus a thermal statistics entry.**
+        _basis: kinds, order: structure. ordered from thermal statistics to helium systems_
+        - **Statistical and general-theory entries for thermal properties are scaled by Boltzmann's constant and N with no quantum or gravitational constant.**
+          _basis: kinds, order: structure_
+          - **Transport of heat and protons in solids is governed by lattice and phonon dynamics rather than by quantum-fluid degeneracy.**
+            _basis: kinds, order: structure. Ordered by structure following the PACS numbering: proton diffusion, then the thermal conduction parent, then its material subtypes._
+            - Proton diffusion
+            - Nonelectronic thermal conduction and heat-pulse propagation in solids; thermal waves (for electronic thermal conduction in metals and alloys, see 72.15.Cz and 72.15.Eb)
+            - Metals, alloys, and semiconductors
+            - Glasses and polymers
+            - Other systems such as ionic crystals, molecular crystals, nanotubes, etc
+          - **Statistical and general-theory entries for thermal properties are scaled by the Boltzmann constant and particle number N, with no quantum or gravitational constant required.**
+            _basis: kinds, order: structure. Ordered from general liquid theory to specific liquids._
+            - Thermal properties of liquids
+            - General theory of thermodynamic properties of liquids, including computer simulation
+            - Studies of thermodynamic properties of specific liquids
+            - Ionic conduction
+            - Nonelectronic transport properties of condensed matter
+        - **Helium-3 physics is divided into thermodynamic aspects, transport and magnetic properties, and structure and boundary effects.**
+          _basis: parts, order: structure. Parts of the helium-3 account from bulk thermodynamics to transport and magnetism to structure and boundaries._
+          - **Normal and thermodynamic aspects of helium-3 cover its normal phase, its superfluid phase, and their thermodynamics and excitations.**
+            _basis: kinds, order: structure. Ordered by structure from phases to thermodynamic properties._
+            - Normal phase of 3 He
+            - Superfluid phase of 3 He
+            - Thermodynamics
+            - Excitations
+          - **Transport and magnetic properties of helium-3 include hydrodynamic flow, spin polarization, and NMR response.**
+            _basis: kinds, order: structure. Ordered by structure from transport to magnetic response._
+            - Transport and hydrodynamics
+            - Spin polarized 3 He
+            - Magnetic properties, NMR
+            - Transport, hydrodynamics, and superflow
+          - **Structure and boundary effects in superfluid helium-3 involve textures, vortices, spin dynamics, impurities, and interfaces.**
+            _basis: kinds, order: structure. Ordered by structure from internal textures to boundaries._
+            - Textures and vortices
+            - Spin dynamics
+            - Impurities
+            - Interfaces
+        - **Confined helium and helium mixtures are kinds of quantum fluid whose behavior is set by ħ together with the confinement scale or particle number N.**
+          _basis: kinds, order: structure. Kinds of helium fluid: confined or finite-size systems, pure thin-layer helium, and dilute 3He-4He solutions._
+          - **Confined and finite-size helium systems show superfluid behavior modified by films, restricted geometries, and small clusters.**
+            _basis: kinds, order: structure. Ordered by structure from films to clusters and helium-3 films._
+            - Films
+            - Restricted geometries
+            - Superfluidity in small clusters
+            - Films and restricted geometries
+          - **Pure liquid helium confined to thin layers or restricted geometries is a kind of quantum fluid whose behavior is set by ħ and the confinement scale.**
+            _basis: kinds, order: structure. Ordered by structure: film before restricted geometry._
+            - Films
+            - Restricted geometries
+            - Mixtures of 3 He and 4 He
+            - Boson mixtures
+            - Bose-Fermi mixtures
+          - **Solutions of 3He in liquid 4He, including spin-polarized, film and confined forms, are kinds of dilute Fermi solution whose scale is set by ħ and N.**
+            _basis: kinds, order: structure. Ordered by structure: general solutions, then polarized, film, restricted._
+            - Solutions of 3 He in liquid 4 He
+            - Spin polarized solutions
+            - Films
+            - Restricted geometries
+        - **Quantum solids and hydrogen systems are kinds of condensed matter whose lattice and collective behavior is set by zero-point motion governed by ħ and N.**
+          _basis: kinds, order: structure. Kinds of quantum matter: hydrogen systems, quantum crystals, and their small-mass and hydrogen-solid forms._
+          - **Hydrogen and its isotopes form kinds of quantum system distinguished as molecular or atomic, with scale set by ħ and N.**
+            _basis: kinds, order: structure. Ordered by structure: general, molecular, atomic._
+            - Hydrogen and isotopes
+            - Molecular hydrogen and isotopes
+            - Atomic hydrogen and isotopes
+          - **Quantum solids are kinds of crystal, of 3He, 4He, hydrogen isotopes or supersolid type, whose properties are set by ħ and N.**
+            _basis: kinds, order: structure. Ordered by structure: general, solid types, then supersolid and solid properties._
+            - Quantum solids
+            - Solid 4 He
+            - Solid 3 He
+            - Superfluidity in solid 4 He, supersolid 4 He
+            - Liquid-solid interfaces; growth kinetics
+          - **Quantum solids in which a small atomic or molecular mass and zero-point motion, governed by Planck's constant ħ and the particle number N, set the scale of the lattice and its collective behavior.**
+            _basis: kinds, order: structure_
+            - Other supersolids
+            - Structure, lattice dynamics and sound
+            - Solids of hydrogen and isotopes
+          - **Quantum solids of hydrogen and its isotopes are condensed phases whose behavior is set by quantum zero-point motion governed by ħ.**
+            _basis: kinds, order: structure. Ordered by structure from defects and magnetism to molecular, atomic, film and lattice forms._
+            - Defects, impurities, and diffusion
+            - Magnetic properties, phases, and NMR
+            - Molecular hydrogen and isotopes
+            - Atomic hydrogen and isotopes
+    - **Topics on quantum gases, surfaces and surface science, covering quantum statistics, surface properties, probes, adsorbates and thin films.**
+      _basis: kinds, order: structure. Ordered by structure from gases and surface properties to experimental surface science._
+      - **Quantum gases and surface claims are classified by quantum statistics or by surface properties, tension and materials.**
+        _basis: kinds, order: structure. ordered from quantum gases to surface materials_
+        - **Ultracold quantum gases are kinds of dilute degenerate gas whose properties are set by quantum statistics, ħ and the particle number N.**
+          _basis: kinds, order: structure. Kinds of ultracold gas: bosonic condensates and fermionic or mixed degenerate gases._
+          - **Bose-Einstein condensates are ultracold gases whose static and dynamic properties are set by ħ and the particle number N.**
+            _basis: kinds, order: structure. Ordered by structure from static properties to dynamics, spinor and optical-lattice condensates, and other phenomena._
+            - Static properties of condensates
+            - Dynamic properties of condensates; excitations, and superfluid flow
+            - Multicomponent condensates; spinor condensates
+            - Bose-Einstein condensates in optical potentials
+          - **Degenerate Fermi gases and Bose-Fermi mixtures are ultracold gases whose scale is set by quantum statistics, ħ and N.**
+            _basis: kinds, order: structure. Ordered by structure from pure Fermi gases to mixtures._
+            - Degenerate Fermi gases
+            - Mixtures of Bose and Fermi gases
+            - Ultracold gases, trapped gases (see also 03.75.-b Matter waves in quantum mechanics)
+            - Other Bose-Einstein condensation phenomena
+        - **Surfaces, interfaces and thin films are kinds of boundary system whose behavior is governed by surface tension and molecular interactions rather than the fundamental constants.**
+          _basis: kinds, order: structure. Kinds of boundary system: general methods, gas-liquid, liquid-liquid, liquid-solid interfaces, and liquid thin films._
+          - **Transport techniques and the general class of surfaces, interfaces and thin films cover experimental methods and systems defined by boundaries.**
+            _basis: kinds, order: structure. Ordered by structure from method to general surface category._
+            - Transport techniques
+            - Surfaces and interfaces; thin films and nanosystems (structure and nonelectronic properties) (for surface and interface chemistry, see 82.65.+r, for surface magnetism, see 75.70.Rf)
+            - Films
+            - Supersolid phases on lattices
+          - **Liquid interface phenomena are surface effects at gas-liquid boundaries governed by surface tension and molecular interactions.**
+            _basis: kinds, order: structure. Ordered by structure from the general interface to tension, evaporation and surface structure._
+            - Gas-liquid and vacuum-liquid interfaces
+            - Surface tension and related phenomena
+            - Evaporation and condensation of liquids
+            - Liquid surface structure: measurements and simulations
+          - **Liquid-liquid interfaces are boundaries between two immiscible fluids, characterised by their dynamics, structure and microemulsion properties.**
+            _basis: kinds, order: structure. Ordered from general interface dynamics to structure to microemulsions._
+            - Dynamics (capillary waves)
+            - Liquid-liquid interfaces
+            - Liquid-liquid interface structure: measurements and simulations
+            - Interfacial properties of microemulsions
+          - **Liquid-solid interfaces are boundaries where a liquid meets a solid, covering wetting and the structure of the contact region.**
+            _basis: kinds, order: structure. Ordered from general category to wetting to structure measurements._
+            - Liquid-solid interfaces
+            - Wetting
+            - Liquid-solid interface structure: measurements and simulations (for crystal growth from solutions and melts, see 81.10.Dn, Fq in materials science)
+            - Atomic scale friction
+            - Acoustical properties
+          - **Liquid thin films are thin layers on liquids, including Langmuir-Blodgett films, whose structure and phase transitions are studied.**
+            _basis: kinds, order: structure. Ordered from Langmuir-Blodgett films to film structure to phase transitions._
+            - Langmuir-Blodgett films on liquids (for L-B films on solids, see 68.47.Pe)
+            - Liquid thin film structure: measurements and simulations
+            - Phase transitions in liquid thin films
+        - **Surface properties and processes describe the structure, dynamics, energetics and bonding or phase-change behavior of solid surfaces and interfaces.**
+          _basis: kinds, order: structure. Ordered from static structure to dynamics and energetics to bonding and phase processes._
+          - **Solid surface structure concerns the atomic arrangement, roughness, composition and defects of solid surfaces and solid-solid interfaces.**
+            _basis: kinds, order: structure. Ordered from general category to clean surfaces to roughness to composition and defects._
+            - Solid surfaces and solid-solid interfaces: structure and energetics
+            - Structure of clean surfaces (and surface reconstruction)
+            - Interface structure and roughness
+            - Composition, segregation; defects and impurities
+          - **Dynamical and energetic properties of solid surfaces describe how surfaces move, transport matter, deform and store energy.**
+            _basis: kinds, order: structure. Ordered from friction and diffusion to mechanical and acoustic behaviour to vibrations and thermodynamics._
+            - Diffusion; interface formation (see also 66.30.-h Diffusion in solids, for diffusion of adsorbates, see 68.43.Jk)
+            - Mechanical properties; surface strains (for strain induced piezoelectric fields, see 77.65.Ly; for strain effects on ferroelectric phase transitions, see 77.80.bn)
+            - Surface and interface dynamics and vibrations
+            - Surface thermodynamics, surface energies (see also 05.70.Np Interface and surface thermodynamics in statistical physics, thermodynamics and nonlinear dynamical systems; 65.40.gp Surface energy in thermal properties of condensed matter)
+          - **Surface processes of adhesion and phase transitions describe how interfaces bond or change state.**
+            _basis: kinds, order: structure. Listed in structural order: adhesion first, then phase transitions._
+            - Adhesion (for polymer adhesion, see 82.35.Gh: for cell adhesion, see 87.17.Rt in biological physics)
+            - Phase transitions and critical phenomena
+        - **Surface material classes are the families of solids, from inorganic crystals to glasses, polymers and fullerenes, whose surfaces are studied.**
+          _basis: kinds, order: structure. Ordered from crystalline inorganic materials to soft, disordered and carbon-based materials._
+          - **Inorganic and crystalline material classes are the solid materials whose surfaces and interfaces are studied.**
+            _basis: kinds, order: structure. Listed in structural order: metals, semiconductors, then other materials._
+            - Metals and alloys
+            - Semiconductors
+            - Other materials
+            - Scanning tunneling microscopy (including chemistry induced with STM)
+            - Microscopy of surfaces, interfaces, and thin films
+          - **Soft, disordered and carbon-based material classes include glasses, polymers and fullerenes studied at surfaces.**
+            _basis: kinds, order: structure. Listed in structural order: amorphous materials, polymers, then fullerenes._
+            - Amorphous semiconductors, glasses
+            - Polymers, organics
+            - Fullerenes
+      - **Surface probes, adsorbates and thin films are the experimental and structural topics of surface science.**
+        _basis: kinds, order: structure. ordered from probes to adsorbates to films_
+        - **Surface probes and microscopies are the electron, scanning-tip, X-ray and particle-scattering methods used to image and characterize surfaces.**
+          _basis: kinds, order: structure. Ordered from electron microscopies to scanning probes to combined electron and X-ray imaging and scattering methods._
+          - **Electron-beam and electron-based microscopies image surfaces and thin films using electrons as the probe.**
+            _basis: kinds, order: structure. Listed in structural order: general scanning, transmission, then low-energy methods._
+            - Scanning electron microscopy (SEM) (including EBIC)
+            - Transmission electron microscopy (TEM)
+            - Scanning transmission electron microscopy (STEM)
+            - Low energy electron microscopy (LEEM)
+            - High-resolution transmission electron microscopy (HRTEM)
+          - **Scanning probe and field-based microscopies map surfaces with a sharp tip or a strong field rather than a broad beam.**
+            _basis: kinds, order: structure. Listed in structural order: general microscopy, tunneling, force probes, near-field, then field emission._
+            - Atomic force microscopy (AFM)
+            - Magnetic force microscopy (MFM)
+            - Acoustic force microscopy
+            - Near-field scanning microscopy and spectroscopy
+            - Field emission and field-ion microscopy
+          - **Electron and X-ray microscopies are imaging probes that resolve the composition and structure of surfaces.**
+            _basis: kinds, order: structure. Ordered by structure, from electron-based to X-ray-based microscopy._
+            - Scanning Auger microscopy, photoelectron microscopy
+            - X-ray microscopy
+            - Electron stimulated desorption (see also 79.20.La Photon- and electron-stimulated desorption)
+            - Photon stimulated desorption (see also 79.20.La Photon- and electron-stimulated desorption)
+            - Thermal desorption
+          - **Particle-surface scattering methods characterize surfaces by directing a particular kind of particle or wave at them.**
+            _basis: kinds, order: structure. Ordered by structure: general scattering, then atoms, molecules, electrons, ions, X-rays._
+            - Surface characterization by particle-surface scattering (see also 34.35.+a Interactions of atoms and molecules with surfaces)
+            - Atom scattering from surfaces (diffraction and energy transfer)
+            - Molecule scattering from surfaces (energy transfer, resonances, trapping)
+            - Electron scattering from surfaces
+            - Ion scattering from surfaces (charge transfer, sputtering, SIMS)
+        - **Adsorbates and surface types cover how adsorbed species sit and move on surfaces and how the interfaces they sit on are classified, down to atomic clusters on oxides.**
+          _basis: kinds, order: structure. Ordered from static adsorbate descriptions to adsorbate dynamics to surface types and clusters._
+          - **Static and equilibrium descriptions of adsorbates cover their general nature, computed structure, statistics, binding geometry and clustering.**
+            _basis: kinds, order: structure. Ordered by structure, from the general category to ab initio, statistical, geometric and collective descriptions._
+            - Chemisorption/physisorption: adsorbates on surfaces
+            - Ab initio calculations of adsorbate structure and reactions (for electronic structure of adsorbates, see 73.20.Hb; for adsorbate reactions, see also 82.65.+r Surface and interface chemistry; heterogeneous catalysis at surfaces)
+            - Statistical mechanics of adsorbates
+            - Adsorbate structure (binding sites, geometry)
+            - Structure of assemblies of adsorbates (two- and three-dimensional clustering)
+          - **Adsorbate dynamics are the rate processes by which adsorbates move, arrive, leave or vibrate on a surface.**
+            _basis: kinds, order: structure. Ordered by structure, from diffusion and uptake to departure and vibration._
+            - Diffusion of adsorbates, kinetics of coarsening and aggregation
+            - Adsorption kinetics
+            - Desorption kinetics
+            - Adsorbate vibrations
+          - **Surface types are classes of solid-gas or vacuum interface distinguished by the material that forms the surface.**
+            _basis: kinds, order: structure. Ordered by structure, from the general class to metals, semiconductors, oxides, oxide-supported clusters and polymers._
+            - Metallic surfaces
+            - Semiconductor surfaces
+            - Oxide surfaces
+            - Polymer surfaces
+          - **Surface-physics topics on solid-gas and solid-vacuum interfaces, from the general classification of surface types to the specific case of atomic clusters on oxide surfaces, whose scale is set by the number of atoms N rather than by c, ħ or G.**
+            _basis: kinds, order: structure_
+            - Solid-gas/vacuum interfaces: types of surfaces
+            - Clusters on oxide surfaces
+        - **Thin-film topics cover how films form, what materials they are made of, and which measurable features and molecular or X-ray-probed properties they show.**
+          _basis: kinds, order: structure. Ordered from film formation to material classes to characteristics and organic or X-ray-probed properties._
+          - **Film formation topics cover how thin films nucleate, grow and take their overall structure and morphology.**
+            _basis: kinds, order: structure. Ordered by structure: general structure, nucleation, morphology._
+            - Thin film structure and morphology (for methods of thin film deposition, film growth and epitaxy, see 81.15.-z)
+            - Nucleation and growth
+            - Morphology of films
+          - **Film material classes distinguish thin films by the type of substance they are made of, such as semiconductors, insulators or organics.**
+            _basis: kinds, order: structure. Ordered by structure: semiconductors, insulators, polymers, fullerenes, other._
+            - Semiconductors
+            - Insulators
+            - Polymers and organics
+            - Fullerenes
+            - Other materials
+          - **Film characteristics describe measurable features of a film such as its defects, composition, thickness and texture.**
+            _basis: kinds, order: structure. Ordered by structure: defects, composition, thickness, texture._
+            - Defects and impurities: doping, implantation, distribution, concentration, etc. (for diffusion of impurities, see 66.30.J-)
+            - Composition and phase identification
+            - Thickness
+            - Texture
+          - **Organic and X-ray-probed film topics cover molecular films on solids and the non-electronic physical properties of thin films.**
+            _basis: kinds, order: structure. Ordered by structure: molecular films, X-ray standing waves, physical properties._
+            - Langmuir-Blodgett films on solids; polymers on surfaces; biological molecules on surfaces
+            - X-ray standing waves
+            - Physical properties of thin films, nonelectronic
+    - **Topics on electronic structure, transport and the electronic, magnetic and polarization properties of conducting and ordered materials.**
+      _basis: kinds, order: structure. Ordered by structure from electronic structure and transport to superconducting, magnetic and dielectric properties._
+      - **Transport topics cover the theory of conduction, response and loss processes, quantum channel counting, classical junction devices and thin-film carrier behavior.**
+        _basis: kinds, order: structure. Ordered by structure, from general theory and phenomena to quantum, classical device and thin-film cases._
+        - **The theory of electronic transport and the headings that divide conduction by material type and structural order form the framework of the field.**
+          _basis: parts, order: structure. Ordered from transport theory to the top-level divisions of conduction._
+          - **Electronic transport theory and the scattering mechanisms that limit conduction, including scattering from disordered structures.**
+            _basis: kinds, order: structure. Ordered by position in the PACS 72 hierarchy._
+            - Electronic transport in condensed matter (for electronic transport in surfaces, interfaces, and thin films, see section 73; for electrical properties related to treatment conditions, see 81.40.Rs; for transport properties of superconductors, see 74.25.F-; for electrical properties of tissues and organs, see 87.19.R- in biological physics)
+            - Theory of electronic transport; scattering mechanisms
+            - General formulation of transport theory
+            - Scattering by phonons, magnons, and other nonlocalized excitations (see also 71.45.-d Collective effects in electronic structure of bulk materials)
+          - **Electrical conduction in condensed matter is divided into two top-level headings: conduction in metals and alloys, and conductivity phenomena in semiconductors and insulators.**
+            _basis: kinds, order: structure. General headings for metals and for semiconductors and insulators._
+            - Electronic conduction in metals and alloys
+            - Conductivity phenomena in semiconductors and insulators (see also 66.70.-f Nonelectronic thermal conduction and heat-pulse propagation in solids; thermal waves)
+          - **Conduction is divided by the structural order of the material and by the theory and transport regime that governs carrier motion in it.**
+            _basis: kinds, order: structure. Ordered from amorphous to crystalline structure, then general theory and mobility edges._
+            - Electrical and thermal conduction in amorphous and liquid metals and alloys
+            - Electrical and thermal conduction in crystalline metals and alloys
+            - General theory, scattering mechanisms
+            - Mobility edges; hopping transport
+        - **Transport phenomena are kinds of response and loss processes by which carriers react to applied fields and temperature gradients or lose momentum.**
+          _basis: kinds, order: structure. Ordered from external-field responses to internal scattering and localization processes._
+          - **Magnetotransport and thermoelectric effects are the responses of conducting materials to magnetic fields and temperature gradients.**
+            _basis: kinds, order: structure. Metals first, then semiconductors, pairing each effect type._
+            - Galvanomagnetic and other magnetotransport effects (see also 75.47.-m Magnetotransport phenomena; materials for magnetotransport)
+            - Thermoelectric and thermomagnetic effects
+            - Galvanomagnetic and other magnetotransport effects
+            - Thermoelectric and thermomagnetic effects
+          - **Scattering, relaxation, collective and localization phenomena describe how carriers lose momentum, relax, or become confined during conduction.**
+            _basis: kinds, order: structure. Ordered from relaxation and collective modes through scattering to localization and carrier dynamics._
+            - Relaxation times and mean free paths
+            - Collective modes (e.g., in one-dimensional conductors)
+            - Scattering mechanisms and Kondo effect (see also 75.20.Hr Local moments in compounds and alloys; Kondo effect, valence fluctuations, heavy fermions in magnetic properties and materials)
+            - Localization effects (Anderson or weak localization)
+            - Low-field transport and mobility; piezoresistance
+          - **Field-driven and spin-dependent transport covers nonlinear carrier behavior and the flow of spin-polarized currents in metals and semiconductors.**
+            _basis: kinds, order: structure. Ordered from carrier generation and high-field effects to spin-polarized transport._
+            - High-field and nonlinear effects
+            - Charge carriers: generation, recombination, lifetime, and trapping
+            - Spin polarized transport (for spin polarized transport devices, see 85.75.-d)
+            - Spin polarized transport in metals
+            - Spin polarized transport in semiconductors
+          - **Spin injection processes are the ways spin-polarized carriers are created, by light or by electrical current.**
+            _basis: kinds, order: structure. Ordered by structure; no ranking implied._
+            - Optical creation of spin polarized carriers
+            - Electrical injection of spin polarized carriers
+          - **Spin transport and loss processes govern how spin moves across interfaces, is pumped by current, and decays by scattering.**
+            _basis: kinds, order: structure. Ordered by structure; no ranking implied._
+            - Spin transport through interfaces
+            - Current-driven spin pumping
+            - Spin relaxation and scattering
+        - **Quantum and channel-counted transport topics have scales set by ħ and the conductance quantum, with the number of conducting channels N fixing the total response.**
+          _basis: kinds, order: structure. Ordered by structure, from quantized conductance to tunneling, contacts and nanoscale conductors._
+          - **Quantum-coherent and quantized transport topics have scales set by ħ and the conductance quantum, with channel number N counting the modes.**
+            _basis: kinds, order: structure. Ordered by structure of the topic, not ranked by degree._
+            - Persistent currents
+            - Quantum Hall effects
+            - Theory and modeling
+            - Novel experimental methods; measurements
+            - Collective excitations
+          - **Tunneling topics have scales set by ħ through barrier transmission, with the number of conducting channels N sets the total current.**
+            _basis: kinds, order: structure. Ordered by structure of the topic, not ranked by degree._
+            - Tunneling (for tunneling in quantum Hall effects, see 73.43.Jn)
+            - Tunneling
+            - Metal-insulator-metal structures
+          - **Contact and general interface transport topics have scales set by contact resistance and potential, where the number of channels N in the contact sets the Sharvin-type resistance.**
+            _basis: kinds, order: structure. Ordered by structure of the topic, not ranked by degree._
+            - Electronic transport in interface structures
+            - Contact resistance, contact potential
+            - Metal-to-metal contacts
+            - Metal-nonmetal contacts
+          - **Claims about electronic transport in nanoscale materials and nanotubes, whose scale is set by the quantum of conductance (ħ and the electron charge) and by the small number N of conducting channels.**
+            _basis: kinds, order: structure_
+            - Nanotubes
+            - Electronic transport in nanoscale materials and structures (see also 73.23.-b Electronic transport in mesoscopic systems)
+        - **Classical junction and layered device structures have scales set by band bending, depletion and band offsets rather than by relativistic constants.**
+          _basis: kinds, order: structure. Ordered by structure, from single junctions to multilayer heterostructures._
+          - **Semiconductor junction and rectifying topics have scales set by classical band-bending and depletion physics, with ħ entering only weakly.**
+            _basis: kinds, order: structure. Ordered by structure of the topic, not ranked by degree._
+            - Rectification
+            - III-V semiconductor-to-semiconductor contacts, p - n junctions, and heterojunctions
+            - Other semiconductor-to-semiconductor contacts, p - n junctions, and heterojunctions
+            - Semiconductor-electrolyte contacts
+          - **Layered heterostructure topics have scales set by layer sequence and band offsets, with the number of layers N and no relativistic constant c or G involved.**
+            _basis: kinds, order: structure. Ordered by structure of the topic, not ranked by degree._
+            - Metal-insulator-semiconductor structures (including semiconductor-to-insulator)
+            - Metal-semiconductor-metal structures
+            - Semiconductor-insulator-semiconductor structures
+            - Semiconductor-metal-semiconductor structures
+        - **Thin-film transport topics describe how charge carriers move, scatter, respond to drives and couple to other effects in films of specific materials.**
+          _basis: kinds, order: structure. Ordered by structure, from general theory to driven response, coupled effects and specific materials._
+          - **Quantum-coherent magnetotransport phenomena are those in which Planck's constant sets the scale of the response of electrons to a magnetic field.**
+            _basis: kinds, order: structure. Ordered by structure, from transitions to resistance effects._
+            - Quantum phase transitions (see also 64.70.Tg Quantum phase transitions in equations of state, phase equilibria and phase transitions)
+            - Magnetoresistance (see also 75.47.-m Magnetotransport phenomena; materials for magnetotransport in magnetic properties and materials)
+            - Electrical properties of specific thin films (for optical properties of thin films, see 78.20.-e and 78.66.-w; for magnetic properties of thin films, see 75.70.-i)
+            - Metal and metallic alloys
+            - Noise processes and phenomena
+          - **General transport theory covers the overarching framework and scattering mechanisms that govern how charge carriers move in thin films.**
+            _basis: kinds, order: structure. Ordered by structure, from the film heading to general theory._
+            - Electronic transport phenomena in thin films (for electronic transport in mesoscopic systems, see 73.23.-b; see also 73.40.-c Electronic transport in interface structures; for electronic transport in nanoscale materials and structures, see 73.63.-b)
+            - General theory, scattering mechanisms
+          - **Drive-dependent transport covers how film conduction responds to the strength and frequency of applied electric fields.**
+            _basis: kinds, order: structure. Ordered by structure, from low-field to high-field to high-frequency._
+            - Low-field transport and mobility; piezoresistance
+            - High-field and nonlinear effects
+            - High-frequency effects; plasma effects
+          - **Carrier dynamics and coupled transport effects cover how carriers are generated and lost, and how their flow couples to magnetic, thermal, optical, acoustic and noise phenomena.**
+            _basis: kinds, order: structure. Ordered by structure, from carrier lifetime to coupled effects to noise._
+            - Charge carriers: generation, recombination, lifetime, trapping, mean free paths
+            - Galvanomagnetic and other magnetotransport effects (including thermomagnetic effects)
+            - Thermoelectric effects
+            - Photoconduction and photovoltaic effects
+            - Acoustoelectric and magnetoacoustic effects
+          - **Electrical properties of specific thin-film materials are grouped by the class of material, such as metals, semiconductors and glasses.**
+            _basis: kinds, order: structure. Ordered by structure, from the general heading to metals to semiconductor classes._
+            - Elemental semiconductors
+            - III-V semiconductors
+            - II-VI semiconductors
+            - Amorphous semiconductors; glasses
+            - Other inorganic semiconductors
+      - **Superconductivity topics cover the descriptions, behaviors, material families and modifiers of the superconducting state.**
+        _basis: kinds, order: structure. Ordered by structure, from theoretical descriptions to behavior, material families and modifying factors._
+        - **Superconductivity topics cover the microscopic, phenomenological and transport descriptions of the superconducting state.**
+          _basis: kinds, order: structure. Ordered by structure, from microscopic theory to macroscopic description and transport response._
+          - **Microscopic theories of superconductivity explain the pairing mechanism and symmetry from quantum mechanics, with ħ and the pairing energy setting the scale.**
+            _basis: kinds, order: structure. ordered by structure_
+            - Theories and models of superconducting state
+            - BCS theory and its development
+            - Nonconventional mechanisms
+            - Electronic structure calculations (for methods of electronic structure calculations, see 71.15.-m)
+            - Pairing symmetries (other than s-wave)
+          - **Phenomenological and thermodynamic descriptions treat superconductors through macroscopic, ensemble-level models and measured properties.**
+            _basis: kinds, order: structure. ordered by structure_
+            - Superconductivity (for superconducting devices, see 85.25.-j)
+            - Phenomenological theories (two-fluid, Ginzburg-Landau, etc.)
+            - Properties of superconductors
+            - Thermodynamic properties
+          - **Transport and thermal response covers how charge and heat flow through a superconductor.**
+            _basis: kinds, order: structure. Ordered by structure, from general transport to its electric, thermal and thermoelectric forms._
+            - Transport properties
+            - Electric and thermal conductivity
+            - Thermoelectric effects
+        - **Behavior of a superconductor comprises its electromagnetic response, vortex physics, lattice and electronic structure, and phase boundaries with fluctuations.**
+          _basis: parts, order: structure. structure_
+          - **Electromagnetic response and spectroscopy covers how a superconductor reacts to and is probed by light, radio-frequency fields and nuclear spins.**
+            _basis: kinds, order: structure. Ordered by structure, from general electromagnetic response to specific optical and resonance probes._
+            - Response to electromagnetic fields
+            - Surface impedance
+            - Optical properties
+            - Raman and optical spectroscopy
+            - Nuclear magnetic resonance
+          - **Vortex and magnetic phenomena covers how a superconductor responds to magnetic fields and carries current through the mixed state.**
+            _basis: kinds, order: structure. Ordered by structure, from magnetic properties through the mixed state and vortex phases to pinning and critical currents._
+            - Magnetic properties including vortex structures and related phenomena (for vortices, magnetic bubbles, and magnetic domain structure, see 75.70.Kw)
+            - Mixed states, critical fields, and surface sheaths
+            - Vortex phases (includes vortex lattices, vortex liquids, and vortex glasses)
+            - Vortex pinning (includes mechanisms and flux creep)
+            - Critical currents
+          - **Lattice and electronic structure covers the electronic states, lattice vibrations and mechanical behavior of the superconducting solid.**
+            _basis: kinds, order: structure. Ordered by structure, from electronic states to phonons and then elastic behavior._
+            - Electronic structure (photoemission, etc.)
+            - Phonons
+            - Mechanical and acoustical properties, elasticity, and ultrasonic attenuation (see also 43.35.Cg Ultrasonic velocity, dispersion, scattering, diffraction, and attenuation in solids; elastic constants—in Acoustics Appendix)
+          - **Phase behavior and fluctuations covers the phase boundaries of superconductivity and the random or nonequilibrium departures from the ordered state.**
+            _basis: kinds, order: structure. Ordered by structure, from the phase diagram to fluctuations, noise and nonequilibrium states._
+            - Superconductivity phase diagrams
+            - Fluctuation phenomena
+            - Noise and chaos (see also 05.45.-a Nonlinear dynamics and chaos; for noise in general studies of fluctuation phenomena, see 05.40.Ca)
+            - Nonequilibrium superconductivity
+        - **Superconducting material families are distinguished by chemical composition, exotic character, or cuprate doping state.**
+          _basis: kinds, order: structure. structure_
+          - **Simple and multi-element inorganic compounds form non-cuprate superconductors defined by their chemical composition.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 74.70 listing._
+            - Superconducting materials other than cuprates (for cuprates, see 74.72.-h; for superconducting films, see 74.78.-w)
+            - Metals; alloys and binary compounds (including A15, MgB 2 , etc.)
+            - Ternary, quaternary, and multinary compounds (including Chevrel phases, borocarbides, etc.)
+            - Pnictides and chalcogenides
+          - **Superconductors built from molecular, carbon, ruthenium oxide or strongly correlated heavy-fermion materials form an exotic non-cuprate family.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 74.70 listing._
+            - Organic superconductors
+            - Ruthenates
+            - Heavy-fermion superconductors (for heavy-fermion systems in magnetically ordered materials, see 75.30.Mb; see also 71.27.+a Strongly correlated electron systems, heavy fermions)
+            - Carbon-based superconductors
+          - **Cuprate superconductors are distinguished by the doping type or electronic state of the copper-oxide material.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 74.72 listing._
+            - Cuprate superconductors
+            - Insulating parent compounds
+            - Electron-doped
+            - Hole-doped
+        - **Modifiers of superconductivity include factors that change the transition temperature and the geometry or makeup of the sample.**
+          _basis: kinds, order: structure. structure_
+          - **Factors that change the superconducting transition temperature include synthesis, composition, doping and disorder.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 74.62 listing._
+            - Transition temperature variations, phase diagrams
+            - Effects of material synthesis, crystal structure, and chemical composition (for methods of materials synthesis, see 81.20.-n)
+            - Effects of crystal defects, doping and substitution (for specific crystal defects, see 61.72.-y)
+            - Effects of disorder
+          - **Pressure, quantum criticality, the pseudogap and other external or collective tuning effects form a distinct kind of influence on superconductivity.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing._
+            - Effects of pressure
+            - Other effects
+            - Quantum critical phenomena
+            - Pseudogap regime
+          - **Superconducting films and low-dimensional structures are superconductors whose reduced geometry, layering, or nanoscale size shapes their behavior.**
+            _basis: kinds, order: structure. Ordered from general low-dimensional category to specific structure types._
+            - Superconducting films and low-dimensional structures
+            - Multilayers, superlattices, heterostructures
+            - Mesoscopic and nanoscale systems
+          - **Inhomogeneous superconducting systems are superconductors whose granular, amorphous, composite, or networked makeup makes their properties spatially non-uniform.**
+            _basis: kinds, order: structure. Ordered from general inhomogeneous category to specific types._
+            - Inhomogeneous superconductors and superconducting systems, including electronic inhomogeneities
+            - Granular, melt-textured, amorphous, and composite superconductors
+            - Josephson junction arrays and wire networks (see also 85.25.Cp Josephson devices)
+      - **Magnetism topics cover the theoretical models and responses of magnetic materials together with their moment order and bulk properties.**
+        _basis: kinds, order: structure. Ordered by structure, from theoretical models to ordered states and measurable properties._
+        - **Magnetic models and responses cover the theoretical frameworks for magnetism and the basic magnetic responses of materials.**
+          _basis: kinds, order: structure. structure_
+          - **General theories and models of magnetic ordering are the theoretical frameworks, including spin Hamiltonians and spin models, used to describe magnetism.**
+            _basis: kinds, order: structure. Ordered from the general theory category to specific model types._
+            - Magnetic properties and materials (for magnetic properties of quantum solids, see 67.80.dk; for magnetic properties related to treatment conditions, see 81.40.Rs; for magnetic properties of superconductors, see 74.25.Ha; for magnetic properties of rocks and minerals, see 91.60.Pn; for magnetic properties of nanostructures, see 75.75.-c; for magnetic devices, see 85.70.-w; for magnetoelectronics and spintronics, see 85.75.-d)
+            - General theory and models of magnetic ordering (see also 05.50.+q Lattice theory and statistics)
+            - Crystal-field theory and spin Hamiltonians (see also 71.70.Ch Crystal and ligand fields)
+            - Classical spin models
+            - Quantized spin models, including quantum spin frustration
+          - **Exotic and itinerant magnetic models cover quantum spin liquids, band models, random spin systems, and chain models, along with a method for open quantum dynamics.**
+            _basis: kinds, order: structure. Ordered from quantum phases to itinerant, random, and chain models, then the dynamics method._
+            - Quantum spin liquids, valence bond phases and related phenomena
+            - Band and itinerant models
+            - Spin-glass and other random models (for spin glasses and other random magnets, see 75.50.Lk)
+            - Spin chain models
+            - Hierarchical equations of motion
+          - **Diamagnetism, paramagnetism, and local-moment phenomena are magnetic responses of materials, classified by whether the material is a nonmetal, a metal, or a Kondo or heavy-fermion system.**
+            _basis: kinds, order: structure. Ordered from the general category to nonmetals, metals, then local-moment compounds._
+            - Diamagnetism, paramagnetism, and superparamagnetism
+            - Nonmetals
+            - Metals and alloys
+            - Local moment in compounds and alloys; Kondo effect, valence fluctuations, heavy fermions (for Kondo effect and scattering mechanisms in electronic conduction, see 72.15.Qm and 72.10.Fk)
+        - **Magnetic order and properties cover the arrangement of moments, the interactions and excitations among them, and measurable bulk response.**
+          _basis: parts, order: structure. structure_
+          - **Ordering and arrangement topics concern how spins, orbitals and charges are arranged in magnetically ordered materials, including density-wave states.**
+            _basis: kinds, order: structure. Ordered by structure from general spin arrangements to orbital and charge orders and spin-density waves._
+            - Spin arrangements in magnetically ordered materials (including neutron and spin-polarized electron studies, synchrotron-source x-ray scattering, etc.) (for devices exploiting spin polarized transport, see 85.75.-d)
+            - Orbital, charge, and other orders, including coupling of these orders
+            - Spin-density waves
+          - **Interaction and excitation topics concern the couplings between magnetic moments and the collective or impurity-driven excitations that result from them.**
+            _basis: kinds, order: structure. Ordered by structure from basic exchange couplings to excitations and impurity or heavy-fermion interactions._
+            - Exchange and superexchange interactions (see also 71.70.Gm Exchange interactions)
+            - Spin waves (for spin-wave resonance, see 76.50.+g)
+            - Magnetic impurity interactions
+            - Valence fluctuation, Kondo lattice, and heavy-fermion phenomena (see also 71.27.+a Strongly correlated electron systems, heavy fermions; for heavy-fermion superconductors, see 74.70.Tx)
+            - Spin crossover
+          - **Bulk response topics concern intrinsic measurable properties of a magnetic material such as moments, anisotropy, phase boundaries and the magnetocaloric effect.**
+            _basis: kinds, order: structure. Ordered by structure from intrinsic materials properties to phase boundaries and thermal response._
+            - Intrinsic properties of magnetically ordered materials (for critical point effects, see 75.40.-s; for magnetotransport phenomena, see 75.47.-m)
+            - Saturation moments and magnetic susceptibilities
+            - Magnetic anisotropy
+            - Magnetic phase boundaries (including classical and quantum magnetic transitions, metamagnetism, etc.) (for ferroelectric phase transitions, see 77.80.B-; for superconductivity phase diagrams, see 74.25.Dw)
+            - Magnetocaloric effect, magnetic cooling (for cryogenics, see 07.20.Mc)
+      - **Magnetism and spin-resonance topics are kinds of study of magnetic order, moments and spin systems, from materials and bulk behavior to resonance methods.**
+        _basis: kinds, order: structure. Ordered structurally from materials to bulk phenomena, low-dimensional systems, then resonance methods._
+        - **Material classes of magnets are distinguished by composition, spin arrangement and intended form or use.**
+          _basis: kinds, order: structure. Ordered from metallic, to nonmetallic, to spin-arrangement, to application-oriented classes._
+          - **Metallic ferromagnets are magnetic materials whose magnetism comes from metals such as iron and their alloys.**
+            _basis: kinds, order: structure. Ordered by structure: iron-based alloys first, then other ferromagnetic metals and alloys, then the general metals and alloys category._
+            - Fe and its alloys
+            - Other ferromagnetic metals and alloys
+            - Metals and alloys
+          - **Oxide, nonmetallic and semiconducting magnets are magnetic materials that are not simple metals, including oxides, insulating ferromagnets and magnetic semiconductors.**
+            _basis: kinds, order: structure. Ordered by structure: oxides, then nonmetallic ferromagnets, then magnetic semiconductors, then other materials._
+            - Magnetic oxides
+            - Nonmetallic ferromagnetic materials
+            - Magnetic semiconductors
+            - Other materials
+          - **Ordered and disordered spin-arrangement magnets are materials classified by how their atomic moments align or fail to align, including antiferromagnets, ferrimagnets, amorphous magnets and spin glasses.**
+            _basis: kinds, order: structure. Ordered by structure: antiparallel ordering first, then ferrimagnetic ordering, then amorphous and random arrangements._
+            - Antiferromagnetics
+            - Ferrimagnetics
+            - Amorphous and quasicrystalline magnetic materials
+            - Spin glasses and other random magnets
+          - **Application-oriented and small-scale magnetic materials are classed by their physical form or intended use, such as liquids, recording media, fine particles, permanent magnets and molecular magnets.**
+            _basis: kinds, order: structure. Ordered by structure: fluid and recording forms, then particles, then hard magnets, then molecular magnets._
+            - Magnetic liquids
+            - Magnetic recording materials (for magnetic recording devices, see 85.70.Li)
+            - Permanent magnets (for magnets, see 07.55.Db in instruments)
+            - Molecular magnets
+        - **Bulk magnetic phenomena are the critical, transport and domain or hysteresis behaviors that magnetic materials display.**
+          _basis: kinds, order: structure. Ordered from transitions, to transport, to domain and hysteresis effects._
+          - **Critical-point topics concern behavior near magnetic transitions, covering static and dynamic properties and numerical simulation studies.**
+            _basis: kinds, order: structure. Ordered by structure from the general critical-point heading to static, dynamic and simulation approaches._
+            - Critical-point effects, specific heats, short-range order (for equilibrium properties near critical points, see 64.60.F-; for dynamical critical phenomena, see 64.60.Ht)
+            - Static properties (order parameter, static susceptibility, heat capacities, critical exponents, etc.)
+            - Dynamic properties (dynamic susceptibility, spin waves, spin diffusion, dynamic scaling, etc.)
+            - Numerical simulation studies
+          - **Magnetotransport topics concern changes in electrical resistance of materials caused by magnetic fields, including giant and colossal magnetoresistance.**
+            _basis: kinds, order: structure. Ordered by structure from the general heading to the specific giant and colossal magnetoresistance effects._
+            - Magnetotransport phenomena; materials for magnetotransport (for spintronics, see 85.75.-d; see also 72.25.-b Spin polarized transport; 72.15.Gd Galvanomagnetic and other magnetotransport effects; for magnetotransport effects in thin films, see 73.50.Jt; see also 73.43.Qt Magnetoresistance)
+            - Giant magnetoresistance
+            - Colossal magnetoresistance
+          - **Domain-level and general magnetic phenomena cover the overall study of specific magnetic materials and the domain, magnetization-curve and hysteresis effects they show.**
+            _basis: kinds, order: structure. Ordered by structure: the general materials heading first, then domain effects, then domain walls._
+            - Studies of specific magnetic materials
+            - Domain effects, magnetization curves, and hysteresis (for dynamics of domain structures, see 75.78.Fg)
+            - Domain walls and domain structure (for magnetic bubbles and vortices, see 75.70.Kw)
+            - Fine-particle systems; nanocrystalline materials
+            - High coercivity materials
+          - **Hysteresis and reversal phenomena describe how a bulk magnet's magnetization responds to applied fields and thermal history over time.**
+            _basis: kinds, order: structure_
+            - Magnetization curves, hysteresis, Barkhausen and related effects (for hysteresis in ferroelectricity, see 77.80.Dj)
+            - Magnetization reversal mechanisms
+            - Magnetic aftereffects
+            - Magnetic annealing and temperature-hysteresis effects
+        - **Low-dimensional magnetism covers magnetic order and structure in films, interfaces and nanostructures.**
+          _basis: kinds, order: structure. Ordered from film and interface effects to film domains to nanostructures._
+          - **Film and interface magnetism covers magnetic properties that arise from reduced dimensionality and from the boundaries of a layered material.**
+            _basis: parts, order: structure_
+            - Magnetic properties of thin films, surfaces, and interfaces (for magnetic properties of nanostructures, see 75.75.-c)
+            - Magnetic properties of monolayers and thin films
+            - Magnetic properties of interfaces (multilayers, superlattices, heterostructures)
+            - Surface magnetism
+          - **Domain and spin-orbit effects in films concern the internal magnetic structure and relativistic coupling that shape thin-film magnetic order.**
+            _basis: kinds, order: structure_
+            - Domain structure (including magnetic bubbles and vortices) (for domain structure in ferroelectricity and antiferroelectricity, see 77.80.Dj)
+            - Spin-orbit effects (see also 71.70.Ej Spin-orbit coupling, Zeeman and Stark splitting, Jahn-Teller effect)
+          - **Magnetic nanostructures are small-scale magnetic objects characterized by how they are made, how their domains are arranged, and how their electrons and moments behave.**
+            _basis: parts, order: structure_
+            - Magnetic properties of nanostructures
+            - Fabrication of magnetic nanostructures (see also 81.16.-c Methods of micro- and nanofabrication and processing, and 81.07.-b Nanoscale materials and structures: fabrication and characterization)
+            - Domain structures in nanoparticles
+            - Dynamics of magnetic nanoparticles
+            - Electronic structure of magnetic nanoparticles
+        - **Magnetization dynamics and electron paramagnetic resonance study how magnetic moments move and resonate, and which centres carry the unpaired spins.**
+          _basis: kinds, order: structure. Ordered from moment dynamics to ionic centres to non-ionic centres._
+          - **Magnetization dynamics and resonance treat the time-dependent motion of magnetic moments, from simulation to ultrafast switching and resonance spectroscopy.**
+            _basis: kinds, order: structure_
+            - Magnetization dynamics
+            - Micromagnetic simulations
+            - Dynamics of domain structures
+            - Ultrafast magnetization dynamics and switching (for switching phenomena in ferroelectrics, see 77.80.Fm; for ultrafast spectroscopy, see 78.47.J-; for ultrafast processes in optics, see 42.65.Re)
+            - Magnetic resonances and relaxations in condensed matter, Mössbauer effect (for magnetic resonance spectrometers, see 07.57.Pt)
+          - **EPR of paramagnetic ions and impurities is divided by the type of ion, from the general case through the iron, palladium-platinum, rare-earth and other groups.**
+            _basis: kinds, order: structure. Ordered structurally from the general heading to specific ion families._
+            - Ions and impurities: general
+            - Platinum and palladium group (4 d and 5 d ) ions and impurities (Zr-Ag and Hf-Au)
+            - Rare-earth ions and impurities
+            - Other ions and impurities
+          - **EPR of non-ionic paramagnetic centres covers defects, conduction electrons and free radicals as sources of unpaired spins.**
+            _basis: kinds, order: structure. Ordered structurally by type of spin source._
+            - Color centers and other defects
+            - Conduction electrons
+            - Free radicals
+        - **Nuclear and double resonance methods probe spin systems through spectral lines, relaxation, echoes, imaging and coupled resonances.**
+          _basis: kinds, order: structure. Ordered from NMR observables to NMR techniques to double resonance._
+          - **NMR spectral and relaxation observables describe how nuclear resonance lines shift, relax or split in the sample.**
+            _basis: kinds, order: structure. Ordered structurally from the parent heading to specific observables._
+            - Nuclear magnetic resonance and relaxation (see also 33.25.+k Nuclear resonance and relaxation in atomic and molecular physics and 82.56.-b Nuclear magnetic resonance in physical chemistry and chemical physics; for structure determination using magnetic resonance techniques, see 61.05.Qr; for biophysical applications, see 87.80.Lg; for NMR in superconducting materials, see 74.25.nj)
+            - Chemical and Knight shifts
+            - Relaxation effects
+            - Quadrupole resonance
+          - **NMR field effects, echo methods and imaging cover internal fields, spin echoes and image formation from nuclear resonance.**
+            _basis: kinds, order: structure. Ordered structurally by method._
+            - Effects of internal magnetic fields
+            - Spin echoes
+            - NMR imaging (for medical NMR imaging, see 87.61.-c)
+            - Electron paramagnetic resonance and relaxation (see also 33.35.+r Electron resonance and relaxation in atomic and molecular physics; 87.80.Lg Magnetic and paramagnetic resonance in biological physics)
+            - Iron group (3 d ) ions and impurities (Ti-Cu)
+          - **Double resonance techniques combine two magnetic or optical resonances so that one spin system is detected or polarized through another.**
+            _basis: kinds, order: structure. Ordered structurally from the parent heading to specific techniques._
+            - Magnetic double resonances and cross effects (see also 33.40.+f Multiple resonances in atomic and molecular physics)
+            - Electron-nuclear double resonance (ENDOR), electron double resonance (ELDOR)
+            - Double nuclear magnetic resonance (DNMR), dynamical nuclear polarization
+            - Optically detected magnetic resonance (ODMR)
+      - **Dielectric, piezoelectric and ferroelectric topics are kinds of study of bulk and thin-film materials and the polarization phenomena they show.**
+        _basis: kinds, order: structure. Ordered structurally from bulk dielectric topics to thin-film materials, phenomena, then bulk materials._
+        - **Bulk dielectric and film-structure topics cover the field response of dielectrics, their failure limit, and the device roles of thin films.**
+          _basis: kinds, order: structure. Ordered by structure, from bulk response to failure and film structure to device role._
+          - **Bulk dielectric properties describe how solids and liquids respond to an applied electric field through permittivity, polarization and loss.**
+            _basis: kinds, order: structure. Ordered from the whole field to its specific response properties._
+            - Dielectrics, piezoelectrics, and ferroelectrics and their properties (for conductivity phenomena, see 72.20.-i and 72.80.-r; for dielectric properties related to treatment conditions, see 81.40.Tv)
+            - Dielectric properties of solids and liquids (for dielectric properties of tissues and organs, see 87.19.rf)
+            - Permittivity (dielectric function) (for low-permittivity dielectric films, see 77.55.Bh; for high-permittivity gate dielectric films, 77.55.D-)
+            - Polarization and depolarization
+            - Dielectric loss and relaxation
+          - **Breakdown and film-structure topics cover the failure limit of dielectrics and the general and epitaxial organization of dielectric thin films.**
+            _basis: kinds, order: structure. Ordered from breakdown to general films to epitaxial layered films._
+            - Dielectric breakdown and space-charge effects (for dielectric breakdown in gases, see 51.50.+v)
+            - Dielectric thin films (see also 85.50.-n Dielectric, ferroelectric, and piezoelectric devices; for microelectronics applications, see 85.40.-e; for methods of film deposition, see 81.15.-z)
+            - Epitaxial and superlattice films
+          - **Films classified by permittivity level or target electronics are distinguished by the role they play in devices.**
+            _basis: kinds, order: structure. Ordered from permittivity-defined films to electronics-platform-defined films._
+            - Low-permittivity dielectric films
+            - High-permittivity gate dielectric films
+            - High-permittivity capacitive films
+            - For silicon electronics
+            - For nonsilicon electronics (Ge, III-V, II-VI, organic electronics)
+        - **Specific thin-film dielectric, piezoelectric and ferroelectric materials are classed by functional response or by the oxide compound forming the film.**
+          _basis: kinds, order: structure. Ordered by structure, from functional response to oxide chemistry to specific compound._
+          - **Functional dielectric films are distinguished by the electromechanical, thermal, magnetic or paraelectric response they exhibit.**
+            _basis: kinds, order: structure. Ordered as listed in the PACS scheme._
+            - Piezoelectric and electrostrictive films
+            - Pyroelectric films
+            - Multiferroic/magnetoelectric films
+            - Paraelectric films
+          - **Material-specific films are defined by their oxide chemistry, namely titanate, zirconate-titanate and niobate or tantalate compounds.**
+            _basis: kinds, order: structure. Ordered as listed in the PACS scheme._
+            - BaTiO 3 -based films
+            - Pb(Zr,Ti)O 3 -based films
+            - Niobate- and tantalate-based films
+          - **Thin-film piezoelectric and ferroelectric materials are classed by the specific compound that forms the film.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 77.55 listing, from ferroelectric films through named compounds to other piezoelectric films._
+            - Other ferroelectric films
+            - AlN
+            - ZnO
+            - PZT
+            - Other piezoelectric or electrostrictive films
+        - **Piezoelectric and ferroelectric phenomena are the coupled strain-polarization effects, the collective polarization behaviors and the external influences that modify them.**
+          _basis: kinds, order: structure. Ordered by structure, from coupling effects to intrinsic collective behavior to extrinsic influences._
+          - **Piezoelectric and electromechanical effects are the coupling of mechanical strain and electric polarization, classed by the kind of effect or quantity observed.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 77.65 listing, from general effects through constants, surface waves, resonance and strain-induced fields._
+            - Piezoelectricity and electromechanical effects
+            - Piezoelectric and electrostrictive constants
+            - Acoustoelectric effects and surface acoustic waves (SAW) in piezoelectrics (see also 43.35.Pt Surface waves in solids and liquids—in Acoustics Appendix; for surface acoustic wave transducers, see 43.38.Rh—in Acoustics Appendix; for acousto-optical effects, see 78.20.hb, and 43.35.Sx—in Acoustics Appendix)
+            - Electromechanical resonance; quartz resonators
+            - Strain-induced piezoelectric fields
+          - **Ferroelectric phenomena are the collective behaviors of spontaneous polarization, such as phase transitions, domains and switching.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 77.80 listing, from general ferroelectricity to transitions, domains, switching and relaxors._
+            - Ferroelectricity and antiferroelectricity
+            - Phase transitions and Curie point (for Curie point in ferromagnetic materials, see 75.30.Kz)
+            - Domain structure; hysteresis (for domain structure and hysteresis in ferromagnetic materials, see 75.60.-d)
+            - Switching phenomena (for ultrafast magnetization dynamics and switching, see 75.78.Jp; for spintronics, see 85.75.-d)
+            - Relaxor ferroelectrics
+          - **Extrinsic influences on ferroelectric behavior are the composition, size scaling and strain or interface conditions that modify the material's response.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 77.80 sub-listing of compositional, scaling and strain effects._
+            - Compositional effects
+            - Scaling effects
+            - Strain and interface effects
+        - **Bulk dielectric, piezoelectric and ferroelectric materials are classed by chemical type and by rigid crystalline or soft composite structure.**
+          _basis: kinds, order: structure. Ordered by structure, from chemical type to crystalline solids to soft and composite media._
+          - **Dielectric, piezoelectric and ferroelectric bulk materials are classed by their chemical type, such as elements, oxides and nitrides.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 77.84 listing, from the general heading to the specific chemical classes._
+            - Dielectric, piezoelectric, ferroelectric, and antiferroelectric materials (for nonlinear optical materials, see 42.70.Mp; for dielectric materials in electrochemistry, see 82.45.Un)
+            - Elements, oxides, nitrides, borides, carbides, chalcogenides, etc
+          - **Inorganic ferroelectric crystals and ceramics are rigid crystalline dielectric materials whose lattice structure produces piezoelectric and ferroelectric behavior.**
+            _basis: kinds, order: structure. Ordered by structure from perovskite ceramics to niobates to hydrogen-bonded crystals._
+            - PZT ceramics and other titanates
+            - Niobates and tantalates
+            - KDP- and TGS-type crystals
+            - Laser ultrasonics
+            - Optical properties, condensed-matter spectroscopy and other interactions of radiation and particles with condensed matter
+          - **Soft and composite dielectric materials are organic, fluid or mixed-phase media whose polarization response comes from molecular or multiphase structure.**
+            _basis: kinds, order: structure. Ordered by structure from polymers to composites to liquids._
+            - Polymers; organic compounds
+            - Composite materials
+            - Liquids, emulsions, and suspensions; liquid crystals (for structure of liquid crystals, see 61.30.-v)
+    - **Topics on light-matter study, nanostructures and probes, and the general material classes and framings that set the scope of the area.**
+      _basis: kinds, order: structure. Ordered by structure from optical studies to nanoscale probes to general background framing._
+      - **Optical and spectroscopic topics are kinds of light-matter study sorted by phenomenon, measured material, time scale or emission mechanism.**
+        _basis: kinds, order: structure. Ordered structurally from general optical phenomena to spectra, dynamics, photoluminescence, then other luminescence._
+        - **Optical phenomena in condensed matter are classed by whether they are basic properties, stimulus-induced changes, acoustic couplings, photothermal conversions or vibrational spectra.**
+          _basis: kinds, order: structure. Ordered by structure, from basic optical properties to induced effects to coupled and spectral effects._
+          - **Fundamental optical characterization covers the theory and the basic measurable optical properties of a material such as constants, activity and birefringence.**
+            _basis: kinds, order: structure. Ordered by structure from theory to measured constants to polarization-dependent properties._
+            - Theory, models, and numerical simulation
+            - Optical constants (including refractive index, complex dielectric constant, absorption, reflection and transmission coefficients, emissivity)
+            - Optical activity
+            - Birefringence
+          - **Field-induced optical effects are changes in a material's optical response caused by an applied electric, magnetic, light-induced or thermal stimulus.**
+            _basis: kinds, order: structure. Ordered by structure from electric to magnetic to light-driven to thermal stimulus._
+            - Electro-optical effects (for electro-optical modulators, see 42.79.Hp)
+            - Magneto-optical effects (for magneto-optical devices, see 85.70.Sq)
+            - Photorefractive effects (see also 42.65.Hw Phase conjugation; photorefractive and Kerr effects; for photorefractive materials, see 42.70.Nq in Optics)
+            - Thermo-optic effects
+          - **Mechanical and acoustic optical coupling comprises the top-level headings and the effects where strain, sound or ultrasound interacts with light in condensed matter.**
+            _basis: parts, order: structure. Ordered by structure from the overarching headings down to specific acoustic-optic effects._
+            - Optical properties of bulk materials and thin films (for optical properties related to materials treatment, see 81.40.Tv; for optical materials, see 42.70-a; for optical properties of superconductors, see 74.25.Gz; for optical properties of rocks and minerals, see 91.60.Mk; for optical properties of specific thin films, see 78.66.-w)
+            - Piezo-, elasto-optical effects (for piezoelectric and electromechanical effects, see 77.65.-j)
+            - Photoacoustic effects (see also 78.20.hb Piezo-optical, elasto-optical, acousto-optical, and photoelastic effects; for photoacoustic transducers, see 43.38.Zp—in Acoustics Appendix)
+            - Piezo-optical, elasto-optical, acousto-optical, and photoelastic effects (see also 43.35.Sx Acousto-optical effects, optoacoustics, acoustical visualization, acoustical microscopy, and acoustical holography—in Acoustics Appendix; for acousto-optical devices, see 42.79.Jq, and 43.38.Zp—in Acoustics Appendix)
+          - **Photothermal-family effects are optical phenomena in which absorbed light is converted into heat or thermal signals that are then detected.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing._
+            - Photothermal effects (for deep-level photothermal spectroscopy, see 79.10.Ca)
+            - Photopyroelectric effects (for pyroelectric effects, see 77.70.+a)
+            - Thermophotonic effects (see also 79.10.-n Thermoelectronic phenomena)
+          - **Infrared and Raman spectra of crystalline semiconductors, insulators, metals and alloys probe the vibrational response of ordered solids.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing._
+            - Infrared and Raman spectra (for vibrational states in crystals and disordered systems, see 63.20.-e and 63.50.-x, respectively; for Raman spectra of superconductors, see 74.25.nd)
+            - Elemental semiconductors and insulators
+            - Solid metals and alloys
+            - III-V and II-VI semiconductors
+        - **Infrared, Raman, visible and ultraviolet spectra are sorted into kinds by the class of material measured, such as liquids, solids, organics or metals.**
+          _basis: kinds, order: structure. Ordered by material class, not ranked._
+          - **Infrared and Raman spectra of nonmetallic, organic, disordered and carbon-cage solids cover materials that are not simple crystalline elements or metals.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing._
+            - Other nonmetallic inorganics
+            - Organic compounds, polymers
+            - Disordered solids
+            - Fullerenes and related materials
+          - **Infrared and Raman spectra of liquids are classified by the chemical nature of the liquid, whether organic, inorganic or a solution.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing._
+            - Liquids
+            - Organic liquids
+            - Inorganic liquids
+            - Solutions and ionic liquids
+          - **Visible and ultraviolet absorption and reflection spectra are classified by the type of material measured, from liquids to metals.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing._
+            - Absorption and reflection spectra: visible and ultraviolet (for infrared spectra, see 78.30.-j; for optical spectra of superconductors, see 74.25.nd; for time resolved reflection spectroscopy, see 78.47.jg; for multiphoton absorption, see 79.20.Ws in impact phenomena)
+            - Liquids
+            - Semiconductors
+            - Other nonmetallic inorganics
+            - Metals, semimetals, and alloys
+          - **Optical studies of solids are organized by the class of material examined, such as organic, disordered or fullerene systems.**
+            _basis: kinds, order: structure. Ordered by structure, from molecular materials to disordered solids to carbon cage materials._
+            - Organic compounds and polymers
+            - Disordered solids
+            - Fullerenes and related materials
+            - Transient grating spectroscopy
+            - Free polarization decay
+        - **Time-resolved, coherent and nonlinear spectroscopies are kinds of dynamics studies distinguished by time scale, probed excitation, measured signal or coherent response.**
+          _basis: kinds, order: structure. Ordered by the aspect of dynamics probed, not ranked._
+          - **Spectroscopy of solid state dynamics is classified by the time-scale regime and resolution at which dynamics are measured.**
+            _basis: kinds, order: degree. Ranked by time resolution, from the general field to picosecond-scale to sub-picosecond ultrafast to high-resolution nonlinear methods._
+            - Spectroscopy of solid state dynamics
+            - Time resolved spectroscopy (>1 psec)
+            - Ultrafast spectroscopy (<1 psec) (see also 42.65.Re Ultrafast processes; optical pulse generation and pulse compression; 82.53.Mj Femtosecond probing of semiconductor nanostructures)
+            - High resolution nonlinear optical spectroscopy (see also 42.62.Fi Laser spectroscopy, and 42.65.-k Nonlinear optics)
+          - **Time-resolved studies are classified by the kind of excitation or species whose dynamics are probed.**
+            _basis: kinds, order: structure. Ordered by structure, from excited states to conduction electrons to radicals._
+            - Excited states
+            - Conduction electrons
+            - Radicals
+          - **Time-resolved optical techniques are classified by the measured signal, whether absorption, luminescence, scattering or reflection.**
+            _basis: kinds, order: structure. Ordered by structure, following the type of optical signal detected._
+            - Transient absorption (see also 42.50.Md Optical transient phenomena: quantum beats, photon echo, free-induction decay, dephasings and revivals, optical nutation, and self-induced transparency)
+            - Time resolved luminescence
+            - Time resolved light scattering spectroscopy
+            - Time resolved reflection spectroscopy
+          - **Coherent transient and nonlinear phenomena are those in which phase-coherent optical responses of the solid are observed in time.**
+            _basis: kinds, order: structure. Ordered by structure, from general coherent spectroscopy to specific coherent effects._
+            - Photon echoes (see also 42.50.Md Optical transient phenomena: quantum beats, photon echo, free-induction decay, dephasings and revivals, optical nutation, and self-induced transparency)
+            - Coherent nonlinear optical spectroscopy (see also 42.62.Fi Laser spectroscopy, and 42.65.-k Nonlinear optics)
+            - Quantum beats (see also 42.50.Md Optical transient phenomena: quantum beats, photon echo, free-induction decay, dephasings and revivals, optical nutation, and self-induced transparency)
+            - Optical nutation (see also 42.50.Md Optical transient phenomena: quantum beats, photon echo, free-induction decay, dephasings and revivals, optical nutation, and self-induced transparency)
+          - **Nonlinear laser spectroscopies probe the coherent optical response of a material using multiple laser fields.**
+            _basis: kinds, order: structure. Ordered as listed in PACS 78.47._
+            - Hole burning spectroscopy
+            - Four-wave mixing spectroscopy (for optical mixing and phase conjugation, see 42.65.Hw)
+            - Photoconduction and photovoltaic effects (for photoconduction and photovoltaic effects in bulk matter and thin films, see 72.40.+w and 73.50.Pz, respectively; see also 84.60.Jt Photoelectric conversion; for solar cells, see 88.40.H- and 88.40.J- in Solar energy)
+            - Photocarrier radiometry (see also 72.20.Jv Charge carriers: generation, recombination, lifetime, and trapping)
+        - **Photoluminescence is divided into kinds by the type of emitting material, from crystalline semiconductors to liquids and disordered solids.**
+          _basis: kinds, order: structure. Ordered by emitter type, not ranked._
+          - **Photoluminescence of crystalline semiconductors and solid inorganic materials is classified by the type of crystal that emits.**
+            _basis: kinds, order: structure. Ordered as listed in PACS 78.55._
+            - Elemental semiconductors
+            - III-V semiconductors
+            - II-VI semiconductors
+            - Solid alkali halides
+            - Other solid inorganic materials
+          - **Photoluminescence of liquids, organic solids, porous solids and disordered solids covers emitters that are not simple crystals, together with the general heading.**
+            _basis: kinds, order: structure. Ordered as listed in PACS 78.55._
+            - Photoluminescence, properties and materials (for time resolved luminescence, see 78.47.jd)
+            - Liquids
+            - Solid organic materials
+            - Porous materials
+            - Amorphous materials; glasses and other disordered solids
+        - **Luminescence not excited by light is divided into kinds by the energy source that drives emission, together with the thin-film general heading.**
+          _basis: kinds, order: structure. Ordered by excitation source, not ranked._
+          - **Non-optically excited luminescence is light emission driven by electric fields, particle beams, heat, stimulation light or mechanical action.**
+            _basis: kinds, order: structure. Ordered as listed in PACS 78.60._
+            - Other luminescence and radiative recombination
+            - Electroluminescence
+            - Cathodoluminescence, ionoluminescence
+            - Optically stimulated luminescence
+          - **Sonoluminescence, triboluminescence and thermoluminescence are luminescence phenomena in which light emission is triggered by mechanical, acoustic or thermal energy rather than by optical or electrical excitation.**
+            _basis: kinds, order: structure_
+            - Sonoluminescence, triboluminescence (see also 43.35.Hl Sonoluminescence—in Acoustics Appendix)
+            - Thermoluminescence
+          - **Chemiluminescence and the general heading for thin-film optics frame the field, one being light emission from chemical reactions and the other the umbrella class for thin-film optical properties.**
+            _basis: kinds, order: structure. Ordered by structure: the emission process first, then the general thin-film heading._
+            - Chemiluminescence (see also 42.55.Ks Chemical lasers)
+            - Optical properties of specific thin films (for optical properties of low-dimensional, mesoscopic, and nanoscale materials, see 78.67.-n; for optical properties of surfaces, see 78.68.+m)
+            - Composite materials
+            - Fullerenes and related materials
+            - Fine-particle systems
+      - **Nanostructure and probe topics are kinds of study of confined systems and of the radiation or particle processes used to examine and affect them.**
+        _basis: kinds, order: structure. Ordered structurally from thin films to nanostructures, probes, then emission processes._
+        - **Thin films and nanostructures are classified into kinds by their material type and by how they are confined in dimension.**
+          _basis: kinds, order: structure. Ordered by film or structure type, not ranked._
+          - **Inorganic crystalline and metallic thin films are films of metals, elemental semiconductors and compound semiconductors whose optical properties are studied.**
+            _basis: kinds, order: structure. Ordered by structure: metals, then elemental, III-V, II-VI and other semiconductors._
+            - Metals and metallic alloys
+            - Elemental semiconductors and insulators
+            - III-V semiconductors
+            - II-VI semiconductors
+            - Other semiconductors
+          - **Disordered, insulating and organic thin films are non-crystalline or insulating film materials such as glasses, insulators, polymers and organic compounds.**
+            _basis: kinds, order: structure. Ordered by structure: amorphous, insulating, then organic films._
+            - Amorphous semiconductors; glasses
+            - Insulators
+            - Polymers; organic compounds
+          - **Low-dimensional and nanoscale structures are objects confined in one or more dimensions, from the general class through particles, tubes, wells, dots and wires to engineered multilayers.**
+            _basis: kinds, order: structure. Ordered by structure: general class, then nanoparticles, tubes, wells, dots, wires, and multilayered structures._
+            - Optical properties of low-dimensional, mesoscopic, and nanoscale materials and structures (for magnetic properties of nanostructures, see 75.75.-c; for electronic transport in nanoscale structures, see 73.63.-b; for mechanical properties of nanoscale systems, see 62.25.-g)
+            - Nanocrystals, nanoparticles, and nanoclusters
+            - Quantum wells
+            - Quantum dots
+            - Multilayers; superlattices; photonic structures; metamaterials (see also 81.05.Xj, Metamaterials for chiral, bianisotropic and other complex media)
+        - **Nanostructures are kinds of nanoscale system whose optical properties are set by their confinement, geometry or self-assembled form.**
+          _basis: kinds, order: structure. Ordered by structure from one-dimensional to composite to liquid forms._
+          - **Nanotubes and quantum wires are one-dimensional nanostructures whose optical properties are set by quantum confinement, so the scale of such claims is governed by ħ together with the particle number N rather than by c or G.**
+            _basis: kinds, order: structure_
+            - Nanotubes
+            - Quantum wires
+          - **Elongated and composite nanostructures are materials whose optical properties are set by their rod, wire, porous or aggregated geometry.**
+            _basis: kinds, order: structure. n/a_
+            - Nanorods
+            - Nanoporous materials
+            - Nanoaggregates; nanocomposites
+            - Nanowires
+            - Optical properties of graphene
+          - **Liquid-based nanostructures are droplet and micelle systems whose optical properties arise from their self-assembled fluid form.**
+            _basis: kinds, order: structure. n/a_
+            - Nanodroplets
+            - Nanomicelles
+        - **Probes of matter are kinds of interaction method in which X-rays, particles or long-wavelength radiation are used to examine a sample.**
+          _basis: kinds, order: structure. Ordered by structure from X-ray to non-X-ray probes._
+          - **X-ray interaction methods are probes in which X-ray photons are scattered, absorbed or emitted by matter.**
+            _basis: kinds, order: structure. n/a_
+            - X-ray scattering
+            - X-ray absorption spectra
+            - X-ray emission spectra and fluorescence
+          - **Particle and radiation probes are non-X-ray interactions in which particles or long-wavelength radiation are used to examine matter.**
+            _basis: kinds, order: structure. n/a_
+            - Interactions of particles and radiation with matter
+            - Positron annihilation (for positron states, see 71.60.+z in electronic structure of bulk materials; for positronium chemistry, see 82.30.Gg in physical chemistry and chemical physics)
+            - Microwave and radio-frequency interactions
+            - Neutron inelastic scattering
+            - Scintillation (see also 29.40.Mc, Scintillation detectors)
+        - **Emission and impact processes are kinds of response in which photons, electrons, ions or heat drive release or interaction at a surface.**
+          _basis: kinds, order: structure. Ordered by structure from the driving agent to the sample probed._
+          - **Emission and impact phenomena are processes in which electrons, ions or heat are released from solids and liquids by thermal or collisional excitation.**
+            _basis: kinds, order: structure. n/a_
+            - Electron and ion emission by liquids and solids; impact phenomena
+            - Thermoelectronic phenomena
+            - Deep-level photothermal spectroscopy
+            - Impact phenomena (including electron spectra and sputtering)
+            - Theory of impact phenomena; numerical simulation
+          - **Photon-driven impact phenomena are kinds of laser-matter interaction whose scale is set by the photon quantum ħω and the speed of light c.**
+            _basis: kinds, order: structure. Ordered by structure: from general laser impact to ablation to multiphoton absorption._
+            - Laser-beam impact phenomena
+            - Laser ablation
+            - Multiphoton absorption (see also 82.50.Pt Multiphoton processes in photochemistry)
+          - **Electron-impact emission phenomena are kinds of surface response to incident electrons, with scales set by ħ and the electron energy.**
+            _basis: kinds, order: structure. Ordered by structure: Auger, secondary, other emission, then energy loss._
+            - Electron impact: Auger emission (for Auger electron spectroscopy, see 82.80.Pv)
+            - Electron impact: secondary emission
+            - Other electron-impact emission phenomena
+            - Electron energy loss spectroscopy (see also 82.80.Pv Electron spectroscopy; 34.80.-i Electron and positron scattering)
+          - **Desorption, positron and heavy-particle beam processes are kinds of particle ejection or surface interaction driven by stimulated or beam impact.**
+            _basis: kinds, order: structure. Ordered by structure: stimulated desorption, positron emission, then ion and atom beams._
+            - Photon- and electron-stimulated desorption (see also 68.43.Rs Electron stimulated desorption; and 68.43.Tj Photon stimulated desorption)
+            - Positron emission (for positron emission tomography, see 87.57.uk)
+            - Atomic, molecular, and ion beam impact and interactions with surfaces (for atomic and molecular beam techniques, see 37.20.+j; see also 34.35.+a Interactions of atoms and molecules with surfaces)
+          - **Photoemission from distinct material surfaces are kinds of photoelectron spectra differing in the sample type probed, with scales set by ħ and the photon energy.**
+            _basis: kinds, order: structure. Ordered by structure: clean surfaces, liquids, adsorbed layers, polymers, disordered structures._
+            - Photoemission and photoelectron spectra (for photoelectron spectroscopy, see 87.64.ks in biological physics; 82.80.Pv in chemical analysis)
+            - Clean metal, semiconductor, and insulator surfaces
+            - Liquids and liquid surfaces
+            - Adsorbed layers and thin films
+            - Polymers; organic compounds
+      - **General material classes and overarching framings are kinds of background description that define the bulk matter and the scope of the whole area.**
+        _basis: kinds, order: structure. Ordered structurally from material classes to the overarching framings._
+        - **Material classes are kinds of bulk material distinguished by their bonding, composition and phase structure.**
+          _basis: kinds, order: structure. Ordered by structure from metals to semiconductors, bulk solids, composites and carbon lattices._
+          - **Metals, semimetals and alloys are conductive materials whose properties arise from metallic bonding.**
+            _basis: kinds, order: structure. Ordered by structure, from the metallic class to its carbon-based relative._
+            - Metals, semimetals, and alloys
+            - Carbon/carbon-based materials (for carbon-based superconductors, see 74.70.Wz)
+          - **Semiconductors are materials with intermediate conductivity, divided by their elemental, compound, organic or amorphous makeup.**
+            _basis: kinds, order: structure. Ordered by structure, from elemental through compound to organic, amorphous and other._
+            - Elemental semiconductors (for semiconductors in electrochemistry, see 82.45.Vp)
+            - II-VI semiconductors
+            - III-V semiconductors
+            - Organic semiconductors
+            - Amorphous semiconductors
+          - **Bulk inorganic and organic solids include other semiconductors, ceramics, glasses and polymers, each defined by its bonding and network structure.**
+            _basis: kinds, order: structure. Ordered by structure, from other semiconductors to ceramics, glasses and polymers._
+            - Other semiconductors
+            - Ceramics and refractories (including borides, carbides, hydrides, nitrides, oxides, and silicides) (for ceramics in electrochemistry, see 82.45.Yz)
+            - Glasses (including metallic glasses)
+            - Polymers and plastics; rubber; synthetic and natural fibers; organometallic and organic materials (for polymers and organic materials in electrochemistry, see 82.45.Wx)
+          - **Composite, porous and engineered media combine several phases or structured components to obtain properties not found in a single homogeneous material.**
+            _basis: kinds, order: structure. Ordered by structure, from ceramic and metal composites to porous and engineered media._
+            - Cermets, ceramic and refractory composites
+            - Dispersion-, fiber-, and platelet-reinforced metal-based composites
+            - Glass-based composites, vitroceramics
+            - Reinforced polymers and polymer-based composites
+          - **Bulk and extended carbon allotropes are materials whose properties are set by a very large number N of covalently bonded carbon atoms in a lattice.**
+            _basis: kinds, order: structure. Ordered by structure of the carbon lattice._
+            - Graphene (for structure of graphene, see 61.48.Gh; for phonons in graphene, see 63.22.Rc; for thermal properties, see 65.80.Ck; for graphene films, see 68.65.Pq; for electronic transport, see 72.80.Vp; for electronic structure, see 73.22.Pr; for optical properties, see 78.67.Wj)
+            - Graphite
+            - Diamond
+            - Diamond/nanocarbon composites
+        - **Framings are kinds of overarching description that set the scope and the governing scale of the whole area.**
+          _basis: kinds, order: structure. Ordered by structure from the many-body framing to the classification headings._
+          - **Low-dimensional and many-body framings are kinds of system descriptions in which the particle number N and nonequilibrium statistics set the scale.**
+            _basis: kinds, order: structure. Ordered by structure: disordered and interface systems, then 2D systems, growth, and nonequilibrium statistics._
+            - Disordered structures
+            - Interfaces; heterostructures; nanostructures
+            - 2-dimensional systems
+            - Surface growth
+            - Nonequilibrium statistical mechanics
+          - **The classification headings frame the whole area of materials fabrication, treatment, testing and analysis.**
+            _basis: parts, order: structure. Ordered from the broadest heading to the specific-materials heading._
+            - INTERDISCIPLINARY PHYSICS AND RELATED AREAS OF SCIENCE AND TECHNOLOGY
+            - Materials science
+            - Specific materials: fabrication, treatment, testing, and analysis (for superconducting materials, see 74.70.-b, and 74.72.-h; for magnetic materials, see 75.50.-y; for optical materials, see 42.70.-a; for dielectric materials, see 77.84.-s; for disperse systems and complex fluids, see 82.70.-y; see also 82.75.-z Molecular sieves, zeolites, clathrates, and other complex solids; for materials properties, see sections 60 and 70)
+            - Porous materials; granular materials (for granular superconductors, see 74.81.Bd)
+            - Metamaterials for chiral, bianisotropic and other complex media (see also 42.70.-a Optical materials; see also 78.67.Pt, Multilayers; superlattices; photonic structures; metamaterials)
+      - **Conducting and condensed matter systems are classified by material composition, structural order, confinement and which constants set their scale.**
+        _basis: kinds, order: structure. Ordered by structure, from low-dimensional and disordered systems to conducting materials and collective behavior._
+        - **Surface, nanoscale and disordered material systems are classified by the geometry, confinement or structural order of the material studied.**
+          _basis: kinds, order: structure. Ordered by structure, from surfaces and interfaces to confined nanostructures and disordered solids._
+          - **Nonelectronic physical properties of surfaces and interfaces cover mechanical, thermal, and other behaviors that do not depend on electronic structure.**
+            _basis: kinds, order: structure. Ordered by structure, following the PACS 68.60 listing._
+            - Mechanical and acoustical properties
+            - Thermal stability; thermal effects
+            - Other nonelectronic physical properties
+          - **Layered and confined nanoscale systems are structures built from stacked films or from quantum confinement in one, two, or three dimensions.**
+            _basis: kinds, order: structure. Ordered by structure, following the PACS 68.65 listing of layered and confined systems._
+            - Low-dimensional, mesoscopic, nanoscale and other related systems: structure and nonelectronic properties (for structure of nanoscale materials, see 61.46.-w; for magnetic properties of interfaces, see 75.70.Cn; for superconducting properties, see 74.78.-w; for optical properties, see 78.67.-n; for transport properties, see 73.63.-b; for thermal properties of nanocrystals and nanotubes, see 65.80.-g; for mechanical properties of nanoscale systems, see 62.25.-g)
+            - Multilayers
+            - Superlattices
+            - Quantum wells
+            - Quantum dots (patterned in quantum wells)
+          - **Low-dimensional carbon and wire-like nanostructures are nanoscale systems whose confined geometry is a wire or a single atomic sheet.**
+            _basis: kinds, order: structure. Ordered by structure, from quantum wires to graphene films._
+            - Quantum wires (patterned in quantum wells)
+            - Graphene films
+            - Lee-Yang & Fisher zeroes
+            - Self-organized systems
+            - Non-Hermitian systems
+          - **Disordered solids are materials whose electronic structure lacks long-range periodic order, including amorphous and quasicrystalline systems.**
+            _basis: kinds, order: structure. Ordered from general theory to specific disordered materials._
+            - Electronic structure of disordered solids
+            - Theories and models; localized states
+            - Amorphous semiconductors, metallic glasses, glasses
+            - Quasicrystals
+        - **Conducting systems are kinds of materials and surface or low-dimensional structures, classified by composition, order and the confinement of electrons.**
+          _basis: kinds, order: structure. Ordered from bulk materials to surface states and then confined and small-scale systems._
+          - **Conventional and inorganic conducting materials are crystalline semiconductors, transition-metal compounds and insulators studied for their conductivity.**
+            _basis: kinds, order: structure. Ordered by structure; no ranking implied._
+            - Elemental semiconductors
+            - III-V and II-VI semiconductors
+            - Transition-metal compounds
+            - Other crystalline inorganic semiconductors
+            - Insulators
+          - **Surface, interface and general conductivity headings frame the electronic structure and methods that apply across low-dimensional systems.**
+            _basis: kinds, order: structure. Ordered by structure; no ranking implied._
+            - Conductivity of specific materials (for conductivity of metals and alloys, see 72.15.-v)
+            - Electronic transport in graphene
+            - Methods in superconductivity
+            - Electronic structure and electrical properties of surfaces, interfaces, thin films, and low-dimensional structures (for electronic structure and electrical properties of superconducting films and low-dimensional structures, see 74.78.-w; for computational methodology for electronic structure calculations in condensed matter, see 71.15.-m)
+            - Electron states at surfaces and interfaces
+          - **Surface electronic states and their band-structure properties are kinds of single-particle surface descriptions.**
+            _basis: kinds, order: structure. Ordered by structure from band states to defect-bound levels._
+            - Surface states, band structure, electron density of states
+            - Impurity and defect levels; energy states of adsorbed species
+            - Collective excitations (including excitons, polarons, plasmons and other charge-density excitations) (for collective excitations in quantum Hall effects, see 73.43.Lp)
+            - Electron solids
+          - **Low-dimensional layered and confined structures are kinds of engineered systems classified by their geometry of electron confinement.**
+            _basis: kinds, order: structure. Ordered by structure from layered stacks to confinement in two, one and zero dimensions._
+            - Electron states and collective excitations in multilayers, quantum wells, mesoscopic, and nanoscale systems (for electron states in nanoscale materials, see 73.22.-f)
+            - Multilayers
+            - Superlattices
+            - Quantum wells
+            - Quantum wires
+          - **Nanoscale and mesoscopic electronic systems are kinds of small-scale systems studied through their electronic states and transport.**
+            _basis: kinds, order: structure. Ordered by structure from nanoscale electronic structure to mesoscopic transport._
+            - Electronic structure of nanoscale materials and related systems
+            - Single particle states
+            - Electronic structure of graphene
+            - Electronic transport in mesoscopic systems
+            - Ballistic transport
+        - **Further claims about conducting materials and electron behavior whose scale is set by which of the constants c, ħ, G and N they depend on.**
+          _basis: kinds, order: structure_
+          - **Soft, disordered and nanostructured conducting materials include polymers, glasses, liquids, fullerenes, composites and graphene.**
+            _basis: kinds, order: structure. Ordered by structure; no ranking implied._
+            - Polymers; organic compounds (including organic semiconductors)
+            - Disordered solids
+            - Liquid semiconductors
+            - Fullerenes and related materials
+            - Composite materials
+          - **Localization and delocalization are opposing kinds of disorder-driven behavior of electrons at surfaces.**
+            _basis: kinds, order: structure. Ordered by structure, localization followed by its opposite._
+            - Weak or Anderson localization
+            - Delocalization processes
+        - **Condensed matter systems and their collective behavior are set by ħ, the confinement length or the many-electron count N.**
+          _basis: kinds, order: structure. Ordered by structure, from collective excitations and symmetry breaking to bulk, molecular and nanoscale systems._
+          - **The group covers Collective excitations and Broken symmetry phases as one kind of claim.**
+            _basis: kinds, order: structure_
+            - Collective excitations
+            - Broken symmetry phases
+            - Quantum dots
+            - Coulomb blockade; single-electron tunneling
+          - **Bulk and molecular materials are condensed matter systems whose electronic properties are set by the many-electron count N.**
+            _basis: kinds, order: structure. ordered by structure_
+            - Insulators
+            - Polymers; organic compounds
+            - Fullerenes and related materials
+            - Nanoscale contacts
+            - Superfluidity
+          - **Nanoscale structures are systems confined in one or more dimensions, where ħ and the confinement length set the scale of electronic transport.**
+            _basis: kinds, order: structure. ordered by structure_
+            - Nanocrystalline materials
+            - Quantum wells
+            - Quantum dots
+            - Quantum wires
+      - **Electronic-structure topics cover many-electron theory, computational methods, quasiparticles, defect levels and level splitting, whose scales are set by ħ and the electron number N.**
+        _basis: kinds, order: structure. Ordered by structure, from theoretical frameworks and calculation methods to quasiparticles, collective and defect topics, and level splitting._
+        - **Theoretical frameworks for many-electron physics are the model systems and electronic-structure sections whose scale is set by ħ and the electron number N.**
+          _basis: parts, order: structure. Ordered by structure, from the general theoretical frameworks to the specific interacting-electron models._
+          - **Electronic-structure sections and many-electron models are theoretical frameworks for describing electrons in bulk condensed matter.**
+            _basis: kinds, order: structure. Ordered by structure, from broad sections down to specific models._
+            - CONDENSED MATTER: ELECTRONIC STRUCTURE, ELECTRICAL, MAGNETIC, AND OPTICAL PROPERTIES
+            - Electronic structure of bulk materials (see section 73 for electronic structure of surfaces, interfaces, low-dimensional structures, and nanomaterials; for electronic structure of superconductors, see 74.25.Jb)
+            - Theories and models of many-electron systems
+            - Fermi-liquid theory and other phenomenological models
+            - Non-Fermi-liquid ground states, electron phase diagrams and phase transitions in model systems
+          - **Models of interacting many-electron systems, from the uniform electron gas to fermions hopping on a lattice, whose scale is set by ħ and the electron number N rather than by c or G.**
+            _basis: kinds, order: structure_
+            - Lattice fermion models (Hubbard model, etc.)
+            - Electron gas, Fermi gas
+          - **Model-system and excited-state topics treat interacting many-electron physics where ħ and the particle number N set the scale.**
+            _basis: kinds, order: degree. Next degree: ħ and N govern correlation among many particles._
+            - Excited states and pairing interactions in model systems
+            - Fermions in reduced dimensions (anyons, composite fermions, Luttinger liquid, etc.) (for anyon mechanism in superconductors, see 74.20.Mn)
+            - Excited states: methodology (see also 71.10.Li Excited states and pairing interactions in model systems)
+            - Relativistic effects [see also 31.30.J- Relativistic and quantum electrodynamic (QED) effects in atoms, molecules, and ions]
+        - **Band-structure and computational approaches are methods for calculating electronic structure, divided by the type of material or numerical technique.**
+          _basis: kinds, order: structure. Ordered by structure, from first-principles schemes to material-specific band studies and numerical techniques._
+          - **First-principles computational methods are non-relativistic schemes whose scale is set by ħ and the number of electrons N.**
+            _basis: kinds, order: degree. Methods: ħ and N govern, c absent._
+            - Methods of electronic structure calculations (see also 31.15.-p Calculations and mathematical techniques in atomic and molecular physics; for electronic structure calculations of superconducting materials, see 74.20.Pq)
+            - Density functional theory, local density approximation, gradient and other corrections
+            - Total energy and cohesive energy calculations
+            - Molecular dynamics calculations (Car-Parrinello) and other numerical simulations
+          - **Band-structure studies of metals and alloys have scales set by ħ and N, with c and G playing no role.**
+            _basis: kinds, order: degree. Materials: ħ and N only._
+            - Transition metals and alloys
+            - Alkali and alkaline earth metals
+            - Rare earth metals and alloys
+            - Other metals and alloys
+            - Intermetallic compounds
+          - **Band-structure studies of semiconductors and other compounds have scales set by ħ and N, with c and G playing no role.**
+            _basis: kinds, order: degree. Materials: ħ and N only._
+            - Electron density of states and band structure of crystalline solids
+            - Elemental semiconductors
+            - Semiconductor compounds
+            - Other inorganic compounds
+            - Polymers and organic compounds
+          - **Computational methods for electronic structure calculations are classified by the numerical techniques and basis representations used to solve the many-electron problem, with the scale of each claim set by ħ and the electron number N.**
+            _basis: kinds, order: structure_
+            - Computational methodology (Brillouin zone sampling, iterative diagonalization, pseudopotential construction)
+            - Basis sets (LCAO, plane-wave, APW, etc.) and related methodology (scattering methods, ASA, linearized methods, etc.)
+        - **Excitonic and polaronic quasiparticle topics describe bound or dressed carriers in solids, differing in how the carrier is bound or dressed.**
+          _basis: kinds, order: structure. Ordered by structure, from basic excitons to field-dependent excitons and polarons._
+          - **Basic exciton topics cover bound electron-hole pairs in their general, self-trapped, intrinsic, plasma and interaction forms.**
+            _basis: kinds, order: structure. Ordered from general exciton phenomena to specific forms._
+            - Excitons and related phenomena
+            - Frenkel excitons and self-trapped excitons
+            - Intrinsic properties of excitons; optical absorption spectra
+            - Electron-hole drops and electron-hole plasma
+            - Exciton-mediated interactions
+          - **Field-dependent and many-body exciton topics cover magnetoexcitons, collective excitonic effects and charged excitons.**
+            _basis: kinds, order: structure. Ordered from field effects to collective and charged complexes._
+            - Excitons in magnetic fields; magnetoexcitons
+            - Collective effects (Bose effects, phase space filling, and excitonic phase transitions)
+            - Charged excitons (trions)
+          - **Polarons are carriers dressed by electron-phonon interaction, ranging from mass renormalization to large, small and paired polarons.**
+            _basis: kinds, order: structure. Ordered from general electron-phonon coupling to specific polaron types._
+            - Polarons and electron-phonon interactions (see also 63.20.K- Phonon interactions in lattice dynamics)
+            - Mass renormalization in metals
+            - Large or Fröhlich polarons
+            - Self-trapped or small polarons
+            - Bipolarons
+        - **Collective-response and defect-level topics cover molecular solids, plasmons, charge ordering and impurity levels in host materials.**
+          _basis: kinds, order: structure. Ordered by structure, from collective phenomena to impurity and defect levels._
+          - **Collective and molecular-solid topics cover fullerene materials and plasmon-type collective response functions of electrons.**
+            _basis: kinds, order: structure. Ordered from molecular solids to collective response._
+            - Fullerenes and related materials; intercalation compounds
+            - Collective effects
+            - Exchange, correlation, dielectric and magnetic response functions, plasmons
+          - **Electronic-structure topics covering collective charge ordering and the general impurity and defect levels heading.**
+            _basis: kinds, order: structure. Ordered by position in the PACS 71 hierarchy._
+            - Charge-density-wave systems (see also 75.30.Fv Spin-density waves)
+            - Impurity and defect levels
+            - Disordered structures; amorphous and glassy solids
+            - Scattering by point defects, dislocations, surfaces, and other imperfections (including Kondo effect)
+          - **Impurity and defect levels classified by the kind of host material in which the impurity sits.**
+            _basis: kinds, order: structure. Ordered by position in the PACS 71.55 list of host materials._
+            - Metals, semimetals, and alloys
+            - Elemental semiconductors
+            - III-V semiconductors
+            - II-VI semiconductors
+            - Other nonmetals
+        - **Level splitting of electronic states arises from two kinds of environment: the crystal lattice and magnetic or spin-related interactions.**
+          _basis: kinds, order: structure. Ordered from lattice-driven to field and spin-driven splitting._
+          - **Level splitting caused by the crystal lattice environment, through crystal fields or strain.**
+            _basis: kinds, order: structure. Ordered by position in the PACS 71.70 list._
+            - Crystal and ligand fields
+            - Strain-induced splitting
+          - **Level splitting and interactions driven by magnetic fields, spin and orbital coupling, exchange and nuclear effects.**
+            _basis: kinds, order: structure. Ordered by position in the PACS 71.70 list._
+            - Level splitting and interactions (see also 73.20.-r Surface and interface electron states; 75.30.Et Exchange and superexchange interactions)
+            - Landau levels
+            - Spin-orbit coupling, Zeeman and Stark splitting, Jahn-Teller effect
+            - Exchange interactions
+            - Nuclear states and interactions
+  - **Applied claims on materials, devices and living matter are kinds of topics whose scale is set by particle number N, c or ħ depending on the field.**
+    _basis: kinds, order: structure. Ordered from materials and chemistry to devices and then biomedical topics._
+    - **Materials, chemistry and soft-matter topics are kinds of claims about how substances are made, change, react and flow, scaled by particle number N, thermal energy and sometimes ħ.**
+      _basis: kinds, order: structure. Ordered by structure from materials-making to chemical reactions to soft and complex-fluid systems._
+      - **Nanoscale structures and the methods used to grow and fabricate materials are kinds of materials-making topics.**
+        _basis: kinds, order: structure. n/a_
+        - **Molecular carbon materials, nanostructured bulk forms, low-dimensional devices and quantum-confined semiconductors are kinds of nanoscale structure scaled by atom number and ħ.**
+          _basis: kinds, order: structure. Ordered by structure, from molecule-sized carbon materials to nanostructured bulk, confined devices and crystal theory._
+          - **Designed and molecular carbon-based materials are finite, engineered or molecule-sized structures whose scale is fixed by a small number of atoms.**
+            _basis: kinds, order: structure. Ordered by structure of the molecular unit._
+            - New materials: theory, design, and fabrication
+            - Fullerenes and related materials
+            - Molecular nanostructures
+            - Organic-inorganic hybrid nanostructures
+          - **Nanostructured bulk forms are aggregates of nanometre-sized grains or particles whose scale is set by the number of atoms in each grain.**
+            _basis: kinds, order: structure. Ordered by structure of the aggregate._
+            - Nanoscale materials and structures: fabrication and characterization (for structure of nanoscale materials, see 61.46.-w; for nanostructured materials in electrochemistry, see 82.45.Yz; see also 62.23.-c Structural classes of nanoscale systems in mechanical properties of condensed matter)
+            - Nanocrystalline materials
+            - Nanopowders
+          - **Low-dimensional nanostructures and devices are objects confined along one or more directions, where size and quantum effects governed by ħ set their behaviour.**
+            _basis: kinds, order: structure. Ordered by structure of confinement dimensionality._
+            - Nanotubes
+            - Nanowires
+            - Nanocontacts
+            - Nanoelectromechanical systems (NEMS)
+          - **Quantum-confined semiconductor structures and crystal growth theory cover systems whose energy scale is set by ħ and by the number of atoms in the crystal.**
+            _basis: kinds, order: structure. Ordered by structure of confinement and growth._
+            - Quantum wells
+            - Quantum dots
+            - Quantum wires
+            - Methods of crystal growth; physics and chemistry of crystal growth, crystal morphology, and orientation (see also 61.50.Lt Crystal binding, cohesive energy)
+            - Theory and models of crystal growth; physics and chemistry of crystal growth, crystal morphology, and orientation (see also 61.50.Nw Crystal stoichiometry)
+        - **Crystal and film growth methods are kinds of growth technique distinguished by the medium or process that supplies the material, such as vapor, liquid, solid, beams or ablation.**
+          _basis: kinds, order: structure. Ordered by structure of the growth medium: vapor, liquid, solid, beam or spray, then target-based physical vapor deposition._
+          - **Vapor-phase growth methods build crystals or films by condensing or reacting species supplied from a gas or vapor source.**
+            _basis: kinds, order: structure. Ordered by structure, following the PACS listing from general vapor growth to specific vapor-deposition techniques._
+            - Growth from vapor
+            - E-beam and hot filament evaporation deposition
+            - Chemical vapor deposition (including plasma-enhanced CVD, MOCVD, ALD, etc.) (for chemistry of MOCVD, see 82.33.Ya in physical chemistry and chemical physics)
+            - Vapor phase epitaxy; growth from vapor phase
+          - **Liquid-phase growth methods produce crystals or films from solutions, melts, or electrolytes in which the material is dissolved or molten.**
+            _basis: kinds, order: structure. Ordered by structure, from bulk crystal growth in liquids to liquid-based film deposition._
+            - Growth from solutions
+            - Growth from melts; zone melting and refining
+            - Liquid phase epitaxy; deposition from liquid phases (melts, solutions, and surface layers on liquids)
+            - Electrodeposition, electroplating
+          - **Solid-phase growth methods form crystals or epitaxial layers by transformation, diffusion, or recrystallization within an existing solid.**
+            _basis: kinds, order: structure. Ordered by structure, from bulk solid-state growth to solid-phase epitaxy._
+            - Growth from solid phases (including multiphase diffusion and recrystallization)
+            - Solid phase epitaxy; growth from solid phases
+            - Growth in microgravity environments
+            - Growth in vacuum
+            - Growth in controlled gaseous atmospheres
+          - **Beam-assisted, spray, and theoretical approaches to film growth rely on directed energetic beams, sprayed material, or models of the growth process rather than on a bulk growth medium.**
+            _basis: kinds, order: structure. Ordered by structure, following the PACS listing of the general film-growth category._
+            - Methods of deposition of films and coatings; film growth and epitaxy (for structure of thin films, see 68.55.-a; see also 85.40.Sz Deposition technology in microelectronics; for epitaxial dielectric films, see 77.55.Px)
+            - Theory and models of film growth
+            - Molecular, atomic, ion, and chemical beam epitaxy
+            - Ion and electron beam-assisted deposition; ion plating (see also 52.77.Dq Plasma-based ion implantation and deposition in physics of plasmas)
+            - Spray coating techniques
+          - **Pulsed laser ablation deposition and deposition by sputtering are physical vapor thin-film growth techniques in which material is ejected from a solid target onto a substrate.**
+            _basis: kinds, order: structure_
+            - Pulsed laser ablation deposition
+            - Deposition by sputtering
+        - **Fabrication and processing techniques are kinds of method for shaping, synthesizing or patterning materials, from bulk workpieces down to atomic-scale structure.**
+          _basis: kinds, order: structure. Ordered by structure, from bulk mechanical and chemical processing to nanosynthesis, patterning and laser-assisted deposition._
+          - **Bulk mechanical and thermal shaping methods work macroscopic workpieces by forming, joining, cutting or consolidating them.**
+            _basis: kinds, order: degree. Coarsest scale: macroscopic bulk workpieces._
+            - Forming; molding, extrusion, etc. [see also, 83.50.Uv Material processing (extension, molding, etc.)]
+            - Joining; welding
+            - Machining, milling
+            - Powder processing: powder metallurgy, compaction, sintering, mechanical alloying, and granulation
+          - **Bulk chemical and phase-based processing methods make or refine materials through reactions, precipitation, dispersal in aerosols, purification or solidification.**
+            _basis: kinds, order: degree. Bulk to mesoscale: materials made or refined chemically or by phase change._
+            - Sol-gel processing, precipitation (for reactions in sol-gels, see 82.33.Ln; for sol-gels as disperse system, see 82.70.Gg)
+            - Chemical synthesis; combustion synthesis (for electrochemical synthesis, see 82.45.Aa)
+            - Aerosols in materials synthesis and processing
+            - Purification
+            - Phase diagrams and microstructures developed by solidification and solid-solid phase transformations (see also 64.70.K- Solid-solid transitions)
+          - **Chemical and catalytic nanosynthesis methods build nanoscale structures by driving reactions in a controlled way.**
+            _basis: kinds, order: degree. Nanoscale structures built by chemical reaction._
+            - Chemical synthesis methods
+            - Catalytic methods
+            - Micro- and nano-oxidation (see also 82.37.Np Single molecule reaction kinetics)
+            - Self-assembly
+            - Supramolecular and biochemical assembly
+          - **Directed patterning and atomic-scale methods impose structure on a surface by writing, depositing or placing material at the finest scales.**
+            _basis: kinds, order: degree. Finest scale: patterns written and atoms placed individually._
+            - Methods of micro- and nanofabrication and processing (for femtosecond probing of semiconductor nanostructures, see 82.53.Mj in physical chemistry and chemical physics)
+            - Micro- and nanolithography
+            - Atom manipulation (see also 82.37.Gk STM and AFM manipulation of a single-molecule; for atom and molecule traps, see 37.10.Gh, and 37.10.Pq, respectively; 87.80.Nj Single-molecule techniques in biological physics; 82.37.Rs Single-molecule manipulation of proteins and other biological molecules in physical chemistry)
+            - Methods of materials synthesis and materials processing (see also 61.72.U- Doping and impurity implantation; for crystal growth, see 81.10.-h; for film growth, deposition and epitaxy, see 81.15.-z)
+          - **Laser-assisted deposition and micro- and nanoscale pattern formation are further fabrication techniques whose claims are scaled by the governing constants c, ħ, G and N.**
+            _basis: kinds, order: structure_
+            - Laser-assisted deposition
+            - Micro- and nanoscale pattern formation
+        - **Core electrochemistry topics are kinds of subject matter covering the processes, the cell components and interfaces, and the solid materials involved in electrochemical change.**
+          _basis: kinds, order: structure. Ordered from processes to components to materials._
+          - **Electrochemical processes are kinds of chemical change driven by or producing electric current, such as synthesis, corrosion, electrolysis and deposition.**
+            _basis: kinds, order: structure. Listed by structure, from synthesis and corrosion to electrolysis and electrodeposition._
+            - Electrochemical synthesis (see also 81.16.Be Chemical synthesis methods in nanofabrication and 81.20.Ka Chemical synthesis; combustion synthesis in materials science)
+            - Corrosion and passivation (see also 81.65.Kn Corrosion protection and 81.65.Rv Passivation in surface treatments)
+            - Electrolysis
+            - Electrodeposition and electrodissolution (see also 81.15.Pq Electrodeposition, electroplating in materials science)
+          - **Electrochemical cell components and interfaces are the physical parts where charge transfer occurs, including electrodes, electrolytes, films and reactive surfaces.**
+            _basis: kinds, order: structure. Listed by structure, from electrodes and electrolytes to films and surfaces._
+            - Electrochemistry and electrophoresis
+            - Electrolytes (for polyelectrolytes, see 82.35.Rs and 82.45.Wx; see also 66.30.H- Self-diffusion and ionic conduction in nonmetals)
+            - Surface structure, reactivity and catalysis (see also 82.65.+r Surface and interface chemistry; heterogeneous catalysis at surfaces)
+            - Thin layers, films, monolayers, membranes (for anodic films, see 82.45.Cc; for surface double layers, see 73.30.+y in electronic structure of surfaces)
+          - **Electrochemical materials are classes of solid substance, such as dielectrics, semiconductors, polymers and ceramics, whose properties are used in electrochemical systems.**
+            _basis: kinds, order: structure. Listed by structure across the material classes._
+            - Dielectric materials in electrochemistry (see also 77.84.-s Dielectric, piezoelectric, ferroelectric, and antiferroelectric materials)
+            - Semiconductor materials in electrochemistry (see also 81.05.Cy Elemental semiconductors; 81.05.Dz II-VI semiconductors; 81.05.Ea III-V semiconductors; 81.05.Fb Organic semiconductors; 81.05.Gc Amorphous semiconductors in specific materials)
+            - Polymers and organic materials in electrochemistry (see also 82.35.-x Polymers: properties; reactions; polymerization)
+            - Ceramics in electrochemistry (see also 81.05.Je Ceramics and refractories, and 81.05.Mh Cermets, ceramic and refractory composites in specific materials)
+        - **Applied electrochemistry topics are kinds of uses of electrochemistry, including measurement, engineering practice, energy storage and fuel cells.**
+          _basis: kinds, order: structure. Ordered from analysis and engineering to energy devices._
+          - **Electrochemical measurement and biological applications are uses of electrochemical methods for chemical analysis and for studying living systems.**
+            _basis: kinds, order: structure. Listed by structure, analytical use first and biological use second._
+            - Electroanalytical chemistry (see also 82.80.Fk Electrochemical methods in chemical analysis and related physical methods of analysis)
+            - Bioelectrochemistry (see also 82.39.-k Chemical kinetics in biological systems; 87.15.Tt Electrophoresis in biological physics)
+            - Electrodes
+            - Anodic films
+          - **General and engineering topics in electrochemistry cover nanostructured materials, applied electrochemistry and process engineering that are not tied to one specific device.**
+            _basis: kinds, order: structure. Ordered from broad materials and applications to engineering practice._
+            - Nanostructured materials in electrochemistry (for nanofabrication, see 81.16.-c in materials science)
+            - Applied electrochemistry (see also 88.30.G- Fuel cell systems, and 88.30.P- Types of fuel cells in renewable energy resources and applications)
+            - Electrochemical engineering
+            - Electrochemical sensors
+            - Electrochemical displays
+          - **Electrochemical energy storage devices store charge or energy in batteries, supercapacitors or hybrid photoelectrochemical cells.**
+            _basis: kinds, order: structure. Ordered from batteries to capacitors and hybrid devices._
+            - Lithium-ion batteries
+            - Lead-acid, nickel-metal hydride and other batteries (for lithium-ion batteries, see 82.47.Aa)
+            - Electrochemical capacitors; supercapacitors (see also 88.80.fh Supercapacitors in renewable energy resources and applications; 84.60.Ve Energy storage systems, including capacitor banks in direct energy conversion and storage)
+            - Photoelectrochemical cells, photoelectrochromic and other hybrid electrochemical energy storage devices (see also 84.60.Jt Photoelectric conversion)
+          - **Fuel cells convert chemical fuel directly into electricity and are classed by their electrolyte type.**
+            _basis: kinds, order: structure. Ordered as in the classification, from solid-oxide to other fuel cells._
+            - Solid-oxide fuel cells (SOFC)
+            - Proton exchange membrane (PEM) fuel cells
+            - Molten-carbonate fuel cells (MCFC)
+            - Polymer-electrolyte fuel cells (PEFC)
+            - Phosphoric-acid fuel cells (PAFC); other fuel cells
+      - **Phase behaviour, processing treatments and mechanical response are kinds of topics describing how bulk materials are changed and how they behave.**
+        _basis: kinds, order: structure. n/a_
+        - **Phase diagrams and phase transformations are kinds of phase-based concept describing which phases are stable and how a material changes between them.**
+          _basis: kinds, order: structure. Ordered by structure, from equilibrium maps to the transformations between phases._
+          - **Phase diagrams are kinds of equilibrium maps that show which phases are stable in a given class of material.**
+            _basis: kinds, order: structure. Ordered by PACS code, from metals, alloys and oxides to other materials._
+            - Phase diagrams of metals, alloys, and oxides
+            - Phase diagrams of other materials (for superconductivity phase diagrams, see 74.25.Dw; for magnetic phase boundaries, see 75.30.Kz)
+            - Surface treatments (for surface preparation and lithography in microelectronics, see 85.40.-e)
+            - Surface cleaning, etching, patterning (see also 52.77.Bn Etching and cleaning in physics of plasmas)
+          - **Phase transformations are kinds of structural change in which a material moves from one phase or arrangement to another.**
+            _basis: kinds, order: structure. Ordered by PACS code, from solidification through solid-solid and martensitic changes to precipitation._
+            - Solidification
+            - Constant-composition solid-solid phase transformations: polymorphic, massive, and order-disorder
+            - Martensitic transformations
+            - Solid-phase precipitation (for precipitation hardening, see 81.40.Cd)
+        - **Processing treatments are external operations using heat, working or surface modification to change a material's microstructure, properties or surface.**
+          _basis: kinds, order: structure. Members are arranged structurally from bulk thermal treatments to surface and property treatments._
+          - **Thermal and thermomechanical treatments are kinds of processing that use heat and working to alter a material's microstructure.**
+            _basis: kinds, order: structure. Ordered by PACS code, from the general heading to hardening, cold working and other heat treatments._
+            - Treatment of materials and its effects on microstructure, nanostructure, and properties
+            - Solid solution hardening, precipitation hardening, and dispersion hardening; aging (see also 64.75.Nx Phase separation and segregation in solid solutions)
+            - Cold working, work hardening; annealing, post-deformation annealing, quenching, tempering recovery, and crystallization
+            - Other heat and thermomechanical treatments
+          - **Property-changing and surface treatments are kinds of external processing that modify electrical, optical or surface characteristics of a material.**
+            _basis: kinds, order: structure. Ordered by PACS code, from property effects through pressure and radiation to surface treatments._
+            - Electrical and magnetic properties related to treatment conditions
+            - Optical and dielectric properties related to treatment conditions
+            - Pressure treatment (see also 62.50.-p High-pressure effects in solids and liquids; 61.50.Ks Crystallographic aspects of phase transformations; pressure effects; for pressure effects on superconducting transition temperature, see 74.62.Fj)
+            - Radiation treatment (particle and electromagnetic) (see also 61.80.-x Physical radiation effects, radiation damage)
+          - **Surface treatments are processes that modify, protect or finish the surface of a material.**
+            _basis: kinds, order: structure. Ordered by structure of the classification scheme._
+            - Corrosion protection (see also 82.45.Bb Corrosion and passivation in electrochemistry)
+            - Oxidation (see also 64.75.Lm Phase separation and segregation in oxidation)
+            - Polishing, grinding, surface finishing
+            - Passivation (see also 82.45.Bb Corrosion and passivation in electrochemistry)
+          - **Gettering and surface hardening by nitridation or carburization are further materials-processing treatments whose scale is set not by c, ħ, G or N alone but by the diffusion and reaction of impurity atoms within a solid.**
+            _basis: kinds, order: structure_
+            - Gettering
+            - Surface hardening: nitridation, carburization, carbonitridation
+        - **Mechanical response and testing concepts describe how a material behaves under load and the methods used to probe or inspect that behavior.**
+          _basis: kinds, order: structure. Members are arranged structurally from behavior to destructive tests to nondestructive inspection._
+          - **Mechanical responses are kinds of material behavior under load, including elastic, plastic, failure and wear behavior.**
+            _basis: kinds, order: structure. Ordered by PACS code, from elasticity through plasticity and fracture to wear._
+            - Elasticity and anelasticity, stress-strain relations
+            - Deformation, plasticity, and creep (see also 83.50.-v Deformation and flow in rheology)
+            - Fatigue, corrosion fatigue, embrittlement, cracking, fracture, and failure (see also 62.20.M- Structural failure of materials)
+            - Friction, lubrication, and wear
+          - **Property testing methods probe how a material responds to loads or to unusual environments such as microgravity.**
+            _basis: kinds, order: structure. Ordered by structure of the classification scheme._
+            - Methods of materials testing and analysis (see also 82.80.-d Chemical analysis and related physical methods of analysis)
+            - Mechanical testing, impact tests, static and dynamic loads (see also 62.20.M- Structural failure of materials; 46.50.+a Fracture mechanics, fatigue, and cracks)
+            - Testing in microgravity environments
+            - Chemical composition analysis, chemical depth and dopant profiling
+            - Thermal analysis, differential thermal analysis (DTA), differential thermogravimetric analysis
+          - **Nondestructive testing methods inspect a material's interior or surface without damaging it, using sound, electromagnetic fields, light or tomography.**
+            _basis: kinds, order: structure. Ordered by structure of the classification scheme._
+            - Nondestructive testing: ultrasonic testing, photoacoustic testing
+            - Nondestructive testing: electromagnetic testing, eddy-current testing
+            - Nondestructive testing: optical methods
+            - Computed tomography
+      - **Polymers, kinetics studies, photochemistry, quantum probes, analysis methods, rheology, many-particle descriptions and soft matter are kinds of topics on macromolecular, soft and many-particle systems and their study.**
+        _basis: kinds, order: structure. n/a_
+        - **Polymer topics are kinds of macromolecular materials, distinguished by their chemistry, composition and optical or surface behaviour.**
+          _basis: kinds, order: structure. Ordered from polymer chemistry to optical response to composition classes._
+          - **Polymer chemistry covers the properties, reactions, and polymerization of macromolecules, including conducting polymers.**
+            _basis: kinds, order: structure. Ordered from general polymers to the conducting specialization._
+            - Solid state chemistry
+            - Polymers: properties; reactions; polymerization (for polymers in electrochemistry, see 82.45.Wx)
+            - Conducting polymers
+          - **Polymer materials studied through their optical response and their interactions with surfaces or embedded nanoscale fillers.**
+            _basis: kinds, order: structure. Ordered by structure, from optical response to surface adhesion to embedded nanoparticles._
+            - Nonlinear optics with polymers (see also 42.65.-k in nonlinear optics)
+            - Polymers on surfaces; adhesion (see also 68.35.Np Adhesion in surfaces and interfaces)
+            - Nanoparticles in polymers (see also 81.07.-b Nanoscale materials and structures: fabrication and characterization)
+          - **Polymer classes defined by chemical composition or bulk physical behaviour, such as copolymers, polyelectrolytes, biopolymers and general polymer properties.**
+            _basis: kinds, order: structure. Ordered by structure, from general properties to specific polymer classes._
+            - Copolymers, phase transitions, structure
+            - Physical properties of polymers
+            - Biopolymers, biopolymerization (see also 87.15.rp Polymerization in biological and medical physics)
+            - Polyelectrolytes
+        - **Kinetics topics are kinds of studies of how chemical reactions proceed, from single molecules and living systems to nonlinear and organized dynamics.**
+          _basis: kinds, order: structure. Ordered from single-molecule studies to biological, general and complex reaction dynamics._
+          - **Studies that probe or manipulate individual molecules to observe their kinetics, reactions and photochemistry one molecule at a time.**
+            _basis: kinds, order: structure. Ordered by structure, from general single-molecule kinetics to specific manipulation techniques._
+            - Single molecule kinetics
+            - STM and AFM manipulations of a single molecule (for atom manipulation see 37.10.Gh, Pq in atomic and molecular physics; see also 81.16.Ta Atom manipulation in methods of nanofabrication and processing; 87.80.Nj Single-molecule techniques in biological physics)
+            - Single molecule reaction kinetics, dissociation, etc
+            - Single molecule manipulation of proteins and other biological molecules
+            - Single molecule photochemistry
+          - **Chemical kinetics inside living systems, covering enzymes, charge transfer, nucleic acids, complex reactions and membrane transport.**
+            _basis: kinds, order: structure. Ordered by structure, from general biological kinetics to specific processes._
+            - Chemical kinetics in biological systems (see also 87.15.R- Reactions and kinetics in biological and medical physics, and 82.45.Tv Bioelectrochemistry)
+            - Enzyme kinetics (see also 87.14.ej Enzymes in biological physics)
+            - Charge (electron, proton) transfer in biological systems
+            - Nucleic acids, DNA and RNA bases (for DNA, see 87.14.gk; for RNA, see 87.14.gn)
+            - Reactions in complex biological systems (see also 87.18.-h Biological complexity)
+          - **General chemical kinetics in special regimes, including membrane and ion-exchange processes and nonlinear dynamics such as oscillations, chaos and bifurcations.**
+            _basis: kinds, order: structure. Ordered by structure, from membrane processes to general regimes to nonlinear dynamics._
+            - Ion exchange, dialysis, osmosis, electro-osmosis, membrane processes
+            - Chemical kinetics and reactions: special regimes and techniques (for chemically reactive flows, see 47.70.Fw; see also 82.20.Uv Stochastic theories of rate constants)
+            - Oscillations, chaos, and bifurcations
+          - **Reaction-dynamics phenomena are kinds of chemical change in which spatial or temporal organization, shock loading or complexity governs how a reaction proceeds.**
+            _basis: kinds, order: structure. Listed by structure, from pattern formation in bulk reactions to shock-driven and complex systems._
+            - Pattern formation in reactions with diffusion, flow and heat transfer (see also 47.54.-r Pattern selection; pattern formation and 47.32.C- Vortex dynamics in fluid dynamics)
+            - Shock wave initiated reactions, high-pressure chemistry (see also 47.40.Nm Shock wave interactions and shock effects in fluid dynamics, and 62.50.Ef Shock wave effects in solids and liquids)
+            - Temporal and spatial patterns in surface reactions
+            - Complex chemical systems (see also 82.39.Rt Reactions in complex biological systems and 87.18.-h Biological complexity)
+        - **Photochemistry topics are kinds of light-driven chemical study, from general radiation-driven processes and their control to ultrafast probing of molecules.**
+          _basis: kinds, order: structure. Ordered from general photochemistry to controlled reactions to ultrafast techniques._
+          - **Photochemistry topics describe chemical processes driven by radiation, divided by the kind of radiation or by how the reaction is controlled.**
+            _basis: kinds, order: structure. Ordered from photochemistry in general, then by radiation type from infrared to X-rays, then control and multiphoton processes._
+            - Processes caused by infrared radiation
+            - Processes caused by visible and UV light
+            - Processes caused by X-rays or γ-rays
+            - Multiphoton processes
+          - **Photochemistry concepts form a kinds group in which controlling photochemical reactions is a specialized case of general photochemistry, where light-driven molecular processes are set by the photon energy ħω (ħ and c) acting on collections of N molecules.**
+            _basis: kinds, order: structure_
+            - Control of photochemical reactions
+            - Photochemistry (for single molecule photochemistry, see 82.37.Vb)
+          - **Femtosecond pump-probe and coherent techniques follow the dynamics of isolated atoms and molecules, such as dissociation and bound-state motion, on ultrafast timescales.**
+            _basis: kinds, order: structure. Ordered from the general field to specific experiment types._
+            - Femtochemistry [see also 78.47.J-; Ultrafast spectroscopy (<1 psec) in condensed matter; 42.65.Re Ultrafast processes; optical generation and pulse compression in nonlinear optics]
+            - Pump probe studies of photodissociation
+            - Pump probe experiments with bound states
+            - Coherent spectroscopy of atoms and molecules
+        - **Quantum-scale probes of spins and ultrafast dynamics are techniques whose scale is set by Planck's constant, covering femtosecond probes and the NMR methods and studies.**
+          _basis: kinds, order: structure. Ordered from general probes to NMR methods to NMR studies._
+          - **Femtosecond probes are applied to molecules and nanostructures in different media, such as semiconductors, biological systems, surfaces, liquids and solids.**
+            _basis: kinds, order: structure. Ordered by the type of host environment probed._
+            - Femtosecond probing of semiconductor nanostructures (see also 81.16.-c Methods of micro- and nanofabrication and processing)
+            - Femtosecond probing of biological molecules
+            - Femtochemistry of adsorbed molecules (for adsorbate structure, see 68.43.Bc, Fg in chemisorption/physisorption: adsorbates on surfaces)
+            - Femtosecond probes of molecules in liquids
+            - Femtosecond probes of molecules in solids and of molecular solids
+          - **NMR methods are the general resonance technique and its high-resolution, multidimensional and pulse-sequence forms, whose scale is set by Planck's constant and nuclear magnetic moments.**
+            _basis: kinds, order: structure. Ordered from the general technique to specific methods._
+            - Nuclear magnetic resonance (see also 33.25.+k Nuclear resonance and relaxation in atomic and molecular physics; 76.60.-k Nuclear magnetic resonance and relaxation; 76.70.-r Magnetic double resonances and cross effects in condensed matter)
+            - High resolution NMR
+            - Multidimensional NMR
+            - Pulse sequences in NMR
+          - **NMR studies of nuclear species, molecular motion and spin relaxation describe how nuclear spins behave and exchange energy in a sample.**
+            _basis: kinds, order: structure. Ordered from nuclear species to motion to relaxation._
+            - Multinuclear NMR
+            - Diffusion
+            - Relaxation
+        - **Many-particle descriptions of matter are claims whose scale is set by the number of particles N, covering bulk energetics and particle-level simulation.**
+          _basis: kinds, order: structure. Ordered from thermodynamic characterization to theory to particle simulation._
+          - **Structure determination of biomolecules by NMR and the thermodynamics of reactions are characterization topics whose scale is set by the number of particles and bulk energy changes.**
+            _basis: kinds, order: structure. Ordered from structural characterization to thermodynamic characterization._
+            - NMR of biomolecules
+            - Structure determination with NMR
+            - Chemical thermodynamics (see also 05.70.Ln Nonequilibrium and irreversible thermodynamics)
+            - Enthalpies of combustion, reaction, and formation
+          - **Thermodynamics of chemical systems covers the energetic and equilibrium properties of substances, solutions, nuclei and small particles.**
+            _basis: kinds, order: structure. Ordered by PACS code sequence._
+            - Heat capacities and heats of phase transitions
+            - Chemical equilibria and equilibrium constants
+            - Thermodynamics of solutions
+            - Thermodynamics of nucleation (see also 64.60.Q- Nucleation—in equations of state, phase equilibria and phase transitions)
+            - Thermodynamics of nanoparticles
+          - **Rheology theories and models are the theoretical and simulation frameworks used to relate stress, deformation, and molecular motion.**
+            _basis: kinds, order: structure. Ordered from continuum descriptions to molecular-scale models._
+            - Continuum mechanics (see also section 46 Continuum mechanics of solids)
+            - Constitutive relations
+            - Reptation and tube theories
+            - Molecular dynamics, Brownian dynamics
+          - **Particle-level dynamics and simulation methods treat a fluid through its many interacting particles, so the particle number N sets the scale of the claim.**
+            _basis: kinds, order: structure. Ordered by structure from particle dynamics to simulation to structural change; N is the governing constant._
+            - Particle dynamics
+            - Computer simulation of molecular and particle dynamics
+            - Structural and phase changes
+            - Extrudate swell
+      - **Complex-fluid rheology topics cover materials and measurement methods whose flow and deformation depend on internal structure, chain density N and thermal energy.**
+        _basis: kinds, order: structure_
+        - **Complex-fluid rheology covers classical-scale applications, behaviors and material systems in which flow and deformation are governed by internal structure.**
+          _basis: kinds, order: degree. Ranked by how strongly internal structure, rather than bulk flow alone, sets the response, from applications to structured systems._
+          - **Material processing and mixing applications cover industrial operations that shape or blend flowing materials, at classical engineering scales.**
+            _basis: kinds, order: structure. Ordered by structure from forming operations to blending; no fundamental constants govern._
+            - Material processing (extension, molding, etc.)
+            - Mixing and blending
+          - **Material behavior topics describe the stress response of complex fluids, whether elastic, viscous, yielding or time-dependent, at the classical continuum scale.**
+            _basis: kinds, order: structure. Ordered by structure from the general category through viscoelastic, flow-rate-dependent, and time-dependent responses; no fundamental constants govern._
+            - Linear viscoelasticity
+            - Nonlinear viscoelasticity
+            - Shear rate dependent viscosity
+            - Viscoplasticity; yield stress
+            - Time-dependent structure (thixotropy, rheopexy)
+          - **Flow and deformation phenomena are rheological behaviors that appear when a material is sheared, heated, stressed or driven unstable.**
+            _basis: kinds, order: structure. Phenomena are listed by structure in PACS numbering order, not ranked by degree._
+            - Shear rate-dependent structure (shear thinning and shear thickening)
+            - Non-isothermal rheology
+            - Wave propagation, fracture, and crack healing
+            - Flow instabilities
+            - Drag reduction
+          - **Solid and structured materials are rigid or network-forming media, such as glasses, granular solids, gels and field-responsive fluids, whose rheology is set by their internal structure.**
+            _basis: kinds, order: structure. Members are listed by structure in PACS numbering order, not ranked by degree._
+            - Material type (see also 82.70.-y Disperse systems; complex fluids and 82.35.-x Polymers: properties; reactions; polymerization in physical chemistry and chemical physics)
+            - Solids: e.g., composites, glasses, semicrystalline polymers
+            - Granular solids
+            - Electro- and magnetorheological fluids
+            - Physical gels and microgels
+          - **Dispersed and reacting soft-matter systems are multiphase or chemically evolving materials, such as suspensions, emulsions, foams and micellar solutions, in which a dispersed phase or reaction controls flow.**
+            _basis: kinds, order: structure. Members are listed by structure in PACS numbering order, not ranked by degree._
+            - Suspensions, dispersions, pastes, slurries, colloids
+            - Emulsions and foams
+            - Reacting systems: thermosetting polymers, chemorheology, rheokinetics
+            - Surfactant and micellar systems, associated polymers
+        - **Natural and polymer materials are media built from natural constituents or long-chain macromolecules, whose mechanics depends on chain density N and thermal energy.**
+          _basis: kinds, order: degree. Ranked from naturally occurring media to polymer fluids to polymer solids, where the chain density N sets the scale most directly._
+          - **Natural and biological materials are naturally occurring media, such as blood, collagen, wood, rock and ice, whose rheology is studied as found in nature.**
+            _basis: kinds, order: structure. Members are listed by structure in PACS numbering order, not ranked by degree._
+            - Physiological materials (e.g. blood, collagen, etc.)
+            - Other natural materials (e.g. wood and other vegetable materials)
+            - Geological materials: Earth, magma, ice, rocks, etc
+          - **Polymer fluids are flowing materials built from long-chain molecules, whether dissolved in a solvent, molten or mixed with other polymers.**
+            _basis: kinds, order: structure. Members are listed by structure in PACS numbering order, not ranked by degree._
+            - Polymer solutions
+            - Polymer melts
+            - Polymer blends
+          - **Polymer materials are soft solids built from long-chain macromolecules, whose mechanics is set by chain number density N and thermal energy.**
+            _basis: kinds, order: structure. structure_
+            - Block copolymers
+            - Elastomeric polymers
+            - Filled elastomers
+            - Liquid crystals: nematic, cholesteric, smectic, discotic, etc
+            - Processed food
+        - **Rheological measurement methods are the tests and probes used to reveal how materials deform, flow and are structured at the microscopic level.**
+          _basis: kinds, order: degree. Ranked from mechanical tests of bulk response to probes of microscopic structure._
+          - **Mechanical rheological tests probe how a material deforms and flows under imposed stress or strain, ranked from the general technique to specific tests.**
+            _basis: kinds, order: degree. Ranked from the general technique (rheometry) to specific tests of viscosity, normal stress, extension, relaxation, creep and oscillation._
+            - Rheological measurements—rheometry
+            - Viscosity measurements
+            - Normal stress difference measurements
+            - Extensional flow measurement
+            - Stress relaxation
+          - **Optical, magnetic resonance and scattering probes and data analysis reveal the microscopic structure of flowing materials.**
+            _basis: kinds, order: structure. structure_
+            - Optical methods; rheo-optics
+            - NMR/magnetic resonance imaging (see also 76.60.Pc NMR imaging in condensed matter)
+            - X-ray and neutron scattering
+            - Data analysis (interconversion of data computation of relaxation and retardation spectra; time-temperature superposition, etc.) (see also 47.11.-j Computational methods in fluid dynamics)
+            - Techniques and apparatus
+          - **Time-domain and frequency-domain rheometric tests that probe a material's viscoelastic response by applying a small controlled shear stress or strain and measuring the resulting deformation.**
+            _basis: kinds, order: structure_
+            - Small amplitude oscillatory shear (dynamic mechanical analysis)
+            - Creep and/or creep recoil
+    - **Electromagnetic and quantum device claims are kinds of claims whose scale is set either by c and carrier number N or directly by ħ and related quantum quantities.**
+      _basis: kinds, order: structure. Ordered by structure from classical circuit devices to quantum-limited devices._
+      - **Electromagnetic circuit and device claims are scaled mainly by c and the large number N of carriers, with ħ entering at most through band structure.**
+        _basis: kinds, order: degree. Ranked by increasing role of ħ, from none in circuits to band structure in junction devices._
+        - **Active circuits and signal electronics are circuit topics governed by classical electromagnetism that supply power or create and shape signals.**
+          _basis: kinds, order: degree. Ranked from the general field of electronics to power circuits to signal-handling circuits._
+          - **Electronics topics cover circuits and their theory, which is governed by classical electromagnetism rather than the constants of rheology.**
+            _basis: kinds, order: structure. structure_
+            - Electronics; radiowave and microwave technology; direct energy conversion and storage
+            - Electronic circuits (for integrated circuits, see 85.40.-e, for microwave circuits, see 84.40.Dc)
+            - Circuit theory
+          - **Power electronics and amplifiers are active circuits that supply, condition, or boost electrical power and signal strength.**
+            _basis: kinds, order: structure. First in structural order: active power-handling circuits that feed the rest._
+            - Power electronics; power supply circuits (see also 84.70.+p High-current and high-voltage technology; for superconducting high-power technology, see 84.71.-b)
+            - Amplifiers
+          - **Signal-generating and signal-shaping circuits create or transform waveforms by oscillating, modulating, pulsing, or digitally switching signals.**
+            _basis: kinds, order: structure. Second: active signal-processing circuits built on the power stage._
+            - Oscillators, pulse generators, and function generators
+            - Modulators and demodulators; discriminators, comparators, mixers, limiters, and compressors
+            - Pulse and digital circuits
+        - **Passive and high-frequency structures are electromagnetic components and systems that connect, filter, guide or transmit signals up to microwave frequencies.**
+          _basis: kinds, order: degree. Ranked from simple passive components to guiding structures to full microwave systems._
+          - **Passive circuit components are devices that connect, resist, store, or protect without providing gain, such as switches, resistors, inductors, capacitors, and fuses.**
+            _basis: kinds, order: structure. Third: passive elements that make up the basic circuit building blocks._
+            - Connectors, relays, and switches
+            - Conductors, resistors (including thermistors, varistors, and photoresistors)
+            - Inductors and coils; wiring
+            - Capacitors (for electrochemical capacitors and supercapacitors, see 82.47.Uv)
+            - Fuses
+          - **Filters and radiowave guiding structures select frequencies and carry or radiate electromagnetic signals along lines, guides, and antennas.**
+            _basis: kinds, order: structure. Fourth: frequency-selective and signal-carrying structures linking circuits to waves._
+            - Filters
+            - Radiowave and microwave (including millimeter wave) technology (for microwave, submillimeter wave, and radiowave receivers and detectors, see 07.57.Kp; for microwave and radiowave spectrometers, see 07.57.Pt; for radiowave propagation, see 41.20.Jb)
+            - Waveguides, transmission lines, striplines
+            - Antennas: theory, components and accessories (for plasma interactions with antennas, see 52.40.Fd in plasma physics)
+            - Passive circuit components (see also 07.50.-e Electrical and electronic instruments, and components)
+          - **Microwave devices and communication systems generate, process, and transmit high-frequency signals using tubes, masers, integrated circuits, and satellite links.**
+            _basis: kinds, order: structure. Last: high-frequency devices and system-level telecommunications._
+            - Microwave circuits
+            - Microwave tubes (e.g., klystrons, magnetrons, traveling-wave, backward-wave tubes, etc.)
+            - Masers; gyrotrons (cyclotron-resonance masers)
+            - Microwave integrated electronics
+            - Telecommunications: signal transmission and processing; communication satellites (for optical communications, see 42.79.Sz in optics)
+        - **Claims scaled mainly by c and by the very large number N of carriers, devices or particles, with no essential quantum role for ħ.**
+          _basis: kinds, order: degree. Least quantum: bulk classical scaling._
+          - **Remote sensing and general conversion performance topics are scaled mainly by the speed of light c and by bulk figures of merit, with no quantum coherence required.**
+            _basis: kinds, order: degree. Ranked from the most classical, c-scaled signalling and bulk metrics, which sit lowest in quantum content._
+            - Telemetry: remote control, remote sensing; radar
+            - Direct energy conversion and storage (see also section 88.00.00 Renewable energy resources and applications; for electrochemical conversion, see 82.47.-a; for ocean energy extraction, see 92.05.Jn)
+            - Performance characteristics of energy conversion systems; figure of merit
+          - **Semiconductor devices are governed by the collective behavior of very large numbers N of carriers rather than individual quanta.**
+            _basis: kinds, order: structure. Kinds distinguished by many-carrier junction and bulk transport._
+            - Semiconductor devices (for photodiodes, phototransistors, and photoresistors, see 85.60.Dw; for laser diodes, see 42.55.Px; for semiconductor-based solar cells, see 88.40.-j; for applications of dielectric films in silicon electronics, see 77.55.df)
+            - Semiconductor-device characterization, design, and modeling
+            - Bulk semiconductor and conductivity oscillation devices (including Hall effect devices, space-charge-limited devices, and Gunn effect devices)
+            - Surface barrier, boundary, and point contact devices
+            - Field effect devices
+          - **Integrated-circuit fabrication topics have a scale set by the very large number N of devices and features integrated together.**
+            _basis: kinds, order: structure. Kinds distinguished by integration of enormous numbers of components._
+            - Microelectronics: LSI, VLSI, ULSI; integrated circuit fabrication technology (see also 85.45.-w Vacuum microelectronics; 84.40.Lj Microwave integrated electronics; 42.82.-m Integrated optics; 85.25.Hv Superconducting logic elements and memory devices; microelectronic circuits)
+            - Computer-aided design of microcircuits; layout and modeling
+            - Lithography, masks and pattern transfer
+            - Metallization, contacts, interconnects; device isolation
+            - Microcircuit quality, noise, performance, and failure analysis
+          - **Classical processing and magnetic device topics are scaled mainly by the particle number N, with no essential role for c, ħ or G.**
+            _basis: kinds, order: degree. Fewest constants: N alone sets the scale._
+            - Impurity doping, diffusion and ion implantation technology
+            - Deposition technology (for plasma applications in deposition technology, see 52.77.Dq)
+            - Hybrid microelectronics; thick films
+            - Magnetic devices (for magnets, see 07.55.Db; for molecular magnets, see 75.50.Xx; for beam bending magnets, see 41.85.Lc; see also 84.71.Ba Superconducting magnets and magnetic levitation devices; 75.50.Ss Magnetic recording materials)
+            - Ferrite and garnet devices
+        - **Magnetic and junction devices whose behavior rests on classical magnetization or p-n junction carrier physics, with ħ entering only through band structure and N setting the current.**
+          _basis: kinds, order: degree. Mostly classical with modest quantum input._
+          - **Thyristors, bipolar transistors, and junction diodes are semiconductor junction devices whose behavior is governed by the charge carrier physics of p-n junctions, where Planck's constant ħ sets the quantum scale of the band structure and the number of carriers N sets the scale of the current.**
+            _basis: kinds, order: structure_
+            - Thyristors
+            - Bipolar transistors
+            - Junction diodes
+          - **Magnetic recording, head, levitation, and magnetooptical devices rely on classical magnetization, with scales set mainly by c in the optical case and by macroscopic fields otherwise.**
+            _basis: kinds, order: structure. Ordered by structure, from thin-film heads through storage media and levitation to magnetooptics._
+            - Magnetic thin film devices: magnetic heads (magnetoresistive, inductive, etc.); domain-motion devices, etc
+            - Other magnetic recording and storage devices (including tapes, disks, and drums)
+            - Magnetic levitation, propulsion and control devices
+            - Magnetooptical devices
+      - **Quantum-limited and superconducting device claims are those whose scale is fixed directly by ħ, gap energies, photons or the flux quantum.**
+        _basis: kinds, order: degree. Ranked by increasing directness of quantum scale, from conversion devices to superconducting and quantum-limit devices._
+        - **Conversion, emission, detection and response claims whose scale is set by ħ through band gaps, photons or tunnelling together with N and often c.**
+          _basis: kinds, order: degree. Quantum energy scales combined with large-N collective behavior._
+          - **Thermal, plasma and photon-driven direct converters set their scale by ħ through band gaps and work functions, together with the large particle number N of the working medium.**
+            _basis: kinds, order: degree. Ranked from weakly quantum, N-dominated thermal and plasma conversion to photoelectric conversion, where ħ sets the photon energy._
+            - Magnetohydrodynamic conversion (for MHD generators, see 52.75.Fk—in plasma physics)
+            - Thermionic conversion (for thermionic generators, see 52.75.Fk—in plasma physics)
+            - Thermoelectric, electrogasdynamic and other direct energy conversion
+            - Photoelectric conversion (for solar cells, see 88.40.H- and 88.40.J- in renewable energy resources; for solar collectors and concentrators, see 42.79.Ek in optics and 88.40.F- in renewable energy resources)
+          - **Vacuum electron emission topics are scaled by ħ through quantum tunnelling together with N, the number of emitting sites.**
+            _basis: kinds, order: degree. Two constants: ħ and N._
+            - Vacuum microelectronics
+            - Vacuum microelectronic device characterization, design, and modeling
+            - Field emitters and arrays, cold electron emitters
+            - Field emission displays (FEDs)
+          - **Dielectric and magnetic-response device topics are scaled by ħ-based collective quantum polarization and magnetization together with N.**
+            _basis: kinds, order: degree. Two constants: ħ and N, with collective response._
+            - Dielectric, ferroelectric, and piezoelectric devices
+            - Non-volatile ferroelectric memories
+            - Magnetic device characterization, design, and modeling
+            - Magnetostrictive, magnetoacoustic, and magnetostatic devices (for magnetostrictive transducers, see 43.38.Ct—in Acoustics Appendix)
+          - **Photon detection topics are scaled by ħ and c through single-photon absorption and by N through the number of carriers.**
+            _basis: kinds, order: degree. Three constants: c, ħ and N._
+            - Photodiodes; phototransistors; photoresistors
+            - Photodetectors (including infrared and CCD detectors) (for superconducting infrared detectors, see 85.25.Pb; for superconducting optical, x-ray and γ-ray detectors, see 85.25.Oj; see also 07.57.Kp in instruments)
+            - Photomultipliers; phototubes and photocathodes
+          - **Light emission and display topics are scaled by c, ħ and N through photon energy, light propagation and the number of emitters.**
+            _basis: kinds, order: degree. Most constants: c, ħ and N jointly._
+            - Optoelectronic devices (see also 42.79.-e Optical elements, devices and systems)
+            - Optoelectronic device characterization, design, and modeling
+            - Light-emitting devices
+            - Display systems (for field emission display, see 85.45.Fd, for optical display devices, see 42.79.Kr; for electrochemical displays, see 82.47.Tp; see also 07.07.Hj Display and recording equipment, oscilloscopes, TV cameras, etc.)
+        - **Claims for superconducting hardware and devices whose scale is fixed by macroscopic coherent states and the flux quantum h/2e.**
+          _basis: kinds, order: degree. Macroscopic quantum coherence, with ħ setting measured quantities._
+          - **Energy storage and high-power superconducting hardware rely on macroscopic coherent states whose scale is set by ħ and N but is used only at the bulk, classical-engineering level.**
+            _basis: kinds, order: degree. Ranked from conventional capacitor storage to superconducting magnets, cables and wires, which use macroscopic quantum coherence more._
+            - Energy storage systems, including capacitor banks (see also 82.47.Uv Electrochemical capacitors; supercapacitors, and 88.80.F- Energy storage technologies)
+            - Superconducting high-power technology (see also 84.30.Jc Power electronics; power supply circuits)
+            - Superconducting magnets; magnetic levitation devices
+            - Superconducting cables
+            - Superconducting wires, fibers, and tapes
+          - **General superconducting electronic devices and Josephson and SQUID elements have their scale fixed by the flux quantum h/2e, so ħ sets the measured quantity directly.**
+            _basis: kinds, order: degree. Ranked from broad device categories and modeling to Josephson and SQUID devices, where ħ is most direct._
+            - Electronic and magnetic devices; microelectronics (for vacuum tubes, see 84.47.+w; for microwave tubes, see 84.40.Fe, for conductors, and resistors, see 84.32.Ff; for wiring, inductors and coils, see 84.32.Hh)
+            - Superconducting devices
+            - Superconducting device characterization, design, and modeling
+            - Josephson devices
+            - Superconducting quantum interference devices (SQUIDs)
+          - **Macroscopic quantum coherence devices operate on phase coherence whose scale is set by the flux quantum h/2e, so ħ governs them.**
+            _basis: kinds, order: structure. Kinds distinguished by the phase-coherent quantum constant ħ._
+            - Superconducting surface acoustic wave devices and other superconducting devices
+            - Quantum interference devices
+        - **Devices operating near quantum limits, where ħ directly sets gap energies, single-photon sensitivity, confinement, tunneling and spin behavior.**
+          _basis: kinds, order: degree. Most quantum: ħ sets behavior at the single-quantum level._
+          - **Superconducting logic, memory and detector devices operate near quantum limits, with ħ setting the gap energy and single-photon sensitivity.**
+            _basis: kinds, order: degree. Ranked from logic and memory circuits to single-photon detectors that are the most quantum-limited._
+            - Superconducting logic elements and memory devices; microelectronic circuits
+            - Superconducting optical, X-ray, and γ-ray detectors (SIS, NIS, transition edge)
+            - Superconducting infrared, submillimeter and millimeter wave detectors (see also 84.71.-b Superconducting high-power technology)
+          - **Quantum confinement and tunneling devices have behavior whose scale is set by ħ through electron confinement and barrier tunneling.**
+            _basis: kinds, order: structure. Kinds distinguished by confinement and tunneling governed by ħ._
+            - Nanoelectronic devices
+            - Quantum well devices (quantum dots, quantum wires, etc.)
+            - Nanotube devices
+            - Junction breakdown and tunneling devices (including resonance tunneling devices)
+            - Single electron devices
+          - **Spintronic memory devices store bits through spin-polarized transport, with scales set by ħ through spin and tunneling physics.**
+            _basis: kinds, order: structure. Ordered by structure, from the general spintronics heading to specific memory types._
+            - Magnetoelectronics; spintronics: devices exploiting spin polarized transport or integrated magnetic fields
+            - Magnetic memory using giant magnetoresistance
+            - Magnetic memory using magnetic tunnel junctions
+            - Reprogrammable magnetic logic
+        - **Device technologies are engineered systems that control or convert carriers and energy, with scale set by ħ for spin devices or by macroscopic transport coefficients for thermoelectromagnetic ones.**
+          _basis: kinds, order: structure_
+          - **Spin-polarized transistor, tunnel-junction, Hall, and sensor devices control or detect carriers through quantum spin-dependent transport, with scales set by ħ.**
+            _basis: kinds, order: structure. Ordered by structure, from transistors and tunnel junctions to Hall devices and sensors._
+            - Spin polarized field effect transistors
+            - Spin polarized resonant tunnel junctions
+            - Hybrid Hall devices
+            - Magnetic field sensors using spin polarized transport
+          - **Thermoelectromagnetic devices convert between heat, electricity, and magnetism, with scales set by macroscopic transport coefficients rather than by individual quantum constants.**
+            _basis: kinds, order: structure. Ordered by structure, from the general heading to thermoelectric, magnetoelectric, and magnetothermal devices._
+            - Thermoelectromagnetic and other devices (for acoustoelectric devices, see 43.38.-p in Acoustics Appendix; for electrochemical devices, see 82.47.-a)
+            - Thermoelectric devices
+            - Magnetoelectric devices
+            - Magnetothermal devices
+      - **Applied and many-agent topics have scales set by technology uses, no fundamental constant, or the number of agents or particles N.**
+        _basis: kinds, order: structure. Listed by structure from applied uses to constant-free and N-scaled topics._
+        - **Technology and society applications are the interdisciplinary uses of physics in industry, computing, defense and other fields.**
+          _basis: kinds, order: structure. Ordered by structure, from general technology entries to further applications._
+          - **Technology and application entries are the interdisciplinary uses of physics in industry, defense, computing, the web, engineering and forensics.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing, from the general heading to specific applications._
+            - Other areas of applied and interdisciplinary physics (for materials science, see section 81; for physical chemistry, see section 82; for rheology, see section 83; for electrical, radiowave and microwave technology, see section 84; for electronic and magnetic devices and microelectronics, see section 85; for biological and medical physics, see section 87)
+            - Industrial and technological research and development
+            - Computer science and technology
+            - Engineering (for electrochemical engineering, see 82.47.Wx; for biomedical engineering, see 87.85.-d; for reservoir engineering in geothermal energy, see 88.10.G-; for nuclear engineering, see 28.00.00)
+            - Forensic science (for forensic acoustics, see 43.72.Uv—in Acoustics Appendix)
+          - **This group collects further applications of physics to technology and society, such as the Internet, military systems and arms control, and other interdisciplinary uses, where no fundamental constant such as c, ħ, G or N sets the scale of the claim.**
+            _basis: kinds, order: structure_
+            - World Wide Web, Internet
+            - Interdisciplinary applications of physics
+            - Military technology and weapons systems; arms control
+        - **Topics whose claims carry no fundamental constant of their own because they are applied, geometric, classical macroscopic, or purely mathematical.**
+          _basis: kinds, order: degree. Lowest degree: no constant sets the scale._
+          - **Air transportation and environmental topics form a set of applied human-infrastructure and environment concerns in which no fundamental constant sets the scale.**
+            _basis: kinds, order: structure. Ordered by PACS numbering._
+            - Air transporation
+            - Environmental studies (for ecology, see 87.23.-n; for environmental impacts of renewable energy, see 88.05.Np)
+            - Environmental safety (for air quality, see 92.60.Sz; for water quality, see 92.40.kc, and 92.40.qc in Geophysics Appendix)
+            - Environmental regulations (see also 01.78.+p Science and government)
+            - Impact of natural and man-made disasters (for volcanic eruption effects on the atmosphere, see 92.60.Zc; for landslides, see 92.40.Ha; for floods, see 92.40.qp in Geophysics Appendix; for avalanches, see 92.40.vw in Geophysics Appendix; for global warming, see 92.70.Mn, for sea level change, see 92.70.Jw; for cryospheric change, see 92.70.Ha)
+          - **Fractal characterizations quantify scale-invariant geometry, a purely geometric property that does not depend on c, ħ or G.**
+            _basis: kinds, order: structure. Ordered by structure from dimension concepts to analysis methods._
+            - Fractal dimension characterization
+            - Fractional dimension
+            - Fractal analysis
+            - Networks & random structures
+            - Data analysis
+          - **Mechanical testing, robotics, packing and jamming, and minerals concern classical macroscopic systems whose scale is set by none of c, hbar, G or N.**
+            _basis: kinds, order: degree. Ranked from fewest governing constants to most; this group has none, so it comes first._
+            - Mechanical testing
+            - Robotics
+            - Packing & jamming problems
+            - Minerals
+          - **Optimization problems, neural network simulations, numerical approximation, and series expansions are mathematical and computational methods whose claims carry no physical constant of their own.**
+            _basis: kinds, order: degree. Ranked from fewest governing constants to most; purely mathematical methods with no constants come after classical mechanics only by convention and precede N-dependent statistics._
+            - Optimization problems
+            - Neural network simulations
+            - Numerical approximation & analysis
+            - Series expansions & exact enumeration
+        - **Topics about human, informational and complex systems whose scale is set by the number of agents, bits or parts N.**
+          _basis: kinds, order: degree. Second degree: only N sets the scale._
+          - **Social and economic systems cover human populations, organizations, markets and cities, whose scale is set by the number of people or agents N.**
+            _basis: parts, order: structure. Parent heading first, then its subtopics._
+            - Social and economic systems
+            - Demographic studies
+            - Social organizations; anthropology
+            - Economics; econophysics, financial markets, business and management (for economic issues regarding production and use of renewable energy, see 88.05.Lg)
+            - Urban planning and construction (for energy efficient buildings utilizing solar power, see 88.40.M-)
+          - **Information theory concerns quantifying information and its reliable transmission, with scale set by counts of bits and symbols rather than c, ħ or G.**
+            _basis: parts, order: structure. Parent heading first, then its subtopics._
+            - Information and communication theory (for telecommunications, see 84.40.Ua; for optical communications, see 42.79.Sz; for quantum information, see 03.67.-a; for applications to neuroscience, see 87.19.lo)
+            - Entropy and other measures of information
+            - Channel capacity and error-correcting codes
+          - **Complexity measures count the computational and communication resources a problem requires, which scale with input size N.**
+            _basis: kinds, order: structure. Ordered by PACS numbering._
+            - Computational complexity
+            - Communication complexity
+          - **Complex systems are collections of many interacting parts whose collective scaling, structure, networks and patterns are governed by large N.**
+            _basis: parts, order: structure. Parent heading first, then its subtopics._
+            - Complex systems (for complex chemical systems, see 82.40.Qt; for biological complexity, see 87.18.-h)
+            - Systems obeying scaling laws
+            - Structures and organization in complex systems
+            - Networks and genealogical trees
+            - Patterns
+        - **Classical statistical methods and processes whose scale is set by particle number N or degrees of freedom, without any quantum role for ħ.**
+          _basis: kinds, order: structure_
+          - **Nonequilibrium growth and thermodynamic processes are classical phenomena governed by irreversibility and large N, not by quantum or relativistic constants.**
+            _basis: kinds, order: structure. Ordered by structure from growth to irreversible processes to engines._
+            - Ballistic deposition
+            - Irreversible processes
+            - Heat engines
+          - **Finite-size scaling and linear response theory are statistical tools whose claims are set by the particle number N, with hbar entering only when the response is quantum.**
+            _basis: kinds, order: degree. Ranked from fewest governing constants to most; N is the main scale here, with hbar optional._
+            - Finite-size scaling
+            - Linear response theory
+            - Gamma-ray techniques
+            - Interferometry
+      - **Many-particle physics topics have a scale set by particle number N, with or without a quantum role for ħ.**
+        _basis: kinds, order: structure. Listed by structure: condensed-matter models with ħ and N, then classical statistics with N alone._
+        - **Condensed-matter models and phenomena whose scale is set by ħ together with many-particle number N.**
+          _basis: kinds, order: degree. Fourth degree: ħ together with N sets the scale._
+          - **Lattice and quantum model frameworks describe many-body systems on discrete sites, where ħ and the particle number N set the scale.**
+            _basis: kinds, order: structure. Ordered by structure from statistical to quantum to condensed-matter lattice models._
+            - Lattice models in statistical physics
+            - Quantum spin models
+            - Lattice models in condensed matter
+            - Nanostructures
+            - Electronic structure
+          - **Materials-oriented topics concern the electronic, mechanical and nanoscale properties of real matter, where ħ and N set the scale.**
+            _basis: kinds, order: structure. Ordered by structure from the broad field to specific material properties._
+            - Condensed Matter, Materials & Applied Physics
+            - Materials modeling
+            - Mechanical & acoustical properties
+            - Elemental materials
+          - **Magnetism, methods in magnetism, superconductivity, and topological phases of matter are condensed-matter phenomena whose scale is set by hbar together with many-particle N.**
+            _basis: kinds, order: degree. Ranked from fewest governing constants to most; hbar and N together place this group fourth._
+            - Magnetism
+            - Methods in magnetism
+            - Superconductivity
+            - Topological phases of matter
+          - **Models and structures of condensed matter whose scale involves ħ through quantum behavior or exact symmetry constraints.**
+            _basis: kinds, order: structure. Classified by whether ħ or symmetry structure enters the scale of the claim._
+            - Symmetries in condensed matter
+            - Classical spin models
+            - Quantum compass model
+            - Integrable systems
+        - **Classical statistical methods and processes whose scale is set by particle number N or degrees of freedom, without any quantum role for ħ.**
+          _basis: kinds, order: degree. Third degree: N-set scale applied through classical statistical physics._
+          - **Disorder-averaging and field-theoretic techniques are analytical methods whose scale is set by the number of degrees of freedom N rather than by c or G.**
+            _basis: kinds, order: structure. Ordered by structure from replica and cavity methods to field theory._
+            - Replica methods
+            - Cavity methods
+            - Field & string theory models & techniques
+          - **Classical methods and models whose scale is set by particle number N and classical dynamics, with no role for ħ.**
+            _basis: kinds, order: structure. Classified by whether the scale is fixed by classical constants and N alone._
+            - Time series analysis
+            - Particle image velocimetry
+            - Methods in transport
+            - Continuum particle models
+          - **Quantum many-body systems, path-integral methods, quasiparticles, the Lindblad equation, interferometry, and gamma-ray techniques are quantum or relativistic claims set by hbar, often with c and N as well.**
+            _basis: kinds, order: degree. Ranked from fewest governing constants to most; hbar with c and N makes this group last._
+            - Quantum many-body systems
+            - Path-integral methods
+            - Quasiparticles & collective excitations
+            - Lindblad equation
+    - **Biophysics and medical physics claims are kinds of claims about living matter, its imaging, radiation exposure and therapy, scaled by ħ and c at the quantum level or by large numbers N.**
+      _basis: kinds, order: structure. Ordered by structure from molecular and cellular biophysics to imaging, radiation, biomedical engineering and disease._
+      - **Biomolecule and light claims at the quantum level are those whose scale is set by ħ, and by c for light, through chemistry and energy levels.**
+        _basis: kinds, order: degree. Ranked from ħ-based chemistry of molecule classes to pure ħ and c light processes._
+        - **Biomolecule classes are families of biological molecules distinguished by size and function, each with scale set by ħ-based chemistry and the number of units N.**
+          _basis: kinds, order: structure_
+          - **Information-bearing and structural macromolecules are built from long chains whose coding and folding depend on quantum-chemical bonding scales set by ħ and on large monomer number N.**
+            _basis: kinds, order: structure. Polymer classes ordered from information-level description to chain types._
+            - Biological information
+            - Nucleic acids
+            - Proteins
+            - Peptides
+          - **Functional protein assemblies are specialized protein forms whose activity or architecture arises from molecular-scale chemistry set by ħ and by cooperative assembly of many units N.**
+            _basis: kinds, order: structure. Protein-based classes ordered from catalytic to structural to membrane-bound forms._
+            - Enzymes
+            - Fibrils (amyloids, collagen, etc.)
+            - Membrane proteins
+            - Biomolecules: types
+          - **Small signaling and metabolic biomolecules are low-mass compounds whose behavior is set by molecular quantum chemistry through ħ with few units N involved.**
+            _basis: kinds, order: structure. Small-molecule classes ordered from structural lipids and sugars to regulatory hormones and vitamins._
+            - Lipids
+            - Carbohydrates
+            - Hormones
+            - Vitamins
+        - **Quantum-chemical claims about biomolecules are those whose scale is set directly by ħ through energy levels, bonding, and molecular structure.**
+          _basis: kinds, order: structure_
+          - **Claims about electronic, spectral and bonding properties of biomolecules are set directly by ħ through quantum energy levels and bond energies.**
+            _basis: kinds, order: degree. Most ħ-dependent: scale fixed by quantum electronic structure._
+            - Electronic and electrical properties
+            - Spectra of biomolecules
+            - Bonding; mechanisms of bond breakage
+          - **Claims about the molecular identity and structure of the nucleic-acid building blocks are set by quantum chemistry through ħ and the electron charge and mass.**
+            _basis: kinds, order: degree. Second: chemical structure rooted in quantum chemistry with ħ setting atomic and bond sizes._
+            - Nucleotides
+            - DNA
+            - RNA
+            - Structure of biomolecules
+          - **Claims about molecular interactions, mechanics and reaction rates combine ħ-derived interaction strengths with thermal energy, so both ħ and N-scale thermal factors matter.**
+            _basis: kinds, order: degree. Middle: mixed dependence on interaction energies from ħ and thermal energy._
+            - Molecular interactions; membrane-protein interactions
+            - Mechanical properties
+            - Reactions and kinetics (see also 82.39.-k Chemical kinetics in biological systems in physical chemistry)
+            - Dynamics of biomolecules
+        - **Quantum-scale light processes are those whose energy and speed scales are set by ħ and c rather than by large molecule numbers.**
+          _basis: kinds, order: degree. Ranked by how strongly ħ and c, rather than N, set the scale, with fast electronic photon events first._
+          - **Light-driven quantum events are fast electronic and photon-induced processes whose scale is set by ħ and c.**
+            _basis: kinds, order: structure. Ordered by structure, from ultrafast transfer to bond breaking and ionization._
+            - Ultrafast dynamics; charge transfer
+            - Photodissociation
+            - Photoionization
+          - **Photon-linked molecular processes are those where the quantum constant ħ and the speed of light c set the energy scale of light emission.**
+            _basis: kinds, order: structure. Single-member-type grouping ordered by structure; light emission governed by ħ and c._
+            - Luminescence
+            - Dissociation
+        - **Theoretical and computational methods are approaches for modeling random or biological systems, with scale set by particle number N, fluctuations, or macroscopic material constants.**
+          _basis: kinds, order: structure_
+          - **General theoretical frameworks for small or random systems have scales set by particle number N and fluctuations rather than by c, ħ, or G.**
+            _basis: kinds, order: structure. Ordered by structure, from small systems through stochastic processes to general biological theory._
+            - 0-dimensional systems
+            - Stochastic processes
+            - Biological and medical physics
+            - General theory and mathematical aspects
+          - **Continuum and analytical modeling methods describe biological matter through smooth fields and equations, so their scale is set by macroscopic material constants rather than by ħ or N explicitly.**
+            _basis: kinds, order: structure. Continuum methods, ordered from analytical theory to numerical solution._
+            - Analytical theories
+            - Ordinary differential equations (ODE), partial differential equations (PDE), integrodifferential models
+            - Finite element calculations
+            - Elasticity theory
+          - **Statistical and particle-based simulation methods treat biological systems as ensembles of many discrete units, so the particle number N and thermal fluctuations set their scale.**
+            _basis: kinds, order: structure. Methods ordered from lattice and stochastic models to sampling and dynamics simulations._
+            - Lattice models
+            - Stochastic modeling
+            - Monte Carlo simulations
+            - Molecular dynamics simulation
+          - **Computational and theoretical methods are approaches whose scale is set by the many-particle number N and by ħ where quantum effects enter.**
+            _basis: kinds, order: structure. Ordered by structure, from analytical to numerical methods._
+            - Phase transitions
+            - Analytical theories
+            - Quantum calculations
+            - Monte Carlo simulations
+            - Molecular dynamics simulation
+        - **Network, method and continuum-property claims treat many interacting molecules statistically, through signaling circuits, computational tools and measurable membrane and nuclear physics.**
+          _basis: kinds, order: degree. Ranked from molecular-level networks to theoretical methods to continuum physical properties._
+          - **Network and signaling claims describe how many interacting molecules form regulatory circuits and transmit signals, with N setting the scale.**
+            _basis: kinds, order: structure. Molecular-circuit level of cell organization._
+            - Signal transduction and intracellular signaling
+            - Regulatory genetic and chemical networks
+            - Genetic switches and networks
+            - Biotechnology of cell processes
+            - Biological complexity (see also 82.39.Rt Reactions in complex biological systems in physical chemistry)
+          - **Method claims are theoretical and computational tools, such as analytical theory, Monte Carlo, lattice models and simulation, that treat large-N cell systems statistically.**
+            _basis: kinds, order: structure. Methodological level of description._
+            - Analytical theories
+            - Monte Carlo calculations
+            - Lattice models
+            - Modeling, computer simulation of cell processes
+          - **Physical-property claims describe the measurable physics of membranes and nuclei, including fluctuations, mechanics, transport and structure, as large-N continuum behavior.**
+            _basis: kinds, order: structure. Physical-property level of cell components._
+            - Dynamics and fluctuations
+            - Mechanical properties and rheology
+            - Assembly and interactions
+            - Structure, static correlations, domains, and rafts
+          - **Molecular and network-level topics concern how many interacting genes, proteins and signaling components process information and fluctuate within cells.**
+            _basis: kinds, order: structure. Ordered from signaling networks to noise to omics-scale descriptions._
+            - Signal transduction networks
+            - Noise in biological systems
+            - Systems biology
+            - Genomics
+            - Proteomics
+      - **Statistical and cellular biophysics claims are those whose scale is set by large particle numbers N, thermal motion and fluctuations rather than by ħ.**
+        _basis: kinds, order: structure_
+        - **Many-body and thermal claims about biomolecular systems are those whose scale is set by the number of particles N and thermal motion rather than by ħ.**
+          _basis: kinds, order: structure_
+          - **Claims about transport and noise in solution are set by thermal motion of many molecules, so N and the thermal energy scale dominate over ħ.**
+            _basis: kinds, order: degree. Fourth: ħ enters only indirectly through fixed material parameters._
+            - Diffusion
+            - Electrophoresis (see also 82.45.-h Electrochemistry and electrophoresis)
+            - Properties of solutions of macromolecules
+            - Fluctuations
+          - **Claims about folding, sequence statistics and coarse-grained models are set by the large number N of degrees of freedom and by combinatorics, largely independent of ħ, c and G.**
+            _basis: kinds, order: degree. Least ħ-dependent: scale set by N and statistical mechanics._
+            - Generic models (lattice, HP, etc.)
+            - Theory, modeling, and computer simulation
+            - Folding: thermodynamics, statistical mechanics, models, and pathways (see also 87.15.hm Folding dynamics)
+            - Sequence analysis
+            - Biomolecules: structure and physical properties (for NMR of biomolecules, see 82.56.Pp)
+          - **Structural organization classes describe how many atoms are arranged into molecular and aggregate architectures, so scale is set by N.**
+            _basis: kinds, order: structure. Ordered by structure, from local to global organization._
+            - Secondary structure
+            - Tertiary structure
+            - Structure of aggregates
+          - **Dynamical processes are time-dependent motions of molecules whose scale is set by the number of interacting particles N.**
+            _basis: kinds, order: structure. Ordered by structure, from interactions to large-scale motion._
+            - Dynamics of intermolecular interactions
+            - Transport dynamics
+            - Folding dynamics
+            - Conformational changes
+          - **Binding interactions are couplings between a protein and a partner such as a polynucleotide, protein, ligand, solvent or membrane, with scale set by N.**
+            _basis: kinds, order: structure. Ordered by structure, by type of binding partner._
+            - Protein-polynucleotide interactions
+            - Protein-protein interactions
+            - Protein-ligand interactions
+            - Protein-solvent interactions
+            - Protein-membrane interactions
+        - **Molecular-scale mechanical and assembly systems are those whose scale is set by thermal energy and forces acting on N molecules or protein units, from assembly to motors and transport.**
+          _basis: kinds, order: degree. Ranked by increasing organization, from collective ordering of molecules to motors and organelles._
+          - **Phase-change and assembly processes are those where the number of molecules N and thermal energy set the scale of collective ordering or breakup of matter.**
+            _basis: kinds, order: structure. Ordered by structure from dissolving and aggregating to ordered crystals and chains._
+            - Dissolution
+            - Aggregation
+            - Crystallization
+            - Polymerization (see also 82.35.Pq Biopolymers, biopolymerization in physical chemistry)
+          - **Filament and motor-driven mechanical systems are those where the scale is set by piconewton forces and thermal energy acting on N protein units rather than by c, ħ or G.**
+            _basis: kinds, order: structure. Ordered by structure from static filaments to motile appendages._
+            - Filaments, microtubules, their networks, and supramolecular assemblies
+            - Cytoskeleton
+            - Motor proteins (myosin, kinesin dynein)
+            - Pseudopods, lamellipods, cilia, and flagella
+            - Morphology of nerve cells
+          - **Organelle and transport systems are those where the scale is set by the ion and cargo counts N and electrochemical energies, with ħ entering only through molecular binding.**
+            _basis: kinds, order: structure. Ordered by structure from stored genome and organelles to transport and channels._
+            - Chromosomes, histones
+            - Mitochondria and other organelles
+            - Active transport processes
+            - Ion channels
+            - Intracellular trafficking
+          - **Modeling and membrane-boundary topics are those where the scale is set by the elasticity and thermal fluctuations of many lipid molecules N rather than by c, ħ or G.**
+            _basis: kinds, order: structure. Ordered by structure from general theory to bounding envelopes._
+            - Subcellular structure and processes
+            - Theory, modeling, and simulations
+            - Membranes, bilayers, and vesicles
+            - Cell walls
+        - **Cell-level and collective claims describe whole-cell activities and populations of cells whose scale is set by large numbers N.**
+          _basis: kinds, order: degree. Ranked from single-cell processes to populations of many cells to whole-organism coordination._
+          - **Cell-process claims describe whole-cell activities such as growth, motion, shape formation and adhesion, whose scale is set by large molecule numbers N.**
+            _basis: kinds, order: structure. Whole-cell process level._
+            - Cell processes
+            - Growth and division
+            - Cell locomotion, chemotaxis
+            - Morphogenesis
+            - Cell adhesion and cell mechanics
+          - **Nuclear morphology and membrane transport are cell-biophysics topics whose claims are scaled by which of the constants c, ħ, G and N set their governing scale.**
+            _basis: kinds, order: structure_
+            - Nuclear morphology
+            - Transport, including channels, pores, and lateral diffusion
+          - **Collective cell phenomena are those in which large numbers N of cells aggregate, communicate and self-organize into populations, biofilms and patterns.**
+            _basis: kinds, order: structure. Ordered from simple aggregation to communication to full pattern formation._
+            - Cell aggregation
+            - Multicellular phenomena, biofilms
+            - Cell-cell communication; collective behavior of motile cells
+            - Spatiotemporal pattern formation in cellular populations
+          - **Whole-organism integrative topics describe large-scale biological processes and rhythms that emerge from the coordination of enormous numbers of cells.**
+            _basis: kinds, order: structure. Ordered from integrative processes to rhythms to organism-level properties._
+            - Large-scale biological processes and integrative biophysics
+            - Circadian rhythms
+            - Properties of higher organisms
+        - **Excitable-tissue and physiological transport claims describe electrical signaling and bulk flows through many coupled cells and tissues of an organism.**
+          _basis: kinds, order: degree. Ranked from single-cell electrical signaling to coupled excitable tissue to bulk physiological transport._
+          - **Cellular electrical signaling topics describe how charge, ion currents and fields carry signals along and between neurons.**
+            _basis: kinds, order: structure. Ordered by structure from single axon to synapse and field effects._
+            - Action potential propagation and axons
+            - Noise in the nervous system
+            - Electrodynamics in the nervous system
+            - Synapses: chemical and electrical (gap junctions)
+            - Neuronal wave propagation
+          - **Neural and excitable-tissue topics cover systems of many coupled excitable units whose collective electrical and mechanical activity is set by their number N.**
+            _basis: kinds, order: structure. Ordered from synaptic networks to neuroscience to muscle and heart to tissue properties._
+            - Neural networks and synaptic communication
+            - Neuroscience
+            - Muscles
+            - Cardiac dynamics
+            - Mechanical and electrical properties of tissues and organs
+          - **Transport and thermal physiology topics treat bulk flow of blood, air and heat through organisms as continuum processes of many molecules.**
+            _basis: kinds, order: structure. Ordered from thermal processes to blood flow to respiratory flow._
+            - Biothermics and thermal processes in biology
+            - Hemodynamics
+            - Pneumodyamics, respiration
+      - **Radiation exposure and therapy topics are the kinds of subject covering field effects on living matter and how therapy is delivered and equipped.**
+        _basis: kinds, order: structure. Ordered from exposure effects to treatment process and hardware._
+        - **Electromagnetic exposure effects are kinds of field interactions with living matter, distinguished by how photon energy and field strength set their scale.**
+          _basis: kinds, order: degree. Ranked from photon-energy-governed spectrum-wide effects to classical-field-governed non-ionizing exposure categories._
+          - **Effects of electromagnetic fields on living matter are set by photon energy ħω and the speed of light c, varying across the spectrum.**
+            _basis: kinds, order: degree. Ranked by increasing frequency, from static and low-frequency fields to optical and infrared radiation._
+            - Static and low-frequency electric and magnetic fields effects
+            - Radiofrequency/microwave fields effects
+            - Millimeter/terahertz fields effects
+            - Optical/infrared radiation effects
+          - **Dosimetry, mechanism and therapy entries for the first electromagnetic exposure category of the 87.50 subsections, where classical field strengths govern the scale.**
+            _basis: kinds, order: degree. Low quantum energy: classical electromagnetic fields._
+            - Dosimetry/exposure assessment
+            - Therapeutic applications
+            - Biophysical mechanisms of interaction
+            - Dosimetry/exposure assessment
+          - **Entries for the second electromagnetic exposure category, covering mechanisms, dosimetry and therapy for field interactions that remain well below ionizing photon energies.**
+            _basis: kinds, order: degree. Intermediate quantum energy: field interactions still below the ionization threshold._
+            - Therapeutic applications
+            - Biophysical mechanisms of interaction
+            - Dosimetry/exposure assessment
+            - Therapeutic applications
+        - **Exposure entries are sorted by whether photon energy, ħ times frequency, stays below ionization or is high enough to ionize matter.**
+          _basis: kinds, order: structure. Ordered from non-ionizing to ionizing exposure._
+          - **Entries for the third non-ionizing exposure category, covering mechanisms, dosimetry and therapy for radiation whose photon energy is set by ħ times frequency but stays below ionization.**
+            _basis: kinds, order: degree. Higher quantum energy: optical and radio-frequency photons below the ionization threshold._
+            - Biophysical mechanisms of interaction
+            - Dosimetry/exposure assessment
+            - Therapeutic applications
+            - Biophysical mechanisms of interaction
+          - **Ionizing radiation effects and the remaining exposure entries involve photon energies high enough to ionize matter, so ħ and c set the scale.**
+            _basis: kinds, order: degree. Highest quantum energy: ionizing radiation._
+            - Dosimetry/exposure assessment
+            - Therapeutic applications
+            - Effects of ionizing radiation on biological systems
+            - Biophysical mechanisms of interaction
+        - **Treatment process topics cover how a radiation therapy is delivered, planned, computed, verified and assessed for dose and tissue response.**
+          _basis: kinds, order: structure. Ordered along the treatment workflow from delivery through planning and computation to checks and assessment._
+          - **Treatment delivery techniques are the specific therapeutic modalities by which radiation is applied to a patient.**
+            _basis: kinds, order: structure. Ordered by structure, from general therapeutic applications to specific delivery techniques._
+            - Therapeutic applications, including brachytherapy
+            - Conformal radiation treatment
+            - Stereotactic radiosurgery
+            - Therapeutic applications
+            - Applications
+          - **Treatment planning and strategy topics cover how a radiation treatment is designed and optimized before delivery.**
+            _basis: kinds, order: structure. Ordered by structure, from overall strategy to detailed design._
+            - Treatment strategy
+            - Treatment planning
+            - Optimization
+            - Design
+          - **Computational methods are the simulation and algorithmic tools used to model radiation dose and its application.**
+            _basis: kinds, order: structure. Ordered by structure, from general simulation to specific algorithms and applications._
+            - Simulation
+            - Monte Carlo methods
+            - Algorithms
+            - Applications
+          - **Safety and verification topics are the checks that confirm a radiation treatment is delivered correctly and safely.**
+            _basis: kinds, order: structure. Ordered by structure, from monitoring to quality assurance to verification records._
+            - Radiation monitoring, control, and safety
+            - Quality assurance in radiotherapy
+            - Record and verify systems and applications
+            - Verification
+          - **Dose and response assessment topics measure delivered dose and evaluate how tissue responds to it.**
+            _basis: kinds, order: structure. Ordered by structure, from dosimetry to tissue response to dose-volume analysis._
+            - Dosimetry/exposure assessment
+            - Tissue response
+            - Dose-volume analysis
+        - **Therapy hardware comprises the devices that generate the beam, shape its field, and modify or support its delivery.**
+          _basis: kinds, order: structure. Ordered from beam source to field shaping to modification and support equipment._
+          - **Radiation sources are the devices that generate the therapeutic beam, either by accelerating particles or by radioactive decay.**
+            _basis: kinds, order: structure. Parent category listed first, then its two kinds of source._
+            - Radiation sources
+            - Accelerators
+            - Radioactive sources
+          - **Collimation defines the size and shape of the radiation field using collimating devices.**
+            _basis: parts, order: structure. Collimation as the whole, followed by its aspects: field size, field shaping and collimators._
+            - Collimation
+            - Field size
+            - Field shaping
+            - Collimators
+          - **Beam modification and support equipment covers the therapy devices that alter beam intensity or ensure its safe and accurate delivery.**
+            _basis: kinds, order: structure. General equipment heading first, then the specific kinds of support and modifying equipment._
+            - Radiation therapy equipment
+            - Ancillary equipment
+            - Quality assurance equipment
+            - Beam intensity modifications
+            - Wedges and compensators
+      - **Disease and classical effect topics are the kinds of subject whose scale is set by mechanism constants or by large numbers rather than microscopic constants.**
+        _basis: kinds, order: structure. Ordered from disease categories to classical collective effects._
+        - **Disease categories are kinds of disorders distinguished by which constant or scale governs their underlying mechanism.**
+          _basis: kinds, order: degree. Ranked from macroscopic mechanics and chemistry, through large-N neural signaling, to quantum-scale ħ-governed molecular defects and infectious agents._
+          - **Organ-system disorders of body structure and metabolism are set by macroscopic tissue mechanics and chemistry rather than by fundamental constants directly.**
+            _basis: kinds, order: degree. Ranked from mechanical load-bearing tissue to chemically regulated organ systems._
+            - Musculoskeletal diseases
+            - Gastrointestinal diseases
+            - Endocrine diseases
+            - Dynamics of evolution
+          - **Neurological disorders are diseases of excitable tissue whose scale is set by electrochemical signaling among large numbers N of neurons.**
+            _basis: kinds, order: degree. Ranked from network-wide dysfunction to progressive neural degeneration._
+            - Epilepsy
+            - Motor system disease (Parkinson's, etc.)
+            - Stroke
+            - Degenerative diseases (Alzheimer's, ALS, etc)
+          - **Disease groups rooted in molecular and genetic defects arise where the quantum-chemical scale set by ħ governs the underlying mechanism.**
+            _basis: kinds, order: degree. Ranked by how strongly a molecular, ħ-scale mechanism sets the disease origin, with the most strongly genetic first._
+            - Cancer
+            - Genetic diseases
+            - Developmental diseases
+            - Immune system diseases
+          - **Infectious diseases are disorders caused by pathogenic agents such as bacteria, viruses, parasites, fungi and prions.**
+            _basis: kinds, order: structure. Ordered structurally by pathogen type from bacteria to prions._
+            - Bacterial diseases
+            - Viral diseases
+            - Parasitic diseases
+            - Fungal diseases
+            - Prion diseases
+        - **Classical and collective effects are kinds of phenomena whose scale is set by large numbers or continuum properties rather than by microscopic constants.**
+          _basis: kinds, order: degree. Ranked from large-N collective dynamics to classical continuum acoustics, the latter being furthest from any fundamental constant._
+          - **Collective dynamics of many interacting organisms are governed by the large number N of agents, not by microscopic constants.**
+            _basis: kinds, order: degree. Ranked from ecological systems at large to evolving populations and human social systems._
+            - Ecology and evolution
+            - Population dynamics and ecological pattern formation
+            - Dynamics of social systems
+            - Effects of electromagnetic and acoustic fields on biological systems
+          - **Acoustic and ultrasonic effects are mechanical wave interactions whose scale is set by classical continuum properties rather than by ħ.**
+            _basis: kinds, order: degree. Lowest in quantum energy: classical mechanical waves with no ħ scale._
+            - Biological effects of acoustic and ultrasonic energy
+            - Biophysical mechanisms of interaction
+            - Electrophoresis/dielectrophoresis and other mechanical effects (see also 87.15.Tt Electrophoresis)
+            - Electroporation/membrane effects
+  - **Energy and further applied topics are kinds of claims about resources, conversion and specialized fields, each scaled by the governing constants in its own way.**
+    _basis: kinds, order: structure. Ordered from energy topics to the remaining applied fields._
+    - **Energy topics are kinds of claims about energy scope, biomass chains, renewable sources, fuel cells, storage and fuel resources.**
+      _basis: kinds, order: structure. Ordered by structure from general energy scope to specific sources and devices._
+      - **Energy topics are the kinds of subject covering energy scope and limits, use and conservation, and geothermal resources.**
+        _basis: kinds, order: structure. Ordered from general framing to applied use and geothermal specifics._
+        - **Energy framing and analysis topics are kinds of treatment that set the broad scope, physical limits, and policy context of energy.**
+          _basis: kinds, order: structure. Ordered by the catalogue structure from broad headings to physical analysis to policy._
+          - **Broad top-level headings frame the whole field of energy and related resource topics at the largest scale.**
+            _basis: kinds, order: structure. ordered by structure_
+            - Proteomics
+            - Renewable energy resources and applications (for nuclear power see 89.30.Gg and 89.30.Jj)
+            - Energy analysis
+            - Geothermal energy (see also 91.35.Dc Heat flow; geothermy)
+          - **Physical and energy-content analyses set the quantitative limits and standards of energy production and use.**
+            _basis: kinds, order: structure. ordered by structure_
+            - Thermodynamic constraints on energy production (see also 05.70.-a Thermodynamics)
+            - Energy content issues; life cycle analysis
+            - Energy efficiency; definitions and standards
+            - Ground heat
+          - **Policy and economic issues concern the targets, assessment, costs and trading mechanisms that govern energy at the societal scale.**
+            _basis: kinds, order: structure. ordered by structure_
+            - Renewable energy targets
+            - Policy issues; resource assessment
+            - Economic issues; sustainability; cost trends
+            - Emissions trading and CDM
+        - **Energy use and conservation topics are kinds of applied energy concern dealing with environmental impact and sector-specific uses.**
+          _basis: kinds, order: structure. Ordered by the catalogue structure from environmental aspects to sector uses._
+          - **Environmental and conservation aspects deal with reducing the impact and demand of energy use in agriculture and equipment.**
+            _basis: kinds, order: structure. ordered by structure_
+            - Environmental aspects
+            - Energy conservation; electricity demand reduction
+            - Energy use in agriculture (see also 91.62.Bf Agricultural systems in Geophysics Appendix)
+            - Energy use in appliances and electronic equipment
+          - **Sector-specific energy uses cover heating, lighting, industry and transportation at the scale of individual applications.**
+            _basis: kinds, order: structure. ordered by structure_
+            - Energy use in heating and cooling of residential and commercial buildings (for solar heating and cooling of residential and commercial buildings, see 88.40.me; for geothermal energy use in heating and cooling of buildings, see 88.10.cn)
+            - Energy use in lighting (for solar energy use in lighting, see 88.40.mx, and 88.40.my)
+            - Energy use in industry and manufacturing (see also 89.20.Bb Industrial and technological research and development)
+            - Energy use in transportation (see also 88.85.-r Advanced vehicles)
+        - **Geothermal energy topics are kinds of subject covering heat-source resources, reservoir engineering, characterization and modelling, and power plants.**
+          _basis: kinds, order: structure. Ordered by the catalogue structure from resource to reservoir to modelling to plants._
+          - **Heat-source resources are the natural underground sources of heat and fluid that geothermal energy is drawn from.**
+            _basis: kinds, order: structure. Ordered from dry hot rock to fluid-bearing reservoirs and their surface or well outputs._
+            - Hot dry rock (igneous systems)
+            - Hydrothermal reservoirs (see also 92.05.Lf Hydrothermal systems in oceanography; 91.40.Ge Hydrothermal systems in volcanology)
+            - Hot springs
+            - Hot water from wells
+            - Brines and their dissolved matter
+          - **Reservoir engineering covers the methods and equipment used to create, access and isolate productive geothermal reservoirs.**
+            _basis: kinds, order: structure. Ordered from reservoir stimulation to pumping and zonal isolation._
+            - Reservoir engineering (enhanced geothermal systems)
+            - Down hole pumps
+            - Site characterization; zonal isolation
+          - **Characterization and modelling covers the tools and models used to image, measure and predict the behaviour of geothermal rock and fluid.**
+            _basis: kinds, order: structure. Ordered from numerical models to imaging, downhole sensing and fracture characterization._
+            - Simulation; prediction models
+            - Imaging fluid flow
+            - High-temperature logging tools and sensors
+            - Fracture characterization of rocks
+          - **Power plants are the facilities that convert geothermal heat into electricity, whether by direct steam or flashed fluid.**
+            _basis: kinds, order: structure. Ordered from the general topic of electricity production to the two plant types._
+            - Geothermal electricity production
+            - Dry steam plants
+            - Flash steam plants
+        - **Image analysis topics cover how recorded images are evaluated, limited in quality by counting statistics, and computationally processed.**
+          _basis: kinds, order: structure. Ordered from evaluation through quality limits to processing operations._
+          - **Image evaluation and analysis covers the measures of image quality and the computational tools used to interpret images.**
+            _basis: kinds, order: degree. Ranked from the broad quality measure to its specific resolution metric, then to analysis and diagnosis tools._
+            - Image quality
+            - Spatial resolution
+            - Image analysis
+            - Computer-aided diagnosis
+          - **Image-quality limits are the properties of a recorded image whose scale is set by photon counting statistics N and by how radiation interacts with tissue.**
+            _basis: kinds, order: structure. Ordered by structure, from signal difference to unwanted variation and error._
+            - Contrast
+            - Noise
+            - Artifacts and distortion
+          - **Image processing operations are computational steps applied to recorded data, which depend on N only through the noise they must handle and not on c, ħ or G.**
+            _basis: kinds, order: structure. Ordered by structure, from building the image to aligning, partitioning, smoothing and sharpening it._
+            - Reconstruction
+            - Registration
+            - Segmentation
+            - Smoothing
+            - Edge enhancement
+        - **Imaging modalities are the distinct techniques that form medical images from detected photons, whose energy ħω and count N set their scale.**
+          _basis: kinds, order: structure. Ordered from general modalities to CT, nuclear medicine and projection x-ray._
+          - **Imaging modalities are the distinct techniques by which medical images of the body are formed.**
+            _basis: kinds, order: structure. General medical imaging heading first, then the specific modalities._
+            - Medical imaging
+            - Computed tomography
+            - Nuclear medicine imaging
+            - Neutron imaging; neutron tomography
+          - **CT scanner configurations are detector arrangements for x-ray tomography, in which the number of detected photons N sets the noise scale.**
+            _basis: kinds, order: structure. Ordered by structure, from one detector row to many rows._
+            - Single-slice
+            - Multislice
+            - Mammography
+          - **Nuclear medicine methods detect gamma photons from administered radionuclides, so the photon energy ħω and the count N set their scale.**
+            _basis: kinds, order: structure. Ordered by structure, from planar imaging to tomographic imaging and the supporting agents and dose._
+            - Conventional nuclear medicine imaging
+            - Single photon emission computed tomography (SPECT)
+            - Positron emission tomography (PET)
+            - Radiopharmaceuticals
+            - Dosimetry
+          - **Projection x-ray techniques form images from transmitted x-ray photons, whose energy ħω and count N set the scale of contrast and noise.**
+            _basis: kinds, order: structure. Ordered by structure, from the general method to static and dynamic projection imaging._
+            - X-ray imaging
+            - Radiography
+            - Fluoroscopy
+            - Angiography
+      - **The biomass energy chain runs from raw source materials through fuels and conversion processes to end uses and context.**
+        _basis: parts, order: structure. Ordered along the chain from source to end use._
+        - **Biomass source materials are the plant, residue, waste and decaying organic raw materials from which bioenergy is obtained.**
+          _basis: kinds, order: structure. Ordered by structure of the source category, from overall field to specific feedstocks._
+          - **Biomass source materials are the plant, residue and aquatic raw materials from which biomass energy is obtained.**
+            _basis: kinds, order: structure. Ordered by structure, from woody and crop sources to residues and aquatic sources._
+            - Wood
+            - Food crops
+            - Grassy and woody plants
+            - Agriculture/forestry residues
+            - Aquatic/marine sources
+          - **Biomass general and source-level categories name the overall biomass energy field and its energy sources.**
+            _basis: kinds, order: structure. Ordered by structure, from the whole field to its sources._
+            - Biomass energy
+            - Biomass energy sources
+          - **Waste and decaying organic materials serve as raw feedstocks from which bioenergy is obtained.**
+            _basis: kinds, order: structure. Ordered by structure, from food waste to municipal waste to landfill and decaying matter._
+            - Food wastes
+            - Municipal and industrial wastes
+            - Methane from landfills
+            - Decaying organic matter
+        - **Biomass-derived fuels are the kinds of energy carriers made from biomass, whether alcohol, oil-derived and drop-in liquids, or gaseous and solid fuels.**
+          _basis: kinds, order: structure. Ordered by structure of fuel form, liquids first and then gases and solids._
+          - **Alcohol fuels are liquid biofuels in which the fuel molecule is an alcohol.**
+            _basis: kinds, order: structure. Ordered by structure, from ethanol to methanol to butanol to mixed alcohols._
+            - Ethanol (see also 88.85.mj ethanol in alternative fuels for advanced vehicles)
+            - Methanol
+            - Butanol
+            - Mixed alcohols
+          - **Oil-derived and drop-in liquid fuels are made from oils or synthesized into hydrocarbon or ether fuels.**
+            _basis: kinds, order: structure. Ordered by structure, from biodiesel and vegetable oils to ethers, aviation fuel and F-T liquids._
+            - Biodiesel (see also 88.85.mb Biodiesel in alternative fuels for advanced vehicles)
+            - Vegetable oils
+            - Bioethers
+            - Bioaviation fuel
+          - **Gaseous and solid fuels are non-liquid energy carriers produced from biomass.**
+            _basis: kinds, order: structure. Ordered by structure, from hydrogen and methane to syngas and pelletized solid fuel._
+            - Hydrogen (see also 88.85.mh Hydrogen in alternative fuels for advanced vehicles)
+            - Methane
+            - Syngas
+            - Solid pelletized fuel
+        - **Conversion and processing topics are the routes, chemical and biological pathways, thermal power systems and hydrogen-producing processes that turn biomass feedstock into usable fuel or energy.**
+          _basis: kinds, order: structure. Ordered by structure of process type, from general processing to specific systems._
+          - **Biomass processing and fuel production topics cover the steps that turn biomass feedstock into usable fuel.**
+            _basis: kinds, order: structure. Ordered by structure, from fuel type to processing routes and conversion methods._
+            - Renewable alternative fuels from biomass energy (for fossil fuels, see 89.30.A-)
+            - Methane production
+            - Biomass processing routes
+            - Biomass conversion methods
+            - Cellolusic materials
+          - **Conversion routes are the processes by which biomass is turned into usable fuel.**
+            _basis: kinds, order: structure. Ordered by structure, from Fischer-Tropsch synthesis to digestion to biochemical and thermochemical routes._
+            - Fischer-Tropsch (F-T) liquids (hydrocarbons)
+            - Anaerobic digestion
+            - Biochemical route
+            - Thermochemical route
+          - **Biomass conversion pathways are the chemical and biological processes that turn raw biomass into fuels or intermediates.**
+            _basis: kinds, order: structure. Listed by structure of process type; no ranking implied._
+            - Combustion
+            - Hydrolysis and fermentation
+            - Extraction and esterification
+            - Alternate photosynthetic pathways
+          - **Thermal power systems are installations that burn or thermally decompose biomass to generate energy or fuel gases and liquids.**
+            _basis: kinds, order: structure. Listed by structure of system type; no ranking implied._
+            - Direct-firing systems
+            - Cofiring systems
+            - Gasification systems; syngas
+            - Pyrolysis to liquids
+          - **Hydrogen production routes are the distinct processes by which hydrogen is generated, whether thermochemically, electrolytically, photolytically, or from biomass and the water-gas-shift reaction.**
+            _basis: kinds, order: structure. Ordered by production process._
+            - Hydrogen production with renewable energy
+            - Thermochemical hydrogen
+            - Electrolytic hydrogen
+            - Electrochemical photolytic hydrogen
+            - Biological photolytic hydrogen
+        - **End uses and context topics cover the energy forms, manufactured products, markets, social issues and policy debate that follow from or frame biomass energy.**
+          _basis: kinds, order: structure. Ordered by structure from direct end uses to broader context._
+          - **Biomass end uses and societal topics cover the products, power systems, markets and social issues that follow from biomass energy.**
+            _basis: kinds, order: structure. Ordered by structure, from products and power systems to markets and social issues._
+            - Biopower systems
+            - Bioproducts from biomass
+            - Markets for renewable alternative fuels (for alternative fuels for advanced vehicles, see 88.85.M-)
+            - Social issues
+          - **Bio-based materials and industries are the products and sectors that use biomass as a raw material for manufactured goods.**
+            _basis: kinds, order: structure. Listed by structure of product type; no ranking implied._
+            - Paper mills
+            - Plastics
+            - Glues
+            - Acids
+          - **Biomass energy end uses are the forms in which biomass-derived energy and products are finally delivered and consumed.**
+            _basis: kinds, order: structure. Listed by structure of end-use type; no ranking implied._
+            - Heat
+            - Combined heat and power
+            - Transportation fuels
+            - Chemicals
+          - **Broader context topics are the policy debate and the alternative hydrogen technology that frame biomass fuel use.**
+            _basis: kinds, order: structure. Listed by structure of topic type; no ranking implied._
+            - Food versus fuel debate
+            - Hydrogen and fuel cell technology (for hydrogen as a renewable alternative fuel, see 88.20.fn; for hydrogen as an alternative fuel in advanced vehicles, see 88.85.mh)
+            - Foam insulation
+            - Wood adhesives
+      - **Renewable generation topics are the natural heat, sunlight, wind and water sources from which power is drawn.**
+        _basis: kinds, order: structure. Listed by structure of source: ground heat, sunlight collection, solar heat use, wind, water._
+        - **Non-biomass heat and resource topics cover geothermal heat flow and use, geothermal plants, and industries that extract materials from the ground.**
+          _basis: kinds, order: structure. Ordered by structure from geothermal heat to extraction industries._
+          - **Heat use and flux covers how geothermal heat flows through the Earth and is used directly for heating and cooling.**
+            _basis: kinds, order: structure. Ordered from direct-use applications to global, continental and oceanic heat flux._
+            - Geothermal heat pumps
+            - Heating and cooling of buildings; space heating (for solar heating and cooling of residential and commercial buildings, see 88.40.me)
+            - Global geothermal flux
+            - Continental geothermal energy
+            - Oceanic geothermal energy
+          - **Geothermal plants and extraction industries are non-biomass energy and resource topics based on heat or on removing materials from the ground.**
+            _basis: kinds, order: structure. Ordered by structure, from the steam plant to mineral and metals extraction._
+            - Binary-cycle steam plants
+            - Mineral extraction
+            - Metals extraction
+            - Combined minerals and metals extraction
+        - **Solar energy collection, photovoltaic cell technologies and solar cell development are the parts of the chain that gathers sunlight and turns it into electricity.**
+          _basis: parts, order: structure. Ordered from collection and conversion to cell development and cell types._
+          - **Solar energy collection and conversion covers the parts of the chain that gathers sunlight and turns it into electricity.**
+            _basis: parts, order: structure. Ordered by structure: from the resource through concentrators to cells._
+            - Solar energy
+            - Solar concentrators (see also 42.79.Ek Solar collectors and concentrators in optics)
+            - Solar cells (photovoltaics)
+            - Types of solar cells
+            - Parabolic-trough mirrors
+          - **Solar cell development and application covers the parts of designing, testing and deploying photovoltaic systems.**
+            _basis: parts, order: structure. Ordered by structure: from modeling and materials to testing and building use._
+            - Residential and commercial buildings
+            - Modeling and analysis
+            - Performance testing
+            - Advanced materials development
+          - **Photovoltaic cell types are the distinct semiconductor and material technologies used to convert sunlight directly into electricity.**
+            _basis: kinds, order: structure. Ordered by structure from silicon to thin films, multijunction and organic cells._
+            - Silicon solar cells
+            - Thin film III-V and II-VI based solar cells
+            - Thin film Cu-based I-III-VI 2 solar cells
+            - Multijunction solar cells
+            - Organic photovoltaics
+        - **Solar thermal systems and solar applications are the ways sunlight is put to use as heat, power or daylight, including in buildings.**
+          _basis: kinds, order: structure. Ordered from concentrating thermal systems to heating and cooling, electric and lighting uses, and building integration._
+          - **Concentrating solar thermal systems use mirrors or collectors to focus sunlight onto a receiver to generate heat or power.**
+            _basis: kinds, order: structure. Ordered by structure from dish and tower systems to the collectors that supply them._
+            - Dish/engine systems
+            - Power tower systems
+            - Concentrating collectors
+            - Efficiency and performance of solar cells
+            - Cost of production of solar cells
+          - **Solar heating and cooling systems use sunlight to supply thermal energy for space, water, or pool temperature control.**
+            _basis: kinds, order: structure. Ordered by structure from general systems to active, passive, and pool heating._
+            - Solar heating and cooling systems
+            - Active space/water heating
+            - Passive space/water heating
+            - Pool heating systems
+          - **Solar electric and lighting applications are installations that put photovoltaic power or daylight to use in grids, buildings, and outdoor settings.**
+            _basis: kinds, order: structure. Ordered by structure from grid-tied systems to building-integrated forms and outdoor lights._
+            - Grid-tied solar electric systems
+            - Building-integrated photovoltaics
+            - Building facades
+            - Outdoor solar lights
+          - **Building-integrated solar applications are ways of using sunlight directly in the structure of a building, such as through natural daylighting and through roof top shingles.**
+            _basis: kinds, order: structure_
+            - Day lighting/natural lighting of buildings
+            - Roof top shingles
+        - **Wind energy topics cover the resource-to-society chain, the research and development of turbines, and the kinds of wind farm.**
+          _basis: parts, order: structure. Ordered from the overall chain to turbine development and wind farm types._
+          - **The wind energy chain runs from the wind resource through turbine conversion and grid generation to the social issues that result.**
+            _basis: cause_effect, order: time. Ordered from resource to conversion to generation to social effects._
+            - Wind energy
+            - Wind turbines
+            - Electricity generation, grid integration from wind (see also 84.70.+p High-current and high-voltage technology: power systems; power transmission lines and cables; see also 88.80.-q Energy delivery and storage)
+            - Social issues regarding wind energy
+          - **Wind turbine research and development is made up of modeling and design, components, and testing activities.**
+            _basis: parts, order: structure. Parts of the research and development effort._
+            - Research and development
+            - Modeling, design
+            - Components
+            - Testing
+          - **Wind farms come in kinds distinguished by their scale and siting, from small-scale to large-scale and off-shore installations.**
+            _basis: kinds, order: degree. Ranked by scale and siting, from the general category to small, large and off-shore farms._
+            - Wind farms
+            - Small-scale wind farms
+            - Large-scale wind farms
+            - Off-shore wind farms
+        - **Water-based power technologies harness the energy of rivers, falling water and the sea through installations, turbines and ocean sources.**
+          _basis: kinds, order: structure. Ordered by structure, from the general hydropower field to ocean sources._
+          - **Hydropower technology divides into the general field, conventional hydropower, hydroturbines and emerging technologies.**
+            _basis: kinds, order: structure. Kinds of hydropower subject areas._
+            - Hydroelectric power (see also 84.70.+p High-current and high-voltage technology: power systems; power transmission lines and cables)
+            - Conventional hydropower
+            - Hydroturbines
+            - Emerging hydropower technologies
+          - **Hydropower installations include kinds of facilities and machinery such as dams, diversion works, pumped storage and cross-flow turbines.**
+            _basis: kinds, order: structure. Kinds of hydropower facilities and equipment._
+            - Impoundment facilities, dams
+            - Diversion facilities
+            - Pumped storage facilities
+            - Cross-flow turbines
+          - **Reaction and flow-driven turbines extract energy from water passing over or through the runner blades.**
+            _basis: kinds, order: structure. Ordered by structure of runner type._
+            - Francis hydropower turbines
+            - Free-flow turbines
+            - Propeller turbines
+            - Reaction turbines
+          - **Impulse-type hydropower uses the direct kinetic energy of falling or flowing water, as in jets striking buckets or natural river flow.**
+            _basis: kinds, order: structure. Ordered by structure of the water-driven mechanism._
+            - Impulse turbines
+            - Pelton hydropower turbines
+            - Natural water flow in rivers
+          - **Ocean energy sources draw on the motion or the heat of the sea, from waves and tides to currents and thermal gradients.**
+            _basis: kinds, order: structure. Ordered by structure of ocean resource._
+            - Energy from ocean waves (see also 92.05.Jn Ocean energy extraction in oceanography)
+            - Tidal energy
+            - Marine thermal gradients
+            - Energy from ocean currents
+            - Ocean thermal energy
+      - **Energy device and fuel topics cover fuel cell systems and types, power delivery and storage, vehicles, and fuel and nuclear resources.**
+        _basis: kinds, order: structure. Listed by structure from fuel cell parts and types to delivery, vehicles and resources._
+        - **Fuel cell system, component, material and hydrogen supply topics are the parts that make up the plant and the hydrogen chain around a fuel cell.**
+          _basis: parts, order: structure. Ordered from overall plant to components, materials, hydrogen production and storage._
+          - **Fuel cell system topics cover the overall plant around the cell, including its design and the supporting subsystems for fuel processing, power conversion and heat recovery.**
+            _basis: kinds, order: structure. Ordered from overall design to subsystems._
+            - Fuel cell systems
+            - Design and simulation
+            - Fuel processor
+            - Current converter
+            - Heat recovery system
+          - **Fuel cell components are the physical building blocks of a cell assembly, centred on the stack.**
+            _basis: kinds, order: structure. Ordered from component heading to the stack._
+            - Fuel cell components
+            - Fuel cell stack
+            - Types of fuel cells (see also 82.47.-a Applied electrochemistry)
+            - Hydrogen storage
+          - **Fuel cell materials and protection concern the substances used to build cell components and the means of protecting them against corrosion.**
+            _basis: kinds, order: structure. Ordered from general materials to specific material classes._
+            - Fuel cell component materials
+            - Corrosion protection
+            - Inorganic proton conductors
+            - Composite materials
+          - **Water-gas-shift and biomass reforming are hydrogen-production processes governed by chemical kinetics and thermodynamics, so no fundamental constant among c, ħ, G or N sets their scale.**
+            _basis: kinds, order: structure_
+            - Water-gas-shift (WGS) reaction
+            - Reforming biomass and wastes
+          - **Hydrogen storage materials are alternative solid media that hold hydrogen for use in fuel cells.**
+            _basis: kinds, order: structure. Ordered by structure: each member is a distinct storage material._
+            - Inorganic metal hydrides
+            - Carbon nanotubes
+        - **Fuel cell types are kinds of cell distinguished by their electrolyte or by how their fuel is supplied or recycled.**
+          _basis: kinds, order: structure. Ordered by the structural feature that defines each type, electrolyte first and fuel supply second._
+          - **Electrolyte-based fuel cells are cell types defined by the electrolyte that carries ions between the electrodes.**
+            _basis: kinds, order: structure. Ordered by structure: each member is a distinct electrolyte type._
+            - Proton exchange membrane fuel cells (PEM)
+            - Alkaline fuel cells
+            - Phosphoric acid fuel cells
+            - Molten carbonate fuel cells
+            - Solid oxide fuel cells
+          - **Fuel-fed and regenerative cell variants are fuel cell kinds defined by how their fuel is supplied or recycled.**
+            _basis: kinds, order: structure. Ordered by structure: each member is a distinct fuel or recycling arrangement._
+            - Direct methanol fuel cells
+            - Regenerative fuel cells
+            - Organics
+            - Hydrocarbons and alcohols liquid systems
+        - **Energy delivery and storage technologies move power from generators to users and hold energy for later use.**
+          _basis: kinds, order: structure. Ordered by structure, from delivery overall to storage and wired or wireless transmission._
+          - **Energy delivery covers the infrastructure that carries and distributes power from generators to users.**
+            _basis: kinds, order: structure. Ordered by structure of delivery layer._
+            - Energy delivery and storage
+            - Grid-connected distributed energy resources
+            - Electric power transmission (see also 84.70.+p High-current and high-voltage technology: power systems; power transmission lines and cables; and 84.71.-b Superconducting high-power technology)
+            - Energy delivery infrastructure
+          - **Energy storage technologies hold energy for later use in chemical, electrostatic or magnetic form.**
+            _basis: kinds, order: structure. Ordered by structure of storage mechanism._
+            - Energy storage technologies (see also 84.60.Ve Energy storage systems, including capacitor banks)
+            - Batteries (for lithium-ion batteries, see 82.47.Aa; for lead-acid, nickel-metal hydride batteries, see 82.47.Cb; see also 88.85.jk, and 88.85.jm in advanced vehicles)
+            - Supercapacitors (see also 82.47.Uv Electrochemical capacitors; supercapacitors)
+            - Superconducting magnetic energy storage (see also 84.71.-b Superconducting high-power technology)
+          - **Wired transmission systems carry electrical power through conductors in grids, whether as ac, high-voltage dc, or superconducting lines.**
+            _basis: kinds, order: structure. Ordered by structure of the conductor system_
+            - Transmission grids
+            - High-voltage direct current transmission
+            - ac power transmission
+            - Superconducting cables (see also 84.71.Fk Superconducting cables in superconducting high power technology)
+          - **Wireless power transmission sends electrical energy across space without conductors, for example by radio-frequency beams.**
+            _basis: kinds, order: structure. Ordered by structure of the transmission mechanism_
+            - Radio-frequency power transmission
+            - Wireless power transmission
+            - Natural gas
+            - Propane
+        - **Vehicle energy topics cover the advanced vehicle types, the on-board storage devices and the alternative fuels with their stations.**
+          _basis: kinds, order: structure. Ordered by structure, from vehicle types to storage and fuels._
+          - **Advanced vehicle types are distinguished by the kind of propulsion energy source they use, such as fuel cells, plug-in hybrids, or batteries.**
+            _basis: kinds, order: structure. Ordered by structure of the propulsion system_
+            - Advanced vehicles
+            - Fuel cell vehicles (FCVs)
+            - Plug-in hybrid vehicles (HEVs)
+            - Electric vehicles (EVs)
+          - **Vehicle energy storage devices store electrical energy on board, as lead-acid or nickel-metal hydride batteries or as ultracapacitors.**
+            _basis: kinds, order: structure. Ordered by structure of the storage technology_
+            - Vehicle energy storage
+            - Lead-acid batteries (for lead-acid batteries in applied electrochemistry, see 82.47.Cb)
+            - Nickel-metal hydride batteries (for nickel-metal hydride batteries in applied electrochemistry, see 82.47.Cb)
+            - Ultracapacitors
+          - **Alternative vehicle fuels and their fueling stations are the chemical fuels, such as biodiesel, propane, natural gas, and hydrogen, that replace conventional fuel, together with the stations that supply them.**
+            _basis: kinds, order: structure. Ordered by structure of the fuel supply chain_
+            - Alternative fuels for advanced vehicles
+            - Fueling stations for advanced vehicles
+            - Biodiesel (see also 88.20.fk Biodiesel in renewable alternative fuels)
+            - Hydrogen (see also 88.20.fn Hydrogen in renewable alternative fuels)
+        - **Fuel and nuclear resources are the energy sources drawn from biofuels, fossil carbon fuels and atomic nuclei.**
+          _basis: kinds, order: structure. Ordered by structure, from biofuels to fossil fuels to nuclear power._
+          - **Biofuel-related entries are ethanol and fuel blends used as renewable alternative fuels.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing, ethanol first then blends._
+            - Ethanol (see also 88.20.ff Ethanol in renewable alternative fuels)
+            - Fuel blends
+          - **Fossil fuel entries are the carbon-based energy resources of coal, oil and natural gas, together with the general fossil fuels heading.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing, general heading first then specific fuels._
+            - Fossil fuels and nuclear power (for renewable energy resources, see section 88)
+            - Fossil fuels
+            - Coal
+            - Oil, petroleum
+            - Natural gas
+          - **Nuclear power entries are the energy sources that draw on fission or fusion of atomic nuclei.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS listing, fission then fusion._
+            - Nuclear fission power (for fission reactors, see 28.41.-i and 28.50.-k in nuclear physics)
+            - Nuclear fusion power (for fusion reactors, see 28.52.-s in nuclear physics)
+            - Transportation
+            - Land transportation
+            - Water transportation
+    - **Further claims are the applied chemistry, soft-matter, medical imaging and biomedical topics whose scale is set by the governing constants (c, ħ, G and N) in each field's own characteristic way.**
+      _basis: kinds, order: structure_
+      - **Reaction theories, species, environments, kinetics, photochemistry and quantum probes are kinds of topics about how chemical reactions proceed.**
+        _basis: kinds, order: structure. n/a_
+        - **Reaction-dynamics theories are approaches to treating chemical reactions, differing in how strongly Planck's constant sets their scale.**
+          _basis: kinds, order: degree. Ranked by how strongly Planck's constant sets the scale, from thermal classical rate theories to quantum treatments._
+          - **Statistical and classical rate theories treat reacting systems with thermal averages and trajectories, so N and thermal energy set their scale rather than ħ.**
+            _basis: kinds, order: structure. Ordered from statistical theories to classical trajectory models._
+            - Transition state theory and statistical theories of rate constants
+            - Correlation function theory of rate constants and its applications
+            - Stochastic theories of rate constants
+            - Collision theories; trajectory models
+            - Classical theories of reactions and/or energy transfer
+          - **Quantitative and computational treatments of reactivity concern measured or simulated rate constants and the effect of the environment on them.**
+            _basis: kinds, order: structure. Ordered from measured rate quantities to simulation to solvent environment._
+            - Rate constants, reaction cross sections, and activation energies
+            - Computational modeling; simulation
+            - Solvent effects on reactivity
+          - **Topics on potential energy surfaces, non-adiabatic crossings and state-resolved energy flow describe how electronic structure governs reaction dynamics and products.**
+            _basis: kinds, order: structure. Ordered from surfaces to non-adiabatic transitions to resulting energy transfer and products._
+            - Potential energy surfaces for chemical reactions (for potential energy surfaces for collisions, see 34.20.-b in atomic and molecular collisions and interactions)
+            - Electronically non-adiabatic reactions
+            - State to state energy transfer (see also 31.70.Hq Time-dependent phenomena—in atomic and molecular physics)
+            - Product distribution (for state selected dynamics and product distribution, see 82.20.Bc)
+          - **Quantum and semiclassical treatments of reactions are those whose scale is set by Planck's constant ħ through tunneling, resonances and isotope mass effects.**
+            _basis: kinds, order: structure. Ordered from full quantum theory to semiclassical and quantum-effect topics._
+            - Quantum theory of reaction cross section
+            - Semiclassical theory of reactions and/or energy transfer
+            - Quantum effects in rate constants (tunneling, resonances, etc.)
+            - Kinetic isotope effects including muonium
+        - **Reaction species and types classify chemical processes by the systems studied, the species involved, the basic transformation, or the solvent and catalytic effects acting on them.**
+          _basis: kinds, order: structure. Members are arranged structurally from general system descriptors to specific species, transformation types and solution effects._
+          - **Physical chemistry topics and system descriptors cover the dynamics of chemical processes and the kinds of systems in which they occur.**
+            _basis: kinds, order: structure. Ordered by structure of the classification scheme._
+            - Physical chemistry and chemical physics (for electronic structure calculations, see 31.15.-p, 71.15.-m, 87.10.-e, 74.20.Pq, and 36.20.Kd in atomic and molecular physics, bulk materials, biophysics, superconductivity, and macromolecules, respectively; for geochemistry, see 91.67.-y; for chemistry of the ocean, see 92.20.Cm; for chemistry of fresh water, see 92.40.Bc; for chemistry of the atmosphere, see 92.60.H- and 92.60.Ls; for chemical reactions in scattering of atoms and molecules, see 34.50.Lf)
+            - Chemical kinetics and dynamics
+            - State selected dynamics and product distribution
+            - 3-dimensional systems
+            - Multicomponent systems
+          - **Specific reaction classes are distinguished by the chemical species involved, such as radicals, ions or positronium, with electromagnetic and mass scales setting their behavior.**
+            _basis: kinds, order: structure. Ordered from general mechanisms to neutral radical reactions to charged and exotic species._
+            - Specific chemical reactions; reaction mechanisms (for enzyme kinetics, see 82.39.Fk, and 87.15.R-; for protein folding dynamics, see 87.15.hm, and 87.15.Cc)
+            - Atom and radical reactions; chain reactions; molecule-molecule reactions
+            - Ion-molecule, ion-ion, and charge-transfer reactions (see also 34.70.+e Charge transfer in atomic and molecular collisions)
+            - Positronium chemistry (see also 36.10.Dr Positronium in atomic and molecular physics; 78.70.Bj Positron annihilation in interactions of particles and radiation with matter)
+          - **Elementary reaction types are the basic ways in which molecules transform, by exchanging groups, breaking apart, combining, or rearranging.**
+            _basis: kinds, order: structure. Ordered by structure of the transformation: exchange, decomposition, association, isomerization._
+            - Chemical exchanges (substitution, atom transfer, abstraction, disproportionation, and group exchange)
+            - Decomposition reactions (pyrolysis, dissociation, and fragmentation)
+            - Association, addition, insertion, cluster formation
+            - Isomerization and rearrangement
+          - **Solvent and catalytic interactions are effects in solution that steer or speed reactions without being a reaction type themselves.**
+            _basis: kinds, order: structure. Ordered by structure: hydrogen bonding, then homogeneous catalysis._
+            - Hydrogen bonding, hydrophilic effects
+            - Homogeneous catalysis in solution, polymers and zeolites (for heterogeneous catalysis in zeolites, see 82.75.Qt)
+            - Reactions in various media
+        - **Reaction environments are the physical settings in which reactions occur, either confined and structured media or energetic and gas-phase conditions.**
+          _basis: kinds, order: structure. Members are arranged structurally from condensed hosts to dilute or extreme settings._
+          - **Confined or structured media are condensed or nanoscale hosts in which reactions occur on, within, or inside a defined structure.**
+            _basis: kinds, order: structure. Ordered by structure of host: clusters, zeolites, porous media, micelles, solids._
+            - Reactions in clusters (see also 36.40.Jn Reactivity of clusters in atomic and molecular physics)
+            - Reactions on clusters
+            - Reactions in zeolites
+            - Reactions in sol gels, aerogels, porous media
+            - Reactions in micells
+          - **Energetic or gas-phase environments are settings of extreme or dilute conditions where reactions proceed in fluids, flames, plasmas, the atmosphere, or vapor deposition.**
+            _basis: kinds, order: structure. Ordered by structure of environment: supercritical, atmospheric, combustion, plasma, deposition._
+            - Reactions in supercritical fluids (for optical properties of supercritical fluids, see 78.15.+e)
+            - Atmospheric chemistry (see also 92.60.H- in geophysics)
+            - Reactions in flames, combustion, and explosions
+            - Plasma reactions (including flowing afterglow and electric discharges)
+            - Chemistry of MOCVD and other vapor deposition methods (for methods of vapor deposition of films and coatings, see 81.15.Gh, and 81.15. Kk in materials science)
+      - **The group covers Structured and porous soft-matter systems are materials in which one phase, assembly, or framework is organized within or through another. and Continuum rheology describes deformation and flow of a material using classical continuum quantities rather than particle counts or quantum constants. as one kind of claim.**
+        _basis: kinds, order: structure_
+        - **Structured and porous soft-matter systems are materials in which one phase, assembly, or framework is organized within or through another.**
+          _basis: kinds, order: structure. Ordered from dispersed phases to self-assembled structures to porous crystals._
+          - **Disperse systems are mixtures in which one phase is spread through another, such as colloids, gels, emulsions and aerosols.**
+            _basis: kinds, order: structure. Ordered by PACS code sequence._
+            - Disperse systems; complex fluids (see also 82.33.-z reactions in various media; for quantum optical phenomena in dispersive media, see 42.50.Nn)
+            - Colloids
+            - Gels and sols
+            - Emulsions and suspensions
+            - Aerosols and foams
+          - **Self-assembled molecular structures are ordered assemblies formed by amphiphilic molecules or by synthesized and modeled framework structures.**
+            _basis: kinds, order: structure. Ordered by PACS code sequence._
+            - Surfactants, micellar solutions, vesicles, lamellae, amphiphilic systems, (hydrophilic and hydrophobic interactions) (see also 82.30.Rs Hydrogen bonding, hydrophilic effects in specific chemical reactions)
+            - Synthesis, structure determination, structure modeling
+          - **Zeolite and molecular-sieve studies concern how molecules, clusters and reactions behave inside porous crystalline solids.**
+            _basis: kinds, order: structure. Ordered by PACS code sequence._
+            - Molecular sieves, zeolites, clathrates, and other complex solids
+            - Measurements and modeling of molecule migration in zeolites
+            - Measurements and simulation of properties (optical, structural) of molecules in zeolites
+            - Mechanism and kinetics of catalysis in zeolites (measurements or simulations)
+            - Clusters in zeolites
+        - **Continuum rheology describes deformation and flow of a material using classical continuum quantities rather than particle counts or quantum constants.**
+          _basis: parts, order: structure. Ordered from framework heading to geometries to boundary effects._
+          - **The rheology framework covers the field heading and the basic description of deformation and flow.**
+            _basis: kinds, order: structure. Ordered from the field heading to its basic descriptions._
+            - Rheology (see also section 47 Fluid dynamics; for rheology of the Earth, see 91.32.-m; see also 87.19.rh Fluid transport and rheology in biological physics)
+            - Fundamentals and theoretical
+            - Kinematics of deformation and flow (see also 47.50.-d Non-Newtonian fluid flows)
+          - **Basic deformation and flow geometries describe how a material is sheared, stretched or driven through a channel, with scale set by classical continuum quantities.**
+            _basis: kinds, order: structure. Ordered by structure from general deformation to specific flow geometries; none of c, hbar, G or N governs._
+            - Deformation and flow
+            - Steady shear flows, viscometric flow
+            - Flow in channels (see also 47.60.Dx Flows in ducts and channels in fluid dynamics)
+            - Extensional flow and combined shear and extension
+          - **Wall slip and boundary effects concern how a flowing material moves relative to its confining surface, a classical interfacial scale.**
+            _basis: kinds, order: structure. Ordered by structure from general slip effects to apparent slip; no fundamental constants govern._
+            - Slip boundary effects (interfacial and free surface flows) (see also 47.45.Gx Slip flows and accommodation in fluid dynamics)
+            - Wall slip and apparent slip
+            - Effects of electric and magnetic fields
+            - Material behavior
+            - Normal stress differences and their effects (e.g. rod climbing)
+        - **Chemical analysis methods are physical techniques that identify and measure a sample's composition, divided by the kind of signal they use.**
+          _basis: kinds, order: structure. Ordered from the general category to mass, spectral, and other signal types._
+          - **Chemical analysis methods are physical techniques used to identify and measure the composition of a sample.**
+            _basis: kinds, order: structure. Ordered by PACS code sequence._
+            - Chemical analysis and related physical methods of analysis (for related instrumentation, see section 07; for spectroscopic techniques in biological physics, see 87.64.-t)
+            - Chromatography
+            - Analytical methods involving electronic spectroscopy
+          - **Mass spectrometry methods identify substances by measuring the mass-to-charge ratio of ions they produce.**
+            _basis: kinds, order: structure. Ordered from the general technique to its specific variants._
+            - Mass spectrometry (including SIMS, multiphoton ionization and resonance ionization mass spectrometry, MALDI)
+            - Fourier transform mass spectrometry
+            - Ion cyclotron resonance mass spectrometry
+            - Time of flight mass spectrometry
+          - **Spectroscopic methods analyze a sample by how it absorbs, emits, or converts photons, electrons, and other radiation.**
+            _basis: kinds, order: structure. Ordered by the type of radiation or energy exchange probed._
+            - X-ray, Mössbauer, and other γ-ray spectroscopic analysis methods
+            - Analytical methods involving vibrational spectroscopy
+            - Analytical methods involving rotational spectroscopy
+            - Electron spectroscopy (X-ray photoelectron (XPS), Auger electron spectroscopy (AES), etc.)
+            - Energy-conversion spectro-analytical methods (e.g., photoacoustic, photothermal, and optogalvanic spectroscopic methods)
+          - **Analytical methods that identify or measure a sample's composition through electrochemical response, induced radioactivity, ion backscattering, or electromagnetic probing, rather than through spectra or ion masses.**
+            _basis: kinds, order: structure. Ordered by the physical mechanism of the method._
+            - Electrochemical methods (see also 82.45.Rr Electroanalytical chemistry; for electrochemical sensors, see 82.47.Rs)
+            - Activation analysis and other radiochemical methods
+            - Rutherford backscattering (RBS), and other methods of chemical analysis
+            - Methods in electromagnetism
+      - **Imaging modalities and analysis topics are the kinds of techniques that form and evaluate medical images from detected photons.**
+        _basis: kinds, order: structure. Ordered from general modalities and analysis to specific methods._
+        - **Ionizing X-ray imaging methods form images from photon attenuation, with scale set by photon energy and the photon-matter interaction through ħ and c.**
+          _basis: kinds, order: degree. Ranked from general X-ray imaging to specific techniques such as densitometry and computed radiography._
+          - **X-ray based imaging forms images from the attenuation of ionizing photons, so photon energy and quantum counting statistics set its scale.**
+            _basis: kinds, order: structure. Ordered by structure: general X-ray detectors first, then mammography variants, then densitometry._
+            - Digital radiography
+            - Digital fluoroscopy
+            - Mammography
+            - Film mammography
+            - Digital mammography
+          - **Bone densitometry and computed radiography are X-ray imaging techniques whose scale is set by the photon-matter interaction, which depends on ħ and c rather than on gravity.**
+            _basis: kinds, order: structure_
+            - Bone densitometry
+            - Computed radiography
+        - **Magnetic resonance imaging is a single technique whose parts, such as spin physics, sequences, hardware and applications, are scaled by ħ and the Larmor frequency.**
+          _basis: parts, order: structure_
+          - **Magnetic resonance imaging is a single technique whose parts are the nuclear spin physics, hardware, acquisition protocols, and applications that set its scale through the Planck constant and the Larmor frequency.**
+            _basis: parts, order: structure. Ordered from theory to instrumentation, then sequences, then imaging uses._
+            - Magnetic resonance imaging
+            - Theory and principles
+            - Anatomic imaging
+            - Flow imaging
+            - Functional imaging
+          - **Clinical applications, pulse sequences, and instrumentation are the practical facets of magnetic resonance imaging, each defined by the physical constants that set the scale of its signal and resolution.**
+            _basis: kinds, order: structure_
+            - Clinical applications
+            - Pulse sequences
+            - Instrumentation
+        - **Non-ionizing wave and optical probing methods are scaled by wave speed, tissue properties or wavelength rather than by strongly quantum effects.**
+          _basis: kinds, order: degree. Ranked from classical wave and far-field methods through optical probes to advanced quantum and evanescent-field optics._
+          - **Methods that probe tissue with non-ionizing waves or currents are scaled by propagation speed and tissue conductivity rather than photon energy.**
+            _basis: kinds, order: degree. Ranked by depth of tissue penetration, from the deepest (ultrasonography) to electrical methods._
+            - Ultrasonography
+            - Electrical impedance tomography (EIT)
+            - Non-ionizing radiation equipment and techniques
+            - Thermography
+            - Visual imaging
+          - **Classical wave and image-processing methods are scaled by wave speed and signal handling rather than by quantum constants.**
+            _basis: kinds, order: structure. Ordered from acoustic imaging to image processing and simulation._
+            - Ultrasonographic imaging
+            - Doppler
+            - Principles of visualization
+            - Image perception
+            - Image enhancement
+          - **Optical probes of tissue are scaled by the speed of light and the photon energy set by ħ, with c and ħ together fixing the wavelength and energy.**
+            _basis: kinds, order: structure. Ordered from broad light transmission to specific scattering and microscopy methods._
+            - Transillumination
+            - Laser imaging
+            - Scattering of visible, uv, and infrared radiation
+            - Optical microscopy
+            - Raman
+          - **Classical far-field light microscopy contrast modes have a resolution scale set by wavelength, that is by c and ħ through the photon, without quantum nonlinearity.**
+            _basis: kinds, order: structure. Ordered by structure of the governing constants._
+            - Bright field
+            - Dark field
+            - Phase contrast and DIC
+          - **Advanced optical imaging methods exploit quantum optical processes or evanescent fields to go beyond the ordinary diffraction scale set by ħ and c.**
+            _basis: kinds, order: structure. Ordered by structure of the governing constants._
+            - Confocal
+            - Multiphoton
+            - Near-field scanning
+        - **Quantum-scale probes of matter are scaled by ħ through de Broglie wavelength, spin magnetic moments or discrete energy levels.**
+          _basis: kinds, order: degree. Ranked by how directly ħ sets the scale, from wavelength and spin moments to discrete energy levels._
+          - **Particle-wave diffraction and microscopy methods are scaled by the de Broglie wavelength, which depends on ħ.**
+            _basis: kinds, order: structure. Ordered from diffraction to microscopy and simulation._
+            - Electron, neutron and x-ray diffraction and scattering
+            - Electron microscopy
+            - Scanning tunneling and atomic force microscopy
+            - Computer simulation
+            - Spectroscopic and microscopic techniques in biophysics and medical physics
+          - **Spin-resonance spectroscopies are scaled by ħ together with the magnetic moment of the spins being probed.**
+            _basis: kinds, order: structure. Ordered from electron to nuclear spin resonance._
+            - EPR
+            - NMR
+          - **Spectroscopies of quantized molecular and core-level transitions are scaled by ħ and the discrete energy levels of the sample.**
+            _basis: kinds, order: structure. Ordered from general spectroscopy to infrared and x-ray methods._
+            - Spectroscopy
+            - X-ray and EXAFS
+            - Infrared
+          - **Spectroscopic probes of quantized energy levels in matter are scaled by ħ, with c entering through the photon energy and electron or nuclear transitions.**
+            _basis: kinds, order: structure. Ordered by structure of the governing constants._
+            - Electron and photoelectron
+            - Magnetic circular dichroism
+            - Fluorescence
+            - Mössbauer
+            - Spectroscopies
+        - **Force-based, ensemble-statistical and application-oriented fields are scaled by photon momentum, particle numbers or biological readout rather than by a single quantum probe.**
+          _basis: kinds, order: structure_
+          - **Force-based manipulation methods are scaled by photon momentum (ħ and c) or by mechanical forces acting on single molecules and cells.**
+            _basis: kinds, order: structure. Ordered by structure of the governing constants._
+            - Optical trapping (see also 42.50.Wk Mechanical effects of light on material media, microstructure and particles in optics; 37.10.-x Atom, molecule, and ion cooling methods)
+            - Mechanical and micromechanical techniques
+            - Micromanipulation of biological structures
+            - Single-molecule techniques (see also 82.37.Rs Single molecule manipulation of proteins and other biological molecules in physical chemistry)
+          - **Electrical, magnetic resonance and separation methods are scaled by ensemble statistics (N) and charge or spin properties of many particles.**
+            _basis: kinds, order: structure. Ordered by structure of the governing constants._
+            - Biophysical techniques (research methods)
+            - Patch clamping and other physiological measurements
+            - Electrochemical techniques
+            - Magnetic and paramagnetic resonance
+            - Biochemical separation processes
+          - **Molecular profiling techniques are kinds of methods that read out biological molecules such as genes and proteins.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 87.80 classification._
+            - Genomic techniques
+            - Proteomic techniques
+            - Biotechnology (for biotechnology of cell processes, see 87.17.Uv)
+          - **Neural and prosthetic fields are kinds of engineering that interface with the nervous system or replace body functions.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 87.85 classification._
+            - Applied neuroscience
+            - Neural prosthetics
+            - Smart prosthetics
+            - Neural engineering (for neural prosthetics, see 87.85.E-)
+      - **Biomedical engineering and neuroscience topics are the kinds of subject covering the nervous system, tissue processes and engineering of living systems.**
+        _basis: kinds, order: structure. Ordered from neural topics to tissue processes and engineering fields._
+        - **Neuroscience topic areas are the distinct parts of the study of the nervous system, from measurement to collective dynamics, information control and clinical concerns.**
+          _basis: parts, order: structure. Ordered from measurement through dynamics and signals to system-level topics._
+          - **Measurement and imaging techniques probe neural activity and anatomy using electromagnetic fields, magnetic resonance or light.**
+            _basis: kinds, order: structure. Ordered by structure from electromagnetic recording to magnetic resonance to optical methods._
+            - EEG and MEG
+            - MRI: anatomic, functional, spectral, diffusion
+            - Optical imaging of neuronal activity
+          - **Collective dynamics topics treat the coordinated behavior of many interacting neurons as emergent network phenomena.**
+            _basis: kinds, order: structure. Ordered by structure from network dynamics to synchronization, oscillation and pattern formation, with models spanning all._
+            - Neuronal network dynamics
+            - Models of single neurons and networks
+            - Synchronization in the nervous system
+            - Oscillations and resonance
+            - Pattern formation: activity and anatomic
+          - **Information and control topics treat neural activity as signals that are quantified, encoded, transformed and regulated.**
+            _basis: kinds, order: structure. Ordered by structure from information measures to encoding to feedback control._
+            - Information theory
+            - Encoding, decoding, and transformation
+            - Control theory and feedback
+          - **System-level and clinical topics concern the supporting cells, disease states and sensory and motor functions of the nervous system as a whole.**
+            _basis: kinds, order: structure. Ordered by structure from supporting cells and disease to sensory input and motor output._
+            - Diseases
+            - Glia
+            - Sensory systems: visual, auditory, tactile, taste, and olfaction (for Neurophysiology of speech perception, see 43.71.Qr and 43.72.Qr Auditory synthesis and recognition in Acoustics Appendix; 42.66.-p Physiological optics)
+            - Motor systems: Locomotion, flight, vocalization
+        - **Tissue and organism processes are the parts of living physical behavior covering adaptation, material makeup, active motion and circulation.**
+          _basis: parts, order: structure. Ordered from adaptive change to material properties, active motion and circulation._
+          - **Adaptive and developmental processes are the ways living systems change, learn, grow and spend energy over time.**
+            _basis: kinds, order: structure. Ordered structurally from neural adaptation to growth and energy use._
+            - Learning and memory
+            - Plasticity
+            - Development and growth
+            - Energetics
+          - **Material and structural properties describe the physical makeup of tissue, including its stiffness, electrical response, flow behavior and architecture.**
+            _basis: kinds, order: structure. Ordered structurally from mechanical to electrical to fluid properties and overall structure._
+            - Elastic properties
+            - Dielectric properties
+            - Fluid transport and rheology
+            - Structure
+          - **Active motion and signaling phenomena are the ways tissues and organisms contract, transmit impulses and move through their environment.**
+            _basis: kinds, order: structure. Ordered structurally from cellular contraction and signaling to whole-body movement._
+            - Contraction
+            - Impulse propagation
+            - Movement
+            - Locomotion
+          - **Circulatory and barrier dynamics cover the transport of blood and the regulation of passage between body compartments.**
+            _basis: kinds, order: structure. Ordered structurally from central organs to peripheral vessels to the brain barrier._
+            - Heart and lung dynamics
+            - Peripheral vascular dynamics
+            - Blood-brain barrier
+        - **Biomedical engineering fields are kinds of engineering distinguished by whether they treat tissue mechanics, sensing and modeling, or small-scale fabrication.**
+          _basis: kinds, order: structure. Ordered by the catalogue structure of biomedical engineering fields._
+          - **Tissue and mechanics fields are kinds of engineering that deal with the physical and material behavior of living tissue.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 87.85 classification._
+            - Biomechanics
+            - Biomaterials
+            - Tissue engineering
+            - Biomedical engineering
+          - **Sensing and modeling fields are kinds of engineering that acquire, process, image or simulate biomedical signals and systems.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 87.85 classification._
+            - Biological signal processing
+            - Biomedical instrumentation and transducers, including micro-electro-mechanical systems (MEMS)
+            - Biomedical imaging
+            - Modeling biomedical systems
+          - **Small-scale fabrication and manipulation fields are kinds of engineering that build or handle devices at micro and nano scales.**
+            _basis: kinds, order: structure. Ordered by structure of the PACS 87.85 classification._
+            - Nanotechnologies-design
+            - Nanotechnologies-applications
+            - Robotics
+            - Micromanipulators
+            - Micromachining
+        - **Neural and biological topics are kinds of subject matter covering nervous-system interfaces, stimulation safety, control and sensing, materials mechanics, and integrative genetic biology.**
+          _basis: kinds, order: structure. Ordered by the catalogue structure from neural interfacing to genetic biology._
+          - **Neural interfacing and modeling topics concern devices and models that connect with or describe the nervous system and cells.**
+            _basis: kinds, order: structure. Ordered structurally from models to devices; not a ranking by constants._
+            - Brain-machine interfaces
+            - Cells on a chip
+            - Physical models of neurophysiological processes
+            - Neural networks
+          - **Stimulation safety topics concern electrode stimulation of tissue and the limits that prevent harm to it.**
+            _basis: kinds, order: structure. Ordered structurally from stimulation to its limits and damage; not a ranking by constants._
+            - Electrode stimulation
+            - Safe limits of charge injection
+            - Tissue damage
+            - Biocompatibility
+            - Bio-based materials
+          - **Control and sensing topics concern signal flow, feedback loops, and sensors used to monitor and communicate with biological systems.**
+            _basis: kinds, order: structure. Ordered structurally from control schemes to sensing and communication; not a ranking by constants._
+            - Feedback
+            - Feedforward
+            - Biosensors
+            - Bidirectional communication
+          - **Materials and mechanics topics concern the physical properties, motion, and compatibility of biological and bio-based matter.**
+            _basis: kinds, order: structure. Ordered structurally from mechanics to materials and compatibility; not a ranking by constants._
+            - Fluid mechanics and rheology
+            - Movement and locomotion
+            - Mechanical systems
+            - Electrical, thermal, and mechanical properties of biological matter
+          - **Integrative and genetic biology topics concern whole-system regulation and the engineering or study of genes and genomes.**
+            _basis: kinds, order: structure. Ordered structurally from systems-level to genetic topics; not a ranking by constants._
+            - Dynamical, regulatory, and integrative biology
+            - Genetic engineering
+            - Genomics
+
+## PH.O.A5
+- **Physics claims are classified by which governing constants among c, ħ, G and N set their scale.**
+  _basis: kinds, order: structure. Groups are ordered from the top-level scale classes to the more specific plasma and subject catalogues and concept clusters._
+  - **The top-level scale classes divide claims by whether N, c, ħ, G or a mix of them sets the scale.**
+    _basis: kinds, order: structure. Ordered from N or convention only, to N alone, N with c, ħ with c, then G or mixed._
+    - **Network, soft-matter and living-system claims are scaled by system size N or by human conventions, with no fundamental constant setting their scale.**
+      _basis: kinds, order: degree. Lowest degree: no fundamental constant sets the scale._
+      - **Soft matter and living-systems topics are scaled by the huge number N of molecules or cells, with the fundamental constants effectively fixed in the background.**
+        _basis: kinds, order: degree. Low degree: only N sets the scale._
+        - Gels
+        - Surfactants, micelles & vesicles
+        - Physics of Living Systems
+        - Body & organ systems
+        - Reaction diffusion systems
+      - **Network, data, engineering and societal topics are scaled by system size N or by human conventions, with no fundamental constant setting their claims.**
+        _basis: kinds, order: degree. Lowest degree: no fundamental constant matters._
+        - Physics & society
+        - Additive manufacturing
+        - Bioinformatics
+        - Scale free & inhomogeneous networks
+      - **Network claims are scaled by the number of nodes N, with no fundamental constant such as c, ħ or G setting their scale.**
+        _basis: kinds, order: degree. Ranked from structural description of networks to dynamics and optimization on them._
+        - Stochastic networks
+        - Dynamics of networks
+        - Network optimization
+        - Social systems
+      - **Soft-matter claims are scaled by the number of constituents N in a chain or network, with thermal energy rather than c, ħ or G setting the scale.**
+        _basis: kinds, order: degree. Ranked from molecular structure to bulk mechanical response._
+        - Polymers & Soft Matter
+        - Conformation & topology
+        - Rheology techniques
+        - Auxetic materials
+    - **Collective-statistics claims are scaled mainly by the large particle number N, with the constants c and ħ playing little or no role.**
+      _basis: kinds, order: degree. Second degree: only the particle number N sets the scale._
+      - **Plasma theory and laboratory plasma are scaled mainly by the large number N of charged particles and collective behavior, with c entering only weakly.**
+        _basis: kinds, order: degree. Middle degree: N dominates, c is secondary._
+        - Plasma kinetic theory
+        - Laboratory plasma
+        - Hamiltonian systems
+      - **Kinetic and fluid theory claims are scaled by N through continuum averaging, with c entering only in relativistic limits.**
+        _basis: kinds, order: degree. Ranked from microscopic kinetic description to macroscopic fluid description._
+        - Fokker-Planck & Vlasov model
+        - Magnetohydrodynamic techniques
+        - Transport phenomena
+        - Nonlinear waves
+      - **Concepts about condensed and soft matter, where collective many-body behavior of N constituents sets the scale of the claim.**
+        _basis: kinds, order: structure. n/a_
+        - Soft condensed matter
+        - Polymer behavior
+        - Mode coupling theory
+        - Crystallography
+      - **Concepts about biological, medical and chemical systems, where large numbers of molecules or cells and molecular quantum scales set the scale of the claim.**
+        _basis: kinds, order: structure. n/a_
+        - Medical and biological physics
+        - Biological physics
+        - Medical physics
+        - Medical and biological physics not elsewhere classified
+        - Chemical Physics & Physical Chemistry
+      - **Classical collective-statistics topics have scales set mainly by the particle number N, as in Debye screening, kinetic distributions and thermodynamic averages.**
+        _basis: kinds, order: degree. Most classical: scale set by N alone, with no c or ħ needed._
+        - Plasma kinetic equations
+        - Thermodynamics of plasmas
+        - Fluctuation and chaos phenomena (for plasma turbulence, see 52.35.Ra; see also 05.45.-a Nonlinear dynamics and chaos)
+        - Single-component, electron-positive-ion plasmas
+    - **Plasma and electromagnetic claims are scaled by particle number N together with the speed of light c through fields and couplings.**
+      _basis: kinds, order: degree. Third degree: N combined with the constant c._
+      - **Plasma claims are scaled by large particle number N together with the speed of light c through electromagnetic coupling.**
+        _basis: kinds, order: degree. Ranked from the physical systems to the processes that create them._
+        - Specific kinds of plasmas
+        - Laboratory studies of space & astrophysical plasmas
+        - Plasma production & heating
+        - Two-fluid & multi-fluid model
+      - **Concepts about gases, plasmas and electrical phenomena, where the speed of light and quantum scales together set the scale of the claim.**
+        _basis: kinds, order: structure. n/a_
+        - PHYSICS OF GASES, PLASMAS, AND ELECTRIC DISCHARGES
+        - Physics of gases
+        - Plasma physics; fusion plasmas; electrical discharges
+        - Electrical techniques
+      - **Transport and magnetized-plasma topics have scales set by N together with the classical electromagnetic speed c entering through fields and drifts.**
+        _basis: kinds, order: degree. Classical with c entering through electromagnetic fields; next most classical after pure N-statistics._
+        - Transport properties
+        - Magnetized plasmas
+        - Particle orbits
+        - Dielectric properties
+    - **Quantum and radiation claims are scaled by Planck's constant ħ and the speed of light c, sometimes together with N.**
+      _basis: kinds, order: degree. Fourth degree: quantum constants ħ and c set the scale, with N added in the densest cases._
+      - **Metrology and atomic and X-ray techniques are scaled by ħ and c, since quantum transitions and light speed define their standards and probes.**
+        _basis: kinds, order: degree. Highest degree: ħ and c both set the scale._
+        - Metrology
+        - Atomic techniques
+        - X-ray techniques
+        - Coupled oscillators
+        - Environmental research
+      - **Dense and radiative plasma topics are scaled by c and ħ together with large particle number N, through radiation, opacity and relativistic energy densities.**
+        _basis: kinds, order: degree. High degree: c, ħ and N all contribute._
+        - High-energy-density plasmas
+        - Plasma opacity
+        - Plasma interactions
+      - **Concepts that are governed by Planck's constant, where quantum effects set the scale of the claim.**
+        _basis: kinds, order: structure. n/a_
+        - Quantum complex networks
+        - Chirality
+        - Network structure
+        - Multilayer & multiplex networks
+        - Complex physical systems
+      - **Radiation interaction topics have scales set by c and ħ because photons are emitted, absorbed and scattered by plasma particles.**
+        _basis: kinds, order: degree. Intermediate: both c and ħ enter through photon energy and propagation._
+        - Emission, absorption, and scattering of electromagnetic radiation
+        - Emission, absorption, and scattering of particles
+        - Ionization of plasmas
+      - **Collision-process topics have scales set by ħ through quantum cross sections of electrons, atoms, ions and neutral species.**
+        _basis: kinds, order: degree. Most quantum: cross sections are fixed by ħ-dependent atomic physics._
+        - Electron collisions
+        - Atomic, molecular, ion, and heavy-particle collisions
+        - Neutrals in plasmas
+        - Impurities in plasmas
+    - **Large-scale, brain-like and residual topics are scaled by gravity G or by a mix of constants, or by no single governing constant.**
+      _basis: kinds, order: degree. Highest degree and residual: gravity or mixed constants, or no single constant for catch-all categories._
+      - **Large-scale, applied and brain-like system claims are scaled by N or by gravity G, with ħ and c playing no direct role.**
+        _basis: kinds, order: degree. Ranked from planetary-scale gravity-governed systems to engineered and biological systems scaled by N._
+        - Geophysics
+        - Energy utilization
+        - Neuroscience, neural computation & artificial intelligence
+        - Spreading
+      - **Neuroimaging and other physical sciences gather further topics whose claims are scaled by which of the constants c, ħ, G and N set their governing limits.**
+        _basis: kinds, order: structure_
+        - Neuroimaging
+        - Other physical sciences
+      - **Umbrella and residual categories have no single governing constant because they only collect other plasma and physical-science topics.**
+        _basis: kinds, order: degree. Not ranked by a constant; placed last as catch-all headings with no specific scale._
+        - Other physical sciences not elsewhere classified
+        - Physics of plasmas and electric discharges (for space plasma physics, see 94.05.-a; for astrophysical plasmas, see 95.30.Qd; for physics of the ionosphere and magnetosphere, see 94.20.-y and 94.30.-d respectively)
+        - Elementary processes in plasmas
+        - Plasma properties (for chemical reactions in plasma, see 82.33.Xj)
+        - Basic studies of specific kinds of plasmas
+  - **Plasma classifications separate kinds of plasma and their interactions by how much c, ħ or N sets the scale.**
+    _basis: kinds, order: structure. Ordered from plasma kinds and dynamics to interactions ranked by the role of c and ħ._
+    - **Plasma kinds and classical dynamics are told apart by whether c, ħ or particle number N sets their scale.**
+      _basis: kinds, order: degree. Ranked from scales set by c and ħ, through composition and N, to classical modes and nonlinear instabilities ordered by structure scale._
+      - **Plasmas whose scale is set by relativistic or quantum constants (c and ħ) rather than by classical particle number alone.**
+        _basis: kinds, order: structure. Distinguished by whether c or ħ controls the regime._
+        - Relativistic plasmas
+        - Electron-positron plasmas
+        - Strongly-coupled plasmas
+      - **Plasmas defined by their species makeup and charge balance, where particle number N and composition set the scale rather than c or ħ.**
+        _basis: kinds, order: structure. Distinguished by composition and charge content._
+        - Multicomponent and negative-ion plasmas
+        - Nonneutral plasmas
+        - Dusty or complex plasmas; plasma crystals
+      - **Descriptions of plasma motion and flow that use classical fluid or kinetic models whose scale is set by the particle number density N.**
+        _basis: kinds, order: structure. Distinguished by the model used to describe the flow._
+        - Plasma dynamics and flow
+        - Magnetohydrodynamics (including electron magnetohydrodynamics) (see also 47.65.-d Magnetohydrodynamics and electrohydrodynamics in fluid dynamics; for MHD generators, see 52.75.Fk; see also 95.30.Qd Magnetohydrodynamics and plasmas in astrophysics)
+        - Two-fluid and multi-fluid plasmas
+        - Gyrokinetics
+      - **Linear waves and oscillations in plasmas, classical modes whose speeds and frequencies are set by plasma parameters with c entering only for electromagnetic modes.**
+        _basis: kinds, order: structure. Distinguished by the restoring force and wave type._
+        - Waves, oscillations, and instabilities in plasmas and intense beams (see also 94.20.wf Plasma waves and instabilities in physics of the ionosphere; 94.30.cq MHD waves, plasma waves, and instabilities in physics of the magnetosphere; 96.50.Tf MHD waves, plasma waves, turbulence in interplanetary physics)
+        - Magnetohydrodynamic waves (e.g., Alfven waves)
+        - Sound waves
+        - Electrostatic waves and oscillations (e.g., ion-acoustic waves)
+        - Drift waves
+      - **Nonlinear interactions and instabilities of plasmas, ranked by the scale of the collective structure involved, from wave coupling to large-scale and small-scale instabilities.**
+        _basis: kinds, order: degree. Ranked from nonlinear wave interactions, to macroinstabilities involving the whole plasma, to microinstabilities involving particle-velocity distributions._
+        - Nonlinear phenomena: waves, wave propagation, and other interactions (including parametric effects, mode coupling, ponderomotive effects, etc.)
+        - Macroinstabilities (hydromagnetic, e.g., kink, fire-hose, mirror, ballooning, tearing, trapped-particle, flute, Rayleigh-Taylor, etc.)
+        - Microinstabilities (ion-acoustic, two-stream, loss-cone, beam-plasma, drift, ion- or electron-cyclotron, etc.)
+        - Electromagnetic waves (e.g., electron-cyclotron, Whistler, Bernstein, upper hybrid, lower hybrid)
+        - Other linear waves
+    - **Plasma interactions with structures, beams and lasers are ranked by how strongly c and ħ, rather than N alone, set the scale.**
+      _basis: kinds, order: degree. Ranked from scales set by N alone (collective structures, surfaces), to c with N (beams, laser coupling), to c and ħ jointly (laser-driven acceleration)._
+      - **Collective nonlinear plasma structures and flows have scales set by classical fluid and kinetic dynamics of the particle number N, with c, ħ and G playing essentially no role.**
+        _basis: kinds, order: degree. Lowest dependence on fundamental constants: only the particle count N sets the scale._
+        - Plasma turbulence
+        - Solitons; BGK modes
+        - Shock waves and discontinuities
+        - Magnetic reconnection (see also 94.30.cp in physics of the magnetosphere)
+        - Plasma vorticity
+      - **Plasma interactions with material surfaces and structures have scales set by classical sheath and boundary physics of N charged particles, with c entering only through electromagnetic coupling.**
+        _basis: kinds, order: degree. Low dependence: N dominates, with c entering only weakly through electromagnetic coupling._
+        - Plasma interactions (nonlaser)
+        - Plasma interactions with antennas; plasma-filled waveguides
+        - Plasma-material interactions; boundary layer effects
+        - Plasma sheaths (see also 94.30.cj Magnetosheath)
+      - **Plasma interactions with external beams and radiation have scales set by the speed of light c in wave propagation together with the particle number N of the medium.**
+        _basis: kinds, order: degree. Moderate dependence: c sets wave propagation and N sets the medium response._
+        - Electromagnetic (nonlaser) radiation interactions with plasma (for electromagnetic wave propagation in the ionosphere and magnetosphere, see 94.20.Bb and 94.30.Tz respectively)
+        - Particle beam interactions in plasmas
+        - Plasma production and heating (see also 52.80.-s Electric discharges)
+      - **Intense laser-plasma coupling processes have scales set by c through relativistic electron motion and light propagation, with N fixing the plasma response.**
+        _basis: kinds, order: degree. Higher dependence: c is dominant through relativistic effects, and N fixes the plasma response._
+        - Laser-plasma interactions (for plasma production and heating by laser beams, see 52.50.Jm)
+        - Rayleigh scattering; stimulated Brillouin and Raman scattering
+        - Laser light absorption in plasmas (collisional, parametric, etc.)
+        - Self-focussing, channeling, and filamentation in plasmas
+        - Laser ablation (see also 79.20.Ds, Laser-beam impact phenomena)
+      - **Laser-driven particle acceleration, field generation and high-energy photon emission have scales set jointly by c and ħ through relativistic and quantum radiation limits.**
+        _basis: kinds, order: degree. Highest dependence: both c and ħ set the scale, together with N._
+        - Laser-induced magnetic fields in plasmas
+        - Laser-plasma acceleration of electrons and ions (see also 41.75.Jv Laser-driven acceleration in electromagnetism; electron and ion optics)
+        - X-ray, γ-ray, and particle generation
+    - **Beam drivers, accelerator hardware and beam regimes concern the delivery of intense beams and radiation to plasma.**
+      _basis: kinds, order: structure. Ordered from beam schemes to hardware to beam regimes._
+      - **Ion-beam drivers and other non-laser confinement schemes deliver energy or confine plasma using light ions, heavy ions, or electrostatic and high-frequency fields.**
+        _basis: kinds, order: structure. ordered from general confinement category to specific driver types_
+        - Other confinement methods
+        - Light-ion inertial confinement
+        - Heavy-ion inertial confinement
+        - Electrostatic and high-frequency confinement
+      - **Accelerator hardware that produces intense beams and radiation includes diodes, multistage heavy-ion accelerators, free-electron devices and hard X-ray sources.**
+        _basis: kinds, order: structure. ordered from general intense-source category to specific hardware_
+        - Intense particle beams and radiation sources (see also 29.25.-t Particle sources and targets, and 29.27.-a Beams in particle accelerators, in instrumentation for elementary-particle and nuclear physics)
+        - Grid- and ion-diode-accelerated beams
+        - Multistage accelerated heavy-ion beams
+        - High-voltage diodes (for high-current and high-voltage technology, see 84.70.+p)
+      - **Beam regimes are distinguished by whether space charge, emittance, or only moderate intensity dominates the beam's behaviour.**
+        _basis: kinds, order: degree. ranked from moderate-intensity beams to space-charge-dominated beams to emittance-dominated beams_
+        - Space-charge-dominated beams
+        - Moderate-intensity beams
+        - Emittance-dominated beams
+    - **Plasma simulation methods are computational approaches that either track discrete particles or solve continuum and reduced equations.**
+      _basis: kinds, order: structure. Ordered from particle-based to continuum methods._
+      - **Particle-based simulation methods follow discrete particles or sample statistically, so the particle number N and orbit dynamics set their scale.**
+        _basis: kinds, order: structure. Ordered by structure from the general simulation heading to specific particle techniques._
+        - Plasma simulation
+        - Particle orbit and trajectory
+        - Monte Carlo methods
+        - Particle-in-cell method
+        - Molecular dynamics methods
+      - **Continuum and reduced-model simulation methods solve fluid, kinetic or perturbative equations, or combine them, rather than tracking individual particles.**
+        _basis: kinds, order: structure. Ordered by structure from kinetic to fluid to reduced and hybrid models._
+        - Fokker-Planck and Vlasov equation
+        - Magnetohydrodynamic and fluid equation
+        - Gyrofluid and gyrokinetic simulations
+        - Perturbative methods
+        - Hybrid methods
+  - **Plasma topic areas are the families of methods, schemes, hardware and applications used to create, drive, model and measure plasma.**
+    _basis: kinds, order: structure. Ordered from sources and confinement, through compression schemes and beam drivers, to simulation, diagnostics and devices._
+    - **Plasma sources and magnetic confinement topics cover how plasma is created, heated, confined and exhausted.**
+      _basis: kinds, order: structure. Ordered from sources and heating to devices, self-organised configurations, and confinement issues._
+      - **Plasma sources and heating methods form a set of kinds distinguished by the energy carrier used to create or heat the plasma.**
+        _basis: kinds, order: structure. Ordered by structure, from general sources to beam, laser, shock, DC, radio-frequency and microwave heating._
+        - Plasma heating by particle beams
+        - Plasma production and heating by shock waves and compression
+        - Plasma heating by DC fields; ohmic heating, arcs
+        - Plasma heating by radio-frequency fields; ICR, ICP, helicons
+        - Plasma heating by microwaves; ECR, LH, collisional heating
+      - **Externally driven toroidal and linear magnetic confinement devices hold plasma with imposed magnetic fields, and they differ in geometry.**
+        _basis: kinds, order: structure. Ordered by structure, from the dominant tokamak to stellarators, mirrors and theta pinches._
+        - Tokamaks, spherical tokamaks
+        - Stellarators, torsatrons, heliacs, bumpy tori, and other toroidal confinement devices
+        - Magnetic mirrors, gas dynamic traps
+        - Theta pinch
+        - Laser inertial confinement
+      - **Compact self-organised magnetic configurations confine plasma largely by currents flowing within the plasma itself.**
+        _basis: kinds, order: structure. Ordered by structure, from spheromaks to field-reversed configurations and related concepts._
+        - Spheromaks
+        - Field-reversed configurations, rotamaks, astrons, ion rings, magnetized target fusion, and cusps
+        - Plasma sources
+        - Plasma production and heating by laser beams (laser-foil, laser-cluster, etc.)
+      - **Confinement physics and operational issues are the topics that govern how any magnetically confined plasma is held, stabilised, driven and exhausted.**
+        _basis: kinds, order: structure. Ordered by structure, from general confinement theory through instabilities and fast particles to current drive and exhaust._
+        - Magnetic confinement and equilibrium (see also 28.52.-s Fusion reactors)
+        - General theory and basic studies of plasma lifetime, particle and heat loss, energy balance, field structure, etc
+        - Fusion products effects (e.g., alpha-particles, etc.), fast particle effects
+        - Ideal and resistive MHD modes; kinetic modes
+      - **Two plasma confinement topics, helicity-injection current drive and divertor power exhaust, are classed together as further engineering-scale claims whose scale is governed by the constants c, ħ, G and N.**
+        _basis: kinds, order: structure_
+        - Current drive; helicity injection
+        - Power exhaust; divertors
+    - **Target-centred and pinch-based topics are schemes that compress plasma or fuel using implosions and currents.**
+      _basis: kinds, order: structure. Ordered from target design to pinch devices._
+      - **Target-centred topics span how a fusion capsule is built, how its implosion stays symmetric and stable, and how its compressed fuel is ignited.**
+        _basis: parts, order: structure. ordered from target construction through implosion stability to ignition_
+        - Target design and fabrication
+        - Implosion symmetry and hydrodynamic instability (Rayleigh-Taylor, Richtmyer-Meshkov, imprint, etc.)
+        - Fast ignition of compressed fusion fuels
+        - Hard X-ray sources
+        - Free-electron devices (for free-electron lasers, see 41.60.Cr)
+      - **Pinch-based confinement and sources use currents to compress plasma, from dense plasma focus devices to wire-array Z-pinches and magneto-plasma accelerators.**
+        _basis: kinds, order: structure. ordered from general pinch confinement to specific pinch devices_
+        - Z-pinches, plasma focus, and other pinch devices
+        - Dense plasma focus
+        - Wire array Z-pinches
+        - Magneto-plasma accelerated plasmas
+    - **Plasma diagnostics are measurement approaches whose scale is set by c for electromagnetic probes or by ħ for radiation and particle detection.**
+      _basis: kinds, order: structure. Ordered from electromagnetic to radiation and particle diagnostics._
+      - **Electromagnetic diagnostics measure plasma properties with electric, magnetic and radio-frequency probes, where the speed of light c sets the field scales.**
+        _basis: kinds, order: structure. Ordered by structure from the general heading to specific probe types._
+        - Plasma diagnostic techniques and instrumentation
+        - Electric and magnetic measurements
+        - Radio-frequency and microwave measurements
+      - **Radiation and particle diagnostics detect photons or particles emitted by the plasma, where the quantum constant ħ sets the photon energy scale.**
+        _basis: kinds, order: structure. Ordered by structure from optical to X-ray to particle detection._
+        - Optical (ultraviolet, visible, infrared) measurements
+        - X-ray and γ-ray measurements
+        - Particle measurements
+      - **Plasma devices are engineered systems that use plasma to generate radiation, thrust or electrical power.**
+        _basis: kinds, order: structure. Ordered by structure from general devices to specific applications._
+        - Plasma devices for generation of coherent radiation
+        - Plasma devices (for ion sources, see 29.25.Lg, Ni; for plasma sources, see 52.50.Dg)
+        - Ion and plasma propulsion
+        - Magnetohydrodynamic generators and thermionic convertors; plasma diodes (see also 84.60.Lw, Ny in direct-energy conversion and storage)
+      - **Plasma and energy phenomena concern ionized matter and the storage or release of energy.**
+        _basis: kinds, order: structure. Ordered by structure, from ionization to fusion to astrophysical plasma to storage._
+        - Plasma ionization
+        - Plasma fusion
+        - Space & astrophysical plasma
+        - Energy storage
+    - **Plasma devices, applications and discharges are engineered systems, industrial uses and conduction regimes whose scale is mostly set by particle number N.**
+      _basis: kinds, order: structure. Ordered from devices and sources to applications, discharge regimes and energy phenomena._
+      - **Plasma sources and switching devices are engineered apparatus that generate or control a plasma, with scale set by the number of charged particles (N).**
+        _basis: kinds, order: structure. Ordered by structure from heat-producing torches to switches to filament-based laboratory sources._
+        - Plasma torches
+        - Plasma switches (e.g., spark gaps)
+        - Thermionic and filament-based sources (e.g., Q machines, double- and triple-plasma devices, etc.)
+      - **Plasma applications are industrial and materials-processing uses of plasma to treat, coat or modify surfaces, whose scale is set by many-particle collective behavior (N).**
+        _basis: kinds, order: structure. Ordered by structure from the general category to specific processing uses._
+        - Plasma applications
+        - Etching and cleaning (see also 81.65.Cf Surface cleaning, etching, patterning in surface treatments)
+        - Plasma-based ion implantation and deposition (see also 81.15.Jj Ion and electron beam-assisted deposition)
+        - High-pressure, high-current plasmas (plasma spray, arc welding, etc.) (see also 81.15.Rs Spray coating techniques)
+      - **Steady and low-energy gas discharges are sustained electrical conduction regimes in gases, from weak Townsend breakdown to glow, corona and arcs, whose scale is set by particle number (N).**
+        _basis: kinds, order: structure. Ordered by structure from the general category through weak-field to high-current discharges._
+        - Electric discharges (see also 51.50.+v Electrical properties of gases; for plasma reactions including flowing afterglow and electric discharges, see 82.33.Xj in physical chemistry and chemical physics)
+        - Low-field and Townsend discharges
+        - Glow; corona
+        - Arcs; sparks; lightning; atmospheric electricity (see also 92.60.Pw Atmospheric electricity, lightning in meteorology)
+      - **Driven, confined and non-gas discharges are discharges sustained by high-frequency fields, magnetic fields, vacuum, condensed media or sudden energy release, whose scale is set by particle number (N).**
+        _basis: kinds, order: structure. Ordered by structure from field-driven gas discharges to explosive, vacuum and condensed-medium cases._
+        - High-frequency and RF discharges
+        - Explosions; exploding wires
+        - Magnetoactive discharges (e.g., Penning discharges)
+        - Discharge in vacuum
+        - Discharge in liquids and solids (for electric breakdown in liquids, see 77.22.Jp)
+      - **General and spectroscopic plasma topics cover miscellaneous discharge types, spectral light sources and thermodynamic or fluid descriptions of plasma, all governed by many-body statistics (N).**
+        _basis: kinds, order: structure. Ordered by structure from other discharges to spectral sources to bulk thermodynamic descriptions._
+        - Other gas discharges
+        - Discharges for spectral sources (including inductively coupled plasma)
+        - Complex fluids
+        - Plasma thermodynamics
+  - **Broad subject catalogues list wide physics domains and the network, soft-matter and technique topics that sit alongside them.**
+    _basis: kinds, order: structure. Ordered from broad domains to the narrower network, soft-matter and technique topics._
+    - **Broad physics domains are wide subject areas spanning plasma and microwave physics, fluid and soft-matter phases, nonlinear dynamics, and biology with computation.**
+      _basis: kinds, order: structure. Ordered from plasma and fluid domains to dynamics and biology._
+      - **Plasma and microwave physics covers ionized matter and the electromagnetic techniques used to probe and drive it.**
+        _basis: kinds, order: structure. Ordered by structure of subject area._
+        - Plasma Physics
+        - Plasma optics
+        - Microwave techniques
+      - **Fluid and soft-matter phases covers continuum flow and ordered or transitioning states of condensed matter.**
+        _basis: kinds, order: structure. Ordered by structure of subject area._
+        - Hydrodynamics
+        - Statistical hydrodynamics
+        - Liquid crystals
+        - Phase behavior
+      - **Nonlinear and applied dynamics covers complex time-evolving systems such as traffic and their sustainability.**
+        _basis: kinds, order: structure. Ordered by structure of subject area._
+        - Nonlinear Dynamics
+        - Traffic
+        - Sustainability
+        - First-principles calculations
+        - Organismal, population, evolutionary & ecological systems
+      - **Biology and computational methods covers living systems at molecular to ecological scales and the calculational tools used to study physical systems.**
+        _basis: kinds, order: structure. Ordered by structure of subject area._
+        - Biological network methods
+        - Biomolecular & subcellular processes
+        - Perturbative methods
+        - Statistical methods
+    - **Networks, soft matter and techniques are topics concerning graph structure, granular materials, computational tools and spectroscopic measurement.**
+      _basis: kinds, order: structure. Ordered from network science to its classes, then matter and techniques._
+      - **Network science covers the structure, models, collective behavior and phase transitions of graphs and networked systems.**
+        _basis: kinds, order: structure. Ordered by structure of subject area._
+        - Collective behavior in networks
+        - Bipartite graphs
+        - Network phase transitions
+        - Network Models
+      - **Experimental spectroscopic techniques probe a sample by resonant, infrared or photoelectron measurements.**
+        _basis: kinds, order: structure. Ordered by structure, from resonance to infrared to photoelectron probes._
+        - Resonance techniques
+        - Infrared techniques
+        - Photoelectron techniques
+        - Uncorrelated network
+        - Tree network
+      - **Network classes are distinguished by how their connections are generated and distributed across nodes.**
+        _basis: kinds, order: structure. Ordered by structure, from degree-distribution types to growth and topology types._
+        - Exponential networks
+        - Deterministic networks
+        - Evolving networks
+        - Small-world networks
+      - **Computational and analytical tools are used to simulate or analyze particles and networks.**
+        _basis: kinds, order: structure. Ordered by structure, from particle simulation methods to network analysis and theory._
+        - Particle-in-cell methods
+        - Test-particle methods
+        - Networks Analysis Tools
+        - Percolation theory
+      - **Soft and granular matter systems are materials whose behavior arises from packing and dispersed constituents.**
+        _basis: kinds, order: structure. Ordered by structure, from granular to dispersed to living matter._
+        - Granular packing
+        - Emulsions
+        - Organisms
+  - **Concept clusters group ideas by the kind of system they describe and by what sets that system's scale.**
+    _basis: kinds, order: structure. Ordered from network concepts, through plasma, living and statistical concepts, to probe and measurement concepts._
+    - **Network and graph concepts are systems whose scale is set by the number N of connected nodes, cells, agents or links rather than by c, ħ or G.**
+      _basis: kinds, order: degree. Ranked from purely N-governed networks to N-governed populations of agents._
+      - **Network concepts are systems whose behavior is set by the large number N of interacting nodes and links rather than by c, ħ or G.**
+        _basis: kinds, order: structure. Ordered by structure of the network type._
+        - Weighted networks
+        - Interconnected & interdependent networks
+        - Network searches
+        - Real world networks
+      - **Mathematical and network frameworks are formal structures whose scale is set by the number of elements N and not by c, ħ or G.**
+        _basis: kinds, order: structure. Ordered by structure from the most general framework (mathematical physics) to specific network forms._
+        - Mathematical physics
+        - Dynamical systems
+        - Networks
+        - Triangular network
+      - **Network and discrete-dynamics concepts treat systems of N nodes or cells connected by links, where the number of nodes sets the scale.**
+        _basis: kinds, order: structure. Ordered by structure, from network topology to rule-based dynamics._
+        - Transport in networks
+        - Network stability
+        - Boolean networks
+        - Homogeneous networks
+      - **Directed networks and polymers are kinds of many-unit systems whose scale is governed by the count N of connected constituents.**
+        _basis: kinds, order: structure. Ordered by structure: networks of nodes with directed links first, then chains of repeated monomer units._
+        - Directed networks
+        - Polymers
+      - **Living and informational ensembles are biological or communicating populations of many agents, where the number N of individuals or messages sets the scale.**
+        _basis: kinds, order: structure. Ordered by structure, from cellular machinery to organisms and information._
+        - Cellular automata
+        - Tissues
+        - Multi-organism systems
+        - Information & communication theory
+    - **Plasma and electromagnetic concepts involve many charged particles and fields, where N together with the speed of light c sets the scale.**
+      _basis: kinds, order: degree. Ranked from N-dominated plasmas to engineering-scale wave and field effects where c matters more._
+      - **Plasma concepts describe ionized matter of many charged particles, where N and the electromagnetic constants set the scale of the claim.**
+        _basis: kinds, order: structure. Ordered by structure, from calculation methods to transport and nonlinear behavior._
+        - First-principles calculations in plasma physics
+        - Plasma transport
+        - Nonlinear phenomena in plasmas
+        - Neutron techniques
+      - **Plasma and space-environment concepts involve many charged particles interacting with fields, where the speed of light c and particle number N set the scale.**
+        _basis: kinds, order: structure. Ordered by structure from space plasma to laboratory plasma._
+        - Space weather
+        - Plasma diagnostic techniques
+        - Radiation & particle generation in plasmas
+        - Plasma discharges
+      - **Further topics whose claims are scaled by which of the constants c, ħ, G and N governs them, here the applied domain of energy technology and the effects of electric fields.**
+        _basis: kinds, order: structure_
+        - Energy Science & Technology
+        - Electric field effects
+      - **Applied and macroscopic topics are engineering-scale or wave claims whose scale is set by c through electromagnetic wave speeds or by bulk material and system properties.**
+        _basis: kinds, order: structure. Ordered by structure from materials to applications to systems and waves._
+        - Composite materials
+        - Applications of soft matter
+        - Transportation research
+        - Plasma waves
+    - **Living and soft-matter concepts are collective systems of enormous numbers of molecules or cells whose scale is set by N and thermal energy.**
+      _basis: kinds, order: degree. Ranked from simple classical soft matter to biological and modeled collective states._
+      - **Soft and condensed matter systems are collections of a very large number N of classical particles whose collective behavior sets the scale of the claim.**
+        _basis: kinds, order: structure. Ordered by structure of the particle assembly, from loose grains to interfaces._
+        - Granular materials
+        - Surface & interfacial phenomena
+        - Colloids
+        - Glassy systems
+      - **Soft-matter structures and processes are collective phenomena of many molecules whose scale is set by N and thermal energy, with ħ, c and G playing no direct role.**
+        _basis: kinds, order: structure. Ordered by structure from ordering processes to the resulting soft-matter forms._
+        - Self-assembly
+        - Foams
+        - Polymer theory
+        - Polymer aging
+      - **Biological and medical concepts describe living systems built from enormous numbers of molecules and cells, so their scale is set by N.**
+        _basis: kinds, order: structure. Ordered by structure from genomes to organs to medicine._
+        - Genomes
+        - Organs
+        - Cellular organization, physiology & dynamics
+        - Medical physics & public health
+      - **Collective-state and modeling concepts describe how many interacting constituents change state or are represented in models, with N controlling the scale.**
+        _basis: kinds, order: structure. Ordered by structure, from physical conditions to model types._
+        - Confinement
+        - Phase transitions
+        - Hybrid model
+        - Fibers
+    - **Statistical and collective theories are descriptions whose scale comes from particle number, averaging or rescaling rather than from a single fundamental constant.**
+      _basis: kinds, order: degree. Ranked from N-governed statistics to scale-free forms with no fixed constant, with quantum dynamics last._
+      - **Large-N collective theories are claims whose scale is set by the number N of interacting units rather than by a single fundamental constant.**
+        _basis: kinds, order: degree. Set mainly by N: many-body collective behavior._
+        - Theories of collective dynamics & active matter
+        - Complex systems
+        - Polydisperse materials
+        - Network evolution
+        - Network formation & growth
+      - **Statistical and stochastic descriptions are claims whose scale is set by the particle number N and thermal averaging, as in fluctuations, diffusion, interactions and computational lattice methods.**
+        _basis: kinds, order: structure. Ordered by structure from the underlying interactions to the statistical and numerical descriptions built on them._
+        - Interactions & forces
+        - Fluctuations & noise
+        - Diffusion & random walks
+        - Lattice-Boltzmann methods
+      - **Fundamental dynamics concepts concern mechanics and fluid or statistical descriptions, with scales set by ħ in the quantum case and by N in the classical and coarse-grained cases.**
+        _basis: kinds, order: structure. Ordered by structure from quantum to classical to coarse-grained._
+        - Quantum chaotic systems
+        - Classical mechanics
+        - Coarse graining
+        - Drops & bubbles
+      - **Scale-free and phase-space methods are claims whose form is independent of any fixed constant, because they rely on self-similarity and rescaling.**
+        _basis: kinds, order: degree. Least tied to a fixed constant: scale-invariant methods._
+        - Self-similarity
+        - Scaling methods
+        - Phase space methods
+        - Gyrofluid & gyrokinetics
+    - **Probe and measurement concepts are techniques and macroscopic domains whose reach is set by quantum scales (ħ) or by the light and probes used, with c or G at engineering scale.**
+      _basis: kinds, order: degree. Ranked from ħ-fixed molecular probes to preparation methods and c- or G-governed applied domains._
+      - **Molecular-scale probes and materials are claims whose scale is fixed by ħ, since they resolve or build matter at the level of single molecules and quantum transitions.**
+        _basis: kinds, order: degree. Most tied to ħ: quantum-scale molecular claims._
+        - Single molecule techniques
+        - Spectroscopy
+        - Macromolecules
+        - Biological materials
+        - Synthesis
+      - **Experimental and preparation techniques are methods whose reach is set by quantum scales (ħ) through electron and thermal probes and by how samples are made and patterned.**
+        _basis: kinds, order: structure. Ordered by structure from sample making to patterning to probing._
+        - Sample preparation
+        - Patterning
+        - Electron techniques
+        - Thermal techniques
+      - **Measurement and applied concepts are techniques and practical domains for probing or using physical systems, with scales set by the light or probe involved.**
+        _basis: kinds, order: structure. Ordered by structure from probing techniques to applications._
+        - Scanning techniques
+        - Optical techniques
+        - Energy sources
+        - Engineering
+      - **Classical, macroscopic and interdisciplinary topics are claims governed by c or G and ordinary engineering scales rather than by quantum constants.**
+        _basis: kinds, order: degree. Classical scales: c, G and macroscopic engineering._
+        - Satellite data analysis
+        - Sound wave techniques
+        - Interdisciplinary Physics
+        - History of physics
+
