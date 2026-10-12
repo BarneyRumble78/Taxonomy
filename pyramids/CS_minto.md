@@ -492,5 +492,5 @@ Group of properties. Basis: kinds. Dimension: the property asserted of a computa
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["CS.K1.S1.U2: ['condition', 'response']"]}
+- minto_check: clean
 - field_check holds: False — P1.3 is a catch-all mixing dependability with General/reference/Document types; P2.3 media/graphics and P3.2 application/human areas are topics, not cost or coordination properties.
