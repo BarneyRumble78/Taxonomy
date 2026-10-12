@@ -988,11 +988,13 @@
       - Other engineering not elsewhere classified
   - **Particulate and granular fields close the predictive model through momentum balance and constitutive laws for the contact and flow behaviour of solids.**
     _basis: kinds, order: structure. Ordered by structure, a single field type._
-    - **Particulate and granular fields close the model through momentum balance and constitutive laws for the contact and flow behaviour of solids.**
-      _basis: kinds, order: structure. Ordered by structure, from particle technology to granular mechanics and agricultural applications._
+    - **Fields that treat bulk particulate matter, where mass and momentum balances plus constitutive laws for grains close the model of a machine or process.**
+      _basis: kinds, order: structure. Ordered from general particle technology to granular mechanics to agricultural engineering._
       - Powder and particle technology
       - Granular mechanics
       - Agricultural engineering
+    - **Radiation-based devices and applications whose models are closed by balancing charged-particle or radiation quantities such as beam energy, luminosity and absorbed dose.**
+      _basis: kinds, order: structure. Ordered from beam-physics devices to biomedical uses of radiation._
       - Colliding beam devices
       - Biomedical applications of radiation
     - **Particle physics topics provide the constitutive laws and conservation closures that underlie nuclear and accelerator models.**
@@ -1000,19 +1002,13 @@
       - Elementary particles
       - Nuclear physics
       - High energy physics instrumentation computing
-  - **Energy and radiation engineering fields complete the predictive model of an artefact by balancing or constitutively closing the energy-related quantity that governs its behaviour, whether through conversion kinetics, power transmission, or radiation control.**
-    _basis: kinds, order: structure_
+  - **Energy and radiation engineering fields are the kinds of field that close an artefact's predictive model through a balanced or constitutively closed quantity.**
+    _basis: kinds, order: structure. Ordered by structure, from energy conversion through power engineering to radiation protection; no ranking is implied._
     - **Energy-conversion fields close the predictive model through energy and heat balances coupled with reaction or electrochemical kinetics.**
       _basis: kinds, order: structure. Ordered by structure, from combustion thermal processes to electrochemical storage._
       - Chemical and thermal processes in energy and combustion
       - Electrochemical energy storage and conversion
       - Carbon capture engineering (excl. sequestration)
-    - **Radiation protection and measurement topics concern detecting, monitoring and controlling radiation so that people and instruments are kept safe.**
-      _basis: kinds, order: structure. Ordered by structure, from the general phenomenon to the protective and measuring practices built around it._
-      - Radiation effects
-      - Radiation monitoring
-      - Radiation safety
-      - Radiation hardening (electronics)
     - **Power and energy engineering fields cover the generation, transmission and mechanical conversion of energy in engineered artefacts.**
       _basis: kinds, order: structure. Ordered by structure, from the broad field to its subfields and the mechanical parent discipline._
       - Power engineering and energy
@@ -1020,6 +1016,12 @@
       - Power generation
       - Power systems
       - Mechanical engineering and machinery
+    - **Radiation protection and measurement topics concern detecting, monitoring and controlling radiation so that people and instruments are kept safe.**
+      _basis: kinds, order: structure. Ordered by structure, from the general phenomenon to the protective and measuring practices built around it._
+      - Radiation effects
+      - Radiation monitoring
+      - Radiation safety
+      - Radiation hardening (electronics)
 
 ## EN.O.A4
 - **Engineering artefacts and the physical principles behind them fall into five kinds, each defined by the quantity whose balance or constitutive closure completes the predictive model of the device.**

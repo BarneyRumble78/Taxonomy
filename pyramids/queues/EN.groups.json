@@ -6487,10 +6487,10 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "EN.O.A3.G4",
-                  "anchor": "group:EN.O.A3.G4",
-                  "statement": "Particulate and granular fields close the model through momentum balance and constitutive laws for the contact and flow behaviour of solids.",
-                  "name": "Particulate and granular fields close the model through momentum balance and constitutive laws for the contact and flow behaviour of solids.",
+                  "id": "EN.O.A3.G18",
+                  "anchor": "group:EN.O.A3.G18",
+                  "statement": "Fields that treat bulk particulate matter, where mass and momentum balances plus constitutive laws for grains close the model of a machine or process.",
+                  "name": "Fields that treat bulk particulate matter, where mass and momentum balances plus constitutive laws for grains close the model of a machine or process.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -6514,7 +6514,22 @@
                         "anchor": "node:ANZSRC:409901",
                         "statement": "Agricultural engineering",
                         "name": "Agricultural engineering"
-                      },
+                      }
+                    ],
+                    "rank_note": "Ordered from general particle technology to granular mechanics to agricultural engineering."
+                  }
+                },
+                {
+                  "id": "EN.O.A3.G19",
+                  "anchor": "group:EN.O.A3.G19",
+                  "statement": "Radiation-based devices and applications whose models are closed by balancing charged-particle or radiation quantities such as beam energy, luminosity and absorbed dose.",
+                  "name": "Radiation-based devices and applications whose models are closed by balancing charged-particle or radiation quantities such as beam energy, luminosity and absorbed dose.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
                       {
                         "id": "IEEE:Nuclear and plasma sciences|Colliding beam devices",
                         "anchor": "node:IEEE:Nuclear and plasma sciences|Colliding beam devices",
@@ -6528,9 +6543,8 @@
                         "name": "Biomedical applications of radiation"
                       }
                     ],
-                    "rank_note": "Ordered by structure, from particle technology to granular mechanics and agricultural applications."
-                  },
-                  "further": true
+                    "rank_note": "Ordered from beam-physics devices to biomedical uses of radiation."
+                  }
                 },
                 {
                   "id": "EN.O.A3.G9",
@@ -6570,10 +6584,10 @@
             }
           },
           {
-            "id": "EN.O.A3.G17",
-            "anchor": "group:EN.O.A3.G17",
-            "statement": "Energy and radiation engineering fields complete the predictive model of an artefact by balancing or constitutively closing the energy-related quantity that governs its behaviour, whether through conversion kinetics, power transmission, or radiation control.",
-            "name": "Energy and radiation engineering fields complete the predictive model of an artefact by balancing or constitutively closing the energy-related quantity that governs its behaviour, whether through conversion kinetics, power transmission, or radiation control.",
+            "id": "EN.O.A3.G20",
+            "anchor": "group:EN.O.A3.G20",
+            "statement": "Energy and radiation engineering fields are the kinds of field that close an artefact's predictive model through a balanced or constitutively closed quantity.",
+            "name": "Energy and radiation engineering fields are the kinds of field that close an artefact's predictive model through a balanced or constitutively closed quantity.",
             "support": {
               "logic_type": "inductive",
               "plural_noun": "members",
@@ -6611,45 +6625,6 @@
                       }
                     ],
                     "rank_note": "Ordered by structure, from combustion thermal processes to electrochemical storage."
-                  }
-                },
-                {
-                  "id": "EN.O.A3.G12",
-                  "anchor": "group:EN.O.A3.G12",
-                  "statement": "Radiation protection and measurement topics concern detecting, monitoring and controlling radiation so that people and instruments are kept safe.",
-                  "name": "Radiation protection and measurement topics concern detecting, monitoring and controlling radiation so that people and instruments are kept safe.",
-                  "support": {
-                    "logic_type": "inductive",
-                    "plural_noun": "members",
-                    "basis": "kinds",
-                    "order": "structure",
-                    "points": [
-                      {
-                        "id": "IEEE:Nuclear and plasma sciences|Radiation effects",
-                        "anchor": "node:IEEE:Nuclear and plasma sciences|Radiation effects",
-                        "statement": "Radiation effects",
-                        "name": "Radiation effects"
-                      },
-                      {
-                        "id": "IEEE:Nuclear and plasma sciences|Radiation monitoring",
-                        "anchor": "node:IEEE:Nuclear and plasma sciences|Radiation monitoring",
-                        "statement": "Radiation monitoring",
-                        "name": "Radiation monitoring"
-                      },
-                      {
-                        "id": "IEEE:Nuclear and plasma sciences|Radiation safety",
-                        "anchor": "node:IEEE:Nuclear and plasma sciences|Radiation safety",
-                        "statement": "Radiation safety",
-                        "name": "Radiation safety"
-                      },
-                      {
-                        "id": "IEEE:Nuclear and plasma sciences|Radiation hardening (electronics)",
-                        "anchor": "node:IEEE:Nuclear and plasma sciences|Radiation hardening (electronics)",
-                        "statement": "Radiation hardening (electronics)",
-                        "name": "Radiation hardening (electronics)"
-                      }
-                    ],
-                    "rank_note": "Ordered by structure, from the general phenomenon to the protective and measuring practices built around it."
                   }
                 },
                 {
@@ -6696,10 +6671,49 @@
                     ],
                     "rank_note": "Ordered by structure, from the broad field to its subfields and the mechanical parent discipline."
                   }
+                },
+                {
+                  "id": "EN.O.A3.G12",
+                  "anchor": "group:EN.O.A3.G12",
+                  "statement": "Radiation protection and measurement topics concern detecting, monitoring and controlling radiation so that people and instruments are kept safe.",
+                  "name": "Radiation protection and measurement topics concern detecting, monitoring and controlling radiation so that people and instruments are kept safe.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "IEEE:Nuclear and plasma sciences|Radiation effects",
+                        "anchor": "node:IEEE:Nuclear and plasma sciences|Radiation effects",
+                        "statement": "Radiation effects",
+                        "name": "Radiation effects"
+                      },
+                      {
+                        "id": "IEEE:Nuclear and plasma sciences|Radiation monitoring",
+                        "anchor": "node:IEEE:Nuclear and plasma sciences|Radiation monitoring",
+                        "statement": "Radiation monitoring",
+                        "name": "Radiation monitoring"
+                      },
+                      {
+                        "id": "IEEE:Nuclear and plasma sciences|Radiation safety",
+                        "anchor": "node:IEEE:Nuclear and plasma sciences|Radiation safety",
+                        "statement": "Radiation safety",
+                        "name": "Radiation safety"
+                      },
+                      {
+                        "id": "IEEE:Nuclear and plasma sciences|Radiation hardening (electronics)",
+                        "anchor": "node:IEEE:Nuclear and plasma sciences|Radiation hardening (electronics)",
+                        "statement": "Radiation hardening (electronics)",
+                        "name": "Radiation hardening (electronics)"
+                      }
+                    ],
+                    "rank_note": "Ordered by structure, from the general phenomenon to the protective and measuring practices built around it."
+                  }
                 }
-              ]
-            },
-            "further": true
+              ],
+              "rank_note": "Ordered by structure, from energy conversion through power engineering to radiation protection; no ranking is implied."
+            }
           }
         ]
       }
@@ -11393,5 +11407,12 @@
         "rank_note": "Ordered from making the artefact, to its materials, to nanoscale devices, to resources and dielectrics, to the closing balance."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Engineering is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its object claims divide into five balances: force and deformation, mass and momentum, energy and entropy, electromagnetic state, and composition and microstructure.",
+    "key_line": "This is the key line of Face O, the claim partition of the pyramid.\n\n- Logic: inductive.\n- Plural noun: balances.\n- Dimension: the quantity whose balance or constitutive closure finishes the predictive model of an artefact.\n- Order: structural, from load path to material.\n- Members (5):\n  1. force and deformation\n  2. mass and momentum\n  3. energy and entropy\n  4. electromagnetic state\n  5. composition and microstructure\n\nTest for a new member (repairs audit EN #18). A sixth balance is warranted only if an artefact model needs a closing quantity none of the five carries. Information state passes that test and is therefore not an EN balance: it is owned by CS (uses CS.O.A2.4). Failure probability also passes it, and is owned by MA (uses MA.O.A5). Neither is held in EN by fiat.",
+    "holds": false,
+    "note": "Cells restate the dimension or assert two groups or one governing quantity; none states the five balances, and A4 says five kinds without naming them.",
+    "review": true
+  }
 }
