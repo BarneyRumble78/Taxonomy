@@ -59,10 +59,10 @@
       - Macromolecular materials
       - Nanochemistry
       - Polymerisation mechanisms
-    - **Further inquiries into inorganic substances ask what a compound is and how it behaves, covering both the f-block elements and any inorganic matter outside the named specialties.**
-      _basis: kinds, order: structure_
-      - Inorganic chemistry not elsewhere classified
+    - **Kinds of inorganic chemistry questions asked of a substance, from the specific f-block elements to the remaining general inorganic cases.**
+      _basis: kinds, order: structure. Ordered from the specific f-block branch to the residual general category._
       - F-block chemistry
+      - Inorganic chemistry not elsewhere classified
     - **Fields that ask what a material or molecular assembly is made of and how its structure and internal motion are organised.**
       _basis: kinds, order: structure_
       - Structure and dynamics of materials
@@ -106,10 +106,12 @@
       - Electrochemistry
       - Solution chemistry
       - Transport properties and non-equilibrium processes
-    - **Questions about change of state ask how a substance forms a solid, separates from solution, or degrades, and whether its properties depend on direction.**
-      _basis: kinds, order: structure. Kinds of state-change questions arranged by structure: solid formation, separation from solution, degradation, and directional property dependence._
+    - **Solid-forming processes are those in which a solid phase emerges or separates out of a solution or melt.**
+      _basis: kinds, order: structure. Ordered by structure: ordered solid growth first, then general solid separation._
       - Crystallization
       - Chemical Precipitation
+    - **Material behavior concepts describe how a substance's properties vary with direction or how it deteriorates through reaction with its environment.**
+      _basis: kinds, order: structure. Ordered by structure: an intrinsic property first, then a degradation process._
       - Corrosion
       - Anisotropy
     - **Changes of state or form describe a substance converting into a different physical or chemical condition.**
@@ -126,10 +128,12 @@
       - Absorption
       - Adsorption
       - Air Ionization
-    - **Separation and transport processes separate or move substances across barriers or through media.**
-      _basis: kinds, order: structure. Listed in structural order of process type._
+    - **Barrier-passage processes separate a substance from a mixture by letting only certain components cross a membrane or filter.**
+      _basis: kinds, order: structure. Ordered by structure; no ranking implied._
       - Dialysis
       - Filtration
+    - **Gradient-driven processes ask how a substance moves or exchanges in response to concentration or charge differences.**
+      _basis: kinds, order: structure. Ordered by structure; no ranking implied._
       - Ion Exchange
       - Osmosis
     - **Movement and release phenomena describe how matter or energy gets through or out of a substance.**
@@ -158,8 +162,8 @@
       - Molecular Weight
       - Osmolar Concentration
       - Particle Size
-    - **Bulk physical properties describe how a substance behaves as a whole, in mixing, density and flow.**
-      _basis: kinds, order: degree. Ranked from composition-related behavior (solubility) to mass per volume (specific gravity) to resistance to flow (viscosity)._
+    - **Solubility, specific gravity, and viscosity are kinds of physical property, each defined by a different question asked of a substance.**
+      _basis: kinds, order: structure. Parallel kinds of physical property, listed in MeSH order with no ranking among them._
       - Solubility
       - Specific Gravity
       - Viscosity
@@ -223,10 +227,10 @@
       - Medicinal and biomolecular chemistry not elsewhere classified
   - **Compositional, synthetic and identity-focused approaches ask what a substance is made of, how it is built and reacts, and what it is used for.**
     _basis: kinds, order: structure. Ordered structurally from macromolecule composition to reaction and synthesis, then to identity and application._
-    - **Biological macromolecules are characterised by asking what they are made of and how they are built, including the sugar-bearing conjugates they form with other molecules.**
-      _basis: kinds, order: structure_
-      - Glycoconjugates
+    - **Each concept is a kind of question asked of a biological substance, from the general characterisation of macromolecules to the specific study of sugar-bearing conjugates.**
+      _basis: kinds, order: degree. Ranked from the broadest question (characterising biological macromolecules in general) to the narrower one (glycoconjugates, a specific class of macromolecule)._
       - Characterisation of biological macromolecules
+      - Glycoconjugates
     - **Process-focused subfields ask how organic substances react and are made, studying mechanisms, radical intermediates, deliberate synthesis and environmentally benign routes.**
       _basis: kinds, order: structure. Kinds of process-focused inquiry; ordered by structure, with no ranking._
       - Free radical chemistry

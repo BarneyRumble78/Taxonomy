@@ -570,10 +570,10 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "MD.O.A1.G9",
-                  "anchor": "group:MD.O.A1.G9",
-                  "statement": "Disease categories that ask what causes a disorder and how it is classified: infectious agents or neoplastic growth.",
-                  "name": "Disease categories that ask what causes a disorder and how it is classified: infectious agents or neoplastic growth.",
+                  "id": "MD.O.A1.G27",
+                  "anchor": "group:MD.O.A1.G27",
+                  "statement": "Disease categories are distinct classes of disorder, each defined by the clinical question asked about its cause and nature.",
+                  "name": "Disease categories are distinct classes of disorder, each defined by the clinical question asked about its cause and nature.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -599,7 +599,7 @@
                         "name": "Neoplasms"
                       }
                     ],
-                    "rank_note": "Ordered from the general disease root to infections, then neoplasms."
+                    "rank_note": "Kinds are listed in structural order by category code: general diseases, then infections, then neoplasms."
                   }
                 },
                 {
@@ -2262,10 +2262,10 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "MD.O.A3.G4",
-                  "anchor": "group:MD.O.A3.G4",
-                  "statement": "Fields that ask how to stabilise and rescue a patient during acute, critical, or perioperative illness.",
-                  "name": "Fields that ask how to stabilise and rescue a patient during acute, critical, or perioperative illness.",
+                  "id": "MD.O.A3.G13",
+                  "anchor": "group:MD.O.A3.G13",
+                  "statement": "Fields that ask how to maintain and control a patient's vital functions during surgery and through prolonged critical illness.",
+                  "name": "Fields that ask how to maintain and control a patient's vital functions during surgery and through prolonged critical illness.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -2279,16 +2279,31 @@
                         "name": "Anaesthesiology"
                       },
                       {
-                        "id": "ANZSRC:320207",
-                        "anchor": "node:ANZSRC:320207",
-                        "statement": "Emergency medicine",
-                        "name": "Emergency medicine"
-                      },
-                      {
                         "id": "ANZSRC:320212",
                         "anchor": "node:ANZSRC:320212",
                         "statement": "Intensive care",
                         "name": "Intensive care"
+                      }
+                    ],
+                    "rank_note": "Ordered by structure: perioperative care first, then continuing critical care."
+                  }
+                },
+                {
+                  "id": "MD.O.A3.G14",
+                  "anchor": "group:MD.O.A3.G14",
+                  "statement": "Fields that ask how to assess and stabilise a patient in the first moments of an acute presentation, in hospital or in the field.",
+                  "name": "Fields that ask how to assess and stabilise a patient in the first moments of an acute presentation, in hospital or in the field.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "ANZSRC:320207",
+                        "anchor": "node:ANZSRC:320207",
+                        "statement": "Emergency medicine",
+                        "name": "Emergency medicine"
                       },
                       {
                         "id": "ANZSRC:320219",
@@ -2296,7 +2311,8 @@
                         "statement": "Paramedicine",
                         "name": "Paramedicine"
                       }
-                    ]
+                    ],
+                    "rank_note": "Ordered by structure: hospital-based acute care first, then pre-hospital care."
                   }
                 },
                 {
@@ -2737,10 +2753,10 @@
                   }
                 },
                 {
-                  "id": "MD.O.A4.G19",
-                  "anchor": "group:MD.O.A4.G19",
-                  "statement": "Therapeutics and pharmacology together with pharmacy and materia medica answer the clinical question of how a disorder is treated, covering the drugs and remedies used to treat it and how they are prepared.",
-                  "name": "Therapeutics and pharmacology together with pharmacy and materia medica answer the clinical question of how a disorder is treated, covering the drugs and remedies used to treat it and how they are prepared.",
+                  "id": "MD.O.A4.G25",
+                  "anchor": "group:MD.O.A4.G25",
+                  "statement": "Therapeutic drug knowledge answers the clinical question of how a disorder is treated with medicines, through the study of their actions and their preparation.",
+                  "name": "Therapeutic drug knowledge answers the clinical question of how a disorder is treated with medicines, through the study of their actions and their preparation.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -2759,7 +2775,8 @@
                         "statement": "Pharmacy and materia medica",
                         "name": "Pharmacy and materia medica"
                       }
-                    ]
+                    ],
+                    "rank_note": "Kinds are listed by structure, with therapeutic use before the preparation of the drugs."
                   }
                 }
               ],
@@ -3045,10 +3062,10 @@
                   }
                 },
                 {
-                  "id": "MD.O.A4.G15",
-                  "anchor": "group:MD.O.A4.G15",
-                  "statement": "Naturopathy and chiropractic are complementary health disciplines that each answer the clinical question of how a disorder can be treated through non-pharmaceutical, hands-on or natural means.",
-                  "name": "Naturopathy and chiropractic are complementary health disciplines that each answer the clinical question of how a disorder can be treated through non-pharmaceutical, hands-on or natural means.",
+                  "id": "MD.O.A4.G26",
+                  "anchor": "group:MD.O.A4.G26",
+                  "statement": "Naturopathy and chiropractic are complementary health disciplines that each offer a non-conventional answer to how a disorder should be treated.",
+                  "name": "Naturopathy and chiropractic are complementary health disciplines that each offer a non-conventional answer to how a disorder should be treated.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -3067,7 +3084,8 @@
                         "statement": "Chiropractic",
                         "name": "Chiropractic"
                       }
-                    ]
+                    ],
+                    "rank_note": "Ordered by structure, not by degree: naturopathy first as the broader whole-person approach, then chiropractic as the spine-focused one."
                   }
                 },
                 {
@@ -3902,5 +3920,12 @@
         ]
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Medicine is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five clinical questions: disorders, causes and mechanisms, diagnosis and prognosis, treatment and drugs, and populations and prevention.",
+    "key_line": "Dimension: **the clinical question asked of a disorder.** Logic inductive. Order: the clinical sequence.\n1. Disorders\n2. Causes and mechanisms\n3. Diagnosis and prognosis\n4. Treatment and drugs\n5. Populations and prevention\n\n**MECE test.** \"Type 2 diabetes is defined by HbA1c ≥ 48 mmol/mol\" is A1 (a classification rule, W12). \"Insulin resistance drives it\" is A2. \"HbA1c has sensitivity s\" is A3. \"Metformin lowers HbA1c\" is A4. \"Prevalence is rising\" is A5.",
+    "holds": false,
+    "note": "The five cells do not state the key line's five clinical questions; they give unrelated or mismatched partitions (immune areas, three-way split, generic fields).",
+    "review": true
+  }
 }

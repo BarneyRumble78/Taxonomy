@@ -88,8 +88,8 @@
       - Cardiovascular medicine and haematology not elsewhere classified
   - **Cause and regulation disease categories are defined by asking what origin, agent or failed process produced a disorder.**
     _basis: kinds, order: structure. Ordered by structure, from infectious and neoplastic causes to regulatory failure, external agents and birth-related origin._
-    - **Disease categories that ask what causes a disorder and how it is classified: infectious agents or neoplastic growth.**
-      _basis: kinds, order: structure. Ordered from the general disease root to infections, then neoplasms._
+    - **Disease categories are distinct classes of disorder, each defined by the clinical question asked about its cause and nature.**
+      _basis: kinds, order: structure. Kinds are listed in structural order by category code: general diseases, then infections, then neoplasms._
       - Diseases
       - Infections
       - Neoplasms
@@ -350,11 +350,13 @@
       - Analytical, Diagnostic and Therapeutic Techniques, and Equipment
   - **Fields of patient support ask how to stabilise a patient in acute illness and sustain comfort and function in long-term conditions.**
     _basis: kinds, order: structure. Members are ordered from acute rescue to chronic care._
-    - **Fields that ask how to stabilise and rescue a patient during acute, critical, or perioperative illness.**
-      _basis: kinds, order: structure_
+    - **Fields that ask how to maintain and control a patient's vital functions during surgery and through prolonged critical illness.**
+      _basis: kinds, order: structure. Ordered by structure: perioperative care first, then continuing critical care._
       - Anaesthesiology
-      - Emergency medicine
       - Intensive care
+    - **Fields that ask how to assess and stabilise a patient in the first moments of an acute presentation, in hospital or in the field.**
+      _basis: kinds, order: structure. Ordered by structure: hospital-based acute care first, then pre-hospital care._
+      - Emergency medicine
       - Paramedicine
     - **Fields that ask how to relieve suffering and sustain function in patients living with chronic or age-related conditions.**
       _basis: kinds, order: structure_
@@ -424,8 +426,8 @@
       - Pharmacologic Actions
       - Specialty Uses of Chemicals
       - Toxic Actions
-    - **Therapeutics and pharmacology together with pharmacy and materia medica answer the clinical question of how a disorder is treated, covering the drugs and remedies used to treat it and how they are prepared.**
-      _basis: kinds, order: structure_
+    - **Therapeutic drug knowledge answers the clinical question of how a disorder is treated with medicines, through the study of their actions and their preparation.**
+      _basis: kinds, order: structure. Kinds are listed by structure, with therapeutic use before the preparation of the drugs._
       - Therapeutics. Pharmacology
       - Pharmacy and materia medica
   - **Rehabilitative and care-delivery fields ask how function, wellbeing and clinical care can be restored or provided to people with a disorder in various settings.**
@@ -471,8 +473,8 @@
       - Nursing not elsewhere classified
       - Traditional, complementary and integrative medicine
       - Traditional Chinese medicine and treatments
-    - **Naturopathy and chiropractic are complementary health disciplines that each answer the clinical question of how a disorder can be treated through non-pharmaceutical, hands-on or natural means.**
-      _basis: kinds, order: structure_
+    - **Naturopathy and chiropractic are complementary health disciplines that each offer a non-conventional answer to how a disorder should be treated.**
+      _basis: kinds, order: structure. Ordered by structure, not by degree: naturopathy first as the broader whole-person approach, then chiropractic as the spine-focused one._
       - Naturopathy
       - Chiropractic
     - **Treatment approaches define how a disorder is intervened upon, from general therapy to operative and dental procedures.**

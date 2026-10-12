@@ -70,11 +70,13 @@
       - Computer aided design
       - Computer graphics
       - Entertainment and gaming
-    - **Interactive and creative media computing asserts that a computation generates experiences, such as stories, content and sound, that respond to a user.**
-      _basis: kinds, order: structure. Kinds of generative media, listed by structure with no ranking._
+    - **Creative media computing covers computations whose asserted property is generating or shaping stories, game content, and sound for human experience.**
+      _basis: kinds, order: structure. Ordered structurally from narrative to generated content to audio media._
       - Interactive narrative
       - Procedural content generation
       - Sound and music computing
+    - **Information-theoretic constructs describe the properties of a computation in terms of how information is transmitted and represented between sender and receiver.**
+      _basis: kinds, order: structure. Ordered structurally from the transmission medium to the representation applied to messages._
       - Communication channels
       - Codes
     - **Immersive and applied media computing asserts that a computation produces simulated or blended environments that serve a purpose beyond entertainment.**
@@ -178,13 +180,15 @@
         - Embedded and cyber-physical systems
         - Real-time systems
         - Dependable and fault-tolerant systems and networks
-      - **Each of these fields is defined by a property asserted of a computation, namely how well people can use, perceive, interact with, or transact through it.**
-        _basis: kinds, order: structure_
-        - Electronic commerce
-        - Accessibility
-        - Visualization
-        - Interaction design
+      - **Human-computer interaction concepts assert that a computation is shaped around how people use, design for, and gain access to it.**
+        _basis: kinds, order: structure. Ordered from the broad field of HCI to the narrower concerns of interaction design and accessibility._
         - Human computer interaction (HCI)
+        - Interaction design
+        - Accessibility
+      - **Application and presentation concepts assert that a computation serves a particular purpose, such as trading goods or making data visible.**
+        _basis: kinds, order: structure. Ordered from commercial application to data presentation, with no ranking implied._
+        - Electronic commerce
+        - Visualization
     - **Human-centred and trust properties assert that a computation serves, supports, or can be trusted by the people who use it or are affected by it.**
       _basis: kinds, order: structure. Kinds of people-facing property, listed by structure with no ranking implied._
       - **Human-centred fields assert that a computation serves, understands or supports people, covering accessibility, emotion, collaboration and learning.**
@@ -276,8 +280,8 @@
         - Ubiquitous and mobile computing
         - Applied computing
         - Enterprise computing
-      - **Physical sciences and engineering and Networks are two distinct areas of computing, each defined by the kind of system or domain to which computation is applied.**
-        _basis: kinds, order: structure_
+      - **Physical sciences and engineering and Networks are broad computing areas, each defined by the kind of system or domain a computation is applied to.**
+        _basis: kinds, order: structure. Members are peer application areas ordered by structure, with no ranking among them._
         - Physical sciences and engineering
         - Networks
     - **Substrate, structure, and embedding properties assert what a computation is built from, where it is deployed, or how the system providing it is organised.**
@@ -342,11 +346,13 @@
       - Machine learning
       - Adversarial machine learning
       - Context learning
-    - **Machine learning methods are kinds of computation that acquire behavior from data or feedback rather than explicit programming.**
-      _basis: kinds, order: structure. Ordered structurally by learning paradigm._
+    - **Machine learning paradigms are kinds of learning in which a computation is asserted to improve its behavior from data or experience.**
+      _basis: kinds, order: structure. Ordered by structure, from specific named paradigms to the residual catch-all category._
       - Reinforcement learning
       - Semi- and unsupervised learning
       - Machine learning not elsewhere classified
+    - **Foundational areas of computational intelligence are kinds of study that assert formal reasoning or developmental growth as the property of a computation.**
+      _basis: kinds, order: structure. Ordered by structure, from formal reasoning to developmental processes._
       - Logic
       - Autonomous mental development
     - **Neural network approaches are kinds of computation built from layered networks of interconnected artificial units.**
@@ -370,10 +376,12 @@
       - Evolutionary computation
       - Intelligent robotics
       - Robotics
-    - **Reasoning computations are defined by the property of choosing actions or solutions that satisfy constraints or optimise objectives.**
-      _basis: kinds, order: structure. Kinds of reasoning computation, listed in no ranked order._
+    - **Computations in this group are asserted to select a correct, feasible or best choice among alternatives.**
+      _basis: kinds, order: structure. Ordered by structure, from choosing actions to solving constraints and optima._
       - Planning and decision making
       - Satisfiability and optimisation
+    - **Computations in this group are asserted to handle general, residual or mixed-modality intelligent processing that is not defined by a single choice or solution task.**
+      _basis: kinds, order: structure. Ordered by structure, from general AI to vision and multimedia and multimodal processing._
       - Artificial intelligence not elsewhere classified
       - Computer vision and multimedia computation not elsewhere classified
       - Multimodal analysis and synthesis

@@ -749,6 +749,150 @@
         ],
         "rank_note": "Ordered by structure: the general field first, then its mathematical subject areas."
       }
+    },
+    {
+      "id": "MA.B.C3",
+      "anchor": "cell:MA.B.C3",
+      "statement": "Mathematical fields classified by their role in the taxonomy, grouped as object, practice, or community.",
+      "name": "Mathematical fields classified by their role in the taxonomy, grouped as object, practice, or community.",
+      "support": {
+        "logic_type": "inductive",
+        "plural_noun": "members",
+        "basis": "kinds",
+        "order": "structure",
+        "points": [
+          {
+            "id": "MA.B.C3.G1",
+            "anchor": "group:MA.B.C3.G1",
+            "statement": "Numerical analysis and computer science are computation-centered fields of mathematics that study algorithms and their behavior.",
+            "name": "Numerical analysis and computer science are computation-centered fields of mathematics that study algorithms and their behavior.",
+            "support": {
+              "logic_type": "inductive",
+              "plural_noun": "members",
+              "basis": "kinds",
+              "order": "structure",
+              "points": [
+                {
+                  "id": "MSC:65-XX",
+                  "anchor": "node:MSC:65-XX",
+                  "statement": "Numerical analysis",
+                  "name": "Numerical analysis"
+                },
+                {
+                  "id": "MSC:68-XX",
+                  "anchor": "node:MSC:68-XX",
+                  "statement": "Computer science",
+                  "name": "Computer science"
+                }
+              ],
+              "rank_note": "Ordered by structure: numerical analysis first as the narrower field, then computer science as the broader field."
+            }
+          }
+        ],
+        "rank_note": "Ordered by structure of the taxonomy rather than by degree."
+      }
+    },
+    {
+      "id": "MA.B.C5",
+      "anchor": "cell:MA.B.C5",
+      "statement": "This group gathers the classes of the mathematics taxonomy that describe the practice and community of mathematics, such as its general framing, its history and people, and its teaching, instead of any specific mathematical object of study.",
+      "name": "This group gathers the classes of the mathematics taxonomy that describe the practice and community of mathematics, such as its general framing, its history and people, and its teaching, instead of any specific mathematical object of study.",
+      "support": {
+        "logic_type": "inductive",
+        "plural_noun": "members",
+        "basis": "kinds",
+        "order": "structure",
+        "points": [
+          {
+            "id": "MA.B.C5.G1",
+            "anchor": "group:MA.B.C5.G1",
+            "statement": "Classes of the taxonomy that cover the practice and community of mathematics (its general framing, history and people, and teaching) rather than a specific mathematical object of study.",
+            "name": "Classes of the taxonomy that cover the practice and community of mathematics (its general framing, history and people, and teaching) rather than a specific mathematical object of study.",
+            "support": {
+              "logic_type": "inductive",
+              "plural_noun": "members",
+              "basis": "kinds",
+              "order": "degree",
+              "points": [
+                {
+                  "id": "MSC:00-XX",
+                  "anchor": "node:MSC:00-XX",
+                  "statement": "General and overarching topics; collections",
+                  "name": "General and overarching topics; collections"
+                },
+                {
+                  "id": "MSC:01-XX",
+                  "anchor": "node:MSC:01-XX",
+                  "statement": "History and biography",
+                  "name": "History and biography"
+                },
+                {
+                  "id": "MSC:97-XX",
+                  "anchor": "node:MSC:97-XX",
+                  "statement": "Mathematics education",
+                  "name": "Mathematics education"
+                }
+              ],
+              "rank_note": "Ranked from most general and overarching (00) to history and biography (01) to the most specialized practice, mathematics education (97)."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "MA.O.A1",
+      "anchor": "cell:MA.O.A1",
+      "statement": "Entries in mathematical classification schemes that name a field of mathematical study form the object layer of the taxonomy.",
+      "name": "Entries in mathematical classification schemes that name a field of mathematical study form the object layer of the taxonomy.",
+      "support": {
+        "logic_type": "inductive",
+        "plural_noun": "members",
+        "basis": "kinds",
+        "order": "structure",
+        "points": [
+          {
+            "id": "MA.O.A1.G1",
+            "anchor": "group:MA.O.A1.G1",
+            "statement": "Entries in mathematical classification schemes that name a field of mathematical study, covering foundations, category theory and homological algebra, and a residual category.",
+            "name": "Entries in mathematical classification schemes that name a field of mathematical study, covering foundations, category theory and homological algebra, and a residual category.",
+            "support": {
+              "logic_type": "inductive",
+              "plural_noun": "members",
+              "basis": "kinds",
+              "order": "structure",
+              "points": [
+                {
+                  "id": "MSC:03-XX",
+                  "anchor": "node:MSC:03-XX",
+                  "statement": "Mathematical logic and foundations",
+                  "name": "Mathematical logic and foundations"
+                },
+                {
+                  "id": "MSC:18-XX",
+                  "anchor": "node:MSC:18-XX",
+                  "statement": "Category theory; homological algebra",
+                  "name": "Category theory; homological algebra"
+                },
+                {
+                  "id": "ANZSRC:4999",
+                  "anchor": "node:ANZSRC:4999",
+                  "statement": "Other mathematical sciences",
+                  "name": "Other mathematical sciences"
+                }
+              ],
+              "rank_note": "Members are kinds of taxonomy entries ordered by structure, not ranked by degree."
+            }
+          }
+        ],
+        "rank_note": "Ordered by structure of the classification scheme: foundations, category theory and homological algebra, then a residual category."
+      }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Mathematics is exhausted by two sides of one pyramid: claims about a mathematical object — the assumptions of proof, structure, space, change and the continuum, or chance — and practices that define, prove, compute, infer from data, or model a claim from another field. Every MSC class is a bridge: a community working one object cell with a characteristic subset of those practices. An application in physics or economics is that field's claim, written in this language.",
+    "key_line": "Logic inductive · plural noun partitions · dimension role in the taxonomy (object / practice / community) · order structural.\n1. Every theorem is about one object: the assumptions of proof, structure, space, change and the continuum, or chance.\n2. Every practice is one role: define, prove, compute, infer from data, or model an outside claim.\n3. Every MSC class is a bridge: an object cell worked by a subset of the roles, or mathematics as the object of another pyramid.",
+    "holds": false,
+    "note": "Cells mostly subdivide individual fields by domain, subfield, or algebra relation, not the object, practice and bridge key line.",
+    "review": true
+  }
 }

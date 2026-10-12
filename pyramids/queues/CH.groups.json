@@ -362,10 +362,10 @@
                   }
                 },
                 {
-                  "id": "CH.O.A2.G5",
-                  "anchor": "group:CH.O.A2.G5",
-                  "statement": "Further inquiries into inorganic substances ask what a compound is and how it behaves, covering both the f-block elements and any inorganic matter outside the named specialties.",
-                  "name": "Further inquiries into inorganic substances ask what a compound is and how it behaves, covering both the f-block elements and any inorganic matter outside the named specialties.",
+                  "id": "CH.O.A2.G11",
+                  "anchor": "group:CH.O.A2.G11",
+                  "statement": "Kinds of inorganic chemistry questions asked of a substance, from the specific f-block elements to the remaining general inorganic cases.",
+                  "name": "Kinds of inorganic chemistry questions asked of a substance, from the specific f-block elements to the remaining general inorganic cases.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -373,18 +373,19 @@
                     "order": "structure",
                     "points": [
                       {
-                        "id": "ANZSRC:340299",
-                        "anchor": "node:ANZSRC:340299",
-                        "statement": "Inorganic chemistry not elsewhere classified",
-                        "name": "Inorganic chemistry not elsewhere classified"
-                      },
-                      {
                         "id": "ANZSRC:340203",
                         "anchor": "node:ANZSRC:340203",
                         "statement": "F-block chemistry",
                         "name": "F-block chemistry"
+                      },
+                      {
+                        "id": "ANZSRC:340299",
+                        "anchor": "node:ANZSRC:340299",
+                        "statement": "Inorganic chemistry not elsewhere classified",
+                        "name": "Inorganic chemistry not elsewhere classified"
                       }
-                    ]
+                    ],
+                    "rank_note": "Ordered from the specific f-block branch to the residual general category."
                   }
                 },
                 {
@@ -658,10 +659,10 @@
                   }
                 },
                 {
-                  "id": "CH.O.A3.G4",
-                  "anchor": "group:CH.O.A3.G4",
-                  "statement": "Questions about change of state ask how a substance forms a solid, separates from solution, or degrades, and whether its properties depend on direction.",
-                  "name": "Questions about change of state ask how a substance forms a solid, separates from solution, or degrades, and whether its properties depend on direction.",
+                  "id": "CH.O.A3.G16",
+                  "anchor": "group:CH.O.A3.G16",
+                  "statement": "Solid-forming processes are those in which a solid phase emerges or separates out of a solution or melt.",
+                  "name": "Solid-forming processes are those in which a solid phase emerges or separates out of a solution or melt.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -679,7 +680,22 @@
                         "anchor": "node:MeSH:G02.159",
                         "statement": "Chemical Precipitation",
                         "name": "Chemical Precipitation"
-                      },
+                      }
+                    ],
+                    "rank_note": "Ordered by structure: ordered solid growth first, then general solid separation."
+                  }
+                },
+                {
+                  "id": "CH.O.A3.G17",
+                  "anchor": "group:CH.O.A3.G17",
+                  "statement": "Material behavior concepts describe how a substance's properties vary with direction or how it deteriorates through reaction with its environment.",
+                  "name": "Material behavior concepts describe how a substance's properties vary with direction or how it deteriorates through reaction with its environment.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
                       {
                         "id": "MeSH:G02.165",
                         "anchor": "node:MeSH:G02.165",
@@ -693,7 +709,7 @@
                         "name": "Anisotropy"
                       }
                     ],
-                    "rank_note": "Kinds of state-change questions arranged by structure: solid formation, separation from solution, degradation, and directional property dependence."
+                    "rank_note": "Ordered by structure: an intrinsic property first, then a degradation process."
                   }
                 },
                 {
@@ -790,10 +806,10 @@
                   }
                 },
                 {
-                  "id": "CH.O.A3.G6",
-                  "anchor": "group:CH.O.A3.G6",
-                  "statement": "Separation and transport processes separate or move substances across barriers or through media.",
-                  "name": "Separation and transport processes separate or move substances across barriers or through media.",
+                  "id": "CH.O.A3.G18",
+                  "anchor": "group:CH.O.A3.G18",
+                  "statement": "Barrier-passage processes separate a substance from a mixture by letting only certain components cross a membrane or filter.",
+                  "name": "Barrier-passage processes separate a substance from a mixture by letting only certain components cross a membrane or filter.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -811,7 +827,22 @@
                         "anchor": "node:MeSH:G02.263",
                         "statement": "Filtration",
                         "name": "Filtration"
-                      },
+                      }
+                    ],
+                    "rank_note": "Ordered by structure; no ranking implied."
+                  }
+                },
+                {
+                  "id": "CH.O.A3.G19",
+                  "anchor": "group:CH.O.A3.G19",
+                  "statement": "Gradient-driven processes ask how a substance moves or exchanges in response to concentration or charge differences.",
+                  "name": "Gradient-driven processes ask how a substance moves or exchanges in response to concentration or charge differences.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
                       {
                         "id": "MeSH:G02.437",
                         "anchor": "node:MeSH:G02.437",
@@ -825,7 +856,7 @@
                         "name": "Osmosis"
                       }
                     ],
-                    "rank_note": "Listed in structural order of process type."
+                    "rank_note": "Ordered by structure; no ranking implied."
                   }
                 },
                 {
@@ -1000,15 +1031,15 @@
                   }
                 },
                 {
-                  "id": "CH.O.A3.G11",
-                  "anchor": "group:CH.O.A3.G11",
-                  "statement": "Bulk physical properties describe how a substance behaves as a whole, in mixing, density and flow.",
-                  "name": "Bulk physical properties describe how a substance behaves as a whole, in mixing, density and flow.",
+                  "id": "CH.O.A3.G20",
+                  "anchor": "group:CH.O.A3.G20",
+                  "statement": "Solubility, specific gravity, and viscosity are kinds of physical property, each defined by a different question asked of a substance.",
+                  "name": "Solubility, specific gravity, and viscosity are kinds of physical property, each defined by a different question asked of a substance.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
                     "basis": "kinds",
-                    "order": "degree",
+                    "order": "structure",
                     "points": [
                       {
                         "id": "MeSH:G02.805",
@@ -1029,7 +1060,7 @@
                         "name": "Viscosity"
                       }
                     ],
-                    "rank_note": "Ranked from composition-related behavior (solubility) to mass per volume (specific gravity) to resistance to flow (viscosity)."
+                    "rank_note": "Parallel kinds of physical property, listed in MeSH order with no ranking among them."
                   }
                 },
                 {
@@ -1403,29 +1434,30 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "CH.O.A5.G5",
-                  "anchor": "group:CH.O.A5.G5",
-                  "statement": "Biological macromolecules are characterised by asking what they are made of and how they are built, including the sugar-bearing conjugates they form with other molecules.",
-                  "name": "Biological macromolecules are characterised by asking what they are made of and how they are built, including the sugar-bearing conjugates they form with other molecules.",
+                  "id": "CH.O.A5.G10",
+                  "anchor": "group:CH.O.A5.G10",
+                  "statement": "Each concept is a kind of question asked of a biological substance, from the general characterisation of macromolecules to the specific study of sugar-bearing conjugates.",
+                  "name": "Each concept is a kind of question asked of a biological substance, from the general characterisation of macromolecules to the specific study of sugar-bearing conjugates.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
                     "basis": "kinds",
-                    "order": "structure",
+                    "order": "degree",
                     "points": [
-                      {
-                        "id": "ANZSRC:340405",
-                        "anchor": "node:ANZSRC:340405",
-                        "statement": "Glycoconjugates",
-                        "name": "Glycoconjugates"
-                      },
                       {
                         "id": "ANZSRC:340403",
                         "anchor": "node:ANZSRC:340403",
                         "statement": "Characterisation of biological macromolecules",
                         "name": "Characterisation of biological macromolecules"
+                      },
+                      {
+                        "id": "ANZSRC:340405",
+                        "anchor": "node:ANZSRC:340405",
+                        "statement": "Glycoconjugates",
+                        "name": "Glycoconjugates"
                       }
-                    ]
+                    ],
+                    "rank_note": "Ranked from the broadest question (characterising biological macromolecules in general) to the narrower one (glycoconjugates, a specific class of macromolecule)."
                   }
                 },
                 {
@@ -1513,5 +1545,12 @@
         ]
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Chemistry is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five questions about a substance: composition and identity, structure and bonding, equilibrium and energy, rates and mechanisms, and synthesis and analysis.",
+    "key_line": "Dimension: **the question asked of a substance.** Logic inductive. Order: structural, from what a substance is to how it is made or found.\n1. Composition and identity\n2. Structure and bonding\n3. Equilibrium and energy\n4. Rates and mechanisms\n5. Synthesis and analysis\n\n**MECE test.** \"The yield of this esterification at 60 °C is 85%\" is A5 (a claim about making). \"Its rate constant at 60 °C is k\" is A4. \"Its equilibrium constant is K\" is A3. The same reaction gets three sentences, each with one home.",
+    "holds": false,
+    "note": "The cells reuse the dimension but give varied two-, three- or five-way splits that do not match the five key-line questions or their order.",
+    "review": true
+  }
 }

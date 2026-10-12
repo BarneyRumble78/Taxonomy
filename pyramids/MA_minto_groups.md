@@ -123,3 +123,29 @@
     - Probability theory and stochastic processes
     - Statistics
 
+## MA.B.C3
+- **Mathematical fields classified by their role in the taxonomy, grouped as object, practice, or community.**
+  _basis: kinds, order: structure. Ordered by structure of the taxonomy rather than by degree._
+  - **Numerical analysis and computer science are computation-centered fields of mathematics that study algorithms and their behavior.**
+    _basis: kinds, order: structure. Ordered by structure: numerical analysis first as the narrower field, then computer science as the broader field._
+    - Numerical analysis
+    - Computer science
+
+## MA.B.C5
+- **This group gathers the classes of the mathematics taxonomy that describe the practice and community of mathematics, such as its general framing, its history and people, and its teaching, instead of any specific mathematical object of study.**
+  _basis: kinds, order: structure_
+  - **Classes of the taxonomy that cover the practice and community of mathematics (its general framing, history and people, and teaching) rather than a specific mathematical object of study.**
+    _basis: kinds, order: degree. Ranked from most general and overarching (00) to history and biography (01) to the most specialized practice, mathematics education (97)._
+    - General and overarching topics; collections
+    - History and biography
+    - Mathematics education
+
+## MA.O.A1
+- **Entries in mathematical classification schemes that name a field of mathematical study form the object layer of the taxonomy.**
+  _basis: kinds, order: structure. Ordered by structure of the classification scheme: foundations, category theory and homological algebra, then a residual category._
+  - **Entries in mathematical classification schemes that name a field of mathematical study, covering foundations, category theory and homological algebra, and a residual category.**
+    _basis: kinds, order: structure. Members are kinds of taxonomy entries ordered by structure, not ranked by degree._
+    - Mathematical logic and foundations
+    - Category theory; homological algebra
+    - Other mathematical sciences
+
