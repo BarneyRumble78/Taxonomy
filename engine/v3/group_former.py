@@ -6,7 +6,8 @@ repaired before it is rejected: missing ids join the nearest group by a
 local word embedding, or a further group; singletons merge into a neighbour;
 group sizes stay 2 to 5. A bare label gets one sentence call, then a
 templated definition flagged for review. A batch that still fails is split,
-and a passing half is kept.
+and a passing half is kept. A cell with fewer than four nodes is one group.
+A log line marked blocked does not close that cell.
 """
 import json
 import math
@@ -511,6 +512,33 @@ def repair_groups(nodes, proposal):
     return groups
 
 
+def is_fallback_statement(text):
+    """The templated definition written when a sentence call does not define the group."""
+    text = " ".join((text or "").split())
+    if text == "The cell gathers the groups under one stated order.":
+        return True
+    return text.startswith("The group covers ") and text.endswith(" as one kind of claim.")
+
+
+def loosely_related(point):
+    """Leaf members share no word with each other or with the statement that should define them."""
+    kids = (point.get("support") or {}).get("points") or []
+    if not kids or any((child.get("support") or {}).get("points") for child in kids):
+        return False
+    names = [child.get("name") or child.get("statement") or "" for child in kids]
+    if len(names) < 2:
+        return False
+    vectors = [embed_text(name) for name in names]
+    best = 0.0
+    for left in range(len(vectors)):
+        for right in range(left + 1, len(vectors)):
+            best = max(best, _cosine(vectors[left], vectors[right]))
+    if best > 0:
+        return False
+    statement = embed_text(point.get("statement") or "")
+    return all(_cosine(statement, vector) <= 0 for vector in vectors)
+
+
 def _fallback_statement(group, names):
     label = " ".join((group.get("statement") or "").split()).strip(" .")
     if not label or label.lower() == FURTHER:
@@ -709,6 +737,8 @@ def _to_point(group, leaves):
     }
     if group.get("review"):
         point["review"] = True
+    if group.get("further"):
+        point["further"] = True
     return point
 
 
@@ -721,7 +751,10 @@ def _max_group_index(groups, cell):
         tail = gid[len(prefix):] if gid.startswith(prefix) else ""
         if tail.isdigit():
             highest = max(highest, int(tail))
-        highest = max(highest, _max_group_index(group.get("children"), cell))
+        nested = group.get("children")
+        if not nested:
+            nested = (group.get("support") or {}).get("points")
+        highest = max(highest, _max_group_index(nested, cell))
     return highest
 
 
@@ -928,11 +961,18 @@ def pending_work(rows, cell, nodes):
 
 
 def finished_cells(rows):
-    """Cells with a terminal line. A cost stop writes no such line."""
+    """Cells with a terminal line. A cost stop writes no such line.
+
+    A blocked line is the old short-cell refusal. It does not close the cell,
+    so the next run can place those nodes as one group.
+    """
     done = {}
     for row in rows:
-        if row.get("part") == "cell" and row.get("cell"):
-            done[row["cell"]] = row
+        if row.get("part") != "cell" or not row.get("cell"):
+            continue
+        if row.get("status") == "blocked":
+            continue
+        done[row["cell"]] = row
     return done
 
 
@@ -944,11 +984,22 @@ def append_log(path, row):
 
 
 def write_result(root, field, rows):
-    cells = []
+    """One point per cell. A later placed line replaces an earlier one."""
+    by_cell = {}
+    order = []
+    check = None
     for row in rows:
+        if row.get("part") == "field" and row.get("check"):
+            check = row["check"]
         if row.get("part") == "cell" and row.get("status") == "placed" and row.get("point"):
-            cells.append(row["point"])
+            cell = row.get("cell") or row["point"].get("id")
+            if cell not in by_cell:
+                order.append(cell)
+            by_cell[cell] = row["point"]
+    cells = [by_cell[cell] for cell in order]
     payload = {"field": field, "cells": cells}
+    if check:
+        payload["field_check"] = check
     path = result_path(root, field)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

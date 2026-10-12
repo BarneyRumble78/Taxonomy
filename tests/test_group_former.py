@@ -328,6 +328,8 @@ def test_ollama_body_turns_thinking_off_and_a_second_run_skips_the_cell(tmp_path
 
 
 def test_anthropic_caches_the_prefix_and_records_the_cost(tmp_path):
+    live = ROOT / "pyramids" / "queues" / "cost_ledger.json"
+    before_ledger = live.read_bytes() if live.exists() else None
     module = _script()
     nodes = _nodes(4)
     module.cell_jobs = lambda field, root: [{
@@ -375,7 +377,8 @@ def test_anthropic_caches_the_prefix_and_records_the_cost(tmp_path):
     assert "Notion" not in seen[0]["system"][0]["text"]
     ledger = json.loads((tmp_path / "pyramids" / "queues" / "cost_ledger.json").read_text(encoding="utf-8"))
     assert ledger["fields"]["PH"] == result["cost"]
-    assert not (ROOT / "pyramids" / "queues" / "cost_ledger.json").exists()
+    after_ledger = live.read_bytes() if live.exists() else None
+    assert after_ledger == before_ledger
 
 
 def test_max_cost_stops_before_the_cell_line_and_resume_skips_the_batch(tmp_path):
@@ -687,6 +690,102 @@ def test_split_keeps_the_passing_half(monkeypatch):
     assert placed == ["n0", "n1", "n2"]
     assert ["n0", "n1", "n2"] in asked
     assert ["n3", "n4", "n5"] in asked
+
+
+def test_a_blocked_line_does_not_finish_a_short_cell():
+    rows = [{
+        "part": "cell",
+        "cell": "MA.B.C3",
+        "status": "blocked",
+        "reason": "fewer than four admitted nodes",
+        "member_ids": ["MSC:65-XX", "MSC:68-XX"],
+    }]
+    assert "MA.B.C3" not in gf.finished_cells(rows)
+    rows.append({"part": "cell", "cell": "MA.B.C3", "status": "placed", "point": {"id": "MA.B.C3"}})
+    assert gf.finished_cells(rows)["MA.B.C3"]["status"] == "placed"
+
+
+def test_write_result_keeps_the_later_placed_point(tmp_path):
+    rows = [
+        {"part": "cell", "cell": "MA.B.C3", "status": "blocked"},
+        {
+            "part": "cell",
+            "cell": "MA.B.C3",
+            "status": "placed",
+            "point": {"id": "MA.B.C3", "statement": "One group holds the two classes as one kind of claim."},
+        },
+        {"part": "cell", "cell": "MA.O.A2", "status": "placed", "point": {"id": "MA.O.A2", "statement": "First."}},
+        {"part": "cell", "cell": "MA.O.A2", "status": "placed", "point": {"id": "MA.O.A2", "statement": "Second."}},
+        {"part": "field", "check": {"holds": True, "note": "The cells answer the governing thought."}},
+    ]
+    payload = gf.write_result(tmp_path, "MA", rows)
+    assert [cell["id"] for cell in payload["cells"]] == ["MA.B.C3", "MA.O.A2"]
+    assert payload["cells"][1]["statement"] == "Second."
+    assert payload["field_check"]["holds"] is True
+
+
+def test_a_blocked_short_cell_is_placed_on_the_next_run(tmp_path):
+    module = _script()
+    nodes = [
+        {"id": "MSC:65-XX", "name": "Numerical analysis"},
+        {"id": "MSC:68-XX", "name": "Computer science"},
+    ]
+    module.cell_jobs = lambda field, root: [{
+        "field": field,
+        "cell": "MA.B.C3",
+        "principle": "Bridges follow the structure.",
+        "nodes": nodes,
+    }]
+    path = log_path(tmp_path, "MA")
+    gf.append_log(path, {
+        "field": "MA",
+        "cell": "MA.B.C3",
+        "part": "cell",
+        "status": "blocked",
+        "reason": "fewer than four admitted nodes",
+        "member_ids": ["MSC:65-XX", "MSC:68-XX"],
+    })
+    calls = []
+
+    def post(body):
+        calls.append(json.loads(body["messages"][1]["content"]))
+        payload = calls[-1]
+        if payload["task"] == "head":
+            reply = _head()
+        elif payload["task"] == "sentence":
+            reply = {"statement": "Numerical analysis and computer science are the two computational bridges."}
+        else:
+            reply = {
+                "statement": "",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "",
+                "groups": [
+                    {
+                        "statement": node["name"],
+                        "basis": "kinds",
+                        "order": "structure",
+                        "rank_note": "",
+                        "members": [node["id"]],
+                    }
+                    for node in payload["nodes"]
+                ],
+            }
+        return {"message": {"content": json.dumps(reply)}}
+
+    args = module.parse_args(["--field", "MA", "--backend", "ollama", "--max-cost", "0"])
+    result = module.run(args, post=post, root=tmp_path)
+    assert result["wrote"] == 1
+    assert calls
+    rows = read_log(path)
+    assert rows[-1]["status"] == "placed"
+    groups = rows[-1]["point"]["support"]["points"]
+    assert len(groups) == 1
+    assert sorted(point["id"] for point in groups[0]["support"]["points"]) == ["MSC:65-XX", "MSC:68-XX"]
+    made = len(calls)
+    again = module.run(args, post=post, root=tmp_path)
+    assert again["wrote"] == 0
+    assert len(calls) == made
 
 
 def test_a_tiny_cap_does_not_call_and_writes_no_cell_line(tmp_path):
