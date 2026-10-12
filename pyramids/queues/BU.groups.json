@@ -164,7 +164,10 @@
                         "id": "ANZSRC:350202",
                         "anchor": "node:ANZSRC:350202",
                         "statement": "Finance",
-                        "name": "Finance"
+                        "name": "Finance",
+                        "aliases": [
+                          "LCC:HG"
+                        ]
                       },
                       {
                         "id": "ANZSRC:350299",
@@ -5234,17 +5237,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Business divides along the practices of the firm into accounts, finance, operations and organisation, marketing, and trade and tax, moving from the record outward to customers and borders.",
+    "governing_thought": "Business divides by the practice of the firm, running from the record outward to customers and borders, into accounts, finance, operations and organisation, marketing, and trade and tax.",
     "key_line": [
-      "Accounts is the practice of the firm that records, reports, audits and explains its financial affairs under standards and in particular settings.",
-      "Finance is the practice of the firm that raises, holds, lends, insures and invests money, through institutions, sectors and divisions of financial activity.",
-      "Operations and organisation is the practice of the firm that produces goods and services, moves and stores them, and directs, staffs and governs the enterprise.",
-      "Marketing is the practice of the firm that brings its offerings to customers, including tourism, accommodation and food service as customer-facing activity.",
-      "Trade and tax is the practice of the firm that buys and resells goods across markets and borders, in wholesale, vehicle trade and retail."
+      "Accounts is the practice of the firm in which financial information is recorded, reported, audited and made accountable.",
+      "Finance is the practice of the firm in which funds, credit, investment and risk are raised, held, exchanged and insured.",
+      "Operations and organisation is the practice of the firm in which goods and services are produced, delivered and managed.",
+      "Marketing is the practice of the firm in which offerings are understood, priced, promoted and delivered to customers, including tourism and hospitality.",
+      "Trade and tax is the practice of the firm in which goods are bought and resold across markets and borders, with the commercial dealings that carry the firm's tax and trading obligations."
     ],
     "holds": false,
-    "note": "P3 mixes industry sectors (P3.1-P3.4) with the management function (P3.5); P4.3/P4.4 are sector classes overlapping P3.4; P5 has no tax and P5.2 overlaps P5.3.",
-    "review": true,
-    "problems": 9
+    "note": "Misplaced: P1.1.1 and P1.2.1 (core accounting under context-specific), P2.3.2 (insurance under asset-holding), P3.3.2.3 (valuation), P5.1.2.3 (retail under wholesale), P3.3.3.",
+    "review": false,
+    "misplaced": 6,
+    "problems": 8
   }
 }
