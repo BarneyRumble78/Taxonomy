@@ -1025,8 +1025,19 @@ def _post_anthropic(body, key):
             "anthropic-version": "2023-06-01",
         },
     )
-    with urllib.request.urlopen(req, timeout=180) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    last = None
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(req, timeout=300) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            if exc.code not in (408, 429, 500, 502, 503, 504, 529):
+                raise
+            last = exc
+        except (TimeoutError, OSError) as exc:
+            last = exc
+        time.sleep(5 * (attempt + 1))
+    raise last
 
 
 class CostCap(Exception):

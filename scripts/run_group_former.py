@@ -159,10 +159,25 @@ def run(args, post=None, anthropic_post=None, root=None):
     stopped = False
     wrote = 0
 
+    saved = [0.0]
+
+    def _save_spend():
+        # Record spend after every call so a crash cannot lose it.
+        if tracker is None or ledger is None:
+            return
+        delta = tracker.usd() - saved[0]
+        if delta > 0:
+            record_spend(ledger, field, delta)
+            save_ledger(queue.ledger_file(root), ledger)
+            saved[0] += delta
+
     def send(task, payload):
         body = request_body(task, payload, model, api)
         if backend == "anthropic":
-            reply = queue.anthropic_send(body, model, SYSTEM, tracker, anthropic_post, key)
+            try:
+                reply = queue.anthropic_send(body, model, SYSTEM, tracker, anthropic_post, key)
+            finally:
+                _save_spend()
         elif post is not None:
             reply = post(body)
         else:
@@ -236,9 +251,7 @@ def run(args, post=None, anthropic_post=None, root=None):
     if tracker is not None:
         cost = tracker.usd()
         print(tracker.line(), flush=True)
-        if cost > 0 and ledger is not None:
-            record_spend(ledger, field, cost)
-            save_ledger(queue.ledger_file(root), ledger)
+        _save_spend()
         if stopped or tracker.stopped:
             stopped = True
             limit = float(args.global_max_cost) if tracker.stop_scope == "global" else float(args.max_cost)
