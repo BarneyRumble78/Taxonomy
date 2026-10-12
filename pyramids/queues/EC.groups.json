@@ -1493,7 +1493,10 @@
                         "id": "JEL:N0",
                         "anchor": "node:JEL:N0",
                         "statement": "General",
-                        "name": "General"
+                        "name": "General",
+                        "aliases": [
+                          "JEL:K0"
+                        ]
                       },
                       {
                         "id": "JEL:N1",
@@ -2405,10 +2408,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Economics is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five scales of allocation: choice, markets, mechanisms and institutions, the aggregate economy, and welfare and public choice.",
-    "key_line": "Dimension: **the scale at which an allocation is settled.** Order: from one agent to the whole society.\n1. Choice\n2. Markets\n3. Mechanisms and institutions\n4. The aggregate economy\n5. Welfare and public choice\n\n**The three-way border (the economics repair).** Take any equilibrium result. The existence proof is MA (uses MA.O.A3 fixed-point theorems, via MA.B.C4). The choice of which game the parties are in, and any move that changes it, is ST. The claim that an actual or counterfactual allocation follows is EC.",
+    "governing_thought": "Economics divides by the scale at which an allocation is settled, from individual choice, to markets, to the mechanisms and institutions that govern them, to the aggregate economy, to welfare and public choice for the whole society.",
+    "key_line": [
+      "Choice is the scale at which allocation is settled by individual people, households and small groups through their own decisions under information, uncertainty and behavioral limits.",
+      "Markets are the scale at which allocation is settled between many buyers and sellers, through production, prices, labor matching and the structure of industries.",
+      "Mechanisms and institutions are the scale at which allocation is settled by the rules, organizations and systems that structure how markets and firms operate.",
+      "The aggregate economy is the scale at which allocation is settled across a whole national or international economy, through prices, money, growth, trade and history.",
+      "Welfare and public choice is the scale at which allocation is settled for the whole society, through collective decisions, government provision and the development of communities."
+    ],
     "holds": false,
-    "note": "Cells restate the scale dimension as ranges or a two-way split, not the five named scales; A1 uses an unrelated division and A5 conflicts.",
-    "review": true
+    "note": "Pillars blend scale (choice, markets, aggregate) with kind of thing (institutions), so they aren't values of one dimension. P4 and P5 also hold catch-all general, reference and method material, and some content follows classification code schemes.",
+    "review": true,
+    "misplaced": 14,
+    "problems": 116
   }
 }
