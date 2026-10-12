@@ -1,214 +1,96 @@
 {
   "field": "CH",
   "introduction": {
-    "situation": "Chemistry studies substances, from single atoms to biological macromolecules and applied materials.",
-    "complication": "Chemical knowledge is recorded in many overlapping schemes, so topics about the same substance are scattered by source rather than by the question being asked.",
-    "question": "How is everything chemistry knows about a substance divided?",
-    "answer": "Chemistry is divided by the question asked of a substance, from what it is to how it is made or found: composition and identity, structure and bonding, equilibrium and energy, rates and mechanisms, and synthesis and analysis."
+    "situation": "Chemistry studies substances, their kinds, their architecture, their energetics and their changes.",
+    "complication": "The source groups mix library headings, classes of substances, phenomena and methods, so there is no single clear view of how the field is divided.",
+    "question": "How is everything in chemistry divided when seen as questions asked of a substance?",
+    "answer": "Chemistry's objects divide by the question asked of a substance into its composition and identity, its structure and bonding, its equilibrium and energy, its rates and mechanisms, and its synthesis and analysis."
   },
-  "governing_thought": "Chemistry is divided by the question asked of a substance, from what it is to how it is made or found: composition and identity, structure and bonding, equilibrium and energy, rates and mechanisms, and synthesis and analysis.",
+  "governing_thought": "Chemistry's objects divide by the question asked of a substance into its composition and identity, its structure and bonding, its equilibrium and energy, its rates and mechanisms, and its synthesis and analysis.",
   "key_line": {
     "logic_type": "inductive",
-    "plural_noun": "questions",
+    "plural_noun": "questions about a substance",
     "mece_dimension": "the question asked of a substance",
     "basis": "kinds",
     "order": "structure",
-    "rank_note": "The questions run from what a substance is, through how it is arranged and how it changes, to how it is made or found.",
+    "rank_note": "The questions run from what a substance is, through how it is built and how it settles and changes, to how it is made or found.",
     "points": [
       {
         "id": "CH.K1",
         "anchor": "pillar:CH.K1",
-        "title": "Composition and identity",
-        "statement": "Composition and identity is the question of what a substance is, covering its general kind, its compound class and its role.",
-        "name": "Composition and identity is the question of what a substance is, covering its general kind, its compound class and its role.",
+        "statement": "Composition and identity is the question of what a substance is, covering its general kind, role and chemical or biological class.",
+        "name": "Composition and identity is the question of what a substance is, covering its general kind, role and chemical or biological class.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "structure",
-          "rank_note": "From the most general chemical entities to specific classes and then to elemental and organic identity.",
+          "rank_note": "From the most general entities to the more specialised classes of substance.",
           "points": [
             {
               "id": "CH.K1.S1",
               "anchor": "section:CH.K1.S1",
-              "statement": "General chemical entities such as substances, molecular entities, groups and atoms answer the question of what kind of thing is being studied.",
-              "name": "General chemical entities such as substances, molecular entities, groups and atoms answer the question of what kind of thing is being studied.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From the most general entity down to the atom.",
-                "points": [
-                  {
-                    "id": "ChEBI:CHEBI:24431",
-                    "anchor": "node:ChEBI:CHEBI:24431",
-                    "statement": "chemical entity",
-                    "name": "chemical entity"
-                  },
-                  {
-                    "id": "ChEBI:CHEBI:59999",
-                    "anchor": "node:ChEBI:CHEBI:59999",
-                    "statement": "chemical substance",
-                    "name": "chemical substance"
-                  },
-                  {
-                    "id": "ChEBI:CHEBI:23367",
-                    "anchor": "node:ChEBI:CHEBI:23367",
-                    "statement": "molecular entity",
-                    "name": "molecular entity"
-                  },
-                  {
-                    "id": "ChEBI:CHEBI:24433",
-                    "anchor": "node:ChEBI:CHEBI:24433",
-                    "statement": "group",
-                    "name": "group"
-                  },
-                  {
-                    "id": "ChEBI:CHEBI:33250",
-                    "anchor": "node:ChEBI:CHEBI:33250",
-                    "statement": "atom",
-                    "name": "atom"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "CH.K1.S2",
-              "anchor": "section:CH.K1.S2",
-              "statement": "Compound classes, biochemical substances, applied chemicals and roles identify a substance by its framework, its function in life and its use.",
-              "name": "Compound classes, biochemical substances, applied chemicals and roles identify a substance by its framework, its function in life and its use.",
+              "statement": "General entities and roles name the broad kinds of chemical object and the functions they play.",
+              "name": "General entities and roles name the broad kinds of chemical object and the functions they play.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From frameworks to biological classes, applied uses and roles.",
+                "rank_note": "From entities to the roles they play.",
                 "points": [
                   {
-                    "id": "CH.O.A1.G2",
-                    "anchor": "group:CH.O.A1.G2",
-                    "statement": "Compound classes by composition and structure describe a substance by the kind of molecular framework it has.",
-                    "name": "Compound classes by composition and structure describe a substance by the kind of molecular framework it has.",
+                    "id": "CH.K1.S1.U1",
+                    "anchor": "section:CH.K1.S1.U1",
+                    "statement": "Chemical entities name the broad kinds of object, from atoms to molecular entities and groups.",
+                    "name": "Chemical entities name the broad kinds of object, from atoms to molecular entities and groups.",
                     "support": {
                       "logic_type": "inductive",
-                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "structure",
+                      "rank_note": "From the most general entity to the smallest.",
                       "points": [
                         {
-                          "id": "MeSH:D01",
-                          "anchor": "node:MeSH:D01",
-                          "statement": "Inorganic Chemicals",
-                          "name": "Inorganic Chemicals"
+                          "id": "ChEBI:CHEBI:24431",
+                          "anchor": "node:ChEBI:CHEBI:24431",
+                          "statement": "chemical entity",
+                          "name": "chemical entity"
                         },
                         {
-                          "id": "MeSH:D02",
-                          "anchor": "node:MeSH:D02",
-                          "statement": "Organic Chemicals",
-                          "name": "Organic Chemicals"
+                          "id": "ChEBI:CHEBI:59999",
+                          "anchor": "node:ChEBI:CHEBI:59999",
+                          "statement": "chemical substance",
+                          "name": "chemical substance"
                         },
                         {
-                          "id": "MeSH:D03",
-                          "anchor": "node:MeSH:D03",
-                          "statement": "Heterocyclic Compounds",
-                          "name": "Heterocyclic Compounds"
+                          "id": "ChEBI:CHEBI:23367",
+                          "anchor": "node:ChEBI:CHEBI:23367",
+                          "statement": "molecular entity",
+                          "name": "molecular entity"
                         },
                         {
-                          "id": "MeSH:D04",
-                          "anchor": "node:MeSH:D04",
-                          "statement": "Polycyclic Compounds",
-                          "name": "Polycyclic Compounds"
+                          "id": "ChEBI:CHEBI:24433",
+                          "anchor": "node:ChEBI:CHEBI:24433",
+                          "statement": "group",
+                          "name": "group"
+                        },
+                        {
+                          "id": "ChEBI:CHEBI:33250",
+                          "anchor": "node:ChEBI:CHEBI:33250",
+                          "statement": "atom",
+                          "name": "atom"
                         }
-                      ],
-                      "rank_note": "Ordered from simple inorganic to organic to ring-based frameworks."
+                      ]
                     }
                   },
                   {
-                    "id": "CH.O.A1.G3",
-                    "anchor": "group:CH.O.A1.G3",
-                    "statement": "Biochemical substances are classes of compounds defined by the role they play in living systems.",
-                    "name": "Biochemical substances are classes of compounds defined by the role they play in living systems.",
+                    "id": "CH.K1.S1.U2",
+                    "anchor": "section:CH.K1.S1.U2",
+                    "statement": "Roles name the function a substance plays, from the general notion to its biological and chemical forms.",
+                    "name": "Roles name the function a substance plays, from the general notion to its biological and chemical forms.",
                     "support": {
                       "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "MeSH:D05",
-                          "anchor": "node:MeSH:D05",
-                          "statement": "Macromolecular Substances",
-                          "name": "Macromolecular Substances"
-                        },
-                        {
-                          "id": "MeSH:D08",
-                          "anchor": "node:MeSH:D08",
-                          "statement": "Enzymes and Coenzymes",
-                          "name": "Enzymes and Coenzymes"
-                        },
-                        {
-                          "id": "MeSH:D06",
-                          "anchor": "node:MeSH:D06",
-                          "statement": "Hormones, Hormone Substitutes, and Hormone Antagonists",
-                          "name": "Hormones, Hormone Substitutes, and Hormone Antagonists"
-                        },
-                        {
-                          "id": "MeSH:D09",
-                          "anchor": "node:MeSH:D09",
-                          "statement": "Carbohydrates",
-                          "name": "Carbohydrates"
-                        },
-                        {
-                          "id": "MeSH:D10",
-                          "anchor": "node:MeSH:D10",
-                          "statement": "Lipids",
-                          "name": "Lipids"
-                        }
-                      ],
-                      "rank_note": "Ranked from large macromolecules to the smaller functional biomolecules."
-                    }
-                  },
-                  {
-                    "id": "CH.O.A1.G4",
-                    "anchor": "group:CH.O.A1.G4",
-                    "statement": "Applied chemicals are substances classified by the practical use made of them in medicine and dentistry.",
-                    "name": "Applied chemicals are substances classified by the practical use made of them in medicine and dentistry.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:D25",
-                          "anchor": "node:MeSH:D25",
-                          "statement": "Biomedical and Dental Materials",
-                          "name": "Biomedical and Dental Materials"
-                        },
-                        {
-                          "id": "MeSH:D26",
-                          "anchor": "node:MeSH:D26",
-                          "statement": "Pharmaceutical Preparations",
-                          "name": "Pharmaceutical Preparations"
-                        },
-                        {
-                          "id": "MeSH:D",
-                          "anchor": "node:MeSH:D",
-                          "statement": "Chemicals and Drugs",
-                          "name": "Chemicals and Drugs"
-                        }
-                      ],
-                      "rank_note": "Ordered from materials to finished pharmaceutical products."
-                    }
-                  },
-                  {
-                    "id": "CH.O.A4.G1",
-                    "anchor": "group:CH.O.A4.G1",
-                    "statement": "A role names the function a substance plays, ranging from the general notion of role to its biological and chemical specializations.",
-                    "name": "A role names the function a substance plays, ranging from the general notion of role to its biological and chemical specializations.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
+                      "rank_note": "From the general role to its specialisations.",
                       "points": [
                         {
                           "id": "ChEBI:CHEBI:50906",
@@ -228,40 +110,48 @@
                           "statement": "chemical role",
                           "name": "chemical role"
                         }
-                      ],
-                      "rank_note": "Ranked from most general (role) to more specific (biological role, chemical role)."
+                      ]
                     }
                   }
                 ]
               }
             },
             {
-              "id": "CH.K1.S3",
-              "anchor": "section:CH.K1.S3",
-              "statement": "Elemental, inorganic, biological and organic identity questions ask which elements and which kinds of molecule a substance consists of.",
-              "name": "Elemental, inorganic, biological and organic identity questions ask which elements and which kinds of molecule a substance consists of.",
+              "id": "CH.K1.S2",
+              "anchor": "section:CH.K1.S2",
+              "statement": "Inorganic and organometallic classes identify substances by the elements and metal centres from which they are composed.",
+              "name": "Inorganic and organometallic classes identify substances by the elements and metal centres from which they are composed.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From elements to inorganic, biological and organic identity.",
+                "rank_note": "From the general inorganic class to specific element families.",
                 "points": [
                   {
-                    "id": "CH.O.A2.G1",
-                    "anchor": "group:CH.O.A2.G1",
-                    "statement": "Fields that ask which elements make up a substance and how those elements, by chemical family, behave.",
-                    "name": "Fields that ask which elements make up a substance and how those elements, by chemical family, behave.",
+                    "id": "CH.K1.S2.U1",
+                    "anchor": "section:CH.K1.S2.U1",
+                    "statement": "General and element-family inorganic classes identify substances by the kinds of elements they contain.",
+                    "name": "General and element-family inorganic classes identify substances by the kinds of elements they contain.",
                     "support": {
                       "logic_type": "inductive",
-                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "structure",
+                      "rank_note": "From the general class to specific element families.",
                       "points": [
+                        {
+                          "id": "MeSH:D01",
+                          "anchor": "node:MeSH:D01",
+                          "statement": "Inorganic Chemicals",
+                          "name": "Inorganic Chemicals"
+                        },
                         {
                           "id": "ANZSRC:3402",
                           "anchor": "node:ANZSRC:3402",
                           "statement": "Inorganic chemistry",
-                          "name": "Inorganic chemistry"
+                          "name": "Inorganic chemistry",
+                          "aliases": [
+                            "ANZSRC:340299"
+                          ]
                         },
                         {
                           "id": "ANZSRC:340205",
@@ -274,28 +164,27 @@
                           "anchor": "node:ANZSRC:340208",
                           "statement": "Non-metal chemistry",
                           "name": "Non-metal chemistry"
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "CH.K1.S2.U2",
+                    "anchor": "section:CH.K1.S2.U2",
+                    "statement": "Metal-centred classes identify substances by transition, f-block and organometallic metal centres.",
+                    "name": "Metal-centred classes identify substances by transition, f-block and organometallic metal centres.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From single metal centres to clusters.",
+                      "points": [
                         {
                           "id": "ANZSRC:340211",
                           "anchor": "node:ANZSRC:340211",
                           "statement": "Transition metal chemistry",
                           "name": "Transition metal chemistry"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from the broad inorganic field to specific element families."
-                    }
-                  },
-                  {
-                    "id": "CH.O.A2.G11",
-                    "anchor": "group:CH.O.A2.G11",
-                    "statement": "Kinds of inorganic chemistry questions asked of a substance, from the specific f-block elements to the remaining general inorganic cases.",
-                    "name": "Kinds of inorganic chemistry questions asked of a substance, from the specific f-block elements to the remaining general inorganic cases.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
+                        },
                         {
                           "id": "ANZSRC:340203",
                           "anchor": "node:ANZSRC:340203",
@@ -303,20 +192,673 @@
                           "name": "F-block chemistry"
                         },
                         {
-                          "id": "ANZSRC:340299",
-                          "anchor": "node:ANZSRC:340299",
-                          "statement": "Inorganic chemistry not elsewhere classified",
-                          "name": "Inorganic chemistry not elsewhere classified"
+                          "id": "ANZSRC:340209",
+                          "anchor": "node:ANZSRC:340209",
+                          "statement": "Organometallic chemistry",
+                          "name": "Organometallic chemistry"
+                        },
+                        {
+                          "id": "ANZSRC:340206",
+                          "anchor": "node:ANZSRC:340206",
+                          "statement": "Metal cluster chemistry",
+                          "name": "Metal cluster chemistry"
                         }
-                      ],
-                      "rank_note": "Ordered from the specific f-block branch to the residual general category."
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "CH.K1.S3",
+              "anchor": "section:CH.K1.S3",
+              "statement": "Organic and ring-based classes identify substances by their carbon frameworks.",
+              "name": "Organic and ring-based classes identify substances by their carbon frameworks.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From the general organic class to ring types.",
+                "points": [
+                  {
+                    "id": "MeSH:D02",
+                    "anchor": "node:MeSH:D02",
+                    "statement": "Organic Chemicals",
+                    "name": "Organic Chemicals"
+                  },
+                  {
+                    "id": "MeSH:D03",
+                    "anchor": "node:MeSH:D03",
+                    "statement": "Heterocyclic Compounds",
+                    "name": "Heterocyclic Compounds"
+                  },
+                  {
+                    "id": "MeSH:D04",
+                    "anchor": "node:MeSH:D04",
+                    "statement": "Polycyclic Compounds",
+                    "name": "Polycyclic Compounds"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "CH.K1.S4",
+              "anchor": "section:CH.K1.S4",
+              "statement": "Biological classes identify substances by their biochemical nature as macromolecules, enzymes, hormones and nutrients.",
+              "name": "Biological classes identify substances by their biochemical nature as macromolecules, enzymes, hormones and nutrients.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From general biomolecules to specific families.",
+                "points": [
+                  {
+                    "id": "MeSH:D05",
+                    "anchor": "node:MeSH:D05",
+                    "statement": "Macromolecular Substances",
+                    "name": "Macromolecular Substances"
+                  },
+                  {
+                    "id": "MeSH:D08",
+                    "anchor": "node:MeSH:D08",
+                    "statement": "Enzymes and Coenzymes",
+                    "name": "Enzymes and Coenzymes"
+                  },
+                  {
+                    "id": "MeSH:D06",
+                    "anchor": "node:MeSH:D06",
+                    "statement": "Hormones, Hormone Substitutes, and Hormone Antagonists",
+                    "name": "Hormones, Hormone Substitutes, and Hormone Antagonists"
+                  },
+                  {
+                    "id": "MeSH:D09",
+                    "anchor": "node:MeSH:D09",
+                    "statement": "Carbohydrates",
+                    "name": "Carbohydrates"
+                  },
+                  {
+                    "id": "MeSH:D10",
+                    "anchor": "node:MeSH:D10",
+                    "statement": "Lipids",
+                    "name": "Lipids"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "CH.K1.S5",
+              "anchor": "section:CH.K1.S5",
+              "statement": "Medicinal and biomolecular classes identify substances by their biological activity and their use in medicine.",
+              "name": "Medicinal and biomolecular classes identify substances by their biological activity and their use in medicine.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From general medicinal chemistry to specific uses and models.",
+                "points": [
+                  {
+                    "id": "CH.K1.S5.U1",
+                    "anchor": "section:CH.K1.S5.U1",
+                    "statement": "Medicinal and biomolecular fields ask what a substance does in living systems and how it is modelled.",
+                    "name": "Medicinal and biomolecular fields ask what a substance does in living systems and how it is modelled.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From the general field to modelling.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:3404",
+                          "anchor": "node:ANZSRC:3404",
+                          "statement": "Medicinal and biomolecular chemistry",
+                          "name": "Medicinal and biomolecular chemistry",
+                          "aliases": [
+                            "ANZSRC:340499"
+                          ]
+                        },
+                        {
+                          "id": "ANZSRC:340402",
+                          "anchor": "node:ANZSRC:340402",
+                          "statement": "Biomolecular modelling and design",
+                          "name": "Biomolecular modelling and design"
+                        },
+                        {
+                          "id": "ANZSRC:340404",
+                          "anchor": "node:ANZSRC:340404",
+                          "statement": "Cheminformatics and quantitative structure-activity relationships",
+                          "name": "Cheminformatics and quantitative structure-activity relationships"
+                        },
+                        {
+                          "id": "ANZSRC:340407",
+                          "anchor": "node:ANZSRC:340407",
+                          "statement": "Proteins and peptides",
+                          "name": "Proteins and peptides"
+                        }
+                      ]
                     }
                   },
                   {
-                    "id": "CH.O.A5.G10",
-                    "anchor": "group:CH.O.A5.G10",
-                    "statement": "Each concept is a kind of question asked of a biological substance, from the general characterisation of macromolecules to the specific study of sugar-bearing conjugates.",
-                    "name": "Each concept is a kind of question asked of a biological substance, from the general characterisation of macromolecules to the specific study of sugar-bearing conjugates.",
+                    "id": "CH.K1.S5.U2",
+                    "anchor": "section:CH.K1.S5.U2",
+                    "statement": "Biologically active substances and their effects identify substances by what they do in living systems.",
+                    "name": "Biologically active substances and their effects identify substances by what they do in living systems.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From assays to molecular medicine.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:340102",
+                          "anchor": "node:ANZSRC:340102",
+                          "statement": "Bioassays",
+                          "name": "Bioassays"
+                        },
+                        {
+                          "id": "ANZSRC:340106",
+                          "anchor": "node:ANZSRC:340106",
+                          "statement": "Metabolomic chemistry",
+                          "name": "Metabolomic chemistry"
+                        },
+                        {
+                          "id": "ANZSRC:340401",
+                          "anchor": "node:ANZSRC:340401",
+                          "statement": "Biologically active molecules",
+                          "name": "Biologically active molecules"
+                        },
+                        {
+                          "id": "ANZSRC:340406",
+                          "anchor": "node:ANZSRC:340406",
+                          "statement": "Molecular medicine",
+                          "name": "Molecular medicine"
+                        },
+                        {
+                          "id": "MeSH:G02.111",
+                          "anchor": "node:MeSH:G02.111",
+                          "statement": "Biochemical Phenomena",
+                          "name": "Biochemical Phenomena"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "CH.K1.S5.U3",
+                    "anchor": "section:CH.K1.S5.U3",
+                    "statement": "Chemicals and drugs and their medical materials identify substances by the practical use made of them.",
+                    "name": "Chemicals and drugs and their medical materials identify substances by the practical use made of them.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From the general heading to specific uses.",
+                      "points": [
+                        {
+                          "id": "MeSH:D",
+                          "anchor": "node:MeSH:D",
+                          "statement": "Chemicals and Drugs",
+                          "name": "Chemicals and Drugs"
+                        },
+                        {
+                          "id": "MeSH:D25",
+                          "anchor": "node:MeSH:D25",
+                          "statement": "Biomedical and Dental Materials",
+                          "name": "Biomedical and Dental Materials"
+                        },
+                        {
+                          "id": "MeSH:D26",
+                          "anchor": "node:MeSH:D26",
+                          "statement": "Pharmaceutical Preparations",
+                          "name": "Pharmaceutical Preparations"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Composition and identity"
+      },
+      {
+        "id": "CH.K2",
+        "anchor": "pillar:CH.K2",
+        "statement": "Structure and bonding is the question of how a substance is built, how its parts attract one another and what measurable properties follow.",
+        "name": "Structure and bonding is the question of how a substance is built, how its parts attract one another and what measurable properties follow.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "From extended structures to interactions to measured properties.",
+          "points": [
+            {
+              "id": "CH.K2.S1",
+              "anchor": "section:CH.K2.S1",
+              "statement": "Condensed and extended structures ask how atoms and molecules are assembled into solids, frameworks and materials.",
+              "name": "Condensed and extended structures ask how atoms and molecules are assembled into solids, frameworks and materials.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From crystalline solids to designed materials.",
+                "points": [
+                  {
+                    "id": "CH.K2.S1.U1",
+                    "anchor": "section:CH.K2.S1.U1",
+                    "statement": "Crystalline and framework solids ask how atoms are ordered in extended solid structures.",
+                    "name": "Crystalline and framework solids ask how atoms are ordered in extended solid structures.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From crystals to frameworks.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:340202",
+                          "anchor": "node:ANZSRC:340202",
+                          "statement": "Crystallography",
+                          "name": "Crystallography"
+                        },
+                        {
+                          "id": "ANZSRC:340210",
+                          "anchor": "node:ANZSRC:340210",
+                          "statement": "Solid state chemistry",
+                          "name": "Solid state chemistry"
+                        },
+                        {
+                          "id": "ANZSRC:340207",
+                          "anchor": "node:ANZSRC:340207",
+                          "statement": "Metal organic frameworks",
+                          "name": "Metal organic frameworks"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "CH.K2.S1.U2",
+                    "anchor": "section:CH.K2.S1.U2",
+                    "statement": "Macromolecular and nanoscale materials ask how larger assemblies are organised and how their internal motion behaves.",
+                    "name": "Macromolecular and nanoscale materials ask how larger assemblies are organised and how their internal motion behaves.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From general materials to nanoscale.",
+                      "points": [
+                        {
+                          "id": "CH.O.A2.G6",
+                          "anchor": "group:CH.O.A2.G6",
+                          "statement": "Fields that ask what a material or molecular assembly is made of and how its structure and internal motion are organised.",
+                          "name": "Fields that ask what a material or molecular assembly is made of and how its structure and internal motion are organised.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:340307",
+                                "anchor": "node:ANZSRC:340307",
+                                "statement": "Structure and dynamics of materials",
+                                "name": "Structure and dynamics of materials"
+                              },
+                              {
+                                "id": "ANZSRC:340308",
+                                "anchor": "node:ANZSRC:340308",
+                                "statement": "Supramolecular chemistry",
+                                "name": "Supramolecular chemistry"
+                              },
+                              {
+                                "id": "ANZSRC:340399",
+                                "anchor": "node:ANZSRC:340399",
+                                "statement": "Macromolecular and materials chemistry not elsewhere classified",
+                                "name": "Macromolecular and materials chemistry not elsewhere classified"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "ANZSRC:3403",
+                          "anchor": "node:ANZSRC:3403",
+                          "statement": "Macromolecular and materials chemistry",
+                          "name": "Macromolecular and materials chemistry",
+                          "aliases": [
+                            "ANZSRC:340302"
+                          ]
+                        },
+                        {
+                          "id": "ANZSRC:340303",
+                          "anchor": "node:ANZSRC:340303",
+                          "statement": "Nanochemistry",
+                          "name": "Nanochemistry"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "CH.K2.S2",
+              "anchor": "section:CH.K2.S2",
+              "statement": "Interactions and structural probes ask how molecules attract one another and how their arrangement is revealed.",
+              "name": "Interactions and structural probes ask how molecules attract one another and how their arrangement is revealed.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From interactions to the probes that reveal them.",
+                "points": [
+                  {
+                    "id": "CH.O.A3.G9",
+                    "anchor": "group:CH.O.A3.G9",
+                    "statement": "Intermolecular interactions and structure concern how molecules attract one another, are arranged, and are probed.",
+                    "name": "Intermolecular interactions and structure concern how molecules attract one another, are arranged, and are probed.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:G02.282",
+                          "anchor": "node:MeSH:G02.282",
+                          "statement": "Hydrogen Bonding",
+                          "name": "Hydrogen Bonding"
+                        },
+                        {
+                          "id": "MeSH:G02.409",
+                          "anchor": "node:MeSH:G02.409",
+                          "statement": "Hydrophobic and Hydrophilic Interactions",
+                          "name": "Hydrophobic and Hydrophilic Interactions"
+                        },
+                        {
+                          "id": "MeSH:G02.466",
+                          "anchor": "node:MeSH:G02.466",
+                          "statement": "Molecular Structure",
+                          "name": "Molecular Structure"
+                        },
+                        {
+                          "id": "MeSH:G02.551",
+                          "anchor": "node:MeSH:G02.551",
+                          "statement": "Neutron Diffraction",
+                          "name": "Neutron Diffraction"
+                        }
+                      ],
+                      "rank_note": "Listed in structural order from interaction to structure to probe."
+                    }
+                  },
+                  {
+                    "id": "ANZSRC:340605",
+                    "anchor": "node:ANZSRC:340605",
+                    "statement": "Molecular imaging (incl. electron microscopy and neutron diffraction)",
+                    "name": "Molecular imaging (incl. electron microscopy and neutron diffraction)"
+                  },
+                  {
+                    "id": "ANZSRC:340699",
+                    "anchor": "node:ANZSRC:340699",
+                    "statement": "Physical chemistry not elsewhere classified",
+                    "name": "Physical chemistry not elsewhere classified"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "CH.K2.S3",
+              "anchor": "section:CH.K2.S3",
+              "statement": "Measured properties and their theory ask what quantities and responses a substance displays and how they are computed.",
+              "name": "Measured properties and their theory ask what quantities and responses a substance displays and how they are computed.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From measured quantities to theoretical design.",
+                "points": [
+                  {
+                    "id": "CH.O.A3.G8",
+                    "anchor": "group:CH.O.A3.G8",
+                    "statement": "Measured properties are quantities that can be determined on a substance or solution.",
+                    "name": "Measured properties are quantities that can be determined on a substance or solution.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:G02.300",
+                          "anchor": "node:MeSH:G02.300",
+                          "statement": "Hydrogen-Ion Concentration",
+                          "name": "Hydrogen-Ion Concentration"
+                        },
+                        {
+                          "id": "MeSH:G02.494",
+                          "anchor": "node:MeSH:G02.494",
+                          "statement": "Molecular Weight",
+                          "name": "Molecular Weight"
+                        },
+                        {
+                          "id": "MeSH:G02.640",
+                          "anchor": "node:MeSH:G02.640",
+                          "statement": "Osmolar Concentration",
+                          "name": "Osmolar Concentration"
+                        },
+                        {
+                          "id": "MeSH:G02.712",
+                          "anchor": "node:MeSH:G02.712",
+                          "statement": "Particle Size",
+                          "name": "Particle Size"
+                        }
+                      ],
+                      "rank_note": "Listed in structural order of property type."
+                    }
+                  },
+                  {
+                    "id": "CH.O.A3.G20",
+                    "anchor": "group:CH.O.A3.G20",
+                    "statement": "Solubility, specific gravity, and viscosity are kinds of physical property, each defined by a different question asked of a substance.",
+                    "name": "Solubility, specific gravity, and viscosity are kinds of physical property, each defined by a different question asked of a substance.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:G02.805",
+                          "anchor": "node:MeSH:G02.805",
+                          "statement": "Solubility",
+                          "name": "Solubility"
+                        },
+                        {
+                          "id": "MeSH:G02.819",
+                          "anchor": "node:MeSH:G02.819",
+                          "statement": "Specific Gravity",
+                          "name": "Specific Gravity"
+                        },
+                        {
+                          "id": "MeSH:G02.930",
+                          "anchor": "node:MeSH:G02.930",
+                          "statement": "Viscosity",
+                          "name": "Viscosity"
+                        }
+                      ],
+                      "rank_note": "Parallel kinds of physical property, listed in MeSH order with no ranking among them."
+                    }
+                  },
+                  {
+                    "id": "CH.O.A2.G3",
+                    "anchor": "group:CH.O.A2.G3",
+                    "statement": "Fields that ask how a substance interacts with light and what measurable properties it displays.",
+                    "name": "Fields that ask how a substance interacts with light and what measurable properties it displays.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:340304",
+                          "anchor": "node:ANZSRC:340304",
+                          "statement": "Optical properties of materials",
+                          "name": "Optical properties of materials"
+                        },
+                        {
+                          "id": "ANZSRC:340305",
+                          "anchor": "node:ANZSRC:340305",
+                          "statement": "Physical properties of materials",
+                          "name": "Physical properties of materials"
+                        },
+                        {
+                          "id": "ANZSRC:340201",
+                          "anchor": "node:ANZSRC:340201",
+                          "statement": "Bioinorganic chemistry",
+                          "name": "Bioinorganic chemistry"
+                        },
+                        {
+                          "id": "ANZSRC:340204",
+                          "anchor": "node:ANZSRC:340204",
+                          "statement": "Inorganic green chemistry",
+                          "name": "Inorganic green chemistry"
+                        },
+                        {
+                          "id": "ANZSRC:340301",
+                          "anchor": "node:ANZSRC:340301",
+                          "statement": "Inorganic materials (incl. nanomaterials)",
+                          "name": "Inorganic materials (incl. nanomaterials)"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure, from optical to general physical properties."
+                    }
+                  },
+                  {
+                    "id": "CH.O.A2.G7",
+                    "anchor": "group:CH.O.A2.G7",
+                    "statement": "Fields that ask how a material can be conceived and designed in theory to achieve desired properties, and how it behaves in aggregate.",
+                    "name": "Fields that ask how a material can be conceived and designed in theory to achieve desired properties, and how it behaves in aggregate.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:340309",
+                          "anchor": "node:ANZSRC:340309",
+                          "statement": "Theory and design of materials",
+                          "name": "Theory and design of materials"
+                        },
+                        {
+                          "id": "ANZSRC:3407",
+                          "anchor": "node:ANZSRC:3407",
+                          "statement": "Theoretical and computational chemistry",
+                          "name": "Theoretical and computational chemistry"
+                        },
+                        {
+                          "id": "ANZSRC:340703",
+                          "anchor": "node:ANZSRC:340703",
+                          "statement": "Statistical mechanics in chemistry",
+                          "name": "Statistical mechanics in chemistry"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "CH.O.A2.G8",
+                    "anchor": "group:CH.O.A2.G8",
+                    "statement": "Fields that ask how a substance behaves under computation, quantum theory and its interaction with radiation.",
+                    "name": "Fields that ask how a substance behaves under computation, quantum theory and its interaction with radiation.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:340701",
+                          "anchor": "node:ANZSRC:340701",
+                          "statement": "Computational chemistry",
+                          "name": "Computational chemistry"
+                        },
+                        {
+                          "id": "ANZSRC:340702",
+                          "anchor": "node:ANZSRC:340702",
+                          "statement": "Radiation and matter",
+                          "name": "Radiation and matter"
+                        },
+                        {
+                          "id": "ANZSRC:340704",
+                          "anchor": "node:ANZSRC:340704",
+                          "statement": "Theoretical quantum chemistry",
+                          "name": "Theoretical quantum chemistry"
+                        },
+                        {
+                          "id": "ANZSRC:340799",
+                          "anchor": "node:ANZSRC:340799",
+                          "statement": "Theoretical and computational chemistry not elsewhere classified",
+                          "name": "Theoretical and computational chemistry not elsewhere classified"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Structure and bonding"
+      },
+      {
+        "id": "CH.K3",
+        "anchor": "pillar:CH.K3",
+        "statement": "Equilibrium and energy is the question of how a substance settles into states, exchanges matter and energy and moves between phases.",
+        "name": "Equilibrium and energy is the question of how a substance settles into states, exchanges matter and energy and moves between phases.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "From energetics to states and phases to transfer across boundaries.",
+          "points": [
+            {
+              "id": "CH.K3.S1",
+              "anchor": "section:CH.K3.S1",
+              "statement": "Energetics and solution states ask how energy, charge and solvent govern a substance at equilibrium.",
+              "name": "Energetics and solution states ask how energy, charge and solvent govern a substance at equilibrium.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From thermodynamics to solutions to stored energy.",
+                "points": [
+                  {
+                    "id": "ANZSRC:340602",
+                    "anchor": "node:ANZSRC:340602",
+                    "statement": "Chemical thermodynamics and energetics",
+                    "name": "Chemical thermodynamics and energetics"
+                  },
+                  {
+                    "id": "ANZSRC:340604",
+                    "anchor": "node:ANZSRC:340604",
+                    "statement": "Electrochemistry",
+                    "name": "Electrochemistry"
+                  },
+                  {
+                    "id": "ANZSRC:340608",
+                    "anchor": "node:ANZSRC:340608",
+                    "statement": "Solution chemistry",
+                    "name": "Solution chemistry"
+                  },
+                  {
+                    "id": "ANZSRC:340609",
+                    "anchor": "node:ANZSRC:340609",
+                    "statement": "Transport properties and non-equilibrium processes",
+                    "name": "Transport properties and non-equilibrium processes"
+                  },
+                  {
+                    "id": "CH.O.A3.G12",
+                    "anchor": "group:CH.O.A3.G12",
+                    "statement": "Energy and structure probes ask how a substance stores energy, ignites, presents its surface, or reveals its atomic arrangement.",
+                    "name": "Energy and structure probes ask how a substance stores energy, ignites, presents its surface, or reveals its atomic arrangement.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -324,329 +866,47 @@
                       "order": "degree",
                       "points": [
                         {
-                          "id": "ANZSRC:340403",
-                          "anchor": "node:ANZSRC:340403",
-                          "statement": "Characterisation of biological macromolecules",
-                          "name": "Characterisation of biological macromolecules"
+                          "id": "MeSH:G02.965",
+                          "anchor": "node:MeSH:G02.965",
+                          "statement": "X-Ray Diffraction",
+                          "name": "X-Ray Diffraction"
                         },
                         {
-                          "id": "ANZSRC:340405",
-                          "anchor": "node:ANZSRC:340405",
-                          "statement": "Glycoconjugates",
-                          "name": "Glycoconjugates"
+                          "id": "MeSH:G02.860",
+                          "anchor": "node:MeSH:G02.860",
+                          "statement": "Surface Properties",
+                          "name": "Surface Properties"
+                        },
+                        {
+                          "id": "MeSH:G02.765",
+                          "anchor": "node:MeSH:G02.765",
+                          "statement": "Proton-Motive Force",
+                          "name": "Proton-Motive Force"
+                        },
+                        {
+                          "id": "MeSH:G02.833",
+                          "anchor": "node:MeSH:G02.833",
+                          "statement": "Spontaneous Combustion",
+                          "name": "Spontaneous Combustion"
                         }
                       ],
-                      "rank_note": "Ranked from the broadest question (characterising biological macromolecules in general) to the narrower one (glycoconjugates, a specific class of macromolecule)."
-                    }
-                  },
-                  {
-                    "id": "CH.O.A5.G7",
-                    "anchor": "group:CH.O.A5.G7",
-                    "statement": "Identity-focused and framing concepts ask what an organic substance is and what it is used for, covering the whole field, natural bioactive compounds, uncategorised topics and applications.",
-                    "name": "Identity-focused and framing concepts ask what an organic substance is and what it is used for, covering the whole field, natural bioactive compounds, uncategorised topics and applications.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3405",
-                          "anchor": "node:ANZSRC:3405",
-                          "statement": "Organic chemistry",
-                          "name": "Organic chemistry"
-                        },
-                        {
-                          "id": "ANZSRC:340502",
-                          "anchor": "node:ANZSRC:340502",
-                          "statement": "Natural products and bioactive compounds",
-                          "name": "Natural products and bioactive compounds"
-                        },
-                        {
-                          "id": "ANZSRC:340599",
-                          "anchor": "node:ANZSRC:340599",
-                          "statement": "Organic chemistry not elsewhere classified",
-                          "name": "Organic chemistry not elsewhere classified"
-                        },
-                        {
-                          "id": "ChEBI:CHEBI:33232",
-                          "anchor": "node:ChEBI:CHEBI:33232",
-                          "statement": "application",
-                          "name": "application"
-                        }
-                      ],
-                      "rank_note": "Kinds of identity and use-focused inquiry; ordered by structure, with no ranking."
+                      "rank_note": "Ranked from the most direct structural measurement (X-ray diffraction) to surface behavior to energetic phenomena."
                     }
                   }
                 ]
               }
-            }
-          ]
-        }
-      },
-      {
-        "id": "CH.K2",
-        "anchor": "pillar:CH.K2",
-        "title": "Structure and bonding",
-        "statement": "Structure and bonding is the question of how the atoms of a substance are arranged and held together, and how that arrangement shapes its response to light and theory.",
-        "name": "Structure and bonding is the question of how the atoms of a substance are arranged and held together, and how that arrangement shapes its response to light and theory.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "kinds",
-          "order": "structure",
-          "rank_note": "From arrangement and internal motion to the properties and models that follow from it.",
-          "points": [
-            {
-              "id": "CH.O.A2.G2",
-              "anchor": "group:CH.O.A2.G2",
-              "statement": "Fields that ask how the atoms of a substance are arranged and bonded into ordered architectures such as lattices, clusters and frameworks.",
-              "name": "Fields that ask how the atoms of a substance are arranged and bonded into ordered architectures such as lattices, clusters and frameworks.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:340202",
-                    "anchor": "node:ANZSRC:340202",
-                    "statement": "Crystallography",
-                    "name": "Crystallography"
-                  },
-                  {
-                    "id": "ANZSRC:340206",
-                    "anchor": "node:ANZSRC:340206",
-                    "statement": "Metal cluster chemistry",
-                    "name": "Metal cluster chemistry"
-                  },
-                  {
-                    "id": "ANZSRC:340207",
-                    "anchor": "node:ANZSRC:340207",
-                    "statement": "Metal organic frameworks",
-                    "name": "Metal organic frameworks"
-                  },
-                  {
-                    "id": "ANZSRC:340210",
-                    "anchor": "node:ANZSRC:340210",
-                    "statement": "Solid state chemistry",
-                    "name": "Solid state chemistry"
-                  }
-                ],
-                "rank_note": "Ordered by structure, from atomic arrangement to larger assembled frameworks."
-              }
             },
             {
-              "id": "CH.O.A2.G6",
-              "anchor": "group:CH.O.A2.G6",
-              "statement": "Fields that ask what a material or molecular assembly is made of and how its structure and internal motion are organised.",
-              "name": "Fields that ask what a material or molecular assembly is made of and how its structure and internal motion are organised.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:340307",
-                    "anchor": "node:ANZSRC:340307",
-                    "statement": "Structure and dynamics of materials",
-                    "name": "Structure and dynamics of materials"
-                  },
-                  {
-                    "id": "ANZSRC:340308",
-                    "anchor": "node:ANZSRC:340308",
-                    "statement": "Supramolecular chemistry",
-                    "name": "Supramolecular chemistry"
-                  },
-                  {
-                    "id": "ANZSRC:340399",
-                    "anchor": "node:ANZSRC:340399",
-                    "statement": "Macromolecular and materials chemistry not elsewhere classified",
-                    "name": "Macromolecular and materials chemistry not elsewhere classified"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "CH.O.A2.G3",
-              "anchor": "group:CH.O.A2.G3",
-              "statement": "Fields that ask how a substance interacts with light and what measurable properties it displays.",
-              "name": "Fields that ask how a substance interacts with light and what measurable properties it displays.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:340304",
-                    "anchor": "node:ANZSRC:340304",
-                    "statement": "Optical properties of materials",
-                    "name": "Optical properties of materials"
-                  },
-                  {
-                    "id": "ANZSRC:340305",
-                    "anchor": "node:ANZSRC:340305",
-                    "statement": "Physical properties of materials",
-                    "name": "Physical properties of materials"
-                  },
-                  {
-                    "id": "ANZSRC:340201",
-                    "anchor": "node:ANZSRC:340201",
-                    "statement": "Bioinorganic chemistry",
-                    "name": "Bioinorganic chemistry"
-                  },
-                  {
-                    "id": "ANZSRC:340204",
-                    "anchor": "node:ANZSRC:340204",
-                    "statement": "Inorganic green chemistry",
-                    "name": "Inorganic green chemistry"
-                  },
-                  {
-                    "id": "ANZSRC:340301",
-                    "anchor": "node:ANZSRC:340301",
-                    "statement": "Inorganic materials (incl. nanomaterials)",
-                    "name": "Inorganic materials (incl. nanomaterials)"
-                  }
-                ],
-                "rank_note": "Ordered by structure, from optical to general physical properties."
-              }
-            },
-            {
-              "id": "CH.O.A2.G7",
-              "anchor": "group:CH.O.A2.G7",
-              "statement": "Fields that ask how a material can be conceived and designed in theory to achieve desired properties, and how it behaves in aggregate.",
-              "name": "Fields that ask how a material can be conceived and designed in theory to achieve desired properties, and how it behaves in aggregate.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:340309",
-                    "anchor": "node:ANZSRC:340309",
-                    "statement": "Theory and design of materials",
-                    "name": "Theory and design of materials"
-                  },
-                  {
-                    "id": "ANZSRC:3407",
-                    "anchor": "node:ANZSRC:3407",
-                    "statement": "Theoretical and computational chemistry",
-                    "name": "Theoretical and computational chemistry"
-                  },
-                  {
-                    "id": "ANZSRC:340703",
-                    "anchor": "node:ANZSRC:340703",
-                    "statement": "Statistical mechanics in chemistry",
-                    "name": "Statistical mechanics in chemistry"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "CH.O.A2.G8",
-              "anchor": "group:CH.O.A2.G8",
-              "statement": "Fields that ask how a substance behaves under computation, quantum theory and its interaction with radiation.",
-              "name": "Fields that ask how a substance behaves under computation, quantum theory and its interaction with radiation.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:340701",
-                    "anchor": "node:ANZSRC:340701",
-                    "statement": "Computational chemistry",
-                    "name": "Computational chemistry"
-                  },
-                  {
-                    "id": "ANZSRC:340702",
-                    "anchor": "node:ANZSRC:340702",
-                    "statement": "Radiation and matter",
-                    "name": "Radiation and matter"
-                  },
-                  {
-                    "id": "ANZSRC:340704",
-                    "anchor": "node:ANZSRC:340704",
-                    "statement": "Theoretical quantum chemistry",
-                    "name": "Theoretical quantum chemistry"
-                  },
-                  {
-                    "id": "ANZSRC:340799",
-                    "anchor": "node:ANZSRC:340799",
-                    "statement": "Theoretical and computational chemistry not elsewhere classified",
-                    "name": "Theoretical and computational chemistry not elsewhere classified"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "CH.K3",
-        "anchor": "pillar:CH.K3",
-        "title": "Equilibrium and energy",
-        "statement": "Equilibrium and energy is the question of how a substance exchanges energy, charge and matter and settles between states, phases and surroundings.",
-        "name": "Equilibrium and energy is the question of how a substance exchanges energy, charge and matter and settles between states, phases and surroundings.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "kinds",
-          "order": "structure",
-          "rank_note": "From internal energy and state change to exchange with surfaces and across boundaries.",
-          "points": [
-            {
-              "id": "CH.K3.S1",
-              "anchor": "section:CH.K3.S1",
-              "statement": "Energy, charge, solid formation and changes of state concern how a substance stores energy and settles into a different condition.",
-              "name": "Energy, charge, solid formation and changes of state concern how a substance stores energy and settles into a different condition.",
+              "id": "CH.K3.S2",
+              "anchor": "section:CH.K3.S2",
+              "statement": "Phase and state changes ask how a substance separates, converts or deteriorates into another condition.",
+              "name": "Phase and state changes ask how a substance separates, converts or deteriorates into another condition.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From energy and charge to phase and form change.",
+                "rank_note": "From solid formation to other changes of state to degradation.",
                 "points": [
-                  {
-                    "id": "CH.O.A3.G2",
-                    "anchor": "group:CH.O.A3.G2",
-                    "statement": "Questions about energy and charge ask how a substance stores, exchanges and transports energy, charge or matter in solution and away from equilibrium.",
-                    "name": "Questions about energy and charge ask how a substance stores, exchanges and transports energy, charge or matter in solution and away from equilibrium.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:340602",
-                          "anchor": "node:ANZSRC:340602",
-                          "statement": "Chemical thermodynamics and energetics",
-                          "name": "Chemical thermodynamics and energetics"
-                        },
-                        {
-                          "id": "ANZSRC:340604",
-                          "anchor": "node:ANZSRC:340604",
-                          "statement": "Electrochemistry",
-                          "name": "Electrochemistry"
-                        },
-                        {
-                          "id": "ANZSRC:340608",
-                          "anchor": "node:ANZSRC:340608",
-                          "statement": "Solution chemistry",
-                          "name": "Solution chemistry"
-                        },
-                        {
-                          "id": "ANZSRC:340609",
-                          "anchor": "node:ANZSRC:340609",
-                          "statement": "Transport properties and non-equilibrium processes",
-                          "name": "Transport properties and non-equilibrium processes"
-                        }
-                      ],
-                      "rank_note": "Kinds of energy and transport questions arranged by structure: energetics, electrical behaviour, solution medium, and transport processes."
-                    }
-                  },
                   {
                     "id": "CH.O.A3.G16",
                     "anchor": "group:CH.O.A3.G16",
@@ -672,33 +932,6 @@
                         }
                       ],
                       "rank_note": "Ordered by structure: ordered solid growth first, then general solid separation."
-                    }
-                  },
-                  {
-                    "id": "CH.O.A3.G17",
-                    "anchor": "group:CH.O.A3.G17",
-                    "statement": "Material behavior concepts describe how a substance's properties vary with direction or how it deteriorates through reaction with its environment.",
-                    "name": "Material behavior concepts describe how a substance's properties vary with direction or how it deteriorates through reaction with its environment.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:G02.165",
-                          "anchor": "node:MeSH:G02.165",
-                          "statement": "Corrosion",
-                          "name": "Corrosion"
-                        },
-                        {
-                          "id": "MeSH:G02.050",
-                          "anchor": "node:MeSH:G02.050",
-                          "statement": "Anisotropy",
-                          "name": "Anisotropy"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure: an intrinsic property first, then a degradation process."
                     }
                   },
                   {
@@ -739,20 +972,47 @@
                       ],
                       "rank_note": "Listed in structural order of change type."
                     }
+                  },
+                  {
+                    "id": "CH.O.A3.G17",
+                    "anchor": "group:CH.O.A3.G17",
+                    "statement": "Material behavior concepts describe how a substance's properties vary with direction or how it deteriorates through reaction with its environment.",
+                    "name": "Material behavior concepts describe how a substance's properties vary with direction or how it deteriorates through reaction with its environment.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:G02.165",
+                          "anchor": "node:MeSH:G02.165",
+                          "statement": "Corrosion",
+                          "name": "Corrosion"
+                        },
+                        {
+                          "id": "MeSH:G02.050",
+                          "anchor": "node:MeSH:G02.050",
+                          "statement": "Anisotropy",
+                          "name": "Anisotropy"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure: an intrinsic property first, then a degradation process."
+                    }
                   }
                 ]
               }
             },
             {
-              "id": "CH.K3.S2",
-              "anchor": "section:CH.K3.S2",
-              "statement": "Interfaces, barriers, gradients, release and intermolecular forces concern how a substance exchanges matter and energy with its surroundings.",
-              "name": "Interfaces, barriers, gradients, release and intermolecular forces concern how a substance exchanges matter and energy with its surroundings.",
+              "id": "CH.K3.S3",
+              "anchor": "section:CH.K3.S3",
+              "statement": "Interfaces, barriers and gradients ask how a substance crosses, exchanges across or is held at a boundary.",
+              "name": "Interfaces, barriers and gradients ask how a substance crosses, exchanges across or is held at a boundary.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From surfaces and barriers to gradients, release and molecular attraction.",
+                "rank_note": "From surfaces to barriers to gradient-driven and general movement.",
                 "points": [
                   {
                     "id": "CH.O.A3.G3",
@@ -885,74 +1145,35 @@
                       ],
                       "rank_note": "Listed in structural order of movement type."
                     }
-                  },
-                  {
-                    "id": "CH.O.A3.G9",
-                    "anchor": "group:CH.O.A3.G9",
-                    "statement": "Intermolecular interactions and structure concern how molecules attract one another, are arranged, and are probed.",
-                    "name": "Intermolecular interactions and structure concern how molecules attract one another, are arranged, and are probed.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:G02.282",
-                          "anchor": "node:MeSH:G02.282",
-                          "statement": "Hydrogen Bonding",
-                          "name": "Hydrogen Bonding"
-                        },
-                        {
-                          "id": "MeSH:G02.409",
-                          "anchor": "node:MeSH:G02.409",
-                          "statement": "Hydrophobic and Hydrophilic Interactions",
-                          "name": "Hydrophobic and Hydrophilic Interactions"
-                        },
-                        {
-                          "id": "MeSH:G02.466",
-                          "anchor": "node:MeSH:G02.466",
-                          "statement": "Molecular Structure",
-                          "name": "Molecular Structure"
-                        },
-                        {
-                          "id": "MeSH:G02.551",
-                          "anchor": "node:MeSH:G02.551",
-                          "statement": "Neutron Diffraction",
-                          "name": "Neutron Diffraction"
-                        }
-                      ],
-                      "rank_note": "Listed in structural order from interaction to structure to probe."
-                    }
                   }
                 ]
               }
             }
           ]
-        }
+        },
+        "title": "Equilibrium and energy"
       },
       {
         "id": "CH.K4",
         "anchor": "pillar:CH.K4",
-        "title": "Rates and mechanisms",
-        "statement": "Rates and mechanisms is the question of how and how fast a substance reacts and is transformed, and by what pathway and driving agent.",
-        "name": "Rates and mechanisms is the question of how and how fast a substance reacts and is transformed, and by what pathway and driving agent.",
+        "statement": "Rates and mechanisms is the question of how fast a substance changes and by what steps its bonds are rearranged.",
+        "name": "Rates and mechanisms is the question of how fast a substance changes and by what steps its bonds are rearranged.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "structure",
-          "rank_note": "From general reaction pathways to driving agents, bond rearrangements and organic processes.",
+          "rank_note": "From general kinetics and catalysis to specific kinds of reaction.",
           "points": [
             {
-              "id": "CH.O.A3.G1",
-              "anchor": "group:CH.O.A3.G1",
-              "statement": "Questions about how a substance reacts ask by what pathway, how fast, and under what catalytic or light-driven influence a chemical change occurs.",
-              "name": "Questions about how a substance reacts ask by what pathway, how fast, and under what catalytic or light-driven influence a chemical change occurs.",
+              "id": "CH.K4.S1",
+              "anchor": "section:CH.K4.S1",
+              "statement": "Kinetics and catalysis ask how fast and by what route a reaction proceeds.",
+              "name": "Kinetics and catalysis ask how fast and by what route a reaction proceeds.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
+                "rank_note": "From kinetics to catalysis.",
                 "points": [
                   {
                     "id": "ANZSRC:340601",
@@ -967,192 +1188,106 @@
                     "name": "Reaction kinetics and dynamics"
                   },
                   {
-                    "id": "ANZSRC:340606",
-                    "anchor": "node:ANZSRC:340606",
-                    "statement": "Photochemistry",
-                    "name": "Photochemistry"
-                  },
-                  {
-                    "id": "MeSH:G02.111",
-                    "anchor": "node:MeSH:G02.111",
-                    "statement": "Biochemical Phenomena",
-                    "name": "Biochemical Phenomena"
-                  }
-                ],
-                "rank_note": "Kinds of reaction questions arranged by structure: mechanism and catalysis, rate and dynamics, light-driven change, and the broad biochemical setting."
-              }
-            },
-            {
-              "id": "CH.O.A4.G2",
-              "anchor": "group:CH.O.A4.G2",
-              "statement": "Reaction-driving processes are ways a substance is made to react by an added agent such as a catalyst, water, light, or heat.",
-              "name": "Reaction-driving processes are ways a substance is made to react by an added agent such as a catalyst, water, light, or heat.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
                     "id": "MeSH:G02.130",
                     "anchor": "node:MeSH:G02.130",
                     "statement": "Catalysis",
                     "name": "Catalysis"
-                  },
-                  {
-                    "id": "MeSH:G02.380",
-                    "anchor": "node:MeSH:G02.380",
-                    "statement": "Hydrolysis",
-                    "name": "Hydrolysis"
-                  },
-                  {
-                    "id": "MeSH:G02.740",
-                    "anchor": "node:MeSH:G02.740",
-                    "statement": "Photochemical Processes",
-                    "name": "Photochemical Processes"
-                  },
-                  {
-                    "id": "MeSH:G02.785",
-                    "anchor": "node:MeSH:G02.785",
-                    "statement": "Pyrolysis",
-                    "name": "Pyrolysis"
                   }
-                ],
-                "rank_note": "Ordered by the type of agent that drives the reaction."
+                ]
               }
             },
             {
-              "id": "CH.O.A4.G3",
-              "anchor": "group:CH.O.A4.G3",
-              "statement": "Transformation phenomena are changes in which a substance's own bonds or molecular structure are rearranged, as in organic chemistry, redox, and polymerization.",
-              "name": "Transformation phenomena are changes in which a substance's own bonds or molecular structure are rearranged, as in organic chemistry, redox, and polymerization.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "MeSH:G02.607",
-                    "anchor": "node:MeSH:G02.607",
-                    "statement": "Organic Chemistry Phenomena",
-                    "name": "Organic Chemistry Phenomena"
-                  },
-                  {
-                    "id": "MeSH:G02.700",
-                    "anchor": "node:MeSH:G02.700",
-                    "statement": "Oxidation-Reduction",
-                    "name": "Oxidation-Reduction"
-                  },
-                  {
-                    "id": "MeSH:G02.750",
-                    "anchor": "node:MeSH:G02.750",
-                    "statement": "Polymerization",
-                    "name": "Polymerization"
-                  }
-                ],
-                "rank_note": "Ordered by the kind of structural change to the substance."
-              }
-            },
-            {
-              "id": "CH.O.A5.G6",
-              "anchor": "group:CH.O.A5.G6",
-              "statement": "Process-focused subfields ask how organic substances react and are made, studying mechanisms, radical intermediates, deliberate synthesis and environmentally benign routes.",
-              "name": "Process-focused subfields ask how organic substances react and are made, studying mechanisms, radical intermediates, deliberate synthesis and environmentally benign routes.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:340501",
-                    "anchor": "node:ANZSRC:340501",
-                    "statement": "Free radical chemistry",
-                    "name": "Free radical chemistry"
-                  },
-                  {
-                    "id": "ANZSRC:340503",
-                    "anchor": "node:ANZSRC:340503",
-                    "statement": "Organic chemical synthesis",
-                    "name": "Organic chemical synthesis"
-                  },
-                  {
-                    "id": "ANZSRC:340504",
-                    "anchor": "node:ANZSRC:340504",
-                    "statement": "Organic green chemistry",
-                    "name": "Organic green chemistry"
-                  },
-                  {
-                    "id": "ANZSRC:340505",
-                    "anchor": "node:ANZSRC:340505",
-                    "statement": "Physical organic chemistry",
-                    "name": "Physical organic chemistry"
-                  }
-                ],
-                "rank_note": "Kinds of process-focused inquiry; ordered by structure, with no ranking."
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "CH.K5",
-        "anchor": "pillar:CH.K5",
-        "title": "Synthesis and analysis",
-        "statement": "Synthesis and analysis is the question of how a substance is made and how it is found, measured and characterised.",
-        "name": "Synthesis and analysis is the question of how a substance is made and how it is found, measured and characterised.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "kinds",
-          "order": "structure",
-          "rank_note": "From making and identifying a substance to measuring its properties.",
-          "points": [
-            {
-              "id": "CH.K5.S1",
-              "anchor": "section:CH.K5.S1",
-              "statement": "Assembly, analytical methods and forensic chemistry show how a substance is built and identified.",
-              "name": "Assembly, analytical methods and forensic chemistry show how a substance is built and identified.",
+              "id": "CH.K4.S2",
+              "anchor": "section:CH.K4.S2",
+              "statement": "Specific reaction types ask how particular driving conditions or bond changes transform a substance.",
+              "name": "Specific reaction types ask how particular driving conditions or bond changes transform a substance.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From assembly to identification methods and forensic use.",
+                "rank_note": "From light and heat driven to bond-rearranging reactions.",
                 "points": [
                   {
-                    "id": "CH.O.A2.G4",
-                    "anchor": "group:CH.O.A2.G4",
-                    "statement": "Fields that ask how a substance is assembled or formed, through polymerisation, nanoscale synthesis or metal-carbon bonding.",
-                    "name": "Fields that ask how a substance is assembled or formed, through polymerisation, nanoscale synthesis or metal-carbon bonding.",
+                    "id": "CH.K4.S2.U1",
+                    "anchor": "section:CH.K4.S2.U1",
+                    "statement": "Light, heat and water driven reactions transform a substance by an external driving condition.",
+                    "name": "Light, heat and water driven reactions transform a substance by an external driving condition.",
                     "support": {
                       "logic_type": "inductive",
-                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "structure",
+                      "rank_note": "From light to heat to water.",
                       "points": [
                         {
-                          "id": "ANZSRC:3403",
-                          "anchor": "node:ANZSRC:3403",
-                          "statement": "Macromolecular and materials chemistry",
-                          "name": "Macromolecular and materials chemistry"
+                          "id": "ANZSRC:340606",
+                          "anchor": "node:ANZSRC:340606",
+                          "statement": "Photochemistry",
+                          "name": "Photochemistry"
                         },
                         {
-                          "id": "ANZSRC:340209",
-                          "anchor": "node:ANZSRC:340209",
-                          "statement": "Organometallic chemistry",
-                          "name": "Organometallic chemistry"
+                          "id": "MeSH:G02.740",
+                          "anchor": "node:MeSH:G02.740",
+                          "statement": "Photochemical Processes",
+                          "name": "Photochemical Processes"
                         },
                         {
-                          "id": "ANZSRC:340302",
-                          "anchor": "node:ANZSRC:340302",
-                          "statement": "Macromolecular materials",
-                          "name": "Macromolecular materials"
+                          "id": "MeSH:G02.785",
+                          "anchor": "node:MeSH:G02.785",
+                          "statement": "Pyrolysis",
+                          "name": "Pyrolysis"
                         },
                         {
-                          "id": "ANZSRC:340303",
-                          "anchor": "node:ANZSRC:340303",
-                          "statement": "Nanochemistry",
-                          "name": "Nanochemistry"
+                          "id": "MeSH:G02.380",
+                          "anchor": "node:MeSH:G02.380",
+                          "statement": "Hydrolysis",
+                          "name": "Hydrolysis"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "CH.K4.S2.U2",
+                    "anchor": "section:CH.K4.S2.U2",
+                    "statement": "Bond-rearranging reactions transform a substance by changing its own bonds or molecular structure.",
+                    "name": "Bond-rearranging reactions transform a substance by changing its own bonds or molecular structure.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From general transformation to polymerisation.",
+                      "points": [
+                        {
+                          "id": "CH.O.A4.G3",
+                          "anchor": "group:CH.O.A4.G3",
+                          "statement": "Transformation phenomena are changes in which a substance's own bonds or molecular structure are rearranged, as in organic chemistry, redox, and polymerization.",
+                          "name": "Transformation phenomena are changes in which a substance's own bonds or molecular structure are rearranged, as in organic chemistry, redox, and polymerization.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "MeSH:G02.607",
+                                "anchor": "node:MeSH:G02.607",
+                                "statement": "Organic Chemistry Phenomena",
+                                "name": "Organic Chemistry Phenomena"
+                              },
+                              {
+                                "id": "MeSH:G02.700",
+                                "anchor": "node:MeSH:G02.700",
+                                "statement": "Oxidation-Reduction",
+                                "name": "Oxidation-Reduction"
+                              },
+                              {
+                                "id": "MeSH:G02.750",
+                                "anchor": "node:MeSH:G02.750",
+                                "statement": "Polymerization",
+                                "name": "Polymerization"
+                              }
+                            ],
+                            "rank_note": "Ordered by the kind of structural change to the substance."
+                          }
                         },
                         {
                           "id": "ANZSRC:340306",
@@ -1160,15 +1295,70 @@
                           "statement": "Polymerisation mechanisms",
                           "name": "Polymerisation mechanisms"
                         }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Rates and mechanisms"
+      },
+      {
+        "id": "CH.K5",
+        "anchor": "pillar:CH.K5",
+        "statement": "Synthesis and analysis is the question of how a substance is made, isolated, detected and measured.",
+        "name": "Synthesis and analysis is the question of how a substance is made, isolated, detected and measured.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "From making substances to finding and measuring them.",
+          "points": [
+            {
+              "id": "CH.K5.S1",
+              "anchor": "section:CH.K5.S1",
+              "statement": "Synthetic and organic approaches ask how substances are built and what they are used for.",
+              "name": "Synthetic and organic approaches ask how substances are built and what they are used for.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From biological substances to organic reactions to identity and use.",
+                "points": [
+                  {
+                    "id": "CH.O.A5.G10",
+                    "anchor": "group:CH.O.A5.G10",
+                    "statement": "Each concept is a kind of question asked of a biological substance, from the general characterisation of macromolecules to the specific study of sugar-bearing conjugates.",
+                    "name": "Each concept is a kind of question asked of a biological substance, from the general characterisation of macromolecules to the specific study of sugar-bearing conjugates.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "degree",
+                      "points": [
+                        {
+                          "id": "ANZSRC:340403",
+                          "anchor": "node:ANZSRC:340403",
+                          "statement": "Characterisation of biological macromolecules",
+                          "name": "Characterisation of biological macromolecules"
+                        },
+                        {
+                          "id": "ANZSRC:340405",
+                          "anchor": "node:ANZSRC:340405",
+                          "statement": "Glycoconjugates",
+                          "name": "Glycoconjugates"
+                        }
                       ],
-                      "rank_note": "Ordered by structure, from molecular bond formation to scaled materials."
+                      "rank_note": "Ranked from the broadest question (characterising biological macromolecules in general) to the narrower one (glycoconjugates, a specific class of macromolecule)."
                     }
                   },
                   {
-                    "id": "CH.O.A5.G8",
-                    "anchor": "group:CH.O.A5.G8",
-                    "statement": "Analytical and characterising approaches ask what a substance is, how much and where it occurs, what it does biologically, and what shape a biomolecule has.",
-                    "name": "Analytical and characterising approaches ask what a substance is, how much and where it occurs, what it does biologically, and what shape a biomolecule has.",
+                    "id": "CH.O.A5.G6",
+                    "anchor": "group:CH.O.A5.G6",
+                    "statement": "Process-focused subfields ask how organic substances react and are made, studying mechanisms, radical intermediates, deliberate synthesis and environmentally benign routes.",
+                    "name": "Process-focused subfields ask how organic substances react and are made, studying mechanisms, radical intermediates, deliberate synthesis and environmentally benign routes.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -1176,185 +1366,112 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "CH.O.A5.G1",
-                          "anchor": "group:CH.O.A5.G1",
-                          "statement": "Spectrometric, electrochemical and general instrumental methods answer what a substance is and how much of it is present by measuring its physical response.",
-                          "name": "Spectrometric, electrochemical and general instrumental methods answer what a substance is and how much of it is present by measuring its physical response.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:3401",
-                                "anchor": "node:ANZSRC:3401",
-                                "statement": "Analytical chemistry",
-                                "name": "Analytical chemistry"
-                              },
-                              {
-                                "id": "ANZSRC:340101",
-                                "anchor": "node:ANZSRC:340101",
-                                "statement": "Analytical spectrometry",
-                                "name": "Analytical spectrometry"
-                              },
-                              {
-                                "id": "ANZSRC:340103",
-                                "anchor": "node:ANZSRC:340103",
-                                "statement": "Electroanalytical chemistry",
-                                "name": "Electroanalytical chemistry"
-                              },
-                              {
-                                "id": "ANZSRC:340105",
-                                "anchor": "node:ANZSRC:340105",
-                                "statement": "Instrumental methods (excl. immunological and bioassay methods)",
-                                "name": "Instrumental methods (excl. immunological and bioassay methods)"
-                              },
-                              {
-                                "id": "ANZSRC:340199",
-                                "anchor": "node:ANZSRC:340199",
-                                "statement": "Analytical chemistry not elsewhere classified",
-                                "name": "Analytical chemistry not elsewhere classified"
-                              }
-                            ],
-                            "rank_note": "Ordered by structure, from the umbrella field to specific instrumental techniques."
-                          }
+                          "id": "ANZSRC:340501",
+                          "anchor": "node:ANZSRC:340501",
+                          "statement": "Free radical chemistry",
+                          "name": "Free radical chemistry"
                         },
                         {
-                          "id": "CH.O.A5.G2",
-                          "anchor": "group:CH.O.A5.G2",
-                          "statement": "Separation, flow and sensing approaches answer what a substance is mixed with and where it is, by isolating components or detecting them continuously.",
-                          "name": "Separation, flow and sensing approaches answer what a substance is mixed with and where it is, by isolating components or detecting them continuously.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:340109",
-                                "anchor": "node:ANZSRC:340109",
-                                "statement": "Separation science",
-                                "name": "Separation science"
-                              },
-                              {
-                                "id": "ANZSRC:340104",
-                                "anchor": "node:ANZSRC:340104",
-                                "statement": "Flow analysis",
-                                "name": "Flow analysis"
-                              },
-                              {
-                                "id": "ANZSRC:340108",
-                                "anchor": "node:ANZSRC:340108",
-                                "statement": "Sensor technology (incl. chemical aspects)",
-                                "name": "Sensor technology (incl. chemical aspects)"
-                              },
-                              {
-                                "id": "ANZSRC:340107",
-                                "anchor": "node:ANZSRC:340107",
-                                "statement": "Quality assurance, chemometrics, traceability and metrological chemistry",
-                                "name": "Quality assurance, chemometrics, traceability and metrological chemistry"
-                              }
-                            ],
-                            "rank_note": "Ordered by structure, from separating components to moving samples to detecting them."
-                          }
+                          "id": "ANZSRC:340503",
+                          "anchor": "node:ANZSRC:340503",
+                          "statement": "Organic chemical synthesis",
+                          "name": "Organic chemical synthesis"
                         },
                         {
-                          "id": "CH.O.A5.G3",
-                          "anchor": "group:CH.O.A5.G3",
-                          "statement": "Bioassays, metabolomics and biologically active molecules ask what a substance does in a living system and which biological effects it produces.",
-                          "name": "Bioassays, metabolomics and biologically active molecules ask what a substance does in a living system and which biological effects it produces.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:340102",
-                                "anchor": "node:ANZSRC:340102",
-                                "statement": "Bioassays",
-                                "name": "Bioassays"
-                              },
-                              {
-                                "id": "ANZSRC:340106",
-                                "anchor": "node:ANZSRC:340106",
-                                "statement": "Metabolomic chemistry",
-                                "name": "Metabolomic chemistry"
-                              },
-                              {
-                                "id": "ANZSRC:340401",
-                                "anchor": "node:ANZSRC:340401",
-                                "statement": "Biologically active molecules",
-                                "name": "Biologically active molecules"
-                              },
-                              {
-                                "id": "ANZSRC:340406",
-                                "anchor": "node:ANZSRC:340406",
-                                "statement": "Molecular medicine",
-                                "name": "Molecular medicine"
-                              }
-                            ],
-                            "rank_note": "Ordered by structure, from testing activity to profiling metabolites to the active molecules themselves."
-                          }
+                          "id": "ANZSRC:340504",
+                          "anchor": "node:ANZSRC:340504",
+                          "statement": "Organic green chemistry",
+                          "name": "Organic green chemistry"
                         },
                         {
-                          "id": "CH.O.A5.G4",
-                          "anchor": "group:CH.O.A5.G4",
-                          "statement": "Modelling, characterisation, informatics and the study of proteins, peptides and glycoconjugates ask what shape a biomolecule has and how it can be designed or predicted.",
-                          "name": "Modelling, characterisation, informatics and the study of proteins, peptides and glycoconjugates ask what shape a biomolecule has and how it can be designed or predicted.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:3404",
-                                "anchor": "node:ANZSRC:3404",
-                                "statement": "Medicinal and biomolecular chemistry",
-                                "name": "Medicinal and biomolecular chemistry"
-                              },
-                              {
-                                "id": "ANZSRC:340402",
-                                "anchor": "node:ANZSRC:340402",
-                                "statement": "Biomolecular modelling and design",
-                                "name": "Biomolecular modelling and design"
-                              },
-                              {
-                                "id": "ANZSRC:340404",
-                                "anchor": "node:ANZSRC:340404",
-                                "statement": "Cheminformatics and quantitative structure-activity relationships",
-                                "name": "Cheminformatics and quantitative structure-activity relationships"
-                              },
-                              {
-                                "id": "ANZSRC:340407",
-                                "anchor": "node:ANZSRC:340407",
-                                "statement": "Proteins and peptides",
-                                "name": "Proteins and peptides"
-                              },
-                              {
-                                "id": "ANZSRC:340499",
-                                "anchor": "node:ANZSRC:340499",
-                                "statement": "Medicinal and biomolecular chemistry not elsewhere classified",
-                                "name": "Medicinal and biomolecular chemistry not elsewhere classified"
-                              }
-                            ],
-                            "rank_note": "Ordered by structure, from the general field and modelling to the specific biomolecule classes."
-                          }
+                          "id": "ANZSRC:340505",
+                          "anchor": "node:ANZSRC:340505",
+                          "statement": "Physical organic chemistry",
+                          "name": "Physical organic chemistry"
                         }
                       ],
-                      "rank_note": "Ordered structurally from physical measurement to separation and sensing, biological activity, and molecular modelling."
+                      "rank_note": "Kinds of process-focused inquiry; ordered by structure, with no ranking."
                     }
                   },
                   {
-                    "id": "ANZSRC:3499",
-                    "anchor": "node:ANZSRC:3499",
-                    "statement": "Other chemical sciences",
-                    "name": "Other chemical sciences",
+                    "id": "CH.O.A5.G7",
+                    "anchor": "group:CH.O.A5.G7",
+                    "statement": "Identity-focused and framing concepts ask what an organic substance is and what it is used for, covering the whole field, natural bioactive compounds, uncategorised topics and applications.",
+                    "name": "Identity-focused and framing concepts ask what an organic substance is and what it is used for, covering the whole field, natural bioactive compounds, uncategorised topics and applications.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:3405",
+                          "anchor": "node:ANZSRC:3405",
+                          "statement": "Organic chemistry",
+                          "name": "Organic chemistry"
+                        },
+                        {
+                          "id": "ANZSRC:340502",
+                          "anchor": "node:ANZSRC:340502",
+                          "statement": "Natural products and bioactive compounds",
+                          "name": "Natural products and bioactive compounds"
+                        },
+                        {
+                          "id": "ANZSRC:340599",
+                          "anchor": "node:ANZSRC:340599",
+                          "statement": "Organic chemistry not elsewhere classified",
+                          "name": "Organic chemistry not elsewhere classified"
+                        },
+                        {
+                          "id": "ChEBI:CHEBI:33232",
+                          "anchor": "node:ChEBI:CHEBI:33232",
+                          "statement": "application",
+                          "name": "application"
+                        }
+                      ],
+                      "rank_note": "Kinds of identity and use-focused inquiry; ordered by structure, with no ranking."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "CH.K5.S2",
+              "anchor": "section:CH.K5.S2",
+              "statement": "Analytical methods ask how a substance is identified and quantified by instruments and spectra.",
+              "name": "Analytical methods ask how a substance is identified and quantified by instruments and spectra.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From the general field to specific instrumental methods.",
+                "points": [
+                  {
+                    "id": "ANZSRC:3401",
+                    "anchor": "node:ANZSRC:3401",
+                    "statement": "Analytical chemistry",
+                    "name": "Analytical chemistry",
                     "aliases": [
-                      "ANZSRC:349999"
+                      "ANZSRC:340199"
                     ]
+                  },
+                  {
+                    "id": "ANZSRC:340101",
+                    "anchor": "node:ANZSRC:340101",
+                    "statement": "Analytical spectrometry",
+                    "name": "Analytical spectrometry"
+                  },
+                  {
+                    "id": "ANZSRC:340103",
+                    "anchor": "node:ANZSRC:340103",
+                    "statement": "Electroanalytical chemistry",
+                    "name": "Electroanalytical chemistry"
+                  },
+                  {
+                    "id": "ANZSRC:340105",
+                    "anchor": "node:ANZSRC:340105",
+                    "statement": "Instrumental methods (excl. immunological and bioassay methods)",
+                    "name": "Instrumental methods (excl. immunological and bioassay methods)"
                   },
                   {
                     "id": "ANZSRC:349901",
@@ -1366,21 +1483,21 @@
               }
             },
             {
-              "id": "CH.K5.S2",
-              "anchor": "section:CH.K5.S2",
-              "statement": "Imaging, measured properties, physical properties and energy probes show how a substance is quantified and characterised.",
-              "name": "Imaging, measured properties, physical properties and energy probes show how a substance is quantified and characterised.",
+              "id": "CH.K5.S3",
+              "anchor": "section:CH.K5.S3",
+              "statement": "Separation and sensing ask how components are isolated and detected in mixtures and forensic or residual cases.",
+              "name": "Separation and sensing ask how components are isolated and detected in mixtures and forensic or residual cases.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From observation to measured and physical properties and probes.",
+                "rank_note": "Isolation precedes detection.",
                 "points": [
                   {
-                    "id": "CH.O.A3.G5",
-                    "anchor": "group:CH.O.A3.G5",
-                    "statement": "Questions about observation and definition ask how a substance is imaged at the molecular scale and how the field itself and its uncategorised topics are delimited.",
-                    "name": "Questions about observation and definition ask how a substance is imaged at the molecular scale and how the field itself and its uncategorised topics are delimited.",
+                    "id": "CH.O.A5.G2",
+                    "anchor": "group:CH.O.A5.G2",
+                    "statement": "Separation, flow and sensing approaches answer what a substance is mixed with and where it is, by isolating components or detecting them continuously.",
+                    "name": "Separation, flow and sensing approaches answer what a substance is mixed with and where it is, by isolating components or detecting them continuously.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -1388,149 +1505,45 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "ANZSRC:3406",
-                          "anchor": "node:ANZSRC:3406",
-                          "statement": "Physical chemistry",
-                          "name": "Physical chemistry"
+                          "id": "ANZSRC:340109",
+                          "anchor": "node:ANZSRC:340109",
+                          "statement": "Separation science",
+                          "name": "Separation science"
                         },
                         {
-                          "id": "ANZSRC:340605",
-                          "anchor": "node:ANZSRC:340605",
-                          "statement": "Molecular imaging (incl. electron microscopy and neutron diffraction)",
-                          "name": "Molecular imaging (incl. electron microscopy and neutron diffraction)"
+                          "id": "ANZSRC:340104",
+                          "anchor": "node:ANZSRC:340104",
+                          "statement": "Flow analysis",
+                          "name": "Flow analysis"
                         },
                         {
-                          "id": "ANZSRC:340699",
-                          "anchor": "node:ANZSRC:340699",
-                          "statement": "Physical chemistry not elsewhere classified",
-                          "name": "Physical chemistry not elsewhere classified"
+                          "id": "ANZSRC:340108",
+                          "anchor": "node:ANZSRC:340108",
+                          "statement": "Sensor technology (incl. chemical aspects)",
+                          "name": "Sensor technology (incl. chemical aspects)"
                         },
                         {
-                          "id": "MeSH:G02",
-                          "anchor": "node:MeSH:G02",
-                          "statement": "Chemical Phenomena",
-                          "name": "Chemical Phenomena"
+                          "id": "ANZSRC:340107",
+                          "anchor": "node:ANZSRC:340107",
+                          "statement": "Quality assurance, chemometrics, traceability and metrological chemistry",
+                          "name": "Quality assurance, chemometrics, traceability and metrological chemistry"
                         }
                       ],
-                      "rank_note": "Kinds of framing questions arranged by structure: the field as a whole, molecular imaging, residual topics, and the overarching phenomena category."
+                      "rank_note": "Ordered by structure, from separating components to moving samples to detecting them."
                     }
                   },
                   {
-                    "id": "CH.O.A3.G8",
-                    "anchor": "group:CH.O.A3.G8",
-                    "statement": "Measured properties are quantities that can be determined on a substance or solution.",
-                    "name": "Measured properties are quantities that can be determined on a substance or solution.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:G02.300",
-                          "anchor": "node:MeSH:G02.300",
-                          "statement": "Hydrogen-Ion Concentration",
-                          "name": "Hydrogen-Ion Concentration"
-                        },
-                        {
-                          "id": "MeSH:G02.494",
-                          "anchor": "node:MeSH:G02.494",
-                          "statement": "Molecular Weight",
-                          "name": "Molecular Weight"
-                        },
-                        {
-                          "id": "MeSH:G02.640",
-                          "anchor": "node:MeSH:G02.640",
-                          "statement": "Osmolar Concentration",
-                          "name": "Osmolar Concentration"
-                        },
-                        {
-                          "id": "MeSH:G02.712",
-                          "anchor": "node:MeSH:G02.712",
-                          "statement": "Particle Size",
-                          "name": "Particle Size"
-                        }
-                      ],
-                      "rank_note": "Listed in structural order of property type."
-                    }
-                  },
-                  {
-                    "id": "CH.O.A3.G20",
-                    "anchor": "group:CH.O.A3.G20",
-                    "statement": "Solubility, specific gravity, and viscosity are kinds of physical property, each defined by a different question asked of a substance.",
-                    "name": "Solubility, specific gravity, and viscosity are kinds of physical property, each defined by a different question asked of a substance.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:G02.805",
-                          "anchor": "node:MeSH:G02.805",
-                          "statement": "Solubility",
-                          "name": "Solubility"
-                        },
-                        {
-                          "id": "MeSH:G02.819",
-                          "anchor": "node:MeSH:G02.819",
-                          "statement": "Specific Gravity",
-                          "name": "Specific Gravity"
-                        },
-                        {
-                          "id": "MeSH:G02.930",
-                          "anchor": "node:MeSH:G02.930",
-                          "statement": "Viscosity",
-                          "name": "Viscosity"
-                        }
-                      ],
-                      "rank_note": "Parallel kinds of physical property, listed in MeSH order with no ranking among them."
-                    }
-                  },
-                  {
-                    "id": "CH.O.A3.G12",
-                    "anchor": "group:CH.O.A3.G12",
-                    "statement": "Energy and structure probes ask how a substance stores energy, ignites, presents its surface, or reveals its atomic arrangement.",
-                    "name": "Energy and structure probes ask how a substance stores energy, ignites, presents its surface, or reveals its atomic arrangement.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "MeSH:G02.965",
-                          "anchor": "node:MeSH:G02.965",
-                          "statement": "X-Ray Diffraction",
-                          "name": "X-Ray Diffraction"
-                        },
-                        {
-                          "id": "MeSH:G02.860",
-                          "anchor": "node:MeSH:G02.860",
-                          "statement": "Surface Properties",
-                          "name": "Surface Properties"
-                        },
-                        {
-                          "id": "MeSH:G02.765",
-                          "anchor": "node:MeSH:G02.765",
-                          "statement": "Proton-Motive Force",
-                          "name": "Proton-Motive Force"
-                        },
-                        {
-                          "id": "MeSH:G02.833",
-                          "anchor": "node:MeSH:G02.833",
-                          "statement": "Spontaneous Combustion",
-                          "name": "Spontaneous Combustion"
-                        }
-                      ],
-                      "rank_note": "Ranked from the most direct structural measurement (X-ray diffraction) to surface behavior to energetic phenomena."
-                    }
+                    "id": "ANZSRC:349999",
+                    "anchor": "node:ANZSRC:349999",
+                    "statement": "Other chemical sciences not elsewhere classified",
+                    "name": "Other chemical sciences not elsewhere classified"
                   }
                 ]
               }
             }
           ]
-        }
+        },
+        "title": "Synthesis and analysis"
       }
     ]
   },
@@ -1538,6 +1551,21 @@
     {
       "id": "LCC:QD",
       "name": "Chemistry",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "ANZSRC:3499",
+      "name": "Other chemical sciences",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "ANZSRC:3406",
+      "name": "Physical chemistry",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "MeSH:G02",
+      "name": "Chemical Phenomena",
       "reason": "container heading for the whole field, not a topic"
     }
   ],
@@ -1548,18 +1576,19 @@
   },
   "minto_issues": {},
   "field_check": {
-    "governing_thought": "Chemistry is divided by the question asked of a substance, from what it is to how it is made or found: composition and identity, structure and bonding, equilibrium and energy, rates and mechanisms, and synthesis and analysis.",
+    "governing_thought": "Chemistry's objects divide by the question asked of a substance into its composition and identity, its structure and bonding, its equilibrium and energy, its rates and mechanisms, and its synthesis and analysis.",
     "key_line": [
-      "Composition and identity is the question of what a substance is, covering its general kind, its compound class and its role.",
-      "Structure and bonding is the question of how the atoms of a substance are arranged and held together, and how that arrangement shapes its response to light and theory.",
-      "Equilibrium and energy is the question of how a substance exchanges energy, charge and matter and settles between states, phases and surroundings.",
-      "Rates and mechanisms is the question of how and how fast a substance reacts and is transformed, and by what pathway and driving agent.",
-      "Synthesis and analysis is the question of how a substance is made and how it is found, measured and characterised."
+      "Composition and identity is the question of what a substance is, covering its general kind, role and chemical or biological class.",
+      "Structure and bonding is the question of how a substance is built, how its parts attract one another and what measurable properties follow.",
+      "Equilibrium and energy is the question of how a substance settles into states, exchanges matter and energy and moves between phases.",
+      "Rates and mechanisms is the question of how fast a substance changes and by what steps its bonds are rearranged.",
+      "Synthesis and analysis is the question of how a substance is made, isolated, detected and measured."
     ],
-    "holds": false,
-    "note": "Pillars overlap: intermolecular interactions (P3.2) belong in structure (P2); P2.3/P2.5 spectroscopy overlaps P5 analysis; P4.4 synthesis overlaps P5; P5.1 has a catch-all group.",
-    "review": true,
-    "problems": 6
+    "holds": true,
+    "note": "Worst misplaced: P5.1.1 biological macromolecules (belongs in P1.4), P2.3.3.3-P2.3.3.5 inorganic fields (belong in P1.2), P3.1.5.1 X-Ray Diffraction (belongs in P2), P3.3.2 separations (belong in P5).",
+    "review": false,
+    "misplaced": 18,
+    "problems": 18
   },
-  "cost_usd": 0.2942
+  "cost_usd": 0.2673
 }
