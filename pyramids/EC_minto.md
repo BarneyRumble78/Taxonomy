@@ -395,5 +395,5 @@ Group of scales of allocation. Basis: kinds. Dimension: the scale at which an al
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["EC.O.A2.G13: ['activity', 'response']", "EC.O.A2.G12: ['limit', 'response']"]}
+- minto_check: clean
 - field_check holds: False — Pillars blend scale (choice, markets, aggregate) with kind of thing (institutions), so they aren't values of one dimension. P4 and P5 also hold catch-all general, reference and method material, and some content follows classification code schemes.
