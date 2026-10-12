@@ -2215,7 +2215,7 @@
           - Atomic Properties
           - Radiation detectors
           - Particle accelerators
-      - **The group covers Cold-atom and degenerate-gas fields have a scale set by ħ and a very large particle number N acting as a coherent matter wave. and Quantum information and technology topics are scaled by ħ together with the number N of controlled quantum systems that carry and process information. as one kind of claim.**
+      - **Claims in this group are physics fields or frameworks whose characteristic scale is fixed by a particular combination of the constants c, ħ and G and the particle number N.**
         _basis: kinds, order: structure_
         - **Cold-atom and degenerate-gas fields have a scale set by ħ and a very large particle number N acting as a coherent matter wave.**
           _basis: kinds, order: degree. Ranked from the general quantum-physics field to the specific gas and matter-wave systems, ħ and N dominant._
@@ -2880,7 +2880,7 @@
           - Crust and lithosphere
           - Friction of fault zones
           - Earth's interior structure and properties
-        - **The group covers Mantle and General aspects as one kind of claim.**
+        - **Mantle and General aspects form one kind of claim, a geophysical claim whose scale is set by the governing constants c, ħ, G and N rather than by any one of them alone.**
           _basis: kinds, order: structure_
           - Mantle
           - General aspects
@@ -5690,7 +5690,7 @@
             - Delocalization processes
         - **Condensed matter systems and their collective behavior are set by ħ, the confinement length or the many-electron count N.**
           _basis: kinds, order: structure. Ordered by structure, from collective excitations and symmetry breaking to bulk, molecular and nanoscale systems._
-          - **The group covers Collective excitations and Broken symmetry phases as one kind of claim.**
+          - **Collective excitations and broken symmetry phases are claims about nanoscale electronic systems whose scale is set by ħ and the electron number N, with no role for c or G.**
             _basis: kinds, order: structure_
             - Collective excitations
             - Broken symmetry phases
