@@ -526,6 +526,8 @@
 | EV.O.A2.3 | Marine environment | EV | O/A2 | EA |
 | EV.O.A2.4 | Soil state | EV | O/A2 | EA |
 | EV.O.A2.5 | Biodiversity status | EV | O/A2 | BI |
+| EV.O.A2.6 | Natural hazards and processes | EV | O/A2 | EA, BI |
+| EV.O.A2.7 | Measured conditions | EV | O/A2 | — |
 | EV.O.A3 | Impacts | EV | O/A3 | — |
 | EV.O.A3.1 | Ecosystem harm | EV | O/A3 | BI |
 | EV.O.A3.2 | Human health impact | EV | O/A3 | MD |

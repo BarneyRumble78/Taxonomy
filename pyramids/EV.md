@@ -30,12 +30,14 @@ Dimension: **the link in the human–environment causal chain.** Order: causal.
 - EV.O.A1.4 Introduced species — pests and invasives (e.g. possums and mustelids in NZ).
 
 ### EV.O.A2 States
-**SCQA.** Pressures change the state of air, water, soil and biota. What is the measured state? Key line: air, freshwater, marine, soil, biodiversity.
-- EV.O.A2.1 Air quality — the measurement uses CH and EA.
-- EV.O.A2.2 Freshwater quality — nitrate, E. coli, sediment.
-- EV.O.A2.3 Marine environment — acidification, warming.
-- EV.O.A2.4 Soil state — contamination, erosion.
-- EV.O.A2.5 Biodiversity status — threat classifications (IUCN Red List criteria, W12).
+**SCQA.** Pressures change the state of air, water, soil and biota. What is the measured state? Key line: measured conditions, natural hazards and processes.
+- EV.O.A2.7 Measured conditions — air, freshwater, marine, soil, and biodiversity.
+  - EV.O.A2.1 Air quality — the measurement uses CH and EA.
+  - EV.O.A2.2 Freshwater quality — nitrate, E. coli, sediment.
+  - EV.O.A2.3 Marine environment — acidification, warming.
+  - EV.O.A2.4 Soil state — contamination, erosion.
+  - EV.O.A2.5 Biodiversity status — threat classifications (IUCN Red List criteria, W12).
+- EV.O.A2.6 Natural hazards and processes — geological, hydro-meteorological, and biogeochemical events. An earthquake or a volcanic eruption is a state, not an impact.
 
 ### EV.O.A3 Impacts
 **SCQA.** A changed state harms ecosystems and people. What harm, attributed how? Key line: ecosystem harm, human health impact, attribution, ecosystem services.
@@ -121,7 +123,7 @@ Precautionary principle (a decision rule, not evidence); polluter pays; "think g
 Coverage: 6 of 6 substantive groups land.
 
 ## 11. Validation
-Sizes: key line 5. Face O 5 cells + 20 sub-cells = 25. M roles 5. Heuristics 3. W rows 5. B bridges 6.
+Sizes: key line 5. Face O 5 cells + 22 sub-cells = 27. M roles 5. Heuristics 3. W rows 5. B bridges 6.
 Key line, word for word: Pressures. States. Impacts. Responses. Limits.
 CONTESTED: planetary boundary numbers; EV as a pyramid rather than an EA cell.
 OPEN: early warning of tipping points in real systems.
@@ -141,6 +143,8 @@ OPEN: early warning of tipping points in real systems.
 | EV.O.A2.3 | Marine environment | O/A2 | EA |
 | EV.O.A2.4 | Soil state | O/A2 | EA |
 | EV.O.A2.5 | Biodiversity status | O/A2 | BI |
+| EV.O.A2.6 | Natural hazards and processes | O/A2 | EA, BI |
+| EV.O.A2.7 | Measured conditions | O/A2 | — |
 | EV.O.A3 | Impacts | O/A3 | — |
 | EV.O.A3.1 | Ecosystem harm | O/A3 | BI |
 | EV.O.A3.2 | Human health impact | O/A3 | MD |

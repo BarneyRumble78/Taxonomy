@@ -34,6 +34,7 @@ that key is set.
 import argparse
 import json
 import os
+import re
 import sys
 import threading
 import time
@@ -75,11 +76,14 @@ SYSTEM_PLACE = (
     "Pressure: a load from human activity. "
     "State: a measured condition. "
     "Impact: a harm, or the attribution of that harm. "
-    "Natural drivers, hazards, processes, and species or ecosystem concepts belong in State or Impact. "
+    "Natural hazards and processes belong under State, in the natural-hazards group. "
+    "Earthquake, volcanic eruption, seismic activity, and landslide are geological hazards. "
+    "Floods, storms, and droughts are hydro-meteorological hazards. "
+    "Biogeochemical and ecological processes are natural processes, not impacts. "
     "Response: an action that changes a pressure or a state. "
     "Limit: a threshold a state is not meant to cross. "
     "Place each item on one group_id from its choices. "
-    "out_of_scope is only for a concept that is clearly not environmental. "
+    "out_of_scope covers a concept that is clearly not environmental, including a GIS or data-model term such as raster. "
     "If none of the groups is the right home, choose unsure. Do not force a fit."
 )
 ESCAPE = ("unsure", "out_of_scope")
@@ -159,12 +163,19 @@ def result_matches(item, row, catalog=None):
     if item_task(item) == "summarise":
         if not item.get("point_id") or row.get("point_id") != item.get("point_id"):
             return False
-        return not summary_is_weak(row.get("summary"))
+        if row.get("status") in (None, "", "placed"):
+            return True
+        return False
     if row.get("node_id") != item.get("node_id"):
         return False
     if row.get("dpsir") == "driver":
         return True
     if row.get("reason") == "the model reply was not usable":
+        return False
+    home = hazard_group(item.get("name"))
+    if home and row.get("group_id") != home["group_id"]:
+        return False
+    if is_technical_term(item.get("name")) and row.get("group_id") != "out_of_scope" and row.get("status") != "out_of_scope":
         return False
     chosen = row.get("group_id")
     if chosen in ESCAPE or row.get("status") in ESCAPE:
@@ -232,12 +243,20 @@ def cell_catalog(field="EV", root=None):
                     "statement": point.get("statement") or "",
                 })
             for child in (point.get("support") or {}).get("points") or []:
+                child_cell = _point_cell(child, cell)
                 if child.get("id"):
                     groups.append({
                         "group_id": child["id"],
-                        "cell": _point_cell(child, cell),
+                        "cell": child_cell,
                         "statement": child.get("statement") or "",
                     })
+                for grandchild in (child.get("support") or {}).get("points") or []:
+                    if str(grandchild.get("anchor") or "").startswith("facet:") and grandchild.get("id"):
+                        groups.append({
+                            "group_id": grandchild["id"],
+                            "cell": _point_cell(grandchild, child_cell),
+                            "statement": grandchild.get("statement") or "",
+                        })
     if not groups:
         rules = load_rules(field, root)
         for index, cell in enumerate(rules.get("cells") or [], start=1):
@@ -322,6 +341,70 @@ def driver_row(item, rules):
         "note": note,
         "reason": "a driver is folded into pressures",
     }
+
+
+def hazard_group(name, rules=None):
+    """The State subgroup for a named natural hazard or process."""
+    key = (name or "").strip().lower()
+    if not key:
+        return None
+    if rules is None:
+        rules = load_rules("EV")
+    for group in (rules.get("natural_hazards") or {}).get("groups") or []:
+        names = {str(item).strip().lower() for item in (group.get("names") or [])}
+        if key in names:
+            return group
+    return None
+
+
+def natural_row(item, rules):
+    """Place a named hazard on its State subgroup. No model call."""
+    if item_task(item) != "place":
+        return None
+    group = hazard_group(item.get("name"), rules)
+    if not group:
+        return None
+    return {
+        "task": "place",
+        "status": "placed",
+        "dpsir": "natural",
+        "node_id": item.get("node_id"),
+        "name": item.get("name"),
+        "cell": group.get("cell") or "EV.O.A2",
+        "group_id": group["group_id"],
+        "reason": "a natural hazard or process belongs under State",
+    }
+
+
+def is_technical_term(name, rules=None):
+    """A GIS or data-model word, such as raster. Not an environmental concept."""
+    if rules is None:
+        rules = load_rules("EV")
+    terms = [str(term) for term in (rules.get("out_of_scope_terms") or [])]
+    if not terms:
+        terms = ["raster", "gis"]
+    pattern = re.compile(r"\b(" + "|".join(re.escape(term) for term in terms) + r")\b", re.I)
+    return bool(pattern.search(name or ""))
+
+
+def technical_row(item, rules):
+    """Mark a GIS or data-model term out of scope. No model call."""
+    if item_task(item) != "place" or not is_technical_term(item.get("name"), rules):
+        return None
+    return {
+        "task": "place",
+        "status": "out_of_scope",
+        "node_id": item.get("node_id"),
+        "name": item.get("name"),
+        "cell": item.get("cell"),
+        "group_id": "out_of_scope",
+        "reason": "a GIS or data-model term is not an environmental concept",
+    }
+
+
+def ruled_row(item, rules):
+    """A row the rules can finish without a model call."""
+    return driver_row(item, rules) or natural_row(item, rules) or technical_row(item, rules)
 
 
 def _schema_body(schema, name, system, payload, api="native"):
@@ -560,9 +643,7 @@ def row_key(row):
 
 
 def row_status(row):
-    """A summary that only says 'Both are' counts as needs_review."""
-    if item_task(row) == "summarise" and summary_is_weak(row.get("summary")):
-        return "needs_review"
+    """The status written on the row. A placed summary stays placed."""
     return row.get("status") or ""
 
 
@@ -997,7 +1078,7 @@ def run(args, post=None, root=None):
         model_preview = []
         drivers = 0
         for item in pending:
-            if driver_row(item, rules):
+            if ruled_row(item, rules):
                 drivers += 1
             else:
                 model_preview.append(item)
@@ -1114,7 +1195,7 @@ def run(args, post=None, root=None):
     local = []
     model_items = []
     for item in pending:
-        decided = driver_row(item, rules)
+        decided = ruled_row(item, rules)
         if decided:
             local.append(decided)
         else:

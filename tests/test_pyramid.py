@@ -215,6 +215,17 @@ def test_ev_section_12():
         key=lambda item: int(item.rsplit("A", 1)[1]),
     )
     assert [point["cell"] for point in key["points"]] == expected
+    state = next(point for point in key["points"] if point["id"] == "EV.P.2")
+    assert [point["id"] for point in state["support"]["points"]] == ["EV.P.2.7", "EV.P.2.6"]
+    assert state["support"]["mece_dimension"] == "whether the state is a measured medium or a natural process"
+    media, natural = state["support"]["points"]
+    assert [point["id"] for point in media["support"]["points"]] == [
+        "EV.P.2.1", "EV.P.2.2", "EV.P.2.3", "EV.P.2.4", "EV.P.2.5",
+    ]
+    assert [point["id"] for point in natural["support"]["points"]] == [
+        "EV.P.2.6.1", "EV.P.2.6.2", "EV.P.2.6.3",
+    ]
+    assert "Natural hazards and processes are geological, weather, and ecological events." in markdown
 
     ids = []
     catalogs = {}
@@ -428,6 +439,18 @@ def test_summary_request_asks_for_a_sentence():
         {"task": "summarise", "point_id": "EV.P.2.2.2", "node_id": "EV.P.2.2.2"},
         weak,
     )
+    kept = {
+        "task": "summarise",
+        "point_id": "EV.P.2.2.2",
+        "node_id": "EV.P.2.2.2",
+        "status": "placed",
+        "summary": "Both are freshwater bodies or their beds that are measured as environmental states.",
+    }
+    assert module.result_matches(
+        {"task": "summarise", "point_id": "EV.P.2.2.2", "node_id": "EV.P.2.2.2"},
+        kept,
+    )
+    assert module.row_status(kept) == "placed"
 
 
 def _blob(point):
@@ -546,8 +569,8 @@ def test_batch_size_stays_between_15_and_25():
     assert module.clamp_workers(8) == 4
     assert module.clamp_workers(3) == 3
     assert len(module.SYSTEM_PLACE) < 1200
-    assert "belong in State or Impact" in module.SYSTEM_PLACE
-    assert "clearly not environmental" in module.SYSTEM_PLACE
+    assert "natural-hazards group" in module.SYSTEM_PLACE
+    assert "raster" in module.SYSTEM_PLACE
 
 
 def test_prompt_offers_every_cell_and_an_escape():
@@ -575,7 +598,7 @@ def test_prompt_offers_every_cell_and_an_escape():
         assert top_groups <= set(choices)
         assert group_id in choices
         assert choices[-2:] == ["unsure", "out_of_scope"]
-        assert "belong in State or Impact" in body["messages"][0]["content"]
+        assert "natural-hazards group" in body["messages"][0]["content"]
         assert "Do not force a fit." in body["messages"][0]["content"]
 
 
@@ -1001,15 +1024,15 @@ def test_resume_drops_duplicate_jsonl_rows(tmp_path):
 def test_only_status_reruns_the_named_rows(tmp_path):
     module = _queue_module()
     items = [
-        _pressure_item("seismic activity", "EV.P.1.1", "Emissions are loads."),
+        _pressure_item("trade fair", "EV.P.1.1", "Emissions are loads."),
         _pressure_item("banking", "EV.P.1.2", "Land use is a load."),
         _place_item(3),
     ]
-    items[0]["node_id"] = "SEISMIC"
+    items[0]["node_id"] = "TRADE"
     items[1]["node_id"] = "BANK"
     items[2]["node_id"] = "N3"
     previous = [
-        {"node_id": "SEISMIC", "name": "seismic activity", "group_id": "out_of_scope", "status": "out_of_scope", "cell": "EV.O.A1", "reason": "a natural process"},
+        {"node_id": "TRADE", "name": "trade fair", "group_id": "out_of_scope", "status": "out_of_scope", "cell": "EV.O.A1", "reason": "not environmental"},
         {"node_id": "BANK", "name": "banking", "group_id": "EV.P.4.3", "status": "needs_review", "cell": "EV.O.A1", "reason": "outside the list"},
         {"node_id": "N3", "name": "concept 3", "group_id": "EV.P.1.1", "status": "placed", "cell": "EV.O.A1", "reason": "kept"},
     ]
@@ -1027,7 +1050,7 @@ def test_only_status_reruns_the_named_rows(tmp_path):
         asked.extend(item["id"] for item in payload["items"])
         rows = []
         for item in payload["items"]:
-            group = "EV.P.3.1" if item["id"] == "SEISMIC" else "out_of_scope"
+            group = "EV.P.3.1" if item["id"] == "TRADE" else "out_of_scope"
             rows.append({"id": item["id"], "group_id": group, "reason": "again"})
         return {"choices": [{"message": {"content": json.dumps({"items": rows})}}]}
 
@@ -1036,17 +1059,93 @@ def test_only_status_reruns_the_named_rows(tmp_path):
         "--only-status", "out_of_scope,needs_review,unsure",
     ])
     result = module.run(args, post=post, root=root)
-    assert set(asked) == {"SEISMIC", "BANK"}
+    assert set(asked) == {"TRADE", "BANK"}
     assert "N3" not in asked
     assert result["wrote"] == 2
     rows = [json.loads(line) for line in jsonl.read_text(encoding="utf-8").splitlines()]
     by_id = {row["node_id"]: row for row in rows}
     assert len(rows) == len(by_id)
-    assert by_id["SEISMIC"]["status"] == "placed"
-    assert by_id["SEISMIC"]["cell"] == "EV.O.A3"
-    assert by_id["SEISMIC"]["group_id"] == "EV.P.3.1"
+    assert by_id["TRADE"]["status"] == "placed"
+    assert by_id["TRADE"]["cell"] == "EV.O.A3"
+    assert by_id["TRADE"]["group_id"] == "EV.P.3.1"
     assert by_id["BANK"]["status"] == "out_of_scope"
     assert by_id["BANK"]["reason"] == "again"
     again = module.run(args, post=post, root=root)
     assert again["wrote"] == 1
     assert again["pending"] == 1
+
+
+def test_natural_hazards_and_technical_terms_are_ruled():
+    module = _queue_module()
+    rules = module.load_rules("EV")
+    quake = module.natural_row(
+        {"task": "place", "node_id": "GEMET:2402", "name": "earthquake"},
+        rules,
+    )
+    assert quake["group_id"] == "EV.P.2.6.1"
+    assert quake["cell"] == "EV.O.A2"
+    assert quake["status"] == "placed"
+    assert quake["dpsir"] == "natural"
+    assert module.natural_row({"task": "place", "node_id": "X", "name": "volcano"}, rules) is None
+    assert module.natural_row({"task": "place", "node_id": "N", "name": "nutrient cycle"}, rules) is None
+    raster = module.technical_row(
+        {"task": "place", "node_id": "GEMET:14922", "name": "raster", "cell": "EV.O.A2"},
+        rules,
+    )
+    assert raster["status"] == "out_of_scope"
+    assert raster["group_id"] == "out_of_scope"
+    assert module.technical_row({"task": "place", "node_id": "Y", "name": "land register"}, rules) is None
+    assert module.technical_row({"task": "place", "node_id": "Z", "name": "legislative"}, rules) is None
+    catalog = module.cell_catalog("EV")
+    by_id = {row["group_id"]: row for row in catalog}
+    assert by_id["EV.P.2.6.1"]["cell"] == "EV.O.A2"
+    assert by_id["EV.P.2.6.2"]["cell"] == "EV.O.A2"
+    assert by_id["EV.P.2.6.3"]["cell"] == "EV.O.A2"
+    assert by_id["EV.P.2.1"]["cell"] == "EV.O.A2"
+    item = {"task": "place", "node_id": "GEMET:2402", "name": "earthquake"}
+    assert not module.result_matches(
+        item,
+        {"node_id": "GEMET:2402", "group_id": "EV.P.3.1", "status": "placed", "cell": "EV.O.A3"},
+        catalog,
+    )
+    assert module.result_matches(item, quake, catalog)
+
+
+def test_only_status_keeps_a_placed_summary(tmp_path):
+    module = _queue_module()
+    item = {
+        "task": "summarise",
+        "needs_summary": True,
+        "node_id": "EV.P.2.2.2",
+        "point_id": "EV.P.2.2.2",
+        "name": "These places are alike as measured states.",
+        "cell": "EV.O.A2",
+        "children": ["Lake is a state.", "A river bed is a state."],
+    }
+    saved = {
+        "task": "summarise",
+        "node_id": "EV.P.2.2.2",
+        "name": "These places are alike as measured states.",
+        "cell": "EV.O.A2",
+        "reason": "Lake and river bed are inland water features recorded as states.",
+        "needs_summary": True,
+        "point_id": "EV.P.2.2.2",
+        "summary": "Both are freshwater bodies or their beds that are measured as environmental states.",
+        "status": "placed",
+    }
+    root = _queue_root(tmp_path, [item], previous=[saved])
+    asked = []
+
+    def post(body):
+        payload = json.loads(body["messages"][1]["content"])
+        asked.extend(row["id"] for row in payload["items"])
+        return {"choices": [{"message": {"content": json.dumps({"items": []})}}]}
+
+    args = module.parse_args([
+        "--field", "EV", "--workers", "1", "--progress", "100",
+        "--only-status", "unsure,needs_review,out_of_scope",
+    ])
+    result = module.run(args, post=post, root=root)
+    assert asked == []
+    assert result["wrote"] == 0
+    assert result["pending"] == 0

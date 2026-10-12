@@ -14,6 +14,27 @@
   "response_terms": ["treatment", "control", "management", "policy", "protection", "regulation", "remediation"],
   "state_resources": ["grain"],
   "ambiguous_phrases": ["urban waste water", "waste water"],
+  "natural_hazards": {
+    "note": "A natural hazard or process is a state. It is not an impact. The pyramid home is EV.P.2.6, added by hand under State.",
+    "groups": [
+      {
+        "group_id": "EV.P.2.6.1",
+        "cell": "EV.O.A2",
+        "names": ["earthquake", "seismic activity", "volcanic eruption", "volcanism", "landslide", "avalanche"]
+      },
+      {
+        "group_id": "EV.P.2.6.2",
+        "cell": "EV.O.A2",
+        "names": ["flash flood", "cyclone", "hurricane"]
+      },
+      {
+        "group_id": "EV.P.2.6.3",
+        "cell": "EV.O.A2",
+        "names": ["biogeochemical cycle", "carbon cycle", "photosynthesis"]
+      }
+    ]
+  },
+  "out_of_scope_terms": ["raster", "gis"],
   "governing_thought": "Environmental science places each coupled human–environment claim on one link of the causal chain: pressure, state, impact, response, or limit.",
   "audience": {
     "who": "A reader placing a coupled human–environment claim.",

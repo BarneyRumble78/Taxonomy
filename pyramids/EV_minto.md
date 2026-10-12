@@ -60,33 +60,38 @@ Inductive group of loads. Dimension: the kind of load. Order: structure.
 
 Question. What is the measured state?
 
-Inductive group of states. Dimension: the medium that is measured. Order: structure.
+Inductive group of states. Dimension: whether the state is a measured medium or a natural process. Order: structure.
 
-- **2.1.** Air quality is the measured state of the atmosphere. `EV.P.2.1`
-  - **2.1.1.** These conditions are the climate measured states. `EV.P.2.1.9`
-  - **2.1.2.** These conditions are the ozone measured states. `EV.P.2.1.11`
-  - **2.1.3.** These conditions are the temperature measured states. `EV.P.2.1.12`
-  - **2.1.4.** These conditions are the level measured states. `EV.P.2.1.13`
-- **2.2.** Freshwater quality is the measured state of rivers, lakes, and groundwater. `EV.P.2.2`
-  - **2.2.1.** These places are alike as measured states. `EV.P.2.2.2`
-  - **2.2.2.** These places are the basin measured states. `EV.P.2.2.4`
-  - **2.2.3.** These places are the river measured states. `EV.P.2.2.6`
-- **2.3.** The marine environment is the measured state of the sea. `EV.P.2.3`
-  - **2.3.1.** These places are the sea measured states. `EV.P.2.3.10`
-  - **2.3.2.** These places are the ocean measured states. `EV.P.2.3.11`
-  - **2.3.3.** These places are the coastal measured states. `EV.P.2.3.12`
-  - **2.3.4.** These places are the conservation measured states. `EV.P.2.3.13`
-  - **2.3.5.** These places are the zone measured states. `EV.P.2.3.6`
-- **2.4.** Soil state is the measured condition of the land surface. `EV.P.2.4`
-  - **2.4.1.** Soil is a measured state. `EV.P.2.4.2.2`
-  - **2.4.2.** Soil process is a measured state. `EV.P.2.4.4.2`
-  - **2.4.3.** Soil sciences is a measured state. `EV.P.2.4.1.3`
-- **2.5.** Biodiversity status is the measured condition of species and habitats. `EV.P.2.5`
-  - **2.5.1.** These ecosystem are alike as measured states. `EV.P.2.5.6`
-  - **2.5.2.** These ecosystem are alike as measured states. `EV.P.2.5.4`
-  - **2.5.3.** These ecosystem are alike as measured states. `EV.P.2.5.7`
-  - **2.5.4.** These ecosystem are alike as measured states. `EV.P.2.5.8`
-  - **2.5.5.** These ecosystem are alike as measured states. `EV.P.2.5.9`
+- **2.1.** Measured conditions are the states of air, water, soil, and living systems. `EV.P.2.7`
+  - **2.1.1.** Air quality is the measured state of the atmosphere. `EV.P.2.1`
+    - **2.1.1.1.** These conditions are the climate measured states. `EV.P.2.1.9`
+    - **2.1.1.2.** These conditions are the ozone measured states. `EV.P.2.1.11`
+    - **2.1.1.3.** These conditions are the temperature measured states. `EV.P.2.1.12`
+    - **2.1.1.4.** These conditions are the level measured states. `EV.P.2.1.13`
+  - **2.1.2.** Freshwater quality is the measured state of rivers, lakes, and groundwater. `EV.P.2.2`
+    - **2.1.2.1.** These places are alike as measured states. `EV.P.2.2.2`
+    - **2.1.2.2.** These places are the basin measured states. `EV.P.2.2.4`
+    - **2.1.2.3.** These places are the river measured states. `EV.P.2.2.6`
+  - **2.1.3.** The marine environment is the measured state of the sea. `EV.P.2.3`
+    - **2.1.3.1.** These places are the sea measured states. `EV.P.2.3.10`
+    - **2.1.3.2.** These places are the ocean measured states. `EV.P.2.3.11`
+    - **2.1.3.3.** These places are the coastal measured states. `EV.P.2.3.12`
+    - **2.1.3.4.** These places are the conservation measured states. `EV.P.2.3.13`
+    - **2.1.3.5.** These places are the zone measured states. `EV.P.2.3.6`
+  - **2.1.4.** Soil state is the measured condition of the land surface. `EV.P.2.4`
+    - **2.1.4.1.** Soil is a measured state. `EV.P.2.4.2.2`
+    - **2.1.4.2.** Soil process is a measured state. `EV.P.2.4.4.2`
+    - **2.1.4.3.** Soil sciences is a measured state. `EV.P.2.4.1.3`
+  - **2.1.5.** Biodiversity status is the measured condition of species and habitats. `EV.P.2.5`
+    - **2.1.5.1.** These ecosystem are alike as measured states. `EV.P.2.5.6`
+    - **2.1.5.2.** These ecosystem are alike as measured states. `EV.P.2.5.4`
+    - **2.1.5.3.** These ecosystem are alike as measured states. `EV.P.2.5.7`
+    - **2.1.5.4.** These ecosystem are alike as measured states. `EV.P.2.5.8`
+    - **2.1.5.5.** These ecosystem are alike as measured states. `EV.P.2.5.9`
+- **2.2.** Natural hazards and processes are geological, weather, and ecological events. `EV.P.2.6`
+  - **2.2.1.** Geological hazards are seismic, volcanic, and landslide events. `EV.P.2.6.1`
+  - **2.2.2.** Hydro-meteorological hazards are floods, storms, and droughts. `EV.P.2.6.2`
+  - **2.2.3.** Natural biogeochemical and ecological processes are cycles of matter in living systems. `EV.P.2.6.3`
 
 ### 3. Impacts are the harms a changed state causes, and the way those harms are attributed.
 
