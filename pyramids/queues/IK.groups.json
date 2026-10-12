@@ -312,14 +312,14 @@
                   }
                 },
                 {
-                  "id": "IK.O.A1.G1",
-                  "anchor": "group:IK.O.A1.G1",
-                  "statement": "Umbrella categories are the top-level headings that contain or catch all other Indigenous science fields.",
-                  "name": "Umbrella categories are the top-level headings that contain or catch all other Indigenous science fields.",
+                  "id": "IK.O.A1.G13",
+                  "anchor": "group:IK.O.A1.G13",
+                  "statement": "Whole Indigenous science traditions are top-level knowledge systems, treated as complete bodies of knowledge rather than as single subject areas.",
+                  "name": "Whole Indigenous science traditions are top-level knowledge systems, treated as complete bodies of knowledge rather than as single subject areas.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
-                    "basis": "parts",
+                    "basis": "kinds",
                     "order": "structure",
                     "points": [
                       {
@@ -333,7 +333,22 @@
                         "anchor": "node:ANZSRC:4512",
                         "statement": "Ngā pūtaiao Māori (Māori sciences)",
                         "name": "Ngā pūtaiao Māori (Māori sciences)"
-                      },
+                      }
+                    ],
+                    "rank_note": "Top-level fields, each covering an entire Indigenous knowledge system."
+                  }
+                },
+                {
+                  "id": "IK.O.A1.G14",
+                  "anchor": "group:IK.O.A1.G14",
+                  "statement": "Specific subject areas within Aboriginal and Torres Strait Islander sciences are subfields that pick out one aspect of that knowledge system, such as genomics, mathematical and physical sciences, or unclassified topics.",
+                  "name": "Specific subject areas within Aboriginal and Torres Strait Islander sciences are subfields that pick out one aspect of that knowledge system, such as genomics, mathematical and physical sciences, or unclassified topics.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
                       {
                         "id": "ANZSRC:450699",
                         "anchor": "node:ANZSRC:450699",
@@ -353,9 +368,8 @@
                         "name": "Aboriginal and Torres Strait Islander genomics"
                       }
                     ],
-                    "rank_note": "Ordered from the Aboriginal and Torres Strait Islander heading, to the Māori heading, to the residual catch-all."
-                  },
-                  "further": true
+                    "rank_note": "Subfields nested within the Aboriginal and Torres Strait Islander sciences field."
+                  }
                 },
                 {
                   "id": "IK.O.A1.G9",
@@ -1117,15 +1131,15 @@
                         }
                       },
                       {
-                        "id": "IK.O.A3.G6",
-                        "anchor": "group:IK.O.A3.G6",
-                        "statement": "Health fields concerned with the conditions, settings and determinants that shape Aboriginal and Torres Strait Islander health outcomes.",
-                        "name": "Health fields concerned with the conditions, settings and determinants that shape Aboriginal and Torres Strait Islander health outcomes.",
+                        "id": "IK.O.A3.G54",
+                        "anchor": "group:IK.O.A3.G54",
+                        "statement": "Health-focused fields address the health and wellbeing of Aboriginal and Torres Strait Islander peoples, including remote contexts, social determinants, and other unclassified topics.",
+                        "name": "Health-focused fields address the health and wellbeing of Aboriginal and Torres Strait Islander peoples, including remote contexts, social determinants, and other unclassified topics.",
                         "support": {
                           "logic_type": "inductive",
                           "plural_noun": "members",
                           "basis": "kinds",
-                          "order": "degree",
+                          "order": "structure",
                           "points": [
                             {
                               "id": "ANZSRC:450418",
@@ -1144,7 +1158,22 @@
                               "anchor": "node:ANZSRC:450499",
                               "statement": "Aboriginal and Torres Strait Islander health and wellbeing not elsewhere classified",
                               "name": "Aboriginal and Torres Strait Islander health and wellbeing not elsewhere classified"
-                            },
+                            }
+                          ],
+                          "rank_note": "Ordered by structure: specific health fields first, the not-elsewhere-classified residual last."
+                        }
+                      },
+                      {
+                        "id": "IK.O.A3.G55",
+                        "anchor": "group:IK.O.A3.G55",
+                        "statement": "Design-focused fields address how Aboriginal and Torres Strait Islander knowledge shapes architecture and the practice and management of design.",
+                        "name": "Design-focused fields address how Aboriginal and Torres Strait Islander knowledge shapes architecture and the practice and management of design.",
+                        "support": {
+                          "logic_type": "inductive",
+                          "plural_noun": "members",
+                          "basis": "kinds",
+                          "order": "structure",
+                          "points": [
                             {
                               "id": "ANZSRC:450510",
                               "anchor": "node:ANZSRC:450510",
@@ -1158,9 +1187,8 @@
                               "name": "Aboriginal and Torres Strait Islander architecture"
                             }
                           ],
-                          "rank_note": "Ranked from broad structural conditions (social determinants) to narrower settings (remote health) and the residual category."
-                        },
-                        "further": true
+                          "rank_note": "Ordered by structure: design practice and management, then architecture."
+                        }
                       },
                       {
                         "id": "IK.O.A3.G17",
@@ -1256,10 +1284,10 @@
                         }
                       },
                       {
-                        "id": "IK.O.A3.G30",
-                        "anchor": "group:IK.O.A3.G30",
-                        "statement": "Pacific Peoples health knowledge is divided into two aspects, the cultural determinants that shape health and the biomedical and clinical science that studies and treats it.",
-                        "name": "Pacific Peoples health knowledge is divided into two aspects, the cultural determinants that shape health and the biomedical and clinical science that studies and treats it.",
+                        "id": "IK.O.A3.G56",
+                        "anchor": "group:IK.O.A3.G56",
+                        "statement": "Pacific Peoples health fields are kinds of knowledge distinguished by whether a claim addresses cultural determinants of health or biomedical and clinical science.",
+                        "name": "Pacific Peoples health fields are kinds of knowledge distinguished by whether a claim addresses cultural determinants of health or biomedical and clinical science.",
                         "support": {
                           "logic_type": "inductive",
                           "plural_noun": "members",
@@ -1278,9 +1306,9 @@
                               "statement": "Pacific Peoples biomedical and clinical science",
                               "name": "Pacific Peoples biomedical and clinical science"
                             }
-                          ]
-                        },
-                        "further": true
+                          ],
+                          "rank_note": "Ordered by structure: cultural determinants first, then biomedical and clinical science."
+                        }
                       },
                       {
                         "id": "IK.O.A3.G32",
@@ -2274,10 +2302,10 @@
                   }
                 },
                 {
-                  "id": "IK.O.A3.G50",
-                  "anchor": "group:IK.O.A3.G50",
-                  "statement": "Pacific scholarly disciplines are the fields of study and research approaches, including social science and general perspectives, through which knowledge about Pacific Peoples is generated and organised.",
-                  "name": "Pacific scholarly disciplines are the fields of study and research approaches, including social science and general perspectives, through which knowledge about Pacific Peoples is generated and organised.",
+                  "id": "IK.O.A3.G57",
+                  "anchor": "group:IK.O.A3.G57",
+                  "statement": "Disciplines, social science fields and general perspectives are the lenses through which scholars generate and organise knowledge about Pacific Peoples communities.",
+                  "name": "Disciplines, social science fields and general perspectives are the lenses through which scholars generate and organise knowledge about Pacific Peoples communities.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -2388,7 +2416,22 @@
                           ],
                           "rank_note": "Kinds of general or residual fields, no ranking."
                         }
-                      },
+                      }
+                    ],
+                    "rank_note": "Ordered from named disciplines to specific social science fields to general or unclassified perspectives."
+                  }
+                },
+                {
+                  "id": "IK.O.A3.G58",
+                  "anchor": "group:IK.O.A3.G58",
+                  "statement": "Wellbeing conditions, change models and life-stage or family-role populations are the substantive subject areas that knowledge about Pacific Peoples examines.",
+                  "name": "Wellbeing conditions, change models and life-stage or family-role populations are the substantive subject areas that knowledge about Pacific Peoples examines.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
                       {
                         "id": "IK.O.A3.G33",
                         "anchor": "group:IK.O.A3.G33",
@@ -2462,9 +2505,8 @@
                         }
                       }
                     ],
-                    "rank_note": "Ordered structurally from general disciplines to social science fields to unclassified topics."
-                  },
-                  "further": true
+                    "rank_note": "Ordered from the general conditions and models of wellbeing to the specific populations studied."
+                  }
                 }
               ],
               "rank_note": "Kinds are listed by sub-domain, not ranked."
@@ -2547,10 +2589,10 @@
                         }
                       },
                       {
-                        "id": "IK.O.A4.G7",
-                        "anchor": "group:IK.O.A4.G7",
-                        "statement": "Curriculum, methods and engagement are the aspects concerning how Aboriginal and Torres Strait Islander knowledge is taught and how learners are involved.",
-                        "name": "Curriculum, methods and engagement are the aspects concerning how Aboriginal and Torres Strait Islander knowledge is taught and how learners are involved.",
+                        "id": "IK.O.A4.G38",
+                        "anchor": "group:IK.O.A4.G38",
+                        "statement": "Fields concerned with the teaching process itself, covering what is taught, how it is taught, and how students are engaged.",
+                        "name": "Fields concerned with the teaching process itself, covering what is taught, how it is taught, and how students are engaged.",
                         "support": {
                           "logic_type": "inductive",
                           "plural_noun": "members",
@@ -2574,23 +2616,37 @@
                               "anchor": "node:ANZSRC:450210",
                               "statement": "Aboriginal and Torres Strait Islander student engagement and teaching",
                               "name": "Aboriginal and Torres Strait Islander student engagement and teaching"
+                            }
+                          ],
+                          "rank_note": "Ordered by structure from content to method to engagement; no ranking implied."
+                        }
+                      },
+                      {
+                        "id": "IK.O.A4.G39",
+                        "anchor": "group:IK.O.A4.G39",
+                        "statement": "Fields defined by the education level or sector in which Aboriginal and Torres Strait Islander learning takes place.",
+                        "name": "Fields defined by the education level or sector in which Aboriginal and Torres Strait Islander learning takes place.",
+                        "support": {
+                          "logic_type": "inductive",
+                          "plural_noun": "members",
+                          "basis": "kinds",
+                          "order": "structure",
+                          "points": [
+                            {
+                              "id": "ANZSRC:450202",
+                              "anchor": "node:ANZSRC:450202",
+                              "statement": "Aboriginal and Torres Strait Islander early childhood education",
+                              "name": "Aboriginal and Torres Strait Islander early childhood education"
                             },
                             {
                               "id": "ANZSRC:450204",
                               "anchor": "node:ANZSRC:450204",
                               "statement": "Aboriginal and Torres Strait Islander technical, further, continuing and community education",
                               "name": "Aboriginal and Torres Strait Islander technical, further, continuing and community education"
-                            },
-                            {
-                              "id": "ANZSRC:450202",
-                              "anchor": "node:ANZSRC:450202",
-                              "statement": "Aboriginal and Torres Strait Islander early childhood education",
-                              "name": "Aboriginal and Torres Strait Islander early childhood education"
                             }
                           ],
-                          "rank_note": "Ordered by structure from curriculum design to methods and student engagement."
-                        },
-                        "further": true
+                          "rank_note": "Ordered by structure from early years to adult and community education; no ranking implied."
+                        }
                       },
                       {
                         "id": "IK.O.A4.G8",
@@ -3082,10 +3138,10 @@
                     "order": "structure",
                     "points": [
                       {
-                        "id": "IK.O.A4.G18",
-                        "anchor": "group:IK.O.A4.G18",
-                        "statement": "Engagement-focused fields concern how education systems respond to Māori and how Māori students and teachers participate.",
-                        "name": "Engagement-focused fields concern how education systems respond to Māori and how Māori students and teachers participate.",
+                        "id": "IK.O.A4.G40",
+                        "anchor": "group:IK.O.A4.G40",
+                        "statement": "This group covers the aspect of a knowledge system concerned with how Māori knowledge is delivered and taken up, through responsive education, student engagement and teaching practice.",
+                        "name": "This group covers the aspect of a knowledge system concerned with how Māori knowledge is delivered and taken up, through responsive education, student engagement and teaching practice.",
                         "support": {
                           "logic_type": "inductive",
                           "plural_noun": "members",
@@ -3103,7 +3159,22 @@
                               "anchor": "node:ANZSRC:450809",
                               "statement": "Te whai wāhi ākonga me ngā mahi whakaako o te Māori (Māori student engagement and teaching)",
                               "name": "Te whai wāhi ākonga me ngā mahi whakaako o te Māori (Māori student engagement and teaching)"
-                            },
+                            }
+                          ],
+                          "rank_note": "Kinds are ordered from system-level responsiveness to classroom-level student engagement and teaching."
+                        }
+                      },
+                      {
+                        "id": "IK.O.A4.G41",
+                        "anchor": "group:IK.O.A4.G41",
+                        "statement": "This group covers the aspect of a knowledge system concerned with the values and worldview that ground Pacific knowledge, namely its ethics and its relationship to land, culture and identity.",
+                        "name": "This group covers the aspect of a knowledge system concerned with the values and worldview that ground Pacific knowledge, namely its ethics and its relationship to land, culture and identity.",
+                        "support": {
+                          "logic_type": "inductive",
+                          "plural_noun": "members",
+                          "basis": "kinds",
+                          "order": "structure",
+                          "points": [
                             {
                               "id": "ANZSRC:451309",
                               "anchor": "node:ANZSRC:451309",
@@ -3117,9 +3188,8 @@
                               "name": "Pacific Peoples ethics"
                             }
                           ],
-                          "rank_note": "n/a"
-                        },
-                        "further": true
+                          "rank_note": "Kinds are ordered from the broad grounding in land, culture and identity to the specific ethical principles that follow from it."
+                        }
                       },
                       {
                         "id": "IK.O.A4.G15",
@@ -3163,10 +3233,10 @@
             }
           },
           {
-            "id": "IK.O.A4.G37",
-            "anchor": "group:IK.O.A4.G37",
-            "statement": "A group of concepts that each pick out a distinct aspect of an Indigenous or Pacific knowledge system, such as its foundations, content, transmission, expression, stewardship or place in education, that a claim about that system can address.",
-            "name": "A group of concepts that each pick out a distinct aspect of an Indigenous or Pacific knowledge system, such as its foundations, content, transmission, expression, stewardship or place in education, that a claim about that system can address.",
+            "id": "IK.O.A4.G42",
+            "anchor": "group:IK.O.A4.G42",
+            "statement": "A claim about an indigenous knowledge system can be classified by the aspect of that system it addresses, such as its foundations, content, transmission, expression, stewardship or place in education.",
+            "name": "A claim about an indigenous knowledge system can be classified by the aspect of that system it addresses, such as its foundations, content, transmission, expression, stewardship or place in education.",
             "support": {
               "logic_type": "inductive",
               "plural_noun": "members",
@@ -3680,9 +3750,9 @@
                     "rank_note": "Kinds are arranged in structural order from physical evidence to expression, language, concepts and stewardship."
                   }
                 }
-              ]
-            },
-            "further": true
+              ],
+              "rank_note": "Ordered by structure, from general aspects of a knowledge system to education stages to the aspects of Aboriginal and Torres Strait Islander heritage."
+            }
           }
         ],
         "rank_note": "Ordered by structure, from the specific component aspects of Aboriginal and Torres Strait Islander knowledge to the wider set of aspects of Indigenous and Pacific knowledge systems."
@@ -3814,5 +3884,12 @@
         "rank_note": "Ordered structurally from substantive content domains to data and methods to residual categories."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Indigenous knowledge is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five aspects of a knowledge system: ordering principles, relations to land and waters, governance and custom, transmission, and research and data.",
+    "key_line": "Dimension: **the aspect of a knowledge system the claim is about.** Order: from the system's principles to its relation with outside research.\n1. Ordering principles\n2. Relations to land and waters\n3. Governance and custom\n4. Transmission\n5. Research and data\n\nA people (iwi, hapū, nation) is a substrate, not a cell. A ·M sentence names its iwi or hapū, because authority is local.",
+    "holds": false,
+    "note": "Cells restate \"aspects of a knowledge system\" generically and offer divisions that differ from the five-point key line, so none answers it.",
+    "review": true
+  }
 }

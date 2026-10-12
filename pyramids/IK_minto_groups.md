@@ -49,10 +49,12 @@
       - Ngā tikanga whakahaere mōhiotanga Māori (Māori knowledge management methods)
       - Pacific Peoples information and knowledge management systems
       - Pacific Peoples knowledge management methods
-    - **Umbrella categories are the top-level headings that contain or catch all other Indigenous science fields.**
-      _basis: parts, order: structure. Ordered from the Aboriginal and Torres Strait Islander heading, to the Māori heading, to the residual catch-all._
+    - **Whole Indigenous science traditions are top-level knowledge systems, treated as complete bodies of knowledge rather than as single subject areas.**
+      _basis: kinds, order: structure. Top-level fields, each covering an entire Indigenous knowledge system._
       - Aboriginal and Torres Strait Islander sciences
       - Ngā pūtaiao Māori (Māori sciences)
+    - **Specific subject areas within Aboriginal and Torres Strait Islander sciences are subfields that pick out one aspect of that knowledge system, such as genomics, mathematical and physical sciences, or unclassified topics.**
+      _basis: kinds, order: structure. Subfields nested within the Aboriginal and Torres Strait Islander sciences field._
       - Aboriginal and Torres Strait Islander sciences not elsewhere classified
       - Aboriginal and Torres Strait Islander mathematical, physical and chemical sciences (excl. astronomy and cosmology)
       - Aboriginal and Torres Strait Islander genomics
@@ -175,11 +177,13 @@
         - Aboriginal and Torres Strait Islander health policy
         - Aboriginal and Torres Strait Islander health promotion
         - Aboriginal and Torres Strait Islander public health and wellbeing
-      - **Health fields concerned with the conditions, settings and determinants that shape Aboriginal and Torres Strait Islander health outcomes.**
-        _basis: kinds, order: degree. Ranked from broad structural conditions (social determinants) to narrower settings (remote health) and the residual category._
+      - **Health-focused fields address the health and wellbeing of Aboriginal and Torres Strait Islander peoples, including remote contexts, social determinants, and other unclassified topics.**
+        _basis: kinds, order: structure. Ordered by structure: specific health fields first, the not-elsewhere-classified residual last._
         - Aboriginal and Torres Strait Islander remote health
         - Aboriginal and Torres Strait Islander social determinants of health
         - Aboriginal and Torres Strait Islander health and wellbeing not elsewhere classified
+      - **Design-focused fields address how Aboriginal and Torres Strait Islander knowledge shapes architecture and the practice and management of design.**
+        _basis: kinds, order: structure. Ordered by structure: design practice and management, then architecture._
         - Aboriginal and Torres Strait Islander design practice and management
         - Aboriginal and Torres Strait Islander architecture
       - **Life-stage and care-role fields concern the health of Māori at particular points in life and the professions that provide that care.**
@@ -196,8 +200,8 @@
         - Pacific Peoples diet and nutrition
         - Pacific Peoples epidemiology
         - Pacific Peoples health and wellbeing
-      - **Pacific Peoples health knowledge is divided into two aspects, the cultural determinants that shape health and the biomedical and clinical science that studies and treats it.**
-        _basis: kinds, order: structure_
+      - **Pacific Peoples health fields are kinds of knowledge distinguished by whether a claim addresses cultural determinants of health or biomedical and clinical science.**
+        _basis: kinds, order: structure. Ordered by structure: cultural determinants first, then biomedical and clinical science._
         - Pacific Peoples cultural determinants of health
         - Pacific Peoples biomedical and clinical science
       - **Pacific Peoples health fields are the professional and service settings, such as nursing, public health and remote care, in which health care and public health for Pacific communities are practised.**
@@ -350,8 +354,8 @@
         - Pacific Peoples human geography and demography
         - Pacific Peoples tourism
         - Pacific Peoples urban and regional planning
-    - **Pacific scholarly disciplines are the fields of study and research approaches, including social science and general perspectives, through which knowledge about Pacific Peoples is generated and organised.**
-      _basis: kinds, order: structure. Ordered structurally from general disciplines to social science fields to unclassified topics._
+    - **Disciplines, social science fields and general perspectives are the lenses through which scholars generate and organise knowledge about Pacific Peoples communities.**
+      _basis: kinds, order: structure. Ordered from named disciplines to specific social science fields to general or unclassified perspectives._
       - **Each concept names a discipline, field of study or research approach through which scholars generate and organise knowledge about Pacific Peoples communities.**
         _basis: kinds, order: structure. Ordered by structure of the classification codes._
         - Pacific Peoples anthropology
@@ -368,6 +372,8 @@
         _basis: kinds, order: structure. Kinds of general or residual fields, no ranking._
         - Pacific Peoples perspectives
         - Pacific Peoples, society and community not elsewhere classified
+    - **Wellbeing conditions, change models and life-stage or family-role populations are the substantive subject areas that knowledge about Pacific Peoples examines.**
+      _basis: kinds, order: structure. Ordered from the general conditions and models of wellbeing to the specific populations studied._
       - **This group covers the psychological, social, cultural and structural conditions that shape Pacific Peoples' wellbeing, together with the models used to bring about change in it.**
         _basis: kinds, order: structure. Ordered by structure of the classification codes._
         - Pacific Peoples psychology
@@ -393,13 +399,15 @@
         - Aboriginal and Torres Strait Islander primary education
         - Aboriginal and Torres Strait Islander secondary education
         - Aboriginal and Torres Strait Islander higher education
-      - **Curriculum, methods and engagement are the aspects concerning how Aboriginal and Torres Strait Islander knowledge is taught and how learners are involved.**
-        _basis: kinds, order: structure. Ordered by structure from curriculum design to methods and student engagement._
+      - **Fields concerned with the teaching process itself, covering what is taught, how it is taught, and how students are engaged.**
+        _basis: kinds, order: structure. Ordered by structure from content to method to engagement; no ranking implied._
         - Aboriginal and Torres Strait Islander curriculum and pedagogy
         - Aboriginal and Torres Strait Islander educational methods
         - Aboriginal and Torres Strait Islander student engagement and teaching
-        - Aboriginal and Torres Strait Islander technical, further, continuing and community education
+      - **Fields defined by the education level or sector in which Aboriginal and Torres Strait Islander learning takes place.**
+        _basis: kinds, order: structure. Ordered by structure from early years to adult and community education; no ranking implied._
         - Aboriginal and Torres Strait Islander early childhood education
+        - Aboriginal and Torres Strait Islander technical, further, continuing and community education
       - **Cultural responsiveness and embedding knowledges are the aspects concerning how education respects and incorporates Aboriginal and Torres Strait Islander communities, country and perspectives.**
         _basis: kinds, order: structure. Ordered by structure from community relationships to integration into educational content._
         - Cultural responsiveness and working with Aboriginal and Torres Strait Islander communities education
@@ -474,10 +482,12 @@
         - Pacific Peoples language education
     - **Engagement-focused fields concern how education systems respond to Māori and how Māori students and teachers participate.**
       _basis: kinds, order: structure. Kinds are distinguished by structure, by which dimension of Māori education each concept addresses._
-      - **Engagement-focused fields concern how education systems respond to Māori and how Māori students and teachers participate.**
-        _basis: kinds, order: structure. n/a_
+      - **This group covers the aspect of a knowledge system concerned with how Māori knowledge is delivered and taken up, through responsive education, student engagement and teaching practice.**
+        _basis: kinds, order: structure. Kinds are ordered from system-level responsiveness to classroom-level student engagement and teaching._
         - Te urupare me te whai wāhi Māori ki te mātauranga (Māori responsiveness and engaged education)
         - Te whai wāhi ākonga me ngā mahi whakaako o te Māori (Māori student engagement and teaching)
+      - **This group covers the aspect of a knowledge system concerned with the values and worldview that ground Pacific knowledge, namely its ethics and its relationship to land, culture and identity.**
+        _basis: kinds, order: structure. Kinds are ordered from the broad grounding in land, culture and identity to the specific ethical principles that follow from it._
         - Pacific Peoples land, culture and identity
         - Pacific Peoples ethics
       - **Education and transmission covers the Māori educational settings and pedagogies through which knowledge is passed to new generations.**
@@ -485,8 +495,8 @@
         - Mātauranga Māori (Māori education)
         - Ngā kōhanga reo (Māori curriculum and pedagogy)
         - Te Whāriki - te mātauranga kōhungahunga Māori (Māori early childhood education)
-  - **A group of concepts that each pick out a distinct aspect of an Indigenous or Pacific knowledge system, such as its foundations, content, transmission, expression, stewardship or place in education, that a claim about that system can address.**
-    _basis: kinds, order: structure_
+  - **A claim about an indigenous knowledge system can be classified by the aspect of that system it addresses, such as its foundations, content, transmission, expression, stewardship or place in education.**
+    _basis: kinds, order: structure. Ordered by structure, from general aspects of a knowledge system to education stages to the aspects of Aboriginal and Torres Strait Islander heritage._
     - **Each member names a distinct aspect of a knowledge system, such as its foundations, content, transmission, expression, or integration into education, that a claim about Māori or Pacific Peoples knowledge can address.**
       _basis: kinds, order: structure_
       - **Teaching engagement and Indigenous languages concern how knowledge is transmitted and carried between people in a knowledge system.**
