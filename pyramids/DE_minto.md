@@ -148,5 +148,5 @@ Group of aspects. Basis: cause_effect. Dimension: the aspect of a designed arran
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["DE.K5.S3.U1: ['activity', 'response']"]}
-- field_check holds: False — Key line holds; misplaced include P1.3.3 (urban planning and health), P5.2.3 (BIM), P5.4.5 and the generic leaves P5.1.1, P5.1.3, P4.3.3 and P4.3.4.
+- minto_check: clean
+- field_check holds: True — Key line holds; misplaced include P1.3.3 (urban planning and health), P5.2.3 (BIM), P5.4.5 and the generic leaves P5.1.1, P5.1.3, P4.3.3 and P4.3.4.
