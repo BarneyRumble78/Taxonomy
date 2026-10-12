@@ -4,147 +4,141 @@ Built by scripts/minto_pass.py from the grouped classification. Three rules (Min
 
 ## Introduction
 
-**Situation.** Mathematics spans abstract objects, the continuum, chance and uses in other sciences.
+**Situation.** Mathematics is catalogued by several overlapping schemes that mix subject matter with containers and applications.
 
-**Complication.** Published schemes mix subject areas, applications and container headings, so the topics overlap and repeat.
+**Complication.** The schemes duplicate topics and include generic headings, so no single list shows how the field actually divides.
 
 **Question.** How is everything in mathematics divided?
 
-**Answer.** Mathematics is divided by the role a claim plays, into foundations and the discipline itself, algebraic and combinatorial structure, space and shape, change and chance, and the modelling and computing of claims from other fields, in that order.
+**Answer.** Mathematics is divided by the kind of question it asks, into algebraic and discrete structure, space and shape, change and the continuum, foundations and the discipline as a human activity, and the modelling of claims from other fields, in that order.
 
 ## Governing thought
 
-Mathematics is divided by the role a claim plays, into foundations and the discipline itself, algebraic and combinatorial structure, space and shape, change and chance, and the modelling and computing of claims from other fields, in that order.
+Mathematics is divided by the kind of question it asks, into algebraic and discrete structure, space and shape, change and the continuum, foundations and the discipline as a human activity, and the modelling of claims from other fields, in that order.
 
 ## Key line
 
-Group of roles. Basis: parts. Dimension: role the claim plays in mathematics (foundation, structure, space, change and chance, or modelling). Order: structure. The pillars run from what underlies all mathematics, through its internal objects, to its use outside itself.
+Group of kinds of question. Basis: kinds. Dimension: kind of question a topic addresses. Order: structure. The pillars run from pure structure through space and change to foundations and finally to mathematics serving other fields.
 
-1. Foundations and the discipline is the role of mathematics as the ground of proof and as a human activity with a history and a teaching practice. `MA.K1`
-2. Structure is the role of mathematics as the study of algebraic, ordered and discrete objects defined by operations and relations. `MA.K2`
-3. Space is the role of mathematics as the study of shape, position and continuity of spaces and the groups that act on them. `MA.K3`
-4. Change and chance is the role of mathematics as the study of the continuum, of change through equations, and of random variation. `MA.K4`
-5. Modelling and computing is the role of mathematics as a language for claims from other fields and as a means of computing answers. `MA.K5`
+1. Structure is the kind of question about operations, order, counting and number, and its topics study algebraic and discrete systems. `MA.K1`
+2. Space is the kind of question about shape, position and symmetry, and its topics study topology, geometry and groups. `MA.K2`
+3. Change and the continuum is the kind of question about limits, variation and functions, and its topics study analysis and the equations of change. `MA.K3`
+4. Foundations and the discipline is the kind of question about what mathematics rests on and how it is practised as a human activity, covering logic, history and teaching. `MA.K4`
+5. Modelling other fields is the kind of question about how mathematics expresses and computes claims from physics, decision science, biology, data and computing. `MA.K5`
 
 ## Groups
 
-### 1. Foundations and the discipline is the role of mathematics as the ground of proof and as a human activity with a history and a teaching practice.
+### 1. Structure is the kind of question about operations, order, counting and number, and its topics study algebraic and discrete systems.
 
-- **Logic and category theory supply the formal ground on which every proof and structure rests.**
-  _basis: parts, order: structure. Logic precedes the general language of categories._
-  - Mathematical logic and foundations
-  - Category theory; homological algebra
-- **History and education treat mathematics as a human activity that is recorded and taught.**
-  _basis: parts, order: structure. The past of the subject precedes its teaching._
-  - History and biography
-  - Mathematics education
-
-### 2. Structure is the role of mathematics as the study of algebraic, ordered and discrete objects defined by operations and relations.
-
-- **Algebraic systems study sets with operations such as groups, rings, fields and algebras.**
-  _basis: parts, order: structure. General systems precede specific kinds of algebra._
+- **Algebraic systems study sets with operations such as fields, rings and algebras.**
+  _basis: kinds, order: structure. From the most general systems to specific ring types._
   - General algebraic systems
-  - Group theory and generalizations
   - Field theory and polynomials
   - Commutative algebra
-- **Rings and linear structures study algebras, matrices and the algebraic invariants built from them.**
-  _basis: parts, order: structure. Rings come before linear algebra and its invariants._
   - Associative rings and algebras
   - Nonassociative rings and algebras
-  - Linear and multilinear algebra; matrix theory
-  - \(K\)-theory
-- **Discrete structure studies counting, order and the integers.**
-  _basis: parts, order: structure. Counting precedes order and number._
+- **Discrete structure studies counting, order and the properties of whole numbers.**
+  _basis: kinds, order: structure. From counting to order to numbers._
   - Combinatorics
   - Order, lattices, ordered algebraic structures
   - Number theory
+- **Linear and unifying structure studies matrices and the abstract languages of categories and K-theory that relate algebraic systems.**
+  _basis: kinds, order: structure. From concrete matrices to abstract unifying theories._
+  - Linear and multilinear algebra; matrix theory
+  - \(K\)-theory
+  - Category theory; homological algebra
 
-### 3. Space is the role of mathematics as the study of shape, position and continuity of spaces and the groups that act on them.
+### 2. Space is the kind of question about shape, position and symmetry, and its topics study topology, geometry and groups.
 
-- **Topology studies the continuity and global form of spaces and manifolds.**
-  _basis: parts, order: structure. General topology precedes algebraic and manifold topology._
+- **Topology and manifolds study qualitative properties of space that survive continuous deformation.**
+  _basis: kinds, order: structure. From general to algebraic and manifold topology._
   - General topology
   - Algebraic topology
   - Manifolds and cell complexes
   - Global analysis, analysis on manifolds
-- **Geometry studies metric, convex, differential and algebraic shape together with continuous symmetry.**
-  _basis: parts, order: structure. Elementary geometry precedes differential and algebraic geometry._
+- **Geometry studies measured, convex and algebraic shape in its classical and modern forms.**
+  _basis: kinds, order: structure. From classical geometry to algebraic geometry._
   - Geometry
   - Convex and discrete geometry
   - Differential geometry
   - Algebraic geometry
+- **Symmetry studies the groups, including topological and Lie groups, that describe the symmetries of spaces.**
+  _basis: kinds, order: structure. From abstract groups to continuous groups._
+  - Group theory and generalizations
   - Topological groups, Lie groups
 
-### 4. Change and chance is the role of mathematics as the study of the continuum, of change through equations, and of random variation.
+### 3. Change and the continuum is the kind of question about limits, variation and functions, and its topics study analysis and the equations of change.
 
-- **Real, complex and functional analysis study functions, limits and the continuum.**
-  _basis: parts, order: structure. Real analysis precedes complex and functional analysis._
-  - **Real analysis studies real functions, measure, series and approximation.**
-    _basis: parts, order: structure. Functions precede measure and series._
-    - Real functions
-    - Measure and integration
-    - Sequences, series, summability
-    - Approximations and expansions
-  - **Complex analysis studies functions of complex variables, potentials and special functions.**
-    _basis: parts, order: structure. One variable precedes several variables._
-    - Functions of a complex variable
-    - Potential theory
-    - Several complex variables and analytic spaces
-    - Special functions
-  - **Harmonic and functional analysis study transforms, function spaces and operators.**
-    _basis: parts, order: structure. Transforms precede abstract operators._
-    - Harmonic analysis on Euclidean spaces
-    - Abstract harmonic analysis
-    - Integral transforms, operational calculus
-    - Functional analysis
-    - Operator theory
-- **Equations and dynamics describe how quantities change through differential, integral and difference laws.**
-  _basis: parts, order: structure. Equations precede the long-run behaviour they generate._
+- **Real and classical analysis studies functions, measure, series and approximation on the real line.**
+  _basis: kinds, order: structure. From functions to measure and series._
+  - Real functions
+  - Measure and integration
+  - Sequences, series, summability
+  - Approximations and expansions
+- **Complex analysis studies functions of complex variables together with potentials and special functions.**
+  _basis: kinds, order: structure. From one complex variable to several and special functions._
+  - Functions of a complex variable
+  - Potential theory
+  - Several complex variables and analytic spaces
+  - Special functions
+- **Harmonic analysis and transforms study the decomposition of functions into oscillating components and the transforms that achieve it.**
+  _basis: kinds, order: structure. From Euclidean to abstract harmonic analysis to transforms._
+  - Harmonic analysis on Euclidean spaces
+  - Abstract harmonic analysis
+  - Integral transforms, operational calculus
+- **Equations and dynamics study how quantities evolve, through differential, difference and integral equations and dynamical systems.**
+  _basis: kinds, order: structure. From ordinary to partial equations and dynamics._
   - Ordinary differential equations
   - Partial differential equations
+  - Dynamical systems and ergodic theory
   - Difference and functional equations
   - Integral equations
-  - Dynamical systems and ergodic theory
-- **Probability and statistics study random variation and inference from data.**
-  _basis: parts, order: structure. Theory of chance precedes inference from data._
-  - Probability theory and stochastic processes
-  - Statistics
+- **Abstract analysis and optimisation study infinite-dimensional spaces, operators and extremal problems.**
+  _basis: kinds, order: structure. From spaces to operators to optimisation._
+  - Functional analysis
+  - Operator theory
+  - Calculus of variations and optimal control; optimization
 
-### 5. Modelling and computing is the role of mathematics as a language for claims from other fields and as a means of computing answers.
+### 4. Foundations and the discipline is the kind of question about what mathematics rests on and how it is practised as a human activity, covering logic, history and teaching.
 
-- **Physical modelling expresses the laws of matter, fields and the cosmos in mathematical form.**
-  _basis: parts, order: structure. Mechanics precedes fields, quantum theory and the cosmos._
-  - **Mechanics and thermal physics model bodies, fluids, heat and matter.**
-    _basis: parts, order: structure. Bodies precede fluids and heat._
-    - Mechanics of particles and systems
-    - Mechanics of deformable solids
-    - Fluid mechanics
-    - Classical thermodynamics, heat transfer
-    - Statistical mechanics, structure of matter
-  - **Fields, quanta and the cosmos are modelled through electromagnetism, quantum theory, relativity and the earth and sky.**
-    _basis: parts, order: structure. Fields precede quantum, relativistic and cosmic scales._
-    - Optics, electromagnetic theory
-    - Quantum theory
-    - Relativity and gravitational theory
-    - Astronomy and astrophysics
-    - Mathematical physics
-  - **Geophysics models the structure and processes of the earth.**
-    _basis: parts, order: structure. Earth models follow the physics they apply._
-    - Geophysics
-    - Calculus of variations and optimal control; optimization
-- **Decision, social and life-science modelling expresses choices, systems and living processes in mathematics.**
-  _basis: parts, order: structure. Decision problems precede social, life and engineered systems._
+- Mathematical logic and foundations
+- History and biography
+- Mathematics education
+
+### 5. Modelling other fields is the kind of question about how mathematics expresses and computes claims from physics, decision science, biology, data and computing.
+
+- **Physical modelling expresses claims about matter, fields and the cosmos in mathematical form.**
+  _basis: kinds, order: structure. From mechanics through fields and quanta to cosmic scales._
+  - Mathematical physics
+  - Mechanics of particles and systems
+  - Mechanics of deformable solids
+  - Fluid mechanics
+  - Optics, electromagnetic theory
+- **Thermal, quantum and cosmic modelling expresses claims about heat, microscopic matter, gravity, stars and the earth.**
+  _basis: kinds, order: structure. From heat to the earth and sky._
+  - Classical thermodynamics, heat transfer
+  - Quantum theory
+  - Statistical mechanics, structure of matter
+  - Relativity and gravitational theory
+  - Astronomy and astrophysics
+- **Decision and living-systems modelling uses mathematics for choices, economies, biology and the earth.**
+  _basis: kinds, order: structure. From the earth to decisions to living systems._
+  - Geophysics
   - Operations research, mathematical programming
   - Game theory, economics, finance, and other social and behavioral sciences
   - Biology and other natural sciences
+- **Information and chance modelling uses mathematics for control, communication and random processes.**
+  _basis: kinds, order: structure. From control to information to chance._
   - Systems theory; control
   - Information and communication theory, circuits
-- **Computation turns mathematical claims into algorithms that produce numerical answers.**
-  _basis: parts, order: structure. Numerical methods precede general computer science._
+  - Probability theory and stochastic processes
+- **Computation applies mathematics to calculating answers and to the theory of computing.**
+  _basis: kinds, order: structure. From general applied methods to numerical and computing._
+  - Applied mathematics
   - Numerical analysis
   - Computer science
 
 ## Checks
 
 - minto_check: clean
-- field_check holds: False — Mixed dimension (role vs subject matter); optimization P5.1.3.2 sits under geophysics, homological algebra P1.1.2 under foundations, and rings P2.1/P2.2 overlap.
+- field_check holds: True — Misplaced: P2.1.4 (analysis on manifolds), P3.3.2 (abstract harmonic analysis), P5.3.1 (geophysics under decision/living systems), P5.5.1 (applied mathematics).

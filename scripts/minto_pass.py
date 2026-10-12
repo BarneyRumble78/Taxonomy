@@ -113,8 +113,7 @@ class Budget:
 
     def call(self, system, user, tool, schema, max_tokens):
         worst = (len(system) + len(user)) / 3.2 / 1e6 * IN_RATE + max_tokens / 1e6 * OUT_RATE
-        prior = float(json.loads(LEDGER.read_text())["fields"].get(f"MINTO:{self.field}", 0))
-        if prior + worst > self.field_cap:
+        if self.used + worst > self.field_cap:
             raise RuntimeError(f"field cap ${self.field_cap} would be passed")
         if total_spent() - BASELINE + worst > self.stage_cap:
             raise RuntimeError(f"stage cap ${self.stage_cap} would be passed")
@@ -382,12 +381,16 @@ def run(field, field_cap, stage_cap, dry=False):
     feedback = ""
     pyr = None
     best = None
+    last = None
     for attempt in range(6):
-        msg = user + (f"\n\nYour previous answer was rejected. Fix ALL of these and answer again:\n{feedback}" if feedback else "")
+        msg = user + (f"\n\nYour previous answer (JSON below) was rejected. Return it corrected: keep everything that is fine, change only what is needed to fix ALL of these:\n{feedback}\n\nPrevious answer:\n{json.dumps(last, ensure_ascii=False)}" if feedback else "")
         try:
             r = b.call(SYSTEM, msg, "record_pyramid", SCHEMA, 10000)
         except RuntimeError as e:
             log(f"{field} stop: {e}"); break
+        if not r.get("pillars"):
+            feedback = feedback or "- key line had 0 pillars"; log(f"{field} attempt {attempt+1} empty reply"); continue
+        last = copy.deepcopy(r)
         repair(r, items)
         its = expand(r, items)
         bad_d = [d for d in r.get("dissolve") or [] if d not in items or not (items[d]["point"].get("support") or {}).get("points")]
@@ -414,7 +417,7 @@ def run(field, field_cap, stage_cap, dry=False):
             log(f"{field} stop: {e}"); break
         pyr["field_check"] = {"governing_thought": pyr["governing_thought"], "key_line": [p["statement"] for p in pyr["key_line"]["points"]],
                               "holds": bool(chk.get("key_line_holds")) and not bad, "note": chk.get("note", ""), "review": not chk.get("key_line_holds")}
-        log(f"{field} attempt {attempt+1} minto_issues={sum(len(v) for v in bad.values())} holds={chk.get('holds')} note={chk.get('note')}")
+        log(f"{field} attempt {attempt+1} minto_issues={sum(len(v) for v in bad.values())} holds={chk.get('key_line_holds')} misplaced={chk.get('misplaced')} note={chk.get('note')}")
         pyr["field_check"]["misplaced"] = int(chk.get("misplaced") or 0)
         pyr["field_check"]["problems"] = (0 if chk.get("key_line_holds") else 100) + pyr["field_check"]["misplaced"] + sum(len(v) for v in bad.values())
         if best is None or pyr["field_check"]["holds"] or pyr["field_check"]["problems"] < best["field_check"]["problems"]:
