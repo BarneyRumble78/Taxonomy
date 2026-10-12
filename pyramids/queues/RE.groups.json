@@ -27,7 +27,10 @@
                   "id": "ANZSRC:5005",
                   "anchor": "node:ANZSRC:5005",
                   "statement": "Theology",
-                  "name": "Theology"
+                  "name": "Theology",
+                  "aliases": [
+                    "ANZSRC:500501"
+                  ]
                 },
                 {
                   "id": "ANZSRC:500501",
@@ -360,10 +363,17 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Religion and theology is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its objects are claims about four objects of the claim: the ultimate and the human condition, authoritative text, practice, and community and institution.",
-    "key_line": "- **Logic.** Inductive.\n- **Plural noun.** objects of the claim.\n- **Dimension.** What the sentence is about.\n- **Order.** Structural, from the referent to its carriers: what is ultimate, the text that discloses it, the practice that answers it, the community that carries it.\n\n1. The ultimate and the human condition\n2. Authoritative text\n3. Practice\n4. Community and institution\n\n**MECE test.** Exclusive: by the subject rule, each sentence has one subject. \"Genesis 1 is a priestly composition\" is about a text (A2). \"God created from nothing\" is about the ultimate (A1), even when its warrant is a text. Exhaustive: religious experience is A3.2 as discipline, or MS.O.A1 as mental process. Sacred place is A1.2 (status), A3.1 (use in rite) or A4.1 (governance). Ethics and religious law are A3.3. Oral text is inside A2, which prevents a bias toward written scripture.\n\n**CONTESTED (order).** An anthropological order would run community first. The order is structural, not a ranking.",
-    "holds": false,
-    "note": "Cells describe classification entries and fields, not the four objects (ultimate, text, practice, community); text and community are missing, and religious law belongs under practice.",
-    "review": true
+    "governing_thought": "Religion and theology are divided by what the study is about, namely the ultimate and the human condition, authoritative text, practice, and community and institution, moving from the referent to its carriers.",
+    "key_line": [
+      "The ultimate and the human condition is the object of study when the subject is what is believed about the divine, the sacred and human nature.",
+      "Authoritative text is the object of study when the subject is the scriptures and the binding legal corpora of religious traditions.",
+      "Practice is the object of study when the subject is how religion is lived out in ministry, conduct, society and culture.",
+      "Community and institution is the object of study when the subject is the religious traditions as organised bodies of adherents."
+    ],
+    "holds": true,
+    "note": "Key line holds; P1.3 (Religions. Mythology. Rationalism) and P4.1.1 (Christianity) are broad headings that sit loosely under their pillars.",
+    "review": false,
+    "misplaced": 2,
+    "problems": 2
   }
 }
