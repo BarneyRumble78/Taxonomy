@@ -1,42 +1,41 @@
 {
   "field": "BI",
   "introduction": {
-    "situation": "Biological claims are made about living things at many scales, from nucleic acid sequences to whole communities.",
-    "complication": "The existing groups mix subject matter with source schemes, and several are residual headings or container labels.",
+    "situation": "Biological knowledge spans molecules, cells, whole organisms, lineages and ecosystems.",
+    "complication": "Source schemes mix anatomy, chemistry, methods and taxa, so topics sit in scattered places.",
     "question": "How is everything in biology divided?",
-    "answer": "Biology is divided by the level or process a claim concerns, running from the copied sequence to the interacting community: heritable information, the cell, the organism, descent, and ecological interaction."
+    "answer": "Biological claims are divided by the level or process they concern, running from the copied sequence to the interacting community: heritable information, the cell, the organism, descent, and ecological interaction."
   },
-  "governing_thought": "Biology is divided by the level or process a claim concerns, running from the copied sequence to the interacting community: heritable information, the cell, the organism, descent, and ecological interaction.",
+  "governing_thought": "Biological claims are divided by the level or process they concern, running from the copied sequence to the interacting community: heritable information, the cell, the organism, descent, and ecological interaction.",
   "key_line": {
     "logic_type": "inductive",
     "plural_noun": "levels or processes",
     "mece_dimension": "the level or process the claim is about",
     "basis": "kinds",
     "order": "structure",
-    "rank_note": "The pillars run from the copied sequence up to the interacting community.",
+    "rank_note": "The pillars run from the copied sequence through the cell and the organism to descent and the interacting community.",
     "points": [
       {
         "id": "BI.K1",
         "anchor": "pillar:BI.K1",
-        "title": "Heritable information",
-        "statement": "Heritable information is the level at which claims concern copied sequences, genes, genomes and the chemistry of nucleic acids, together with the computational analysis of them.",
-        "name": "Heritable information is the level at which claims concern copied sequences, genes, genomes and the chemistry of nucleic acids, together with the computational analysis of them.",
+        "statement": "Heritable information is the level at which claims concern copied sequences, genes, genomes and the molecules that carry them.",
+        "name": "Heritable information is the level at which claims concern copied sequences, genes, genomes and the molecules that carry them.",
         "support": {
           "logic_type": "inductive",
-          "basis": "parts",
+          "basis": "kinds",
           "order": "structure",
-          "rank_note": "From the analysis of sequence data to the genetics and chemistry of the nucleic acids themselves.",
+          "rank_note": "From the nucleic acid sequence itself to the genetic study of cells and genomes.",
           "points": [
             {
-              "id": "BI.O.A1.G9",
-              "anchor": "group:BI.O.A1.G9",
-              "statement": "Computational and bioinformatic claims are those resting on analytic methods, molecular sequence data, sequence units and systems-level or evolutionary analyses.",
-              "name": "Computational and bioinformatic claims are those resting on analytic methods, molecular sequence data, sequence units and systems-level or evolutionary analyses.",
+              "id": "BI.K1.S1",
+              "anchor": "section:BI.K1.S1",
+              "statement": "Sequence analysis and nucleic acid chemistry address claims about the sequences, tools and molecular classes that make up genetic material.",
+              "name": "Sequence analysis and nucleic acid chemistry address claims about the sequences, tools and molecular classes that make up genetic material.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
+                "rank_note": "From computational tools to sequence data, genetic elements and chemical classes.",
                 "points": [
                   {
                     "id": "BI.O.A1.G1",
@@ -138,10 +137,10 @@
                     }
                   },
                   {
-                    "id": "BI.O.A1.G3",
-                    "anchor": "group:BI.O.A1.G3",
-                    "statement": "Systems, population and evolutionary computational analyses address claims at the level of networks, ecosystems, lineages and inherited variation.",
-                    "name": "Systems, population and evolutionary computational analyses address claims at the level of networks, ecosystems, lineages and inherited variation.",
+                    "id": "BI.O.A1.G7",
+                    "anchor": "group:BI.O.A1.G7",
+                    "statement": "Nucleic acid chemical classes are kinds of molecules defined by their structure, from nucleosides and nucleotides to precursors, full nucleic acids and antisense elements.",
+                    "name": "Nucleic acid chemical classes are kinds of molecules defined by their structure, from nucleosides and nucleotides to precursors, full nucleic acids and antisense elements.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -149,41 +148,46 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "ANZSRC:310202",
-                          "anchor": "node:ANZSRC:310202",
-                          "statement": "Biological network analysis",
-                          "name": "Biological network analysis"
+                          "id": "MeSH:D13",
+                          "anchor": "node:MeSH:D13",
+                          "statement": "Nucleic Acids, Nucleotides, and Nucleosides",
+                          "name": "Nucleic Acids, Nucleotides, and Nucleosides"
                         },
                         {
-                          "id": "ANZSRC:310203",
-                          "anchor": "node:ANZSRC:310203",
-                          "statement": "Computational ecology and phylogenetics",
-                          "name": "Computational ecology and phylogenetics"
+                          "id": "MeSH:D13.400",
+                          "anchor": "node:MeSH:D13.400",
+                          "statement": "Nucleic Acid Precursors",
+                          "name": "Nucleic Acid Precursors"
                         },
                         {
-                          "id": "ANZSRC:310207",
-                          "anchor": "node:ANZSRC:310207",
-                          "statement": "Statistical and quantitative genetics",
-                          "name": "Statistical and quantitative genetics"
+                          "id": "MeSH:D13.444",
+                          "anchor": "node:MeSH:D13.444",
+                          "statement": "Nucleic Acids",
+                          "name": "Nucleic Acids"
+                        },
+                        {
+                          "id": "MeSH:D13.570",
+                          "anchor": "node:MeSH:D13.570",
+                          "statement": "Nucleosides",
+                          "name": "Nucleosides"
                         }
                       ],
-                      "rank_note": "Ordered from molecular networks up to populations and ecosystems."
+                      "rank_note": "Kinds of nucleic acid related molecules, listed by structure."
                     }
                   }
-                ],
-                "rank_note": "Ordered by structure of level: methods, then molecular data, then sequence units, then systems and lineages."
+                ]
               }
             },
             {
-              "id": "BI.O.A1.G10",
-              "anchor": "group:BI.O.A1.G10",
-              "statement": "Genetics and nucleic acid chemistry claims are those about cellular and developmental processes, genomes, research fields and the chemical classes of nucleic acids.",
-              "name": "Genetics and nucleic acid chemistry claims are those about cellular and developmental processes, genomes, research fields and the chemical classes of nucleic acids.",
+              "id": "BI.K1.S2",
+              "anchor": "section:BI.K1.S2",
+              "statement": "Genetics fields address claims about how heritable information operates in cell division, development, genomes and research traditions.",
+              "name": "Genetics fields address claims about how heritable information operates in cell division, development, genomes and research traditions.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
+                "rank_note": "From cellular processes to genomes and then the research fields.",
                 "points": [
                   {
                     "id": "BI.O.A1.G4",
@@ -319,75 +323,35 @@
                       ],
                       "rank_note": "Kinds of genetics research fields, listed by structure of subject area."
                     }
-                  },
-                  {
-                    "id": "BI.O.A1.G7",
-                    "anchor": "group:BI.O.A1.G7",
-                    "statement": "Nucleic acid chemical classes are kinds of molecules defined by their structure, from nucleosides and nucleotides to precursors, full nucleic acids and antisense elements.",
-                    "name": "Nucleic acid chemical classes are kinds of molecules defined by their structure, from nucleosides and nucleotides to precursors, full nucleic acids and antisense elements.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:D13",
-                          "anchor": "node:MeSH:D13",
-                          "statement": "Nucleic Acids, Nucleotides, and Nucleosides",
-                          "name": "Nucleic Acids, Nucleotides, and Nucleosides"
-                        },
-                        {
-                          "id": "MeSH:D13.400",
-                          "anchor": "node:MeSH:D13.400",
-                          "statement": "Nucleic Acid Precursors",
-                          "name": "Nucleic Acid Precursors"
-                        },
-                        {
-                          "id": "MeSH:D13.444",
-                          "anchor": "node:MeSH:D13.444",
-                          "statement": "Nucleic Acids",
-                          "name": "Nucleic Acids"
-                        },
-                        {
-                          "id": "MeSH:D13.570",
-                          "anchor": "node:MeSH:D13.570",
-                          "statement": "Nucleosides",
-                          "name": "Nucleosides"
-                        }
-                      ],
-                      "rank_note": "Kinds of nucleic acid related molecules, listed by structure."
-                    }
                   }
-                ],
-                "rank_note": "Ordered by structure of level: cellular processes, then genomes and populations, then research fields, then chemical classes."
+                ]
               }
             }
           ]
-        }
+        },
+        "title": "Heritable information"
       },
       {
         "id": "BI.K2",
         "anchor": "pillar:BI.K2",
-        "title": "Cell",
-        "statement": "The cell is the level at which claims concern biomolecules, cellular processes, regulatory factors, biological materials and their industrial and environmental uses.",
-        "name": "The cell is the level at which claims concern biomolecules, cellular processes, regulatory factors, biological materials and their industrial and environmental uses.",
+        "statement": "The cell is the level at which claims concern biomolecules, cellular processes, signals and the materials cells make.",
+        "name": "The cell is the level at which claims concern biomolecules, cellular processes, signals and the materials cells make.",
         "support": {
           "logic_type": "inductive",
-          "basis": "parts",
+          "basis": "kinds",
           "order": "structure",
-          "rank_note": "From molecules and cell processes outward to materials, products and regulatory agents.",
+          "rank_note": "From molecules inside the cell to cell processes, signalling and cell-derived materials.",
           "points": [
             {
-              "id": "BI.O.A2.G19",
-              "anchor": "group:BI.O.A2.G19",
-              "statement": "Molecular, cellular and systems-level studies examine how biomolecules, cells and their networks are structured, interact and function.",
-              "name": "Molecular, cellular and systems-level studies examine how biomolecules, cells and their networks are structured, interact and function.",
+              "id": "BI.K2.S1",
+              "anchor": "section:BI.K2.S1",
+              "statement": "Molecular and cellular processes cover how biomolecules and cells function, grow, communicate and transport material.",
+              "name": "Molecular and cellular processes cover how biomolecules and cells function, grow, communicate and transport material.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
+                "rank_note": "From molecules to cell processes, communication and cell biology fields.",
                 "points": [
                   {
                     "id": "BI.O.A2.G1",
@@ -544,126 +508,109 @@
                       ],
                       "rank_note": "Ordered by structure from modelling whole systems to designing new ones."
                     }
+                  },
+                  {
+                    "id": "BI.O.A3.G1",
+                    "anchor": "group:BI.O.A3.G1",
+                    "statement": "Molecular and cellular fields study genes, biochemical pathways and cell machinery inside microbes, plants and animals.",
+                    "name": "Molecular and cellular fields study genes, biochemical pathways and cell machinery inside microbes, plants and animals.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310704",
+                          "anchor": "node:ANZSRC:310704",
+                          "statement": "Microbial genetics",
+                          "name": "Microbial genetics"
+                        },
+                        {
+                          "id": "ANZSRC:310802",
+                          "anchor": "node:ANZSRC:310802",
+                          "statement": "Plant biochemistry",
+                          "name": "Plant biochemistry"
+                        },
+                        {
+                          "id": "ANZSRC:310803",
+                          "anchor": "node:ANZSRC:310803",
+                          "statement": "Plant cell and molecular biology",
+                          "name": "Plant cell and molecular biology"
+                        },
+                        {
+                          "id": "ANZSRC:310902",
+                          "anchor": "node:ANZSRC:310902",
+                          "statement": "Animal cell and molecular biology",
+                          "name": "Animal cell and molecular biology"
+                        }
+                      ],
+                      "rank_note": "Smallest scale, molecules and cells."
+                    }
                   }
-                ],
-                "rank_note": "Ordered from individual molecules to cells to integrated systems."
+                ]
               }
             },
             {
-              "id": "BI.O.A2.G20",
-              "anchor": "group:BI.O.A2.G20",
-              "statement": "Industrial biotechnology applies biological catalysts, organisms and molecular tools to make products and serve industrial purposes.",
-              "name": "Industrial biotechnology applies biological catalysts, organisms and molecular tools to make products and serve industrial purposes.",
+              "id": "BI.K2.S2",
+              "anchor": "section:BI.K2.S2",
+              "statement": "Amino acids, peptides and proteins are the molecules from which cells build their machinery.",
+              "name": "Amino acids, peptides and proteins are the molecules from which cells build their machinery.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
+                "rank_note": "From the general class to its building blocks and larger forms.",
                 "points": [
                   {
-                    "id": "BI.O.A2.G5",
-                    "anchor": "group:BI.O.A2.G5",
-                    "statement": "Industrial biotechnology applies biological catalysts and organisms to make products at production scale.",
-                    "name": "Industrial biotechnology applies biological catalysts and organisms to make products at production scale.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3106",
-                          "anchor": "node:ANZSRC:3106",
-                          "statement": "Industrial biotechnology",
-                          "name": "Industrial biotechnology"
-                        },
-                        {
-                          "id": "ANZSRC:310601",
-                          "anchor": "node:ANZSRC:310601",
-                          "statement": "Biocatalysis and enzyme technology",
-                          "name": "Biocatalysis and enzyme technology"
-                        },
-                        {
-                          "id": "ANZSRC:310602",
-                          "anchor": "node:ANZSRC:310602",
-                          "statement": "Bioprocessing, bioproduction and bioproducts",
-                          "name": "Bioprocessing, bioproduction and bioproducts"
-                        },
-                        {
-                          "id": "ANZSRC:310603",
-                          "anchor": "node:ANZSRC:310603",
-                          "statement": "Fermentation",
-                          "name": "Fermentation"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure from the field to catalysis, production and fermentation."
-                    }
+                    "id": "MeSH:D12",
+                    "anchor": "node:MeSH:D12",
+                    "statement": "Amino Acids, Peptides, and Proteins",
+                    "name": "Amino Acids, Peptides, and Proteins"
                   },
                   {
-                    "id": "BI.O.A2.G6",
-                    "anchor": "group:BI.O.A2.G6",
-                    "statement": "Industrial biotechnology subfields are research areas that apply biological systems and molecular tools to industrial purposes.",
-                    "name": "Industrial biotechnology subfields are research areas that apply biological systems and molecular tools to industrial purposes.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:310604",
-                          "anchor": "node:ANZSRC:310604",
-                          "statement": "Industrial biotechnology diagnostics (incl. biosensors)",
-                          "name": "Industrial biotechnology diagnostics (incl. biosensors)"
-                        },
-                        {
-                          "id": "ANZSRC:310605",
-                          "anchor": "node:ANZSRC:310605",
-                          "statement": "Industrial microbiology (incl. biofeedstocks)",
-                          "name": "Industrial microbiology (incl. biofeedstocks)"
-                        },
-                        {
-                          "id": "ANZSRC:310606",
-                          "anchor": "node:ANZSRC:310606",
-                          "statement": "Industrial molecular engineering of nucleic acids and proteins",
-                          "name": "Industrial molecular engineering of nucleic acids and proteins"
-                        },
-                        {
-                          "id": "ANZSRC:310607",
-                          "anchor": "node:ANZSRC:310607",
-                          "statement": "Nanobiotechnology",
-                          "name": "Nanobiotechnology"
-                        },
-                        {
-                          "id": "ANZSRC:310699",
-                          "anchor": "node:ANZSRC:310699",
-                          "statement": "Industrial biotechnology not elsewhere classified",
-                          "name": "Industrial biotechnology not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Ordered by ANZSRC code sequence."
-                    }
+                    "id": "MeSH:D12.125",
+                    "anchor": "node:MeSH:D12.125",
+                    "statement": "Amino Acids",
+                    "name": "Amino Acids"
+                  },
+                  {
+                    "id": "MeSH:D12.644",
+                    "anchor": "node:MeSH:D12.644",
+                    "statement": "Peptides",
+                    "name": "Peptides"
+                  },
+                  {
+                    "id": "MeSH:D12.776",
+                    "anchor": "node:MeSH:D12.776",
+                    "statement": "Proteins",
+                    "name": "Proteins"
+                  },
+                  {
+                    "id": "MeSH:D12.888",
+                    "anchor": "node:MeSH:D12.888",
+                    "statement": "Micropeptides",
+                    "name": "Micropeptides"
                   }
-                ],
-                "rank_note": "Ordered from production-scale practice to the research subfields behind it."
+                ]
               }
             },
             {
-              "id": "BI.O.A2.G21",
-              "anchor": "group:BI.O.A2.G21",
-              "statement": "Molecules and materials of biological origin include amino acid based molecules and substances produced by or obtained from living organisms.",
-              "name": "Molecules and materials of biological origin include amino acid based molecules and substances produced by or obtained from living organisms.",
+              "id": "BI.K2.S3",
+              "anchor": "section:BI.K2.S3",
+              "statement": "Signalling and regulatory molecules are substances that carry messages or control cellular and immune activity.",
+              "name": "Signalling and regulatory molecules are substances that carry messages or control cellular and immune activity.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
+                "rank_note": "From host factors to messengers, indicators and process-blocking agents.",
                 "points": [
                   {
-                    "id": "BI.O.A2.G7",
-                    "anchor": "group:BI.O.A2.G7",
-                    "statement": "Amino acid based molecules are chemical entities built from amino acids, ranging from single residues to large proteins.",
-                    "name": "Amino acid based molecules are chemical entities built from amino acids, ranging from single residues to large proteins.",
+                    "id": "BI.O.A2.G15",
+                    "anchor": "group:BI.O.A2.G15",
+                    "statement": "Host-produced signaling and regulatory factors are molecules made by the body that direct clotting, cell movement, and cellular activity.",
+                    "name": "Host-produced signaling and regulatory factors are molecules made by the body that direct clotting, cell movement, and cellular activity.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -671,39 +618,167 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "MeSH:D12",
-                          "anchor": "node:MeSH:D12",
-                          "statement": "Amino Acids, Peptides, and Proteins",
-                          "name": "Amino Acids, Peptides, and Proteins"
+                          "id": "MeSH:D23",
+                          "anchor": "node:MeSH:D23",
+                          "statement": "Biological Factors",
+                          "name": "Biological Factors"
                         },
                         {
-                          "id": "MeSH:D12.125",
-                          "anchor": "node:MeSH:D12.125",
-                          "statement": "Amino Acids",
-                          "name": "Amino Acids"
+                          "id": "MeSH:D23.119",
+                          "anchor": "node:MeSH:D23.119",
+                          "statement": "Blood Coagulation Factors",
+                          "name": "Blood Coagulation Factors"
                         },
                         {
-                          "id": "MeSH:D12.644",
-                          "anchor": "node:MeSH:D12.644",
-                          "statement": "Peptides",
-                          "name": "Peptides"
+                          "id": "MeSH:D23.125",
+                          "anchor": "node:MeSH:D23.125",
+                          "statement": "Chemotactic Factors",
+                          "name": "Chemotactic Factors"
                         },
                         {
-                          "id": "MeSH:D12.776",
-                          "anchor": "node:MeSH:D12.776",
-                          "statement": "Proteins",
-                          "name": "Proteins"
-                        },
-                        {
-                          "id": "MeSH:D12.888",
-                          "anchor": "node:MeSH:D12.888",
-                          "statement": "Micropeptides",
-                          "name": "Micropeptides"
+                          "id": "MeSH:D23.297",
+                          "anchor": "node:MeSH:D23.297",
+                          "statement": "Host-Derived Cellular Factors",
+                          "name": "Host-Derived Cellular Factors"
                         }
                       ],
-                      "rank_note": "Ordered from the parent category to its child classes."
+                      "rank_note": "not ranked"
                     }
                   },
+                  {
+                    "id": "BI.O.A2.G16",
+                    "anchor": "group:BI.O.A2.G16",
+                    "statement": "Signaling molecules are substances that carry messages between cells or organisms to trigger responses.",
+                    "name": "Signaling molecules are substances that carry messages between cells or organisms to trigger responses.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:D23.469",
+                          "anchor": "node:MeSH:D23.469",
+                          "statement": "Inflammation Mediators",
+                          "name": "Inflammation Mediators"
+                        },
+                        {
+                          "id": "MeSH:D23.529",
+                          "anchor": "node:MeSH:D23.529",
+                          "statement": "Intercellular Signaling Peptides and Proteins",
+                          "name": "Intercellular Signaling Peptides and Proteins"
+                        },
+                        {
+                          "id": "MeSH:D23.585",
+                          "anchor": "node:MeSH:D23.585",
+                          "statement": "Pathogen-Associated Molecular Pattern Molecules",
+                          "name": "Pathogen-Associated Molecular Pattern Molecules"
+                        },
+                        {
+                          "id": "MeSH:D23.641",
+                          "anchor": "node:MeSH:D23.641",
+                          "statement": "Pheromones",
+                          "name": "Pheromones"
+                        }
+                      ],
+                      "rank_note": "Grouped by kind of signaling substance, with no ranking implied."
+                    }
+                  },
+                  {
+                    "id": "BI.O.A2.G27",
+                    "anchor": "group:BI.O.A2.G27",
+                    "statement": "State indicators and regulators are molecular entities that report on or control the level of a biological state, such as disease status or immune activity.",
+                    "name": "State indicators and regulators are molecular entities that report on or control the level of a biological state, such as disease status or immune activity.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:D23.101",
+                          "anchor": "node:MeSH:D23.101",
+                          "statement": "Biomarkers",
+                          "name": "Biomarkers"
+                        },
+                        {
+                          "id": "MeSH:D23.383",
+                          "anchor": "node:MeSH:D23.383",
+                          "statement": "Immune Checkpoint Proteins",
+                          "name": "Immune Checkpoint Proteins"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure: the general measurable indicator first, then the specific immune regulator."
+                    }
+                  },
+                  {
+                    "id": "BI.O.A2.G26",
+                    "anchor": "group:BI.O.A2.G26",
+                    "statement": "Process-modifying agents are substances that act on a chemical or physiological process in order to block or limit it.",
+                    "name": "Process-modifying agents are substances that act on a chemical or physiological process in order to block or limit it.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:D23.063",
+                          "anchor": "node:MeSH:D23.063",
+                          "statement": "Antioxidants",
+                          "name": "Antioxidants"
+                        },
+                        {
+                          "id": "MeSH:D23.113",
+                          "anchor": "node:MeSH:D23.113",
+                          "statement": "Blood Coagulation Factor Inhibitors",
+                          "name": "Blood Coagulation Factor Inhibitors"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure: the oxidative process first, then the coagulation process."
+                    }
+                  },
+                  {
+                    "id": "BI.O.A2.G24",
+                    "anchor": "group:BI.O.A2.G24",
+                    "statement": "Immunostimulating agents are substances whose role is to provoke or boost an immune response in an organism.",
+                    "name": "Immunostimulating agents are substances whose role is to provoke or boost an immune response in an organism.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:D20.475",
+                          "anchor": "node:MeSH:D20.475",
+                          "statement": "Freund's Adjuvant",
+                          "name": "Freund's Adjuvant"
+                        },
+                        {
+                          "id": "MeSH:D23.050",
+                          "anchor": "node:MeSH:D23.050",
+                          "statement": "Antigens",
+                          "name": "Antigens"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure: the enhancing adjuvant is listed before the antigen it accompanies."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BI.K2.S4",
+              "anchor": "section:BI.K2.S4",
+              "statement": "Cell-derived materials and cellular physiology cover substances obtained from cells and the metabolic and cell-physiological processes they perform.",
+              "name": "Cell-derived materials and cellular physiology cover substances obtained from cells and the metabolic and cell-physiological processes they perform.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From raw biological materials to compounds and then cell-level processes.",
+                "points": [
                   {
                     "id": "BI.O.A2.G8",
                     "anchor": "group:BI.O.A2.G8",
@@ -741,33 +816,6 @@
                         }
                       ],
                       "rank_note": "Ordered from cells to products derived from them."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A2.G24",
-                    "anchor": "group:BI.O.A2.G24",
-                    "statement": "Immunostimulating agents are substances whose role is to provoke or boost an immune response in an organism.",
-                    "name": "Immunostimulating agents are substances whose role is to provoke or boost an immune response in an organism.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:D20.475",
-                          "anchor": "node:MeSH:D20.475",
-                          "statement": "Freund's Adjuvant",
-                          "name": "Freund's Adjuvant"
-                        },
-                        {
-                          "id": "MeSH:D23.050",
-                          "anchor": "node:MeSH:D23.050",
-                          "statement": "Antigens",
-                          "name": "Antigens"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure: the enhancing adjuvant is listed before the antigen it accompanies."
                     }
                   },
                   {
@@ -835,21 +883,1198 @@
                       ],
                       "rank_note": "Grouped by kind of biologically derived compound, with no ranking implied."
                     }
+                  },
+                  {
+                    "id": "BI.O.A2.G18",
+                    "anchor": "group:BI.O.A2.G18",
+                    "statement": "Physiological processes are the cellular, metabolic, and organ-system activities that a claim about living function addresses.",
+                    "name": "Physiological processes are the cellular, metabolic, and organ-system activities that a claim about living function addresses.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:G",
+                          "anchor": "node:MeSH:G",
+                          "statement": "Phenomena and Processes",
+                          "name": "Phenomena and Processes"
+                        },
+                        {
+                          "id": "MeSH:G03",
+                          "anchor": "node:MeSH:G03",
+                          "statement": "Metabolism",
+                          "name": "Metabolism"
+                        },
+                        {
+                          "id": "MeSH:G04",
+                          "anchor": "node:MeSH:G04",
+                          "statement": "Cell Physiological Phenomena",
+                          "name": "Cell Physiological Phenomena"
+                        },
+                        {
+                          "id": "MeSH:G13",
+                          "anchor": "node:MeSH:G13",
+                          "statement": "Integumentary System Physiological Phenomena",
+                          "name": "Integumentary System Physiological Phenomena"
+                        }
+                      ],
+                      "rank_note": "Grouped by level of physiological process, with no ranking implied."
+                    }
                   }
-                ],
-                "rank_note": "Ordered from amino acid based molecules to whole biological materials and experimental preparations."
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Cell"
+      },
+      {
+        "id": "BI.K3",
+        "anchor": "pillar:BI.K3",
+        "statement": "The organism is the level at which claims concern the body structures, physiology, behaviour and kinds of whole living individuals.",
+        "name": "The organism is the level at which claims concern the body structures, physiology, behaviour and kinds of whole living individuals.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "From body structure to function, to the kinds of organism studied.",
+          "points": [
+            {
+              "id": "BI.K3.S1",
+              "anchor": "section:BI.K3.S1",
+              "statement": "Body structures are the anatomical parts and regions of the organism, from general anatomy to musculoskeletal and digestive systems.",
+              "name": "Body structures are the anatomical parts and regions of the organism, from general anatomy to musculoskeletal and digestive systems.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From general anatomy to regions, systems and tissues.",
+                "points": [
+                  {
+                    "id": "MeSH:A",
+                    "anchor": "node:MeSH:A",
+                    "statement": "Anatomy",
+                    "name": "Anatomy"
+                  },
+                  {
+                    "id": "MeSH:A01",
+                    "anchor": "node:MeSH:A01",
+                    "statement": "Body Regions",
+                    "name": "Body Regions"
+                  },
+                  {
+                    "id": "MeSH:A02",
+                    "anchor": "node:MeSH:A02",
+                    "statement": "Musculoskeletal System",
+                    "name": "Musculoskeletal System"
+                  },
+                  {
+                    "id": "MeSH:A03",
+                    "anchor": "node:MeSH:A03",
+                    "statement": "Digestive System",
+                    "name": "Digestive System"
+                  },
+                  {
+                    "id": "MeSH:A10",
+                    "anchor": "node:MeSH:A10",
+                    "statement": "Tissues",
+                    "name": "Tissues"
+                  }
+                ]
               }
             },
             {
-              "id": "BI.O.A2.G22",
-              "anchor": "group:BI.O.A2.G22",
-              "statement": "Environmental and complex mixtures are natural, waste or polluting materials found in soil, air and other media, often as dispersed particles.",
-              "name": "Environmental and complex mixtures are natural, waste or polluting materials found in soil, air and other media, often as dispersed particles.",
+              "id": "BI.K3.S2",
+              "anchor": "section:BI.K3.S2",
+              "statement": "Organ systems and body products are the specific systems, tissues and structures that carry out bodily functions in animals, plants and microbes.",
+              "name": "Organ systems and body products are the specific systems, tissues and structures that carry out bodily functions in animals, plants and microbes.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
+                "rank_note": "From organ systems to structures, secretions and human anatomy.",
+                "points": [
+                  {
+                    "id": "BI.K3.S2.U1",
+                    "anchor": "section:BI.K3.S2.U1",
+                    "statement": "Animal organ systems handle exchange, signalling, sensing and protection at the interface with the environment.",
+                    "name": "Animal organ systems handle exchange, signalling, sensing and protection at the interface with the environment.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From internal to interface systems.",
+                      "points": [
+                        {
+                          "id": "BI.O.A3.G11",
+                          "anchor": "group:BI.O.A3.G11",
+                          "statement": "Organ systems of the animal body that handle exchange of gases and the excretion and reproduction of the organism.",
+                          "name": "Organ systems of the animal body that handle exchange of gases and the excretion and reproduction of the organism.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "parts",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "MeSH:A04",
+                                "anchor": "node:MeSH:A04",
+                                "statement": "Respiratory System",
+                                "name": "Respiratory System"
+                              },
+                              {
+                                "id": "MeSH:A05",
+                                "anchor": "node:MeSH:A05",
+                                "statement": "Urogenital System",
+                                "name": "Urogenital System"
+                              },
+                              {
+                                "id": "MeSH:A06",
+                                "anchor": "node:MeSH:A06",
+                                "statement": "Endocrine System",
+                                "name": "Endocrine System"
+                              },
+                              {
+                                "id": "MeSH:A07",
+                                "anchor": "node:MeSH:A07",
+                                "statement": "Cardiovascular System",
+                                "name": "Cardiovascular System"
+                              }
+                            ],
+                            "rank_note": "Parts of the animal body concerned with exchange, excretion and reproduction."
+                          }
+                        },
+                        {
+                          "id": "BI.O.A3.G12",
+                          "anchor": "group:BI.O.A3.G12",
+                          "statement": "Organ systems of the animal body that sense, signal, process and protect at the interface with the environment.",
+                          "name": "Organ systems of the animal body that sense, signal, process and protect at the interface with the environment.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "parts",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "MeSH:A08",
+                                "anchor": "node:MeSH:A08",
+                                "statement": "Nervous System",
+                                "name": "Nervous System"
+                              },
+                              {
+                                "id": "MeSH:A09",
+                                "anchor": "node:MeSH:A09",
+                                "statement": "Sense Organs",
+                                "name": "Sense Organs"
+                              },
+                              {
+                                "id": "MeSH:A14",
+                                "anchor": "node:MeSH:A14",
+                                "statement": "Stomatognathic System",
+                                "name": "Stomatognathic System"
+                              },
+                              {
+                                "id": "MeSH:A17",
+                                "anchor": "node:MeSH:A17",
+                                "statement": "Integumentary System",
+                                "name": "Integumentary System"
+                              }
+                            ],
+                            "rank_note": "Parts of the animal body concerned with sensing, control and the outer interface."
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "BI.K3.S2.U2",
+                    "anchor": "section:BI.K3.S2.U2",
+                    "statement": "Structures, secretions and human anatomy are the body parts and products of animals, plants, fungi, bacteria and viruses.",
+                    "name": "Structures, secretions and human anatomy are the body parts and products of animals, plants, fungi, bacteria and viruses.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From non-animal to animal structures and human anatomy.",
+                      "points": [
+                        {
+                          "id": "BI.O.A3.G14",
+                          "anchor": "group:BI.O.A3.G14",
+                          "statement": "Structures belonging to non-animal organisms are the characteristic body parts of plants, fungi, bacteria and viruses.",
+                          "name": "Structures belonging to non-animal organisms are the characteristic body parts of plants, fungi, bacteria and viruses.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "parts",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "MeSH:A18",
+                                "anchor": "node:MeSH:A18",
+                                "statement": "Plant Structures",
+                                "name": "Plant Structures"
+                              },
+                              {
+                                "id": "MeSH:A19",
+                                "anchor": "node:MeSH:A19",
+                                "statement": "Fungal Structures",
+                                "name": "Fungal Structures"
+                              },
+                              {
+                                "id": "MeSH:A20",
+                                "anchor": "node:MeSH:A20",
+                                "statement": "Bacterial Structures",
+                                "name": "Bacterial Structures"
+                              },
+                              {
+                                "id": "MeSH:A21",
+                                "anchor": "node:MeSH:A21",
+                                "statement": "Viral Structures",
+                                "name": "Viral Structures"
+                              }
+                            ],
+                            "rank_note": "Parts of non-animal organisms."
+                          }
+                        },
+                        {
+                          "id": "MeSH:A12",
+                          "anchor": "node:MeSH:A12",
+                          "statement": "Fluids and Secretions",
+                          "name": "Fluids and Secretions"
+                        },
+                        {
+                          "id": "MeSH:A13",
+                          "anchor": "node:MeSH:A13",
+                          "statement": "Animal Structures",
+                          "name": "Animal Structures"
+                        },
+                        {
+                          "id": "MeSH:A16",
+                          "anchor": "node:MeSH:A16",
+                          "statement": "Embryonic Structures",
+                          "name": "Embryonic Structures"
+                        },
+                        {
+                          "id": "LCC:QM",
+                          "anchor": "node:LCC:QM",
+                          "statement": "Human anatomy",
+                          "name": "Human anatomy"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BI.K3.S3",
+              "anchor": "section:BI.K3.S3",
+              "statement": "Physiology and behaviour concern how whole organisms function, develop, behave and fall ill.",
+              "name": "Physiology and behaviour concern how whole organisms function, develop, behave and fall ill.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From general functions to specific physiology, development and disease.",
+                "points": [
+                  {
+                    "id": "BI.K3.S3.U1",
+                    "anchor": "section:BI.K3.S3.U1",
+                    "statement": "Physiological phenomena are the functional activities of body systems that a claim about living function addresses.",
+                    "name": "Physiological phenomena are the functional activities of body systems that a claim about living function addresses.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From general phenomena to specific animal physiology.",
+                      "points": [
+                        {
+                          "id": "BI.O.A3.G17",
+                          "anchor": "group:BI.O.A3.G17",
+                          "statement": "Physiological phenomena are the functional processes of body systems, from general physiology to specific organ systems.",
+                          "name": "Physiological phenomena are the functional processes of body systems, from general physiology to specific organ systems.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "MeSH:G07",
+                                "anchor": "node:MeSH:G07",
+                                "statement": "Physiological Phenomena",
+                                "name": "Physiological Phenomena"
+                              },
+                              {
+                                "id": "MeSH:G08",
+                                "anchor": "node:MeSH:G08",
+                                "statement": "Reproductive and Urinary Physiological Phenomena",
+                                "name": "Reproductive and Urinary Physiological Phenomena"
+                              },
+                              {
+                                "id": "MeSH:G10",
+                                "anchor": "node:MeSH:G10",
+                                "statement": "Digestive System and Oral Physiological Phenomena",
+                                "name": "Digestive System and Oral Physiological Phenomena"
+                              },
+                              {
+                                "id": "MeSH:G11",
+                                "anchor": "node:MeSH:G11",
+                                "statement": "Musculoskeletal and Neural Physiological Phenomena",
+                                "name": "Musculoskeletal and Neural Physiological Phenomena"
+                              },
+                              {
+                                "id": "MeSH:G14",
+                                "anchor": "node:MeSH:G14",
+                                "statement": "Ocular Physiological Phenomena",
+                                "name": "Ocular Physiological Phenomena"
+                              }
+                            ],
+                            "rank_note": "Ordered from general physiology to specific organ systems."
+                          }
+                        },
+                        {
+                          "id": "BI.O.A3.G6",
+                          "anchor": "group:BI.O.A3.G6",
+                          "statement": "Claims about physiological processes inside the animal body, from cells and biophysics to organ systems and nutrition, immunity and neural function.",
+                          "name": "Claims about physiological processes inside the animal body, from cells and biophysics to organ systems and nutrition, immunity and neural function.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "degree",
+                            "points": [
+                              {
+                                "id": "ANZSRC:310905",
+                                "anchor": "node:ANZSRC:310905",
+                                "statement": "Animal immunology",
+                                "name": "Animal immunology"
+                              },
+                              {
+                                "id": "ANZSRC:310908",
+                                "anchor": "node:ANZSRC:310908",
+                                "statement": "Animal physiology - biophysics",
+                                "name": "Animal physiology - biophysics"
+                              },
+                              {
+                                "id": "ANZSRC:310909",
+                                "anchor": "node:ANZSRC:310909",
+                                "statement": "Animal physiology - cell",
+                                "name": "Animal physiology - cell"
+                              },
+                              {
+                                "id": "ANZSRC:310910",
+                                "anchor": "node:ANZSRC:310910",
+                                "statement": "Animal physiology - systems",
+                                "name": "Animal physiology - systems"
+                              }
+                            ],
+                            "rank_note": "Ranked from smaller scale (cell, biophysics) to larger scale (systems, immune, neural, diet)."
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "BI.K3.S3.U2",
+                    "anchor": "section:BI.K3.S3.U2",
+                    "statement": "Development, behaviour and disease fields study how organisms grow, reproduce, act and are affected by pathogens.",
+                    "name": "Development, behaviour and disease fields study how organisms grow, reproduce, act and are affected by pathogens.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From development to behaviour and disease, then general structure and function.",
+                      "points": [
+                        {
+                          "id": "BI.O.A3.G2",
+                          "anchor": "group:BI.O.A3.G2",
+                          "statement": "Development and function fields study how organisms grow, reproduce and carry out their life processes over time.",
+                          "name": "Development and function fields study how organisms grow, reproduce and carry out their life processes over time.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:310804",
+                                "anchor": "node:ANZSRC:310804",
+                                "statement": "Plant developmental and reproductive biology",
+                                "name": "Plant developmental and reproductive biology"
+                              },
+                              {
+                                "id": "ANZSRC:310806",
+                                "anchor": "node:ANZSRC:310806",
+                                "statement": "Plant physiology",
+                                "name": "Plant physiology"
+                              },
+                              {
+                                "id": "ANZSRC:310903",
+                                "anchor": "node:ANZSRC:310903",
+                                "statement": "Animal developmental and reproductive biology",
+                                "name": "Animal developmental and reproductive biology"
+                              }
+                            ],
+                            "rank_note": "Processes within the whole organism, above the cell level."
+                          }
+                        },
+                        {
+                          "id": "BI.O.A3.G3",
+                          "anchor": "group:BI.O.A3.G3",
+                          "statement": "Behaviour and disease fields study what whole organisms do and how infectious agents and pathogens affect their hosts.",
+                          "name": "Behaviour and disease fields study what whole organisms do and how infectious agents and pathogens affect their hosts.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:310702",
+                                "anchor": "node:ANZSRC:310702",
+                                "statement": "Infectious agents",
+                                "name": "Infectious agents"
+                              },
+                              {
+                                "id": "ANZSRC:310805",
+                                "anchor": "node:ANZSRC:310805",
+                                "statement": "Plant pathology",
+                                "name": "Plant pathology"
+                              },
+                              {
+                                "id": "ANZSRC:310901",
+                                "anchor": "node:ANZSRC:310901",
+                                "statement": "Animal behaviour",
+                                "name": "Animal behaviour"
+                              },
+                              {
+                                "id": "ANZSRC:310706",
+                                "anchor": "node:ANZSRC:310706",
+                                "statement": "Virology",
+                                "name": "Virology"
+                              }
+                            ],
+                            "rank_note": "Organism-level actions and host-pathogen interactions."
+                          }
+                        },
+                        {
+                          "id": "ANZSRC:310911",
+                          "anchor": "node:ANZSRC:310911",
+                          "statement": "Animal structure and function",
+                          "name": "Animal structure and function"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BI.K3.S4",
+              "anchor": "section:BI.K3.S4",
+              "statement": "Kinds of organism are the taxa and whole-organism fields that study particular groups of living things.",
+              "name": "Kinds of organism are the taxa and whole-organism fields that study particular groups of living things.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From general organism categories to microbes, plants and animals.",
+                "points": [
+                  {
+                    "id": "BI.K3.S4.U1",
+                    "anchor": "section:BI.K3.S4.U1",
+                    "statement": "Domains and organism forms are the broad categories of living things such as eukaryotes, archaea and bacteria.",
+                    "name": "Domains and organism forms are the broad categories of living things such as eukaryotes, archaea and bacteria.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From the general category to each domain.",
+                      "points": [
+                        {
+                          "id": "MeSH:B",
+                          "anchor": "node:MeSH:B",
+                          "statement": "Organisms",
+                          "name": "Organisms"
+                        },
+                        {
+                          "id": "MeSH:B01",
+                          "anchor": "node:MeSH:B01",
+                          "statement": "Eukaryota",
+                          "name": "Eukaryota"
+                        },
+                        {
+                          "id": "MeSH:B02",
+                          "anchor": "node:MeSH:B02",
+                          "statement": "Archaea",
+                          "name": "Archaea"
+                        },
+                        {
+                          "id": "MeSH:B03",
+                          "anchor": "node:MeSH:B03",
+                          "statement": "Bacteria",
+                          "name": "Bacteria"
+                        },
+                        {
+                          "id": "MeSH:B05",
+                          "anchor": "node:MeSH:B05",
+                          "statement": "Organism Forms",
+                          "name": "Organism Forms"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "BI.K3.S4.U2",
+                    "anchor": "section:BI.K3.S4.U2",
+                    "statement": "Microbes and fungi are studied through fields concerning bacteria, fungi and microbial life processes.",
+                    "name": "Microbes and fungi are studied through fields concerning bacteria, fungi and microbial life processes.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From specific microbial groups to general microbiology.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310701",
+                          "anchor": "node:ANZSRC:310701",
+                          "statement": "Bacteriology",
+                          "name": "Bacteriology"
+                        },
+                        {
+                          "id": "ANZSRC:310705",
+                          "anchor": "node:ANZSRC:310705",
+                          "statement": "Mycology",
+                          "name": "Mycology"
+                        },
+                        {
+                          "id": "ANZSRC:310799",
+                          "anchor": "node:ANZSRC:310799",
+                          "statement": "Microbiology not elsewhere classified",
+                          "name": "Microbiology not elsewhere classified"
+                        },
+                        {
+                          "id": "BI.O.A3.G18",
+                          "anchor": "group:BI.O.A3.G18",
+                          "statement": "Microbial phenomena and microbiology concern the life processes of microorganisms and the field that studies them.",
+                          "name": "Microbial phenomena and microbiology concern the life processes of microorganisms and the field that studies them.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "MeSH:G06",
+                                "anchor": "node:MeSH:G06",
+                                "statement": "Microbiological Phenomena",
+                                "name": "Microbiological Phenomena"
+                              },
+                              {
+                                "id": "LCC:QR",
+                                "anchor": "node:LCC:QR",
+                                "statement": "Microbiology",
+                                "name": "Microbiology"
+                              }
+                            ],
+                            "rank_note": "Ordered from microbial phenomena to the discipline of microbiology."
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "BI.K3.S4.U3",
+                    "anchor": "section:BI.K3.S4.U3",
+                    "statement": "Plants and algae are studied through botany and plant biology fields.",
+                    "name": "Plants and algae are studied through botany and plant biology fields.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From algae to plants in general.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310801",
+                          "anchor": "node:ANZSRC:310801",
+                          "statement": "Phycology (incl. marine grasses)",
+                          "name": "Phycology (incl. marine grasses)"
+                        },
+                        {
+                          "id": "ANZSRC:310899",
+                          "anchor": "node:ANZSRC:310899",
+                          "statement": "Plant biology not elsewhere classified",
+                          "name": "Plant biology not elsewhere classified"
+                        },
+                        {
+                          "id": "LCC:QK",
+                          "anchor": "node:LCC:QK",
+                          "statement": "Botany",
+                          "name": "Botany"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "BI.K3.S4.U4",
+                    "anchor": "section:BI.K3.S4.U4",
+                    "statement": "Animals and general natural history are studied through fields on invertebrates, vertebrates and biology as a whole.",
+                    "name": "Animals and general natural history are studied through fields on invertebrates, vertebrates and biology as a whole.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "From invertebrates to vertebrates and general biology.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310913",
+                          "anchor": "node:ANZSRC:310913",
+                          "statement": "Invertebrate biology",
+                          "name": "Invertebrate biology"
+                        },
+                        {
+                          "id": "ANZSRC:310914",
+                          "anchor": "node:ANZSRC:310914",
+                          "statement": "Vertebrate biology",
+                          "name": "Vertebrate biology"
+                        },
+                        {
+                          "id": "ANZSRC:310999",
+                          "anchor": "node:ANZSRC:310999",
+                          "statement": "Zoology not elsewhere classified",
+                          "name": "Zoology not elsewhere classified"
+                        },
+                        {
+                          "id": "LCC:QH",
+                          "anchor": "node:LCC:QH",
+                          "statement": "Natural history - Biology",
+                          "name": "Natural history - Biology"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Organism"
+      },
+      {
+        "id": "BI.K4",
+        "anchor": "pillar:BI.K4",
+        "statement": "Descent is the process by which claims concern how lineages are related, adapt, split and vanish over evolutionary time.",
+        "name": "Descent is the process by which claims concern how lineages are related, adapt, split and vanish over evolutionary time.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "From naming relationships to evolutionary change and large-scale lineage patterns.",
+          "points": [
+            {
+              "id": "BI.K4.S1",
+              "anchor": "section:BI.K4.S1",
+              "statement": "Systematics and general evolutionary biology name, classify and reconstruct the relationships of organisms across the branches of life.",
+              "name": "Systematics and general evolutionary biology name, classify and reconstruct the relationships of organisms across the branches of life.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From the general field to classification of lineages.",
+                "points": [
+                  {
+                    "id": "BI.O.A4.G1",
+                    "anchor": "group:BI.O.A4.G1",
+                    "statement": "Systematics fields name, classify and reconstruct the relationships of organisms across the major branches of life.",
+                    "name": "Systematics fields name, classify and reconstruct the relationships of organisms across the major branches of life.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310401",
+                          "anchor": "node:ANZSRC:310401",
+                          "statement": "Animal systematics and taxonomy",
+                          "name": "Animal systematics and taxonomy"
+                        },
+                        {
+                          "id": "ANZSRC:310409",
+                          "anchor": "node:ANZSRC:310409",
+                          "statement": "Microbial taxonomy",
+                          "name": "Microbial taxonomy"
+                        },
+                        {
+                          "id": "ANZSRC:310411",
+                          "anchor": "node:ANZSRC:310411",
+                          "statement": "Plant and fungus systematics and taxonomy",
+                          "name": "Plant and fungus systematics and taxonomy"
+                        },
+                        {
+                          "id": "ANZSRC:310410",
+                          "anchor": "node:ANZSRC:310410",
+                          "statement": "Phylogeny and comparative analysis",
+                          "name": "Phylogeny and comparative analysis"
+                        }
+                      ],
+                      "rank_note": "Ordered structurally by the kind of organism group classified, followed by the comparative method that links them."
+                    }
+                  },
+                  {
+                    "id": "ANZSRC:3104",
+                    "anchor": "node:ANZSRC:3104",
+                    "statement": "Evolutionary biology",
+                    "name": "Evolutionary biology"
+                  },
+                  {
+                    "id": "ANZSRC:319999",
+                    "anchor": "node:ANZSRC:319999",
+                    "statement": "Other biological sciences not elsewhere classified",
+                    "name": "Other biological sciences not elsewhere classified",
+                    "aliases": [
+                      "ANZSRC:3199"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BI.K4.S2",
+              "anchor": "section:BI.K4.S2",
+              "statement": "Evolutionary change concerns adaptation, developmental evolution and life histories shaped over generations.",
+              "name": "Evolutionary change concerns adaptation, developmental evolution and life histories shaped over generations.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From adaptation to development and life history.",
+                "points": [
+                  {
+                    "id": "ANZSRC:310403",
+                    "anchor": "node:ANZSRC:310403",
+                    "statement": "Biological adaptation",
+                    "name": "Biological adaptation"
+                  },
+                  {
+                    "id": "ANZSRC:310404",
+                    "anchor": "node:ANZSRC:310404",
+                    "statement": "Evolution of developmental systems",
+                    "name": "Evolution of developmental systems"
+                  },
+                  {
+                    "id": "ANZSRC:310408",
+                    "anchor": "node:ANZSRC:310408",
+                    "statement": "Life histories",
+                    "name": "Life histories"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BI.K4.S3",
+              "anchor": "section:BI.K4.S3",
+              "statement": "Lineage patterns concern how lineages are distributed in space and time, split into species and disappear.",
+              "name": "Lineage patterns concern how lineages are distributed in space and time, split into species and disappear.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From spatial distribution to speciation and loss.",
+                "points": [
+                  {
+                    "id": "BI.O.A4.G4",
+                    "anchor": "group:BI.O.A4.G4",
+                    "statement": "Macroevolutionary pattern fields concern how lineages are distributed across space, split into new species, or disappear, along with residual topics.",
+                    "name": "Macroevolutionary pattern fields concern how lineages are distributed across space, split into new species, or disappear, along with residual topics.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310402",
+                          "anchor": "node:ANZSRC:310402",
+                          "statement": "Biogeography and phylogeography",
+                          "name": "Biogeography and phylogeography"
+                        },
+                        {
+                          "id": "ANZSRC:310412",
+                          "anchor": "node:ANZSRC:310412",
+                          "statement": "Speciation and extinction",
+                          "name": "Speciation and extinction"
+                        },
+                        {
+                          "id": "ANZSRC:310499",
+                          "anchor": "node:ANZSRC:310499",
+                          "statement": "Evolutionary biology not elsewhere classified",
+                          "name": "Evolutionary biology not elsewhere classified"
+                        }
+                      ],
+                      "rank_note": "Ordered structurally from spatial distribution to species origin and loss, then the remainder category."
+                    }
+                  },
+                  {
+                    "id": "ANZSRC:310306",
+                    "anchor": "node:ANZSRC:310306",
+                    "statement": "Palaeoecology",
+                    "name": "Palaeoecology"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Descent"
+      },
+      {
+        "id": "BI.K5",
+        "anchor": "pillar:BI.K5",
+        "statement": "Ecological interaction is the level at which claims concern organisms relating to each other, to habitats and to the wider environment.",
+        "name": "Ecological interaction is the level at which claims concern organisms relating to each other, to habitats and to the wider environment.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "From interactions among organisms to habitats, then environmental materials and uses.",
+          "points": [
+            {
+              "id": "BI.K5.S1",
+              "anchor": "section:BI.K5.S1",
+              "statement": "Ecology subfields address interactions at the level of behaviour, populations, communities and habitats.",
+              "name": "Ecology subfields address interactions at the level of behaviour, populations, communities and habitats.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From organisational level to habitat realm.",
+                "points": [
+                  {
+                    "id": "BI.O.A5.G1",
+                    "anchor": "group:BI.O.A5.G1",
+                    "statement": "Ecology subfields are distinguished by the level of biological organisation at which a claim is made, running from the individual organism's behaviour and physiology up to populations and whole communities.",
+                    "name": "Ecology subfields are distinguished by the level of biological organisation at which a claim is made, running from the individual organism's behaviour and physiology up to populations and whole communities.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310301",
+                          "anchor": "node:ANZSRC:310301",
+                          "statement": "Behavioural ecology",
+                          "name": "Behavioural ecology"
+                        },
+                        {
+                          "id": "ANZSRC:310303",
+                          "anchor": "node:ANZSRC:310303",
+                          "statement": "Ecological physiology",
+                          "name": "Ecological physiology"
+                        },
+                        {
+                          "id": "ANZSRC:310307",
+                          "anchor": "node:ANZSRC:310307",
+                          "statement": "Population ecology",
+                          "name": "Population ecology"
+                        },
+                        {
+                          "id": "ANZSRC:310302",
+                          "anchor": "node:ANZSRC:310302",
+                          "statement": "Community ecology (excl. invasive species ecology)",
+                          "name": "Community ecology (excl. invasive species ecology)"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure from individual organism to population to community."
+                    }
+                  },
+                  {
+                    "id": "BI.O.A5.G2",
+                    "anchor": "group:BI.O.A5.G2",
+                    "statement": "Habitat-based subfields study ecological processes as they occur within a particular environmental realm such as freshwater, sea or land.",
+                    "name": "Habitat-based subfields study ecological processes as they occur within a particular environmental realm such as freshwater, sea or land.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310304",
+                          "anchor": "node:ANZSRC:310304",
+                          "statement": "Freshwater ecology",
+                          "name": "Freshwater ecology"
+                        },
+                        {
+                          "id": "ANZSRC:310305",
+                          "anchor": "node:ANZSRC:310305",
+                          "statement": "Marine and estuarine ecology (incl. marine ichthyology)",
+                          "name": "Marine and estuarine ecology (incl. marine ichthyology)"
+                        },
+                        {
+                          "id": "ANZSRC:310308",
+                          "anchor": "node:ANZSRC:310308",
+                          "statement": "Terrestrial ecology",
+                          "name": "Terrestrial ecology"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure of environmental realm: freshwater, marine, terrestrial."
+                    }
+                  },
+                  {
+                    "id": "ANZSRC:310399",
+                    "anchor": "node:ANZSRC:310399",
+                    "statement": "Ecology not elsewhere classified",
+                    "name": "Ecology not elsewhere classified"
+                  },
+                  {
+                    "id": "ANZSRC:310703",
+                    "anchor": "node:ANZSRC:310703",
+                    "statement": "Microbial ecology",
+                    "name": "Microbial ecology"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BI.K5.S2",
+              "anchor": "section:BI.K5.S2",
+              "statement": "Interactions between species and the changing environment concern hosts, parasites, climate, whole-animal adaptation and industrial uses of organisms.",
+              "name": "Interactions between species and the changing environment concern hosts, parasites, climate, whole-animal adaptation and industrial uses of organisms.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From species interactions to environmental change and human use.",
+                "points": [
+                  {
+                    "id": "BI.O.A4.G3",
+                    "anchor": "group:BI.O.A4.G3",
+                    "statement": "Interaction fields address how evolution is shaped by organisms' relationships with other species and with a changing environment.",
+                    "name": "Interaction fields address how evolution is shaped by organisms' relationships with other species and with a changing environment.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310405",
+                          "anchor": "node:ANZSRC:310405",
+                          "statement": "Evolutionary ecology",
+                          "name": "Evolutionary ecology"
+                        },
+                        {
+                          "id": "ANZSRC:310406",
+                          "anchor": "node:ANZSRC:310406",
+                          "statement": "Evolutionary impacts of climate change",
+                          "name": "Evolutionary impacts of climate change"
+                        },
+                        {
+                          "id": "ANZSRC:310407",
+                          "anchor": "node:ANZSRC:310407",
+                          "statement": "Host-parasite interactions",
+                          "name": "Host-parasite interactions"
+                        }
+                      ],
+                      "rank_note": "Ordered structurally from ecological context to climate drivers to parasite relationships."
+                    }
+                  },
+                  {
+                    "id": "BI.O.A3.G7",
+                    "anchor": "group:BI.O.A3.G7",
+                    "statement": "Claims about how whole animals interact with and adapt to their environment, including comparative physiology across species and responses to global change.",
+                    "name": "Claims about how whole animals interact with and adapt to their environment, including comparative physiology across species and responses to global change.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310907",
+                          "anchor": "node:ANZSRC:310907",
+                          "statement": "Animal physiological ecology",
+                          "name": "Animal physiological ecology"
+                        },
+                        {
+                          "id": "ANZSRC:310912",
+                          "anchor": "node:ANZSRC:310912",
+                          "statement": "Comparative physiology",
+                          "name": "Comparative physiology"
+                        },
+                        {
+                          "id": "ANZSRC:319902",
+                          "anchor": "node:ANZSRC:319902",
+                          "statement": "Global change biology",
+                          "name": "Global change biology"
+                        },
+                        {
+                          "id": "ANZSRC:310904",
+                          "anchor": "node:ANZSRC:310904",
+                          "statement": "Animal diet and nutrition",
+                          "name": "Animal diet and nutrition"
+                        },
+                        {
+                          "id": "ANZSRC:310906",
+                          "anchor": "node:ANZSRC:310906",
+                          "statement": "Animal neurobiology",
+                          "name": "Animal neurobiology"
+                        }
+                      ],
+                      "rank_note": "Organism-environment level topics ordered from individual to global scale."
+                    },
+                    "further": true
+                  },
+                  {
+                    "id": "BI.O.A1.G3",
+                    "anchor": "group:BI.O.A1.G3",
+                    "statement": "Systems, population and evolutionary computational analyses address claims at the level of networks, ecosystems, lineages and inherited variation.",
+                    "name": "Systems, population and evolutionary computational analyses address claims at the level of networks, ecosystems, lineages and inherited variation.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:310202",
+                          "anchor": "node:ANZSRC:310202",
+                          "statement": "Biological network analysis",
+                          "name": "Biological network analysis"
+                        },
+                        {
+                          "id": "ANZSRC:310203",
+                          "anchor": "node:ANZSRC:310203",
+                          "statement": "Computational ecology and phylogenetics",
+                          "name": "Computational ecology and phylogenetics"
+                        },
+                        {
+                          "id": "ANZSRC:310207",
+                          "anchor": "node:ANZSRC:310207",
+                          "statement": "Statistical and quantitative genetics",
+                          "name": "Statistical and quantitative genetics"
+                        }
+                      ],
+                      "rank_note": "Ordered from molecular networks up to populations and ecosystems."
+                    }
+                  },
+                  {
+                    "id": "BI.O.A2.G20",
+                    "anchor": "group:BI.O.A2.G20",
+                    "statement": "Industrial biotechnology applies biological catalysts, organisms and molecular tools to make products and serve industrial purposes.",
+                    "name": "Industrial biotechnology applies biological catalysts, organisms and molecular tools to make products and serve industrial purposes.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "BI.O.A2.G5",
+                          "anchor": "group:BI.O.A2.G5",
+                          "statement": "Industrial biotechnology applies biological catalysts and organisms to make products at production scale.",
+                          "name": "Industrial biotechnology applies biological catalysts and organisms to make products at production scale.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:3106",
+                                "anchor": "node:ANZSRC:3106",
+                                "statement": "Industrial biotechnology",
+                                "name": "Industrial biotechnology"
+                              },
+                              {
+                                "id": "ANZSRC:310601",
+                                "anchor": "node:ANZSRC:310601",
+                                "statement": "Biocatalysis and enzyme technology",
+                                "name": "Biocatalysis and enzyme technology"
+                              },
+                              {
+                                "id": "ANZSRC:310602",
+                                "anchor": "node:ANZSRC:310602",
+                                "statement": "Bioprocessing, bioproduction and bioproducts",
+                                "name": "Bioprocessing, bioproduction and bioproducts"
+                              },
+                              {
+                                "id": "ANZSRC:310603",
+                                "anchor": "node:ANZSRC:310603",
+                                "statement": "Fermentation",
+                                "name": "Fermentation"
+                              }
+                            ],
+                            "rank_note": "Ordered by structure from the field to catalysis, production and fermentation."
+                          }
+                        },
+                        {
+                          "id": "BI.O.A2.G6",
+                          "anchor": "group:BI.O.A2.G6",
+                          "statement": "Industrial biotechnology subfields are research areas that apply biological systems and molecular tools to industrial purposes.",
+                          "name": "Industrial biotechnology subfields are research areas that apply biological systems and molecular tools to industrial purposes.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:310604",
+                                "anchor": "node:ANZSRC:310604",
+                                "statement": "Industrial biotechnology diagnostics (incl. biosensors)",
+                                "name": "Industrial biotechnology diagnostics (incl. biosensors)"
+                              },
+                              {
+                                "id": "ANZSRC:310605",
+                                "anchor": "node:ANZSRC:310605",
+                                "statement": "Industrial microbiology (incl. biofeedstocks)",
+                                "name": "Industrial microbiology (incl. biofeedstocks)"
+                              },
+                              {
+                                "id": "ANZSRC:310606",
+                                "anchor": "node:ANZSRC:310606",
+                                "statement": "Industrial molecular engineering of nucleic acids and proteins",
+                                "name": "Industrial molecular engineering of nucleic acids and proteins"
+                              },
+                              {
+                                "id": "ANZSRC:310607",
+                                "anchor": "node:ANZSRC:310607",
+                                "statement": "Nanobiotechnology",
+                                "name": "Nanobiotechnology"
+                              },
+                              {
+                                "id": "ANZSRC:310699",
+                                "anchor": "node:ANZSRC:310699",
+                                "statement": "Industrial biotechnology not elsewhere classified",
+                                "name": "Industrial biotechnology not elsewhere classified"
+                              }
+                            ],
+                            "rank_note": "Ordered by ANZSRC code sequence."
+                          }
+                        }
+                      ],
+                      "rank_note": "Ordered from production-scale practice to the research subfields behind it."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "BI.K5.S3",
+              "anchor": "section:BI.K5.S3",
+              "statement": "Environmental mixtures and forensic work concern natural, waste and polluting materials and the biological evidence found in them.",
+              "name": "Environmental mixtures and forensic work concern natural, waste and polluting materials and the biological evidence found in them.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "From natural to polluting materials, then forensic evidence.",
                 "points": [
                   {
                     "id": "BI.O.A2.G9",
@@ -994,950 +2219,6 @@
                       ],
                       "rank_note": "not ranked"
                     }
-                  }
-                ],
-                "rank_note": "Ordered from natural and fossil mixtures to dispersed and soil-derived materials and pollutants."
-              }
-            },
-            {
-              "id": "BI.O.A2.G23",
-              "anchor": "group:BI.O.A2.G23",
-              "statement": "Regulatory and physiological factors are agents and processes that signal, protect, monitor or direct the activity of living organisms.",
-              "name": "Regulatory and physiological factors are agents and processes that signal, protect, monitor or direct the activity of living organisms.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "BI.O.A2.G26",
-                    "anchor": "group:BI.O.A2.G26",
-                    "statement": "Process-modifying agents are substances that act on a chemical or physiological process in order to block or limit it.",
-                    "name": "Process-modifying agents are substances that act on a chemical or physiological process in order to block or limit it.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:D23.063",
-                          "anchor": "node:MeSH:D23.063",
-                          "statement": "Antioxidants",
-                          "name": "Antioxidants"
-                        },
-                        {
-                          "id": "MeSH:D23.113",
-                          "anchor": "node:MeSH:D23.113",
-                          "statement": "Blood Coagulation Factor Inhibitors",
-                          "name": "Blood Coagulation Factor Inhibitors"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure: the oxidative process first, then the coagulation process."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A2.G27",
-                    "anchor": "group:BI.O.A2.G27",
-                    "statement": "State indicators and regulators are molecular entities that report on or control the level of a biological state, such as disease status or immune activity.",
-                    "name": "State indicators and regulators are molecular entities that report on or control the level of a biological state, such as disease status or immune activity.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:D23.101",
-                          "anchor": "node:MeSH:D23.101",
-                          "statement": "Biomarkers",
-                          "name": "Biomarkers"
-                        },
-                        {
-                          "id": "MeSH:D23.383",
-                          "anchor": "node:MeSH:D23.383",
-                          "statement": "Immune Checkpoint Proteins",
-                          "name": "Immune Checkpoint Proteins"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure: the general measurable indicator first, then the specific immune regulator."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A2.G15",
-                    "anchor": "group:BI.O.A2.G15",
-                    "statement": "Host-produced signaling and regulatory factors are molecules made by the body that direct clotting, cell movement, and cellular activity.",
-                    "name": "Host-produced signaling and regulatory factors are molecules made by the body that direct clotting, cell movement, and cellular activity.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:D23",
-                          "anchor": "node:MeSH:D23",
-                          "statement": "Biological Factors",
-                          "name": "Biological Factors"
-                        },
-                        {
-                          "id": "MeSH:D23.119",
-                          "anchor": "node:MeSH:D23.119",
-                          "statement": "Blood Coagulation Factors",
-                          "name": "Blood Coagulation Factors"
-                        },
-                        {
-                          "id": "MeSH:D23.125",
-                          "anchor": "node:MeSH:D23.125",
-                          "statement": "Chemotactic Factors",
-                          "name": "Chemotactic Factors"
-                        },
-                        {
-                          "id": "MeSH:D23.297",
-                          "anchor": "node:MeSH:D23.297",
-                          "statement": "Host-Derived Cellular Factors",
-                          "name": "Host-Derived Cellular Factors"
-                        }
-                      ],
-                      "rank_note": "not ranked"
-                    }
-                  },
-                  {
-                    "id": "BI.O.A2.G16",
-                    "anchor": "group:BI.O.A2.G16",
-                    "statement": "Signaling molecules are substances that carry messages between cells or organisms to trigger responses.",
-                    "name": "Signaling molecules are substances that carry messages between cells or organisms to trigger responses.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:D23.469",
-                          "anchor": "node:MeSH:D23.469",
-                          "statement": "Inflammation Mediators",
-                          "name": "Inflammation Mediators"
-                        },
-                        {
-                          "id": "MeSH:D23.529",
-                          "anchor": "node:MeSH:D23.529",
-                          "statement": "Intercellular Signaling Peptides and Proteins",
-                          "name": "Intercellular Signaling Peptides and Proteins"
-                        },
-                        {
-                          "id": "MeSH:D23.585",
-                          "anchor": "node:MeSH:D23.585",
-                          "statement": "Pathogen-Associated Molecular Pattern Molecules",
-                          "name": "Pathogen-Associated Molecular Pattern Molecules"
-                        },
-                        {
-                          "id": "MeSH:D23.641",
-                          "anchor": "node:MeSH:D23.641",
-                          "statement": "Pheromones",
-                          "name": "Pheromones"
-                        }
-                      ],
-                      "rank_note": "Grouped by kind of signaling substance, with no ranking implied."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A2.G18",
-                    "anchor": "group:BI.O.A2.G18",
-                    "statement": "Physiological processes are the cellular, metabolic, and organ-system activities that a claim about living function addresses.",
-                    "name": "Physiological processes are the cellular, metabolic, and organ-system activities that a claim about living function addresses.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:G",
-                          "anchor": "node:MeSH:G",
-                          "statement": "Phenomena and Processes",
-                          "name": "Phenomena and Processes"
-                        },
-                        {
-                          "id": "MeSH:G03",
-                          "anchor": "node:MeSH:G03",
-                          "statement": "Metabolism",
-                          "name": "Metabolism"
-                        },
-                        {
-                          "id": "MeSH:G04",
-                          "anchor": "node:MeSH:G04",
-                          "statement": "Cell Physiological Phenomena",
-                          "name": "Cell Physiological Phenomena"
-                        },
-                        {
-                          "id": "MeSH:G13",
-                          "anchor": "node:MeSH:G13",
-                          "statement": "Integumentary System Physiological Phenomena",
-                          "name": "Integumentary System Physiological Phenomena"
-                        }
-                      ],
-                      "rank_note": "Grouped by level of physiological process, with no ranking implied."
-                    }
-                  }
-                ],
-                "rank_note": "Ordered from protective and signaling agents to the physiological processes they influence."
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "BI.K3",
-        "anchor": "pillar:BI.K3",
-        "title": "Organism",
-        "statement": "The organism is the level at which claims concern whole living bodies, their kinds, their structures and their functions.",
-        "name": "The organism is the level at which claims concern whole living bodies, their kinds, their structures and their functions.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "parts",
-          "order": "structure",
-          "rank_note": "From fields and disciplines to body structure and then to function and kinds.",
-          "points": [
-            {
-              "id": "BI.K3.S1",
-              "anchor": "section:BI.K3.S1",
-              "statement": "Organism fields and disciplines study whole living things by taxonomic group or by the level of function they emphasise.",
-              "name": "Organism fields and disciplines study whole living things by taxonomic group or by the level of function they emphasise.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From broad fields to groups defined by taxon.",
-                "points": [
-                  {
-                    "id": "BI.O.A3.G19",
-                    "anchor": "group:BI.O.A3.G19",
-                    "statement": "Fields of study at the molecular, cellular, developmental, behavioural, disease, microbial and discipline-wide levels each take a different level or process as their focus.",
-                    "name": "Fields of study at the molecular, cellular, developmental, behavioural, disease, microbial and discipline-wide levels each take a different level or process as their focus.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "BI.O.A3.G1",
-                          "anchor": "group:BI.O.A3.G1",
-                          "statement": "Molecular and cellular fields study genes, biochemical pathways and cell machinery inside microbes, plants and animals.",
-                          "name": "Molecular and cellular fields study genes, biochemical pathways and cell machinery inside microbes, plants and animals.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:310704",
-                                "anchor": "node:ANZSRC:310704",
-                                "statement": "Microbial genetics",
-                                "name": "Microbial genetics"
-                              },
-                              {
-                                "id": "ANZSRC:310802",
-                                "anchor": "node:ANZSRC:310802",
-                                "statement": "Plant biochemistry",
-                                "name": "Plant biochemistry"
-                              },
-                              {
-                                "id": "ANZSRC:310803",
-                                "anchor": "node:ANZSRC:310803",
-                                "statement": "Plant cell and molecular biology",
-                                "name": "Plant cell and molecular biology"
-                              },
-                              {
-                                "id": "ANZSRC:310902",
-                                "anchor": "node:ANZSRC:310902",
-                                "statement": "Animal cell and molecular biology",
-                                "name": "Animal cell and molecular biology"
-                              }
-                            ],
-                            "rank_note": "Smallest scale, molecules and cells."
-                          }
-                        },
-                        {
-                          "id": "BI.O.A3.G2",
-                          "anchor": "group:BI.O.A3.G2",
-                          "statement": "Development and function fields study how organisms grow, reproduce and carry out their life processes over time.",
-                          "name": "Development and function fields study how organisms grow, reproduce and carry out their life processes over time.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:310804",
-                                "anchor": "node:ANZSRC:310804",
-                                "statement": "Plant developmental and reproductive biology",
-                                "name": "Plant developmental and reproductive biology"
-                              },
-                              {
-                                "id": "ANZSRC:310806",
-                                "anchor": "node:ANZSRC:310806",
-                                "statement": "Plant physiology",
-                                "name": "Plant physiology"
-                              },
-                              {
-                                "id": "ANZSRC:310903",
-                                "anchor": "node:ANZSRC:310903",
-                                "statement": "Animal developmental and reproductive biology",
-                                "name": "Animal developmental and reproductive biology"
-                              }
-                            ],
-                            "rank_note": "Processes within the whole organism, above the cell level."
-                          }
-                        },
-                        {
-                          "id": "BI.O.A3.G3",
-                          "anchor": "group:BI.O.A3.G3",
-                          "statement": "Behaviour and disease fields study what whole organisms do and how infectious agents and pathogens affect their hosts.",
-                          "name": "Behaviour and disease fields study what whole organisms do and how infectious agents and pathogens affect their hosts.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:310702",
-                                "anchor": "node:ANZSRC:310702",
-                                "statement": "Infectious agents",
-                                "name": "Infectious agents"
-                              },
-                              {
-                                "id": "ANZSRC:310805",
-                                "anchor": "node:ANZSRC:310805",
-                                "statement": "Plant pathology",
-                                "name": "Plant pathology"
-                              },
-                              {
-                                "id": "ANZSRC:310901",
-                                "anchor": "node:ANZSRC:310901",
-                                "statement": "Animal behaviour",
-                                "name": "Animal behaviour"
-                              },
-                              {
-                                "id": "ANZSRC:310706",
-                                "anchor": "node:ANZSRC:310706",
-                                "statement": "Virology",
-                                "name": "Virology"
-                              }
-                            ],
-                            "rank_note": "Organism-level actions and host-pathogen interactions."
-                          }
-                        },
-                        {
-                          "id": "BI.O.A3.G5",
-                          "anchor": "group:BI.O.A3.G5",
-                          "statement": "Broad-scope categories cover an entire discipline or the community-level interactions of organisms with their environment.",
-                          "name": "Broad-scope categories cover an entire discipline or the community-level interactions of organisms with their environment.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:3107",
-                                "anchor": "node:ANZSRC:3107",
-                                "statement": "Microbiology",
-                                "name": "Microbiology"
-                              },
-                              {
-                                "id": "ANZSRC:3108",
-                                "anchor": "node:ANZSRC:3108",
-                                "statement": "Plant biology",
-                                "name": "Plant biology"
-                              },
-                              {
-                                "id": "ANZSRC:3109",
-                                "anchor": "node:ANZSRC:3109",
-                                "statement": "Zoology",
-                                "name": "Zoology"
-                              },
-                              {
-                                "id": "ANZSRC:310703",
-                                "anchor": "node:ANZSRC:310703",
-                                "statement": "Microbial ecology",
-                                "name": "Microbial ecology"
-                              }
-                            ],
-                            "rank_note": "Largest scale, whole disciplines and ecological communities."
-                          }
-                        },
-                        {
-                          "id": "BI.O.A3.G18",
-                          "anchor": "group:BI.O.A3.G18",
-                          "statement": "Microbial phenomena and microbiology concern the life processes of microorganisms and the field that studies them.",
-                          "name": "Microbial phenomena and microbiology concern the life processes of microorganisms and the field that studies them.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "MeSH:G06",
-                                "anchor": "node:MeSH:G06",
-                                "statement": "Microbiological Phenomena",
-                                "name": "Microbiological Phenomena"
-                              },
-                              {
-                                "id": "LCC:QR",
-                                "anchor": "node:LCC:QR",
-                                "statement": "Microbiology",
-                                "name": "Microbiology"
-                              }
-                            ],
-                            "rank_note": "Ordered from microbial phenomena to the discipline of microbiology."
-                          }
-                        }
-                      ],
-                      "rank_note": "Ordered from the smallest scale (molecules and cells) to the largest (whole disciplines and communities)."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A3.G4",
-                    "anchor": "group:BI.O.A3.G4",
-                    "statement": "Organism-defined fields study a particular taxonomic group of living things, including the residual categories for such groups.",
-                    "name": "Organism-defined fields study a particular taxonomic group of living things, including the residual categories for such groups.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:310701",
-                          "anchor": "node:ANZSRC:310701",
-                          "statement": "Bacteriology",
-                          "name": "Bacteriology"
-                        },
-                        {
-                          "id": "ANZSRC:310705",
-                          "anchor": "node:ANZSRC:310705",
-                          "statement": "Mycology",
-                          "name": "Mycology"
-                        },
-                        {
-                          "id": "ANZSRC:310801",
-                          "anchor": "node:ANZSRC:310801",
-                          "statement": "Phycology (incl. marine grasses)",
-                          "name": "Phycology (incl. marine grasses)"
-                        },
-                        {
-                          "id": "ANZSRC:310799",
-                          "anchor": "node:ANZSRC:310799",
-                          "statement": "Microbiology not elsewhere classified",
-                          "name": "Microbiology not elsewhere classified"
-                        },
-                        {
-                          "id": "ANZSRC:310899",
-                          "anchor": "node:ANZSRC:310899",
-                          "statement": "Plant biology not elsewhere classified",
-                          "name": "Plant biology not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Defined by the type of organism studied rather than by process."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A3.G8",
-                    "anchor": "group:BI.O.A3.G8",
-                    "statement": "Claims about the biology of whole animal groups defined by taxon, covering invertebrates, vertebrates and zoology not classified elsewhere.",
-                    "name": "Claims about the biology of whole animal groups defined by taxon, covering invertebrates, vertebrates and zoology not classified elsewhere.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:310913",
-                          "anchor": "node:ANZSRC:310913",
-                          "statement": "Invertebrate biology",
-                          "name": "Invertebrate biology"
-                        },
-                        {
-                          "id": "ANZSRC:310914",
-                          "anchor": "node:ANZSRC:310914",
-                          "statement": "Vertebrate biology",
-                          "name": "Vertebrate biology"
-                        },
-                        {
-                          "id": "ANZSRC:310999",
-                          "anchor": "node:ANZSRC:310999",
-                          "statement": "Zoology not elsewhere classified",
-                          "name": "Zoology not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Taxon-defined fields listed from invertebrate to vertebrate to residual zoology."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A3.G16",
-                    "anchor": "group:BI.O.A3.G16",
-                    "statement": "Organism forms and the biological disciplines study the structure and kinds of living organisms at the whole-organism level.",
-                    "name": "Organism forms and the biological disciplines study the structure and kinds of living organisms at the whole-organism level.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:B05",
-                          "anchor": "node:MeSH:B05",
-                          "statement": "Organism Forms",
-                          "name": "Organism Forms"
-                        },
-                        {
-                          "id": "LCC:QH",
-                          "anchor": "node:LCC:QH",
-                          "statement": "Natural history - Biology",
-                          "name": "Natural history - Biology"
-                        },
-                        {
-                          "id": "LCC:QK",
-                          "anchor": "node:LCC:QK",
-                          "statement": "Botany",
-                          "name": "Botany"
-                        },
-                        {
-                          "id": "LCC:QL",
-                          "anchor": "node:LCC:QL",
-                          "statement": "Zoology",
-                          "name": "Zoology"
-                        },
-                        {
-                          "id": "LCC:QM",
-                          "anchor": "node:LCC:QM",
-                          "statement": "Human anatomy",
-                          "name": "Human anatomy"
-                        }
-                      ],
-                      "rank_note": "Ordered from general biology to botany, zoology and human anatomy."
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "BI.K3.S2",
-              "anchor": "section:BI.K3.S2",
-              "statement": "Body structure claims concern the anatomical parts of animals, plants, fungi, bacteria and viruses.",
-              "name": "Body structure claims concern the anatomical parts of animals, plants, fungi, bacteria and viruses.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From the animal body as a whole to the structures of other organisms.",
-                "points": [
-                  {
-                    "id": "BI.O.A3.G9",
-                    "anchor": "group:BI.O.A3.G9",
-                    "statement": "Claims about the anatomical organization of the body, including its regions and the musculoskeletal and digestive systems, and animal structure and function.",
-                    "name": "Claims about the anatomical organization of the body, including its regions and the musculoskeletal and digestive systems, and animal structure and function.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "parts",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:310911",
-                          "anchor": "node:ANZSRC:310911",
-                          "statement": "Animal structure and function",
-                          "name": "Animal structure and function"
-                        },
-                        {
-                          "id": "MeSH:A",
-                          "anchor": "node:MeSH:A",
-                          "statement": "Anatomy",
-                          "name": "Anatomy"
-                        },
-                        {
-                          "id": "MeSH:A01",
-                          "anchor": "node:MeSH:A01",
-                          "statement": "Body Regions",
-                          "name": "Body Regions"
-                        },
-                        {
-                          "id": "MeSH:A02",
-                          "anchor": "node:MeSH:A02",
-                          "statement": "Musculoskeletal System",
-                          "name": "Musculoskeletal System"
-                        },
-                        {
-                          "id": "MeSH:A03",
-                          "anchor": "node:MeSH:A03",
-                          "statement": "Digestive System",
-                          "name": "Digestive System"
-                        }
-                      ],
-                      "rank_note": "Body parts ordered from whole-body regions to specific systems."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A3.G13",
-                    "anchor": "group:BI.O.A3.G13",
-                    "statement": "Animal-level structural categories cover the tissues, fluids, general structures and embryonic forms that make up the body.",
-                    "name": "Animal-level structural categories cover the tissues, fluids, general structures and embryonic forms that make up the body.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "parts",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:A10",
-                          "anchor": "node:MeSH:A10",
-                          "statement": "Tissues",
-                          "name": "Tissues"
-                        },
-                        {
-                          "id": "MeSH:A12",
-                          "anchor": "node:MeSH:A12",
-                          "statement": "Fluids and Secretions",
-                          "name": "Fluids and Secretions"
-                        },
-                        {
-                          "id": "MeSH:A13",
-                          "anchor": "node:MeSH:A13",
-                          "statement": "Animal Structures",
-                          "name": "Animal Structures"
-                        },
-                        {
-                          "id": "MeSH:A16",
-                          "anchor": "node:MeSH:A16",
-                          "statement": "Embryonic Structures",
-                          "name": "Embryonic Structures"
-                        }
-                      ],
-                      "rank_note": "Structural components from tissues up to whole body structures and embryonic forms."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A3.G14",
-                    "anchor": "group:BI.O.A3.G14",
-                    "statement": "Structures belonging to non-animal organisms are the characteristic body parts of plants, fungi, bacteria and viruses.",
-                    "name": "Structures belonging to non-animal organisms are the characteristic body parts of plants, fungi, bacteria and viruses.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "parts",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:A18",
-                          "anchor": "node:MeSH:A18",
-                          "statement": "Plant Structures",
-                          "name": "Plant Structures"
-                        },
-                        {
-                          "id": "MeSH:A19",
-                          "anchor": "node:MeSH:A19",
-                          "statement": "Fungal Structures",
-                          "name": "Fungal Structures"
-                        },
-                        {
-                          "id": "MeSH:A20",
-                          "anchor": "node:MeSH:A20",
-                          "statement": "Bacterial Structures",
-                          "name": "Bacterial Structures"
-                        },
-                        {
-                          "id": "MeSH:A21",
-                          "anchor": "node:MeSH:A21",
-                          "statement": "Viral Structures",
-                          "name": "Viral Structures"
-                        }
-                      ],
-                      "rank_note": "Parts of non-animal organisms."
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "BI.K3.S3",
-              "anchor": "section:BI.K3.S3",
-              "statement": "Organism function and kinds concern what whole organisms do physiologically and the domains of life they belong to, including forensic uses of that knowledge.",
-              "name": "Organism function and kinds concern what whole organisms do physiologically and the domains of life they belong to, including forensic uses of that knowledge.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From physiological function to domains of life and their forensic use.",
-                "points": [
-                  {
-                    "id": "BI.O.A3.G20",
-                    "anchor": "group:BI.O.A3.G20",
-                    "statement": "Animal physiology and organ-system claims concern the functional processes of the animal body and its interaction with the environment.",
-                    "name": "Animal physiology and organ-system claims concern the functional processes of the animal body and its interaction with the environment.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "BI.O.A3.G6",
-                          "anchor": "group:BI.O.A3.G6",
-                          "statement": "Claims about physiological processes inside the animal body, from cells and biophysics to organ systems and nutrition, immunity and neural function.",
-                          "name": "Claims about physiological processes inside the animal body, from cells and biophysics to organ systems and nutrition, immunity and neural function.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "degree",
-                            "points": [
-                              {
-                                "id": "ANZSRC:310905",
-                                "anchor": "node:ANZSRC:310905",
-                                "statement": "Animal immunology",
-                                "name": "Animal immunology"
-                              },
-                              {
-                                "id": "ANZSRC:310908",
-                                "anchor": "node:ANZSRC:310908",
-                                "statement": "Animal physiology - biophysics",
-                                "name": "Animal physiology - biophysics"
-                              },
-                              {
-                                "id": "ANZSRC:310909",
-                                "anchor": "node:ANZSRC:310909",
-                                "statement": "Animal physiology - cell",
-                                "name": "Animal physiology - cell"
-                              },
-                              {
-                                "id": "ANZSRC:310910",
-                                "anchor": "node:ANZSRC:310910",
-                                "statement": "Animal physiology - systems",
-                                "name": "Animal physiology - systems"
-                              }
-                            ],
-                            "rank_note": "Ranked from smaller scale (cell, biophysics) to larger scale (systems, immune, neural, diet)."
-                          }
-                        },
-                        {
-                          "id": "BI.O.A3.G17",
-                          "anchor": "group:BI.O.A3.G17",
-                          "statement": "Physiological phenomena are the functional processes of body systems, from general physiology to specific organ systems.",
-                          "name": "Physiological phenomena are the functional processes of body systems, from general physiology to specific organ systems.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "MeSH:G07",
-                                "anchor": "node:MeSH:G07",
-                                "statement": "Physiological Phenomena",
-                                "name": "Physiological Phenomena"
-                              },
-                              {
-                                "id": "MeSH:G08",
-                                "anchor": "node:MeSH:G08",
-                                "statement": "Reproductive and Urinary Physiological Phenomena",
-                                "name": "Reproductive and Urinary Physiological Phenomena"
-                              },
-                              {
-                                "id": "MeSH:G10",
-                                "anchor": "node:MeSH:G10",
-                                "statement": "Digestive System and Oral Physiological Phenomena",
-                                "name": "Digestive System and Oral Physiological Phenomena"
-                              },
-                              {
-                                "id": "MeSH:G11",
-                                "anchor": "node:MeSH:G11",
-                                "statement": "Musculoskeletal and Neural Physiological Phenomena",
-                                "name": "Musculoskeletal and Neural Physiological Phenomena"
-                              },
-                              {
-                                "id": "MeSH:G14",
-                                "anchor": "node:MeSH:G14",
-                                "statement": "Ocular Physiological Phenomena",
-                                "name": "Ocular Physiological Phenomena"
-                              }
-                            ],
-                            "rank_note": "Ordered from general physiology to specific organ systems."
-                          }
-                        },
-                        {
-                          "id": "BI.O.A3.G11",
-                          "anchor": "group:BI.O.A3.G11",
-                          "statement": "Organ systems of the animal body that handle exchange of gases and the excretion and reproduction of the organism.",
-                          "name": "Organ systems of the animal body that handle exchange of gases and the excretion and reproduction of the organism.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "parts",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "MeSH:A04",
-                                "anchor": "node:MeSH:A04",
-                                "statement": "Respiratory System",
-                                "name": "Respiratory System"
-                              },
-                              {
-                                "id": "MeSH:A05",
-                                "anchor": "node:MeSH:A05",
-                                "statement": "Urogenital System",
-                                "name": "Urogenital System"
-                              },
-                              {
-                                "id": "MeSH:A06",
-                                "anchor": "node:MeSH:A06",
-                                "statement": "Endocrine System",
-                                "name": "Endocrine System"
-                              },
-                              {
-                                "id": "MeSH:A07",
-                                "anchor": "node:MeSH:A07",
-                                "statement": "Cardiovascular System",
-                                "name": "Cardiovascular System"
-                              }
-                            ],
-                            "rank_note": "Parts of the animal body concerned with exchange, excretion and reproduction."
-                          }
-                        },
-                        {
-                          "id": "BI.O.A3.G12",
-                          "anchor": "group:BI.O.A3.G12",
-                          "statement": "Organ systems of the animal body that sense, signal, process and protect at the interface with the environment.",
-                          "name": "Organ systems of the animal body that sense, signal, process and protect at the interface with the environment.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "parts",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "MeSH:A08",
-                                "anchor": "node:MeSH:A08",
-                                "statement": "Nervous System",
-                                "name": "Nervous System"
-                              },
-                              {
-                                "id": "MeSH:A09",
-                                "anchor": "node:MeSH:A09",
-                                "statement": "Sense Organs",
-                                "name": "Sense Organs"
-                              },
-                              {
-                                "id": "MeSH:A14",
-                                "anchor": "node:MeSH:A14",
-                                "statement": "Stomatognathic System",
-                                "name": "Stomatognathic System"
-                              },
-                              {
-                                "id": "MeSH:A17",
-                                "anchor": "node:MeSH:A17",
-                                "statement": "Integumentary System",
-                                "name": "Integumentary System"
-                              }
-                            ],
-                            "rank_note": "Parts of the animal body concerned with sensing, control and the outer interface."
-                          }
-                        },
-                        {
-                          "id": "BI.O.A3.G7",
-                          "anchor": "group:BI.O.A3.G7",
-                          "statement": "Claims about how whole animals interact with and adapt to their environment, including comparative physiology across species and responses to global change.",
-                          "name": "Claims about how whole animals interact with and adapt to their environment, including comparative physiology across species and responses to global change.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:310907",
-                                "anchor": "node:ANZSRC:310907",
-                                "statement": "Animal physiological ecology",
-                                "name": "Animal physiological ecology"
-                              },
-                              {
-                                "id": "ANZSRC:310912",
-                                "anchor": "node:ANZSRC:310912",
-                                "statement": "Comparative physiology",
-                                "name": "Comparative physiology"
-                              },
-                              {
-                                "id": "ANZSRC:319902",
-                                "anchor": "node:ANZSRC:319902",
-                                "statement": "Global change biology",
-                                "name": "Global change biology"
-                              },
-                              {
-                                "id": "ANZSRC:310904",
-                                "anchor": "node:ANZSRC:310904",
-                                "statement": "Animal diet and nutrition",
-                                "name": "Animal diet and nutrition"
-                              },
-                              {
-                                "id": "ANZSRC:310906",
-                                "anchor": "node:ANZSRC:310906",
-                                "statement": "Animal neurobiology",
-                                "name": "Animal neurobiology"
-                              }
-                            ],
-                            "rank_note": "Organism-environment level topics ordered from individual to global scale."
-                          },
-                          "further": true
-                        }
-                      ],
-                      "rank_note": "Ordered from internal body processes and organ systems out to whole-animal interaction with the environment."
-                    }
-                  },
-                  {
-                    "id": "BI.O.A3.G15",
-                    "anchor": "group:BI.O.A3.G15",
-                    "statement": "Organism categories are the whole-organism domains of life, such as eukaryotes, archaea and bacteria, plus the general organisms heading.",
-                    "name": "Organism categories are the whole-organism domains of life, such as eukaryotes, archaea and bacteria, plus the general organisms heading.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:B",
-                          "anchor": "node:MeSH:B",
-                          "statement": "Organisms",
-                          "name": "Organisms"
-                        },
-                        {
-                          "id": "MeSH:B01",
-                          "anchor": "node:MeSH:B01",
-                          "statement": "Eukaryota",
-                          "name": "Eukaryota"
-                        },
-                        {
-                          "id": "MeSH:B02",
-                          "anchor": "node:MeSH:B02",
-                          "statement": "Archaea",
-                          "name": "Archaea"
-                        },
-                        {
-                          "id": "MeSH:B03",
-                          "anchor": "node:MeSH:B03",
-                          "statement": "Bacteria",
-                          "name": "Bacteria"
-                        }
-                      ],
-                      "rank_note": "Whole organisms grouped by domain of life."
-                    }
                   },
                   {
                     "id": "ANZSRC:319901",
@@ -1949,287 +2230,35 @@
               }
             }
           ]
-        }
-      },
-      {
-        "id": "BI.K4",
-        "anchor": "pillar:BI.K4",
-        "title": "Descent",
-        "statement": "Descent is the process by which lineages are classified, adapt, interact with other species and diversify or vanish over evolutionary time.",
-        "name": "Descent is the process by which lineages are classified, adapt, interact with other species and diversify or vanish over evolutionary time.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "parts",
-          "order": "structure",
-          "rank_note": "From classifying lineages to adaptation, interaction and large-scale pattern.",
-          "points": [
-            {
-              "id": "BI.O.A4.G1",
-              "anchor": "group:BI.O.A4.G1",
-              "statement": "Systematics fields name, classify and reconstruct the relationships of organisms across the major branches of life.",
-              "name": "Systematics fields name, classify and reconstruct the relationships of organisms across the major branches of life.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:310401",
-                    "anchor": "node:ANZSRC:310401",
-                    "statement": "Animal systematics and taxonomy",
-                    "name": "Animal systematics and taxonomy"
-                  },
-                  {
-                    "id": "ANZSRC:310409",
-                    "anchor": "node:ANZSRC:310409",
-                    "statement": "Microbial taxonomy",
-                    "name": "Microbial taxonomy"
-                  },
-                  {
-                    "id": "ANZSRC:310411",
-                    "anchor": "node:ANZSRC:310411",
-                    "statement": "Plant and fungus systematics and taxonomy",
-                    "name": "Plant and fungus systematics and taxonomy"
-                  },
-                  {
-                    "id": "ANZSRC:310410",
-                    "anchor": "node:ANZSRC:310410",
-                    "statement": "Phylogeny and comparative analysis",
-                    "name": "Phylogeny and comparative analysis"
-                  }
-                ],
-                "rank_note": "Ordered structurally by the kind of organism group classified, followed by the comparative method that links them."
-              }
-            },
-            {
-              "id": "BI.O.A4.G2",
-              "anchor": "group:BI.O.A4.G2",
-              "statement": "Organism-level fields and umbrella concepts cover how traits, development and life cycles evolve and adapt within the broad scope of biological phenomena.",
-              "name": "Organism-level fields and umbrella concepts cover how traits, development and life cycles evolve and adapt within the broad scope of biological phenomena.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:3104",
-                    "anchor": "node:ANZSRC:3104",
-                    "statement": "Evolutionary biology",
-                    "name": "Evolutionary biology"
-                  },
-                  {
-                    "id": "MeSH:G16",
-                    "anchor": "node:MeSH:G16",
-                    "statement": "Biological Phenomena",
-                    "name": "Biological Phenomena"
-                  },
-                  {
-                    "id": "ANZSRC:310403",
-                    "anchor": "node:ANZSRC:310403",
-                    "statement": "Biological adaptation",
-                    "name": "Biological adaptation"
-                  },
-                  {
-                    "id": "ANZSRC:310404",
-                    "anchor": "node:ANZSRC:310404",
-                    "statement": "Evolution of developmental systems",
-                    "name": "Evolution of developmental systems"
-                  },
-                  {
-                    "id": "ANZSRC:310408",
-                    "anchor": "node:ANZSRC:310408",
-                    "statement": "Life histories",
-                    "name": "Life histories"
-                  }
-                ],
-                "rank_note": "Ordered structurally from the broad umbrella concepts to specific organism-level traits."
-              }
-            },
-            {
-              "id": "BI.O.A4.G3",
-              "anchor": "group:BI.O.A4.G3",
-              "statement": "Interaction fields address how evolution is shaped by organisms' relationships with other species and with a changing environment.",
-              "name": "Interaction fields address how evolution is shaped by organisms' relationships with other species and with a changing environment.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:310405",
-                    "anchor": "node:ANZSRC:310405",
-                    "statement": "Evolutionary ecology",
-                    "name": "Evolutionary ecology"
-                  },
-                  {
-                    "id": "ANZSRC:310406",
-                    "anchor": "node:ANZSRC:310406",
-                    "statement": "Evolutionary impacts of climate change",
-                    "name": "Evolutionary impacts of climate change"
-                  },
-                  {
-                    "id": "ANZSRC:310407",
-                    "anchor": "node:ANZSRC:310407",
-                    "statement": "Host-parasite interactions",
-                    "name": "Host-parasite interactions"
-                  }
-                ],
-                "rank_note": "Ordered structurally from ecological context to climate drivers to parasite relationships."
-              }
-            },
-            {
-              "id": "BI.O.A4.G4",
-              "anchor": "group:BI.O.A4.G4",
-              "statement": "Macroevolutionary pattern fields concern how lineages are distributed across space, split into new species, or disappear, along with residual topics.",
-              "name": "Macroevolutionary pattern fields concern how lineages are distributed across space, split into new species, or disappear, along with residual topics.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:310402",
-                    "anchor": "node:ANZSRC:310402",
-                    "statement": "Biogeography and phylogeography",
-                    "name": "Biogeography and phylogeography"
-                  },
-                  {
-                    "id": "ANZSRC:310412",
-                    "anchor": "node:ANZSRC:310412",
-                    "statement": "Speciation and extinction",
-                    "name": "Speciation and extinction"
-                  },
-                  {
-                    "id": "ANZSRC:310499",
-                    "anchor": "node:ANZSRC:310499",
-                    "statement": "Evolutionary biology not elsewhere classified",
-                    "name": "Evolutionary biology not elsewhere classified"
-                  }
-                ],
-                "rank_note": "Ordered structurally from spatial distribution to species origin and loss, then the remainder category."
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "BI.K5",
-        "anchor": "pillar:BI.K5",
-        "title": "Ecological interaction",
-        "statement": "Ecological interaction is the level at which claims concern organisms living together in populations, communities and habitats, including their past.",
-        "name": "Ecological interaction is the level at which claims concern organisms living together in populations, communities and habitats, including their past.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "parts",
-          "order": "structure",
-          "rank_note": "From organisation levels to habitats and then to the ecological past.",
-          "points": [
-            {
-              "id": "BI.O.A5.G1",
-              "anchor": "group:BI.O.A5.G1",
-              "statement": "Ecology subfields are distinguished by the level of biological organisation at which a claim is made, running from the individual organism's behaviour and physiology up to populations and whole communities.",
-              "name": "Ecology subfields are distinguished by the level of biological organisation at which a claim is made, running from the individual organism's behaviour and physiology up to populations and whole communities.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:310301",
-                    "anchor": "node:ANZSRC:310301",
-                    "statement": "Behavioural ecology",
-                    "name": "Behavioural ecology"
-                  },
-                  {
-                    "id": "ANZSRC:310303",
-                    "anchor": "node:ANZSRC:310303",
-                    "statement": "Ecological physiology",
-                    "name": "Ecological physiology"
-                  },
-                  {
-                    "id": "ANZSRC:310307",
-                    "anchor": "node:ANZSRC:310307",
-                    "statement": "Population ecology",
-                    "name": "Population ecology"
-                  },
-                  {
-                    "id": "ANZSRC:310302",
-                    "anchor": "node:ANZSRC:310302",
-                    "statement": "Community ecology (excl. invasive species ecology)",
-                    "name": "Community ecology (excl. invasive species ecology)"
-                  }
-                ],
-                "rank_note": "Ordered by structure from individual organism to population to community."
-              }
-            },
-            {
-              "id": "BI.O.A5.G2",
-              "anchor": "group:BI.O.A5.G2",
-              "statement": "Habitat-based subfields study ecological processes as they occur within a particular environmental realm such as freshwater, sea or land.",
-              "name": "Habitat-based subfields study ecological processes as they occur within a particular environmental realm such as freshwater, sea or land.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:310304",
-                    "anchor": "node:ANZSRC:310304",
-                    "statement": "Freshwater ecology",
-                    "name": "Freshwater ecology"
-                  },
-                  {
-                    "id": "ANZSRC:310305",
-                    "anchor": "node:ANZSRC:310305",
-                    "statement": "Marine and estuarine ecology (incl. marine ichthyology)",
-                    "name": "Marine and estuarine ecology (incl. marine ichthyology)"
-                  },
-                  {
-                    "id": "ANZSRC:310308",
-                    "anchor": "node:ANZSRC:310308",
-                    "statement": "Terrestrial ecology",
-                    "name": "Terrestrial ecology"
-                  }
-                ],
-                "rank_note": "Ordered by structure of environmental realm: freshwater, marine, terrestrial."
-              }
-            },
-            {
-              "id": "ANZSRC:310306",
-              "anchor": "node:ANZSRC:310306",
-              "statement": "Palaeoecology",
-              "name": "Palaeoecology"
-            }
-          ]
-        }
+        },
+        "title": "Ecological interaction"
       }
     ]
   },
   "retired": [
-    {
-      "id": "ANZSRC:3199",
-      "name": "Other biological sciences",
-      "reason": "container heading for the whole field, not a topic"
-    },
-    {
-      "id": "ANZSRC:319999",
-      "name": "Other biological sciences not elsewhere classified",
-      "reason": "container heading for the whole field, not a topic"
-    },
     {
       "id": "ANZSRC:3103",
       "name": "Ecology",
       "reason": "container heading for the whole field, not a topic"
     },
     {
-      "id": "ANZSRC:310399",
-      "name": "Ecology not elsewhere classified",
+      "id": "ANZSRC:3107",
+      "name": "Microbiology",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "ANZSRC:3108",
+      "name": "Plant biology",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "ANZSRC:3109",
+      "name": "Zoology",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "MeSH:G16",
+      "name": "Biological Phenomena",
       "reason": "container heading for the whole field, not a topic"
     }
   ],
@@ -2240,18 +2269,19 @@
   },
   "minto_issues": {},
   "field_check": {
-    "governing_thought": "Biology is divided by the level or process a claim concerns, running from the copied sequence to the interacting community: heritable information, the cell, the organism, descent, and ecological interaction.",
+    "governing_thought": "Biological claims are divided by the level or process they concern, running from the copied sequence to the interacting community: heritable information, the cell, the organism, descent, and ecological interaction.",
     "key_line": [
-      "Heritable information is the level at which claims concern copied sequences, genes, genomes and the chemistry of nucleic acids, together with the computational analysis of them.",
-      "The cell is the level at which claims concern biomolecules, cellular processes, regulatory factors, biological materials and their industrial and environmental uses.",
-      "The organism is the level at which claims concern whole living bodies, their kinds, their structures and their functions.",
-      "Descent is the process by which lineages are classified, adapt, interact with other species and diversify or vanish over evolutionary time.",
-      "Ecological interaction is the level at which claims concern organisms living together in populations, communities and habitats, including their past."
+      "Heritable information is the level at which claims concern copied sequences, genes, genomes and the molecules that carry them.",
+      "The cell is the level at which claims concern biomolecules, cellular processes, signals and the materials cells make.",
+      "The organism is the level at which claims concern the body structures, physiology, behaviour and kinds of whole living individuals.",
+      "Descent is the process by which claims concern how lineages are related, adapt, split and vanish over evolutionary time.",
+      "Ecological interaction is the level at which claims concern organisms relating to each other, to habitats and to the wider environment."
     ],
-    "holds": false,
-    "note": "P2 'cell' pillar holds industrial uses, biological materials and environmental mixtures (P2.2-P2.4), which are not cell-level; P2.5, P3.1, P4.2 and P5.1 overlap other pillars.",
-    "review": true,
-    "problems": 6
+    "holds": true,
+    "note": "Misplaced: P1.2.3.5, P2.1.5.1, P2.4.1.4, P2.4.3.4, P2.4.4.4, P5.2.2.4, P5.2.2.5, P5.2.3.3, P4.1.3, P5.2.4 and P5.3 material groups.",
+    "review": false,
+    "misplaced": 11,
+    "problems": 11
   },
-  "cost_usd": 0.311
+  "cost_usd": 0.3736
 }

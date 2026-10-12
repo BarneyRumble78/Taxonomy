@@ -1334,7 +1334,10 @@
                         "id": "ANZSRC:3109",
                         "anchor": "node:ANZSRC:3109",
                         "statement": "Zoology",
-                        "name": "Zoology"
+                        "name": "Zoology",
+                        "aliases": [
+                          "LCC:QL"
+                        ]
                       },
                       {
                         "id": "ANZSRC:310703",
@@ -2253,17 +2256,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Biology is divided by the level or process a claim concerns, running from the copied sequence to the interacting community: heritable information, the cell, the organism, descent, and ecological interaction.",
+    "governing_thought": "Biological claims are divided by the level or process they concern, running from the copied sequence to the interacting community: heritable information, the cell, the organism, descent, and ecological interaction.",
     "key_line": [
-      "Heritable information is the level at which claims concern copied sequences, genes, genomes and the chemistry of nucleic acids, together with the computational analysis of them.",
-      "The cell is the level at which claims concern biomolecules, cellular processes, regulatory factors, biological materials and their industrial and environmental uses.",
-      "The organism is the level at which claims concern whole living bodies, their kinds, their structures and their functions.",
-      "Descent is the process by which lineages are classified, adapt, interact with other species and diversify or vanish over evolutionary time.",
-      "Ecological interaction is the level at which claims concern organisms living together in populations, communities and habitats, including their past."
+      "Heritable information is the level at which claims concern copied sequences, genes, genomes and the molecules that carry them.",
+      "The cell is the level at which claims concern biomolecules, cellular processes, signals and the materials cells make.",
+      "The organism is the level at which claims concern the body structures, physiology, behaviour and kinds of whole living individuals.",
+      "Descent is the process by which claims concern how lineages are related, adapt, split and vanish over evolutionary time.",
+      "Ecological interaction is the level at which claims concern organisms relating to each other, to habitats and to the wider environment."
     ],
-    "holds": false,
-    "note": "P2 'cell' pillar holds industrial uses, biological materials and environmental mixtures (P2.2-P2.4), which are not cell-level; P2.5, P3.1, P4.2 and P5.1 overlap other pillars.",
-    "review": true,
-    "problems": 6
+    "holds": true,
+    "note": "Misplaced: P1.2.3.5, P2.1.5.1, P2.4.1.4, P2.4.3.4, P2.4.4.4, P5.2.2.4, P5.2.2.5, P5.2.3.3, P4.1.3, P5.2.4 and P5.3 material groups.",
+    "review": false,
+    "misplaced": 11,
+    "problems": 11
   }
 }
