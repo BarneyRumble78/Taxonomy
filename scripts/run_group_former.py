@@ -64,7 +64,8 @@ def parse_reply(content):
         data = json.loads(text)
     except json.JSONDecodeError:
         return None
-    if isinstance(data, dict) and isinstance(data.get("groups"), list):
+    if isinstance(data, dict) and (isinstance(data.get("groups"), list) or isinstance(data.get("statement"), str)):
+        data.setdefault("groups", [])
         return data
     return None
 
@@ -183,6 +184,7 @@ def run(args, post=None, anthropic_post=None, root=None):
                 "status": formed.get("status"),
                 "batch_key": ",".join(sorted(formed.get("member_ids") or [])),
                 "member_ids": formed.get("member_ids") or [],
+                "review_ids": formed.get("review_ids") or [],
                 "groups": formed.get("groups") or [],
                 "reason": formed.get("reason") or "",
             })
@@ -217,6 +219,12 @@ def run(args, post=None, anthropic_post=None, root=None):
         }
         if outcome.get("point"):
             line["point"] = outcome["point"]
+        if outcome.get("review_ids"):
+            line["review_ids"] = outcome["review_ids"]
+        if outcome.get("statement_review"):
+            line["statement_review"] = outcome["statement_review"]
+        if outcome.get("groups") and not outcome.get("point"):
+            line["groups"] = outcome["groups"]
         append_log(path, line)
         wrote += 1
         if tracker is not None and tracker.stopped:

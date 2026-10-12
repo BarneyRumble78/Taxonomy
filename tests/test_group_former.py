@@ -6,14 +6,19 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "engine" / "v3"))
+import group_former as gf
 from group_former import (
     PASS_KEYS,
     SYSTEM,
+    assign_members,
     batches,
     cell_jobs,
+    form_batch,
     form_cell,
     log_path,
     read_log,
+    repair_groups,
+    target_groups,
 )
 from minto_check import is_definition, minto_counts
 
@@ -134,37 +139,78 @@ def test_four_nodes_ask_for_two_groups():
     _clean(outcome["point"])
 
 
-def test_an_oversized_group_is_retried_and_then_split():
+def test_an_oversized_group_is_split_to_the_target_count():
     nodes = _nodes(6)
     asked = []
 
     def ask(task, payload):
         if task == "head":
             return _head()
-        ids = [node["id"] for node in payload["nodes"]]
-        asked.append((ids, list(payload["problems"]), payload["min_groups"]))
-        if len(ids) == 6:
-            return _one(ids)
-        return _one(ids)
+        if task == "sentence":
+            return {"statement": "The group covers the split members as one kind of claim."}
+        asked.append(payload)
+        return _one([node["id"] for node in payload["nodes"]])
 
     outcome = form_cell("MA.O.A1", nodes, ask)
     assert outcome["status"] == "placed"
-    assert asked[0][0] == [node["id"] for node in nodes]
-    assert asked[0][1] == []
-    assert asked[1][0] == asked[0][0]
-    assert any("6 members" in item for item in asked[1][1])
-    assert asked[2][0] == ["n0", "n1", "n2"]
-    assert asked[3][0] == ["n3", "n4", "n5"]
-    assert asked[2][2] == 1
+    assert len(asked) == 1
+    assert asked[0]["group_count"] == 2
+    assert asked[0]["min_groups"] == 2
+    sizes = [len(group["support"]["points"]) for group in outcome["point"]["support"]["points"]]
+    assert sum(sizes) == 6
+    assert all(2 <= size <= 5 for size in sizes)
     _clean(outcome["point"])
 
 
-def test_fewer_than_four_nodes_does_not_ask():
+def test_target_group_count_is_ceil_of_n_over_4():
+    assert target_groups(3) == 1
+    assert target_groups(4) == 2
+    assert target_groups(6) == 2
+    assert target_groups(9) == 3
+    assert target_groups(16) == 4
+    assert target_groups(17) == 5
+    assert target_groups(21) == 5
+
+
+def test_fewer_than_four_nodes_become_one_group():
+    nodes = [
+        {"id": "a", "name": "Alpha rite"},
+        {"id": "b", "name": "Beta rite"},
+        {"id": "c", "name": "Gamma rite"},
+    ]
     calls = []
-    outcome = form_cell("MA.O.A1", _nodes(3), lambda task, payload: calls.append(task))
-    assert outcome["status"] == "blocked"
-    assert outcome["reason"] == "fewer than four admitted nodes"
-    assert calls == []
+
+    def ask(task, payload):
+        calls.append(task)
+        if task == "head":
+            return _head()
+        if task == "sentence":
+            return {"statement": "The group covers the three rites as one kind of claim."}
+        assert payload["group_count"] == 1
+        return {
+            "statement": "",
+            "basis": "kinds",
+            "order": "structure",
+            "rank_note": "",
+            "groups": [
+                {
+                    "statement": node["name"],
+                    "basis": "kinds",
+                    "order": "structure",
+                    "rank_note": "",
+                    "members": [node["id"]],
+                }
+                for node in payload["nodes"]
+            ],
+        }
+
+    outcome = form_cell("RE.O.A1", nodes, ask)
+    assert outcome["status"] == "placed"
+    assert "form" in calls
+    groups = outcome["point"]["support"]["points"]
+    assert len(groups) == 1
+    assert sorted(point["id"] for point in groups[0]["support"]["points"]) == ["a", "b", "c"]
+    assert is_definition(groups[0]["statement"])
 
 
 def test_a_resumed_cell_keeps_placed_ids_and_does_not_reuse_them():
@@ -382,25 +428,265 @@ def test_max_cost_stops_before_the_cell_line_and_resume_skips_the_batch(tmp_path
     assert group_ids == ["CS.O.A1.G1", "CS.O.A1.G2"]
 
 
-def test_a_blocked_cell_is_finished_and_not_asked_again(tmp_path):
+def test_a_short_cell_is_one_group_and_is_not_asked_again(tmp_path):
     module = _script()
     module.cell_jobs = lambda field, root: [{
         "field": field, "cell": "LA.O.A1", "principle": "Cause precedes effect.", "nodes": _nodes(3),
     }]
+    calls = []
 
     def post(body):
-        raise AssertionError("a short cell does not call the model")
+        calls.append(body)
+        payload = json.loads(body["messages"][1]["content"])
+        if payload["task"] == "head":
+            reply = _head()
+        elif payload["task"] == "sentence":
+            reply = {"statement": "The group covers the three notions as one kind of claim."}
+        else:
+            reply = {
+                "statement": "",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "",
+                "groups": [
+                    {
+                        "statement": node["name"],
+                        "basis": "kinds",
+                        "order": "structure",
+                        "rank_note": "",
+                        "members": [node["id"]],
+                    }
+                    for node in payload["nodes"]
+                ],
+            }
+        return {"message": {"content": json.dumps(reply)}}
 
     args = module.parse_args(["--field", "LA", "--backend", "ollama", "--max-cost", "0"])
     result = module.run(args, post=post, root=tmp_path)
     assert result["wrote"] == 1
     assert result["stopped"] is False
+    assert calls
     rows = read_log(log_path(tmp_path, "LA"))
-    assert rows[0]["part"] == "cell"
-    assert rows[0]["status"] == "blocked"
+    assert rows[-1]["part"] == "cell"
+    assert rows[-1]["status"] == "placed"
+    assert len(rows[-1]["point"]["support"]["points"]) == 1
+    made = len(calls)
     again = module.run(args, post=post, root=tmp_path)
     assert again["wrote"] == 0
-    assert len(read_log(log_path(tmp_path, "LA"))) == 1
+    assert len(calls) == made
+
+
+def _traditions(count=16):
+    families = ["Buddhist", "Christian", "Islamic", "Jewish", "Hindu", "Sikh", "Taoist", "Shinto"]
+    nodes = []
+    for index in range(count):
+        family = families[index % len(families)]
+        nodes.append({"id": f"t{index}", "name": f"{family} tradition {index}"})
+    return nodes
+
+
+def _singleton_reply(nodes):
+    return {
+        "statement": "",
+        "basis": "kinds",
+        "order": "structure",
+        "rank_note": "",
+        "groups": [
+            {
+                "statement": node["name"],
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "",
+                "members": [node["id"]],
+            }
+            for node in nodes
+        ],
+    }
+
+
+def test_missing_ids_join_the_nearest_group_and_unknown_ids_are_dropped():
+    nodes = [
+        {"id": "c1", "name": "Christian rite"},
+        {"id": "c2", "name": "Christian liturgy"},
+        {"id": "b1", "name": "Buddhist temple"},
+        {"id": "b2", "name": "Buddhist monk"},
+    ]
+    proposal = {
+        "groups": [
+            {
+                "statement": "Christian churches",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "",
+                "members": ["c1", "not-a-real-id"],
+            },
+            {
+                "statement": "Buddhist temples",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "",
+                "members": ["b1", "b2"],
+            },
+        ]
+    }
+    assigned = assign_members(nodes, proposal)
+    flat = [member for group in assigned for member in group["members"]]
+    assert "not-a-real-id" not in flat
+    assert sorted(flat) == ["b1", "b2", "c1", "c2"]
+    christian = next(group for group in assigned if "c1" in group["members"])
+    assert "c2" in christian["members"]
+    assert "b1" not in christian["members"]
+
+
+def test_a_name_with_no_overlap_joins_the_further_group():
+    nodes = [
+        {"id": "c1", "name": "Christian rite"},
+        {"id": "b1", "name": "Buddhist temple"},
+        {"id": "q1", "name": "Quantum platypus"},
+    ]
+    proposal = {
+        "groups": [
+            {
+                "statement": "Christian churches",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "",
+                "members": ["c1"],
+            },
+            {
+                "statement": "Buddhist temples",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "",
+                "members": ["b1"],
+            },
+        ]
+    }
+    assigned = assign_members(nodes, proposal)
+    further = next(group for group in assigned if group.get("further"))
+    assert further["members"] == ["q1"]
+
+
+def test_fifteen_singletons_for_sixteen_traditions_stay_inside_two_to_five():
+    nodes = _traditions(16)
+    dropped = nodes[-1]
+    proposal = _singleton_reply(nodes[:-1])
+    assigned = assign_members(nodes, proposal)
+    home = next(group for group in assigned if dropped["id"] in group["members"])
+    shinto = [node["id"] for node in nodes if node["name"].startswith("Shinto") and node["id"] != dropped["id"]]
+    assert any(member in shinto for member in home["members"])
+    packed = repair_groups(nodes, proposal)
+    assert packed is not None
+    sizes = [len(group["members"]) for group in packed]
+    assert all(2 <= size <= 5 for size in sizes)
+    assert 2 <= len(packed) <= 5
+    assert len(packed) == target_groups(16)
+    seen = [member for group in packed for member in group["members"]]
+    assert sorted(seen) == sorted(node["id"] for node in nodes)
+    calls = []
+
+    def ask(task, payload):
+        calls.append((task, payload.get("group_count")))
+        if task == "head":
+            return _head()
+        if task == "sentence":
+            assert "nodes" not in payload
+            assert payload["members"]
+            return {"statement": "The group covers these traditions as one kind of claim."}
+        assert payload["group_count"] == 4
+        return proposal
+
+    outcome = form_cell("RE.O.A4", nodes, ask)
+    assert outcome["status"] == "placed"
+    assert calls[0] == ("form", 4)
+    _clean(outcome["point"])
+    leaves = [
+        point["id"]
+        for group in outcome["point"]["support"]["points"]
+        for point in group["support"]["points"]
+    ]
+    assert sorted(leaves) == sorted(node["id"] for node in nodes)
+
+
+def test_a_bare_label_asks_for_one_sentence_then_uses_a_flagged_template():
+    nodes = _nodes(4)
+    ids = [node["id"] for node in nodes]
+    calls = []
+
+    def ask(task, payload):
+        calls.append(task)
+        if task == "head":
+            return _head()
+        if task == "sentence":
+            assert "nodes" not in payload
+            if payload["label"] == "Abrahamic":
+                return {"statement": "The group covers Abrahamic rites as one kind of claim."}
+            return {"statement": "Dharmic"}
+        return {
+            "statement": "",
+            "basis": "kinds",
+            "order": "structure",
+            "rank_note": "",
+            "groups": [
+                {
+                    "statement": "Abrahamic",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "rank_note": "",
+                    "members": ids[:2],
+                },
+                {
+                    "statement": "Dharmic",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "rank_note": "",
+                    "members": ids[2:],
+                },
+            ],
+        }
+
+    outcome = form_cell("RE.O.A1", nodes, ask)
+    assert outcome["status"] == "placed"
+    assert calls.count("sentence") == 2
+    points = outcome["point"]["support"]["points"]
+    by_members = {tuple(point["id"] for point in group["support"]["points"]): group for group in points}
+    abrahamic = by_members[("n0", "n1")]
+    dharmic = by_members[("n2", "n3")]
+    assert abrahamic["statement"] == "The group covers Abrahamic rites as one kind of claim."
+    assert "review" not in abrahamic
+    assert dharmic["statement"] == "The group covers Dharmic as one kind of claim."
+    assert dharmic["review"] is True
+    assert is_definition(dharmic["statement"])
+    assert outcome["statement_review"] == [dharmic["id"]]
+
+
+def test_split_keeps_the_passing_half(monkeypatch):
+    real = gf.repair_groups
+
+    def wrapped(nodes, proposal):
+        ids = [node["id"] for node in nodes]
+        if len(ids) == 6 or ids == ["n3", "n4", "n5"]:
+            return None
+        return real(nodes, proposal)
+
+    monkeypatch.setattr(gf, "repair_groups", wrapped)
+    nodes = _nodes(6)
+    asked = []
+
+    def ask(task, payload):
+        if task == "sentence":
+            return {"statement": "The group covers the named members as one kind of claim."}
+        asked.append([node["id"] for node in payload["nodes"]])
+        return _one([node["id"] for node in payload["nodes"]])
+
+    ident = iter(f"RE.O.A1.G{index}" for index in range(1, 100))
+    result = form_batch(nodes, ask, ident)
+    assert result["status"] == "placed"
+    assert result["review_ids"] == ["n3", "n4", "n5"]
+    placed = [member for group in result["groups"] for member in group["members"]]
+    assert placed == ["n0", "n1", "n2"]
+    assert ["n0", "n1", "n2"] in asked
+    assert ["n3", "n4", "n5"] in asked
 
 
 def test_a_tiny_cap_does_not_call_and_writes_no_cell_line(tmp_path):
