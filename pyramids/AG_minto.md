@@ -1995,5 +1995,5 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["AG.O.A2.G8: ['activity', 'response']"]}
+- minto_check: clean
 - field_check holds: False — Crop and animal health is not a stage and overlaps husbandry; Farming systems is a cross-cutting catch-all frame; P3.1.5 and the sector and organism-class sections mix dimensions.
