@@ -882,7 +882,10 @@
                   "id": "ANZSRC:4801",
                   "anchor": "node:ANZSRC:4801",
                   "statement": "Commercial law",
-                  "name": "Commercial law"
+                  "name": "Commercial law",
+                  "aliases": [
+                    "ANZSRC:480102"
+                  ]
                 },
                 {
                   "id": "ANZSRC:480102",
@@ -967,7 +970,10 @@
                   "id": "ANZSRC:480601",
                   "anchor": "node:ANZSRC:480601",
                   "statement": "Contract law",
-                  "name": "Contract law"
+                  "name": "Contract law",
+                  "aliases": [
+                    "UNESCO:5324"
+                  ]
                 },
                 {
                   "id": "UNESCO:5324",
@@ -1353,7 +1359,10 @@
                   "id": "ANZSRC:4807",
                   "anchor": "node:ANZSRC:4807",
                   "statement": "Public law",
-                  "name": "Public law"
+                  "name": "Public law",
+                  "aliases": [
+                    "UNESCO:550"
+                  ]
                 },
                 {
                   "id": "UNESCO:550",
@@ -1371,7 +1380,10 @@
                   "id": "UNESCO:1422",
                   "anchor": "node:UNESCO:1422",
                   "statement": "Administrative law",
-                  "name": "Administrative law"
+                  "name": "Administrative law",
+                  "aliases": [
+                    "ANZSRC:480701"
+                  ]
                 },
                 {
                   "id": "ANZSRC:480701",
@@ -1398,7 +1410,10 @@
                   "id": "UNESCO:5311",
                   "anchor": "node:UNESCO:5311",
                   "statement": "Constitutional law",
-                  "name": "Constitutional law"
+                  "name": "Constitutional law",
+                  "aliases": [
+                    "ANZSRC:480702"
+                  ]
                 },
                 {
                   "id": "ANZSRC:480702",
@@ -1680,10 +1695,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Law is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five legal relations: sources, obligations, wrongs and remedies, public power, and forums and proof.",
-    "key_line": "Dimension: **the legal relation the claim states.** Order: from validity to decision.\n1. Sources\n2. Obligations\n3. Wrongs and remedies\n4. Public power\n5. Forums and proof\n\nR7 repair: v1's \"order a remedy\" is now member 3, \"Wrongs and remedies\". v1's \"constitute the forum\" is member 5, \"Forums and proof\". All three places now list the same five members.\n\nEvery legal claim is indexed to a system and a date: \"under New Zealand law at 2026\". A claim without its system is not placeable.",
+    "governing_thought": "Law divides along the legal relation a claim states into sources, obligations, wrongs and remedies, public power, and forums and proof, ordered from the validity of a rule to its decision.",
+    "key_line": [
+      "Sources are the legal relation in which a rule gains its validity, from made law and custom to theory and comparison of whole legal orders.",
+      "Obligations are the legal relation in which private parties owe duties and hold rights against each other in trade, property and personal life.",
+      "Wrongs and remedies are the legal relation in which a harm or offence is answered by liability, punishment or enforcement.",
+      "Public power is the legal relation in which the state holds authority over persons, territory and resources and is limited by rights.",
+      "Forums and proof are the legal relation in which claims are brought before institutions and decided through set procedure and advocacy."
+    ],
     "holds": false,
-    "note": "Cells share the legal-relation dimension but none states the five members (sources, obligations, wrongs and remedies, public power, forums and proof); A5 says four.",
-    "review": true
+    "note": "P1 Sources is a catch-all mixing legal theory, education, lawyers, law reform and comparative law, so it fails to restate one value of the dimension.",
+    "review": true,
+    "misplaced": 9,
+    "problems": 109
   }
 }
