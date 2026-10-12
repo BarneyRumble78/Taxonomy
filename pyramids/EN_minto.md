@@ -1768,5 +1768,5 @@ Group of balances. Basis: kinds. Dimension: the quantity whose balance or consti
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["EN.O.A5.G3: ['condition', 'response']", "EN.O.A5.G12: ['activity', 'substance']"]}
+- minto_check: clean
 - field_check holds: False — Pillars are not clean distinct values: P3.4 is a catch-all, P1.4.3/P1.4.4 are LCC schemes, P1.3.4 is "IEEE topics", and P4 and P5 each bundle unrelated fields.
