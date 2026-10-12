@@ -1202,6 +1202,8 @@ def test_ev_classification_passes_minto_checks():
         "basis_order_mismatch": 0,
         "degree_without_rank": 0,
         "mixed_kinds": 0,
+        "loose_topics": 0,
+        "missing_summaries": 0,
     }
     assert "classification framework" in (ROOT / "pyramids" / "EV_minto.md").read_text(encoding="utf-8")
     bad = {

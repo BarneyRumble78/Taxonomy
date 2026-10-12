@@ -66,9 +66,11 @@ def test_saved_plan_keeps_the_split_and_the_mesh_queue():
             assert entry["cap"] == 0
         if entry["model"] == 0:
             assert entry["unsure_rate"] == 0
+        if entry["mode"] == "qwen" or entry["id"] == MESH:
             assert entry["estimate_usd"] == 0
-        else:
-            assert entry["unsure_rate"] == 0.25
+        elif entry.get("minto_items"):
+            assert entry["estimate_usd"] > 0
+            assert entry["cap"] > 0
     mesh = next(entry for entry in plan["order"] if entry["id"] == MESH)
     assert mesh["kind"] == "mesh"
     assert plan["totals"]["focus_resolved"] == mesh["focus_resolved"]
@@ -78,10 +80,14 @@ def test_saved_plan_keeps_the_split_and_the_mesh_queue():
     assert "$60" in text
     assert "$55" in text
     assert "25 percent" in text
+    assert "loose" in text
     assert f"{mesh['focus_cross_conflicts']:,}" in text
     assert f"{mesh['focus_resolved']:,}" in text
     if plan["assigned"] == 0:
         assert "Their caps are zero" in text
+    else:
+        assert plan["totals"]["claude_items"] > 0
+        assert plan["headroom"] > 0
 
 
 def test_dry_run_does_not_call_the_queue_and_resume_skips(tmp_path):
@@ -111,6 +117,28 @@ def test_dry_run_does_not_call_the_queue_and_resume_skips(tmp_path):
     assert [row["result"] for row in again["steps"]] == ["no-model", "resume", "ran"]
     saved = json.loads(module.state_path(tmp_path).read_text(encoding="utf-8"))
     assert saved["done"] == ["PH", "MA", "AG"]
+
+
+def test_minto_items_stay_pending_and_do_not_call_a_model(tmp_path):
+    module = _runner()
+    plan = {
+        "assigned": 1.0,
+        "global_cap": 60,
+        "reserve": 5,
+        "order": [
+            {"id": "MA", "mode": "claude", "model": 0, "cap": 1, "estimate_usd": 0.2, "kind": "field", "minto_items": 40},
+        ],
+    }
+    calls = []
+
+    def queue_run(entry, root):
+        calls.append(entry["id"])
+        return {"cost": 1, "wrote": 1, "stopped": False}
+
+    result = module.run_all(tmp_path, plan=plan, execute=True, queue_run=queue_run)
+    assert calls == []
+    assert result["steps"][0]["result"] == "minto-pending"
+    assert not module.state_path(tmp_path).exists()
 
 
 def test_a_cap_stop_leaves_the_queue_unfinished(tmp_path):

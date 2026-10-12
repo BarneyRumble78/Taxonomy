@@ -16,6 +16,7 @@ from pathlib import Path
 
 from cost_cap import ALLOCATION, GLOBAL_BUDGET, RESERVE, UNSURE_RATE, USD_PER_THOUSAND
 from field_rebuild import FIELDS, mesh_fields, prepare, shared_queue
+from minto_build import audit_field, claude_usd
 
 PRIORITY = ["MA", "PH", "CH", "CS", "MD"]
 MESH = "MESH"
@@ -74,6 +75,9 @@ def build_plan(root):
         report = prepare(field, root)
         free = report["ruled"] + report["filed"] + report["kept_override"] + report["routed"]
         rate, escalate, usd = estimate_escalation(report["model"], UNSURE_RATE)
+        found = audit_field(field, root)
+        literal = found["literal"]
+        concept = found["concept"]
         entries.append({
             "id": field,
             "kind": "field",
@@ -89,6 +93,22 @@ def build_plan(root):
             "escalate_items": escalate,
             "estimate_usd": round(usd, 6),
             "depth_cap": report["depth_cap"],
+            "minto_in_pyramid": literal["admitted"],
+            "minto_loose": literal["loose_topics"],
+            "minto_oversized": literal["oversized_groups"],
+            "minto_undersized": literal["undersized_groups"],
+            "minto_missing_basis": literal["missing_basis"],
+            "minto_missing_order": literal["missing_order"],
+            "minto_template": literal["template_summaries"],
+            "minto_missing_summaries": literal["missing_summaries"],
+            "catalogue_filed": concept["lcc_filed"] + concept["flat_filed"],
+            "admitted": concept["admitted"],
+            "formation": concept["formation"],
+            "summaries": concept["summaries"],
+            "minto_items": concept["items"],
+            "flat_files": concept["flat_files"],
+            "worst": literal["worst"],
+            "worst_groups": literal["worst_groups"],
         })
     owners = mesh_fields(root)
     mesh = shared_queue(owners, root, include_rows=False, focus=MESH_FOCUS)
@@ -108,6 +128,22 @@ def build_plan(root):
         "escalate_items": escalate,
         "estimate_usd": round(usd, 6),
         "depth_cap": None,
+        "minto_in_pyramid": 0,
+        "minto_loose": 0,
+        "minto_oversized": 0,
+        "minto_undersized": 0,
+        "minto_missing_basis": 0,
+        "minto_missing_order": 0,
+        "minto_template": 0,
+        "minto_missing_summaries": 0,
+        "catalogue_filed": 0,
+        "admitted": 0,
+        "formation": 0,
+        "summaries": 0,
+        "minto_items": 0,
+        "flat_files": [],
+        "worst": {"children": 0, "id": "", "name": ""},
+        "worst_groups": [],
         "descriptor_rows": mesh["descriptor_rows"],
         "tree_copies": mesh["tree_copies"],
         "conflicts": mesh["conflicts"],
@@ -119,6 +155,8 @@ def build_plan(root):
     })
     for entry in entries:
         entry["mode"] = "claude" if entry["id"] in CLAUDE_IDS else "qwen"
+        if entry["kind"] == "field" and entry["mode"] == "claude":
+            entry["estimate_usd"] = claude_usd(entry["minto_items"])
     _scale_caps(entries)
     for entry in entries:
         entry["cap"] = round(entry.pop("cap_cents") / 100, 2)
@@ -151,33 +189,63 @@ def build_plan(root):
             "focus_resolved": by_id[MESH]["focus_resolved"],
             "estimate_usd": round(sum(entry["estimate_usd"] for entry in ordered if entry["mode"] == "claude"), 2),
             "assigned": assigned,
+            "minto_items": sum(entry["minto_items"] for entry in ordered),
+            "claude_items": sum(entry["minto_items"] for entry in ordered if entry["mode"] == "claude" and entry["kind"] == "field"),
+            "qwen_items": sum(entry["minto_items"] for entry in ordered if entry["mode"] == "qwen"),
+            "formation": sum(entry["formation"] for entry in ordered),
+            "summaries": sum(entry["summaries"] for entry in ordered),
         },
     }
 
 
+def _row(plan, ident):
+    return next(entry for entry in plan["order"] if entry["id"] == ident)
+
+
+def _count(number, one, many):
+    word = one if number == 1 else many
+    return f"{number:,} {word}"
+
+
 def render_markdown(plan):
-    """The budget note. Figures are the dry-run counts, not a measured Qwen rate."""
+    """The budget note. Cell filing is reported separately from the Minto checker."""
     totals = plan["totals"]
+    ma = _row(plan, "MA")
+    hi = _row(plan, "HI")
+    flat = sorted({name for entry in plan["order"] for name in entry.get("flat_files") or []})
+    flat_text = ", ".join(flat) if flat else "none"
     lines = [
         "# Budget plan",
         "",
         "No model was called. The global Claude cap is $60. Assigned caps sum to at most $55. Five dollars stay in reserve.",
         "",
-        "Mathematics, physics, chemistry, computing and medicine may escalate to Claude. The shared MeSH queue may escalate as one queue. Every other field is Qwen only.",
+        "A cell on a source node is a filing mark. It is not a Minto group. The count of nodes that already have a cell is not a classification.",
         "",
-        "The Qwen first-pass rate is 25 percent unsure or needs_review. That figure is the EV planning default, not a new measurement.",
+        f"Field maps hold {totals['nodes']:,} nodes. {totals['free']:,} already have a cell, a filed parent, or a route. {totals['model']:,} remain in the cell-assignment queue. That queue is not the work below.",
         "",
-        "The widened EV re-run left 1,268 of 5,059 rows unsure, about 25 percent. The first counted pass left 1,117 of 5,060 rows unsure or needs_review, about 22 percent. This plan uses 25 percent.",
+        "The rebuild hangs each capped node on its cell by the source parent link. It copies basis and order only from the rule file. Source groups get the source name as their statement. `engine/v3/minto_check.py` then reads that pyramid. Environmental science passes the same checker with every count at 0.",
         "",
-        "Where the rules already place a node, the rate is zero. A MeSH disagreement takes the cell of its primary tree number. That number is the first in lexicographic order, which is the order NLM lists. Only a disagreement with no deciding tree number stays in the model queue.",
+        f"Mathematics puts {ma['minto_in_pyramid']:,} capped nodes in the pyramid. {ma['minto_loose']:,} are loose topics under a cell. {_count(ma['minto_oversized'], 'group has', 'groups have')} more than five members. {_count(ma['minto_undersized'], 'group has', 'groups have')} fewer than two. {ma['minto_missing_basis']:,} groups lack a basis. {ma['minto_missing_order']:,} lack an order. {ma['minto_template']:,} summaries match a template. {ma['minto_missing_summaries']:,} group nodes lack a plain-definition sentence.",
         "",
-        f"Field maps hold {totals['nodes']:,} nodes. {totals['free']:,} are placed with no model. {totals['model']:,} remain in field model queues after the depth cap.",
+        f"The largest mathematics group is {ma['worst']['name']} ({ma['worst']['id']}), with {ma['worst']['children']:,} members.",
         "",
-        f"The one MeSH queue holds {totals['mesh_conflicts']:,} cell disagreements. {totals['mesh_resolved']:,} are ruled by the primary tree number. {totals['mesh_model']:,} stay for a model.",
+        f"History puts {hi['minto_in_pyramid']:,} capped nodes in the pyramid. {hi['minto_loose']:,} are loose topics under a cell. {_count(hi['minto_oversized'], 'group has', 'groups have')} more than five members. {_count(hi['minto_undersized'], 'group has', 'groups have')} fewer than two. {hi['minto_missing_basis']:,} groups lack a basis. {hi['minto_missing_order']:,} lack an order. {hi['minto_template']:,} summaries match a template. {hi['minto_missing_summaries']:,} group nodes lack a plain-definition sentence.",
         "",
-        f"{totals['focus_cross_conflicts']:,} of those disagreements cross medicine, biology, chemistry, mind and society, and agriculture. {totals['focus_resolved']:,} of them are ruled.",
+        f"The largest history group is {hi['worst']['name']} ({hi['worst']['id']}), with {hi['worst']['children']:,} members. The depth cap is 2, and LCC schedule lines sit at level 2, so the cap does not file them.",
         "",
-        f"Estimated Claude spend on the escalation queues is ${totals['estimate_usd']:.2f}.",
+        "Physics is almost the whole Claude estimate because its cap admits the PACS second level. The Gold Book is the flat index, so those chemistry terms stay in the checker table and out of the Claude count.",
+        "",
+        "Before any model is priced, two free rules file catalogue lines. An LCC schedule line, letters then digits, is filed under its class heading. A flat index, at least 1,000 nodes of which 90 percent are level 1, is catalogued under its cell. Flat indexes in this run: " + flat_text + ".",
+        "",
+        "Model work is what remains. Formation places each member of an illegal group into a group of two to five. A summary is one plain-definition sentence on a group node, not on a leaf. A group already of size two to five needs the sentence and the basis, not a new placement.",
+        "",
+        "This estimate does not use the 25 percent EV placement rate. There is no measured Qwen rate for forming groups. Qwen items are priced at $0. Claude items use the measured $0.90 per 1,000.",
+        "",
+        "Claude forms the groups and writes the sentences for mathematics, physics, chemistry, computing and medicine. Qwen does both for the other fields. The MESH queue is not a group-forming queue. Its cell disagreements are already ruled by the primary tree number.",
+        "",
+        f"The one MeSH queue holds {totals['mesh_conflicts']:,} cell disagreements. {totals['mesh_resolved']:,} are ruled by the primary tree number. {totals['mesh_model']:,} stay for a model. {totals['focus_cross_conflicts']:,} of those disagreements cross medicine, biology, chemistry, mind and society, and agriculture. {totals['focus_resolved']:,} of them are ruled.",
+        "",
+        f"Claude items are {totals['claude_items']:,}. Qwen items are {totals['qwen_items']:,}. Formation items are {totals['formation']:,}. Summary items are {totals['summaries']:,}. Estimated Claude spend is ${totals['estimate_usd']:.2f}.",
         "",
     ]
     if plan["assigned"] == 0:
@@ -204,21 +272,43 @@ def render_markdown(plan):
         f"| Reserve | {plan['reserve']:.2f} |",
         f"| Global cap | {plan['global_cap']:.2f} |",
         "",
-        "| Queue | Free | Model queue | Rate | Est. escalate | Est. $ | Mode | Cap $ |",
-        "|---|---:|---:|---:|---:|---:|---|---:|",
+        "Checker on the pyramid the rebuild emits now. Catalogue filing is not applied in this table.",
+        "",
+        "| Field | In pyramid | Loose under cells | Oversized groups | Undersized groups | Missing basis | Missing order | Template summaries | Missing summaries |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
     ])
     for entry in plan["order"]:
-        rate = "0%" if entry["unsure_rate"] == 0 else "25%"
-        mode = "Claude" if entry["mode"] == "claude" else "Qwen only"
+        if entry["kind"] != "field":
+            continue
         lines.append(
-            f"| {entry['id']} | {entry['free']:,} | {entry['model']:,} | {rate} | "
-            f"{entry['escalate_items']:,} | {entry['estimate_usd']:.2f} | {mode} | {entry['cap']:.2f} |"
+            f"| {entry['id']} | {entry['minto_in_pyramid']:,} | {entry['minto_loose']:,} | "
+            f"{entry['minto_oversized']:,} | {entry['minto_undersized']:,} | "
+            f"{entry['minto_missing_basis']:,} | {entry['minto_missing_order']:,} | "
+            f"{entry['minto_template']:,} | {entry['minto_missing_summaries']:,} |"
         )
     lines.extend([
         "",
-        "Free means ruled, filed under a parent, kept as an override, or routed by a rule. The MeSH row counts disagreements ruled by the primary tree number.",
+        "Model work after the two catalogue rules. A cap is Claude money. Qwen rows are local.",
         "",
-        "Run order is mathematics, physics, chemistry, computing, medicine, the MeSH queue, then the Qwen-only fields. `scripts/run_all_fields.py` reads this plan, resumes from a state file, and stops on a cap. A dry run does not call a model.",
+        "| Field | Catalogue filed | Admitted | Formation | Summaries | Mode | Est. $ | Cap $ |",
+        "|---|---:|---:|---:|---:|---|---:|---:|",
+    ])
+    for entry in plan["order"]:
+        if entry["kind"] != "field":
+            continue
+        mode = "Claude" if entry["mode"] == "claude" else "Qwen only"
+        lines.append(
+            f"| {entry['id']} | {entry['catalogue_filed']:,} | {entry['admitted']:,} | "
+            f"{entry['formation']:,} | {entry['summaries']:,} | {mode} | "
+            f"{entry['estimate_usd']:.2f} | {entry['cap']:.2f} |"
+        )
+    lines.extend([
+        "",
+        "Oversized means more than five members. Undersized means fewer than two. A loose topic is a leaf whose parent is a cell. A missing summary is a group node whose statement is not a sentence of at least six words.",
+        "",
+        "The unallocated headroom is not a finished field. It is money not yet assigned. Qwen drafts for the other nineteen fields have no measured pass rate against this checker.",
+        "",
+        "`scripts/run_all_fields.py` reads this plan. A dry run does not call a model. Rows with Minto items stay pending: the cell placer is not a group former, and this run does not start one.",
         "",
     ])
     return "\n".join(lines)

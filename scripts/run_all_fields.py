@@ -7,9 +7,11 @@
 
 The default is a dry run. It prints the plan and does not call Ollama or
 Claude. --write-plan refreshes pyramids/rebuild/BUDGET_PLAN.md from the maps.
---execute resumes from pyramids/queues/all_fields_state.json, honours each
-cap, and prints a summary. A stopped queue stays unfinished so the next
-run continues it.
+--execute resumes from pyramids/queues/all_fields_state.json and honours
+each cap for a cell queue. A field with Minto items stays pending. The
+cell placer does not form groups, and this script does not call a model
+for that work. A stopped cell queue stays unfinished so the next run
+continues it.
 """
 import argparse
 import json
@@ -84,6 +86,10 @@ def run_all(root, plan=None, execute=False, queue_run=None, refresh=False):
         }
         if entry["id"] in state["done"]:
             row["result"] = "resume"
+            summary.append(row)
+            continue
+        if entry.get("minto_items"):
+            row["result"] = "minto-pending"
             summary.append(row)
             continue
         if not entry["model"]:

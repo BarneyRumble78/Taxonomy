@@ -11,6 +11,7 @@ TEMPLATE = re.compile(
     r"^(These|Both are|All are)\b|alike as|is the class that holds|^\s*$",
     re.I,
 )
+WORD = re.compile(r"[A-Za-z0-9]+(?:[-–][A-Za-z0-9]+)?")
 ORDERS = {"time", "structure", "degree"}
 BASES = {"cause_effect", "parts", "kinds"}
 # cause/effect is a sequence. Parts follow the structure of the whole.
@@ -69,6 +70,38 @@ def _kind_of_name(name):
     return "unsorted"
 
 
+def is_definition(statement):
+    """A plain-definition summary: one sentence of at least six words, not a template."""
+    text = (statement or "").strip()
+    if not text.endswith("."):
+        return False
+    if TEMPLATE.search(text):
+        return False
+    return len(WORD.findall(text)) >= 6
+
+
+def _loose_and_summaries(pyramid):
+    """Leaves hung directly on a cell, and group nodes with no definition sentence."""
+    loose = []
+    missing = []
+
+    def walk(points, parent_anchor):
+        for point in points or []:
+            support = point.get("support")
+            kids = (support or {}).get("points") if support else None
+            anchor = str(point.get("anchor") or "")
+            if support is not None and not is_definition(point.get("statement") or ""):
+                missing.append(point.get("id") or point.get("statement"))
+            if parent_anchor.startswith("cell:") and not support:
+                loose.append(point.get("id") or point.get("name") or point.get("statement"))
+            if kids is not None:
+                walk(kids, anchor)
+
+    walk((pyramid.get("key_line") or {}).get("points"), "")
+    walk((pyramid.get("method_line") or {}).get("points"), "")
+    return loose, missing
+
+
 def minto_issues(pyramid):
     """Lists of failures. An empty list is a pass for that check."""
     issues = {
@@ -80,6 +113,8 @@ def minto_issues(pyramid):
         "basis_order_mismatch": [],
         "degree_without_rank": [],
         "mixed_kinds": [],
+        "loose_topics": [],
+        "missing_summaries": [],
     }
     for label, group in iter_groups(pyramid):
         points = group.get("points") or []
@@ -110,6 +145,9 @@ def minto_issues(pyramid):
     for point in _walk_points(methods.get("points")):
         if point.get("support") and TEMPLATE.search(point.get("statement") or ""):
             issues["template_summaries"].append(point.get("id") or point.get("statement"))
+    loose, missing = _loose_and_summaries(pyramid)
+    issues["loose_topics"] = loose
+    issues["missing_summaries"] = missing
     return issues
 
 
