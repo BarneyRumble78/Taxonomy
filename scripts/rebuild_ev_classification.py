@@ -2,6 +2,9 @@
 
 Deletes template summaries, regroups leaves by kind, inserts the loose
 topics that belong in a named group, and routes the rest to a field code.
+
+Other fields use scripts/rebuild_classification.py and pyramids/rebuild/<FIELD>.json.
+This file stays the EV leaf rebuild. It does not call a model.
 """
 import json
 import re

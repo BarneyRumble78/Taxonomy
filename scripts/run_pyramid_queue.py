@@ -30,6 +30,12 @@ that key is set.
     python3 scripts/run_pyramid_queue.py --field EV --backend anthropic --max-cost 10
     python3 scripts/run_pyramid_queue.py --field EV --backend anthropic --max-cost 10 \\
         --only-status out_of_scope,needs_review,unsure
+    python3 scripts/run_pyramid_queue.py --field EV --backend hybrid --max-cost 10 --global-max-cost 90
+
+Hybrid runs the first pass on Ollama (native /api/chat, think false). Only rows
+left as unsure or needs_review are sent to Claude. --max-cost is the cap for
+this field. --global-max-cost is the cap for the whole programme (default $90).
+Ollama costs nothing. A dry run does not call either model.
 """
 import argparse
 import json
@@ -44,12 +50,23 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "engine" / "v3"))
+from cost_cap import (  # noqa: E402
+    ESCALATE_STATUS,
+    GLOBAL_BUDGET,
+    load_ledger,
+    record as record_spend,
+    save_ledger,
+)
+from shortlist import ranked_shortlist  # noqa: E402
+
 MODEL = "qwen3:30b-a3b"
 DEFAULT_ANTHROPIC_MODEL = "claude-sonnet-5-5"
 BATCH_SIZE = 20
 DEFAULT_WORKERS = 3
 PROGRESS_EVERY = 20
 DEFAULT_MAX_COST = 10.0
+DEFAULT_GLOBAL_MAX_COST = GLOBAL_BUDGET
 ANTHROPIC_MAX_TOKENS = 3000
 # List prices, USD per million tokens, Claude API global tier.
 # Input, output, 5-minute cache write, cache read.
@@ -255,18 +272,39 @@ def cell_catalog(field="EV", root=None):
                     })
                 for grandchild in (child.get("support") or {}).get("points") or []:
                     if str(grandchild.get("anchor") or "").startswith("facet:") and grandchild.get("id"):
+                        grandchild_cell = _point_cell(grandchild, child_cell)
                         groups.append({
                             "group_id": grandchild["id"],
-                            "cell": _point_cell(grandchild, child_cell),
+                            "cell": grandchild_cell,
                             "statement": grandchild.get("statement") or "",
                         })
+                        added = 0
+                        for deeper in (grandchild.get("support") or {}).get("points") or []:
+                            if not deeper.get("id") or not (deeper.get("support") or {}).get("points"):
+                                continue
+                            groups.append({
+                                "group_id": deeper["id"],
+                                "cell": _point_cell(deeper, grandchild_cell),
+                                "statement": deeper.get("statement") or "",
+                            })
+                            added += 1
+                            if added >= 5:
+                                break
         methods = data.get("method_line") or {}
+        method_cell = _point_cell(methods, "EV.O.A4")
         if methods.get("id"):
             groups.append({
                 "group_id": methods["id"],
-                "cell": _point_cell(methods, "EV.O.A4"),
+                "cell": method_cell,
                 "statement": methods.get("statement") or "",
             })
+        for point in methods.get("points") or []:
+            if point.get("id"):
+                groups.append({
+                    "group_id": point["id"],
+                    "cell": _point_cell(point, method_cell),
+                    "statement": point.get("statement") or "",
+                })
     if not groups:
         rules = load_rules(field, root)
         for index, cell in enumerate(rules.get("cells") or [], start=1):
@@ -988,15 +1026,19 @@ class CostCap(Exception):
 class CostTracker:
     """Token counts and list-price dollars. A call reserves its worst case before it starts."""
 
-    def __init__(self, model, max_cost):
+    def __init__(self, model, max_cost, global_max_cost=0.0, field_spent=0.0, global_spent=0.0):
         self.model = model
         self.max_cost = max_cost if max_cost and max_cost > 0 else 0.0
+        self.global_max_cost = global_max_cost if global_max_cost and global_max_cost > 0 else 0.0
+        self.field_spent = float(field_spent or 0)
+        self.global_spent = float(global_spent or 0)
         self.input_tokens = 0
         self.output_tokens = 0
         self.cache_read = 0
         self.cache_write = 0
         self.reserved = 0.0
         self.stopped = False
+        self.stop_scope = ""
         self._lock = threading.Lock()
 
     def usd(self):
@@ -1014,8 +1056,14 @@ class CostTracker:
 
     def begin(self, reserve):
         with self._lock:
-            if self.max_cost and self._usd() + self.reserved + reserve > self.max_cost:
+            upcoming = self._usd() + self.reserved + reserve
+            if self.max_cost and self.field_spent + upcoming > self.max_cost:
                 self.stopped = True
+                self.stop_scope = "field"
+                return False
+            if self.global_max_cost and self.global_spent + upcoming > self.global_max_cost:
+                self.stopped = True
+                self.stop_scope = "global"
                 return False
             self.reserved += reserve
             return True
@@ -1078,9 +1126,9 @@ def parse_args(argv=None):
     )
     parser.add_argument(
         "--backend",
-        choices=("ollama", "anthropic"),
+        choices=("ollama", "anthropic", "hybrid"),
         default="ollama",
-        help="ollama is the default. anthropic calls the Messages API.",
+        help="ollama is the default. anthropic calls the Messages API. hybrid uses Ollama, then Claude for unsure and needs_review rows.",
     )
     parser.add_argument(
         "--model",
@@ -1091,7 +1139,13 @@ def parse_args(argv=None):
         "--max-cost",
         type=float,
         default=DEFAULT_MAX_COST,
-        help="Stop before a call that would pass this many USD. 0 means no cap. Default 10.",
+        help="Stop before a call that would pass this many USD for this field. 0 means no field cap. Default 10.",
+    )
+    parser.add_argument(
+        "--global-max-cost",
+        type=float,
+        default=DEFAULT_GLOBAL_MAX_COST,
+        help="Stop before a call that would pass this many USD across fields. 0 means no global cap. Default 90.",
     )
     parser.add_argument(
         "--only-status",
@@ -1109,7 +1163,18 @@ def resolve_model(backend, model):
     return MODEL
 
 
-def run(args, post=None, root=None):
+def claude_model_name(model):
+    """The Claude model for an Anthropic or hybrid escalation pass."""
+    if model and "claude" in model:
+        return model
+    return DEFAULT_ANTHROPIC_MODEL
+
+
+def ledger_file(root):
+    return Path(root) / "pyramids" / "queues" / "cost_ledger.json"
+
+
+def run(args, post=None, root=None, anthropic_post=None):
     field = args.field
     root = Path(root) if root else ROOT
     batch_size = clamp_batch(args.batch)
@@ -1125,7 +1190,7 @@ def run(args, post=None, root=None):
     if api not in ("native", "openai"):
         api = "native"
     backend = getattr(args, "backend", None) or "ollama"
-    if backend not in ("ollama", "anthropic"):
+    if backend not in ("ollama", "anthropic", "hybrid"):
         backend = "ollama"
     model = resolve_model(backend, getattr(args, "model", "") or "")
     max_cost = getattr(args, "max_cost", DEFAULT_MAX_COST)
@@ -1133,6 +1198,11 @@ def run(args, post=None, root=None):
         max_cost = float(max_cost)
     except (TypeError, ValueError):
         max_cost = DEFAULT_MAX_COST
+    global_max_cost = getattr(args, "global_max_cost", DEFAULT_GLOBAL_MAX_COST)
+    try:
+        global_max_cost = float(global_max_cost)
+    except (TypeError, ValueError):
+        global_max_cost = DEFAULT_GLOBAL_MAX_COST
     if not args.dry_run:
         compact_jsonl(dest_jsonl)
     saved = load_previous(dest_json, dest_jsonl)
@@ -1162,8 +1232,44 @@ def run(args, post=None, root=None):
                 f"dry-run field={field} pending={len(pending)} drivers={drivers} "
                 f"model_items={len(model_preview)} batch={batch_size} workers={workers} "
                 f"backend=anthropic model={model} max-cost={max_cost:.2f} "
+                f"global-max-cost={global_max_cost:.2f} "
                 f"expected ${per_thousand:.2f} per 1000 items{only_bit}"
             )
+        elif backend == "hybrid":
+            item_keys = {row_key(item) for item in items}
+            latest = {row_key(row): row for row in saved}
+            escalate = [
+                row for key, row in latest.items()
+                if key in item_keys and row_status(row) in ESCALATE_STATUS
+            ]
+            sonnet = claude_model_name(getattr(args, "model", "") or "")
+            per_thousand = expected_usd_per_thousand(sonnet)
+            claude_usd = round(len(escalate) * per_thousand / 1000, 6)
+            upper = round(len(model_preview) * per_thousand / 1000, 6)
+            print(
+                f"dry-run field={field} pending={len(pending)} drivers={drivers} "
+                f"ollama_items={len(model_preview)} escalate_items={len(escalate)} "
+                f"backend=hybrid ollama={model} claude={sonnet} "
+                f"claude_usd={claude_usd:.6f} upper_if_all_model_items={upper:.6f} "
+                f"field_max_cost={max_cost:.2f} global_max_cost={global_max_cost:.2f}{only_bit}"
+            )
+            print("Claude is priced only for unsure and needs_review rows. No unsure rate is applied.")
+            return {
+                "pending": len(pending),
+                "batch": batch_size,
+                "workers": workers,
+                "drivers": drivers,
+                "api": api,
+                "backend": backend,
+                "model": model,
+                "wrote": 0,
+                "stopped": False,
+                "cost": 0.0,
+                "ollama_items": len(model_preview),
+                "escalate_items": len(escalate),
+                "claude_usd": claude_usd,
+                "upper_if_all_model_items": upper,
+            }
         else:
             print(
                 f"dry-run field={field} pending={len(pending)} drivers={drivers} "
@@ -1198,11 +1304,20 @@ def run(args, post=None, root=None):
     key = ""
     tracker = None
     prefix = ""
+    ledger = None
+    if backend in ("anthropic", "hybrid"):
+        ledger = load_ledger(ledger_file(root))
     if backend == "anthropic":
         key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
         if post is None and not key:
             raise SystemExit("ANTHROPIC_API_KEY is not set")
-        tracker = CostTracker(model, max_cost)
+        tracker = CostTracker(
+            model,
+            max_cost,
+            global_max_cost,
+            float((ledger.get("fields") or {}).get(field) or 0),
+            float(ledger.get("spent") or 0),
+        )
 
     def send(body):
         if backend == "anthropic":
@@ -1295,16 +1410,64 @@ def run(args, post=None, root=None):
                     record([unsure_row(item) for item in batch])
     if counts["done"] and counts["since"]:
         progress_line()
+    if backend == "hybrid":
+        compact_jsonl(dest_jsonl)
+        saved_now = load_previous(dest_json, dest_jsonl)
+        latest = {row_key(row): row for row in saved_now}
+        escalate_items = [
+            item for item in model_items
+            if row_status(latest.get(row_key(item)) or {}) in ESCALATE_STATUS
+        ]
+        if escalate_items:
+            sonnet = claude_model_name(getattr(args, "model", "") or "")
+            key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+            if anthropic_post is None and not key:
+                raise SystemExit("ANTHROPIC_API_KEY is not set")
+            tracker = CostTracker(
+                sonnet,
+                max_cost,
+                global_max_cost,
+                float((ledger.get("fields") or {}).get(field) or 0),
+                float(ledger.get("spent") or 0),
+            )
+            prefix = stable_prefix(catalog, escalate_items)
+
+            def send_claude(body):
+                return anthropic_send(body, sonnet, prefix, tracker, anthropic_post, key)
+
+            print(
+                f"escalate {len(escalate_items)} unsure or needs_review rows to {sonnet}",
+                flush=True,
+            )
+            for batch in chunks(escalate_items, batch_size):
+                try:
+                    record(resolve_batch(batch, send_claude, True, api, catalog))
+                except CostCap:
+                    stopped = True
+                    break
+                except AssertionError:
+                    raise
+                except Exception:
+                    record([unsure_row(item) for item in batch])
     compact_jsonl(dest_jsonl)
     print(f"wrote {counts['done']} items to {dest_jsonl}", flush=True)
     if tracker is not None:
         print(tracker.line(), flush=True)
+        if tracker.usd() > 0 and ledger is not None:
+            record_spend(ledger, field, tracker.usd())
+            save_ledger(ledger_file(root), ledger)
         if stopped or tracker.stopped:
             stopped = True
-            print(
-                f"stopped at max-cost ${max_cost:.2f}; unsent items stay pending",
-                flush=True,
-            )
+            if tracker.stop_scope == "global":
+                print(
+                    f"stopped at global max-cost ${global_max_cost:.2f}; unsent items stay pending",
+                    flush=True,
+                )
+            else:
+                print(
+                    f"stopped at max-cost ${max_cost:.2f}; unsent items stay pending",
+                    flush=True,
+                )
     return {
         "pending": total,
         "batch": batch_size,
