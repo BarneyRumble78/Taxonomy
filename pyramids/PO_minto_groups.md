@@ -14,8 +14,8 @@
     - Government policy
     - Public administration
     - Self government
-  - **Theoretical and ideological frameworks that justify, contest, or define the status of power and the individual under it.**
-    _basis: kinds, order: structure. Ordered by structure, from general political theory to specific ideologies and the citizen's standing._
+  - **Claims about power can concern its theoretical foundations, its ideological critiques and alternatives, or its relation to membership in a political community.**
+    _basis: kinds, order: structure. Ordered from general theory to specific ideological programs to individual standing within a polity._
     - Political theory
     - Socialism. Communism. Anarchism
     - Citizenship
@@ -206,8 +206,8 @@
       - Policy and administration not elsewhere classified
       - Education Politics and Policy
       - Colonies and colonization. Emigration and immigration.
-    - **Administrative and policy power is the authority exercised through governmental bodies and the sector policies they design and implement.**
-      _basis: kinds, order: structure_
+    - **Arenas of political power are distinguished by whether authority is exercised through a level of government or around a policy issue.**
+      _basis: kinds, order: structure. Ordered by structure: institutional level of government first, then thematic policy domain._
       - Local government. Municipal government
       - Environmental politics
   - **Sector-specific policy power is the authority exercised over a particular domain of social, economic, security or informational life, such as welfare, development, order or resources.**
@@ -239,8 +239,8 @@
 ## PO.O.A5
 - **Claims about power divide by which aspect of power they concern, either domestic authority within political systems or interstate relations in the international arena.**
   _basis: kinds, order: structure. Kinds are distinguished by the aspect of power the claim concerns, not ranked by degree._
-  - **Domestic power concerns how authority is divided, shared and compared across governments within and among political systems.**
-    _basis: kinds, order: structure. Ordered from intergovernmental division of authority to cross-system comparison._
+  - **Federalism & Intergovernmental Relations and Comparative Politics are kinds of power-focused inquiry, one concerning how power is divided among levels of government and the other how power is organized across different political systems.**
+    _basis: kinds, order: structure. Ordered by structure, from power divided within one system to power compared across systems; no degree ranking is implied._
     - Federalism & Intergovernmental Relations
     - Comparative Politics
   - **Interstate power concerns how states relate, compete, cooperate and shape one another in the international arena.**

@@ -85,10 +85,10 @@
             }
           },
           {
-            "id": "PO.O.A1.G3",
-            "anchor": "group:PO.O.A1.G3",
-            "statement": "Theoretical and ideological frameworks that justify, contest, or define the status of power and the individual under it.",
-            "name": "Theoretical and ideological frameworks that justify, contest, or define the status of power and the individual under it.",
+            "id": "PO.O.A1.G4",
+            "anchor": "group:PO.O.A1.G4",
+            "statement": "Claims about power can concern its theoretical foundations, its ideological critiques and alternatives, or its relation to membership in a political community.",
+            "name": "Claims about power can concern its theoretical foundations, its ideological critiques and alternatives, or its relation to membership in a political community.",
             "support": {
               "logic_type": "inductive",
               "plural_noun": "members",
@@ -114,7 +114,7 @@
                   "name": "Citizenship"
                 }
               ],
-              "rank_note": "Ordered by structure, from general political theory to specific ideologies and the citizen's standing."
+              "rank_note": "Ordered from general theory to specific ideological programs to individual standing within a polity."
             }
           }
         ],
@@ -1306,10 +1306,10 @@
                   }
                 },
                 {
-                  "id": "PO.O.A4.G7",
-                  "anchor": "group:PO.O.A4.G7",
-                  "statement": "Administrative and policy power is the authority exercised through governmental bodies and the sector policies they design and implement.",
-                  "name": "Administrative and policy power is the authority exercised through governmental bodies and the sector policies they design and implement.",
+                  "id": "PO.O.A4.G10",
+                  "anchor": "group:PO.O.A4.G10",
+                  "statement": "Arenas of political power are distinguished by whether authority is exercised through a level of government or around a policy issue.",
+                  "name": "Arenas of political power are distinguished by whether authority is exercised through a level of government or around a policy issue.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -1328,7 +1328,8 @@
                         "statement": "Environmental politics",
                         "name": "Environmental politics"
                       }
-                    ]
+                    ],
+                    "rank_note": "Ordered by structure: institutional level of government first, then thematic policy domain."
                   }
                 }
               ],
@@ -1516,10 +1517,10 @@
         "order": "structure",
         "points": [
           {
-            "id": "PO.O.A5.G1",
-            "anchor": "group:PO.O.A5.G1",
-            "statement": "Domestic power concerns how authority is divided, shared and compared across governments within and among political systems.",
-            "name": "Domestic power concerns how authority is divided, shared and compared across governments within and among political systems.",
+            "id": "PO.O.A5.G3",
+            "anchor": "group:PO.O.A5.G3",
+            "statement": "Federalism & Intergovernmental Relations and Comparative Politics are kinds of power-focused inquiry, one concerning how power is divided among levels of government and the other how power is organized across different political systems.",
+            "name": "Federalism & Intergovernmental Relations and Comparative Politics are kinds of power-focused inquiry, one concerning how power is divided among levels of government and the other how power is organized across different political systems.",
             "support": {
               "logic_type": "inductive",
               "plural_noun": "members",
@@ -1539,7 +1540,7 @@
                   "name": "Comparative Politics"
                 }
               ],
-              "rank_note": "Ordered from intergovernmental division of authority to cross-system comparison."
+              "rank_note": "Ordered by structure, from power divided within one system to power compared across systems; no degree ranking is implied."
             }
           },
           {
@@ -1585,5 +1586,12 @@
         "rank_note": "Kinds are distinguished by the aspect of power the claim concerns, not ranked by degree."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Politics is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five aspects of power: authority, institutions, political behaviour, policy and administration, and relations among states.",
+    "key_line": "Dimension: **the aspect of power the claim concerns.** Order: from the source of authority outward.\n1. Authority\n2. Institutions\n3. Political behaviour\n4. Policy and administration\n5. Relations among states",
+    "holds": false,
+    "note": "The cells give differing three-, five- and two-way divisions that do not match the key line's five aspects, from authority through relations among states.",
+    "review": true
+  }
 }
