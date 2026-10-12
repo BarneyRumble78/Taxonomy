@@ -79,10 +79,10 @@
             }
           },
           {
-            "id": "ST.O.A1.G3",
-            "anchor": "group:ST.O.A1.G3",
-            "statement": "Navy organization and distribution classes explain the sea-force naval situation, in the same class recorded under three schemes.",
-            "name": "Navy organization and distribution classes explain the sea-force naval situation, in the same class recorded under three schemes.",
+            "id": "ST.O.A1.G5",
+            "anchor": "group:ST.O.A1.G5",
+            "statement": "This group covers the heading on navies' organization, distribution, and naval situation, as it appears in its variant forms.",
+            "name": "This group covers the heading on navies' organization, distribution, and naval situation, as it appears in its variant forms.",
             "support": {
               "logic_type": "inductive",
               "plural_noun": "members",
@@ -106,7 +106,22 @@
                   "anchor": "node:LCCf:VA:navies-organization-distribution-naval-s",
                   "statement": "Navies: Organization, distribution, naval situation",
                   "name": "Navies: Organization, distribution, naval situation"
-                },
+                }
+              ],
+              "rank_note": "Ordered by structure of the classification headings."
+            }
+          },
+          {
+            "id": "ST.O.A1.G6",
+            "anchor": "group:ST.O.A1.G6",
+            "statement": "This group covers the heading on naval administration, which explains how naval forces are managed and governed.",
+            "name": "This group covers the heading on naval administration, which explains how naval forces are managed and governed.",
+            "support": {
+              "logic_type": "inductive",
+              "plural_noun": "members",
+              "basis": "kinds",
+              "order": "structure",
+              "points": [
                 {
                   "id": "LCCf:VB:naval-administration",
                   "anchor": "node:LCCf:VB:naval-administration",
@@ -120,9 +135,8 @@
                   "name": "NAVAL ADMINISTRATION"
                 }
               ],
-              "rank_note": "Ordered from class code to full-text heading to subclass entry."
-            },
-            "further": true
+              "rank_note": "Ordered by structure of the classification headings."
+            }
           },
           {
             "id": "ST.O.A1.G4",
@@ -322,10 +336,10 @@
                   }
                 },
                 {
-                  "id": "ST.O.A3.G3",
-                  "anchor": "group:ST.O.A3.G3",
-                  "statement": "Missile and rocket delivery weapons are the kinds of self-propelled or air-dropped munitions that deliver destructive force at a distance.",
-                  "name": "Missile and rocket delivery weapons are the kinds of self-propelled or air-dropped munitions that deliver destructive force at a distance.",
+                  "id": "ST.O.A3.G16",
+                  "anchor": "group:ST.O.A3.G16",
+                  "statement": "Guided missiles, rockets, and aerial bombs are distinct kinds of airborne munitions that deliver explosive force against targets.",
+                  "name": "Guided missiles, rockets, and aerial bombs are distinct kinds of airborne munitions that deliver explosive force against targets.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -351,7 +365,7 @@
                         "name": "Aerial Bombs"
                       }
                     ],
-                    "rank_note": "Ordered by structure from guided missiles to rockets to aerial bombs."
+                    "rank_note": "Ordered by structure of the delivery mechanism: guided propulsion, unguided propulsion, unpowered drop."
                   }
                 },
                 {
@@ -591,10 +605,10 @@
                   }
                 },
                 {
-                  "id": "ST.O.A3.G10",
-                  "anchor": "group:ST.O.A3.G10",
-                  "statement": "This group collects the classification headings for artillery and infantry, the combat arms whose role in a strategic situation the claim explains.",
-                  "name": "This group collects the classification headings for artillery and infantry, the combat arms whose role in a strategic situation the claim explains.",
+                  "id": "ST.O.A3.G17",
+                  "anchor": "group:ST.O.A3.G17",
+                  "statement": "Artillery is the branch of heavy ranged weapons, recorded here under three overlapping classification headings for the same subject.",
+                  "name": "Artillery is the branch of heavy ranged weapons, recorded here under three overlapping classification headings for the same subject.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -612,22 +626,36 @@
                         "anchor": "node:LCCf:UF",
                         "statement": "ARTILLERY",
                         "name": "ARTILLERY"
+                      }
+                    ],
+                    "rank_note": "Ordered by structure: the specific heading, the capitalized heading, then the classification entry."
+                  }
+                },
+                {
+                  "id": "ST.O.A3.G18",
+                  "anchor": "group:ST.O.A3.G18",
+                  "statement": "Artillery is the branch of heavy ranged weapons, recorded here under three overlapping classification headings for the same subject.",
+                  "name": "Artillery is the branch of heavy ranged weapons, recorded here under three overlapping classification headings for the same subject.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "LCCf:UD:infantry",
+                        "anchor": "node:LCCf:UD:infantry",
+                        "statement": "Infantry",
+                        "name": "Infantry"
                       },
                       {
                         "id": "LCC:UF",
                         "anchor": "node:LCC:UF",
                         "statement": "Artillery",
                         "name": "Artillery"
-                      },
-                      {
-                        "id": "LCCf:UD:infantry",
-                        "anchor": "node:LCCf:UD:infantry",
-                        "statement": "Infantry",
-                        "name": "Infantry"
                       }
                     ]
-                  },
-                  "further": true
+                  }
                 }
               ],
               "rank_note": "Ordered by structure, from strategic frameworks to combat arms, classification headings and the engineering support branch."
@@ -1079,5 +1107,12 @@
         ]
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Strategy is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its objects are five features of the strategic situation: actors, the game, coercion, conduct, and information.",
+    "key_line": "- Logic: inductive.\n- Plural noun: features (of the strategic situation).\n- Dimension: the feature of the strategic situation that the claim explains.\n- Order: structural, from who contends to what each side knows.\n\n1. **Actors** (ST.O.A1): who contends, how they align, and whether each can bind itself.\n2. **The game** (ST.O.A2): the structure of payoffs and moves, and the moves that reshape it.\n3. **Coercion** (ST.O.A3): how a threat of harm, held in reserve, changes another's choice, and how it escalates.\n4. **Conduct** (ST.O.A4): how means are applied in time and space to reach a purpose.\n5. **Information** (ST.O.A5): what each side knows, believes and can predict, and how that knowledge is contested.\n\nWhy this dimension. The Encyclopedia's own protocol forbids retrieval by \"a scenario's own vocabulary\" and requires retrieval \"by structure\". Its ten Panel axes are ten questions about features of the situation. They group into these five features without remainder (section 4, Panel table).\n\nRejected dimensions. The ten theatres mix substrate, method and record. The levels of strategy are a scale on which every mechanism recurs [luttwak-c17]. The medium or service is a substrate [wylie-c14]. Clausewitz's trinity [clausewitz-c03] does not place bargaining or forecasting. Purpose–ways–means reduces to conduct (A4.1).\n\nCONTESTED: coercion could be folded into the game as A2.5, giving four features. It is kept separate for two reasons. Its operative move, a threat held in reserve, has its own mechanisms (M03, M06–M08, M18, M19). It also owes a different warrant: deterrence succeeds through non-events, which the game cell's warrants cannot see.",
+    "holds": false,
+    "note": "Cell statements follow a military-science, naval, armament and support-services scheme, not the five features: actors, game, coercion, conduct and information.",
+    "review": true
+  }
 }

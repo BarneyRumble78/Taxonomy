@@ -13,11 +13,13 @@
     - Armies: Organization, distribution, military situation
     - ARMIES: ORGANIZATION, DISTRIBUTION, MILITARY SITUATION
     - Armies: Organization, distribution, military situation
-  - **Navy organization and distribution classes explain the sea-force naval situation, in the same class recorded under three schemes.**
-    _basis: kinds, order: structure. Ordered from class code to full-text heading to subclass entry._
+  - **This group covers the heading on navies' organization, distribution, and naval situation, as it appears in its variant forms.**
+    _basis: kinds, order: structure. Ordered by structure of the classification headings._
     - Navies: Organization, distribution, naval situation
     - NAVIES: ORGANIZATION, DISTRIBUTION, NAVAL SITUATION
     - Navies: Organization, distribution, naval situation
+  - **This group covers the heading on naval administration, which explains how naval forces are managed and governed.**
+    _basis: kinds, order: structure. Ordered by structure of the classification headings._
     - Naval administration
     - NAVAL ADMINISTRATION
   - **Military and naval administration classes explain how the management of land and sea forces shapes the strategic situation.**
@@ -54,8 +56,8 @@
       - Guided Missile Trajectories, Accuracy and Ballistics
       - Guided Missile Warheads and Fuzes
       - Guided Missile Reentry Vehicles
-    - **Missile and rocket delivery weapons are the kinds of self-propelled or air-dropped munitions that deliver destructive force at a distance.**
-      _basis: kinds, order: structure. Ordered by structure from guided missiles to rockets to aerial bombs._
+    - **Guided missiles, rockets, and aerial bombs are distinct kinds of airborne munitions that deliver explosive force against targets.**
+      _basis: kinds, order: structure. Ordered by structure of the delivery mechanism: guided propulsion, unguided propulsion, unpowered drop._
       - Guided Missiles
       - Rockets
       - Aerial Bombs
@@ -95,12 +97,14 @@
       - Military engineering
       - Marines
       - MARINES
-    - **This group collects the classification headings for artillery and infantry, the combat arms whose role in a strategic situation the claim explains.**
-      _basis: kinds, order: structure_
+    - **Artillery is the branch of heavy ranged weapons, recorded here under three overlapping classification headings for the same subject.**
+      _basis: kinds, order: structure. Ordered by structure: the specific heading, the capitalized heading, then the classification entry._
       - Artillery
       - ARTILLERY
-      - Artillery
+    - **Artillery is the branch of heavy ranged weapons, recorded here under three overlapping classification headings for the same subject.**
+      _basis: kinds, order: structure_
       - Infantry
+      - Artillery
   - **Science and strategic study of armament are the physical explanations, weapon classes and scholarly fields that account for how munitions work and how war shapes the balance between states.**
     _basis: kinds, order: structure. Ordered by structure, from physical science of munitions to weapon technology classes to research disciplines on conflict._
     - **Explosive effects and ballistic science are the physical phenomena and materials that explain how munitions detonate and travel.**
