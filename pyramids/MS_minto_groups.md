@@ -36,8 +36,8 @@
       - Sensory Perception
       - Motor Processes
       - Cognitive Processes
-    - **Consciousness states and motivation and emotion are both about the inner mental conditions of an individual, so the unit each claim addresses is the person's own subjective experience.**
-      _basis: kinds, order: structure_
+    - **Consciousness states and motivation and emotion are kinds of internal mental processes that psychology studies in the individual person.**
+      _basis: kinds, order: structure. Two parallel kinds of internal mental process; no ranking is implied._
       - Consciousness States
       - Motivation & Emotion
     - **Cognitive topics treat a specific mental process or the intelligent systems built around it as the unit the claim is about.**
@@ -145,15 +145,15 @@
       - Eating Disorders
       - Communication Disorders
       - Physical & Somatic Disorders
-    - **Environmental toxins and the developmental and behavioral disorders they may influence are concepts whose claims concern the health outcomes of individuals exposed to harmful conditions.**
-      _basis: kinds, order: structure_
+    - **Environmental toxins and the behavioral and neurodevelopmental conditions they are studied alongside make up the health-related subject areas that a claim can be about.**
+      _basis: kinds, order: structure. Members are listed structurally: the exposure area first, then the two clinical disorder areas; no ranking by degree is implied._
       - Environmental Toxins & Health
       - Behavior Disorders & Antisocial Behavior
       - Neurodevelopmental & Autism Spectrum Disorders
   - **Applied practice and care fields are those whose claims concern how psychology is used on people in treatment methods, care settings, life stages, real-world arenas, and clinical professions.**
     _basis: kinds, order: structure. Ordered by structure, from the intervention to the setting to the people to the arena to the profession._
-    - **Treatment-method fields make claims about the intervention itself, meaning the technique or agent used to change a client's condition.**
-      _basis: kinds, order: structure. Ordered structurally from talk-based to drug-based to specialized interventions._
+    - **Clinical interventions in psychology are distinct treatment approaches that differ by method: talk-based therapy, medication-based treatment, and specialized targeted techniques.**
+      _basis: kinds, order: structure. Ordered by structure of the classification: general talk-based therapy, then drug-based treatment, then specialized interventions._
       - Psychotherapy & Psychotherapeutic Counseling
       - Clinical Psychopharmacology
       - Specialized Interventions
@@ -215,8 +215,26 @@
       - Consumer Psychology
       - Consumer Attitudes & Behavior
       - Marketing & Advertising
-  - **Each of these concepts names a field or area of study or practice about human behavior, communication, or social services, defined by the unit it takes as its subject.**
-    _basis: kinds, order: structure_
+  - **Psychology areas are fields that study human behavior in general or in specific social and personal contexts.**
+    _basis: kinds, order: structure. Ordered from the broad umbrella disciplines to the specific social and personality subfields._
+    - **General social psychology and the broad behavioral disciplines are umbrella areas for studying human behavior.**
+      _basis: kinds, order: structure. Broad behavioral study areas grouped by structure._
+      - Social psychology
+      - Social and personality psychology not elsewhere classified
+      - Behavioral Disciplines and Activities
+    - **Social and personality psychology is a field whose subfields study communities, gender, individual differences, and religion.**
+      _basis: parts, order: structure. Parent field followed by its component subfields._
+      - Social and personality psychology
+      - Community psychology
+      - Gender psychology
+      - Personality and individual differences
+      - Psychology of religion
+  - **Applied and professional fields put knowledge about people into practice by serving clients, justice systems, and audiences.**
+    _basis: kinds, order: structure. Ordered from criminal justice applications to social work practice to communication channels._
+    - **Crime prevention and police and legal personnel are applied psychology areas serving criminal justice.**
+      _basis: kinds, order: structure. Criminal justice applications grouped by structure._
+      - Crime Prevention
+      - Police & Legal Personnel
     - **Social work is a professional field divided into clinical practice, community services, program evaluation, and residual specialisms.**
       _basis: parts, order: structure. Parent field followed by its component specialisms._
       - Social work
@@ -231,26 +249,10 @@
       - Social Psychology
       - Group & Interpersonal Processes
       - Social Perception & Cognition
-    - **General social psychology and the broad behavioral disciplines are umbrella areas for studying human behavior.**
-      _basis: kinds, order: structure. Broad behavioral study areas grouped by structure._
-      - Social psychology
-      - Social and personality psychology not elsewhere classified
-      - Behavioral Disciplines and Activities
-    - **Crime prevention and police and legal personnel are applied psychology areas serving criminal justice.**
-      _basis: kinds, order: structure. Criminal justice applications grouped by structure._
-      - Crime Prevention
-      - Police & Legal Personnel
-    - **Social and personality psychology is a field whose subfields study communities, gender, individual differences, and religion.**
-      _basis: parts, order: structure. Parent field followed by its component subfields._
-      - Social and personality psychology
-      - Community psychology
-      - Gender psychology
-      - Personality and individual differences
-      - Psychology of religion
   - **Social institutions and social issues are the broad societal structures and practices, such as religion, culture, family, politics, gender, and substance use, about which claims are made.**
     _basis: kinds, order: structure_
-    - **Each concept concerns a domain of individual human behavior and social identity, namely substance use, sexual conduct and orientation, and gendered social roles.**
-      _basis: kinds, order: structure_
+    - **Each of these concepts is a kind of personal behavior or identity topic that psychology examines at the level of the individual person.**
+      _basis: kinds, order: structure. Kinds are listed by structure, not ranked; each is a parallel topic about individual behavior or identity._
       - Drug & Alcohol Usage (Legal)
       - Sexual Behavior & Sexual Orientation
       - Sex & Gender Roles

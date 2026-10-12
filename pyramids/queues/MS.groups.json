@@ -228,10 +228,10 @@
                   }
                 },
                 {
-                  "id": "MS.O.A1.G5",
-                  "anchor": "group:MS.O.A1.G5",
-                  "statement": "Consciousness states and motivation and emotion are both about the inner mental conditions of an individual, so the unit each claim addresses is the person's own subjective experience.",
-                  "name": "Consciousness states and motivation and emotion are both about the inner mental conditions of an individual, so the unit each claim addresses is the person's own subjective experience.",
+                  "id": "MS.O.A1.G14",
+                  "anchor": "group:MS.O.A1.G14",
+                  "statement": "Consciousness states and motivation and emotion are kinds of internal mental processes that psychology studies in the individual person.",
+                  "name": "Consciousness states and motivation and emotion are kinds of internal mental processes that psychology studies in the individual person.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -250,9 +250,9 @@
                         "statement": "Motivation & Emotion",
                         "name": "Motivation & Emotion"
                       }
-                    ]
-                  },
-                  "further": true
+                    ],
+                    "rank_note": "Two parallel kinds of internal mental process; no ranking is implied."
+                  }
                 },
                 {
                   "id": "MS.O.A1.G7",
@@ -924,10 +924,10 @@
                   }
                 },
                 {
-                  "id": "MS.O.A3.G5",
-                  "anchor": "group:MS.O.A3.G5",
-                  "statement": "Environmental toxins and the developmental and behavioral disorders they may influence are concepts whose claims concern the health outcomes of individuals exposed to harmful conditions.",
-                  "name": "Environmental toxins and the developmental and behavioral disorders they may influence are concepts whose claims concern the health outcomes of individuals exposed to harmful conditions.",
+                  "id": "MS.O.A3.G16",
+                  "anchor": "group:MS.O.A3.G16",
+                  "statement": "Environmental toxins and the behavioral and neurodevelopmental conditions they are studied alongside make up the health-related subject areas that a claim can be about.",
+                  "name": "Environmental toxins and the behavioral and neurodevelopmental conditions they are studied alongside make up the health-related subject areas that a claim can be about.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -952,9 +952,9 @@
                         "statement": "Neurodevelopmental & Autism Spectrum Disorders",
                         "name": "Neurodevelopmental & Autism Spectrum Disorders"
                       }
-                    ]
-                  },
-                  "further": true
+                    ],
+                    "rank_note": "Members are listed structurally: the exposure area first, then the two clinical disorder areas; no ranking by degree is implied."
+                  }
                 }
               ],
               "rank_note": "Ordered by structure, from methods to development to personality to disorders to exposures."
@@ -972,10 +972,10 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "MS.O.A3.G6",
-                  "anchor": "group:MS.O.A3.G6",
-                  "statement": "Treatment-method fields make claims about the intervention itself, meaning the technique or agent used to change a client's condition.",
-                  "name": "Treatment-method fields make claims about the intervention itself, meaning the technique or agent used to change a client's condition.",
+                  "id": "MS.O.A3.G17",
+                  "anchor": "group:MS.O.A3.G17",
+                  "statement": "Clinical interventions in psychology are distinct treatment approaches that differ by method: talk-based therapy, medication-based treatment, and specialized targeted techniques.",
+                  "name": "Clinical interventions in psychology are distinct treatment approaches that differ by method: talk-based therapy, medication-based treatment, and specialized targeted techniques.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -1001,7 +1001,7 @@
                         "name": "Specialized Interventions"
                       }
                     ],
-                    "rank_note": "Ordered structurally from talk-based to drug-based to specialized interventions."
+                    "rank_note": "Ordered by structure of the classification: general talk-based therapy, then drug-based treatment, then specialized interventions."
                   }
                 },
                 {
@@ -1380,16 +1380,136 @@
             }
           },
           {
-            "id": "MS.O.A4.G12",
-            "anchor": "group:MS.O.A4.G12",
-            "statement": "Each of these concepts names a field or area of study or practice about human behavior, communication, or social services, defined by the unit it takes as its subject.",
-            "name": "Each of these concepts names a field or area of study or practice about human behavior, communication, or social services, defined by the unit it takes as its subject.",
+            "id": "MS.O.A4.G14",
+            "anchor": "group:MS.O.A4.G14",
+            "statement": "Psychology areas are fields that study human behavior in general or in specific social and personal contexts.",
+            "name": "Psychology areas are fields that study human behavior in general or in specific social and personal contexts.",
             "support": {
               "logic_type": "inductive",
               "plural_noun": "members",
               "basis": "kinds",
               "order": "structure",
               "points": [
+                {
+                  "id": "MS.O.A4.G8",
+                  "anchor": "group:MS.O.A4.G8",
+                  "statement": "General social psychology and the broad behavioral disciplines are umbrella areas for studying human behavior.",
+                  "name": "General social psychology and the broad behavioral disciplines are umbrella areas for studying human behavior.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "ANZSRC:520505",
+                        "anchor": "node:ANZSRC:520505",
+                        "statement": "Social psychology",
+                        "name": "Social psychology"
+                      },
+                      {
+                        "id": "ANZSRC:520599",
+                        "anchor": "node:ANZSRC:520599",
+                        "statement": "Social and personality psychology not elsewhere classified",
+                        "name": "Social and personality psychology not elsewhere classified"
+                      },
+                      {
+                        "id": "MeSH:F04",
+                        "anchor": "node:MeSH:F04",
+                        "statement": "Behavioral Disciplines and Activities",
+                        "name": "Behavioral Disciplines and Activities"
+                      }
+                    ],
+                    "rank_note": "Broad behavioral study areas grouped by structure."
+                  }
+                },
+                {
+                  "id": "MS.O.A4.G7",
+                  "anchor": "group:MS.O.A4.G7",
+                  "statement": "Social and personality psychology is a field whose subfields study communities, gender, individual differences, and religion.",
+                  "name": "Social and personality psychology is a field whose subfields study communities, gender, individual differences, and religion.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "parts",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "ANZSRC:5205",
+                        "anchor": "node:ANZSRC:5205",
+                        "statement": "Social and personality psychology",
+                        "name": "Social and personality psychology"
+                      },
+                      {
+                        "id": "ANZSRC:520501",
+                        "anchor": "node:ANZSRC:520501",
+                        "statement": "Community psychology",
+                        "name": "Community psychology"
+                      },
+                      {
+                        "id": "ANZSRC:520502",
+                        "anchor": "node:ANZSRC:520502",
+                        "statement": "Gender psychology",
+                        "name": "Gender psychology"
+                      },
+                      {
+                        "id": "ANZSRC:520503",
+                        "anchor": "node:ANZSRC:520503",
+                        "statement": "Personality and individual differences",
+                        "name": "Personality and individual differences"
+                      },
+                      {
+                        "id": "ANZSRC:520504",
+                        "anchor": "node:ANZSRC:520504",
+                        "statement": "Psychology of religion",
+                        "name": "Psychology of religion"
+                      }
+                    ],
+                    "rank_note": "Parent field followed by its component subfields."
+                  }
+                }
+              ],
+              "rank_note": "Ordered from the broad umbrella disciplines to the specific social and personality subfields."
+            }
+          },
+          {
+            "id": "MS.O.A4.G15",
+            "anchor": "group:MS.O.A4.G15",
+            "statement": "Applied and professional fields put knowledge about people into practice by serving clients, justice systems, and audiences.",
+            "name": "Applied and professional fields put knowledge about people into practice by serving clients, justice systems, and audiences.",
+            "support": {
+              "logic_type": "inductive",
+              "plural_noun": "members",
+              "basis": "kinds",
+              "order": "structure",
+              "points": [
+                {
+                  "id": "MS.O.A4.G9",
+                  "anchor": "group:MS.O.A4.G9",
+                  "statement": "Crime prevention and police and legal personnel are applied psychology areas serving criminal justice.",
+                  "name": "Crime prevention and police and legal personnel are applied psychology areas serving criminal justice.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "APA:4270",
+                        "anchor": "node:APA:4270",
+                        "statement": "Crime Prevention",
+                        "name": "Crime Prevention"
+                      },
+                      {
+                        "id": "APA:4290",
+                        "anchor": "node:APA:4290",
+                        "statement": "Police & Legal Personnel",
+                        "name": "Police & Legal Personnel"
+                      }
+                    ],
+                    "rank_note": "Criminal justice applications grouped by structure."
+                  }
+                },
                 {
                   "id": "MS.O.A4.G6",
                   "anchor": "group:MS.O.A4.G6",
@@ -1479,115 +1599,10 @@
                     ],
                     "rank_note": "General communication systems come first, then the specific kind, mass media."
                   }
-                },
-                {
-                  "id": "MS.O.A4.G8",
-                  "anchor": "group:MS.O.A4.G8",
-                  "statement": "General social psychology and the broad behavioral disciplines are umbrella areas for studying human behavior.",
-                  "name": "General social psychology and the broad behavioral disciplines are umbrella areas for studying human behavior.",
-                  "support": {
-                    "logic_type": "inductive",
-                    "plural_noun": "members",
-                    "basis": "kinds",
-                    "order": "structure",
-                    "points": [
-                      {
-                        "id": "ANZSRC:520505",
-                        "anchor": "node:ANZSRC:520505",
-                        "statement": "Social psychology",
-                        "name": "Social psychology"
-                      },
-                      {
-                        "id": "ANZSRC:520599",
-                        "anchor": "node:ANZSRC:520599",
-                        "statement": "Social and personality psychology not elsewhere classified",
-                        "name": "Social and personality psychology not elsewhere classified"
-                      },
-                      {
-                        "id": "MeSH:F04",
-                        "anchor": "node:MeSH:F04",
-                        "statement": "Behavioral Disciplines and Activities",
-                        "name": "Behavioral Disciplines and Activities"
-                      }
-                    ],
-                    "rank_note": "Broad behavioral study areas grouped by structure."
-                  }
-                },
-                {
-                  "id": "MS.O.A4.G9",
-                  "anchor": "group:MS.O.A4.G9",
-                  "statement": "Crime prevention and police and legal personnel are applied psychology areas serving criminal justice.",
-                  "name": "Crime prevention and police and legal personnel are applied psychology areas serving criminal justice.",
-                  "support": {
-                    "logic_type": "inductive",
-                    "plural_noun": "members",
-                    "basis": "kinds",
-                    "order": "structure",
-                    "points": [
-                      {
-                        "id": "APA:4270",
-                        "anchor": "node:APA:4270",
-                        "statement": "Crime Prevention",
-                        "name": "Crime Prevention"
-                      },
-                      {
-                        "id": "APA:4290",
-                        "anchor": "node:APA:4290",
-                        "statement": "Police & Legal Personnel",
-                        "name": "Police & Legal Personnel"
-                      }
-                    ],
-                    "rank_note": "Criminal justice applications grouped by structure."
-                  }
-                },
-                {
-                  "id": "MS.O.A4.G7",
-                  "anchor": "group:MS.O.A4.G7",
-                  "statement": "Social and personality psychology is a field whose subfields study communities, gender, individual differences, and religion.",
-                  "name": "Social and personality psychology is a field whose subfields study communities, gender, individual differences, and religion.",
-                  "support": {
-                    "logic_type": "inductive",
-                    "plural_noun": "members",
-                    "basis": "parts",
-                    "order": "structure",
-                    "points": [
-                      {
-                        "id": "ANZSRC:5205",
-                        "anchor": "node:ANZSRC:5205",
-                        "statement": "Social and personality psychology",
-                        "name": "Social and personality psychology"
-                      },
-                      {
-                        "id": "ANZSRC:520501",
-                        "anchor": "node:ANZSRC:520501",
-                        "statement": "Community psychology",
-                        "name": "Community psychology"
-                      },
-                      {
-                        "id": "ANZSRC:520502",
-                        "anchor": "node:ANZSRC:520502",
-                        "statement": "Gender psychology",
-                        "name": "Gender psychology"
-                      },
-                      {
-                        "id": "ANZSRC:520503",
-                        "anchor": "node:ANZSRC:520503",
-                        "statement": "Personality and individual differences",
-                        "name": "Personality and individual differences"
-                      },
-                      {
-                        "id": "ANZSRC:520504",
-                        "anchor": "node:ANZSRC:520504",
-                        "statement": "Psychology of religion",
-                        "name": "Psychology of religion"
-                      }
-                    ],
-                    "rank_note": "Parent field followed by its component subfields."
-                  }
                 }
-              ]
-            },
-            "further": true
+              ],
+              "rank_note": "Ordered from criminal justice applications to social work practice to communication channels."
+            }
           },
           {
             "id": "MS.O.A4.G13",
@@ -1601,10 +1616,10 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "MS.O.A4.G5",
-                  "anchor": "group:MS.O.A4.G5",
-                  "statement": "Each concept concerns a domain of individual human behavior and social identity, namely substance use, sexual conduct and orientation, and gendered social roles.",
-                  "name": "Each concept concerns a domain of individual human behavior and social identity, namely substance use, sexual conduct and orientation, and gendered social roles.",
+                  "id": "MS.O.A4.G16",
+                  "anchor": "group:MS.O.A4.G16",
+                  "statement": "Each of these concepts is a kind of personal behavior or identity topic that psychology examines at the level of the individual person.",
+                  "name": "Each of these concepts is a kind of personal behavior or identity topic that psychology examines at the level of the individual person.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -1629,9 +1644,9 @@
                         "statement": "Sex & Gender Roles",
                         "name": "Sex & Gender Roles"
                       }
-                    ]
-                  },
-                  "further": true
+                    ],
+                    "rank_note": "Kinds are listed by structure, not ranked; each is a parallel topic about individual behavior or identity."
+                  }
                 },
                 {
                   "id": "MS.O.A4.G4",
@@ -2497,5 +2512,12 @@
         ]
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Mind, brain and society is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its objects are mental processes, nervous systems, persons, interactions and social structures.",
+    "key_line": "Logic: inductive. Plural noun: units. Dimension: the unit the claim is about. Order: structural, from the smallest unit that bears a mental claim to the largest pattern.\n\n1. Mental processes\n2. Nervous systems\n3. Persons\n4. Interactions\n5. Social structures\n\nBoundary sentences kept from v1. The ion channel is neuroscience. The report of a memory is psychology. The distribution of that report across a class is sociology. Social psychology is the interaction unit asked with psychological methods. Cognitive neuroscience is the process unit asked with neural measures.",
+    "holds": false,
+    "note": "Cells speak generically of classifying fields by unit of claim; they do not state the five objects (mental processes, nervous systems, persons, interactions, social structures) of the key line.",
+    "review": true
+  }
 }
