@@ -1564,7 +1564,10 @@
                   "id": "ANZSRC:440808",
                   "anchor": "node:ANZSRC:440808",
                   "statement": "International relations",
-                  "name": "International relations"
+                  "name": "International relations",
+                  "aliases": [
+                    "LCC:JZ"
+                  ]
                 },
                 {
                   "id": "LCC:JZ",
@@ -1588,10 +1591,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Politics is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five aspects of power: authority, institutions, political behaviour, policy and administration, and relations among states.",
-    "key_line": "Dimension: **the aspect of power the claim concerns.** Order: from the source of authority outward.\n1. Authority\n2. Institutions\n3. Political behaviour\n4. Policy and administration\n5. Relations among states",
-    "holds": false,
-    "note": "The cells give differing three-, five- and two-way divisions that do not match the key line's five aspects, from authority through relations among states.",
-    "review": true
+    "governing_thought": "Politics is divided by the aspect of power the claim concerns, moving from the source of authority outward through institutions, political behaviour, and policy and administration to relations among states.",
+    "key_line": [
+      "Authority is the aspect of power concerned with the ideas, ideologies and conditions that found, justify and limit political rule.",
+      "Institutions are the aspect of power concerned with the bodies, offices, regimes and organisations that hold and embody political authority.",
+      "Political behaviour is the aspect of power concerned with how citizens and groups mobilise, participate, contest and resist in pursuit of power.",
+      "Policy and administration is the aspect of power concerned with how public authority is exercised through governmental bodies in making and carrying out policy.",
+      "Relations among states is the aspect of power concerned with how power is divided, projected and organised across territories, regions and countries."
+    ],
+    "holds": true,
+    "note": "Misplaced: P3.2.1.3 Polemology and P3.2.1.4 Internationalism (belong in P5), P3.2.4.2 Electoral systems (P2), P3.3.3 Liberalism (P1), P5.4 institutions items (P2/P4).",
+    "review": false,
+    "misplaced": 12,
+    "problems": 12
   }
 }
