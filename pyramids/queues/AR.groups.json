@@ -1108,10 +1108,10 @@
                   }
                 },
                 {
-                  "id": "AR.O.A4.G6",
-                  "anchor": "group:AR.O.A4.G6",
-                  "statement": "Cultural-content concepts name the specific media, traditions, and cultural phenomena that a work examines as its subject.",
-                  "name": "Cultural-content concepts name the specific media, traditions, and cultural phenomena that a work examines as its subject.",
+                  "id": "AR.O.A4.G10",
+                  "anchor": "group:AR.O.A4.G10",
+                  "statement": "Media-oriented cultural studies fields take screen media and general cultural analysis as the subject of the work.",
+                  "name": "Media-oriented cultural studies fields take screen media and general cultural analysis as the subject of the work.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -1125,16 +1125,31 @@
                         "name": "Screen and media culture"
                       },
                       {
-                        "id": "LCC:GR",
-                        "anchor": "node:LCC:GR",
-                        "statement": "Folklore",
-                        "name": "Folklore"
-                      },
-                      {
                         "id": "ANZSRC:470299",
                         "anchor": "node:ANZSRC:470299",
                         "statement": "Cultural studies not elsewhere classified",
                         "name": "Cultural studies not elsewhere classified"
+                      }
+                    ],
+                    "rank_note": "Ordered from the specific media field to the general residual category."
+                  }
+                },
+                {
+                  "id": "AR.O.A4.G11",
+                  "anchor": "group:AR.O.A4.G11",
+                  "statement": "Traditional and musical expression literature covers the folk practices and musical works that a text is about.",
+                  "name": "Traditional and musical expression literature covers the folk practices and musical works that a text is about.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "LCC:GR",
+                        "anchor": "node:LCC:GR",
+                        "statement": "Folklore",
+                        "name": "Folklore"
                       },
                       {
                         "id": "LCC:ML",
@@ -1143,9 +1158,8 @@
                         "name": "Literature on music"
                       }
                     ],
-                    "rank_note": "Ordered from specific media and traditions to general cultural studies."
-                  },
-                  "further": true
+                    "rank_note": "Ordered from folklore to writing about music."
+                  }
                 },
                 {
                   "id": "AR.O.A4.G7",
@@ -1366,5 +1380,12 @@
         ]
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Arts and literature is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Its objects are claims about five aspects of the work: medium and making, form, meaning, context and reception, and value.",
+    "key_line": "- **Logic.** Inductive.\n- **Plural noun.** aspects of the work.\n- **Dimension.** What feature of the work the sentence is about.\n- **Order.** Structural, from the material object outward to judgment.\n\n1. Medium and making\n2. Form\n3. Meaning\n4. Context and reception\n5. Value\n\n**MECE test.** Exclusive: a sentence about arrangement (A2) does not assert what the work represents (A3). A reception fact (A4) does not assert worth (A5). Exhaustive: a sentence naming none of the five is about the perceiver's mind (MS), the material's chemistry (CH), a structure's stability (EN), or the concept of art (PL). Each is refused by rule (section 9).",
+    "holds": false,
+    "note": "Cells A2, A3 and A5 describe thesaurus or field classifications rather than the aspects; A4 merges meaning and value; context and reception is missing.",
+    "review": true
+  }
 }

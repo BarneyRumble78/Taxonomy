@@ -175,11 +175,13 @@
       - Migrant cultural studies
       - Multicultural, intercultural and cross-cultural studies
       - Postcolonial studies
-    - **Cultural-content concepts name the specific media, traditions, and cultural phenomena that a work examines as its subject.**
-      _basis: kinds, order: structure. Ordered from specific media and traditions to general cultural studies._
+    - **Media-oriented cultural studies fields take screen media and general cultural analysis as the subject of the work.**
+      _basis: kinds, order: structure. Ordered from the specific media field to the general residual category._
       - Screen and media culture
-      - Folklore
       - Cultural studies not elsewhere classified
+    - **Traditional and musical expression literature covers the folk practices and musical works that a text is about.**
+      _basis: kinds, order: structure. Ordered from folklore to writing about music._
+      - Folklore
       - Literature on music
     - **Humanities-field concepts name the broad scholarly and artistic disciplines that frame a work as belonging to the humanities or arts.**
       _basis: kinds, order: structure. Ordered from the general humanities headings to the arts and music literature._
