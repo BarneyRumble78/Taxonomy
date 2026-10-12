@@ -1,469 +1,65 @@
 {
   "field": "AR",
   "introduction": {
-    "situation": "Arts and literature covers works made in many media, from text and stage to sound, image and screen.",
-    "complication": "Existing groupings mix media, national traditions and thesaurus facets, so the same aspect of a work appears under many headings.",
+    "situation": "Arts and literature research and scholarship cover a very wide range of works in visual, performing, screen, musical and written media.",
+    "complication": "The existing groups mix subject matter with catalogue labels, residual categories and duplicated headings, so the same aspect of a work is described in several unrelated places.",
     "question": "How is everything in arts and literature divided?",
-    "answer": "Arts and literature is divided by the feature of the work that a claim is about, running from the material object outward to judgment: medium and making, form, meaning, context and reception, and value."
+    "answer": "Arts and literature is divided by the feature of the work a claim is about, running outward from the material object to judgment: medium and making, form, meaning, context and reception, and value."
   },
-  "governing_thought": "Arts and literature is divided by the feature of the work that a claim is about, running from the material object outward to judgment: medium and making, form, meaning, context and reception, and value.",
+  "governing_thought": "Arts and literature is divided by the feature of the work a claim is about, running outward from the material object to judgment: medium and making, form, meaning, context and reception, and value.",
   "key_line": {
     "logic_type": "inductive",
-    "plural_noun": "aspects of the work",
-    "mece_dimension": "the feature of the work that a claim is about",
+    "plural_noun": "features of the work",
+    "mece_dimension": "what feature of the work the sentence is about",
     "basis": "kinds",
     "order": "structure",
-    "rank_note": "The aspects run from the material object outward to judgment of the work.",
+    "rank_note": "The pillars run from the material object outward to judgment of the work.",
     "points": [
       {
         "id": "AR.K1",
         "anchor": "pillar:AR.K1",
-        "title": "Medium and making",
-        "statement": "Medium and making is the aspect of the work concerned with the material or expressive medium in which it is made and the practice of making it.",
-        "name": "Medium and making is the aspect of the work concerned with the material or expressive medium in which it is made and the practice of making it.",
+        "statement": "Medium and making is the feature of a work concerned with the material, technique and process by which it is produced.",
+        "name": "Medium and making is the feature of a work concerned with the material, technique and process by which it is produced.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "structure",
-          "rank_note": "Sections run from text and stage, to sound, to image and object.",
+          "rank_note": "Sections run from fixed visual and material media to lens, screen and digital media, then to physical attributes and the practice of making.",
           "points": [
             {
               "id": "AR.K1.S1",
               "anchor": "section:AR.K1.S1",
-              "statement": "Written and performed work is made in text or on the embodied stage, whether creative, professional or live, and includes creative arts not otherwise specified.",
-              "name": "Written and performed work is made in text or on the embodied stage, whether creative, professional or live, and includes creative arts not otherwise specified.",
+              "statement": "Visual and material media are works defined by the physical substance and technique used to make an object or image.",
+              "name": "Visual and material media are works defined by the physical substance and technique used to make an object or image.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From writing to live performance to the residual creative category.",
+                "rank_note": "Ordered from solid objects to flat images to crafted goods.",
                 "points": [
                   {
-                    "id": "AR.O.A1.G1",
-                    "anchor": "group:AR.O.A1.G1",
-                    "statement": "Creative-oriented writing covers work where the feature in focus is imaginative, digital, or place-based expression in text.",
-                    "name": "Creative-oriented writing covers work where the feature in focus is imaginative, digital, or place-based expression in text.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3602",
-                          "anchor": "node:ANZSRC:3602",
-                          "statement": "Creative and professional writing",
-                          "name": "Creative and professional writing"
-                        },
-                        {
-                          "id": "ANZSRC:360201",
-                          "anchor": "node:ANZSRC:360201",
-                          "statement": "Creative writing (incl. scriptwriting)",
-                          "name": "Creative writing (incl. scriptwriting)"
-                        },
-                        {
-                          "id": "ANZSRC:360202",
-                          "anchor": "node:ANZSRC:360202",
-                          "statement": "Digital writing",
-                          "name": "Digital writing"
-                        },
-                        {
-                          "id": "ANZSRC:360204",
-                          "anchor": "node:ANZSRC:360204",
-                          "statement": "Site-based writing",
-                          "name": "Site-based writing"
-                        },
-                        {
-                          "id": "ANZSRC:360299",
-                          "anchor": "node:ANZSRC:360299",
-                          "statement": "Creative and professional writing not elsewhere classified",
-                          "name": "Creative and professional writing not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Ordered as listed in ANZSRC code sequence."
-                    }
+                    "id": "LCC:NB",
+                    "anchor": "node:LCC:NB",
+                    "statement": "Sculpture",
+                    "name": "Sculpture"
                   },
                   {
-                    "id": "AR.O.A1.G2",
-                    "anchor": "group:AR.O.A1.G2",
-                    "statement": "Professional and technical writing covers work where the feature in focus is informing audiences through journalism or specialised documentation.",
-                    "name": "Professional and technical writing covers work where the feature in focus is informing audiences through journalism or specialised documentation.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:360203",
-                          "anchor": "node:ANZSRC:360203",
-                          "statement": "Professional writing and journalism practice",
-                          "name": "Professional writing and journalism practice"
-                        },
-                        {
-                          "id": "ANZSRC:360205",
-                          "anchor": "node:ANZSRC:360205",
-                          "statement": "Technical writing",
-                          "name": "Technical writing"
-                        }
-                      ],
-                      "rank_note": "Ordered as listed in ANZSRC code sequence."
-                    }
+                    "id": "LCC:ND",
+                    "anchor": "node:LCC:ND",
+                    "statement": "Painting",
+                    "name": "Painting"
                   },
                   {
-                    "id": "AR.O.A1.G5",
-                    "anchor": "group:AR.O.A1.G5",
-                    "statement": "Performing arts cover work where the feature in focus is live embodied performance in theatre, dance, and community settings.",
-                    "name": "Performing arts cover work where the feature in focus is live embodied performance in theatre, dance, and community settings.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3604",
-                          "anchor": "node:ANZSRC:3604",
-                          "statement": "Performing arts",
-                          "name": "Performing arts"
-                        },
-                        {
-                          "id": "ANZSRC:360401",
-                          "anchor": "node:ANZSRC:360401",
-                          "statement": "Applied theatre",
-                          "name": "Applied theatre"
-                        },
-                        {
-                          "id": "ANZSRC:360402",
-                          "anchor": "node:ANZSRC:360402",
-                          "statement": "Dance and dance studies",
-                          "name": "Dance and dance studies"
-                        },
-                        {
-                          "id": "ANZSRC:360403",
-                          "anchor": "node:ANZSRC:360403",
-                          "statement": "Drama, theatre and performance studies",
-                          "name": "Drama, theatre and performance studies"
-                        },
-                        {
-                          "id": "ANZSRC:360499",
-                          "anchor": "node:ANZSRC:360499",
-                          "statement": "Performing arts not elsewhere classified",
-                          "name": "Performing arts not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Ordered as listed in ANZSRC code sequence."
-                    }
+                    "id": "LCC:NC",
+                    "anchor": "node:LCC:NC",
+                    "statement": "Drawing. Design. Illustration",
+                    "name": "Drawing. Design. Illustration"
                   },
                   {
-                    "id": "ANZSRC:3699",
-                    "anchor": "node:ANZSRC:3699",
-                    "statement": "Other creative arts and writing",
-                    "name": "Other creative arts and writing",
-                    "aliases": [
-                      "ANZSRC:369999"
-                    ]
-                  }
-                ]
-              }
-            },
-            {
-              "id": "AR.K1.S2",
-              "anchor": "section:AR.K1.S2",
-              "statement": "Music work has sound as its medium and covers its study, its practice and its instruction.",
-              "name": "Music work has sound as its medium and covers its study, its practice and its instruction.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From study to practice to general instruction.",
-                "points": [
-                  {
-                    "id": "AR.O.A1.G3",
-                    "anchor": "group:AR.O.A1.G3",
-                    "statement": "Music studies cover work where the feature in focus is understanding, teaching, and analysing music as a subject of inquiry.",
-                    "name": "Music studies cover work where the feature in focus is understanding, teaching, and analysing music as a subject of inquiry.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3603",
-                          "anchor": "node:ANZSRC:3603",
-                          "statement": "Music",
-                          "name": "Music"
-                        },
-                        {
-                          "id": "ANZSRC:360301",
-                          "anchor": "node:ANZSRC:360301",
-                          "statement": "Music cognition",
-                          "name": "Music cognition"
-                        },
-                        {
-                          "id": "ANZSRC:360303",
-                          "anchor": "node:ANZSRC:360303",
-                          "statement": "Music education",
-                          "name": "Music education"
-                        },
-                        {
-                          "id": "ANZSRC:360306",
-                          "anchor": "node:ANZSRC:360306",
-                          "statement": "Musicology and ethnomusicology",
-                          "name": "Musicology and ethnomusicology"
-                        },
-                        {
-                          "id": "ANZSRC:360399",
-                          "anchor": "node:ANZSRC:360399",
-                          "statement": "Music not elsewhere classified",
-                          "name": "Music not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Ordered as listed in ANZSRC code sequence."
-                    }
-                  },
-                  {
-                    "id": "AR.O.A1.G4",
-                    "anchor": "group:AR.O.A1.G4",
-                    "statement": "Music practice covers work where the feature in focus is the making, performing, and recording of music.",
-                    "name": "Music practice covers work where the feature in focus is the making, performing, and recording of music.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:360302",
-                          "anchor": "node:ANZSRC:360302",
-                          "statement": "Music composition and improvisation",
-                          "name": "Music composition and improvisation"
-                        },
-                        {
-                          "id": "ANZSRC:360304",
-                          "anchor": "node:ANZSRC:360304",
-                          "statement": "Music performance",
-                          "name": "Music performance"
-                        },
-                        {
-                          "id": "ANZSRC:360305",
-                          "anchor": "node:ANZSRC:360305",
-                          "statement": "Music technology and recording",
-                          "name": "Music technology and recording"
-                        }
-                      ],
-                      "rank_note": "Ordered as listed in ANZSRC code sequence."
-                    }
-                  },
-                  {
-                    "id": "AR.O.A1.G10",
-                    "anchor": "group:AR.O.A1.G10",
-                    "statement": "Music work concerns the art of sound, including its instruction and study.",
-                    "name": "Music work concerns the art of sound, including its instruction and study.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "LCC:M",
-                          "anchor": "node:LCC:M",
-                          "statement": "Music",
-                          "name": "Music"
-                        },
-                        {
-                          "id": "LCC:MT",
-                          "anchor": "node:LCC:MT",
-                          "statement": "Instruction and study",
-                          "name": "Instruction and study"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from music in general to its instruction and study."
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "AR.K1.S3",
-              "anchor": "section:AR.K1.S3",
-              "statement": "Visual and screen work is made in images, objects or screens, from hand-made crafts to digital and moving-image production.",
-              "name": "Visual and screen work is made in images, objects or screens, from hand-made crafts to digital and moving-image production.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From moving image and digital work to broad and hand-made object arts.",
-                "points": [
-                  {
-                    "id": "AR.O.A1.G6",
-                    "anchor": "group:AR.O.A1.G6",
-                    "statement": "Moving-image and screen-based work covers film, screen media and visual effects as studied and produced for the screen.",
-                    "name": "Moving-image and screen-based work covers film, screen media and visual effects as studied and produced for the screen.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3605",
-                          "anchor": "node:ANZSRC:3605",
-                          "statement": "Screen and digital media",
-                          "name": "Screen and digital media"
-                        },
-                        {
-                          "id": "ANZSRC:360501",
-                          "anchor": "node:ANZSRC:360501",
-                          "statement": "Cinema studies",
-                          "name": "Cinema studies"
-                        },
-                        {
-                          "id": "ANZSRC:360505",
-                          "anchor": "node:ANZSRC:360505",
-                          "statement": "Screen media",
-                          "name": "Screen media"
-                        },
-                        {
-                          "id": "ANZSRC:360506",
-                          "anchor": "node:ANZSRC:360506",
-                          "statement": "Visual effects",
-                          "name": "Visual effects"
-                        },
-                        {
-                          "id": "ANZSRC:360599",
-                          "anchor": "node:ANZSRC:360599",
-                          "statement": "Screen and digital media not elsewhere classified",
-                          "name": "Screen and digital media not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from the general screen field to specific screen forms."
-                    }
-                  },
-                  {
-                    "id": "AR.O.A1.G7",
-                    "anchor": "group:AR.O.A1.G7",
-                    "statement": "Interactive and digital-art work is made with computing technology, such as games, animation, electronic art and interactive media.",
-                    "name": "Interactive and digital-art work is made with computing technology, such as games, animation, electronic art and interactive media.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:360502",
-                          "anchor": "node:ANZSRC:360502",
-                          "statement": "Computer gaming and animation",
-                          "name": "Computer gaming and animation"
-                        },
-                        {
-                          "id": "ANZSRC:360503",
-                          "anchor": "node:ANZSRC:360503",
-                          "statement": "Digital and electronic media art",
-                          "name": "Digital and electronic media art"
-                        },
-                        {
-                          "id": "ANZSRC:360504",
-                          "anchor": "node:ANZSRC:360504",
-                          "statement": "Interactive media",
-                          "name": "Interactive media"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure across the computing-based forms."
-                    }
-                  },
-                  {
-                    "id": "AR.O.A1.G8",
-                    "anchor": "group:AR.O.A1.G8",
-                    "statement": "General visual arts categories are the broad umbrella fields for visual art practice, including residual and performance or lens-based forms.",
-                    "name": "General visual arts categories are the broad umbrella fields for visual art practice, including residual and performance or lens-based forms.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3606",
-                          "anchor": "node:ANZSRC:3606",
-                          "statement": "Visual arts",
-                          "name": "Visual arts"
-                        },
-                        {
-                          "id": "LCC:N",
-                          "anchor": "node:LCC:N",
-                          "statement": "Visual arts",
-                          "name": "Visual arts"
-                        },
-                        {
-                          "id": "ANZSRC:360603",
-                          "anchor": "node:ANZSRC:360603",
-                          "statement": "Performance art",
-                          "name": "Performance art"
-                        },
-                        {
-                          "id": "ANZSRC:360604",
-                          "anchor": "node:ANZSRC:360604",
-                          "statement": "Photography, video and lens-based practice",
-                          "name": "Photography, video and lens-based practice"
-                        },
-                        {
-                          "id": "ANZSRC:360699",
-                          "anchor": "node:ANZSRC:360699",
-                          "statement": "Visual arts not elsewhere classified",
-                          "name": "Visual arts not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from the broad fields to their general subdivisions."
-                    }
-                  },
-                  {
-                    "id": "AR.O.A1.G9",
-                    "anchor": "group:AR.O.A1.G9",
-                    "statement": "Hand-made and traditional object-based art work covers crafts, fine arts, sculpture, drawing and painting made as physical artworks.",
-                    "name": "Hand-made and traditional object-based art work covers crafts, fine arts, sculpture, drawing and painting made as physical artworks.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:360601",
-                          "anchor": "node:ANZSRC:360601",
-                          "statement": "Crafts",
-                          "name": "Crafts"
-                        },
-                        {
-                          "id": "ANZSRC:360602",
-                          "anchor": "node:ANZSRC:360602",
-                          "statement": "Fine arts",
-                          "name": "Fine arts"
-                        },
-                        {
-                          "id": "LCC:NB",
-                          "anchor": "node:LCC:NB",
-                          "statement": "Sculpture",
-                          "name": "Sculpture"
-                        },
-                        {
-                          "id": "LCC:NC",
-                          "anchor": "node:LCC:NC",
-                          "statement": "Drawing. Design. Illustration",
-                          "name": "Drawing. Design. Illustration"
-                        },
-                        {
-                          "id": "LCC:ND",
-                          "anchor": "node:LCC:ND",
-                          "statement": "Painting",
-                          "name": "Painting"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure across the traditional physical media."
-                    }
+                    "id": "ANZSRC:360601",
+                    "anchor": "node:ANZSRC:360601",
+                    "statement": "Crafts",
+                    "name": "Crafts"
                   },
                   {
                     "id": "AR.O.A1.G11",
@@ -500,32 +96,314 @@
                   }
                 ]
               }
-            }
-          ]
-        }
-      },
-      {
-        "id": "AR.K2",
-        "anchor": "pillar:AR.K2",
-        "title": "Form",
-        "statement": "Form is the aspect of the work concerned with its own structure, features and attributes, such as genre, theoretical approach, design elements and physical properties.",
-        "name": "Form is the aspect of the work concerned with its own structure, features and attributes, such as genre, theoretical approach, design elements and physical properties.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "kinds",
-          "order": "structure",
-          "rank_note": "Sections run from features of texts to physical and design attributes.",
-          "points": [
+            },
             {
-              "id": "AR.K2.S1",
-              "anchor": "section:AR.K2.S1",
-              "statement": "Textual form covers literary studies defined by a feature of the text itself, such as approach, medium, genre, readership or general scope.",
-              "name": "Textual form covers literary studies defined by a feature of the text itself, such as approach, medium, genre, readership or general scope.",
+              "id": "AR.K1.S2",
+              "anchor": "section:AR.K1.S2",
+              "statement": "Lens-based, screen and digital media are works made with cameras, moving images or computing technology.",
+              "name": "Lens-based, screen and digital media are works made with cameras, moving images or computing technology.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From specific textual features to the general category.",
+                "rank_note": "Ordered from photography to screen to computing media.",
+                "points": [
+                  {
+                    "id": "ANZSRC:360604",
+                    "anchor": "node:ANZSRC:360604",
+                    "statement": "Photography, video and lens-based practice",
+                    "name": "Photography, video and lens-based practice"
+                  },
+                  {
+                    "id": "ANZSRC:360501",
+                    "anchor": "node:ANZSRC:360501",
+                    "statement": "Cinema studies",
+                    "name": "Cinema studies"
+                  },
+                  {
+                    "id": "ANZSRC:360506",
+                    "anchor": "node:ANZSRC:360506",
+                    "statement": "Visual effects",
+                    "name": "Visual effects"
+                  },
+                  {
+                    "id": "ANZSRC:360599",
+                    "anchor": "node:ANZSRC:360599",
+                    "statement": "Screen and digital media not elsewhere classified",
+                    "name": "Screen and digital media not elsewhere classified",
+                    "aliases": [
+                      "ANZSRC:360505"
+                    ]
+                  },
+                  {
+                    "id": "AR.O.A1.G7",
+                    "anchor": "group:AR.O.A1.G7",
+                    "statement": "Interactive and digital-art work is made with computing technology, such as games, animation, electronic art and interactive media.",
+                    "name": "Interactive and digital-art work is made with computing technology, such as games, animation, electronic art and interactive media.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:360502",
+                          "anchor": "node:ANZSRC:360502",
+                          "statement": "Computer gaming and animation",
+                          "name": "Computer gaming and animation"
+                        },
+                        {
+                          "id": "ANZSRC:360503",
+                          "anchor": "node:ANZSRC:360503",
+                          "statement": "Digital and electronic media art",
+                          "name": "Digital and electronic media art"
+                        },
+                        {
+                          "id": "ANZSRC:360504",
+                          "anchor": "node:ANZSRC:360504",
+                          "statement": "Interactive media",
+                          "name": "Interactive media"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure across the computing-based forms."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AR.K1.S3",
+              "anchor": "section:AR.K1.S3",
+              "statement": "Physical attributes and condition describe the material properties and state of a work as an object.",
+              "name": "Physical attributes and condition describe the material properties and state of a work as an object.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from general physical attributes to condition and effects.",
+                "points": [
+                  {
+                    "id": "AAT:300264087",
+                    "anchor": "node:AAT:300264087",
+                    "statement": "Physical Attributes Facet",
+                    "name": "Physical Attributes Facet"
+                  },
+                  {
+                    "id": "AAT:300123559",
+                    "anchor": "node:AAT:300123559",
+                    "statement": "Attributes and Properties (hierarchy name)",
+                    "name": "Attributes and Properties (hierarchy name)"
+                  },
+                  {
+                    "id": "AAT:300186269",
+                    "anchor": "node:AAT:300186269",
+                    "statement": "Conditions and Effects (hierarchy name)",
+                    "name": "Conditions and Effects (hierarchy name)"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AR.K1.S4",
+              "anchor": "section:AR.K1.S4",
+              "statement": "Making and performing practices cover the creative acts through which music, performance and writing are produced.",
+              "name": "Making and performing practices cover the creative acts through which music, performance and writing are produced.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from musical making to bodily performance to written making.",
+                "points": [
+                  {
+                    "id": "AR.K1.S4.U1",
+                    "anchor": "section:AR.K1.S4.U1",
+                    "statement": "Musical and bodily performance practices are the acts of making sound and movement before an audience.",
+                    "name": "Musical and bodily performance practices are the acts of making sound and movement before an audience.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from music to performance art to dance.",
+                      "points": [
+                        {
+                          "id": "AR.O.A1.G4",
+                          "anchor": "group:AR.O.A1.G4",
+                          "statement": "Music practice covers work where the feature in focus is the making, performing, and recording of music.",
+                          "name": "Music practice covers work where the feature in focus is the making, performing, and recording of music.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:360302",
+                                "anchor": "node:ANZSRC:360302",
+                                "statement": "Music composition and improvisation",
+                                "name": "Music composition and improvisation"
+                              },
+                              {
+                                "id": "ANZSRC:360304",
+                                "anchor": "node:ANZSRC:360304",
+                                "statement": "Music performance",
+                                "name": "Music performance"
+                              },
+                              {
+                                "id": "ANZSRC:360305",
+                                "anchor": "node:ANZSRC:360305",
+                                "statement": "Music technology and recording",
+                                "name": "Music technology and recording"
+                              }
+                            ],
+                            "rank_note": "Ordered as listed in ANZSRC code sequence."
+                          }
+                        },
+                        {
+                          "id": "ANZSRC:360603",
+                          "anchor": "node:ANZSRC:360603",
+                          "statement": "Performance art",
+                          "name": "Performance art"
+                        },
+                        {
+                          "id": "ANZSRC:360402",
+                          "anchor": "node:ANZSRC:360402",
+                          "statement": "Dance and dance studies",
+                          "name": "Dance and dance studies"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "AR.K1.S4.U2",
+                    "anchor": "section:AR.K1.S4.U2",
+                    "statement": "Writing practices are the acts of composing creative, digital, site-based and professional texts.",
+                    "name": "Writing practices are the acts of composing creative, digital, site-based and professional texts.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from creative writing to digital and site-based writing to professional writing and residual categories.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:360201",
+                          "anchor": "node:ANZSRC:360201",
+                          "statement": "Creative writing (incl. scriptwriting)",
+                          "name": "Creative writing (incl. scriptwriting)"
+                        },
+                        {
+                          "id": "ANZSRC:360202",
+                          "anchor": "node:ANZSRC:360202",
+                          "statement": "Digital writing",
+                          "name": "Digital writing"
+                        },
+                        {
+                          "id": "ANZSRC:360204",
+                          "anchor": "node:ANZSRC:360204",
+                          "statement": "Site-based writing",
+                          "name": "Site-based writing"
+                        },
+                        {
+                          "id": "AR.O.A1.G2",
+                          "anchor": "group:AR.O.A1.G2",
+                          "statement": "Professional and technical writing covers work where the feature in focus is informing audiences through journalism or specialised documentation.",
+                          "name": "Professional and technical writing covers work where the feature in focus is informing audiences through journalism or specialised documentation.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:360203",
+                                "anchor": "node:ANZSRC:360203",
+                                "statement": "Professional writing and journalism practice",
+                                "name": "Professional writing and journalism practice"
+                              },
+                              {
+                                "id": "ANZSRC:360205",
+                                "anchor": "node:ANZSRC:360205",
+                                "statement": "Technical writing",
+                                "name": "Technical writing"
+                              }
+                            ],
+                            "rank_note": "Ordered as listed in ANZSRC code sequence."
+                          }
+                        },
+                        {
+                          "id": "ANZSRC:360299",
+                          "anchor": "node:ANZSRC:360299",
+                          "statement": "Creative and professional writing not elsewhere classified",
+                          "name": "Creative and professional writing not elsewhere classified"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Medium and making"
+      },
+      {
+        "id": "AR.K2",
+        "anchor": "pillar:AR.K2",
+        "statement": "Form is the feature of a work concerned with its design, structure, genre and style as it appears to the audience.",
+        "name": "Form is the feature of a work concerned with its design, structure, genre and style as it appears to the audience.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "Sections run from visual design elements to literary kinds and style to the organised form of music and drama.",
+          "points": [
+            {
+              "id": "AR.K2.S1",
+              "anchor": "section:AR.K2.S1",
+              "statement": "Design elements and colour describe the visual building blocks from which the look of a work is composed.",
+              "name": "Design elements and colour describe the visual building blocks from which the look of a work is composed.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from general design elements to colour to fine art as a kind.",
+                "points": [
+                  {
+                    "id": "AAT:300123558",
+                    "anchor": "node:AAT:300123558",
+                    "statement": "Design Elements (hierarchy name)",
+                    "name": "Design Elements (hierarchy name)"
+                  },
+                  {
+                    "id": "AAT:300131647",
+                    "anchor": "node:AAT:300131647",
+                    "statement": "Color (hierarchy name)",
+                    "name": "Color (hierarchy name)"
+                  },
+                  {
+                    "id": "ANZSRC:360602",
+                    "anchor": "node:ANZSRC:360602",
+                    "statement": "Fine arts",
+                    "name": "Fine arts"
+                  },
+                  {
+                    "id": "ANZSRC:360699",
+                    "anchor": "node:ANZSRC:360699",
+                    "statement": "Visual arts not elsewhere classified",
+                    "name": "Visual arts not elsewhere classified"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AR.K2.S2",
+              "anchor": "section:AR.K2.S2",
+              "statement": "Genre and type of writing classify literary works by their kind, readership and textual style.",
+              "name": "Genre and type of writing classify literary works by their kind, readership and textual style.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from theoretical approach and medium to popular genre and readership to general literary studies.",
                 "points": [
                   {
                     "id": "AR.O.A3.G4",
@@ -573,33 +451,6 @@
                     }
                   },
                   {
-                    "id": "AR.O.A3.G5",
-                    "anchor": "group:AR.O.A3.G5",
-                    "statement": "Each of these literary and cultural study fields is defined by a particular feature of a work that its analysis addresses, such as its environmental concerns or its physical production and circulation as a book.",
-                    "name": "Each of these literary and cultural study fields is defined by a particular feature of a work that its analysis addresses, such as its environmental concerns or its physical production and circulation as a book.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:470509",
-                          "anchor": "node:ANZSRC:470509",
-                          "statement": "Ecocriticism",
-                          "name": "Ecocriticism"
-                        },
-                        {
-                          "id": "ANZSRC:470503",
-                          "anchor": "node:ANZSRC:470503",
-                          "statement": "Book history",
-                          "name": "Book history"
-                        }
-                      ]
-                    },
-                    "further": true
-                  },
-                  {
                     "id": "AR.O.A3.G7",
                     "anchor": "group:AR.O.A3.G7",
                     "statement": "Popular, genre, young adult and juvenile fiction are classified by the type of writing and the readership it is aimed at.",
@@ -645,6 +496,33 @@
                     }
                   },
                   {
+                    "id": "AR.O.A3.G5",
+                    "anchor": "group:AR.O.A3.G5",
+                    "statement": "Each of these literary and cultural study fields is defined by a particular feature of a work that its analysis addresses, such as its environmental concerns or its physical production and circulation as a book.",
+                    "name": "Each of these literary and cultural study fields is defined by a particular feature of a work that its analysis addresses, such as its environmental concerns or its physical production and circulation as a book.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:470509",
+                          "anchor": "node:ANZSRC:470509",
+                          "statement": "Ecocriticism",
+                          "name": "Ecocriticism"
+                        },
+                        {
+                          "id": "ANZSRC:470503",
+                          "anchor": "node:ANZSRC:470503",
+                          "statement": "Book history",
+                          "name": "Book history"
+                        }
+                      ]
+                    },
+                    "further": true
+                  },
+                  {
                     "id": "AR.O.A3.G8",
                     "anchor": "group:AR.O.A3.G8",
                     "statement": "General and unclassified literary studies cover work that is not tied to a particular region, genre or feature of the text.",
@@ -675,173 +553,21 @@
               }
             },
             {
-              "id": "AR.K2.S2",
-              "anchor": "section:AR.K2.S2",
-              "statement": "Physical and design attributes cover the properties, design elements, colour and conditions that describe how a work looks and is made up.",
-              "name": "Physical and design attributes cover the properties, design elements, colour and conditions that describe how a work looks and is made up.",
+              "id": "AR.K2.S3",
+              "anchor": "section:AR.K2.S3",
+              "statement": "Musical and dramatic forms concern how sound and staged action are organised as works.",
+              "name": "Musical and dramatic forms concern how sound and staged action are organised as works.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From general attributes to design elements and conditions.",
+                "rank_note": "Ordered from music to staged performance.",
                 "points": [
                   {
-                    "id": "AAT:300264087",
-                    "anchor": "node:AAT:300264087",
-                    "statement": "Physical Attributes Facet",
-                    "name": "Physical Attributes Facet"
-                  },
-                  {
-                    "id": "AAT:300123559",
-                    "anchor": "node:AAT:300123559",
-                    "statement": "Attributes and Properties (hierarchy name)",
-                    "name": "Attributes and Properties (hierarchy name)"
-                  },
-                  {
-                    "id": "AAT:300123558",
-                    "anchor": "node:AAT:300123558",
-                    "statement": "Design Elements (hierarchy name)",
-                    "name": "Design Elements (hierarchy name)"
-                  },
-                  {
-                    "id": "AAT:300131647",
-                    "anchor": "node:AAT:300131647",
-                    "statement": "Color (hierarchy name)",
-                    "name": "Color (hierarchy name)"
-                  },
-                  {
-                    "id": "AAT:300186269",
-                    "anchor": "node:AAT:300186269",
-                    "statement": "Conditions and Effects (hierarchy name)",
-                    "name": "Conditions and Effects (hierarchy name)"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "AR.K3",
-        "anchor": "pillar:AR.K3",
-        "title": "Meaning",
-        "statement": "Meaning is the aspect of the work concerned with the concepts, representations and subjects it expresses or is about.",
-        "name": "Meaning is the aspect of the work concerned with the concepts, representations and subjects it expresses or is about.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "kinds",
-          "order": "structure",
-          "rank_note": "From abstract concepts to representation and subject matter.",
-          "points": [
-            {
-              "id": "AAT:300264086",
-              "anchor": "node:AAT:300264086",
-              "statement": "Associated Concepts Facet",
-              "name": "Associated Concepts Facet"
-            },
-            {
-              "id": "AAT:300055126",
-              "anchor": "node:AAT:300055126",
-              "statement": "Associated Concepts (hierarchy name)",
-              "name": "Associated Concepts (hierarchy name)"
-            },
-            {
-              "id": "AR.O.A4.G2",
-              "anchor": "group:AR.O.A4.G2",
-              "statement": "Theory and representation studies examine how images, identities and meanings are produced and conceptualised in culture.",
-              "name": "Theory and representation studies examine how images, identities and meanings are produced and conceptualised in culture.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "ANZSRC:360104",
-                    "anchor": "node:ANZSRC:360104",
-                    "statement": "Visual cultures",
-                    "name": "Visual cultures"
-                  },
-                  {
-                    "id": "ANZSRC:360199",
-                    "anchor": "node:ANZSRC:360199",
-                    "statement": "Art history, theory and criticism not elsewhere classified",
-                    "name": "Art history, theory and criticism not elsewhere classified"
-                  },
-                  {
-                    "id": "ANZSRC:470207",
-                    "anchor": "node:ANZSRC:470207",
-                    "statement": "Cultural theory",
-                    "name": "Cultural theory"
-                  },
-                  {
-                    "id": "ANZSRC:470208",
-                    "anchor": "node:ANZSRC:470208",
-                    "statement": "Culture, representation and identity",
-                    "name": "Culture, representation and identity"
-                  }
-                ],
-                "rank_note": "Ordered from visual cultures to general cultural theory."
-              }
-            },
-            {
-              "id": "AR.O.A4.G11",
-              "anchor": "group:AR.O.A4.G11",
-              "statement": "Traditional and musical expression literature covers the folk practices and musical works that a text is about.",
-              "name": "Traditional and musical expression literature covers the folk practices and musical works that a text is about.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "LCC:GR",
-                    "anchor": "node:LCC:GR",
-                    "statement": "Folklore",
-                    "name": "Folklore"
-                  },
-                  {
-                    "id": "LCC:ML",
-                    "anchor": "node:LCC:ML",
-                    "statement": "Literature on music",
-                    "name": "Literature on music"
-                  }
-                ],
-                "rank_note": "Ordered from folklore to writing about music."
-              }
-            }
-          ]
-        }
-      },
-      {
-        "id": "AR.K4",
-        "anchor": "pillar:AR.K4",
-        "title": "Context and reception",
-        "statement": "Context and reception is the aspect of the work concerned with the place, tradition, language and cultural setting from which it comes and in which it is received.",
-        "name": "Context and reception is the aspect of the work concerned with the place, tradition, language and cultural setting from which it comes and in which it is received.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "kinds",
-          "order": "structure",
-          "rank_note": "From literary origins by region and language outward to wider cultural setting.",
-          "points": [
-            {
-              "id": "AR.K4.S1",
-              "anchor": "section:AR.K4.S1",
-              "statement": "Regional literatures are defined by the region, nation or tradition from which the writing comes.",
-              "name": "Regional literatures are defined by the region, nation or tradition from which the writing comes.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From specific regions to broader traditions.",
-                "points": [
-                  {
-                    "id": "AR.O.A3.G1",
-                    "anchor": "group:AR.O.A3.G1",
-                    "statement": "This group covers the study of literature from Africa and Australia, defined by the region or nation of the writing.",
-                    "name": "This group covers the study of literature from Africa and Australia, defined by the region or nation of the writing.",
+                    "id": "AR.O.A1.G10",
+                    "anchor": "group:AR.O.A1.G10",
+                    "statement": "Music work concerns the art of sound, including its instruction and study.",
+                    "name": "Music work concerns the art of sound, including its instruction and study.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -849,16 +575,384 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "ANZSRC:470501",
-                          "anchor": "node:ANZSRC:470501",
-                          "statement": "African literature",
-                          "name": "African literature"
+                          "id": "LCC:M",
+                          "anchor": "node:LCC:M",
+                          "statement": "Music",
+                          "name": "Music"
                         },
                         {
-                          "id": "ANZSRC:470502",
-                          "anchor": "node:ANZSRC:470502",
-                          "statement": "Australian literature (excl. Aboriginal and Torres Strait Islander literature)",
-                          "name": "Australian literature (excl. Aboriginal and Torres Strait Islander literature)"
+                          "id": "LCC:MT",
+                          "anchor": "node:LCC:MT",
+                          "statement": "Instruction and study",
+                          "name": "Instruction and study"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure, from music in general to its instruction and study."
+                    }
+                  },
+                  {
+                    "id": "ANZSRC:360403",
+                    "anchor": "node:ANZSRC:360403",
+                    "statement": "Drama, theatre and performance studies",
+                    "name": "Drama, theatre and performance studies"
+                  },
+                  {
+                    "id": "ANZSRC:360401",
+                    "anchor": "node:ANZSRC:360401",
+                    "statement": "Applied theatre",
+                    "name": "Applied theatre"
+                  },
+                  {
+                    "id": "ANZSRC:360499",
+                    "anchor": "node:ANZSRC:360499",
+                    "statement": "Performing arts not elsewhere classified",
+                    "name": "Performing arts not elsewhere classified"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Form"
+      },
+      {
+        "id": "AR.K3",
+        "anchor": "pillar:AR.K3",
+        "statement": "Meaning is the feature of a work concerned with what it represents, expresses and conveys through ideas and theory.",
+        "name": "Meaning is the feature of a work concerned with what it represents, expresses and conveys through ideas and theory.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "Sections run from abstract concepts and representation to the themes of cultural encounter that works address.",
+          "points": [
+            {
+              "id": "AR.K3.S1",
+              "anchor": "section:AR.K3.S1",
+              "statement": "Concepts and representation explain how meanings, images and identities are produced and understood.",
+              "name": "Concepts and representation explain how meanings, images and identities are produced and understood.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from abstract concepts to cultural representation.",
+                "points": [
+                  {
+                    "id": "AR.O.A5.G1",
+                    "anchor": "group:AR.O.A5.G1",
+                    "statement": "Associated concepts are the abstract ideas, themes and notions that a work is connected with and conveys.",
+                    "name": "Associated concepts are the abstract ideas, themes and notions that a work is connected with and conveys.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "AAT:300264086",
+                          "anchor": "node:AAT:300264086",
+                          "statement": "Associated Concepts Facet",
+                          "name": "Associated Concepts Facet"
+                        },
+                        {
+                          "id": "AAT:300055126",
+                          "anchor": "node:AAT:300055126",
+                          "statement": "Associated Concepts (hierarchy name)",
+                          "name": "Associated Concepts (hierarchy name)"
+                        }
+                      ],
+                      "rank_note": "Facet is the broader level; the hierarchy name is nested within it."
+                    }
+                  },
+                  {
+                    "id": "AR.O.A4.G2",
+                    "anchor": "group:AR.O.A4.G2",
+                    "statement": "Theory and representation studies examine how images, identities and meanings are produced and conceptualised in culture.",
+                    "name": "Theory and representation studies examine how images, identities and meanings are produced and conceptualised in culture.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:360104",
+                          "anchor": "node:ANZSRC:360104",
+                          "statement": "Visual cultures",
+                          "name": "Visual cultures"
+                        },
+                        {
+                          "id": "ANZSRC:360199",
+                          "anchor": "node:ANZSRC:360199",
+                          "statement": "Art history, theory and criticism not elsewhere classified",
+                          "name": "Art history, theory and criticism not elsewhere classified"
+                        },
+                        {
+                          "id": "ANZSRC:470207",
+                          "anchor": "node:ANZSRC:470207",
+                          "statement": "Cultural theory",
+                          "name": "Cultural theory"
+                        },
+                        {
+                          "id": "ANZSRC:470208",
+                          "anchor": "node:ANZSRC:470208",
+                          "statement": "Culture, representation and identity",
+                          "name": "Culture, representation and identity"
+                        }
+                      ],
+                      "rank_note": "Ordered from visual cultures to general cultural theory."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AR.K3.S2",
+              "anchor": "section:AR.K3.S2",
+              "statement": "Themes of cultural encounter and media culture address what works say about people and the world.",
+              "name": "Themes of cultural encounter and media culture address what works say about people and the world.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from cultural encounter to media culture.",
+                "points": [
+                  {
+                    "id": "AR.O.A4.G5",
+                    "anchor": "group:AR.O.A4.G5",
+                    "statement": "Migration and postcolonial studies investigate cultural encounters, movement of peoples and the legacies of colonialism.",
+                    "name": "Migration and postcolonial studies investigate cultural encounters, movement of peoples and the legacies of colonialism.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:470211",
+                          "anchor": "node:ANZSRC:470211",
+                          "statement": "Migrant cultural studies",
+                          "name": "Migrant cultural studies"
+                        },
+                        {
+                          "id": "ANZSRC:470212",
+                          "anchor": "node:ANZSRC:470212",
+                          "statement": "Multicultural, intercultural and cross-cultural studies",
+                          "name": "Multicultural, intercultural and cross-cultural studies"
+                        },
+                        {
+                          "id": "ANZSRC:470213",
+                          "anchor": "node:ANZSRC:470213",
+                          "statement": "Postcolonial studies",
+                          "name": "Postcolonial studies"
+                        }
+                      ],
+                      "rank_note": "Ordered from migrant experience to intercultural contact to postcolonial critique."
+                    }
+                  },
+                  {
+                    "id": "AR.O.A4.G10",
+                    "anchor": "group:AR.O.A4.G10",
+                    "statement": "Media-oriented cultural studies fields take screen media and general cultural analysis as the subject of the work.",
+                    "name": "Media-oriented cultural studies fields take screen media and general cultural analysis as the subject of the work.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:470214",
+                          "anchor": "node:ANZSRC:470214",
+                          "statement": "Screen and media culture",
+                          "name": "Screen and media culture"
+                        },
+                        {
+                          "id": "ANZSRC:470299",
+                          "anchor": "node:ANZSRC:470299",
+                          "statement": "Cultural studies not elsewhere classified",
+                          "name": "Cultural studies not elsewhere classified"
+                        }
+                      ],
+                      "rank_note": "Ordered from the specific media field to the general residual category."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AR.K3.S3",
+              "anchor": "section:AR.K3.S3",
+              "statement": "Humanistic, musical and traditional expression frame what works mean as part of the arts and humanities.",
+              "name": "Humanistic, musical and traditional expression frame what works mean as part of the arts and humanities.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from the humanities in general to music study to folklore and music literature.",
+                "points": [
+                  {
+                    "id": "AR.O.A4.G7",
+                    "anchor": "group:AR.O.A4.G7",
+                    "statement": "Humanities-field concepts name the broad scholarly and artistic disciplines that frame a work as belonging to the humanities or arts.",
+                    "name": "Humanities-field concepts name the broad scholarly and artistic disciplines that frame a work as belonging to the humanities or arts.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MeSH:K",
+                          "anchor": "node:MeSH:K",
+                          "statement": "Humanities",
+                          "name": "Humanities"
+                        },
+                        {
+                          "id": "MeSH:K01",
+                          "anchor": "node:MeSH:K01",
+                          "statement": "Humanities",
+                          "name": "Humanities"
+                        },
+                        {
+                          "id": "LCC:NX",
+                          "anchor": "node:LCC:NX",
+                          "statement": "Arts in general",
+                          "name": "Arts in general"
+                        }
+                      ],
+                      "rank_note": "Ordered from the general humanities headings to the arts and music literature."
+                    }
+                  },
+                  {
+                    "id": "AR.O.A1.G3",
+                    "anchor": "group:AR.O.A1.G3",
+                    "statement": "Music studies cover work where the feature in focus is understanding, teaching, and analysing music as a subject of inquiry.",
+                    "name": "Music studies cover work where the feature in focus is understanding, teaching, and analysing music as a subject of inquiry.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:3603",
+                          "anchor": "node:ANZSRC:3603",
+                          "statement": "Music",
+                          "name": "Music"
+                        },
+                        {
+                          "id": "ANZSRC:360301",
+                          "anchor": "node:ANZSRC:360301",
+                          "statement": "Music cognition",
+                          "name": "Music cognition"
+                        },
+                        {
+                          "id": "ANZSRC:360303",
+                          "anchor": "node:ANZSRC:360303",
+                          "statement": "Music education",
+                          "name": "Music education"
+                        },
+                        {
+                          "id": "ANZSRC:360306",
+                          "anchor": "node:ANZSRC:360306",
+                          "statement": "Musicology and ethnomusicology",
+                          "name": "Musicology and ethnomusicology"
+                        },
+                        {
+                          "id": "ANZSRC:360399",
+                          "anchor": "node:ANZSRC:360399",
+                          "statement": "Music not elsewhere classified",
+                          "name": "Music not elsewhere classified"
+                        }
+                      ],
+                      "rank_note": "Ordered as listed in ANZSRC code sequence."
+                    }
+                  },
+                  {
+                    "id": "AR.O.A4.G11",
+                    "anchor": "group:AR.O.A4.G11",
+                    "statement": "Traditional and musical expression literature covers the folk practices and musical works that a text is about.",
+                    "name": "Traditional and musical expression literature covers the folk practices and musical works that a text is about.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "LCC:GR",
+                          "anchor": "node:LCC:GR",
+                          "statement": "Folklore",
+                          "name": "Folklore"
+                        },
+                        {
+                          "id": "LCC:ML",
+                          "anchor": "node:LCC:ML",
+                          "statement": "Literature on music",
+                          "name": "Literature on music"
+                        }
+                      ],
+                      "rank_note": "Ordered from folklore to writing about music."
+                    }
+                  },
+                  {
+                    "id": "ANZSRC:369999",
+                    "anchor": "node:ANZSRC:369999",
+                    "statement": "Other creative arts and writing not elsewhere classified",
+                    "name": "Other creative arts and writing not elsewhere classified"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Meaning"
+      },
+      {
+        "id": "AR.K4",
+        "anchor": "pillar:AR.K4",
+        "statement": "Context and reception is the feature of a work concerned with the place, language, time, industry and audience in which it is produced and received.",
+        "name": "Context and reception is the feature of a work concerned with the place, language, time, industry and audience in which it is produced and received.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "Sections run from literary traditions by place and language to social and industrial settings.",
+          "points": [
+            {
+              "id": "AR.K4.S1",
+              "anchor": "section:AR.K4.S1",
+              "statement": "Anglophone and Oceanian literary traditions place works within the English-language and Pacific settings of their composition.",
+              "name": "Anglophone and Oceanian literary traditions place works within the English-language and Pacific settings of their composition.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from British to American to Australasian traditions.",
+                "points": [
+                  {
+                    "id": "AR.K4.S1.U1",
+                    "anchor": "section:AR.K4.S1.U1",
+                    "statement": "British, Irish and American literatures place works within the English-language traditions of the North Atlantic.",
+                    "name": "British, Irish and American literatures place works within the English-language traditions of the North Atlantic.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from British to American traditions.",
+                      "points": [
+                        {
+                          "id": "LCC:PR",
+                          "anchor": "node:LCC:PR",
+                          "statement": "English literature",
+                          "name": "English literature"
+                        },
+                        {
+                          "id": "LCC:PS",
+                          "anchor": "node:LCC:PS",
+                          "statement": "American literature",
+                          "name": "American literature"
                         },
                         {
                           "id": "ANZSRC:470504",
@@ -867,104 +961,39 @@
                           "name": "British and Irish literature"
                         },
                         {
-                          "id": "ANZSRC:470505",
-                          "anchor": "node:ANZSRC:470505",
-                          "statement": "Central and Eastern European literature (incl. Russian)",
-                          "name": "Central and Eastern European literature (incl. Russian)"
-                        }
-                      ],
-                      "rank_note": "Kinds are listed by region without ranking."
-                    }
-                  },
-                  {
-                    "id": "AR.O.A3.G2",
-                    "anchor": "group:AR.O.A3.G2",
-                    "statement": "This group covers the study of literature from South, Southeast and East Asia written in Indian, Indonesian, Korean, Chinese and Japanese traditions.",
-                    "name": "This group covers the study of literature from South, Southeast and East Asia written in Indian, Indonesian, Korean, Chinese and Japanese traditions.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:470510",
-                          "anchor": "node:ANZSRC:470510",
-                          "statement": "Indian literature",
-                          "name": "Indian literature"
-                        },
-                        {
-                          "id": "ANZSRC:470511",
-                          "anchor": "node:ANZSRC:470511",
-                          "statement": "Indonesian literature",
-                          "name": "Indonesian literature"
-                        },
-                        {
-                          "id": "ANZSRC:470512",
-                          "anchor": "node:ANZSRC:470512",
-                          "statement": "Korean literature",
-                          "name": "Korean literature"
-                        },
-                        {
-                          "id": "ANZSRC:470515",
-                          "anchor": "node:ANZSRC:470515",
-                          "statement": "Literature in Chinese",
-                          "name": "Literature in Chinese"
-                        },
-                        {
-                          "id": "ANZSRC:470519",
-                          "anchor": "node:ANZSRC:470519",
-                          "statement": "Literature in Japanese",
-                          "name": "Literature in Japanese"
-                        }
-                      ],
-                      "rank_note": "Kinds are listed by region without ranking."
-                    }
-                  },
-                  {
-                    "id": "AR.O.A3.G9",
-                    "anchor": "group:AR.O.A3.G9",
-                    "statement": "Each of these fields studies the literature of a particular world region or tradition, such as Asian, Middle Eastern, North American or European writing, that has no field of its own.",
-                    "name": "Each of these fields studies the literature of a particular world region or tradition, such as Asian, Middle Eastern, North American or European writing, that has no field of its own.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:470524",
-                          "anchor": "node:ANZSRC:470524",
-                          "statement": "Other Asian literature (excl. South-East Asian)",
-                          "name": "Other Asian literature (excl. South-East Asian)"
-                        },
-                        {
-                          "id": "ANZSRC:470521",
-                          "anchor": "node:ANZSRC:470521",
-                          "statement": "Middle Eastern literature",
-                          "name": "Middle Eastern literature"
-                        },
-                        {
-                          "id": "ANZSRC:470529",
-                          "anchor": "node:ANZSRC:470529",
-                          "statement": "South-East Asian literature (excl. Indonesian)",
-                          "name": "South-East Asian literature (excl. Indonesian)"
-                        },
-                        {
                           "id": "ANZSRC:470523",
                           "anchor": "node:ANZSRC:470523",
                           "statement": "North American literature",
                           "name": "North American literature"
-                        },
-                        {
-                          "id": "ANZSRC:470525",
-                          "anchor": "node:ANZSRC:470525",
-                          "statement": "Other European literature",
-                          "name": "Other European literature"
                         }
                       ]
-                    },
-                    "further": true
+                    }
+                  },
+                  {
+                    "id": "AR.K4.S1.U2",
+                    "anchor": "section:AR.K4.S1.U2",
+                    "statement": "Australian and New Zealand literatures place works within the settings of Australasia.",
+                    "name": "Australian and New Zealand literatures place works within the settings of Australasia.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from Australia to New Zealand.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:470502",
+                          "anchor": "node:ANZSRC:470502",
+                          "statement": "Australian literature (excl. Aboriginal and Torres Strait Islander literature)",
+                          "name": "Australian literature (excl. Aboriginal and Torres Strait Islander literature)"
+                        },
+                        {
+                          "id": "ANZSRC:470522",
+                          "anchor": "node:ANZSRC:470522",
+                          "statement": "New Zealand literature (excl. Māori literature)",
+                          "name": "New Zealand literature (excl. Māori literature)"
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -972,24 +1001,24 @@
             {
               "id": "AR.K4.S2",
               "anchor": "section:AR.K4.S2",
-              "statement": "Language literatures are defined by the language community of the writing, such as classical, European, Spanish and Portuguese.",
-              "name": "Language literatures are defined by the language community of the writing, such as classical, European, Spanish and Portuguese.",
+              "statement": "European and classical literary traditions place works within the languages and heritage of Europe and antiquity.",
+              "name": "European and classical literary traditions place works within the languages and heritage of Europe and antiquity.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From classical and European languages to Iberian and other regions.",
+                "rank_note": "Ordered from classical to modern European languages.",
                 "points": [
                   {
-                    "id": "AR.O.A3.G3",
-                    "anchor": "group:AR.O.A3.G3",
-                    "statement": "This group covers the study of literature defined by the language of the writing, namely classical Latin and Greek, French, German and Italian.",
-                    "name": "This group covers the study of literature defined by the language of the writing, namely classical Latin and Greek, French, German and Italian.",
+                    "id": "AR.K4.S2.U1",
+                    "anchor": "section:AR.K4.S2.U1",
+                    "statement": "Classical and Romance-language literatures place works within the heritage of antiquity and southern Europe.",
+                    "name": "Classical and Romance-language literatures place works within the heritage of antiquity and southern Europe.",
                     "support": {
                       "logic_type": "inductive",
-                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "structure",
+                      "rank_note": "Ordered from classical to Romance languages.",
                       "points": [
                         {
                           "id": "ANZSRC:470513",
@@ -1004,37 +1033,10 @@
                           "name": "Literature in French"
                         },
                         {
-                          "id": "ANZSRC:470517",
-                          "anchor": "node:ANZSRC:470517",
-                          "statement": "Literature in German",
-                          "name": "Literature in German"
-                        },
-                        {
                           "id": "ANZSRC:470518",
                           "anchor": "node:ANZSRC:470518",
                           "statement": "Literature in Italian",
                           "name": "Literature in Italian"
-                        }
-                      ],
-                      "rank_note": "Kinds are listed by language without ranking."
-                    }
-                  },
-                  {
-                    "id": "AR.O.A3.G6",
-                    "anchor": "group:AR.O.A3.G6",
-                    "statement": "Literatures of the Spanish, Portuguese, Middle Eastern, Asian, European, English-language and other regions are classified by the place or language community the work comes from.",
-                    "name": "Literatures of the Spanish, Portuguese, Middle Eastern, Asian, European, English-language and other regions are classified by the place or language community the work comes from.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:470522",
-                          "anchor": "node:ANZSRC:470522",
-                          "statement": "New Zealand literature (excl. Māori literature)",
-                          "name": "New Zealand literature (excl. Māori literature)"
                         },
                         {
                           "id": "LCC:PQ",
@@ -1043,53 +1045,72 @@
                           "name": "French literature - Italian literature - Spanish literature - Portuguese"
                         },
                         {
-                          "id": "LCC:PR",
-                          "anchor": "node:LCC:PR",
-                          "statement": "English literature",
-                          "name": "English literature"
-                        },
+                          "id": "AR.O.A3.G10",
+                          "anchor": "group:AR.O.A3.G10",
+                          "statement": "Literary studies of works defined by their language of composition, covering Spanish and Portuguese literature as well as literatures written in English beyond the major national traditions.",
+                          "name": "Literary studies of works defined by their language of composition, covering Spanish and Portuguese literature as well as literatures written in English beyond the major national traditions.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:470526",
+                                "anchor": "node:ANZSRC:470526",
+                                "statement": "Other literatures in English",
+                                "name": "Other literatures in English"
+                              },
+                              {
+                                "id": "ANZSRC:470520",
+                                "anchor": "node:ANZSRC:470520",
+                                "statement": "Literature in Spanish and Portuguese",
+                                "name": "Literature in Spanish and Portuguese"
+                              }
+                            ]
+                          },
+                          "further": true
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "AR.K4.S2.U2",
+                    "anchor": "section:AR.K4.S2.U2",
+                    "statement": "Germanic, central and eastern European literatures place works within the languages of northern and eastern Europe.",
+                    "name": "Germanic, central and eastern European literatures place works within the languages of northern and eastern Europe.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from German to eastern and other European literatures.",
+                      "points": [
                         {
-                          "id": "LCC:PS",
-                          "anchor": "node:LCC:PS",
-                          "statement": "American literature",
-                          "name": "American literature"
+                          "id": "ANZSRC:470517",
+                          "anchor": "node:ANZSRC:470517",
+                          "statement": "Literature in German",
+                          "name": "Literature in German"
                         },
                         {
                           "id": "LCC:PT",
                           "anchor": "node:LCC:PT",
                           "statement": "German literature - Dutch literature - Flemish literature since 1830",
                           "name": "German literature - Dutch literature - Flemish literature since 1830"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure of the regional scheme, not by degree."
-                    }
-                  },
-                  {
-                    "id": "AR.O.A3.G10",
-                    "anchor": "group:AR.O.A3.G10",
-                    "statement": "Literary studies of works defined by their language of composition, covering Spanish and Portuguese literature as well as literatures written in English beyond the major national traditions.",
-                    "name": "Literary studies of works defined by their language of composition, covering Spanish and Portuguese literature as well as literatures written in English beyond the major national traditions.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:470526",
-                          "anchor": "node:ANZSRC:470526",
-                          "statement": "Other literatures in English",
-                          "name": "Other literatures in English"
                         },
                         {
-                          "id": "ANZSRC:470520",
-                          "anchor": "node:ANZSRC:470520",
-                          "statement": "Literature in Spanish and Portuguese",
-                          "name": "Literature in Spanish and Portuguese"
+                          "id": "ANZSRC:470505",
+                          "anchor": "node:ANZSRC:470505",
+                          "statement": "Central and Eastern European literature (incl. Russian)",
+                          "name": "Central and Eastern European literature (incl. Russian)"
+                        },
+                        {
+                          "id": "ANZSRC:470525",
+                          "anchor": "node:ANZSRC:470525",
+                          "statement": "Other European literature",
+                          "name": "Other European literature"
                         }
                       ]
-                    },
-                    "further": true
+                    }
                   }
                 ]
               }
@@ -1097,13 +1118,123 @@
             {
               "id": "AR.K4.S3",
               "anchor": "section:AR.K4.S3",
-              "statement": "Cultural setting covers how culture is situated in places, migrations, industries and media, and how it is organised and used.",
-              "name": "Cultural setting covers how culture is situated in places, migrations, industries and media, and how it is organised and used.",
+              "statement": "Asian, Middle Eastern and African literary traditions place works within the languages and regions where they were composed.",
+              "name": "Asian, Middle Eastern and African literary traditions place works within the languages and regions where they were composed.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "From place and movement to industry and media.",
+                "rank_note": "Ordered from East Asia to South and South-East Asia to the Middle East and Africa.",
+                "points": [
+                  {
+                    "id": "AR.K4.S3.U1",
+                    "anchor": "section:AR.K4.S3.U1",
+                    "statement": "East Asian literatures place works within Chinese, Japanese and Korean languages and settings.",
+                    "name": "East Asian literatures place works within Chinese, Japanese and Korean languages and settings.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from Chinese to Japanese to Korean.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:470515",
+                          "anchor": "node:ANZSRC:470515",
+                          "statement": "Literature in Chinese",
+                          "name": "Literature in Chinese"
+                        },
+                        {
+                          "id": "ANZSRC:470519",
+                          "anchor": "node:ANZSRC:470519",
+                          "statement": "Literature in Japanese",
+                          "name": "Literature in Japanese"
+                        },
+                        {
+                          "id": "ANZSRC:470512",
+                          "anchor": "node:ANZSRC:470512",
+                          "statement": "Korean literature",
+                          "name": "Korean literature"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "AR.K4.S3.U2",
+                    "anchor": "section:AR.K4.S3.U2",
+                    "statement": "South, South-East and other Asian literatures place works within the languages of the Indian subcontinent and South-East Asia.",
+                    "name": "South, South-East and other Asian literatures place works within the languages of the Indian subcontinent and South-East Asia.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from India to Indonesia to wider Asia.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:470510",
+                          "anchor": "node:ANZSRC:470510",
+                          "statement": "Indian literature",
+                          "name": "Indian literature"
+                        },
+                        {
+                          "id": "ANZSRC:470511",
+                          "anchor": "node:ANZSRC:470511",
+                          "statement": "Indonesian literature",
+                          "name": "Indonesian literature"
+                        },
+                        {
+                          "id": "ANZSRC:470529",
+                          "anchor": "node:ANZSRC:470529",
+                          "statement": "South-East Asian literature (excl. Indonesian)",
+                          "name": "South-East Asian literature (excl. Indonesian)"
+                        },
+                        {
+                          "id": "ANZSRC:470524",
+                          "anchor": "node:ANZSRC:470524",
+                          "statement": "Other Asian literature (excl. South-East Asian)",
+                          "name": "Other Asian literature (excl. South-East Asian)"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "AR.K4.S3.U3",
+                    "anchor": "section:AR.K4.S3.U3",
+                    "statement": "Middle Eastern and African literatures place works within the languages and regions of western Asia and Africa.",
+                    "name": "Middle Eastern and African literatures place works within the languages and regions of western Asia and Africa.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from the Middle East to Africa.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:470521",
+                          "anchor": "node:ANZSRC:470521",
+                          "statement": "Middle Eastern literature",
+                          "name": "Middle Eastern literature"
+                        },
+                        {
+                          "id": "ANZSRC:470501",
+                          "anchor": "node:ANZSRC:470501",
+                          "statement": "African literature",
+                          "name": "African literature"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AR.K4.S4",
+              "anchor": "section:AR.K4.S4",
+              "statement": "Social and industrial settings show how works are placed, produced, circulated and received by publics.",
+              "name": "Social and industrial settings show how works are placed, produced, circulated and received by publics.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from place to policy and industry.",
                 "points": [
                   {
                     "id": "AR.O.A4.G4",
@@ -1151,39 +1282,6 @@
                     }
                   },
                   {
-                    "id": "AR.O.A4.G5",
-                    "anchor": "group:AR.O.A4.G5",
-                    "statement": "Migration and postcolonial studies investigate cultural encounters, movement of peoples and the legacies of colonialism.",
-                    "name": "Migration and postcolonial studies investigate cultural encounters, movement of peoples and the legacies of colonialism.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:470211",
-                          "anchor": "node:ANZSRC:470211",
-                          "statement": "Migrant cultural studies",
-                          "name": "Migrant cultural studies"
-                        },
-                        {
-                          "id": "ANZSRC:470212",
-                          "anchor": "node:ANZSRC:470212",
-                          "statement": "Multicultural, intercultural and cross-cultural studies",
-                          "name": "Multicultural, intercultural and cross-cultural studies"
-                        },
-                        {
-                          "id": "ANZSRC:470213",
-                          "anchor": "node:ANZSRC:470213",
-                          "statement": "Postcolonial studies",
-                          "name": "Postcolonial studies"
-                        }
-                      ],
-                      "rank_note": "Ordered from migrant experience to intercultural contact to postcolonial critique."
-                    }
-                  },
-                  {
                     "id": "AR.O.A4.G3",
                     "anchor": "group:AR.O.A4.G3",
                     "statement": "Policy, industry and consumption studies look at how culture is organised, produced and used in economic and everyday life.",
@@ -1221,75 +1319,62 @@
                       ],
                       "rank_note": "Ordered from policy to industry to everyday consumption."
                     }
-                  },
-                  {
-                    "id": "AR.O.A4.G10",
-                    "anchor": "group:AR.O.A4.G10",
-                    "statement": "Media-oriented cultural studies fields take screen media and general cultural analysis as the subject of the work.",
-                    "name": "Media-oriented cultural studies fields take screen media and general cultural analysis as the subject of the work.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:470214",
-                          "anchor": "node:ANZSRC:470214",
-                          "statement": "Screen and media culture",
-                          "name": "Screen and media culture"
-                        },
-                        {
-                          "id": "ANZSRC:470299",
-                          "anchor": "node:ANZSRC:470299",
-                          "statement": "Cultural studies not elsewhere classified",
-                          "name": "Cultural studies not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Ordered from the specific media field to the general residual category."
-                    }
                   }
                 ]
               }
             }
           ]
-        }
+        },
+        "title": "Context and reception"
       },
       {
         "id": "AR.K5",
         "anchor": "pillar:AR.K5",
-        "title": "Value",
-        "statement": "Value is the aspect of the work concerned with interpreting, evaluating and judging it within the broader scholarly and humanistic disciplines.",
-        "name": "Value is the aspect of the work concerned with interpreting, evaluating and judging it within the broader scholarly and humanistic disciplines.",
+        "statement": "Value is the feature of a work concerned with how it is judged, studied historically and assigned standing within culture.",
+        "name": "Value is the feature of a work concerned with how it is judged, studied historically and assigned standing within culture.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "structure",
-          "rank_note": "From critical judgment of works to the disciplines that frame them.",
+          "rank_note": "Sections run from direct critical judgment to historical and theoretical standing.",
           "points": [
             {
-              "id": "AR.O.A4.G1",
-              "anchor": "group:AR.O.A4.G1",
-              "statement": "Art history, theory and criticism is the field of scholarship that interprets, evaluates and historically situates works of art.",
-              "name": "Art history, theory and criticism is the field of scholarship that interprets, evaluates and historically situates works of art.",
+              "id": "AR.K5.S1",
+              "anchor": "section:AR.K5.S1",
+              "statement": "Criticism assesses the worth of works by judging their qualities against standards of art.",
+              "name": "Criticism assesses the worth of works by judging their qualities against standards of art.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
+                "rank_note": "Ordered from critical judgment to residual creative arts.",
                 "points": [
-                  {
-                    "id": "ANZSRC:3601",
-                    "anchor": "node:ANZSRC:3601",
-                    "statement": "Art history, theory and criticism",
-                    "name": "Art history, theory and criticism"
-                  },
                   {
                     "id": "ANZSRC:360101",
                     "anchor": "node:ANZSRC:360101",
                     "statement": "Art criticism",
                     "name": "Art criticism"
                   },
+                  {
+                    "id": "ANZSRC:3699",
+                    "anchor": "node:ANZSRC:3699",
+                    "statement": "Other creative arts and writing",
+                    "name": "Other creative arts and writing"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "AR.K5.S2",
+              "anchor": "section:AR.K5.S2",
+              "statement": "Art history and art theory assign works their standing by tracing their significance over time and in principle.",
+              "name": "Art history and art theory assign works their standing by tracing their significance over time and in principle.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from art history to art theory.",
+                "points": [
                   {
                     "id": "ANZSRC:360102",
                     "anchor": "node:ANZSRC:360102",
@@ -1302,49 +1387,42 @@
                     "statement": "Art theory",
                     "name": "Art theory"
                   }
-                ],
-                "rank_note": "Ordered from the whole field to its main sub-fields."
-              }
-            },
-            {
-              "id": "AR.O.A4.G7",
-              "anchor": "group:AR.O.A4.G7",
-              "statement": "Humanities-field concepts name the broad scholarly and artistic disciplines that frame a work as belonging to the humanities or arts.",
-              "name": "Humanities-field concepts name the broad scholarly and artistic disciplines that frame a work as belonging to the humanities or arts.",
-              "support": {
-                "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
-                "order": "structure",
-                "points": [
-                  {
-                    "id": "MeSH:K",
-                    "anchor": "node:MeSH:K",
-                    "statement": "Humanities",
-                    "name": "Humanities"
-                  },
-                  {
-                    "id": "MeSH:K01",
-                    "anchor": "node:MeSH:K01",
-                    "statement": "Humanities",
-                    "name": "Humanities"
-                  },
-                  {
-                    "id": "LCC:NX",
-                    "anchor": "node:LCC:NX",
-                    "statement": "Arts in general",
-                    "name": "Arts in general"
-                  }
-                ],
-                "rank_note": "Ordered from the general humanities headings to the arts and music literature."
+                ]
               }
             }
           ]
-        }
+        },
+        "title": "Value"
       }
     ]
   },
-  "retired": [],
+  "retired": [
+    {
+      "id": "ANZSRC:3606",
+      "name": "Visual arts",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "ANZSRC:3605",
+      "name": "Screen and digital media",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "ANZSRC:3604",
+      "name": "Performing arts",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "ANZSRC:3602",
+      "name": "Creative and professional writing",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "ANZSRC:3601",
+      "name": "Art history, theory and criticism",
+      "reason": "container heading for the whole field, not a topic"
+    }
+  ],
   "build": {
     "script": "scripts/minto_pass.py",
     "model": "claude-sonnet-5-5",
@@ -1356,18 +1434,19 @@
     ]
   },
   "field_check": {
-    "governing_thought": "Arts and literature is divided by the feature of the work that a claim is about, running from the material object outward to judgment: medium and making, form, meaning, context and reception, and value.",
+    "governing_thought": "Arts and literature is divided by the feature of the work a claim is about, running outward from the material object to judgment: medium and making, form, meaning, context and reception, and value.",
     "key_line": [
-      "Medium and making is the aspect of the work concerned with the material or expressive medium in which it is made and the practice of making it.",
-      "Form is the aspect of the work concerned with its own structure, features and attributes, such as genre, theoretical approach, design elements and physical properties.",
-      "Meaning is the aspect of the work concerned with the concepts, representations and subjects it expresses or is about.",
-      "Context and reception is the aspect of the work concerned with the place, tradition, language and cultural setting from which it comes and in which it is received.",
-      "Value is the aspect of the work concerned with interpreting, evaluating and judging it within the broader scholarly and humanistic disciplines."
+      "Medium and making is the feature of a work concerned with the material, technique and process by which it is produced.",
+      "Form is the feature of a work concerned with its design, structure, genre and style as it appears to the audience.",
+      "Meaning is the feature of a work concerned with what it represents, expresses and conveys through ideas and theory.",
+      "Context and reception is the feature of a work concerned with the place, language, time, industry and audience in which it is produced and received.",
+      "Value is the feature of a work concerned with how it is judged, studied historically and assigned standing within culture."
     ],
     "holds": false,
-    "note": "Regional literatures (P4.1) and language literatures (P4.2) overlap on Asian, Middle Eastern and European groups; P2.1 literary-study groups overlap P4; P2.2, P3.1 and P3.2 are catalogue-style labels.",
-    "review": true,
-    "problems": 7
+    "note": "Key line holds; misplaced include P2.2.2.5, P2.2.3.2 (context), P3.1.2.2 (value), P3.2.2.1, P3.3.3.1, P5.1.2, P2.1.3, P2.1.4, P2.2.4.1.",
+    "review": false,
+    "misplaced": 12,
+    "problems": 13
   },
-  "cost_usd": 0.3176
+  "cost_usd": 0.4864
 }

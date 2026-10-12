@@ -368,7 +368,10 @@
                         "id": "ANZSRC:3606",
                         "anchor": "node:ANZSRC:3606",
                         "statement": "Visual arts",
-                        "name": "Visual arts"
+                        "name": "Visual arts",
+                        "aliases": [
+                          "LCC:N"
+                        ]
                       },
                       {
                         "id": "LCC:N",
@@ -1382,17 +1385,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Arts and literature is divided by the feature of the work that a claim is about, running from the material object outward to judgment: medium and making, form, meaning, context and reception, and value.",
+    "governing_thought": "Arts and literature is divided by the feature of the work a claim is about, running outward from the material object to judgment: medium and making, form, meaning, context and reception, and value.",
     "key_line": [
-      "Medium and making is the aspect of the work concerned with the material or expressive medium in which it is made and the practice of making it.",
-      "Form is the aspect of the work concerned with its own structure, features and attributes, such as genre, theoretical approach, design elements and physical properties.",
-      "Meaning is the aspect of the work concerned with the concepts, representations and subjects it expresses or is about.",
-      "Context and reception is the aspect of the work concerned with the place, tradition, language and cultural setting from which it comes and in which it is received.",
-      "Value is the aspect of the work concerned with interpreting, evaluating and judging it within the broader scholarly and humanistic disciplines."
+      "Medium and making is the feature of a work concerned with the material, technique and process by which it is produced.",
+      "Form is the feature of a work concerned with its design, structure, genre and style as it appears to the audience.",
+      "Meaning is the feature of a work concerned with what it represents, expresses and conveys through ideas and theory.",
+      "Context and reception is the feature of a work concerned with the place, language, time, industry and audience in which it is produced and received.",
+      "Value is the feature of a work concerned with how it is judged, studied historically and assigned standing within culture."
     ],
     "holds": false,
-    "note": "Regional literatures (P4.1) and language literatures (P4.2) overlap on Asian, Middle Eastern and European groups; P2.1 literary-study groups overlap P4; P2.2, P3.1 and P3.2 are catalogue-style labels.",
-    "review": true,
-    "problems": 7
+    "note": "Key line holds; misplaced include P2.2.2.5, P2.2.3.2 (context), P3.1.2.2 (value), P3.2.2.1, P3.3.3.1, P5.1.2, P2.1.3, P2.1.4, P2.2.4.1.",
+    "review": false,
+    "misplaced": 12,
+    "problems": 13
   }
 }
