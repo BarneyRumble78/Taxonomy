@@ -234,10 +234,10 @@
                   }
                 },
                 {
-                  "id": "HI.O.A1.G6",
-                  "anchor": "group:HI.O.A1.G6",
-                  "statement": "Inscriptions and epigraphy assert the human past through the study of texts carved or written on durable surfaces that survive as direct evidence.",
-                  "name": "Inscriptions and epigraphy assert the human past through the study of texts carved or written on durable surfaces that survive as direct evidence.",
+                  "id": "HI.O.A1.G10",
+                  "anchor": "group:HI.O.A1.G10",
+                  "statement": "Inscriptions and epigraphy assert the human past through texts carved or written on durable surfaces, deciphered and read as direct physical records.",
+                  "name": "Inscriptions and epigraphy assert the human past through texts carved or written on durable surfaces, deciphered and read as direct physical records.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -255,7 +255,22 @@
                         "anchor": "node:LCCf:CN:inscriptions-epigraphy",
                         "statement": "Inscriptions. Epigraphy",
                         "name": "Inscriptions. Epigraphy"
-                      },
+                      }
+                    ],
+                    "rank_note": "Not ranked; one kind of historical source among two."
+                  }
+                },
+                {
+                  "id": "HI.O.A1.G11",
+                  "anchor": "group:HI.O.A1.G11",
+                  "statement": "Biography asserts the human past through accounts of individual people's lives, treating personal careers as evidence of what happened.",
+                  "name": "Biography asserts the human past through accounts of individual people's lives, treating personal careers as evidence of what happened.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
                       {
                         "id": "LCCf:CT:biography",
                         "anchor": "node:LCCf:CT:biography",
@@ -269,9 +284,8 @@
                         "name": "BIOGRAPHY"
                       }
                     ],
-                    "rank_note": "Ordered by structure: evidence-based discipline of inscribed source material."
-                  },
-                  "further": true
+                    "rank_note": "Not ranked; one kind of historical source among two."
+                  }
                 },
                 {
                   "id": "HI.O.A1.G7",
@@ -2059,5 +2073,12 @@
         "rank_note": "Four sub-areas of the field, each distinguished by what it asserts about the human past."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "History is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five assertions about the past: occurrence, time, cause, change and continuity, and meaning and memory.",
+    "key_line": "Dimension: **what the sentence asserts about the human past.** Order: from the single fact to its meaning.\n1. Occurrence\n2. Time\n3. Cause\n4. Change and continuity\n5. Meaning and memory\n\nA period, region or nation is a catalogue (substrate), not a cell. \"Medieval Europe\" indexes claims; it does not hold them.",
+    "holds": false,
+    "note": "The cells describe disciplines, subject classes, regional catalogues and storage sub-areas, not the five assertions about the past (occurrence, time, cause, change and continuity, meaning and memory).",
+    "review": true
+  }
 }

@@ -37,10 +37,12 @@
       - NUMISMATICS
       - Numismatics
       - Inscriptions. Epigraphy
-    - **Inscriptions and epigraphy assert the human past through the study of texts carved or written on durable surfaces that survive as direct evidence.**
-      _basis: kinds, order: structure. Ordered by structure: evidence-based discipline of inscribed source material._
+    - **Inscriptions and epigraphy assert the human past through texts carved or written on durable surfaces, deciphered and read as direct physical records.**
+      _basis: kinds, order: structure. Not ranked; one kind of historical source among two._
       - INSCRIPTIONS. EPIGRAPHY
       - Inscriptions. Epigraphy
+    - **Biography asserts the human past through accounts of individual people's lives, treating personal careers as evidence of what happened.**
+      _basis: kinds, order: structure. Not ranked; one kind of historical source among two._
       - Biography
       - BIOGRAPHY
     - **Genealogy and biography assert the human past by tracing the descent, relationships, and lives of particular families and individuals.**
