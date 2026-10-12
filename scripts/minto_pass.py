@@ -74,6 +74,7 @@ CHECK_SYSTEM = """You check a classification pyramid from the top down (Minto ke
 key_line_holds is true when ALL of these are true: (a) the governing thought names one dimension intrinsic to the field (for example what the knowledge is about, the role a piece of knowledge plays, a causal link, scale, stage or theme) and answers the question how the field divides; (b) there are 2-5 pillars and each is a distinct value of that one dimension; (c) together the pillars cover the field, and no pillar is a catch-all; (d) each pillar statement restates its own value of the dimension; (e) no pillar or section is organised by a library, catalogue or code scheme.
 Judge (a)-(e) on the governing thought, the pillars and their direct sections only. Do NOT set key_line_holds false because of individual misplaced items deeper down; count those in misplaced instead.
 misplaced: the number of second- or third-level items that clearly belong under a different pillar.
+Field-specific facts: in information science (IS) and library science, classification schemes, thesauri and catalogues are the subject matter itself, so a section about named schemes is legitimate there. In any field, a pillar for the discipline studied as a human activity (its history, teaching, methodology and profession) is a legitimate value when the dimension is the role the knowledge plays; judge it by whether its members fit that value.
 Ids like P1.2 are neutral positions, not codes. Leaf topic names come from published sources and cannot be renamed.
 note: one sentence, at most twenty-five words: the worst key-line problem if key_line_holds is false, otherwise the worst misplaced items by position.
 Call the tool record_check exactly once."""
@@ -81,6 +82,7 @@ CHECK_SCHEMA = {"type": "object", "additionalProperties": False,
                 "properties": {"key_line_holds": {"type": "boolean"}, "misplaced": {"type": "integer"}, "note": {"type": "string"}}, "required": ["key_line_holds", "misplaced", "note"]}
 
 EXPAND = re.compile(BAN.pattern + r"|\bcontainer|classifications?\b|\bcategories\b", re.I)
+PRE_RETIRED = []
 LOG = Path("/workspace/minto_pass.log")
 
 
@@ -110,6 +112,9 @@ def add_spend(field, usd):
 
 class Budget:
     def __init__(self, field, field_cap, stage_cap):
+        cap_file = Path("/workspace/minto_stage_cap")
+        if cap_file.exists():
+            stage_cap = min(28.0, float(cap_file.read_text().strip()))  # Chris approved $28 hard cap
         self.field, self.field_cap, self.stage_cap, self.used = field, field_cap, stage_cap, 0.0
 
     def call(self, system, user, tool, schema, max_tokens):
@@ -192,6 +197,12 @@ def load(field):
         else:
             byname[nm] = k
     for k in drop:
+        items.pop(k)
+    # Catalogue residual leaves are not topics: retire them before the model sees them.
+    RESID = re.compile(r"not elsewhere classified|\bn\.?e\.?c\.?\b|^\s*(general|miscellaneous|other)\b|\bmiscellan|, general$|\(general\)", re.I)
+    pre = [k for k, v in items.items() if not (v["point"].get("support") or {}).get("points") and RESID.search(v["point"].get("name") or v["point"].get("statement") or "")]
+    PRE_RETIRED[:] = [{"id": k, "name": items[k]["point"].get("name"), "reason": "catalogue residual heading, not a topic"} for k in pre]
+    for k in pre:
         items.pop(k)
     md = (ROOT / "pyramids" / f"{field}.md")
     text = md.read_text() if md.exists() else ""
@@ -327,7 +338,7 @@ def build(field, r, items):
             "governing_thought": r["governing_thought"],
             "key_line": {"logic_type": "inductive", "plural_noun": r["plural_noun"], "mece_dimension": r["dimension"],
                          "basis": r["basis"], "order": r["order"], "rank_note": r["rank_note"], "points": pts},
-            "retired": [{"id": x, "name": items[x]["point"].get("name"), "reason": "container heading for the whole field, not a topic"} for x in r.get("retired") or []],
+            "retired": [{"id": x, "name": items[x]["point"].get("name"), "reason": "container heading for the whole field, not a topic"} for x in r.get("retired") or []] + PRE_RETIRED,
             "build": {"script": "scripts/minto_pass.py", "model": MODEL, "source": f"pyramids/queues/{field}.groups.json"}}
 
 
