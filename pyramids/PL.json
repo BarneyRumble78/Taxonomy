@@ -1,272 +1,89 @@
 {
   "field": "PL",
   "introduction": {
-    "situation": "Philosophy asks questions about reality, knowledge, meaning, value and inquiry, and has been organised by many schemes.",
-    "complication": "Existing groupings mix subject matter with periods, regions, school-level teaching and catch-all headings, so related questions are scattered.",
-    "question": "How is everything in philosophy divided by the kind of question it asks?",
-    "answer": "Philosophy is divided by what its questions are about: being, knowledge and mind, meaning and inference, value, and the standing of the sciences, mathematics and philosophy itself."
+    "situation": "Philosophy asks questions about reality, thought, language, value and inquiry, and its literature has grown in many separately labelled areas.",
+    "complication": "The areas are labelled by overlapping schemes, with duplicates, residual headings and mixed groupings that hide what each question is actually about.",
+    "question": "How is everything in philosophy divided by what its questions are about?",
+    "answer": "Philosophy is divided by what its questions are about into being, knowledge and mind, meaning and inference, value, and the standing of the sciences and of philosophy itself."
   },
-  "governing_thought": "Philosophy is divided by what its questions are about: being, knowledge and mind, meaning and inference, value, and the standing of the sciences, mathematics and philosophy itself.",
+  "governing_thought": "Philosophy is divided by what its questions are about into being, knowledge and mind, meaning and inference, value, and the standing of the sciences and of philosophy itself.",
   "key_line": {
     "logic_type": "inductive",
-    "plural_noun": "claim-types",
+    "plural_noun": "kinds of philosophical question",
     "mece_dimension": "what the question is about",
     "basis": "kinds",
     "order": "structure",
-    "rank_note": "The pillars run from being, to knowing, to saying, to valuing, to the standing of the sciences and of inquiry itself.",
+    "rank_note": "The pillars run from being, to knowing, to saying, to valuing, to the sciences and disciplines that study the world.",
     "points": [
       {
         "id": "PL.K1",
         "anchor": "pillar:PL.K1",
-        "statement": "Being is the claim-type concerned with what exists, including fundamental reality, religious questions, action and the place of consciousness in nature.",
-        "name": "Being is the claim-type concerned with what exists, including fundamental reality, religious questions, action and the place of consciousness in nature.",
+        "statement": "Being is the kind of question that asks what exists and what the fundamental nature of reality is.",
+        "name": "Being is the kind of question that asks what exists and what the fundamental nature of reality is.",
         "support": {
           "logic_type": "inductive",
-          "basis": "parts",
+          "basis": "kinds",
           "order": "structure",
-          "rank_note": "From the most fundamental reality to its specific manifestations.",
+          "rank_note": "Speculative metaphysics comes first, then the combined core branches.",
           "points": [
             {
-              "id": "PL.K1.S1",
-              "anchor": "section:PL.K1.S1",
-              "statement": "Metaphysics and speculative philosophy ask what reality and existence fundamentally are.",
-              "name": "Metaphysics and speculative philosophy ask what reality and existence fundamentally are.",
+              "id": "PL.O.A1.G4",
+              "anchor": "group:PL.O.A1.G4",
+              "statement": "Metaphysics and speculative philosophy cover questions about the fundamental nature of reality and being.",
+              "name": "Metaphysics and speculative philosophy cover questions about the fundamental nature of reality and being.",
               "support": {
                 "logic_type": "inductive",
+                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "General first, then the speculative branch.",
                 "points": [
                   {
-                    "id": "PL.O.A1.G4",
-                    "anchor": "group:PL.O.A1.G4",
-                    "statement": "Metaphysics and speculative philosophy cover questions about the fundamental nature of reality and being.",
-                    "name": "Metaphysics and speculative philosophy cover questions about the fundamental nature of reality and being.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:500309",
-                          "anchor": "node:ANZSRC:500309",
-                          "statement": "Metaphysics",
-                          "name": "Metaphysics"
-                        },
-                        {
-                          "id": "LCC:BD",
-                          "anchor": "node:LCC:BD",
-                          "statement": "Speculative philosophy",
-                          "name": "Speculative philosophy"
-                        },
-                        {
-                          "id": "PP:me-misc",
-                          "anchor": "node:PP:me-misc",
-                          "statement": "M&E, Misc",
-                          "name": "M&E, Misc"
-                        }
-                      ],
-                      "rank_note": "Listed from the specific metaphysics heading to the broader speculative and miscellaneous headings."
-                    }
+                    "id": "ANZSRC:500309",
+                    "anchor": "node:ANZSRC:500309",
+                    "statement": "Metaphysics",
+                    "name": "Metaphysics"
                   },
                   {
-                    "id": "PL.O.A1.G6",
-                    "anchor": "group:PL.O.A1.G6",
-                    "statement": "Core theoretical branches of philosophy ask what exists and how we know it.",
-                    "name": "Core theoretical branches of philosophy ask what exists and how we know it.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "PP:metaphysics",
-                          "anchor": "node:PP:metaphysics",
-                          "statement": "Metaphysics",
-                          "name": "Metaphysics"
-                        },
-                        {
-                          "id": "PP:metaphysics-and-epistemology",
-                          "anchor": "node:PP:metaphysics-and-epistemology",
-                          "statement": "Metaphysics and Epistemology",
-                          "name": "Metaphysics and Epistemology"
-                        }
-                      ],
-                      "rank_note": "Ordered from metaphysics alone to its pairing with epistemology."
-                    }
+                    "id": "LCC:BD",
+                    "anchor": "node:LCC:BD",
+                    "statement": "Speculative philosophy",
+                    "name": "Speculative philosophy"
+                  },
+                  {
+                    "id": "PP:me-misc",
+                    "anchor": "node:PP:me-misc",
+                    "statement": "M&E, Misc",
+                    "name": "M&E, Misc"
                   }
-                ]
+                ],
+                "rank_note": "Listed from the specific metaphysics heading to the broader speculative and miscellaneous headings."
               }
             },
             {
-              "id": "PL.K1.S2",
-              "anchor": "section:PL.K1.S2",
-              "statement": "Questions about religion and intentional action ask what ultimate reality and human agency involve.",
-              "name": "Questions about religion and intentional action ask what ultimate reality and human agency involve.",
+              "id": "PL.O.A1.G6",
+              "anchor": "group:PL.O.A1.G6",
+              "statement": "Core theoretical branches of philosophy ask what exists and how we know it.",
+              "name": "Core theoretical branches of philosophy ask what exists and how we know it.",
               "support": {
                 "logic_type": "inductive",
+                "plural_noun": "members",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "Religion first, then action, then children's treatment.",
                 "points": [
                   {
-                    "id": "PP:philosophy-of-religion",
-                    "anchor": "node:PP:philosophy-of-religion",
-                    "statement": "Philosophy of Religion",
-                    "name": "Philosophy of Religion"
+                    "id": "PP:metaphysics",
+                    "anchor": "node:PP:metaphysics",
+                    "statement": "Metaphysics",
+                    "name": "Metaphysics"
                   },
                   {
-                    "id": "PP:philosophy-for-children-religion-and-spirituality",
-                    "anchor": "node:PP:philosophy-for-children-religion-and-spirituality",
-                    "statement": "Philosophy for Children: Religion and Spirituality",
-                    "name": "Philosophy for Children: Religion and Spirituality"
-                  },
-                  {
-                    "id": "PP:philosophy-of-action",
-                    "anchor": "node:PP:philosophy-of-action",
-                    "statement": "Philosophy of Action",
-                    "name": "Philosophy of Action"
+                    "id": "PP:metaphysics-and-epistemology",
+                    "anchor": "node:PP:metaphysics-and-epistemology",
+                    "statement": "Metaphysics and Epistemology",
+                    "name": "Metaphysics and Epistemology"
                   }
-                ]
-              }
-            },
-            {
-              "id": "PL.K1.S3",
-              "anchor": "section:PL.K1.S3",
-              "statement": "Consciousness in nature asks how awareness exists in relation to the brain, biology, physics and its varied states.",
-              "name": "Consciousness in nature asks how awareness exists in relation to the brain, biology, physics and its varied states.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From the natural sciences to brain correlates to forms of consciousness.",
-                "points": [
-                  {
-                    "id": "PL.O.A5.G6",
-                    "anchor": "group:PL.O.A5.G6",
-                    "statement": "Consciousness and the natural sciences covers questions about how awareness relates to brain, biology, and physics.",
-                    "name": "Consciousness and the natural sciences covers questions about how awareness relates to brain, biology, and physics.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "PP:consciousness-and-neuroscience-foundational-issues",
-                          "anchor": "node:PP:consciousness-and-neuroscience-foundational-issues",
-                          "statement": "Consciousness and Neuroscience, Foundational Issues",
-                          "name": "Consciousness and Neuroscience, Foundational Issues"
-                        },
-                        {
-                          "id": "PP:consciousness-and-neuroscience-misc",
-                          "anchor": "node:PP:consciousness-and-neuroscience-misc",
-                          "statement": "Consciousness and Neuroscience, Misc",
-                          "name": "Consciousness and Neuroscience, Misc"
-                        },
-                        {
-                          "id": "PP:consciousness-and-biology-misc",
-                          "anchor": "node:PP:consciousness-and-biology-misc",
-                          "statement": "Consciousness and Biology, Misc",
-                          "name": "Consciousness and Biology, Misc"
-                        },
-                        {
-                          "id": "PP:consciousness-and-physics",
-                          "anchor": "node:PP:consciousness-and-physics",
-                          "statement": "Consciousness and Physics",
-                          "name": "Consciousness and Physics"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from the specific neuroscience topics to the wider biology and physics topics."
-                    }
-                  },
-                  {
-                    "id": "PL.O.A5.G11",
-                    "anchor": "group:PL.O.A5.G11",
-                    "statement": "Neural correlates of consciousness research asks which brain processes, timing patterns and synchrony accompany conscious experience.",
-                    "name": "Neural correlates of consciousness research asks which brain processes, timing patterns and synchrony accompany conscious experience.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "PP:neural-correlates-of-consciousness",
-                          "anchor": "node:PP:neural-correlates-of-consciousness",
-                          "statement": "Neural Correlates of Consciousness",
-                          "name": "Neural Correlates of Consciousness"
-                        },
-                        {
-                          "id": "PP:neural-correlates-of-visual-consciousness",
-                          "anchor": "node:PP:neural-correlates-of-visual-consciousness",
-                          "statement": "Neural Correlates of Visual Consciousness",
-                          "name": "Neural Correlates of Visual Consciousness"
-                        },
-                        {
-                          "id": "PP:neural-synchrony-and-binding",
-                          "anchor": "node:PP:neural-synchrony-and-binding",
-                          "statement": "Neural Synchrony and Binding",
-                          "name": "Neural Synchrony and Binding"
-                        },
-                        {
-                          "id": "PP:neural-timing-and-consciousness",
-                          "anchor": "node:PP:neural-timing-and-consciousness",
-                          "statement": "Neural Timing and Consciousness",
-                          "name": "Neural Timing and Consciousness"
-                        },
-                        {
-                          "id": "PP:phenomenology-and-consciousness",
-                          "anchor": "node:PP:phenomenology-and-consciousness",
-                          "statement": "Phenomenology and Consciousness",
-                          "name": "Phenomenology and Consciousness"
-                        }
-                      ],
-                      "rank_note": "Listed from general neural correlates to specific aspects; no ranking implied."
-                    }
-                  },
-                  {
-                    "id": "PL.O.A5.G21",
-                    "anchor": "group:PL.O.A5.G21",
-                    "statement": "This group covers the different forms and conditions in which consciousness itself shows up, from altered states to unconscious processing.",
-                    "name": "This group covers the different forms and conditions in which consciousness itself shows up, from altered states to unconscious processing.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "PP:states-of-consciousness",
-                          "anchor": "node:PP:states-of-consciousness",
-                          "statement": "States of Consciousness",
-                          "name": "States of Consciousness"
-                        },
-                        {
-                          "id": "PP:the-minimally-conscious-state",
-                          "anchor": "node:PP:the-minimally-conscious-state",
-                          "statement": "The Minimally Conscious State",
-                          "name": "The Minimally Conscious State"
-                        },
-                        {
-                          "id": "PP:the-stream-of-consciousness",
-                          "anchor": "node:PP:the-stream-of-consciousness",
-                          "statement": "The Stream of Consciousness",
-                          "name": "The Stream of Consciousness"
-                        },
-                        {
-                          "id": "PP:unconscious-and-conscious-processes",
-                          "anchor": "node:PP:unconscious-and-conscious-processes",
-                          "statement": "Unconscious and Conscious Processes",
-                          "name": "Unconscious and Conscious Processes"
-                        }
-                      ],
-                      "rank_note": "structure"
-                    }
-                  }
-                ]
+                ],
+                "rank_note": "Ordered from metaphysics alone to its pairing with epistemology."
               }
             }
           ]
@@ -276,24 +93,24 @@
       {
         "id": "PL.K2",
         "anchor": "pillar:PL.K2",
-        "statement": "Knowledge and mind is the claim-type concerned with how we know, what the mind is, and how minds malfunction.",
-        "name": "Knowledge and mind is the claim-type concerned with how we know, what the mind is, and how minds malfunction.",
+        "statement": "Knowledge and mind is the kind of question that asks how we know, what the mind is, how consciousness arises and how mental life can fail.",
+        "name": "Knowledge and mind is the kind of question that asks how we know, what the mind is, how consciousness arises and how mental life can fail.",
         "support": {
           "logic_type": "inductive",
-          "basis": "parts",
+          "basis": "kinds",
           "order": "structure",
-          "rank_note": "From knowledge, to mind in general, to the study of consciousness, to disorders.",
+          "rank_note": "Sections move from knowledge, to mind, to consciousness, to disorders of mind.",
           "points": [
             {
               "id": "PL.K2.S1",
               "anchor": "section:PL.K2.S1",
-              "statement": "Epistemology asks about the nature, sources, justification and limits of knowledge and belief.",
-              "name": "Epistemology asks about the nature, sources, justification and limits of knowledge and belief.",
+              "statement": "Knowledge and the philosophy of mind ask about the nature of belief, justification, experience, cognition and action.",
+              "name": "Knowledge and the philosophy of mind ask about the nature of belief, justification, experience, cognition and action.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "Knowledge first, then lived experience of the knower.",
+                "rank_note": "Knowledge comes first, then experience, then mind.",
                 "points": [
                   {
                     "id": "PL.O.A2.G3",
@@ -348,21 +165,7 @@
                       ],
                       "rank_note": "Both are mind-focused fields, listed by source order."
                     }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "PL.K2.S2",
-              "anchor": "section:PL.K2.S2",
-              "statement": "Philosophy of mind asks what mind, cognition and experience are and how they can be approached through lived practice.",
-              "name": "Philosophy of mind asks what mind, cognition and experience are and how they can be approached through lived practice.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "Mind first, then experiential approaches.",
-                "points": [
+                  },
                   {
                     "id": "PL.O.A2.G2",
                     "anchor": "group:PL.O.A2.G2",
@@ -403,10 +206,10 @@
                     }
                   },
                   {
-                    "id": "PL.O.A5.G9",
-                    "anchor": "group:PL.O.A5.G9",
-                    "statement": "Experiential and contemplative approaches cover questions about studying consciousness through lived experience and Eastern traditions.",
-                    "name": "Experiential and contemplative approaches cover questions about studying consciousness through lived experience and Eastern traditions.",
+                    "id": "PL.O.A1.G11",
+                    "anchor": "group:PL.O.A1.G11",
+                    "statement": "Topical subfields take up a specific philosophical subject, such as intentional action or religious belief.",
+                    "name": "Topical subfields take up a specific philosophical subject, such as intentional action or religious belief.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -414,41 +217,200 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "PP:first-person-approaches-in-the-science-of-consciousness-misc",
-                          "anchor": "node:PP:first-person-approaches-in-the-science-of-consciousness-misc",
-                          "statement": "First-Person Approaches in the Science of Consciousness, Misc",
-                          "name": "First-Person Approaches in the Science of Consciousness, Misc"
+                          "id": "PP:philosophy-of-action",
+                          "anchor": "node:PP:philosophy-of-action",
+                          "statement": "Philosophy of Action",
+                          "name": "Philosophy of Action"
                         },
                         {
-                          "id": "PP:eastern-approaches-to-consciousness",
-                          "anchor": "node:PP:eastern-approaches-to-consciousness",
-                          "statement": "Eastern Approaches to Consciousness",
-                          "name": "Eastern Approaches to Consciousness"
-                        },
-                        {
-                          "id": "PP:depression",
-                          "anchor": "node:PP:depression",
-                          "statement": "Depression",
-                          "name": "Depression"
+                          "id": "PP:philosophy-of-religion",
+                          "anchor": "node:PP:philosophy-of-religion",
+                          "statement": "Philosophy of Religion",
+                          "name": "Philosophy of Religion"
                         }
                       ],
-                      "rank_note": "Ordered by structure, from first-person methods to Eastern traditions."
+                      "rank_note": "Ordered by structure of topic: action first, then religion."
                     }
                   }
                 ]
               }
             },
             {
-              "id": "PL.K2.S3",
-              "anchor": "section:PL.K2.S3",
-              "statement": "Psychological approaches to consciousness ask how mind, control and self-monitoring are framed by psychology.",
-              "name": "Psychological approaches to consciousness ask how mind, control and self-monitoring are framed by psychology.",
+              "id": "PL.K2.S2",
+              "anchor": "section:PL.K2.S2",
+              "statement": "Consciousness research asks how awareness appears and how it relates to brain, biology, physics and psychology.",
+              "name": "Consciousness research asks how awareness appears and how it relates to brain, biology, physics and psychology.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "Foundations then fields.",
+                "rank_note": "General appearances come first, then the natural and psychological sciences of consciousness.",
                 "points": [
+                  {
+                    "id": "PL.O.A5.G25",
+                    "anchor": "group:PL.O.A5.G25",
+                    "statement": "Questions about how consciousness appears and is studied, through brain processes, its various states, psychological methods and lived experience.",
+                    "name": "Questions about how consciousness appears and is studied, through brain processes, its various states, psychological methods and lived experience.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PL.O.A5.G11",
+                          "anchor": "group:PL.O.A5.G11",
+                          "statement": "Neural correlates of consciousness research asks which brain processes, timing patterns and synchrony accompany conscious experience.",
+                          "name": "Neural correlates of consciousness research asks which brain processes, timing patterns and synchrony accompany conscious experience.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PP:neural-correlates-of-consciousness",
+                                "anchor": "node:PP:neural-correlates-of-consciousness",
+                                "statement": "Neural Correlates of Consciousness",
+                                "name": "Neural Correlates of Consciousness"
+                              },
+                              {
+                                "id": "PP:neural-correlates-of-visual-consciousness",
+                                "anchor": "node:PP:neural-correlates-of-visual-consciousness",
+                                "statement": "Neural Correlates of Visual Consciousness",
+                                "name": "Neural Correlates of Visual Consciousness"
+                              },
+                              {
+                                "id": "PP:neural-synchrony-and-binding",
+                                "anchor": "node:PP:neural-synchrony-and-binding",
+                                "statement": "Neural Synchrony and Binding",
+                                "name": "Neural Synchrony and Binding"
+                              },
+                              {
+                                "id": "PP:neural-timing-and-consciousness",
+                                "anchor": "node:PP:neural-timing-and-consciousness",
+                                "statement": "Neural Timing and Consciousness",
+                                "name": "Neural Timing and Consciousness"
+                              },
+                              {
+                                "id": "PP:phenomenology-and-consciousness",
+                                "anchor": "node:PP:phenomenology-and-consciousness",
+                                "statement": "Phenomenology and Consciousness",
+                                "name": "Phenomenology and Consciousness"
+                              }
+                            ],
+                            "rank_note": "Listed from general neural correlates to specific aspects; no ranking implied."
+                          }
+                        },
+                        {
+                          "id": "PL.O.A5.G21",
+                          "anchor": "group:PL.O.A5.G21",
+                          "statement": "This group covers the different forms and conditions in which consciousness itself shows up, from altered states to unconscious processing.",
+                          "name": "This group covers the different forms and conditions in which consciousness itself shows up, from altered states to unconscious processing.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PP:states-of-consciousness",
+                                "anchor": "node:PP:states-of-consciousness",
+                                "statement": "States of Consciousness",
+                                "name": "States of Consciousness"
+                              },
+                              {
+                                "id": "PP:the-minimally-conscious-state",
+                                "anchor": "node:PP:the-minimally-conscious-state",
+                                "statement": "The Minimally Conscious State",
+                                "name": "The Minimally Conscious State"
+                              },
+                              {
+                                "id": "PP:the-stream-of-consciousness",
+                                "anchor": "node:PP:the-stream-of-consciousness",
+                                "statement": "The Stream of Consciousness",
+                                "name": "The Stream of Consciousness"
+                              },
+                              {
+                                "id": "PP:unconscious-and-conscious-processes",
+                                "anchor": "node:PP:unconscious-and-conscious-processes",
+                                "statement": "Unconscious and Conscious Processes",
+                                "name": "Unconscious and Conscious Processes"
+                              }
+                            ],
+                            "rank_note": "structure"
+                          }
+                        },
+                        {
+                          "id": "PL.O.A5.G22",
+                          "anchor": "group:PL.O.A5.G22",
+                          "statement": "This group covers the disciplinary fields and methods through which psychologists frame and study consciousness, including its timing and its verbal reports.",
+                          "name": "This group covers the disciplinary fields and methods through which psychologists frame and study consciousness, including its timing and its verbal reports.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PP:social-sciences",
+                                "anchor": "node:PP:social-sciences",
+                                "statement": "Social Sciences",
+                                "name": "Social Sciences"
+                              },
+                              {
+                                "id": "PP:time-and-consciousness-in-psychology",
+                                "anchor": "node:PP:time-and-consciousness-in-psychology",
+                                "statement": "Time and Consciousness in Psychology",
+                                "name": "Time and Consciousness in Psychology"
+                              },
+                              {
+                                "id": "PP:verbal-reports-and-heterophenomenology",
+                                "anchor": "node:PP:verbal-reports-and-heterophenomenology",
+                                "statement": "Verbal Reports and Heterophenomenology",
+                                "name": "Verbal Reports and Heterophenomenology"
+                              }
+                            ],
+                            "rank_note": "structure"
+                          }
+                        },
+                        {
+                          "id": "PL.O.A5.G9",
+                          "anchor": "group:PL.O.A5.G9",
+                          "statement": "Experiential and contemplative approaches cover questions about studying consciousness through lived experience and Eastern traditions.",
+                          "name": "Experiential and contemplative approaches cover questions about studying consciousness through lived experience and Eastern traditions.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PP:first-person-approaches-in-the-science-of-consciousness-misc",
+                                "anchor": "node:PP:first-person-approaches-in-the-science-of-consciousness-misc",
+                                "statement": "First-Person Approaches in the Science of Consciousness, Misc",
+                                "name": "First-Person Approaches in the Science of Consciousness, Misc"
+                              },
+                              {
+                                "id": "PP:eastern-approaches-to-consciousness",
+                                "anchor": "node:PP:eastern-approaches-to-consciousness",
+                                "statement": "Eastern Approaches to Consciousness",
+                                "name": "Eastern Approaches to Consciousness"
+                              },
+                              {
+                                "id": "PP:depression",
+                                "anchor": "node:PP:depression",
+                                "statement": "Depression",
+                                "name": "Depression"
+                              }
+                            ],
+                            "rank_note": "Ordered by structure, from first-person methods to Eastern traditions."
+                          }
+                        }
+                      ],
+                      "rank_note": "Ordered by structure, from brain correlates through forms of consciousness and methods of study to experiential approaches."
+                    }
+                  },
                   {
                     "id": "PL.O.A5.G7",
                     "anchor": "group:PL.O.A5.G7",
@@ -495,10 +457,10 @@
                     }
                   },
                   {
-                    "id": "PL.O.A5.G22",
-                    "anchor": "group:PL.O.A5.G22",
-                    "statement": "This group covers the disciplinary fields and methods through which psychologists frame and study consciousness, including its timing and its verbal reports.",
-                    "name": "This group covers the disciplinary fields and methods through which psychologists frame and study consciousness, including its timing and its verbal reports.",
+                    "id": "PL.O.A5.G6",
+                    "anchor": "group:PL.O.A5.G6",
+                    "statement": "Consciousness and the natural sciences covers questions about how awareness relates to brain, biology, and physics.",
+                    "name": "Consciousness and the natural sciences covers questions about how awareness relates to brain, biology, and physics.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -506,51 +468,96 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "PP:social-sciences",
-                          "anchor": "node:PP:social-sciences",
-                          "statement": "Social Sciences",
-                          "name": "Social Sciences"
+                          "id": "PP:consciousness-and-neuroscience-foundational-issues",
+                          "anchor": "node:PP:consciousness-and-neuroscience-foundational-issues",
+                          "statement": "Consciousness and Neuroscience, Foundational Issues",
+                          "name": "Consciousness and Neuroscience, Foundational Issues"
                         },
                         {
-                          "id": "PP:time-and-consciousness-in-psychology",
-                          "anchor": "node:PP:time-and-consciousness-in-psychology",
-                          "statement": "Time and Consciousness in Psychology",
-                          "name": "Time and Consciousness in Psychology"
+                          "id": "PP:consciousness-and-neuroscience-misc",
+                          "anchor": "node:PP:consciousness-and-neuroscience-misc",
+                          "statement": "Consciousness and Neuroscience, Misc",
+                          "name": "Consciousness and Neuroscience, Misc"
                         },
                         {
-                          "id": "PP:verbal-reports-and-heterophenomenology",
-                          "anchor": "node:PP:verbal-reports-and-heterophenomenology",
-                          "statement": "Verbal Reports and Heterophenomenology",
-                          "name": "Verbal Reports and Heterophenomenology"
+                          "id": "PP:consciousness-and-biology-misc",
+                          "anchor": "node:PP:consciousness-and-biology-misc",
+                          "statement": "Consciousness and Biology, Misc",
+                          "name": "Consciousness and Biology, Misc"
+                        },
+                        {
+                          "id": "PP:consciousness-and-physics",
+                          "anchor": "node:PP:consciousness-and-physics",
+                          "statement": "Consciousness and Physics",
+                          "name": "Consciousness and Physics"
                         }
                       ],
-                      "rank_note": "structure"
+                      "rank_note": "Ordered by structure, from the specific neuroscience topics to the wider biology and physics topics."
+                    }
+                  },
+                  {
+                    "id": "PL.O.A5.G17",
+                    "anchor": "group:PL.O.A5.G17",
+                    "statement": "Philosophy of mind and brain sciences asks about the nature of psychological and neural explanation and the scientific study of consciousness.",
+                    "name": "Philosophy of mind and brain sciences asks about the nature of psychological and neural explanation and the scientific study of consciousness.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PP:philosophy-of-neuroscience",
+                          "anchor": "node:PP:philosophy-of-neuroscience",
+                          "statement": "Philosophy of Neuroscience",
+                          "name": "Philosophy of Neuroscience"
+                        },
+                        {
+                          "id": "PP:philosophy-of-psychology",
+                          "anchor": "node:PP:philosophy-of-psychology",
+                          "statement": "Philosophy of Psychology",
+                          "name": "Philosophy of Psychology"
+                        },
+                        {
+                          "id": "PP:science-of-consciousness-miscellaneous",
+                          "anchor": "node:PP:science-of-consciousness-miscellaneous",
+                          "statement": "Science of Consciousness, Miscellaneous",
+                          "name": "Science of Consciousness, Miscellaneous"
+                        },
+                        {
+                          "id": "PP:science-of-visual-consciousness-misc",
+                          "anchor": "node:PP:science-of-visual-consciousness-misc",
+                          "statement": "Science of Visual Consciousness, Misc",
+                          "name": "Science of Visual Consciousness, Misc"
+                        }
+                      ],
+                      "rank_note": "Not ranked; arranged by structure."
                     }
                   }
                 ]
               }
             },
             {
-              "id": "PL.K2.S4",
-              "anchor": "section:PL.K2.S4",
-              "statement": "Disorders of mind ask how illness and impairment alter awareness, self and social understanding.",
-              "name": "Disorders of mind ask how illness and impairment alter awareness, self and social understanding.",
+              "id": "PL.K2.S3",
+              "anchor": "section:PL.K2.S3",
+              "statement": "Clinical disorders of mind ask how illness and impairment alter awareness, personality and social understanding.",
+              "name": "Clinical disorders of mind ask how illness and impairment alter awareness, personality and social understanding.",
               "support": {
                 "logic_type": "inductive",
-                "basis": "parts",
+                "basis": "kinds",
                 "order": "structure",
-                "rank_note": "Groups of disorders first, then specific conditions and psychiatry.",
+                "rank_note": "Group-level clinical conditions come first, then the general philosophy of psychiatry.",
                 "points": [
                   {
-                    "id": "PL.K2.S4.U1",
-                    "anchor": "section:PL.K2.S4.U1",
-                    "statement": "Clinical conditions and disorders raise questions about how illness impairs mind, awareness and social understanding.",
-                    "name": "Clinical conditions and disorders raise questions about how illness impairs mind, awareness and social understanding.",
+                    "id": "PL.O.A5.G26",
+                    "anchor": "group:PL.O.A5.G26",
+                    "statement": "Questions about clinical conditions and disorders that alter or impair mind, awareness and social understanding.",
+                    "name": "Questions about clinical conditions and disorders that alter or impair mind, awareness and social understanding.",
                     "support": {
                       "logic_type": "inductive",
+                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "structure",
-                      "rank_note": "From mind-brain disorders to specific clinical syndromes.",
                       "points": [
                         {
                           "id": "PL.O.A5.G4",
@@ -708,52 +715,53 @@
                             "rank_note": "Listed without ranking; each is a distinct type of condition."
                           }
                         }
-                      ]
+                      ],
+                      "rank_note": "Ordered by structure, from broad mind-and-brain questions to specific conditions and syndromes."
                     }
                   },
                   {
-                    "id": "PL.K2.S4.U2",
-                    "anchor": "section:PL.K2.S4.U2",
-                    "statement": "Psychiatry and psychopathology ask what mental illness and disordered personality are and how they should be understood.",
-                    "name": "Psychiatry and psychopathology ask what mental illness and disordered personality are and how they should be understood.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "rank_note": "General psychiatry first, then specific conditions.",
-                      "points": [
-                        {
-                          "id": "PP:philosophy-of-psychiatry",
-                          "anchor": "node:PP:philosophy-of-psychiatry",
-                          "statement": "Philosophy of Psychiatry",
-                          "name": "Philosophy of Psychiatry"
-                        },
-                        {
-                          "id": "PP:philosophy-of-psychiatry-and-psychopathology-misc",
-                          "anchor": "node:PP:philosophy-of-psychiatry-and-psychopathology-misc",
-                          "statement": "Philosophy of Psychiatry and Psychopathology, Misc",
-                          "name": "Philosophy of Psychiatry and Psychopathology, Misc"
-                        },
-                        {
-                          "id": "PP:psychopathology-misc",
-                          "anchor": "node:PP:psychopathology-misc",
-                          "statement": "Psychopathology, Misc",
-                          "name": "Psychopathology, Misc"
-                        },
-                        {
-                          "id": "PP:psychopathy",
-                          "anchor": "node:PP:psychopathy",
-                          "statement": "Psychopathy",
-                          "name": "Psychopathy"
-                        },
-                        {
-                          "id": "PP:schizophrenia",
-                          "anchor": "node:PP:schizophrenia",
-                          "statement": "Schizophrenia",
-                          "name": "Schizophrenia"
-                        }
-                      ]
-                    }
+                    "id": "PP:philosophy-of-psychiatry",
+                    "anchor": "node:PP:philosophy-of-psychiatry",
+                    "statement": "Philosophy of Psychiatry",
+                    "name": "Philosophy of Psychiatry"
+                  },
+                  {
+                    "id": "PP:philosophy-of-psychiatry-and-psychopathology-misc",
+                    "anchor": "node:PP:philosophy-of-psychiatry-and-psychopathology-misc",
+                    "statement": "Philosophy of Psychiatry and Psychopathology, Misc",
+                    "name": "Philosophy of Psychiatry and Psychopathology, Misc"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "PL.K2.S4",
+              "anchor": "section:PL.K2.S4",
+              "statement": "Named psychopathologies ask what particular conditions such as psychopathy and schizophrenia reveal about the mind.",
+              "name": "Named psychopathologies ask what particular conditions such as psychopathy and schizophrenia reveal about the mind.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "General psychopathology comes first, then specific conditions.",
+                "points": [
+                  {
+                    "id": "PP:psychopathology-misc",
+                    "anchor": "node:PP:psychopathology-misc",
+                    "statement": "Psychopathology, Misc",
+                    "name": "Psychopathology, Misc"
+                  },
+                  {
+                    "id": "PP:psychopathy",
+                    "anchor": "node:PP:psychopathy",
+                    "statement": "Psychopathy",
+                    "name": "Psychopathy"
+                  },
+                  {
+                    "id": "PP:schizophrenia",
+                    "anchor": "node:PP:schizophrenia",
+                    "statement": "Schizophrenia",
+                    "name": "Schizophrenia"
                   }
                 ]
               }
@@ -765,13 +773,13 @@
       {
         "id": "PL.K3",
         "anchor": "pillar:PL.K3",
-        "statement": "Meaning and inference is the claim-type concerned with valid reasoning and how meaning is produced and understood in language and texts.",
-        "name": "Meaning and inference is the claim-type concerned with valid reasoning and how meaning is produced and understood in language and texts.",
+        "statement": "Meaning and inference is the kind of question that asks how valid reasoning works and how meaning is produced and understood.",
+        "name": "Meaning and inference is the kind of question that asks how valid reasoning works and how meaning is produced and understood.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "structure",
-          "rank_note": "Inference first, then meaning.",
+          "rank_note": "Reasoning comes first, then language and interpretation.",
           "points": [
             {
               "id": "PL.O.A3.G1",
@@ -844,12 +852,6 @@
                 ],
                 "rank_note": "Parallel meaning-focused categories covering language, interpretation, and critical theory; no ranking."
               }
-            },
-            {
-              "id": "PP:philosophy-for-children-reasoning",
-              "anchor": "node:PP:philosophy-for-children-reasoning",
-              "statement": "Philosophy for Children: Reasoning",
-              "name": "Philosophy for Children: Reasoning"
             }
           ]
         },
@@ -858,30 +860,30 @@
       {
         "id": "PL.K4",
         "anchor": "pillar:PL.K4",
-        "statement": "Value is the claim-type concerned with what is good, right, beautiful and just, in private life, society and the professions.",
-        "name": "Value is the claim-type concerned with what is good, right, beautiful and just, in private life, society and the professions.",
+        "statement": "Value is the kind of question that asks what is good, right, just, beautiful or worth loving, in private life and in society.",
+        "name": "Value is the kind of question that asks what is good, right, just, beautiful or worth loving, in private life and in society.",
         "support": {
           "logic_type": "inductive",
-          "basis": "parts",
+          "basis": "kinds",
           "order": "structure",
-          "rank_note": "From general value theory to applied, social and intimate spheres.",
+          "rank_note": "Sections move from general value and ethics, to social and political life, to love and sexuality.",
           "points": [
             {
               "id": "PL.K4.S1",
               "anchor": "section:PL.K4.S1",
-              "statement": "Moral and aesthetic value theory asks what makes actions, objects and lives good, right or beautiful.",
-              "name": "Moral and aesthetic value theory asks what makes actions, objects and lives good, right or beautiful.",
+              "statement": "Ethics and aesthetics ask about moral and aesthetic value in general and in applied settings.",
+              "name": "Ethics and aesthetics ask about moral and aesthetic value in general and in applied settings.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "Abstract theory first, then children's treatments.",
+                "rank_note": "General theory comes before applied ethics.",
                 "points": [
                   {
-                    "id": "PL.O.A4.G5",
-                    "anchor": "group:PL.O.A4.G5",
-                    "statement": "General normative and evaluative theory concerns abstract questions of value, choice, beauty and our relation to nature.",
-                    "name": "General normative and evaluative theory concerns abstract questions of value, choice, beauty and our relation to nature.",
+                    "id": "PL.O.A4.G17",
+                    "anchor": "group:PL.O.A4.G17",
+                    "statement": "Value and formal theory covers abstract questions of moral and aesthetic value together with formal, queer and aesthetic theoretical fields.",
+                    "name": "Value and formal theory covers abstract questions of moral and aesthetic value together with formal, queer and aesthetic theoretical fields.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -889,38 +891,131 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "ANZSRC:500306",
-                          "anchor": "node:ANZSRC:500306",
-                          "statement": "Ethical theory",
-                          "name": "Ethical theory"
+                          "id": "PL.O.A4.G5",
+                          "anchor": "group:PL.O.A4.G5",
+                          "statement": "General normative and evaluative theory concerns abstract questions of value, choice, beauty and our relation to nature.",
+                          "name": "General normative and evaluative theory concerns abstract questions of value, choice, beauty and our relation to nature.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:500306",
+                                "anchor": "node:ANZSRC:500306",
+                                "statement": "Ethical theory",
+                                "name": "Ethical theory"
+                              },
+                              {
+                                "id": "ANZSRC:500303",
+                                "anchor": "node:ANZSRC:500303",
+                                "statement": "Decision theory",
+                                "name": "Decision theory"
+                              },
+                              {
+                                "id": "ANZSRC:500301",
+                                "anchor": "node:ANZSRC:500301",
+                                "statement": "Aesthetics",
+                                "name": "Aesthetics"
+                              },
+                              {
+                                "id": "ANZSRC:500304",
+                                "anchor": "node:ANZSRC:500304",
+                                "statement": "Environmental philosophy",
+                                "name": "Environmental philosophy"
+                              }
+                            ],
+                            "rank_note": "Ordered from ethical theory to decision, aesthetic and environmental theory."
+                          }
                         },
                         {
-                          "id": "ANZSRC:500303",
-                          "anchor": "node:ANZSRC:500303",
-                          "statement": "Decision theory",
-                          "name": "Decision theory"
+                          "id": "PL.O.A4.G9",
+                          "anchor": "group:PL.O.A4.G9",
+                          "statement": "Questions about value, covering what is morally right and good and what makes something beautiful.",
+                          "name": "Questions about value, covering what is morally right and good and what makes something beautiful.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "LCC:BJ",
+                                "anchor": "node:LCC:BJ",
+                                "statement": "Ethics",
+                                "name": "Ethics"
+                              },
+                              {
+                                "id": "PP:meta-ethics",
+                                "anchor": "node:PP:meta-ethics",
+                                "statement": "Meta-Ethics",
+                                "name": "Meta-Ethics"
+                              },
+                              {
+                                "id": "PP:normative-ethics",
+                                "anchor": "node:PP:normative-ethics",
+                                "statement": "Normative Ethics",
+                                "name": "Normative Ethics"
+                              },
+                              {
+                                "id": "PP:applied-ethics",
+                                "anchor": "node:PP:applied-ethics",
+                                "statement": "Applied Ethics",
+                                "name": "Applied Ethics"
+                              }
+                            ],
+                            "rank_note": "Ordered from ethics general to specific ethical branches to aesthetics."
+                          }
                         },
                         {
-                          "id": "ANZSRC:500301",
-                          "anchor": "node:ANZSRC:500301",
-                          "statement": "Aesthetics",
-                          "name": "Aesthetics"
-                        },
-                        {
-                          "id": "ANZSRC:500304",
-                          "anchor": "node:ANZSRC:500304",
-                          "statement": "Environmental philosophy",
-                          "name": "Environmental philosophy"
+                          "id": "PL.O.A4.G10",
+                          "anchor": "group:PL.O.A4.G10",
+                          "statement": "Formal theory, queer theory, and aesthetics are theoretical fields of inquiry, each defined by the kind of question it asks about politics, identity, or art and beauty.",
+                          "name": "Formal theory, queer theory, and aesthetics are theoretical fields of inquiry, each defined by the kind of question it asks about politics, identity, or art and beauty.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "APSA:52",
+                                "anchor": "node:APSA:52",
+                                "statement": "Formal Theory",
+                                "name": "Formal Theory"
+                              },
+                              {
+                                "id": "PP:queer-theory",
+                                "anchor": "node:PP:queer-theory",
+                                "statement": "Queer Theory",
+                                "name": "Queer Theory"
+                              },
+                              {
+                                "id": "PP:aesthetics",
+                                "anchor": "node:PP:aesthetics",
+                                "statement": "Aesthetics",
+                                "name": "Aesthetics"
+                              },
+                              {
+                                "id": "LCC:BH",
+                                "anchor": "node:LCC:BH",
+                                "statement": "Aesthetics",
+                                "name": "Aesthetics"
+                              }
+                            ]
+                          },
+                          "further": true
                         }
                       ],
-                      "rank_note": "Ordered from ethical theory to decision, aesthetic and environmental theory."
+                      "rank_note": "Kinds of abstract theory, ordered by structure from general value to specific theoretical fields."
                     }
                   },
                   {
-                    "id": "PL.O.A4.G9",
-                    "anchor": "group:PL.O.A4.G9",
-                    "statement": "Questions about value, covering what is morally right and good and what makes something beautiful.",
-                    "name": "Questions about value, covering what is morally right and good and what makes something beautiful.",
+                    "id": "PL.O.A4.G14",
+                    "anchor": "group:PL.O.A4.G14",
+                    "statement": "Applied ethics addresses the moral duties and dilemmas that arise within professions, institutions, medicine, biology and technology.",
+                    "name": "Applied ethics addresses the moral duties and dilemmas that arise within professions, institutions, medicine, biology and technology.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -928,83 +1023,86 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "LCC:BJ",
-                          "anchor": "node:LCC:BJ",
-                          "statement": "Ethics",
-                          "name": "Ethics"
+                          "id": "PL.O.A4.G2",
+                          "anchor": "group:PL.O.A4.G2",
+                          "statement": "Professional and institutional ethics concerns the moral duties that arise within occupations, businesses and legal practice.",
+                          "name": "Professional and institutional ethics concerns the moral duties that arise within occupations, businesses and legal practice.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:5001",
+                                "anchor": "node:ANZSRC:5001",
+                                "statement": "Applied ethics",
+                                "name": "Applied ethics"
+                              },
+                              {
+                                "id": "ANZSRC:500102",
+                                "anchor": "node:ANZSRC:500102",
+                                "statement": "Business ethics",
+                                "name": "Business ethics"
+                              },
+                              {
+                                "id": "ANZSRC:500105",
+                                "anchor": "node:ANZSRC:500105",
+                                "statement": "Legal ethics",
+                                "name": "Legal ethics"
+                              },
+                              {
+                                "id": "ANZSRC:500107",
+                                "anchor": "node:ANZSRC:500107",
+                                "statement": "Professional ethics",
+                                "name": "Professional ethics"
+                              },
+                              {
+                                "id": "ANZSRC:500199",
+                                "anchor": "node:ANZSRC:500199",
+                                "statement": "Applied ethics not elsewhere classified",
+                                "name": "Applied ethics not elsewhere classified"
+                              }
+                            ],
+                            "rank_note": "Ordered from the general applied ethics heading to specific professions."
+                          }
                         },
                         {
-                          "id": "PP:meta-ethics",
-                          "anchor": "node:PP:meta-ethics",
-                          "statement": "Meta-Ethics",
-                          "name": "Meta-Ethics"
-                        },
-                        {
-                          "id": "PP:normative-ethics",
-                          "anchor": "node:PP:normative-ethics",
-                          "statement": "Normative Ethics",
-                          "name": "Normative Ethics"
-                        },
-                        {
-                          "id": "PP:applied-ethics",
-                          "anchor": "node:PP:applied-ethics",
-                          "statement": "Applied Ethics",
-                          "name": "Applied Ethics"
+                          "id": "PL.O.A4.G3",
+                          "anchor": "group:PL.O.A4.G3",
+                          "statement": "Life, medicine and technology ethics concerns moral questions raised by health care, biology and emerging technologies.",
+                          "name": "Life, medicine and technology ethics concerns moral questions raised by health care, biology and emerging technologies.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:500101",
+                                "anchor": "node:ANZSRC:500101",
+                                "statement": "Bioethics",
+                                "name": "Bioethics"
+                              },
+                              {
+                                "id": "ANZSRC:500106",
+                                "anchor": "node:ANZSRC:500106",
+                                "statement": "Medical ethics",
+                                "name": "Medical ethics"
+                              },
+                              {
+                                "id": "ANZSRC:500103",
+                                "anchor": "node:ANZSRC:500103",
+                                "statement": "Ethical use of new technology",
+                                "name": "Ethical use of new technology"
+                              }
+                            ],
+                            "rank_note": "Ordered from biological and medical ethics to technology ethics."
+                          }
                         }
                       ],
-                      "rank_note": "Ordered from ethics general to specific ethical branches to aesthetics."
+                      "rank_note": "Kinds of applied ethics, ordered by structure from occupational to biomedical."
                     }
-                  },
-                  {
-                    "id": "PL.O.A4.G10",
-                    "anchor": "group:PL.O.A4.G10",
-                    "statement": "Formal theory, queer theory, and aesthetics are theoretical fields of inquiry, each defined by the kind of question it asks about politics, identity, or art and beauty.",
-                    "name": "Formal theory, queer theory, and aesthetics are theoretical fields of inquiry, each defined by the kind of question it asks about politics, identity, or art and beauty.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "APSA:52",
-                          "anchor": "node:APSA:52",
-                          "statement": "Formal Theory",
-                          "name": "Formal Theory"
-                        },
-                        {
-                          "id": "PP:queer-theory",
-                          "anchor": "node:PP:queer-theory",
-                          "statement": "Queer Theory",
-                          "name": "Queer Theory"
-                        },
-                        {
-                          "id": "PP:aesthetics",
-                          "anchor": "node:PP:aesthetics",
-                          "statement": "Aesthetics",
-                          "name": "Aesthetics"
-                        },
-                        {
-                          "id": "LCC:BH",
-                          "anchor": "node:LCC:BH",
-                          "statement": "Aesthetics",
-                          "name": "Aesthetics"
-                        }
-                      ]
-                    },
-                    "further": true
-                  },
-                  {
-                    "id": "PP:philosophy-for-children-ethics",
-                    "anchor": "node:PP:philosophy-for-children-ethics",
-                    "statement": "Philosophy for Children: Ethics",
-                    "name": "Philosophy for Children: Ethics"
-                  },
-                  {
-                    "id": "PP:philosophy-for-children-aesthetics",
-                    "anchor": "node:PP:philosophy-for-children-aesthetics",
-                    "statement": "Philosophy for Children: Aesthetics",
-                    "name": "Philosophy for Children: Aesthetics"
                   }
                 ]
               }
@@ -1012,19 +1110,19 @@
             {
               "id": "PL.K4.S2",
               "anchor": "section:PL.K4.S2",
-              "statement": "Applied ethics asks what moral duties arise in professions, institutions, medicine and technology.",
-              "name": "Applied ethics asks what moral duties arise in professions, institutions, medicine and technology.",
+              "statement": "Social and political philosophy asks about justice, rights, power, law, gender and race in society.",
+              "name": "Social and political philosophy asks about justice, rights, power, law, gender and race in society.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
                 "order": "structure",
-                "rank_note": "Professions then life sciences and technology.",
+                "rank_note": "Political theory comes first, then justice and social relations, then law, gender and race.",
                 "points": [
                   {
-                    "id": "PL.O.A4.G2",
-                    "anchor": "group:PL.O.A4.G2",
-                    "statement": "Professional and institutional ethics concerns the moral duties that arise within occupations, businesses and legal practice.",
-                    "name": "Professional and institutional ethics concerns the moral duties that arise within occupations, businesses and legal practice.",
+                    "id": "PL.O.A4.G1",
+                    "anchor": "group:PL.O.A4.G1",
+                    "statement": "Political theory and thought concerns the foundational ideas, concepts and traditions that shape how politics is understood.",
+                    "name": "Political theory and thought concerns the foundational ideas, concepts and traditions that shape how politics is understood.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -1032,44 +1130,38 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "ANZSRC:5001",
-                          "anchor": "node:ANZSRC:5001",
-                          "statement": "Applied ethics",
-                          "name": "Applied ethics"
+                          "id": "APSA:17",
+                          "anchor": "node:APSA:17",
+                          "statement": "Foundations of Political Theory",
+                          "name": "Foundations of Political Theory"
                         },
                         {
-                          "id": "ANZSRC:500102",
-                          "anchor": "node:ANZSRC:500102",
-                          "statement": "Business ethics",
-                          "name": "Business ethics"
+                          "id": "ANZSRC:440811",
+                          "anchor": "node:ANZSRC:440811",
+                          "statement": "Political theory and political philosophy",
+                          "name": "Political theory and political philosophy"
                         },
                         {
-                          "id": "ANZSRC:500105",
-                          "anchor": "node:ANZSRC:500105",
-                          "statement": "Legal ethics",
-                          "name": "Legal ethics"
+                          "id": "APSA:46",
+                          "anchor": "node:APSA:46",
+                          "statement": "Ideas, Knowledge and Politics",
+                          "name": "Ideas, Knowledge and Politics"
                         },
                         {
-                          "id": "ANZSRC:500107",
-                          "anchor": "node:ANZSRC:500107",
-                          "statement": "Professional ethics",
-                          "name": "Professional ethics"
-                        },
-                        {
-                          "id": "ANZSRC:500199",
-                          "anchor": "node:ANZSRC:500199",
-                          "statement": "Applied ethics not elsewhere classified",
-                          "name": "Applied ethics not elsewhere classified"
+                          "id": "APSA:47",
+                          "anchor": "node:APSA:47",
+                          "statement": "American Political Thought",
+                          "name": "American Political Thought"
                         }
                       ],
-                      "rank_note": "Ordered from the general applied ethics heading to specific professions."
+                      "rank_note": "Ordered from general foundations to specific national thought."
                     }
                   },
                   {
-                    "id": "PL.O.A4.G3",
-                    "anchor": "group:PL.O.A4.G3",
-                    "statement": "Life, medicine and technology ethics concerns moral questions raised by health care, biology and emerging technologies.",
-                    "name": "Life, medicine and technology ethics concerns moral questions raised by health care, biology and emerging technologies.",
+                    "id": "PL.O.A4.G4",
+                    "anchor": "group:PL.O.A4.G4",
+                    "statement": "Justice, rights and social philosophy concerns questions of fairness, rights, power and social relations in society.",
+                    "name": "Justice, rights and social philosophy concerns questions of fairness, rights, power and social relations in society.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -1077,26 +1169,50 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "ANZSRC:500101",
-                          "anchor": "node:ANZSRC:500101",
-                          "statement": "Bioethics",
-                          "name": "Bioethics"
+                          "id": "ANZSRC:500104",
+                          "anchor": "node:ANZSRC:500104",
+                          "statement": "Human rights and justice issues (excl. law)",
+                          "name": "Human rights and justice issues (excl. law)"
                         },
                         {
-                          "id": "ANZSRC:500106",
-                          "anchor": "node:ANZSRC:500106",
-                          "statement": "Medical ethics",
-                          "name": "Medical ethics"
+                          "id": "ANZSRC:500321",
+                          "anchor": "node:ANZSRC:500321",
+                          "statement": "Social and political philosophy",
+                          "name": "Social and political philosophy"
                         },
                         {
-                          "id": "ANZSRC:500103",
-                          "anchor": "node:ANZSRC:500103",
-                          "statement": "Ethical use of new technology",
-                          "name": "Ethical use of new technology"
+                          "id": "ANZSRC:500302",
+                          "anchor": "node:ANZSRC:500302",
+                          "statement": "Critical theory",
+                          "name": "Critical theory"
+                        },
+                        {
+                          "id": "ANZSRC:500313",
+                          "anchor": "node:ANZSRC:500313",
+                          "statement": "Philosophy of gender",
+                          "name": "Philosophy of gender"
                         }
                       ],
-                      "rank_note": "Ordered from biological and medical ethics to technology ethics."
+                      "rank_note": "Ordered from rights and justice to critical and gender perspectives."
                     }
+                  },
+                  {
+                    "id": "PP:philosophy-of-law",
+                    "anchor": "node:PP:philosophy-of-law",
+                    "statement": "Philosophy of Law",
+                    "name": "Philosophy of Law"
+                  },
+                  {
+                    "id": "PP:philosophy-of-race",
+                    "anchor": "node:PP:philosophy-of-race",
+                    "statement": "Philosophy of Race",
+                    "name": "Philosophy of Race"
+                  },
+                  {
+                    "id": "PP:feminist-philosophy",
+                    "anchor": "node:PP:feminist-philosophy",
+                    "statement": "Feminist Philosophy",
+                    "name": "Feminist Philosophy"
                   }
                 ]
               }
@@ -1104,30 +1220,30 @@
             {
               "id": "PL.K4.S3",
               "anchor": "section:PL.K4.S3",
-              "statement": "Political and social philosophy asks about justice, rights, power, law, gender and race in society.",
-              "name": "Political and social philosophy asks about justice, rights, power, law, gender and race in society.",
+              "statement": "Love and sexuality ask what love, sex and sexual orientation are and how they are morally valued.",
+              "name": "Love and sexuality ask what love, sex and sexual orientation are and how they are morally valued.",
               "support": {
                 "logic_type": "inductive",
-                "basis": "parts",
+                "basis": "kinds",
                 "order": "structure",
-                "rank_note": "Political theory first, then social groupings and law.",
+                "rank_note": "Love comes first, then sex and sexual orientation.",
                 "points": [
                   {
                     "id": "PL.K4.S3.U1",
                     "anchor": "section:PL.K4.S3.U1",
-                    "statement": "Political theory and justice ask what rights, fairness and power require in society.",
-                    "name": "Political theory and justice ask what rights, fairness and power require in society.",
+                    "statement": "Love asks what love is, what features and varieties it has, and how it is valued in relationships.",
+                    "name": "Love asks what love is, what features and varieties it has, and how it is valued in relationships.",
                     "support": {
                       "logic_type": "inductive",
                       "basis": "kinds",
                       "order": "structure",
-                      "rank_note": "Theory first, then children's treatment.",
+                      "rank_note": "Definitions and theories come first, then ethics and relationships.",
                       "points": [
                         {
-                          "id": "PL.O.A4.G1",
-                          "anchor": "group:PL.O.A4.G1",
-                          "statement": "Political theory and thought concerns the foundational ideas, concepts and traditions that shape how politics is understood.",
-                          "name": "Political theory and thought concerns the foundational ideas, concepts and traditions that shape how politics is understood.",
+                          "id": "PL.O.A4.G13",
+                          "anchor": "group:PL.O.A4.G13",
+                          "statement": "Questions about love ask what love is, what varieties it takes, and how it is valued.",
+                          "name": "Questions about love ask what love is, what varieties it takes, and how it is valued.",
                           "support": {
                             "logic_type": "inductive",
                             "plural_noun": "members",
@@ -1135,77 +1251,56 @@
                             "order": "structure",
                             "points": [
                               {
-                                "id": "APSA:17",
-                                "anchor": "node:APSA:17",
-                                "statement": "Foundations of Political Theory",
-                                "name": "Foundations of Political Theory"
+                                "id": "PP:theories-of-love",
+                                "anchor": "node:PP:theories-of-love",
+                                "statement": "Theories of Love",
+                                "name": "Theories of Love"
                               },
                               {
-                                "id": "ANZSRC:440811",
-                                "anchor": "node:ANZSRC:440811",
-                                "statement": "Political theory and political philosophy",
-                                "name": "Political theory and political philosophy"
+                                "id": "PP:varieties-of-love",
+                                "anchor": "node:PP:varieties-of-love",
+                                "statement": "Varieties of Love",
+                                "name": "Varieties of Love"
                               },
                               {
-                                "id": "APSA:46",
-                                "anchor": "node:APSA:46",
-                                "statement": "Ideas, Knowledge and Politics",
-                                "name": "Ideas, Knowledge and Politics"
+                                "id": "PP:value-theory",
+                                "anchor": "node:PP:value-theory",
+                                "statement": "Value Theory",
+                                "name": "Value Theory"
                               },
                               {
-                                "id": "APSA:47",
-                                "anchor": "node:APSA:47",
-                                "statement": "American Political Thought",
-                                "name": "American Political Thought"
+                                "id": "PP:value-theory-miscellaneous",
+                                "anchor": "node:PP:value-theory-miscellaneous",
+                                "statement": "Value Theory, Miscellaneous",
+                                "name": "Value Theory, Miscellaneous"
                               }
                             ],
-                            "rank_note": "Ordered from general foundations to specific national thought."
+                            "rank_note": "Ordered from theories of love, to its varieties, to the value-theoretic framing."
                           }
                         },
                         {
-                          "id": "PL.O.A4.G4",
-                          "anchor": "group:PL.O.A4.G4",
-                          "statement": "Justice, rights and social philosophy concerns questions of fairness, rights, power and social relations in society.",
-                          "name": "Justice, rights and social philosophy concerns questions of fairness, rights, power and social relations in society.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:500104",
-                                "anchor": "node:ANZSRC:500104",
-                                "statement": "Human rights and justice issues (excl. law)",
-                                "name": "Human rights and justice issues (excl. law)"
-                              },
-                              {
-                                "id": "ANZSRC:500321",
-                                "anchor": "node:ANZSRC:500321",
-                                "statement": "Social and political philosophy",
-                                "name": "Social and political philosophy"
-                              },
-                              {
-                                "id": "ANZSRC:500302",
-                                "anchor": "node:ANZSRC:500302",
-                                "statement": "Critical theory",
-                                "name": "Critical theory"
-                              },
-                              {
-                                "id": "ANZSRC:500313",
-                                "anchor": "node:ANZSRC:500313",
-                                "statement": "Philosophy of gender",
-                                "name": "Philosophy of gender"
-                              }
-                            ],
-                            "rank_note": "Ordered from rights and justice to critical and gender perspectives."
-                          }
+                          "id": "PP:defining-love",
+                          "anchor": "node:PP:defining-love",
+                          "statement": "Defining Love",
+                          "name": "Defining Love"
                         },
                         {
-                          "id": "PP:philosophy-for-children-political-philosophy",
-                          "anchor": "node:PP:philosophy-for-children-political-philosophy",
-                          "statement": "Philosophy for Children: Political Philosophy",
-                          "name": "Philosophy for Children: Political Philosophy"
+                          "id": "PP:features-of-love",
+                          "anchor": "node:PP:features-of-love",
+                          "statement": "Features of Love",
+                          "name": "Features of Love"
+                        },
+                        {
+                          "id": "PP:philosophy-of-love-misc",
+                          "anchor": "node:PP:philosophy-of-love-misc",
+                          "statement": "Philosophy of Love, Misc",
+                          "name": "Philosophy of Love, Misc"
+                        },
+                        {
+                          "id": "PP:ethics-of-love",
+                          "anchor": "node:PP:ethics-of-love",
+                          "statement": "Ethics of Love",
+                          "name": "Ethics of Love"
                         }
                       ]
                     }
@@ -1213,249 +1308,140 @@
                   {
                     "id": "PL.K4.S3.U2",
                     "anchor": "section:PL.K4.S3.U2",
-                    "statement": "Philosophy of gender, race and law asks how social groups and legal institutions are understood and justified.",
-                    "name": "Philosophy of gender, race and law asks how social groups and legal institutions are understood and justified.",
+                    "statement": "Sex and sexual orientation ask what sexual activity and orientation are and how they are morally and politically assessed.",
+                    "name": "Sex and sexual orientation ask what sexual activity and orientation are and how they are morally and politically assessed.",
                     "support": {
                       "logic_type": "inductive",
                       "basis": "kinds",
                       "order": "structure",
-                      "rank_note": "Gender and race first, then law.",
+                      "rank_note": "Relationships come first, then sexual activity, then orientation.",
                       "points": [
+                        {
+                          "id": "PP:relationships-and-marriage",
+                          "anchor": "node:PP:relationships-and-marriage",
+                          "statement": "Relationships and Marriage",
+                          "name": "Relationships and Marriage"
+                        },
+                        {
+                          "id": "PL.O.A4.G7",
+                          "anchor": "group:PL.O.A4.G7",
+                          "statement": "Questions about sexual activity, its moral standing, and its general philosophical treatment.",
+                          "name": "Questions about sexual activity, its moral standing, and its general philosophical treatment.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "parts",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PP:sexual-activities",
+                                "anchor": "node:PP:sexual-activities",
+                                "statement": "Sexual Activities",
+                                "name": "Sexual Activities"
+                              },
+                              {
+                                "id": "PP:sexual-ethics",
+                                "anchor": "node:PP:sexual-ethics",
+                                "statement": "Sexual Ethics",
+                                "name": "Sexual Ethics"
+                              },
+                              {
+                                "id": "PP:philosophy-of-sexuality-miscellaneous",
+                                "anchor": "node:PP:philosophy-of-sexuality-miscellaneous",
+                                "statement": "Philosophy of Sexuality, Miscellaneous",
+                                "name": "Philosophy of Sexuality, Miscellaneous"
+                              }
+                            ],
+                            "rank_note": "Ordered from activities to ethics to miscellany."
+                          }
+                        },
+                        {
+                          "id": "PL.O.A4.G12",
+                          "anchor": "group:PL.O.A4.G12",
+                          "statement": "Questions about sex ask what sex is and which sexual phenomena philosophy must account for.",
+                          "name": "Questions about sex ask what sex is and which sexual phenomena philosophy must account for.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PP:sexual-phenomena",
+                                "anchor": "node:PP:sexual-phenomena",
+                                "statement": "Sexual Phenomena",
+                                "name": "Sexual Phenomena"
+                              },
+                              {
+                                "id": "PP:the-nature-of-sex",
+                                "anchor": "node:PP:the-nature-of-sex",
+                                "statement": "The Nature of Sex",
+                                "name": "The Nature of Sex"
+                              },
+                              {
+                                "id": "PP:social-and-political-philosophy",
+                                "anchor": "node:PP:social-and-political-philosophy",
+                                "statement": "Social and Political Philosophy",
+                                "name": "Social and Political Philosophy"
+                              },
+                              {
+                                "id": "PP:sexual-orientations",
+                                "anchor": "node:PP:sexual-orientations",
+                                "statement": "Sexual Orientations",
+                                "name": "Sexual Orientations"
+                              }
+                            ],
+                            "rank_note": "Ordered from the nature of sex to the wider range of sexual phenomena."
+                          },
+                          "further": true
+                        },
+                        {
+                          "id": "PL.O.A4.G11",
+                          "anchor": "group:PL.O.A4.G11",
+                          "statement": "Questions about sexual orientation ask what it is, which orientations exist, and how it bears on morality, politics, and law.",
+                          "name": "Questions about sexual orientation ask what it is, which orientations exist, and how it bears on morality, politics, and law.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PP:sexual-orientation-and-morality",
+                                "anchor": "node:PP:sexual-orientation-and-morality",
+                                "statement": "Sexual Orientation and Morality",
+                                "name": "Sexual Orientation and Morality"
+                              },
+                              {
+                                "id": "PP:sexual-orientation-politics-and-the-law",
+                                "anchor": "node:PP:sexual-orientation-politics-and-the-law",
+                                "statement": "Sexual Orientation, Politics, and the Law",
+                                "name": "Sexual Orientation, Politics, and the Law"
+                              },
+                              {
+                                "id": "PP:the-nature-of-sexual-orientation",
+                                "anchor": "node:PP:the-nature-of-sexual-orientation",
+                                "statement": "The Nature of Sexual Orientation",
+                                "name": "The Nature of Sexual Orientation"
+                              },
+                              {
+                                "id": "PP:topics-in-the-philosophy-of-sexual-orientation",
+                                "anchor": "node:PP:topics-in-the-philosophy-of-sexual-orientation",
+                                "statement": "Topics in the Philosophy of Sexual Orientation",
+                                "name": "Topics in the Philosophy of Sexual Orientation"
+                              }
+                            ],
+                            "rank_note": "Ordered from the nature of orientation, to its varieties, to its moral and political treatment."
+                          }
+                        },
                         {
                           "id": "PP:philosophy-of-gender",
                           "anchor": "node:PP:philosophy-of-gender",
                           "statement": "Philosophy of Gender",
                           "name": "Philosophy of Gender"
-                        },
-                        {
-                          "id": "PP:philosophy-of-race",
-                          "anchor": "node:PP:philosophy-of-race",
-                          "statement": "Philosophy of Race",
-                          "name": "Philosophy of Race"
-                        },
-                        {
-                          "id": "PP:feminist-philosophy",
-                          "anchor": "node:PP:feminist-philosophy",
-                          "statement": "Feminist Philosophy",
-                          "name": "Feminist Philosophy"
-                        },
-                        {
-                          "id": "PP:philosophy-of-law",
-                          "anchor": "node:PP:philosophy-of-law",
-                          "statement": "Philosophy of Law",
-                          "name": "Philosophy of Law"
                         }
                       ]
                     }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "PL.K4.S4",
-              "anchor": "section:PL.K4.S4",
-              "statement": "Love and sexuality ask what love and sex are and how they are morally and socially valued.",
-              "name": "Love and sexuality ask what love and sex are and how they are morally and socially valued.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "Love first, then sex and orientation.",
-                "points": [
-                  {
-                    "id": "PL.O.A4.G13",
-                    "anchor": "group:PL.O.A4.G13",
-                    "statement": "Questions about love ask what love is, what varieties it takes, and how it is valued.",
-                    "name": "Questions about love ask what love is, what varieties it takes, and how it is valued.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "PP:theories-of-love",
-                          "anchor": "node:PP:theories-of-love",
-                          "statement": "Theories of Love",
-                          "name": "Theories of Love"
-                        },
-                        {
-                          "id": "PP:varieties-of-love",
-                          "anchor": "node:PP:varieties-of-love",
-                          "statement": "Varieties of Love",
-                          "name": "Varieties of Love"
-                        },
-                        {
-                          "id": "PP:value-theory",
-                          "anchor": "node:PP:value-theory",
-                          "statement": "Value Theory",
-                          "name": "Value Theory"
-                        },
-                        {
-                          "id": "PP:value-theory-miscellaneous",
-                          "anchor": "node:PP:value-theory-miscellaneous",
-                          "statement": "Value Theory, Miscellaneous",
-                          "name": "Value Theory, Miscellaneous"
-                        }
-                      ],
-                      "rank_note": "Ordered from theories of love, to its varieties, to the value-theoretic framing."
-                    }
-                  },
-                  {
-                    "id": "PP:defining-love",
-                    "anchor": "node:PP:defining-love",
-                    "statement": "Defining Love",
-                    "name": "Defining Love"
-                  },
-                  {
-                    "id": "PP:features-of-love",
-                    "anchor": "node:PP:features-of-love",
-                    "statement": "Features of Love",
-                    "name": "Features of Love"
-                  },
-                  {
-                    "id": "PP:philosophy-of-love-misc",
-                    "anchor": "node:PP:philosophy-of-love-misc",
-                    "statement": "Philosophy of Love, Misc",
-                    "name": "Philosophy of Love, Misc"
-                  },
-                  {
-                    "id": "PP:ethics-of-love",
-                    "anchor": "node:PP:ethics-of-love",
-                    "statement": "Ethics of Love",
-                    "name": "Ethics of Love"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "PL.K4.S5",
-              "anchor": "section:PL.K4.S5",
-              "statement": "Sex, sexual activity and orientation ask what they are and how they bear on morality, politics and law.",
-              "name": "Sex, sexual activity and orientation ask what they are and how they bear on morality, politics and law.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "Sex, activity, then orientation.",
-                "points": [
-                  {
-                    "id": "PL.O.A4.G12",
-                    "anchor": "group:PL.O.A4.G12",
-                    "statement": "Questions about sex ask what sex is and which sexual phenomena philosophy must account for.",
-                    "name": "Questions about sex ask what sex is and which sexual phenomena philosophy must account for.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "PP:sexual-phenomena",
-                          "anchor": "node:PP:sexual-phenomena",
-                          "statement": "Sexual Phenomena",
-                          "name": "Sexual Phenomena"
-                        },
-                        {
-                          "id": "PP:the-nature-of-sex",
-                          "anchor": "node:PP:the-nature-of-sex",
-                          "statement": "The Nature of Sex",
-                          "name": "The Nature of Sex"
-                        },
-                        {
-                          "id": "PP:social-and-political-philosophy",
-                          "anchor": "node:PP:social-and-political-philosophy",
-                          "statement": "Social and Political Philosophy",
-                          "name": "Social and Political Philosophy"
-                        },
-                        {
-                          "id": "PP:sexual-orientations",
-                          "anchor": "node:PP:sexual-orientations",
-                          "statement": "Sexual Orientations",
-                          "name": "Sexual Orientations"
-                        }
-                      ],
-                      "rank_note": "Ordered from the nature of sex to the wider range of sexual phenomena."
-                    },
-                    "further": true
-                  },
-                  {
-                    "id": "PL.O.A4.G7",
-                    "anchor": "group:PL.O.A4.G7",
-                    "statement": "Questions about sexual activity, its moral standing, and its general philosophical treatment.",
-                    "name": "Questions about sexual activity, its moral standing, and its general philosophical treatment.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "parts",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "PP:sexual-activities",
-                          "anchor": "node:PP:sexual-activities",
-                          "statement": "Sexual Activities",
-                          "name": "Sexual Activities"
-                        },
-                        {
-                          "id": "PP:sexual-ethics",
-                          "anchor": "node:PP:sexual-ethics",
-                          "statement": "Sexual Ethics",
-                          "name": "Sexual Ethics"
-                        },
-                        {
-                          "id": "PP:philosophy-of-sexuality-miscellaneous",
-                          "anchor": "node:PP:philosophy-of-sexuality-miscellaneous",
-                          "statement": "Philosophy of Sexuality, Miscellaneous",
-                          "name": "Philosophy of Sexuality, Miscellaneous"
-                        }
-                      ],
-                      "rank_note": "Ordered from activities to ethics to miscellany."
-                    }
-                  },
-                  {
-                    "id": "PL.O.A4.G11",
-                    "anchor": "group:PL.O.A4.G11",
-                    "statement": "Questions about sexual orientation ask what it is, which orientations exist, and how it bears on morality, politics, and law.",
-                    "name": "Questions about sexual orientation ask what it is, which orientations exist, and how it bears on morality, politics, and law.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "PP:sexual-orientation-and-morality",
-                          "anchor": "node:PP:sexual-orientation-and-morality",
-                          "statement": "Sexual Orientation and Morality",
-                          "name": "Sexual Orientation and Morality"
-                        },
-                        {
-                          "id": "PP:sexual-orientation-politics-and-the-law",
-                          "anchor": "node:PP:sexual-orientation-politics-and-the-law",
-                          "statement": "Sexual Orientation, Politics, and the Law",
-                          "name": "Sexual Orientation, Politics, and the Law"
-                        },
-                        {
-                          "id": "PP:the-nature-of-sexual-orientation",
-                          "anchor": "node:PP:the-nature-of-sexual-orientation",
-                          "statement": "The Nature of Sexual Orientation",
-                          "name": "The Nature of Sexual Orientation"
-                        },
-                        {
-                          "id": "PP:topics-in-the-philosophy-of-sexual-orientation",
-                          "anchor": "node:PP:topics-in-the-philosophy-of-sexual-orientation",
-                          "statement": "Topics in the Philosophy of Sexual Orientation",
-                          "name": "Topics in the Philosophy of Sexual Orientation"
-                        }
-                      ],
-                      "rank_note": "Ordered from the nature of orientation, to its varieties, to its moral and political treatment."
-                    }
-                  },
-                  {
-                    "id": "PP:relationships-and-marriage",
-                    "anchor": "node:PP:relationships-and-marriage",
-                    "statement": "Relationships and Marriage",
-                    "name": "Relationships and Marriage"
                   }
                 ]
               }
@@ -1467,437 +1453,218 @@
       {
         "id": "PL.K5",
         "anchor": "pillar:PL.K5",
-        "statement": "The standing of the sciences, mathematics and philosophy is the claim-type concerned with the foundations, methods and history of inquiry, including philosophy's own.",
-        "name": "The standing of the sciences, mathematics and philosophy is the claim-type concerned with the foundations, methods and history of inquiry, including philosophy's own.",
+        "statement": "The standing of the sciences and disciplines is the kind of question that asks what the methods, foundations and history of inquiry, including philosophy itself, are worth.",
+        "name": "The standing of the sciences and disciplines is the kind of question that asks what the methods, foundations and history of inquiry, including philosophy itself, are worth.",
         "support": {
           "logic_type": "inductive",
-          "basis": "parts",
+          "basis": "kinds",
           "order": "structure",
-          "rank_note": "From the sciences, to philosophy's own history and traditions, to its teaching.",
+          "rank_note": "Sections move from the sciences, to the other disciplines, to philosophy's own history and teaching.",
           "points": [
             {
               "id": "PL.K5.S1",
               "anchor": "section:PL.K5.S1",
-              "statement": "Philosophy of the sciences and disciplines asks about the foundations, methods and concepts of formal, natural, social and applied fields.",
-              "name": "Philosophy of the sciences and disciplines asks about the foundations, methods and concepts of formal, natural, social and applied fields.",
+              "statement": "Philosophy of science and of the formal and natural sciences asks about the foundations and methods of scientific inquiry.",
+              "name": "Philosophy of science and of the formal and natural sciences asks about the foundations and methods of scientific inquiry.",
               "support": {
                 "logic_type": "inductive",
-                "basis": "parts",
+                "basis": "kinds",
                 "order": "structure",
-                "rank_note": "General science first, then particular fields.",
+                "rank_note": "General science comes first, then particular scientific fields.",
                 "points": [
                   {
-                    "id": "PL.K5.S1.U1",
-                    "anchor": "section:PL.K5.S1.U1",
-                    "statement": "General philosophy of science and the formal sciences ask about the methods and foundations of inquiry.",
-                    "name": "General philosophy of science and the formal sciences ask about the methods and foundations of inquiry.",
+                    "id": "PL.O.A5.G3",
+                    "anchor": "group:PL.O.A5.G3",
+                    "statement": "This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.",
+                    "name": "This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.",
                     "support": {
                       "logic_type": "inductive",
+                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "structure",
-                      "rank_note": "General first, then formal sciences.",
                       "points": [
                         {
-                          "id": "PL.O.A5.G10",
-                          "anchor": "group:PL.O.A5.G10",
-                          "statement": "Philosophy of science and philosophy itself cover questions about the methods and foundations of inquiry.",
-                          "name": "Philosophy of science and philosophy itself cover questions about the methods and foundations of inquiry.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "PP:formal-sciences",
-                                "anchor": "node:PP:formal-sciences",
-                                "statement": "Formal Sciences",
-                                "name": "Formal Sciences"
-                              },
-                              {
-                                "id": "PP:general-philosophy-of-science",
-                                "anchor": "node:PP:general-philosophy-of-science",
-                                "statement": "General Philosophy of Science",
-                                "name": "General Philosophy of Science"
-                              },
-                              {
-                                "id": "PP:metaphilosophy",
-                                "anchor": "node:PP:metaphilosophy",
-                                "statement": "Metaphilosophy",
-                                "name": "Metaphilosophy"
-                              }
-                            ],
-                            "rank_note": "Ordered by structure, from the formal sciences to science in general, then philosophy itself."
-                          }
+                          "id": "ANZSRC:500207",
+                          "anchor": "node:ANZSRC:500207",
+                          "statement": "History of ideas",
+                          "name": "History of ideas"
                         },
                         {
-                          "id": "PL.O.A5.G16",
-                          "anchor": "group:PL.O.A5.G16",
-                          "statement": "Philosophy of the formal and physical sciences examines the foundations of mathematics, probability, physical science, and science in general.",
-                          "name": "Philosophy of the formal and physical sciences examines the foundations of mathematics, probability, physical science, and science in general.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "PP:philosophy-of-mathematics",
-                                "anchor": "node:PP:philosophy-of-mathematics",
-                                "statement": "Philosophy of Mathematics",
-                                "name": "Philosophy of Mathematics"
-                              },
-                              {
-                                "id": "PP:philosophy-of-probability",
-                                "anchor": "node:PP:philosophy-of-probability",
-                                "statement": "Philosophy of Probability",
-                                "name": "Philosophy of Probability"
-                              },
-                              {
-                                "id": "PP:philosophy-of-physical-science",
-                                "anchor": "node:PP:philosophy-of-physical-science",
-                                "statement": "Philosophy of Physical Science",
-                                "name": "Philosophy of Physical Science"
-                              },
-                              {
-                                "id": "PP:philosophy-of-science-misc",
-                                "anchor": "node:PP:philosophy-of-science-misc",
-                                "statement": "Philosophy of Science, Misc",
-                                "name": "Philosophy of Science, Misc"
-                              },
-                              {
-                                "id": "PP:science-logic-and-mathematics",
-                                "anchor": "node:PP:science-logic-and-mathematics",
-                                "statement": "Science, Logic, and Mathematics",
-                                "name": "Science, Logic, and Mathematics"
-                              }
-                            ],
-                            "rank_note": "Not ranked; arranged by structure."
-                          }
+                          "id": "ANZSRC:500208",
+                          "anchor": "node:ANZSRC:500208",
+                          "statement": "History of philosophy",
+                          "name": "History of philosophy"
                         },
                         {
-                          "id": "PL.O.A5.G14",
-                          "anchor": "group:PL.O.A5.G14",
-                          "statement": "Broad academic areas are general or residual fields of study that are not tied to a single specific philosophical question.",
-                          "name": "Broad academic areas are general or residual fields of study that are not tied to a single specific philosophical question.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "PP:natural-sciences",
-                                "anchor": "node:PP:natural-sciences",
-                                "statement": "Natural Sciences",
-                                "name": "Natural Sciences"
-                              },
-                              {
-                                "id": "PP:other-academic-areas",
-                                "anchor": "node:PP:other-academic-areas",
-                                "statement": "Other Academic Areas",
-                                "name": "Other Academic Areas"
-                              },
-                              {
-                                "id": "PP:other-academic-areas-misc",
-                                "anchor": "node:PP:other-academic-areas-misc",
-                                "statement": "Other Academic Areas, Misc",
-                                "name": "Other Academic Areas, Misc"
-                              }
-                            ],
-                            "rank_note": "Listed without ranking; they are catch-all academic categories."
-                          }
+                          "id": "ANZSRC:500204",
+                          "anchor": "node:ANZSRC:500204",
+                          "statement": "History and philosophy of science",
+                          "name": "History and philosophy of science"
+                        },
+                        {
+                          "id": "ANZSRC:500317",
+                          "anchor": "node:ANZSRC:500317",
+                          "statement": "Philosophy of science (excl. history and philosophy of specific fields)",
+                          "name": "Philosophy of science (excl. history and philosophy of specific fields)"
+                        },
+                        {
+                          "id": "LCC:Q",
+                          "anchor": "node:LCC:Q",
+                          "statement": "Science (General)",
+                          "name": "Science (General)"
                         }
-                      ]
+                      ],
+                      "rank_note": "Grouped by the field studied; no ranking."
                     }
                   },
                   {
-                    "id": "PL.K5.S1.U2",
-                    "anchor": "section:PL.K5.S1.U2",
-                    "statement": "Philosophy of the special, social and humanistic disciplines asks about the concepts and methods of particular fields of study.",
-                    "name": "Philosophy of the special, social and humanistic disciplines asks about the concepts and methods of particular fields of study.",
+                    "id": "PL.O.A5.G10",
+                    "anchor": "group:PL.O.A5.G10",
+                    "statement": "Philosophy of science and philosophy itself cover questions about the methods and foundations of inquiry.",
+                    "name": "Philosophy of science and philosophy itself cover questions about the methods and foundations of inquiry.",
                     "support": {
                       "logic_type": "inductive",
+                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "structure",
-                      "rank_note": "Special sciences, social sciences, then humanities.",
                       "points": [
                         {
-                          "id": "PL.O.A5.G13",
-                          "anchor": "group:PL.O.A5.G13",
-                          "statement": "Philosophy of special sciences and disciplines asks foundational questions about the methods and concepts of particular fields of study.",
-                          "name": "Philosophy of special sciences and disciplines asks foundational questions about the methods and concepts of particular fields of study.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "PP:philosophy-of-anthropology",
-                                "anchor": "node:PP:philosophy-of-anthropology",
-                                "statement": "Philosophy of Anthropology",
-                                "name": "Philosophy of Anthropology"
-                              },
-                              {
-                                "id": "PP:philosophy-of-archaeology",
-                                "anchor": "node:PP:philosophy-of-archaeology",
-                                "statement": "Philosophy of Archaeology",
-                                "name": "Philosophy of Archaeology"
-                              },
-                              {
-                                "id": "PP:philosophy-of-biology",
-                                "anchor": "node:PP:philosophy-of-biology",
-                                "statement": "Philosophy of Biology",
-                                "name": "Philosophy of Biology"
-                              },
-                              {
-                                "id": "PP:philosophy-of-economics",
-                                "anchor": "node:PP:philosophy-of-economics",
-                                "statement": "Philosophy of Economics",
-                                "name": "Philosophy of Economics"
-                              },
-                              {
-                                "id": "PP:philosophy-of-education",
-                                "anchor": "node:PP:philosophy-of-education",
-                                "statement": "Philosophy of Education",
-                                "name": "Philosophy of Education"
-                              }
-                            ],
-                            "rank_note": "Listed without ranking; each is a distinct discipline."
-                          }
+                          "id": "PP:formal-sciences",
+                          "anchor": "node:PP:formal-sciences",
+                          "statement": "Formal Sciences",
+                          "name": "Formal Sciences"
                         },
                         {
-                          "id": "PL.O.A5.G19",
-                          "anchor": "group:PL.O.A5.G19",
-                          "statement": "Philosophy of the social and historical sciences examines how we study human societies, places, and the past.",
-                          "name": "Philosophy of the social and historical sciences examines how we study human societies, places, and the past.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "PP:philosophy-of-geography",
-                                "anchor": "node:PP:philosophy-of-geography",
-                                "statement": "Philosophy of Geography",
-                                "name": "Philosophy of Geography"
-                              },
-                              {
-                                "id": "PP:philosophy-of-history",
-                                "anchor": "node:PP:philosophy-of-history",
-                                "statement": "Philosophy of History",
-                                "name": "Philosophy of History"
-                              },
-                              {
-                                "id": "PP:philosophy-of-social-science-miscellaneous",
-                                "anchor": "node:PP:philosophy-of-social-science-miscellaneous",
-                                "statement": "Philosophy of Social Science, Miscellaneous",
-                                "name": "Philosophy of Social Science, Miscellaneous"
-                              },
-                              {
-                                "id": "PP:philosophy-of-sociology",
-                                "anchor": "node:PP:philosophy-of-sociology",
-                                "statement": "Philosophy of Sociology",
-                                "name": "Philosophy of Sociology"
-                              }
-                            ],
-                            "rank_note": "Not ranked; arranged by structure."
-                          }
+                          "id": "PP:general-philosophy-of-science",
+                          "anchor": "node:PP:general-philosophy-of-science",
+                          "statement": "General Philosophy of Science",
+                          "name": "General Philosophy of Science"
                         },
                         {
-                          "id": "PL.O.A5.G2",
-                          "anchor": "group:PL.O.A5.G2",
-                          "statement": "This group covers history and philosophy of the academic disciplines of the humanities and social sciences, together with the broad arts and humanities area.",
-                          "name": "This group covers history and philosophy of the academic disciplines of the humanities and social sciences, together with the broad arts and humanities area.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:500205",
-                                "anchor": "node:ANZSRC:500205",
-                                "statement": "History and philosophy of the humanities",
-                                "name": "History and philosophy of the humanities"
-                              },
-                              {
-                                "id": "ANZSRC:500206",
-                                "anchor": "node:ANZSRC:500206",
-                                "statement": "History and philosophy of the social sciences",
-                                "name": "History and philosophy of the social sciences"
-                              },
-                              {
-                                "id": "PP:arts-and-humanities",
-                                "anchor": "node:PP:arts-and-humanities",
-                                "statement": "Arts and Humanities",
-                                "name": "Arts and Humanities"
-                              }
-                            ],
-                            "rank_note": "Grouped by the field studied; no ranking."
-                          }
+                          "id": "PP:metaphilosophy",
+                          "anchor": "node:PP:metaphilosophy",
+                          "statement": "Metaphilosophy",
+                          "name": "Metaphilosophy"
                         }
-                      ]
+                      ],
+                      "rank_note": "Ordered by structure, from the formal sciences to science in general, then philosophy itself."
                     }
                   },
                   {
-                    "id": "PL.K5.S1.U3",
-                    "anchor": "section:PL.K5.S1.U3",
-                    "statement": "Philosophy of the mind, computing and applied fields asks about minds, machines and professional practice as objects of study.",
-                    "name": "Philosophy of the mind, computing and applied fields asks about minds, machines and professional practice as objects of study.",
+                    "id": "PL.O.A5.G13",
+                    "anchor": "group:PL.O.A5.G13",
+                    "statement": "Philosophy of special sciences and disciplines asks foundational questions about the methods and concepts of particular fields of study.",
+                    "name": "Philosophy of special sciences and disciplines asks foundational questions about the methods and concepts of particular fields of study.",
                     "support": {
                       "logic_type": "inductive",
+                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "structure",
-                      "rank_note": "Cognitive and brain sciences first, then applied fields.",
                       "points": [
                         {
-                          "id": "PL.O.A5.G12",
-                          "anchor": "group:PL.O.A5.G12",
-                          "statement": "Philosophy of cognitive and computing sciences asks conceptual questions about minds, machines and information.",
-                          "name": "Philosophy of cognitive and computing sciences asks conceptual questions about minds, machines and information.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "PP:philosophy-of-artificial-intelligence",
-                                "anchor": "node:PP:philosophy-of-artificial-intelligence",
-                                "statement": "Philosophy of Artificial Intelligence",
-                                "name": "Philosophy of Artificial Intelligence"
-                              },
-                              {
-                                "id": "PP:philosophy-of-cognitive-science-miscellaneous",
-                                "anchor": "node:PP:philosophy-of-cognitive-science-miscellaneous",
-                                "statement": "Philosophy of Cognitive Science, Miscellaneous",
-                                "name": "Philosophy of Cognitive Science, Miscellaneous"
-                              },
-                              {
-                                "id": "PP:philosophy-of-computing-and-information",
-                                "anchor": "node:PP:philosophy-of-computing-and-information",
-                                "statement": "Philosophy of Computing and Information",
-                                "name": "Philosophy of Computing and Information"
-                              }
-                            ],
-                            "rank_note": "Listed without ranking; each is a distinct subfield."
-                          }
+                          "id": "PP:philosophy-of-anthropology",
+                          "anchor": "node:PP:philosophy-of-anthropology",
+                          "statement": "Philosophy of Anthropology",
+                          "name": "Philosophy of Anthropology"
                         },
                         {
-                          "id": "PL.O.A5.G17",
-                          "anchor": "group:PL.O.A5.G17",
-                          "statement": "Philosophy of mind and brain sciences asks about the nature of psychological and neural explanation and the scientific study of consciousness.",
-                          "name": "Philosophy of mind and brain sciences asks about the nature of psychological and neural explanation and the scientific study of consciousness.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "PP:philosophy-of-neuroscience",
-                                "anchor": "node:PP:philosophy-of-neuroscience",
-                                "statement": "Philosophy of Neuroscience",
-                                "name": "Philosophy of Neuroscience"
-                              },
-                              {
-                                "id": "PP:philosophy-of-psychology",
-                                "anchor": "node:PP:philosophy-of-psychology",
-                                "statement": "Philosophy of Psychology",
-                                "name": "Philosophy of Psychology"
-                              },
-                              {
-                                "id": "PP:science-of-consciousness-miscellaneous",
-                                "anchor": "node:PP:science-of-consciousness-miscellaneous",
-                                "statement": "Science of Consciousness, Miscellaneous",
-                                "name": "Science of Consciousness, Miscellaneous"
-                              },
-                              {
-                                "id": "PP:science-of-visual-consciousness-misc",
-                                "anchor": "node:PP:science-of-visual-consciousness-misc",
-                                "statement": "Science of Visual Consciousness, Misc",
-                                "name": "Science of Visual Consciousness, Misc"
-                              }
-                            ],
-                            "rank_note": "Not ranked; arranged by structure."
-                          }
+                          "id": "PP:philosophy-of-archaeology",
+                          "anchor": "node:PP:philosophy-of-archaeology",
+                          "statement": "Philosophy of Archaeology",
+                          "name": "Philosophy of Archaeology"
                         },
                         {
-                          "id": "PL.O.A5.G1",
-                          "anchor": "group:PL.O.A5.G1",
-                          "statement": "This group covers history and philosophy of applied and professional fields, such as engineering, law and medicine, which concern how those practices developed and what they rest on.",
-                          "name": "This group covers history and philosophy of applied and professional fields, such as engineering, law and medicine, which concern how those practices developed and what they rest on.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:5002",
-                                "anchor": "node:ANZSRC:5002",
-                                "statement": "History and philosophy of specific fields",
-                                "name": "History and philosophy of specific fields"
-                              },
-                              {
-                                "id": "ANZSRC:500201",
-                                "anchor": "node:ANZSRC:500201",
-                                "statement": "History and philosophy of engineering and technology",
-                                "name": "History and philosophy of engineering and technology"
-                              },
-                              {
-                                "id": "ANZSRC:500202",
-                                "anchor": "node:ANZSRC:500202",
-                                "statement": "History and philosophy of law and justice",
-                                "name": "History and philosophy of law and justice"
-                              },
-                              {
-                                "id": "ANZSRC:500203",
-                                "anchor": "node:ANZSRC:500203",
-                                "statement": "History and philosophy of medicine",
-                                "name": "History and philosophy of medicine"
-                              },
-                              {
-                                "id": "ANZSRC:500299",
-                                "anchor": "node:ANZSRC:500299",
-                                "statement": "History and philosophy of specific fields not elsewhere classified",
-                                "name": "History and philosophy of specific fields not elsewhere classified"
-                              }
-                            ],
-                            "rank_note": "Grouped by the field studied; no ranking."
-                          }
+                          "id": "PP:philosophy-of-biology",
+                          "anchor": "node:PP:philosophy-of-biology",
+                          "statement": "Philosophy of Biology",
+                          "name": "Philosophy of Biology"
                         },
                         {
-                          "id": "PL.O.A5.G20",
-                          "anchor": "group:PL.O.A5.G20",
-                          "statement": "Applied and professional areas cover the practice of therapy and the professional fields connected to philosophy.",
-                          "name": "Applied and professional areas cover the practice of therapy and the professional fields connected to philosophy.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "PP:professional-areas",
-                                "anchor": "node:PP:professional-areas",
-                                "statement": "Professional Areas",
-                                "name": "Professional Areas"
-                              },
-                              {
-                                "id": "PP:psychotherapy-and-psychoanalysis",
-                                "anchor": "node:PP:psychotherapy-and-psychoanalysis",
-                                "statement": "Psychotherapy and Psychoanalysis",
-                                "name": "Psychotherapy and Psychoanalysis"
-                              }
-                            ],
-                            "rank_note": "Not ranked; arranged by structure."
-                          }
+                          "id": "PP:philosophy-of-economics",
+                          "anchor": "node:PP:philosophy-of-economics",
+                          "statement": "Philosophy of Economics",
+                          "name": "Philosophy of Economics"
+                        },
+                        {
+                          "id": "PP:philosophy-of-education",
+                          "anchor": "node:PP:philosophy-of-education",
+                          "statement": "Philosophy of Education",
+                          "name": "Philosophy of Education"
                         }
-                      ]
+                      ],
+                      "rank_note": "Listed without ranking; each is a distinct discipline."
+                    }
+                  },
+                  {
+                    "id": "PL.O.A5.G19",
+                    "anchor": "group:PL.O.A5.G19",
+                    "statement": "Philosophy of the social and historical sciences examines how we study human societies, places, and the past.",
+                    "name": "Philosophy of the social and historical sciences examines how we study human societies, places, and the past.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PP:philosophy-of-geography",
+                          "anchor": "node:PP:philosophy-of-geography",
+                          "statement": "Philosophy of Geography",
+                          "name": "Philosophy of Geography"
+                        },
+                        {
+                          "id": "PP:philosophy-of-history",
+                          "anchor": "node:PP:philosophy-of-history",
+                          "statement": "Philosophy of History",
+                          "name": "Philosophy of History"
+                        },
+                        {
+                          "id": "PP:philosophy-of-social-science-miscellaneous",
+                          "anchor": "node:PP:philosophy-of-social-science-miscellaneous",
+                          "statement": "Philosophy of Social Science, Miscellaneous",
+                          "name": "Philosophy of Social Science, Miscellaneous"
+                        },
+                        {
+                          "id": "PP:philosophy-of-sociology",
+                          "anchor": "node:PP:philosophy-of-sociology",
+                          "statement": "Philosophy of Sociology",
+                          "name": "Philosophy of Sociology"
+                        }
+                      ],
+                      "rank_note": "Not ranked; arranged by structure."
+                    }
+                  },
+                  {
+                    "id": "PL.O.A5.G12",
+                    "anchor": "group:PL.O.A5.G12",
+                    "statement": "Philosophy of cognitive and computing sciences asks conceptual questions about minds, machines and information.",
+                    "name": "Philosophy of cognitive and computing sciences asks conceptual questions about minds, machines and information.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PP:philosophy-of-artificial-intelligence",
+                          "anchor": "node:PP:philosophy-of-artificial-intelligence",
+                          "statement": "Philosophy of Artificial Intelligence",
+                          "name": "Philosophy of Artificial Intelligence"
+                        },
+                        {
+                          "id": "PP:philosophy-of-cognitive-science-miscellaneous",
+                          "anchor": "node:PP:philosophy-of-cognitive-science-miscellaneous",
+                          "statement": "Philosophy of Cognitive Science, Miscellaneous",
+                          "name": "Philosophy of Cognitive Science, Miscellaneous"
+                        },
+                        {
+                          "id": "PP:philosophy-of-computing-and-information",
+                          "anchor": "node:PP:philosophy-of-computing-and-information",
+                          "statement": "Philosophy of Computing and Information",
+                          "name": "Philosophy of Computing and Information"
+                        }
+                      ],
+                      "rank_note": "Listed without ranking; each is a distinct subfield."
                     }
                   }
                 ]
@@ -1906,90 +1673,231 @@
             {
               "id": "PL.K5.S2",
               "anchor": "section:PL.K5.S2",
-              "statement": "The history and traditions of philosophy record how philosophical thought developed across periods, regions and cultures.",
-              "name": "The history and traditions of philosophy record how philosophical thought developed across periods, regions and cultures.",
+              "statement": "Philosophy of the humanities and professions asks about the foundations of non-scientific disciplines and applied fields.",
+              "name": "Philosophy of the humanities and professions asks about the foundations of non-scientific disciplines and applied fields.",
               "support": {
                 "logic_type": "inductive",
-                "basis": "parts",
+                "basis": "kinds",
                 "order": "structure",
-                "rank_note": "Historical periods first, then regional traditions.",
+                "rank_note": "Humanities and social sciences come first, then applied professions and formal sciences.",
                 "points": [
                   {
-                    "id": "PL.K5.S2.U1",
-                    "anchor": "section:PL.K5.S2.U1",
-                    "statement": "The history of ideas and of science records how thought developed over time.",
-                    "name": "The history of ideas and of science records how thought developed over time.",
+                    "id": "PL.O.A5.G2",
+                    "anchor": "group:PL.O.A5.G2",
+                    "statement": "This group covers history and philosophy of the academic disciplines of the humanities and social sciences, together with the broad arts and humanities area.",
+                    "name": "This group covers history and philosophy of the academic disciplines of the humanities and social sciences, together with the broad arts and humanities area.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:500205",
+                          "anchor": "node:ANZSRC:500205",
+                          "statement": "History and philosophy of the humanities",
+                          "name": "History and philosophy of the humanities"
+                        },
+                        {
+                          "id": "ANZSRC:500206",
+                          "anchor": "node:ANZSRC:500206",
+                          "statement": "History and philosophy of the social sciences",
+                          "name": "History and philosophy of the social sciences"
+                        },
+                        {
+                          "id": "PP:arts-and-humanities",
+                          "anchor": "node:PP:arts-and-humanities",
+                          "statement": "Arts and Humanities",
+                          "name": "Arts and Humanities"
+                        }
+                      ],
+                      "rank_note": "Grouped by the field studied; no ranking."
+                    }
+                  },
+                  {
+                    "id": "PL.O.A5.G1",
+                    "anchor": "group:PL.O.A5.G1",
+                    "statement": "This group covers history and philosophy of applied and professional fields, such as engineering, law and medicine, which concern how those practices developed and what they rest on.",
+                    "name": "This group covers history and philosophy of applied and professional fields, such as engineering, law and medicine, which concern how those practices developed and what they rest on.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:5002",
+                          "anchor": "node:ANZSRC:5002",
+                          "statement": "History and philosophy of specific fields",
+                          "name": "History and philosophy of specific fields"
+                        },
+                        {
+                          "id": "ANZSRC:500201",
+                          "anchor": "node:ANZSRC:500201",
+                          "statement": "History and philosophy of engineering and technology",
+                          "name": "History and philosophy of engineering and technology"
+                        },
+                        {
+                          "id": "ANZSRC:500202",
+                          "anchor": "node:ANZSRC:500202",
+                          "statement": "History and philosophy of law and justice",
+                          "name": "History and philosophy of law and justice"
+                        },
+                        {
+                          "id": "ANZSRC:500203",
+                          "anchor": "node:ANZSRC:500203",
+                          "statement": "History and philosophy of medicine",
+                          "name": "History and philosophy of medicine"
+                        },
+                        {
+                          "id": "ANZSRC:500299",
+                          "anchor": "node:ANZSRC:500299",
+                          "statement": "History and philosophy of specific fields not elsewhere classified",
+                          "name": "History and philosophy of specific fields not elsewhere classified"
+                        }
+                      ],
+                      "rank_note": "Grouped by the field studied; no ranking."
+                    }
+                  },
+                  {
+                    "id": "PL.O.A5.G20",
+                    "anchor": "group:PL.O.A5.G20",
+                    "statement": "Applied and professional areas cover the practice of therapy and the professional fields connected to philosophy.",
+                    "name": "Applied and professional areas cover the practice of therapy and the professional fields connected to philosophy.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PP:professional-areas",
+                          "anchor": "node:PP:professional-areas",
+                          "statement": "Professional Areas",
+                          "name": "Professional Areas"
+                        },
+                        {
+                          "id": "PP:psychotherapy-and-psychoanalysis",
+                          "anchor": "node:PP:psychotherapy-and-psychoanalysis",
+                          "statement": "Psychotherapy and Psychoanalysis",
+                          "name": "Psychotherapy and Psychoanalysis"
+                        }
+                      ],
+                      "rank_note": "Not ranked; arranged by structure."
+                    }
+                  },
+                  {
+                    "id": "PL.O.A5.G16",
+                    "anchor": "group:PL.O.A5.G16",
+                    "statement": "Philosophy of the formal and physical sciences examines the foundations of mathematics, probability, physical science, and science in general.",
+                    "name": "Philosophy of the formal and physical sciences examines the foundations of mathematics, probability, physical science, and science in general.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PP:philosophy-of-mathematics",
+                          "anchor": "node:PP:philosophy-of-mathematics",
+                          "statement": "Philosophy of Mathematics",
+                          "name": "Philosophy of Mathematics"
+                        },
+                        {
+                          "id": "PP:philosophy-of-probability",
+                          "anchor": "node:PP:philosophy-of-probability",
+                          "statement": "Philosophy of Probability",
+                          "name": "Philosophy of Probability"
+                        },
+                        {
+                          "id": "PP:philosophy-of-physical-science",
+                          "anchor": "node:PP:philosophy-of-physical-science",
+                          "statement": "Philosophy of Physical Science",
+                          "name": "Philosophy of Physical Science"
+                        },
+                        {
+                          "id": "PP:philosophy-of-science-misc",
+                          "anchor": "node:PP:philosophy-of-science-misc",
+                          "statement": "Philosophy of Science, Misc",
+                          "name": "Philosophy of Science, Misc"
+                        },
+                        {
+                          "id": "PP:science-logic-and-mathematics",
+                          "anchor": "node:PP:science-logic-and-mathematics",
+                          "statement": "Science, Logic, and Mathematics",
+                          "name": "Science, Logic, and Mathematics"
+                        }
+                      ],
+                      "rank_note": "Not ranked; arranged by structure."
+                    }
+                  },
+                  {
+                    "id": "PL.O.A5.G14",
+                    "anchor": "group:PL.O.A5.G14",
+                    "statement": "Broad academic areas are general or residual fields of study that are not tied to a single specific philosophical question.",
+                    "name": "Broad academic areas are general or residual fields of study that are not tied to a single specific philosophical question.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PP:natural-sciences",
+                          "anchor": "node:PP:natural-sciences",
+                          "statement": "Natural Sciences",
+                          "name": "Natural Sciences"
+                        },
+                        {
+                          "id": "PP:other-academic-areas",
+                          "anchor": "node:PP:other-academic-areas",
+                          "statement": "Other Academic Areas",
+                          "name": "Other Academic Areas"
+                        },
+                        {
+                          "id": "PP:other-academic-areas-misc",
+                          "anchor": "node:PP:other-academic-areas-misc",
+                          "statement": "Other Academic Areas, Misc",
+                          "name": "Other Academic Areas, Misc"
+                        }
+                      ],
+                      "rank_note": "Listed without ranking; they are catch-all academic categories."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "PL.K5.S3",
+              "anchor": "section:PL.K5.S3",
+              "statement": "The history, traditions and teaching of philosophy ask how philosophical thought has developed across periods and cultures and how it is introduced to learners.",
+              "name": "The history, traditions and teaching of philosophy ask how philosophical thought has developed across periods and cultures and how it is introduced to learners.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Historical periods come first, then cultural traditions, then teaching.",
+                "points": [
+                  {
+                    "id": "PL.K5.S3.U1",
+                    "anchor": "section:PL.K5.S3.U1",
+                    "statement": "Historical periods of Western philosophy trace how philosophical thought developed from antiquity to the nineteenth century.",
+                    "name": "Historical periods of Western philosophy trace how philosophical thought developed from antiquity to the nineteenth century.",
                     "support": {
                       "logic_type": "inductive",
                       "basis": "kinds",
                       "order": "structure",
-                      "rank_note": "General history first, then Western survey.",
+                      "rank_note": "Periods run in chronological order.",
                       "points": [
-                        {
-                          "id": "PL.O.A5.G3",
-                          "anchor": "group:PL.O.A5.G3",
-                          "statement": "This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.",
-                          "name": "This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:500207",
-                                "anchor": "node:ANZSRC:500207",
-                                "statement": "History of ideas",
-                                "name": "History of ideas"
-                              },
-                              {
-                                "id": "ANZSRC:500208",
-                                "anchor": "node:ANZSRC:500208",
-                                "statement": "History of philosophy",
-                                "name": "History of philosophy"
-                              },
-                              {
-                                "id": "ANZSRC:500204",
-                                "anchor": "node:ANZSRC:500204",
-                                "statement": "History and philosophy of science",
-                                "name": "History and philosophy of science"
-                              },
-                              {
-                                "id": "ANZSRC:500317",
-                                "anchor": "node:ANZSRC:500317",
-                                "statement": "Philosophy of science (excl. history and philosophy of specific fields)",
-                                "name": "Philosophy of science (excl. history and philosophy of specific fields)"
-                              },
-                              {
-                                "id": "LCC:Q",
-                                "anchor": "node:LCC:Q",
-                                "statement": "Science (General)",
-                                "name": "Science (General)"
-                              }
-                            ],
-                            "rank_note": "Grouped by the field studied; no ranking."
-                          }
-                        },
                         {
                           "id": "PP:history-of-western-philosophy",
                           "anchor": "node:PP:history-of-western-philosophy",
                           "statement": "History of Western Philosophy",
-                          "name": "History of Western Philosophy"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "PL.K5.S2.U2",
-                    "anchor": "section:PL.K5.S2.U2",
-                    "statement": "Historical periods of Western philosophy trace doctrines from antiquity to the twentieth century.",
-                    "name": "Historical periods of Western philosophy trace doctrines from antiquity to the twentieth century.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "rank_note": "Chronological from ancient to twentieth century.",
-                      "points": [
+                          "name": "History of Western Philosophy",
+                          "aliases": [
+                            "PP:history-of-western-philosophy-misc"
+                          ]
+                        },
                         {
                           "id": "PP:ancient-greek-and-roman-philosophy",
                           "anchor": "node:PP:ancient-greek-and-roman-philosophy",
@@ -2013,27 +1921,27 @@
                           "anchor": "node:PP:19th-century-philosophy",
                           "statement": "19th Century Philosophy",
                           "name": "19th Century Philosophy"
-                        },
-                        {
-                          "id": "PP:20th-century-philosophy",
-                          "anchor": "node:PP:20th-century-philosophy",
-                          "statement": "20th Century Philosophy",
-                          "name": "20th Century Philosophy"
                         }
                       ]
                     }
                   },
                   {
-                    "id": "PL.K5.S2.U3",
-                    "anchor": "section:PL.K5.S2.U3",
-                    "statement": "European and continental traditions are defined by shared regional lineages of philosophical thought.",
-                    "name": "European and continental traditions are defined by shared regional lineages of philosophical thought.",
+                    "id": "PL.K5.S3.U2",
+                    "anchor": "section:PL.K5.S3.U2",
+                    "statement": "Regional and cultural traditions of philosophy ask how thought has developed in different places and schools.",
+                    "name": "Regional and cultural traditions of philosophy ask how thought has developed in different places and schools.",
                     "support": {
                       "logic_type": "inductive",
                       "basis": "kinds",
                       "order": "structure",
-                      "rank_note": "European first, then continental.",
+                      "rank_note": "Twentieth-century and European traditions come first, then other regions.",
                       "points": [
+                        {
+                          "id": "PP:20th-century-philosophy",
+                          "anchor": "node:PP:20th-century-philosophy",
+                          "statement": "20th Century Philosophy",
+                          "name": "20th Century Philosophy"
+                        },
                         {
                           "id": "PP:european-philosophy",
                           "anchor": "node:PP:european-philosophy",
@@ -2045,21 +1953,7 @@
                           "anchor": "node:PP:continental-philosophy",
                           "statement": "Continental Philosophy",
                           "name": "Continental Philosophy"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "PL.K5.S2.U4",
-                    "anchor": "section:PL.K5.S2.U4",
-                    "statement": "Non-Western, American and comparative traditions are defined by the cultures and regions from which they arise.",
-                    "name": "Non-Western, American and comparative traditions are defined by the cultures and regions from which they arise.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "rank_note": "Asian, African, comparative, then Americas and traditions.",
-                      "points": [
+                        },
                         {
                           "id": "PP:asian-philosophy",
                           "anchor": "node:PP:asian-philosophy",
@@ -2071,7 +1965,21 @@
                           "anchor": "node:PP:africanafricana-philosophy",
                           "statement": "African/Africana Philosophy",
                           "name": "African/Africana Philosophy"
-                        },
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "PL.K5.S3.U3",
+                    "anchor": "section:PL.K5.S3.U3",
+                    "statement": "Comparative traditions and regional contexts place philosophy within particular cultures and introduce it to newcomers.",
+                    "name": "Comparative traditions and regional contexts place philosophy within particular cultures and introduce it to newcomers.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Comparative work comes first, then regional contexts, then traditions, then introductions.",
+                      "points": [
                         {
                           "id": "ANZSRC:500318",
                           "anchor": "node:ANZSRC:500318",
@@ -2079,82 +1987,140 @@
                           "name": "Philosophy of specific cultures (incl. comparative philosophy)"
                         },
                         {
-                          "id": "PP:philosophy-of-the-americas",
-                          "anchor": "node:PP:philosophy-of-the-americas",
-                          "statement": "Philosophy of the Americas",
-                          "name": "Philosophy of the Americas"
+                          "id": "PL.O.A1.G12",
+                          "anchor": "group:PL.O.A1.G12",
+                          "statement": "Contextual areas are defined by a region or an educational activity rather than by a single philosophical topic.",
+                          "name": "Contextual areas are defined by a region or an educational activity rather than by a single philosophical topic.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PP:philosophy-of-the-americas",
+                                "anchor": "node:PP:philosophy-of-the-americas",
+                                "statement": "Philosophy of the Americas",
+                                "name": "Philosophy of the Americas"
+                              },
+                              {
+                                "id": "PP:teaching-philosophy-misc",
+                                "anchor": "node:PP:teaching-philosophy-misc",
+                                "statement": "Teaching Philosophy, Misc",
+                                "name": "Teaching Philosophy, Misc"
+                              }
+                            ],
+                            "rank_note": "Ordered by structure of context: region first, then teaching."
+                          }
                         },
                         {
-                          "id": "PP:philosophical-traditions",
-                          "anchor": "node:PP:philosophical-traditions",
-                          "statement": "Philosophical Traditions",
-                          "name": "Philosophical Traditions"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "PL.K5.S3",
-              "anchor": "section:PL.K5.S3",
-              "statement": "Philosophy as taught and introduced asks how philosophy is presented to newcomers, children and schools.",
-              "name": "Philosophy as taught and introduced asks how philosophy is presented to newcomers, children and schools.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "parts",
-                "order": "structure",
-                "rank_note": "General introductions first, then school and children's work.",
-                "points": [
-                  {
-                    "id": "PL.K5.S3.U1",
-                    "anchor": "section:PL.K5.S3.U1",
-                    "statement": "Introductions, anthologies and schooling present philosophy to newcomers in educational settings.",
-                    "name": "Introductions, anthologies and schooling present philosophy to newcomers in educational settings.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "rank_note": "Introductions first, then schools and teaching.",
-                      "points": [
-                        {
-                          "id": "PP:philosophy-introductions-and-anthologies",
-                          "anchor": "node:PP:philosophy-introductions-and-anthologies",
-                          "statement": "Philosophy, Introductions and Anthologies",
-                          "name": "Philosophy, Introductions and Anthologies"
+                          "id": "PP:philosophical-traditions-miscellaneous",
+                          "anchor": "node:PP:philosophical-traditions-miscellaneous",
+                          "statement": "Philosophical Traditions, Miscellaneous",
+                          "name": "Philosophical Traditions, Miscellaneous"
                         },
                         {
-                          "id": "PP:philosophy-in-schools",
-                          "anchor": "node:PP:philosophy-in-schools",
-                          "statement": "Philosophy in Schools",
-                          "name": "Philosophy in Schools"
-                        },
-                        {
-                          "id": "PP:teaching-philosophy-misc",
-                          "anchor": "node:PP:teaching-philosophy-misc",
-                          "statement": "Teaching Philosophy, Misc",
-                          "name": "Teaching Philosophy, Misc"
+                          "id": "PL.O.A1.G9",
+                          "anchor": "group:PL.O.A1.G9",
+                          "statement": "Introductory and school-based works present philosophy to newcomers and place it in educational settings.",
+                          "name": "Introductory and school-based works present philosophy to newcomers and place it in educational settings.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PP:philosophy-for-children-introductions",
+                                "anchor": "node:PP:philosophy-for-children-introductions",
+                                "statement": "Philosophy for Children: Introductions",
+                                "name": "Philosophy for Children: Introductions"
+                              },
+                              {
+                                "id": "PP:philosophy-in-schools",
+                                "anchor": "node:PP:philosophy-in-schools",
+                                "statement": "Philosophy in Schools",
+                                "name": "Philosophy in Schools"
+                              },
+                              {
+                                "id": "PP:philosophy-introductions-and-anthologies",
+                                "anchor": "node:PP:philosophy-introductions-and-anthologies",
+                                "statement": "Philosophy, Introductions and Anthologies",
+                                "name": "Philosophy, Introductions and Anthologies"
+                              },
+                              {
+                                "id": "PP:philosophical-traditions",
+                                "anchor": "node:PP:philosophical-traditions",
+                                "statement": "Philosophical Traditions",
+                                "name": "Philosophical Traditions"
+                              }
+                            ],
+                            "rank_note": "Ordered from introductions to schools."
+                          }
                         }
                       ]
                     }
                   },
                   {
-                    "id": "PL.K5.S3.U2",
-                    "anchor": "section:PL.K5.S3.U2",
-                    "statement": "Philosophy for children concerns how young people are introduced to philosophical inquiry and its methods.",
-                    "name": "Philosophy for children concerns how young people are introduced to philosophical inquiry and its methods.",
+                    "id": "PL.K5.S3.U4",
+                    "anchor": "section:PL.K5.S3.U4",
+                    "statement": "Teaching philosophy to children presents philosophical themes such as ethics, aesthetics, politics and reasoning to learners.",
+                    "name": "Teaching philosophy to children presents philosophical themes such as ethics, aesthetics, politics and reasoning to learners.",
                     "support": {
                       "logic_type": "inductive",
                       "basis": "kinds",
                       "order": "structure",
-                      "rank_note": "Introductions first, then method and theory.",
+                      "rank_note": "Themes come first, then the general children's heading.",
                       "points": [
                         {
-                          "id": "PP:philosophy-for-children-introductions",
-                          "anchor": "node:PP:philosophy-for-children-introductions",
-                          "statement": "Philosophy for Children: Introductions",
-                          "name": "Philosophy for Children: Introductions"
+                          "id": "PP:philosophy-for-children-aesthetics",
+                          "anchor": "node:PP:philosophy-for-children-aesthetics",
+                          "statement": "Philosophy for Children: Aesthetics",
+                          "name": "Philosophy for Children: Aesthetics"
+                        },
+                        {
+                          "id": "PP:philosophy-for-children-ethics",
+                          "anchor": "node:PP:philosophy-for-children-ethics",
+                          "statement": "Philosophy for Children: Ethics",
+                          "name": "Philosophy for Children: Ethics"
+                        },
+                        {
+                          "id": "PP:philosophy-for-children-political-philosophy",
+                          "anchor": "node:PP:philosophy-for-children-political-philosophy",
+                          "statement": "Philosophy for Children: Political Philosophy",
+                          "name": "Philosophy for Children: Political Philosophy"
+                        },
+                        {
+                          "id": "PP:philosophy-for-children-reasoning",
+                          "anchor": "node:PP:philosophy-for-children-reasoning",
+                          "statement": "Philosophy for Children: Reasoning",
+                          "name": "Philosophy for Children: Reasoning"
+                        },
+                        {
+                          "id": "PP:philosophy-for-children-misc",
+                          "anchor": "node:PP:philosophy-for-children-misc",
+                          "statement": "Philosophy for Children, Misc",
+                          "name": "Philosophy for Children, Misc"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "PL.K5.S3.U5",
+                    "anchor": "section:PL.K5.S3.U5",
+                    "statement": "Philosophy for children also treats religion, community of inquiry, educational method, metaphilosophy and specific philosophers.",
+                    "name": "Philosophy for children also treats religion, community of inquiry, educational method, metaphilosophy and specific philosophers.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Content comes first, then method, community and philosophers.",
+                      "points": [
+                        {
+                          "id": "PP:philosophy-for-children-religion-and-spirituality",
+                          "anchor": "node:PP:philosophy-for-children-religion-and-spirituality",
+                          "statement": "Philosophy for Children: Religion and Spirituality",
+                          "name": "Philosophy for Children: Religion and Spirituality"
                         },
                         {
                           "id": "PP:philosophy-for-children-community-of-inquiry",
@@ -2188,16 +2154,11 @@
             }
           ]
         },
-        "title": "Standing of the sciences and mathematics"
+        "title": "Standing of the sciences and disciplines"
       }
     ]
   },
   "retired": [
-    {
-      "id": "PP:history-of-western-philosophy-misc",
-      "name": "History of Western Philosophy, Misc",
-      "reason": "container heading for the whole field, not a topic"
-    },
     {
       "id": "ANZSRC:500399",
       "name": "Philosophy not elsewhere classified",
@@ -2237,16 +2198,6 @@
       "id": "PP:philosophy-miscellaneous",
       "name": "Philosophy, Miscellaneous",
       "reason": "container heading for the whole field, not a topic"
-    },
-    {
-      "id": "PP:philosophical-traditions-miscellaneous",
-      "name": "Philosophical Traditions, Miscellaneous",
-      "reason": "container heading for the whole field, not a topic"
-    },
-    {
-      "id": "PP:philosophy-for-children-misc",
-      "name": "Philosophy for Children, Misc",
-      "reason": "container heading for the whole field, not a topic"
     }
   ],
   "build": {
@@ -2256,19 +2207,19 @@
   },
   "minto_issues": {},
   "field_check": {
-    "governing_thought": "Philosophy is divided by what its questions are about: being, knowledge and mind, meaning and inference, value, and the standing of the sciences, mathematics and philosophy itself.",
+    "governing_thought": "Philosophy is divided by what its questions are about into being, knowledge and mind, meaning and inference, value, and the standing of the sciences and of philosophy itself.",
     "key_line": [
-      "Being is the claim-type concerned with what exists, including fundamental reality, religious questions, action and the place of consciousness in nature.",
-      "Knowledge and mind is the claim-type concerned with how we know, what the mind is, and how minds malfunction.",
-      "Meaning and inference is the claim-type concerned with valid reasoning and how meaning is produced and understood in language and texts.",
-      "Value is the claim-type concerned with what is good, right, beautiful and just, in private life, society and the professions.",
-      "The standing of the sciences, mathematics and philosophy is the claim-type concerned with the foundations, methods and history of inquiry, including philosophy's own."
+      "Being is the kind of question that asks what exists and what the fundamental nature of reality is.",
+      "Knowledge and mind is the kind of question that asks how we know, what the mind is, how consciousness arises and how mental life can fail.",
+      "Meaning and inference is the kind of question that asks how valid reasoning works and how meaning is produced and understood.",
+      "Value is the kind of question that asks what is good, right, just, beautiful or worth loving, in private life and in society.",
+      "The standing of the sciences and disciplines is the kind of question that asks what the methods, foundations and history of inquiry, including philosophy itself, are worth."
     ],
     "holds": false,
-    "note": "P5 mixes sciences' foundations with history, regional traditions and teaching (not values of subject matter); P1/P2 overlap on consciousness; catch-all and catalogue-style sections; Philosophy for Children scattered.",
+    "note": "P5 is a mixed pillar: P5.3 is organised by period and region, P5.2.5 is a residual catch-all, and several sections are Misc/NEC catalogue buckets.",
     "review": true,
-    "misplaced": 11,
-    "problems": 111
+    "misplaced": 10,
+    "problems": 110
   },
-  "cost_usd": 0.5745
+  "cost_usd": 0.4646
 }
