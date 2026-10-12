@@ -1028,7 +1028,7 @@ def _post_anthropic(body, key):
     last = None
     for attempt in range(4):
         try:
-            with urllib.request.urlopen(req, timeout=300) as resp:
+            with urllib.request.urlopen(req, timeout=int(os.environ.get("ANTHROPIC_TIMEOUT", "120"))) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
             if exc.code not in (408, 429, 500, 502, 503, 504, 529):
