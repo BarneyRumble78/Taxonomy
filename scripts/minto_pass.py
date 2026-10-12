@@ -34,7 +34,7 @@ Rules you must follow exactly:
 2. Key line: 2 to 5 pillars, MECE on ONE dimension that belongs to the field's own subject matter (e.g. for religion: the ultimate, sacred texts, practice, community). Never a library, catalogue, code or source-scheme dimension. Never a pillar for "other", "miscellaneous", "general" or "containers".
 3. The field's existing key line in the input is a hint only. Use it if every group truly fits one of its values; otherwise choose a better subject-matter dimension (what the knowledge is about, e.g. its objects, scales, regimes, stages or themes) so that every group fits exactly one pillar. A strict reviewer will reject any group that sits under a pillar whose value it does not share.
 4. Every group id in the input appears exactly once, under exactly one pillar. Do not invent, drop, merge or split group ids.
-5. A pillar with 2 to 5 items lists them in "members" and leaves "sections" empty. A pillar with more than 5 items puts them in 2 to 5 "sections", each with 2 to 5 member ids, and leaves "members" empty. A pillar may NOT have exactly one item: if only one group fits a pillar, rethink the pillars.
+5. Every node (pillar, section, subsection) has EITHER 2 to 5 ids in "members" OR 2 to 5 children (a pillar's children are "sections", a section's children are "subsections"), never both, never exactly one. Build the tree top-down: decide the pillars first, then split each pillar on one dimension of its own, then split again if needed. A pillar may NOT have exactly one item: if only one group fits a pillar, rethink the pillars.
 6. Every statement (governing thought, pillar, section) is one plain declarative sentence ending with a full stop, at least eight words, saying what the members have in common and why they belong together (the summary idea, not a heading). Never start with "These", "Both are" or "All are". Never mention MSC, LCC, ANZSRC, MeSH, catalogue, taxonomy or codes.
 9. "rewrites": for any input group whose statement describes a library, catalogue or code scheme instead of subject matter, give {id, statement} with a new subject-matter summary sentence (same rules as 6). Leave it empty when nothing needs rewriting.
 10. "retired": ids of items with is_leaf true that are only container headings for the whole field (e.g. "Mathematics", "Pure mathematics", "General"), not topics. At most five. Retired ids are not placed under any pillar.
@@ -50,6 +50,10 @@ SEC = {"type": "object", "additionalProperties": False,
                       "order": {"type": "string", "enum": ["time", "structure", "degree"]}, "rank_note": {"type": "string"},
                       "members": {"type": "array", "items": {"type": "string"}}},
        "required": ["statement", "basis", "order", "rank_note", "members"]}
+SUB = copy.deepcopy(SEC)
+SEC = copy.deepcopy(SEC)
+SEC["properties"]["subsections"] = {"type": "array", "items": SUB}
+SEC["required"] = SEC["required"] + ["subsections"]
 PIL = {"type": "object", "additionalProperties": False,
        "properties": {"title": {"type": "string"}, "statement": {"type": "string"},
                       "basis": SEC["properties"]["basis"], "order": SEC["properties"]["order"], "rank_note": {"type": "string"},
@@ -65,14 +69,15 @@ SCHEMA = {"type": "object", "additionalProperties": False,
                          "dissolve": {"type": "array", "items": {"type": "string"}},
                          "merge": {"type": "array", "items": {"type": "object", "additionalProperties": False, "properties": {"keep": {"type": "string"}, "drop": {"type": "string"}}, "required": ["keep", "drop"]}}},
           "required": ["merge", "dissolve", "rewrites", "retired", "governing_thought", "dimension", "plural_noun", "basis", "order", "rank_note", "situation", "complication", "question", "pillars"]}
-CHECK_SYSTEM = """You check a classification pyramid from the top down, strictly.
-holds is true only when ALL of these are true: the governing thought names one dimension intrinsic to the field (for example what the knowledge is about, the role a piece of knowledge plays such as object studied / practice / application to another field, scale, stage or theme); the 2-5 pillars are mutually exclusive values of that dimension and together exhaust the field; each pillar statement restates its value of the dimension; every group under a pillar belongs to that pillar's value better than to any other pillar; no pillar or section is organised by a library, catalogue or code scheme.
-Ids like P1.2 are neutral positions, not codes. Leaf topic names come from published sources and cannot be renamed; judge where they are placed, not their wording. Overlap means one item fits two pillars equally well, not merely that two fields are related.
-problems: the number of misplaced or overlapping items you found (0 when holds is true).
-note: one sentence, at most twenty-five words; when holds is false, name the worst problem and the group ids involved.
+CHECK_SYSTEM = """You check a classification pyramid from the top down (Minto key-line test).
+key_line_holds is true when ALL of these are true: (a) the governing thought names one dimension intrinsic to the field (for example what the knowledge is about, the role a piece of knowledge plays, a causal link, scale, stage or theme) and answers the question how the field divides; (b) there are 2-5 pillars and each is a distinct value of that one dimension; (c) together the pillars cover the field, and no pillar is a catch-all; (d) each pillar statement restates its own value of the dimension; (e) no pillar or section is organised by a library, catalogue or code scheme.
+Judge (a)-(e) on the governing thought, the pillars and their direct sections only. Do NOT set key_line_holds false because of individual misplaced items deeper down; count those in misplaced instead.
+misplaced: the number of second- or third-level items that clearly belong under a different pillar.
+Ids like P1.2 are neutral positions, not codes. Leaf topic names come from published sources and cannot be renamed.
+note: one sentence, at most twenty-five words: the worst key-line problem if key_line_holds is false, otherwise the worst misplaced items by position.
 Call the tool record_check exactly once."""
 CHECK_SCHEMA = {"type": "object", "additionalProperties": False,
-                "properties": {"holds": {"type": "boolean"}, "problems": {"type": "integer"}, "note": {"type": "string"}}, "required": ["holds", "problems", "note"]}
+                "properties": {"key_line_holds": {"type": "boolean"}, "misplaced": {"type": "integer"}, "note": {"type": "string"}}, "required": ["key_line_holds", "misplaced", "note"]}
 
 EXPAND = re.compile(BAN.pattern + r"|\bcontainer|classifications?\b|\bcategories\b", re.I)
 LOG = Path("/workspace/minto_pass.log")
@@ -165,6 +170,17 @@ def load(field):
                 continue
             pid = p.get("id") or p.get("anchor")
             items[pid] = {"point": p, "cell": c.get("id"), "cell_statement": c.get("statement")}
+    TARGET = 75
+    def nkids(p): return len((p.get("support") or {}).get("points") or [])
+    while True:
+        cands = [k for k, v in items.items() if nkids(v["point"]) and len(items) - 1 + nkids(v["point"]) <= TARGET]
+        if not cands:
+            break
+        cands.sort(key=lambda k: (not EXPAND.search(items[k]["point"].get("statement") or ""), -nkids(items[k]["point"])))
+        k = cands[0]
+        v = items.pop(k)
+        for c in v["point"]["support"]["points"]:
+            items[c.get("id") or c.get("anchor")] = {"point": c, "cell": v.get("cell")}
     byname, drop = {}, []
     for k, v in items.items():
         pt = v["point"]
@@ -182,6 +198,38 @@ def load(field):
     rb = ROOT / "pyramids" / "rebuild" / f"{field}.json"
     rbj = json.loads(rb.read_text()) if rb.exists() else {}
     return g, items, text, rbj
+
+
+def repair(r, items):
+    """Mechanical fixes only: no idea is moved across pillars."""
+    groups = {k for k, v in items.items() if (v["point"].get("support") or {}).get("points")}
+    ret = []
+    for x in r.get("retired") or []:
+        if x in groups:
+            r.setdefault("dissolve", []).append(x)
+        else:
+            ret.append(x)
+    r["retired"] = ret
+    def fix(n, key):
+        if not key:
+            return
+        nxt = {"sections": "subsections", "subsections": None}[key]
+        kids = [c for c in n.get(key) or [] if c.get("members") or c.get(nxt or "_")]
+        for c in kids:
+            fix(c, nxt)
+        changed = True
+        while changed:
+            changed = False
+            for c in kids:
+                if not c.get(nxt or "_") and len(c.get("members") or []) == 1 and len(kids) > 1:
+                    others = sorted([o for o in kids if o is not c and not o.get(nxt or "_") and len(o["members"]) < 5], key=lambda o: len(o["members"]))
+                    if others:
+                        others[0]["members"] += c["members"]; kids.remove(c); changed = True; break
+        if len(kids) == 1 and not kids[0].get(nxt or "_") and not n.get("members"):
+            n["members"] = kids[0]["members"]; kids = []
+        n[key] = kids
+    for p in r.get("pillars") or []:
+        fix(p, "sections")
 
 
 def expand(r, items):
@@ -213,19 +261,22 @@ def validate(r, ids, leaf_ids=(), all_group_ids=()):
         if g["basis"] == "parts" and g["order"] != "structure": errs.append(f"{name}: parts needs order structure")
         if g["basis"] == "kinds" and g["order"] == "time": errs.append(f"{name}: kinds cannot be order time")
     grp("key line", r)
-    for i, p in enumerate(pills, 1):
-        texts.append(p["statement"]); grp(f"pillar {i}", p)
-        if p["sections"] and p["members"]:
-            errs.append(f"pillar {i} has both members and sections")
-        if p["sections"]:
-            if not 2 <= len(p["sections"]) <= 5: errs.append(f"pillar {i} has {len(p['sections'])} sections; need 2-5")
-            for j, s in enumerate(p["sections"], 1):
-                texts.append(s["statement"]); grp(f"pillar {i} section {j}", s)
-                if not 2 <= len(s["members"]) <= 5: errs.append(f"pillar {i} section {j} has {len(s['members'])} members; need 2-5")
-                seen += s["members"]
+    def node(name, n, kids_key):
+        texts.append(n["statement"]); grp(name, n)
+        kids = [c for c in (n.get(kids_key) or [])] if kids_key else []
+        mem = n.get("members") or []
+        if kids and mem:
+            errs.append(f"{name} has both members and children")
+        elif kids:
+            if not 2 <= len(kids) <= 5: errs.append(f"{name} has {len(kids)} children; need 2-5")
+            nxt = {"sections": "subsections", "subsections": None}[kids_key]
+            for j, c in enumerate(kids, 1):
+                node(f"{name} > {kids_key[:-1]} {j}", c, nxt)
         else:
-            if not 2 <= len(p["members"]) <= 5: errs.append(f"pillar {i} has {len(p['members'])} members; need 2-5 (use sections if more than 5)")
-            seen += p["members"]
+            if not 2 <= len(mem) <= 5: errs.append(f"{name} has {len(mem)} members; need 2-5 (split into children if more than 5)")
+            seen.extend(mem)
+    for i, p in enumerate(pills, 1):
+        node(f"pillar {i}", p, "sections")
     for t in texts:
         if not is_definition(t) or TEMPLATE.search(t) or BAN.search(t):
             errs.append(f"statement not allowed (blank, template or names a source scheme): {t[:90]}")
@@ -259,19 +310,18 @@ def build(field, r, items):
     m = {w["id"]: w["statement"] for w in r.get("rewrites") or []}
     for v in items.values():
         _rw(v["point"], m)
-    pts = []
-    for i, p in enumerate(r["pillars"], 1):
-        pid = f"{field}.K{i}"
-        if p["sections"]:
-            kids = []
-            for j, s in enumerate(p["sections"], 1):
-                kids.append({"id": f"{pid}.S{j}", "anchor": f"section:{pid}.S{j}", "statement": s["statement"], "name": s["statement"],
-                             "support": {"logic_type": "inductive", "basis": s["basis"], "order": s["order"], "rank_note": s["rank_note"],
-                                         "points": [copy.deepcopy(items[m]["point"]) for m in s["members"]]}})
+    def mk(n, nid, anchor, kids_key, extra=None):
+        kids = n.get(kids_key) or [] if kids_key else []
+        if kids:
+            nxt = {"sections": ("subsections", "S"), "subsections": (None, "U")}[kids_key]
+            pts_ = [mk(c, f"{nid}.{nxt[1]}{j}", "section", nxt[0]) for j, c in enumerate(kids, 1)]
         else:
-            kids = [copy.deepcopy(items[m]["point"]) for m in p["members"]]
-        pts.append({"id": pid, "anchor": f"pillar:{pid}", "title": p["title"], "statement": p["statement"], "name": p["statement"],
-                    "support": {"logic_type": "inductive", "basis": p["basis"], "order": p["order"], "rank_note": p["rank_note"], "points": kids}})
+            pts_ = [copy.deepcopy(items[x]["point"]) for x in n["members"]]
+        out = {"id": nid, "anchor": f"{anchor}:{nid}", "statement": n["statement"], "name": n["statement"],
+               "support": {"logic_type": "inductive", "basis": n["basis"], "order": n["order"], "rank_note": n["rank_note"], "points": pts_}}
+        if extra: out.update(extra)
+        return out
+    pts = [mk(p, f"{field}.K{i}", "pillar", "sections", {"title": p["title"]}) for i, p in enumerate(r["pillars"], 1)]
     return {"field": field, "introduction": {"situation": r["situation"], "complication": r["complication"], "question": r["question"],
                                              "answer": r["governing_thought"]},
             "governing_thought": r["governing_thought"],
@@ -335,39 +385,44 @@ def run(field, field_cap, stage_cap, dry=False):
     for attempt in range(6):
         msg = user + (f"\n\nYour previous answer was rejected. Fix ALL of these and answer again:\n{feedback}" if feedback else "")
         try:
-            r = b.call(SYSTEM, msg, "record_pyramid", SCHEMA, 6000)
+            r = b.call(SYSTEM, msg, "record_pyramid", SCHEMA, 10000)
         except RuntimeError as e:
             log(f"{field} stop: {e}"); break
+        repair(r, items)
         its = expand(r, items)
         bad_d = [d for d in r.get("dissolve") or [] if d not in items or not (items[d]["point"].get("support") or {}).get("points")]
         lids = {k for k, v in its.items() if not (v["point"].get("support") or {}).get("points")}
         errs = validate(r, list(its), lids, gids) + [f"dissolve id {d} is not an input group" for d in bad_d]
         if errs:
-            feedback = "\n".join("- " + e for e in errs); log(f"{field} attempt {attempt+1} invalid: {feedback[:400]}")
+            feedback = "\n".join("- " + e for e in errs) + "\n- Remember: 2-5 pillars, each with 2-5 members or 2-5 sections of 2-5 members; every listed id exactly once."; log(f"{field} attempt {attempt+1} invalid: {feedback[:400]}")
             continue
         pyr = build(field, r, its)
         iss = minto_issues(pyr)
         bad = {k: v for k, v in iss.items() if v}
         pyr["minto_issues"] = bad
+        def vw(n, pos, depth):
+            sup = (n.get("support") or {}).get("points")
+            d = {"id": pos, "statement": (n.get("statement") or n.get("name") or "")[:160]}
+            if sup and depth < 3:
+                d["under"] = [vw(c, f"{pos}.{i}", depth + 1) for i, c in enumerate(sup, 1)]
+            return d
         view = {"governing_thought": pyr["governing_thought"], "key_line_dimension": r["dimension"],
-                "pillars": [{"id": f"P{pi}", "statement": p["statement"],
-                             "under": [{"id": f"P{pi}.{ci}", "statement": c.get("statement") or c.get("name"),
-                                        "under": [(x.get("statement") or x.get("name") or "")[:140] for x in (c.get("support") or {}).get("points", [])][:5] if c.get("anchor", "").startswith("section:") else None}
-                                       for ci, c in enumerate(p["support"]["points"], 1)]} for pi, p in enumerate(pyr["key_line"]["points"], 1)]}
+                "pillars": [vw(p, f"P{pi}", 0) for pi, p in enumerate(pyr["key_line"]["points"], 1)]}
         try:
             chk = b.call(CHECK_SYSTEM, "Check this pyramid:\n" + json.dumps(view, ensure_ascii=False, indent=1), "record_check", CHECK_SCHEMA, 2500)
         except RuntimeError as e:
             log(f"{field} stop: {e}"); break
         pyr["field_check"] = {"governing_thought": pyr["governing_thought"], "key_line": [p["statement"] for p in pyr["key_line"]["points"]],
-                              "holds": bool(chk.get("holds")) and not bad, "note": chk.get("note", ""), "review": not chk.get("holds")}
+                              "holds": bool(chk.get("key_line_holds")) and not bad, "note": chk.get("note", ""), "review": not chk.get("key_line_holds")}
         log(f"{field} attempt {attempt+1} minto_issues={sum(len(v) for v in bad.values())} holds={chk.get('holds')} note={chk.get('note')}")
-        pyr["field_check"]["problems"] = int(chk.get("problems") or 0) + sum(len(v) for v in bad.values())
+        pyr["field_check"]["misplaced"] = int(chk.get("misplaced") or 0)
+        pyr["field_check"]["problems"] = (0 if chk.get("key_line_holds") else 100) + pyr["field_check"]["misplaced"] + sum(len(v) for v in bad.values())
         if best is None or pyr["field_check"]["holds"] or pyr["field_check"]["problems"] < best["field_check"]["problems"]:
             best = pyr
-        if pyr["field_check"]["holds"]:
+        if pyr["field_check"]["holds"] and (pyr["field_check"]["misplaced"] <= 5 or attempt >= 2):
             break
         pos = {f"P{pi}.{ci}": (c.get("id") or c.get("name")) for pi, p in enumerate(pyr["key_line"]["points"], 1) for ci, c in enumerate(p["support"]["points"], 1)}
-        feedback = f"- minto_check problems: {bad}\n- top-down check said: {chk.get('note')}\n- position key for that note: {json.dumps(pos)}"
+        feedback = ("- The key line passed; now fix the misplaced items.\n" if pyr["field_check"]["holds"] else "") + f"- minto_check problems: {bad}\n- top-down check said: {chk.get('note')}\n- position key for that note: {json.dumps(pos)}"
         if b.used > field_cap * 0.8:
             break
     pyr = best

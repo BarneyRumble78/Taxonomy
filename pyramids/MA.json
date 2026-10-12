@@ -1,501 +1,41 @@
 {
   "field": "MA",
   "introduction": {
-    "situation": "Mathematics spans a very large body of specialised areas that were published under several different schemes.",
-    "complication": "The areas mix pure structures, computing methods, uses in other sciences and the history and teaching of the discipline, and some appear twice under different names.",
+    "situation": "Mathematics spans abstract objects, the continuum, chance and uses in other sciences.",
+    "complication": "Published schemes mix subject areas, applications and container headings, so the topics overlap and repeat.",
     "question": "How is everything in mathematics divided?",
-    "answer": "Mathematics is divided by the role its knowledge plays into the structures it studies, the computation and inference it performs, the modelling of other fields' claims, and the discipline as a human activity."
+    "answer": "Mathematics is divided by the role a claim plays, into foundations and the discipline itself, algebraic and combinatorial structure, space and shape, change and chance, and the modelling and computing of claims from other fields, in that order."
   },
-  "governing_thought": "Mathematics is divided by the role its knowledge plays into the structures it studies, the computation and inference it performs, the modelling of other fields' claims, and the discipline as a human activity.",
+  "governing_thought": "Mathematics is divided by the role a claim plays, into foundations and the discipline itself, algebraic and combinatorial structure, space and shape, change and chance, and the modelling and computing of claims from other fields, in that order.",
   "key_line": {
     "logic_type": "inductive",
     "plural_noun": "roles",
-    "mece_dimension": "role the knowledge plays",
+    "mece_dimension": "role the claim plays in mathematics (foundation, structure, space, change and chance, or modelling)",
     "basis": "parts",
     "order": "structure",
-    "rank_note": "The roles run from pure structure, through computation and inference, to modelling of outside claims, and finally to the discipline as a human activity.",
+    "rank_note": "The pillars run from what underlies all mathematics, through its internal objects, to its use outside itself.",
     "points": [
       {
         "id": "MA.K1",
         "anchor": "pillar:MA.K1",
-        "title": "Structures",
-        "statement": "Structures are the role in which mathematics studies abstract objects such as algebraic systems, spaces, functions and the foundations of proof for their own sake.",
-        "name": "Structures are the role in which mathematics studies abstract objects such as algebraic systems, spaces, functions and the foundations of proof for their own sake.",
+        "statement": "Foundations and the discipline is the role of mathematics as the ground of proof and as a human activity with a history and a teaching practice.",
+        "name": "Foundations and the discipline is the role of mathematics as the ground of proof and as a human activity with a history and a teaching practice.",
         "support": {
           "logic_type": "inductive",
-          "basis": "kinds",
+          "basis": "parts",
           "order": "structure",
-          "rank_note": "Kinds run from algebra to geometry and topology, then analysis, then foundations.",
+          "rank_note": "Logical ground comes first, then the human discipline built on it.",
           "points": [
             {
               "id": "MA.K1.S1",
               "anchor": "section:MA.K1.S1",
-              "statement": "Algebraic structures are systems defined by operations and their neighbouring arithmetic and combinatorial areas, which study the same operational objects.",
-              "name": "Algebraic structures are systems defined by operations and their neighbouring arithmetic and combinatorial areas, which study the same operational objects.",
+              "statement": "Logic and category theory supply the formal ground on which every proof and structure rests.",
+              "name": "Logic and category theory supply the formal ground on which every proof and structure rests.",
               "support": {
                 "logic_type": "inductive",
-                "basis": "kinds",
+                "basis": "parts",
                 "order": "structure",
-                "rank_note": "From general algebraic systems to neighbouring areas to groups.",
-                "points": [
-                  {
-                    "id": "MA.O.A2.G2",
-                    "anchor": "group:MA.O.A2.G2",
-                    "statement": "Algebraic structure areas study systems defined by operations such as rings, fields and algebras.",
-                    "name": "Algebraic structure areas study systems defined by operations such as rings, fields and algebras.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MSC:08-XX",
-                          "anchor": "node:MSC:08-XX",
-                          "statement": "General algebraic systems",
-                          "name": "General algebraic systems"
-                        },
-                        {
-                          "id": "MSC:12-XX",
-                          "anchor": "node:MSC:12-XX",
-                          "statement": "Field theory and polynomials",
-                          "name": "Field theory and polynomials"
-                        },
-                        {
-                          "id": "MSC:13-XX",
-                          "anchor": "node:MSC:13-XX",
-                          "statement": "Commutative algebra",
-                          "name": "Commutative algebra"
-                        },
-                        {
-                          "id": "MSC:16-XX",
-                          "anchor": "node:MSC:16-XX",
-                          "statement": "Associative rings and algebras",
-                          "name": "Associative rings and algebras"
-                        },
-                        {
-                          "id": "MSC:17-XX",
-                          "anchor": "node:MSC:17-XX",
-                          "statement": "Nonassociative rings and algebras",
-                          "name": "Nonassociative rings and algebras"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "MA.O.A2.G3",
-                    "anchor": "group:MA.O.A2.G3",
-                    "statement": "Neighbouring areas are fields that border algebra through combinatorial, order, arithmetic, matrix or K-theoretic methods.",
-                    "name": "Neighbouring areas are fields that border algebra through combinatorial, order, arithmetic, matrix or K-theoretic methods.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MSC:05-XX",
-                          "anchor": "node:MSC:05-XX",
-                          "statement": "Combinatorics",
-                          "name": "Combinatorics"
-                        },
-                        {
-                          "id": "MSC:06-XX",
-                          "anchor": "node:MSC:06-XX",
-                          "statement": "Order, lattices, ordered algebraic structures",
-                          "name": "Order, lattices, ordered algebraic structures"
-                        },
-                        {
-                          "id": "MSC:11-XX",
-                          "anchor": "node:MSC:11-XX",
-                          "statement": "Number theory",
-                          "name": "Number theory"
-                        },
-                        {
-                          "id": "MSC:15-XX",
-                          "anchor": "node:MSC:15-XX",
-                          "statement": "Linear and multilinear algebra; matrix theory",
-                          "name": "Linear and multilinear algebra; matrix theory"
-                        },
-                        {
-                          "id": "MSC:19-XX",
-                          "anchor": "node:MSC:19-XX",
-                          "statement": "\\(K\\)-theory",
-                          "name": "\\(K\\)-theory"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "MA.O.A2.G4",
-                    "anchor": "group:MA.O.A2.G4",
-                    "statement": "Group-based areas study groups and their generalizations, including topological and Lie groups.",
-                    "name": "Group-based areas study groups and their generalizations, including topological and Lie groups.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MSC:20-XX",
-                          "anchor": "node:MSC:20-XX",
-                          "statement": "Group theory and generalizations",
-                          "name": "Group theory and generalizations"
-                        },
-                        {
-                          "id": "MSC:22-XX",
-                          "anchor": "node:MSC:22-XX",
-                          "statement": "Topological groups, Lie groups",
-                          "name": "Topological groups, Lie groups"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "MA.K1.S2",
-              "anchor": "section:MA.K1.S2",
-              "statement": "Geometric and topological structures are spaces studied through figures, equations, smooth structure and global shape.",
-              "name": "Geometric and topological structures are spaces studied through figures, equations, smooth structure and global shape.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From elementary geometry to algebraic and differential geometry to topology.",
-                "points": [
-                  {
-                    "id": "MA.O.A3.G1",
-                    "anchor": "group:MA.O.A3.G1",
-                    "statement": "Geometry and convex and discrete geometry are kinds of classical and elementary geometric study of figures, convex sets and discrete configurations.",
-                    "name": "Geometry and convex and discrete geometry are kinds of classical and elementary geometric study of figures, convex sets and discrete configurations.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "MSC:51-XX",
-                          "anchor": "node:MSC:51-XX",
-                          "statement": "Geometry",
-                          "name": "Geometry"
-                        },
-                        {
-                          "id": "MSC:52-XX",
-                          "anchor": "node:MSC:52-XX",
-                          "statement": "Convex and discrete geometry",
-                          "name": "Convex and discrete geometry"
-                        }
-                      ],
-                      "rank_note": "Ranked from the most elementary field to the more specialized one."
-                    }
-                  },
-                  {
-                    "id": "MA.O.A3.G2",
-                    "anchor": "group:MA.O.A3.G2",
-                    "statement": "Algebraic geometry and differential geometry are kinds of geometry that study spaces through algebraic equations or through calculus and smooth structure.",
-                    "name": "Algebraic geometry and differential geometry are kinds of geometry that study spaces through algebraic equations or through calculus and smooth structure.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "MSC:53-XX",
-                          "anchor": "node:MSC:53-XX",
-                          "statement": "Differential geometry",
-                          "name": "Differential geometry"
-                        },
-                        {
-                          "id": "MSC:14-XX",
-                          "anchor": "node:MSC:14-XX",
-                          "statement": "Algebraic geometry",
-                          "name": "Algebraic geometry"
-                        }
-                      ],
-                      "rank_note": "Ranked from the more concrete smooth setting to the more abstract algebraic setting."
-                    }
-                  },
-                  {
-                    "id": "MA.O.A3.G3",
-                    "anchor": "group:MA.O.A3.G3",
-                    "statement": "General topology, algebraic topology, manifolds and global analysis are kinds of topological and analytic study of the shape and global structure of spaces.",
-                    "name": "General topology, algebraic topology, manifolds and global analysis are kinds of topological and analytic study of the shape and global structure of spaces.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "MSC:54-XX",
-                          "anchor": "node:MSC:54-XX",
-                          "statement": "General topology",
-                          "name": "General topology"
-                        },
-                        {
-                          "id": "MSC:55-XX",
-                          "anchor": "node:MSC:55-XX",
-                          "statement": "Algebraic topology",
-                          "name": "Algebraic topology"
-                        },
-                        {
-                          "id": "MSC:57-XX",
-                          "anchor": "node:MSC:57-XX",
-                          "statement": "Manifolds and cell complexes",
-                          "name": "Manifolds and cell complexes"
-                        },
-                        {
-                          "id": "MSC:58-XX",
-                          "anchor": "node:MSC:58-XX",
-                          "statement": "Global analysis, analysis on manifolds",
-                          "name": "Global analysis, analysis on manifolds"
-                        }
-                      ],
-                      "rank_note": "Ranked from foundational point-set topology to the more structured and analytic fields."
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "MA.K1.S3",
-              "anchor": "section:MA.K1.S3",
-              "statement": "Analytic structures are functions, equations, transforms, function spaces and operators studied through limits and continuity.",
-              "name": "Analytic structures are functions, equations, transforms, function spaces and operators studied through limits and continuity.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From core classical analysis to the abstract frameworks that generalise it.",
-                "points": [
-                  {
-                    "id": "MA.O.A4.G7",
-                    "anchor": "group:MA.O.A4.G7",
-                    "statement": "Core analysis areas are the classical subfields that study functions, equations, and transforms directly in real, complex, differential, and harmonic settings.",
-                    "name": "Core analysis areas are the classical subfields that study functions, equations, and transforms directly in real, complex, differential, and harmonic settings.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MA.O.A4.G1",
-                          "anchor": "group:MA.O.A4.G1",
-                          "statement": "Real-variable foundations study real functions, measure, integration, and the convergence and approximation of sequences and series.",
-                          "name": "Real-variable foundations study real functions, measure, integration, and the convergence and approximation of sequences and series.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "MSC:26-XX",
-                                "anchor": "node:MSC:26-XX",
-                                "statement": "Real functions",
-                                "name": "Real functions"
-                              },
-                              {
-                                "id": "MSC:28-XX",
-                                "anchor": "node:MSC:28-XX",
-                                "statement": "Measure and integration",
-                                "name": "Measure and integration"
-                              },
-                              {
-                                "id": "MSC:40-XX",
-                                "anchor": "node:MSC:40-XX",
-                                "statement": "Sequences, series, summability",
-                                "name": "Sequences, series, summability"
-                              },
-                              {
-                                "id": "MSC:41-XX",
-                                "anchor": "node:MSC:41-XX",
-                                "statement": "Approximations and expansions",
-                                "name": "Approximations and expansions"
-                              }
-                            ],
-                            "rank_note": "Ordered from basic functions to measure to series and approximation."
-                          }
-                        },
-                        {
-                          "id": "MA.O.A4.G2",
-                          "anchor": "group:MA.O.A4.G2",
-                          "statement": "Complex and potential-theoretic analysis studies holomorphic functions in one or several variables, together with harmonic potentials and special functions.",
-                          "name": "Complex and potential-theoretic analysis studies holomorphic functions in one or several variables, together with harmonic potentials and special functions.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "MSC:30-XX",
-                                "anchor": "node:MSC:30-XX",
-                                "statement": "Functions of a complex variable",
-                                "name": "Functions of a complex variable"
-                              },
-                              {
-                                "id": "MSC:31-XX",
-                                "anchor": "node:MSC:31-XX",
-                                "statement": "Potential theory",
-                                "name": "Potential theory"
-                              },
-                              {
-                                "id": "MSC:32-XX",
-                                "anchor": "node:MSC:32-XX",
-                                "statement": "Several complex variables and analytic spaces",
-                                "name": "Several complex variables and analytic spaces"
-                              },
-                              {
-                                "id": "MSC:33-XX",
-                                "anchor": "node:MSC:33-XX",
-                                "statement": "Special functions",
-                                "name": "Special functions"
-                              }
-                            ],
-                            "rank_note": "Ordered from one complex variable to potential theory to several variables and special functions."
-                          }
-                        },
-                        {
-                          "id": "MA.O.A4.G3",
-                          "anchor": "group:MA.O.A4.G3",
-                          "statement": "Equation-based analysis studies differential, difference, functional, and integral equations and the dynamics of their solutions.",
-                          "name": "Equation-based analysis studies differential, difference, functional, and integral equations and the dynamics of their solutions.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "MSC:34-XX",
-                                "anchor": "node:MSC:34-XX",
-                                "statement": "Ordinary differential equations",
-                                "name": "Ordinary differential equations"
-                              },
-                              {
-                                "id": "MSC:35-XX",
-                                "anchor": "node:MSC:35-XX",
-                                "statement": "Partial differential equations",
-                                "name": "Partial differential equations"
-                              },
-                              {
-                                "id": "MSC:37-XX",
-                                "anchor": "node:MSC:37-XX",
-                                "statement": "Dynamical systems and ergodic theory",
-                                "name": "Dynamical systems and ergodic theory"
-                              },
-                              {
-                                "id": "MSC:39-XX",
-                                "anchor": "node:MSC:39-XX",
-                                "statement": "Difference and functional equations",
-                                "name": "Difference and functional equations"
-                              },
-                              {
-                                "id": "MSC:45-XX",
-                                "anchor": "node:MSC:45-XX",
-                                "statement": "Integral equations",
-                                "name": "Integral equations"
-                              }
-                            ],
-                            "rank_note": "Ordered from ordinary and partial differential equations to dynamics, difference equations, and integral equations."
-                          }
-                        },
-                        {
-                          "id": "MA.O.A4.G4",
-                          "anchor": "group:MA.O.A4.G4",
-                          "statement": "Harmonic analysis and transform methods decompose functions into frequency components on Euclidean spaces and on abstract groups, and apply integral transforms.",
-                          "name": "Harmonic analysis and transform methods decompose functions into frequency components on Euclidean spaces and on abstract groups, and apply integral transforms.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "MSC:42-XX",
-                                "anchor": "node:MSC:42-XX",
-                                "statement": "Harmonic analysis on Euclidean spaces",
-                                "name": "Harmonic analysis on Euclidean spaces"
-                              },
-                              {
-                                "id": "MSC:43-XX",
-                                "anchor": "node:MSC:43-XX",
-                                "statement": "Abstract harmonic analysis",
-                                "name": "Abstract harmonic analysis"
-                              },
-                              {
-                                "id": "MSC:44-XX",
-                                "anchor": "node:MSC:44-XX",
-                                "statement": "Integral transforms, operational calculus",
-                                "name": "Integral transforms, operational calculus"
-                              }
-                            ],
-                            "rank_note": "Ordered from Euclidean to abstract settings to integral transforms."
-                          }
-                        }
-                      ],
-                      "rank_note": "Ordered structurally from real foundations to complex, equation-based, and harmonic analysis."
-                    }
-                  },
-                  {
-                    "id": "MA.O.A4.G5",
-                    "anchor": "group:MA.O.A4.G5",
-                    "statement": "Function spaces and operators generalise analysis, and their methods are applied to optimization and variational problems.",
-                    "name": "Function spaces and operators generalise analysis, and their methods are applied to optimization and variational problems.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MSC:46-XX",
-                          "anchor": "node:MSC:46-XX",
-                          "statement": "Functional analysis",
-                          "name": "Functional analysis"
-                        },
-                        {
-                          "id": "MSC:47-XX",
-                          "anchor": "node:MSC:47-XX",
-                          "statement": "Operator theory",
-                          "name": "Operator theory"
-                        },
-                        {
-                          "id": "MSC:49-XX",
-                          "anchor": "node:MSC:49-XX",
-                          "statement": "Calculus of variations and optimal control; optimization",
-                          "name": "Calculus of variations and optimal control; optimization"
-                        },
-                        {
-                          "id": "ANZSRC:4901",
-                          "anchor": "node:ANZSRC:4901",
-                          "statement": "Applied mathematics",
-                          "name": "Applied mathematics"
-                        }
-                      ],
-                      "rank_note": "Ordered from abstract spaces to operators to applied optimization."
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "MA.K1.S4",
-              "anchor": "section:MA.K1.S4",
-              "statement": "Foundational structures are the logical and categorical frameworks in which mathematical objects and proofs are expressed.",
-              "name": "Foundational structures are the logical and categorical frameworks in which mathematical objects and proofs are expressed.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "structure",
-                "rank_note": "From logic to category theory.",
+                "rank_note": "Logic precedes the general language of categories.",
                 "points": [
                   {
                     "id": "MSC:03-XX",
@@ -511,213 +51,637 @@
                   }
                 ]
               }
+            },
+            {
+              "id": "MA.K1.S2",
+              "anchor": "section:MA.K1.S2",
+              "statement": "History and education treat mathematics as a human activity that is recorded and taught.",
+              "name": "History and education treat mathematics as a human activity that is recorded and taught.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "parts",
+                "order": "structure",
+                "rank_note": "The past of the subject precedes its teaching.",
+                "points": [
+                  {
+                    "id": "MSC:01-XX",
+                    "anchor": "node:MSC:01-XX",
+                    "statement": "History and biography",
+                    "name": "History and biography"
+                  },
+                  {
+                    "id": "MSC:97-XX",
+                    "anchor": "node:MSC:97-XX",
+                    "statement": "Mathematics education",
+                    "name": "Mathematics education"
+                  }
+                ]
+              }
             }
           ]
-        }
+        },
+        "title": "Foundations and the discipline"
       },
       {
         "id": "MA.K2",
         "anchor": "pillar:MA.K2",
-        "title": "Computation and inference",
-        "statement": "Computation and inference is the role in which mathematics computes results by algorithms and infers conclusions from chance and data.",
-        "name": "Computation and inference is the role in which mathematics computes results by algorithms and infers conclusions from chance and data.",
+        "statement": "Structure is the role of mathematics as the study of algebraic, ordered and discrete objects defined by operations and relations.",
+        "name": "Structure is the role of mathematics as the study of algebraic, ordered and discrete objects defined by operations and relations.",
         "support": {
           "logic_type": "inductive",
-          "basis": "kinds",
+          "basis": "parts",
           "order": "structure",
-          "rank_note": "From chance and data to the algorithms that compute with them.",
+          "rank_note": "Algebraic systems come first, then counting, order and numbers.",
           "points": [
             {
-              "id": "MSC:60-XX",
-              "anchor": "node:MSC:60-XX",
-              "statement": "Probability theory and stochastic processes",
-              "name": "Probability theory and stochastic processes"
-            },
-            {
-              "id": "ANZSRC:4905",
-              "anchor": "node:ANZSRC:4905",
-              "statement": "Statistics",
-              "name": "Statistics",
-              "aliases": [
-                "LCC:HA",
-                "MSC:62-XX",
-                "LCC:HA",
-                "MSC:62-XX",
-                "LCC:HA",
-                "MSC:62-XX",
-                "LCC:HA",
-                "MSC:62-XX"
-              ]
-            },
-            {
-              "id": "MA.B.C3.G1",
-              "anchor": "group:MA.B.C3.G1",
-              "statement": "Numerical analysis and computer science are computation-centered fields of mathematics that study algorithms and their behavior.",
-              "name": "Numerical analysis and computer science are computation-centered fields of mathematics that study algorithms and their behavior.",
+              "id": "MA.K2.S1",
+              "anchor": "section:MA.K2.S1",
+              "statement": "Algebraic systems study sets with operations such as groups, rings, fields and algebras.",
+              "name": "Algebraic systems study sets with operations such as groups, rings, fields and algebras.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
+                "basis": "parts",
                 "order": "structure",
+                "rank_note": "General systems precede specific kinds of algebra.",
                 "points": [
                   {
-                    "id": "MSC:65-XX",
-                    "anchor": "node:MSC:65-XX",
-                    "statement": "Numerical analysis",
-                    "name": "Numerical analysis"
+                    "id": "MSC:08-XX",
+                    "anchor": "node:MSC:08-XX",
+                    "statement": "General algebraic systems",
+                    "name": "General algebraic systems"
                   },
                   {
-                    "id": "MSC:68-XX",
-                    "anchor": "node:MSC:68-XX",
-                    "statement": "Computer science",
-                    "name": "Computer science"
+                    "id": "MSC:20-XX",
+                    "anchor": "node:MSC:20-XX",
+                    "statement": "Group theory and generalizations",
+                    "name": "Group theory and generalizations"
+                  },
+                  {
+                    "id": "MSC:12-XX",
+                    "anchor": "node:MSC:12-XX",
+                    "statement": "Field theory and polynomials",
+                    "name": "Field theory and polynomials"
+                  },
+                  {
+                    "id": "MSC:13-XX",
+                    "anchor": "node:MSC:13-XX",
+                    "statement": "Commutative algebra",
+                    "name": "Commutative algebra"
                   }
-                ],
-                "rank_note": "Ordered by structure: numerical analysis first as the narrower field, then computer science as the broader field."
+                ]
+              }
+            },
+            {
+              "id": "MA.K2.S2",
+              "anchor": "section:MA.K2.S2",
+              "statement": "Rings and linear structures study algebras, matrices and the algebraic invariants built from them.",
+              "name": "Rings and linear structures study algebras, matrices and the algebraic invariants built from them.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "parts",
+                "order": "structure",
+                "rank_note": "Rings come before linear algebra and its invariants.",
+                "points": [
+                  {
+                    "id": "MSC:16-XX",
+                    "anchor": "node:MSC:16-XX",
+                    "statement": "Associative rings and algebras",
+                    "name": "Associative rings and algebras"
+                  },
+                  {
+                    "id": "MSC:17-XX",
+                    "anchor": "node:MSC:17-XX",
+                    "statement": "Nonassociative rings and algebras",
+                    "name": "Nonassociative rings and algebras"
+                  },
+                  {
+                    "id": "MSC:15-XX",
+                    "anchor": "node:MSC:15-XX",
+                    "statement": "Linear and multilinear algebra; matrix theory",
+                    "name": "Linear and multilinear algebra; matrix theory"
+                  },
+                  {
+                    "id": "MSC:19-XX",
+                    "anchor": "node:MSC:19-XX",
+                    "statement": "\\(K\\)-theory",
+                    "name": "\\(K\\)-theory"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "MA.K2.S3",
+              "anchor": "section:MA.K2.S3",
+              "statement": "Discrete structure studies counting, order and the integers.",
+              "name": "Discrete structure studies counting, order and the integers.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "parts",
+                "order": "structure",
+                "rank_note": "Counting precedes order and number.",
+                "points": [
+                  {
+                    "id": "MSC:05-XX",
+                    "anchor": "node:MSC:05-XX",
+                    "statement": "Combinatorics",
+                    "name": "Combinatorics"
+                  },
+                  {
+                    "id": "MSC:06-XX",
+                    "anchor": "node:MSC:06-XX",
+                    "statement": "Order, lattices, ordered algebraic structures",
+                    "name": "Order, lattices, ordered algebraic structures"
+                  },
+                  {
+                    "id": "MSC:11-XX",
+                    "anchor": "node:MSC:11-XX",
+                    "statement": "Number theory",
+                    "name": "Number theory"
+                  }
+                ]
               }
             }
           ]
-        }
+        },
+        "title": "Structure"
       },
       {
         "id": "MA.K3",
         "anchor": "pillar:MA.K3",
-        "title": "Modelling",
-        "statement": "Modelling is the role in which mathematics expresses another field's claims about physical, living, social and decision systems in mathematical language.",
-        "name": "Modelling is the role in which mathematics expresses another field's claims about physical, living, social and decision systems in mathematical language.",
+        "statement": "Space is the role of mathematics as the study of shape, position and continuity of spaces and the groups that act on them.",
+        "name": "Space is the role of mathematics as the study of shape, position and continuity of spaces and the groups that act on them.",
         "support": {
           "logic_type": "inductive",
-          "basis": "kinds",
+          "basis": "parts",
           "order": "structure",
-          "rank_note": "From macroscopic physics to fundamental physics to mathematical physics to systems and decision sciences.",
+          "rank_note": "Coarse topological properties come before geometric detail.",
           "points": [
             {
-              "id": "MA.B.C4.G1",
-              "anchor": "group:MA.B.C4.G1",
-              "statement": "Classical mechanics and continuum field theories model macroscopic physical bodies, media, and fields.",
-              "name": "Classical mechanics and continuum field theories model macroscopic physical bodies, media, and fields.",
+              "id": "MA.K3.S1",
+              "anchor": "section:MA.K3.S1",
+              "statement": "Topology studies the continuity and global form of spaces and manifolds.",
+              "name": "Topology studies the continuity and global form of spaces and manifolds.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
+                "basis": "parts",
                 "order": "structure",
+                "rank_note": "General topology precedes algebraic and manifold topology.",
                 "points": [
                   {
-                    "id": "MSC:70-XX",
-                    "anchor": "node:MSC:70-XX",
-                    "statement": "Mechanics of particles and systems",
-                    "name": "Mechanics of particles and systems"
+                    "id": "MSC:54-XX",
+                    "anchor": "node:MSC:54-XX",
+                    "statement": "General topology",
+                    "name": "General topology"
                   },
                   {
-                    "id": "MSC:74-XX",
-                    "anchor": "node:MSC:74-XX",
-                    "statement": "Mechanics of deformable solids",
-                    "name": "Mechanics of deformable solids"
+                    "id": "MSC:55-XX",
+                    "anchor": "node:MSC:55-XX",
+                    "statement": "Algebraic topology",
+                    "name": "Algebraic topology"
                   },
                   {
-                    "id": "MSC:76-XX",
-                    "anchor": "node:MSC:76-XX",
-                    "statement": "Fluid mechanics",
-                    "name": "Fluid mechanics"
+                    "id": "MSC:57-XX",
+                    "anchor": "node:MSC:57-XX",
+                    "statement": "Manifolds and cell complexes",
+                    "name": "Manifolds and cell complexes"
                   },
                   {
-                    "id": "MSC:78-XX",
-                    "anchor": "node:MSC:78-XX",
-                    "statement": "Optics, electromagnetic theory",
-                    "name": "Optics, electromagnetic theory"
-                  },
-                  {
-                    "id": "MSC:80-XX",
-                    "anchor": "node:MSC:80-XX",
-                    "statement": "Classical thermodynamics, heat transfer",
-                    "name": "Classical thermodynamics, heat transfer"
+                    "id": "MSC:58-XX",
+                    "anchor": "node:MSC:58-XX",
+                    "statement": "Global analysis, analysis on manifolds",
+                    "name": "Global analysis, analysis on manifolds"
                   }
-                ],
-                "rank_note": "Ordered from discrete particles to deformable solids, fluids, electromagnetic fields, and heat."
+                ]
               }
             },
             {
-              "id": "MA.B.C4.G2",
-              "anchor": "group:MA.B.C4.G2",
-              "statement": "Fundamental and cosmic physics theories model matter, spacetime, and the universe at the smallest and largest scales.",
-              "name": "Fundamental and cosmic physics theories model matter, spacetime, and the universe at the smallest and largest scales.",
+              "id": "MA.K3.S2",
+              "anchor": "section:MA.K3.S2",
+              "statement": "Geometry studies metric, convex, differential and algebraic shape together with continuous symmetry.",
+              "name": "Geometry studies metric, convex, differential and algebraic shape together with continuous symmetry.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
+                "basis": "parts",
                 "order": "structure",
+                "rank_note": "Elementary geometry precedes differential and algebraic geometry.",
                 "points": [
                   {
-                    "id": "MSC:81-XX",
-                    "anchor": "node:MSC:81-XX",
-                    "statement": "Quantum theory",
-                    "name": "Quantum theory"
+                    "id": "MSC:51-XX",
+                    "anchor": "node:MSC:51-XX",
+                    "statement": "Geometry",
+                    "name": "Geometry"
                   },
                   {
-                    "id": "MSC:82-XX",
-                    "anchor": "node:MSC:82-XX",
-                    "statement": "Statistical mechanics, structure of matter",
-                    "name": "Statistical mechanics, structure of matter"
+                    "id": "MSC:52-XX",
+                    "anchor": "node:MSC:52-XX",
+                    "statement": "Convex and discrete geometry",
+                    "name": "Convex and discrete geometry"
                   },
                   {
-                    "id": "MSC:83-XX",
-                    "anchor": "node:MSC:83-XX",
-                    "statement": "Relativity and gravitational theory",
-                    "name": "Relativity and gravitational theory"
+                    "id": "MSC:53-XX",
+                    "anchor": "node:MSC:53-XX",
+                    "statement": "Differential geometry",
+                    "name": "Differential geometry"
                   },
                   {
-                    "id": "MSC:85-XX",
-                    "anchor": "node:MSC:85-XX",
-                    "statement": "Astronomy and astrophysics",
-                    "name": "Astronomy and astrophysics"
+                    "id": "MSC:14-XX",
+                    "anchor": "node:MSC:14-XX",
+                    "statement": "Algebraic geometry",
+                    "name": "Algebraic geometry"
                   },
                   {
-                    "id": "MSC:86-XX",
-                    "anchor": "node:MSC:86-XX",
-                    "statement": "Geophysics",
-                    "name": "Geophysics"
+                    "id": "MSC:22-XX",
+                    "anchor": "node:MSC:22-XX",
+                    "statement": "Topological groups, Lie groups",
+                    "name": "Topological groups, Lie groups"
                   }
-                ],
-                "rank_note": "Ordered from quantum and statistical foundations to gravity, astronomy, and the Earth."
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Space"
+      },
+      {
+        "id": "MA.K4",
+        "anchor": "pillar:MA.K4",
+        "statement": "Change and chance is the role of mathematics as the study of the continuum, of change through equations, and of random variation.",
+        "name": "Change and chance is the role of mathematics as the study of the continuum, of change through equations, and of random variation.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "parts",
+          "order": "structure",
+          "rank_note": "The continuum comes first, then change over it, then chance.",
+          "points": [
+            {
+              "id": "MA.K4.S1",
+              "anchor": "section:MA.K4.S1",
+              "statement": "Real, complex and functional analysis study functions, limits and the continuum.",
+              "name": "Real, complex and functional analysis study functions, limits and the continuum.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "parts",
+                "order": "structure",
+                "rank_note": "Real analysis precedes complex and functional analysis.",
+                "points": [
+                  {
+                    "id": "MA.K4.S1.U1",
+                    "anchor": "section:MA.K4.S1.U1",
+                    "statement": "Real analysis studies real functions, measure, series and approximation.",
+                    "name": "Real analysis studies real functions, measure, series and approximation.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "parts",
+                      "order": "structure",
+                      "rank_note": "Functions precede measure and series.",
+                      "points": [
+                        {
+                          "id": "MSC:26-XX",
+                          "anchor": "node:MSC:26-XX",
+                          "statement": "Real functions",
+                          "name": "Real functions"
+                        },
+                        {
+                          "id": "MSC:28-XX",
+                          "anchor": "node:MSC:28-XX",
+                          "statement": "Measure and integration",
+                          "name": "Measure and integration"
+                        },
+                        {
+                          "id": "MSC:40-XX",
+                          "anchor": "node:MSC:40-XX",
+                          "statement": "Sequences, series, summability",
+                          "name": "Sequences, series, summability"
+                        },
+                        {
+                          "id": "MSC:41-XX",
+                          "anchor": "node:MSC:41-XX",
+                          "statement": "Approximations and expansions",
+                          "name": "Approximations and expansions"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "MA.K4.S1.U2",
+                    "anchor": "section:MA.K4.S1.U2",
+                    "statement": "Complex analysis studies functions of complex variables, potentials and special functions.",
+                    "name": "Complex analysis studies functions of complex variables, potentials and special functions.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "parts",
+                      "order": "structure",
+                      "rank_note": "One variable precedes several variables.",
+                      "points": [
+                        {
+                          "id": "MSC:30-XX",
+                          "anchor": "node:MSC:30-XX",
+                          "statement": "Functions of a complex variable",
+                          "name": "Functions of a complex variable"
+                        },
+                        {
+                          "id": "MSC:31-XX",
+                          "anchor": "node:MSC:31-XX",
+                          "statement": "Potential theory",
+                          "name": "Potential theory"
+                        },
+                        {
+                          "id": "MSC:32-XX",
+                          "anchor": "node:MSC:32-XX",
+                          "statement": "Several complex variables and analytic spaces",
+                          "name": "Several complex variables and analytic spaces"
+                        },
+                        {
+                          "id": "MSC:33-XX",
+                          "anchor": "node:MSC:33-XX",
+                          "statement": "Special functions",
+                          "name": "Special functions"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "MA.K4.S1.U3",
+                    "anchor": "section:MA.K4.S1.U3",
+                    "statement": "Harmonic and functional analysis study transforms, function spaces and operators.",
+                    "name": "Harmonic and functional analysis study transforms, function spaces and operators.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "parts",
+                      "order": "structure",
+                      "rank_note": "Transforms precede abstract operators.",
+                      "points": [
+                        {
+                          "id": "MSC:42-XX",
+                          "anchor": "node:MSC:42-XX",
+                          "statement": "Harmonic analysis on Euclidean spaces",
+                          "name": "Harmonic analysis on Euclidean spaces"
+                        },
+                        {
+                          "id": "MSC:43-XX",
+                          "anchor": "node:MSC:43-XX",
+                          "statement": "Abstract harmonic analysis",
+                          "name": "Abstract harmonic analysis"
+                        },
+                        {
+                          "id": "MSC:44-XX",
+                          "anchor": "node:MSC:44-XX",
+                          "statement": "Integral transforms, operational calculus",
+                          "name": "Integral transforms, operational calculus"
+                        },
+                        {
+                          "id": "MSC:46-XX",
+                          "anchor": "node:MSC:46-XX",
+                          "statement": "Functional analysis",
+                          "name": "Functional analysis"
+                        },
+                        {
+                          "id": "MSC:47-XX",
+                          "anchor": "node:MSC:47-XX",
+                          "statement": "Operator theory",
+                          "name": "Operator theory"
+                        }
+                      ]
+                    }
+                  }
+                ]
               }
             },
             {
-              "id": "MA.O.A4.G6",
-              "anchor": "group:MA.O.A4.G6",
-              "statement": "Mathematical physics applies mathematical methods to model physical phenomena and their governing equations.",
-              "name": "Mathematical physics applies mathematical methods to model physical phenomena and their governing equations.",
+              "id": "MA.K4.S2",
+              "anchor": "section:MA.K4.S2",
+              "statement": "Equations and dynamics describe how quantities change through differential, integral and difference laws.",
+              "name": "Equations and dynamics describe how quantities change through differential, integral and difference laws.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
+                "basis": "parts",
                 "order": "structure",
+                "rank_note": "Equations precede the long-run behaviour they generate.",
                 "points": [
                   {
-                    "id": "ANZSRC:4902",
-                    "anchor": "node:ANZSRC:4902",
-                    "statement": "Mathematical physics",
-                    "name": "Mathematical physics"
+                    "id": "MSC:34-XX",
+                    "anchor": "node:MSC:34-XX",
+                    "statement": "Ordinary differential equations",
+                    "name": "Ordinary differential equations"
                   },
                   {
-                    "id": "ANZSRC:4903",
-                    "anchor": "node:ANZSRC:4903",
-                    "statement": "Numerical and computational mathematics",
-                    "name": "Numerical and computational mathematics"
+                    "id": "MSC:35-XX",
+                    "anchor": "node:MSC:35-XX",
+                    "statement": "Partial differential equations",
+                    "name": "Partial differential equations"
+                  },
+                  {
+                    "id": "MSC:39-XX",
+                    "anchor": "node:MSC:39-XX",
+                    "statement": "Difference and functional equations",
+                    "name": "Difference and functional equations"
+                  },
+                  {
+                    "id": "MSC:45-XX",
+                    "anchor": "node:MSC:45-XX",
+                    "statement": "Integral equations",
+                    "name": "Integral equations"
+                  },
+                  {
+                    "id": "MSC:37-XX",
+                    "anchor": "node:MSC:37-XX",
+                    "statement": "Dynamical systems and ergodic theory",
+                    "name": "Dynamical systems and ergodic theory"
                   }
-                ],
-                "rank_note": "Ordered by structure: the theory-oriented field of mathematical physics comes first, then the computation-oriented field."
+                ]
               }
             },
             {
-              "id": "MA.B.C4.G3",
-              "anchor": "group:MA.B.C4.G3",
-              "statement": "Systems and decision sciences apply mathematics to optimization, social and living systems, control, and information.",
-              "name": "Systems and decision sciences apply mathematics to optimization, social and living systems, control, and information.",
+              "id": "MA.K4.S3",
+              "anchor": "section:MA.K4.S3",
+              "statement": "Probability and statistics study random variation and inference from data.",
+              "name": "Probability and statistics study random variation and inference from data.",
               "support": {
                 "logic_type": "inductive",
-                "plural_noun": "members",
-                "basis": "kinds",
+                "basis": "parts",
                 "order": "structure",
+                "rank_note": "Theory of chance precedes inference from data.",
+                "points": [
+                  {
+                    "id": "MSC:60-XX",
+                    "anchor": "node:MSC:60-XX",
+                    "statement": "Probability theory and stochastic processes",
+                    "name": "Probability theory and stochastic processes"
+                  },
+                  {
+                    "id": "ANZSRC:4905",
+                    "anchor": "node:ANZSRC:4905",
+                    "statement": "Statistics",
+                    "name": "Statistics",
+                    "aliases": [
+                      "LCC:HA",
+                      "MSC:62-XX",
+                      "LCC:HA",
+                      "MSC:62-XX",
+                      "LCC:HA",
+                      "MSC:62-XX",
+                      "LCC:HA",
+                      "MSC:62-XX",
+                      "LCC:HA",
+                      "MSC:62-XX"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Change and chance"
+      },
+      {
+        "id": "MA.K5",
+        "anchor": "pillar:MA.K5",
+        "statement": "Modelling and computing is the role of mathematics as a language for claims from other fields and as a means of computing answers.",
+        "name": "Modelling and computing is the role of mathematics as a language for claims from other fields and as a means of computing answers.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "parts",
+          "order": "structure",
+          "rank_note": "Physical models come first, then decision and life-science models, then computation.",
+          "points": [
+            {
+              "id": "MA.K5.S1",
+              "anchor": "section:MA.K5.S1",
+              "statement": "Physical modelling expresses the laws of matter, fields and the cosmos in mathematical form.",
+              "name": "Physical modelling expresses the laws of matter, fields and the cosmos in mathematical form.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "parts",
+                "order": "structure",
+                "rank_note": "Mechanics precedes fields, quantum theory and the cosmos.",
+                "points": [
+                  {
+                    "id": "MA.K5.S1.U1",
+                    "anchor": "section:MA.K5.S1.U1",
+                    "statement": "Mechanics and thermal physics model bodies, fluids, heat and matter.",
+                    "name": "Mechanics and thermal physics model bodies, fluids, heat and matter.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "parts",
+                      "order": "structure",
+                      "rank_note": "Bodies precede fluids and heat.",
+                      "points": [
+                        {
+                          "id": "MSC:70-XX",
+                          "anchor": "node:MSC:70-XX",
+                          "statement": "Mechanics of particles and systems",
+                          "name": "Mechanics of particles and systems"
+                        },
+                        {
+                          "id": "MSC:74-XX",
+                          "anchor": "node:MSC:74-XX",
+                          "statement": "Mechanics of deformable solids",
+                          "name": "Mechanics of deformable solids"
+                        },
+                        {
+                          "id": "MSC:76-XX",
+                          "anchor": "node:MSC:76-XX",
+                          "statement": "Fluid mechanics",
+                          "name": "Fluid mechanics"
+                        },
+                        {
+                          "id": "MSC:80-XX",
+                          "anchor": "node:MSC:80-XX",
+                          "statement": "Classical thermodynamics, heat transfer",
+                          "name": "Classical thermodynamics, heat transfer"
+                        },
+                        {
+                          "id": "MSC:82-XX",
+                          "anchor": "node:MSC:82-XX",
+                          "statement": "Statistical mechanics, structure of matter",
+                          "name": "Statistical mechanics, structure of matter"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "MA.K5.S1.U2",
+                    "anchor": "section:MA.K5.S1.U2",
+                    "statement": "Fields, quanta and the cosmos are modelled through electromagnetism, quantum theory, relativity and the earth and sky.",
+                    "name": "Fields, quanta and the cosmos are modelled through electromagnetism, quantum theory, relativity and the earth and sky.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "parts",
+                      "order": "structure",
+                      "rank_note": "Fields precede quantum, relativistic and cosmic scales.",
+                      "points": [
+                        {
+                          "id": "MSC:78-XX",
+                          "anchor": "node:MSC:78-XX",
+                          "statement": "Optics, electromagnetic theory",
+                          "name": "Optics, electromagnetic theory"
+                        },
+                        {
+                          "id": "MSC:81-XX",
+                          "anchor": "node:MSC:81-XX",
+                          "statement": "Quantum theory",
+                          "name": "Quantum theory"
+                        },
+                        {
+                          "id": "MSC:83-XX",
+                          "anchor": "node:MSC:83-XX",
+                          "statement": "Relativity and gravitational theory",
+                          "name": "Relativity and gravitational theory"
+                        },
+                        {
+                          "id": "MSC:85-XX",
+                          "anchor": "node:MSC:85-XX",
+                          "statement": "Astronomy and astrophysics",
+                          "name": "Astronomy and astrophysics"
+                        },
+                        {
+                          "id": "ANZSRC:4902",
+                          "anchor": "node:ANZSRC:4902",
+                          "statement": "Mathematical physics",
+                          "name": "Mathematical physics"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "MA.K5.S1.U3",
+                    "anchor": "section:MA.K5.S1.U3",
+                    "statement": "Geophysics models the structure and processes of the earth.",
+                    "name": "Geophysics models the structure and processes of the earth.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "parts",
+                      "order": "structure",
+                      "rank_note": "Earth models follow the physics they apply.",
+                      "points": [
+                        {
+                          "id": "MSC:86-XX",
+                          "anchor": "node:MSC:86-XX",
+                          "statement": "Geophysics",
+                          "name": "Geophysics"
+                        },
+                        {
+                          "id": "MSC:49-XX",
+                          "anchor": "node:MSC:49-XX",
+                          "statement": "Calculus of variations and optimal control; optimization",
+                          "name": "Calculus of variations and optimal control; optimization"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "MA.K5.S2",
+              "anchor": "section:MA.K5.S2",
+              "statement": "Decision, social and life-science modelling expresses choices, systems and living processes in mathematics.",
+              "name": "Decision, social and life-science modelling expresses choices, systems and living processes in mathematics.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "parts",
+                "order": "structure",
+                "rank_note": "Decision problems precede social, life and engineered systems.",
                 "points": [
                   {
                     "id": "MSC:90-XX",
@@ -749,45 +713,41 @@
                     "statement": "Information and communication theory, circuits",
                     "name": "Information and communication theory, circuits"
                   }
-                ],
-                "rank_note": "Ordered from optimization and social decisions to biology, control, and information."
+                ]
+              }
+            },
+            {
+              "id": "MA.K5.S3",
+              "anchor": "section:MA.K5.S3",
+              "statement": "Computation turns mathematical claims into algorithms that produce numerical answers.",
+              "name": "Computation turns mathematical claims into algorithms that produce numerical answers.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "parts",
+                "order": "structure",
+                "rank_note": "Numerical methods precede general computer science.",
+                "points": [
+                  {
+                    "id": "MSC:65-XX",
+                    "anchor": "node:MSC:65-XX",
+                    "statement": "Numerical analysis",
+                    "name": "Numerical analysis",
+                    "aliases": [
+                      "ANZSRC:4903"
+                    ]
+                  },
+                  {
+                    "id": "MSC:68-XX",
+                    "anchor": "node:MSC:68-XX",
+                    "statement": "Computer science",
+                    "name": "Computer science"
+                  }
+                ]
               }
             }
           ]
-        }
-      },
-      {
-        "id": "MA.K4",
-        "anchor": "pillar:MA.K4",
-        "title": "Discipline",
-        "statement": "The discipline is the role in which mathematics is a human activity with a history, a teaching practice and a general literature.",
-        "name": "The discipline is the role in which mathematics is a human activity with a history, a teaching practice and a general literature.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "parts",
-          "order": "structure",
-          "rank_note": "From general overview to history to teaching.",
-          "points": [
-            {
-              "id": "MSC:00-XX",
-              "anchor": "node:MSC:00-XX",
-              "statement": "General and overarching topics; collections",
-              "name": "General and overarching topics; collections"
-            },
-            {
-              "id": "MSC:01-XX",
-              "anchor": "node:MSC:01-XX",
-              "statement": "History and biography",
-              "name": "History and biography"
-            },
-            {
-              "id": "MSC:97-XX",
-              "anchor": "node:MSC:97-XX",
-              "statement": "Mathematics education",
-              "name": "Mathematics education"
-            }
-          ]
-        }
+        },
+        "title": "Modelling and computing"
       }
     ]
   },
@@ -803,8 +763,18 @@
       "reason": "container heading for the whole field, not a topic"
     },
     {
+      "id": "MSC:00-XX",
+      "name": "General and overarching topics; collections",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
       "id": "ANZSRC:4999",
       "name": "Other mathematical sciences",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "ANZSRC:4901",
+      "name": "Applied mathematics",
       "reason": "container heading for the whole field, not a topic"
     }
   ],
@@ -815,16 +785,18 @@
   },
   "minto_issues": {},
   "field_check": {
-    "governing_thought": "Mathematics is divided by the role its knowledge plays into the structures it studies, the computation and inference it performs, the modelling of other fields' claims, and the discipline as a human activity.",
+    "governing_thought": "Mathematics is divided by the role a claim plays, into foundations and the discipline itself, algebraic and combinatorial structure, space and shape, change and chance, and the modelling and computing of claims from other fields, in that order.",
     "key_line": [
-      "Structures are the role in which mathematics studies abstract objects such as algebraic systems, spaces, functions and the foundations of proof for their own sake.",
-      "Computation and inference is the role in which mathematics computes results by algorithms and infers conclusions from chance and data.",
-      "Modelling is the role in which mathematics expresses another field's claims about physical, living, social and decision systems in mathematical language.",
-      "The discipline is the role in which mathematics is a human activity with a history, a teaching practice and a general literature."
+      "Foundations and the discipline is the role of mathematics as the ground of proof and as a human activity with a history and a teaching practice.",
+      "Structure is the role of mathematics as the study of algebraic, ordered and discrete objects defined by operations and relations.",
+      "Space is the role of mathematics as the study of shape, position and continuity of spaces and the groups that act on them.",
+      "Change and chance is the role of mathematics as the study of the continuum, of change through equations, and of random variation.",
+      "Modelling and computing is the role of mathematics as a language for claims from other fields and as a means of computing answers."
     ],
     "holds": false,
-    "note": "P1.1 \"neighbouring areas\" (combinatorial, order, arithmetic, K-theory) and P4.1 \"collections\" follow subject-classification adjacency; homological algebra in P1.4 fits P1.1 better.",
-    "review": true
+    "note": "Mixed dimension (role vs subject matter); optimization P5.1.3.2 sits under geophysics, homological algebra P1.1.2 under foundations, and rings P2.1/P2.2 overlap.",
+    "review": true,
+    "problems": 5
   },
-  "cost_usd": 0.285
+  "cost_usd": 0.4027
 }
