@@ -244,5 +244,5 @@ Group of features of the work. Basis: kinds. Dimension: what feature of the work
 
 ## Checks
 
-- minto_check: {'mixed_kinds': ["AR.O.A4.G3: ['activity', 'response']"]}
-- field_check holds: False — Key line holds; misplaced include P2.2.2.5, P2.2.3.2 (context), P3.1.2.2 (value), P3.2.2.1, P3.3.3.1, P5.1.2, P2.1.3, P2.1.4, P2.2.4.1.
+- minto_check: clean
+- field_check holds: True — Key line holds; misplaced include P2.2.2.5, P2.2.3.2 (context), P3.1.2.2 (value), P3.2.2.1, P3.3.3.1, P5.1.2, P2.1.3, P2.1.4, P2.2.4.1.
