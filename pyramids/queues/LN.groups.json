@@ -72,14 +72,14 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "LN.O.A2.G4",
-                  "anchor": "group:LN.O.A2.G4",
-                  "statement": "Language structure and meaning concern the internal rules, word stock, and sign systems that make up a language.",
-                  "name": "Language structure and meaning concern the internal rules, word stock, and sign systems that make up a language.",
+                  "id": "LN.O.A2.G13",
+                  "anchor": "group:LN.O.A2.G13",
+                  "statement": "Grammar, vocabularies and semiology are distinct aspects of language, covering its rules, its words and its systems of signs.",
+                  "name": "Grammar, vocabularies and semiology are distinct aspects of language, covering its rules, its words and its systems of signs.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
-                    "basis": "parts",
+                    "basis": "kinds",
                     "order": "structure",
                     "points": [
                       {
@@ -101,7 +101,7 @@
                         "name": "Semiology"
                       }
                     ],
-                    "rank_note": "Ordered by structure from rules to words to signs."
+                    "rank_note": "Ordered from the internal rules of a language, to its word stock, to the wider study of signs."
                   }
                 },
                 {
@@ -330,10 +330,10 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "LN.O.A2.G5",
-                  "anchor": "group:LN.O.A2.G5",
-                  "statement": "Language in society concerns how people acquire, share, and standardize languages across communities.",
-                  "name": "Language in society concerns how people acquire, share, and standardize languages across communities.",
+                  "id": "LN.O.A2.G14",
+                  "anchor": "group:LN.O.A2.G14",
+                  "statement": "Mother tongue, bilingualism, and linguistic unification are kinds of language aspects, each defined by how a speaker or community relates to one or more languages.",
+                  "name": "Mother tongue, bilingualism, and linguistic unification are kinds of language aspects, each defined by how a speaker or community relates to one or more languages.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -359,7 +359,7 @@
                         "name": "Linguistic unification"
                       }
                     ],
-                    "rank_note": "Ordered by structure from the individual speaker to the community and standardization."
+                    "rank_note": "Ordered from the individual speaker's first language to the use of two languages to the society-wide merging of languages."
                   }
                 },
                 {
@@ -9345,5 +9345,12 @@
         "rank_note": "Ordered from general treatments, to regional families, to non-genealogical types."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Language is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five aspects of language: signal, form, meaning, variation in use, and diversity.",
+    "key_line": "Dimension: **the aspect of language the sentence is about.** Order: from the signal to the family of languages.\n1. Signal\n2. Form\n3. Meaning\n4. Variation in use\n5. Diversity\n\nA particular language is a catalogue entry on the same five cells. There is no \"exotic languages\" bucket.",
+    "holds": false,
+    "note": "Cells use inconsistent splits (scholarship, fields, recording, residual topics) rather than the five aspects from signal to diversity; only A1 and A5 loosely fit.",
+    "review": true
+  }
 }

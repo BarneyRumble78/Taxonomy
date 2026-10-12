@@ -14,8 +14,8 @@
   _basis: kinds, order: structure_
   - **Language form covers the internal structure of a language, its word stock and sign systems, and the scripts used to represent it in writing.**
     _basis: kinds, order: structure. Ordered from internal structure to written representation._
-    - **Language structure and meaning concern the internal rules, word stock, and sign systems that make up a language.**
-      _basis: parts, order: structure. Ordered by structure from rules to words to signs._
+    - **Grammar, vocabularies and semiology are distinct aspects of language, covering its rules, its words and its systems of signs.**
+      _basis: kinds, order: structure. Ordered from the internal rules of a language, to its word stock, to the wider study of signs._
       - Grammar
       - Vocabularies
       - Semiology
@@ -53,8 +53,8 @@
       - Philology. Linguistics
   - **Language use among people covers how languages are learned, shared, standardized, and carried across communities and into other languages by translation.**
     _basis: kinds, order: structure. Ordered from acquisition and sharing to standardization and cross-language transfer._
-    - **Language in society concerns how people acquire, share, and standardize languages across communities.**
-      _basis: kinds, order: structure. Ordered by structure from the individual speaker to the community and standardization._
+    - **Mother tongue, bilingualism, and linguistic unification are kinds of language aspects, each defined by how a speaker or community relates to one or more languages.**
+      _basis: kinds, order: structure. Ordered from the individual speaker's first language to the use of two languages to the society-wide merging of languages._
       - Mother tongue
       - Bilingualism
       - Linguistic unification
