@@ -2363,7 +2363,10 @@
                         "id": "ACM:10010147.10010178",
                         "anchor": "node:ACM:10010147.10010178",
                         "statement": "Artificial intelligence",
-                        "name": "Artificial intelligence"
+                        "name": "Artificial intelligence",
+                        "aliases": [
+                          "ANZSRC:4602"
+                        ]
                       },
                       {
                         "id": "APA:4120",
@@ -2973,17 +2976,18 @@
     }
   ],
   "field_check": {
-    "governing_thought": "Computer science divides by the property asserted of a computation into correctness, cost, coordination, learning and protection, moving from the single program outward to many agents and adversaries.",
+    "governing_thought": "Computer science divides by the property asserted of a computation, ordered from the single program outward to many agents and adversaries: correctness, cost, coordination, learning, and protection.",
     "key_line": [
-      "Correctness is the property that a computation does what it is specified, expressed and proved to do, covering program structure, verification, process quality and formal theory.",
-      "Cost is the property of how much time, space, bandwidth or effort a computation consumes and how that is traded off against quality.",
-      "Coordination is the property of how a computation interacts with other systems, agents and the world through networks, reasoning, language and perception.",
-      "Learning is the property that a computation improves its behaviour from data or produces content and products for users, alongside cross-cutting reference tools.",
-      "Protection is the property that a computation resists attack and safeguards data, spanning formal and human aspects and the concrete systems that are defended."
+      "Correctness is the property that a computation does what its specification, formal model or mathematical foundation says it should.",
+      "Cost is the property of how much time, energy, information capacity or algorithmic effort a computation requires.",
+      "Coordination is the property of how a computation cooperates with other components, machines, networks and people.",
+      "Learning is the property that a computation improves its behaviour, reasons or acts intelligently from data and experience.",
+      "Protection is the property that a computation and its data resist attack, misuse and failure."
     ],
     "holds": false,
-    "note": "Pillars are not mutually exclusive values of one dimension: P2 mixes coding theory, human-facing and methodology groups under \"cost\" (P2.1-P2.3); P1.4/P1.5 overlap on theory; P4.2/P4.3 are not learning.",
+    "note": "P1.3 is a catch-all mixing dependability with General/reference/Document types; P2.3 media/graphics and P3.2 application/human areas are topics, not cost or coordination properties.",
     "review": true,
-    "problems": 8
+    "misplaced": 8,
+    "problems": 109
   }
 }
