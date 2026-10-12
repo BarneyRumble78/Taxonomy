@@ -944,15 +944,30 @@ def _schema_of(body):
 
 
 def _is_summary_schema(schema):
-    item = schema["properties"]["items"]["items"]
-    return "summary" in item.get("properties", {})
+    item = (schema.get("properties") or {}).get("items")
+    if not isinstance(item, dict):
+        return False
+    inner = item.get("items")
+    if not isinstance(inner, dict):
+        return False
+    return "summary" in (inner.get("properties") or {})
+
+
+def _tool_for(schema):
+    """Placement, summary, and group-forming calls cache a different tool."""
+    props = schema.get("properties") or {}
+    if "groups" in props:
+        return "record_groups"
+    if _is_summary_schema(schema):
+        return "record_summaries"
+    return "record_placements"
 
 
 def to_anthropic(body, model, system_prefix):
     """Messages API body. The system prefix and the tool carry a cache breakpoint."""
     schema = _schema_of(body)
     summary = _is_summary_schema(schema)
-    tool = "record_summaries" if summary else "record_placements"
+    tool = _tool_for(schema)
     controls = anthropic_controls(model)
     if summary:
         system_text = SYSTEM_SUMMARY + "\nCall the tool once. Put every item in its items array."
@@ -992,7 +1007,7 @@ def anthropic_content(data):
     for block in data.get("content") or []:
         if not isinstance(block, dict):
             continue
-        if block.get("type") == "tool_use" and block.get("name") in ("record_placements", "record_summaries"):
+        if block.get("type") == "tool_use" and block.get("name") in ("record_placements", "record_summaries", "record_groups"):
             return json.dumps(block.get("input") or {})
         if block.get("type") == "text" and not text:
             text = block.get("text") or ""

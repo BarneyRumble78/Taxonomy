@@ -119,26 +119,108 @@ def test_dry_run_does_not_call_the_queue_and_resume_skips(tmp_path):
     assert saved["done"] == ["PH", "MA", "AG"]
 
 
-def test_minto_items_stay_pending_and_do_not_call_a_model(tmp_path):
-    module = _runner()
-    plan = {
+def _minto_plan():
+    return {
         "assigned": 1.0,
         "global_cap": 60,
         "reserve": 5,
         "order": [
-            {"id": "MA", "mode": "claude", "model": 0, "cap": 1, "estimate_usd": 0.2, "kind": "field", "minto_items": 40},
+            {"id": "MA", "mode": "claude", "model": 0, "cap": 0.08, "estimate_usd": 0.07, "kind": "field", "minto_items": 40},
+            {"id": "AG", "mode": "qwen", "model": 0, "cap": 0, "estimate_usd": 0, "kind": "field", "minto_items": 12},
         ],
     }
+
+
+def test_dry_run_leaves_minto_fields_pending(tmp_path):
+    module = _runner()
     calls = []
 
-    def queue_run(entry, root):
+    def group_run(entry, root):
         calls.append(entry["id"])
         return {"cost": 1, "wrote": 1, "stopped": False}
 
-    result = module.run_all(tmp_path, plan=plan, execute=True, queue_run=queue_run)
+    result = module.run_all(tmp_path, plan=_minto_plan(), execute=False, group_run=group_run)
     assert calls == []
-    assert result["steps"][0]["result"] == "minto-pending"
+    assert [row["result"] for row in result["steps"]] == ["minto-pending", "minto-pending"]
     assert not module.state_path(tmp_path).exists()
+
+
+def test_execute_sends_minto_fields_to_the_group_former(tmp_path):
+    module = _runner()
+    queue_calls = []
+    group_calls = []
+
+    def queue_run(entry, root):
+        queue_calls.append(entry["id"])
+        return {"cost": 1, "wrote": 1, "stopped": False}
+
+    def group_run(entry, root):
+        group_calls.append(module.group_command(entry))
+        return {"cost": 0.01, "wrote": 1, "stopped": False}
+
+    result = module.run_all(
+        tmp_path, plan=_minto_plan(), execute=True, queue_run=queue_run, group_run=group_run,
+    )
+    assert queue_calls == []
+    assert group_calls[0][3] == "anthropic"
+    assert group_calls[1] == [
+        "--field", "AG", "--backend", "ollama", "--max-cost", "0", "--global-max-cost", "60",
+    ]
+    assert [row["result"] for row in result["steps"]] == ["ran", "ran"]
+    saved = json.loads(module.state_path(tmp_path).read_text(encoding="utf-8"))
+    assert saved["done"] == ["MA", "AG"]
+    assert saved["stopped"] is None
+
+
+def test_a_stopped_group_run_is_not_marked_done(tmp_path):
+    module = _runner()
+    calls = []
+
+    def group_run(entry, root):
+        calls.append(entry["id"])
+        return {"cost": 0.01, "wrote": 0, "stopped": True}
+
+    result = module.run_all(tmp_path, plan=_minto_plan(), execute=True, group_run=group_run)
+    assert calls == ["MA"]
+    assert result["stopped"] is True
+    assert [row["id"] for row in result["steps"]] == ["MA"]
+    saved = json.loads(module.state_path(tmp_path).read_text(encoding="utf-8"))
+    assert saved["done"] == []
+    assert saved["stopped"] == "MA"
+
+
+def test_fields_filter_skips_ids_that_were_not_named(tmp_path):
+    module = _runner()
+    calls = []
+
+    def group_run(entry, root):
+        calls.append(entry["id"])
+        return {"cost": 0, "wrote": 1, "stopped": False}
+
+    result = module.run_all(
+        tmp_path, plan=_minto_plan(), execute=True, group_run=group_run, fields=["AG"],
+    )
+    assert calls == ["AG"]
+    assert [row["id"] for row in result["steps"]] == ["AG"]
+    saved = json.loads(module.state_path(tmp_path).read_text(encoding="utf-8"))
+    assert saved["done"] == ["AG"]
+
+
+def test_group_commands_follow_the_approved_split():
+    module = _runner()
+    plan = load_plan(ROOT)
+    by_id = {entry["id"]: entry for entry in plan["order"]}
+    assert module.group_command(by_id["MA"]) == [
+        "--field", "MA", "--backend", "anthropic", "--max-cost", "0.08", "--global-max-cost", "60",
+    ]
+    assert module.group_command(by_id["PH"])[-3] == "5.57"
+    assert module.group_command(by_id["CH"])[-3] == "0.14"
+    assert module.group_command(by_id["CS"])[-3] == "0.29"
+    assert module.group_command(by_id["MD"])[-3] == "0.37"
+    qwen = [entry["id"] for entry in plan["order"] if entry["mode"] == "qwen"]
+    assert ",".join(qwen) == "AG,AR,BI,BU,DE,EA,EC,ED,EN,HI,IK,IS,LA,LN,MS,PL,PO,RE,ST"
+    for name in qwen:
+        assert module.group_command(by_id[name])[3:6] == ["ollama", "--max-cost", "0"]
 
 
 def test_a_cap_stop_leaves_the_queue_unfinished(tmp_path):

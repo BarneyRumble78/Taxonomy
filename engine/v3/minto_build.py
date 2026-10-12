@@ -386,3 +386,32 @@ def audit_field(field, root, flat_min_nodes=FLAT_MIN_NODES):
 
 def claude_usd(items):
     return round(int(items) * USD_PER_THOUSAND / 1000, 6)
+
+
+def admitted_nodes(field, root):
+    """Catalogue-filtered nodes that still need a Minto group. No model call."""
+    root = Path(root)
+    rule = load_rule(field, root)
+    cap = int(rule.get("depth_cap") or 2)
+    table = load_indigenous(root)
+    maps = load_maps(field, root)
+    nodes = _tagged(maps)
+    flat = flat_index_files(maps)
+    admitted, _lcc, _flat = _select(nodes, cap, table, field, {"enabled": True, "flat": flat})
+    rows = []
+    for node in admitted:
+        cell = node.get("taxonomy_cell") or ""
+        if not cell:
+            continue
+        rows.append({
+            "id": node["id"],
+            "name": node.get("name") or node["id"],
+            "code": str(node.get("code") or ""),
+            "cell": cell,
+        })
+    rows.sort(key=lambda item: (item["cell"], item["code"], item["id"]))
+    return {
+        "field": field,
+        "principle": rule.get("organising_principle") or "",
+        "nodes": rows,
+    }
