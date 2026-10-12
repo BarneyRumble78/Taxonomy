@@ -78,9 +78,12 @@ SYSTEM_PLACE = (
     "Impact: a harm, or the attribution of that harm. "
     "Natural hazards and processes belong under State, in the natural-hazards group. "
     "Earthquake, volcanic eruption, seismic activity, and landslide are geological hazards. "
-    "Floods, storms, and droughts are hydro-meteorological hazards. "
+    "Floods, storms, droughts, heat waves, and natural disasters are hydro-meteorological hazards. "
     "Biogeochemical and ecological processes are natural processes, not impacts. "
+    "Environmental concepts, natural resources, and earth-system sciences are states. "
     "Response: an action that changes a pressure or a state. "
+    "Measurement, monitoring, and assessment are environmental methods. "
+    "Environmental engineering is a technical response. "
     "Limit: a threshold a state is not meant to cross. "
     "Place each item on one group_id from its choices. "
     "out_of_scope covers a concept that is clearly not environmental, including a GIS or data-model term such as raster. "
@@ -172,10 +175,10 @@ def result_matches(item, row, catalog=None):
         return True
     if row.get("reason") == "the model reply was not usable":
         return False
-    home = hazard_group(item.get("name"))
+    home = named_home(item.get("name"))
     if home and row.get("group_id") != home["group_id"]:
         return False
-    if is_technical_term(item.get("name")) and row.get("group_id") != "out_of_scope" and row.get("status") != "out_of_scope":
+    if (is_technical_term(item.get("name")) or is_scoped_name(item.get("name"))) and row.get("group_id") != "out_of_scope" and row.get("status") != "out_of_scope":
         return False
     chosen = row.get("group_id")
     if chosen in ESCAPE or row.get("status") in ESCAPE:
@@ -402,9 +405,72 @@ def technical_row(item, rules):
     }
 
 
+def named_home(name, rules=None):
+    """The group an exact name belongs to, hazards first."""
+    return hazard_group(name, rules) or ruled_group(name, rules)
+
+
+def ruled_group(name, rules=None):
+    """A methods, engineering, concept, resource, or earth-science group."""
+    key = (name or "").strip().lower()
+    if not key:
+        return None
+    if rules is None:
+        rules = load_rules("EV")
+    for group in rules.get("ruled_groups") or []:
+        names = {str(item).strip().lower() for item in (group.get("names") or [])}
+        if key in names:
+            return group
+    return None
+
+
+def grouped_row(item, rules):
+    """Place a named method, concept, resource, or science. No model call."""
+    if item_task(item) != "place":
+        return None
+    group = ruled_group(item.get("name"), rules)
+    if not group:
+        return None
+    return {
+        "task": "place",
+        "status": "placed",
+        "node_id": item.get("node_id"),
+        "name": item.get("name"),
+        "cell": group.get("cell") or "",
+        "group_id": group["group_id"],
+        "reason": group.get("reason") or "the name belongs to this group",
+    }
+
+
+def is_scoped_name(name, rules=None):
+    """An exact name that is not an environmental concept."""
+    key = (name or "").strip().lower()
+    if not key:
+        return False
+    if rules is None:
+        rules = load_rules("EV")
+    names = {str(item).strip().lower() for item in (rules.get("out_of_scope_names") or [])}
+    return key in names
+
+
+def scoped_row(item, rules):
+    """Mark a chemical, place, organism, or economic term out of scope. No model call."""
+    if item_task(item) != "place" or not is_scoped_name(item.get("name"), rules):
+        return None
+    return {
+        "task": "place",
+        "status": "out_of_scope",
+        "node_id": item.get("node_id"),
+        "name": item.get("name"),
+        "cell": item.get("cell"),
+        "group_id": "out_of_scope",
+        "reason": "a chemical, place, organism, or economic term is not an environmental concept",
+    }
+
+
 def ruled_row(item, rules):
     """A row the rules can finish without a model call."""
-    return driver_row(item, rules) or natural_row(item, rules) or technical_row(item, rules)
+    return driver_row(item, rules) or natural_row(item, rules) or grouped_row(item, rules) or scoped_row(item, rules) or technical_row(item, rules)
 
 
 def _schema_body(schema, name, system, payload, api="native"):

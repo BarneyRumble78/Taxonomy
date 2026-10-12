@@ -10024,6 +10024,42 @@
             "id": "GEMET:6211",
             "code": "6211",
             "file": "maps/EV/gemet.json"
+          },
+          {
+            "scheme": "GEMET",
+            "id": "GEMET:2944",
+            "code": "2944",
+            "file": "maps/EV/gemet.json"
+          },
+          {
+            "scheme": "GEMET",
+            "id": "GEMET:2470",
+            "code": "2470",
+            "file": "maps/EV/gemet.json"
+          },
+          {
+            "scheme": "GEMET",
+            "id": "GEMET:3438",
+            "code": "3438",
+            "file": "maps/EV/gemet.json"
+          },
+          {
+            "scheme": "GEMET",
+            "id": "GEMET:2712",
+            "code": "2712",
+            "file": "maps/EV/gemet.json"
+          },
+          {
+            "scheme": "GEMET",
+            "id": "GEMET:3650",
+            "code": "3650",
+            "file": "maps/EV/gemet.json"
+          },
+          {
+            "scheme": "GEMET",
+            "id": "GEMET:4118",
+            "code": "4118",
+            "file": "maps/EV/gemet.json"
           }
         ],
         "cell": "EV.O.A2",
@@ -10032,7 +10068,7 @@
         "support": {
           "logic_type": "inductive",
           "plural_noun": "states",
-          "mece_dimension": "whether the state is a measured medium or a natural process",
+          "mece_dimension": "whether the state is a medium, a hazard, a concept, a resource, or an earth science",
           "order": "structure",
           "question_raised": "which_ones",
           "points": [
@@ -15681,6 +15717,72 @@
                   }
                 ]
               }
+            },
+            {
+              "id": "EV.P.2.8",
+              "anchor": "facet:EV.O.A2:concepts",
+              "statement": "Environmental concepts are the names for the environment and its sciences.",
+              "idea_type": "situation",
+              "sources": [
+                {
+                  "scheme": "GEMET",
+                  "id": "GEMET:2944",
+                  "code": "2944",
+                  "file": "maps/EV/gemet.json"
+                },
+                {
+                  "scheme": "GEMET",
+                  "id": "GEMET:2470",
+                  "code": "2470",
+                  "file": "maps/EV/gemet.json"
+                }
+              ],
+              "facet": "concepts",
+              "cell": "EV.O.A2"
+            },
+            {
+              "id": "EV.P.2.9",
+              "anchor": "facet:EV.O.A2:resources",
+              "statement": "Natural resources are stocks of water, minerals, energy, and living systems.",
+              "idea_type": "situation",
+              "sources": [
+                {
+                  "scheme": "GEMET",
+                  "id": "GEMET:3438",
+                  "code": "3438",
+                  "file": "maps/EV/gemet.json"
+                },
+                {
+                  "scheme": "GEMET",
+                  "id": "GEMET:2712",
+                  "code": "2712",
+                  "file": "maps/EV/gemet.json"
+                }
+              ],
+              "facet": "resources",
+              "cell": "EV.O.A2"
+            },
+            {
+              "id": "EV.P.2.10",
+              "anchor": "facet:EV.O.A2:earth",
+              "statement": "Earth-system sciences are geology, hydrology, geography, and oceanography.",
+              "idea_type": "situation",
+              "sources": [
+                {
+                  "scheme": "GEMET",
+                  "id": "GEMET:3650",
+                  "code": "3650",
+                  "file": "maps/EV/gemet.json"
+                },
+                {
+                  "scheme": "GEMET",
+                  "id": "GEMET:4118",
+                  "code": "4118",
+                  "file": "maps/EV/gemet.json"
+                }
+              ],
+              "facet": "earth",
+              "cell": "EV.O.A2"
             }
           ]
         }
@@ -17789,6 +17891,24 @@
             "scheme": "GEMET",
             "id": "GEMET:13253",
             "code": "13253",
+            "file": "maps/EV/gemet.json"
+          },
+          {
+            "scheme": "GEMET",
+            "id": "GEMET:2774",
+            "code": "2774",
+            "file": "maps/EV/gemet.json"
+          },
+          {
+            "scheme": "GEMET",
+            "id": "GEMET:5346",
+            "code": "5346",
+            "file": "maps/EV/gemet.json"
+          },
+          {
+            "scheme": "GEMET",
+            "id": "GEMET:10133",
+            "code": "10133",
             "file": "maps/EV/gemet.json"
           }
         ],
@@ -30138,6 +30258,82 @@
                         }
                       ]
                     }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "EV.P.4.7",
+              "anchor": "facet:EV.O.A4:practice",
+              "statement": "Methods and engineering are the technical responses to an environmental state.",
+              "idea_type": "situation",
+              "sources": [
+                {
+                  "scheme": "GEMET",
+                  "id": "GEMET:2774",
+                  "code": "2774",
+                  "file": "maps/EV/gemet.json"
+                },
+                {
+                  "scheme": "GEMET",
+                  "id": "GEMET:5346",
+                  "code": "5346",
+                  "file": "maps/EV/gemet.json"
+                },
+                {
+                  "scheme": "GEMET",
+                  "id": "GEMET:10133",
+                  "code": "10133",
+                  "file": "maps/EV/gemet.json"
+                }
+              ],
+              "facet": "practice",
+              "cell": "EV.O.A4",
+              "question_raised": "which_ones",
+              "support": {
+                "logic_type": "inductive",
+                "plural_noun": "responses",
+                "mece_dimension": "whether the technical response is a method or an engineering work",
+                "order": "structure",
+                "question_raised": "which_ones",
+                "points": [
+                  {
+                    "id": "EV.P.4.7.1",
+                    "anchor": "facet:EV.O.A4:methods",
+                    "statement": "Environmental methods are measurement, monitoring, and assessment.",
+                    "idea_type": "situation",
+                    "sources": [
+                      {
+                        "scheme": "GEMET",
+                        "id": "GEMET:2774",
+                        "code": "2774",
+                        "file": "maps/EV/gemet.json"
+                      },
+                      {
+                        "scheme": "GEMET",
+                        "id": "GEMET:5346",
+                        "code": "5346",
+                        "file": "maps/EV/gemet.json"
+                      }
+                    ],
+                    "facet": "methods",
+                    "cell": "EV.O.A4"
+                  },
+                  {
+                    "id": "EV.P.4.7.2",
+                    "anchor": "facet:EV.O.A4:engineering",
+                    "statement": "Environmental engineering is the technical work that changes a pressure or a state.",
+                    "idea_type": "situation",
+                    "sources": [
+                      {
+                        "scheme": "GEMET",
+                        "id": "GEMET:10133",
+                        "code": "10133",
+                        "file": "maps/EV/gemet.json"
+                      }
+                    ],
+                    "facet": "engineering",
+                    "cell": "EV.O.A4"
                   }
                 ]
               }

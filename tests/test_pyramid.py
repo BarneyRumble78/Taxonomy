@@ -216,9 +216,20 @@ def test_ev_section_12():
     )
     assert [point["cell"] for point in key["points"]] == expected
     state = next(point for point in key["points"] if point["id"] == "EV.P.2")
-    assert [point["id"] for point in state["support"]["points"]] == ["EV.P.2.7", "EV.P.2.6"]
-    assert state["support"]["mece_dimension"] == "whether the state is a measured medium or a natural process"
-    media, natural = state["support"]["points"]
+    assert [point["id"] for point in state["support"]["points"]] == [
+        "EV.P.2.7", "EV.P.2.6", "EV.P.2.8", "EV.P.2.9", "EV.P.2.10",
+    ]
+    assert state["support"]["mece_dimension"] == (
+        "whether the state is a medium, a hazard, a concept, a resource, or an earth science"
+    )
+    media, natural, concepts, resources, earth = state["support"]["points"]
+    assert concepts["id"] == "EV.P.2.8"
+    assert resources["id"] == "EV.P.2.9"
+    assert earth["id"] == "EV.P.2.10"
+    responses = next(point for point in key["points"] if point["id"] == "EV.P.4")
+    assert [point["id"] for point in responses["support"]["points"]] == [
+        "EV.P.4.1", "EV.P.4.2", "EV.P.4.3", "EV.P.4.7",
+    ]
     assert [point["id"] for point in media["support"]["points"]] == [
         "EV.P.2.1", "EV.P.2.2", "EV.P.2.3", "EV.P.2.4", "EV.P.2.5",
     ]
@@ -1088,6 +1099,27 @@ def test_natural_hazards_and_technical_terms_are_ruled():
     assert quake["dpsir"] == "natural"
     assert module.natural_row({"task": "place", "node_id": "X", "name": "volcano"}, rules) is None
     assert module.natural_row({"task": "place", "node_id": "N", "name": "nutrient cycle"}, rules) is None
+    flood = module.natural_row({"task": "place", "node_id": "GEMET:3298", "name": "flood"}, rules)
+    assert flood["group_id"] == "EV.P.2.6.2"
+    assert flood["cell"] == "EV.O.A2"
+    assert flood["status"] == "placed"
+    for name in ("storm", "drought", "heat wave", "natural disaster", "cyclone"):
+        row = module.natural_row({"task": "place", "node_id": name, "name": name}, rules)
+        assert row["group_id"] == "EV.P.2.6.2", name
+    assert module.natural_row({"task": "place", "node_id": "F", "name": "flood prevention"}, rules) is None
+    assess = module.grouped_row(
+        {"task": "place", "node_id": "GEMET:2774", "name": "environmental assessment"},
+        rules,
+    )
+    assert assess["group_id"] == "EV.P.4.7.1"
+    assert assess["cell"] == "EV.O.A4"
+    assert assess["status"] == "placed"
+    econ = module.scoped_row(
+        {"task": "place", "node_id": "E", "name": "environmental economics"},
+        rules,
+    )
+    assert econ["status"] == "out_of_scope"
+    assert econ["group_id"] == "out_of_scope"
     raster = module.technical_row(
         {"task": "place", "node_id": "GEMET:14922", "name": "raster", "cell": "EV.O.A2"},
         rules,
@@ -1102,6 +1134,10 @@ def test_natural_hazards_and_technical_terms_are_ruled():
     assert by_id["EV.P.2.6.2"]["cell"] == "EV.O.A2"
     assert by_id["EV.P.2.6.3"]["cell"] == "EV.O.A2"
     assert by_id["EV.P.2.1"]["cell"] == "EV.O.A2"
+    assert by_id["EV.P.2.8"]["cell"] == "EV.O.A2"
+    assert by_id["EV.P.2.10"]["cell"] == "EV.O.A2"
+    assert by_id["EV.P.4.7.1"]["cell"] == "EV.O.A4"
+    assert by_id["EV.P.4.7.2"]["cell"] == "EV.O.A4"
     item = {"task": "place", "node_id": "GEMET:2402", "name": "earthquake"}
     assert not module.result_matches(
         item,

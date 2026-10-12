@@ -36,10 +36,34 @@ Inductive group of loads. Dimension: the kind of load. Order: structure.
 
 - **1.1.** Emissions are the loads from greenhouse gases and other pollutants. `EV.P.1.1`
   - **1.1.1.** These substances are the pollutant pressures. `EV.P.1.1.11`
+    - **1.1.1.1.** These substances are the pollutant pressures. `EV.P.1.1.11.1`
+    - **1.1.1.2.** These substances are the pollutant pressures. `EV.P.1.1.11.2`
+    - **1.1.1.3.** These substances are the pollutant pressures. `EV.P.1.1.11.3`
+    - **1.1.1.4.** These substances are the pollutant pressures. `EV.P.1.1.11.4`
+    - **1.1.1.5.** These substances are the pollutant pressures. `EV.P.1.1.11.5`
   - **1.1.2.** These substances are the waste pressures. `EV.P.1.1.12`
+    - **1.1.2.1.** These substances are the waste pressures. `EV.P.1.1.12.1`
+    - **1.1.2.2.** These substances are the waste pressures. `EV.P.1.1.12.2`
+    - **1.1.2.3.** These substances are the waste pressures. `EV.P.1.1.12.3`
+    - **1.1.2.4.** These substances are the waste pressures. `EV.P.1.1.12.4`
+    - **1.1.2.5.** These substances are the waste pressures. `EV.P.1.1.12.5`
   - **1.1.3.** These substances are the emission pressures. `EV.P.1.1.13`
+    - **1.1.3.1.** These substances are the emission pressures. `EV.P.1.1.13.1`
+    - **1.1.3.2.** These substances are the emission pressures. `EV.P.1.1.13.2`
+    - **1.1.3.3.** These substances are the emission pressures. `EV.P.1.1.13.3`
+    - **1.1.3.4.** These substances are the emission pressures. `EV.P.1.1.13.4`
+    - **1.1.3.5.** These substances are the emission pressures. `EV.P.1.1.13.5`
   - **1.1.4.** These substances are the fuel pressures. `EV.P.1.1.14`
+    - **1.1.4.1.** These substances are the fuel pressures. `EV.P.1.1.14.1`
+    - **1.1.4.2.** These substances are the fuel pressures. `EV.P.1.1.14.2`
+    - **1.1.4.3.** These substances are the consumption pressures. `EV.P.1.1.14.3`
+    - **1.1.4.4.** These substances are the fuel pressures. `EV.P.1.1.14.4`
   - **1.1.5.** These substances are the fertiliser pressures. `EV.P.1.1.6`
+    - **1.1.5.1.** Chemical fertiliser is a pressure. `EV.P.1.1.1.1.4.2`
+    - **1.1.5.2.** Inorganic fertiliser is a pressure. `EV.P.1.1.1.1.4.1`
+    - **1.1.5.3.** Nitrogenous fertiliser is a pressure. `EV.P.1.1.3.4.4.1`
+    - **1.1.5.4.** Phosphatic fertiliser is a pressure. `EV.P.1.1.3.4.5.1`
+    - **1.1.5.5.** Potassium fertiliser is a pressure. `EV.P.1.1.3.4.5.2`
 - **1.2.** Land and sea use changes are the loads from clearance, drainage, and building. `EV.P.1.2`
   - **1.2.1.** Urban noise is a pressure. `EV.P.1.2.1.3`
   - **1.2.2.** Urban pollution is a pressure. `EV.P.1.2.5.2`
@@ -47,20 +71,47 @@ Inductive group of loads. Dimension: the kind of load. Order: structure.
   - **1.2.4.** Urban water supply is a pressure. `EV.P.1.2.3.3`
 - **1.3.** Extraction is the load from taking water, fish, or minerals. `EV.P.1.3`
   - **1.3.1.** These activities are the industry pressures. `EV.P.1.3.11`
+    - **1.3.1.1.** These activities are the industry pressures. `EV.P.1.3.11.1`
+    - **1.3.1.2.** These activities are the industry pressures. `EV.P.1.3.11.2`
+    - **1.3.1.3.** These activities are the industry pressures. `EV.P.1.3.11.3`
+    - **1.3.1.4.** These activities are the industry pressures. `EV.P.1.3.11.4`
+    - **1.3.1.5.** These activities are the industry pressures. `EV.P.1.3.11.5`
   - **1.3.2.** These activities are the mining pressures. `EV.P.1.3.12`
+    - **1.3.2.1.** These activities are the mining pressures. `EV.P.1.3.12.1`
+    - **1.3.2.2.** These activities are the mining pressures. `EV.P.1.3.12.2`
+    - **1.3.2.3.** These activities are the mining pressures. `EV.P.1.3.12.3`
+    - **1.3.2.4.** These activities are the mining pressures. `EV.P.1.3.12.4`
+    - **1.3.2.5.** These activities are the mining pressures. `EV.P.1.3.12.5`
   - **1.3.3.** These activities are the extraction pressures. `EV.P.1.3.13`
+    - **1.3.3.1.** These activities are the extraction pressures. `EV.P.1.3.13.1`
+    - **1.3.3.2.** These activities are the extraction pressures. `EV.P.1.3.13.2`
+    - **1.3.3.3.** These activities are the extraction pressures. `EV.P.1.3.13.3`
+    - **1.3.3.4.** These activities are the extraction pressures. `EV.P.1.3.13.4`
+    - **1.3.3.5.** These activities are the extraction pressures. `EV.P.1.3.13.5`
   - **1.3.4.** These activities are the fishing pressures. `EV.P.1.3.14`
+    - **1.3.4.1.** These activities are the fishing pressures. `EV.P.1.3.14.1`
+    - **1.3.4.2.** These activities are the fishing pressures. `EV.P.1.3.14.2`
+    - **1.3.4.3.** These activities are the fishing pressures. `EV.P.1.3.14.3`
+    - **1.3.4.4.** These activities are the fishing pressures. `EV.P.1.3.14.4`
   - **1.3.5.** These activities are the fishery pressures. `EV.P.1.3.15`
+    - **1.3.5.1.** Commercial fishery is a pressure. `EV.P.1.3.3.2.2.1`
+    - **1.3.5.2.** Fishery is a pressure. `EV.P.1.3.4.1.2.1`
+    - **1.3.5.3.** Fishery economics is a pressure. `EV.P.1.3.2.2.2.2`
+    - **1.3.5.4.** Inland fishery is a pressure. `EV.P.1.3.3.2.4.2`
+    - **1.3.5.5.** Marine fishery is a pressure. `EV.P.1.3.1.4.4.2`
 - **1.4.** Introduced species are the loads from pests and organisms people bring in. `EV.P.1.4`
   - **1.4.1.** Genetically modified organism is a pressure. `EV.P.1.4.1.1.2`
   - **1.4.2.** Pest infestation is a pressure. `EV.P.1.4.2`
   - **1.4.3.** These organisms are alike as pressures. `EV.P.1.4.1.1.3`
+    - **1.4.3.1.** Accidental release of organisms is a pressure. `EV.P.1.4.1.1.1`
+    - **1.4.3.2.** Introduction of animal species is a pressure. `EV.P.1.4.2.4`
+    - **1.4.3.3.** Introduction of plant species is a pressure. `EV.P.1.4.1.1.3.1`
 
 ### 2. States are the measured conditions of air, water, soil, and living systems.
 
 Question. What is the measured state?
 
-Inductive group of states. Dimension: whether the state is a measured medium or a natural process. Order: structure.
+Inductive group of states. Dimension: whether the state is a medium, a hazard, a concept, a resource, or an earth science. Order: structure.
 
 - **2.1.** Measured conditions are the states of air, water, soil, and living systems. `EV.P.2.7`
   - **2.1.1.** Air quality is the measured state of the atmosphere. `EV.P.2.1`
@@ -92,6 +143,9 @@ Inductive group of states. Dimension: whether the state is a measured medium or 
   - **2.2.1.** Geological hazards are seismic, volcanic, and landslide events. `EV.P.2.6.1`
   - **2.2.2.** Hydro-meteorological hazards are floods, storms, and droughts. `EV.P.2.6.2`
   - **2.2.3.** Natural biogeochemical and ecological processes are cycles of matter in living systems. `EV.P.2.6.3`
+- **2.3.** Environmental concepts are the names for the environment and its sciences. `EV.P.2.8`
+- **2.4.** Natural resources are stocks of water, minerals, energy, and living systems. `EV.P.2.9`
+- **2.5.** Earth-system sciences are geology, hydrology, geography, and oceanography. `EV.P.2.10`
 
 ### 3. Impacts are the harms a changed state causes, and the way those harms are attributed.
 
@@ -101,8 +155,14 @@ Inductive group of effects. Dimension: what is harmed, and how the harm is attri
 
 - **3.1.** Ecosystem harm is the loss of function or species after a changed state. `EV.P.3.1`
   - **3.1.1.** These degradation are alike as impacts. `EV.P.3.1.6`
+    - **3.1.1.1.** Degradation of natural resources is an impact. `EV.P.3.1.2.2.1`
+    - **3.1.1.2.** Freshwater degradation is an impact. `EV.P.3.1.5.4.2`
   - **3.1.2.** These degradation are alike as impacts. `EV.P.3.1.2`
+    - **3.1.2.1.** Ecosystem degradation is an impact. `EV.P.3.1.2.3.1`
+    - **3.1.2.2.** Degradation of the environment is an impact. `EV.P.3.1.2.3.2`
   - **3.1.3.** These degradation are alike as impacts. `EV.P.3.1.7`
+    - **3.1.3.1.** Soil degradation is an impact. `EV.P.3.1.4.4.1`
+    - **3.1.3.2.** Land degradation is an impact. `EV.P.3.1.2.2.2`
 - **3.2.** Human health impact is the harm to people that follows an exposure. `EV.P.3.2`
   - **3.2.1.** Effect on health is an impact. `EV.P.3.2.1.2`
   - **3.2.2.** Health is an impact. `EV.P.3.2.1.1`
@@ -120,16 +180,59 @@ Inductive group of responses. Dimension: the kind of response. Order: structure.
   - **4.1.3.** Land restoration is a response. `EV.P.4.1.2.1`
 - **4.2.** Conservation is the response that protects areas and cuts pressures on them. `EV.P.4.2`
   - **4.2.1.** These responses are the protection responses. `EV.P.4.2.6`
+    - **4.2.1.1.** These responses are the protection responses. `EV.P.4.2.6.1`
+    - **4.2.1.2.** These responses are the environmental responses. `EV.P.4.2.6.2`
+    - **4.2.1.3.** These responses are the protection responses. `EV.P.4.2.6.3`
   - **4.2.2.** These responses are the protection responses. `EV.P.4.2.7`
+    - **4.2.2.1.** These responses are the protection responses. `EV.P.4.2.7.1`
+    - **4.2.2.2.** These responses are the protection responses. `EV.P.4.2.7.2`
+    - **4.2.2.3.** These responses are the protection responses. `EV.P.4.2.7.3`
   - **4.2.3.** These responses are alike as responses. `EV.P.4.2.8`
+    - **4.2.3.1.** These responses are alike as responses. `EV.P.4.2.8.1`
+    - **4.2.3.2.** These responses are the protection responses. `EV.P.4.2.8.2`
+    - **4.2.3.3.** These responses are the protection responses. `EV.P.4.2.8.3`
   - **4.2.4.** These responses are the protection responses. `EV.P.4.2.1`
+    - **4.2.4.1.** These responses are the protection responses. `EV.P.4.2.1.5`
+    - **4.2.4.2.** These responses are the protection responses. `EV.P.4.2.1.6`
+    - **4.2.4.3.** These responses are the protection responses. `EV.P.4.2.1.7`
   - **4.2.5.** These responses are the protection responses. `EV.P.4.2.9`
+    - **4.2.5.1.** These responses are the protection responses. `EV.P.4.2.9.1`
+    - **4.2.5.2.** These responses are the environmental responses. `EV.P.4.2.9.2`
+    - **4.2.5.3.** These responses are the protection responses. `EV.P.4.2.9.3`
 - **4.3.** Regulation is the response whose environmental effect is what this field measures. `EV.P.4.3`
   - **4.3.1.** These responses are the treatment responses. `EV.P.4.3.10`
+    - **4.3.1.1.** These responses are the treatment responses. `EV.P.4.3.10.1`
+    - **4.3.1.2.** These responses are the treatment responses. `EV.P.4.3.10.2`
+    - **4.3.1.3.** These responses are the treatment responses. `EV.P.4.3.10.3`
+    - **4.3.1.4.** These responses are the treatment responses. `EV.P.4.3.10.4`
+    - **4.3.1.5.** These responses are the treatment responses. `EV.P.4.3.10.5`
   - **4.3.2.** These responses are the control responses. `EV.P.4.3.11`
+    - **4.3.2.1.** These responses are the control responses. `EV.P.4.3.11.1`
+    - **4.3.2.2.** These responses are the control responses. `EV.P.4.3.11.2`
+    - **4.3.2.3.** These responses are the pollution responses. `EV.P.4.3.11.3`
+    - **4.3.2.4.** These responses are the control responses. `EV.P.4.3.11.4`
+    - **4.3.2.5.** These responses are the control responses. `EV.P.4.3.11.5`
   - **4.3.3.** These responses are alike as responses. `EV.P.4.3.12`
+    - **4.3.3.1.** These responses are the management responses. `EV.P.4.3.12.1`
+    - **4.3.3.2.** These responses are the management responses. `EV.P.4.3.12.2`
+    - **4.3.3.3.** These responses are alike as responses. `EV.P.4.3.12.3`
+    - **4.3.3.4.** These responses are the management responses. `EV.P.4.3.12.4`
+    - **4.3.3.5.** These responses are the management responses. `EV.P.4.3.12.5`
   - **4.3.4.** These responses are alike as responses. `EV.P.4.3.13`
+    - **4.3.4.1.** These responses are the legislation responses. `EV.P.4.3.13.1`
+    - **4.3.4.2.** These responses are the legislation responses. `EV.P.4.3.13.2`
+    - **4.3.4.3.** These responses are the legislation responses. `EV.P.4.3.13.3`
+    - **4.3.4.4.** These responses are the legislation responses. `EV.P.4.3.13.4`
+    - **4.3.4.5.** These responses are alike as responses. `EV.P.4.3.13.5`
   - **4.3.5.** These responses are the policy responses. `EV.P.4.3.14`
+    - **4.3.5.1.** These responses are the policy responses. `EV.P.4.3.14.1`
+    - **4.3.5.2.** These responses are the policy responses. `EV.P.4.3.14.2`
+    - **4.3.5.3.** These responses are the policy responses. `EV.P.4.3.14.3`
+    - **4.3.5.4.** These responses are the policy responses. `EV.P.4.3.14.4`
+    - **4.3.5.5.** These responses are the policy responses. `EV.P.4.3.14.5`
+- **4.4.** Methods and engineering are the technical responses to an environmental state. `EV.P.4.7`
+  - **4.4.1.** Environmental methods are measurement, monitoring, and assessment. `EV.P.4.7.1`
+  - **4.4.2.** Environmental engineering is the technical work that changes a pressure or a state. `EV.P.4.7.2`
 
 ### 5. Limits are the thresholds a measured state is not meant to cross.
 
@@ -144,6 +247,8 @@ Inductive group of limits. Dimension: the kind of limit. Order: structure.
   - **5.2.1.** EU Green Bond Standard is a limit. `EV.P.5.2.1`
   - **5.2.2.** Mitigation measure is a limit. `EV.P.5.2.2`
   - **5.2.3.** These institutions are the measure limits. `EV.P.5.2.3`
+    - **5.2.3.1.** Prevention measure is a limit. `EV.P.5.2.3.1`
+    - **5.2.3.2.** Protective measure is a limit. `EV.P.5.2.3.2`
 - **5.3.** Carrying capacity is the limit of what a system can sustain. `EV.P.5.3`
 
 This pyramid classifies the field. A problem-solving pyramid for one case would start from a defined problem (Chapter 8) and is a later document.

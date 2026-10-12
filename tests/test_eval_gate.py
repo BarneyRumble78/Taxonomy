@@ -61,7 +61,7 @@ def test_index_matches_pyramid_text():
     index = te.load_index()
     assert index["chunks_sha256"] == digest
     assert index["model"] == "BAAI/bge-small-en-v1.5"
-    assert len(index["fields"]) == len(chunks) == 332
+    assert len(index["fields"]) == len(chunks) == 333
     assert all(len(v) == 384 for v in index["vectors"])
     text = json.loads((ROOT / "engine" / "retrieval_text.json").read_text(encoding="utf-8"))
     assert text["chunks_sha256"] == digest

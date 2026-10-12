@@ -1353,9 +1353,11 @@ def render_markdown(pyramid, depth=3):
 
 
 def _render_level(lines, points, depth, prefix):
+    if depth <= 0:
+        return
     for index, point in enumerate(points, start=1):
         label = f"{prefix}.{index}"
-        lines.append(f"- **{label}.** {point['statement']} `{point['id']}`")
-        if depth > 1 and point.get("support"):
-            for child_i, child in enumerate(point["support"]["points"], start=1):
-                lines.append(f"  - **{label}.{child_i}.** {child['statement']} `{child['id']}`")
+        indent = "  " * (label.count(".") - 1)
+        lines.append(f"{indent}- **{label}.** {point['statement']} `{point['id']}`")
+        if point.get("support"):
+            _render_level(lines, point["support"]["points"], depth - 1, label)
