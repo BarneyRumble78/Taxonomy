@@ -96,10 +96,10 @@
                   }
                 },
                 {
-                  "id": "BI.O.A1.G8",
-                  "anchor": "group:BI.O.A1.G8",
-                  "statement": "Antisense elements and nucleotides are molecular-level components of nucleic acid chemistry, where claims concern the sequence units and strands that carry and regulate genetic information.",
-                  "name": "Antisense elements and nucleotides are molecular-level components of nucleic acid chemistry, where claims concern the sequence units and strands that carry and regulate genetic information.",
+                  "id": "BI.O.A1.G11",
+                  "anchor": "group:BI.O.A1.G11",
+                  "statement": "Nucleic acid based molecular elements are the genetic material level that the claim addresses, including antisense elements and their nucleotide building blocks.",
+                  "name": "Nucleic acid based molecular elements are the genetic material level that the claim addresses, including antisense elements and their nucleotide building blocks.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -118,9 +118,9 @@
                         "statement": "Nucleotides",
                         "name": "Nucleotides"
                       }
-                    ]
-                  },
-                  "further": true
+                    ],
+                    "rank_note": "Ordered by structure, from the specific antisense elements to the general nucleotide units."
+                  }
                 },
                 {
                   "id": "BI.O.A1.G3",
@@ -729,10 +729,10 @@
                   }
                 },
                 {
-                  "id": "BI.O.A2.G13",
-                  "anchor": "group:BI.O.A2.G13",
-                  "statement": "Biologically derived experimental preparations are substances taken from organisms and used to provoke or study immune and toxic responses.",
-                  "name": "Biologically derived experimental preparations are substances taken from organisms and used to provoke or study immune and toxic responses.",
+                  "id": "BI.O.A2.G24",
+                  "anchor": "group:BI.O.A2.G24",
+                  "statement": "Immunostimulating agents are substances whose role is to provoke or boost an immune response in an organism.",
+                  "name": "Immunostimulating agents are substances whose role is to provoke or boost an immune response in an organism.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -746,6 +746,27 @@
                         "name": "Freund's Adjuvant"
                       },
                       {
+                        "id": "MeSH:D23.050",
+                        "anchor": "node:MeSH:D23.050",
+                        "statement": "Antigens",
+                        "name": "Antigens"
+                      }
+                    ],
+                    "rank_note": "Ordered by structure: the enhancing adjuvant is listed before the antigen it accompanies."
+                  }
+                },
+                {
+                  "id": "BI.O.A2.G25",
+                  "anchor": "group:BI.O.A2.G25",
+                  "statement": "Biological source materials are substances taken from living organisms, with the claim concerning their origin and composition.",
+                  "name": "Biological source materials are substances taken from living organisms, with the claim concerning their origin and composition.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
                         "id": "MeSH:D20.777",
                         "anchor": "node:MeSH:D20.777",
                         "statement": "Tissue Extracts",
@@ -756,15 +777,9 @@
                         "anchor": "node:MeSH:D20.888",
                         "statement": "Venoms",
                         "name": "Venoms"
-                      },
-                      {
-                        "id": "MeSH:D23.050",
-                        "anchor": "node:MeSH:D23.050",
-                        "statement": "Antigens",
-                        "name": "Antigens"
                       }
                     ],
-                    "rank_note": "not ranked"
+                    "rank_note": "Ordered by structure: tissue-derived extracts are listed before secreted venoms."
                   }
                 },
                 {
@@ -981,10 +996,10 @@
               "order": "structure",
               "points": [
                 {
-                  "id": "BI.O.A2.G14",
-                  "anchor": "group:BI.O.A2.G14",
-                  "statement": "Agents that protect or monitor the body are factors used to guard against damage or to signal biological state.",
-                  "name": "Agents that protect or monitor the body are factors used to guard against damage or to signal biological state.",
+                  "id": "BI.O.A2.G26",
+                  "anchor": "group:BI.O.A2.G26",
+                  "statement": "Process-modifying agents are substances that act on a chemical or physiological process in order to block or limit it.",
+                  "name": "Process-modifying agents are substances that act on a chemical or physiological process in order to block or limit it.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
@@ -998,16 +1013,31 @@
                         "name": "Antioxidants"
                       },
                       {
-                        "id": "MeSH:D23.101",
-                        "anchor": "node:MeSH:D23.101",
-                        "statement": "Biomarkers",
-                        "name": "Biomarkers"
-                      },
-                      {
                         "id": "MeSH:D23.113",
                         "anchor": "node:MeSH:D23.113",
                         "statement": "Blood Coagulation Factor Inhibitors",
                         "name": "Blood Coagulation Factor Inhibitors"
+                      }
+                    ],
+                    "rank_note": "Ordered by structure: the oxidative process first, then the coagulation process."
+                  }
+                },
+                {
+                  "id": "BI.O.A2.G27",
+                  "anchor": "group:BI.O.A2.G27",
+                  "statement": "State indicators and regulators are molecular entities that report on or control the level of a biological state, such as disease status or immune activity.",
+                  "name": "State indicators and regulators are molecular entities that report on or control the level of a biological state, such as disease status or immune activity.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "kinds",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "MeSH:D23.101",
+                        "anchor": "node:MeSH:D23.101",
+                        "statement": "Biomarkers",
+                        "name": "Biomarkers"
                       },
                       {
                         "id": "MeSH:D23.383",
@@ -1016,7 +1046,7 @@
                         "name": "Immune Checkpoint Proteins"
                       }
                     ],
-                    "rank_note": "not ranked"
+                    "rank_note": "Ordered by structure: the general measurable indicator first, then the specific immune regulator."
                   }
                 },
                 {
@@ -2221,5 +2251,12 @@
         ]
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Biology is exhausted by four faces of one pyramid: objects, methods, warrants and bridges. Every biological claim is about one of five levels or processes: Heritable information · Cell · Organism · Descent · Ecological interaction.",
+    "key_line": "- Logic: inductive.\n- Plural noun: levels or processes of living organisation.\n- Dimension: the level or process the claim is about.\n- Order: structural, from the copied sequence to the interacting community.\n\nMembers (5):\n1. Heritable information\n2. Cell\n3. Organism\n4. Descent\n5. Ecological interaction\n\nAssignment note on the dimension. Heritable information and Descent are processes, not sizes. The dimension is therefore \"level or process\", not \"unit, small to large\" (audit error 5). Population has one home per question: allele-frequency change goes to Descent (BI.O.A4); numbers, rates and growth go to Ecological interaction (BI.O.A5).",
+    "holds": false,
+    "note": "Cells restate the level-or-process phrase but fill it with discipline, application and residual topic lists instead of the five named members in structural order.",
+    "review": true
+  }
 }

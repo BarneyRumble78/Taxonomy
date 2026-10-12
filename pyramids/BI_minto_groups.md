@@ -16,8 +16,8 @@
       - Sequence analysis
       - Genomics and transcriptomics
       - Proteomics and metabolomics
-    - **Antisense elements and nucleotides are molecular-level components of nucleic acid chemistry, where claims concern the sequence units and strands that carry and regulate genetic information.**
-      _basis: kinds, order: structure_
+    - **Nucleic acid based molecular elements are the genetic material level that the claim addresses, including antisense elements and their nucleotide building blocks.**
+      _basis: kinds, order: structure. Ordered by structure, from the specific antisense elements to the general nucleotide units._
       - Antisense Elements (Genetics)
       - Nucleotides
     - **Systems, population and evolutionary computational analyses address claims at the level of networks, ecosystems, lineages and inherited variation.**
@@ -114,12 +114,14 @@
       - Biological Products
       - Ambergris
       - Biofuels
-    - **Biologically derived experimental preparations are substances taken from organisms and used to provoke or study immune and toxic responses.**
-      _basis: kinds, order: structure. not ranked_
+    - **Immunostimulating agents are substances whose role is to provoke or boost an immune response in an organism.**
+      _basis: kinds, order: structure. Ordered by structure: the enhancing adjuvant is listed before the antigen it accompanies._
       - Freund's Adjuvant
+      - Antigens
+    - **Biological source materials are substances taken from living organisms, with the claim concerning their origin and composition.**
+      _basis: kinds, order: structure. Ordered by structure: tissue-derived extracts are listed before secreted venoms._
       - Tissue Extracts
       - Venoms
-      - Antigens
     - **Other biologically derived compounds are substances made by living organisms for color, defense, or chemical function, together with the field that studies them.**
       _basis: kinds, order: structure. Grouped by kind of biologically derived compound, with no ranking implied._
       - Phytochemicals
@@ -152,11 +154,13 @@
       - Vehicle Emissions
   - **Regulatory and physiological factors are agents and processes that signal, protect, monitor or direct the activity of living organisms.**
     _basis: kinds, order: structure. Ordered from protective and signaling agents to the physiological processes they influence._
-    - **Agents that protect or monitor the body are factors used to guard against damage or to signal biological state.**
-      _basis: kinds, order: structure. not ranked_
+    - **Process-modifying agents are substances that act on a chemical or physiological process in order to block or limit it.**
+      _basis: kinds, order: structure. Ordered by structure: the oxidative process first, then the coagulation process._
       - Antioxidants
-      - Biomarkers
       - Blood Coagulation Factor Inhibitors
+    - **State indicators and regulators are molecular entities that report on or control the level of a biological state, such as disease status or immune activity.**
+      _basis: kinds, order: structure. Ordered by structure: the general measurable indicator first, then the specific immune regulator._
+      - Biomarkers
       - Immune Checkpoint Proteins
     - **Host-produced signaling and regulatory factors are molecules made by the body that direct clotting, cell movement, and cellular activity.**
       _basis: kinds, order: structure. not ranked_
