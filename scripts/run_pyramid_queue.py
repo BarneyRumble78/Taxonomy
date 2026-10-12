@@ -80,7 +80,7 @@ SYSTEM_PLACE = (
     "Earthquake, volcanic eruption, seismic activity, and landslide are geological hazards. "
     "Floods, storms, droughts, heat waves, and natural disasters are hydro-meteorological hazards. "
     "Biogeochemical and ecological processes are natural processes, not impacts. "
-    "Environmental concepts, natural resources, and earth-system sciences are states. "
+    "Natural resources are states. Environmental concepts and earth-system sciences are out of scope. "
     "Response: an action that changes a pressure or a state. "
     "Measurement, monitoring, and assessment are environmental methods. "
     "Environmental engineering is a technical response. "
@@ -260,6 +260,13 @@ def cell_catalog(field="EV", root=None):
                             "cell": _point_cell(grandchild, child_cell),
                             "statement": grandchild.get("statement") or "",
                         })
+        methods = data.get("method_line") or {}
+        if methods.get("id"):
+            groups.append({
+                "group_id": methods["id"],
+                "cell": _point_cell(methods, "EV.O.A4"),
+                "statement": methods.get("statement") or "",
+            })
     if not groups:
         rules = load_rules(field, root)
         for index, cell in enumerate(rules.get("cells") or [], start=1):

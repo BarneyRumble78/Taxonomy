@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "engine" / "v3"))
 from pyramid import IdBook, _walk_points, dedupe_nodes, dpsir_role, is_filler, kind_of, pack_concepts, summarise_names
+from minto_check import minto_counts, minto_issues
 
 WORD = re.compile(r"[A-Za-z0-9]+(?:[-–][A-Za-z0-9]+)?")
 ORDERS = {"time", "structure", "degree"}
@@ -217,26 +218,28 @@ def test_ev_section_12():
     assert [point["cell"] for point in key["points"]] == expected
     state = next(point for point in key["points"] if point["id"] == "EV.P.2")
     assert [point["id"] for point in state["support"]["points"]] == [
-        "EV.P.2.7", "EV.P.2.6", "EV.P.2.8", "EV.P.2.9", "EV.P.2.10",
+        "EV.P.2.7", "EV.P.2.6", "EV.P.2.9",
     ]
-    assert state["support"]["mece_dimension"] == (
-        "whether the state is a medium, a hazard, a concept, a resource, or an earth science"
-    )
-    media, natural, concepts, resources, earth = state["support"]["points"]
-    assert concepts["id"] == "EV.P.2.8"
+    assert state["support"]["mece_dimension"] == "the kind of state"
+    assert state["support"]["basis"] == "kinds"
+    conditions, natural, resources = state["support"]["points"]
     assert resources["id"] == "EV.P.2.9"
-    assert earth["id"] == "EV.P.2.10"
+    assert "EV.P.2.8" in {item["id"] for item in pyramid.get("retired") or []}
+    assert "EV.P.2.10" in {item["id"] for item in pyramid.get("retired") or []}
     responses = next(point for point in key["points"] if point["id"] == "EV.P.4")
     assert [point["id"] for point in responses["support"]["points"]] == [
-        "EV.P.4.1", "EV.P.4.2", "EV.P.4.3", "EV.P.4.7",
+        "EV.P.4.1", "EV.P.4.2", "EV.P.4.3", "EV.P.4.7.2",
     ]
-    assert [point["id"] for point in media["support"]["points"]] == [
+    assert [point["id"] for point in conditions["support"]["points"]] == [
         "EV.P.2.1", "EV.P.2.2", "EV.P.2.3", "EV.P.2.4", "EV.P.2.5",
     ]
     assert [point["id"] for point in natural["support"]["points"]] == [
         "EV.P.2.6.1", "EV.P.2.6.2", "EV.P.2.6.3",
     ]
     assert "Natural hazards and processes are geological, weather, and ecological events." in markdown
+    assert "classification framework" in markdown
+    assert "Chapter 6, p. 78" in markdown
+    assert pyramid["method_line"]["id"] == "EV.P.4.7.1"
 
     ids = []
     catalogs = {}
@@ -529,7 +532,7 @@ def test_dpsir_placement_on_ev():
     responses = _blob(by_cell["EV.O.A4"]).lower()
     states = _blob(by_cell["EV.O.A2"]).lower()
     queued_names = "\n".join(item["name"].lower() for item in place_items)
-    assert "pest control" in responses
+    assert "pest control" not in responses
     assert "waste water treatment" in responses
     assert re.search(r"\bgrain\b", states) or re.search(r"\bgrain\b", queued_names)
 
@@ -1134,8 +1137,8 @@ def test_natural_hazards_and_technical_terms_are_ruled():
     assert by_id["EV.P.2.6.2"]["cell"] == "EV.O.A2"
     assert by_id["EV.P.2.6.3"]["cell"] == "EV.O.A2"
     assert by_id["EV.P.2.1"]["cell"] == "EV.O.A2"
-    assert by_id["EV.P.2.8"]["cell"] == "EV.O.A2"
-    assert by_id["EV.P.2.10"]["cell"] == "EV.O.A2"
+    assert "EV.P.2.8" not in by_id
+    assert "EV.P.2.10" not in by_id
     assert by_id["EV.P.4.7.1"]["cell"] == "EV.O.A4"
     assert by_id["EV.P.4.7.2"]["cell"] == "EV.O.A4"
     item = {"task": "place", "node_id": "GEMET:2402", "name": "earthquake"}
@@ -1185,3 +1188,48 @@ def test_only_status_keeps_a_placed_summary(tmp_path):
     assert asked == []
     assert result["wrote"] == 0
     assert result["pending"] == 0
+
+
+def test_ev_classification_passes_minto_checks():
+    pyramid = _load(ROOT / "pyramids" / "EV.json")
+    counts = minto_counts(pyramid)
+    assert counts == {
+        "template_summaries": 0,
+        "group_size": 0,
+        "single_child": 0,
+        "missing_basis": 0,
+        "missing_order": 0,
+        "basis_order_mismatch": 0,
+        "degree_without_rank": 0,
+        "mixed_kinds": 0,
+    }
+    assert "classification framework" in (ROOT / "pyramids" / "EV_minto.md").read_text(encoding="utf-8")
+    bad = {
+        "key_line": {
+            "points": [
+                {"id": "EV.P.9", "statement": "These substances are alike as loads.", "support": {"points": []}},
+            ]
+        }
+    }
+    issues = minto_issues(bad)
+    assert issues["template_summaries"]
+    assert issues["group_size"]
+    assert issues["single_child"]
+    assert issues["missing_basis"]
+
+
+def test_nitrogen_question_pyramid_cites_its_sources():
+    path = ROOT / "pyramids" / "questions" / "EV_Q1_nz_nitrogen_eutrophication.json"
+    question = _load(path)
+    assert question["governing_thought"].count(".") == 1
+    assert len(WORD.findall(question["governing_thought"])) <= 25
+    points = question["key_line"]["points"]
+    assert 2 <= len(points) <= 5
+    assert {point["answer"] for point in points} <= {"yes", "no"}
+    for point in points:
+        assert point["classification_id"].startswith("EV.P.")
+        assert point["evidence"]
+        for item in point["evidence"]:
+            assert item["source"]
+            assert item["retrieved"]
+    assert "UNVERIFIED" in question["hypothesis"]["defeat"]

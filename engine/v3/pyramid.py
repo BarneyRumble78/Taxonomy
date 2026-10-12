@@ -1,10 +1,10 @@
 """Build a Minto pyramid for one field from its published maps.
 
 Orders follow Minto Chapter 6 (time, structure, degree). The key line is
-inductive, which Chapter 5 prefers at that level. Groups are MECE in the
-sense of Chapter 7: mutually exclusive, collectively exhaustive, and between
-two and five members. This module does not call a language model. Nodes it
-cannot place with a rule or a confident embedding go to a queue.
+inductive, which Chapter 5 prefers at that level. A group has two to five
+members (Chapter 6, p. 78, and Chapter 10, p. 174). This module does not
+call a language model. Nodes it cannot place with a rule or a confident
+embedding go to a queue.
 """
 import json
 import re
@@ -422,6 +422,17 @@ class IdBook:
             for item in self.retired:
                 self.used.add(item["id"])
             for point in _walk_points(previous.get("key_line", {}).get("points") or []):
+                anchor = point.get("anchor")
+                if anchor:
+                    self.by_anchor[anchor] = point["id"]
+                    self.used.add(point["id"])
+                    self._loaded.add(anchor)
+            method = previous.get("method_line") or {}
+            if method.get("anchor") and method.get("id"):
+                self.by_anchor[method["anchor"]] = method["id"]
+                self.used.add(method["id"])
+                self._loaded.add(method["anchor"])
+            for point in _walk_points(method.get("points") or []):
                 anchor = point.get("anchor")
                 if anchor:
                     self.by_anchor[anchor] = point["id"]
@@ -1294,15 +1305,26 @@ def build_pyramid(field, embed=True):
     return pyramid, deduped + unique_summaries
 
 
-def render_markdown(pyramid, depth=3):
-    """Governing thought, SCQA, key line, and the top levels. No deeper dump."""
+def render_markdown(pyramid, depth=None):
+    """Classification framework. depth None renders every node."""
+    if depth is None:
+        depth = 99
     intro = pyramid["introduction"]
     lines = [
-        f"# {pyramid['field']} — pyramid",
+        f"# {pyramid['field']} — classification framework",
         "",
+        "This is a classification of the field, not a pyramid for one problem "
+        "(Minto, pp. 110–111 and 143, and Chapter 9). "
         "The introduction is Situation, Complication, Question, Answer (Chapter 4). "
-        "The key line is inductive (Chapter 5). Order is time, structure, or degree (Chapter 6). "
-        "Each summary is an inference over a group of two to five (Chapter 7).",
+        "The key line is inductive (Chapter 5). "
+        "Order is time, structure, or degree (Chapter 6). "
+        "A group has two to five members (Chapter 6, p. 78, and Chapter 10, p. 174). "
+        "A summary defines what the group contains and why.",
+        "",
+        "## What counts as environmental",
+        "",
+        pyramid.get("environmental_definition")
+        or "An environmental topic names a load, a measured condition, a harm, a response, or a limit in a coupled human and natural system.",
         "",
         "## Introduction",
         "",
@@ -1318,14 +1340,12 @@ def render_markdown(pyramid, depth=3):
         "",
         pyramid["governing_thought"],
         "",
-        "## Key line",
-        "",
     ]
+    if pyramid.get("driver_fold"):
+        lines.extend(["## Drivers", "", pyramid["driver_fold"], ""])
+    lines.extend(["## Key line", ""])
     key = pyramid["key_line"]
-    lines.append(
-        f"Inductive group of {key['plural_noun']}. "
-        f"Dimension: {key['mece_dimension']}. Order: {key['order']}."
-    )
+    lines.append(_group_heading(key))
     lines.append("")
     for index, point in enumerate(key["points"], start=1):
         lines.append(f"{index}. {point['statement']} `{point['id']}`")
@@ -1340,16 +1360,39 @@ def render_markdown(pyramid, depth=3):
             lines.append(f"Question. {point['question']}")
             lines.append("")
         if support:
-            lines.append(
-                f"Inductive group of {support['plural_noun']}. "
-                f"Dimension: {support['mece_dimension']}. Order: {support['order']}."
-            )
+            lines.append(_group_heading(support))
             lines.append("")
         _render_level(lines, support.get("points") or [], depth - 1, str(index))
         lines.append("")
-    lines.append("This pyramid classifies the field. A problem-solving pyramid for one case would start from a defined problem (Chapter 8) and is a later document.")
+    methods = pyramid.get("method_line")
+    if methods:
+        lines.append("## Methods")
+        lines.append("")
+        lines.append(methods.get("statement") or "Methods record a state or a harm. They are not a sixth object cell.")
+        lines.append("")
+        lines.append(_group_heading(methods))
+        lines.append("")
+        _render_level(lines, methods.get("points") or [], depth - 1, "M")
+        lines.append("")
+    lines.append(
+        "This pyramid classifies the field. "
+        "A problem-solving pyramid for one case would start from a defined problem (Chapter 8) and is a later document."
+    )
     lines.append("")
     return "\n".join(lines)
+
+
+def _group_heading(group):
+    basis = group.get("basis") or "unstated"
+    order = group.get("order") or "unstated"
+    text = (
+        f"Group of {group.get('plural_noun') or 'members'}. "
+        f"Basis: {basis}. Dimension: {group.get('mece_dimension') or 'unstated'}. "
+        f"Order: {order}."
+    )
+    if group.get("rank_note"):
+        text += f" Ranking: {group['rank_note']}"
+    return text
 
 
 def _render_level(lines, points, depth, prefix):
@@ -1359,5 +1402,8 @@ def _render_level(lines, points, depth, prefix):
         label = f"{prefix}.{index}"
         indent = "  " * (label.count(".") - 1)
         lines.append(f"{indent}- **{label}.** {point['statement']} `{point['id']}`")
-        if point.get("support"):
-            _render_level(lines, point["support"]["points"], depth - 1, label)
+        support = point.get("support") or {}
+        kids = support.get("points") or []
+        if kids:
+            lines.append(f"{indent}  {_group_heading(support)}")
+            _render_level(lines, kids, depth - 1, label)
