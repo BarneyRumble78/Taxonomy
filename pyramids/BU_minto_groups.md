@@ -684,13 +684,15 @@
       - Marketing management (incl. strategy and customer relations)
       - Marketing communications
       - Pricing (incl. consumer value estimation)
-    - **Customer and product-focused marketing covers the study of buyers and the development of offerings designed for them.**
-      _basis: kinds, order: structure. Ordered from buyer understanding to product development and service offerings._
+    - **Consumer-facing marketing practice is how a firm understands its customers and develops and markets what it offers to them.**
+      _basis: parts, order: structure. Ordered from understanding the consumer, to developing the offering, to marketing the service._
       - Consumer behaviour
       - Consumer-oriented product or service development
       - Service marketing
-      - Impacts of tourism
+    - **Tourism practice is how firms appraise tourism resources and manage the effects of tourism activity.**
+      _basis: parts, order: structure. Ordered from appraising resources to assessing impacts._
       - Tourism resource appraisal
+      - Impacts of tourism
     - **Market-specific marketing kinds adapt marketing practice to a particular type of market, organisation or social purpose.**
       _basis: kinds, order: structure. Ordered from commercial business markets to non-commercial and social purposes._
       - Industrial marketing

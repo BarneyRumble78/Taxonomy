@@ -4455,14 +4455,14 @@
                   }
                 },
                 {
-                  "id": "BU.O.A4.G2",
-                  "anchor": "group:BU.O.A4.G2",
-                  "statement": "Customer and product-focused marketing covers the study of buyers and the development of offerings designed for them.",
-                  "name": "Customer and product-focused marketing covers the study of buyers and the development of offerings designed for them.",
+                  "id": "BU.O.A4.G11",
+                  "anchor": "group:BU.O.A4.G11",
+                  "statement": "Consumer-facing marketing practice is how a firm understands its customers and develops and markets what it offers to them.",
+                  "name": "Consumer-facing marketing practice is how a firm understands its customers and develops and markets what it offers to them.",
                   "support": {
                     "logic_type": "inductive",
                     "plural_noun": "members",
-                    "basis": "kinds",
+                    "basis": "parts",
                     "order": "structure",
                     "points": [
                       {
@@ -4482,23 +4482,37 @@
                         "anchor": "node:ANZSRC:350611",
                         "statement": "Service marketing",
                         "name": "Service marketing"
+                      }
+                    ],
+                    "rank_note": "Ordered from understanding the consumer, to developing the offering, to marketing the service."
+                  }
+                },
+                {
+                  "id": "BU.O.A4.G12",
+                  "anchor": "group:BU.O.A4.G12",
+                  "statement": "Tourism practice is how firms appraise tourism resources and manage the effects of tourism activity.",
+                  "name": "Tourism practice is how firms appraise tourism resources and manage the effects of tourism activity.",
+                  "support": {
+                    "logic_type": "inductive",
+                    "plural_noun": "members",
+                    "basis": "parts",
+                    "order": "structure",
+                    "points": [
+                      {
+                        "id": "ANZSRC:350805",
+                        "anchor": "node:ANZSRC:350805",
+                        "statement": "Tourism resource appraisal",
+                        "name": "Tourism resource appraisal"
                       },
                       {
                         "id": "ANZSRC:350801",
                         "anchor": "node:ANZSRC:350801",
                         "statement": "Impacts of tourism",
                         "name": "Impacts of tourism"
-                      },
-                      {
-                        "id": "ANZSRC:350805",
-                        "anchor": "node:ANZSRC:350805",
-                        "statement": "Tourism resource appraisal",
-                        "name": "Tourism resource appraisal"
                       }
                     ],
-                    "rank_note": "Ordered from buyer understanding to product development and service offerings."
-                  },
-                  "further": true
+                    "rank_note": "Ordered from appraising resources to assessing impacts."
+                  }
                 },
                 {
                   "id": "BU.O.A4.G3",
@@ -5218,5 +5232,12 @@
         "rank_note": "Kinds are ordered by structure, from trade between businesses to trade with consumers."
       }
     }
-  ]
+  ],
+  "field_check": {
+    "governing_thought": "Business is exhausted by four faces of one pyramid: objects, methods, warrants and bridges.\nIts objects divide into five practices of the firm: accounts, finance, operations and organisation, marketing, and trade and tax.",
+    "key_line": "Dimension: **the practice of the firm.** Order: from the record outward to customers and borders.\n1. Accounts\n2. Finance\n3. Operations and organisation\n4. Marketing\n5. Trade and tax",
+    "holds": false,
+    "note": "Cells A2, A3 and A4 use different splits (fields, industry sectors, tourism) and A5 omits tax, so they do not match the five practices.",
+    "review": true
+  }
 }
