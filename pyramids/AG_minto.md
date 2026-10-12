@@ -4,34 +4,34 @@ Built by scripts/minto_pass.py from the grouped classification. Three rules (Min
 
 ## Introduction
 
-**Situation.** Agriculture produces crops, livestock, fish, trees and food from living organisms managed in farming systems.
+**Situation.** Agricultural production turns organisms, land and inputs into food and other products.
 
-**Complication.** Its concepts come from many sources and mix organisms, practices, products and settings, so they have no single organising logic.
+**Complication.** The field's knowledge is scattered across organism lists, practice stages, veterinary sciences, product classes and management concepts.
 
-**Question.** How is everything in agriculture divided across the stages of the production system?
+**Question.** How is everything in agriculture divided?
 
-**Answer.** Agriculture is divided by the stage of the production system, from the organism to the whole system: breeding, cultivation and husbandry, crop and animal health, food, and farming systems.
+**Answer.** Agriculture is divided by the domain of knowledge about production, from the organism to the whole system: organisms, production practice, health and protection, products, and the production system.
 
 ## Governing thought
 
-Agriculture is divided by the stage of the production system, from the organism to the whole system: breeding, cultivation and husbandry, crop and animal health, food, and farming systems.
+Agriculture is divided by the domain of knowledge about production, from the organism to the whole system: organisms, production practice, health and protection, products, and the production system.
 
 ## Key line
 
-Group of stages. Basis: cause_effect. Dimension: the stage of the production system. Order: time. Stages run from the organism through its growing and protection to the food produced and the whole farming system around it.
+Group of domains. Basis: parts. Dimension: the domain of agricultural knowledge, from the organism to the whole system. Order: structure. The domains run from the living organisms at the base to the whole production system that frames them.
 
-1. Breeding is the stage in which the organisms themselves are selected, improved and engineered before they are grown. `AG.K1`
-2. Cultivation and husbandry is the stage in which crops, trees, animals and fish are established, fed, grown and harvested. `AG.K2`
-3. Crop and animal health is the stage in which the health of growing stock is protected, monitored and restored. `AG.K3`
-4. Food is the stage in which harvested outputs are handled, processed, checked and turned into products for use. `AG.K4`
-5. Farming systems are the whole-system stage in which organisms, inputs, people, technology and outcomes are brought together and run as one production system. `AG.K5`
+1. Organisms are the living things of agriculture, whose classes, genetics and biotechnology define what is bred and raised. `AG.K1`
+2. Production practice is the domain of the work, inputs and operations by which crops, trees, livestock and fish are established, grown and harvested. `AG.K2`
+3. Health and protection is the domain of knowledge about keeping plants and livestock sound against disease, pests and stress, and treating them when harmed. `AG.K3`
+4. Products are the domain of harvested outputs, covering how they are handled, processed, classed and brought to market. `AG.K4`
+5. The production system is the whole-system domain in which planning, analysis, management, institutions and change direct and sustain production. `AG.K5`
 
 ## Groups
 
-### 1. Breeding is the stage in which the organisms themselves are selected, improved and engineered before they are grown.
+### 1. Organisms are the living things of agriculture, whose classes, genetics and biotechnology define what is bred and raised.
 
-- **Biotechnology tools and engineered organisms are the methods and the modified or cloned plants and animals that alter agricultural genomes.**
-  _basis: kinds, order: structure. Tools come first, then the organisms they produce._
+- **Biotechnology and engineered organisms are the tools and modified plants and animals through which agricultural genetics is changed.**
+  _basis: kinds, order: structure. From tools to the organisms they produce._
   - **Biotechnology tools and non-GM applications are the methods used to analyse, detect, monitor and engineer agricultural organisms.**
     _basis: parts, order: structure. Methods come first, then the applications that use them without genetic modification._
     - **Biotechnology tools are the field-level, molecular and marine methods used to analyse and engineer agricultural organisms.**
@@ -59,17 +59,153 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
       - Genetically modified animals
       - Livestock cloning
       - chimaeras
-- **Selection and improvement cover the traits and breeding work by which crop and animal stock is improved.**
-  _basis: kinds, order: structure. Plant improvement comes first, then animal traits._
   - Crop and pasture improvement (incl. selection and breeding)
-  - dwarfs
+  - **Enabling technology and resource inputs are the stage in which innovations, genetic material and financing are prepared before production begins.**
+    _basis: cause_effect, order: time. Second stage: inputs and innovations made ready for use._
+    - emerging technology
+    - financial technology
+    - germplasm exchange
+    - targeting
+- **Classes of organisms divide agricultural living things by lineage, origin, habitat, relationship and effect on production.**
+  _basis: kinds, order: structure. From basic lineage to relations and effects._
+  - **Taxonomic groups divide living things by their basic cellular and biological lineage.**
+    _basis: kinds, order: structure. Ordered from the broad cellular domains to the kingdoms within them._
+    - Prokaryotae
+    - Eukaryota
+    - Monera
+    - plants
+  - **Habitat-defined organisms are classed by the environment or substrate in which they live or burrow.**
+    _basis: kinds, order: structure. Ordered from soil habitats to aquatic and boring habitats._
+    - soil-borne organisms
+    - soil organisms
+    - aquatic organisms
+    - boring organisms
+  - **Origin-defined organisms are classed by whether they occur naturally, are engineered, or form the general category.**
+    _basis: kinds, order: structure. Ordered from the general category to natural and engineered origins and composite lichens._
+    - organisms
+    - native organisms
+    - genetically modified organisms
+    - lichens
+  - **Relationship-defined organisms are classed by how they depend on or act upon other species.**
+    _basis: kinds, order: structure. Ordered from feeding mode to host, parasite and natural enemy interactions._
+    - heterotrophic organisms
+    - hosts
+    - parasites
+    - natural enemies
+  - **Organisms classed by their effect on production or their dependence on a host or substrate are grouped by impact, association, attachment, origin and nutrition.**
+    _basis: kinds, order: structure. Ordered from production impact, through host and substrate dependence, to origin and nutrition._
+    - **Impact-defined organisms are classed by the benefit or harm they bring to crop and livestock production.**
+      _basis: kinds, order: structure. Ordered from harmful pests to beneficial organisms and the main animal and microbial groups._
+      - pests
+      - beneficial organisms
+      - animals
+      - microorganisms
+    - **Organisms that live on or in another organism, or depend on a host or carrier for living and spreading, form the host-associated kinds.**
+      _basis: kinds, order: structure. Kinds are grouped structurally by type of host dependence, not ranked by degree._
+      - symbionts
+      - epibionts
+      - vectors
+      - epontic organisms
+    - **Organisms defined by how they attach to, move through, or modify the physical substrate they inhabit form the substrate-bound kinds.**
+      _basis: kinds, order: structure. Kinds are grouped structurally by type of substrate relationship, not ranked by degree._
+      - lithophytes
+      - sessile organisms
+      - burrowing organisms
+      - calcifying organisms
+    - **Organisms characterised by their origin, geographic range, taxonomic rank or mode of nutrition form the origin and nutrition kinds.**
+      _basis: kinds, order: structure. Kinds are grouped structurally by type of origin or nutrition, not ranked by degree._
+      - xenogens
+      - species
+      - endemic organisms
+      - mixotrophic organisms
+- **Sexes, forms and feeding types are organism categories that describe individual stock within populations.**
+  _basis: kinds, order: structure. From sex and size to feeding habit._
   - females
   - males
+  - dwarfs
+  - insectivores
+  - saprophytes
 
-### 2. Cultivation and husbandry is the stage in which crops, trees, animals and fish are established, fed, grown and harvested.
+### 2. Production practice is the domain of the work, inputs and operations by which crops, trees, livestock and fish are established, grown and harvested.
 
-- **Preparation and establishment are the early activities that locate resources, ready the site and put planted stock in place.**
-  _basis: cause_effect, order: time. Activities run from planning to exploration to establishment._
+- **Inputs and establishment supply the materials and ready the site and stock from which growing starts.**
+  _basis: parts, order: structure. From materials to site and planting._
+  - **Starting inputs are the base materials, supplied additions and potent agents that enter a production system at its outset to be worked upon.**
+    _basis: parts, order: structure. Ordered from base substances to supplied additions to potent agents, as they are introduced._
+    - **Starting substances are the inputs and base materials that are added to or composed into a production process at its outset.**
+      _basis: cause_effect, order: time. Ordered from inputs applied to raw materials obtained._
+      - **Added inputs are substances deliberately put into a production process to start it, shape it, or protect it.**
+        _basis: kinds, order: structure. Ordered by structure, from the substances that start a process to those that protect it._
+        - additives
+        - starter cultures
+        - antifeedants
+        - drugs
+        - chemicals
+      - **Base materials are the raw and composing substances and ingredients that a production system works with and is made from.**
+        _basis: kinds, order: structure. Ordered by structure, from basic components to composed mixtures._
+        - ingredients
+        - elements
+        - inorganic matter
+        - concentrates
+        - air
+      - **Inputs are agents applied to crops, stored goods or pests to control or support production at the start of the system.**
+        _basis: cause_effect, order: time. earliest stage: applied before output_
+        - gene inhibitors
+        - fumigants
+        - baits
+        - processing aids
+      - **Raw materials are the substances obtained from or contained in agricultural products that are carried into later use.**
+        _basis: cause_effect, order: time. middle stage: material produced and handled_
+        - extracts
+        - fats
+        - fibres
+        - bitter principles
+    - **Input materials are the natural base substances and supplied additions that the production system takes in and works upon at the start.**
+      _basis: kinds, order: structure. Not a degree ranking; kinds are listed by structure, from natural base materials to supplied inputs._
+      - **Natural base materials form the foundation of the production system, supplying the physical and organic substrate from which soil and growth develop.**
+        _basis: kinds, order: structure. Ordered from mineral foundation to organic substrate._
+        - rock
+        - soil parent materials
+        - organic matter
+      - **Supply inputs are materials added to or supplied within the production system to feed and condition crops and soil.**
+        _basis: kinds, order: structure. Ordered from added amendments to the nutrients and oils they supply._
+        - soil amendments
+        - nutrients
+        - oils
+        - pollutants
+        - residues
+      - **Input materials are the basic substances and media that a production system takes in and works upon.**
+        _basis: parts, order: structure. Inputs are the first structural stage of the system._
+        - substrata
+        - water
+        - materials
+        - biomass
+        - waxes
+      - **General chemical and material categories are kinds of substances and compounds that make up inputs, products and emissions.**
+        _basis: kinds, order: structure. Ordered from general categories to specific materials._
+        - chemical compounds
+        - chemical substances
+        - minerals
+        - greenhouse gases
+    - **Applied agents are the chemically or biologically potent substances that are added or present during production to act on organisms and processes.**
+      _basis: kinds, order: structure. Kinds are distinguished by structure, such as regulatory, protective and signalling agents._
+      - **Regulatory and bioactive agents are kinds of substances that stimulate, inhibit or lyse in biological systems.**
+        _basis: kinds, order: structure. Ordered from general agents to specific bioactive substances._
+        - growth substances
+        - mitogens
+        - haemolysins
+        - lipotropic factors
+      - **Chemical agents and signals are substances that deter, attract, or control organisms during crop protection and plant communication.**
+        _basis: kinds, order: structure. Ordered from applied controls to natural plant-released signals._
+        - pesticides
+        - repellents
+        - attractants
+        - plant secretions
+      - **Active agents are the chemically or biologically potent substances applied or present during production that act on organisms and processes.**
+        _basis: parts, order: structure. Active agents act on the inputs at the processing stage._
+        - toxic substances
+        - bioactive compounds
+        - biocides
   - **Preparatory and establishment stages come first, readying the site and resources and putting planted stock in place to start the growing cycle.**
     _basis: cause_effect, order: time. Earliest stages before and at the start of growth._
     - **Preparatory activities come first in the production system, locating resources and clearing or readying the site before crops are established.**
@@ -90,50 +226,34 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
       - irrigation technology
       - seed treatment
       - precipitation interception
-  - **Planning and preparation activities set up and prepare the work before production begins.**
-    _basis: parts, order: structure. Ordered by structure within the planning stage._
-    - design
-    - preparedness
-    - diagnosis
-    - case studies
-  - **Exploration and collection activities are the early stage in which resources, samples and information are located, surveyed and gathered.**
-    _basis: kinds, order: structure. Kinds of early-stage activities for locating and gathering resources._
-    - exploration
-    - survey methods
-    - collection
-    - search and rescue
-  - **Planning and analysis methods are used to study, assess and anticipate production before and around operations.**
-    _basis: kinds, order: structure. Ordered from general research methods to specific assessment and prediction techniques._
-    - research methods
-    - forecasting
-    - nutrient profiling
-    - expeditions
-- **Growing and operating covers the field work, biological processes, inputs and plant physiology that carry production through.**
-  _basis: cause_effect, order: time. Operations come first, then the inputs and plant science that sustain them._
-  - **Field operations and production practices are the work and technologies by which crops and animals are grown on the farm.**
-    _basis: cause_effect, order: time. Natural processes and field work come before the production stages that follow._
-    - **Growing and operating stages are where production work is carried out in the field and natural biological processes drive growth and output.**
-      _basis: cause_effect, order: time. Middle stage during active production._
-      - **Natural processes are the biological, genetic, biochemical and physicochemical changes that underlie growth and production in living systems.**
-        _basis: kinds, order: structure. Kinds of underlying natural processes driving production._
-        - biological processes
-        - genetic processes
-        - biochemical processes
-        - physicochemical processes
-      - **Field operation approaches are the stage where production work is physically carried out, whether by hand, by machine or by other options, including establishing facilities and taking wild resources.**
-        _basis: parts, order: structure. Second stage: carrying out the work._
-        - mechanical methods
-        - manual operation
-        - alternative methods
-        - construction
-        - hunting
-      - **Water and physical treatment operations apply water, heat control or radiation to crops, products and facilities.**
-        _basis: kinds, order: structure. Ordered by structure of physical treatment type._
-        - irrigation
-        - irrigation methods
-        - deicing
-        - insulation
-        - irradiation
+  - culture media
+  - digesta
+- **Crop and pasture production fields cover the nutrition, physiology, inputs and practices of growing crops, pastures and horticulture.**
+  _basis: kinds, order: structure. From general crop science to horticulture._
+  - **Crop and pasture science fields study how crops and pastures function, are fed and are supplied with inputs on the farm.**
+    _basis: kinds, order: structure. From system function to nutrition and inputs._
+    - **Agronomy and agro-ecosystem function and prediction are crop and soil science fields that study how plant production systems operate and perform on the farm.**
+      _basis: kinds, order: structure_
+      - Agronomy
+      - Agro-ecosystem function and prediction
+    - **Crop production inputs and practices cover the fertilisers, pollination services and low-input methods that support growing crops and pastures.**
+      _basis: parts, order: structure. Ordered from inputs to growing practices._
+      - Fertilisers (incl. application)
+      - Organic and low chemical input crop production
+      - Pollination biology and systems
+      - Crop and pasture production not elsewhere classified
+    - Crop and pasture nutrition
+    - Agrochemicals and biocides (incl. application)
+    - Crop and pasture biochemistry and physiology
+  - **Horticultural production fields cover how horticultural crops are grown, improved and protected in the field.**
+    _basis: kinds, order: structure. From horticultural science to field capture._
+    - **Pre-harvest horticultural fields cover how horticultural crops are grown, improved, protected and managed in the field or vineyard.**
+      _basis: kinds, order: structure. Ordered by structure of the production chain, upstream of harvest._
+      - Horticultural production
+      - Field organic and low chemical input horticulture
+      - Horticultural crop growth and development
+      - Horticultural crop improvement (incl. selection and breeding)
+      - Horticultural crop protection (incl. pests, diseases and weeds)
     - **Field production and capture is the stage in which crops, forests, animals and fish are established, grown and obtained in the field, on the farm or at sea.**
       _basis: parts, order: structure. Parts of the primary production stage, following planning._
       - **Harvesting and capture activities obtain animals or resources from their natural setting.**
@@ -160,132 +280,134 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
         - seed technology
         - application
         - extensification
-    - **Stages of the production system are the successive phases of practice and technology through which livestock and farm products are actually raised and made.**
-      _basis: kinds, order: structure_
-      - **Animal production stages cover feeding, breeding, husbandry and hygiene practices that carry livestock through the production cycle.**
-        _basis: kinds, order: structure. Ordered by structure of the animal production cycle, from inputs and breeding to husbandry and sanitation._
-        - **Animal inputs and management are the early stages of production, where feeding and husbandry drive animal growth and development.**
-          _basis: cause_effect, order: time. Inputs and care come first, growth follows._
-          - Animal production
-          - Animal management
-          - Animal nutrition
-          - Animal growth and development
-        - **Animal reproduction and breeding is the stage where animals are bred to renew stock and set up the next production cycle.**
-          _basis: cause_effect, order: time. Breeding follows growth and begins the next cycle._
-          - Animal reproduction and breeding
-          - Animal production not elsewhere classified
-          - Animal protection (incl. pests and pathogens)
-          - Animal welfare
-          - Environmental studies in animal production
-        - **Animal husbandry practices directly manage the welfare, growth and body condition of livestock on the farm.**
-          _basis: kinds, order: structure. Ordered by structure, from protection of animals to growth and weight regulation._
-          - cruelty prevention
-          - growth control
-          - weight reduction
-        - **Hygiene and sanitation methods keep production premises and animals clean and free of pathogens and waste.**
-          _basis: kinds, order: structure. Ordered by structure, from cleaning to disinfection and waste removal._
-          - cleaning
-          - disinfection
-          - manure removal methods
-      - **The production stage covers the biological processes, sector technologies, field methods and physical tools by which products are actually made.**
-        _basis: cause_effect, order: time. Second stage, in which products are grown, raised or caught._
-        - **Production and its biological processes link the making of products to the uptake of nutrients and the carriers that spread effects through the system.**
-          _basis: cause_effect, order: time_
-          - production
-          - assimilation
-          - fomites
-        - **Sector-specific production technologies are the applied technical systems used to grow crops, raise animals, catch fish, and prepare feed.**
-          _basis: kinds, order: structure. Ordered by structure, from land-based to water-based production technologies._
-          - agricultural technology
-          - fishery technology
-          - feed technology
-          - marine technology
-        - **Harvesting and field-intervention methods are the practices by which people take resources from, or act upon, the natural environment.**
-          _basis: kinds, order: structure. Ordered by structure, from direct harvesting to environmental intervention._
-          - hunting methods
-          - diving
-          - weather control
-        - **Physical tools and materials are the concrete items and techniques used to build, fix, and equip production operations.**
-          _basis: kinds, order: structure. Ordered by structure, from fabrication techniques to the materials they produce or use._
-          - welding
-          - magnets
-          - rubber mats
-        - **Production operations and installation are the stage in which farming methods and physical structures are put in place and run.**
-          _basis: cause_effect, order: time. Third stage: on-site setup and operation of production._
-          - biofloc technology
-          - anchors
-          - grouting
-          - marine stewardship
-  - **Plant science and inputs cover the agronomy, fertilisers, nutrition and agrochemicals that sustain crop growth.**
-    _basis: cause_effect, order: time. Agronomy comes first, then the inputs and physiology it manages._
-    - **Agronomy and agro-ecosystem function and prediction are crop and soil science fields that study how plant production systems operate and perform on the farm.**
-      _basis: kinds, order: structure_
-      - Agronomy
-      - Agro-ecosystem function and prediction
-    - **Crop production inputs and practices cover the fertilisers, pollination services and low-input methods that support growing crops and pastures.**
-      _basis: parts, order: structure. Ordered from inputs to growing practices._
-      - Fertilisers (incl. application)
-      - Organic and low chemical input crop production
-      - Pollination biology and systems
-      - Crop and pasture production not elsewhere classified
-    - Crop and pasture nutrition
-    - Crop and pasture biochemistry and physiology
-    - Agrochemicals and biocides (incl. application)
-- **Sector production covers the growing of fish, trees and horticultural crops in their own settings.**
-  _basis: cause_effect, order: time. Sectors run from aquatic to forest to horticultural._
-  - **Aquatic production covers the farming and biology of fish together with the oversight of stocks and handling of the catch.**
-    _basis: kinds, order: structure. Ordered by structure, from fish production and biology to stock oversight and post-harvest handling._
-    - **Fish production and biology covers the farming of aquatic animals and the physiology and genetics that underpin their growth.**
-      _basis: parts, order: structure. Ordered from farming to the biology of the animals._
-      - Aquaculture
-      - Fish physiology and genetics
-      - Fisheries sciences
-      - Fish pests and diseases
-    - **Fisheries stock oversight covers assessing wild and farmed stocks, managing the fishery and handling the catch after harvest.**
-      _basis: parts, order: structure. Ordered from assessment to management to post-harvest handling._
-      - Aquaculture and fisheries stock assessment
-      - Fisheries management
-      - Post-harvest fisheries technologies (incl. transportation)
-      - Fisheries sciences not elsewhere classified
-  - **Forest production covers the health of forests, the growing and management of trees, and the processing of harvested wood.**
-    _basis: kinds, order: structure. Ordered by structure, from forest condition and tree growing to management and wood processing._
-    - **Forest health and ecosystem care covers the biodiversity, ecological processes, diseases and fire risks that determine the condition of forests.**
-      _basis: parts, order: structure. Ordered from ecological foundations to threats._
-      - Forest biodiversity
-      - Forest ecosystems
-      - Forest health and pathology
-      - Forestry fire management
-    - **Forest production and management covers growing trees within farming systems, managing forests and harvesting biomass and bioproducts from them.**
-      _basis: parts, order: structure. Ordered from establishment to management to products._
-      - Forestry sciences
-      - Agroforestry
-      - Forestry management and environment
-      - Forestry biomass and bioproducts
-    - **Tree-growing fields cover the breeding, nutrition and physiology of trees as living production stock before harvest.**
-      _basis: kinds, order: structure. Ordered by structure of the production chain, upstream of harvest._
-      - Tree improvement (incl. selection and breeding)
-      - Tree nutrition and physiology
-      - Oenology and viticulture
-      - Post harvest horticultural technologies (incl. transportation and storage)
-      - Horticultural production not elsewhere classified
-    - **Wood-processing fields cover the conversion and quality assessment of harvested timber and fibre into forestry products.**
-      _basis: kinds, order: structure. Ordered by structure of the production chain, downstream of harvest._
-      - Forestry product quality assessment
-      - Wood fibre processing
-      - Wood processing
-      - Forestry sciences not elsewhere classified
-  - **Pre-harvest horticultural fields cover how horticultural crops are grown, improved, protected and managed in the field or vineyard.**
-    _basis: kinds, order: structure. Ordered by structure of the production chain, upstream of harvest._
-    - Horticultural production
-    - Field organic and low chemical input horticulture
-    - Horticultural crop growth and development
-    - Horticultural crop improvement (incl. selection and breeding)
-    - Horticultural crop protection (incl. pests, diseases and weeds)
+- **Growing operations and animal, fish and forest production are the practical work and natural processes that raise products in the field, at sea or in the forest.**
+  _basis: kinds, order: structure. From general field work to sector-specific production._
+  - **Growing operations and natural processes are the field work and biological changes through which production is carried out.**
+    _basis: kinds, order: structure. From work to the processes beneath it._
+    - **Growing and operating stages are where production work is carried out in the field and natural biological processes drive growth and output.**
+      _basis: cause_effect, order: time. Middle stage during active production._
+      - **Natural processes are the biological, genetic, biochemical and physicochemical changes that underlie growth and production in living systems.**
+        _basis: kinds, order: structure. Kinds of underlying natural processes driving production._
+        - biological processes
+        - genetic processes
+        - biochemical processes
+        - physicochemical processes
+      - **Field operation approaches are the stage where production work is physically carried out, whether by hand, by machine or by other options, including establishing facilities and taking wild resources.**
+        _basis: parts, order: structure. Second stage: carrying out the work._
+        - mechanical methods
+        - manual operation
+        - alternative methods
+        - construction
+        - hunting
+      - **Water and physical treatment operations apply water, heat control or radiation to crops, products and facilities.**
+        _basis: kinds, order: structure. Ordered by structure of physical treatment type._
+        - irrigation
+        - irrigation methods
+        - deicing
+        - insulation
+        - irradiation
+    - **The production stage covers the biological processes, sector technologies, field methods and physical tools by which products are actually made.**
+      _basis: cause_effect, order: time. Second stage, in which products are grown, raised or caught._
+      - **Production and its biological processes link the making of products to the uptake of nutrients and the carriers that spread effects through the system.**
+        _basis: cause_effect, order: time_
+        - production
+        - assimilation
+        - fomites
+      - **Sector-specific production technologies are the applied technical systems used to grow crops, raise animals, catch fish, and prepare feed.**
+        _basis: kinds, order: structure. Ordered by structure, from land-based to water-based production technologies._
+        - agricultural technology
+        - fishery technology
+        - feed technology
+        - marine technology
+      - **Harvesting and field-intervention methods are the practices by which people take resources from, or act upon, the natural environment.**
+        _basis: kinds, order: structure. Ordered by structure, from direct harvesting to environmental intervention._
+        - hunting methods
+        - diving
+        - weather control
+      - **Physical tools and materials are the concrete items and techniques used to build, fix, and equip production operations.**
+        _basis: kinds, order: structure. Ordered by structure, from fabrication techniques to the materials they produce or use._
+        - welding
+        - magnets
+        - rubber mats
+      - **Production operations and installation are the stage in which farming methods and physical structures are put in place and run.**
+        _basis: cause_effect, order: time. Third stage: on-site setup and operation of production._
+        - biofloc technology
+        - anchors
+        - grouting
+        - marine stewardship
+    - **Animal production stages cover feeding, breeding, husbandry and hygiene practices that carry livestock through the production cycle.**
+      _basis: kinds, order: structure. Ordered by structure of the animal production cycle, from inputs and breeding to husbandry and sanitation._
+      - **Animal inputs and management are the early stages of production, where feeding and husbandry drive animal growth and development.**
+        _basis: cause_effect, order: time. Inputs and care come first, growth follows._
+        - Animal production
+        - Animal management
+        - Animal nutrition
+        - Animal growth and development
+      - **Animal reproduction and breeding is the stage where animals are bred to renew stock and set up the next production cycle.**
+        _basis: cause_effect, order: time. Breeding follows growth and begins the next cycle._
+        - Animal reproduction and breeding
+        - Animal production not elsewhere classified
+        - Animal protection (incl. pests and pathogens)
+        - Animal welfare
+        - Environmental studies in animal production
+      - **Animal husbandry practices directly manage the welfare, growth and body condition of livestock on the farm.**
+        _basis: kinds, order: structure. Ordered by structure, from protection of animals to growth and weight regulation._
+        - cruelty prevention
+        - growth control
+        - weight reduction
+      - **Hygiene and sanitation methods keep production premises and animals clean and free of pathogens and waste.**
+        _basis: kinds, order: structure. Ordered by structure, from cleaning to disinfection and waste removal._
+        - cleaning
+        - disinfection
+        - manure removal methods
+  - **Aquatic and forest production are the sector-specific ways of raising fish and trees as products.**
+    _basis: kinds, order: structure. From water to forest._
+    - **Aquatic production covers the farming and biology of fish together with the oversight of stocks and handling of the catch.**
+      _basis: kinds, order: structure. Ordered by structure, from fish production and biology to stock oversight and post-harvest handling._
+      - **Fish production and biology covers the farming of aquatic animals and the physiology and genetics that underpin their growth.**
+        _basis: parts, order: structure. Ordered from farming to the biology of the animals._
+        - Aquaculture
+        - Fish physiology and genetics
+        - Fisheries sciences
+        - Fish pests and diseases
+      - **Fisheries stock oversight covers assessing wild and farmed stocks, managing the fishery and handling the catch after harvest.**
+        _basis: parts, order: structure. Ordered from assessment to management to post-harvest handling._
+        - Aquaculture and fisheries stock assessment
+        - Fisheries management
+        - Post-harvest fisheries technologies (incl. transportation)
+        - Fisheries sciences not elsewhere classified
+    - **Forest production covers the health of forests, the growing and management of trees, and the processing of harvested wood.**
+      _basis: kinds, order: structure. Ordered by structure, from forest condition and tree growing to management and wood processing._
+      - **Forest health and ecosystem care covers the biodiversity, ecological processes, diseases and fire risks that determine the condition of forests.**
+        _basis: parts, order: structure. Ordered from ecological foundations to threats._
+        - Forest biodiversity
+        - Forest ecosystems
+        - Forest health and pathology
+        - Forestry fire management
+      - **Forest production and management covers growing trees within farming systems, managing forests and harvesting biomass and bioproducts from them.**
+        _basis: parts, order: structure. Ordered from establishment to management to products._
+        - Forestry sciences
+        - Agroforestry
+        - Forestry management and environment
+        - Forestry biomass and bioproducts
+      - **Tree-growing fields cover the breeding, nutrition and physiology of trees as living production stock before harvest.**
+        _basis: kinds, order: structure. Ordered by structure of the production chain, upstream of harvest._
+        - Tree improvement (incl. selection and breeding)
+        - Tree nutrition and physiology
+        - Oenology and viticulture
+        - Post harvest horticultural technologies (incl. transportation and storage)
+        - Horticultural production not elsewhere classified
+      - **Wood-processing fields cover the conversion and quality assessment of harvested timber and fibre into forestry products.**
+        _basis: kinds, order: structure. Ordered by structure of the production chain, downstream of harvest._
+        - Forestry product quality assessment
+        - Wood fibre processing
+        - Wood processing
+        - Forestry sciences not elsewhere classified
 
-### 3. Crop and animal health is the stage in which the health of growing stock is protected, monitored and restored.
+### 3. Health and protection is the domain of knowledge about keeping plants and livestock sound against disease, pests and stress, and treating them when harmed.
 
-- **Animal health foundations and pathogens explain how healthy animals function and which organisms threaten them.**
-  _basis: kinds, order: structure. Normal function comes before the pathogens that disrupt it._
+- **Veterinary sciences explain how healthy animals function, which pathogens threaten them, how disease is detected and how sick animals are treated.**
+  _basis: kinds, order: structure. From healthy function to pathogens, detection and treatment._
   - **Foundational sciences establish how healthy animals function and defend and medicate themselves, underpinning every later stage of animal health.**
     _basis: kinds, order: structure. Ordered from the overall field to its core biological disciplines._
     - Veterinary sciences
@@ -298,8 +420,6 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
     - Veterinary mycology
     - Veterinary parasitology
     - Veterinary virology
-- **Detection and treatment cover identifying disease and then caring for sick or injured animals.**
-  _basis: cause_effect, order: time. Detection precedes treatment._
   - **Detection and assessment fields identify disease, track its spread, and recognise decline in animals or products.**
     _basis: kinds, order: structure. Ordered from individual diagnosis to lesions, population spread, and deterioration._
     - Veterinary diagnosis and diagnostics
@@ -312,104 +432,109 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
     - Veterinary surgery
     - Veterinary urology
     - Veterinary anaesthesiology and intensive care
-- **Crop protection and monitoring cover safeguarding plants and measuring conditions to guide action.**
-  _basis: cause_effect, order: time. Monitoring informs protection._
+- **Plant and ecological protection covers the safeguarding of crops and the disruptions, risks and ecological pressures that threaten production.**
+  _basis: kinds, order: structure. From protective action to the threats it answers._
   - **Crop and pasture protection, harvest and waste are the later stages, covering safeguarding plants, handling the harvest and managing residues.**
     _basis: cause_effect, order: time. Protection precedes harvest, harvest precedes waste handling._
     - Crop and pasture protection (incl. pests, diseases and weeds)
     - Crop and pasture biomass and bioproducts
     - Crop and pasture post harvest technologies (incl. transportation and storage)
     - Crop and pasture waste water use
-  - **Monitoring stages measure, test and recognise conditions and performance before and during production to guide decisions.**
-    _basis: cause_effect, order: time. Runs alongside production, informing it._
-    - **Assessment and diagnosis methods are the stage where conditions, inputs and performance are measured, tested and monitored before and during production.**
-      _basis: parts, order: structure. First stage: assessing and diagnosing._
-      - trial methods
-      - DRIS
-      - imagery
-      - atmospheric deposition
-    - **Checking and recognition activities establish what something is and how it is performing within the production system.**
-      _basis: kinds, order: structure. Ordered by structure from identifying to observing._
-      - identification
-      - inspection
-      - measurement
-      - monitoring
-      - microscopy
-    - **Analytical and modelling tools support decisions across the production system by measuring, computing and simulating its performance.**
-      _basis: parts, order: structure. Ordered from basic analysis and calculation to simulation and digital tools._
-      - analysis
-      - calculation
-      - simulation
-      - digital technology
+  - **Disruptions and surrounding conditions are the adverse events, risks, natural phenomena and external setting that affect production as it proceeds and after.**
+    _basis: cause_effect, order: time. Ordered from risks and harms to wider context._
+    - **Disruptions and change are the adverse events, harms, and shifts that affect a production system after operation.**
+      _basis: cause_effect, order: time. Ordered in time, from sudden hazards to their damage and the longer-term trends._
+      - emergencies
+      - explosives
+      - damage
+      - trends
+    - **Risks are conditions that expose production to harm, loss or shortfall as it proceeds.**
+      _basis: cause_effect, order: time. later stage: harm arising from production_
+      - vulnerability
+      - hazards
+      - deficiencies
+      - particulates
+    - **Natural and physical phenomena are the environmental and material processes that act on production throughout the system.**
+      _basis: kinds, order: structure. ordered from general phenomena to specific types_
+      - physical phenomena
+      - chemical phenomena
+      - natural phenomena
+      - phenomena
+    - **The wider context covers the external social, economic and international setting in which production operates.**
+      _basis: kinds, order: structure. ordered from general to specific kinds of context_
+      - international relations
+      - social phenomena
+      - economic phenomena
+      - substances
+  - **Ecological processes and pressures are the events, distributions and external stresses through which organisms and populations develop and interact once production is under way.**
+    _basis: kinds, order: structure. Kinds are distinguished by structure, covering biological processes, distribution patterns, stressors and dynamics._
+    - **Biological processes and phenomena are kinds of events or relations through which organisms and populations develop, distribute and interact.**
+      _basis: kinds, order: structure. Ordered from general phenomena to specific relations._
+      - development
+      - biological phenomena
+      - source-sink relations
+      - spatial distribution
+    - **Physical and environmental stressors are kinds of external conditions that inhibit, damage or reduce production.**
+      _basis: kinds, order: structure. Ordered from environmental causes to resulting damage._
+      - environmental inhibitors
+      - shock
+      - ice
+      - losses
+    - **Ecological dynamics and outcomes are the patterns, changes, and disturbances that arise in the production system over time.**
+      _basis: kinds, order: structure. Ordered from patterns of populations to interactions, effects, and disturbances._
+      - geographical distribution
+      - population dynamics
+      - interactions
+      - effects
+      - disruptions
+    - **Distribution patterns describe where and how often things occur across space and time within the system.**
+      _basis: parts, order: structure. Distribution follows the outputs as they spread through the system._
+      - spatio-temporal distribution
+      - natural occurrence
+      - anomalies
 
-### 4. Food is the stage in which harvested outputs are handled, processed, checked and turned into products for use.
+### 4. Products are the domain of harvested outputs, covering how they are handled, processed, classed and brought to market.
 
-- **Products are defined by their source, use, handling and quality attributes.**
-  _basis: kinds, order: structure. Products run from use and handling to source._
-  - **Use, handling and quality classes define products by what they are for, how they were treated and what attributes they carry.**
-    _basis: kinds, order: structure. Use comes first, then handling and quality._
-    - **Use-oriented products are defined by the purpose for which they are consumed or applied downstream.**
-      _basis: kinds, order: structure. Ordered by end use from food and feed to non-food and oil products._
-      - foods
-      - feeds
-      - non-food products
-      - oil products
-    - **Handled products are defined by the storage, processing or manufacturing step they have undergone after primary production.**
-      _basis: kinds, order: structure. Ordered from storage to processing, by-products and manufactured goods._
-      - stored products
-      - value-added products
-      - co-products
-      - artificial products
-    - **Quality-labelled products are defined by their environmental characteristics or by how they are grouped as product sets.**
-      _basis: kinds, order: structure. Ordered from environmental quality labels to the grouping category._
-      - biodegradable products
-      - sustainable products
-      - product groups
-  - **Source classes define products by whether they come from plants, animals, water or forests.**
-    _basis: kinds, order: structure. Classes run from plant to animal to aquatic to forest sources._
-    - plant products
-    - animal products
-    - aquatic products
-    - forest products
-    - resins
-- **Chain stages carry products from raw materials through processing, assurance, handling and trade.**
-  _basis: cause_effect, order: time. Stages follow the order of the production chain._
-  - **The production chain stages run in sequence from raw and fresh materials through processing to the resulting outputs.**
-    _basis: cause_effect, order: time. Stages follow the time sequence of production from raw input to final output._
-    - **The raw and fresh stage covers unprocessed food materials and the general food categories that start the production chain.**
-      _basis: kinds, order: structure. Ordered by structure of the chain._
-      - fresh products
-      - Food
-      - Sustenance
-      - Food and Beverages
-    - **The processing stage covers products and categories that result from industrial transformation, fat processing, fermentation and beverage making.**
-      _basis: kinds, order: structure. Ordered by structure of the chain._
-      - processed products
-      - industrial products
-      - fat products
-      - Fermented Foods
-      - Beverages
-    - **The output stage covers the residual, novel and technology-driven results that emerge from food production.**
-      _basis: kinds, order: structure. Ordered by structure of the chain._
-      - by-products
-      - new products
-      - Food technology
-      - Food sciences not elsewhere classified
-  - **The supporting fields of the production system are those that assure food quality and safety and those that research its chemistry and sensory properties.**
-    _basis: parts, order: structure. Structural parts of the knowledge and control side of the system, from assurance to research._
-    - **The quality and safety stage covers the fields that protect, preserve and assure the nutritional value, safety and sustainability of food.**
-      _basis: kinds, order: structure. Ordered by structure of the chain._
-      - Food packaging, preservation and processing
-      - Food safety, traceability, certification and authenticity
-      - Food nutritional balance
-      - Food sustainability
-    - **The research stage covers the scientific fields that study the chemistry and sensory properties of food and beverages.**
-      _basis: kinds, order: structure. Ordered by structure of the chain._
-      - Food sciences
-      - Beverage chemistry and beverage sensory science
-      - Food chemistry and food sensory science
-  - **Post-production stages transform, protect, store, verify, assess and sell the outputs once products have been produced or harvested.**
-    _basis: cause_effect, order: time_
+- **Product handling and the food chain carry outputs from raw material through processing, storage, quality assurance and trade.**
+  _basis: kinds, order: structure. From chain stages to post-production handling and trade._
+  - **Chain stages and quality research carry food from raw material to assessed output.**
+    _basis: kinds, order: structure. From raw material to output, then quality and research._
+    - **The production chain stages run in sequence from raw and fresh materials through processing to the resulting outputs.**
+      _basis: cause_effect, order: time. Stages follow the time sequence of production from raw input to final output._
+      - **The raw and fresh stage covers unprocessed food materials and the general food categories that start the production chain.**
+        _basis: kinds, order: structure. Ordered by structure of the chain._
+        - fresh products
+        - Food
+        - Sustenance
+        - Food and Beverages
+      - **The processing stage covers products and categories that result from industrial transformation, fat processing, fermentation and beverage making.**
+        _basis: kinds, order: structure. Ordered by structure of the chain._
+        - processed products
+        - industrial products
+        - fat products
+        - Fermented Foods
+        - Beverages
+      - **The output stage covers the residual, novel and technology-driven results that emerge from food production.**
+        _basis: kinds, order: structure. Ordered by structure of the chain._
+        - by-products
+        - new products
+        - Food technology
+        - Food sciences not elsewhere classified
+    - **The supporting fields of the production system are those that assure food quality and safety and those that research its chemistry and sensory properties.**
+      _basis: parts, order: structure. Structural parts of the knowledge and control side of the system, from assurance to research._
+      - **The quality and safety stage covers the fields that protect, preserve and assure the nutritional value, safety and sustainability of food.**
+        _basis: kinds, order: structure. Ordered by structure of the chain._
+        - Food packaging, preservation and processing
+        - Food safety, traceability, certification and authenticity
+        - Food nutritional balance
+        - Food sustainability
+      - **The research stage covers the scientific fields that study the chemistry and sensory properties of food and beverages.**
+        _basis: kinds, order: structure. Ordered by structure of the chain._
+        - Food sciences
+        - Beverage chemistry and beverage sensory science
+        - Food chemistry and food sensory science
+  - **Post-production handling transforms, preserves, moves and sells outputs once products leave the field.**
+    _basis: kinds, order: structure. From processing to storage, handling and trade._
     - **Processing and manufacturing is the stage in which raw materials are transformed into finished products by technology and craft.**
       _basis: parts, order: structure. Parts of the transformation stage, following primary production._
       - **Processing and making activities transform materials into finished products using technology and craft.**
@@ -507,157 +632,139 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
         - cost recovery
         - recuperation
         - anticipatory action
-  - **Handling and movement activities deal with goods, their identification, and their removal after production.**
-    _basis: parts, order: structure. Ordered by structure within the handling stage._
-    - cargo
-    - marking
-    - removal
-    - age determination
-  - **Distribution and trade covers the transport, port handling and economic linkages that move goods to markets.**
-    _basis: kinds, order: structure. Ordered from physical movement to the economic framework around it._
-    - modes of transport
-    - port operations
-    - economic integration
-    - economic activities
+    - **Handling and movement activities deal with goods, their identification, and their removal after production.**
+      _basis: parts, order: structure. Ordered by structure within the handling stage._
+      - cargo
+      - marking
+      - removal
+      - age determination
+  - **Distribution and quality labelling move goods through transport and ports to markets and characterise them.**
+    _basis: kinds, order: structure. From transport to market linkages._
+    - **Distribution and trade covers the transport, port handling and economic linkages that move goods to markets.**
+      _basis: kinds, order: structure. Ordered from physical movement to the economic framework around it._
+      - modes of transport
+      - port operations
+      - economic integration
+      - economic activities
+    - **Quality-labelled products are defined by their environmental characteristics or by how they are grouped as product sets.**
+      _basis: kinds, order: structure. Ordered from environmental quality labels to the grouping category._
+      - biodegradable products
+      - sustainable products
+      - product groups
+- **Product classes divide outputs by use, handling and by their plant, animal, aquatic or forest source.**
+  _basis: kinds, order: structure. From use and handling to source._
+  - **Products classed by use and handling are defined by purpose and the steps they have undergone after primary production.**
+    _basis: kinds, order: structure. From purpose to handling._
+    - **Use-oriented products are defined by the purpose for which they are consumed or applied downstream.**
+      _basis: kinds, order: structure. Ordered by end use from food and feed to non-food and oil products._
+      - foods
+      - feeds
+      - non-food products
+      - oil products
+    - **Handled products are defined by the storage, processing or manufacturing step they have undergone after primary production.**
+      _basis: kinds, order: structure. Ordered from storage to processing, by-products and manufactured goods._
+      - stored products
+      - value-added products
+      - co-products
+      - artificial products
+  - **Products classed by source come from plants, animals, water or forests, including resins.**
+    _basis: kinds, order: structure. From plant and animal to aquatic and forest sources._
+    - plant products
+    - animal products
+    - aquatic products
+    - forest products
+    - resins
 
-### 5. Farming systems are the whole-system stage in which organisms, inputs, people, technology and outcomes are brought together and run as one production system.
+### 5. The production system is the whole-system domain in which planning, analysis, management, institutions and change direct and sustain production.
 
-- **Composition and context cover the organisms, inputs, settings and pressures that make up the system in which production operates.**
-  _basis: parts, order: structure. Organisms and inputs come first, then the pressures and processes acting on them._
-  - **Lineage, habitat and origin classes describe the living components of a farming system by what they are and where they live.**
-    _basis: parts, order: structure. Lineage comes first, then habitat, then origin._
-    - **Taxonomic groups divide living things by their basic cellular and biological lineage.**
-      _basis: kinds, order: structure. Ordered from the broad cellular domains to the kingdoms within them._
-      - Prokaryotae
-      - Eukaryota
-      - Monera
-      - plants
-    - **Habitat-defined organisms are classed by the environment or substrate in which they live or burrow.**
-      _basis: kinds, order: structure. Ordered from soil habitats to aquatic and boring habitats._
-      - soil-borne organisms
-      - soil organisms
-      - aquatic organisms
-      - boring organisms
-    - **Origin-defined organisms are classed by whether they occur naturally, are engineered, or form the general category.**
-      _basis: kinds, order: structure. Ordered from the general category to natural and engineered origins and composite lichens._
-      - organisms
-      - native organisms
-      - genetically modified organisms
-      - lichens
-  - **Relationship, effect and nutrition classes describe the living components of a farming system by how they depend on and act upon others.**
-    _basis: parts, order: structure. Relationships come first, then effects, then feeding modes._
-    - **Relationship-defined organisms are classed by how they depend on or act upon other species.**
-      _basis: kinds, order: structure. Ordered from feeding mode to host, parasite and natural enemy interactions._
-      - heterotrophic organisms
-      - hosts
-      - parasites
-      - natural enemies
-    - **Organisms classed by their effect on production or their dependence on a host or substrate are grouped by impact, association, attachment, origin and nutrition.**
-      _basis: kinds, order: structure. Ordered from production impact, through host and substrate dependence, to origin and nutrition._
-      - **Impact-defined organisms are classed by the benefit or harm they bring to crop and livestock production.**
-        _basis: kinds, order: structure. Ordered from harmful pests to beneficial organisms and the main animal and microbial groups._
-        - pests
-        - beneficial organisms
-        - animals
-        - microorganisms
-      - **Organisms that live on or in another organism, or depend on a host or carrier for living and spreading, form the host-associated kinds.**
-        _basis: kinds, order: structure. Kinds are grouped structurally by type of host dependence, not ranked by degree._
-        - symbionts
-        - epibionts
-        - vectors
-        - epontic organisms
-      - **Organisms defined by how they attach to, move through, or modify the physical substrate they inhabit form the substrate-bound kinds.**
-        _basis: kinds, order: structure. Kinds are grouped structurally by type of substrate relationship, not ranked by degree._
-        - lithophytes
-        - sessile organisms
-        - burrowing organisms
-        - calcifying organisms
-      - **Organisms characterised by their origin, geographic range, taxonomic rank or mode of nutrition form the origin and nutrition kinds.**
-        _basis: kinds, order: structure. Kinds are grouped structurally by type of origin or nutrition, not ranked by degree._
-        - xenogens
-        - species
-        - endemic organisms
-        - mixotrophic organisms
-    - insectivores
-    - saprophytes
-  - **Inputs, settings and starting materials are what production starts from and draws upon in its farming context.**
-    _basis: parts, order: structure. Starting inputs come first, then the settings and resources that hold them._
-    - **Starting inputs are the base materials, supplied additions and potent agents that enter a production system at its outset to be worked upon.**
-      _basis: parts, order: structure. Ordered from base substances to supplied additions to potent agents, as they are introduced._
-      - **Starting substances are the inputs and base materials that are added to or composed into a production process at its outset.**
-        _basis: cause_effect, order: time. Ordered from inputs applied to raw materials obtained._
-        - **Added inputs are substances deliberately put into a production process to start it, shape it, or protect it.**
-          _basis: kinds, order: structure. Ordered by structure, from the substances that start a process to those that protect it._
-          - additives
-          - starter cultures
-          - antifeedants
-          - drugs
-          - chemicals
-        - **Base materials are the raw and composing substances and ingredients that a production system works with and is made from.**
-          _basis: kinds, order: structure. Ordered by structure, from basic components to composed mixtures._
-          - ingredients
-          - elements
-          - inorganic matter
-          - concentrates
-          - air
-        - **Inputs are agents applied to crops, stored goods or pests to control or support production at the start of the system.**
-          _basis: cause_effect, order: time. earliest stage: applied before output_
-          - gene inhibitors
-          - fumigants
-          - baits
-          - processing aids
-        - **Raw materials are the substances obtained from or contained in agricultural products that are carried into later use.**
-          _basis: cause_effect, order: time. middle stage: material produced and handled_
-          - extracts
-          - fats
-          - fibres
-          - bitter principles
-      - **Input materials are the natural base substances and supplied additions that the production system takes in and works upon at the start.**
-        _basis: kinds, order: structure. Not a degree ranking; kinds are listed by structure, from natural base materials to supplied inputs._
-        - **Natural base materials form the foundation of the production system, supplying the physical and organic substrate from which soil and growth develop.**
-          _basis: kinds, order: structure. Ordered from mineral foundation to organic substrate._
-          - rock
-          - soil parent materials
-          - organic matter
-        - **Supply inputs are materials added to or supplied within the production system to feed and condition crops and soil.**
-          _basis: kinds, order: structure. Ordered from added amendments to the nutrients and oils they supply._
-          - soil amendments
-          - nutrients
-          - oils
-          - pollutants
-          - residues
-        - **Input materials are the basic substances and media that a production system takes in and works upon.**
-          _basis: parts, order: structure. Inputs are the first structural stage of the system._
-          - substrata
-          - water
-          - materials
-          - biomass
-          - waxes
-        - **General chemical and material categories are kinds of substances and compounds that make up inputs, products and emissions.**
-          _basis: kinds, order: structure. Ordered from general categories to specific materials._
-          - chemical compounds
-          - chemical substances
-          - minerals
-          - greenhouse gases
-      - **Applied agents are the chemically or biologically potent substances that are added or present during production to act on organisms and processes.**
-        _basis: kinds, order: structure. Kinds are distinguished by structure, such as regulatory, protective and signalling agents._
-        - **Regulatory and bioactive agents are kinds of substances that stimulate, inhibit or lyse in biological systems.**
-          _basis: kinds, order: structure. Ordered from general agents to specific bioactive substances._
-          - growth substances
-          - mitogens
-          - haemolysins
-          - lipotropic factors
-        - **Chemical agents and signals are substances that deter, attract, or control organisms during crop protection and plant communication.**
-          _basis: kinds, order: structure. Ordered from applied controls to natural plant-released signals._
-          - pesticides
-          - repellents
-          - attractants
-          - plant secretions
-        - **Active agents are the chemically or biologically potent substances applied or present during production that act on organisms and processes.**
-          _basis: parts, order: structure. Active agents act on the inputs at the processing stage._
-          - toxic substances
-          - bioactive compounds
-          - biocides
+- **Planning, exploration and analysis study and anticipate production before and around operations.**
+  _basis: kinds, order: structure. From planning to analysis and monitoring._
+  - **Planning and exploration set up, survey and gather what production needs before it begins.**
+    _basis: kinds, order: structure. From planning to exploration._
+    - **Planning and preparation activities set up and prepare the work before production begins.**
+      _basis: parts, order: structure. Ordered by structure within the planning stage._
+      - design
+      - preparedness
+      - diagnosis
+      - case studies
+    - **Planning and analysis methods are used to study, assess and anticipate production before and around operations.**
+      _basis: kinds, order: structure. Ordered from general research methods to specific assessment and prediction techniques._
+      - research methods
+      - forecasting
+      - nutrient profiling
+      - expeditions
+    - **Exploration and collection activities are the early stage in which resources, samples and information are located, surveyed and gathered.**
+      _basis: kinds, order: structure. Kinds of early-stage activities for locating and gathering resources._
+      - exploration
+      - survey methods
+      - collection
+      - search and rescue
+  - **Monitoring and analytical tools measure, test and communicate how the system performs.**
+    _basis: kinds, order: structure. From monitoring to analysis and cross-cutting concepts._
+    - **Monitoring stages measure, test and recognise conditions and performance before and during production to guide decisions.**
+      _basis: cause_effect, order: time. Runs alongside production, informing it._
+      - **Assessment and diagnosis methods are the stage where conditions, inputs and performance are measured, tested and monitored before and during production.**
+        _basis: parts, order: structure. First stage: assessing and diagnosing._
+        - trial methods
+        - DRIS
+        - imagery
+        - atmospheric deposition
+      - **Checking and recognition activities establish what something is and how it is performing within the production system.**
+        _basis: kinds, order: structure. Ordered by structure from identifying to observing._
+        - identification
+        - inspection
+        - measurement
+        - monitoring
+        - microscopy
+      - **Analytical and modelling tools support decisions across the production system by measuring, computing and simulating its performance.**
+        _basis: parts, order: structure. Ordered from basic analysis and calculation to simulation and digital tools._
+        - analysis
+        - calculation
+        - simulation
+        - digital technology
+    - **The analytical stage covers the research, measurement and information tools used to investigate, quantify and communicate how the system performs.**
+      _basis: cause_effect, order: time. Final stage, in which performance is measured and shared._
+      - **Research and analytical activities are the methods used to investigate, measure, choose and model what happens in a production system.**
+        _basis: kinds, order: structure. Ordered by structure of the investigative workflow._
+        - research
+        - sampling
+        - selection
+        - computer programming
+      - **Measurement and standardization covers the analytical methods used to survey, quantify and standardize production processes.**
+        _basis: kinds, order: structure. Ordered from observing and measuring to standardizing._
+        - surveying
+        - statistical methods
+        - standardization
+      - **Information, assessment, and communication tools are the means used to measure, record, evaluate, and share knowledge about production.**
+        _basis: kinds, order: structure. Ordered by structure, from assessment items to communication and teaching media._
+        - valuation
+        - samples
+        - educational technology
+        - Information and Communication Technologies
+        - cinematography
+    - **Cross-cutting concepts are broad sector classes, chain concepts and scientific methods that apply across the whole production system rather than one sector.**
+      _basis: kinds, order: structure. Ordered by structure, from broad sector classes to chain concepts and general methods._
+      - **Broad production-sector classes and supply-chain concepts span the whole system of plant, forest, animal and aquatic production.**
+        _basis: kinds, order: structure. Ordered by structure, from sector classes to cross-cutting chain concepts._
+        - Plant culture
+        - Forestry
+        - Animal culture
+        - Aquaculture. Fisheries. Angling
+      - **Bright spot technology and chains are concepts that each mark a distinct stage within a production system.**
+        _basis: kinds, order: structure_
+        - bright spot technology
+        - chains
+      - **Biological and technological methods apply scientific knowledge to modify organisms and materials in production.**
+        _basis: kinds, order: structure. Ordered by structure, from molecular-scale technology to broader biological applications and breeding._
+        - nanotechnology
+        - biotechnology
+        - breeding methods
+        - sustaining peace
+        - classification
+- **Operation, people and management concepts describe how the whole system is run, organised, supported and measured.**
+  _basis: parts, order: structure. From site and inputs to operation, people, management and outcomes._
+  - **Settings, inputs and outcomes are the sites, resources and results that production starts from and delivers.**
+    _basis: parts, order: structure. From inputs to outcomes._
     - **The setting and input stage covers the site, its conditions, and the resources and composition that production starts from and draws upon.**
       _basis: parts, order: structure. Earliest stage: what exists before and at the start of production._
       - **Setting and observation stages describe the physical site, its limits, and the monitoring and modelling used to understand where production takes place.**
@@ -962,818 +1069,6 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
           - oil and gas fields
           - buffer strips
           - temperature gradients
-    - culture media
-  - **Disruptions, ecological processes and wildlife interactions are the pressures and dynamics that act on production as it runs.**
-    _basis: parts, order: structure. Disruptions come first, then ecological processes, then flows and wildlife relations._
-    - **Disruptions and surrounding conditions are the adverse events, risks, natural phenomena and external setting that affect production as it proceeds and after.**
-      _basis: cause_effect, order: time. Ordered from risks and harms to wider context._
-      - **Disruptions and change are the adverse events, harms, and shifts that affect a production system after operation.**
-        _basis: cause_effect, order: time. Ordered in time, from sudden hazards to their damage and the longer-term trends._
-        - emergencies
-        - explosives
-        - damage
-        - trends
-      - **Risks are conditions that expose production to harm, loss or shortfall as it proceeds.**
-        _basis: cause_effect, order: time. later stage: harm arising from production_
-        - vulnerability
-        - hazards
-        - deficiencies
-        - particulates
-      - **Natural and physical phenomena are the environmental and material processes that act on production throughout the system.**
-        _basis: kinds, order: structure. ordered from general phenomena to specific types_
-        - physical phenomena
-        - chemical phenomena
-        - natural phenomena
-        - phenomena
-      - **The wider context covers the external social, economic and international setting in which production operates.**
-        _basis: kinds, order: structure. ordered from general to specific kinds of context_
-        - international relations
-        - social phenomena
-        - economic phenomena
-        - substances
-    - **Ecological processes and pressures are the events, distributions and external stresses through which organisms and populations develop and interact once production is under way.**
-      _basis: kinds, order: structure. Kinds are distinguished by structure, covering biological processes, distribution patterns, stressors and dynamics._
-      - **Biological processes and phenomena are kinds of events or relations through which organisms and populations develop, distribute and interact.**
-        _basis: kinds, order: structure. Ordered from general phenomena to specific relations._
-        - development
-        - biological phenomena
-        - source-sink relations
-        - spatial distribution
-      - **Physical and environmental stressors are kinds of external conditions that inhibit, damage or reduce production.**
-        _basis: kinds, order: structure. Ordered from environmental causes to resulting damage._
-        - environmental inhibitors
-        - shock
-        - ice
-        - losses
-      - **Ecological dynamics and outcomes are the patterns, changes, and disturbances that arise in the production system over time.**
-        _basis: kinds, order: structure. Ordered from patterns of populations to interactions, effects, and disturbances._
-        - geographical distribution
-        - population dynamics
-        - interactions
-        - effects
-        - disruptions
-      - **Distribution patterns describe where and how often things occur across space and time within the system.**
-        _basis: parts, order: structure. Distribution follows the outputs as they spread through the system._
-        - spatio-temporal distribution
-        - natural occurrence
-        - anomalies
-    - **Process outputs and relations are the flows, residues and interactions that arise and are accounted for while a system operates.**
-      _basis: cause_effect, order: time. Ordered from substances moving through the system to the accounting of them._
-      - **Flows and residues are the substances that move through, dissolve in, or are released from a system during processing.**
-        _basis: kinds, order: structure. Ordered by structure, from dissolved substances to settled residues._
-        - solutes
-        - exudates
-        - sediment
-        - unsaponifiable materials
-      - **Relations and accounting concepts describe how components of the production system interact and how its quantities are tracked.**
-        _basis: parts, order: structure. Ordered by structure, from relations to quantitative accounting._
-        - plant soil relations
-        - mass balances
-    - human-wildlife relations
-- **Operation and organisation cover how production is run, directed and supported by people and institutions.**
-  _basis: parts, order: structure. Management and governance come first, then the operation and people behind them._
-  - **The operating section covers the processes, people, rules, institutions and tools through which production is carried out, directed and supported.**
-    _basis: parts, order: structure. Middle section of the production system, where production is run and governed._
-    - **The management stage covers the plans, rules, structures, finance and tools that direct how production is designed, governed and run.**
-      _basis: parts, order: structure. Directing stage: planning and governance guiding the other stages._
-      - **Planning and governance stages set the rules, knowledge and management direction that guide how production is organised before it begins.**
-        _basis: parts, order: structure. Ordered from rules and frameworks to knowledge and management practice._
-        - **Governance and planning frameworks set the rules and methods that guide how production is organised before it begins.**
-          _basis: kinds, order: structure. Kinds of framework that sit at the setup stage of production._
-          - rules
-          - methodology
-          - information systems
-          - cadastres
-        - **Governance and organisational concepts are kinds of framework that steer how production enterprises operate, ranked from abstract principles to concrete organisations.**
-          _basis: kinds, order: degree. Ranked from most abstract principle to most concrete organisation._
-          - policy coherence
-          - neutrality
-          - enterprises
-        - **Knowledge and learning concepts form the formal and abstract capacity that supports the production system.**
-          _basis: parts, order: structure. n/a_
-          - knowledge
-          - educational courses
-          - mathematical properties
-        - **Management and sustainability stages cover running the farm as a business and directing production toward long-term sustainable development.**
-          _basis: parts, order: structure. Farm business and sustainability stage of the production system._
-          - Farm management, rural management and agribusiness
-          - Sustainable agricultural development
-          - Sustainable Development Goals
-          - Hunting sports
-      - **The management stage covers the planning, goals, steering systems and people that direct how production is designed and run.**
-        _basis: parts, order: structure. Third stage: direction and control of production._
-        - **The management and control stage covers the goals, limits, steering mechanisms and training that direct how production is run.**
-          _basis: parts, order: structure. Arranged from objectives, to limits, to control mechanisms, to skills._
-          - management by objectives
-          - constraints
-          - steering systems
-          - curriculum
-        - **Management comprises the systems, group arrangements and decision rules used to steer production.**
-          _basis: parts, order: structure. Management acts on the process after conditions are set._
-          - economic systems
-          - mating systems
-          - group size
-          - selection index
-          - economic thresholds
-        - **Planning and design is the early stage in which feasibility is assessed and prototypes and infrastructure are developed.**
-          _basis: parts, order: structure. Parts of the planning stage in order of structure._
-          - feasibility studies
-          - prototypes
-          - infrastructure
-        - **Human factors are the people and the social and psychological aspects involved in running the production system.**
-          _basis: parts, order: structure. Parts of the human side of production in order of structure._
-          - employment
-          - engineers
-          - psychological factors
-      - **Organizing and guiding concepts are the plans, structures, monitoring tools, entitlements and knowledge through which production is arranged and governed.**
-        _basis: kinds, order: structure. Ordered by structure from planning and organization to regulation and knowledge._
-        - **Monitoring and regulatory concepts are the tools and entitlements that guide, warn about or formally govern production.**
-          _basis: kinds, order: structure. Ordered by structure from alert tools to rights and values to quantitative effects._
-          - warning systems
-          - legal rights
-          - value systems
-          - multipliers
-        - **Organizational concepts are the planned undertakings and formal structures through which production activity is arranged and carried out.**
-          _basis: kinds, order: structure. Listed from planning to the resulting structures and entities._
-          - plans
-          - projects
-          - structures
-          - entities
-        - **Knowledge and communication concepts are the forms of information and learning that support understanding of the production system.**
-          _basis: kinds, order: structure. Listed from raw information to educational and disciplinary forms._
-          - information
-          - educational resources
-          - humanities
-          - languages
-          - labels
-        - **Organizational and planning concepts describe how a production system is arranged and carried out, including systems, distribution, strategies, approaches and stages.**
-          _basis: kinds, order: structure. Ordered from the overall system to distribution, then to the plans and the stages._
-          - systems
-          - distribution systems
-          - strategies
-          - approaches
-      - **Governance and finance are the economic drivers, funds, thresholds, rules and institutions that steer production and judge its economic results.**
-        _basis: kinds, order: degree. Ranked from direct financial resources and drivers to the broader legal and institutional frameworks._
-        - **Financial resources are the capital, credit and obligations that fund production and measure its economic results.**
-          _basis: kinds, order: structure. Ordered by structure, from sources of funds to obligations and returns._
-          - loans
-          - equity
-          - liabilities
-          - return on investment
-        - **Economic factors are the financial drivers and returns that motivate producers and shape what they invest in and earn.**
-          _basis: kinds, order: structure. Ordered by structure, from motivating drivers to the returns and costs of capital._
-          - incentives
-          - income
-          - interest rates
-          - interest groups
-        - **Economic and risk thresholds describe the monetary values and limits used to judge the outcomes of production and its hazards.**
-          _basis: kinds, order: structure. Ordered by structure, from financial position to hazard thresholds._
-          - financial situation
-          - economic value
-          - economic injury levels
-          - bioaccumulation factor
-        - **Governance and legal instruments are the rules, permissions and rights that regulate how production is carried out.**
-          _basis: kinds, order: structure. Ordered by structure, from general rules to specific permissions and rights holders._
-          - legislation
-          - licences
-          - landowners
-        - **Institutional and knowledge frameworks are the bodies, disciplines, legal sources and conventions that organise and govern production.**
-          _basis: kinds, order: structure. Ordered by structure, from the organisations themselves to the knowledge and rules they use._
-          - organizations
-          - sciences
-          - source of law
-          - abbreviations
-    - **The actor and support stage covers the people, places, institutions and storage and knowledge functions that surround and sustain production.**
-      _basis: parts, order: structure. Surrounding stage: context and support beyond the core production steps._
-      - **The post-production and support stage covers storage periods, supporting institutions and the knowledge that records and communicates what is known about production.**
-        _basis: parts, order: structure. Final stage: what follows and surrounds production._
-        - **Time-related handling concepts cover the post-production period during which products are held and kept.**
-          _basis: kinds, order: structure. Kinds of time-related handling, ordered by structure._
-          - storage time
-          - duration
-          - hospitals
-          - exhibitions
-        - **Institutional and locational concepts describe the places, services and shared resources that support and surround production.**
-          _basis: kinds, order: structure. Kinds of institutional or locational context, ordered by structure._
-          - epicentres
-          - public goods
-          - Denmark
-          - computer software
-        - **Knowledge covers the vocabulary and institutions that record and communicate what is known about production.**
-          _basis: parts, order: structure. Knowledge is the final stage, documenting the system._
-          - terminology
-          - museums
-        - **Inputs are the resources, materials and environments that a production system draws upon to operate.**
-          _basis: parts, order: structure. Inputs are the first stage of the production system._
-          - economic resources
-          - raw materials
-          - ecosystems
-          - world
-          - stumpage value
-        - **The production setting stage covers the natural and physical conditions and sites within which production takes place.**
-          _basis: parts, order: structure. Arranged from broad climate zones to specific sites and time available._
-          - climatic zones
-          - available days
-          - recreational areas
-          - landing sites
-      - **Actor and context concepts are the people, social frameworks, places and money flows that take part in or surround production.**
-        _basis: kinds, order: structure. Ordered by structure from people to social frameworks to financial context._
-        - **Financial and economic measures describe the money flows and macroeconomic conditions that affect the production system.**
-          _basis: kinds, order: structure. Ordered by structure from spending to wider economic conditions._
-          - expenditure
-          - economic situation
-          - exchange rate
-          - liquidity
-        - **Human actors and social frameworks are the people, groups and rules that take part in or shape the production system and its products.**
-          _basis: kinds, order: structure. Ordered by structure from observers to users to norms._
-          - surveyors
-          - sociologists
-          - consumers
-          - low income groups
-        - **People and places of fishing and emergency work form the human and spatial base of the production system.**
-          _basis: kinds, order: structure. Ordered by structure, from workers to the places and time associated with them._
-          - fishers
-          - fishing areas
-          - firefighters
-          - free time
-        - **Actor and population concepts are the people and groups who take part in or are served by the production system.**
-          _basis: kinds, order: structure. Listed from individual participants to whole populations._
-          - subjects
-          - tenants
-          - population
-        - **Contextual concepts are the external settings, obligations and occurrences within which the production system operates.**
-          _basis: kinds, order: structure. Listed from broad geographic setting to specific occurrences._
-          - countries
-          - liability
-          - events
-      - **People, places and heritage are the actors, locations and protected settings in which agricultural production is carried out.**
-        _basis: parts, order: structure. Ordered from the people involved to the places, protected heritage and wider settings._
-        - **Actors and human resources are the people and social units who carry out, manage, or consume the outputs of production.**
-          _basis: kinds, order: structure. Kinds of human actors, listed by structure._
-          - households
-          - housewives
-          - physicians
-          - human resources
-          - entrepreneurs
-        - **Places and protected landscape settings are the geographic regions and conserved areas and heritage in which production takes place.**
-          _basis: kinds, order: structure. Kinds of places and settings, listed by structure._
-          - Baltic States
-          - rural conditions
-          - Iceland
-          - green belts
-        - **Cultural heritage and protected areas are safeguarded resources that sit beyond the core production stages and shape how agricultural production systems are managed and sustained.**
-          _basis: kinds, order: structure_
-          - cultural heritage
-          - protected areas
-        - **Settings and environments describe the places and conditions in which agrifood production and food access take place.**
-          _basis: kinds, order: structure. Ordered by structure, from the broad system down to specific places and conditions._
-          - agrifood systems
-          - human settlements
-          - food swamps
-          - less favoured areas
-          - precipitation intensity
-    - **Operation and measurement concepts cover how production is run, the conditions and biological states during it, and the indicators used to track performance.**
-      _basis: parts, order: structure. Ordered from management to conditions to measures._
-      - **Production operation concepts describe the management, living organisms and quantitative measures through which production is run, monitored and assessed.**
-        _basis: kinds, order: structure. Ordered by structure from management to organism state to measurement._
-        - **Production management and measures cover the people, systems and quantities used to run and monitor production operations.**
-          _basis: kinds, order: structure. Ordered by structure, from the people who manage to the systems and measures they use._
-          - managers
-          - quality management systems
-          - life cycle
-          - livestock numbers
-          - mass
-        - **Concepts describing the physiological state, capacity and feeding conditions of living organisms in production.**
-          _basis: kinds, order: structure. Ordered from biological condition to feeding behaviour._
-          - maternity
-          - meal patterns
-          - hypoxia
-          - ability
-        - **Measurable properties and quantitative concepts used to describe, convert and assess biological or physical states.**
-          _basis: kinds, order: structure. Ordered by structure, from general concepts to specific measures._
-          - conversion factors
-          - equilibrium
-          - chlorophyll content
-          - pesticidal properties
-      - **The operating stage covers the physical conditions, product states and organism populations present while production is under way.**
-        _basis: parts, order: structure. Parts of the growing stage, arranged from physical conditions to the organisms and product._
-        - **Pressure and azimuth are measurable physical quantities that describe conditions and orientation at a given stage of the production system.**
-          _basis: kinds, order: structure_
-          - pressure
-          - azimuth
-        - **The product and condition stage covers the attributes and states of the product and of the land during the production cycle.**
-          _basis: kinds, order: structure. Ordered from product attributes to the natural states of the production system._
-          - quality
-          - safety
-          - trophic state
-          - seasons
-        - **Population and pest dynamics concepts describe the status, composition and grouping of organisms within a production system during its operation.**
-          _basis: kinds, order: structure. Ordered by structure from population composition to pest status._
-          - pest status
-          - sex ratio
-          - organism aggregations
-        - **Environmental conditions and pressures are the physical factors and responses that act on organisms during the growing stage of the production system.**
-          _basis: cause_effect, order: time. Ordered in time from the conditions and stimuli that act first to the stress that results._
-          - temperature
-          - temperature profiles
-          - stimuli
-          - stress
-        - **Atmospheric and physical environment conditions are measurable factors of weather and soil water that influence production.**
-          _basis: kinds, order: structure. Ordered by structure from atmospheric to soil conditions._
-          - hygrometry
-          - irradiance
-          - infiltration rate
-          - visibility
-      - **Operation-stage concepts cover the technical practices, housing, feeding and biological states that determine how output is produced during rearing or growing.**
-        _basis: cause_effect, order: time. Third stage: the active production process itself._
-        - **Biological process states are physiological or developmental conditions of animals and colonies that affect how production proceeds.**
-          _basis: kinds, order: structure. Ordered by structure: the in-process stage of production._
-          - queenrightness
-          - prepatent period
-          - anoestrus
-          - disabilities
-        - **Production operations and biological processes are the technical practices and physiological factors that determine how output is produced and captured.**
-          _basis: parts, order: structure. Operations follow the setting and inputs._
-          - gear selectivity
-          - metabolic rate
-          - oil in water content
-        - **Production management concepts describe how animals are housed, fed and supplied during the rearing or growing stage.**
-          _basis: kinds, order: structure. Ordered by structure from housing to feeding and supply._
-          - animal place
-          - feeding rate
-          - availability
-          - propulsion systems
-      - **Production-stage measures are the indicators, rates and timings used to track how crops, livestock and fish stocks develop and perform during production.**
-        _basis: parts, order: structure. Ordered from conditions and timings to growth, rate and analytical measures._
-        - **Biological and temporal stage measures are the developmental periods and timings that mark how production progresses.**
-          _basis: kinds, order: structure. Ordered by structure, from developmental periods to daily timing._
-          - egg incubation period
-          - phyllochron
-          - flushing time
-          - times of the day
-        - **Crop growth and development measures describe how planting material develops and performs through the crop cycle.**
-          _basis: kinds, order: structure. Ordered from seed renewal through maturation to yield and water use._
-          - seed replacement rate
-          - days to maturity
-          - yield potential
-          - transpiration ratio
-        - **Measures and parameters used during production describe the state, response and condition of crops, livestock and fish stocks.**
-          _basis: kinds, order: structure. Listed from system-level states to stock and animal measures._
-          - steady state
-          - yield response factor
-          - catch at age
-          - body condition scoring
-          - ventilation rate
-        - **Analytical and capacity measures are the statistical and demographic quantities used to assess production performance and its uncertainty.**
-          _basis: kinds, order: structure. Ordered by structure, from statistical tools to capacity measures._
-          - quantiles
-          - uncertainty
-          - population factors
-          - fishing power
-      - **Further production measures cover the conditions under which production takes place and the speed and duration of processes within the production system.**
-        _basis: kinds, order: structure_
-        - **Process rates and disease measures quantify how fast things pass through or spread within a system and how long effects last.**
-          _basis: kinds, order: structure. Ordered from filtration to infection spread to persistence._
-          - filtration rate
-          - coefficient of infection
-          - permanence
-        - **Environmental and condition indicators measure the physical, biological and health conditions under which production takes place.**
-          _basis: kinds, order: structure. Listed in structural order without ranking._
-          - salt flux
-          - drought index
-          - biotic indices
-          - disease severity
-    - **Governance and knowledge concepts cover the institutions, rules, rights and tools that inform, regulate and monitor production.**
-      _basis: parts, order: structure. Ordered from institutions to rules to oversight tools._
-      - **Governance and institutional concepts are the organizations, instruments, policies and supporting professionals that administer, regulate and inform production.**
-        _basis: kinds, order: structure. Ordered by structure from organizations to formal instruments to policy._
-        - **Organizational bodies that administer, coordinate and oversee activities within the production system.**
-          _basis: kinds, order: structure. Ordered structurally from broad institutions to specific governing units._
-          - educational systems
-          - agencies
-          - boards (organization)
-          - bodies
-        - **Formal instruments and administrative units that regulate and direct conduct in the production system.**
-          _basis: kinds, order: structure. Ordered structurally from administrative units to the rules they issue._
-          - bureaus
-          - committees
-          - agreements
-          - guidelines
-        - **Formal organizations and institutional bodies that structure collective activity, from broad institutions to specific units.**
-          _basis: kinds, order: structure. Ordered by structure, from broad institutions to specific units._
-          - institutions
-          - branches (enterprise)
-          - unions
-          - society
-        - **Planned initiatives, legal instruments and professionals that support and regulate agricultural work.**
-          _basis: kinds, order: structure. Ordered by structure, from plans to instruments to practitioners._
-          - programmes
-          - patents
-          - technicians
-          - pharmacists
-        - **Policy and institutional elements are the governing and advisory arrangements that regulate and inform production.**
-          _basis: kinds, order: structure. Ordered from political systems to policies to expert input._
-          - political systems
-          - policies
-          - independent experts
-          - production factors
-          - production structure
-      - **The knowledge and governance stage covers the people, systems, rules and rights that inform and regulate production.**
-        _basis: parts, order: structure. Parts of the supporting stage, arranged from knowledge actors to formal rules._
-        - **The actor and knowledge stage covers the people and systems that generate and record knowledge used in production.**
-          _basis: kinds, order: structure. Ordered from individual people to the systems and measures that connect them._
-          - scientists
-          - archivists
-          - innovation systems
-          - human development index
-        - **The regulation and access stage covers the formal rules, registrations and rights that govern who may produce and trade.**
-          _basis: kinds, order: structure. Ordered from formal identification to the economic cost of access._
-          - registration
-          - trade marks
-          - rent
-          - affordability
-        - **Knowledge and learning actors are the people and systems that generate, study and transmit information supporting the production system.**
-          _basis: parts, order: structure. Ordered by structure from the people involved to the systems and disciplines they work within._
-          - students
-          - teachers
-          - research systems
-          - statistics as science
-        - **Rules and legal arrangements are the formal standards and rights that regulate access to and conduct within the production system.**
-          _basis: parts, order: structure. Ordered by structure from the officials and standards to the rights they secure._
-          - notary
-          - standards
-          - tenure
-      - **Oversight-stage concepts cover the institutions, rules, units and tools used to coordinate, measure, observe and respond to the production system.**
-        _basis: cause_effect, order: time. Final stage: governance, measurement and feedback across the system._
-        - **Monitoring and measurement tools are the indices, scales and analytical categories used to observe, classify and compare conditions across the system.**
-          _basis: parts, order: structure. Monitoring follows the operations it assesses._
-          - extreme values
-          - temporal variations
-          - classification systems
-          - vegetation index
-        - **Organisation, support and strategy are the institutions, groups and plans that coordinate, train and enable actors in the production system.**
-          _basis: parts, order: structure. Organisation and support frame the system as a whole._
-          - rural development strategies
-          - self-help groups
-          - telecentres
-          - training strategies
-          - stakeholders
-        - **Observation and response concepts are the ways of watching, describing and responding to the system.**
-          _basis: kinds, order: structure. Ordered by position within the stage._
-          - monitoring systems
-          - awareness
-          - vulnerable groups
-          - shape
-        - **Governance and social concepts describe the rules, rights and communication that shape how production is regulated and shared.**
-          _basis: kinds, order: structure. Ordered by structure from authority to rules and communication._
-          - sovereignty
-          - penalties
-          - communication strategies
-          - Gender Development Index
-  - **Operation and people-and-organization concepts describe how production is actually carried out, covering the living processes, farm work, infrastructure, pressures, individuals, groups and social arrangements involved.**
-    _basis: kinds, order: structure_
-    - **The operation stage covers the living processes, farm operations, infrastructure and pressures through which production is actually carried out.**
-      _basis: parts, order: structure. Middle stage: production as it is run and the conditions acting on it._
-      - **Process stages cover the living organisms, their characteristics, development and stress conditions in which production itself takes place.**
-        _basis: parts, order: structure. Ordered from biological components to their traits, development and disturbances._
-        - **Biological and ecological components are the living and natural elements in which the production process itself takes place.**
-          _basis: kinds, order: structure. Kinds of biological element involved in the process stage._
-          - microbiomes
-          - queenlessness
-          - biodiversity hotspots
-          - fossils
-        - **Biological and reproductive measures describe the stages through which living production stock develops over time.**
-          _basis: cause_effect, order: time. n/a_
-          - incubation period
-          - conception rate
-          - gonadosomatic index
-          - basic reproduction number
-          - blue whale unit
-        - **Intrinsic biological, physical and genetic characteristics describe the organisms and materials being produced.**
-          _basis: parts, order: structure. Ordered from general properties to specific genetic and health traits._
-          - biological properties
-          - chemicophysical properties
-          - chromosome number
-          - specific pathogen free state
-        - **Physiological stress conditions are the health disturbances that can arise in the organisms during production and disrupt the process.**
-          _basis: kinds, order: structure. Kinds of stress condition arising during the process stage._
-          - hypothermia
-          - ischaemia
-          - heart rate
-          - Lithuania
-      - **The operation stage covers the cropping arrangements, water systems and biological processes and conditions through which output is actually produced.**
-        _basis: parts, order: structure. Second stage: the active production process._
-        - **The production operation stage covers the cropping arrangements and biological processes through which output is actually produced.**
-          _basis: parts, order: structure. Arranged from cropping design to the interventions and growth that follow._
-          - cropping systems
-          - cropping patterns
-          - growth rate
-          - anaesthesia
-        - **Biological development and condition concepts describe the growth, life-cycle phase and state of the organisms being produced.**
-          _basis: kinds, order: structure. Kinds of biological state, ordered by structure._
-          - developmental stages
-          - dormancy
-          - body condition
-          - litter size
-        - **Production conditions are the physical, chemical and biological states that determine how well plants, animals and environments perform.**
-          _basis: parts, order: structure. Conditions follow inputs and shape the production process._
-          - osmotic potential
-          - ion exchange capacity
-          - nutritional status
-          - pollutant load
-        - **Water infrastructure and management covers the physical systems and schemes that supply, apply and remove water in production.**
-          _basis: kinds, order: structure. Kinds of water system, arranged from supply to drainage._
-          - drinking water systems
-          - drainage systems
-          - irrigation systems
-          - irrigation schemes
-          - irrigation rates
-      - **Process-stage concepts describe how production is run on the farm, from operations and physical flows to installed infrastructure and harvest limits.**
-        _basis: kinds, order: structure. Ordered by structure from farm operations to physical conditions, installed systems and harvest controls._
-        - **Farm operation concepts describe how production is organised, fed and counted on the farm during the production stage.**
-          _basis: kinds, order: structure. Ordered by structure from system to farm-level measures._
-          - farming systems
-          - feeding systems
-          - farm numbers
-          - farm results
-        - **Physical and flow conditions describe the material states and forces acting within the production process.**
-          _basis: kinds, order: structure. Ordered by structure, from material state to applied forces and flow._
-          - colloidal state
-          - saturation
-          - mechanical loads
-          - flow rate
-        - **Physical infrastructure and monitoring systems are installed at the production site to anchor, observe and regulate operations.**
-          _basis: parts, order: structure. Ordered from anchoring hardware to monitoring and control._
-          - mooring systems
-          - buoy systems
-          - surveillance systems
-          - control systems
-        - **Harvest management measures set how much is taken from the stock and how often during the harvesting stage.**
-          _basis: parts, order: structure. Ordered from stock-level limits to harvest timing._
-          - total allowable catch
-          - yield-per-recruit
-          - harvesting frequency
-          - rights of nature
-          - sociocultural systems
-      - **External conditions and pressures are the environmental, physiological and human-made forces that act on production from outside the system.**
-        _basis: kinds, order: degree. Ranked from broad natural conditions through physiological stress on organisms to human-made burdens._
-        - **Natural environmental conditions form the outside context that sets the physical limits within which agricultural production takes place.**
-          _basis: kinds, order: structure. Ordered by structure, from the broad natural system down to specific climatic and biotic conditions._
-          - nature
-          - ocean-atmosphere system
-          - insolation
-          - vapour pressure deficit
-        - **Physical and physiological conditions are environmental and biological variables that act on plants and animals during production.**
-          _basis: kinds, order: structure. Kinds of physical and physiological conditions, listed by structure._
-          - wavelength
-          - respiration rate
-          - humidity
-          - hyperthermia
-        - **Human and environmental pressures describe the external influences and waste burdens that people place on a production system.**
-          _basis: kinds, order: structure. Ordered by structure, from social pressures to resulting contamination._
-          - population pressure
-          - anthropogenic factors
-          - squatters
-          - landfills
-    - **People and organization concepts cover the individuals, groups, sites and social arrangements through which production is carried out and its context shaped.**
-      _basis: parts, order: structure. Ordered from individual participants to social arrangements to wider context._
-      - **Human participants are the individuals, social units and informal collectives that carry out, use or receive the results of production.**
-        _basis: kinds, order: structure. Ordered by structure from individuals to social units to informal collectives._
-        - **Concepts naming the people and personal attributes found among those who take part in a production system.**
-          _basis: kinds, order: structure. Ordered from individual attributes to occupational roles._
-          - individuals
-          - nationality
-          - medical auxiliaries
-          - merchants
-        - **People and social units who carry out, use or receive the results of production activities.**
-          _basis: kinds, order: structure. Ordered structurally from individual actors to collective social units._
-          - land practitioners
-          - patients
-          - communities
-          - groups
-        - **Informal or community-based collectives of people who join together for shared purposes or temporary tasks.**
-          _basis: kinds, order: structure. Ordered by structure, from local groups to linked collectives._
-          - local groups
-          - savings groups
-          - task forces
-          - networks
-        - **Socioeconomic and demographic indicators describe the human population and the economic distribution surrounding production.**
-          _basis: kinds, order: structure. Ordered from population measures to economic measures._
-          - gender parity
-          - Gini index
-          - population structure
-          - prices
-          - socioecological systems
-      - **Setting-stage concepts cover the people, sites and social arrangements through which production is organized and carried out.**
-        _basis: cause_effect, order: time. Second stage: who produces and where, once inputs are in place._
-        - **Economic and human actors or models are the people, flows and theoretical modes tied to production and consumption.**
-          _basis: kinds, order: structure. Ordered by structure from economic flows to people._
-          - balance of payments
-          - baroclinic mode
-          - vegetarians
-          - veterinarians
-        - **Production actors are the people who own, manage or carry out production in farming, beekeeping, aquaculture and shipping.**
-          _basis: kinds, order: structure. Ordered by structure: the agents who run the system._
-          - beekeepers
-          - aquaculturists
-          - shipowners
-        - **Production sites and labor organization describe where production takes place and how work is arranged and timed.**
-          _basis: kinds, order: structure. Ordered by structure: the setting and labor arrangements of production._
-          - wilderness areas
-          - apiaries
-          - work teams
-          - working hours
-        - **Production systems and the places and social arrangements around them are where production is carried out.**
-          _basis: kinds, order: structure. Ordered by position within the stage._
-          - production systems
-          - whaling stations
-          - caste systems
-          - time use patterns
-      - **Human and institutional context is made up of the actors, rules and social outcomes that surround production and its markets.**
-        _basis: parts, order: structure. Ordered from actors to institutions to social outcomes._
-        - **Actors are the people and parties who take part in, watch, or compete within production and its markets.**
-          _basis: kinds, order: structure. Ordered by structure, from observers to household roles._
-          - observers
-          - househusbands
-          - competitors
-          - child advocacy
-        - **Market actors and social outcome measures describe who sells production and how well its benefits are shared.**
-          _basis: kinds, order: structure. Listed from market actors to social outcome measures._
-          - fish vendors
-          - multidimensional poverty index
-          - equality
-          - resolution
-        - **Institutional and regulatory frameworks are the systems, rules, and standards that support and govern production.**
-          _basis: kinds, order: structure. Ordered by structure, from services to rules and standing._
-          - extension systems
-          - good laboratory practices
-          - legal status
-          - embeddedness
-        - **Social and institutional concepts describe the human, legal and welfare context that frames the outcomes of production.**
-          _basis: kinds, order: structure. Listed in structural order without ranking._
-          - food insecurity
-          - educational status
-          - legal system
-          - management strategies
-        - **This group defines the concepts that are tied to the stage of the production system, covering a cereal crop group and the Indigenous peoples who work with it.**
-          _basis: kinds, order: structure. Ordered by structure; no ranking by degree is applied._
-          - Millets and Sorghum Group
-          - Indigenous Peoples Group
-- **Technology and change cover the analysis, support, drivers and adoption of new methods in the production system.**
-  _basis: cause_effect, order: time. Drivers come first, then adoption and the tools that support it._
-  - **Drivers, support and analysis are the pressures and tools that prompt and inform change in how production is run.**
-    _basis: cause_effect, order: time. Drivers come first, then support and analysis._
-    - **Drivers and policy responses are the earliest stage, in which change pressures and commitments to act shape the production system.**
-      _basis: cause_effect, order: time. First stage: external pressures and policy commitments that precede production._
-      - anthropogenic changes
-      - climate action
-      - decarbonization
-      - ratification
-    - **Enabling technology and resource inputs are the stage in which innovations, genetic material and financing are prepared before production begins.**
-      _basis: cause_effect, order: time. Second stage: inputs and innovations made ready for use._
-      - emerging technology
-      - financial technology
-      - germplasm exchange
-      - targeting
-    - **Cross-cutting support stages organize, protect, control and sustain the whole production system rather than one step of it.**
-      _basis: cause_effect, order: time_
-      - **Cross-cutting concepts are broad sector classes, chain concepts and scientific methods that apply across the whole production system rather than one sector.**
-        _basis: kinds, order: structure. Ordered by structure, from broad sector classes to chain concepts and general methods._
-        - **Broad production-sector classes and supply-chain concepts span the whole system of plant, forest, animal and aquatic production.**
-          _basis: kinds, order: structure. Ordered by structure, from sector classes to cross-cutting chain concepts._
-          - Plant culture
-          - Forestry
-          - Animal culture
-          - Aquaculture. Fisheries. Angling
-        - **Bright spot technology and chains are concepts that each mark a distinct stage within a production system.**
-          _basis: kinds, order: structure_
-          - bright spot technology
-          - chains
-        - **Biological and technological methods apply scientific knowledge to modify organisms and materials in production.**
-          _basis: kinds, order: structure. Ordered by structure, from molecular-scale technology to broader biological applications and breeding._
-          - nanotechnology
-          - biotechnology
-          - breeding methods
-          - sustaining peace
-          - classification
-      - **Management, protection and support is the cross-cutting stage that organizes, records, protects, improves and sustains the production system as a whole.**
-        _basis: parts, order: structure. Parts of the overarching layer that runs alongside all other stages._
-        - **Organizational and information methods plan, direct, record and classify the activities of a production system.**
-          _basis: kinds, order: structure. Ordered by structure, from administration and management to mapping, navigation and analysis._
-          - administration
-          - management
-          - cartography
-          - navigation
-          - analytical methods
-        - **Support activities supply the equipment, power, training, and collaboration that sustain the production system.**
-          _basis: parts, order: structure. Ordered by structure within the support stage._
-          - equipment
-          - electrification
-          - education
-          - cooperative activities
-        - **Evaluation, evolution, innovation and traditional technology are general kinds of development and appraisal that cut across production systems.**
-          _basis: kinds, order: structure. Ordered by structure, from appraisal to change._
-          - evaluation
-          - evolution
-          - innovation
-          - traditional technology
-        - **System management covers the general activities and organizing, protecting, improving and restoring actions applied to production.**
-          _basis: kinds, order: structure. Ordered from general activities to specific management actions._
-          - activities
-          - organization
-          - improvement
-          - protection
-          - rehabilitation
-      - **Further operational practices are the protective or controlling actions and the general categories of practice that govern how operations are carried out and how hazards are limited or managed.**
-        _basis: kinds, order: structure_
-        - **Military operations, fire control, inhibition and measures are kinds of protective or controlling actions applied to limit, suppress or manage hazards.**
-          _basis: kinds, order: structure. Ordered by structure of control actions._
-          - military operations
-          - fire control
-          - inhibition
-          - measures (action)
-        - **General and overarching categories of practice describe how operations are carried out, whether conventional, formal or prohibited.**
-          _basis: kinds, order: structure. Ordered by structure, from broad generic categories to specific kinds of practice._
-          - processes
-          - techniques
-          - traditional methods
-          - illegal practices
-      - **Enabling and support stages provide the methods, technologies, participation and management that sustain and adapt the whole production system.**
-        _basis: cause_effect, order: time. Cross-cutting support throughout the cycle._
-        - **Enabling technologies are the stage that supplies new tools and process innovations used to improve production and processing.**
-          _basis: parts, order: structure. Third stage: technological enablement._
-          - new technology
-          - high pressure technology
-          - enzyme technology
-          - energy technology
-          - in vitro
-        - **Stakeholder engagement is the stage where producers and others exchange information and take part through dialogue and involvement.**
-          _basis: parts, order: structure. Fifth stage: outreach and engagement._
-          - interviews
-          - participation
-          - communication
-        - **Management and support activities sustain, enable and transform how the production system is run.**
-          _basis: kinds, order: structure. Ordered by structure from upkeep to change._
-          - maintenance
-          - engagement
-          - facilitation
-          - conversion to organic agriculture
-        - **Methodological concepts describe the ways and the combining of elements by which production work is carried out.**
-          _basis: kinds, order: structure. Ordered by structure from general to specific method._
-          - synthesis
-          - methods
-        - **Enabling approaches shape how the whole production system is organised and adapted, through change, participation and suitable technology.**
-          _basis: parts, order: structure. Ordered from institutional change to local and participatory action._
-          - organizational change
-          - multi-stakeholder processes
-          - appropriate technology
-          - locally-led action
-    - **The analytical stage covers the research, measurement and information tools used to investigate, quantify and communicate how the system performs.**
-      _basis: cause_effect, order: time. Final stage, in which performance is measured and shared._
-      - **Research and analytical activities are the methods used to investigate, measure, choose and model what happens in a production system.**
-        _basis: kinds, order: structure. Ordered by structure of the investigative workflow._
-        - research
-        - sampling
-        - selection
-        - computer programming
-      - **Measurement and standardization covers the analytical methods used to survey, quantify and standardize production processes.**
-        _basis: kinds, order: structure. Ordered from observing and measuring to standardizing._
-        - surveying
-        - statistical methods
-        - standardization
-      - **Information, assessment, and communication tools are the means used to measure, record, evaluate, and share knowledge about production.**
-        _basis: kinds, order: structure. Ordered by structure, from assessment items to communication and teaching media._
-        - valuation
-        - samples
-        - educational technology
-        - Information and Communication Technologies
-        - cinematography
-  - **Adoption and technology concepts name the technologies and the steps by which farming systems put them into practice.**
-    _basis: cause_effect, order: time. Implementation comes first, then the technologies themselves._
-    - **Implementation and scaling covers the steps that put new methods into practice and extend them to larger operations.**
-      _basis: kinds, order: structure. Ordered from putting methods into practice to scaling them up._
-      - implementation
-      - scaling up
-      - teaching methods
-      - storytelling
-    - technology
-    - geotechnology
-  - **Change, transfer and renewal describe how technologies shift, pass between users and are refreshed in farming systems.**
-    _basis: cause_effect, order: time. Change comes first, then transfer, then renewal._
-    - technological changes
-    - technology transfer
-    - renewal
-- **Outcomes and transitions cover what production delivers, the residues and effects it leaves, and the reforms that move systems onward.**
-  _basis: cause_effect, order: time. Interventions come first, then results, residues and the effects that follow._
-  - **Interventions and reform cover the deliberate actions, negotiations and institutional changes that move farming systems through transition.**
-    _basis: cause_effect, order: time. Interventions come first, then reform and transition._
-    - interventions
-    - institutional reform
-    - agroecological transition
-    - peacebuilding
-    - negotiation
-  - **Delivered results cover what production delivers, how its yields and quality are valued, and the constraints that must be balanced.**
-    _basis: cause_effect, order: time. Delivered results come first, then their valuation and constraints._
     - **The outcome stage covers what production delivers and how its yields, costs, quality and condition are measured and valued.**
       _basis: parts, order: structure. Later stage: results of production and their measurement._
       - **Outcome and human stages cover what production delivers, the people who carry it out, and residual entries outside any single stage.**
@@ -1981,24 +1276,709 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
           - unsteady state
           - dimensionless numbers
           - biomarkers
-    - **Outcome considerations are the effects and constraints that result from operating the production system and must be balanced.**
-      _basis: parts, order: structure. Outcomes are the final structural stage of the system._
-      - trade-offs
-      - impact
-      - congestion
-  - **Residues and effects cover the by-products, outputs and later conditions that remain after production operations.**
-    _basis: cause_effect, order: time. Outputs come first, then the residues and effects that follow._
-    - **Each of these concepts marks a further stage or condition that arises within a production system after its core operations have begun.**
+  - **Management and governance concepts direct production through plans, rules, institutions and knowledge tools.**
+    _basis: parts, order: structure. From management to governance._
+    - **The management stage covers the plans, rules, structures, finance and tools that direct how production is designed, governed and run.**
+      _basis: parts, order: structure. Directing stage: planning and governance guiding the other stages._
+      - **Planning and governance stages set the rules, knowledge and management direction that guide how production is organised before it begins.**
+        _basis: parts, order: structure. Ordered from rules and frameworks to knowledge and management practice._
+        - **Governance and planning frameworks set the rules and methods that guide how production is organised before it begins.**
+          _basis: kinds, order: structure. Kinds of framework that sit at the setup stage of production._
+          - rules
+          - methodology
+          - information systems
+          - cadastres
+        - **Governance and organisational concepts are kinds of framework that steer how production enterprises operate, ranked from abstract principles to concrete organisations.**
+          _basis: kinds, order: degree. Ranked from most abstract principle to most concrete organisation._
+          - policy coherence
+          - neutrality
+          - enterprises
+        - **Knowledge and learning concepts form the formal and abstract capacity that supports the production system.**
+          _basis: parts, order: structure. n/a_
+          - knowledge
+          - educational courses
+          - mathematical properties
+        - **Management and sustainability stages cover running the farm as a business and directing production toward long-term sustainable development.**
+          _basis: parts, order: structure. Farm business and sustainability stage of the production system._
+          - Farm management, rural management and agribusiness
+          - Sustainable agricultural development
+          - Sustainable Development Goals
+          - Hunting sports
+      - **The management stage covers the planning, goals, steering systems and people that direct how production is designed and run.**
+        _basis: parts, order: structure. Third stage: direction and control of production._
+        - **The management and control stage covers the goals, limits, steering mechanisms and training that direct how production is run.**
+          _basis: parts, order: structure. Arranged from objectives, to limits, to control mechanisms, to skills._
+          - management by objectives
+          - constraints
+          - steering systems
+          - curriculum
+        - **Management comprises the systems, group arrangements and decision rules used to steer production.**
+          _basis: parts, order: structure. Management acts on the process after conditions are set._
+          - economic systems
+          - mating systems
+          - group size
+          - selection index
+          - economic thresholds
+        - **Planning and design is the early stage in which feasibility is assessed and prototypes and infrastructure are developed.**
+          _basis: parts, order: structure. Parts of the planning stage in order of structure._
+          - feasibility studies
+          - prototypes
+          - infrastructure
+        - **Human factors are the people and the social and psychological aspects involved in running the production system.**
+          _basis: parts, order: structure. Parts of the human side of production in order of structure._
+          - employment
+          - engineers
+          - psychological factors
+      - **Organizing and guiding concepts are the plans, structures, monitoring tools, entitlements and knowledge through which production is arranged and governed.**
+        _basis: kinds, order: structure. Ordered by structure from planning and organization to regulation and knowledge._
+        - **Monitoring and regulatory concepts are the tools and entitlements that guide, warn about or formally govern production.**
+          _basis: kinds, order: structure. Ordered by structure from alert tools to rights and values to quantitative effects._
+          - warning systems
+          - legal rights
+          - value systems
+          - multipliers
+        - **Organizational concepts are the planned undertakings and formal structures through which production activity is arranged and carried out.**
+          _basis: kinds, order: structure. Listed from planning to the resulting structures and entities._
+          - plans
+          - projects
+          - structures
+          - entities
+        - **Knowledge and communication concepts are the forms of information and learning that support understanding of the production system.**
+          _basis: kinds, order: structure. Listed from raw information to educational and disciplinary forms._
+          - information
+          - educational resources
+          - humanities
+          - languages
+          - labels
+        - **Organizational and planning concepts describe how a production system is arranged and carried out, including systems, distribution, strategies, approaches and stages.**
+          _basis: kinds, order: structure. Ordered from the overall system to distribution, then to the plans and the stages._
+          - systems
+          - distribution systems
+          - strategies
+          - approaches
+      - **Governance and finance are the economic drivers, funds, thresholds, rules and institutions that steer production and judge its economic results.**
+        _basis: kinds, order: degree. Ranked from direct financial resources and drivers to the broader legal and institutional frameworks._
+        - **Financial resources are the capital, credit and obligations that fund production and measure its economic results.**
+          _basis: kinds, order: structure. Ordered by structure, from sources of funds to obligations and returns._
+          - loans
+          - equity
+          - liabilities
+          - return on investment
+        - **Economic factors are the financial drivers and returns that motivate producers and shape what they invest in and earn.**
+          _basis: kinds, order: structure. Ordered by structure, from motivating drivers to the returns and costs of capital._
+          - incentives
+          - income
+          - interest rates
+          - interest groups
+        - **Economic and risk thresholds describe the monetary values and limits used to judge the outcomes of production and its hazards.**
+          _basis: kinds, order: structure. Ordered by structure, from financial position to hazard thresholds._
+          - financial situation
+          - economic value
+          - economic injury levels
+          - bioaccumulation factor
+        - **Governance and legal instruments are the rules, permissions and rights that regulate how production is carried out.**
+          _basis: kinds, order: structure. Ordered by structure, from general rules to specific permissions and rights holders._
+          - legislation
+          - licences
+          - landowners
+        - **Institutional and knowledge frameworks are the bodies, disciplines, legal sources and conventions that organise and govern production.**
+          _basis: kinds, order: structure. Ordered by structure, from the organisations themselves to the knowledge and rules they use._
+          - organizations
+          - sciences
+          - source of law
+          - abbreviations
+    - **Governance and knowledge concepts cover the institutions, rules, rights and tools that inform, regulate and monitor production.**
+      _basis: parts, order: structure. Ordered from institutions to rules to oversight tools._
+      - **Governance and institutional concepts are the organizations, instruments, policies and supporting professionals that administer, regulate and inform production.**
+        _basis: kinds, order: structure. Ordered by structure from organizations to formal instruments to policy._
+        - **Organizational bodies that administer, coordinate and oversee activities within the production system.**
+          _basis: kinds, order: structure. Ordered structurally from broad institutions to specific governing units._
+          - educational systems
+          - agencies
+          - boards (organization)
+          - bodies
+        - **Formal instruments and administrative units that regulate and direct conduct in the production system.**
+          _basis: kinds, order: structure. Ordered structurally from administrative units to the rules they issue._
+          - bureaus
+          - committees
+          - agreements
+          - guidelines
+        - **Formal organizations and institutional bodies that structure collective activity, from broad institutions to specific units.**
+          _basis: kinds, order: structure. Ordered by structure, from broad institutions to specific units._
+          - institutions
+          - branches (enterprise)
+          - unions
+          - society
+        - **Planned initiatives, legal instruments and professionals that support and regulate agricultural work.**
+          _basis: kinds, order: structure. Ordered by structure, from plans to instruments to practitioners._
+          - programmes
+          - patents
+          - technicians
+          - pharmacists
+        - **Policy and institutional elements are the governing and advisory arrangements that regulate and inform production.**
+          _basis: kinds, order: structure. Ordered from political systems to policies to expert input._
+          - political systems
+          - policies
+          - independent experts
+          - production factors
+          - production structure
+      - **The knowledge and governance stage covers the people, systems, rules and rights that inform and regulate production.**
+        _basis: parts, order: structure. Parts of the supporting stage, arranged from knowledge actors to formal rules._
+        - **The actor and knowledge stage covers the people and systems that generate and record knowledge used in production.**
+          _basis: kinds, order: structure. Ordered from individual people to the systems and measures that connect them._
+          - scientists
+          - archivists
+          - innovation systems
+          - human development index
+        - **The regulation and access stage covers the formal rules, registrations and rights that govern who may produce and trade.**
+          _basis: kinds, order: structure. Ordered from formal identification to the economic cost of access._
+          - registration
+          - trade marks
+          - rent
+          - affordability
+        - **Knowledge and learning actors are the people and systems that generate, study and transmit information supporting the production system.**
+          _basis: parts, order: structure. Ordered by structure from the people involved to the systems and disciplines they work within._
+          - students
+          - teachers
+          - research systems
+          - statistics as science
+        - **Rules and legal arrangements are the formal standards and rights that regulate access to and conduct within the production system.**
+          _basis: parts, order: structure. Ordered by structure from the officials and standards to the rights they secure._
+          - notary
+          - standards
+          - tenure
+      - **Oversight-stage concepts cover the institutions, rules, units and tools used to coordinate, measure, observe and respond to the production system.**
+        _basis: cause_effect, order: time. Final stage: governance, measurement and feedback across the system._
+        - **Monitoring and measurement tools are the indices, scales and analytical categories used to observe, classify and compare conditions across the system.**
+          _basis: parts, order: structure. Monitoring follows the operations it assesses._
+          - extreme values
+          - temporal variations
+          - classification systems
+          - vegetation index
+        - **Organisation, support and strategy are the institutions, groups and plans that coordinate, train and enable actors in the production system.**
+          _basis: parts, order: structure. Organisation and support frame the system as a whole._
+          - rural development strategies
+          - self-help groups
+          - telecentres
+          - training strategies
+          - stakeholders
+        - **Observation and response concepts are the ways of watching, describing and responding to the system.**
+          _basis: kinds, order: structure. Ordered by position within the stage._
+          - monitoring systems
+          - awareness
+          - vulnerable groups
+          - shape
+        - **Governance and social concepts describe the rules, rights and communication that shape how production is regulated and shared.**
+          _basis: kinds, order: structure. Ordered by structure from authority to rules and communication._
+          - sovereignty
+          - penalties
+          - communication strategies
+          - Gender Development Index
+    - **The actor and support stage covers the people, places, institutions and storage and knowledge functions that surround and sustain production.**
+      _basis: parts, order: structure. Surrounding stage: context and support beyond the core production steps._
+      - **The post-production and support stage covers storage periods, supporting institutions and the knowledge that records and communicates what is known about production.**
+        _basis: parts, order: structure. Final stage: what follows and surrounds production._
+        - **Time-related handling concepts cover the post-production period during which products are held and kept.**
+          _basis: kinds, order: structure. Kinds of time-related handling, ordered by structure._
+          - storage time
+          - duration
+          - hospitals
+          - exhibitions
+        - **Institutional and locational concepts describe the places, services and shared resources that support and surround production.**
+          _basis: kinds, order: structure. Kinds of institutional or locational context, ordered by structure._
+          - epicentres
+          - public goods
+          - Denmark
+          - computer software
+        - **Knowledge covers the vocabulary and institutions that record and communicate what is known about production.**
+          _basis: parts, order: structure. Knowledge is the final stage, documenting the system._
+          - terminology
+          - museums
+        - **Inputs are the resources, materials and environments that a production system draws upon to operate.**
+          _basis: parts, order: structure. Inputs are the first stage of the production system._
+          - economic resources
+          - raw materials
+          - ecosystems
+          - world
+          - stumpage value
+        - **The production setting stage covers the natural and physical conditions and sites within which production takes place.**
+          _basis: parts, order: structure. Arranged from broad climate zones to specific sites and time available._
+          - climatic zones
+          - available days
+          - recreational areas
+          - landing sites
+      - **Actor and context concepts are the people, social frameworks, places and money flows that take part in or surround production.**
+        _basis: kinds, order: structure. Ordered by structure from people to social frameworks to financial context._
+        - **Financial and economic measures describe the money flows and macroeconomic conditions that affect the production system.**
+          _basis: kinds, order: structure. Ordered by structure from spending to wider economic conditions._
+          - expenditure
+          - economic situation
+          - exchange rate
+          - liquidity
+        - **Human actors and social frameworks are the people, groups and rules that take part in or shape the production system and its products.**
+          _basis: kinds, order: structure. Ordered by structure from observers to users to norms._
+          - surveyors
+          - sociologists
+          - consumers
+          - low income groups
+        - **People and places of fishing and emergency work form the human and spatial base of the production system.**
+          _basis: kinds, order: structure. Ordered by structure, from workers to the places and time associated with them._
+          - fishers
+          - fishing areas
+          - firefighters
+          - free time
+        - **Actor and population concepts are the people and groups who take part in or are served by the production system.**
+          _basis: kinds, order: structure. Listed from individual participants to whole populations._
+          - subjects
+          - tenants
+          - population
+        - **Contextual concepts are the external settings, obligations and occurrences within which the production system operates.**
+          _basis: kinds, order: structure. Listed from broad geographic setting to specific occurrences._
+          - countries
+          - liability
+          - events
+      - **People, places and heritage are the actors, locations and protected settings in which agricultural production is carried out.**
+        _basis: parts, order: structure. Ordered from the people involved to the places, protected heritage and wider settings._
+        - **Actors and human resources are the people and social units who carry out, manage, or consume the outputs of production.**
+          _basis: kinds, order: structure. Kinds of human actors, listed by structure._
+          - households
+          - housewives
+          - physicians
+          - human resources
+          - entrepreneurs
+        - **Places and protected landscape settings are the geographic regions and conserved areas and heritage in which production takes place.**
+          _basis: kinds, order: structure. Kinds of places and settings, listed by structure._
+          - Baltic States
+          - rural conditions
+          - Iceland
+          - green belts
+        - **Cultural heritage and protected areas are safeguarded resources that sit beyond the core production stages and shape how agricultural production systems are managed and sustained.**
+          _basis: kinds, order: structure_
+          - cultural heritage
+          - protected areas
+        - **Settings and environments describe the places and conditions in which agrifood production and food access take place.**
+          _basis: kinds, order: structure. Ordered by structure, from the broad system down to specific places and conditions._
+          - agrifood systems
+          - human settlements
+          - food swamps
+          - less favoured areas
+          - precipitation intensity
+  - **Operation and people concepts describe how production is run and by whom.**
+    _basis: parts, order: structure. From operations to people._
+    - **Operation and measurement concepts cover how production is run, the conditions and biological states during it, and the indicators used to track performance.**
+      _basis: parts, order: structure. Ordered from management to conditions to measures._
+      - **Production operation concepts describe the management, living organisms and quantitative measures through which production is run, monitored and assessed.**
+        _basis: kinds, order: structure. Ordered by structure from management to organism state to measurement._
+        - **Production management and measures cover the people, systems and quantities used to run and monitor production operations.**
+          _basis: kinds, order: structure. Ordered by structure, from the people who manage to the systems and measures they use._
+          - managers
+          - quality management systems
+          - life cycle
+          - livestock numbers
+          - mass
+        - **Concepts describing the physiological state, capacity and feeding conditions of living organisms in production.**
+          _basis: kinds, order: structure. Ordered from biological condition to feeding behaviour._
+          - maternity
+          - meal patterns
+          - hypoxia
+          - ability
+        - **Measurable properties and quantitative concepts used to describe, convert and assess biological or physical states.**
+          _basis: kinds, order: structure. Ordered by structure, from general concepts to specific measures._
+          - conversion factors
+          - equilibrium
+          - chlorophyll content
+          - pesticidal properties
+      - **The operating stage covers the physical conditions, product states and organism populations present while production is under way.**
+        _basis: parts, order: structure. Parts of the growing stage, arranged from physical conditions to the organisms and product._
+        - **Pressure and azimuth are measurable physical quantities that describe conditions and orientation at a given stage of the production system.**
+          _basis: kinds, order: structure_
+          - pressure
+          - azimuth
+        - **The product and condition stage covers the attributes and states of the product and of the land during the production cycle.**
+          _basis: kinds, order: structure. Ordered from product attributes to the natural states of the production system._
+          - quality
+          - safety
+          - trophic state
+          - seasons
+        - **Population and pest dynamics concepts describe the status, composition and grouping of organisms within a production system during its operation.**
+          _basis: kinds, order: structure. Ordered by structure from population composition to pest status._
+          - pest status
+          - sex ratio
+          - organism aggregations
+        - **Environmental conditions and pressures are the physical factors and responses that act on organisms during the growing stage of the production system.**
+          _basis: cause_effect, order: time. Ordered in time from the conditions and stimuli that act first to the stress that results._
+          - temperature
+          - temperature profiles
+          - stimuli
+          - stress
+        - **Atmospheric and physical environment conditions are measurable factors of weather and soil water that influence production.**
+          _basis: kinds, order: structure. Ordered by structure from atmospheric to soil conditions._
+          - hygrometry
+          - irradiance
+          - infiltration rate
+          - visibility
+      - **Operation-stage concepts cover the technical practices, housing, feeding and biological states that determine how output is produced during rearing or growing.**
+        _basis: cause_effect, order: time. Third stage: the active production process itself._
+        - **Biological process states are physiological or developmental conditions of animals and colonies that affect how production proceeds.**
+          _basis: kinds, order: structure. Ordered by structure: the in-process stage of production._
+          - queenrightness
+          - prepatent period
+          - anoestrus
+          - disabilities
+        - **Production operations and biological processes are the technical practices and physiological factors that determine how output is produced and captured.**
+          _basis: parts, order: structure. Operations follow the setting and inputs._
+          - gear selectivity
+          - metabolic rate
+          - oil in water content
+        - **Production management concepts describe how animals are housed, fed and supplied during the rearing or growing stage.**
+          _basis: kinds, order: structure. Ordered by structure from housing to feeding and supply._
+          - animal place
+          - feeding rate
+          - availability
+          - propulsion systems
+      - **Production-stage measures are the indicators, rates and timings used to track how crops, livestock and fish stocks develop and perform during production.**
+        _basis: parts, order: structure. Ordered from conditions and timings to growth, rate and analytical measures._
+        - **Biological and temporal stage measures are the developmental periods and timings that mark how production progresses.**
+          _basis: kinds, order: structure. Ordered by structure, from developmental periods to daily timing._
+          - egg incubation period
+          - phyllochron
+          - flushing time
+          - times of the day
+        - **Crop growth and development measures describe how planting material develops and performs through the crop cycle.**
+          _basis: kinds, order: structure. Ordered from seed renewal through maturation to yield and water use._
+          - seed replacement rate
+          - days to maturity
+          - yield potential
+          - transpiration ratio
+        - **Measures and parameters used during production describe the state, response and condition of crops, livestock and fish stocks.**
+          _basis: kinds, order: structure. Listed from system-level states to stock and animal measures._
+          - steady state
+          - yield response factor
+          - catch at age
+          - body condition scoring
+          - ventilation rate
+        - **Analytical and capacity measures are the statistical and demographic quantities used to assess production performance and its uncertainty.**
+          _basis: kinds, order: structure. Ordered by structure, from statistical tools to capacity measures._
+          - quantiles
+          - uncertainty
+          - population factors
+          - fishing power
+      - **Further production measures cover the conditions under which production takes place and the speed and duration of processes within the production system.**
+        _basis: kinds, order: structure_
+        - **Process rates and disease measures quantify how fast things pass through or spread within a system and how long effects last.**
+          _basis: kinds, order: structure. Ordered from filtration to infection spread to persistence._
+          - filtration rate
+          - coefficient of infection
+          - permanence
+        - **Environmental and condition indicators measure the physical, biological and health conditions under which production takes place.**
+          _basis: kinds, order: structure. Listed in structural order without ranking._
+          - salt flux
+          - drought index
+          - biotic indices
+          - disease severity
+    - **The operation stage covers the living processes, farm operations, infrastructure and pressures through which production is actually carried out.**
+      _basis: parts, order: structure. Middle stage: production as it is run and the conditions acting on it._
+      - **Process stages cover the living organisms, their characteristics, development and stress conditions in which production itself takes place.**
+        _basis: parts, order: structure. Ordered from biological components to their traits, development and disturbances._
+        - **Biological and ecological components are the living and natural elements in which the production process itself takes place.**
+          _basis: kinds, order: structure. Kinds of biological element involved in the process stage._
+          - microbiomes
+          - queenlessness
+          - biodiversity hotspots
+          - fossils
+        - **Biological and reproductive measures describe the stages through which living production stock develops over time.**
+          _basis: cause_effect, order: time. n/a_
+          - incubation period
+          - conception rate
+          - gonadosomatic index
+          - basic reproduction number
+          - blue whale unit
+        - **Intrinsic biological, physical and genetic characteristics describe the organisms and materials being produced.**
+          _basis: parts, order: structure. Ordered from general properties to specific genetic and health traits._
+          - biological properties
+          - chemicophysical properties
+          - chromosome number
+          - specific pathogen free state
+        - **Physiological stress conditions are the health disturbances that can arise in the organisms during production and disrupt the process.**
+          _basis: kinds, order: structure. Kinds of stress condition arising during the process stage._
+          - hypothermia
+          - ischaemia
+          - heart rate
+          - Lithuania
+      - **The operation stage covers the cropping arrangements, water systems and biological processes and conditions through which output is actually produced.**
+        _basis: parts, order: structure. Second stage: the active production process._
+        - **The production operation stage covers the cropping arrangements and biological processes through which output is actually produced.**
+          _basis: parts, order: structure. Arranged from cropping design to the interventions and growth that follow._
+          - cropping systems
+          - cropping patterns
+          - growth rate
+          - anaesthesia
+        - **Biological development and condition concepts describe the growth, life-cycle phase and state of the organisms being produced.**
+          _basis: kinds, order: structure. Kinds of biological state, ordered by structure._
+          - developmental stages
+          - dormancy
+          - body condition
+          - litter size
+        - **Production conditions are the physical, chemical and biological states that determine how well plants, animals and environments perform.**
+          _basis: parts, order: structure. Conditions follow inputs and shape the production process._
+          - osmotic potential
+          - ion exchange capacity
+          - nutritional status
+          - pollutant load
+        - **Water infrastructure and management covers the physical systems and schemes that supply, apply and remove water in production.**
+          _basis: kinds, order: structure. Kinds of water system, arranged from supply to drainage._
+          - drinking water systems
+          - drainage systems
+          - irrigation systems
+          - irrigation schemes
+          - irrigation rates
+      - **Process-stage concepts describe how production is run on the farm, from operations and physical flows to installed infrastructure and harvest limits.**
+        _basis: kinds, order: structure. Ordered by structure from farm operations to physical conditions, installed systems and harvest controls._
+        - **Farm operation concepts describe how production is organised, fed and counted on the farm during the production stage.**
+          _basis: kinds, order: structure. Ordered by structure from system to farm-level measures._
+          - farming systems
+          - feeding systems
+          - farm numbers
+          - farm results
+        - **Physical and flow conditions describe the material states and forces acting within the production process.**
+          _basis: kinds, order: structure. Ordered by structure, from material state to applied forces and flow._
+          - colloidal state
+          - saturation
+          - mechanical loads
+          - flow rate
+        - **Physical infrastructure and monitoring systems are installed at the production site to anchor, observe and regulate operations.**
+          _basis: parts, order: structure. Ordered from anchoring hardware to monitoring and control._
+          - mooring systems
+          - buoy systems
+          - surveillance systems
+          - control systems
+        - **Harvest management measures set how much is taken from the stock and how often during the harvesting stage.**
+          _basis: parts, order: structure. Ordered from stock-level limits to harvest timing._
+          - total allowable catch
+          - yield-per-recruit
+          - harvesting frequency
+          - rights of nature
+          - sociocultural systems
+      - **External conditions and pressures are the environmental, physiological and human-made forces that act on production from outside the system.**
+        _basis: kinds, order: degree. Ranked from broad natural conditions through physiological stress on organisms to human-made burdens._
+        - **Natural environmental conditions form the outside context that sets the physical limits within which agricultural production takes place.**
+          _basis: kinds, order: structure. Ordered by structure, from the broad natural system down to specific climatic and biotic conditions._
+          - nature
+          - ocean-atmosphere system
+          - insolation
+          - vapour pressure deficit
+        - **Physical and physiological conditions are environmental and biological variables that act on plants and animals during production.**
+          _basis: kinds, order: structure. Kinds of physical and physiological conditions, listed by structure._
+          - wavelength
+          - respiration rate
+          - humidity
+          - hyperthermia
+        - **Human and environmental pressures describe the external influences and waste burdens that people place on a production system.**
+          _basis: kinds, order: structure. Ordered by structure, from social pressures to resulting contamination._
+          - population pressure
+          - anthropogenic factors
+          - squatters
+          - landfills
+    - **People and organization concepts cover the individuals, groups, sites and social arrangements through which production is carried out and its context shaped.**
+      _basis: parts, order: structure. Ordered from individual participants to social arrangements to wider context._
+      - **Human participants are the individuals, social units and informal collectives that carry out, use or receive the results of production.**
+        _basis: kinds, order: structure. Ordered by structure from individuals to social units to informal collectives._
+        - **Concepts naming the people and personal attributes found among those who take part in a production system.**
+          _basis: kinds, order: structure. Ordered from individual attributes to occupational roles._
+          - individuals
+          - nationality
+          - medical auxiliaries
+          - merchants
+        - **People and social units who carry out, use or receive the results of production activities.**
+          _basis: kinds, order: structure. Ordered structurally from individual actors to collective social units._
+          - land practitioners
+          - patients
+          - communities
+          - groups
+        - **Informal or community-based collectives of people who join together for shared purposes or temporary tasks.**
+          _basis: kinds, order: structure. Ordered by structure, from local groups to linked collectives._
+          - local groups
+          - savings groups
+          - task forces
+          - networks
+        - **Socioeconomic and demographic indicators describe the human population and the economic distribution surrounding production.**
+          _basis: kinds, order: structure. Ordered from population measures to economic measures._
+          - gender parity
+          - Gini index
+          - population structure
+          - prices
+          - socioecological systems
+      - **Setting-stage concepts cover the people, sites and social arrangements through which production is organized and carried out.**
+        _basis: cause_effect, order: time. Second stage: who produces and where, once inputs are in place._
+        - **Economic and human actors or models are the people, flows and theoretical modes tied to production and consumption.**
+          _basis: kinds, order: structure. Ordered by structure from economic flows to people._
+          - balance of payments
+          - baroclinic mode
+          - vegetarians
+          - veterinarians
+        - **Production actors are the people who own, manage or carry out production in farming, beekeeping, aquaculture and shipping.**
+          _basis: kinds, order: structure. Ordered by structure: the agents who run the system._
+          - beekeepers
+          - aquaculturists
+          - shipowners
+        - **Production sites and labor organization describe where production takes place and how work is arranged and timed.**
+          _basis: kinds, order: structure. Ordered by structure: the setting and labor arrangements of production._
+          - wilderness areas
+          - apiaries
+          - work teams
+          - working hours
+        - **Production systems and the places and social arrangements around them are where production is carried out.**
+          _basis: kinds, order: structure. Ordered by position within the stage._
+          - production systems
+          - whaling stations
+          - caste systems
+          - time use patterns
+      - **Human and institutional context is made up of the actors, rules and social outcomes that surround production and its markets.**
+        _basis: parts, order: structure. Ordered from actors to institutions to social outcomes._
+        - **Actors are the people and parties who take part in, watch, or compete within production and its markets.**
+          _basis: kinds, order: structure. Ordered by structure, from observers to household roles._
+          - observers
+          - househusbands
+          - competitors
+          - child advocacy
+        - **Market actors and social outcome measures describe who sells production and how well its benefits are shared.**
+          _basis: kinds, order: structure. Listed from market actors to social outcome measures._
+          - fish vendors
+          - multidimensional poverty index
+          - equality
+          - resolution
+        - **Institutional and regulatory frameworks are the systems, rules, and standards that support and govern production.**
+          _basis: kinds, order: structure. Ordered by structure, from services to rules and standing._
+          - extension systems
+          - good laboratory practices
+          - legal status
+          - embeddedness
+        - **Social and institutional concepts describe the human, legal and welfare context that frames the outcomes of production.**
+          _basis: kinds, order: structure. Listed in structural order without ranking._
+          - food insecurity
+          - educational status
+          - legal system
+          - management strategies
+        - **This group defines the concepts that are tied to the stage of the production system, covering a cereal crop group and the Indigenous peoples who work with it.**
+          _basis: kinds, order: structure. Ordered by structure; no ranking by degree is applied._
+          - Millets and Sorghum Group
+          - Indigenous Peoples Group
+  - **Cross-cutting management and support practices organise, protect and sustain the whole production system.**
+    _basis: parts, order: structure. From management to protective and enabling support._
+    - **Management, protection and support is the cross-cutting stage that organizes, records, protects, improves and sustains the production system as a whole.**
+      _basis: parts, order: structure. Parts of the overarching layer that runs alongside all other stages._
+      - **Organizational and information methods plan, direct, record and classify the activities of a production system.**
+        _basis: kinds, order: structure. Ordered by structure, from administration and management to mapping, navigation and analysis._
+        - administration
+        - management
+        - cartography
+        - navigation
+        - analytical methods
+      - **Support activities supply the equipment, power, training, and collaboration that sustain the production system.**
+        _basis: parts, order: structure. Ordered by structure within the support stage._
+        - equipment
+        - electrification
+        - education
+        - cooperative activities
+      - **Evaluation, evolution, innovation and traditional technology are general kinds of development and appraisal that cut across production systems.**
+        _basis: kinds, order: structure. Ordered by structure, from appraisal to change._
+        - evaluation
+        - evolution
+        - innovation
+        - traditional technology
+      - **System management covers the general activities and organizing, protecting, improving and restoring actions applied to production.**
+        _basis: kinds, order: structure. Ordered from general activities to specific management actions._
+        - activities
+        - organization
+        - improvement
+        - protection
+        - rehabilitation
+    - **Further operational practices are the protective or controlling actions and the general categories of practice that govern how operations are carried out and how hazards are limited or managed.**
       _basis: kinds, order: structure_
-      - bloom
-      - hysteresis
-      - disasters
-    - **Production outputs and mechanisms are kinds of measures and actors describing what is produced and how actions and relationships operate.**
-      _basis: kinds, order: structure. Ordered from measured output to acting parties and relations._
-      - dry matter
-      - mode of action
-      - agents
-      - interorganizational relationships
+      - **Military operations, fire control, inhibition and measures are kinds of protective or controlling actions applied to limit, suppress or manage hazards.**
+        _basis: kinds, order: structure. Ordered by structure of control actions._
+        - military operations
+        - fire control
+        - inhibition
+        - measures (action)
+      - **General and overarching categories of practice describe how operations are carried out, whether conventional, formal or prohibited.**
+        _basis: kinds, order: structure. Ordered by structure, from broad generic categories to specific kinds of practice._
+        - processes
+        - techniques
+        - traditional methods
+        - illegal practices
+    - **Enabling and support stages provide the methods, technologies, participation and management that sustain and adapt the whole production system.**
+      _basis: cause_effect, order: time. Cross-cutting support throughout the cycle._
+      - **Enabling technologies are the stage that supplies new tools and process innovations used to improve production and processing.**
+        _basis: parts, order: structure. Third stage: technological enablement._
+        - new technology
+        - high pressure technology
+        - enzyme technology
+        - energy technology
+        - in vitro
+      - **Stakeholder engagement is the stage where producers and others exchange information and take part through dialogue and involvement.**
+        _basis: parts, order: structure. Fifth stage: outreach and engagement._
+        - interviews
+        - participation
+        - communication
+      - **Management and support activities sustain, enable and transform how the production system is run.**
+        _basis: kinds, order: structure. Ordered by structure from upkeep to change._
+        - maintenance
+        - engagement
+        - facilitation
+        - conversion to organic agriculture
+      - **Methodological concepts describe the ways and the combining of elements by which production work is carried out.**
+        _basis: kinds, order: structure. Ordered by structure from general to specific method._
+        - synthesis
+        - methods
+      - **Enabling approaches shape how the whole production system is organised and adapted, through change, participation and suitable technology.**
+        _basis: parts, order: structure. Ordered from institutional change to local and participatory action._
+        - organizational change
+        - multi-stakeholder processes
+        - appropriate technology
+        - locally-led action
+- **Change, policy and technology steps put new methods and reforms into practice and shape how the system evolves.**
+  _basis: cause_effect, order: time. From drivers of change to implementation and renewal._
+  - **Drivers and implementation are the pressures and steps that start and extend change in the system.**
+    _basis: cause_effect, order: time. From drivers to implementation._
+    - **Drivers and policy responses are the earliest stage, in which change pressures and commitments to act shape the production system.**
+      _basis: cause_effect, order: time. First stage: external pressures and policy commitments that precede production._
+      - anthropogenic changes
+      - climate action
+      - decarbonization
+      - ratification
+    - **Implementation and scaling covers the steps that put new methods into practice and extend them to larger operations.**
+      _basis: kinds, order: structure. Ordered from putting methods into practice to scaling them up._
+      - implementation
+      - scaling up
+      - teaching methods
+      - storytelling
+    - interventions
+    - institutional reform
+    - agroecological transition
+  - **Technology and renewal cover the technologies, their transfer and the changes they bring to the system.**
+    _basis: cause_effect, order: time. From technology to transfer and renewal._
+    - technology
+    - geotechnology
+    - technological changes
+    - renewal
+    - technology transfer
+- **Process outputs, residues and relations are the flows and results accounted for as the system operates.**
+  _basis: kinds, order: structure. From flows to residues and outcomes._
+  - **Process outputs and relations are the flows, residues and interactions that arise and are accounted for while a system operates.**
+    _basis: cause_effect, order: time. Ordered from substances moving through the system to the accounting of them._
+    - **Flows and residues are the substances that move through, dissolve in, or are released from a system during processing.**
+      _basis: kinds, order: structure. Ordered by structure, from dissolved substances to settled residues._
+      - solutes
+      - exudates
+      - sediment
+      - unsaponifiable materials
+    - **Relations and accounting concepts describe how components of the production system interact and how its quantities are tracked.**
+      _basis: parts, order: structure. Ordered by structure, from relations to quantitative accounting._
+      - plant soil relations
+      - mass balances
+  - **Residues and outcomes are the by-products, results and constraints that remain or emerge after production operations have taken place.**
+    _basis: kinds, order: structure. Kinds are distinguished by structure, from physical residues to measured outputs and balancing considerations._
     - **Process residues are the by-products, digestive contents and contaminating layers that remain after processing or digestion.**
       _basis: parts, order: structure. Residues are the output stage following processing._
       - wastes
@@ -2006,9 +1986,27 @@ Group of stages. Basis: cause_effect. Dimension: the stage of the production sys
       - stomach content
       - surface films
       - ballast
-    - digesta
+    - **Production outputs and mechanisms are kinds of measures and actors describing what is produced and how actions and relationships operate.**
+      _basis: kinds, order: structure. Ordered from measured output to acting parties and relations._
+      - dry matter
+      - mode of action
+      - agents
+      - interorganizational relationships
+    - **Outcome considerations are the effects and constraints that result from operating the production system and must be balanced.**
+      _basis: parts, order: structure. Outcomes are the final structural stage of the system._
+      - trade-offs
+      - impact
+      - congestion
+    - **Each of these concepts marks a further stage or condition that arises within a production system after its core operations have begun.**
+      _basis: kinds, order: structure_
+      - bloom
+      - hysteresis
+      - disasters
+  - human-wildlife relations
+  - peacebuilding
+  - negotiation
 
 ## Checks
 
 - minto_check: clean
-- field_check holds: False — P5 Farming systems is a catch-all (taxonomic groups, peacebuilding, digesta, technology), and P3 holds post-harvest items, so pillars overlap and are not distinct stages.
+- field_check holds: False — Pillars overlap (health, products and production practice) and P5 is a catch-all mixing planning, policy, people, residues and peacebuilding; not distinct values of one dimension.
