@@ -44,6 +44,7 @@ Rules you must follow exactly:
 14. Forbidden at every level (pillar, section, subsection): catch-all or residual nodes ("other", "general", "miscellaneous", "related topics", "reference", "methods and general works", "frameworks"), and nodes that copy a library or industry catalogue class (LCC, NAICS, ISIC, IEEE topic lists, "not elsewhere classified"). Every pillar must be a distinct value of ONE dimension; do not mix dimensions (e.g. stages with themes, functions with industry sectors, scale with kinds of thing). If an item fits nowhere, rethink the dimension rather than adding a bucket. Generic leaf items (e.g. "General", "Other ... not elsewhere classified") should be put in "retired".
 7. Pillar statements must restate the key-line dimension: each names its own value of the dimension (e.g. "Practice is ...").
 8. basis is cause_effect (order must be time), parts (order must be structure) or kinds (order structure, or degree with a rank_note). rank_note is one sentence explaining the order.
+15. "method_line" is a node outside the key line (same shape as a pillar). When the input gives no fixed key line, leave its members and sections empty unless items are about how the discipline is studied, taught or recorded. "routed": ids of items that belong to another field (usually empty).
 Call the tool record_pyramid exactly once."""
 
 SEC = {"type": "object", "additionalProperties": False,
@@ -68,13 +69,16 @@ SCHEMA = {"type": "object", "additionalProperties": False,
                          "rewrites": {"type": "array", "items": {"type": "object", "additionalProperties": False, "properties": {"id": {"type": "string"}, "statement": {"type": "string"}}, "required": ["id", "statement"]}},
                          "retired": {"type": "array", "items": {"type": "string"}},
                          "dissolve": {"type": "array", "items": {"type": "string"}},
+                         "method_line": PIL,
+                         "routed": {"type": "array", "items": {"type": "string"}},
                          "merge": {"type": "array", "items": {"type": "object", "additionalProperties": False, "properties": {"keep": {"type": "string"}, "drop": {"type": "string"}}, "required": ["keep", "drop"]}}},
-          "required": ["merge", "dissolve", "rewrites", "retired", "governing_thought", "dimension", "plural_noun", "basis", "order", "rank_note", "situation", "complication", "question", "pillars"]}
+          "required": ["method_line", "routed", "merge", "dissolve", "rewrites", "retired", "governing_thought", "dimension", "plural_noun", "basis", "order", "rank_note", "situation", "complication", "question", "pillars"]}
 CHECK_SYSTEM = """You check a classification pyramid from the top down (Minto key-line test).
 key_line_holds is true when ALL of these are true: (a) the governing thought names one dimension intrinsic to the field (for example what the knowledge is about, the role a piece of knowledge plays, a causal link, scale, stage or theme) and answers the question how the field divides; (b) there are 2-5 pillars and each is a distinct value of that one dimension; (c) together the pillars cover the field, and no pillar is a catch-all; (d) each pillar statement restates its own value of the dimension; (e) no pillar or section is organised by a library, catalogue or code scheme.
 Judge (a)-(e) on the governing thought, the pillars and their direct sections only. Do NOT set key_line_holds false because of individual misplaced items deeper down; count those in misplaced instead.
 misplaced: the number of second- or third-level items that clearly belong under a different pillar.
 Field-specific facts: in information science (IS) and library science, classification schemes, thesauri and catalogues are the subject matter itself, so a section about named schemes is legitimate there. In any field, a pillar for the discipline studied as a human activity (its history, teaching, methodology and profession) is a legitimate value when the dimension is the role the knowledge plays; judge it by whether its members fit that value.
+The method line sits outside the key line and holds how the discipline is studied, taught and recorded; it is not a pillar and not a catch-all if its items fit that description. Routed items belong to another field and are not judged here.
 Ids like P1.2 are neutral positions, not codes. Leaf topic names come from published sources and cannot be renamed.
 note: one sentence, at most twenty-five words: the worst key-line problem if key_line_holds is false, otherwise the worst misplaced items by position.
 Call the tool record_check exactly once."""
@@ -83,6 +87,9 @@ CHECK_SCHEMA = {"type": "object", "additionalProperties": False,
 
 EXPAND = re.compile(BAN.pattern + r"|\bcontainer|classifications?\b|\bcategories\b", re.I)
 PRE_RETIRED = []
+FIXED = {}
+FIXED_MODE = [False]
+ATTEMPTS = [6]
 LOG = Path("/workspace/minto_pass.log")
 
 
@@ -114,7 +121,7 @@ class Budget:
     def __init__(self, field, field_cap, stage_cap):
         cap_file = Path("/workspace/minto_stage_cap")
         if cap_file.exists():
-            stage_cap = min(28.0, float(cap_file.read_text().strip()))  # Chris approved $28 hard cap
+            stage_cap = min(50.0, float(cap_file.read_text().strip()))  # Chris approved $50 hard stage cap (13 Oct, 1:23 PM)
         self.field, self.field_cap, self.stage_cap, self.used = field, field_cap, stage_cap, 0.0
 
     def call(self, system, user, tool, schema, max_tokens):
@@ -288,6 +295,12 @@ def validate(r, ids, leaf_ids=(), all_group_ids=()):
             seen.extend(mem)
     for i, p in enumerate(pills, 1):
         node(f"pillar {i}", p, "sections")
+    if FIXED and len(pills) != len(FIXED["pillars"]):
+        errs.append(f"use exactly the {len(FIXED['pillars'])} fixed pillars in the given order")
+    ml = r.get("method_line") or {}
+    if ml.get("members") or ml.get("sections"):
+        node("method line", ml, "sections")
+    seen.extend(r.get("routed") or [])
     for t in texts:
         if not is_definition(t) or TEMPLATE.search(t) or BAN.search(t):
             errs.append(f"statement not allowed (blank, template or names a source scheme): {t[:90]}")
@@ -333,11 +346,19 @@ def build(field, r, items):
         if extra: out.update(extra)
         return out
     pts = [mk(p, f"{field}.K{i}", "pillar", "sections", {"title": p["title"]}) for i, p in enumerate(r["pillars"], 1)]
+    ml = r.get("method_line") or {}
+    method = None
+    if ml.get("members") or ml.get("sections"):
+        m_ = mk(ml, f"{field}.M", "method", "sections")
+        method = {"logic_type": "inductive", "statement": ml["statement"], "basis": ml["basis"], "order": ml["order"],
+                  "rank_note": ml["rank_note"], "points": m_["support"]["points"]}
     return {"field": field, "introduction": {"situation": r["situation"], "complication": r["complication"], "question": r["question"],
                                              "answer": r["governing_thought"]},
             "governing_thought": r["governing_thought"],
             "key_line": {"logic_type": "inductive", "plural_noun": r["plural_noun"], "mece_dimension": r["dimension"],
                          "basis": r["basis"], "order": r["order"], "rank_note": r["rank_note"], "points": pts},
+            "method_line": method,
+            "routed": [{"id": x, "name": items[x]["point"].get("name")} for x in r.get("routed") or [] if x in items],
             "retired": [{"id": x, "name": items[x]["point"].get("name"), "reason": "container heading for the whole field, not a topic"} for x in r.get("retired") or []] + PRE_RETIRED,
             "build": {"script": "scripts/minto_pass.py", "model": MODEL, "source": f"pyramids/queues/{field}.groups.json"}}
 
@@ -364,6 +385,13 @@ def render(pyr):
         L += [f"### {n}. {p['statement']}", ""]
         for c in p["support"]["points"]: walk(c, 0)
         L.append("")
+    ml = pyr.get("method_line")
+    if ml:
+        L += ["## Method line (outside the key line)", "", f"**{ml['statement']}**", f"_basis: {ml.get('basis')}, order: {ml.get('order')}_", ""]
+        for c in ml["points"]: walk(c, 0)
+        L.append("")
+    if pyr.get("routed"):
+        L += ["## Routed to other fields", ""] + [f"- {x['name']}" for x in pyr["routed"]] + [""]
     fc = pyr.get("field_check") or {}
     L += ["## Checks", "", f"- minto_check: {'clean' if not any(pyr.get('minto_issues', {}).values()) else pyr.get('minto_issues')}",
           f"- field_check holds: {fc.get('holds')} — {fc.get('note', '')}", ""]
@@ -386,6 +414,16 @@ def run(field, field_cap, stage_cap, dry=False):
                "groups": [{"id": k, "statement": v["point"].get("statement") or v["point"].get("name"),
                            "is_leaf": not (v["point"].get("support") or {}).get("points"),
                            "children": [{"id": c.get("id") or c.get("anchor"), "name": (c.get("statement") or c.get("name") or "")[:120]} for c in (v["point"].get("support") or {}).get("points") or []]} for k, v in items.items()]}
+    kf = ROOT / "pyramids" / "keylines" / f"{field}.json"
+    FIXED.clear()
+    if FIXED_MODE[0] and kf.exists():
+        FIXED.update(json.loads(kf.read_text()))
+        payload["fixed_key_line"] = FIXED
+        payload["instruction"] = ("The key line is FIXED and approved: use exactly these pillars, in this order, with these titles and statements. "
+                                  "Your job is to place every item under the pillar whose value it shares, build 2-5 sections inside each pillar, "
+                                  "write section statements that restate that pillar's value, and put items about " + FIXED["method_line"]["covers"] +
+                                  " into method_line. " + FIXED.get("route_note", ""))
+        payload.pop("existing_governing_thought", None); payload.pop("existing_key_line", None); payload.pop("rebuild_key_line", None)
     user = "Restructure this field. Input JSON:\n" + json.dumps(payload, ensure_ascii=False, indent=1)
     if dry:
         print(user); return None
@@ -394,7 +432,7 @@ def run(field, field_cap, stage_cap, dry=False):
     pyr = None
     best = None
     last = None
-    for attempt in range(6):
+    for attempt in range(ATTEMPTS[0]):
         msg = user + (f"\n\nYour previous answer (JSON below) was rejected. Return it corrected: keep everything that is fine, change only what is needed to fix ALL of these:\n{feedback}\n\nPrevious answer:\n{json.dumps(last, ensure_ascii=False)}" if feedback else "")
         try:
             r = b.call(SYSTEM, msg, "record_pyramid", SCHEMA, 10000)
@@ -402,6 +440,15 @@ def run(field, field_cap, stage_cap, dry=False):
             log(f"{field} stop: {e}"); break
         if not r.get("pillars"):
             feedback = feedback or "- key line had 0 pillars"; log(f"{field} attempt {attempt+1} empty reply"); continue
+        if FIXED:
+            r["governing_thought"] = FIXED["governing_thought"]
+            for key in ("dimension", "plural_noun", "basis", "order", "rank_note"):
+                r[key] = FIXED[key]
+            for p_, fp in zip(r["pillars"], FIXED["pillars"]):
+                p_["title"], p_["statement"] = fp["title"], fp["statement"]
+            ml = r.get("method_line") or {}
+            if ml:
+                ml["title"] = "Method line"
         last = copy.deepcopy(r)
         repair(r, items)
         its = expand(r, items)
@@ -423,7 +470,9 @@ def run(field, field_cap, stage_cap, dry=False):
                 d["under"] = [vw(c, f"{pos}.{i}", depth + 1) for i, c in enumerate(sup, 1)]
             return d
         view = {"governing_thought": pyr["governing_thought"], "key_line_dimension": r["dimension"],
-                "pillars": [vw(p, f"P{pi}", 0) for pi, p in enumerate(pyr["key_line"]["points"], 1)]}
+                "pillars": [vw(p, f"P{pi}", 0) for pi, p in enumerate(pyr["key_line"]["points"], 1)],
+                "method_line_outside_key_line": [vw(c, f"M.{i}", 1) for i, c in enumerate((pyr.get("method_line") or {}).get("points") or [], 1)],
+                "routed_to_other_fields": [x["name"] for x in pyr.get("routed") or []]}
         try:
             chk = b.call(CHECK_SYSTEM, "Check this pyramid:\n" + json.dumps(view, ensure_ascii=False, indent=1), "record_check", CHECK_SCHEMA, 2500)
         except RuntimeError as e:
@@ -456,7 +505,10 @@ def run(field, field_cap, stage_cap, dry=False):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--field", required=True); ap.add_argument("--max-cost", type=float, default=1.0)
-    ap.add_argument("--stage-cap", type=float, default=22.0); ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--stage-cap", type=float, default=22.0); ap.add_argument("--fixed", action="store_true")
+    ap.add_argument("--attempts", type=int, default=6); ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
+    FIXED_MODE[0] = a.fixed
+    ATTEMPTS[0] = a.attempts
     res = run(a.field, a.max_cost, a.stage_cap, a.dry_run)
     print(json.dumps(res))
