@@ -441,7 +441,6 @@ Group of clinical questions. Basis: cause_effect. Dimension: the clinical questi
     - Dentistry
   - **Each field in this group addresses the setting or context in which a disorder is managed, whether rural communities, sport, general clinical practice, or the techniques and equipment used there.**
     _basis: kinds, order: structure. Ordered from specific practice settings to general catch-all categories._
-    - Rural clinical health
     - Sports medicine
     - Clinical sciences not elsewhere classified
     - Analytical, Diagnostic and Therapeutic Techniques, and Equipment
@@ -638,7 +637,11 @@ Group of clinical questions. Basis: cause_effect. Dimension: the clinical questi
     - Public aspects of medicine
     - Environment and Public Health
 
+## Routed to other fields
+
+- Rural clinical health
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Misplaced: P3.1.2 vaccine under cancer detection; P4.5.1.1-3 nursing under alternative medicine; P4.3.4.1 rural; P2.3.5 body-system lists; P5.4.3 sports science; duplicate surgery/dentistry/neoplasm entries.
+- field_check holds: True — Worst misplaced: P2.5.1 and P2.5.2 specialties (Psychiatry, Rheumatology, Endocrinology), P2.3.5, P3.2.2, P3.1.2, P4.5.1.1-3 nursing items and P5.4.3 sports science.
