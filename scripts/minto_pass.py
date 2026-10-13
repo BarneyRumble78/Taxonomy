@@ -44,7 +44,7 @@ Rules you must follow exactly:
 14. Forbidden at every level (pillar, section, subsection): catch-all or residual nodes ("other", "general", "miscellaneous", "related topics", "reference", "methods and general works", "frameworks"), and nodes that copy a library or industry catalogue class (LCC, NAICS, ISIC, IEEE topic lists, "not elsewhere classified"). Every pillar must be a distinct value of ONE dimension; do not mix dimensions (e.g. stages with themes, functions with industry sectors, scale with kinds of thing). If an item fits nowhere, rethink the dimension rather than adding a bucket. Generic leaf items (e.g. "General", "Other ... not elsewhere classified") should be put in "retired".
 7. Pillar statements must restate the key-line dimension: each names its own value of the dimension (e.g. "Practice is ...").
 8. basis is cause_effect (order must be time), parts (order must be structure) or kinds (order structure, or degree with a rank_note). rank_note is one sentence explaining the order.
-15. "method_line" is a node outside the key line (same shape as a pillar). When the input gives no fixed key line, leave its members and sections empty unless items are about how the discipline is studied, taught or recorded. "routed": ids of items that belong to another field (usually empty).
+15. Only when the input instruction asks for it, add one final pillar entry titled "Method line": it sits outside the key line and holds items about how the discipline is studied, taught or recorded. "routed": ids of items that belong to another field (usually empty).
 Call the tool record_pyramid exactly once."""
 
 SEC = {"type": "object", "additionalProperties": False,
@@ -61,7 +61,7 @@ PIL = {"type": "object", "additionalProperties": False,
                       "basis": SEC["properties"]["basis"], "order": SEC["properties"]["order"], "rank_note": {"type": "string"},
                       "members": {"type": "array", "items": {"type": "string"}}, "sections": {"type": "array", "items": SEC}},
        "required": ["title", "statement", "basis", "order", "rank_note", "members", "sections"]}
-MLS = {"type": "object", "additionalProperties": False,
+_UNUSED_MLS = {"type": "object", "additionalProperties": False,
        "properties": {"statement": {"type": "string"}, "basis": SUB["properties"]["basis"], "order": SUB["properties"]["order"],
                       "rank_note": {"type": "string"}, "members": {"type": "array", "items": {"type": "string"}},
                       "sections": {"type": "array", "items": SUB}},
@@ -74,10 +74,9 @@ SCHEMA = {"type": "object", "additionalProperties": False,
                          "rewrites": {"type": "array", "items": {"type": "object", "additionalProperties": False, "properties": {"id": {"type": "string"}, "statement": {"type": "string"}}, "required": ["id", "statement"]}},
                          "retired": {"type": "array", "items": {"type": "string"}},
                          "dissolve": {"type": "array", "items": {"type": "string"}},
-                         "method_line": MLS,
                          "routed": {"type": "array", "items": {"type": "string"}},
                          "merge": {"type": "array", "items": {"type": "object", "additionalProperties": False, "properties": {"keep": {"type": "string"}, "drop": {"type": "string"}}, "required": ["keep", "drop"]}}},
-          "required": ["method_line", "routed", "merge", "dissolve", "rewrites", "retired", "governing_thought", "dimension", "plural_noun", "basis", "order", "rank_note", "situation", "complication", "question", "pillars"]}
+          "required": ["routed", "merge", "dissolve", "rewrites", "retired", "governing_thought", "dimension", "plural_noun", "basis", "order", "rank_note", "situation", "complication", "question", "pillars"]}
 CHECK_SYSTEM = """You check a classification pyramid from the top down (Minto key-line test).
 key_line_holds is true when ALL of these are true: (a) the governing thought names one dimension intrinsic to the field (for example what the knowledge is about, the role a piece of knowledge plays, a causal link, scale, stage or theme) and answers the question how the field divides; (b) there are 2-5 pillars and each is a distinct value of that one dimension; (c) together the pillars cover the field, and no pillar is a catch-all; (d) each pillar statement restates its own value of the dimension; (e) no pillar or section is organised by a library, catalogue or code scheme.
 Judge (a)-(e) on the governing thought, the pillars and their direct sections only. Do NOT set key_line_holds false because of individual misplaced items deeper down; count those in misplaced instead.
@@ -87,12 +86,7 @@ The method line sits outside the key line and holds how the discipline is studie
 Ids like P1.2 are neutral positions, not codes. Leaf topic names come from published sources and cannot be renamed.
 note: one sentence, at most twenty-five words: the worst key-line problem if key_line_holds is false, otherwise the worst misplaced items by position.
 Call the tool record_check exactly once."""
-CHECK_MLS = {"type": "object", "additionalProperties": False,
-       "properties": {"statement": {"type": "string"}, "basis": SUB["properties"]["basis"], "order": SUB["properties"]["order"],
-                      "rank_note": {"type": "string"}, "members": {"type": "array", "items": {"type": "string"}},
-                      "sections": {"type": "array", "items": SUB}},
-       "required": ["statement", "basis", "order", "rank_note", "members", "sections"]}
-SCHEMA = {"type": "object", "additionalProperties": False,
+CHECK_SCHEMA = {"type": "object", "additionalProperties": False,
                 "properties": {"key_line_holds": {"type": "boolean"}, "misplaced": {"type": "integer"}, "note": {"type": "string"}}, "required": ["key_line_holds", "misplaced", "note"]}
 
 EXPAND = re.compile(BAN.pattern + r"|\bcontainer|classifications?\b|\bcategories\b", re.I)
@@ -306,7 +300,7 @@ def validate(r, ids, leaf_ids=(), all_group_ids=()):
     for i, p in enumerate(pills, 1):
         node(f"pillar {i}", p, "sections")
     if FIXED and len(pills) != len(FIXED["pillars"]):
-        errs.append(f"use exactly the {len(FIXED['pillars'])} fixed pillars in the given order")
+        errs.append(f"return exactly {len(FIXED['pillars'])} fixed pillars in the given order plus one final 'Method line' entry")
     ml = r.get("method_line") or {}
     if ml.get("members") or ml.get("sections"):
         node("method line", ml, "sections")
@@ -429,12 +423,13 @@ def run(field, field_cap, stage_cap, dry=False):
     if FIXED_MODE[0] and kf.exists():
         FIXED.update(json.loads(kf.read_text()))
         payload["fixed_key_line"] = FIXED
-        payload["instruction"] = ("The key line is FIXED and approved: use exactly these pillars, in this order, with these titles and statements. "
+        payload["instruction"] = ("The key line is FIXED and approved: return exactly " + str(len(FIXED["pillars"]) + 1) + " entries in pillars: first the fixed pillars, in this order, with these titles and statements, then ONE final entry titled 'Method line' (it sits outside the key line). "
                                   "Your job is to place every item under the pillar whose value it shares, build 2-5 sections inside each pillar, "
                                   "write section statements that restate that pillar's value, and put items about " + FIXED["method_line"]["covers"] +
-                                  " into method_line. " + FIXED.get("route_note", ""))
+                                  " into that final Method line entry (2-5 members or 2-5 sections, same rules). " + FIXED.get("route_note", ""))
         payload.pop("existing_governing_thought", None); payload.pop("existing_key_line", None); payload.pop("rebuild_key_line", None)
-    user = "Restructure this field. Input JSON:\n" + json.dumps(payload, ensure_ascii=False, indent=1)
+    user = ("Build the pyramid and return it with record_pyramid. The tool input MUST contain these keys: governing_thought, dimension, plural_noun, basis, order, rank_note, situation, complication, question, pillars (each with title, statement, basis, order, rank_note, members, sections), routed, merge, dissolve, retired, rewrites. Do not return a verdict or a note; return the structure.\n\n"
+            "Restructure this field. Input JSON:\n") + json.dumps(payload, ensure_ascii=False, indent=1)
     if dry:
         print(user); return None
     b = Budget(field, field_cap, stage_cap)
@@ -450,7 +445,13 @@ def run(field, field_cap, stage_cap, dry=False):
             log(f"{field} stop: {e}"); break
         if not r.get("pillars"):
             feedback = feedback or "- key line had 0 pillars"; log(f"{field} attempt {attempt+1} empty reply"); continue
+        last = copy.deepcopy(r)
         if FIXED:
+            pl = r.get("pillars") or []
+            if len(pl) == len(FIXED["pillars"]) + 1:
+                r["method_line"] = pl.pop()
+            else:
+                r.setdefault("method_line", {})
             r["governing_thought"] = FIXED["governing_thought"]
             for key in ("dimension", "plural_noun", "basis", "order", "rank_note"):
                 r[key] = FIXED[key]
@@ -459,7 +460,6 @@ def run(field, field_cap, stage_cap, dry=False):
             ml = r.get("method_line") or {}
             if ml:
                 ml["title"] = "Method line"
-        last = copy.deepcopy(r)
         repair(r, items)
         its = expand(r, items)
         bad_d = [d for d in r.get("dissolve") or [] if d not in items or not (items[d]["point"].get("support") or {}).get("points")]
