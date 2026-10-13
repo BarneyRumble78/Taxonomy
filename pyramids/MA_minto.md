@@ -55,7 +55,6 @@ Group of kinds of question. Basis: kinds. Dimension: kind of question a topic ad
   - General topology
   - Algebraic topology
   - Manifolds and cell complexes
-  - Global analysis, analysis on manifolds
 - **Geometry studies measured, convex and algebraic shape in its classical and modern forms.**
   _basis: kinds, order: structure. From classical geometry to algebraic geometry._
   - Geometry
@@ -84,7 +83,6 @@ Group of kinds of question. Basis: kinds. Dimension: kind of question a topic ad
 - **Harmonic analysis and transforms study the decomposition of functions into oscillating components and the transforms that achieve it.**
   _basis: kinds, order: structure. From Euclidean to abstract harmonic analysis to transforms._
   - Harmonic analysis on Euclidean spaces
-  - Abstract harmonic analysis
   - Integral transforms, operational calculus
 - **Equations and dynamics study how quantities evolve, through differential, difference and integral equations and dynamical systems.**
   _basis: kinds, order: structure. From ordinary to partial equations and dynamics._
@@ -123,7 +121,6 @@ Group of kinds of question. Basis: kinds. Dimension: kind of question a topic ad
   - Astronomy and astrophysics
 - **Decision and living-systems modelling uses mathematics for choices, economies, biology and the earth.**
   _basis: kinds, order: structure. From the earth to decisions to living systems._
-  - Geophysics
   - Operations research, mathematical programming
   - Game theory, economics, finance, and other social and behavioral sciences
   - Biology and other natural sciences
@@ -138,7 +135,13 @@ Group of kinds of question. Basis: kinds. Dimension: kind of question a topic ad
   - Numerical analysis
   - Computer science
 
+## Routed to other fields
+
+- Global analysis, analysis on manifolds
+- Abstract harmonic analysis
+- Geophysics
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Misplaced: P2.1.4 (analysis on manifolds), P3.3.2 (abstract harmonic analysis), P5.3.1 (geophysics under decision/living systems), P5.5.1 (applied mathematics).
+- field_check holds: True — Misplaced: P5.5.1 applied mathematics (generic), P5.5.2 numerical analysis (fits P3), P2.3.1 group theory (fits P1 structure).

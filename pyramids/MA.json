@@ -177,12 +177,6 @@
                     "anchor": "node:MSC:57-XX",
                     "statement": "Manifolds and cell complexes",
                     "name": "Manifolds and cell complexes"
-                  },
-                  {
-                    "id": "MSC:58-XX",
-                    "anchor": "node:MSC:58-XX",
-                    "statement": "Global analysis, analysis on manifolds",
-                    "name": "Global analysis, analysis on manifolds"
                   }
                 ]
               }
@@ -358,12 +352,6 @@
                     "anchor": "node:MSC:42-XX",
                     "statement": "Harmonic analysis on Euclidean spaces",
                     "name": "Harmonic analysis on Euclidean spaces"
-                  },
-                  {
-                    "id": "MSC:43-XX",
-                    "anchor": "node:MSC:43-XX",
-                    "statement": "Abstract harmonic analysis",
-                    "name": "Abstract harmonic analysis"
                   },
                   {
                     "id": "MSC:44-XX",
@@ -598,12 +586,6 @@
                 "rank_note": "From the earth to decisions to living systems.",
                 "points": [
                   {
-                    "id": "MSC:86-XX",
-                    "anchor": "node:MSC:86-XX",
-                    "statement": "Geophysics",
-                    "name": "Geophysics"
-                  },
-                  {
                     "id": "MSC:90-XX",
                     "anchor": "node:MSC:90-XX",
                     "statement": "Operations research, mathematical programming",
@@ -750,10 +732,36 @@
       "Modelling other fields is the kind of question about how mathematics expresses and computes claims from physics, decision science, biology, data and computing."
     ],
     "holds": true,
-    "note": "Misplaced: P2.1.4 (analysis on manifolds), P3.3.2 (abstract harmonic analysis), P5.3.1 (geophysics under decision/living systems), P5.5.1 (applied mathematics).",
+    "note": "Misplaced: P5.5.1 applied mathematics (generic), P5.5.2 numerical analysis (fits P3), P2.3.1 group theory (fits P1 structure).",
     "review": false,
-    "misplaced": 4,
-    "problems": 4
+    "misplaced": 3,
+    "problems": 3,
+    "cleanup": {
+      "before": 4,
+      "rule_moves": 0,
+      "ai_moves": 3,
+      "date": "2026-10-13 15:39"
+    }
   },
-  "cost_usd": 0.1218
+  "cost_usd": 0.1574,
+  "routed": [
+    {
+      "id": "MSC:58-XX",
+      "name": "Global analysis, analysis on manifolds",
+      "to_field": "target",
+      "by": "cleanup"
+    },
+    {
+      "id": "MSC:43-XX",
+      "name": "Abstract harmonic analysis",
+      "to_field": "target",
+      "by": "cleanup"
+    },
+    {
+      "id": "MSC:86-XX",
+      "name": "Geophysics",
+      "to_field": "field",
+      "by": "cleanup"
+    }
+  ]
 }
