@@ -836,51 +836,6 @@
                           }
                         },
                         {
-                          "id": "PL.O.A5.G3",
-                          "anchor": "group:PL.O.A5.G3",
-                          "statement": "This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.",
-                          "name": "This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "ANZSRC:500207",
-                                "anchor": "node:ANZSRC:500207",
-                                "statement": "History of ideas",
-                                "name": "History of ideas"
-                              },
-                              {
-                                "id": "ANZSRC:500208",
-                                "anchor": "node:ANZSRC:500208",
-                                "statement": "History of philosophy",
-                                "name": "History of philosophy"
-                              },
-                              {
-                                "id": "ANZSRC:500204",
-                                "anchor": "node:ANZSRC:500204",
-                                "statement": "History and philosophy of science",
-                                "name": "History and philosophy of science"
-                              },
-                              {
-                                "id": "ANZSRC:500317",
-                                "anchor": "node:ANZSRC:500317",
-                                "statement": "Philosophy of science (excl. history and philosophy of specific fields)",
-                                "name": "Philosophy of science (excl. history and philosophy of specific fields)"
-                              },
-                              {
-                                "id": "LCC:Q",
-                                "anchor": "node:LCC:Q",
-                                "statement": "Science (General)",
-                                "name": "Science (General)"
-                              }
-                            ],
-                            "rank_note": "Grouped by the field studied; no ranking."
-                          }
-                        },
-                        {
                           "id": "PL.O.A5.G27",
                           "anchor": "group:PL.O.A5.G27",
                           "statement": "Further areas of philosophy are classified by what the question is about, covering broad general fields, the history and philosophy of applied professions, therapeutic and professional practice, and the foundations of the formal and physical sciences.",
@@ -2239,7 +2194,14 @@
       }
     ]
   },
-  "routed": [],
+  "routed": [
+    {
+      "id": "PL.O.A5.G3",
+      "name": "This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.",
+      "to_field": "target",
+      "by": "cleanup"
+    }
+  ],
   "retired": [
     {
       "id": "ANZSRC:5003",
@@ -2307,10 +2269,16 @@
       "Claims about value ask what is good, right, beautiful and just, as in ethics, aesthetics and political and social philosophy."
     ],
     "holds": true,
-    "note": "Misplaced: P1.3.1 Philosophy of Action, P1.2.2, P2.4.1.2 and P2.4.1.3 grab-bag, P4.1.2.3 aesthetics/queer theory, P3.2.4 Poststructuralism, P4.2.2.4 Relationships and Marriage.",
+    "note": "Worst: P1.3.1 Philosophy of Action under being, P2.1.4 Epistemology under mind, P4.1.2.3 formal/queer theory under moral value, P2.4.2.3 duplicating mind.",
     "review": false,
-    "misplaced": 7,
-    "problems": 7
+    "misplaced": 5,
+    "problems": 5,
+    "cleanup": {
+      "before": 7,
+      "rule_moves": 0,
+      "ai_moves": 1,
+      "date": "2026-10-13 15:41"
+    }
   },
-  "cost_usd": 0.7109
+  "cost_usd": 0.7582
 }

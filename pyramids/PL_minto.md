@@ -153,13 +153,6 @@ Group of kinds of claim. Basis: kinds. Dimension: the kind of claim at issue. Or
       - Formal Sciences
       - General Philosophy of Science
       - Metaphilosophy
-    - **This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.**
-      _basis: kinds, order: structure. Grouped by the field studied; no ranking._
-      - History of ideas
-      - History of philosophy
-      - History and philosophy of science
-      - Philosophy of science (excl. history and philosophy of specific fields)
-      - Science (General)
     - **Further areas of philosophy are classified by what the question is about, covering broad general fields, the history and philosophy of applied professions, therapeutic and professional practice, and the foundations of the formal and physical sciences.**
       _basis: kinds, order: structure_
       - **Broad academic areas are general or residual fields of study that are not tied to a single specific philosophical question.**
@@ -372,7 +365,11 @@ _basis: kinds, order: structure_
     - Philosophy for Children: Political Philosophy
     - Philosophy for Children: Religion and Spirituality
 
+## Routed to other fields
+
+- This group covers the history of ideas and of philosophy, which concern how thought and philosophical doctrines have developed over time.
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Misplaced: P1.3.1 Philosophy of Action, P1.2.2, P2.4.1.2 and P2.4.1.3 grab-bag, P4.1.2.3 aesthetics/queer theory, P3.2.4 Poststructuralism, P4.2.2.4 Relationships and Marriage.
+- field_check holds: True — Worst: P1.3.1 Philosophy of Action under being, P2.1.4 Epistemology under mind, P4.1.2.3 formal/queer theory under moral value, P2.4.2.3 duplicating mind.
