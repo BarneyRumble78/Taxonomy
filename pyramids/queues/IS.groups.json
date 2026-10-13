@@ -4919,9 +4919,26 @@
       "Preservation and governance is the final stage in which records are kept, protected and managed over the long term."
     ],
     "holds": true,
-    "note": "Worst misplaced: P1.3.3 (description activities), P5.3.1 (retrieval under preservation), P4.4.4 (holding stage under use), P2.3.3 (systems design), P3.4 mathematics, P2.3.5 retrieval methods.",
+    "note": "Misplaced: P3.4.5.3 (description stage) belongs under P2; P3.4.2.4 and P3.4.2.5 belong under P3.2/P3.3; P5.2.2.3 (OPACs) belongs under P4; P2.2.2.3 retrieval tools.",
     "review": false,
-    "misplaced": 11,
-    "problems": 11
+    "misplaced": 13,
+    "problems": 13,
+    "checks_2of3": [
+      {
+        "holds": true,
+        "misplaced": 12,
+        "note": "Misplaced: P3.4.5.3 (description stage) belongs under P2; P3.4.2.4 and P3.4.2.5 belong under P3.2/P3.3; P5.2.2.3 (OPACs) belongs under P4; P2.2.2.3 retrieval tools."
+      },
+      {
+        "holds": true,
+        "misplaced": 14,
+        "note": "Misplaced: P1.2.3 and P1.4.2.2-3 metadata, P3.4.4.1 and P3.4.3.1 acquisition, P4.4.3.1-2 mathematics, P5.2.2.3 OPACs, P2.1.4.3 VINITI."
+      }
+    ],
+    "rebuild": {
+      "builder": "claude-opus-5-5",
+      "checker": "claude-sonnet-5-5",
+      "date": "2026-10-13 17:44"
+    }
   }
 }
