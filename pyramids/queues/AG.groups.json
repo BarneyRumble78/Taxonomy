@@ -12955,9 +12955,31 @@
       "The food and rural system level covers what leaves the farm and how the sector is governed: harvest handling, products, residues, markets, policy and rural change."
     ],
     "holds": true,
-    "note": "Pillars hold; misplaced: P2.3.2.2 fisheries catch, P3.1.5.3/P3.1.5.4 outcomes and markets, P3.1.2.2 crop improvement, P4.4.1.2 policy drivers, P3.2.3.4 search and rescue.",
+    "note": "Misplaced: P3.1.5.3 and P3.1.5.4 (outputs/markets in farm inputs), P3.1.4.3 germplasm, P1.4.1-P1.4.2 crop items under organism, P2.1.3.4 breeding, P2.3.4 wildlife.",
     "review": false,
     "misplaced": 12,
-    "problems": 12
+    "problems": 12,
+    "checks_2of3": [
+      {
+        "holds": true,
+        "misplaced": 9,
+        "note": "Misplaced: P3.1.5.3 and P3.1.5.4 (outputs/markets in farm inputs), P3.1.4.3 germplasm, P1.4.1-P1.4.2 crop items under organism, P2.1.3.4 breeding, P2.3.4 wildlife."
+      },
+      {
+        "holds": false,
+        "misplaced": 9,
+        "note": "P3 and P4 sections mix production stages, products and governance rather than one level; catch-all sections like P1.3, P3.2.5, P3.3.4; P3.1.5.3-4 outputs sit under inputs."
+      },
+      {
+        "holds": true,
+        "misplaced": 16,
+        "note": "Worst misplaced: P3.1.5.3 and P3.1.5.4 (outcome and market concepts under farm inputs), P2.2.3.4 wood processing, P2.1.4.1 harvest/capture, P3.2.3.4 search and rescue, P1.2.3.4 lichens."
+      }
+    ],
+    "rebuild": {
+      "builder": "claude-opus-5-5",
+      "checker": "claude-sonnet-5-5",
+      "date": "2026-10-13 16:32"
+    }
   }
 }

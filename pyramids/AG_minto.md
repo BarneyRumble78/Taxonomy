@@ -2006,4 +2006,4 @@ _basis: parts, order: structure_
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Pillars hold; misplaced: P2.3.2.2 fisheries catch, P3.1.5.3/P3.1.5.4 outcomes and markets, P3.1.2.2 crop improvement, P4.4.1.2 policy drivers, P3.2.3.4 search and rescue.
+- field_check holds: True — Misplaced: P3.1.5.3 and P3.1.5.4 (outputs/markets in farm inputs), P3.1.4.3 germplasm, P1.4.1-P1.4.2 crop items under organism, P2.1.3.4 breeding, P2.3.4 wildlife.
