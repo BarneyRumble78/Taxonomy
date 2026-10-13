@@ -1,0 +1,148 @@
+{
+ "model": "claude-sonnet-5-5",
+ "total_usd": 0.0488,
+ "reviews": [
+  {
+   "test_id": "T03",
+   "usd": 0.014,
+   "review": {
+    "criteria": [
+     {
+      "n": 1,
+      "pass": true,
+      "reason": "The governing thought answers the 'how' question in a single sentence that names the three steps: detect, fix, confirm."
+     },
+     {
+      "n": 2,
+      "pass": false,
+      "reason": "The situation and complication are sound, but the closing question is a near-verbatim restatement of the main question, and the complication ('whether it is still there') is only partly resolved by the stated key-line dimension."
+     },
+     {
+      "n": 3,
+      "pass": true,
+      "reason": "There are three points of one kind, all steps in the targeting chain, in time order, and they are mutually exclusive and collectively cover detect, locate, confirm."
+     },
+     {
+      "n": 4,
+      "pass": true,
+      "reason": "Each point is a stage that directly supports the governing thought, and together they restate its three clauses."
+     },
+     {
+      "n": 5,
+      "pass": false,
+      "reason": "ST.K5.S2 and ST.O.A5.G3 fit plausibly, but DTIC:15.04 'Military Intelligence' is a very broad node, and confirmation by re-checking close to strike time (a targeting or battle-damage step) is only loosely a home for this point; the link is weak rather than clearly plausible."
+     },
+     {
+      "n": 6,
+      "pass": false,
+      "reason": "The draft cites no sources, and several claims are unsupported or imprecise: signals satellites 'finding' objects alongside imaging, GPS-guided weapons depending on WGS 84 coordinates, and the decoys claim. Some are textbook-standard, but the statements are broad."
+     }
+    ],
+    "doubtful_claims": [
+     "Signals (SIGINT) satellites 'find candidate objects' alongside optical and SAR: SIGINT detects and geolocates emitters rather than imaging objects, so lumping them together is imprecise.",
+     "Coordinates are 'accurate enough for GPS-guided weapons' via WGS 84 plus elevation models: this is broadly true (target coordinate mensuration), but no accuracy figure or source is given, and the claim is broad.",
+     "Implied claim that detection is done chiefly from orbit: militaries also use aerial, UAV and ground sensors, and this is not acknowledged.",
+     "Claim that decoys exist and targets move, so confirmation is re-checked close to strike time: standard doctrine, but it is uncited."
+    ],
+    "overall_pass": false,
+    "fix": "Reword the introduction's question so it narrows the main question instead of repeating it, for example by asking which steps turn raw imagery into a strike-quality position. Make T03.1 precise: optical and SAR image objects, and SIGINT geolocates emitters. Link T03.3 to a more specific node, such as targeting, all-source fusion or battle-damage assessment, if one exists. Add at least one citation (e.g. NGA or JP 3-60 for joint targeting, and a standard source for SAR and WGS 84) or soften the claims."
+   }
+  },
+  {
+   "test_id": "T04",
+   "usd": 0.0171,
+   "review": {
+    "criteria": [
+     {
+      "n": 1,
+      "pass": true,
+      "reason": "The governing thought answers the 'why important' question in one sentence: the zeros set the error size, and RH would make it minimal."
+     },
+     {
+      "n": 2,
+      "pass": true,
+      "reason": "Situation (PNT), complication (no error control) and question (why zeros control the error) form a coherent SCQ, and the question leads naturally to the 'why important' question, though it is narrower than the main question."
+     },
+     {
+      "n": 3,
+      "pass": false,
+      "reason": "The three points are a sequence (formula, then zero position bounds error, then RH gives the best bound) rather than clearly MECE on 'link from zeros to primes'; T04.3 also bundles two ideas (the error bound and conditional results), and 'structure' order is loosely applied."
+     },
+     {
+      "n": 4,
+      "pass": true,
+      "reason": "Each point supports the governing thought: formula link, error dependence on zero positions, and RH giving the minimal error."
+     },
+     {
+      "n": 5,
+      "pass": false,
+      "reason": "MSC:11-XX (Number theory) is a fine home for T04.1 and T04.3, but MA.K1.S2 ('counting, order and properties of whole numbers') is a weak fit for T04.2, which is an analytic claim about oscillating terms and real parts of zeros."
+     },
+     {
+      "n": 6,
+      "pass": false,
+      "reason": "The 'essentially the best possible' claim and the attribution of the O(sqrt(x) log x) bound to von Koch 1901 are textbook-level, but the explicit formula is stated imprecisely and no sources are cited, so the claims remain unsupported."
+     }
+    ],
+    "doubtful_claims": [
+     "'The further a zero's real part is from 1/2, the larger its oscillating contribution' is imprecise: the contribution of a zero rho is of size x^{Re(rho)}/|rho|, so it depends on the real part but 'further from 1/2' is not exactly right (the relevant quantity is the supremum of the real parts, which is at least 1/2 by the functional equation).",
+     "'Essentially the best possible' for O(sqrt(x) log x) is stated without support. It is a textbook-adjacent claim (Omega results of Littlewood and Hardy-Littlewood show sqrt(x) order oscillation), but it needs a citation.",
+     "The explicit formula for pi(x) is more complex than 'main term minus a sum over zeros': it is more naturally stated for psi(x) or via Riemann's J(x), and it includes further terms (trivial zeros, constants). 'Main term' hides li(x) and the other terms.",
+     "The error bound O(sqrt(x) log x) is for pi(x) - li(x) (von Koch 1901, assuming RH). It should be stated as such, as the draft's 'the error' is ambiguous.",
+     "'Many results in number theory are proved conditional on it' is true but unsupported, with no examples given."
+    ],
+    "overall_pass": false,
+    "fix": "1) Recast the key line as clearly distinct, MECE steps. For example: (a) the explicit formula ties pi(x) (or psi(x)) to the zeros; (b) the zeros' real parts set the size of the error, since each zero contributes about x^{Re(rho)}/|rho|; (c) RH gives the smallest possible error, O(sqrt(x) log x) for pi(x)-li(x). Move 'conditional results' to a separate point or drop it. 2) State the explicit formula precisely, referring to psi(x) and the zeros rho, and say the bound is for pi(x)-li(x). 3) Replace 'further from 1/2' with 'the largest real part among the zeros'. 4) Re-link T04.2 to an analytic or complex-analysis node, or to MSC:11-XX (analytic number theory), instead of MA.K1.S2. 5) Cite sources (e.g. Davenport, Multiplicative Number Theory; Edwards, Riemann's Zeta Function) or add the Omega-result justification for 'best possible'."
+   }
+  },
+  {
+   "test_id": "T09",
+   "usd": 0.0177,
+   "review": {
+    "criteria": [
+     {
+      "n": 1,
+      "pass": true,
+      "reason": "The governing thought directly answers the question in one sentence by naming zinc protection, pasture management and genetic tolerance breeding."
+     },
+     {
+      "n": 2,
+      "pass": true,
+      "reason": "Situation (costs of FE), complication (caused by pasture toxin, so skin treatment doesn't prevent it) and question form a valid SCQ that leads to the stated question."
+     },
+     {
+      "n": 3,
+      "pass": false,
+      "reason": "The points are not clean on one dimension: 'short term / season / long term' mixes horizons, and the zinc point is also tied to the same seasonal risk window as T09.2 (the season point is not really a distinct horizon from short-term). T09.2 also bundles several distinct measures (grazing height, fungicide, safer crops). The time order is stated but the 'season' vs 'short term' boundary overlaps, so MECE is weak."
+     },
+     {
+      "n": 4,
+      "pass": true,
+      "reason": "Each point (zinc, pasture exposure management, genetic tolerance) summarises upward into the governing thought, which restates them almost verbatim."
+     },
+     {
+      "n": 5,
+      "pass": false,
+      "reason": "T09.1 mixes monitoring spore counts (a pasture/ecological measure) with zinc dosing, which fits the veterinary intervention node only partially; T09.2 is plausibly placed in crop protection/ecological pressures, T09.3 in organism-level breeding. The T09.1 placement is plausible for the zinc/prophylaxis part, but zinc is preventive rather than detect/track/treat disease, so the fit is imperfect."
+     },
+     {
+      "n": 6,
+      "pass": false,
+      "reason": "No sources are cited and several claims are specific and not verified: 'avoiding hard grazing into dead litter' is textbook-ish, but fungicide use on pasture, 'safer crops', and the claim that sire breeding lowers susceptibility 'permanently' (overstated; it is gradual and heritable, not permanent) are doubtful or unsupported. The claim that the toxin is 'not by the skin' is fine, but 'costs NZ dairy farmers' is unquantified."
+     }
+    ],
+    "doubtful_claims": [
+     "Breeding from tolerance-tested sires 'lowers herd susceptibility permanently' is overstated; genetic gain is cumulative and requires continued selection, not permanent.",
+     "Fungicide use on high-risk paddocks is presented as a standard option without support; it is used but its efficacy, timing and practicality are not established here.",
+     "'Safer crops' on high-risk paddocks is vague and unsupported (e.g. which crops, e.g. brassicas/lucerne, are low-risk is not stated).",
+     "Zinc delivered as 'water treatment' is a recognised option but is less reliable than boluses or drenches; presenting it as equivalent is unsupported.",
+     "Zinc 'protects the liver' is a simplification; it reduces sporidesmin liver damage but needs dosing at the correct rate and continuity, which is not noted.",
+     "'Hard grazing into dead litter' is textbook for spore exposure but the Pithomyces chartarum habitat claim and the timing (late summer/autumn) are asserted without a source.",
+     "Drafted from general knowledge with no sources fetched, so none of the NZ-specific factual claims are verified."
+    ],
+    "overall_pass": false,
+    "fix": "Restructure the key line to a cleaner dimension: use three control levers (protect the animal with zinc; reduce pasture exposure to spores; raise genetic tolerance) ordered by time or by priority, and make each point a single measure. Move spore-count monitoring into the pasture-management point (or a separate detection point) so zinc stays a treatment/prevention point, and re-link points accordingly. Replace 'permanently' with 'cumulatively across generations', qualify fungicide and 'safer crops' with specifics, and cite or flag sources (e.g. NZ Dairy/DairyNZ, SciQuest/AgResearch FE guidance) for the zinc dosing, fungicide and sire-testing claims."
+   }
+  }
+ ]
+}
