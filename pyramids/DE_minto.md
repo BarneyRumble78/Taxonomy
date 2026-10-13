@@ -46,7 +46,6 @@ Group of aspects. Basis: cause_effect. Dimension: the aspect of a designed arran
   _basis: kinds, order: degree. Ordered from community planning to public participation._
   - Community planning
   - Public participation and community engagement
-  - Urban planning and health
 
 ### 2. Form is the aspect of design concerned with the shape, material make-up and style of designed objects, spaces and images.
 
@@ -125,7 +124,6 @@ Group of aspects. Basis: cause_effect. Dimension: the aspect of a designed arran
   _basis: cause_effect, order: time. Ordered from the building as a whole to the technology that delivers it._
   - Building
   - Automation and technology in building and construction
-  - Building information modelling and management
 - **Management and economics of building cover the organisation, costing and running of design and construction work.**
   _basis: cause_effect, order: time. Ordered from the organising of building work to the management of design practice._
   - **Building organisation and economics cover how construction projects are planned, staffed, studied and costed.**
@@ -144,9 +142,14 @@ Group of aspects. Basis: cause_effect. Dimension: the aspect of a designed arran
   - Architectural history, theory and criticism
   - Design history, theory and criticism
   - History and theory of the built environment (excl. architecture)
-  - Architecture
+
+## Routed to other fields
+
+- Urban planning and health
+- Building information modelling and management
+- Architecture
 
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Key line holds; misplaced include P1.3.3 (urban planning and health), P5.2.3 (BIM), P5.4.5 and the generic leaves P5.1.1, P5.1.3, P4.3.3 and P4.3.4.
+- field_check holds: True — Misplaced: P5.1.1, P5.1.3 and P5.1.4 (generic design practice under life of built thing), P5.3.2.3 design management, P1.2.5 home economics.
