@@ -63,8 +63,6 @@ Group of units of claim. Basis: kinds. Dimension: the unit the claim is about. O
     _basis: kinds, order: structure. ordered by structure_
     - Genetics
     - Behavioural genetics
-    - Behavioural neuroscience
-    - Cognitive neuroscience
   - **Evolutionary psychological studies make claims about the species-level, evolved origins of mind and behaviour, treating adaptations across a population as the unit of analysis.**
     _basis: kinds, order: structure. Single species-level field grouped with the residual category because its claims do not target a specific individual-level system._
     - Evolutionary psychological studies
@@ -105,7 +103,6 @@ Group of units of claim. Basis: kinds. Dimension: the unit the claim is about. O
     - Computational neuroscience (incl. mathematical neuroscience and theoretical neuroscience)
   - Psychopharmacology
   - Psychophysiology
-  - Social and affective neuroscience
 
 ### 3. Persons are the unit of claim when psychology studies the individual human being across life, personality, health, identity and the discipline itself.
 
@@ -126,7 +123,6 @@ Group of units of claim. Basis: kinds. Dimension: the unit the claim is about. O
       - Cognitive & Perceptual Development
       - Psychosocial & Personality Development
       - Aging & Older Adult Development
-    - History & Systems
   - **Personality and individual-difference topics make claims about the stable traits that characterise individual people.**
     _basis: kinds, order: structure. From traits to social-personal fields._
     - **Personality psychology covers the stable traits and processes that characterize individuals and the theories that explain them.**
@@ -210,8 +206,6 @@ Group of units of claim. Basis: kinds. Dimension: the unit the claim is about. O
   - **Individual and relational studies make claims about persons and their close relationships, bodies and life stages.**
     _basis: kinds, order: structure. Ordered by structure: kinds of individual-level units._
     - Sociology of family and relationships
-    - Sociology of the life course
-    - Sociology of health
     - Sociology of gender
   - **Anthropology subfields that make claims about the human person, either as a gendered and sexual social being or as a biological organism, take the individual human as their unit of analysis.**
     _basis: kinds, order: structure_
@@ -232,8 +226,6 @@ Group of units of claim. Basis: kinds. Dimension: the unit the claim is about. O
     _basis: kinds, order: structure. General communication systems come first, then the specific kind, mass media._
     - Communication Systems
     - Mass Media Communications
-    - Social Psychology
-    - Group & Interpersonal Processes
     - Social Perception & Cognition
   - **Consumer psychology concerns the attitudes and behavior of buyers and the marketing and advertising directed at them.**
     _basis: kinds, order: structure. Ordered from the broad field to the consumer side and then the marketing side._
@@ -245,13 +237,6 @@ Group of units of claim. Basis: kinds. Dimension: the unit the claim is about. O
   _basis: kinds, order: structure. From work to organisations to play._
   - **Work and organisation topics make claims about people interacting within jobs and organisations.**
     _basis: kinds, order: structure. From personnel to workers to organisations._
-    - **Health and mental health personnel issues concern the professionals who deliver care, including their education, attitudes, ethical standards, and impairment.**
-      _basis: parts, order: structure. From the general category to specific aspects of professional life._
-      - Health & Mental Health Personnel Issues
-      - Professional Education & Training
-      - Professional Personnel Attitudes & Characteristics
-      - Professional Ethics & Standards & Liability
-      - Professional Impairment
     - **Individual workers and their jobs are the unit when claims address career interests, selection and training, performance evaluation, and job attitudes.**
       _basis: parts, order: structure. Follows the worker from career choice through selection to performance and satisfaction._
       - Occupational Interests & Guidance
@@ -289,13 +274,6 @@ Group of units of claim. Basis: kinds. Dimension: the unit the claim is about. O
     _basis: kinds, order: structure. Criminal justice applications grouped by structure._
     - Crime Prevention
     - Police & Legal Personnel
-  - **Social work is a professional field divided into clinical practice, community services, program evaluation, and residual specialisms.**
-    _basis: parts, order: structure. Parent field followed by its component specialisms._
-    - Social work
-    - Clinical social work practice
-    - Counselling, wellbeing and community services
-    - Social program evaluation
-    - Social work not elsewhere classified
 
 ### 5. Social structures are the unit of claim when studies concern institutions, cultures, populations, settings and society as a whole.
 
@@ -313,8 +291,6 @@ Group of units of claim. Basis: kinds. Dimension: the unit the claim is about. O
     - Rural sociology
     - Urban sociology and community studies
     - Sociology and social studies of science and technology
-  - Engineering & Environmental Psychology
-  - Human Factors Engineering
 - **Institutions, culture and population topics make claims about the lasting societal forms and demographic patterns of human groups.**
   _basis: kinds, order: structure. From institutions to culture to population._
   - **Institutions and everyday social life topics make claims about the lasting forms of social organisation in daily life.**
@@ -383,7 +359,22 @@ Group of units of claim. Basis: kinds. Dimension: the unit the claim is about. O
     - Literature & Fine Arts
     - Philosophy
 
+## Routed to other fields
+
+- Behavioural neuroscience
+- Cognitive neuroscience
+- Social and affective neuroscience
+- Sociology of the life course
+- Sociology of health
+- History & Systems
+- Health and mental health personnel issues concern the professionals who deliver care, including their education, attitudes, ethical standards, and impairment.
+- Social work is a professional field divided into clinical practice, community services, program evaluation, and residual specialisms.
+- Engineering & Environmental Psychology
+- Human Factors Engineering
+- Social Psychology
+- Group & Interpersonal Processes
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Key line holds; misplaced: P1.3.1.3-4 and P2.2.5 neuroscience/social, P3.3.3.x sociology items, P3.1.1.3 History, P4.2.1.1, P4.3.3 social work, P5.1.3, P5.1.4.
+- field_check holds: True — Worst misplaced: P1.3.5 cognitive psychology under P1.3; P3.3.3.2 sociology of gender and P3.3.4.1 anthropology of gender under persons instead of P5; P1.3.1 genetics under P1.
