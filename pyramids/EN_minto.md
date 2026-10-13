@@ -119,7 +119,6 @@ Group of kinds of designed system. Basis: kinds. Dimension: the kind of system d
     - Nanoscale technology
     - Semiconductor device packaging
     - Thermal management of electronics
-    - Chemical technology
 - **Nanoscale device systems are designed devices and nanomaterials built from nanometre-sized structures, with their electronic and constitutive behaviour.**
   _basis: kinds, order: structure. Ordered from electronic devices to nanosystems and nanomaterials._
   - **Nanoscale electronic and molecular device fields concern charge transport and electronic behaviour in structures of nanometre dimensions.**
@@ -163,8 +162,6 @@ Group of kinds of designed system. Basis: kinds. Dimension: the kind of system d
     - Nanophotonics
     - Nanoplasmonics
     - Nanomagnetics
-    - Manufactures
-    - Mining engineering. Metallurgy
   - **Fluid and self-organizing fields close the model through a mass, momentum, or free-energy balance that governs how matter moves or assembles at the nanoscale.**
     _basis: kinds, order: structure. Ordered by structure, from flow to assembly to replication._
     - Nanofluidics
@@ -223,7 +220,6 @@ Group of kinds of designed system. Basis: kinds. Dimension: the kind of system d
       - Intelligent vehicles
   - **Motor vehicles, guidance and transport systems are designed to move and steer vehicles on roads and through the air and space.**
     _basis: kinds, order: structure. Ordered from motor vehicles to guidance and transport._
-    - Motor vehicles. Aeronautics. Astronautics
     - **Guidance and command disciplines are kinds of engineering that close the predictive model of a vehicle through the balance of sensed state, control action and command decisions.**
       _basis: kinds, order: structure. Ordered structurally from onboard control to navigation and then to command-level supervision._
       - Aerospace control
@@ -363,7 +359,6 @@ Group of kinds of designed system. Basis: kinds. Dimension: the kind of system d
     - Fusion reactors
     - Fusion power generation
     - Gas discharge devices
-    - Helioseismology
   - **Beam and accelerator topics are devices whose model is closed by the balance of charge and momentum in a particle beam.**
     _basis: kinds, order: structure. Ordered along the beam path from emission and injection to handling, accelerators and applications._
     - Electron emission
@@ -668,33 +663,6 @@ Group of kinds of designed system. Basis: kinds. Dimension: the kind of system d
       - Pressure sensors
   - **Device and equipment concepts are artefact types whose predictive model is completed by a physical balance, a measured signal or a clinical action.**
     _basis: kinds, order: structure. Ordered by structure from patient-related equipment to balance-closed, physical-principle and instrument devices._
-    - **Patient-related and support equipment are artefact types whose models close on a mass, load, signal or energy balance at the body or in the supporting utilities.**
-      _basis: kinds, order: structure. Listed structurally from body-contact devices to culture systems, clinical instruments and utilities._
-      - **Body-contact devices are artefacts applied to or worn on the patient, whose models close on the load or fluid exchanged at the body interface.**
-        _basis: kinds, order: structure. Listed by structure: items applied directly to the patient's body._
-        - Bandages
-        - Catheters
-        - Contraceptive Devices
-        - Exoskeleton Device
-        - Emergency Medical Tags
-      - **Culture and bioprocess systems are artefacts that sustain living material, whose models close on the mass balance of nutrients and metabolites.**
-        _basis: kinds, order: structure. Listed by structure: items that contain or feed cultured material._
-        - Bioreactors
-        - Culture Media
-        - Diffusion Chambers, Culture
-        - Capillary Tubing
-      - **Clinical and diagnostic equipment comprises instruments used to examine or treat patients, whose models close on the signal or energy measured or delivered.**
-        _basis: kinds, order: structure. Listed by structure: instruments used for examination and care._
-        - Diagnostic Equipment
-        - Gamma Cameras
-        - Dental Equipment
-        - Durable Medical Equipment
-      - **Utility and support equipment supplies or removes energy and gases for other devices, and its model closes on the flow balance of power or gas.**
-        _basis: kinds, order: structure. Listed by structure: infrastructure supporting other equipment._
-        - Compressed Air
-        - Gas Scavengers
-        - Electrical Equipment and Supplies
-        - Bathroom Equipment
     - **Balance-closed devices are artefacts whose predictive model is completed by a thermal-moisture balance or by a fluid flow and pressure balance.**
       _basis: kinds, order: structure. Listed structurally from heat and moisture balance to flow and pressure balance._
       - **Devices whose model is closed by a balance of heat and moisture, so that temperature and humidity of the contained or delivered air fix their behaviour.**
@@ -1777,7 +1745,16 @@ _basis: kinds, order: structure_
       - Inclusive language
       - International relations
 
+## Routed to other fields
+
+- Manufactures
+- Mining engineering. Metallurgy
+- Helioseismology
+- Chemical technology
+- Motor vehicles. Aeronautics. Astronautics
+- Patient-related and support equipment are artefact types whose models close on a mass, load, signal or energy balance at the body or in the supporting utilities.
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Misplaced: P1.5.2.4 and P1.5.2.5 (Manufactures, Mining/Metallurgy), P3.2.3.5 Helioseismology, P1.3.4.5 Chemical technology, P2.2.2.1 aeronautics under road vehicles, P4.1.5 medical items.
+- field_check holds: True — Misplaced: P3.1.1.4 Maritime engineering (belongs P2.3), P1.3.3.1 and P1.3.3.2 (belong P1.4), P1.5.2.1 Nanophotonics (duplicates P1.4.1.3), P3.3.1.3 Particle physics.

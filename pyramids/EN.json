@@ -606,12 +606,6 @@
                           "anchor": "node:IEEE:Components, packaging, and manufacturing technology|Thermal management of electronics",
                           "statement": "Thermal management of electronics",
                           "name": "Thermal management of electronics"
-                        },
-                        {
-                          "id": "LCC:TP",
-                          "anchor": "node:LCC:TP",
-                          "statement": "Chemical technology",
-                          "name": "Chemical technology"
                         }
                       ],
                       "rank_note": "Ordered by structure, from broad fields to specific packaging and thermal topics."
@@ -895,18 +889,6 @@
                           "anchor": "node:IEEE:Nanotechnology|Nanomagnetics",
                           "statement": "Nanomagnetics",
                           "name": "Nanomagnetics"
-                        },
-                        {
-                          "id": "LCC:TS",
-                          "anchor": "node:LCC:TS",
-                          "statement": "Manufactures",
-                          "name": "Manufactures"
-                        },
-                        {
-                          "id": "LCC:TN",
-                          "anchor": "node:LCC:TN",
-                          "statement": "Mining engineering. Metallurgy",
-                          "name": "Mining engineering. Metallurgy"
                         }
                       ],
                       "rank_note": "Ordered by structure, from light to plasmons to magnetism."
@@ -1288,12 +1270,6 @@
                       "order": "structure",
                       "rank_note": "Ordered from motor vehicles to guidance and transport.",
                       "points": [
-                        {
-                          "id": "LCC:TL",
-                          "anchor": "node:LCC:TL",
-                          "statement": "Motor vehicles. Aeronautics. Astronautics",
-                          "name": "Motor vehicles. Aeronautics. Astronautics"
-                        },
                         {
                           "id": "EN.O.A2.G13",
                           "anchor": "group:EN.O.A2.G13",
@@ -2200,12 +2176,6 @@
                           "anchor": "node:IEEE:Nuclear and plasma sciences|Gas discharge devices",
                           "statement": "Gas discharge devices",
                           "name": "Gas discharge devices"
-                        },
-                        {
-                          "id": "IEEE:Nuclear and plasma sciences|Helioseismology",
-                          "anchor": "node:IEEE:Nuclear and plasma sciences|Helioseismology",
-                          "statement": "Helioseismology",
-                          "name": "Helioseismology"
                         }
                       ],
                       "rank_note": "Ordered from the plasma medium to the reactors and power generation built on it."
@@ -4206,183 +4176,6 @@
                       "basis": "kinds",
                       "order": "structure",
                       "points": [
-                        {
-                          "id": "EN.O.A1.G126",
-                          "anchor": "group:EN.O.A1.G126",
-                          "statement": "Patient-related and support equipment are artefact types whose models close on a mass, load, signal or energy balance at the body or in the supporting utilities.",
-                          "name": "Patient-related and support equipment are artefact types whose models close on a mass, load, signal or energy balance at the body or in the supporting utilities.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "EN.O.A1.G36",
-                                "anchor": "group:EN.O.A1.G36",
-                                "statement": "Body-contact devices are artefacts applied to or worn on the patient, whose models close on the load or fluid exchanged at the body interface.",
-                                "name": "Body-contact devices are artefacts applied to or worn on the patient, whose models close on the load or fluid exchanged at the body interface.",
-                                "support": {
-                                  "logic_type": "inductive",
-                                  "plural_noun": "members",
-                                  "basis": "kinds",
-                                  "order": "structure",
-                                  "points": [
-                                    {
-                                      "id": "MeSH:E07.101",
-                                      "anchor": "node:MeSH:E07.101",
-                                      "statement": "Bandages",
-                                      "name": "Bandages"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.132",
-                                      "anchor": "node:MeSH:E07.132",
-                                      "statement": "Catheters",
-                                      "name": "Catheters"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.190",
-                                      "anchor": "node:MeSH:E07.190",
-                                      "statement": "Contraceptive Devices",
-                                      "name": "Contraceptive Devices"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.341",
-                                      "anchor": "node:MeSH:E07.341",
-                                      "statement": "Exoskeleton Device",
-                                      "name": "Exoskeleton Device"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.315",
-                                      "anchor": "node:MeSH:E07.315",
-                                      "statement": "Emergency Medical Tags",
-                                      "name": "Emergency Medical Tags"
-                                    }
-                                  ],
-                                  "rank_note": "Listed by structure: items applied directly to the patient's body."
-                                }
-                              },
-                              {
-                                "id": "EN.O.A1.G37",
-                                "anchor": "group:EN.O.A1.G37",
-                                "statement": "Culture and bioprocess systems are artefacts that sustain living material, whose models close on the mass balance of nutrients and metabolites.",
-                                "name": "Culture and bioprocess systems are artefacts that sustain living material, whose models close on the mass balance of nutrients and metabolites.",
-                                "support": {
-                                  "logic_type": "inductive",
-                                  "plural_noun": "members",
-                                  "basis": "kinds",
-                                  "order": "structure",
-                                  "points": [
-                                    {
-                                      "id": "MeSH:E07.115",
-                                      "anchor": "node:MeSH:E07.115",
-                                      "statement": "Bioreactors",
-                                      "name": "Bioreactors"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.206",
-                                      "anchor": "node:MeSH:E07.206",
-                                      "statement": "Culture Media",
-                                      "name": "Culture Media"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.241",
-                                      "anchor": "node:MeSH:E07.241",
-                                      "statement": "Diffusion Chambers, Culture",
-                                      "name": "Diffusion Chambers, Culture"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.123",
-                                      "anchor": "node:MeSH:E07.123",
-                                      "statement": "Capillary Tubing",
-                                      "name": "Capillary Tubing"
-                                    }
-                                  ],
-                                  "rank_note": "Listed by structure: items that contain or feed cultured material."
-                                }
-                              },
-                              {
-                                "id": "EN.O.A1.G38",
-                                "anchor": "group:EN.O.A1.G38",
-                                "statement": "Clinical and diagnostic equipment comprises instruments used to examine or treat patients, whose models close on the signal or energy measured or delivered.",
-                                "name": "Clinical and diagnostic equipment comprises instruments used to examine or treat patients, whose models close on the signal or energy measured or delivered.",
-                                "support": {
-                                  "logic_type": "inductive",
-                                  "plural_noun": "members",
-                                  "basis": "kinds",
-                                  "order": "structure",
-                                  "points": [
-                                    {
-                                      "id": "MeSH:E07.230",
-                                      "anchor": "node:MeSH:E07.230",
-                                      "statement": "Diagnostic Equipment",
-                                      "name": "Diagnostic Equipment"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.420",
-                                      "anchor": "node:MeSH:E07.420",
-                                      "statement": "Gamma Cameras",
-                                      "name": "Gamma Cameras"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.222",
-                                      "anchor": "node:MeSH:E07.222",
-                                      "statement": "Dental Equipment",
-                                      "name": "Dental Equipment"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.278",
-                                      "anchor": "node:MeSH:E07.278",
-                                      "statement": "Durable Medical Equipment",
-                                      "name": "Durable Medical Equipment"
-                                    }
-                                  ],
-                                  "rank_note": "Listed by structure: instruments used for examination and care."
-                                }
-                              },
-                              {
-                                "id": "EN.O.A1.G39",
-                                "anchor": "group:EN.O.A1.G39",
-                                "statement": "Utility and support equipment supplies or removes energy and gases for other devices, and its model closes on the flow balance of power or gas.",
-                                "name": "Utility and support equipment supplies or removes energy and gases for other devices, and its model closes on the flow balance of power or gas.",
-                                "support": {
-                                  "logic_type": "inductive",
-                                  "plural_noun": "members",
-                                  "basis": "kinds",
-                                  "order": "structure",
-                                  "points": [
-                                    {
-                                      "id": "MeSH:E07.161",
-                                      "anchor": "node:MeSH:E07.161",
-                                      "statement": "Compressed Air",
-                                      "name": "Compressed Air"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.427",
-                                      "anchor": "node:MeSH:E07.427",
-                                      "statement": "Gas Scavengers",
-                                      "name": "Gas Scavengers"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.305",
-                                      "anchor": "node:MeSH:E07.305",
-                                      "statement": "Electrical Equipment and Supplies",
-                                      "name": "Electrical Equipment and Supplies"
-                                    },
-                                    {
-                                      "id": "MeSH:E07.108",
-                                      "anchor": "node:MeSH:E07.108",
-                                      "statement": "Bathroom Equipment",
-                                      "name": "Bathroom Equipment"
-                                    }
-                                  ],
-                                  "rank_note": "Listed by structure: infrastructure supporting other equipment."
-                                }
-                              }
-                            ],
-                            "rank_note": "Listed structurally from body-contact devices to culture systems, clinical instruments and utilities."
-                          }
-                        },
                         {
                           "id": "EN.O.A1.G127",
                           "anchor": "group:EN.O.A1.G127",
@@ -11494,7 +11287,44 @@
       }
     ]
   },
-  "routed": [],
+  "routed": [
+    {
+      "id": "LCC:TS",
+      "name": "Manufactures",
+      "to_field": "target",
+      "by": "cleanup"
+    },
+    {
+      "id": "LCC:TN",
+      "name": "Mining engineering. Metallurgy",
+      "to_field": "target",
+      "by": "cleanup"
+    },
+    {
+      "id": "IEEE:Nuclear and plasma sciences|Helioseismology",
+      "name": "Helioseismology",
+      "to_field": "astronomy",
+      "by": "cleanup"
+    },
+    {
+      "id": "LCC:TP",
+      "name": "Chemical technology",
+      "to_field": "target",
+      "by": "cleanup"
+    },
+    {
+      "id": "LCC:TL",
+      "name": "Motor vehicles. Aeronautics. Astronautics",
+      "to_field": "target",
+      "by": "cleanup"
+    },
+    {
+      "id": "EN.O.A1.G126",
+      "name": "Patient-related and support equipment are artefact types whose models close on a mass, load, signal or energy balance at the body or in the supporting utilities.",
+      "to_field": "target",
+      "by": "cleanup"
+    }
+  ],
   "retired": [
     {
       "id": "ANZSRC:4099",
@@ -11527,10 +11357,16 @@
       "Electrical, information and control systems are designed to carry charge, signals and decisions, from circuits and electromagnetics to communications, sensing, robotics and control."
     ],
     "holds": true,
-    "note": "Misplaced: P1.5.2.4 and P1.5.2.5 (Manufactures, Mining/Metallurgy), P3.2.3.5 Helioseismology, P1.3.4.5 Chemical technology, P2.2.2.1 aeronautics under road vehicles, P4.1.5 medical items.",
+    "note": "Misplaced: P3.1.1.4 Maritime engineering (belongs P2.3), P1.3.3.1 and P1.3.3.2 (belong P1.4), P1.5.2.1 Nanophotonics (duplicates P1.4.1.3), P3.3.1.3 Particle physics.",
     "review": false,
-    "misplaced": 8,
-    "problems": 8
+    "misplaced": 7,
+    "problems": 7,
+    "cleanup": {
+      "before": 8,
+      "rule_moves": 0,
+      "ai_moves": 6,
+      "date": "2026-10-13 15:36"
+    }
   },
-  "cost_usd": 1.3547
+  "cost_usd": 1.5312
 }
