@@ -12976,10 +12976,11 @@
         "note": "Worst misplaced: P3.1.5.3 and P3.1.5.4 (outcome and market concepts under farm inputs), P2.2.3.4 wood processing, P2.1.4.1 harvest/capture, P3.2.3.4 search and rescue, P1.2.3.4 lichens."
       }
     ],
-    "rebuild": {
-      "builder": "claude-opus-5-5",
+    "verified_2of3": {
       "checker": "claude-sonnet-5-5",
-      "date": "2026-10-13 16:32"
+      "date": "2026-10-13 16:33",
+      "sections_rebuilt": false,
+      "why": "Opus 5.5 build hit max_tokens; the existing pyramid was re-checked only"
     }
   }
 }

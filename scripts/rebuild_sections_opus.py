@@ -32,6 +32,7 @@ def add(field, model, usd):
 SPLIT = {}
 def call(self, system, user, tool, schema, max_tokens):
     model = OPUS if tool == "record_pyramid" else SONNET
+    if model == OPUS: max_tokens = 24000  # adaptive thinking shares this budget; 10000 ran out
     ir, orr = RATES[model]
     worst = (len(system) + len(user)) / 3.0 / 1e6 * ir + max_tokens / 1e6 * orr
     if self.used + worst > self.field_cap:
@@ -99,7 +100,7 @@ def run(field, results):
     except Exception as e:
         res = {"error": str(e)}; log(f"{field} build error {e}")
     new = json.loads(paths[0].read_text())
-    built = new is not orig and json.dumps(new) != backup[paths[0]]
+    built = paths[0].read_text() != backup[paths[0]]
     b = mp.Budget(field, 10, 1e9); b.field_cap = FIELD_CAP - SPLIT.get(field, {}).get(OPUS, 0) - SPLIT.get(field, {}).get(SONNET, 0) + 0.0
     bad = cm.issues(field, new) if built else {"not built": [1]}
     checks = three_checks(field, new, b) if built and not bad else []
