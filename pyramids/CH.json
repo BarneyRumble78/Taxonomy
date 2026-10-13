@@ -205,6 +205,24 @@
                         }
                       ]
                     }
+                  },
+                  {
+                    "id": "ANZSRC:340201",
+                    "anchor": "node:ANZSRC:340201",
+                    "statement": "Bioinorganic chemistry",
+                    "name": "Bioinorganic chemistry"
+                  },
+                  {
+                    "id": "ANZSRC:340204",
+                    "anchor": "node:ANZSRC:340204",
+                    "statement": "Inorganic green chemistry",
+                    "name": "Inorganic green chemistry"
+                  },
+                  {
+                    "id": "ANZSRC:340301",
+                    "anchor": "node:ANZSRC:340301",
+                    "statement": "Inorganic materials (incl. nanomaterials)",
+                    "name": "Inorganic materials (incl. nanomaterials)"
                   }
                 ]
               }
@@ -708,24 +726,6 @@
                           "anchor": "node:ANZSRC:340305",
                           "statement": "Physical properties of materials",
                           "name": "Physical properties of materials"
-                        },
-                        {
-                          "id": "ANZSRC:340201",
-                          "anchor": "node:ANZSRC:340201",
-                          "statement": "Bioinorganic chemistry",
-                          "name": "Bioinorganic chemistry"
-                        },
-                        {
-                          "id": "ANZSRC:340204",
-                          "anchor": "node:ANZSRC:340204",
-                          "statement": "Inorganic green chemistry",
-                          "name": "Inorganic green chemistry"
-                        },
-                        {
-                          "id": "ANZSRC:340301",
-                          "anchor": "node:ANZSRC:340301",
-                          "statement": "Inorganic materials (incl. nanomaterials)",
-                          "name": "Inorganic materials (incl. nanomaterials)"
                         }
                       ],
                       "rank_note": "Ordered by structure, from optical to general physical properties."
@@ -865,12 +865,6 @@
                       "basis": "kinds",
                       "order": "degree",
                       "points": [
-                        {
-                          "id": "MeSH:G02.965",
-                          "anchor": "node:MeSH:G02.965",
-                          "statement": "X-Ray Diffraction",
-                          "name": "X-Ray Diffraction"
-                        },
                         {
                           "id": "MeSH:G02.860",
                           "anchor": "node:MeSH:G02.860",
@@ -1051,33 +1045,6 @@
                         }
                       ],
                       "rank_note": "Kinds of interface questions arranged by structure: surface science, bulk uptake, surface binding, and ionization of air."
-                    }
-                  },
-                  {
-                    "id": "CH.O.A3.G18",
-                    "anchor": "group:CH.O.A3.G18",
-                    "statement": "Barrier-passage processes separate a substance from a mixture by letting only certain components cross a membrane or filter.",
-                    "name": "Barrier-passage processes separate a substance from a mixture by letting only certain components cross a membrane or filter.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "MeSH:G02.186",
-                          "anchor": "node:MeSH:G02.186",
-                          "statement": "Dialysis",
-                          "name": "Dialysis"
-                        },
-                        {
-                          "id": "MeSH:G02.263",
-                          "anchor": "node:MeSH:G02.263",
-                          "statement": "Filtration",
-                          "name": "Filtration"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure; no ranking implied."
                     }
                   },
                   {
@@ -1585,10 +1552,30 @@
       "Synthesis and analysis is the question of how a substance is made, isolated, detected and measured."
     ],
     "holds": true,
-    "note": "Worst misplaced: P5.1.1 biological macromolecules (belongs in P1.4), P2.3.3.3-P2.3.3.5 inorganic fields (belong in P1.2), P3.1.5.1 X-Ray Diffraction (belongs in P2), P3.3.2 separations (belong in P5).",
+    "note": "Key line holds; worst misplaced: P5.1.1 (biological macromolecules) belongs under P1.4, P5.1.2.1 and P5.1.2.4 under P4, and P1.5.1.4 under P1.4.",
     "review": false,
-    "misplaced": 18,
-    "problems": 18
+    "misplaced": 14,
+    "problems": 14,
+    "cleanup": {
+      "before": 18,
+      "rule_moves": 3,
+      "ai_moves": 2,
+      "date": "2026-10-13 15:26"
+    }
   },
-  "cost_usd": 0.2673
+  "cost_usd": 0.3192,
+  "routed": [
+    {
+      "id": "MeSH:G02.965",
+      "name": "X-Ray Diffraction",
+      "to_field": "position",
+      "by": "cleanup"
+    },
+    {
+      "id": "CH.O.A3.G18",
+      "name": "Barrier-passage processes separate a substance from a mixture by letting only certain components cross a membrane or filter.",
+      "to_field": "position",
+      "by": "cleanup"
+    }
+  ]
 }

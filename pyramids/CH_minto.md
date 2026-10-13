@@ -58,6 +58,9 @@ Group of questions about a substance. Basis: kinds. Dimension: the question aske
     - F-block chemistry
     - Organometallic chemistry
     - Metal cluster chemistry
+  - Bioinorganic chemistry
+  - Inorganic green chemistry
+  - Inorganic materials (incl. nanomaterials)
 - **Organic and ring-based classes identify substances by their carbon frameworks.**
   _basis: kinds, order: structure. From the general organic class to ring types._
   - Organic Chemicals
@@ -136,9 +139,6 @@ Group of questions about a substance. Basis: kinds. Dimension: the question aske
     _basis: kinds, order: structure. Ordered by structure, from optical to general physical properties._
     - Optical properties of materials
     - Physical properties of materials
-    - Bioinorganic chemistry
-    - Inorganic green chemistry
-    - Inorganic materials (incl. nanomaterials)
   - **Fields that ask how a material can be conceived and designed in theory to achieve desired properties, and how it behaves in aggregate.**
     _basis: kinds, order: structure_
     - Theory and design of materials
@@ -161,7 +161,6 @@ Group of questions about a substance. Basis: kinds. Dimension: the question aske
   - Transport properties and non-equilibrium processes
   - **Energy and structure probes ask how a substance stores energy, ignites, presents its surface, or reveals its atomic arrangement.**
     _basis: kinds, order: degree. Ranked from the most direct structural measurement (X-ray diffraction) to surface behavior to energetic phenomena._
-    - X-Ray Diffraction
     - Surface Properties
     - Proton-Motive Force
     - Spontaneous Combustion
@@ -189,10 +188,6 @@ Group of questions about a substance. Basis: kinds. Dimension: the question aske
     - Absorption
     - Adsorption
     - Air Ionization
-  - **Barrier-passage processes separate a substance from a mixture by letting only certain components cross a membrane or filter.**
-    _basis: kinds, order: structure. Ordered by structure; no ranking implied._
-    - Dialysis
-    - Filtration
   - **Gradient-driven processes ask how a substance moves or exchanges in response to concentration or charge differences.**
     _basis: kinds, order: structure. Ordered by structure; no ranking implied._
     - Ion Exchange
@@ -265,7 +260,12 @@ Group of questions about a substance. Basis: kinds. Dimension: the question aske
     - Quality assurance, chemometrics, traceability and metrological chemistry
   - Other chemical sciences not elsewhere classified
 
+## Routed to other fields
+
+- X-Ray Diffraction
+- Barrier-passage processes separate a substance from a mixture by letting only certain components cross a membrane or filter.
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Worst misplaced: P5.1.1 biological macromolecules (belongs in P1.4), P2.3.3.3-P2.3.3.5 inorganic fields (belong in P1.2), P3.1.5.1 X-Ray Diffraction (belongs in P2), P3.3.2 separations (belong in P5).
+- field_check holds: True — Key line holds; worst misplaced: P5.1.1 (biological macromolecules) belongs under P1.4, P5.1.2.1 and P5.1.2.4 under P4, and P1.5.1.4 under P1.4.
