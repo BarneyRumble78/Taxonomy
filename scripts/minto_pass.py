@@ -61,6 +61,11 @@ PIL = {"type": "object", "additionalProperties": False,
                       "basis": SEC["properties"]["basis"], "order": SEC["properties"]["order"], "rank_note": {"type": "string"},
                       "members": {"type": "array", "items": {"type": "string"}}, "sections": {"type": "array", "items": SEC}},
        "required": ["title", "statement", "basis", "order", "rank_note", "members", "sections"]}
+MLS = {"type": "object", "additionalProperties": False,
+       "properties": {"statement": {"type": "string"}, "basis": SUB["properties"]["basis"], "order": SUB["properties"]["order"],
+                      "rank_note": {"type": "string"}, "members": {"type": "array", "items": {"type": "string"}},
+                      "sections": {"type": "array", "items": SUB}},
+       "required": ["statement", "basis", "order", "rank_note", "members", "sections"]}
 SCHEMA = {"type": "object", "additionalProperties": False,
           "properties": {"governing_thought": {"type": "string"}, "dimension": {"type": "string"}, "plural_noun": {"type": "string"},
                          "basis": SEC["properties"]["basis"], "order": SEC["properties"]["order"], "rank_note": {"type": "string"},
@@ -69,7 +74,7 @@ SCHEMA = {"type": "object", "additionalProperties": False,
                          "rewrites": {"type": "array", "items": {"type": "object", "additionalProperties": False, "properties": {"id": {"type": "string"}, "statement": {"type": "string"}}, "required": ["id", "statement"]}},
                          "retired": {"type": "array", "items": {"type": "string"}},
                          "dissolve": {"type": "array", "items": {"type": "string"}},
-                         "method_line": PIL,
+                         "method_line": MLS,
                          "routed": {"type": "array", "items": {"type": "string"}},
                          "merge": {"type": "array", "items": {"type": "object", "additionalProperties": False, "properties": {"keep": {"type": "string"}, "drop": {"type": "string"}}, "required": ["keep", "drop"]}}},
           "required": ["method_line", "routed", "merge", "dissolve", "rewrites", "retired", "governing_thought", "dimension", "plural_noun", "basis", "order", "rank_note", "situation", "complication", "question", "pillars"]}
@@ -82,7 +87,12 @@ The method line sits outside the key line and holds how the discipline is studie
 Ids like P1.2 are neutral positions, not codes. Leaf topic names come from published sources and cannot be renamed.
 note: one sentence, at most twenty-five words: the worst key-line problem if key_line_holds is false, otherwise the worst misplaced items by position.
 Call the tool record_check exactly once."""
-CHECK_SCHEMA = {"type": "object", "additionalProperties": False,
+CHECK_MLS = {"type": "object", "additionalProperties": False,
+       "properties": {"statement": {"type": "string"}, "basis": SUB["properties"]["basis"], "order": SUB["properties"]["order"],
+                      "rank_note": {"type": "string"}, "members": {"type": "array", "items": {"type": "string"}},
+                      "sections": {"type": "array", "items": SUB}},
+       "required": ["statement", "basis", "order", "rank_note", "members", "sections"]}
+SCHEMA = {"type": "object", "additionalProperties": False,
                 "properties": {"key_line_holds": {"type": "boolean"}, "misplaced": {"type": "integer"}, "note": {"type": "string"}}, "required": ["key_line_holds", "misplaced", "note"]}
 
 EXPAND = re.compile(BAN.pattern + r"|\bcontainer|classifications?\b|\bcategories\b", re.I)
