@@ -149,9 +149,7 @@ Group of settling agents. Basis: kinds. Dimension: who settles the allocation. O
   - **Regulation and industry studies of manufacturing, primary products, and services describe allocation settled through public rules and at the sector level.**
     _basis: kinds, order: structure. Ordered by structure from regulation to sector studies._
     - Regulation and Industrial Policy
-    - Industry Studies: Manufacturing
     - Industry Studies: Primary Products and Construction
-    - Industry Studies: Services
 - **Governments settle allocations through public provision, taxation and local or intergovernmental arrangements.**
   _basis: kinds, order: structure. Ordered from national to local public finance._
   - **Fields where allocation is settled collectively by governments through political choice, public provision, taxation and distributional judgement.**
@@ -180,7 +178,6 @@ Group of settling agents. Basis: kinds. Dimension: who settles the allocation. O
   _basis: kinds, order: structure. Ordered from welfare theory to development practice._
   - **Allocation is settled at the scale of the whole economy or collective, through general equilibrium, welfare assessment, and collective decision-making.**
     _basis: kinds, order: structure. Ordered by structure, from economy-wide equilibrium to collective choice._
-    - General Equilibrium and Disequilibrium
     - Welfare Economics
     - Analysis of Collective Decision-Making
   - Rural community development
@@ -267,8 +264,6 @@ Group of settling agents. Basis: kinds. Dimension: who settles the allocation. O
     - Economic Impacts of Globalization
   - **Broad field headings and the general industrial organization entry define the widest scale at which allocation questions are posed.**
     _basis: kinds, order: structure. Ordered by structure from the field headings to the general entry._
-    - Industrial Organization
-    - Agricultural and Natural Resource Economics &bull; Environmental and Ecological Economics
     - Urban, Rural, Regional, Real Estate, and Transportation Economics
     - General
 - **The whole economy's history shows allocations settled over time through the aggregate and sector records of economic history.**
@@ -362,7 +357,15 @@ _basis: kinds, order: structure_
   - Dissertations (unclassified)
   - Further Reading (unclassified)
 
+## Routed to other fields
+
+- Industry Studies: Manufacturing
+- Industry Studies: Services
+- Industrial Organization
+- Agricultural and Natural Resource Economics &bull; Environmental and Ecological Economics
+- General Equilibrium and Disequilibrium
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Worst misplaced: P3.1.4.2-4 industry studies under government, P4.3.5.1-3 industrial/resource/urban fields under international trade, P3.3.1.1 general equilibrium under public institutions.
+- field_check holds: True — Worst misplaced: P2.2.3.4 antitrust, P3.1.4.2 industry studies, P4.3.1 macro behavioral, P4.3.5.1 spatial economics, P4.1.5.3 labor, P2.4.4.1 household analysis.

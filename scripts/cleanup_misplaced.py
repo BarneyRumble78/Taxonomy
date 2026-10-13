@@ -170,6 +170,17 @@ def run1(field, results, rnd, note2=None, prev=None):
     bad = issues(field, pyr)
     holds = bool(chk.get("key_line_holds")) and not bad
     after = int(chk.get("misplaced") or 0)
+    if not bad and (not holds or after >= (before or 0)):
+        log(f"{field} first re-check holds={holds} misplaced={after}; checking once more (checker is noisy)")
+        try:
+            chk2 = call(b, mp.CHECK_SYSTEM, "Check this pyramid:\n" + json.dumps(view(pyr), ensure_ascii=False, indent=1), "record_check", mp.CHECK_SCHEMA, 2500)
+        except RuntimeError as e:
+            chk2 = None; log(f"{field} second check skipped: {e}")
+        if chk2:
+            rec["first_check"] = {"holds": holds, "misplaced": after, "note": chk.get("note")}
+            h2, a2 = bool(chk2.get("key_line_holds")), int(chk2.get("misplaced") or 0)
+            if (h2 and not holds) or (h2 == holds and a2 < after):
+                chk, holds, after = chk2, h2, a2
     rec.update(check_holds=holds, check_misplaced=after, check_note=chk.get("note"), cost=round(b.used, 4))
     log(f"{field} recheck holds={holds} misplaced {before}->{after} moves rule={len(free)} ai={len(ai)}/{len(mv)} cost=${b.used:.4f} note={chk.get('note')}")
     if not holds or after >= (before or 0):

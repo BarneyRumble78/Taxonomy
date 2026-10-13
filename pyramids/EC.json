@@ -797,22 +797,10 @@
                           "name": "Regulation and Industrial Policy"
                         },
                         {
-                          "id": "JEL:L6",
-                          "anchor": "node:JEL:L6",
-                          "statement": "Industry Studies: Manufacturing",
-                          "name": "Industry Studies: Manufacturing"
-                        },
-                        {
                           "id": "JEL:L7",
                           "anchor": "node:JEL:L7",
                           "statement": "Industry Studies: Primary Products and Construction",
                           "name": "Industry Studies: Primary Products and Construction"
-                        },
-                        {
-                          "id": "JEL:L8",
-                          "anchor": "node:JEL:L8",
-                          "statement": "Industry Studies: Services",
-                          "name": "Industry Studies: Services"
                         }
                       ],
                       "rank_note": "Ordered by structure from regulation to sector studies."
@@ -1001,12 +989,6 @@
                       "basis": "kinds",
                       "order": "structure",
                       "points": [
-                        {
-                          "id": "JEL:D5",
-                          "anchor": "node:JEL:D5",
-                          "statement": "General Equilibrium and Disequilibrium",
-                          "name": "General Equilibrium and Disequilibrium"
-                        },
                         {
                           "id": "JEL:D6",
                           "anchor": "node:JEL:D6",
@@ -1558,18 +1540,6 @@
                       "basis": "kinds",
                       "order": "structure",
                       "points": [
-                        {
-                          "id": "JEL:L",
-                          "anchor": "node:JEL:L",
-                          "statement": "Industrial Organization",
-                          "name": "Industrial Organization"
-                        },
-                        {
-                          "id": "JEL:Q",
-                          "anchor": "node:JEL:Q",
-                          "statement": "Agricultural and Natural Resource Economics &bull; Environmental and Ecological Economics",
-                          "name": "Agricultural and Natural Resource Economics &bull; Environmental and Ecological Economics"
-                        },
                         {
                           "id": "JEL:R",
                           "anchor": "node:JEL:R",
@@ -2148,7 +2118,38 @@
       }
     ]
   },
-  "routed": [],
+  "routed": [
+    {
+      "id": "JEL:L6",
+      "name": "Industry Studies: Manufacturing",
+      "to_field": "position",
+      "by": "cleanup"
+    },
+    {
+      "id": "JEL:L8",
+      "name": "Industry Studies: Services",
+      "to_field": "position",
+      "by": "cleanup"
+    },
+    {
+      "id": "JEL:L",
+      "name": "Industrial Organization",
+      "to_field": "position",
+      "by": "cleanup"
+    },
+    {
+      "id": "JEL:Q",
+      "name": "Agricultural and Natural Resource Economics &bull; Environmental and Ecological Economics",
+      "to_field": "position",
+      "by": "cleanup"
+    },
+    {
+      "id": "JEL:D5",
+      "name": "General Equilibrium and Disequilibrium",
+      "to_field": "position",
+      "by": "cleanup"
+    }
+  ],
   "retired": [
     {
       "id": "JEL:D0",
@@ -2246,10 +2247,16 @@
       "The whole economy settles allocations in aggregate through money, prices, growth, development and trade between countries."
     ],
     "holds": true,
-    "note": "Worst misplaced: P3.1.4.2-4 industry studies under government, P4.3.5.1-3 industrial/resource/urban fields under international trade, P3.3.1.1 general equilibrium under public institutions.",
+    "note": "Worst misplaced: P2.2.3.4 antitrust, P3.1.4.2 industry studies, P4.3.1 macro behavioral, P4.3.5.1 spatial economics, P4.1.5.3 labor, P2.4.4.1 household analysis.",
     "review": false,
-    "misplaced": 18,
-    "problems": 18
+    "misplaced": 13,
+    "problems": 13,
+    "cleanup": {
+      "before": 18,
+      "rule_moves": 0,
+      "ai_moves": 5,
+      "date": "2026-10-13 15:35"
+    }
   },
-  "cost_usd": 0.2859
+  "cost_usd": 0.3558
 }
