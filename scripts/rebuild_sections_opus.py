@@ -7,7 +7,7 @@ import cleanup_misplaced as cm
 
 ROOT = mp.ROOT
 HARD = 79.2
-FIELD_CAP = 1.70
+FIELD_CAP = float(os.environ.get("FIELD_CAP", "1.70"))
 OPUS, SONNET = "claude-opus-5-5", "claude-sonnet-5-5"
 RATES = {OPUS: (4.0, 20.0), SONNET: (2.0, 10.0)}
 RES = Path("/workspace/rebuild_results.json")
@@ -32,7 +32,7 @@ def add(field, model, usd):
 SPLIT = {}
 def call(self, system, user, tool, schema, max_tokens):
     model = OPUS if tool == "record_pyramid" else SONNET
-    if model == OPUS: max_tokens = 24000  # adaptive thinking shares this budget; 10000 ran out
+    if model == OPUS: max_tokens = int(os.environ.get("OPUS_MAX", "24000"))  # adaptive thinking shares this budget; 10000 ran out
     ir, orr = RATES[model]
     worst = (len(system) + len(user)) / 3.0 / 1e6 * ir + max_tokens / 1e6 * orr
     if self.used + worst > self.field_cap:
@@ -94,7 +94,7 @@ def run(field, results):
     kf_backup = kf.read_text() if kf.exists() else None
     kf.write_text(json.dumps(old or kl_new, indent=1, ensure_ascii=False) + "\n")
     rec = {"field": field, "misplaced_before": orig["field_check"].get("misplaced")}
-    mp.FIXED_MODE[0] = True; mp.ATTEMPTS[0] = 3
+    mp.FIXED_MODE[0] = True; mp.ATTEMPTS[0] = int(os.environ.get("ATTEMPTS", "3"))
     try:
         res = mp.run(field, FIELD_CAP - 0.30, 1e9)   # keep ~$0.30 of the field cap for the 3 checks
     except Exception as e:
