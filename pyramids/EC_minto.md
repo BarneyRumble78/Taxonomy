@@ -4,50 +4,50 @@ Built by scripts/minto_pass.py from the grouped classification. Three rules (Min
 
 ## Introduction
 
-**Situation.** Economics studies how scarce resources are allocated among competing uses.
+**Situation.** Economics studies how scarce resources are allocated, and every allocation is settled by some agent or set of agents.
 
-**Complication.** The field's topics are scattered across several schemes that do not share a common subject-matter organisation.
+**Complication.** Source schemes list topics by catalogue class, mixing agents of different scales, so the same agent appears in many places.
 
-**Question.** How is everything in economics divided?
+**Question.** Who settles the allocation in each area of economics?
 
-**Answer.** Economics divides by the scale at which an allocation is settled into choice by single agents, markets, mechanisms and institutions, the aggregate economy, and welfare and public choice.
+**Answer.** Economics is divided by who settles an allocation: individuals and households, firms and markets, governments and public institutions, and the economy as a whole.
 
 ## Governing thought
 
-Economics divides by the scale at which an allocation is settled into choice by single agents, markets, mechanisms and institutions, the aggregate economy, and welfare and public choice.
+Economics is divided by who settles an allocation: individuals and households, firms and markets, governments and public institutions, and the economy as a whole.
 
 ## Key line
 
-Group of scales of allocation. Basis: kinds. Dimension: the scale at which an allocation is settled. Order: degree. From one agent, to a market, to the whole society.
+Group of settling agents. Basis: kinds. Dimension: who settles the allocation. Order: degree. Ranked from the smallest settling agent, the individual, to the largest, the whole economy.
 
-1. Choice is the scale at which an allocation is settled by a single household, person or small group deciding under its own preferences, information and constraints. `EC.K1`
-2. Markets are the scale at which an allocation is settled through the exchange, pricing and competition of many buyers and sellers, firms and workers. `EC.K2`
-3. Mechanisms and institutions are the scale at which an allocation is settled by the rules, laws, organisations and economic systems that structure exchange. `EC.K3`
-4. The aggregate economy is the scale at which an allocation is settled across a whole economy, through prices, money, growth and exchange with other countries. `EC.K4`
-5. Welfare and public choice is the scale at which an allocation is settled for the whole society through distribution, collective decision and government. `EC.K5`
+1. Individuals and households settle allocations through their own choices about consumption, work, learning, health and risk. `EC.K1`
+2. Firms and markets settle allocations through production, exchange, pricing and competition in labour, product, financial, land and resource markets. `EC.K2`
+3. Governments and public institutions settle allocations through law, regulation, taxation, public choice and the redistribution of welfare. `EC.K3`
+4. The whole economy settles allocations in aggregate through money, prices, growth, development and trade between countries. `EC.K4`
 
 ## Groups
 
-### 1. Choice is the scale at which an allocation is settled by a single household, person or small group deciding under its own preferences, information and constraints.
+### 1. Individuals and households settle allocations through their own choices about consumption, work, learning, health and risk.
 
-- **Individual and household decision-making settles allocations through preferences, information, uncertainty and behavioural limits.**
-  _basis: kinds, order: degree. From general theory to behavioural departures from it._
-  - Microeconomic theory
-  - Household Behavior and Family Economics
+- **Individuals settle allocations through their own choices under information limits, uncertainty and behavioral bias.**
+  _basis: kinds, order: structure. Ordered from theory of choice to behavioral evidence._
+  - Microeconomics
   - Information, Knowledge, and Uncertainty
   - Micro-Based Behavioral Economics
-  - Economic theory. Demography
-- **Behavioural and experimental study tests how individuals and households actually decide in saving, finance and family matters.**
-  _basis: kinds, order: degree. From experiment to behaviour in finance and the household._
-  - Behavioural economics
-  - Experimental economics
+- **Households settle allocations through family decisions on saving, finance and demographic composition.**
+  _basis: kinds, order: structure. Ordered from household behavior to its financial and demographic dimensions._
+  - Household Behavior and Family Economics
   - Behavioral Finance
   - Household Finance
   - Demographic Economics
-- **Individual allocations over learning, work, health and community circumstances are settled by people and their households.**
-  _basis: kinds, order: degree. From personal skills, to health, to the wider household and community._
-  - Economics of education
-  - Labour economics
+- **Individuals and communities settle allocations through their work, schooling, health and wellbeing decisions.**
+  _basis: kinds, order: structure. Ordered from personal investments to community-level wellbeing._
+  - **Fields where allocation is settled by individual people and small groups through their choices, learning and work decisions.**
+    _basis: kinds, order: degree. Smallest scale: individual and small-group decisions._
+    - Behavioural economics
+    - Experimental economics
+    - Economics of education
+    - Labour economics
   - Health economics
   - **Individual and household settlement covers allocations settled through the behavior of agents and their health and education outcomes.**
     _basis: kinds, order: structure. Smallest scale: the individual agent._
@@ -58,59 +58,49 @@ Group of scales of allocation. Basis: kinds. Dimension: the scale at which an al
     _basis: kinds, order: structure. Ordered structurally from the household and individual scale to the broader cultural and community scale._
     - Welfare, Well-Being, and Poverty
     - Cultural Economics &bull; Economic Sociology &bull; Economic Anthropology
+  - Poverty, inclusivity and wellbeing
 
-### 2. Markets are the scale at which an allocation is settled through the exchange, pricing and competition of many buyers and sellers, firms and workers.
+### 2. Firms and markets settle allocations through production, exchange, pricing and competition in labour, product, financial, land and resource markets.
 
-- **Labour markets settle allocation by matching workers and employers on supply, demand, pay and discrimination.**
-  _basis: kinds, order: degree. From supply and pay to particular markets._
-  - Demand and Supply of Labor
-  - Wages, Compensation, and Labor Costs
-  - Particular Labor Markets
-  - Labor Discrimination
-- **Collective bargaining and the movement of workers settle labour allocation at the group scale across jobs, places and borders.**
-  _basis: kinds, order: degree. From bargaining to mobility._
-  - Labor&ndash;Management Relations, Trade Unions, and Collective Bargaining
-  - Mobility, Unemployment, Vacancies, and Immigrant Workers
-- **Firms and industries settle allocation through production, market structure, strategy, competition and the internal management of business.**
-  _basis: kinds, order: degree. From the single firm to whole industries._
-  - **Production, pricing and market structure describe how firms and competition settle allocation.**
-    _basis: kinds, order: degree. From production to market structure and competition policy._
-    - Production and Organizations
-    - Market Structure, Pricing, and Design
-    - Market Structure, Firm Strategy, and Market Performance
-    - Firm Objectives, Organization, and Behavior
-    - Antitrust Issues and Policies
-  - **Business administration, accounting, marketing and personnel settle allocation inside the firm.**
-    _basis: kinds, order: degree. From administration to the management of people._
-    - Business Administration
+- **Firms settle allocations through production, organization, business administration, accounting and personnel decisions.**
+  _basis: kinds, order: structure. Ordered from production theory to the management functions inside the firm._
+  - Production and Organizations
+  - Business Administration and Business Economics &bull; Marketing &bull; Accounting &bull; Personnel Economics
+  - Business Administration
+  - **Allocation is settled inside the firm through business economics, marketing, accounting and the management of personnel.**
+    _basis: kinds, order: structure. Ordered by structure of the classification, from business economics to personnel._
     - Business Economics
     - Marketing and Advertising
     - Accounting and Auditing
     - Personnel Economics
-  - **Industry studies and sector economics describe allocation in particular branches of production and service.**
-    _basis: kinds, order: degree. From primary and manufacturing sectors to services._
-    - Industry Studies: Manufacturing
-    - Industry Studies: Primary Products and Construction
-    - Industry Studies: Services
-    - Industry economics and industrial organisation
-    - Industries. Land use. Labor
-  - **Agriculture, tourism, transport and sport markets are settled in particular sector markets.**
-    _basis: kinds, order: degree. From land-based, to travel, to leisure sectors._
-    - Agricultural economics
-    - Tourism economics
-    - Transport economics
-    - **Allocations in this group are settled at the level of particular industries and sector markets, such as sports and tourism, plus the general residual category.**
-      _basis: kinds, order: structure. Ordered structurally from the general residual category to specific sector markets._
-      - Other Special Topics
-      - General
-      - Sports Economics
-      - Tourism Economics
-    - Transportation and communications
-- **Financial, land and resource markets settle allocation through trading, location and the use of natural resources.**
-  _basis: kinds, order: degree. From financial trading to land and resource use._
+  - Corporate Finance and Governance
+- **Markets settle allocations through pricing, market structure, competition and the matching of workers and employers.**
+  _basis: kinds, order: structure. Ordered from product markets to labour markets._
+  - Distribution
+  - Market Structure, Pricing, and Design
+  - **Market structure, firm objectives, nonprofit forms, and antitrust describe allocation settled by firms' strategies, ownership, and competition enforcement.**
+    _basis: kinds, order: structure. Ordered by structure from firm strategy to competition policy._
+    - Market Structure, Firm Strategy, and Market Performance
+    - Firm Objectives, Organization, and Behavior
+    - Nonprofit Organizations and Public Enterprise
+    - Antitrust Issues and Policies
+  - **Allocation settled in the labor market through the matching of workers and employers on supply, demand, pay and occupation.**
+    _basis: kinds, order: degree. Third scale: market-level exchange of labor._
+    - Demand and Supply of Labor
+    - Wages, Compensation, and Labor Costs
+    - Particular Labor Markets
+    - Labor Discrimination
+  - **Allocation settled through collective bargaining and movement of workers across jobs, places and borders at the group scale.**
+    _basis: kinds, order: degree. Fourth scale: collective and group-level labor arrangements._
+    - Labor&ndash;Management Relations, Trade Unions, and Collective Bargaining
+    - Mobility, Unemployment, Vacancies, and Immigrant Workers
+- **Financial markets and network systems settle allocations through trading, intermediation, transport and communication.**
+  _basis: kinds, order: structure. Ordered from financial trading to physical networks._
   - General Financial Markets
   - Financial Institutions and Services
-  - Corporate Finance and Governance
+  - Transportation and communications
+- **Industries, land and natural resources settle allocations through sector markets and the use of places and resources.**
+  _basis: kinds, order: structure. Ordered from general sector markets to land and resource use._
   - **Fields where allocation is settled by the use of land, natural resources and location within places and regions.**
     _basis: kinds, order: degree. Third scale: place and resource level, spanning localities and regions._
     - Environment and resource economics
@@ -121,8 +111,6 @@ Group of scales of allocation. Basis: kinds. Dimension: the scale at which an al
     - General
     - Agriculture
     - Renewable Resources and Conservation
-- **Regional and environmental markets settle allocation through where households and firms locate and how resources and energy are used.**
-  _basis: kinds, order: degree. From location choices to resource use at regional scale._
   - **Nonrenewable resources, energy, the environment, and general regional economics describe allocation settled at the scale of resource stocks, ecosystems, and places.**
     _basis: kinds, order: structure. Ordered by structure from resources to environment to regional._
     - Nonrenewable Resources and Conservation
@@ -134,188 +122,38 @@ Group of scales of allocation. Basis: kinds. Dimension: the scale at which an al
     - Household Analysis
     - Real Estate Markets, Spatial Production Analysis, and Firm Location
     - Transportation Economics
-  - Regional and Urban History
-  - Micro-Business History
+  - **Allocations in this group are settled at the level of particular industries and sector markets, such as sports and tourism, plus the general residual category.**
+    _basis: kinds, order: structure. Ordered structurally from the general residual category to specific sector markets._
+    - Other Special Topics
+    - General
+    - Sports Economics
+    - Tourism Economics
+- **Specific industries settle allocations through their own market conditions in agriculture, tourism, transport and industrial organisation.**
+  _basis: kinds, order: structure. Ordered from primary to service sectors._
+  - Agricultural economics
+  - Industry economics and industrial organisation
+  - Tourism economics
+  - Transport economics
+  - **Broad economic and sectoral fields settle the allocation of land, labor, industry and general applied economic activity at the aggregate scale.**
+    _basis: kinds, order: structure. Aggregate, economy-wide scale of allocation._
+    - Applied economics not elsewhere classified
+    - Industries. Land use. Labor
 
-### 3. Mechanisms and institutions are the scale at which an allocation is settled by the rules, laws, organisations and economic systems that structure exchange.
+### 3. Governments and public institutions settle allocations through law, regulation, taxation, public choice and the redistribution of welfare.
 
-- **Law and regulation settle allocation through legal procedure, public rules, public enterprise and industrial policy.**
-  _basis: kinds, order: degree. From procedure to regulation._
-  - Law and Economics
+- **Governments settle allocations through law, legal procedure and regulation of business conduct.**
+  _basis: kinds, order: structure. Ordered from law to regulation._
   - Basic Areas of Law
+  - Regulation and Business Law
   - Legal Procedure, the Legal System, and Illegal Behavior
-  - Regulation and Industrial Policy
-  - Nonprofit Organizations and Public Enterprise
-- **Economic systems and political economy settle allocation through the institutions of capitalist, socialist and transition economies.**
-  _basis: kinds, order: degree. From capitalist to socialist and compared systems._
-  - Capitalist Economies
-  - Socialist and Transition Economies
-  - Socialist Institutions and Their Transitions
-  - Other Economic Systems
-  - Comparative Economic Systems
-- **Economic history traces how institutions settled allocations across periods, sectors and societies.**
-  _basis: kinds, order: degree. From overall and financial history to social and sector history._
-  - **Overall, macroeconomic and financial history traces how institutions settled allocations in the economy as a whole.**
-    _basis: kinds, order: degree. From overall history to macro and financial history._
-    - Economic History
-    - Macroeconomics and Monetary Economics &bull; Industrial Structure &bull; Growth &bull; Fluctuations
-    - Financial Markets and Institutions
-  - **Social, government and sector history traces how institutions settled allocations among people, states and services.**
-    _basis: kinds, order: degree. From society to government to sectors._
-    - Labor and Consumers, Demography, Education, Health, Welfare, Income, Wealth, Religion, and Philanthropy
-    - Government, War, Law, International Relations, and Regulation
-    - Transport, Trade, Energy, Technology, and Other Services
-- **The history, methods and teaching of economics are the disciplinary institutions through which allocation is studied.**
-  _basis: kinds, order: degree. From ideas and methods to teaching and published material._
-  - **Historical thought covers how ideas about allocation developed across successive periods and through particular thinkers.**
-    _basis: kinds, order: structure. Ordered by structure, from the general category to period and individual subdivisions._
-    - History of economic thought
-    - History of Economic Thought through 1925
-    - History of Economic Thought since 1925
-    - History of Economic Thought:  Individuals
-  - **Methodology and heterodox approaches cover the general framing of the discipline and the ways economists justify or challenge its methods.**
-    _basis: kinds, order: structure. Ordered by structure, from the general category to specific approaches._
-    - History of Economic Thought, Methodology, and Heterodox Approaches
-    - General
-    - Economic Methodology
-    - Current Heterodox Approaches
-  - General Economics and Teaching
-  - Economic Education and Teaching of Economics
-  - Collective Works
-- **Statistical and published material is the disciplinary record through which allocation questions are documented and discussed.**
-  _basis: kinds, order: degree. From data and excerpts to reviews and unclassified works._
-  - **Data, introductory material and excerpts document allocation questions in primary form.**
-    _basis: kinds, order: degree. From data to introductions and excerpts._
-    - Data: Tables and Charts
-    - Introductory Material
-    - Excerpts
-    - Related Disciplines
-  - **Reviews, dissertations and further reading discuss allocation questions in unclassified published works.**
-    _basis: kinds, order: degree. From reviews to anonymous discussions._
-    - Book Reviews (unclassified)
-    - Dissertations (unclassified)
-    - Further Reading (unclassified)
-    - No Author General Discussions
-
-### 4. The aggregate economy is the scale at which an allocation is settled across a whole economy, through prices, money, growth and exchange with other countries.
-
-- **Macroeconomic aggregates and policy settle allocation economy-wide through prices, money, output and labour.**
-  _basis: kinds, order: degree. From aggregate behaviour to policy levers._
-  - **Macroeconomic overview and aggregate behavior covers how the whole economy's consumption, saving, production, and labor are settled in total.**
-    _basis: kinds, order: structure. Ordered from the field itself to general models and real aggregates._
-    - Macroeconomics and Monetary Economics
-    - General
-    - General Aggregative Models
-    - Consumption, Saving, Production, Investment, Labor Markets, and Informal Economy
-  - **Prices, money and policy cover allocations settled economy-wide through price movements, interest rates, central banks, and government macro policy.**
-    _basis: kinds, order: structure. Ordered from prices and cycles to money, central banking and fiscal policy._
-    - Prices, Business Fluctuations, and Cycles
-    - Money and Interest Rates
-    - Monetary Policy, Central Banking, and the Supply of Money and Credit
-    - Macroeconomic Policy, Macroeconomic Aspects of Public Finance, and General Outlook
-- **Whole-system theory, behavioural macroeconomics and umbrella headings frame allocation at the level of the entire economy.**
-  _basis: kinds, order: degree. From formal theory to whole-system and umbrella framing._
-  - **Aggregate and formal theory covers allocation analysed at the level of the whole economy or through general mathematical models.**
-    _basis: kinds, order: structure. Ordered by structure, from the parent field to its subfields._
-    - Economic theory
-    - Macroeconomic theory
-    - Mathematical economics
-    - Economic theory not elsewhere classified
-  - **Economy-wide settlement covers the whole-system and alternative-paradigm areas of economics that study how an entire economy allocates resources.**
-    _basis: kinds, order: structure. Largest scale: the whole economic system._
-    - Other economics
-    - Comparative economic systems
-    - Ecological economics
-    - Heterodox economics
-    - Other economics not elsewhere classified
-  - Macro-Based Behavioral Economics
-  - **Top-level umbrella fields and general method headings settle quantitative questions at the broadest, discipline-wide scale.**
-    _basis: kinds, order: degree. Ranked from the broadest heading (Mathematical and Quantitative Methods) to the narrower general headings beneath it._
-    - Econometrics
-    - Mathematical and Quantitative Methods
-    - General
-    - Econometric and Statistical Methods and Methodology:  General
-- **Development and growth settle allocation across whole countries and societies over time, through planning, cooperation and social change.**
-  _basis: kinds, order: degree. From development theory and planning to cooperation and social change._
-  - **Development and growth settle allocation across whole countries and communities over time.**
-    _basis: kinds, order: degree. From development theory to planning and local development._
-    - **Fields of development and growth economics distinguished by the scale at which resource allocation is settled, from innovation activity to aggregate productivity to whole-country experience.**
-      _basis: kinds, order: structure. Ordered structurally from the narrowest scale (innovation and technology) to the broadest (economywide country studies)._
-      - Innovation &bull; Research and Development &bull; Technological Change &bull; Intellectual Property Rights
-      - Economic Growth and Aggregate Productivity
-      - Economywide Country Studies
-    - Development studies
-    - Socio-economic development
-    - Development Planning and Policy
-    - Rural community development
-  - **Cross-country development, conflict and social change settle allocation across societies and their politics.**
-    _basis: kinds, order: degree. From cooperation to conflict and migration._
-    - Development cooperation
-    - Humanitarian disasters, conflict and peacebuilding
-    - Labour, migration and development
-    - Political economy and social change
-    - Urban community development
-- **International economics and whole-system studies settle allocation across borders, financial systems and long histories.**
-  _basis: kinds, order: degree. From national to international scale._
-  - **International economics fields treat allocation as settled across national borders through factor movements, finance, macro linkages, political relations, and globalization.**
-    _basis: kinds, order: structure. Ordered by structure from factor flows to finance, macro, political, and global impacts._
-    - International Factor Movements and International Business
-    - International Finance
-    - Macroeconomic Aspects of International Trade and Finance
-    - International Relations, National Security, and International Political Economy
-    - Economic Impacts of Globalization
-  - International Economics
-  - Trade
-  - **Fields where allocation is settled at the level of the whole economy, across borders, financial systems and long historical spans, together with the general field of applied economics.**
-    _basis: kinds, order: degree. Largest scale: economy-wide and international settlement._
-    - Macroeconomics (incl. monetary and fiscal theory)
-    - International economics
-    - Financial economics
-    - Economic history
-    - Applied economics
-  - **Allocation settled at the economy-wide, national or international scale, or classified under broad general headings.**
-    _basis: kinds, order: degree. Largest scale: economy-wide and general._
-    - Financial Economics
-    - General
-    - Labor and Demographic Economics
-    - General
-    - Labor Standards: National and International
-- **Quantitative methods estimate aggregate relationships through equations, data series and designed models.**
-  _basis: kinds, order: degree. From single relationships to systems of equations and data._
-  - **Single-equation and econometric modelling methods estimate allocation at the scale of one relationship or model.**
-    _basis: kinds, order: degree. From single equations to special topics and data work._
-    - Single Equation Models &bull; Single Variables
-    - Econometric and Statistical Methods:  Special Topics
-    - Econometric Modeling
-    - Data Collection and Data Estimation Methodology &bull; Computer Programs
-    - **Methods-oriented econometric categories settle estimation questions at the level of general techniques and models rather than a particular dataset.**
-      _basis: kinds, order: degree. Ranked from general statistical methods to model-building and forecasting to residual catch-all categories._
-      - Econometric and statistical methods
-      - Economic models and forecasting
-      - Econometrics not elsewhere classified
-      - Development studies not elsewhere classified
-  - **Multi-equation, mathematical, strategic and experimental methods estimate allocation across interacting systems and players.**
-    _basis: kinds, order: degree. From systems of equations to games and experiments._
-    - Multiple or Simultaneous Equation Models &bull; Multiple Variables
-    - Mathematical Methods &bull; Programming Models &bull; Mathematical and Simulation Modeling
-    - Game Theory and Bargaining Theory
-    - Design of Experiments
-  - **Cross-section, time-series and panel analysis estimate how aggregates differ across units and move over time.**
-    _basis: kinds, order: degree. From a single cross-section to series and pooled data._
-    - Cross-sectional analysis
-    - Time-series analysis
-    - Panel data analysis
-
-### 5. Welfare and public choice is the scale at which an allocation is settled for the whole society through distribution, collective decision and government.
-
-- **Equilibrium, distribution and welfare assess how well an allocation serves the whole society.**
-  _basis: kinds, order: degree. From distribution to equilibrium and welfare._
-  - Distribution
-  - General Equilibrium and Disequilibrium
-  - Welfare Economics
-  - Analysis of Collective Decision-Making
-- **Government and regional authorities settle allocation collectively through political choice, provision and taxation.**
-  _basis: kinds, order: degree. From national to regional and local government._
+  - **Regulation and industry studies of manufacturing, primary products, and services describe allocation settled through public rules and at the sector level.**
+    _basis: kinds, order: structure. Ordered by structure from regulation to sector studies._
+    - Regulation and Industrial Policy
+    - Industry Studies: Manufacturing
+    - Industry Studies: Primary Products and Construction
+    - Industry Studies: Services
+- **Governments settle allocations through public provision, taxation and local or intergovernmental arrangements.**
+  _basis: kinds, order: structure. Ordered from national to local public finance._
   - **Fields where allocation is settled collectively by governments through political choice, public provision, taxation and distributional judgement.**
     _basis: kinds, order: degree. Fourth scale: collective and state-level settlement._
     - Public economics - public choice
@@ -338,23 +176,193 @@ Group of scales of allocation. Basis: kinds. Dimension: the scale at which an al
     - Publicly Provided Goods
     - State and Local Government &bull; Intergovernmental Relations
     - Miscellaneous Issues
-- **Poverty, inclusion and the broad headings of the field frame the social ends of allocation.**
-  _basis: kinds, order: degree. From social ends to overarching headings._
-  - Poverty, inclusivity and wellbeing
-  - **General and umbrella headings are top-level categories that span the field without fixing a particular scale of settlement.**
-    _basis: kinds, order: structure. Scale-neutral catch-all headings placed last._
-    - Public Economics
+- **Public institutions settle allocations through welfare assessment, collective decision-making and community development.**
+  _basis: kinds, order: structure. Ordered from welfare theory to development practice._
+  - **Allocation is settled at the scale of the whole economy or collective, through general equilibrium, welfare assessment, and collective decision-making.**
+    _basis: kinds, order: structure. Ordered by structure, from economy-wide equilibrium to collective choice._
+    - General Equilibrium and Disequilibrium
+    - Welfare Economics
+    - Analysis of Collective Decision-Making
+  - Rural community development
+  - Urban community development
+
+### 4. The whole economy settles allocations in aggregate through money, prices, growth, development and trade between countries.
+
+- **The whole economy settles allocations in aggregate through output, money, prices and policy.**
+  _basis: kinds, order: structure. Ordered from aggregates to monetary policy and broad headings._
+  - **Prices, money and policy cover allocations settled economy-wide through price movements, interest rates, central banks, and government macro policy.**
+    _basis: kinds, order: structure. Ordered from prices and cycles to money, central banking and fiscal policy._
+    - Prices, Business Fluctuations, and Cycles
+    - Money and Interest Rates
+    - Monetary Policy, Central Banking, and the Supply of Money and Credit
+    - Macroeconomic Policy, Macroeconomic Aspects of Public Finance, and General Outlook
+  - **Macroeconomic overview and aggregate behavior covers how the whole economy's consumption, saving, production, and labor are settled in total.**
+    _basis: kinds, order: structure. Ordered from the field itself to general models and real aggregates._
+    - Macroeconomics and Monetary Economics
     - General
-    - Health, Education, and Welfare
+    - General Aggregative Models
+    - Consumption, Saving, Production, Investment, Labor Markets, and Informal Economy
+  - **Economy-wide settlement covers the whole-system and alternative-paradigm areas of economics that study how an entire economy allocates resources.**
+    _basis: kinds, order: structure. Largest scale: the whole economic system._
+    - Other economics
+    - Comparative economic systems
+    - Ecological economics
+    - Heterodox economics
+    - Other economics not elsewhere classified
+  - **Fields where allocation is settled at the level of the whole economy, across borders, financial systems and long historical spans, together with the general field of applied economics.**
+    _basis: kinds, order: degree. Largest scale: economy-wide and international settlement._
+    - Macroeconomics (incl. monetary and fiscal theory)
+    - International economics
+    - Financial economics
+    - Economic history
+    - Applied economics
+  - **Allocation settled at the economy-wide, national or international scale, or classified under broad general headings.**
+    _basis: kinds, order: degree. Largest scale: economy-wide and general._
+    - Financial Economics
     - General
+    - Labor and Demographic Economics
+    - General
+    - Labor Standards: National and International
+- **Whole countries settle allocations through development, growth and the structure of their economic systems.**
+  _basis: kinds, order: structure. Ordered from development to economic systems._
+  - **Development settles whole-country allocations through growth, planning and innovation.**
+    _basis: kinds, order: structure. Ordered from growth to planning._
+    - **Fields of development and growth economics distinguished by the scale at which resource allocation is settled, from innovation activity to aggregate productivity to whole-country experience.**
+      _basis: kinds, order: structure. Ordered structurally from the narrowest scale (innovation and technology) to the broadest (economywide country studies)._
+      - Innovation &bull; Research and Development &bull; Technological Change &bull; Intellectual Property Rights
+      - Economic Growth and Aggregate Productivity
+      - Economywide Country Studies
+    - Economic Development, Innovation, Technological Change, and Growth
+    - Economic Development
+    - Development Planning and Policy
+  - **Development studies settle whole-country allocations through cooperation, social change, migration and conflict response.**
+    _basis: kinds, order: structure. Ordered from social to humanitarian._
+    - Development studies
+    - Socio-economic development
+    - Development cooperation
+    - Humanitarian disasters, conflict and peacebuilding
+    - Labour, migration and development
+  - **Economic systems settle whole-country allocations through capitalist, socialist and transition arrangements.**
+    _basis: kinds, order: structure. Ordered from capitalist to socialist and comparative systems._
+    - Political Economy and Comparative Economic Systems
+    - Capitalist Economies
+    - Socialist and Transition Economies
+    - Socialist Institutions and Their Transitions
+    - Other Economic Systems
+  - **Political economy settles whole-country allocations through social change and the comparison of economic systems.**
+    _basis: kinds, order: structure. Ordered from social change to comparison._
+    - Political economy and social change
+    - Comparative Economic Systems
+- **Trade between countries settles allocations across borders through exchange, factor movement and aggregate behavior.**
+  _basis: kinds, order: structure. Ordered from behavior to international exchange._
+  - Macro-Based Behavioral Economics
+  - International Economics
+  - Trade
+  - **International economics fields treat allocation as settled across national borders through factor movements, finance, macro linkages, political relations, and globalization.**
+    _basis: kinds, order: structure. Ordered by structure from factor flows to finance, macro, political, and global impacts._
+    - International Factor Movements and International Business
+    - International Finance
+    - Macroeconomic Aspects of International Trade and Finance
+    - International Relations, National Security, and International Political Economy
+    - Economic Impacts of Globalization
   - **Broad field headings and the general industrial organization entry define the widest scale at which allocation questions are posed.**
     _basis: kinds, order: structure. Ordered by structure from the field headings to the general entry._
     - Industrial Organization
     - Agricultural and Natural Resource Economics &bull; Environmental and Ecological Economics
     - Urban, Rural, Regional, Real Estate, and Transportation Economics
     - General
+- **The whole economy's history shows allocations settled over time through the aggregate and sector records of economic history.**
+  _basis: kinds, order: structure. Ordered from aggregates to sectors and regions._
+  - **Economic history records whole-economy allocations through aggregates, finance, society and government.**
+    _basis: kinds, order: structure. Ordered from aggregates to government._
+    - Economic history and conditions
+    - Macroeconomics and Monetary Economics &bull; Industrial Structure &bull; Growth &bull; Fluctuations
+    - Financial Markets and Institutions
+    - Labor and Consumers, Demography, Education, Health, Welfare, Income, Wealth, Religion, and Philanthropy
+    - Government, War, Law, International Relations, and Regulation
+  - **Sector and regional histories record whole-economy allocations through industries, businesses and places.**
+    _basis: kinds, order: structure. Ordered from primary sectors to regions._
+    - Agriculture, Natural Resources, Environment, and Extractive Industries
+    - Manufacturing and Construction
+    - Transport, Trade, Energy, Technology, and Other Services
+    - Micro-Business History
+    - Regional and Urban History
+
+## Method line (outside the key line)
+
+**The method line holds how economics is studied: its history of thought, methodology, econometrics, teaching and reference material.**
+_basis: kinds, order: structure_
+
+- **The history of ideas and methodology frame how allocation is studied and justified.**
+  _basis: kinds, order: structure. Ordered from theory to history to method._
+  - **Aggregate and formal theory covers allocation analysed at the level of the whole economy or through general mathematical models.**
+    _basis: kinds, order: structure. Ordered by structure, from the parent field to its subfields._
+    - Economic theory
+    - Macroeconomic theory
+    - Mathematical economics
+    - Economic theory not elsewhere classified
+  - **Historical thought covers how ideas about allocation developed across successive periods and through particular thinkers.**
+    _basis: kinds, order: structure. Ordered by structure, from the general category to period and individual subdivisions._
+    - History of economic thought
+    - History of Economic Thought through 1925
+    - History of Economic Thought since 1925
+    - History of Economic Thought:  Individuals
+  - **Methodology and heterodox approaches cover the general framing of the discipline and the ways economists justify or challenge its methods.**
+    _basis: kinds, order: structure. Ordered by structure, from the general category to specific approaches._
+    - History of Economic Thought, Methodology, and Heterodox Approaches
+    - General
+    - Economic Methodology
+    - Current Heterodox Approaches
+  - Economic theory. Demography
+  - Related Disciplines
+- **Econometric and modelling techniques are the methods by which allocation data are estimated and tested.**
+  _basis: kinds, order: structure. Ordered from single-equation to multi-equation methods and data._
+  - **Equation-based econometric methods are the techniques by which allocation relationships are estimated and tested.**
+    _basis: kinds, order: structure. Ordered from single-equation to multi-equation and method headings._
+    - **Single-equation and special-topic methods settle estimation at the scale of one relationship, model specification, or dataset.**
+      _basis: kinds, order: structure. Ordered from single equations to modeling, special topics and data construction._
+      - Single Equation Models &bull; Single Variables
+      - Econometric and Statistical Methods:  Special Topics
+      - Econometric Modeling
+      - Data Collection and Data Estimation Methodology &bull; Computer Programs
+    - **Multi-equation, mathematical, strategic and experimental methods settle allocations at the scale of interacting systems, players, or designed trials.**
+      _basis: kinds, order: structure. Ordered from simultaneous systems to programming, games and experiments._
+      - Multiple or Simultaneous Equation Models &bull; Multiple Variables
+      - Mathematical Methods &bull; Programming Models &bull; Mathematical and Simulation Modeling
+      - Game Theory and Bargaining Theory
+      - Design of Experiments
+    - **Methods-oriented econometric categories settle estimation questions at the level of general techniques and models rather than a particular dataset.**
+      _basis: kinds, order: degree. Ranked from general statistical methods to model-building and forecasting to residual catch-all categories._
+      - Econometric and statistical methods
+      - Economic models and forecasting
+      - Econometrics not elsewhere classified
+      - Development studies not elsewhere classified
+    - **Top-level umbrella fields and general method headings settle quantitative questions at the broadest, discipline-wide scale.**
+      _basis: kinds, order: degree. Ranked from the broadest heading (Mathematical and Quantitative Methods) to the narrower general headings beneath it._
+      - Econometrics
+      - Mathematical and Quantitative Methods
+      - General
+      - Econometric and Statistical Methods and Methodology:  General
+    - **General and umbrella headings are top-level categories that span the field without fixing a particular scale of settlement.**
+      _basis: kinds, order: structure. Scale-neutral catch-all headings placed last._
+      - Public Economics
+      - General
+      - Health, Education, and Welfare
+      - General
+  - **Data-structure analyses are the methods by which cross-sectional, time-series and panel allocation data are examined.**
+    _basis: kinds, order: structure. Ordered from cross-section to time series to panels._
+    - Cross-sectional analysis
+    - Time-series analysis
+    - Panel data analysis
+- **Teaching and reference material record and pass on knowledge about economics.**
+  _basis: kinds, order: structure. Ordered from teaching to reference._
+  - Economic Education and Teaching of Economics
+  - Collective Works
+  - Book Reviews (unclassified)
+  - Dissertations (unclassified)
+  - Further Reading (unclassified)
 
 ## Checks
 
 - minto_check: clean
-- field_check holds: False — P3 is a catch-all mixing institutions, economic history, discipline teaching and catalogue-style publication types (reviews, dissertations, unclassified), so the pillars do not form one scale dimension.
+- field_check holds: True — Worst misplaced: P3.1.4.2-4 industry studies under government, P4.3.5.1-3 industrial/resource/urban fields under international trade, P3.3.1.1 general equilibrium under public institutions.

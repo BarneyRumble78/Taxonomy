@@ -1,53 +1,50 @@
 {
   "field": "EC",
   "introduction": {
-    "situation": "Economics studies how scarce resources are allocated among competing uses.",
-    "complication": "The field's topics are scattered across several schemes that do not share a common subject-matter organisation.",
-    "question": "How is everything in economics divided?",
-    "answer": "Economics divides by the scale at which an allocation is settled into choice by single agents, markets, mechanisms and institutions, the aggregate economy, and welfare and public choice."
+    "situation": "Economics studies how scarce resources are allocated, and every allocation is settled by some agent or set of agents.",
+    "complication": "Source schemes list topics by catalogue class, mixing agents of different scales, so the same agent appears in many places.",
+    "question": "Who settles the allocation in each area of economics?",
+    "answer": "Economics is divided by who settles an allocation: individuals and households, firms and markets, governments and public institutions, and the economy as a whole."
   },
-  "governing_thought": "Economics divides by the scale at which an allocation is settled into choice by single agents, markets, mechanisms and institutions, the aggregate economy, and welfare and public choice.",
+  "governing_thought": "Economics is divided by who settles an allocation: individuals and households, firms and markets, governments and public institutions, and the economy as a whole.",
   "key_line": {
     "logic_type": "inductive",
-    "plural_noun": "scales of allocation",
-    "mece_dimension": "the scale at which an allocation is settled",
+    "plural_noun": "settling agents",
+    "mece_dimension": "who settles the allocation",
     "basis": "kinds",
     "order": "degree",
-    "rank_note": "From one agent, to a market, to the whole society.",
+    "rank_note": "Ranked from the smallest settling agent, the individual, to the largest, the whole economy.",
     "points": [
       {
         "id": "EC.K1",
         "anchor": "pillar:EC.K1",
-        "statement": "Choice is the scale at which an allocation is settled by a single household, person or small group deciding under its own preferences, information and constraints.",
-        "name": "Choice is the scale at which an allocation is settled by a single household, person or small group deciding under its own preferences, information and constraints.",
+        "statement": "Individuals and households settle allocations through their own choices about consumption, work, learning, health and risk.",
+        "name": "Individuals and households settle allocations through their own choices about consumption, work, learning, health and risk.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "degree",
-          "rank_note": "From the decision itself, to behaviour, to learning, work and health.",
+          "rank_note": "Ordered from the single chooser to the household and community.",
           "points": [
             {
               "id": "EC.K1.S1",
               "anchor": "section:EC.K1.S1",
-              "statement": "Individual and household decision-making settles allocations through preferences, information, uncertainty and behavioural limits.",
-              "name": "Individual and household decision-making settles allocations through preferences, information, uncertainty and behavioural limits.",
+              "statement": "Individuals settle allocations through their own choices under information limits, uncertainty and behavioral bias.",
+              "name": "Individuals settle allocations through their own choices under information limits, uncertainty and behavioral bias.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From general theory to behavioural departures from it.",
+                "order": "structure",
+                "rank_note": "Ordered from theory of choice to behavioral evidence.",
                 "points": [
                   {
-                    "id": "ANZSRC:380304",
-                    "anchor": "node:ANZSRC:380304",
-                    "statement": "Microeconomic theory",
-                    "name": "Microeconomic theory"
-                  },
-                  {
-                    "id": "JEL:D1",
-                    "anchor": "node:JEL:D1",
-                    "statement": "Household Behavior and Family Economics",
-                    "name": "Household Behavior and Family Economics"
+                    "id": "JEL:D",
+                    "anchor": "node:JEL:D",
+                    "statement": "Microeconomics",
+                    "name": "Microeconomics",
+                    "aliases": [
+                      "ANZSRC:380304"
+                    ]
                   },
                   {
                     "id": "JEL:D8",
@@ -60,12 +57,6 @@
                     "anchor": "node:JEL:D9",
                     "statement": "Micro-Based Behavioral Economics",
                     "name": "Micro-Based Behavioral Economics"
-                  },
-                  {
-                    "id": "LCC:HB",
-                    "anchor": "node:LCC:HB",
-                    "statement": "Economic theory. Demography",
-                    "name": "Economic theory. Demography"
                   }
                 ]
               }
@@ -73,25 +64,19 @@
             {
               "id": "EC.K1.S2",
               "anchor": "section:EC.K1.S2",
-              "statement": "Behavioural and experimental study tests how individuals and households actually decide in saving, finance and family matters.",
-              "name": "Behavioural and experimental study tests how individuals and households actually decide in saving, finance and family matters.",
+              "statement": "Households settle allocations through family decisions on saving, finance and demographic composition.",
+              "name": "Households settle allocations through family decisions on saving, finance and demographic composition.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From experiment to behaviour in finance and the household.",
+                "order": "structure",
+                "rank_note": "Ordered from household behavior to its financial and demographic dimensions.",
                 "points": [
                   {
-                    "id": "ANZSRC:380102",
-                    "anchor": "node:ANZSRC:380102",
-                    "statement": "Behavioural economics",
-                    "name": "Behavioural economics"
-                  },
-                  {
-                    "id": "ANZSRC:380106",
-                    "anchor": "node:ANZSRC:380106",
-                    "statement": "Experimental economics",
-                    "name": "Experimental economics"
+                    "id": "JEL:D1",
+                    "anchor": "node:JEL:D1",
+                    "statement": "Household Behavior and Family Economics",
+                    "name": "Household Behavior and Family Economics"
                   },
                   {
                     "id": "JEL:G4",
@@ -117,25 +102,52 @@
             {
               "id": "EC.K1.S3",
               "anchor": "section:EC.K1.S3",
-              "statement": "Individual allocations over learning, work, health and community circumstances are settled by people and their households.",
-              "name": "Individual allocations over learning, work, health and community circumstances are settled by people and their households.",
+              "statement": "Individuals and communities settle allocations through their work, schooling, health and wellbeing decisions.",
+              "name": "Individuals and communities settle allocations through their work, schooling, health and wellbeing decisions.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From personal skills, to health, to the wider household and community.",
+                "order": "structure",
+                "rank_note": "Ordered from personal investments to community-level wellbeing.",
                 "points": [
                   {
-                    "id": "ANZSRC:380104",
-                    "anchor": "node:ANZSRC:380104",
-                    "statement": "Economics of education",
-                    "name": "Economics of education"
-                  },
-                  {
-                    "id": "ANZSRC:380111",
-                    "anchor": "node:ANZSRC:380111",
-                    "statement": "Labour economics",
-                    "name": "Labour economics"
+                    "id": "EC.O.A2.G1",
+                    "anchor": "group:EC.O.A2.G1",
+                    "statement": "Fields where allocation is settled by individual people and small groups through their choices, learning and work decisions.",
+                    "name": "Fields where allocation is settled by individual people and small groups through their choices, learning and work decisions.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "degree",
+                      "points": [
+                        {
+                          "id": "ANZSRC:380102",
+                          "anchor": "node:ANZSRC:380102",
+                          "statement": "Behavioural economics",
+                          "name": "Behavioural economics"
+                        },
+                        {
+                          "id": "ANZSRC:380106",
+                          "anchor": "node:ANZSRC:380106",
+                          "statement": "Experimental economics",
+                          "name": "Experimental economics"
+                        },
+                        {
+                          "id": "ANZSRC:380104",
+                          "anchor": "node:ANZSRC:380104",
+                          "statement": "Economics of education",
+                          "name": "Economics of education"
+                        },
+                        {
+                          "id": "ANZSRC:380111",
+                          "anchor": "node:ANZSRC:380111",
+                          "statement": "Labour economics",
+                          "name": "Labour economics"
+                        }
+                      ],
+                      "rank_note": "Smallest scale: individual and small-group decisions."
+                    }
                   },
                   {
                     "id": "ANZSRC:380108",
@@ -202,161 +214,71 @@
                       ],
                       "rank_note": "Ordered structurally from the household and individual scale to the broader cultural and community scale."
                     }
+                  },
+                  {
+                    "id": "ANZSRC:440405",
+                    "anchor": "node:ANZSRC:440405",
+                    "statement": "Poverty, inclusivity and wellbeing",
+                    "name": "Poverty, inclusivity and wellbeing"
                   }
                 ]
               }
             }
           ]
         },
-        "title": "Choice"
+        "title": "Individuals and households"
       },
       {
         "id": "EC.K2",
         "anchor": "pillar:EC.K2",
-        "statement": "Markets are the scale at which an allocation is settled through the exchange, pricing and competition of many buyers and sellers, firms and workers.",
-        "name": "Markets are the scale at which an allocation is settled through the exchange, pricing and competition of many buyers and sellers, firms and workers.",
+        "statement": "Firms and markets settle allocations through production, exchange, pricing and competition in labour, product, financial, land and resource markets.",
+        "name": "Firms and markets settle allocations through production, exchange, pricing and competition in labour, product, financial, land and resource markets.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "degree",
-          "rank_note": "From labour markets, to firms and industries, to financial, land and network markets.",
+          "rank_note": "Ordered from the firm to its markets and the sectors and places they span.",
           "points": [
             {
               "id": "EC.K2.S1",
               "anchor": "section:EC.K2.S1",
-              "statement": "Labour markets settle allocation by matching workers and employers on supply, demand, pay and discrimination.",
-              "name": "Labour markets settle allocation by matching workers and employers on supply, demand, pay and discrimination.",
+              "statement": "Firms settle allocations through production, organization, business administration, accounting and personnel decisions.",
+              "name": "Firms settle allocations through production, organization, business administration, accounting and personnel decisions.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From supply and pay to particular markets.",
+                "order": "structure",
+                "rank_note": "Ordered from production theory to the management functions inside the firm.",
                 "points": [
                   {
-                    "id": "JEL:J2",
-                    "anchor": "node:JEL:J2",
-                    "statement": "Demand and Supply of Labor",
-                    "name": "Demand and Supply of Labor"
+                    "id": "JEL:D2",
+                    "anchor": "node:JEL:D2",
+                    "statement": "Production and Organizations",
+                    "name": "Production and Organizations"
                   },
                   {
-                    "id": "JEL:J3",
-                    "anchor": "node:JEL:J3",
-                    "statement": "Wages, Compensation, and Labor Costs",
-                    "name": "Wages, Compensation, and Labor Costs"
+                    "id": "JEL:M",
+                    "anchor": "node:JEL:M",
+                    "statement": "Business Administration and Business Economics &bull; Marketing &bull; Accounting &bull; Personnel Economics",
+                    "name": "Business Administration and Business Economics &bull; Marketing &bull; Accounting &bull; Personnel Economics"
                   },
                   {
-                    "id": "JEL:J4",
-                    "anchor": "node:JEL:J4",
-                    "statement": "Particular Labor Markets",
-                    "name": "Particular Labor Markets"
+                    "id": "JEL:M1",
+                    "anchor": "node:JEL:M1",
+                    "statement": "Business Administration",
+                    "name": "Business Administration"
                   },
                   {
-                    "id": "JEL:J7",
-                    "anchor": "node:JEL:J7",
-                    "statement": "Labor Discrimination",
-                    "name": "Labor Discrimination"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K2.S2",
-              "anchor": "section:EC.K2.S2",
-              "statement": "Collective bargaining and the movement of workers settle labour allocation at the group scale across jobs, places and borders.",
-              "name": "Collective bargaining and the movement of workers settle labour allocation at the group scale across jobs, places and borders.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From bargaining to mobility.",
-                "points": [
-                  {
-                    "id": "JEL:J5",
-                    "anchor": "node:JEL:J5",
-                    "statement": "Labor&ndash;Management Relations, Trade Unions, and Collective Bargaining",
-                    "name": "Labor&ndash;Management Relations, Trade Unions, and Collective Bargaining"
-                  },
-                  {
-                    "id": "JEL:J6",
-                    "anchor": "node:JEL:J6",
-                    "statement": "Mobility, Unemployment, Vacancies, and Immigrant Workers",
-                    "name": "Mobility, Unemployment, Vacancies, and Immigrant Workers"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K2.S3",
-              "anchor": "section:EC.K2.S3",
-              "statement": "Firms and industries settle allocation through production, market structure, strategy, competition and the internal management of business.",
-              "name": "Firms and industries settle allocation through production, market structure, strategy, competition and the internal management of business.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From the single firm to whole industries.",
-                "points": [
-                  {
-                    "id": "EC.K2.S3.U1",
-                    "anchor": "section:EC.K2.S3.U1",
-                    "statement": "Production, pricing and market structure describe how firms and competition settle allocation.",
-                    "name": "Production, pricing and market structure describe how firms and competition settle allocation.",
+                    "id": "EC.O.A3.G3",
+                    "anchor": "group:EC.O.A3.G3",
+                    "statement": "Allocation is settled inside the firm through business economics, marketing, accounting and the management of personnel.",
+                    "name": "Allocation is settled inside the firm through business economics, marketing, accounting and the management of personnel.",
                     "support": {
                       "logic_type": "inductive",
+                      "plural_noun": "members",
                       "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From production to market structure and competition policy.",
+                      "order": "structure",
                       "points": [
-                        {
-                          "id": "JEL:D2",
-                          "anchor": "node:JEL:D2",
-                          "statement": "Production and Organizations",
-                          "name": "Production and Organizations"
-                        },
-                        {
-                          "id": "JEL:D4",
-                          "anchor": "node:JEL:D4",
-                          "statement": "Market Structure, Pricing, and Design",
-                          "name": "Market Structure, Pricing, and Design"
-                        },
-                        {
-                          "id": "JEL:L1",
-                          "anchor": "node:JEL:L1",
-                          "statement": "Market Structure, Firm Strategy, and Market Performance",
-                          "name": "Market Structure, Firm Strategy, and Market Performance"
-                        },
-                        {
-                          "id": "JEL:L2",
-                          "anchor": "node:JEL:L2",
-                          "statement": "Firm Objectives, Organization, and Behavior",
-                          "name": "Firm Objectives, Organization, and Behavior"
-                        },
-                        {
-                          "id": "JEL:L4",
-                          "anchor": "node:JEL:L4",
-                          "statement": "Antitrust Issues and Policies",
-                          "name": "Antitrust Issues and Policies"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "EC.K2.S3.U2",
-                    "anchor": "section:EC.K2.S3.U2",
-                    "statement": "Business administration, accounting, marketing and personnel settle allocation inside the firm.",
-                    "name": "Business administration, accounting, marketing and personnel settle allocation inside the firm.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From administration to the management of people.",
-                      "points": [
-                        {
-                          "id": "JEL:M1",
-                          "anchor": "node:JEL:M1",
-                          "statement": "Business Administration",
-                          "name": "Business Administration"
-                        },
                         {
                           "id": "JEL:M2",
                           "anchor": "node:JEL:M2",
@@ -381,149 +303,160 @@
                           "statement": "Personnel Economics",
                           "name": "Personnel Economics"
                         }
-                      ]
+                      ],
+                      "rank_note": "Ordered by structure of the classification, from business economics to personnel."
                     }
                   },
                   {
-                    "id": "EC.K2.S3.U3",
-                    "anchor": "section:EC.K2.S3.U3",
-                    "statement": "Industry studies and sector economics describe allocation in particular branches of production and service.",
-                    "name": "Industry studies and sector economics describe allocation in particular branches of production and service.",
+                    "id": "JEL:G3",
+                    "anchor": "node:JEL:G3",
+                    "statement": "Corporate Finance and Governance",
+                    "name": "Corporate Finance and Governance"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "EC.K2.S2",
+              "anchor": "section:EC.K2.S2",
+              "statement": "Markets settle allocations through pricing, market structure, competition and the matching of workers and employers.",
+              "name": "Markets settle allocations through pricing, market structure, competition and the matching of workers and employers.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from product markets to labour markets.",
+                "points": [
+                  {
+                    "id": "JEL:D3",
+                    "anchor": "node:JEL:D3",
+                    "statement": "Distribution",
+                    "name": "Distribution"
+                  },
+                  {
+                    "id": "JEL:D4",
+                    "anchor": "node:JEL:D4",
+                    "statement": "Market Structure, Pricing, and Design",
+                    "name": "Market Structure, Pricing, and Design"
+                  },
+                  {
+                    "id": "EC.O.A2.G12",
+                    "anchor": "group:EC.O.A2.G12",
+                    "statement": "Market structure, firm objectives, nonprofit forms, and antitrust describe allocation settled by firms' strategies, ownership, and competition enforcement.",
+                    "name": "Market structure, firm objectives, nonprofit forms, and antitrust describe allocation settled by firms' strategies, ownership, and competition enforcement.",
                     "support": {
                       "logic_type": "inductive",
+                      "plural_noun": "members",
                       "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From primary and manufacturing sectors to services.",
+                      "order": "structure",
                       "points": [
                         {
-                          "id": "JEL:L6",
-                          "anchor": "node:JEL:L6",
-                          "statement": "Industry Studies: Manufacturing",
-                          "name": "Industry Studies: Manufacturing",
-                          "aliases": [
-                            "JEL:N6"
-                          ]
+                          "id": "JEL:L1",
+                          "anchor": "node:JEL:L1",
+                          "statement": "Market Structure, Firm Strategy, and Market Performance",
+                          "name": "Market Structure, Firm Strategy, and Market Performance"
                         },
                         {
-                          "id": "JEL:L7",
-                          "anchor": "node:JEL:L7",
-                          "statement": "Industry Studies: Primary Products and Construction",
-                          "name": "Industry Studies: Primary Products and Construction",
-                          "aliases": [
-                            "JEL:N5"
-                          ]
+                          "id": "JEL:L2",
+                          "anchor": "node:JEL:L2",
+                          "statement": "Firm Objectives, Organization, and Behavior",
+                          "name": "Firm Objectives, Organization, and Behavior"
                         },
                         {
-                          "id": "JEL:L8",
-                          "anchor": "node:JEL:L8",
-                          "statement": "Industry Studies: Services",
-                          "name": "Industry Studies: Services"
+                          "id": "JEL:L3",
+                          "anchor": "node:JEL:L3",
+                          "statement": "Nonprofit Organizations and Public Enterprise",
+                          "name": "Nonprofit Organizations and Public Enterprise"
                         },
                         {
-                          "id": "ANZSRC:380109",
-                          "anchor": "node:ANZSRC:380109",
-                          "statement": "Industry economics and industrial organisation",
-                          "name": "Industry economics and industrial organisation"
-                        },
-                        {
-                          "id": "LCC:HD",
-                          "anchor": "node:LCC:HD",
-                          "statement": "Industries. Land use. Labor",
-                          "name": "Industries. Land use. Labor"
+                          "id": "JEL:L4",
+                          "anchor": "node:JEL:L4",
+                          "statement": "Antitrust Issues and Policies",
+                          "name": "Antitrust Issues and Policies"
                         }
-                      ]
+                      ],
+                      "rank_note": "Ordered by structure from firm strategy to competition policy."
                     }
                   },
                   {
-                    "id": "EC.K2.S3.U4",
-                    "anchor": "section:EC.K2.S3.U4",
-                    "statement": "Agriculture, tourism, transport and sport markets are settled in particular sector markets.",
-                    "name": "Agriculture, tourism, transport and sport markets are settled in particular sector markets.",
+                    "id": "EC.O.A2.G7",
+                    "anchor": "group:EC.O.A2.G7",
+                    "statement": "Allocation settled in the labor market through the matching of workers and employers on supply, demand, pay and occupation.",
+                    "name": "Allocation settled in the labor market through the matching of workers and employers on supply, demand, pay and occupation.",
                     "support": {
                       "logic_type": "inductive",
+                      "plural_noun": "members",
                       "basis": "kinds",
                       "order": "degree",
-                      "rank_note": "From land-based, to travel, to leisure sectors.",
                       "points": [
                         {
-                          "id": "ANZSRC:380101",
-                          "anchor": "node:ANZSRC:380101",
-                          "statement": "Agricultural economics",
-                          "name": "Agricultural economics"
+                          "id": "JEL:J2",
+                          "anchor": "node:JEL:J2",
+                          "statement": "Demand and Supply of Labor",
+                          "name": "Demand and Supply of Labor"
                         },
                         {
-                          "id": "ANZSRC:380116",
-                          "anchor": "node:ANZSRC:380116",
-                          "statement": "Tourism economics",
-                          "name": "Tourism economics"
+                          "id": "JEL:J3",
+                          "anchor": "node:JEL:J3",
+                          "statement": "Wages, Compensation, and Labor Costs",
+                          "name": "Wages, Compensation, and Labor Costs"
                         },
                         {
-                          "id": "ANZSRC:380117",
-                          "anchor": "node:ANZSRC:380117",
-                          "statement": "Transport economics",
-                          "name": "Transport economics"
+                          "id": "JEL:J4",
+                          "anchor": "node:JEL:J4",
+                          "statement": "Particular Labor Markets",
+                          "name": "Particular Labor Markets"
                         },
                         {
-                          "id": "EC.O.A5.G7",
-                          "anchor": "group:EC.O.A5.G7",
-                          "statement": "Allocations in this group are settled at the level of particular industries and sector markets, such as sports and tourism, plus the general residual category.",
-                          "name": "Allocations in this group are settled at the level of particular industries and sector markets, such as sports and tourism, plus the general residual category.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "JEL:Z",
-                                "anchor": "node:JEL:Z",
-                                "statement": "Other Special Topics",
-                                "name": "Other Special Topics"
-                              },
-                              {
-                                "id": "JEL:Z0",
-                                "anchor": "node:JEL:Z0",
-                                "statement": "General",
-                                "name": "General"
-                              },
-                              {
-                                "id": "JEL:Z2",
-                                "anchor": "node:JEL:Z2",
-                                "statement": "Sports Economics",
-                                "name": "Sports Economics"
-                              },
-                              {
-                                "id": "JEL:Z3",
-                                "anchor": "node:JEL:Z3",
-                                "statement": "Tourism Economics",
-                                "name": "Tourism Economics"
-                              }
-                            ],
-                            "rank_note": "Ordered structurally from the general residual category to specific sector markets."
-                          }
-                        },
-                        {
-                          "id": "LCC:HE",
-                          "anchor": "node:LCC:HE",
-                          "statement": "Transportation and communications",
-                          "name": "Transportation and communications"
+                          "id": "JEL:J7",
+                          "anchor": "node:JEL:J7",
+                          "statement": "Labor Discrimination",
+                          "name": "Labor Discrimination"
                         }
-                      ]
+                      ],
+                      "rank_note": "Third scale: market-level exchange of labor."
+                    }
+                  },
+                  {
+                    "id": "EC.O.A2.G8",
+                    "anchor": "group:EC.O.A2.G8",
+                    "statement": "Allocation settled through collective bargaining and movement of workers across jobs, places and borders at the group scale.",
+                    "name": "Allocation settled through collective bargaining and movement of workers across jobs, places and borders at the group scale.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "degree",
+                      "points": [
+                        {
+                          "id": "JEL:J5",
+                          "anchor": "node:JEL:J5",
+                          "statement": "Labor&ndash;Management Relations, Trade Unions, and Collective Bargaining",
+                          "name": "Labor&ndash;Management Relations, Trade Unions, and Collective Bargaining"
+                        },
+                        {
+                          "id": "JEL:J6",
+                          "anchor": "node:JEL:J6",
+                          "statement": "Mobility, Unemployment, Vacancies, and Immigrant Workers",
+                          "name": "Mobility, Unemployment, Vacancies, and Immigrant Workers"
+                        }
+                      ],
+                      "rank_note": "Fourth scale: collective and group-level labor arrangements."
                     }
                   }
                 ]
               }
             },
             {
-              "id": "EC.K2.S4",
-              "anchor": "section:EC.K2.S4",
-              "statement": "Financial, land and resource markets settle allocation through trading, location and the use of natural resources.",
-              "name": "Financial, land and resource markets settle allocation through trading, location and the use of natural resources.",
+              "id": "EC.K2.S3",
+              "anchor": "section:EC.K2.S3",
+              "statement": "Financial markets and network systems settle allocations through trading, intermediation, transport and communication.",
+              "name": "Financial markets and network systems settle allocations through trading, intermediation, transport and communication.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From financial trading to land and resource use.",
+                "order": "structure",
+                "rank_note": "Ordered from financial trading to physical networks.",
                 "points": [
                   {
                     "id": "JEL:G1",
@@ -538,11 +471,25 @@
                     "name": "Financial Institutions and Services"
                   },
                   {
-                    "id": "JEL:G3",
-                    "anchor": "node:JEL:G3",
-                    "statement": "Corporate Finance and Governance",
-                    "name": "Corporate Finance and Governance"
-                  },
+                    "id": "LCC:HE",
+                    "anchor": "node:LCC:HE",
+                    "statement": "Transportation and communications",
+                    "name": "Transportation and communications"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "EC.K2.S4",
+              "anchor": "section:EC.K2.S4",
+              "statement": "Industries, land and natural resources settle allocations through sector markets and the use of places and resources.",
+              "name": "Industries, land and natural resources settle allocations through sector markets and the use of places and resources.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from general sector markets to land and resource use.",
+                "points": [
                   {
                     "id": "EC.O.A2.G3",
                     "anchor": "group:EC.O.A2.G3",
@@ -608,21 +555,7 @@
                       ],
                       "rank_note": "Ordered by structure from utilities to resource topics."
                     }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K2.S5",
-              "anchor": "section:EC.K2.S5",
-              "statement": "Regional and environmental markets settle allocation through where households and firms locate and how resources and energy are used.",
-              "name": "Regional and environmental markets settle allocation through where households and firms locate and how resources and energy are used.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From location choices to resource use at regional scale.",
-                "points": [
+                  },
                   {
                     "id": "EC.O.A2.G15",
                     "anchor": "group:EC.O.A2.G15",
@@ -696,57 +629,149 @@
                     }
                   },
                   {
-                    "id": "JEL:N9",
-                    "anchor": "node:JEL:N9",
-                    "statement": "Regional and Urban History",
-                    "name": "Regional and Urban History"
+                    "id": "EC.O.A5.G7",
+                    "anchor": "group:EC.O.A5.G7",
+                    "statement": "Allocations in this group are settled at the level of particular industries and sector markets, such as sports and tourism, plus the general residual category.",
+                    "name": "Allocations in this group are settled at the level of particular industries and sector markets, such as sports and tourism, plus the general residual category.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "JEL:Z",
+                          "anchor": "node:JEL:Z",
+                          "statement": "Other Special Topics",
+                          "name": "Other Special Topics"
+                        },
+                        {
+                          "id": "JEL:Z0",
+                          "anchor": "node:JEL:Z0",
+                          "statement": "General",
+                          "name": "General"
+                        },
+                        {
+                          "id": "JEL:Z2",
+                          "anchor": "node:JEL:Z2",
+                          "statement": "Sports Economics",
+                          "name": "Sports Economics"
+                        },
+                        {
+                          "id": "JEL:Z3",
+                          "anchor": "node:JEL:Z3",
+                          "statement": "Tourism Economics",
+                          "name": "Tourism Economics"
+                        }
+                      ],
+                      "rank_note": "Ordered structurally from the general residual category to specific sector markets."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "EC.K2.S5",
+              "anchor": "section:EC.K2.S5",
+              "statement": "Specific industries settle allocations through their own market conditions in agriculture, tourism, transport and industrial organisation.",
+              "name": "Specific industries settle allocations through their own market conditions in agriculture, tourism, transport and industrial organisation.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from primary to service sectors.",
+                "points": [
+                  {
+                    "id": "ANZSRC:380101",
+                    "anchor": "node:ANZSRC:380101",
+                    "statement": "Agricultural economics",
+                    "name": "Agricultural economics"
                   },
                   {
-                    "id": "JEL:N8",
-                    "anchor": "node:JEL:N8",
-                    "statement": "Micro-Business History",
-                    "name": "Micro-Business History"
+                    "id": "ANZSRC:380109",
+                    "anchor": "node:ANZSRC:380109",
+                    "statement": "Industry economics and industrial organisation",
+                    "name": "Industry economics and industrial organisation"
+                  },
+                  {
+                    "id": "ANZSRC:380116",
+                    "anchor": "node:ANZSRC:380116",
+                    "statement": "Tourism economics",
+                    "name": "Tourism economics"
+                  },
+                  {
+                    "id": "ANZSRC:380117",
+                    "anchor": "node:ANZSRC:380117",
+                    "statement": "Transport economics",
+                    "name": "Transport economics"
+                  },
+                  {
+                    "id": "EC.O.A2.G23",
+                    "anchor": "group:EC.O.A2.G23",
+                    "statement": "Broad economic and sectoral fields settle the allocation of land, labor, industry and general applied economic activity at the aggregate scale.",
+                    "name": "Broad economic and sectoral fields settle the allocation of land, labor, industry and general applied economic activity at the aggregate scale.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:380199",
+                          "anchor": "node:ANZSRC:380199",
+                          "statement": "Applied economics not elsewhere classified",
+                          "name": "Applied economics not elsewhere classified"
+                        },
+                        {
+                          "id": "LCC:HD",
+                          "anchor": "node:LCC:HD",
+                          "statement": "Industries. Land use. Labor",
+                          "name": "Industries. Land use. Labor"
+                        }
+                      ],
+                      "rank_note": "Aggregate, economy-wide scale of allocation."
+                    }
                   }
                 ]
               }
             }
           ]
         },
-        "title": "Markets"
+        "title": "Firms and markets"
       },
       {
         "id": "EC.K3",
         "anchor": "pillar:EC.K3",
-        "statement": "Mechanisms and institutions are the scale at which an allocation is settled by the rules, laws, organisations and economic systems that structure exchange.",
-        "name": "Mechanisms and institutions are the scale at which an allocation is settled by the rules, laws, organisations and economic systems that structure exchange.",
+        "statement": "Governments and public institutions settle allocations through law, regulation, taxation, public choice and the redistribution of welfare.",
+        "name": "Governments and public institutions settle allocations through law, regulation, taxation, public choice and the redistribution of welfare.",
         "support": {
           "logic_type": "inductive",
           "basis": "kinds",
           "order": "degree",
-          "rank_note": "From particular rules, to legal procedure, to whole economic systems.",
+          "rank_note": "Ordered from legal rules to public provision and collective choice.",
           "points": [
             {
               "id": "EC.K3.S1",
               "anchor": "section:EC.K3.S1",
-              "statement": "Law and regulation settle allocation through legal procedure, public rules, public enterprise and industrial policy.",
-              "name": "Law and regulation settle allocation through legal procedure, public rules, public enterprise and industrial policy.",
+              "statement": "Governments settle allocations through law, legal procedure and regulation of business conduct.",
+              "name": "Governments settle allocations through law, legal procedure and regulation of business conduct.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From procedure to regulation.",
+                "order": "structure",
+                "rank_note": "Ordered from law to regulation.",
                 "points": [
-                  {
-                    "id": "JEL:K",
-                    "anchor": "node:JEL:K",
-                    "statement": "Law and Economics",
-                    "name": "Law and Economics"
-                  },
                   {
                     "id": "JEL:K1",
                     "anchor": "node:JEL:K1",
                     "statement": "Basic Areas of Law",
                     "name": "Basic Areas of Law"
+                  },
+                  {
+                    "id": "JEL:K2",
+                    "anchor": "node:JEL:K2",
+                    "statement": "Regulation and Business Law",
+                    "name": "Regulation and Business Law"
                   },
                   {
                     "id": "JEL:K4",
@@ -755,19 +780,43 @@
                     "name": "Legal Procedure, the Legal System, and Illegal Behavior"
                   },
                   {
-                    "id": "JEL:L5",
-                    "anchor": "node:JEL:L5",
-                    "statement": "Regulation and Industrial Policy",
-                    "name": "Regulation and Industrial Policy",
-                    "aliases": [
-                      "JEL:K2"
-                    ]
-                  },
-                  {
-                    "id": "JEL:L3",
-                    "anchor": "node:JEL:L3",
-                    "statement": "Nonprofit Organizations and Public Enterprise",
-                    "name": "Nonprofit Organizations and Public Enterprise"
+                    "id": "EC.O.A2.G13",
+                    "anchor": "group:EC.O.A2.G13",
+                    "statement": "Regulation and industry studies of manufacturing, primary products, and services describe allocation settled through public rules and at the sector level.",
+                    "name": "Regulation and industry studies of manufacturing, primary products, and services describe allocation settled through public rules and at the sector level.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "JEL:L5",
+                          "anchor": "node:JEL:L5",
+                          "statement": "Regulation and Industrial Policy",
+                          "name": "Regulation and Industrial Policy"
+                        },
+                        {
+                          "id": "JEL:L6",
+                          "anchor": "node:JEL:L6",
+                          "statement": "Industry Studies: Manufacturing",
+                          "name": "Industry Studies: Manufacturing"
+                        },
+                        {
+                          "id": "JEL:L7",
+                          "anchor": "node:JEL:L7",
+                          "statement": "Industry Studies: Primary Products and Construction",
+                          "name": "Industry Studies: Primary Products and Construction"
+                        },
+                        {
+                          "id": "JEL:L8",
+                          "anchor": "node:JEL:L8",
+                          "statement": "Industry Studies: Services",
+                          "name": "Industry Studies: Services"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure from regulation to sector studies."
+                    }
                   }
                 ]
               }
@@ -775,1092 +824,13 @@
             {
               "id": "EC.K3.S2",
               "anchor": "section:EC.K3.S2",
-              "statement": "Economic systems and political economy settle allocation through the institutions of capitalist, socialist and transition economies.",
-              "name": "Economic systems and political economy settle allocation through the institutions of capitalist, socialist and transition economies.",
+              "statement": "Governments settle allocations through public provision, taxation and local or intergovernmental arrangements.",
+              "name": "Governments settle allocations through public provision, taxation and local or intergovernmental arrangements.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From capitalist to socialist and compared systems.",
-                "points": [
-                  {
-                    "id": "JEL:P1",
-                    "anchor": "node:JEL:P1",
-                    "statement": "Capitalist Economies",
-                    "name": "Capitalist Economies"
-                  },
-                  {
-                    "id": "JEL:P2",
-                    "anchor": "node:JEL:P2",
-                    "statement": "Socialist and Transition Economies",
-                    "name": "Socialist and Transition Economies"
-                  },
-                  {
-                    "id": "JEL:P3",
-                    "anchor": "node:JEL:P3",
-                    "statement": "Socialist Institutions and Their Transitions",
-                    "name": "Socialist Institutions and Their Transitions"
-                  },
-                  {
-                    "id": "JEL:P4",
-                    "anchor": "node:JEL:P4",
-                    "statement": "Other Economic Systems",
-                    "name": "Other Economic Systems"
-                  },
-                  {
-                    "id": "JEL:P5",
-                    "anchor": "node:JEL:P5",
-                    "statement": "Comparative Economic Systems",
-                    "name": "Comparative Economic Systems"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K3.S3",
-              "anchor": "section:EC.K3.S3",
-              "statement": "Economic history traces how institutions settled allocations across periods, sectors and societies.",
-              "name": "Economic history traces how institutions settled allocations across periods, sectors and societies.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From overall and financial history to social and sector history.",
-                "points": [
-                  {
-                    "id": "EC.K3.S3.U1",
-                    "anchor": "section:EC.K3.S3.U1",
-                    "statement": "Overall, macroeconomic and financial history traces how institutions settled allocations in the economy as a whole.",
-                    "name": "Overall, macroeconomic and financial history traces how institutions settled allocations in the economy as a whole.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From overall history to macro and financial history.",
-                      "points": [
-                        {
-                          "id": "JEL:N",
-                          "anchor": "node:JEL:N",
-                          "statement": "Economic History",
-                          "name": "Economic History"
-                        },
-                        {
-                          "id": "JEL:N1",
-                          "anchor": "node:JEL:N1",
-                          "statement": "Macroeconomics and Monetary Economics &bull; Industrial Structure &bull; Growth &bull; Fluctuations",
-                          "name": "Macroeconomics and Monetary Economics &bull; Industrial Structure &bull; Growth &bull; Fluctuations"
-                        },
-                        {
-                          "id": "JEL:N2",
-                          "anchor": "node:JEL:N2",
-                          "statement": "Financial Markets and Institutions",
-                          "name": "Financial Markets and Institutions"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "EC.K3.S3.U2",
-                    "anchor": "section:EC.K3.S3.U2",
-                    "statement": "Social, government and sector history traces how institutions settled allocations among people, states and services.",
-                    "name": "Social, government and sector history traces how institutions settled allocations among people, states and services.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From society to government to sectors.",
-                      "points": [
-                        {
-                          "id": "JEL:N3",
-                          "anchor": "node:JEL:N3",
-                          "statement": "Labor and Consumers, Demography, Education, Health, Welfare, Income, Wealth, Religion, and Philanthropy",
-                          "name": "Labor and Consumers, Demography, Education, Health, Welfare, Income, Wealth, Religion, and Philanthropy"
-                        },
-                        {
-                          "id": "JEL:N4",
-                          "anchor": "node:JEL:N4",
-                          "statement": "Government, War, Law, International Relations, and Regulation",
-                          "name": "Government, War, Law, International Relations, and Regulation"
-                        },
-                        {
-                          "id": "JEL:N7",
-                          "anchor": "node:JEL:N7",
-                          "statement": "Transport, Trade, Energy, Technology, and Other Services",
-                          "name": "Transport, Trade, Energy, Technology, and Other Services"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K3.S4",
-              "anchor": "section:EC.K3.S4",
-              "statement": "The history, methods and teaching of economics are the disciplinary institutions through which allocation is studied.",
-              "name": "The history, methods and teaching of economics are the disciplinary institutions through which allocation is studied.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From ideas and methods to teaching and published material.",
-                "points": [
-                  {
-                    "id": "EC.O.A1.G3",
-                    "anchor": "group:EC.O.A1.G3",
-                    "statement": "Historical thought covers how ideas about allocation developed across successive periods and through particular thinkers.",
-                    "name": "Historical thought covers how ideas about allocation developed across successive periods and through particular thinkers.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:380301",
-                          "anchor": "node:ANZSRC:380301",
-                          "statement": "History of economic thought",
-                          "name": "History of economic thought"
-                        },
-                        {
-                          "id": "JEL:B1",
-                          "anchor": "node:JEL:B1",
-                          "statement": "History of Economic Thought through 1925",
-                          "name": "History of Economic Thought through 1925"
-                        },
-                        {
-                          "id": "JEL:B2",
-                          "anchor": "node:JEL:B2",
-                          "statement": "History of Economic Thought since 1925",
-                          "name": "History of Economic Thought since 1925"
-                        },
-                        {
-                          "id": "JEL:B3",
-                          "anchor": "node:JEL:B3",
-                          "statement": "History of Economic Thought:  Individuals",
-                          "name": "History of Economic Thought:  Individuals"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from the general category to period and individual subdivisions."
-                    }
-                  },
-                  {
-                    "id": "EC.O.A1.G4",
-                    "anchor": "group:EC.O.A1.G4",
-                    "statement": "Methodology and heterodox approaches cover the general framing of the discipline and the ways economists justify or challenge its methods.",
-                    "name": "Methodology and heterodox approaches cover the general framing of the discipline and the ways economists justify or challenge its methods.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "JEL:B",
-                          "anchor": "node:JEL:B",
-                          "statement": "History of Economic Thought, Methodology, and Heterodox Approaches",
-                          "name": "History of Economic Thought, Methodology, and Heterodox Approaches"
-                        },
-                        {
-                          "id": "JEL:B0",
-                          "anchor": "node:JEL:B0",
-                          "statement": "General",
-                          "name": "General"
-                        },
-                        {
-                          "id": "JEL:B4",
-                          "anchor": "node:JEL:B4",
-                          "statement": "Economic Methodology",
-                          "name": "Economic Methodology"
-                        },
-                        {
-                          "id": "JEL:B5",
-                          "anchor": "node:JEL:B5",
-                          "statement": "Current Heterodox Approaches",
-                          "name": "Current Heterodox Approaches"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from the general category to specific approaches."
-                    }
-                  },
-                  {
-                    "id": "JEL:A",
-                    "anchor": "node:JEL:A",
-                    "statement": "General Economics and Teaching",
-                    "name": "General Economics and Teaching"
-                  },
-                  {
-                    "id": "JEL:A2",
-                    "anchor": "node:JEL:A2",
-                    "statement": "Economic Education and Teaching of Economics",
-                    "name": "Economic Education and Teaching of Economics"
-                  },
-                  {
-                    "id": "JEL:A3",
-                    "anchor": "node:JEL:A3",
-                    "statement": "Collective Works",
-                    "name": "Collective Works"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K3.S5",
-              "anchor": "section:EC.K3.S5",
-              "statement": "Statistical and published material is the disciplinary record through which allocation questions are documented and discussed.",
-              "name": "Statistical and published material is the disciplinary record through which allocation questions are documented and discussed.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From data and excerpts to reviews and unclassified works.",
-                "points": [
-                  {
-                    "id": "EC.K3.S5.U1",
-                    "anchor": "section:EC.K3.S5.U1",
-                    "statement": "Data, introductory material and excerpts document allocation questions in primary form.",
-                    "name": "Data, introductory material and excerpts document allocation questions in primary form.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From data to introductions and excerpts.",
-                      "points": [
-                        {
-                          "id": "JEL:Y1",
-                          "anchor": "node:JEL:Y1",
-                          "statement": "Data: Tables and Charts",
-                          "name": "Data: Tables and Charts"
-                        },
-                        {
-                          "id": "JEL:Y2",
-                          "anchor": "node:JEL:Y2",
-                          "statement": "Introductory Material",
-                          "name": "Introductory Material"
-                        },
-                        {
-                          "id": "JEL:Y6",
-                          "anchor": "node:JEL:Y6",
-                          "statement": "Excerpts",
-                          "name": "Excerpts"
-                        },
-                        {
-                          "id": "JEL:Y8",
-                          "anchor": "node:JEL:Y8",
-                          "statement": "Related Disciplines",
-                          "name": "Related Disciplines"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "EC.K3.S5.U2",
-                    "anchor": "section:EC.K3.S5.U2",
-                    "statement": "Reviews, dissertations and further reading discuss allocation questions in unclassified published works.",
-                    "name": "Reviews, dissertations and further reading discuss allocation questions in unclassified published works.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From reviews to anonymous discussions.",
-                      "points": [
-                        {
-                          "id": "JEL:Y3",
-                          "anchor": "node:JEL:Y3",
-                          "statement": "Book Reviews (unclassified)",
-                          "name": "Book Reviews (unclassified)"
-                        },
-                        {
-                          "id": "JEL:Y4",
-                          "anchor": "node:JEL:Y4",
-                          "statement": "Dissertations (unclassified)",
-                          "name": "Dissertations (unclassified)"
-                        },
-                        {
-                          "id": "JEL:Y5",
-                          "anchor": "node:JEL:Y5",
-                          "statement": "Further Reading (unclassified)",
-                          "name": "Further Reading (unclassified)"
-                        },
-                        {
-                          "id": "JEL:Y7",
-                          "anchor": "node:JEL:Y7",
-                          "statement": "No Author General Discussions",
-                          "name": "No Author General Discussions"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "title": "Mechanisms and institutions"
-      },
-      {
-        "id": "EC.K4",
-        "anchor": "pillar:EC.K4",
-        "statement": "The aggregate economy is the scale at which an allocation is settled across a whole economy, through prices, money, growth and exchange with other countries.",
-        "name": "The aggregate economy is the scale at which an allocation is settled across a whole economy, through prices, money, growth and exchange with other countries.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "kinds",
-          "order": "degree",
-          "rank_note": "From the national economy, to its development, to relations across borders.",
-          "points": [
-            {
-              "id": "EC.K4.S1",
-              "anchor": "section:EC.K4.S1",
-              "statement": "Macroeconomic aggregates and policy settle allocation economy-wide through prices, money, output and labour.",
-              "name": "Macroeconomic aggregates and policy settle allocation economy-wide through prices, money, output and labour.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From aggregate behaviour to policy levers.",
-                "points": [
-                  {
-                    "id": "EC.O.A4.G8",
-                    "anchor": "group:EC.O.A4.G8",
-                    "statement": "Macroeconomic overview and aggregate behavior covers how the whole economy's consumption, saving, production, and labor are settled in total.",
-                    "name": "Macroeconomic overview and aggregate behavior covers how the whole economy's consumption, saving, production, and labor are settled in total.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "JEL:E",
-                          "anchor": "node:JEL:E",
-                          "statement": "Macroeconomics and Monetary Economics",
-                          "name": "Macroeconomics and Monetary Economics"
-                        },
-                        {
-                          "id": "JEL:E0",
-                          "anchor": "node:JEL:E0",
-                          "statement": "General",
-                          "name": "General"
-                        },
-                        {
-                          "id": "JEL:E1",
-                          "anchor": "node:JEL:E1",
-                          "statement": "General Aggregative Models",
-                          "name": "General Aggregative Models"
-                        },
-                        {
-                          "id": "JEL:E2",
-                          "anchor": "node:JEL:E2",
-                          "statement": "Consumption, Saving, Production, Investment, Labor Markets, and Informal Economy",
-                          "name": "Consumption, Saving, Production, Investment, Labor Markets, and Informal Economy"
-                        }
-                      ],
-                      "rank_note": "Ordered from the field itself to general models and real aggregates."
-                    }
-                  },
-                  {
-                    "id": "EC.O.A4.G9",
-                    "anchor": "group:EC.O.A4.G9",
-                    "statement": "Prices, money and policy cover allocations settled economy-wide through price movements, interest rates, central banks, and government macro policy.",
-                    "name": "Prices, money and policy cover allocations settled economy-wide through price movements, interest rates, central banks, and government macro policy.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "JEL:E3",
-                          "anchor": "node:JEL:E3",
-                          "statement": "Prices, Business Fluctuations, and Cycles",
-                          "name": "Prices, Business Fluctuations, and Cycles"
-                        },
-                        {
-                          "id": "JEL:E4",
-                          "anchor": "node:JEL:E4",
-                          "statement": "Money and Interest Rates",
-                          "name": "Money and Interest Rates"
-                        },
-                        {
-                          "id": "JEL:E5",
-                          "anchor": "node:JEL:E5",
-                          "statement": "Monetary Policy, Central Banking, and the Supply of Money and Credit",
-                          "name": "Monetary Policy, Central Banking, and the Supply of Money and Credit"
-                        },
-                        {
-                          "id": "JEL:E6",
-                          "anchor": "node:JEL:E6",
-                          "statement": "Macroeconomic Policy, Macroeconomic Aspects of Public Finance, and General Outlook",
-                          "name": "Macroeconomic Policy, Macroeconomic Aspects of Public Finance, and General Outlook"
-                        }
-                      ],
-                      "rank_note": "Ordered from prices and cycles to money, central banking and fiscal policy."
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K4.S2",
-              "anchor": "section:EC.K4.S2",
-              "statement": "Whole-system theory, behavioural macroeconomics and umbrella headings frame allocation at the level of the entire economy.",
-              "name": "Whole-system theory, behavioural macroeconomics and umbrella headings frame allocation at the level of the entire economy.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From formal theory to whole-system and umbrella framing.",
-                "points": [
-                  {
-                    "id": "EC.O.A1.G1",
-                    "anchor": "group:EC.O.A1.G1",
-                    "statement": "Aggregate and formal theory covers allocation analysed at the level of the whole economy or through general mathematical models.",
-                    "name": "Aggregate and formal theory covers allocation analysed at the level of the whole economy or through general mathematical models.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3803",
-                          "anchor": "node:ANZSRC:3803",
-                          "statement": "Economic theory",
-                          "name": "Economic theory"
-                        },
-                        {
-                          "id": "ANZSRC:380302",
-                          "anchor": "node:ANZSRC:380302",
-                          "statement": "Macroeconomic theory",
-                          "name": "Macroeconomic theory"
-                        },
-                        {
-                          "id": "ANZSRC:380303",
-                          "anchor": "node:ANZSRC:380303",
-                          "statement": "Mathematical economics",
-                          "name": "Mathematical economics"
-                        },
-                        {
-                          "id": "ANZSRC:380399",
-                          "anchor": "node:ANZSRC:380399",
-                          "statement": "Economic theory not elsewhere classified",
-                          "name": "Economic theory not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure, from the parent field to its subfields."
-                    }
-                  },
-                  {
-                    "id": "EC.O.A5.G1",
-                    "anchor": "group:EC.O.A5.G1",
-                    "statement": "Economy-wide settlement covers the whole-system and alternative-paradigm areas of economics that study how an entire economy allocates resources.",
-                    "name": "Economy-wide settlement covers the whole-system and alternative-paradigm areas of economics that study how an entire economy allocates resources.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3899",
-                          "anchor": "node:ANZSRC:3899",
-                          "statement": "Other economics",
-                          "name": "Other economics"
-                        },
-                        {
-                          "id": "ANZSRC:389901",
-                          "anchor": "node:ANZSRC:389901",
-                          "statement": "Comparative economic systems",
-                          "name": "Comparative economic systems"
-                        },
-                        {
-                          "id": "ANZSRC:389902",
-                          "anchor": "node:ANZSRC:389902",
-                          "statement": "Ecological economics",
-                          "name": "Ecological economics"
-                        },
-                        {
-                          "id": "ANZSRC:389903",
-                          "anchor": "node:ANZSRC:389903",
-                          "statement": "Heterodox economics",
-                          "name": "Heterodox economics"
-                        },
-                        {
-                          "id": "ANZSRC:389999",
-                          "anchor": "node:ANZSRC:389999",
-                          "statement": "Other economics not elsewhere classified",
-                          "name": "Other economics not elsewhere classified"
-                        }
-                      ],
-                      "rank_note": "Largest scale: the whole economic system."
-                    }
-                  },
-                  {
-                    "id": "JEL:E7",
-                    "anchor": "node:JEL:E7",
-                    "statement": "Macro-Based Behavioral Economics",
-                    "name": "Macro-Based Behavioral Economics"
-                  },
-                  {
-                    "id": "EC.O.A4.G1",
-                    "anchor": "group:EC.O.A4.G1",
-                    "statement": "Top-level umbrella fields and general method headings settle quantitative questions at the broadest, discipline-wide scale.",
-                    "name": "Top-level umbrella fields and general method headings settle quantitative questions at the broadest, discipline-wide scale.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "ANZSRC:3802",
-                          "anchor": "node:ANZSRC:3802",
-                          "statement": "Econometrics",
-                          "name": "Econometrics"
-                        },
-                        {
-                          "id": "JEL:C",
-                          "anchor": "node:JEL:C",
-                          "statement": "Mathematical and Quantitative Methods",
-                          "name": "Mathematical and Quantitative Methods"
-                        },
-                        {
-                          "id": "JEL:C0",
-                          "anchor": "node:JEL:C0",
-                          "statement": "General",
-                          "name": "General"
-                        },
-                        {
-                          "id": "JEL:C1",
-                          "anchor": "node:JEL:C1",
-                          "statement": "Econometric and Statistical Methods and Methodology:  General",
-                          "name": "Econometric and Statistical Methods and Methodology:  General"
-                        }
-                      ],
-                      "rank_note": "Ranked from the broadest heading (Mathematical and Quantitative Methods) to the narrower general headings beneath it."
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K4.S3",
-              "anchor": "section:EC.K4.S3",
-              "statement": "Development and growth settle allocation across whole countries and societies over time, through planning, cooperation and social change.",
-              "name": "Development and growth settle allocation across whole countries and societies over time, through planning, cooperation and social change.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From development theory and planning to cooperation and social change.",
-                "points": [
-                  {
-                    "id": "EC.K4.S3.U1",
-                    "anchor": "section:EC.K4.S3.U1",
-                    "statement": "Development and growth settle allocation across whole countries and communities over time.",
-                    "name": "Development and growth settle allocation across whole countries and communities over time.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From development theory to planning and local development.",
-                      "points": [
-                        {
-                          "id": "EC.O.A4.G16",
-                          "anchor": "group:EC.O.A4.G16",
-                          "statement": "Fields of development and growth economics distinguished by the scale at which resource allocation is settled, from innovation activity to aggregate productivity to whole-country experience.",
-                          "name": "Fields of development and growth economics distinguished by the scale at which resource allocation is settled, from innovation activity to aggregate productivity to whole-country experience.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "structure",
-                            "points": [
-                              {
-                                "id": "JEL:O3",
-                                "anchor": "node:JEL:O3",
-                                "statement": "Innovation &bull; Research and Development &bull; Technological Change &bull; Intellectual Property Rights",
-                                "name": "Innovation &bull; Research and Development &bull; Technological Change &bull; Intellectual Property Rights"
-                              },
-                              {
-                                "id": "JEL:O4",
-                                "anchor": "node:JEL:O4",
-                                "statement": "Economic Growth and Aggregate Productivity",
-                                "name": "Economic Growth and Aggregate Productivity"
-                              },
-                              {
-                                "id": "JEL:O5",
-                                "anchor": "node:JEL:O5",
-                                "statement": "Economywide Country Studies",
-                                "name": "Economywide Country Studies"
-                              }
-                            ],
-                            "rank_note": "Ordered structurally from the narrowest scale (innovation and technology) to the broadest (economywide country studies)."
-                          }
-                        },
-                        {
-                          "id": "ANZSRC:4404",
-                          "anchor": "node:ANZSRC:4404",
-                          "statement": "Development studies",
-                          "name": "Development studies",
-                          "aliases": [
-                            "JEL:O1"
-                          ]
-                        },
-                        {
-                          "id": "ANZSRC:440407",
-                          "anchor": "node:ANZSRC:440407",
-                          "statement": "Socio-economic development",
-                          "name": "Socio-economic development"
-                        },
-                        {
-                          "id": "JEL:O2",
-                          "anchor": "node:JEL:O2",
-                          "statement": "Development Planning and Policy",
-                          "name": "Development Planning and Policy"
-                        },
-                        {
-                          "id": "ANZSRC:440406",
-                          "anchor": "node:ANZSRC:440406",
-                          "statement": "Rural community development",
-                          "name": "Rural community development"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "EC.K4.S3.U2",
-                    "anchor": "section:EC.K4.S3.U2",
-                    "statement": "Cross-country development, conflict and social change settle allocation across societies and their politics.",
-                    "name": "Cross-country development, conflict and social change settle allocation across societies and their politics.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From cooperation to conflict and migration.",
-                      "points": [
-                        {
-                          "id": "ANZSRC:440401",
-                          "anchor": "node:ANZSRC:440401",
-                          "statement": "Development cooperation",
-                          "name": "Development cooperation"
-                        },
-                        {
-                          "id": "ANZSRC:440402",
-                          "anchor": "node:ANZSRC:440402",
-                          "statement": "Humanitarian disasters, conflict and peacebuilding",
-                          "name": "Humanitarian disasters, conflict and peacebuilding"
-                        },
-                        {
-                          "id": "ANZSRC:440403",
-                          "anchor": "node:ANZSRC:440403",
-                          "statement": "Labour, migration and development",
-                          "name": "Labour, migration and development"
-                        },
-                        {
-                          "id": "ANZSRC:440404",
-                          "anchor": "node:ANZSRC:440404",
-                          "statement": "Political economy and social change",
-                          "name": "Political economy and social change"
-                        },
-                        {
-                          "id": "ANZSRC:440408",
-                          "anchor": "node:ANZSRC:440408",
-                          "statement": "Urban community development",
-                          "name": "Urban community development"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K4.S4",
-              "anchor": "section:EC.K4.S4",
-              "statement": "International economics and whole-system studies settle allocation across borders, financial systems and long histories.",
-              "name": "International economics and whole-system studies settle allocation across borders, financial systems and long histories.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From national to international scale.",
-                "points": [
-                  {
-                    "id": "EC.O.A4.G11",
-                    "anchor": "group:EC.O.A4.G11",
-                    "statement": "International economics fields treat allocation as settled across national borders through factor movements, finance, macro linkages, political relations, and globalization.",
-                    "name": "International economics fields treat allocation as settled across national borders through factor movements, finance, macro linkages, political relations, and globalization.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "structure",
-                      "points": [
-                        {
-                          "id": "JEL:F2",
-                          "anchor": "node:JEL:F2",
-                          "statement": "International Factor Movements and International Business",
-                          "name": "International Factor Movements and International Business"
-                        },
-                        {
-                          "id": "JEL:F3",
-                          "anchor": "node:JEL:F3",
-                          "statement": "International Finance",
-                          "name": "International Finance"
-                        },
-                        {
-                          "id": "JEL:F4",
-                          "anchor": "node:JEL:F4",
-                          "statement": "Macroeconomic Aspects of International Trade and Finance",
-                          "name": "Macroeconomic Aspects of International Trade and Finance"
-                        },
-                        {
-                          "id": "JEL:F5",
-                          "anchor": "node:JEL:F5",
-                          "statement": "International Relations, National Security, and International Political Economy",
-                          "name": "International Relations, National Security, and International Political Economy"
-                        },
-                        {
-                          "id": "JEL:F6",
-                          "anchor": "node:JEL:F6",
-                          "statement": "Economic Impacts of Globalization",
-                          "name": "Economic Impacts of Globalization"
-                        }
-                      ],
-                      "rank_note": "Ordered by structure from factor flows to finance, macro, political, and global impacts."
-                    }
-                  },
-                  {
-                    "id": "JEL:F",
-                    "anchor": "node:JEL:F",
-                    "statement": "International Economics",
-                    "name": "International Economics"
-                  },
-                  {
-                    "id": "JEL:F1",
-                    "anchor": "node:JEL:F1",
-                    "statement": "Trade",
-                    "name": "Trade"
-                  },
-                  {
-                    "id": "EC.O.A2.G5",
-                    "anchor": "group:EC.O.A2.G5",
-                    "statement": "Fields where allocation is settled at the level of the whole economy, across borders, financial systems and long historical spans, together with the general field of applied economics.",
-                    "name": "Fields where allocation is settled at the level of the whole economy, across borders, financial systems and long historical spans, together with the general field of applied economics.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "ANZSRC:380112",
-                          "anchor": "node:ANZSRC:380112",
-                          "statement": "Macroeconomics (incl. monetary and fiscal theory)",
-                          "name": "Macroeconomics (incl. monetary and fiscal theory)"
-                        },
-                        {
-                          "id": "ANZSRC:380110",
-                          "anchor": "node:ANZSRC:380110",
-                          "statement": "International economics",
-                          "name": "International economics"
-                        },
-                        {
-                          "id": "ANZSRC:380107",
-                          "anchor": "node:ANZSRC:380107",
-                          "statement": "Financial economics",
-                          "name": "Financial economics"
-                        },
-                        {
-                          "id": "ANZSRC:380103",
-                          "anchor": "node:ANZSRC:380103",
-                          "statement": "Economic history",
-                          "name": "Economic history"
-                        },
-                        {
-                          "id": "ANZSRC:3801",
-                          "anchor": "node:ANZSRC:3801",
-                          "statement": "Applied economics",
-                          "name": "Applied economics"
-                        }
-                      ],
-                      "rank_note": "Largest scale: economy-wide and international settlement."
-                    }
-                  },
-                  {
-                    "id": "EC.O.A2.G9",
-                    "anchor": "group:EC.O.A2.G9",
-                    "statement": "Allocation settled at the economy-wide, national or international scale, or classified under broad general headings.",
-                    "name": "Allocation settled at the economy-wide, national or international scale, or classified under broad general headings.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "plural_noun": "members",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "points": [
-                        {
-                          "id": "JEL:G",
-                          "anchor": "node:JEL:G",
-                          "statement": "Financial Economics",
-                          "name": "Financial Economics"
-                        },
-                        {
-                          "id": "JEL:G0",
-                          "anchor": "node:JEL:G0",
-                          "statement": "General",
-                          "name": "General"
-                        },
-                        {
-                          "id": "JEL:J",
-                          "anchor": "node:JEL:J",
-                          "statement": "Labor and Demographic Economics",
-                          "name": "Labor and Demographic Economics"
-                        },
-                        {
-                          "id": "JEL:J0",
-                          "anchor": "node:JEL:J0",
-                          "statement": "General",
-                          "name": "General"
-                        },
-                        {
-                          "id": "JEL:J8",
-                          "anchor": "node:JEL:J8",
-                          "statement": "Labor Standards: National and International",
-                          "name": "Labor Standards: National and International"
-                        }
-                      ],
-                      "rank_note": "Largest scale: economy-wide and general."
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K4.S5",
-              "anchor": "section:EC.K4.S5",
-              "statement": "Quantitative methods estimate aggregate relationships through equations, data series and designed models.",
-              "name": "Quantitative methods estimate aggregate relationships through equations, data series and designed models.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From single relationships to systems of equations and data.",
-                "points": [
-                  {
-                    "id": "EC.K4.S5.U1",
-                    "anchor": "section:EC.K4.S5.U1",
-                    "statement": "Single-equation and econometric modelling methods estimate allocation at the scale of one relationship or model.",
-                    "name": "Single-equation and econometric modelling methods estimate allocation at the scale of one relationship or model.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From single equations to special topics and data work.",
-                      "points": [
-                        {
-                          "id": "JEL:C2",
-                          "anchor": "node:JEL:C2",
-                          "statement": "Single Equation Models &bull; Single Variables",
-                          "name": "Single Equation Models &bull; Single Variables"
-                        },
-                        {
-                          "id": "JEL:C4",
-                          "anchor": "node:JEL:C4",
-                          "statement": "Econometric and Statistical Methods:  Special Topics",
-                          "name": "Econometric and Statistical Methods:  Special Topics"
-                        },
-                        {
-                          "id": "JEL:C5",
-                          "anchor": "node:JEL:C5",
-                          "statement": "Econometric Modeling",
-                          "name": "Econometric Modeling"
-                        },
-                        {
-                          "id": "JEL:C8",
-                          "anchor": "node:JEL:C8",
-                          "statement": "Data Collection and Data Estimation Methodology &bull; Computer Programs",
-                          "name": "Data Collection and Data Estimation Methodology &bull; Computer Programs"
-                        },
-                        {
-                          "id": "EC.O.A4.G2",
-                          "anchor": "group:EC.O.A4.G2",
-                          "statement": "Methods-oriented econometric categories settle estimation questions at the level of general techniques and models rather than a particular dataset.",
-                          "name": "Methods-oriented econometric categories settle estimation questions at the level of general techniques and models rather than a particular dataset.",
-                          "support": {
-                            "logic_type": "inductive",
-                            "plural_noun": "members",
-                            "basis": "kinds",
-                            "order": "degree",
-                            "points": [
-                              {
-                                "id": "ANZSRC:380202",
-                                "anchor": "node:ANZSRC:380202",
-                                "statement": "Econometric and statistical methods",
-                                "name": "Econometric and statistical methods"
-                              },
-                              {
-                                "id": "ANZSRC:380203",
-                                "anchor": "node:ANZSRC:380203",
-                                "statement": "Economic models and forecasting",
-                                "name": "Economic models and forecasting"
-                              },
-                              {
-                                "id": "ANZSRC:380299",
-                                "anchor": "node:ANZSRC:380299",
-                                "statement": "Econometrics not elsewhere classified",
-                                "name": "Econometrics not elsewhere classified"
-                              },
-                              {
-                                "id": "ANZSRC:440499",
-                                "anchor": "node:ANZSRC:440499",
-                                "statement": "Development studies not elsewhere classified",
-                                "name": "Development studies not elsewhere classified"
-                              }
-                            ],
-                            "rank_note": "Ranked from general statistical methods to model-building and forecasting to residual catch-all categories."
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "EC.K4.S5.U2",
-                    "anchor": "section:EC.K4.S5.U2",
-                    "statement": "Multi-equation, mathematical, strategic and experimental methods estimate allocation across interacting systems and players.",
-                    "name": "Multi-equation, mathematical, strategic and experimental methods estimate allocation across interacting systems and players.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From systems of equations to games and experiments.",
-                      "points": [
-                        {
-                          "id": "JEL:C3",
-                          "anchor": "node:JEL:C3",
-                          "statement": "Multiple or Simultaneous Equation Models &bull; Multiple Variables",
-                          "name": "Multiple or Simultaneous Equation Models &bull; Multiple Variables"
-                        },
-                        {
-                          "id": "JEL:C6",
-                          "anchor": "node:JEL:C6",
-                          "statement": "Mathematical Methods &bull; Programming Models &bull; Mathematical and Simulation Modeling",
-                          "name": "Mathematical Methods &bull; Programming Models &bull; Mathematical and Simulation Modeling"
-                        },
-                        {
-                          "id": "JEL:C7",
-                          "anchor": "node:JEL:C7",
-                          "statement": "Game Theory and Bargaining Theory",
-                          "name": "Game Theory and Bargaining Theory"
-                        },
-                        {
-                          "id": "JEL:C9",
-                          "anchor": "node:JEL:C9",
-                          "statement": "Design of Experiments",
-                          "name": "Design of Experiments"
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "id": "EC.K4.S5.U3",
-                    "anchor": "section:EC.K4.S5.U3",
-                    "statement": "Cross-section, time-series and panel analysis estimate how aggregates differ across units and move over time.",
-                    "name": "Cross-section, time-series and panel analysis estimate how aggregates differ across units and move over time.",
-                    "support": {
-                      "logic_type": "inductive",
-                      "basis": "kinds",
-                      "order": "degree",
-                      "rank_note": "From a single cross-section to series and pooled data.",
-                      "points": [
-                        {
-                          "id": "ANZSRC:380201",
-                          "anchor": "node:ANZSRC:380201",
-                          "statement": "Cross-sectional analysis",
-                          "name": "Cross-sectional analysis"
-                        },
-                        {
-                          "id": "ANZSRC:380205",
-                          "anchor": "node:ANZSRC:380205",
-                          "statement": "Time-series analysis",
-                          "name": "Time-series analysis"
-                        },
-                        {
-                          "id": "ANZSRC:380204",
-                          "anchor": "node:ANZSRC:380204",
-                          "statement": "Panel data analysis",
-                          "name": "Panel data analysis"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
-            }
-          ]
-        },
-        "title": "The aggregate economy"
-      },
-      {
-        "id": "EC.K5",
-        "anchor": "pillar:EC.K5",
-        "statement": "Welfare and public choice is the scale at which an allocation is settled for the whole society through distribution, collective decision and government.",
-        "name": "Welfare and public choice is the scale at which an allocation is settled for the whole society through distribution, collective decision and government.",
-        "support": {
-          "logic_type": "inductive",
-          "basis": "kinds",
-          "order": "degree",
-          "rank_note": "From distribution and welfare, to collective choice, to government action.",
-          "points": [
-            {
-              "id": "EC.K5.S1",
-              "anchor": "section:EC.K5.S1",
-              "statement": "Equilibrium, distribution and welfare assess how well an allocation serves the whole society.",
-              "name": "Equilibrium, distribution and welfare assess how well an allocation serves the whole society.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From distribution to equilibrium and welfare.",
-                "points": [
-                  {
-                    "id": "JEL:D3",
-                    "anchor": "node:JEL:D3",
-                    "statement": "Distribution",
-                    "name": "Distribution"
-                  },
-                  {
-                    "id": "JEL:D5",
-                    "anchor": "node:JEL:D5",
-                    "statement": "General Equilibrium and Disequilibrium",
-                    "name": "General Equilibrium and Disequilibrium"
-                  },
-                  {
-                    "id": "JEL:D6",
-                    "anchor": "node:JEL:D6",
-                    "statement": "Welfare Economics",
-                    "name": "Welfare Economics"
-                  },
-                  {
-                    "id": "JEL:D7",
-                    "anchor": "node:JEL:D7",
-                    "statement": "Analysis of Collective Decision-Making",
-                    "name": "Analysis of Collective Decision-Making"
-                  }
-                ]
-              }
-            },
-            {
-              "id": "EC.K5.S2",
-              "anchor": "section:EC.K5.S2",
-              "statement": "Government and regional authorities settle allocation collectively through political choice, provision and taxation.",
-              "name": "Government and regional authorities settle allocation collectively through political choice, provision and taxation.",
-              "support": {
-                "logic_type": "inductive",
-                "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From national to regional and local government.",
+                "order": "structure",
+                "rank_note": "Ordered from national to local public finance.",
                 "points": [
                   {
                     "id": "EC.O.A2.G4",
@@ -2010,27 +980,21 @@
               }
             },
             {
-              "id": "EC.K5.S3",
-              "anchor": "section:EC.K5.S3",
-              "statement": "Poverty, inclusion and the broad headings of the field frame the social ends of allocation.",
-              "name": "Poverty, inclusion and the broad headings of the field frame the social ends of allocation.",
+              "id": "EC.K3.S3",
+              "anchor": "section:EC.K3.S3",
+              "statement": "Public institutions settle allocations through welfare assessment, collective decision-making and community development.",
+              "name": "Public institutions settle allocations through welfare assessment, collective decision-making and community development.",
               "support": {
                 "logic_type": "inductive",
                 "basis": "kinds",
-                "order": "degree",
-                "rank_note": "From social ends to overarching headings.",
+                "order": "structure",
+                "rank_note": "Ordered from welfare theory to development practice.",
                 "points": [
                   {
-                    "id": "ANZSRC:440405",
-                    "anchor": "node:ANZSRC:440405",
-                    "statement": "Poverty, inclusivity and wellbeing",
-                    "name": "Poverty, inclusivity and wellbeing"
-                  },
-                  {
-                    "id": "EC.O.A5.G5",
-                    "anchor": "group:EC.O.A5.G5",
-                    "statement": "General and umbrella headings are top-level categories that span the field without fixing a particular scale of settlement.",
-                    "name": "General and umbrella headings are top-level categories that span the field without fixing a particular scale of settlement.",
+                    "id": "EC.O.A1.G7",
+                    "anchor": "group:EC.O.A1.G7",
+                    "statement": "Allocation is settled at the scale of the whole economy or collective, through general equilibrium, welfare assessment, and collective decision-making.",
+                    "name": "Allocation is settled at the scale of the whole economy or collective, through general equilibrium, welfare assessment, and collective decision-making.",
                     "support": {
                       "logic_type": "inductive",
                       "plural_noun": "members",
@@ -2038,31 +1002,549 @@
                       "order": "structure",
                       "points": [
                         {
-                          "id": "JEL:H",
-                          "anchor": "node:JEL:H",
-                          "statement": "Public Economics",
-                          "name": "Public Economics"
+                          "id": "JEL:D5",
+                          "anchor": "node:JEL:D5",
+                          "statement": "General Equilibrium and Disequilibrium",
+                          "name": "General Equilibrium and Disequilibrium"
                         },
                         {
-                          "id": "JEL:H0",
-                          "anchor": "node:JEL:H0",
-                          "statement": "General",
-                          "name": "General"
+                          "id": "JEL:D6",
+                          "anchor": "node:JEL:D6",
+                          "statement": "Welfare Economics",
+                          "name": "Welfare Economics"
                         },
                         {
-                          "id": "JEL:I",
-                          "anchor": "node:JEL:I",
-                          "statement": "Health, Education, and Welfare",
-                          "name": "Health, Education, and Welfare"
-                        },
-                        {
-                          "id": "JEL:I0",
-                          "anchor": "node:JEL:I0",
-                          "statement": "General",
-                          "name": "General"
+                          "id": "JEL:D7",
+                          "anchor": "node:JEL:D7",
+                          "statement": "Analysis of Collective Decision-Making",
+                          "name": "Analysis of Collective Decision-Making"
                         }
                       ],
-                      "rank_note": "Scale-neutral catch-all headings placed last."
+                      "rank_note": "Ordered by structure, from economy-wide equilibrium to collective choice."
+                    }
+                  },
+                  {
+                    "id": "ANZSRC:440406",
+                    "anchor": "node:ANZSRC:440406",
+                    "statement": "Rural community development",
+                    "name": "Rural community development"
+                  },
+                  {
+                    "id": "ANZSRC:440408",
+                    "anchor": "node:ANZSRC:440408",
+                    "statement": "Urban community development",
+                    "name": "Urban community development"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "title": "Governments and public institutions"
+      },
+      {
+        "id": "EC.K4",
+        "anchor": "pillar:EC.K4",
+        "statement": "The whole economy settles allocations in aggregate through money, prices, growth, development and trade between countries.",
+        "name": "The whole economy settles allocations in aggregate through money, prices, growth, development and trade between countries.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "degree",
+          "rank_note": "Ordered from the national aggregate to development and the global economy.",
+          "points": [
+            {
+              "id": "EC.K4.S1",
+              "anchor": "section:EC.K4.S1",
+              "statement": "The whole economy settles allocations in aggregate through output, money, prices and policy.",
+              "name": "The whole economy settles allocations in aggregate through output, money, prices and policy.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from aggregates to monetary policy and broad headings.",
+                "points": [
+                  {
+                    "id": "EC.O.A4.G9",
+                    "anchor": "group:EC.O.A4.G9",
+                    "statement": "Prices, money and policy cover allocations settled economy-wide through price movements, interest rates, central banks, and government macro policy.",
+                    "name": "Prices, money and policy cover allocations settled economy-wide through price movements, interest rates, central banks, and government macro policy.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "JEL:E3",
+                          "anchor": "node:JEL:E3",
+                          "statement": "Prices, Business Fluctuations, and Cycles",
+                          "name": "Prices, Business Fluctuations, and Cycles"
+                        },
+                        {
+                          "id": "JEL:E4",
+                          "anchor": "node:JEL:E4",
+                          "statement": "Money and Interest Rates",
+                          "name": "Money and Interest Rates"
+                        },
+                        {
+                          "id": "JEL:E5",
+                          "anchor": "node:JEL:E5",
+                          "statement": "Monetary Policy, Central Banking, and the Supply of Money and Credit",
+                          "name": "Monetary Policy, Central Banking, and the Supply of Money and Credit"
+                        },
+                        {
+                          "id": "JEL:E6",
+                          "anchor": "node:JEL:E6",
+                          "statement": "Macroeconomic Policy, Macroeconomic Aspects of Public Finance, and General Outlook",
+                          "name": "Macroeconomic Policy, Macroeconomic Aspects of Public Finance, and General Outlook"
+                        }
+                      ],
+                      "rank_note": "Ordered from prices and cycles to money, central banking and fiscal policy."
+                    }
+                  },
+                  {
+                    "id": "EC.O.A4.G8",
+                    "anchor": "group:EC.O.A4.G8",
+                    "statement": "Macroeconomic overview and aggregate behavior covers how the whole economy's consumption, saving, production, and labor are settled in total.",
+                    "name": "Macroeconomic overview and aggregate behavior covers how the whole economy's consumption, saving, production, and labor are settled in total.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "JEL:E",
+                          "anchor": "node:JEL:E",
+                          "statement": "Macroeconomics and Monetary Economics",
+                          "name": "Macroeconomics and Monetary Economics"
+                        },
+                        {
+                          "id": "JEL:E0",
+                          "anchor": "node:JEL:E0",
+                          "statement": "General",
+                          "name": "General"
+                        },
+                        {
+                          "id": "JEL:E1",
+                          "anchor": "node:JEL:E1",
+                          "statement": "General Aggregative Models",
+                          "name": "General Aggregative Models"
+                        },
+                        {
+                          "id": "JEL:E2",
+                          "anchor": "node:JEL:E2",
+                          "statement": "Consumption, Saving, Production, Investment, Labor Markets, and Informal Economy",
+                          "name": "Consumption, Saving, Production, Investment, Labor Markets, and Informal Economy"
+                        }
+                      ],
+                      "rank_note": "Ordered from the field itself to general models and real aggregates."
+                    }
+                  },
+                  {
+                    "id": "EC.O.A5.G1",
+                    "anchor": "group:EC.O.A5.G1",
+                    "statement": "Economy-wide settlement covers the whole-system and alternative-paradigm areas of economics that study how an entire economy allocates resources.",
+                    "name": "Economy-wide settlement covers the whole-system and alternative-paradigm areas of economics that study how an entire economy allocates resources.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "ANZSRC:3899",
+                          "anchor": "node:ANZSRC:3899",
+                          "statement": "Other economics",
+                          "name": "Other economics"
+                        },
+                        {
+                          "id": "ANZSRC:389901",
+                          "anchor": "node:ANZSRC:389901",
+                          "statement": "Comparative economic systems",
+                          "name": "Comparative economic systems"
+                        },
+                        {
+                          "id": "ANZSRC:389902",
+                          "anchor": "node:ANZSRC:389902",
+                          "statement": "Ecological economics",
+                          "name": "Ecological economics"
+                        },
+                        {
+                          "id": "ANZSRC:389903",
+                          "anchor": "node:ANZSRC:389903",
+                          "statement": "Heterodox economics",
+                          "name": "Heterodox economics"
+                        },
+                        {
+                          "id": "ANZSRC:389999",
+                          "anchor": "node:ANZSRC:389999",
+                          "statement": "Other economics not elsewhere classified",
+                          "name": "Other economics not elsewhere classified"
+                        }
+                      ],
+                      "rank_note": "Largest scale: the whole economic system."
+                    }
+                  },
+                  {
+                    "id": "EC.O.A2.G5",
+                    "anchor": "group:EC.O.A2.G5",
+                    "statement": "Fields where allocation is settled at the level of the whole economy, across borders, financial systems and long historical spans, together with the general field of applied economics.",
+                    "name": "Fields where allocation is settled at the level of the whole economy, across borders, financial systems and long historical spans, together with the general field of applied economics.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "degree",
+                      "points": [
+                        {
+                          "id": "ANZSRC:380112",
+                          "anchor": "node:ANZSRC:380112",
+                          "statement": "Macroeconomics (incl. monetary and fiscal theory)",
+                          "name": "Macroeconomics (incl. monetary and fiscal theory)"
+                        },
+                        {
+                          "id": "ANZSRC:380110",
+                          "anchor": "node:ANZSRC:380110",
+                          "statement": "International economics",
+                          "name": "International economics"
+                        },
+                        {
+                          "id": "ANZSRC:380107",
+                          "anchor": "node:ANZSRC:380107",
+                          "statement": "Financial economics",
+                          "name": "Financial economics"
+                        },
+                        {
+                          "id": "ANZSRC:380103",
+                          "anchor": "node:ANZSRC:380103",
+                          "statement": "Economic history",
+                          "name": "Economic history"
+                        },
+                        {
+                          "id": "ANZSRC:3801",
+                          "anchor": "node:ANZSRC:3801",
+                          "statement": "Applied economics",
+                          "name": "Applied economics"
+                        }
+                      ],
+                      "rank_note": "Largest scale: economy-wide and international settlement."
+                    }
+                  },
+                  {
+                    "id": "EC.O.A2.G9",
+                    "anchor": "group:EC.O.A2.G9",
+                    "statement": "Allocation settled at the economy-wide, national or international scale, or classified under broad general headings.",
+                    "name": "Allocation settled at the economy-wide, national or international scale, or classified under broad general headings.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "degree",
+                      "points": [
+                        {
+                          "id": "JEL:G",
+                          "anchor": "node:JEL:G",
+                          "statement": "Financial Economics",
+                          "name": "Financial Economics"
+                        },
+                        {
+                          "id": "JEL:G0",
+                          "anchor": "node:JEL:G0",
+                          "statement": "General",
+                          "name": "General"
+                        },
+                        {
+                          "id": "JEL:J",
+                          "anchor": "node:JEL:J",
+                          "statement": "Labor and Demographic Economics",
+                          "name": "Labor and Demographic Economics"
+                        },
+                        {
+                          "id": "JEL:J0",
+                          "anchor": "node:JEL:J0",
+                          "statement": "General",
+                          "name": "General"
+                        },
+                        {
+                          "id": "JEL:J8",
+                          "anchor": "node:JEL:J8",
+                          "statement": "Labor Standards: National and International",
+                          "name": "Labor Standards: National and International"
+                        }
+                      ],
+                      "rank_note": "Largest scale: economy-wide and general."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "EC.K4.S2",
+              "anchor": "section:EC.K4.S2",
+              "statement": "Whole countries settle allocations through development, growth and the structure of their economic systems.",
+              "name": "Whole countries settle allocations through development, growth and the structure of their economic systems.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from development to economic systems.",
+                "points": [
+                  {
+                    "id": "EC.K4.S2.U1",
+                    "anchor": "section:EC.K4.S2.U1",
+                    "statement": "Development settles whole-country allocations through growth, planning and innovation.",
+                    "name": "Development settles whole-country allocations through growth, planning and innovation.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from growth to planning.",
+                      "points": [
+                        {
+                          "id": "EC.O.A4.G16",
+                          "anchor": "group:EC.O.A4.G16",
+                          "statement": "Fields of development and growth economics distinguished by the scale at which resource allocation is settled, from innovation activity to aggregate productivity to whole-country experience.",
+                          "name": "Fields of development and growth economics distinguished by the scale at which resource allocation is settled, from innovation activity to aggregate productivity to whole-country experience.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "JEL:O3",
+                                "anchor": "node:JEL:O3",
+                                "statement": "Innovation &bull; Research and Development &bull; Technological Change &bull; Intellectual Property Rights",
+                                "name": "Innovation &bull; Research and Development &bull; Technological Change &bull; Intellectual Property Rights"
+                              },
+                              {
+                                "id": "JEL:O4",
+                                "anchor": "node:JEL:O4",
+                                "statement": "Economic Growth and Aggregate Productivity",
+                                "name": "Economic Growth and Aggregate Productivity"
+                              },
+                              {
+                                "id": "JEL:O5",
+                                "anchor": "node:JEL:O5",
+                                "statement": "Economywide Country Studies",
+                                "name": "Economywide Country Studies"
+                              }
+                            ],
+                            "rank_note": "Ordered structurally from the narrowest scale (innovation and technology) to the broadest (economywide country studies)."
+                          }
+                        },
+                        {
+                          "id": "JEL:O",
+                          "anchor": "node:JEL:O",
+                          "statement": "Economic Development, Innovation, Technological Change, and Growth",
+                          "name": "Economic Development, Innovation, Technological Change, and Growth"
+                        },
+                        {
+                          "id": "JEL:O1",
+                          "anchor": "node:JEL:O1",
+                          "statement": "Economic Development",
+                          "name": "Economic Development"
+                        },
+                        {
+                          "id": "JEL:O2",
+                          "anchor": "node:JEL:O2",
+                          "statement": "Development Planning and Policy",
+                          "name": "Development Planning and Policy"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "EC.K4.S2.U2",
+                    "anchor": "section:EC.K4.S2.U2",
+                    "statement": "Development studies settle whole-country allocations through cooperation, social change, migration and conflict response.",
+                    "name": "Development studies settle whole-country allocations through cooperation, social change, migration and conflict response.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from social to humanitarian.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:4404",
+                          "anchor": "node:ANZSRC:4404",
+                          "statement": "Development studies",
+                          "name": "Development studies"
+                        },
+                        {
+                          "id": "ANZSRC:440407",
+                          "anchor": "node:ANZSRC:440407",
+                          "statement": "Socio-economic development",
+                          "name": "Socio-economic development"
+                        },
+                        {
+                          "id": "ANZSRC:440401",
+                          "anchor": "node:ANZSRC:440401",
+                          "statement": "Development cooperation",
+                          "name": "Development cooperation"
+                        },
+                        {
+                          "id": "ANZSRC:440402",
+                          "anchor": "node:ANZSRC:440402",
+                          "statement": "Humanitarian disasters, conflict and peacebuilding",
+                          "name": "Humanitarian disasters, conflict and peacebuilding"
+                        },
+                        {
+                          "id": "ANZSRC:440403",
+                          "anchor": "node:ANZSRC:440403",
+                          "statement": "Labour, migration and development",
+                          "name": "Labour, migration and development"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "EC.K4.S2.U3",
+                    "anchor": "section:EC.K4.S2.U3",
+                    "statement": "Economic systems settle whole-country allocations through capitalist, socialist and transition arrangements.",
+                    "name": "Economic systems settle whole-country allocations through capitalist, socialist and transition arrangements.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from capitalist to socialist and comparative systems.",
+                      "points": [
+                        {
+                          "id": "JEL:P",
+                          "anchor": "node:JEL:P",
+                          "statement": "Political Economy and Comparative Economic Systems",
+                          "name": "Political Economy and Comparative Economic Systems"
+                        },
+                        {
+                          "id": "JEL:P1",
+                          "anchor": "node:JEL:P1",
+                          "statement": "Capitalist Economies",
+                          "name": "Capitalist Economies"
+                        },
+                        {
+                          "id": "JEL:P2",
+                          "anchor": "node:JEL:P2",
+                          "statement": "Socialist and Transition Economies",
+                          "name": "Socialist and Transition Economies"
+                        },
+                        {
+                          "id": "JEL:P3",
+                          "anchor": "node:JEL:P3",
+                          "statement": "Socialist Institutions and Their Transitions",
+                          "name": "Socialist Institutions and Their Transitions"
+                        },
+                        {
+                          "id": "JEL:P4",
+                          "anchor": "node:JEL:P4",
+                          "statement": "Other Economic Systems",
+                          "name": "Other Economic Systems"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "EC.K4.S2.U4",
+                    "anchor": "section:EC.K4.S2.U4",
+                    "statement": "Political economy settles whole-country allocations through social change and the comparison of economic systems.",
+                    "name": "Political economy settles whole-country allocations through social change and the comparison of economic systems.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from social change to comparison.",
+                      "points": [
+                        {
+                          "id": "ANZSRC:440404",
+                          "anchor": "node:ANZSRC:440404",
+                          "statement": "Political economy and social change",
+                          "name": "Political economy and social change"
+                        },
+                        {
+                          "id": "JEL:P5",
+                          "anchor": "node:JEL:P5",
+                          "statement": "Comparative Economic Systems",
+                          "name": "Comparative Economic Systems"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "EC.K4.S3",
+              "anchor": "section:EC.K4.S3",
+              "statement": "Trade between countries settles allocations across borders through exchange, factor movement and aggregate behavior.",
+              "name": "Trade between countries settles allocations across borders through exchange, factor movement and aggregate behavior.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from behavior to international exchange.",
+                "points": [
+                  {
+                    "id": "JEL:E7",
+                    "anchor": "node:JEL:E7",
+                    "statement": "Macro-Based Behavioral Economics",
+                    "name": "Macro-Based Behavioral Economics"
+                  },
+                  {
+                    "id": "JEL:F",
+                    "anchor": "node:JEL:F",
+                    "statement": "International Economics",
+                    "name": "International Economics"
+                  },
+                  {
+                    "id": "JEL:F1",
+                    "anchor": "node:JEL:F1",
+                    "statement": "Trade",
+                    "name": "Trade"
+                  },
+                  {
+                    "id": "EC.O.A4.G11",
+                    "anchor": "group:EC.O.A4.G11",
+                    "statement": "International economics fields treat allocation as settled across national borders through factor movements, finance, macro linkages, political relations, and globalization.",
+                    "name": "International economics fields treat allocation as settled across national borders through factor movements, finance, macro linkages, political relations, and globalization.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "JEL:F2",
+                          "anchor": "node:JEL:F2",
+                          "statement": "International Factor Movements and International Business",
+                          "name": "International Factor Movements and International Business"
+                        },
+                        {
+                          "id": "JEL:F3",
+                          "anchor": "node:JEL:F3",
+                          "statement": "International Finance",
+                          "name": "International Finance"
+                        },
+                        {
+                          "id": "JEL:F4",
+                          "anchor": "node:JEL:F4",
+                          "statement": "Macroeconomic Aspects of International Trade and Finance",
+                          "name": "Macroeconomic Aspects of International Trade and Finance"
+                        },
+                        {
+                          "id": "JEL:F5",
+                          "anchor": "node:JEL:F5",
+                          "statement": "International Relations, National Security, and International Political Economy",
+                          "name": "International Relations, National Security, and International Political Economy"
+                        },
+                        {
+                          "id": "JEL:F6",
+                          "anchor": "node:JEL:F6",
+                          "statement": "Economic Impacts of Globalization",
+                          "name": "Economic Impacts of Globalization"
+                        }
+                      ],
+                      "rank_note": "Ordered by structure from factor flows to finance, macro, political, and global impacts."
                     }
                   },
                   {
@@ -2106,16 +1588,575 @@
                   }
                 ]
               }
+            },
+            {
+              "id": "EC.K4.S4",
+              "anchor": "section:EC.K4.S4",
+              "statement": "The whole economy's history shows allocations settled over time through the aggregate and sector records of economic history.",
+              "name": "The whole economy's history shows allocations settled over time through the aggregate and sector records of economic history.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from aggregates to sectors and regions.",
+                "points": [
+                  {
+                    "id": "EC.K4.S4.U1",
+                    "anchor": "section:EC.K4.S4.U1",
+                    "statement": "Economic history records whole-economy allocations through aggregates, finance, society and government.",
+                    "name": "Economic history records whole-economy allocations through aggregates, finance, society and government.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from aggregates to government.",
+                      "points": [
+                        {
+                          "id": "LCC:HC",
+                          "anchor": "node:LCC:HC",
+                          "statement": "Economic history and conditions",
+                          "name": "Economic history and conditions"
+                        },
+                        {
+                          "id": "JEL:N1",
+                          "anchor": "node:JEL:N1",
+                          "statement": "Macroeconomics and Monetary Economics &bull; Industrial Structure &bull; Growth &bull; Fluctuations",
+                          "name": "Macroeconomics and Monetary Economics &bull; Industrial Structure &bull; Growth &bull; Fluctuations"
+                        },
+                        {
+                          "id": "JEL:N2",
+                          "anchor": "node:JEL:N2",
+                          "statement": "Financial Markets and Institutions",
+                          "name": "Financial Markets and Institutions"
+                        },
+                        {
+                          "id": "JEL:N3",
+                          "anchor": "node:JEL:N3",
+                          "statement": "Labor and Consumers, Demography, Education, Health, Welfare, Income, Wealth, Religion, and Philanthropy",
+                          "name": "Labor and Consumers, Demography, Education, Health, Welfare, Income, Wealth, Religion, and Philanthropy"
+                        },
+                        {
+                          "id": "JEL:N4",
+                          "anchor": "node:JEL:N4",
+                          "statement": "Government, War, Law, International Relations, and Regulation",
+                          "name": "Government, War, Law, International Relations, and Regulation"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "id": "EC.K4.S4.U2",
+                    "anchor": "section:EC.K4.S4.U2",
+                    "statement": "Sector and regional histories record whole-economy allocations through industries, businesses and places.",
+                    "name": "Sector and regional histories record whole-economy allocations through industries, businesses and places.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "rank_note": "Ordered from primary sectors to regions.",
+                      "points": [
+                        {
+                          "id": "JEL:N5",
+                          "anchor": "node:JEL:N5",
+                          "statement": "Agriculture, Natural Resources, Environment, and Extractive Industries",
+                          "name": "Agriculture, Natural Resources, Environment, and Extractive Industries"
+                        },
+                        {
+                          "id": "JEL:N6",
+                          "anchor": "node:JEL:N6",
+                          "statement": "Manufacturing and Construction",
+                          "name": "Manufacturing and Construction"
+                        },
+                        {
+                          "id": "JEL:N7",
+                          "anchor": "node:JEL:N7",
+                          "statement": "Transport, Trade, Energy, Technology, and Other Services",
+                          "name": "Transport, Trade, Energy, Technology, and Other Services"
+                        },
+                        {
+                          "id": "JEL:N8",
+                          "anchor": "node:JEL:N8",
+                          "statement": "Micro-Business History",
+                          "name": "Micro-Business History"
+                        },
+                        {
+                          "id": "JEL:N9",
+                          "anchor": "node:JEL:N9",
+                          "statement": "Regional and Urban History",
+                          "name": "Regional and Urban History"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
             }
           ]
         },
-        "title": "Welfare and public choice"
+        "title": "The whole economy"
       }
     ]
   },
+  "method_line": {
+    "logic_type": "inductive",
+    "statement": "The method line holds how economics is studied: its history of thought, methodology, econometrics, teaching and reference material.",
+    "basis": "kinds",
+    "order": "structure",
+    "rank_note": "Ordered from ideas to techniques to teaching and reference.",
+    "points": [
+      {
+        "id": "EC.M.S1",
+        "anchor": "section:EC.M.S1",
+        "statement": "The history of ideas and methodology frame how allocation is studied and justified.",
+        "name": "The history of ideas and methodology frame how allocation is studied and justified.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "Ordered from theory to history to method.",
+          "points": [
+            {
+              "id": "EC.O.A1.G1",
+              "anchor": "group:EC.O.A1.G1",
+              "statement": "Aggregate and formal theory covers allocation analysed at the level of the whole economy or through general mathematical models.",
+              "name": "Aggregate and formal theory covers allocation analysed at the level of the whole economy or through general mathematical models.",
+              "support": {
+                "logic_type": "inductive",
+                "plural_noun": "members",
+                "basis": "kinds",
+                "order": "structure",
+                "points": [
+                  {
+                    "id": "ANZSRC:3803",
+                    "anchor": "node:ANZSRC:3803",
+                    "statement": "Economic theory",
+                    "name": "Economic theory"
+                  },
+                  {
+                    "id": "ANZSRC:380302",
+                    "anchor": "node:ANZSRC:380302",
+                    "statement": "Macroeconomic theory",
+                    "name": "Macroeconomic theory"
+                  },
+                  {
+                    "id": "ANZSRC:380303",
+                    "anchor": "node:ANZSRC:380303",
+                    "statement": "Mathematical economics",
+                    "name": "Mathematical economics"
+                  },
+                  {
+                    "id": "ANZSRC:380399",
+                    "anchor": "node:ANZSRC:380399",
+                    "statement": "Economic theory not elsewhere classified",
+                    "name": "Economic theory not elsewhere classified"
+                  }
+                ],
+                "rank_note": "Ordered by structure, from the parent field to its subfields."
+              }
+            },
+            {
+              "id": "EC.O.A1.G3",
+              "anchor": "group:EC.O.A1.G3",
+              "statement": "Historical thought covers how ideas about allocation developed across successive periods and through particular thinkers.",
+              "name": "Historical thought covers how ideas about allocation developed across successive periods and through particular thinkers.",
+              "support": {
+                "logic_type": "inductive",
+                "plural_noun": "members",
+                "basis": "kinds",
+                "order": "structure",
+                "points": [
+                  {
+                    "id": "ANZSRC:380301",
+                    "anchor": "node:ANZSRC:380301",
+                    "statement": "History of economic thought",
+                    "name": "History of economic thought"
+                  },
+                  {
+                    "id": "JEL:B1",
+                    "anchor": "node:JEL:B1",
+                    "statement": "History of Economic Thought through 1925",
+                    "name": "History of Economic Thought through 1925"
+                  },
+                  {
+                    "id": "JEL:B2",
+                    "anchor": "node:JEL:B2",
+                    "statement": "History of Economic Thought since 1925",
+                    "name": "History of Economic Thought since 1925"
+                  },
+                  {
+                    "id": "JEL:B3",
+                    "anchor": "node:JEL:B3",
+                    "statement": "History of Economic Thought:  Individuals",
+                    "name": "History of Economic Thought:  Individuals"
+                  }
+                ],
+                "rank_note": "Ordered by structure, from the general category to period and individual subdivisions."
+              }
+            },
+            {
+              "id": "EC.O.A1.G4",
+              "anchor": "group:EC.O.A1.G4",
+              "statement": "Methodology and heterodox approaches cover the general framing of the discipline and the ways economists justify or challenge its methods.",
+              "name": "Methodology and heterodox approaches cover the general framing of the discipline and the ways economists justify or challenge its methods.",
+              "support": {
+                "logic_type": "inductive",
+                "plural_noun": "members",
+                "basis": "kinds",
+                "order": "structure",
+                "points": [
+                  {
+                    "id": "JEL:B",
+                    "anchor": "node:JEL:B",
+                    "statement": "History of Economic Thought, Methodology, and Heterodox Approaches",
+                    "name": "History of Economic Thought, Methodology, and Heterodox Approaches"
+                  },
+                  {
+                    "id": "JEL:B0",
+                    "anchor": "node:JEL:B0",
+                    "statement": "General",
+                    "name": "General"
+                  },
+                  {
+                    "id": "JEL:B4",
+                    "anchor": "node:JEL:B4",
+                    "statement": "Economic Methodology",
+                    "name": "Economic Methodology"
+                  },
+                  {
+                    "id": "JEL:B5",
+                    "anchor": "node:JEL:B5",
+                    "statement": "Current Heterodox Approaches",
+                    "name": "Current Heterodox Approaches"
+                  }
+                ],
+                "rank_note": "Ordered by structure, from the general category to specific approaches."
+              }
+            },
+            {
+              "id": "LCC:HB",
+              "anchor": "node:LCC:HB",
+              "statement": "Economic theory. Demography",
+              "name": "Economic theory. Demography"
+            },
+            {
+              "id": "JEL:Y8",
+              "anchor": "node:JEL:Y8",
+              "statement": "Related Disciplines",
+              "name": "Related Disciplines"
+            }
+          ]
+        }
+      },
+      {
+        "id": "EC.M.S2",
+        "anchor": "section:EC.M.S2",
+        "statement": "Econometric and modelling techniques are the methods by which allocation data are estimated and tested.",
+        "name": "Econometric and modelling techniques are the methods by which allocation data are estimated and tested.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "Ordered from single-equation to multi-equation methods and data.",
+          "points": [
+            {
+              "id": "EC.M.S2.U1",
+              "anchor": "section:EC.M.S2.U1",
+              "statement": "Equation-based econometric methods are the techniques by which allocation relationships are estimated and tested.",
+              "name": "Equation-based econometric methods are the techniques by which allocation relationships are estimated and tested.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from single-equation to multi-equation and method headings.",
+                "points": [
+                  {
+                    "id": "EC.O.A4.G6",
+                    "anchor": "group:EC.O.A4.G6",
+                    "statement": "Single-equation and special-topic methods settle estimation at the scale of one relationship, model specification, or dataset.",
+                    "name": "Single-equation and special-topic methods settle estimation at the scale of one relationship, model specification, or dataset.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "JEL:C2",
+                          "anchor": "node:JEL:C2",
+                          "statement": "Single Equation Models &bull; Single Variables",
+                          "name": "Single Equation Models &bull; Single Variables"
+                        },
+                        {
+                          "id": "JEL:C4",
+                          "anchor": "node:JEL:C4",
+                          "statement": "Econometric and Statistical Methods:  Special Topics",
+                          "name": "Econometric and Statistical Methods:  Special Topics"
+                        },
+                        {
+                          "id": "JEL:C5",
+                          "anchor": "node:JEL:C5",
+                          "statement": "Econometric Modeling",
+                          "name": "Econometric Modeling"
+                        },
+                        {
+                          "id": "JEL:C8",
+                          "anchor": "node:JEL:C8",
+                          "statement": "Data Collection and Data Estimation Methodology &bull; Computer Programs",
+                          "name": "Data Collection and Data Estimation Methodology &bull; Computer Programs"
+                        }
+                      ],
+                      "rank_note": "Ordered from single equations to modeling, special topics and data construction."
+                    }
+                  },
+                  {
+                    "id": "EC.O.A4.G7",
+                    "anchor": "group:EC.O.A4.G7",
+                    "statement": "Multi-equation, mathematical, strategic and experimental methods settle allocations at the scale of interacting systems, players, or designed trials.",
+                    "name": "Multi-equation, mathematical, strategic and experimental methods settle allocations at the scale of interacting systems, players, or designed trials.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "JEL:C3",
+                          "anchor": "node:JEL:C3",
+                          "statement": "Multiple or Simultaneous Equation Models &bull; Multiple Variables",
+                          "name": "Multiple or Simultaneous Equation Models &bull; Multiple Variables"
+                        },
+                        {
+                          "id": "JEL:C6",
+                          "anchor": "node:JEL:C6",
+                          "statement": "Mathematical Methods &bull; Programming Models &bull; Mathematical and Simulation Modeling",
+                          "name": "Mathematical Methods &bull; Programming Models &bull; Mathematical and Simulation Modeling"
+                        },
+                        {
+                          "id": "JEL:C7",
+                          "anchor": "node:JEL:C7",
+                          "statement": "Game Theory and Bargaining Theory",
+                          "name": "Game Theory and Bargaining Theory"
+                        },
+                        {
+                          "id": "JEL:C9",
+                          "anchor": "node:JEL:C9",
+                          "statement": "Design of Experiments",
+                          "name": "Design of Experiments"
+                        }
+                      ],
+                      "rank_note": "Ordered from simultaneous systems to programming, games and experiments."
+                    }
+                  },
+                  {
+                    "id": "EC.O.A4.G2",
+                    "anchor": "group:EC.O.A4.G2",
+                    "statement": "Methods-oriented econometric categories settle estimation questions at the level of general techniques and models rather than a particular dataset.",
+                    "name": "Methods-oriented econometric categories settle estimation questions at the level of general techniques and models rather than a particular dataset.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "degree",
+                      "points": [
+                        {
+                          "id": "ANZSRC:380202",
+                          "anchor": "node:ANZSRC:380202",
+                          "statement": "Econometric and statistical methods",
+                          "name": "Econometric and statistical methods"
+                        },
+                        {
+                          "id": "ANZSRC:380203",
+                          "anchor": "node:ANZSRC:380203",
+                          "statement": "Economic models and forecasting",
+                          "name": "Economic models and forecasting"
+                        },
+                        {
+                          "id": "ANZSRC:380299",
+                          "anchor": "node:ANZSRC:380299",
+                          "statement": "Econometrics not elsewhere classified",
+                          "name": "Econometrics not elsewhere classified"
+                        },
+                        {
+                          "id": "ANZSRC:440499",
+                          "anchor": "node:ANZSRC:440499",
+                          "statement": "Development studies not elsewhere classified",
+                          "name": "Development studies not elsewhere classified"
+                        }
+                      ],
+                      "rank_note": "Ranked from general statistical methods to model-building and forecasting to residual catch-all categories."
+                    }
+                  },
+                  {
+                    "id": "EC.O.A4.G1",
+                    "anchor": "group:EC.O.A4.G1",
+                    "statement": "Top-level umbrella fields and general method headings settle quantitative questions at the broadest, discipline-wide scale.",
+                    "name": "Top-level umbrella fields and general method headings settle quantitative questions at the broadest, discipline-wide scale.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "degree",
+                      "points": [
+                        {
+                          "id": "ANZSRC:3802",
+                          "anchor": "node:ANZSRC:3802",
+                          "statement": "Econometrics",
+                          "name": "Econometrics"
+                        },
+                        {
+                          "id": "JEL:C",
+                          "anchor": "node:JEL:C",
+                          "statement": "Mathematical and Quantitative Methods",
+                          "name": "Mathematical and Quantitative Methods"
+                        },
+                        {
+                          "id": "JEL:C0",
+                          "anchor": "node:JEL:C0",
+                          "statement": "General",
+                          "name": "General"
+                        },
+                        {
+                          "id": "JEL:C1",
+                          "anchor": "node:JEL:C1",
+                          "statement": "Econometric and Statistical Methods and Methodology:  General",
+                          "name": "Econometric and Statistical Methods and Methodology:  General"
+                        }
+                      ],
+                      "rank_note": "Ranked from the broadest heading (Mathematical and Quantitative Methods) to the narrower general headings beneath it."
+                    }
+                  },
+                  {
+                    "id": "EC.O.A5.G5",
+                    "anchor": "group:EC.O.A5.G5",
+                    "statement": "General and umbrella headings are top-level categories that span the field without fixing a particular scale of settlement.",
+                    "name": "General and umbrella headings are top-level categories that span the field without fixing a particular scale of settlement.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "JEL:H",
+                          "anchor": "node:JEL:H",
+                          "statement": "Public Economics",
+                          "name": "Public Economics"
+                        },
+                        {
+                          "id": "JEL:H0",
+                          "anchor": "node:JEL:H0",
+                          "statement": "General",
+                          "name": "General"
+                        },
+                        {
+                          "id": "JEL:I",
+                          "anchor": "node:JEL:I",
+                          "statement": "Health, Education, and Welfare",
+                          "name": "Health, Education, and Welfare"
+                        },
+                        {
+                          "id": "JEL:I0",
+                          "anchor": "node:JEL:I0",
+                          "statement": "General",
+                          "name": "General"
+                        }
+                      ],
+                      "rank_note": "Scale-neutral catch-all headings placed last."
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "EC.M.S2.U2",
+              "anchor": "section:EC.M.S2.U2",
+              "statement": "Data-structure analyses are the methods by which cross-sectional, time-series and panel allocation data are examined.",
+              "name": "Data-structure analyses are the methods by which cross-sectional, time-series and panel allocation data are examined.",
+              "support": {
+                "logic_type": "inductive",
+                "basis": "kinds",
+                "order": "structure",
+                "rank_note": "Ordered from cross-section to time series to panels.",
+                "points": [
+                  {
+                    "id": "ANZSRC:380201",
+                    "anchor": "node:ANZSRC:380201",
+                    "statement": "Cross-sectional analysis",
+                    "name": "Cross-sectional analysis"
+                  },
+                  {
+                    "id": "ANZSRC:380205",
+                    "anchor": "node:ANZSRC:380205",
+                    "statement": "Time-series analysis",
+                    "name": "Time-series analysis"
+                  },
+                  {
+                    "id": "ANZSRC:380204",
+                    "anchor": "node:ANZSRC:380204",
+                    "statement": "Panel data analysis",
+                    "name": "Panel data analysis"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "EC.M.S3",
+        "anchor": "section:EC.M.S3",
+        "statement": "Teaching and reference material record and pass on knowledge about economics.",
+        "name": "Teaching and reference material record and pass on knowledge about economics.",
+        "support": {
+          "logic_type": "inductive",
+          "basis": "kinds",
+          "order": "structure",
+          "rank_note": "Ordered from teaching to reference.",
+          "points": [
+            {
+              "id": "JEL:A2",
+              "anchor": "node:JEL:A2",
+              "statement": "Economic Education and Teaching of Economics",
+              "name": "Economic Education and Teaching of Economics"
+            },
+            {
+              "id": "JEL:A3",
+              "anchor": "node:JEL:A3",
+              "statement": "Collective Works",
+              "name": "Collective Works"
+            },
+            {
+              "id": "JEL:Y3",
+              "anchor": "node:JEL:Y3",
+              "statement": "Book Reviews (unclassified)",
+              "name": "Book Reviews (unclassified)"
+            },
+            {
+              "id": "JEL:Y4",
+              "anchor": "node:JEL:Y4",
+              "statement": "Dissertations (unclassified)",
+              "name": "Dissertations (unclassified)"
+            },
+            {
+              "id": "JEL:Y5",
+              "anchor": "node:JEL:Y5",
+              "statement": "Further Reading (unclassified)",
+              "name": "Further Reading (unclassified)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "routed": [],
   "retired": [
     {
       "id": "JEL:D0",
+      "name": "General",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "JEL:P0",
       "name": "General",
       "reason": "container heading for the whole field, not a topic"
     },
@@ -2130,8 +2171,18 @@
       "reason": "container heading for the whole field, not a topic"
     },
     {
-      "id": "JEL:P0",
-      "name": "General",
+      "id": "JEL:N",
+      "name": "Economic History",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "JEL:K",
+      "name": "Law and Economics",
+      "reason": "container heading for the whole field, not a topic"
+    },
+    {
+      "id": "JEL:A",
+      "name": "General Economics and Teaching",
       "reason": "container heading for the whole field, not a topic"
     },
     {
@@ -2140,33 +2191,23 @@
       "reason": "container heading for the whole field, not a topic"
     },
     {
-      "id": "JEL:D",
-      "name": "Microeconomics",
+      "id": "JEL:Y1",
+      "name": "Data: Tables and Charts",
       "reason": "container heading for the whole field, not a topic"
     },
     {
-      "id": "JEL:M",
-      "name": "Business Administration and Business Economics &bull; Marketing &bull; Accounting &bull; Personnel Economics",
+      "id": "JEL:Y2",
+      "name": "Introductory Material",
       "reason": "container heading for the whole field, not a topic"
     },
     {
-      "id": "JEL:P",
-      "name": "Political Economy and Comparative Economic Systems",
+      "id": "JEL:Y6",
+      "name": "Excerpts",
       "reason": "container heading for the whole field, not a topic"
     },
     {
-      "id": "JEL:O",
-      "name": "Economic Development, Innovation, Technological Change, and Growth",
-      "reason": "container heading for the whole field, not a topic"
-    },
-    {
-      "id": "LCC:HC",
-      "name": "Economic history and conditions",
-      "reason": "container heading for the whole field, not a topic"
-    },
-    {
-      "id": "ANZSRC:380199",
-      "name": "Applied economics not elsewhere classified",
+      "id": "JEL:Y7",
+      "name": "No Author General Discussions",
       "reason": "container heading for the whole field, not a topic"
     },
     {
@@ -2197,19 +2238,18 @@
   },
   "minto_issues": {},
   "field_check": {
-    "governing_thought": "Economics divides by the scale at which an allocation is settled into choice by single agents, markets, mechanisms and institutions, the aggregate economy, and welfare and public choice.",
+    "governing_thought": "Economics is divided by who settles an allocation: individuals and households, firms and markets, governments and public institutions, and the economy as a whole.",
     "key_line": [
-      "Choice is the scale at which an allocation is settled by a single household, person or small group deciding under its own preferences, information and constraints.",
-      "Markets are the scale at which an allocation is settled through the exchange, pricing and competition of many buyers and sellers, firms and workers.",
-      "Mechanisms and institutions are the scale at which an allocation is settled by the rules, laws, organisations and economic systems that structure exchange.",
-      "The aggregate economy is the scale at which an allocation is settled across a whole economy, through prices, money, growth and exchange with other countries.",
-      "Welfare and public choice is the scale at which an allocation is settled for the whole society through distribution, collective decision and government."
+      "Individuals and households settle allocations through their own choices about consumption, work, learning, health and risk.",
+      "Firms and markets settle allocations through production, exchange, pricing and competition in labour, product, financial, land and resource markets.",
+      "Governments and public institutions settle allocations through law, regulation, taxation, public choice and the redistribution of welfare.",
+      "The whole economy settles allocations in aggregate through money, prices, growth, development and trade between countries."
     ],
-    "holds": false,
-    "note": "P3 is a catch-all mixing institutions, economic history, discipline teaching and catalogue-style publication types (reviews, dissertations, unclassified), so the pillars do not form one scale dimension.",
-    "review": true,
-    "misplaced": 14,
-    "problems": 114
+    "holds": true,
+    "note": "Worst misplaced: P3.1.4.2-4 industry studies under government, P4.3.5.1-3 industrial/resource/urban fields under international trade, P3.3.1.1 general equilibrium under public institutions.",
+    "review": false,
+    "misplaced": 18,
+    "problems": 18
   },
-  "cost_usd": 0.5005
+  "cost_usd": 0.2859
 }
