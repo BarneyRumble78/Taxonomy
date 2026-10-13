@@ -488,11 +488,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
       - Study Abroad
       - Summer Programs
       - Supplementary Education
-    - **Professional training arrangements are programs that prepare and develop teachers and supervisors for their educational roles.**
-      _basis: kinds, order: structure. Listed from formal programs to short workshops and supervisory training._
-      - Teacher Education Programs
-      - Teacher Workshops
-      - Supervisory Training
   - **Instructional and language structures are the teaching activities, language learning units and curriculum designs that organize how content is taught and sequenced.**
     _basis: kinds, order: structure. Kinds of instructional structures are ordered by structure, from teaching and evaluative activities to language units and curriculum designs._
     - **Instructional and evaluative activities are the methods and practices, such as seminars, training, research, and self-evaluation, used to teach and assess learning.**
@@ -752,11 +747,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
       - Dropout Research
       - Emergent Literacy
       - Elementary School Curriculum
-    - **Evaluative and investigative activities are the assessment, experimentation and research methods used to examine how well education works.**
-      _basis: kinds, order: structure. Ordered by structure, from measurement to experiment to broad research._
-      - Educational Assessment
-      - Educational Experiments
-      - Educational Research
     - **Disciplinary foundations are the psychological, sociological and theoretical perspectives that explain the nature of education.**
       _basis: kinds, order: structure. Ordered by structure, from individual to social to general theory._
       - Educational Psychology
@@ -1180,27 +1170,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
         - Listening
         - Motivation Techniques
         - Problem Based Learning
-    - **Teacher-side elements are the knowledge, methods, and personal qualities that educators bring to designing and delivering instruction.**
-      _basis: kinds, order: structure. Ordered structurally from teacher knowledge to methods to personal factors._
-      - **Teacher knowledge and professional practice are the understanding and reflective action that educators bring to designing and delivering instruction.**
-        _basis: kinds, order: structure. Ordered by structure from general knowledge base to its specialized and applied forms._
-        - Knowledge Base for Teaching
-        - Pedagogical Content Knowledge
-        - Praxis
-        - Material Development
-      - **Instructional techniques are the teacher's moment-to-moment methods for guiding, questioning, and reflecting on learning.**
-        _basis: kinds, order: structure. Ordered structurally from classroom interaction methods to reflective practice._
-        - Prompting
-        - Questioning Techniques
-        - Reflective Teaching
-        - Redundancy
-      - **Teacher factors are the beliefs, conduct, drive, and influence of the teacher that shape the learning environment.**
-        _basis: parts, order: structure. Parts of the teacher element: philosophy, behavior, expectations, influence, motivation, and improvement._
-        - Teaching Philosophy
-        - Teacher Behavior
-        - Teacher Expectations of Students
-        - Teacher Influence
-        - Teacher Motivation
   - **Learner conduct and mind elements are the kinds of elements describing how the learner behaves, changes behavior, takes a role, and thinks.**
     _basis: kinds, order: structure. Ordered from general conduct to deliberate change, then role and cognition._
     - **Behavior-related elements are the general patterns of conduct and behavior that learners show in an educational setting.**
@@ -1917,33 +1886,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
         - Counselor Client Ratio
         - Counselor Role
         - Counselor Training
-    - **Fields and areas of study are the psychology-based divisions and the studies of inclusion, organisation, wellbeing, technology and learning science that frame educational work.**
-      _basis: kinds, order: structure. Ordered structurally from psychology divisions to studies of inclusion, organisation and technology._
-      - **Psychology-based divisions are APA fields that cover psychological work within education, from school psychology to learning, special education and counselling services.**
-        _basis: kinds, order: structure. Ordered by structure of the APA classification._
-        - Educational & School Psychology
-        - Academic Learning & Achievement
-        - Special & Compensatory Education
-        - Educational/Vocational Counseling & Student Services
-      - **Inclusion and diversity studies examine how education serves learners and settings that differ by culture, gender, ability or disability.**
-        _basis: kinds, order: structure. Ordered by structure of the ANZSRC listing._
-        - Comparative and cross-cultural education
-        - Gender, sexuality and education
-        - Inclusive education
-        - Multicultural education (excl. Aboriginal and Torres Strait Islander, Māori and Pacific Peoples)
-        - Special education and disability
-      - **Organisation, support and wellbeing studies cover how educational institutions are run and how their people are counselled and supported.**
-        _basis: kinds, order: structure. Ordered by structure of the ANZSRC listing._
-        - Educational administration, management and leadership
-        - Educational counselling
-        - Teacher and student wellbeing
-        - Specialist studies in education not elsewhere classified
-      - **Technology and learning science studies cover the tools, data and scientific knowledge used to understand and improve learning, together with the broad category they sit under.**
-        _basis: kinds, order: structure. Ordered by structure, with the parent category first._
-        - Specialist studies in education
-        - Educational technology and computing
-        - Learning analytics
-        - Learning sciences
   - **Instruction and support provision elements are the teaching, materials, goals, and care services through which an educational arrangement guides and assists learners.**
     _basis: kinds, order: structure. Kinds of provision, ordered from instruction to protective and care support._
     - **Instructional and social setting elements are the training, materials and relationships through which an educational arrangement delivers content and builds trust.**
@@ -2099,7 +2041,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
   - **Program design elements are the structured supports and goals that organize teaching and training for improvement.**
     _basis: parts, order: structure. Parts of the program element: tutorials, objectives, team training, and teacher improvement._
     - Tutorial Programs
-    - Training Objectives
     - Team Training
     - Teacher Improvement
 - **Instructional materials and activities are the prepared content, simulations and tasks through which students are actually taught.**
@@ -2135,28 +2076,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
     - Educational Therapy
     - Error Correction
     - Individualized Programs
-  - **Progress, assessment, and support elements are the arrangements that regulate pace, evaluate learning, and provide extra help to learners.**
-    _basis: kinds, order: structure. Ordered structurally from pacing to assessment to early support to remedial help._
-    - **Pacing and mastery elements are the arrangements that regulate how fast and how thoroughly learners progress toward set standards.**
-      _basis: kinds, order: structure. Ordered by structure from pacing of progress to agreements and performance conditions._
-      - Pacing
-      - Mastery Learning
-      - Performance Contracts
-      - Performance Factors
-    - **Assessment elements are the means of evaluating learning outcomes and preparing students to take tests.**
-      _basis: parts, order: structure. Parts of the assessment element: evaluation, preparation, and test skill._
-      - Summative Evaluation
-      - Test Preparation
-      - Test Wiseness
-    - **Assessment and early support elements are the means of documenting learner work and intervening before formal referral.**
-      _basis: kinds, order: structure. Ordered by structure from documenting learning to supportive intervention._
-      - Portfolio Assessment
-      - Prereferral Intervention
-    - **Remedial and intervention arrangements provide additional instruction and programs for students who need extra support to catch up.**
-      _basis: kinds, order: structure. Ordered structurally from instruction to programs to systematic intervention frameworks._
-      - Remedial Instruction
-      - Remedial Programs
-      - Response to Intervention
 
 ### 4. Assessment is the element of an educational arrangement that judges learning and instruction, through measurement concepts, instruments, evaluation practice and research method.
 
@@ -2821,12 +2740,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
       - International Educational Exchange
       - International Programs
       - Interstate Programs
-    - **International relations, trade, investment, and justice are public-affairs and economic subjects that frame how societies interact.**
-      _basis: kinds, order: structure. Ordered from political relations to economic exchange to civic principle._
-      - International Relations
-      - International Trade
-      - Investment
-      - Justice
 - **Law, equity, policy and community context are the courts, democratic values, governmental and cultural conditions that regulate and surround education.**
   _basis: kinds, order: structure. From law to broader community context._
   - **Legal and governance elements are the courts, desegregation processes, democratic values, and equity conditions that regulate fair treatment in education.**
@@ -2906,11 +2819,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
       - Intellectual Property
       - Insurance
       - Insurance Occupations
-    - **Job application, search methods, and placement are the steps by which a person seeks and obtains employment.**
-      _basis: kinds, order: structure. Ordered from applying to searching to being placed._
-      - Job Application
-      - Job Search Methods
-      - Job Placement
   - **Law, society and finance elements are the legal rules, social contexts and funding activities that surround and govern educational practice.**
     _basis: kinds, order: structure. Kinds of law, society and finance element, listed in structural order._
     - **Law and society elements are the legal rules, enforcement and assistance that govern conduct around an educational arrangement.**
@@ -3908,12 +3816,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
       - Credibility
       - Criteria
       - Crowding
-    - **Curriculum design, implementation, and evaluation are the successive stages of planning and carrying out a curriculum, alongside the data and systems fields that support it.**
-      _basis: cause_effect, order: time. Ordered in time from design to implementation to evaluation, then supporting data and systems fields._
-      - Curriculum Design
-      - Curriculum Implementation
-      - Curriculum Evaluation
-      - Data
   - **Employment and labor elements are the workforce conditions, training, security, relations and management measures that link education to the world of work.**
     _basis: kinds, order: structure. Kinds of employment and labor element, listed in structural order._
     - **Job development, enrichment, training, security, and layoff describe conditions and measures affecting the quality and continuity of employment.**
@@ -3965,19 +3867,6 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
       - Opportunities
       - Office Occupations
       - Oral Tradition
-    - **Parent conferences, workshops, and teacher meetings are kinds of direct interaction between parents and the school.**
-      _basis: kinds, order: structure. Ordered by structure of interaction format._
-      - Parent Conferences
-      - Parent Teacher Conferences
-      - Parent Workshops
-      - Outreach Programs
-    - **Parent rights, grievances, and materials are kinds of formal parental standing and information within a school arrangement.**
-      _basis: kinds, order: structure. Ordered by structure of parental standing._
-      - Parent Rights
-      - Parent Grievances
-      - Parent Materials
-      - Pamphlets
-      - Participant Characteristics
     - **Financial and external relationships are the outside sources of money and cooperation that support an educational institution.**
       _basis: parts, order: structure. Ordered from funding sources to community and police partners._
       - Paying for College
@@ -3991,7 +3880,21 @@ Group of elements. Basis: cause_effect. Dimension: the element of an educational
       - Part Time Employment
       - Ownership
 
+## Routed to other fields
+
+- Progress, assessment, and support elements are the arrangements that regulate pace, evaluate learning, and provide extra help to learners.
+- Training Objectives
+- Evaluative and investigative activities are the assessment, experimentation and research methods used to examine how well education works.
+- Curriculum design, implementation, and evaluation are the successive stages of planning and carrying out a curriculum, alongside the data and systems fields that support it.
+- Teacher-side elements are the knowledge, methods, and personal qualities that educators bring to designing and delivering instruction.
+- Parent conferences, workshops, and teacher meetings are kinds of direct interaction between parents and the school.
+- International relations, trade, investment, and justice are public-affairs and economic subjects that frame how societies interact.
+- Job application, search methods, and placement are the steps by which a person seeks and obtains employment.
+- Parent rights, grievances, and materials are kinds of formal parental standing and information within a school arrangement.
+- Professional training arrangements are programs that prepare and develop teachers and supervisors for their educational roles.
+- Fields and areas of study are the psychology-based divisions and the studies of inclusion, organisation, wellbeing, technology and learning science that frame educational work.
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Key line holds; misplaced include P3.3.4 and P3.1.3.2 (assessment/training under Teaching), P1.3.5.2, P5.5.2.4, P2.4.2, P2.1.2.3, P5.5.5.2.
+- field_check holds: True — Misplaced: P1.2.3.1 (activities under curricula), P4.5.2.2, P4.4.1/P4.4.2 (evaluation types apart from P4.3), P3.1.2.3, P3.3.3.4, P5.4.2.2, P3.1.3.3.
