@@ -72,10 +72,6 @@ Group of aspects. Basis: cause_effect. Dimension: the aspect of a knowledge syst
     - Pacific Peoples ethics
   - **Each member names a distinct aspect of a knowledge system, such as its foundations, content, transmission, expression, or integration into education, that a claim about Māori or Pacific Peoples knowledge can address.**
     _basis: kinds, order: structure_
-    - **Teaching engagement and Indigenous languages concern how knowledge is transmitted and carried between people in a knowledge system.**
-      _basis: kinds, order: structure. Ordered by structure: the practice of teaching, then the language that carries knowledge._
-      - Pacific Peoples student engagement and teaching
-      - Indigenous languages
     - **Foundations of knowing are the philosophical, ethical, religious, project-based, and methodological bases that ground Māori inquiry and practice.**
       _basis: kinds, order: structure. Ordered from underlying worldview and values to applied projects and research methods._
       - Ngā matatika o te Māori (Māori ethics)
@@ -83,12 +79,6 @@ Group of aspects. Basis: cause_effect. Dimension: the aspect of a knowledge syst
       - Te whakapono me te mātai whakapono o te Māori (Māori religion and religious studies)
       - Ngā Kaupapa Māori (Māori projects)
       - Ngā tikanga rangahau o te Māori (Māori research methods)
-    - **Content-focused fields classify Māori education by the language, knowledge and methods that are taught and transmitted.**
-      _basis: kinds, order: structure. n/a_
-      - Ngā tikanga mātauranga o te Māori (Māori educational methods)
-      - Te mātauranga reo Māori (Māori language education)
-      - Te mātauranga Māori i roto i te mātauranga (Mātauranga Māori in education)
-      - Te mātauranga Māori kāore anō kia whakarōpūtia i wāhi kē (Māori education not elsewhere classified)
     - **Expressive and creative forms are the artistic media through which Pacific Peoples knowledge is performed, shown and recorded.**
       _basis: kinds, order: structure. Ordered by structure, from sound and performance to visual and screen media._
       - Pacific Peoples media, film, animation and photography
@@ -511,6 +501,12 @@ Group of aspects. Basis: cause_effect. Dimension: the aspect of a knowledge syst
     - Pacific Peoples technical, further, continuing and community education
     - Pacific Peoples higher education
     - Pacific Peoples language education
+  - **Content-focused fields classify Māori education by the language, knowledge and methods that are taught and transmitted.**
+    _basis: kinds, order: structure. n/a_
+    - Ngā tikanga mātauranga o te Māori (Māori educational methods)
+    - Te mātauranga reo Māori (Māori language education)
+    - Te mātauranga Māori i roto i te mātauranga (Mātauranga Māori in education)
+    - Te mātauranga Māori kāore anō kia whakarōpūtia i wāhi kē (Māori education not elsewhere classified)
 - **Language, history and creative expression are the spoken, written and performed media that carry Indigenous knowledge across time.**
   _basis: kinds, order: structure. From culture and history to language to creative media._
   - **Cultural and historical fields cover the lived culture, history, ethics and identity of Pacific Peoples.**
@@ -602,8 +598,6 @@ Group of aspects. Basis: cause_effect. Dimension: the aspect of a knowledge syst
     _basis: kinds, order: degree. Ranked from broad frameworks (theory of change) to specific community research and governance practice._
     - Aboriginal and Torres Strait Islander theory of change models for health
     - Aboriginal and Torres Strait Islander community-based research
-    - Aboriginal and Torres Strait Islander community governance and decision making
-    - Aboriginal and Torres Strait Islander peoples, society and community
 - **Global Indigenous studies are the cross-peoples fields that examine Indigenous culture, environment, health, society and science together.**
   _basis: kinds, order: structure. From culture to environment to health, society and science._
   - Global Indigenous studies culture, language and history
@@ -612,7 +606,13 @@ Group of aspects. Basis: cause_effect. Dimension: the aspect of a knowledge syst
   - Global Indigenous studies peoples, society and community
   - Global Indigenous studies sciences
 
+## Routed to other fields
+
+- Teaching engagement and Indigenous languages concern how knowledge is transmitted and carried between people in a knowledge system.
+- Aboriginal and Torres Strait Islander community governance and decision making
+- Aboriginal and Torres Strait Islander peoples, society and community
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Misplaced: P1.2.5 education items (P1.2.5.1, P1.2.5.3) belong in P4.1; P1.2.4.1 in P2; P3.3.1.1, P3.3.1.3, P5.1.3.3 and P5.1.3.4 mislocated; P3.4 health is stretched under governance.
+- field_check holds: True — Misplaced: P1.2.4.1 and P1.2.5.2/P1.2.5.3 (land, expression and education under ordering principles), P3.1.1.1, P3.3.3.3, P5.1.3.1 (health model under research).
