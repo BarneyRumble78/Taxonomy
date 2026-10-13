@@ -67,16 +67,114 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
     - Tectonics
   - Structural geology and tectonics
   - Volcanology
+  - **Volcanic claims concern molten rock and its eruption, with scale set by the physics and chemistry of magma rather than by the fundamental constants.**
+    _basis: kinds, order: structure. Ordered from the magma body itself to the dynamics of its eruption._
+    - **Magma-body topics cover the physical, chemical and thermodynamic behaviour of molten rock and its chemical modeling.**
+      _basis: kinds, order: structure. Ordered by structure from chemical modeling to magma bodies, thermodynamics and phase equilibria._
+      - Geochemical modeling
+      - Physics and chemistry of magma bodies
+      - Thermodynamics in volcanology
+      - Reactions and phase equilibria (see also 91.67.De—in Geochemistry)
+    - **Eruption-dynamics topics cover how magma moves, erupts and flows as lava and what ash and atmospheric effects it leaves.**
+      _basis: kinds, order: structure. Ordered by structure from magma migration through eruption and lava to ash deposits and atmospheric effects._
+      - Magma migration
+      - Eruption mechanisms
+      - Lava rheology and morphology
+      - Tephrochronology; ash deposits
+      - Atmospheric effects (see also 92.60.Mt Particles and aerosols—in Meteorology)
 - **Internal motion shapes the Earth's figure, gravity and magnetic field, which record how mass and molten metal move within the planet.**
   _basis: kinds, order: structure. Shape comes first, then the gravity field and then the magnetic field._
   - Geodesy
   - Gravity/Gravitational Field
   - Magnetism and palaeomagnetism
+  - **Geomagnetism fields study the Earth's magnetic field and its rock record with no scale set by c, ħ, G or N.**
+    _basis: kinds, order: structure. Kinds are distinguished by how the field is studied: overall origin, classification by records and changes, or rock magnetization._
+    - **Geomagnetic topics concern the origin, structure, variation and recorded history of the Earth's magnetic field and of magnetism in rocks.**
+      _basis: kinds, order: structure. Ordered from field generation to spatial and temporal variations and records._
+      - Geomagnetism and paleomagnetism; geoelectricity (see also 91.50.Iv Marine magnetics and electromagnetics)
+      - Origins and models of the magnetic field; dynamo theories
+      - Interactions between exterior sources and interior properties
+      - Rock and mineral magnetism (see also 91.60.Pn Magnetic and electrical properties—in Physical properties of rocks and minerals)
+      - Magnetic field reversals: process and timescale
+    - **Geomagnetism subfields are classed by how the Earth's magnetic field is studied across past records, time changes and spatial patterns, with no scale set by c, ħ, G or N.**
+      _basis: kinds, order: structure_
+      - Archeomagnetism
+      - Time variations in geomagnetism
+      - Spatial variations in geomagnetism
+    - **Rock-magnetic record studies use the magnetization preserved in rocks and sediments to date and interpret Earth's past magnetic field.**
+      _basis: kinds, order: structure. Ordered from remanence acquisition to its dating and later alteration._
+      - Paleomagnetism
+      - Magnetostratigraphy
+      - Remagnetization
+      - Geomagnetic excursion
+  - **Gravity-scaled Earth and planetary fields have their scale set mainly by the gravitational constant G through the shape, gravity field and motion of bodies.**
+    _basis: kinds, order: structure. Kinds are distinguished by which aspect of gravity they treat: orbits, shape, potential, or motion._
+    - **Orbital and planetary fields concern the motion of bodies in the solar system and the solid Earth, governed mainly by Newtonian gravity G.**
+      _basis: kinds, order: structure. Ordered by structure from orbital dynamics to planets and the solid Earth._
+      - Astrodynamics and space situational awareness
+      - Solar system planetary science (excl. planetary geology)
+      - Solid Earth physics
+    - **Geodesy and gravity fields measure and model the shape and gravity of the Earth, with the gravitational constant G setting the scale.**
+      _basis: kinds, order: structure. Ordered by structure from general theory to mapping and satellite applications._
+      - Geodesy and gravity (see also 91.50.Kx Gravity and isostasy—in Marine geology and geophysics; 91.45.gh—in Geophysics Appendix)
+      - Mathematical geodesy; general theory
+      - Cartography
+      - Space and satellite geodesy; applications of global positioning systems
+    - **Geometric and positional topics describe the shape, surface and coordinate framework of the Earth through observation and reference definitions.**
+      _basis: kinds, order: structure. Ordered from surface observation to reference frames._
+      - Topography; geometric observations
+      - Photogrammetry
+      - Reference systems
+      - Ocean/Earth/atmosphere/ hydrosphere/cryosphere interactions; mass balance
+      - Global change from geodesy
+    - **Gravity-field topics concern the gravitational potential of the Earth, its anomalies, harmonics and the techniques that measure them.**
+      _basis: kinds, order: structure. Ordered from measurement techniques to anomalies to potential theory._
+      - Geodetic techniques; gravimetric measurements and instruments
+      - Gravity anomalies; time variable gravity
+      - Harmonics of the gravity potential field; geopotential theory and determination
+    - **Dynamical motion topics concern how the solid Earth and orbiting bodies move, deform and respond to gravitational forces.**
+      _basis: kinds, order: structure. Ordered from crustal deformation to rotation, tides and orbits._
+      - Crustal movements and deformation
+      - Rotational variations; polar wobble (see also 92.10.Iv Ocean influence of Earth's rotation)
+      - Earth tides
+      - Satellite orbits
 - **Internal motion is probed through seismic waves and electrical currents that reveal structure and movement beneath the surface.**
   _basis: kinds, order: structure. Seismic probing comes first, then electrical probing and then their combined use in exploration._
   - Seismology and seismic exploration
   - Electrical and electromagnetic methods in geophysics
   - Applied geophysics
+  - **Seismological claims about earthquakes and elastic waves have their scale set by the mechanics of elastic media rather than by the fundamental constants c, ħ, G or N.**
+    _basis: kinds, order: structure. Ordered from general seismology and wave propagation to tectonic settings, events and layered-Earth studies._
+    - **Seismology studies the sources, propagation, and modeling of elastic waves and earthquakes in Earth.**
+      _basis: kinds, order: structure. Ordered from general theory to sources, wave types, and seismicity._
+      - Seismology
+      - Theory and modeling, computational seismology
+      - Seismic sources (mechanisms, magnitude, moment frequency spectrum)
+      - Surface waves and free oscillations
+    - **Seismicity and body wave propagation are further seismological topics whose claims are set by the mechanics of elastic media and not by the fundamental constants c, ħ, G or N.**
+      _basis: kinds, order: structure_
+      - Seismicity (see also 91.45.gd—in Geophysics Appendix)
+      - Body wave propagation
+    - **Plate-boundary settings are tectonic zones where lithospheric plates converge, diverge, or slide past each other.**
+      _basis: kinds, order: structure. Ordered by type of plate boundary: convergent, divergent, transform._
+      - Subduction zones (see also 91.40.Rs—in Volcanology; 91.45.Hc—in Tectonophysics; 91.50.Wy—in Marine geology and geophysics; 91.67.fc—in Geophysics Appendix)
+      - Mid-ocean ridges (see also 91.40.St—in Volcanology; 91.50.Rt—in Marine geology and geophysics; 91.67.ff—in Geophysics Appendix)
+      - Transform faults
+      - Tomography in seismology (see also 91.35.Pn Tomography of the Earth's interior)
+      - Volcano seismology
+    - **Seismic events and their records are the ground-shaking phenomena, whether natural or man-made, and the traces they leave in time.**
+      _basis: kinds, order: structure. Ordered from strong shaking to specific event sources and past events._
+      - Strong motions and shock waves
+      - Tsunamis (see also 92.10.hl—in Geophysics Appendix)
+      - Earthquakes
+      - Nuclear explosion seismology
+      - Paleoseismology
+    - **Seismology of Earth's layers uses seismic waves to study the structure of particular regions of the Earth, from the crust down to the core.**
+      _basis: kinds, order: structure. Ordered from the surface crust downward to the deep interior._
+      - Oceanic crust seismology
+      - Continental crust seismology
+      - Lithosphere seismology (see also 91.45.gf—in Geophysics Appendix)
+      - Core and mantle seismology
 
 ### 3. Deep time is the history of the Earth, covering the age, layering, life and climate records preserved in its materials.
 
@@ -89,6 +187,19 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
     - Stratigraphy (incl. biostratigraphy, sequence stratigraphy and basin analysis)
     - Sedimentology
   - Palaeontology (incl. palynology)
+  - **Seafloor and marine geology covers the coastal, intra-plate, sediment and sampling topics concerning the ocean floor and its margins.**
+    _basis: kinds, order: structure_
+    - **Intra-plate seafloor features are volcanic and structural landforms of the ocean floor that lie away from active plate boundaries.**
+      _basis: kinds, order: structure. Ordered from volcanic features to broad plateaus and general seafloor morphology._
+      - Oceanic hotspots and intra-plate volcanism (see also 91.40.Ta—in Volcanology; 91.67.fh—in Geophysics Appendix)
+      - Oceanic plateaus and fracture zone processes
+      - Seafloor morphology, geology, and geophysics (see also 92.10.Oc Benthic boundary layers, ocean bottom processes—in oceanography)
+      - Bathymetry, seafloor topology
+    - **Sediment and fluid systems are processes that move, store or circulate sediments, gases and water within the seabed.**
+      _basis: kinds, order: structure. Ordered from surface sediment transport to subsurface fluids and gas._
+      - Marine sediments, turbidity currents—processes and transport (see also 91.65.Ti—in petrology; 91.67.Ty—in Geochemistry; 92.10.Wa and 92.20.Vn—in oceanography; 92.40.Gc—in hydrology; 91.80.Wx—in Geophysics Appendix)
+      - Gas and hydrate systems (see also 92.20.Uv—in oceanography)
+      - Marine hydrogeology
 - **Deep time includes past climates and environments, reconstructed from ice, land, ocean and lake archives.**
   _basis: kinds, order: structure. The archives come first, then the climate reconstructed from them and then the wider past environments._
   - **Claims about natural archives that preserve past climate evidence in ice, on land and in oceans or lakes belong to this group.**
@@ -140,6 +251,7 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
       - Surface Thermal Properties
       - Topography
     - Land surface temperature
+  - Geological Phenomena
 - **Surface and fluid envelopes include the waters of the land and the sea, their motion, heat, properties and seabed.**
   _basis: kinds, order: structure. Land waters come first, then the water sciences as wholes, then ocean motion and finally the properties and floor of the sea._
   - **Surface and fluid envelopes on land hold rivers, lakes and frozen water bodies whose budget, quality and mass can be measured.**
@@ -227,6 +339,26 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
     - Ocean Acoustics
     - Ocean Pressure
     - Marine geoscience
+  - **Seafloor and marine geology covers the coastal, intra-plate, sediment and sampling topics concerning the ocean floor and its margins.**
+    _basis: kinds, order: structure. Ordered by structure from broad approaches to margins, seafloor features, sediment systems and sampling methods._
+    - **Earth evolution, tomographic imaging and marine geology are broad approaches to studying the history and structure of the Earth and its ocean floor.**
+      _basis: kinds, order: structure. Ordered by structure from evolution and imaging to marine geology._
+      - Evolution of the Earth
+      - Tomography of plate tectonics (see also 91.30.Jk—in Seismology)
+      - Marine geology and geophysics
+    - **Nearshore and margin processes are those that shape coasts, beaches, shelves and slopes where land meets the sea.**
+      _basis: kinds, order: structure. Ordered from the shoreline seaward across the margin._
+      - Beach and coastal processes
+      - Littoral processes
+      - Continental shelf and slope processes
+      - Submarine landslides
+    - **Geophysical and sampling methods are the measurements and records used to probe the structure, field properties and history of the seafloor.**
+      _basis: kinds, order: structure. Ordered from potential-field and thermal measurements to drilling and fossil records._
+      - Marine magnetics and electromagnetics
+      - Gravity and isostasy
+      - Heat flow (benthic)
+      - Ocean drilling (see also 93.85.Tf Oil prospecting, pipelines, and conduits)
+      - Micropaleontology
 - **Surface and fluid envelopes end in the air and the climate system it carries, from atmospheric composition and weather to long-term climate change.**
   _basis: kinds, order: structure. The atmosphere itself comes first and the climate system it carries second._
   - **Atmospheric topics are the kinds of claims about the air, covering its makeup, its layered state and the weather and climate processes acting within it.**

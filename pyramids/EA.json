@@ -259,6 +259,105 @@
                     "anchor": "node:ANZSRC:370512",
                     "statement": "Volcanology",
                     "name": "Volcanology"
+                  },
+                  {
+                    "id": "PH.O.A3.G222",
+                    "anchor": "group:PH.O.A3.G222",
+                    "statement": "Volcanic claims concern molten rock and its eruption, with scale set by the physics and chemistry of magma rather than by the fundamental constants.",
+                    "name": "Volcanic claims concern molten rock and its eruption, with scale set by the physics and chemistry of magma rather than by the fundamental constants.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PH.O.A3.G38",
+                          "anchor": "group:PH.O.A3.G38",
+                          "statement": "Magma-body topics cover the physical, chemical and thermodynamic behaviour of molten rock and its chemical modeling.",
+                          "name": "Magma-body topics cover the physical, chemical and thermodynamic behaviour of molten rock and its chemical modeling.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.40.Ac",
+                                "anchor": "node:PACS:91.40.Ac",
+                                "statement": "Geochemical modeling",
+                                "name": "Geochemical modeling"
+                              },
+                              {
+                                "id": "PACS:91.40.La",
+                                "anchor": "node:PACS:91.40.La",
+                                "statement": "Physics and chemistry of magma bodies",
+                                "name": "Physics and chemistry of magma bodies"
+                              },
+                              {
+                                "id": "PACS:91.40.Pc",
+                                "anchor": "node:PACS:91.40.Pc",
+                                "statement": "Thermodynamics in volcanology",
+                                "name": "Thermodynamics in volcanology"
+                              },
+                              {
+                                "id": "PACS:91.40.Qa",
+                                "anchor": "node:PACS:91.40.Qa",
+                                "statement": "Reactions and phase equilibria (see also 91.67.De—in Geochemistry)",
+                                "name": "Reactions and phase equilibria (see also 91.67.De—in Geochemistry)"
+                              }
+                            ],
+                            "rank_note": "Ordered by structure from chemical modeling to magma bodies, thermodynamics and phase equilibria."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G39",
+                          "anchor": "group:PH.O.A3.G39",
+                          "statement": "Eruption-dynamics topics cover how magma moves, erupts and flows as lava and what ash and atmospheric effects it leaves.",
+                          "name": "Eruption-dynamics topics cover how magma moves, erupts and flows as lava and what ash and atmospheric effects it leaves.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.40.Jk",
+                                "anchor": "node:PACS:91.40.Jk",
+                                "statement": "Magma migration",
+                                "name": "Magma migration"
+                              },
+                              {
+                                "id": "PACS:91.40.Ft",
+                                "anchor": "node:PACS:91.40.Ft",
+                                "statement": "Eruption mechanisms",
+                                "name": "Eruption mechanisms"
+                              },
+                              {
+                                "id": "PACS:91.40.Hw",
+                                "anchor": "node:PACS:91.40.Hw",
+                                "statement": "Lava rheology and morphology",
+                                "name": "Lava rheology and morphology"
+                              },
+                              {
+                                "id": "PACS:91.40.Bp",
+                                "anchor": "node:PACS:91.40.Bp",
+                                "statement": "Tephrochronology; ash deposits",
+                                "name": "Tephrochronology; ash deposits"
+                              },
+                              {
+                                "id": "PACS:91.40.Dr",
+                                "anchor": "node:PACS:91.40.Dr",
+                                "statement": "Atmospheric effects (see also 92.60.Mt Particles and aerosols—in Meteorology)",
+                                "name": "Atmospheric effects (see also 92.60.Mt Particles and aerosols—in Meteorology)"
+                              }
+                            ],
+                            "rank_note": "Ordered by structure from magma migration through eruption and lava to ash deposits and atmospheric effects."
+                          }
+                        }
+                      ],
+                      "rank_note": "Ordered from the magma body itself to the dynamics of its eruption."
+                    }
                   }
                 ]
               }
@@ -300,6 +399,341 @@
                     "aliases": [
                       "GCMD:910013d7-1e6a-4d1a-9921-be32d792a290"
                     ]
+                  },
+                  {
+                    "id": "PH.O.A3.G218",
+                    "anchor": "group:PH.O.A3.G218",
+                    "statement": "Geomagnetism fields study the Earth's magnetic field and its rock record with no scale set by c, ħ, G or N.",
+                    "name": "Geomagnetism fields study the Earth's magnetic field and its rock record with no scale set by c, ħ, G or N.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PH.O.A3.G24",
+                          "anchor": "group:PH.O.A3.G24",
+                          "statement": "Geomagnetic topics concern the origin, structure, variation and recorded history of the Earth's magnetic field and of magnetism in rocks.",
+                          "name": "Geomagnetic topics concern the origin, structure, variation and recorded history of the Earth's magnetic field and of magnetism in rocks.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.25.-r",
+                                "anchor": "node:PACS:91.25.-r",
+                                "statement": "Geomagnetism and paleomagnetism; geoelectricity (see also 91.50.Iv Marine magnetics and electromagnetics)",
+                                "name": "Geomagnetism and paleomagnetism; geoelectricity (see also 91.50.Iv Marine magnetics and electromagnetics)"
+                              },
+                              {
+                                "id": "PACS:91.25.Cw",
+                                "anchor": "node:PACS:91.25.Cw",
+                                "statement": "Origins and models of the magnetic field; dynamo theories",
+                                "name": "Origins and models of the magnetic field; dynamo theories"
+                              },
+                              {
+                                "id": "PACS:91.25.Ey",
+                                "anchor": "node:PACS:91.25.Ey",
+                                "statement": "Interactions between exterior sources and interior properties",
+                                "name": "Interactions between exterior sources and interior properties"
+                              },
+                              {
+                                "id": "PACS:91.25.F-",
+                                "anchor": "node:PACS:91.25.F-",
+                                "statement": "Rock and mineral magnetism (see also 91.60.Pn Magnetic and electrical properties—in Physical properties of rocks and minerals)",
+                                "name": "Rock and mineral magnetism (see also 91.60.Pn Magnetic and electrical properties—in Physical properties of rocks and minerals)"
+                              },
+                              {
+                                "id": "PACS:91.25.Mf",
+                                "anchor": "node:PACS:91.25.Mf",
+                                "statement": "Magnetic field reversals: process and timescale",
+                                "name": "Magnetic field reversals: process and timescale"
+                              }
+                            ],
+                            "rank_note": "Ordered from field generation to spatial and temporal variations and records."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G25",
+                          "anchor": "group:PH.O.A3.G25",
+                          "statement": "Geomagnetism subfields are classed by how the Earth's magnetic field is studied across past records, time changes and spatial patterns, with no scale set by c, ħ, G or N.",
+                          "name": "Geomagnetism subfields are classed by how the Earth's magnetic field is studied across past records, time changes and spatial patterns, with no scale set by c, ħ, G or N.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.25.Dx",
+                                "anchor": "node:PACS:91.25.Dx",
+                                "statement": "Archeomagnetism",
+                                "name": "Archeomagnetism"
+                              },
+                              {
+                                "id": "PACS:91.25.Le",
+                                "anchor": "node:PACS:91.25.Le",
+                                "statement": "Time variations in geomagnetism",
+                                "name": "Time variations in geomagnetism"
+                              },
+                              {
+                                "id": "PACS:91.25.G-",
+                                "anchor": "node:PACS:91.25.G-",
+                                "statement": "Spatial variations in geomagnetism",
+                                "name": "Spatial variations in geomagnetism"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G26",
+                          "anchor": "group:PH.O.A3.G26",
+                          "statement": "Rock-magnetic record studies use the magnetization preserved in rocks and sediments to date and interpret Earth's past magnetic field.",
+                          "name": "Rock-magnetic record studies use the magnetization preserved in rocks and sediments to date and interpret Earth's past magnetic field.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.25.Ng",
+                                "anchor": "node:PACS:91.25.Ng",
+                                "statement": "Paleomagnetism",
+                                "name": "Paleomagnetism"
+                              },
+                              {
+                                "id": "PACS:91.25.Ph",
+                                "anchor": "node:PACS:91.25.Ph",
+                                "statement": "Magnetostratigraphy",
+                                "name": "Magnetostratigraphy"
+                              },
+                              {
+                                "id": "PACS:91.25.Ux",
+                                "anchor": "node:PACS:91.25.Ux",
+                                "statement": "Remagnetization",
+                                "name": "Remagnetization"
+                              },
+                              {
+                                "id": "PACS:91.25.Xg",
+                                "anchor": "node:PACS:91.25.Xg",
+                                "statement": "Geomagnetic excursion",
+                                "name": "Geomagnetic excursion"
+                              }
+                            ],
+                            "rank_note": "Ordered from remanence acquisition to its dating and later alteration."
+                          }
+                        }
+                      ],
+                      "rank_note": "Kinds are distinguished by how the field is studied: overall origin, classification by records and changes, or rock magnetization."
+                    }
+                  },
+                  {
+                    "id": "PH.O.A3.G217",
+                    "anchor": "group:PH.O.A3.G217",
+                    "statement": "Gravity-scaled Earth and planetary fields have their scale set mainly by the gravitational constant G through the shape, gravity field and motion of bodies.",
+                    "name": "Gravity-scaled Earth and planetary fields have their scale set mainly by the gravitational constant G through the shape, gravity field and motion of bodies.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PH.O.A3.G19",
+                          "anchor": "group:PH.O.A3.G19",
+                          "statement": "Orbital and planetary fields concern the motion of bodies in the solar system and the solid Earth, governed mainly by Newtonian gravity G.",
+                          "name": "Orbital and planetary fields concern the motion of bodies in the solar system and the solid Earth, governed mainly by Newtonian gravity G.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "ANZSRC:510901",
+                                "anchor": "node:ANZSRC:510901",
+                                "statement": "Astrodynamics and space situational awareness",
+                                "name": "Astrodynamics and space situational awareness"
+                              },
+                              {
+                                "id": "ANZSRC:510905",
+                                "anchor": "node:ANZSRC:510905",
+                                "statement": "Solar system planetary science (excl. planetary geology)",
+                                "name": "Solar system planetary science (excl. planetary geology)"
+                              },
+                              {
+                                "id": "PACS:91",
+                                "anchor": "node:PACS:91",
+                                "statement": "Solid Earth physics",
+                                "name": "Solid Earth physics"
+                              }
+                            ],
+                            "rank_note": "Ordered by structure from orbital dynamics to planets and the solid Earth."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G20",
+                          "anchor": "group:PH.O.A3.G20",
+                          "statement": "Geodesy and gravity fields measure and model the shape and gravity of the Earth, with the gravitational constant G setting the scale.",
+                          "name": "Geodesy and gravity fields measure and model the shape and gravity of the Earth, with the gravitational constant G setting the scale.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.10.-v",
+                                "anchor": "node:PACS:91.10.-v",
+                                "statement": "Geodesy and gravity (see also 91.50.Kx Gravity and isostasy—in Marine geology and geophysics; 91.45.gh—in Geophysics Appendix)",
+                                "name": "Geodesy and gravity (see also 91.50.Kx Gravity and isostasy—in Marine geology and geophysics; 91.45.gh—in Geophysics Appendix)"
+                              },
+                              {
+                                "id": "PACS:91.10.By",
+                                "anchor": "node:PACS:91.10.By",
+                                "statement": "Mathematical geodesy; general theory",
+                                "name": "Mathematical geodesy; general theory"
+                              },
+                              {
+                                "id": "PACS:91.10.Da",
+                                "anchor": "node:PACS:91.10.Da",
+                                "statement": "Cartography",
+                                "name": "Cartography"
+                              },
+                              {
+                                "id": "PACS:91.10.Fc",
+                                "anchor": "node:PACS:91.10.Fc",
+                                "statement": "Space and satellite geodesy; applications of global positioning systems",
+                                "name": "Space and satellite geodesy; applications of global positioning systems"
+                              }
+                            ],
+                            "rank_note": "Ordered by structure from general theory to mapping and satellite applications."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G21",
+                          "anchor": "group:PH.O.A3.G21",
+                          "statement": "Geometric and positional topics describe the shape, surface and coordinate framework of the Earth through observation and reference definitions.",
+                          "name": "Geometric and positional topics describe the shape, surface and coordinate framework of the Earth through observation and reference definitions.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.10.Jf",
+                                "anchor": "node:PACS:91.10.Jf",
+                                "statement": "Topography; geometric observations",
+                                "name": "Topography; geometric observations"
+                              },
+                              {
+                                "id": "PACS:91.10.Lh",
+                                "anchor": "node:PACS:91.10.Lh",
+                                "statement": "Photogrammetry",
+                                "name": "Photogrammetry"
+                              },
+                              {
+                                "id": "PACS:91.10.Ws",
+                                "anchor": "node:PACS:91.10.Ws",
+                                "statement": "Reference systems",
+                                "name": "Reference systems"
+                              },
+                              {
+                                "id": "PACS:91.10.Vr",
+                                "anchor": "node:PACS:91.10.Vr",
+                                "statement": "Ocean/Earth/atmosphere/ hydrosphere/cryosphere interactions; mass balance",
+                                "name": "Ocean/Earth/atmosphere/ hydrosphere/cryosphere interactions; mass balance"
+                              },
+                              {
+                                "id": "PACS:91.10.Xa",
+                                "anchor": "node:PACS:91.10.Xa",
+                                "statement": "Global change from geodesy",
+                                "name": "Global change from geodesy"
+                              }
+                            ],
+                            "rank_note": "Ordered from surface observation to reference frames."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G22",
+                          "anchor": "group:PH.O.A3.G22",
+                          "statement": "Gravity-field topics concern the gravitational potential of the Earth, its anomalies, harmonics and the techniques that measure them.",
+                          "name": "Gravity-field topics concern the gravitational potential of the Earth, its anomalies, harmonics and the techniques that measure them.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.10.Pp",
+                                "anchor": "node:PACS:91.10.Pp",
+                                "statement": "Geodetic techniques; gravimetric measurements and instruments",
+                                "name": "Geodetic techniques; gravimetric measurements and instruments"
+                              },
+                              {
+                                "id": "PACS:91.10.Op",
+                                "anchor": "node:PACS:91.10.Op",
+                                "statement": "Gravity anomalies; time variable gravity",
+                                "name": "Gravity anomalies; time variable gravity"
+                              },
+                              {
+                                "id": "PACS:91.10.Qm",
+                                "anchor": "node:PACS:91.10.Qm",
+                                "statement": "Harmonics of the gravity potential field; geopotential theory and determination",
+                                "name": "Harmonics of the gravity potential field; geopotential theory and determination"
+                              }
+                            ],
+                            "rank_note": "Ordered from measurement techniques to anomalies to potential theory."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G23",
+                          "anchor": "group:PH.O.A3.G23",
+                          "statement": "Dynamical motion topics concern how the solid Earth and orbiting bodies move, deform and respond to gravitational forces.",
+                          "name": "Dynamical motion topics concern how the solid Earth and orbiting bodies move, deform and respond to gravitational forces.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.10.Kg",
+                                "anchor": "node:PACS:91.10.Kg",
+                                "statement": "Crustal movements and deformation",
+                                "name": "Crustal movements and deformation"
+                              },
+                              {
+                                "id": "PACS:91.10.Nj",
+                                "anchor": "node:PACS:91.10.Nj",
+                                "statement": "Rotational variations; polar wobble (see also 92.10.Iv Ocean influence of Earth's rotation)",
+                                "name": "Rotational variations; polar wobble (see also 92.10.Iv Ocean influence of Earth's rotation)"
+                              },
+                              {
+                                "id": "PACS:91.10.Tq",
+                                "anchor": "node:PACS:91.10.Tq",
+                                "statement": "Earth tides",
+                                "name": "Earth tides"
+                              },
+                              {
+                                "id": "PACS:91.10.Sp",
+                                "anchor": "node:PACS:91.10.Sp",
+                                "statement": "Satellite orbits",
+                                "name": "Satellite orbits"
+                              }
+                            ],
+                            "rank_note": "Ordered from crustal deformation to rotation, tides and orbits."
+                          }
+                        }
+                      ],
+                      "rank_note": "Kinds are distinguished by which aspect of gravity they treat: orbits, shape, potential, or motion."
+                    }
                   }
                 ]
               }
@@ -332,6 +766,215 @@
                     "anchor": "node:ANZSRC:370601",
                     "statement": "Applied geophysics",
                     "name": "Applied geophysics"
+                  },
+                  {
+                    "id": "PH.O.A3.G220",
+                    "anchor": "group:PH.O.A3.G220",
+                    "statement": "Seismological claims about earthquakes and elastic waves have their scale set by the mechanics of elastic media rather than by the fundamental constants c, ħ, G or N.",
+                    "name": "Seismological claims about earthquakes and elastic waves have their scale set by the mechanics of elastic media rather than by the fundamental constants c, ħ, G or N.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PH.O.A3.G29",
+                          "anchor": "group:PH.O.A3.G29",
+                          "statement": "Seismology studies the sources, propagation, and modeling of elastic waves and earthquakes in Earth.",
+                          "name": "Seismology studies the sources, propagation, and modeling of elastic waves and earthquakes in Earth.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.30.-f",
+                                "anchor": "node:PACS:91.30.-f",
+                                "statement": "Seismology",
+                                "name": "Seismology"
+                              },
+                              {
+                                "id": "PACS:91.30.Ab",
+                                "anchor": "node:PACS:91.30.Ab",
+                                "statement": "Theory and modeling, computational seismology",
+                                "name": "Theory and modeling, computational seismology"
+                              },
+                              {
+                                "id": "PACS:91.30.Bi",
+                                "anchor": "node:PACS:91.30.Bi",
+                                "statement": "Seismic sources (mechanisms, magnitude, moment frequency spectrum)",
+                                "name": "Seismic sources (mechanisms, magnitude, moment frequency spectrum)"
+                              },
+                              {
+                                "id": "PACS:91.30.Fn",
+                                "anchor": "node:PACS:91.30.Fn",
+                                "statement": "Surface waves and free oscillations",
+                                "name": "Surface waves and free oscillations"
+                              }
+                            ],
+                            "rank_note": "Ordered from general theory to sources, wave types, and seismicity."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G30",
+                          "anchor": "group:PH.O.A3.G30",
+                          "statement": "Seismicity and body wave propagation are further seismological topics whose claims are set by the mechanics of elastic media and not by the fundamental constants c, ħ, G or N.",
+                          "name": "Seismicity and body wave propagation are further seismological topics whose claims are set by the mechanics of elastic media and not by the fundamental constants c, ħ, G or N.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.30.Dk",
+                                "anchor": "node:PACS:91.30.Dk",
+                                "statement": "Seismicity (see also 91.45.gd—in Geophysics Appendix)",
+                                "name": "Seismicity (see also 91.45.gd—in Geophysics Appendix)"
+                              },
+                              {
+                                "id": "PACS:91.30.Cd",
+                                "anchor": "node:PACS:91.30.Cd",
+                                "statement": "Body wave propagation",
+                                "name": "Body wave propagation"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G31",
+                          "anchor": "group:PH.O.A3.G31",
+                          "statement": "Plate-boundary settings are tectonic zones where lithospheric plates converge, diverge, or slide past each other.",
+                          "name": "Plate-boundary settings are tectonic zones where lithospheric plates converge, diverge, or slide past each other.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.30.Ga",
+                                "anchor": "node:PACS:91.30.Ga",
+                                "statement": "Subduction zones (see also 91.40.Rs—in Volcanology; 91.45.Hc—in Tectonophysics; 91.50.Wy—in Marine geology and geophysics; 91.67.fc—in Geophysics Appendix)",
+                                "name": "Subduction zones (see also 91.40.Rs—in Volcanology; 91.45.Hc—in Tectonophysics; 91.50.Wy—in Marine geology and geophysics; 91.67.fc—in Geophysics Appendix)"
+                              },
+                              {
+                                "id": "PACS:91.30.Hc",
+                                "anchor": "node:PACS:91.30.Hc",
+                                "statement": "Mid-ocean ridges (see also 91.40.St—in Volcanology; 91.50.Rt—in Marine geology and geophysics; 91.67.ff—in Geophysics Appendix)",
+                                "name": "Mid-ocean ridges (see also 91.40.St—in Volcanology; 91.50.Rt—in Marine geology and geophysics; 91.67.ff—in Geophysics Appendix)"
+                              },
+                              {
+                                "id": "PACS:91.30.Iv",
+                                "anchor": "node:PACS:91.30.Iv",
+                                "statement": "Transform faults",
+                                "name": "Transform faults"
+                              },
+                              {
+                                "id": "PACS:91.30.Jk",
+                                "anchor": "node:PACS:91.30.Jk",
+                                "statement": "Tomography in seismology (see also 91.35.Pn Tomography of the Earth's interior)",
+                                "name": "Tomography in seismology (see also 91.35.Pn Tomography of the Earth's interior)"
+                              },
+                              {
+                                "id": "PACS:91.30.Tb",
+                                "anchor": "node:PACS:91.30.Tb",
+                                "statement": "Volcano seismology",
+                                "name": "Volcano seismology"
+                              }
+                            ],
+                            "rank_note": "Ordered by type of plate boundary: convergent, divergent, transform."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G32",
+                          "anchor": "group:PH.O.A3.G32",
+                          "statement": "Seismic events and their records are the ground-shaking phenomena, whether natural or man-made, and the traces they leave in time.",
+                          "name": "Seismic events and their records are the ground-shaking phenomena, whether natural or man-made, and the traces they leave in time.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.30.Mv",
+                                "anchor": "node:PACS:91.30.Mv",
+                                "statement": "Strong motions and shock waves",
+                                "name": "Strong motions and shock waves"
+                              },
+                              {
+                                "id": "PACS:91.30.Nw",
+                                "anchor": "node:PACS:91.30.Nw",
+                                "statement": "Tsunamis (see also 92.10.hl—in Geophysics Appendix)",
+                                "name": "Tsunamis (see also 92.10.hl—in Geophysics Appendix)"
+                              },
+                              {
+                                "id": "PACS:91.30.Px",
+                                "anchor": "node:PACS:91.30.Px",
+                                "statement": "Earthquakes",
+                                "name": "Earthquakes"
+                              },
+                              {
+                                "id": "PACS:91.30.Rz",
+                                "anchor": "node:PACS:91.30.Rz",
+                                "statement": "Nuclear explosion seismology",
+                                "name": "Nuclear explosion seismology"
+                              },
+                              {
+                                "id": "PACS:91.30.Za",
+                                "anchor": "node:PACS:91.30.Za",
+                                "statement": "Paleoseismology",
+                                "name": "Paleoseismology"
+                              }
+                            ],
+                            "rank_note": "Ordered from strong shaking to specific event sources and past events."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G33",
+                          "anchor": "group:PH.O.A3.G33",
+                          "statement": "Seismology of Earth's layers uses seismic waves to study the structure of particular regions of the Earth, from the crust down to the core.",
+                          "name": "Seismology of Earth's layers uses seismic waves to study the structure of particular regions of the Earth, from the crust down to the core.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.30.Ye",
+                                "anchor": "node:PACS:91.30.Ye",
+                                "statement": "Oceanic crust seismology",
+                                "name": "Oceanic crust seismology"
+                              },
+                              {
+                                "id": "PACS:91.30.Vc",
+                                "anchor": "node:PACS:91.30.Vc",
+                                "statement": "Continental crust seismology",
+                                "name": "Continental crust seismology"
+                              },
+                              {
+                                "id": "PACS:91.30.Wx",
+                                "anchor": "node:PACS:91.30.Wx",
+                                "statement": "Lithosphere seismology (see also 91.45.gf—in Geophysics Appendix)",
+                                "name": "Lithosphere seismology (see also 91.45.gf—in Geophysics Appendix)"
+                              },
+                              {
+                                "id": "PACS:91.30.Uv",
+                                "anchor": "node:PACS:91.30.Uv",
+                                "statement": "Core and mantle seismology",
+                                "name": "Core and mantle seismology"
+                              }
+                            ],
+                            "rank_note": "Ordered from the surface crust downward to the deep interior."
+                          }
+                        }
+                      ],
+                      "rank_note": "Ordered from general seismology and wave propagation to tectonic settings, events and layered-Earth studies."
+                    }
                   }
                 ]
               }
@@ -406,6 +1049,92 @@
                     "anchor": "node:ANZSRC:370506",
                     "statement": "Palaeontology (incl. palynology)",
                     "name": "Palaeontology (incl. palynology)"
+                  },
+                  {
+                    "id": "PH.O.A3.G226",
+                    "anchor": "group:PH.O.A3.G226",
+                    "statement": "Seafloor and marine geology covers the coastal, intra-plate, sediment and sampling topics concerning the ocean floor and its margins.",
+                    "name": "Seafloor and marine geology covers the coastal, intra-plate, sediment and sampling topics concerning the ocean floor and its margins.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PH.O.A3.G48",
+                          "anchor": "group:PH.O.A3.G48",
+                          "statement": "Intra-plate seafloor features are volcanic and structural landforms of the ocean floor that lie away from active plate boundaries.",
+                          "name": "Intra-plate seafloor features are volcanic and structural landforms of the ocean floor that lie away from active plate boundaries.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.50.Tb",
+                                "anchor": "node:PACS:91.50.Tb",
+                                "statement": "Oceanic hotspots and intra-plate volcanism (see also 91.40.Ta—in Volcanology; 91.67.fh—in Geophysics Appendix)",
+                                "name": "Oceanic hotspots and intra-plate volcanism (see also 91.40.Ta—in Volcanology; 91.67.fh—in Geophysics Appendix)"
+                              },
+                              {
+                                "id": "PACS:91.50.Uv",
+                                "anchor": "node:PACS:91.50.Uv",
+                                "statement": "Oceanic plateaus and fracture zone processes",
+                                "name": "Oceanic plateaus and fracture zone processes"
+                              },
+                              {
+                                "id": "PACS:91.50.Ey",
+                                "anchor": "node:PACS:91.50.Ey",
+                                "statement": "Seafloor morphology, geology, and geophysics (see also 92.10.Oc Benthic boundary layers, ocean bottom processes—in oceanography)",
+                                "name": "Seafloor morphology, geology, and geophysics (see also 92.10.Oc Benthic boundary layers, ocean bottom processes—in oceanography)"
+                              },
+                              {
+                                "id": "PACS:91.50.Ga",
+                                "anchor": "node:PACS:91.50.Ga",
+                                "statement": "Bathymetry, seafloor topology",
+                                "name": "Bathymetry, seafloor topology"
+                              }
+                            ],
+                            "rank_note": "Ordered from volcanic features to broad plateaus and general seafloor morphology."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G49",
+                          "anchor": "group:PH.O.A3.G49",
+                          "statement": "Sediment and fluid systems are processes that move, store or circulate sediments, gases and water within the seabed.",
+                          "name": "Sediment and fluid systems are processes that move, store or circulate sediments, gases and water within the seabed.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.50.Jc",
+                                "anchor": "node:PACS:91.50.Jc",
+                                "statement": "Marine sediments, turbidity currents—processes and transport (see also 91.65.Ti—in petrology; 91.67.Ty—in Geochemistry; 92.10.Wa and 92.20.Vn—in oceanography; 92.40.Gc—in hydrology; 91.80.Wx—in Geophysics Appendix)",
+                                "name": "Marine sediments, turbidity currents—processes and transport (see also 91.65.Ti—in petrology; 91.67.Ty—in Geochemistry; 92.10.Wa and 92.20.Vn—in oceanography; 92.40.Gc—in hydrology; 91.80.Wx—in Geophysics Appendix)"
+                              },
+                              {
+                                "id": "PACS:91.50.Hc",
+                                "anchor": "node:PACS:91.50.Hc",
+                                "statement": "Gas and hydrate systems (see also 92.20.Uv—in oceanography)",
+                                "name": "Gas and hydrate systems (see also 92.20.Uv—in oceanography)"
+                              },
+                              {
+                                "id": "PACS:91.50.Ps",
+                                "anchor": "node:PACS:91.50.Ps",
+                                "statement": "Marine hydrogeology",
+                                "name": "Marine hydrogeology"
+                              }
+                            ],
+                            "rank_note": "Ordered from surface sediment transport to subsurface fluids and gas."
+                          }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -738,6 +1467,12 @@
                         }
                       ]
                     }
+                  },
+                  {
+                    "id": "MeSH:G01.311",
+                    "anchor": "node:MeSH:G01.311",
+                    "statement": "Geological Phenomena",
+                    "name": "Geological Phenomena"
                   }
                 ]
               }
@@ -1309,6 +2044,138 @@
                           "name": "Marine geoscience"
                         }
                       ]
+                    }
+                  },
+                  {
+                    "id": "PH.O.A3.G224",
+                    "anchor": "group:PH.O.A3.G224",
+                    "statement": "Seafloor and marine geology covers the coastal, intra-plate, sediment and sampling topics concerning the ocean floor and its margins.",
+                    "name": "Seafloor and marine geology covers the coastal, intra-plate, sediment and sampling topics concerning the ocean floor and its margins.",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "PH.O.A3.G44",
+                          "anchor": "group:PH.O.A3.G44",
+                          "statement": "Earth evolution, tomographic imaging and marine geology are broad approaches to studying the history and structure of the Earth and its ocean floor.",
+                          "name": "Earth evolution, tomographic imaging and marine geology are broad approaches to studying the history and structure of the Earth and its ocean floor.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.45.Nc",
+                                "anchor": "node:PACS:91.45.Nc",
+                                "statement": "Evolution of the Earth",
+                                "name": "Evolution of the Earth"
+                              },
+                              {
+                                "id": "PACS:91.45.Qv",
+                                "anchor": "node:PACS:91.45.Qv",
+                                "statement": "Tomography of plate tectonics (see also 91.30.Jk—in Seismology)",
+                                "name": "Tomography of plate tectonics (see also 91.30.Jk—in Seismology)"
+                              },
+                              {
+                                "id": "PACS:91.50.-r",
+                                "anchor": "node:PACS:91.50.-r",
+                                "statement": "Marine geology and geophysics",
+                                "name": "Marine geology and geophysics"
+                              }
+                            ],
+                            "rank_note": "Ordered by structure from evolution and imaging to marine geology."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G46",
+                          "anchor": "group:PH.O.A3.G46",
+                          "statement": "Nearshore and margin processes are those that shape coasts, beaches, shelves and slopes where land meets the sea.",
+                          "name": "Nearshore and margin processes are those that shape coasts, beaches, shelves and slopes where land meets the sea.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.50.Cw",
+                                "anchor": "node:PACS:91.50.Cw",
+                                "statement": "Beach and coastal processes",
+                                "name": "Beach and coastal processes"
+                              },
+                              {
+                                "id": "PACS:91.50.Nc",
+                                "anchor": "node:PACS:91.50.Nc",
+                                "statement": "Littoral processes",
+                                "name": "Littoral processes"
+                              },
+                              {
+                                "id": "PACS:91.50.Bd",
+                                "anchor": "node:PACS:91.50.Bd",
+                                "statement": "Continental shelf and slope processes",
+                                "name": "Continental shelf and slope processes"
+                              },
+                              {
+                                "id": "PACS:91.50.Xz",
+                                "anchor": "node:PACS:91.50.Xz",
+                                "statement": "Submarine landslides",
+                                "name": "Submarine landslides"
+                              }
+                            ],
+                            "rank_note": "Ordered from the shoreline seaward across the margin."
+                          }
+                        },
+                        {
+                          "id": "PH.O.A3.G50",
+                          "anchor": "group:PH.O.A3.G50",
+                          "statement": "Geophysical and sampling methods are the measurements and records used to probe the structure, field properties and history of the seafloor.",
+                          "name": "Geophysical and sampling methods are the measurements and records used to probe the structure, field properties and history of the seafloor.",
+                          "support": {
+                            "logic_type": "inductive",
+                            "plural_noun": "members",
+                            "basis": "kinds",
+                            "order": "structure",
+                            "points": [
+                              {
+                                "id": "PACS:91.50.Iv",
+                                "anchor": "node:PACS:91.50.Iv",
+                                "statement": "Marine magnetics and electromagnetics",
+                                "name": "Marine magnetics and electromagnetics"
+                              },
+                              {
+                                "id": "PACS:91.50.Kx",
+                                "anchor": "node:PACS:91.50.Kx",
+                                "statement": "Gravity and isostasy",
+                                "name": "Gravity and isostasy"
+                              },
+                              {
+                                "id": "PACS:91.50.Ln",
+                                "anchor": "node:PACS:91.50.Ln",
+                                "statement": "Heat flow (benthic)",
+                                "name": "Heat flow (benthic)"
+                              },
+                              {
+                                "id": "PACS:91.50.Sn",
+                                "anchor": "node:PACS:91.50.Sn",
+                                "statement": "Ocean drilling (see also 93.85.Tf Oil prospecting, pipelines, and conduits)",
+                                "name": "Ocean drilling (see also 93.85.Tf Oil prospecting, pipelines, and conduits)"
+                              },
+                              {
+                                "id": "PACS:91.50.Qr",
+                                "anchor": "node:PACS:91.50.Qr",
+                                "statement": "Micropaleontology",
+                                "name": "Micropaleontology"
+                              }
+                            ],
+                            "rank_note": "Ordered from potential-field and thermal measurements to drilling and fossil records."
+                          }
+                        }
+                      ],
+                      "rank_note": "Ordered by structure from broad approaches to margins, seafloor features, sediment systems and sampling methods."
                     }
                   }
                 ]
@@ -3717,7 +4584,9 @@
       "builder": "claude-opus-5-5",
       "checker": "claude-sonnet-5-5",
       "date": "2026-10-13 17:22"
-    }
+    },
+    "received_from_PH": 7,
+    "note_free_fix": "7 earth-science groups from PH attached by rule (geomagnetism, Earth gravity/rotation, seismology, volcanology, marine geology x2, geological phenomena); misplaced not re-checked"
   },
   "cost_usd": 0.9934
 }
