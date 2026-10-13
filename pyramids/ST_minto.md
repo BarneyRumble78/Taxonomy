@@ -66,7 +66,6 @@ Group of features of the strategic situation. Basis: kinds. Dimension: the featu
     _basis: kinds, order: structure. Parallel weapon types; no ranking implied._
     - Nuclear Weapons
     - Directed Energy Weapons
-    - Guided Munitions
   - **Guided missiles, rockets, and aerial bombs are distinct kinds of airborne munitions that deliver explosive force against targets.**
     _basis: kinds, order: structure. Ordered by structure of the delivery mechanism: guided propulsion, unguided propulsion, unpowered drop._
     - Guided Missiles
@@ -88,7 +87,6 @@ Group of features of the strategic situation. Basis: kinds. Dimension: the featu
   - **Explosive effects and ballistic science are the physical phenomena and materials that explain how munitions detonate and travel.**
     _basis: kinds, order: structure. Ordered by structure from the explosive materials to the underwater application, the explosion phenomenon, and ballistics._
     - Ammunition and Explosives
-    - Underwater Ordnance
     - Explosions
     - Ballistics
 
@@ -132,7 +130,12 @@ Group of features of the strategic situation. Basis: kinds. Dimension: the featu
   - Navigation, Detection and Countermeasures
   - Countermeasures
 
+## Routed to other fields
+
+- Guided Munitions
+- Underwater Ordnance
+
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Misplaced: P3.1.1.3 Guided Munitions duplicates P3.1.2.1; P3.3.5.2 Underwater Ordnance belongs with P3.1.3; P4.1.4 air forces, P4.1.2 Armor, P5.2.3 mixed.
+- field_check holds: True — Misplaced: P4.1.2 Cavalry. Armor duplicates P3.2.2 Armor; P2.3 Peace studies is a discipline, not game structure; P5.2.3 mixes navigation, detection and countermeasures.

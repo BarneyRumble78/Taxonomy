@@ -266,12 +266,6 @@
                           "anchor": "node:DTIC:19.12",
                           "statement": "Directed Energy Weapons",
                           "name": "Directed Energy Weapons"
-                        },
-                        {
-                          "id": "DTIC:19.13",
-                          "anchor": "node:DTIC:19.13",
-                          "statement": "Guided Munitions",
-                          "name": "Guided Munitions"
                         }
                       ],
                       "rank_note": "Parallel weapon types; no ranking implied."
@@ -412,12 +406,6 @@
                           "anchor": "node:DTIC:19.01",
                           "statement": "Ammunition and Explosives",
                           "name": "Ammunition and Explosives"
-                        },
-                        {
-                          "id": "DTIC:19.08",
-                          "anchor": "node:DTIC:19.08",
-                          "statement": "Underwater Ordnance",
-                          "name": "Underwater Ordnance"
                         },
                         {
                           "id": "DTIC:19.09",
@@ -767,10 +755,30 @@
       "Information is what each side senses, locates, learns and denies, through detection, locating, intelligence and countermeasures."
     ],
     "holds": true,
-    "note": "Misplaced: P3.1.1.3 Guided Munitions duplicates P3.1.2.1; P3.3.5.2 Underwater Ordnance belongs with P3.1.3; P4.1.4 air forces, P4.1.2 Armor, P5.2.3 mixed.",
+    "note": "Misplaced: P4.1.2 Cavalry. Armor duplicates P3.2.2 Armor; P2.3 Peace studies is a discipline, not game structure; P5.2.3 mixes navigation, detection and countermeasures.",
     "review": false,
-    "misplaced": 5,
-    "problems": 5
+    "misplaced": 3,
+    "problems": 3,
+    "cleanup": {
+      "before": 5,
+      "rule_moves": 0,
+      "ai_moves": 2,
+      "date": "2026-10-13 15:41"
+    }
   },
-  "cost_usd": 0.1155
+  "cost_usd": 0.1493,
+  "routed": [
+    {
+      "id": "DTIC:19.13",
+      "name": "Guided Munitions",
+      "to_field": "position",
+      "by": "cleanup"
+    },
+    {
+      "id": "DTIC:19.08",
+      "name": "Underwater Ordnance",
+      "to_field": "position",
+      "by": "cleanup"
+    }
+  ]
 }
