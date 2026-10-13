@@ -227,7 +227,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "manufacturing",
+                "engineering",
+                "excl",
+                "systems",
+                "manufacture",
+                "additive",
+                "machining",
+                "processes",
+                "technologies",
+                "textiles",
+                "textile",
+                "technology",
+                "machine",
+                "tools",
+                "flexible"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K1.S2",
@@ -442,7 +460,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "materials",
+                "semiconductors",
+                "elements",
+                "compounds",
+                "metals",
+                "engineering",
+                "atoms",
+                "chemical",
+                "science",
+                "technology",
+                "material",
+                "storage",
+                "ceramics",
+                "composite",
+                "hybrid"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K1.S3",
@@ -612,7 +648,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "packaging",
+                "dielectrics",
+                "insulation",
+                "components",
+                "electronics",
+                "technology",
+                "electrical",
+                "electric",
+                "breakdown",
+                "electromagnetic",
+                "fields",
+                "electronic",
+                "integrated",
+                "circuit",
+                "bionanotechnology"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K1.S4",
@@ -803,7 +857,26 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "molecular",
+                "electronics",
+                "nanoelectronics",
+                "nanoelectromechanical",
+                "systems",
+                "nanomaterials",
+                "organic",
+                "nanophotonics",
+                "computing",
+                "nanobioscience",
+                "nanocommunication",
+                "nanotechnology",
+                "micro-",
+                "nanosystems",
+                "nanostructured",
+                "computers"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K1.S5",
@@ -968,11 +1041,46 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "nanofabrication",
+                "growth",
+                "self",
+                "assembly",
+                "nanomanufacturing",
+                "nanometrology",
+                "nanoscale",
+                "characterisation",
+                "nanotechnology",
+                "elsewhere",
+                "classified",
+                "nanophotonics",
+                "nanoplasmonics",
+                "nanomagnetics",
+                "nanofluidics"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Materials and manufacturing"
+        "title": "Materials and manufacturing",
+        "keywords": [
+          "materials engineering",
+          "manufacturing",
+          "3D printing",
+          "metals",
+          "production",
+          "materials",
+          "engineering",
+          "packaging",
+          "technology",
+          "systems",
+          "electronics",
+          "elsewhere",
+          "classified",
+          "semiconductors"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "EN.K2",
@@ -1133,7 +1241,26 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "aerospace",
+                "aircraft",
+                "materials",
+                "hypersonic",
+                "propulsion",
+                "engineering",
+                "flight",
+                "systems",
+                "structures",
+                "aerothermodynamics",
+                "satellite",
+                "space",
+                "vehicle",
+                "missile",
+                "design",
+                "buildings"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K2.S2",
@@ -1352,7 +1479,26 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "automotive",
+                "engineering",
+                "vehicles",
+                "systems",
+                "control",
+                "combustion",
+                "fuel",
+                "hybrid",
+                "electric",
+                "powertrains",
+                "elsewhere",
+                "classified",
+                "materials",
+                "mechatronics",
+                "autonomous",
+                "cars"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K2.S3",
@@ -1693,7 +1839,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "marine",
+                "engineering",
+                "navigation",
+                "naval",
+                "architecture",
+                "ocean",
+                "shipbuilding",
+                "systems",
+                "merchant",
+                "maritime",
+                "technology",
+                "sensor",
+                "equipment",
+                "ship",
+                "platform"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K2.S4",
@@ -1779,11 +1943,111 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "automation",
+                "systems",
+                "robotics",
+                "animatronics",
+                "autonomous",
+                "cloud",
+                "robots",
+                "multi-robot"
+              ],
+              "keywords_source": "member labels + synonyms"
+            },
+            {
+              "id": "EN.K2.M1",
+              "anchor": "section:EN.K2.M1",
+              "statement": "Civil structures are designed fixed systems whose behaviour is set by loads, ground conditions and earthquake shaking.",
+              "name": "Civil structures are designed fixed systems whose behaviour is set by loads, ground conditions and earthquake shaking.",
+              "added": true,
+              "source": "minerva-curated",
+              "support": {
+                "logic_type": "inductive",
+                "plural_noun": "members",
+                "basis": "kinds",
+                "order": "structure",
+                "points": [
+                  {
+                    "id": "MINERVA:bridges",
+                    "anchor": "node:MINERVA:bridges",
+                    "statement": "Bridges",
+                    "name": "Bridges",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:buildings-and-towers",
+                    "anchor": "node:MINERVA:buildings-and-towers",
+                    "statement": "Buildings and towers",
+                    "name": "Buildings and towers",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:earthquake-and-seismic-engineering",
+                    "anchor": "node:MINERVA:earthquake-and-seismic-engineering",
+                    "statement": "Earthquake and seismic engineering",
+                    "name": "Earthquake and seismic engineering",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:foundations-and-geotechnical-engineering",
+                    "anchor": "node:MINERVA:foundations-and-geotechnical-engineering",
+                    "statement": "Foundations and geotechnical engineering",
+                    "name": "Foundations and geotechnical engineering",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:dams-and-tunnels",
+                    "anchor": "node:MINERVA:dams-and-tunnels",
+                    "statement": "Dams and tunnels",
+                    "name": "Dams and tunnels",
+                    "added": true,
+                    "source": "minerva-curated"
+                  }
+                ]
+              },
+              "keywords": [
+                "engineering",
+                "bridges",
+                "buildings",
+                "towers",
+                "earthquake",
+                "seismic",
+                "foundations",
+                "geotechnical",
+                "dams",
+                "tunnels"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Structures, machines and vehicles"
+        "title": "Structures, machines and vehicles",
+        "keywords": [
+          "structures",
+          "bridges",
+          "buildings",
+          "machines",
+          "vehicles",
+          "cars",
+          "aircraft",
+          "robots",
+          "earthquake engineering",
+          "engineering",
+          "marine",
+          "systems",
+          "aerospace",
+          "automotive",
+          "navigation",
+          "naval",
+          "architecture"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "EN.K3",
@@ -1964,7 +2228,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "fluid",
+                "flows",
+                "engineering",
+                "mechanics",
+                "incl",
+                "aerodynamics",
+                "computational",
+                "methods",
+                "flow",
+                "heat",
+                "mass",
+                "transfer",
+                "dynamics",
+                "thermal",
+                "excl"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K3.S2",
@@ -2266,7 +2548,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "power",
+                "energy",
+                "engineering",
+                "radiation",
+                "nuclear",
+                "particle",
+                "beam",
+                "generation",
+                "electronics",
+                "fusion",
+                "chemical",
+                "thermal",
+                "processes",
+                "combustion",
+                "electrochemical"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K3.S3",
@@ -2421,7 +2721,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "physics",
+                "instrumentation",
+                "powder",
+                "particle",
+                "technology",
+                "granular",
+                "mechanics",
+                "agricultural",
+                "engineering",
+                "colliding",
+                "beam",
+                "devices",
+                "biomedical",
+                "applications",
+                "radiation"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K3.S4",
@@ -2729,11 +3047,49 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "engineering",
+                "chemical",
+                "elsewhere",
+                "classified",
+                "environmental",
+                "resources",
+                "nuclear",
+                "treatment",
+                "processes",
+                "control",
+                "assessment",
+                "waste",
+                "extractive",
+                "metallurgy",
+                "processing"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Energy, fluid and process systems"
+        "title": "Energy, fluid and process systems",
+        "keywords": [
+          "energy systems",
+          "power plants",
+          "engines",
+          "chemical engineering",
+          "pipes",
+          "renewable energy",
+          "emissions control",
+          "engineering",
+          "fluid",
+          "nuclear",
+          "flows",
+          "energy",
+          "power",
+          "radiation",
+          "mechanics",
+          "incl",
+          "elsewhere"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "EN.K4",
@@ -4655,7 +5011,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "magnetic",
+                "devices",
+                "sensors",
+                "systems",
+                "power",
+                "electrical",
+                "electronics",
+                "superconducting",
+                "engineering",
+                "circuits",
+                "energy",
+                "electronic",
+                "quantum",
+                "film",
+                "resonance"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K4.S2",
@@ -5634,7 +6008,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "signal",
+                "systems",
+                "processing",
+                "communications",
+                "communication",
+                "technology",
+                "imaging",
+                "circuits",
+                "sensors",
+                "devices",
+                "antennas",
+                "circuit",
+                "frequency",
+                "engineering",
+                "propagation"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K4.S3",
@@ -6853,7 +7245,26 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "sensors",
+                "signal",
+                "engineering",
+                "systems",
+                "electronics",
+                "imaging",
+                "processing",
+                "instrumentation",
+                "image",
+                "control",
+                "robotics",
+                "computing",
+                "devices",
+                "radar",
+                "communication",
+                "computers"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EN.K4.S4",
@@ -8136,11 +8547,46 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "control",
+                "engineering",
+                "systems",
+                "reliability",
+                "environmental",
+                "management",
+                "biology",
+                "computational",
+                "feedback",
+                "fault",
+                "nonlinear",
+                "network",
+                "automatic",
+                "loop",
+                "design"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Electrical, information and control systems"
+        "title": "Electrical, information and control systems",
+        "keywords": [
+          "electronics",
+          "electrical engineering",
+          "telecommunications",
+          "control systems",
+          "circuits",
+          "control",
+          "systems",
+          "engineering",
+          "sensors",
+          "devices",
+          "magnetic",
+          "signal",
+          "imaging",
+          "technology"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       }
     ]
   },

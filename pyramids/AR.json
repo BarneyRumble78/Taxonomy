@@ -124,7 +124,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "arts",
+                "visual",
+                "fine",
+                "painting",
+                "sculpture",
+                "drawing",
+                "design",
+                "illustration",
+                "crafts",
+                "print",
+                "media",
+                "photography",
+                "video",
+                "lens-based",
+                "practice"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K1.S2",
@@ -189,7 +207,20 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "media",
+                "screen",
+                "digital",
+                "visual",
+                "effects",
+                "computer",
+                "gaming",
+                "animation",
+                "electronic",
+                "interactive"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K1.S3",
@@ -221,7 +252,15 @@
                     "name": "Performance art"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "performing",
+                "arts",
+                "applied",
+                "theatre",
+                "performance"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K1.S4",
@@ -286,7 +325,20 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "writing",
+                "creative",
+                "professional",
+                "incl",
+                "scriptwriting",
+                "digital",
+                "site-based",
+                "journalism",
+                "practice",
+                "technical"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K1.S5",
@@ -342,11 +394,41 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "music",
+                "composition",
+                "improvisation",
+                "performance",
+                "technology",
+                "recording"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Medium and making"
+        "title": "Medium and making",
+        "keywords": [
+          "painting",
+          "sculpture",
+          "film",
+          "photography",
+          "writing",
+          "theatre",
+          "dance",
+          "music making",
+          "craft",
+          "media",
+          "music",
+          "arts",
+          "digital",
+          "visual",
+          "practice",
+          "screen",
+          "performance",
+          "creative"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "AR.K2",
@@ -389,7 +471,17 @@
                     "name": "Conditions and Effects (hierarchy name)"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "hierarchy",
+                "name",
+                "design",
+                "elements",
+                "color",
+                "conditions",
+                "effects"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K2.S2",
@@ -491,13 +583,97 @@
                       ],
                       "rank_note": "Kinds are listed by approach without ranking."
                     }
+                  },
+                  {
+                    "id": "AR.K2.S2.M1",
+                    "anchor": "group:AR.K2.S2.M1",
+                    "statement": "Literary genres are the familiar forms in which written works are composed and read.",
+                    "name": "Literary genres are the familiar forms in which written works are composed and read.",
+                    "added": true,
+                    "source": "minerva-curated",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MINERVA:the-novel",
+                          "anchor": "node:MINERVA:the-novel",
+                          "statement": "The novel",
+                          "name": "The novel",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:poetry",
+                          "anchor": "node:MINERVA:poetry",
+                          "statement": "Poetry",
+                          "name": "Poetry",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:drama-and-playwriting",
+                          "anchor": "node:MINERVA:drama-and-playwriting",
+                          "statement": "Drama and playwriting",
+                          "name": "Drama and playwriting",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:short-story",
+                          "anchor": "node:MINERVA:short-story",
+                          "statement": "Short story",
+                          "name": "Short story",
+                          "added": true,
+                          "source": "minerva-curated"
+                        }
+                      ]
+                    }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "literature",
+                "literary",
+                "popular",
+                "genre",
+                "young",
+                "adult",
+                "fiction",
+                "juvenile",
+                "belles",
+                "lettres",
+                "stylistics",
+                "textual",
+                "analysis",
+                "print",
+                "culture"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Form"
+        "title": "Form",
+        "keywords": [
+          "style",
+          "genre",
+          "composition",
+          "structure of a work",
+          "form",
+          "literature",
+          "hierarchy",
+          "name",
+          "literary",
+          "design",
+          "elements",
+          "color",
+          "conditions",
+          "effects",
+          "popular"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "AR.K3",
@@ -567,7 +743,21 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "theory",
+                "visual",
+                "cultures",
+                "history",
+                "criticism",
+                "elsewhere",
+                "classified",
+                "cultural",
+                "culture",
+                "representation",
+                "identity"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K3.S2",
@@ -591,13 +781,85 @@
                     "anchor": "node:LCC:GR",
                     "statement": "Folklore",
                     "name": "Folklore"
+                  },
+                  {
+                    "id": "AR.K3.S2.M1",
+                    "anchor": "group:AR.K3.S2.M1",
+                    "statement": "Common themes are the recurring subjects, such as love, death and identity, that works explore.",
+                    "name": "Common themes are the recurring subjects, such as love, death and identity, that works explore.",
+                    "added": true,
+                    "source": "minerva-curated",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MINERVA:love-and-desire-in-art",
+                          "anchor": "node:MINERVA:love-and-desire-in-art",
+                          "statement": "Love and desire in art",
+                          "name": "Love and desire in art",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:death-and-mourning-in-art",
+                          "anchor": "node:MINERVA:death-and-mourning-in-art",
+                          "statement": "Death and mourning in art",
+                          "name": "Death and mourning in art",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:identity-and-belonging-in-art",
+                          "anchor": "node:MINERVA:identity-and-belonging-in-art",
+                          "statement": "Identity and belonging in art",
+                          "name": "Identity and belonging in art",
+                          "added": true,
+                          "source": "minerva-curated"
+                        }
+                      ]
+                    }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "associated",
+                "concepts",
+                "hierarchy",
+                "name",
+                "folklore",
+                "love",
+                "desire",
+                "death",
+                "mourning",
+                "identity",
+                "belonging"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Meaning"
+        "title": "Meaning",
+        "keywords": [
+          "interpretation",
+          "symbolism",
+          "themes",
+          "what a work means",
+          "representation",
+          "theory",
+          "identity",
+          "visual",
+          "cultures",
+          "history",
+          "criticism",
+          "elsewhere",
+          "classified",
+          "cultural",
+          "culture"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "AR.K4",
@@ -833,7 +1095,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "literature",
+                "excl",
+                "indonesian",
+                "eastern",
+                "korean",
+                "chinese",
+                "japanese",
+                "indian",
+                "south-east",
+                "asian",
+                "african",
+                "middle",
+                "latin",
+                "classical",
+                "greek"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K4.S2",
@@ -925,7 +1205,24 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "studies",
+                "cultural",
+                "culture",
+                "asian",
+                "nation",
+                "region",
+                "environment",
+                "globalisation",
+                "migrant",
+                "multicultural",
+                "intercultural",
+                "cross-cultural",
+                "postcolonial",
+                "nature"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K4.S3",
@@ -1011,11 +1308,47 @@
                     "further": true
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "cultural",
+                "arts",
+                "policy",
+                "consumption",
+                "everyday",
+                "life",
+                "creative",
+                "industries",
+                "studies",
+                "agriculture",
+                "food",
+                "wine",
+                "screen",
+                "media",
+                "culture"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Context and reception"
+        "title": "Context and reception",
+        "keywords": [
+          "audience",
+          "reception",
+          "literary movements",
+          "publishing",
+          "art market",
+          "culture",
+          "literature",
+          "cultural",
+          "studies",
+          "excl",
+          "indonesian",
+          "asian",
+          "eastern",
+          "korean",
+          "chinese"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "AR.K5",
@@ -1058,7 +1391,13 @@
                     "name": "Art history"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "criticism",
+                "theory"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K5.S2",
@@ -1090,7 +1429,16 @@
                     "name": "Dance and dance studies"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "studies",
+                "dance",
+                "cinema",
+                "drama",
+                "theatre",
+                "performance"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "AR.K5.S3",
@@ -1116,11 +1464,35 @@
                     "name": "Literature on music"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "musicology",
+                "ethnomusicology",
+                "literature",
+                "music"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Value"
+        "title": "Value",
+        "keywords": [
+          "criticism",
+          "art history",
+          "aesthetic judgement",
+          "reviews",
+          "canon",
+          "studies",
+          "history",
+          "dance",
+          "theory",
+          "cinema",
+          "drama",
+          "theatre",
+          "performance",
+          "musicology"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       }
     ]
   },

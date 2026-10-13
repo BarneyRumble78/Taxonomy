@@ -112,7 +112,17 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "archaeological",
+                "archaeology",
+                "science",
+                "digital",
+                "sites",
+                "excavations",
+                "objects"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "HI.K1.S2",
@@ -223,7 +233,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "archaeology",
+                "excl",
+                "historical",
+                "incl",
+                "industrial",
+                "maritime",
+                "human",
+                "remains",
+                "underwater",
+                "archaeological",
+                "sociology",
+                "asia",
+                "africa",
+                "americas",
+                "australia"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "HI.K1.S3",
@@ -331,11 +359,37 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "inscriptions",
+                "epigraphy",
+                "numismatics",
+                "biography",
+                "genealogy",
+                "heraldry",
+                "flags"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Occurrence"
+        "title": "Occurrence",
+        "keywords": [
+          "archaeology",
+          "evidence",
+          "sources",
+          "what happened",
+          "archaeological",
+          "excl",
+          "science",
+          "digital",
+          "sites",
+          "excavations",
+          "objects",
+          "historical",
+          "incl"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "HI.K2",
@@ -405,7 +459,17 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "technical",
+                "chronology",
+                "calendar",
+                "prehistory",
+                "ancient",
+                "modern"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "HI.K2.S2",
@@ -437,11 +501,37 @@
                     "name": "Contemporary history"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "classical",
+                "greek",
+                "roman",
+                "medieval",
+                "contemporary"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Time"
+        "title": "Time",
+        "keywords": [
+          "chronology",
+          "periods",
+          "dates",
+          "eras",
+          "ancient",
+          "medieval",
+          "modern",
+          "history",
+          "technical",
+          "calendar",
+          "prehistory",
+          "classical",
+          "greek",
+          "roman"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "HI.K3",
@@ -476,9 +566,83 @@
                     "anchor": "node:ANZSRC:430313",
                     "statement": "History of empires, imperialism and colonialism",
                     "name": "History of empires, imperialism and colonialism"
+                  },
+                  {
+                    "id": "HI.K3.S1.M1",
+                    "anchor": "group:HI.K3.S1.M1",
+                    "statement": "Histories of war and conflict assert that wars, their causes and their conduct shaped what happened.",
+                    "name": "Histories of war and conflict assert that wars, their causes and their conduct shaped what happened.",
+                    "added": true,
+                    "source": "minerva-curated",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MINERVA:military-history",
+                          "anchor": "node:MINERVA:military-history",
+                          "statement": "Military history",
+                          "name": "Military history",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:first-world-war",
+                          "anchor": "node:MINERVA:first-world-war",
+                          "statement": "First World War",
+                          "name": "First World War",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:second-world-war",
+                          "anchor": "node:MINERVA:second-world-war",
+                          "statement": "Second World War",
+                          "name": "Second World War",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:civil-wars-and-revolutions",
+                          "anchor": "node:MINERVA:civil-wars-and-revolutions",
+                          "statement": "Civil wars and revolutions",
+                          "name": "Civil wars and revolutions",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:colonial-wars",
+                          "anchor": "node:MINERVA:colonial-wars",
+                          "statement": "Colonial wars",
+                          "name": "Colonial wars",
+                          "added": true,
+                          "source": "minerva-curated"
+                        }
+                      ]
+                    }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "world",
+                "wars",
+                "political",
+                "empires",
+                "imperialism",
+                "colonialism",
+                "military",
+                "first",
+                "second",
+                "civil",
+                "revolutions",
+                "colonial",
+                "armed forces",
+                "defence"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "HI.K3.S2",
@@ -555,11 +719,45 @@
                     "name": "History of religion"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "historical",
+                "social",
+                "sociology",
+                "histories",
+                "race",
+                "religious",
+                "environmental",
+                "gender",
+                "studies",
+                "crime",
+                "religion"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Cause"
+        "title": "Cause",
+        "keywords": [
+          "causes",
+          "why it happened",
+          "wars",
+          "revolutions",
+          "empires",
+          "political history",
+          "history",
+          "world",
+          "historical",
+          "political",
+          "imperialism",
+          "colonialism",
+          "military",
+          "first",
+          "armed forces",
+          "defence"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "HI.K4",
@@ -1528,7 +1726,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "europe",
+                "countries",
+                "soviet",
+                "eastern",
+                "south",
+                "great",
+                "britain",
+                "austria",
+                "central",
+                "france",
+                "germany",
+                "greco-roman",
+                "world",
+                "italy"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "HI.K4.S2",
@@ -1560,7 +1776,14 @@
                     "name": "International history"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "migration",
+                "transnational",
+                "international"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "HI.K4.S3",
@@ -1691,11 +1914,43 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "historical",
+                "civilization",
+                "studies",
+                "periods",
+                "global",
+                "world",
+                "scholarship",
+                "learning",
+                "humanities",
+                "elsewhere",
+                "classified"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Change and continuity"
+        "title": "Change and continuity",
+        "keywords": [
+          "change over time",
+          "nations",
+          "migration",
+          "social change",
+          "history",
+          "europe",
+          "countries",
+          "soviet",
+          "world",
+          "eastern",
+          "south",
+          "great",
+          "britain",
+          "austria"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "HI.K5",
@@ -1744,7 +1999,16 @@
                     "name": "Digital history"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "historical",
+                "philosophy",
+                "methods",
+                "research",
+                "digital"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "HI.K5.S2",
@@ -1770,7 +2034,13 @@
                     "name": "Mythology"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "collective",
+                "memory",
+                "mythology"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "HI.K5.S3",
@@ -1808,7 +2078,23 @@
                     "name": "Museums. Collectors and collecting"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "studies",
+                "heritage",
+                "archival",
+                "repository",
+                "related",
+                "critical",
+                "museum",
+                "archive",
+                "collections",
+                "interpretations",
+                "museums",
+                "collectors",
+                "collecting"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "HI.K5.S4",
@@ -1873,11 +2159,44 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "heritage",
+                "cultural",
+                "conservation",
+                "management",
+                "incl",
+                "world",
+                "materials",
+                "digital",
+                "tourism",
+                "visitor",
+                "audience",
+                "studies",
+                "intangible"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Meaning and memory"
+        "title": "Meaning and memory",
+        "keywords": [
+          "historical memory",
+          "museums",
+          "heritage",
+          "historiography",
+          "commemoration",
+          "studies",
+          "history",
+          "historical",
+          "digital",
+          "cultural",
+          "conservation",
+          "philosophy",
+          "methods",
+          "research"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       }
     ]
   },

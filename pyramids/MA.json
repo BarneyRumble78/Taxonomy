@@ -68,7 +68,21 @@
                     "name": "Nonassociative rings and algebras"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "rings",
+                "algebras",
+                "algebraic",
+                "systems",
+                "field",
+                "theory",
+                "polynomials",
+                "commutative",
+                "algebra",
+                "associative",
+                "nonassociative"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K1.S2",
@@ -98,9 +112,65 @@
                     "anchor": "node:MSC:11-XX",
                     "statement": "Number theory",
                     "name": "Number theory"
+                  },
+                  {
+                    "id": "MA.K1.S2.M1",
+                    "anchor": "group:MA.K1.S2.M1",
+                    "statement": "Everyday discrete mathematics studies primes, networks and counting problems met outside pure research.",
+                    "name": "Everyday discrete mathematics studies primes, networks and counting problems met outside pure research.",
+                    "added": true,
+                    "source": "minerva-curated",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MINERVA:graph-theory-and-networks",
+                          "anchor": "node:MINERVA:graph-theory-and-networks",
+                          "statement": "Graph theory and networks",
+                          "name": "Graph theory and networks",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:combinatorics-and-counting",
+                          "anchor": "node:MINERVA:combinatorics-and-counting",
+                          "statement": "Combinatorics and counting",
+                          "name": "Combinatorics and counting",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:cryptographic-number-theory",
+                          "anchor": "node:MINERVA:cryptographic-number-theory",
+                          "statement": "Cryptographic number theory",
+                          "name": "Cryptographic number theory",
+                          "added": true,
+                          "source": "minerva-curated"
+                        }
+                      ]
+                    }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "theory",
+                "combinatorics",
+                "number",
+                "order",
+                "lattices",
+                "ordered",
+                "algebraic",
+                "structures",
+                "graph",
+                "networks",
+                "counting",
+                "cryptographic",
+                "buildings"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K1.S3",
@@ -132,11 +202,37 @@
                     "name": "Category theory; homological algebra"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "algebra",
+                "theory",
+                "linear",
+                "multilinear",
+                "matrix",
+                "-theory",
+                "category",
+                "homological"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Structure"
+        "title": "Structure",
+        "keywords": [
+          "algebra",
+          "number theory",
+          "combinatorics",
+          "discrete maths",
+          "theory",
+          "algebraic",
+          "rings",
+          "algebras",
+          "number",
+          "systems",
+          "field",
+          "polynomials"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "MA.K2",
@@ -179,7 +275,15 @@
                     "name": "Manifolds and cell complexes"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "topology",
+                "algebraic",
+                "manifolds",
+                "cell",
+                "complexes"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K2.S2",
@@ -217,7 +321,15 @@
                     "name": "Algebraic geometry"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "geometry",
+                "convex",
+                "discrete",
+                "differential",
+                "algebraic"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K2.S3",
@@ -243,11 +355,34 @@
                     "name": "Topological groups, Lie groups"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "groups",
+                "group",
+                "theory",
+                "generalizations",
+                "topological"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Space"
+        "title": "Space",
+        "keywords": [
+          "geometry",
+          "topology",
+          "shapes",
+          "symmetry",
+          "algebraic",
+          "groups",
+          "manifolds",
+          "cell",
+          "complexes",
+          "convex",
+          "discrete",
+          "differential"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "MA.K3",
@@ -296,7 +431,19 @@
                     "name": "Approximations and expansions"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "real",
+                "functions",
+                "measure",
+                "integration",
+                "sequences",
+                "series",
+                "summability",
+                "approximations",
+                "expansions"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K3.S2",
@@ -334,7 +481,20 @@
                     "name": "Special functions"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "functions",
+                "complex",
+                "variable",
+                "potential",
+                "theory",
+                "several",
+                "variables",
+                "analytic",
+                "spaces",
+                "special"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K3.S3",
@@ -360,7 +520,18 @@
                     "name": "Integral transforms, operational calculus"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "harmonic",
+                "analysis",
+                "euclidean",
+                "spaces",
+                "integral",
+                "transforms",
+                "operational",
+                "calculus"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K3.S4",
@@ -404,7 +575,21 @@
                     "name": "Integral equations"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "equations",
+                "differential",
+                "ordinary",
+                "partial",
+                "dynamical",
+                "systems",
+                "ergodic",
+                "theory",
+                "difference",
+                "functional",
+                "integral"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K3.S5",
@@ -436,11 +621,38 @@
                     "name": "Calculus of variations and optimal control; optimization"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "functional",
+                "analysis",
+                "operator",
+                "theory",
+                "calculus",
+                "variations",
+                "optimal",
+                "control",
+                "optimization"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Change and the continuum"
+        "title": "Change and the continuum",
+        "keywords": [
+          "calculus",
+          "analysis",
+          "differential equations",
+          "functions",
+          "limits",
+          "equations",
+          "theory",
+          "complex",
+          "spaces",
+          "integral",
+          "differential",
+          "functional"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "MA.K4",
@@ -470,10 +682,77 @@
               "anchor": "node:MSC:97-XX",
               "statement": "Mathematics education",
               "name": "Mathematics education"
+            },
+            {
+              "id": "MA.K4.M1",
+              "anchor": "group:MA.K4.M1",
+              "statement": "Proof and the foundations of mathematics ask what a valid proof is and what axioms mathematics rests on.",
+              "name": "Proof and the foundations of mathematics ask what a valid proof is and what axioms mathematics rests on.",
+              "added": true,
+              "source": "minerva-curated",
+              "support": {
+                "logic_type": "inductive",
+                "plural_noun": "members",
+                "basis": "kinds",
+                "order": "structure",
+                "points": [
+                  {
+                    "id": "MINERVA:set-theory",
+                    "anchor": "node:MINERVA:set-theory",
+                    "statement": "Set theory",
+                    "name": "Set theory",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:axioms-and-axiomatic-systems",
+                    "anchor": "node:MINERVA:axioms-and-axiomatic-systems",
+                    "statement": "Axioms and axiomatic systems",
+                    "name": "Axioms and axiomatic systems",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:g-del-s-incompleteness-theorems",
+                    "anchor": "node:MINERVA:g-del-s-incompleteness-theorems",
+                    "statement": "Gödel's incompleteness theorems",
+                    "name": "Gödel's incompleteness theorems",
+                    "added": true,
+                    "source": "minerva-curated"
+                  }
+                ]
+              },
+              "keywords": [
+                "theory",
+                "axioms",
+                "axiomatic",
+                "systems",
+                "del's",
+                "incompleteness",
+                "theorems"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Foundations and the discipline"
+        "title": "Foundations and the discipline",
+        "keywords": [
+          "logic",
+          "set theory",
+          "foundations",
+          "maths education",
+          "history of maths",
+          "mathematical",
+          "history",
+          "biography",
+          "mathematics",
+          "education",
+          "theory",
+          "axioms",
+          "axiomatic",
+          "schooling"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "MA.K5",
@@ -528,7 +807,21 @@
                     "name": "Optics, electromagnetic theory"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "mechanics",
+                "mathematical",
+                "physics",
+                "particles",
+                "systems",
+                "deformable",
+                "solids",
+                "fluid",
+                "optics",
+                "electromagnetic",
+                "theory"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K5.S2",
@@ -572,7 +865,24 @@
                     "name": "Astronomy and astrophysics"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "theory",
+                "classical",
+                "thermodynamics",
+                "heat",
+                "transfer",
+                "quantum",
+                "statistical",
+                "mechanics",
+                "structure",
+                "matter",
+                "relativity",
+                "gravitational",
+                "astronomy",
+                "astrophysics"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K5.S3",
@@ -604,7 +914,24 @@
                     "name": "Biology and other natural sciences"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "sciences",
+                "operations",
+                "research",
+                "mathematical",
+                "programming",
+                "game",
+                "theory",
+                "economics",
+                "finance",
+                "social",
+                "behavioral",
+                "biology",
+                "natural",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K5.S4",
@@ -651,7 +978,19 @@
                     ]
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "theory",
+                "systems",
+                "control",
+                "information",
+                "communication",
+                "circuits",
+                "probability",
+                "stochastic",
+                "processes"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MA.K5.S5",
@@ -686,11 +1025,38 @@
                     "name": "Computer science"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "applied",
+                "mathematics",
+                "numerical",
+                "analysis",
+                "computer",
+                "science"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Modelling other fields"
+        "title": "Modelling other fields",
+        "keywords": [
+          "applied mathematics",
+          "statistics",
+          "probability",
+          "mathematical modelling",
+          "numerical methods",
+          "theory",
+          "mechanics",
+          "mathematical",
+          "systems",
+          "sciences",
+          "physics",
+          "particles",
+          "deformable",
+          "solids",
+          "fluid"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       }
     ]
   },

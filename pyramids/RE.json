@@ -62,7 +62,20 @@
                     "name": "Comparative religious studies"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "religions",
+                "mythology",
+                "rationalism",
+                "doctrinal",
+                "theology",
+                "philosophy",
+                "religion",
+                "comparative",
+                "religious",
+                "studies"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "RE.K1.S2",
@@ -147,13 +160,105 @@
                         }
                       ]
                     }
+                  },
+                  {
+                    "id": "RE.K1.S2.M1",
+                    "anchor": "group:RE.K1.S2.M1",
+                    "statement": "World religions are the major living traditions, each with its own account of the ultimate.",
+                    "name": "World religions are the major living traditions, each with its own account of the ultimate.",
+                    "added": true,
+                    "source": "minerva-curated",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MINERVA:buddhism",
+                          "anchor": "node:MINERVA:buddhism",
+                          "statement": "Buddhism",
+                          "name": "Buddhism",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:hinduism",
+                          "anchor": "node:MINERVA:hinduism",
+                          "statement": "Hinduism",
+                          "name": "Hinduism",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:islam",
+                          "anchor": "node:MINERVA:islam",
+                          "statement": "Islam",
+                          "name": "Islam",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:judaism",
+                          "anchor": "node:MINERVA:judaism",
+                          "statement": "Judaism",
+                          "name": "Judaism",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:christianity",
+                          "anchor": "node:MINERVA:christianity",
+                          "statement": "Christianity",
+                          "name": "Christianity",
+                          "added": true,
+                          "source": "minerva-curated"
+                        }
+                      ]
+                    }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "traditions",
+                "christianity",
+                "judaism",
+                "islam",
+                "buddhism",
+                "studies",
+                "eastern",
+                "religious",
+                "bahaism",
+                "theosophy",
+                "excl",
+                "jewish",
+                "christian",
+                "islamic",
+                "hinduism"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "The ultimate and the human condition"
+        "title": "The ultimate and the human condition",
+        "keywords": [
+          "God",
+          "beliefs",
+          "theology",
+          "religions",
+          "spirituality",
+          "afterlife",
+          "religious",
+          "studies",
+          "traditions",
+          "christianity",
+          "judaism",
+          "islam",
+          "buddhism",
+          "eastern",
+          "mythology"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "RE.K2",
@@ -192,7 +297,20 @@
             }
           ]
         },
-        "title": "Authoritative text"
+        "title": "Authoritative text",
+        "keywords": [
+          "scripture",
+          "Bible",
+          "Quran",
+          "religious law",
+          "religious",
+          "bible",
+          "comparative",
+          "jurisprudence",
+          "jewish",
+          "islamic"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "RE.K3",
@@ -216,10 +334,83 @@
               "anchor": "node:ANZSRC:500405",
               "statement": "Religion, society and culture",
               "name": "Religion, society and culture"
+            },
+            {
+              "id": "RE.K3.M1",
+              "anchor": "group:RE.K3.M1",
+              "statement": "Worship and ritual are the acts through which believers express and enact their faith together.",
+              "name": "Worship and ritual are the acts through which believers express and enact their faith together.",
+              "added": true,
+              "source": "minerva-curated",
+              "support": {
+                "logic_type": "inductive",
+                "plural_noun": "members",
+                "basis": "kinds",
+                "order": "structure",
+                "points": [
+                  {
+                    "id": "MINERVA:prayer-and-worship",
+                    "anchor": "node:MINERVA:prayer-and-worship",
+                    "statement": "Prayer and worship",
+                    "name": "Prayer and worship",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:ritual-and-sacraments",
+                    "anchor": "node:MINERVA:ritual-and-sacraments",
+                    "statement": "Ritual and sacraments",
+                    "name": "Ritual and sacraments",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:pilgrimage",
+                    "anchor": "node:MINERVA:pilgrimage",
+                    "statement": "Pilgrimage",
+                    "name": "Pilgrimage",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:religious-festivals",
+                    "anchor": "node:MINERVA:religious-festivals",
+                    "statement": "Religious festivals",
+                    "name": "Religious festivals",
+                    "added": true,
+                    "source": "minerva-curated"
+                  }
+                ]
+              },
+              "keywords": [
+                "prayer",
+                "worship",
+                "ritual",
+                "sacraments",
+                "pilgrimage",
+                "religious",
+                "festivals"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Practice"
+        "title": "Practice",
+        "keywords": [
+          "worship",
+          "prayer",
+          "ministry",
+          "ritual",
+          "practice",
+          "practical",
+          "theology",
+          "religion",
+          "society",
+          "culture",
+          "sacraments",
+          "pilgrimage"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "RE.K4",
@@ -252,7 +443,20 @@
             }
           ]
         },
-        "title": "Community and institution"
+        "title": "Community and institution",
+        "keywords": [
+          "churches",
+          "denominations",
+          "religious organisations",
+          "christian",
+          "history",
+          "canon",
+          "roman",
+          "catholic",
+          "church",
+          "holy"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       }
     ]
   },

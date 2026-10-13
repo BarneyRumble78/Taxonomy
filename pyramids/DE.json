@@ -56,7 +56,17 @@
                     "name": "Events (hierarchy name)"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "hierarchy",
+                "name",
+                "physical",
+                "mental",
+                "activities",
+                "functions",
+                "events"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K1.S2",
@@ -100,7 +110,19 @@
                     "name": "Home economics"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "design",
+                "anthropology",
+                "social",
+                "service",
+                "interaction",
+                "experience",
+                "home",
+                "economics",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K1.S3",
@@ -124,13 +146,83 @@
                     "anchor": "node:ANZSRC:330405",
                     "statement": "Public participation and community engagement",
                     "name": "Public participation and community engagement"
+                  },
+                  {
+                    "id": "DE.K1.S3.M1",
+                    "anchor": "group:DE.K1.S3.M1",
+                    "statement": "Inclusive design responds to the needs of people with different abilities, ages and cultures.",
+                    "name": "Inclusive design responds to the needs of people with different abilities, ages and cultures.",
+                    "added": true,
+                    "source": "minerva-curated",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MINERVA:accessibility",
+                          "anchor": "node:MINERVA:accessibility",
+                          "statement": "Accessibility",
+                          "name": "Accessibility",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:universal-design",
+                          "anchor": "node:MINERVA:universal-design",
+                          "statement": "Universal design",
+                          "name": "Universal design",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:co-design-with-communities",
+                          "anchor": "node:MINERVA:co-design-with-communities",
+                          "statement": "Co-design with communities",
+                          "name": "Co-design with communities",
+                          "added": true,
+                          "source": "minerva-curated"
+                        }
+                      ]
+                    }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "community",
+                "planning",
+                "public",
+                "participation",
+                "engagement",
+                "accessibility",
+                "universal",
+                "design",
+                "co-design",
+                "communities"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Use and need"
+        "title": "Use and need",
+        "keywords": [
+          "user needs",
+          "human-centred design",
+          "service design",
+          "community",
+          "users",
+          "design",
+          "hierarchy",
+          "name",
+          "physical",
+          "mental",
+          "activities",
+          "functions",
+          "events",
+          "anthropology"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "DE.K2",
@@ -223,9 +315,75 @@
                         }
                       ]
                     }
+                  },
+                  {
+                    "id": "DE.K2.S1.M1",
+                    "anchor": "group:DE.K2.S1.M1",
+                    "statement": "Product and visual design disciplines shape everyday objects, garments and graphics for use.",
+                    "name": "Product and visual design disciplines shape everyday objects, garments and graphics for use.",
+                    "added": true,
+                    "source": "minerva-curated",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MINERVA:product-and-industrial-design",
+                          "anchor": "node:MINERVA:product-and-industrial-design",
+                          "statement": "Product and industrial design",
+                          "name": "Product and industrial design",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:furniture-design",
+                          "anchor": "node:MINERVA:furniture-design",
+                          "statement": "Furniture design",
+                          "name": "Furniture design",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:fashion-and-textile-design",
+                          "anchor": "node:MINERVA:fashion-and-textile-design",
+                          "statement": "Fashion and textile design",
+                          "name": "Fashion and textile design",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:graphic-design",
+                          "anchor": "node:MINERVA:graphic-design",
+                          "statement": "Graphic design",
+                          "name": "Graphic design",
+                          "added": true,
+                          "source": "minerva-curated"
+                        }
+                      ]
+                    }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "design",
+                "hierarchy",
+                "name",
+                "object",
+                "industrial",
+                "product",
+                "textile",
+                "fashion",
+                "genres",
+                "groupings",
+                "systems",
+                "decorative",
+                "arts",
+                "components",
+                "furnishings"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K2.S2",
@@ -269,7 +427,22 @@
                     "name": "Styles and Periods (hierarchy name)"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "design",
+                "visual",
+                "communication",
+                "hierarchy",
+                "name",
+                "incl",
+                "graphic",
+                "verbal",
+                "interior",
+                "architectural",
+                "styles",
+                "periods"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K2.S3",
@@ -301,11 +474,47 @@
                     "name": "Models and simulations of design"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "visualisation",
+                "design",
+                "data",
+                "computational",
+                "incl",
+                "parametric",
+                "generative",
+                "architectural",
+                "computing",
+                "methods",
+                "models",
+                "simulations",
+                "computers"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Form"
+        "title": "Form",
+        "keywords": [
+          "form",
+          "shape",
+          "materials",
+          "objects",
+          "product design",
+          "graphic design",
+          "interiors",
+          "design",
+          "hierarchy",
+          "name",
+          "object",
+          "industrial",
+          "product",
+          "textile",
+          "fashion",
+          "graphic",
+          "visual"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "DE.K3",
@@ -354,7 +563,17 @@
                     "name": "Design for disaster relief"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "design",
+                "disaster",
+                "relief",
+                "ergonomics",
+                "fire",
+                "safety",
+                "architecture"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K3.S2",
@@ -392,11 +611,40 @@
                     "name": "Sustainable architecture"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "science",
+                "sustainable",
+                "architectural",
+                "technology",
+                "building",
+                "technologies",
+                "systems",
+                "design",
+                "architecture"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Performance in use"
+        "title": "Performance in use",
+        "keywords": [
+          "ergonomics",
+          "safety",
+          "comfort",
+          "sustainability",
+          "energy efficiency",
+          "building performance",
+          "design",
+          "architecture",
+          "disaster",
+          "relief",
+          "science",
+          "sustainable",
+          "fire",
+          "architectural"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "DE.K4",
@@ -454,7 +702,21 @@
                     "name": "Transport planning"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "planning",
+                "regional",
+                "urban",
+                "strategic",
+                "metropolitan",
+                "regulatory",
+                "development",
+                "assessment",
+                "land",
+                "environmental",
+                "transport"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K4.S2",
@@ -492,7 +754,18 @@
                     "name": "Urban informatics"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "development",
+                "analysis",
+                "urban",
+                "housing",
+                "markets",
+                "management",
+                "regional",
+                "informatics"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K4.S3",
@@ -533,11 +806,43 @@
                     ]
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "design",
+                "built",
+                "environment",
+                "urban",
+                "landscape",
+                "architecture",
+                "hierarchy",
+                "name",
+                "nature"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Place and settlement"
+        "title": "Place and settlement",
+        "keywords": [
+          "urban planning",
+          "cities",
+          "landscape",
+          "housing",
+          "zoning",
+          "regional planning",
+          "planning",
+          "urban",
+          "development",
+          "regional",
+          "analysis",
+          "design",
+          "built",
+          "environment",
+          "strategic",
+          "metropolitan",
+          "nature"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "DE.K5",
@@ -589,7 +894,18 @@
                     "name": "Processes and Techniques (hierarchy name)"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "design",
+                "hierarchy",
+                "name",
+                "practice",
+                "methods",
+                "disciplines",
+                "processes",
+                "techniques"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K5.S2",
@@ -619,7 +935,14 @@
                     "name": "Automation and technology in building and construction"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "building",
+                "automation",
+                "technology",
+                "construction"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K5.S3",
@@ -697,7 +1020,22 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "building",
+                "management",
+                "studies",
+                "construction",
+                "project",
+                "planning",
+                "industry",
+                "organisational",
+                "quantity",
+                "surveying",
+                "architecture",
+                "design"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "DE.K5.S4",
@@ -735,11 +1073,43 @@
                     "name": "History and theory of the built environment (excl. architecture)"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "theory",
+                "architectural",
+                "criticism",
+                "heritage",
+                "conservation",
+                "design",
+                "built",
+                "environment",
+                "excl",
+                "architecture",
+                "nature"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Life of the built thing"
+        "title": "Life of the built thing",
+        "keywords": [
+          "architecture practice",
+          "construction",
+          "building maintenance",
+          "heritage",
+          "design history",
+          "building",
+          "design",
+          "management",
+          "history",
+          "theory",
+          "hierarchy",
+          "name",
+          "studies",
+          "architecture"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       }
     ]
   },

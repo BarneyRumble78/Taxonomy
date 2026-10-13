@@ -2,7 +2,9 @@
 Field score -> pillar -> section -> group. Used because the Mac's Qwen was unreachable."""
 import json,glob,math,re,collections
 from pathlib import Path
+import os
 R=Path(__file__).resolve().parents[1]
+PR=Path(os.environ.get("PYR_ROOT",R))
 STOP=set("a an the of and or in on to for is are be by with from how what why which who does do can its it as at that this their there into than more most about should when whether use used new zealand".split())
 def stem(w):
     for s in ("ational","ations","ation","ities","ity","ings","ing","ies","es","ed","al","s"):
@@ -30,7 +32,7 @@ def subtree(n):
     for c in kids(n): out+=subtree(c)
     return out
 F={}
-for f in sorted(glob.glob(str(R/"pyramids/??.json"))):
+for f in sorted(glob.glob(str(PR/"pyramids/??.json"))):
     d=json.load(open(f)); F[d["field"]]=d
 docs={}  # id -> tokens
 def add(i,txt): docs[i]=tok(txt)
@@ -62,7 +64,7 @@ def retrieve(question):
     return {"fields":[f for _,f in fr],"field_scores":[round(s,2) for s,_ in fr],"pillars":[p for _,p in pil],
             "section":sec[0][1] if sec else None,"groups":[g for _,g in grp]}
 if __name__=="__main__":
-    gold=json.load(open(R/"pyramids/tests/retrieval_gold.json"))["questions"]
+    GOLD=os.environ.get("GOLD","retrieval_gold"); gold=json.load(open(R/f"pyramids/tests/{GOLD}.json"))["questions"]
     res=[];st=collections.Counter()
     for g in gold:
         r=retrieve(g["q"]); okF=[g["field"]]+g.get("alt_fields",[]); okP=[g["pillar"]]+g.get("alt_pillars",[])
@@ -73,6 +75,6 @@ if __name__=="__main__":
         res.append(row)
     out={"method":"BM25 top-down (box, deterministic; Mac Qwen unreachable)"+(" + source topic names" if ENRICH else ", node statements only"),"n":len(gold),
          "accuracy":{k:f"{v}/{len(gold)}" for k,v in st.items()},"results":res}
-    (R/("pyramids/tests/retrieval_results"+("_enriched" if ENRICH else "")+".json")).write_text(json.dumps(out,indent=1,ensure_ascii=False))
+    (R/("pyramids/tests/"+os.environ.get("OUT","retrieval_results")+".json")).write_text(json.dumps(out,indent=1,ensure_ascii=False))
     print(out["accuracy"])
     for r in res: print(r["id"],"F" if r["field_top1"] else ("f" if r["field_top3"] else "-"),"P" if r["pillar_top1"] else ("p" if r["pillar_top3"] else "-"),r["gold_field"],r["gold_pillar"],"->",r["fields"],r["pillars"],r["section"])

@@ -84,7 +84,22 @@
                     ]
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "military",
+                "organization",
+                "distribution",
+                "situation",
+                "administration",
+                "naval",
+                "forces",
+                "organizations",
+                "armies",
+                "navies",
+                "armed forces",
+                "defence"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "ST.K1.S2",
@@ -123,11 +138,36 @@
                     ]
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "naval",
+                "seamen",
+                "personnel",
+                "marines"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Actors"
+        "title": "Actors",
+        "keywords": [
+          "armed forces",
+          "military",
+          "army",
+          "navy",
+          "personnel",
+          "naval",
+          "organization",
+          "distribution",
+          "situation",
+          "administration",
+          "forces",
+          "organizations",
+          "armies",
+          "navies",
+          "defence"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "ST.K2",
@@ -171,7 +211,15 @@
                   }
                 ],
                 "rank_note": "Parallel academic fields; no ranking implied."
-              }
+              },
+              "keywords": [
+                "defence",
+                "studies",
+                "civil",
+                "conflict",
+                "research"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "APSA:07",
@@ -216,11 +264,102 @@
                   }
                 ],
                 "rank_note": "Ordered from civil protection through defense systems to operational strategy and tactics."
-              }
+              },
+              "keywords": [
+                "defense",
+                "civil",
+                "systems",
+                "military",
+                "operations",
+                "strategy",
+                "tactics",
+                "armed forces",
+                "defence"
+              ],
+              "keywords_source": "member labels + synonyms"
+            },
+            {
+              "id": "ST.K2.M1",
+              "anchor": "group:ST.K2.M1",
+              "statement": "Contemporary security problems are the strategic settings of deterrence, cyber conflict and irregular war.",
+              "name": "Contemporary security problems are the strategic settings of deterrence, cyber conflict and irregular war.",
+              "added": true,
+              "source": "minerva-curated",
+              "support": {
+                "logic_type": "inductive",
+                "plural_noun": "members",
+                "basis": "kinds",
+                "order": "structure",
+                "points": [
+                  {
+                    "id": "MINERVA:deterrence-and-nuclear-strategy",
+                    "anchor": "node:MINERVA:deterrence-and-nuclear-strategy",
+                    "statement": "Deterrence and nuclear strategy",
+                    "name": "Deterrence and nuclear strategy",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:cyber-warfare",
+                    "anchor": "node:MINERVA:cyber-warfare",
+                    "statement": "Cyber warfare",
+                    "name": "Cyber warfare",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:terrorism-and-counterinsurgency",
+                    "anchor": "node:MINERVA:terrorism-and-counterinsurgency",
+                    "statement": "Terrorism and counterinsurgency",
+                    "name": "Terrorism and counterinsurgency",
+                    "added": true,
+                    "source": "minerva-curated"
+                  },
+                  {
+                    "id": "MINERVA:military-alliances",
+                    "anchor": "node:MINERVA:military-alliances",
+                    "statement": "Military alliances",
+                    "name": "Military alliances",
+                    "added": true,
+                    "source": "minerva-curated"
+                  }
+                ]
+              },
+              "keywords": [
+                "deterrence",
+                "nuclear",
+                "strategy",
+                "cyber",
+                "warfare",
+                "terrorism",
+                "counterinsurgency",
+                "military",
+                "alliances",
+                "armed forces",
+                "defence"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "The game"
+        "title": "The game",
+        "keywords": [
+          "war",
+          "conflict",
+          "defence policy",
+          "deterrence",
+          "peace",
+          "studies",
+          "civil",
+          "defense",
+          "military",
+          "strategy",
+          "defence",
+          "research",
+          "processes",
+          "armed forces"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "ST.K3",
@@ -315,7 +454,21 @@
                     ]
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "weapons",
+                "nuclear",
+                "directed",
+                "energy",
+                "guided",
+                "missiles",
+                "rockets",
+                "aerial",
+                "bombs",
+                "naval",
+                "ordnance"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "ST.K3.S2",
@@ -353,7 +506,19 @@
                     "name": "Fire Control and Bombing Systems"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "combat",
+                "vehicles",
+                "armor",
+                "guns",
+                "fire",
+                "control",
+                "bombing",
+                "systems",
+                "cars"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "ST.K3.S3",
@@ -424,11 +589,46 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "guided",
+                "missile",
+                "ballistics",
+                "launching",
+                "basing",
+                "support",
+                "trajectories",
+                "accuracy",
+                "warheads",
+                "fuzes",
+                "reentry",
+                "vehicles",
+                "ammunition",
+                "explosives",
+                "explosions",
+                "cars"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Coercion"
+        "title": "Coercion",
+        "keywords": [
+          "weapons",
+          "missiles",
+          "munitions",
+          "firepower",
+          "guided",
+          "missile",
+          "vehicles",
+          "ballistics",
+          "nuclear",
+          "directed",
+          "energy",
+          "rockets",
+          "cars"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "ST.K4",
@@ -498,7 +698,19 @@
                     ]
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "military",
+                "engineering",
+                "infantry",
+                "cavalry",
+                "armor",
+                "artillery",
+                "forces",
+                "armed forces",
+                "defence"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "ST.K4.S2",
@@ -548,11 +760,44 @@
                     ]
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "maintenance",
+                "logistics",
+                "military",
+                "facilities",
+                "supplies",
+                "transportation",
+                "naval",
+                "minor",
+                "services",
+                "navies",
+                "armed forces",
+                "defence"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Conduct"
+        "title": "Conduct",
+        "keywords": [
+          "military operations",
+          "tactics",
+          "logistics",
+          "campaigns",
+          "military",
+          "engineering",
+          "maintenance",
+          "infantry",
+          "cavalry",
+          "armor",
+          "artillery",
+          "forces",
+          "facilities",
+          "armed forces",
+          "defence"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "ST.K5",
@@ -634,7 +879,25 @@
                     "name": "Miscellaneous Detection and Detectors"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "detection",
+                "detectors",
+                "acoustic",
+                "optical",
+                "active",
+                "passive",
+                "radar",
+                "equipment",
+                "non-acoustic",
+                "non-magnetic",
+                "submarine",
+                "magnetic",
+                "electric",
+                "field",
+                "seismic"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "ST.K5.S2",
@@ -699,11 +962,46 @@
                     "name": "Countermeasures"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "direction",
+                "finding",
+                "navigation",
+                "countermeasures",
+                "target",
+                "range",
+                "position",
+                "guidance",
+                "military",
+                "intelligence",
+                "detection",
+                "armed forces",
+                "defence"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Information"
+        "title": "Information",
+        "keywords": [
+          "intelligence",
+          "surveillance",
+          "reconnaissance",
+          "sensors",
+          "geospatial intelligence",
+          "targeting",
+          "detection",
+          "detectors",
+          "direction",
+          "finding",
+          "navigation",
+          "countermeasures",
+          "acoustic",
+          "optical",
+          "active",
+          "passive"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       }
     ]
   },

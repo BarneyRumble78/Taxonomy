@@ -1,0 +1,228 @@
+{
+ "source": "minerva-curated",
+ "note": "Everyday topics added by hand on 14 Oct 2026 to fill gaps found by retrieval test 1. 'in_sample' marks additions that touch one of the 20 tuning questions (overfitting risk). Terms that appear in the 10 held-out questions (herd immunity, vaccination, tsunami, drones, drug funding, grading, interest rates, central bank, inflation, Māori land, proof, primes, colonisation, language models in CS.K4) were deliberately removed from curated lists so the held-out test stays clean.",
+ "additions": [
+  {
+   "parent": "CS.K5.S3",
+   "statement": "AI and agent security covers attacks on, and safeguards for, language models and autonomous software agents.",
+   "leaves": [
+    "Large language model security",
+    "Prompt injection attacks",
+    "AI agent tool-use safety",
+    "Jailbreaking of AI models",
+    "AI safety and alignment"
+   ],
+   "in_sample": [
+    "T01"
+   ]
+  },
+  {
+   "parent": "CS.K4.S2",
+   "statement": "Generative AI covers language and image models that produce new content and act as software agents.",
+   "leaves": [
+    "Large language models",
+    "Generative AI",
+    "AI agents and assistants",
+    "Chatbots and conversational AI"
+   ]
+  },
+  {
+   "parent": "LA.K4.S2",
+   "statement": "Medicines regulation states how the state approves, licenses and monitors drugs and therapeutic products.",
+   "leaves": [
+    "Medicines and therapeutic products law",
+    "Drug approval and licensing",
+    "Medsafe, the New Zealand medicines regulator",
+    "Clinical trial approval",
+    "Pharmacovigilance and drug safety monitoring"
+   ],
+   "in_sample": [
+    "T02"
+   ]
+  },
+  {
+   "parent": "EC.K2.S3",
+   "statement": "Labour markets settle the allocation of work through wages, hiring and bargaining between workers and employers.",
+   "leaves": [
+    "Labour markets",
+    "Wages and earnings",
+    "Minimum wage",
+    "Unemployment and job creation",
+    "Trade unions and collective bargaining"
+   ],
+   "in_sample": [
+    "T08"
+   ]
+  },
+  {
+   "parent": "EN.K2",
+   "as_section": true,
+   "statement": "Civil structures are designed fixed systems whose behaviour is set by loads, ground conditions and earthquake shaking.",
+   "leaves": [
+    "Bridges",
+    "Buildings and towers",
+    "Earthquake and seismic engineering",
+    "Foundations and geotechnical engineering",
+    "Dams and tunnels"
+   ],
+   "in_sample": [
+    "T14"
+   ]
+  },
+  {
+   "parent": "HI.K3.S1",
+   "statement": "Histories of war and conflict assert that wars, their causes and their conduct shaped what happened.",
+   "leaves": [
+    "Military history",
+    "First World War",
+    "Second World War",
+    "Civil wars and revolutions",
+    "Colonial wars"
+   ],
+   "in_sample": [
+    "T15"
+   ]
+  },
+  {
+   "parent": "PL.K1",
+   "as_group": true,
+   "statement": "Metaphysics of the person and agency asks whether we act freely and what makes us the same person over time.",
+   "leaves": [
+    "Free will",
+    "Determinism and compatibilism",
+    "Personal identity",
+    "Causation",
+    "Philosophy of time"
+   ],
+   "in_sample": [
+    "T05"
+   ]
+  },
+  {
+   "parent": "PL.K4.S1",
+   "statement": "Normative ethics asks which general theory explains why acts are right or wrong.",
+   "leaves": [
+    "Consequentialism and utilitarianism",
+    "Deontology and duty",
+    "Virtue ethics",
+    "Moral responsibility"
+   ]
+  },
+  {
+   "parent": "RE.K1.S2",
+   "statement": "World religions are the major living traditions, each with its own account of the ultimate.",
+   "leaves": [
+    "Buddhism",
+    "Hinduism",
+    "Islam",
+    "Judaism",
+    "Christianity"
+   ]
+  },
+  {
+   "parent": "RE.K3",
+   "as_group": true,
+   "statement": "Worship and ritual are the acts through which believers express and enact their faith together.",
+   "leaves": [
+    "Prayer and worship",
+    "Ritual and sacraments",
+    "Pilgrimage",
+    "Religious festivals"
+   ]
+  },
+  {
+   "parent": "MA.K4",
+   "as_group": true,
+   "statement": "Proof and the foundations of mathematics ask what a valid proof is and what axioms mathematics rests on.",
+   "leaves": [
+    "Set theory",
+    "Axioms and axiomatic systems",
+    "Gödel's incompleteness theorems"
+   ]
+  },
+  {
+   "parent": "MA.K1.S2",
+   "statement": "Everyday discrete mathematics studies primes, networks and counting problems met outside pure research.",
+   "leaves": [
+    "Graph theory and networks",
+    "Combinatorics and counting",
+    "Cryptographic number theory"
+   ],
+   "in_sample": [
+    "T04"
+   ]
+  },
+  {
+   "parent": "ST.K2",
+   "as_group": true,
+   "statement": "Contemporary security problems are the strategic settings of deterrence, cyber conflict and irregular war.",
+   "leaves": [
+    "Deterrence and nuclear strategy",
+    "Cyber warfare",
+    "Terrorism and counterinsurgency",
+    "Military alliances"
+   ]
+  },
+  {
+   "parent": "DE.K2.S1",
+   "statement": "Product and visual design disciplines shape everyday objects, garments and graphics for use.",
+   "leaves": [
+    "Product and industrial design",
+    "Furniture design",
+    "Fashion and textile design",
+    "Graphic design"
+   ]
+  },
+  {
+   "parent": "DE.K1.S3",
+   "statement": "Inclusive design responds to the needs of people with different abilities, ages and cultures.",
+   "leaves": [
+    "Accessibility",
+    "Universal design",
+    "Co-design with communities"
+   ]
+  },
+  {
+   "parent": "AR.K2.S2",
+   "statement": "Literary genres are the familiar forms in which written works are composed and read.",
+   "leaves": [
+    "The novel",
+    "Poetry",
+    "Drama and playwriting",
+    "Short story"
+   ]
+  },
+  {
+   "parent": "AR.K3.S2",
+   "statement": "Common themes are the recurring subjects, such as love, death and identity, that works explore.",
+   "leaves": [
+    "Love and desire in art",
+    "Death and mourning in art",
+    "Identity and belonging in art"
+   ]
+  },
+  {
+   "parent": "PO.K3.S1",
+   "statement": "Elections and voting cover how citizens choose representatives and how electoral rules shape the result.",
+   "leaves": [
+    "Elections and voting",
+    "Electoral systems, including MMP and proportional representation",
+    "Referendums",
+    "Opinion polls"
+   ],
+   "in_sample": [
+    "T17"
+   ]
+  },
+  {
+   "parent": "LA.K5.S2",
+   "statement": "Everyday legal processes are the routine ways ordinary people use the law to resolve matters.",
+   "leaves": [
+    "Contracts in everyday life",
+    "Tenancy disputes",
+    "Wills and estates",
+    "Small claims and disputes tribunals"
+   ]
+  }
+ ]
+}

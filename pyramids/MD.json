@@ -433,7 +433,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "diseases",
+                "medicine",
+                "elsewhere",
+                "classified",
+                "ophthalmology",
+                "optometry",
+                "respiratory",
+                "system",
+                "cardiovascular",
+                "obstetrics",
+                "paediatrics",
+                "health",
+                "reproductive",
+                "tumours",
+                "tract"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K1.S2",
@@ -519,7 +537,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "diseases",
+                "disorders",
+                "system",
+                "nutritional",
+                "metabolic",
+                "endocrine",
+                "immune",
+                "congenital",
+                "hereditary",
+                "neonatal",
+                "abnormalities",
+                "mental",
+                "anxiety",
+                "disruptive",
+                "impulse"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K1.S3",
@@ -702,7 +738,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "disorders",
+                "mood",
+                "neurotic",
+                "trauma",
+                "stressor",
+                "related",
+                "dissociative",
+                "schizophrenia",
+                "spectrum",
+                "psychotic",
+                "neurocognitive",
+                "neurodevelopmental",
+                "personality",
+                "paraphilic",
+                "sexual"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K1.S4",
@@ -746,7 +800,18 @@
                     "name": "Chemically-Induced Disorders"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "disorders",
+                "infections",
+                "neoplasms",
+                "environmental",
+                "origin",
+                "occupational",
+                "diseases",
+                "chemically-induced"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K1.S5",
@@ -772,11 +837,33 @@
                     "name": "Animal Diseases"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "wounds",
+                "injuries",
+                "animal",
+                "diseases"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Disorders"
+        "title": "Disorders",
+        "keywords": [
+          "diseases",
+          "conditions",
+          "disorders",
+          "illnesses",
+          "system",
+          "medicine",
+          "elsewhere",
+          "classified",
+          "ophthalmology",
+          "optometry",
+          "respiratory",
+          "cardiovascular"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "MD.K2",
@@ -1235,7 +1322,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "immunology",
+                "immune",
+                "antibody",
+                "immunologic",
+                "activation",
+                "immunity",
+                "lymphocyte",
+                "system",
+                "neutrophil",
+                "phenomena",
+                "allergy",
+                "autoimmunity",
+                "elsewhere",
+                "classified",
+                "cellular"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K2.S2",
@@ -1517,7 +1622,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "viruses",
+                "medical",
+                "microbiology",
+                "bacteriology",
+                "infection",
+                "agents",
+                "incl",
+                "prions",
+                "mycology",
+                "parasitology",
+                "elsewhere",
+                "classified",
+                "virology",
+                "arboviruses",
+                "archaeal"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K2.S3",
@@ -1732,7 +1855,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "medical",
+                "biochemistry",
+                "physiological",
+                "phenomena",
+                "physiology",
+                "acids",
+                "metabolomics",
+                "systems",
+                "respiratory",
+                "blood",
+                "immune",
+                "system",
+                "amino",
+                "metabolites",
+                "carbohydrates"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K2.S4",
@@ -1791,7 +1932,22 @@
                     "name": "Medical physiology not elsewhere classified"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "cancer",
+                "oncology",
+                "carcinogenesis",
+                "cell",
+                "biology",
+                "genetics",
+                "molecular",
+                "targets",
+                "medical",
+                "physiology",
+                "elsewhere",
+                "classified"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K2.S5",
@@ -1882,11 +2038,46 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "pathology",
+                "excl",
+                "genetics",
+                "pathological",
+                "conditions",
+                "signs",
+                "symptoms",
+                "oral",
+                "psychiatry",
+                "incl",
+                "psychotherapy",
+                "rheumatology",
+                "arthritis",
+                "venereology",
+                "endocrinology"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Causes and mechanisms"
+        "title": "Causes and mechanisms",
+        "keywords": [
+          "causes of disease",
+          "pathology",
+          "risk factors",
+          "mechanisms",
+          "medical",
+          "viruses",
+          "biochemistry",
+          "immune",
+          "phenomena",
+          "immunology",
+          "elsewhere",
+          "classified",
+          "incl",
+          "system"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "MD.K3",
@@ -1950,7 +2141,19 @@
                     "name": "Immunogenicity, Vaccine"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "cancer",
+                "diagnosis",
+                "liquid",
+                "biopsies",
+                "predictive",
+                "prognostic",
+                "markers",
+                "immunogenicity",
+                "vaccine"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K3.S2",
@@ -1982,7 +2185,14 @@
                     "name": "Pathology"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "seroconversion",
+                "transplantation",
+                "immunology",
+                "pathology"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K3.S3",
@@ -2073,11 +2283,46 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "clinical",
+                "chemistry",
+                "incl",
+                "diagnostics",
+                "microbiology",
+                "clinimetrics",
+                "diagnostic",
+                "radiography",
+                "nuclear",
+                "medicine",
+                "diagnosis",
+                "investigative",
+                "techniques",
+                "radiology",
+                "organ"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Diagnosis and prognosis"
+        "title": "Diagnosis and prognosis",
+        "keywords": [
+          "diagnosis",
+          "tests",
+          "screening",
+          "prognosis",
+          "imaging",
+          "clinical",
+          "cancer",
+          "liquid",
+          "biopsies",
+          "predictive",
+          "prognostic",
+          "markers",
+          "immunogenicity",
+          "vaccine"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "MD.K4",
@@ -2168,7 +2413,26 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "therapy",
+                "immunology",
+                "chemotherapy",
+                "radiation",
+                "cancer",
+                "excl",
+                "applied",
+                "incl",
+                "antibody",
+                "engineering",
+                "xenotransplantation",
+                "t-cell",
+                "therapies",
+                "transplantation",
+                "tumour",
+                "treatment"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K4.S2",
@@ -2455,7 +2719,27 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "pharmacology",
+                "pharmaceutical",
+                "medical",
+                "sciences",
+                "clinical",
+                "pharmacy",
+                "incl",
+                "actions",
+                "biotechnology",
+                "elsewhere",
+                "classified",
+                "therapeutics",
+                "toxicology",
+                "uses",
+                "molecular",
+                "drugs",
+                "medicines"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K4.S3",
@@ -2768,7 +3052,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "dentistry",
+                "oral",
+                "surgery",
+                "dental",
+                "equipment",
+                "orthopaedics",
+                "medicine",
+                "therapeutics",
+                "elsewhere",
+                "classified",
+                "materials",
+                "endodontics",
+                "periodontics",
+                "implantology",
+                "prosthodontics"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K4.S4",
@@ -3090,7 +3392,26 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "care",
+                "health",
+                "therapy",
+                "rehabilitation",
+                "midwifery",
+                "nursing",
+                "clinical",
+                "allied",
+                "science",
+                "elsewhere",
+                "classified",
+                "mental",
+                "anaesthesiology",
+                "intensive",
+                "emergency",
+                "treatment"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K4.S5",
@@ -3215,11 +3536,47 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "medicine",
+                "traditional",
+                "nursing",
+                "elsewhere",
+                "classified",
+                "complementary",
+                "integrative",
+                "workforce",
+                "sub-acute",
+                "care",
+                "chinese",
+                "treatments",
+                "naturopathy",
+                "chiropractic",
+                "botanic"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Treatment and drugs"
+        "title": "Treatment and drugs",
+        "keywords": [
+          "treatment",
+          "drugs",
+          "medicines",
+          "surgery",
+          "therapy",
+          "pharmaceuticals",
+          "medicine",
+          "elsewhere",
+          "classified",
+          "pharmacology",
+          "clinical",
+          "nursing",
+          "care",
+          "sciences",
+          "health"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "MD.K5",
@@ -3502,7 +3859,27 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "epidemiology",
+                "nutrition",
+                "health",
+                "epidemiological",
+                "disease",
+                "surveillance",
+                "nutritional",
+                "elsewhere",
+                "classified",
+                "dietetics",
+                "methods",
+                "modelling",
+                "major",
+                "global",
+                "burdens",
+                "illness",
+                "sickness"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K5.S2",
@@ -3660,7 +4037,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "health",
+                "care",
+                "services",
+                "systems",
+                "aged",
+                "family",
+                "palliative",
+                "people",
+                "disability",
+                "mental",
+                "practice",
+                "primary",
+                "community",
+                "counselling",
+                "residential"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K5.S3",
@@ -3779,7 +4174,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "health",
+                "care",
+                "systems",
+                "administration",
+                "evaluation",
+                "services",
+                "management",
+                "digital",
+                "informatics",
+                "information",
+                "implementation",
+                "science",
+                "patient",
+                "safety",
+                "facilities"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "MD.K5.S4",
@@ -3982,11 +4395,45 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "health",
+                "public",
+                "elsewhere",
+                "classified",
+                "exercise",
+                "sports",
+                "science",
+                "sciences",
+                "medicine",
+                "community",
+                "child",
+                "promotion",
+                "injury",
+                "prevention",
+                "preventative"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Populations and prevention"
+        "title": "Populations and prevention",
+        "keywords": [
+          "public health",
+          "prevention",
+          "epidemiology",
+          "population health",
+          "health",
+          "care",
+          "services",
+          "elsewhere",
+          "classified",
+          "nutrition",
+          "public",
+          "science",
+          "exercise"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       }
     ]
   },

@@ -59,7 +59,18 @@
                     "name": "Micro-Based Behavioral Economics"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "microeconomics",
+                "information",
+                "knowledge",
+                "uncertainty",
+                "micro-based",
+                "behavioral",
+                "economics",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K1.S2",
@@ -97,7 +108,18 @@
                     "name": "Demographic Economics"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "household",
+                "economics",
+                "finance",
+                "behavior",
+                "family",
+                "behavioral",
+                "demographic",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K1.S3",
@@ -222,11 +244,52 @@
                     "name": "Poverty, inclusivity and wellbeing"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "economics",
+                "economic",
+                "education",
+                "health",
+                "poverty",
+                "bull",
+                "behavioural",
+                "experimental",
+                "labour",
+                "fiscal",
+                "policies",
+                "behavior",
+                "agents",
+                "research",
+                "institutions",
+                "economy",
+                "schooling"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Individuals and households"
+        "title": "Individuals and households",
+        "keywords": [
+          "consumers",
+          "households",
+          "choice",
+          "behavioural economics",
+          "saving",
+          "spending",
+          "economics",
+          "economic",
+          "behavioral",
+          "household",
+          "behavior",
+          "finance",
+          "education",
+          "health",
+          "poverty",
+          "bull",
+          "economy",
+          "schooling"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "EC.K2",
@@ -314,7 +377,25 @@
                     "name": "Corporate Finance and Governance"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "business",
+                "economics",
+                "bull",
+                "administration",
+                "marketing",
+                "accounting",
+                "personnel",
+                "production",
+                "organizations",
+                "advertising",
+                "auditing",
+                "corporate",
+                "finance",
+                "governance",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K2.S2",
@@ -445,7 +526,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "labor",
+                "market",
+                "structure",
+                "firm",
+                "distribution",
+                "pricing",
+                "design",
+                "strategy",
+                "performance",
+                "objectives",
+                "organization",
+                "behavior",
+                "nonprofit",
+                "organizations",
+                "public"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K2.S3",
@@ -475,9 +574,83 @@
                     "anchor": "node:LCC:HE",
                     "statement": "Transportation and communications",
                     "name": "Transportation and communications"
+                  },
+                  {
+                    "id": "EC.K2.S3.M1",
+                    "anchor": "group:EC.K2.S3.M1",
+                    "statement": "Labour markets settle the allocation of work through wages, hiring and bargaining between workers and employers.",
+                    "name": "Labour markets settle the allocation of work through wages, hiring and bargaining between workers and employers.",
+                    "added": true,
+                    "source": "minerva-curated",
+                    "support": {
+                      "logic_type": "inductive",
+                      "plural_noun": "members",
+                      "basis": "kinds",
+                      "order": "structure",
+                      "points": [
+                        {
+                          "id": "MINERVA:labour-markets",
+                          "anchor": "node:MINERVA:labour-markets",
+                          "statement": "Labour markets",
+                          "name": "Labour markets",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:wages-and-earnings",
+                          "anchor": "node:MINERVA:wages-and-earnings",
+                          "statement": "Wages and earnings",
+                          "name": "Wages and earnings",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:minimum-wage",
+                          "anchor": "node:MINERVA:minimum-wage",
+                          "statement": "Minimum wage",
+                          "name": "Minimum wage",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:unemployment-and-job-creation",
+                          "anchor": "node:MINERVA:unemployment-and-job-creation",
+                          "statement": "Unemployment and job creation",
+                          "name": "Unemployment and job creation",
+                          "added": true,
+                          "source": "minerva-curated"
+                        },
+                        {
+                          "id": "MINERVA:trade-unions-and-collective-bargaining",
+                          "anchor": "node:MINERVA:trade-unions-and-collective-bargaining",
+                          "statement": "Trade unions and collective bargaining",
+                          "name": "Trade unions and collective bargaining",
+                          "added": true,
+                          "source": "minerva-curated"
+                        }
+                      ]
+                    }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "financial",
+                "markets",
+                "institutions",
+                "services",
+                "transportation",
+                "communications",
+                "labour",
+                "wages",
+                "earnings",
+                "minimum",
+                "wage",
+                "unemployment",
+                "creation",
+                "trade",
+                "unions"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K2.S4",
@@ -668,7 +841,27 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "economics",
+                "transportation",
+                "resources",
+                "conservation",
+                "analysis",
+                "environment",
+                "resource",
+                "urban",
+                "regional",
+                "industry",
+                "studies",
+                "utilities",
+                "agriculture",
+                "renewable",
+                "nonrenewable",
+                "economy",
+                "nature"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K2.S5",
@@ -733,11 +926,48 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "economics",
+                "agricultural",
+                "industry",
+                "industrial",
+                "organisation",
+                "tourism",
+                "transport",
+                "applied",
+                "elsewhere",
+                "classified",
+                "industries",
+                "land",
+                "labor",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Firms and markets"
+        "title": "Firms and markets",
+        "keywords": [
+          "firms",
+          "markets",
+          "prices",
+          "competition",
+          "labour",
+          "wages",
+          "industries",
+          "economics",
+          "labor",
+          "business",
+          "bull",
+          "market",
+          "firm",
+          "transportation",
+          "production",
+          "organizations",
+          "economy"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "EC.K3",
@@ -807,7 +1037,28 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "regulation",
+                "legal",
+                "basic",
+                "areas",
+                "business",
+                "procedure",
+                "system",
+                "illegal",
+                "behavior",
+                "industrial",
+                "policy",
+                "industry",
+                "studies",
+                "primary",
+                "products",
+                "rules",
+                "regulator",
+                "approval"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K3.S2",
@@ -965,7 +1216,26 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "public",
+                "economics",
+                "government",
+                "publicly",
+                "provided",
+                "goods",
+                "taxation",
+                "revenue",
+                "regional",
+                "national",
+                "choice",
+                "welfare",
+                "analysis",
+                "structure",
+                "scope",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K3.S3",
@@ -1018,11 +1288,45 @@
                     "name": "Urban community development"
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "community",
+                "development",
+                "welfare",
+                "economics",
+                "analysis",
+                "collective",
+                "decision-making",
+                "rural",
+                "urban",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "Governments and public institutions"
+        "title": "Governments and public institutions",
+        "keywords": [
+          "government policy",
+          "taxation",
+          "regulation",
+          "public spending",
+          "welfare",
+          "minimum wage law",
+          "economics",
+          "public",
+          "government",
+          "legal",
+          "publicly",
+          "provided",
+          "goods",
+          "revenue",
+          "economy",
+          "rules",
+          "regulator",
+          "approval"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       },
       {
         "id": "EC.K4",
@@ -1260,7 +1564,26 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "economics",
+                "monetary",
+                "labor",
+                "money",
+                "policy",
+                "macroeconomic",
+                "macroeconomics",
+                "economic",
+                "international",
+                "financial",
+                "prices",
+                "business",
+                "fluctuations",
+                "cycles",
+                "interest",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K4.S2",
@@ -1453,7 +1776,25 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "development",
+                "economic",
+                "bull",
+                "change",
+                "systems",
+                "innovation",
+                "technological",
+                "growth",
+                "studies",
+                "political",
+                "economy",
+                "comparative",
+                "economies",
+                "socialist",
+                "research"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K4.S3",
@@ -1557,7 +1898,28 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "international",
+                "economics",
+                "trade",
+                "finance",
+                "macro-based",
+                "behavioral",
+                "factor",
+                "movements",
+                "business",
+                "macroeconomic",
+                "aspects",
+                "relations",
+                "national",
+                "security",
+                "political",
+                "economy",
+                "protection",
+                "safety"
+              ],
+              "keywords_source": "member labels + synonyms"
             },
             {
               "id": "EC.K4.S4",
@@ -1659,11 +2021,48 @@
                     }
                   }
                 ]
-              }
+              },
+              "keywords": [
+                "history",
+                "bull",
+                "economic",
+                "conditions",
+                "macroeconomics",
+                "monetary",
+                "economics",
+                "industrial",
+                "structure",
+                "growth",
+                "fluctuations",
+                "financial",
+                "markets",
+                "institutions",
+                "labor",
+                "economy"
+              ],
+              "keywords_source": "member labels + synonyms"
             }
           ]
         },
-        "title": "The whole economy"
+        "title": "The whole economy",
+        "keywords": [
+          "GDP",
+          "unemployment",
+          "recession",
+          "money",
+          "macroeconomics",
+          "economics",
+          "economic",
+          "international",
+          "development",
+          "bull",
+          "monetary",
+          "labor",
+          "economy",
+          "systems",
+          "history"
+        ],
+        "keywords_source": "minerva-curated + member labels"
       }
     ]
   },
