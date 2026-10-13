@@ -4033,9 +4033,26 @@
       "Human spatial organization is how people locate, map, settle, use and manage places, and how they organize information about them."
     ],
     "holds": true,
-    "note": "Misplaced: P4.1.2.3/P4.1.2.4 life under land surface; P4.1.4.1 solar physics under water; P5.1.2.3/P5.1.2.4 advisories under methods; P4.3.3.1 species models.",
+    "note": "Misplaced: P5.3.2.2 and P5.3.2.3 (models, belong in method line), P5.3.1 versus P3.2.3.1 (natural hazards), P1.2.1.1 (duplicate geochemistry), P2.3.3 (applied geophysics).",
     "review": false,
-    "misplaced": 9,
-    "problems": 12
+    "misplaced": 4,
+    "problems": 4,
+    "checks_2of3": [
+      {
+        "holds": true,
+        "misplaced": 6,
+        "note": "Misplaced: P5.3.2.2 and P5.3.2.3 (models, belong in method line), P5.3.1 versus P3.2.3.1 (natural hazards), P1.2.1.1 (duplicate geochemistry), P2.3.3 (applied geophysics)."
+      },
+      {
+        "holds": true,
+        "misplaced": 3,
+        "note": "Misplaced: P5.3.2.2 and P5.3.2.3 (models, belong in M.2.1), P3.2.3.1 Natural hazards (belongs under P5.3); P1.1.2.1 duplicates geochemistry."
+      }
+    ],
+    "rebuild": {
+      "builder": "claude-opus-5-5",
+      "checker": "claude-sonnet-5-5",
+      "date": "2026-10-13 17:22"
+    }
   }
 }

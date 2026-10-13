@@ -4,11 +4,11 @@ Built by scripts/minto_pass.py from the grouped classification. Three rules (Min
 
 ## Introduction
 
-**Situation.** Earth science knowledge spans rocks, planetary forces, geological history, the surface envelopes and human use of space.
+**Situation.** Earth science gathers claims about rocks, the moving interior, the planet's history, its land, waters and air, and the places people map, settle and protect.
 
-**Complication.** The sources mix subject matter with data services, instrument descriptions and duplicated headings, so topics sit in scattered groups.
+**Complication.** The inherited groups mix subject matter with source headings, residual classes, life science, space physics, farming and data services, so some topics appear twice and some groups hold unrelated subjects.
 
-**Question.** How is everything in Earth science divided?
+**Question.** How should every Earth science claim be placed so that each sits under exactly one subject it is about, with methods kept apart?
 
 **Answer.** Earth science claims are divided by what the claim is about, running from rock to settlement: materials, internal motion, deep time, surface and fluid envelopes, and human spatial organization.
 
@@ -30,18 +30,21 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
 
 ### 1. Materials are what the Earth is made of, namely the chemistry, minerals, rocks and fluids that compose it.
 
-- **Geochemistry examines the chemical makeup and isotopic character of Earth materials, from the parent field to its subfields.**
-  _basis: kinds, order: structure. Parent field first, then the residual and organic subfields._
-  - **Geochemistry is the study of the chemical makeup and processes of earth materials, and the parent field comes first, followed by its subfields.**
+- **Materials at the chemical level are the elements, isotopes and reactions that make up earth substances, including those built by organisms.**
+  _basis: kinds, order: structure. The general field comes first, followed by its research scope and then mineral formation by organisms._
+  - **Geochemistry studies the chemical makeup of earth materials and the processes that move elements among rocks, waters and air.**
     _basis: kinds, order: structure. Parent field first, then subfields in classification-code order._
     - Geochemistry
     - Exploration geochemistry
     - Inorganic geochemistry
     - Isotope geochemistry
-  - Geochemistry not elsewhere classified
-  - Organic geochemistry
-- **Rocks, minerals and fluids are the physical materials whose composition and mechanical properties are studied.**
-  _basis: kinds, order: structure. From general material topics to minerals and then rocks._
+  - **Geochemistry research spans the inorganic, organic and isotopic chemistry of rocks, waters and gases and the cycling of elements through them.**
+    _basis: kinds, order: structure. Ordered by structure: the general residual category first, then the organic subfield._
+    - Geochemistry not elsewhere classified
+    - Organic geochemistry
+  - Biomineralisation
+- **Materials at the mineral and rock level are the crystals, rocks, fluids and ore bodies whose composition and properties define the solid Earth.**
+  _basis: kinds, order: structure. The broad group of rocks, minerals and fluids comes first, then crystals, rock-forming processes and finally concentrated resources._
   - **Earth material topics concern claims about the composition, chemistry and mechanical properties of rocks, minerals and fluids.**
     _basis: kinds, order: structure. Ordered from chemical composition to physical properties of rocks to fluids and gases._
     - Geochemistry
@@ -50,70 +53,70 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
     - Earth Gases/Liquids
   - Mineralogy and crystallography
   - Igneous and metamorphic petrology
-- **Resource and biogenic materials are Earth materials valued for use or formed through living processes.**
-  _basis: kinds, order: structure. From economic resources to biologically formed minerals._
   - Resource geoscience
-  - Biomineralisation
 
 ### 2. Internal motion is the force, field and movement within the solid Earth that deforms, heats and shakes it.
 
-- **Geophysical fields and measurements probe the planet's shape, gravity, magnetism and seismic waves.**
-  _basis: kinds, order: structure. From shape and gravity to magnetic and seismic probing._
-  - **Geophysics, geodesy and gravity describe the planet's overall shape and gravitational field.**
-    _basis: kinds, order: structure. From general geophysics to specific measurements of shape and gravity._
-    - Geophysics
-    - Geophysics not elsewhere classified
-    - Geodesy
-    - Gravimetrics
-  - **Magnetic, electrical and seismic methods probe the interior through fields and waves.**
-    _basis: kinds, order: structure. From magnetic fields to electrical and seismic exploration._
-    - Geomagnetism
-    - Magnetism and palaeomagnetism
-    - Applied geophysics
-    - Electrical and electromagnetic methods in geophysics
-    - Seismology and seismic exploration
-- **Tectonics and geodynamics describe how the solid Earth deforms, erupts and moves through internal heat and stress.**
-  _basis: kinds, order: structure. From deep heat and dynamics to surface expression in structures and volcanoes._
-  - **Heat and dynamics drive the slow internal movement of the planet.**
-    _basis: kinds, order: structure. From heat flow to dynamics._
-    - Geothermal Dynamics
+- **Internal motion appears as heat flow, deformation, faulting and magma rising through the crust and mantle of the solid Earth.**
+  _basis: kinds, order: structure. Deep processes come first, then crustal structures and then their surface expression in volcanoes._
+  - **Deep Earth process topics concern claims about the heat, motion and deformation occurring within the Earth's interior and crust.**
+    _basis: kinds, order: structure. Ordered from heat sources to mantle motion to plate-scale tectonics._
     - Geothermics and radiometrics
+    - Geothermal Dynamics
     - Geodynamics
-  - **Tectonic structures and volcanoes are the surface expression of internal stress and heat.**
-    _basis: kinds, order: structure. From plate tectonics to structures and eruptions._
     - Tectonics
-    - Structural geology and tectonics
-    - Volcanology
+  - Structural geology and tectonics
+  - Volcanology
+- **Internal motion shapes the Earth's figure, gravity and magnetic field, which record how mass and molten metal move within the planet.**
+  _basis: kinds, order: structure. Shape comes first, then the gravity field and then the magnetic field._
+  - Geodesy
+  - Gravity/Gravitational Field
+  - Magnetism and palaeomagnetism
+- **Internal motion is probed through seismic waves and electrical currents that reveal structure and movement beneath the surface.**
+  _basis: kinds, order: structure. Seismic probing comes first, then electrical probing and then their combined use in exploration._
+  - Seismology and seismic exploration
+  - Electrical and electromagnetic methods in geophysics
+  - Applied geophysics
 
 ### 3. Deep time is the history of the Earth, covering the age, layering, life and climate records preserved in its materials.
 
-- **Geology, dating and layering establish the age and sequence of Earth materials and deposits.**
-  _basis: kinds, order: structure. From the general field to dating, layering and planetary comparison._
+- **Deep time is read in the dated layers of sediment and the fossils they hold, which together order Earth history.**
+  _basis: kinds, order: structure. The layered rock record comes first and the life preserved in it second._
   - **Claims about the age, layering and deposition of Earth materials through time, including the field of geology itself, belong to this group.**
     _basis: kinds, order: structure. Ordered from the general discipline to dating and layered deposit studies._
     - Geology
     - Geochronology
     - Stratigraphy (incl. biostratigraphy, sequence stratigraphy and basin analysis)
     - Sedimentology
-  - Geology not elsewhere classified
-  - Planetary geology
-- **Fossils and climate records preserve evidence of past life and past climates in organisms, ice, land and sediments.**
-  _basis: kinds, order: structure. From fossil life to climate archives and reconstructions._
   - Palaeontology (incl. palynology)
+- **Deep time includes past climates and environments, reconstructed from ice, land, ocean and lake archives.**
+  _basis: kinds, order: structure. The archives come first, then the climate reconstructed from them and then the wider past environments._
   - **Claims about natural archives that preserve past climate evidence in ice, on land and in oceans or lakes belong to this group.**
     _basis: kinds, order: structure. Ordered from ice archives to land archives to ocean and lake archives._
     - Ice Core Records
     - Land Records
     - Ocean/Lake Records
-  - Paleoclimate
+  - **Claims about past climate itself and the reconstructions inferred from proxy evidence belong to this group.**
+    _basis: kinds, order: structure. Ordered from the general subject of paleoclimate to its reconstructions._
+    - Paleoclimate
+    - Paleoclimate Reconstructions
+  - **Earth history fields reconstruct past climates and environments, including the record of natural catastrophes in the geological past.**
+    _basis: kinds, order: structure. Ordered by structure: hazards, past climate, then Quaternary environments._
+    - Natural hazards
+    - Palaeoclimatology
+    - Quaternary environments
 
 ### 4. Surface and fluid envelopes are the land surface, ice, waters and air that wrap the solid Earth, together with the means of observing them.
 
-- **Land surface and terrestrial water cover landforms, ground, ice, rivers and groundwater at the Earth's surface.**
-  _basis: kinds, order: structure. From landforms to the waters on and below the land._
-  - Geomorphic Landforms/Processes
-  - **Land, history, and life topics cover the shaping of the land surface, past environments and hazards, and the organisms living on Earth.**
-    _basis: kinds, order: structure. Ordered from land surface to past and hazards, then macroscopic to microbial life._
+- **Surface and fluid envelopes begin at the land surface, where landforms, frozen ground, soils and surface temperature form and change.**
+  _basis: kinds, order: structure. Shape comes first and the condition of the ground second._
+  - **Surface and fluid envelopes at the land surface include the landforms and the erosion, ice and weathering processes that shape them.**
+    _basis: kinds, order: structure. The landform topic comes first, then landforms with frozen ground, then the whole study of landscape change._
+    - Geomorphic Landforms/Processes
+    - **Geomorphic landforms and processes and frozen ground are both Earth science topics describing the physical shaping and ground conditions of the land surface.**
+      _basis: kinds, order: structure_
+      - Geomorphic Landforms/Processes
+      - Frozen Ground
     - **Earth surface and landscape fields study how the land surface, its ice and its weathered cover form and change.**
       _basis: kinds, order: structure. Ordered by structure: general field, surface processes, ice, then regolith and residual._
       - Physical geography and environmental geoscience
@@ -121,40 +124,14 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
       - Glaciology
       - Regolith and landscape evolution
       - Physical geography and environmental geoscience not elsewhere classified
-    - **Earth history and hazard fields study past climates and environments and the natural events that threaten people.**
-      _basis: kinds, order: structure. Ordered by structure: hazards, past climate, then Quaternary environments._
-      - Natural hazards
-      - Palaeoclimatology
-      - Quaternary environments
-    - **Macroscopic life concepts cover the overall classification of organisms and the larger multicellular animals and plants.**
-      _basis: kinds, order: structure. Ordered structurally from the classification scheme to animals and then plants._
-      - Biological Classification
-      - Animals/Invertebrates
-      - Animals/Vertebrates
-      - Plants
-    - **Microbial and decomposer life comprises the bacteria, archaea, fungi and protists that are mostly small or single-celled organisms.**
-      _basis: kinds, order: structure. Ordered structurally from prokaryotes to fungi and protists._
-      - Bacteria/Archaea
-      - Fungi
-      - Protists
-  - **Land surface and Earth science subjects describe the physical Earth, its landforms and the ground conditions of the land.**
-    _basis: kinds, order: structure. Ordered from the broad disciplines to the specific land surface topics._
-    - **Broad disciplines of Earth science name the fields that study the physical Earth, its landforms and its oceans.**
-      _basis: kinds, order: structure. Ordered by structure, from the broad field to its specific domains._
-      - Geoscience and remote sensing
-      - Geoscience
-      - Physical geography
-      - Oceanography
+  - **Surface and fluid envelopes at the land surface also include the terrain, soils, thermal state and other conditions of the ground itself.**
+    _basis: kinds, order: structure. General ground features come first, then physical characteristics and then one measured property._
     - **Land surface concepts describe the features and processes of the ground, such as erosion, frozen ground, landforms, color and cover.**
       _basis: kinds, order: structure. Ordered by structure, from the general surface to its specific aspects._
       - Land Surface
       - Erosion/Sedimentation
       - Land Surface Color
       - Land Use/Land Cover
-    - **Geomorphic landforms and processes and frozen ground are both Earth science topics describing the physical shaping and ground conditions of the land surface.**
-      _basis: kinds, order: structure_
-      - Geomorphic Landforms/Processes
-      - Frozen Ground
     - **Physical characteristics of the land surface, such as terrain, soils and the radiative and thermal behavior of the ground, form one kind of subject.**
       _basis: kinds, order: structure. Ordered by structure of the land surface description._
       - Landscape
@@ -162,15 +139,11 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
       - Surface Radiative Properties
       - Surface Thermal Properties
       - Topography
-  - **Land and Earth-surface subjects are concepts about terrestrial water, mapped surfaces and the atmosphere, and the solar and space-physics influences on Earth's upper atmosphere.**
-    _basis: kinds, order: structure. Ordered by structure, moving from land water bodies to measured water properties, mapped surfaces and space influences._
-    - **Solar and space-physics topics concern how solar activity and energetic particles interact with Earth's ionosphere and magnetosphere.**
-      _basis: kinds, order: structure. Ordered from the Sun-Earth system down to its particle properties._
-      - Sun-Earth Interactions
-      - Ionosphere/Magnetosphere Dynamics
-      - Solar Activity
-      - Solar Energetic Particle Flux
-      - Solar Energetic Particle Properties
+    - Land surface temperature
+- **Surface and fluid envelopes include the waters of the land and the sea, their motion, heat, properties and seabed.**
+  _basis: kinds, order: structure. Land waters come first, then the water sciences as wholes, then ocean motion and finally the properties and floor of the sea._
+  - **Surface and fluid envelopes on land hold rivers, lakes and frozen water bodies whose budget, quality and mass can be measured.**
+    _basis: kinds, order: structure. The water stores come first and their measured properties second._
     - **Surface water and frozen water bodies are the visible stores of water at Earth's land surface.**
       _basis: kinds, order: structure. Ordered from frozen stores to liquid surface water._
       - Glaciers/Ice Sheets
@@ -185,35 +158,46 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
       - Terrestrial Hydrosphere Change
       - Water Budget
       - Water Quality/Water Chemistry
-    - **Mapped Earth surfaces and atmosphere are the targets that remote sensing charts.**
-      _basis: kinds, order: structure. Ordered from land surface to vegetation to atmosphere._
-      - Terrain mapping
-      - Vegetation mapping
-      - Terrestrial atmosphere
-  - **Water science fields study water on land, below ground, and in the sea, split by the setting in which the water is studied.**
-    _basis: kinds, order: structure. Ordered from general hydrology to its settings and then to the oceans._
-    - **Hydrology is the study of water on and below the land, including groundwater, contaminants, and ecosystem links.**
-      _basis: parts, order: structure. Ordered from the whole field to its specialized subfields._
-      - Hydrology
-      - Contaminant hydrology
-      - Ecohydrology
-      - Groundwater hydrology
-    - **Hydrology fields study land-based water, split by the setting in which the water is studied.**
-      _basis: kinds, order: structure. Ordered by structure: surface water, urban water, then residual hydrology._
-      - Surface water hydrology
-      - Urban hydrology
-      - Hydrology not elsewhere classified
-    - **Oceanography fields study the sea, split by whether the focus is its life, its chemistry or its physical motion.**
-      _basis: kinds, order: structure. Ordered by structure: biological, chemical, physical, then residual oceanography._
-      - Oceanography
-      - Biological oceanography
-      - Chemical oceanography
-      - Physical oceanography
-      - Oceanography not elsewhere classified
-- **Ocean subjects cover the sea's motion, state, chemistry, seafloor, optics, acoustics and heat.**
-  _basis: kinds, order: structure. From whole-ocean fields to specific physical properties._
-  - **Ocean fields, seafloor and surface motion describe the sea as a whole and its boundaries.**
-    _basis: kinds, order: structure. From broad fields to marine geoscience and surface dynamics._
+  - **Surface and fluid envelopes of water are studied as whole fields such as hydrology, oceanography, hydrography and aquatic science.**
+    _basis: kinds, order: structure. Water science fields come first and the broad ocean fields and monitoring second._
+    - **Water science fields study water on land, below ground, and in the sea, split by the setting in which the water is studied.**
+      _basis: kinds, order: structure. Ordered from general hydrology to its settings and then to the oceans._
+      - **Hydrology is the study of water on and below the land, including groundwater, contaminants, and ecosystem links.**
+        _basis: parts, order: structure. Ordered from the whole field to its specialized subfields._
+        - Hydrology
+        - Contaminant hydrology
+        - Ecohydrology
+        - Groundwater hydrology
+      - **Hydrology fields study land-based water, split by the setting in which the water is studied.**
+        _basis: kinds, order: structure. Ordered by structure: surface water, urban water, then residual hydrology._
+        - Surface water hydrology
+        - Urban hydrology
+        - Hydrology not elsewhere classified
+      - **Oceanography fields study the sea, split by whether the focus is its life, its chemistry or its physical motion.**
+        _basis: kinds, order: structure. Ordered by structure: biological, chemical, physical, then residual oceanography._
+        - Oceanography
+        - Biological oceanography
+        - Chemical oceanography
+        - Physical oceanography
+        - Oceanography not elsewhere classified
+    - **Broad ocean fields and monitoring practices name whole disciplines or observation activities rather than a single ocean property.**
+      _basis: kinds, order: structure. Ordered by structure, from the general ocean domain to specific disciplines and monitoring._
+      - Oceans
+      - Aquatic Sciences
+      - Hydrography
+      - Marine Environment Monitoring
+  - **Surface and fluid envelopes of the ocean move and store heat through circulation, waves, winds and tides.**
+    _basis: kinds, order: structure. Deep circulation comes first, then the heat it carries, then surface motion._
+    - Ocean Circulation
+    - Ocean Heat Budget
+    - **Ocean motion and surface dynamics are concepts about how the sea surface moves, rises, and is driven by wind and gravity.**
+      _basis: kinds, order: structure. Grouped by the kind of surface motion described._
+      - Ocean Waves
+      - Ocean Winds
+      - Sea Surface Topography
+      - Tides
+  - **Surface and fluid envelopes of the ocean have chemical, optical, acoustic and pressure properties and rest on a geologically active seafloor.**
+    _basis: kinds, order: structure. The broad ocean subjects come first, then single properties of seawater, then the seafloor geology._
     - **Ocean subjects are concepts about the sea, covering its physical behaviour, chemistry, sediments, seafloor geology, state properties, surface motion and water inputs and stores.**
       _basis: kinds, order: structure. Ordered by structure, moving from water behaviour and condition to the seafloor and ocean-system flows._
       - **Marine chemical and sedimentary subjects concern the dissolved substances in seawater and the material deposited on the seafloor.**
@@ -239,28 +223,12 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
         - Sea Ice
         - Photometry
         - Radiometry
-    - **Broad ocean fields and monitoring practices name whole disciplines or observation activities rather than a single ocean property.**
-      _basis: kinds, order: structure. Ordered by structure, from the general ocean domain to specific disciplines and monitoring._
-      - Oceans
-      - Aquatic Sciences
-      - Hydrography
-      - Marine Environment Monitoring
-    - **Ocean motion and surface dynamics are concepts about how the sea surface moves, rises, and is driven by wind and gravity.**
-      _basis: kinds, order: structure. Grouped by the kind of surface motion described._
-      - Ocean Waves
-      - Ocean Winds
-      - Sea Surface Topography
-      - Tides
-    - Marine geoscience
-  - **Ocean physical properties describe circulation, heat, light, sound and pressure within the water.**
-    _basis: kinds, order: structure. From circulation and heat to optics, acoustics and pressure._
-    - Ocean Circulation
-    - Ocean Heat Budget
     - Ocean Optics
     - Ocean Acoustics
     - Ocean Pressure
-- **The atmosphere and the climate system concern the air's makeup, weather, climate and the models that simulate Earth's envelopes.**
-  _basis: kinds, order: structure. From the air itself to climate and the models representing it._
+    - Marine geoscience
+- **Surface and fluid envelopes end in the air and the climate system it carries, from atmospheric composition and weather to long-term climate change.**
+  _basis: kinds, order: structure. The atmosphere itself comes first and the climate system it carries second._
   - **Atmospheric topics are the kinds of claims about the air, covering its makeup, its layered state and the weather and climate processes acting within it.**
     _basis: kinds, order: structure. Ordered from static composition and state to dynamic processes._
     - **Atmosphere makeup and state topics describe what the air contains, how its layers and physics are organized, and the measured quantities that define it.**
@@ -316,69 +284,184 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
         - Climatology
         - Greenhouse gas inventories and fluxes
         - Climate change science not elsewhere classified
-  - **Earth system subjects and models are the kinds of claims about living, frozen and climate components of Earth and the models and hazard activities that represent them.**
-    _basis: kinds, order: structure. Ordered from system components to the models and management built around them._
-    - **Earth system subjects are the kinds of living, ecological, climatic and frozen things that a scientific claim can be about.**
-      _basis: kinds, order: structure. Ordered from biological entities through ecosystems and climate to the cryosphere._
-      - **Biological entities and the layers of life, from viruses and molecular data up to vegetation and the biosphere.**
-        _basis: kinds, order: structure. Ordered from smallest biological unit to the whole biosphere._
-        - Viruses
-        - Omics
-        - Vegetation
-        - Biosphere
-      - **Ecological systems and the processes of change and carbon exchange that operate within them.**
-        _basis: kinds, order: structure. Ordered from the ecosystem as a whole to the processes acting in it._
-        - Ecosystems
-        - Ecological Dynamics
-        - Carbon Flux
-      - **Indicators that show climate conditions in the atmosphere, ocean, biosphere, land surface, terrestrial water and the paleoclimate record.**
-        _basis: kinds, order: structure. Ordered from the general indicator category to its specific domains._
-        - Climate Indicators
-        - Atmospheric/Ocean Indicators
-        - Biospheric Indicators
-        - Paleoclimate Indicators
-      - **Cryosphere subjects are the kinds of snow and ice features on land and sea that a scientific claim can concern.**
-        _basis: kinds, order: structure. Ordered from land-based ice to sea ice and seasonal snow._
-        - Glaciers/Ice Sheets
-        - Land Ice/Ocean Classification
-        - Sea Ice
-        - Snow/Ice
-    - **Concepts about the climate system that cover how climate change operates and is assessed, together with the frozen components of the Earth system.**
-      _basis: kinds, order: structure_
-      - **Climate drivers, feedbacks, regional climate levels and environmental vulnerability measures that describe how climate change acts and is assessed.**
-        _basis: kinds, order: structure. Ordered from external drivers to feedbacks to regional and vulnerability assessment._
-        - Sun-Earth Interactions
-        - Climate Feedbacks
-        - Regional Climate Levels
-        - Environmental Vulnerability Index (Evi)
-      - **Frozen components of the Earth system, including the cryosphere, its indicators and frozen ground.**
-        _basis: kinds, order: structure. Ordered from the whole cryosphere to its indicators and frozen ground._
-        - Cryosphere
-        - Cryospheric Indicators
-        - Frozen Ground
-        - Land Surface/Agriculture Indicators
-        - Terrestrial Hydrosphere Indicators
-    - **Hazard management and general modeling concepts cover activities around hazardous events and the broad simulation of Earth system processes.**
-      _basis: kinds, order: structure. Ordered from hazard activities to general and method-based modeling._
-      - **Hazard management stages are the activities carried out before, during and after a hazardous event.**
-        _basis: parts, order: structure. Ordered by structure, from planning to recovery._
-        - Hazards Management
-        - Hazards Planning
-        - Hazards Mitigation
-        - Disaster Response
-        - Disaster Recovery/Relief
-      - **Numerical models simulate Earth system processes such as atmospheric circulation, chemistry, the carbon cycle and climate change impacts.**
-        _basis: kinds, order: structure. Ordered by structure of model types._
-        - Models
-        - Ancillary Models
-        - Atmospheric Chemistry Models
-        - Atmospheric General Circulation Models
-      - **Generic approach models are defined by their method or purpose rather than by a particular part of the Earth system.**
-        _basis: kinds, order: structure. Ordered by structure from process components to data-driven, physical, and human-oriented approaches._
-        - Component Process Models
-        - Machine Learning Models
-        - Phenomenological Models
-        - Regulatory Models
+  - **Concepts about the climate system that cover how climate change operates and is assessed, together with the frozen components of the Earth system.**
+    _basis: kinds, order: structure_
+    - **Climate drivers, feedbacks, regional climate levels and environmental vulnerability measures that describe how climate change acts and is assessed.**
+      _basis: kinds, order: structure. Ordered from external drivers to feedbacks to regional and vulnerability assessment._
+      - Sun-Earth Interactions
+      - Climate Feedbacks
+      - Regional Climate Levels
+      - Environmental Vulnerability Index (Evi)
+    - **Frozen components of the Earth system, including the cryosphere, its indicators and frozen ground.**
+      _basis: kinds, order: structure. Ordered from the whole cryosphere to its indicators and frozen ground._
+      - Cryosphere
+      - Cryospheric Indicators
+      - Frozen Ground
+      - Land Surface/Agriculture Indicators
+      - Terrestrial Hydrosphere Indicators
+
+### 5. Human spatial organization is how people locate, map, settle, use and manage places, and how they organize information about them.
+
+- **Human spatial organization starts with locating and mapping places, naming regions, drawing boundaries and holding place data in geographic systems.**
+  _basis: kinds, order: structure. Mapping and boundaries come first, then named locations, then the geospatial tools and systems that hold them._
+  - **Geographic and spatial subjects concern describing, mapping and delimiting the Earth's surface and the regions on it.**
+    _basis: kinds, order: structure. Kinds are ordered by structure, from general geography to mathematical cartography and then boundaries._
+    - Geography (General). Atlases. Maps
+    - Mathematical geography. Cartography
+    - Boundaries
+  - Geographic Locations
+  - **Geospatial and imaging tools are the kinds of technologies that locate, map and process spatial data.**
+    _basis: kinds, order: structure. Ordered from positioning to mapping to image processing._
+    - Global Positioning Systems
+    - Geographic Information Systems
+    - Image Processing
+  - Geographic information systems
+- **Human spatial organization covers how societies settle and live in places and how they shape and respond to their environments.**
+  _basis: kinds, order: structure. The study of society in space comes first and interaction with the environment second._
+  - **Human geography subfields study how society, the economy, space and power organise places and the people in them.**
+    _basis: kinds, order: structure. Ordered by structure, from society to economy to spatial environment to politics and the residual category._
+    - **Society-focused human geography studies people, their cultures, health, populations and social relations in space.**
+      _basis: kinds, order: structure. Parent field first, then the people-centred subfields._
+      - Human geography
+      - Cultural geography
+      - Social geography
+      - Population geography
+      - Health geography
+    - **Economy-focused geography studies how production, development and rural land use shape places, including agriculture.**
+      _basis: kinds, order: structure. Subfields concerned with livelihoods and production, with agriculture as the applied sector._
+      - Development geography
+      - Economic geography
+      - Rural and regional geography
+      - Agriculture
+    - **Spatial-environment geography studies how environments, travel, leisure and cities organise the use of space.**
+      _basis: kinds, order: structure. Subfields concerned with the environment and the built or travelled landscape._
+      - Environmental geography
+      - Recreation, leisure and tourism geography
+      - Transport geography
+      - Urban geography
+    - **Political geography studies how power, borders and territory organise places and the people who live in them.**
+      _basis: kinds, order: structure. A specific subfield followed by the residual category._
+      - Political geography
+      - Human geography not elsewhere classified
+  - **Human-environment systems subjects concern how people, settlements and societies interact with and respond to environmental conditions.**
+    _basis: kinds, order: structure. Ordered by structure, from governance and adaptation to the built environment to population and society._
+    - **Human-dimension subjects concern how people shape, manage and respond to environmental change through governance, economics and adaptation.**
+      _basis: kinds, order: structure. Kinds are ordered by structure, from the general human dimensions to specific governance, economic and environmental topics._
+      - Human Dimensions
+      - Climate Change Responses
+      - Economic Resources
+      - Environmental Governance/Management
+      - Environmental Impacts
+    - **Human settlements, infrastructure and sustainability concern the built environment and the systems that keep communities durable and functioning.**
+      _basis: kinds, order: structure. Ordered from physical settlements to infrastructure to sustainability of those systems._
+      - Human Settlements
+      - Infrastructure
+      - Sustainability
+    - **Population, public health, social behavior and socioeconomics concern people, their well-being and how they act and live together in society.**
+      _basis: kinds, order: structure. Ordered from population size to health, behavior and economic conditions._
+      - Population
+      - Public Health
+      - Social Behavior
+      - Socioeconomics
+- **Human spatial organization includes managing places against natural hazards by mapping risk, preparing responses and issuing warnings.**
+  _basis: kinds, order: structure. The hazards come first, then their management and mapping, then warnings about living and physical threats._
+  - Natural Hazards
+  - **Hazard management concepts cover the activities that prepare for, simulate and respond to hazardous events affecting places and people.**
+    _basis: kinds, order: structure. Ordered from hazard activities to general and method-based modeling._
+    - **Hazard management stages are the activities carried out before, during and after a hazardous event.**
+      _basis: parts, order: structure. Ordered by structure, from planning to recovery._
+      - Hazards Management
+      - Hazards Planning
+      - Hazards Mitigation
+      - Disaster Response
+      - Disaster Recovery/Relief
+    - **Numerical models simulate Earth system processes such as atmospheric circulation, chemistry, the carbon cycle and climate change impacts.**
+      _basis: kinds, order: structure. Ordered by structure of model types._
+      - Models
+      - Ancillary Models
+      - Atmospheric Chemistry Models
+      - Atmospheric General Circulation Models
+    - **Generic approach models are defined by their method or purpose rather than by a particular part of the Earth system.**
+      _basis: kinds, order: structure. Ordered by structure from process components to data-driven, physical, and human-oriented approaches._
+      - Component Process Models
+      - Machine Learning Models
+      - Phenomenological Models
+      - Regulatory Models
+  - Hazard Mapping
+  - **Advisories about living things and people warn of conditions affecting crops, human health and marine environments.**
+    _basis: kinds, order: structure. Ordered by structure of the affected domain._
+    - Agricultural Advisories
+    - Health Advisories
+    - Marine Advisories
+    - Environmental Advisories
+    - Environmental factors
+  - **Advisories about physical hazards warn of fire, geological, water, space and atmospheric events.**
+    _basis: kinds, order: structure. Ordered by structure from the land to the atmosphere and space._
+    - Fire Advisories
+    - Geological Advisories
+    - Hydrological Advisories
+    - Weather/Climate Advisories
+    - Space Weather Advisories
+
+## Method line (outside the key line)
+
+**The method line holds how Earth science is studied, taught and recorded, standing outside the subjects the claims are about.**
+_basis: kinds, order: structure_
+
+- **Earth science is studied by observing the planet with remote sensing instruments and geophysical measurements that record its state.**
+  _basis: kinds, order: structure. Remote sensing comes first and geophysical measurement second._
+  - **Earth science observes the planet by remote sensing instruments working in chosen spectral bands on chosen targets.**
+    _basis: kinds, order: structure. The general topic comes first, then instruments, then methods and bands, then the mapped targets._
+    - Remote sensing
+    - **Remote sensing technologies are instruments that observe the Earth by emitting or detecting electromagnetic radiation such as microwaves and laser light.**
+      _basis: kinds, order: structure. Ordered by structure: microwave sensing first, then optical laser-based lidar._
+      - Microwave
+      - Lidar
+    - **Concepts about the methods, radiation bands, and instrument features used to observe the earth by remote sensing.**
+      _basis: kinds, order: structure. Ordered by structure: methods first, then spectral bands, then instrument and platform features, then radar sensor properties._
+      - **Remote sensing methods are distinguished by the part of the electromagnetic spectrum or imaging approach they use to observe the earth.**
+        _basis: kinds, order: structure. Spectral bands and imaging methods listed in alphabetical order._
+        - Gamma Ray
+        - Hyperspectral Imagery
+        - Infrared Wavelengths
+        - Multispectral Imagery
+      - **Spectral bands are kinds of electromagnetic radiation distinguished by their wavelength range.**
+        _basis: kinds, order: degree. Ranked by wavelength from longest (radio wave) to shortest (X-ray)._
+        - Radio Wave
+        - Visible Wavelengths
+        - Ultraviolet Wavelengths
+        - X-Ray
+      - **Instrument and platform characteristics describe the engineering features and measurement properties of the sensing equipment itself.**
+        _basis: kinds, order: structure. General characteristic categories followed by specific components and measurement properties._
+        - Spectral/Engineering
+        - Diffraction Grating
+        - Platform Characteristics
+        - Polarimetry
+        - Geology
+      - **Radar and its sensor properties are the parts of an active remote sensing instrument description.**
+        _basis: parts, order: structure. Ordered from the instrument type to its general characteristics to the signal property of polarization._
+        - Radar
+        - Sensor Characteristics
+        - Polarization
+    - **Mapped Earth surfaces and atmosphere are the targets that remote sensing charts.**
+      _basis: kinds, order: structure. Ordered from land surface to vegetation to atmosphere._
+      - Terrain mapping
+      - Vegetation mapping
+      - Terrestrial atmosphere
+  - **Earth science also measures the planet by geophysical techniques whose signals must be processed into usable records.**
+    _basis: kinds, order: structure. Measurement comes before the processing of its signals._
+    - Geophysical measurement techniques
+    - Geophysical signal processing
+- **Earth science is studied through numerical models and through analysis and machine learning methods applied to its data.**
+  _basis: kinds, order: structure. Modelling comes first and data analysis second._
+  - **Earth science is studied by building numerical, statistical and Earth system models that simulate its processes.**
+    _basis: kinds, order: structure. Specific model types come first, then Earth system models, then the general practice of simulation._
+    - **Numerical and statistical model types are computational methods used to represent, simulate or project environmental and geophysical systems.**
+      _basis: kinds, order: structure. Ordered by structure, from biological and statistical models to atmospheric and geophysical models._
+      - Species Distribution Models
+      - Statistical Downscaling Models
+      - Weather Research/Forecast Models
+      - Spherical Harmonic Models
     - **Specific Earth system model kinds simulate carbon and climate impacts, the atmosphere, water and ice, land ecosystems, and the solid earth and space.**
       _basis: kinds, order: structure. Ordered from carbon and climate models through the fluid envelope to the land and the solid earth._
       - **Carbon cycle and climate impact assessment models are kinds of simulation models that represent how carbon moves through the Earth system and how a changing climate affects natural and human systems.**
@@ -409,73 +492,9 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
         - Solar-Atmosphere/Space-Weather Models
         - Social And Economic Models
         - Physical/Laboratory Models
-  - **Numerical and statistical model types are computational methods used to represent, simulate or project environmental and geophysical systems.**
-    _basis: kinds, order: structure. Ordered by structure, from biological and statistical models to atmospheric and geophysical models._
-    - Species Distribution Models
-    - Statistical Downscaling Models
-    - Weather Research/Forecast Models
-    - Spherical Harmonic Models
-- **Remote sensing observes the envelopes through electromagnetic radiation, defined by spectral band, imaging approach and instrument properties.**
-  _basis: kinds, order: structure. From the field and bands to instrument properties._
-  - **Remote sensing methods and spectral bands define how radiation is used to observe the Earth.**
-    _basis: kinds, order: structure. From the field and services to technologies and bands._
-    - **The remote sensing field and its web services provide the methods and delivery channels for observation data.**
-      _basis: kinds, order: structure. Ordered from the field itself to its service delivery._
-      - Remote sensing
-      - Web Services
-    - **Remote sensing technologies are instruments that observe the Earth by emitting or detecting electromagnetic radiation such as microwaves and laser light.**
-      _basis: kinds, order: structure. Ordered by structure: microwave sensing first, then optical laser-based lidar._
-      - Microwave
-      - Lidar
-    - **Remote sensing methods are distinguished by the part of the electromagnetic spectrum or imaging approach they use to observe the earth.**
-      _basis: kinds, order: structure. Spectral bands and imaging methods listed in alphabetical order._
-      - Gamma Ray
-      - Hyperspectral Imagery
-      - Infrared Wavelengths
-      - Multispectral Imagery
-    - **Spectral bands are kinds of electromagnetic radiation distinguished by their wavelength range.**
-      _basis: kinds, order: degree. Ranked by wavelength from longest (radio wave) to shortest (X-ray)._
-      - Radio Wave
-      - Visible Wavelengths
-      - Ultraviolet Wavelengths
-      - X-Ray
-  - **Radar and instrument characteristics describe the sensors and platforms that carry out observation.**
-    _basis: kinds, order: structure. From radar to sensor and platform properties._
-    - **Radar and its sensor properties are the parts of an active remote sensing instrument description.**
-      _basis: parts, order: structure. Ordered from the instrument type to its general characteristics to the signal property of polarization._
-      - Radar
-      - Sensor Characteristics
-      - Polarization
-    - Spectral/Engineering
-    - Diffraction Grating
-    - Platform Characteristics
-    - Polarimetry
-
-### 5. Human spatial organization is how people locate, map, settle, use and manage places, and how they organize information about them.
-
-- **Spatial description and mapping delimit the Earth's surface, regions and locations that frame where events occur.**
-  _basis: kinds, order: structure. From spatial settings to the analytical methods that map them._
-  - **Spatial methods and physical setting subjects concern the tools for handling earth data and the description of the Earth's surface, regions, hazards and locations.**
-    _basis: kinds, order: structure. Ordered by structure, from computational tools to mapping to physical hazards and places._
-    - **Geoinformatics covers computational modelling, informatics and visualisation methods used to handle earth science data.**
-      _basis: kinds, order: structure. Parent field first, then its subfields, then the residual category._
-      - Geoinformatics
-      - Computational modelling and simulation in earth sciences
-      - Earth and space science informatics
-      - Geoscience data visualisation
-      - Geoinformatics not elsewhere classified
-    - **Geographic and spatial subjects concern describing, mapping and delimiting the Earth's surface and the regions on it.**
-      _basis: kinds, order: structure. Kinds are ordered by structure, from general geography to mathematical cartography and then boundaries._
-      - Geography (General). Atlases. Maps
-      - Mathematical geography. Cartography
-      - Boundaries
-    - **Natural hazards and geographic locations concern the physical threats and places that frame where and how events occur.**
-      _basis: kinds, order: structure. Ordered from hazard events to the geographic categories that locate them._
-      - Natural Hazards
-      - Geographicals
-      - Geographic Locations
-  - **Analytical and geospatial methods are the kinds of techniques and technologies used to examine, check, locate and map data.**
-    _basis: kinds, order: structure. Ordered from analysis and validation methods to geospatial and imaging tools._
+    - Computational modelling and simulation in earth sciences
+  - **Earth science is studied by analysing and validating data and by training learning algorithms on labelled examples.**
+    _basis: kinds, order: structure. Analysis comes first, then training data, its labels and its sources._
     - **Analysis and validation methods are the kinds of techniques used to examine, check and present data.**
       _basis: kinds, order: structure. Ordered from checking data quality to analyzing and presenting it._
       - Calibration/Validation
@@ -483,120 +502,38 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
       - Statistical Applications
       - Data Visualization
       - Data Analysis And Visualization
-    - **Geospatial and imaging tools are the kinds of technologies that locate, map and process spatial data.**
-      _basis: kinds, order: structure. Ordered from positioning to mapping to image processing._
-      - Global Positioning Systems
-      - Geographic Information Systems
-      - Image Processing
-    - **Advisories about living things and people warn of conditions affecting crops, human health and marine environments.**
-      _basis: kinds, order: structure. Ordered by structure of the affected domain._
-      - Agricultural Advisories
-      - Health Advisories
-      - Marine Advisories
-      - Environmental Advisories
-      - Environmental factors
-    - **Advisories about physical hazards warn of fire, geological, water, space and atmospheric events.**
-      _basis: kinds, order: structure. Ordered by structure from the land to the atmosphere and space._
-      - Fire Advisories
-      - Geological Advisories
-      - Hydrological Advisories
-      - Weather/Climate Advisories
-      - Space Weather Advisories
-- **Society, settlement and resource use describe how people, economies, power and land use organize places.**
-  _basis: kinds, order: structure. From human geography to human-environment systems and resource use._
-  - **Human geography subfields study how society, the economy, space and power organise places and the people in them.**
-    _basis: kinds, order: structure. Ordered by structure, from society to economy to spatial environment to politics and the residual category._
-    - **Society-focused human geography studies people, their cultures, health, populations and social relations in space.**
-      _basis: kinds, order: structure. Parent field first, then the people-centred subfields._
-      - Human geography
-      - Cultural geography
-      - Social geography
-      - Population geography
-      - Health geography
-    - **Economy-focused geography studies how production, development and rural land use shape places, including agriculture.**
-      _basis: kinds, order: structure. Subfields concerned with livelihoods and production, with agriculture as the applied sector._
-      - Development geography
-      - Economic geography
-      - Rural and regional geography
-      - Agriculture
-    - **Spatial-environment geography studies how environments, travel, leisure and cities organise the use of space.**
-      _basis: kinds, order: structure. Subfields concerned with the environment and the built or travelled landscape._
-      - Environmental geography
-      - Recreation, leisure and tourism geography
-      - Transport geography
-      - Urban geography
-    - **Political geography and the residual category cover power and territory plus human geography topics not classified elsewhere.**
-      _basis: kinds, order: structure. A specific subfield followed by the residual category._
-      - Political geography
-      - Human geography not elsewhere classified
-  - **Human-environment systems subjects concern how people, settlements and societies interact with and respond to environmental conditions.**
-    _basis: kinds, order: structure. Ordered by structure, from governance and adaptation to the built environment to population and society._
-    - **Human-dimension subjects concern how people shape, manage and respond to environmental change through governance, economics and adaptation.**
-      _basis: kinds, order: structure. Kinds are ordered by structure, from the general human dimensions to specific governance, economic and environmental topics._
-      - Human Dimensions
-      - Climate Change Responses
-      - Economic Resources
-      - Environmental Governance/Management
-      - Environmental Impacts
-    - **Human settlements, infrastructure and sustainability concern the built environment and the systems that keep communities durable and functioning.**
-      _basis: kinds, order: structure. Ordered from physical settlements to infrastructure to sustainability of those systems._
-      - Human Settlements
-      - Infrastructure
-      - Sustainability
-    - **Population, public health, social behavior and socioeconomics concern people, their well-being and how they act and live together in society.**
-      _basis: kinds, order: structure. Ordered from population size to health, behavior and economic conditions._
-      - Population
-      - Public Health
-      - Social Behavior
-      - Socioeconomics
-  - **Agriculture and natural resource subjects concern what is grown, raised or harvested from land, animals, forests, waters and plants.**
-    _basis: kinds, order: structure. Ordered by structure, from crops and land to animals to forest, aquatic and food resources._
-    - **Claims about the living and land-based natural resources that agriculture depends on, including crops, soil, and the habitat altered by land use.**
-      _basis: kinds, order: structure. Ordered structurally from the plants grown, to the soil beneath them, to the habitat around them._
-      - Agricultural Plant Science
-      - Soils
-      - Habitat Conversion/Fragmentation
-    - **Claims about the human-made inputs and engineered methods that farmers apply to produce and protect crops.**
-      _basis: kinds, order: structure. Ordered structurally from chemical inputs to engineered systems._
-      - Agricultural Chemicals
-      - Agricultural Engineering
-    - **Animal-related subjects cover the science of raising animals along with the animal products and feed they depend on.**
-      _basis: kinds, order: structure. Kinds are ordered by structure, from animal science to animal commodities and the feed that sustains them._
-      - Animal Science
-      - Animal Commodities
-      - Feed Products
-    - **Forest, aquatic, food and plant-product subjects concern resources harvested from woodlands, waters and plants and how they are studied and processed.**
-      _basis: kinds, order: structure. Kinds are ordered by structure, from forests and aquatic systems to plant commodities and food processing._
-      - Forest Science
-      - Agricultural Aquatic Sciences
-      - Plant Commodities
-      - Food Science
-- **Data and information services organize, preserve, deliver and teach about Earth information for human users.**
-  _basis: kinds, order: structure. From measurement and stewardship to access, handling and outreach._
-  - **Measurement, reference and stewardship describe how Earth information is taken, described and preserved.**
-    _basis: kinds, order: structure. From measurement to reference works and stewardship._
-    - **Data and measurement concepts describe how observations are taken, labeled for learning, and documented and found as metadata.**
-      _basis: kinds, order: structure. Ordered from data collection to data use to data discovery._
-      - **Measurement and data-handling concepts describe how geophysical observations are taken and processed.**
-        _basis: kinds, order: structure. Ordered by structure, from raw measurement to signal processing._
-        - Geophysical measurement techniques
-        - Geophysical measurements
-        - Geophysical signal processing
-        - Geographic information systems
-        - Hazard Mapping
-      - **Machine learning training data covers labeled datasets and their sources that are used to train learning algorithms.**
-        _basis: kinds, order: structure. Ordered by structure of the training data._
-        - Machine Learning Training Data
-        - Labels
-        - Source
-        - Land surface temperature
-      - **Metadata handling and discovery concerns the tools and services used to author, convert and find metadata, data and services.**
-        _basis: kinds, order: structure. Ordered by structure of the metadata workflow._
-        - Metadata Handling
-        - Authoring Tools
-        - Data Discovery
-        - Metadata Transformation/Conversion
-        - Service Discovery
+    - Machine Learning Training Data
+    - Labels
+    - Source
+- **Earth science is taught and practised as a set of separate and integrative disciplines, shared with learners and the public through outreach.**
+  _basis: kinds, order: structure. The named disciplines come first, then the integrative study that joins them, then the teaching of them._
+  - **Broad disciplines of Earth science name the fields that study the physical Earth, its landforms and its oceans.**
+    _basis: kinds, order: structure. Ordered by structure, from the broad field to its specific domains._
+    - Geoscience and remote sensing
+    - Geoscience
+    - Physical geography
+    - Oceanography
+  - **Integrative earth science draws on several earth disciplines at once to study the planet as one connected system.**
+    _basis: kinds, order: structure. Integrative earth system sciences and the residual not-elsewhere-classified category._
+    - Other earth sciences
+    - Earth system sciences
+    - Other earth sciences not elsewhere classified
+  - **Education and outreach concepts are about teaching materials and activities that bring data to learners and the public.**
+    _basis: kinds, order: structure. Ordered by structure from the general program to its specific forms._
+    - Education/Outreach
+    - Curriculum Support
+    - Exhibit Materials
+    - Interactive Programs
+- **Earth science is recorded by preserving, describing, sharing and handling its data so that it can be found and reused.**
+  _basis: kinds, order: structure. Stewardship comes first, then access, then handling operations._
+  - **Earth science records are preserved by archiving data, describing it with metadata and keeping reference works.**
+    _basis: kinds, order: structure. Stewardship comes first, then reference resources, then metadata work and authoring._
+    - **Data stewardship practices are the kinds of activities that preserve, describe and prepare data holdings.**
+      _basis: kinds, order: structure. Ordered from storing to describing to reducing data._
+      - Archiving
+      - Cataloging
+      - Data Compression
+      - Data Management/Data Handling
     - **Information resources and services are the reference works and data services that help users look up, describe, process and manage knowledge.**
       _basis: kinds, order: structure. Ordered by structure, moving from general reference services to specific reference works to data services._
       - **Reference and information services are resources that help users look up, identify, and obtain knowledge and information.**
@@ -616,20 +553,22 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
         - Data Application Services
         - Data Processing Services
         - Information Management Services
-    - **Data stewardship practices are the kinds of activities that preserve, describe and prepare data holdings.**
-      _basis: kinds, order: structure. Ordered from storing to describing to reducing data._
-      - Archiving
-      - Cataloging
-      - Data Compression
-      - Data Management/Data Handling
-  - **Access, handling and outreach make Earth data reachable, usable and understood by others.**
-    _basis: kinds, order: structure. From access to handling, processing and outreach._
+    - Metadata Handling
+    - Metadata Transformation/Conversion
+    - Authoring Tools
+  - **Earth science records are shared through services that let people discover and reach data and the tools that serve it.**
+    _basis: kinds, order: structure. Access in general comes first, then discovery of data and services, then the web services that deliver them._
     - **Data access services are the kinds of activities that make data reachable, tailored and usable by others.**
       _basis: kinds, order: structure. Ordered from retrieving to tailoring to delivering and integrating data._
       - Data Access/Retrieval
       - Data Customization
       - Data Delivery
       - Data Interoperability
+    - Data Discovery
+    - Service Discovery
+    - Web Services
+  - **Earth science records are handled by searching, converting, subsetting and visualising data with informatics methods.**
+    _basis: kinds, order: structure. Handling operations come first, then reshaping operations, then the informatics and visualisation that frame them._
     - **Data handling services are operations that search, mine, subset, convert, transfer and rescue data.**
       _basis: kinds, order: structure. Ordered by structure of the data handling workflow._
       - Data Search
@@ -640,14 +579,19 @@ Group of subjects of Earth claims. Basis: kinds. Dimension: what the claim is ab
       _basis: kinds, order: structure_
       - Transformation/Conversion
       - Subsetting/Supersetting
-    - **Education and outreach concepts are about teaching materials and activities that bring data to learners and the public.**
-      _basis: kinds, order: structure. Ordered by structure from the general program to its specific forms._
-      - Education/Outreach
-      - Curriculum Support
-      - Exhibit Materials
-      - Interactive Programs
+    - Earth and space science informatics
+    - Geoscience data visualisation
+
+## Routed to other fields
+
+- Planetary geology
+- Macroscopic life concepts cover the overall classification of organisms and the larger multicellular animals and plants.
+- Microbial and decomposer life comprises the bacteria, archaea, fungi and protists that are mostly small or single-celled organisms.
+- Earth system subjects are the kinds of living, ecological, climatic and frozen things that a scientific claim can be about.
+- Solar and space-physics topics concern how solar activity and energetic particles interact with Earth's ionosphere and magnetosphere.
+- Agriculture and natural resource subjects concern what is grown, raised or harvested from land, animals, forests, waters and plants.
 
 ## Checks
 
 - minto_check: clean
-- field_check holds: True — Misplaced: P4.1.2.3/P4.1.2.4 life under land surface; P4.1.4.1 solar physics under water; P5.1.2.3/P5.1.2.4 advisories under methods; P4.3.3.1 species models.
+- field_check holds: True — Misplaced: P5.3.2.2 and P5.3.2.3 (models, belong in method line), P5.3.1 versus P3.2.3.1 (natural hazards), P1.2.1.1 (duplicate geochemistry), P2.3.3 (applied geophysics).
