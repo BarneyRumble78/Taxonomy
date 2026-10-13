@@ -370,6 +370,7 @@
                         "statement": "Visual arts",
                         "name": "Visual arts",
                         "aliases": [
+                          "LCC:N",
                           "LCC:N"
                         ]
                       },
@@ -1394,9 +1395,26 @@
       "Value is the feature of a work concerned with how it is judged, studied historically and assigned standing within culture."
     ],
     "holds": true,
-    "note": "Key line holds; misplaced include P2.2.2.5, P2.2.3.2 (context), P3.1.2.2 (value), P3.2.2.1, P3.3.3.1, P5.1.2, P2.1.3, P2.1.4, P2.2.4.1.",
+    "note": "Misplaced: P2.2.2.5 Literary theory (belongs in P3), P2.2.1.5 Print culture and P2.2.2.3 Comparative literature (P4), P4.3.3.1 Ecocriticism (P3), P4.3.1.4 agriculture/food/wine, P4.2.1.2 Asian cultural studies.",
     "review": false,
-    "misplaced": 12,
-    "problems": 13
+    "misplaced": 6,
+    "problems": 6,
+    "checks_2of3": [
+      {
+        "holds": true,
+        "misplaced": 6,
+        "note": "Misplaced: P2.2.2.5 Literary theory (belongs in P3), P2.2.1.5 Print culture and P2.2.2.3 Comparative literature (P4), P4.3.3.1 Ecocriticism (P3), P4.3.1.4 agriculture/food/wine, P4.2.1.2 Asian cultural studies."
+      },
+      {
+        "holds": true,
+        "misplaced": 6,
+        "note": "Worst misplaced: P2.2.2.5 Literary theory (belongs in P3.1), P2.2.1.5 Print culture (belongs in P4.3.3), P4.3.3.1 Ecocriticism, P3.2.2 Folklore."
+      }
+    ],
+    "rebuild": {
+      "builder": "claude-opus-5-5",
+      "checker": "claude-sonnet-5-5",
+      "date": "2026-10-13 16:39"
+    }
   }
 }
