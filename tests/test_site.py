@@ -130,8 +130,8 @@ def test_site_map_pages_and_redirects():
         assert line in redirects
     skynet = read("skynet/index.html")
     assert "trademark" not in skynet.lower()
-    assert "[[NAME UNDER REVIEW]]" in skynet
-    assert "[[NAME CHECK]]" in read("blade-runner/index.html")
+    assert "[[NAME UNDER REVIEW]]" not in skynet
+    assert "[[NAME CHECK]]" not in read("blade-runner/index.html")
     evaluation = read("minerva/evaluation/index.html")
     assert "62.1%" in evaluation and "37.9%" in evaluation
     contact = read("contact/index.html")
