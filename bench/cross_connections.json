@@ -1,0 +1,1332 @@
+{
+ "source": "Research report 'Taxonomy Knowledge Base', checked 2026-10-11",
+ "cases": [
+  {
+   "id": "XC001",
+   "problem": "Recover signals and MRI images from far fewer samples than Nyquist",
+   "target_fields": [
+    "EN",
+    "MD"
+   ],
+   "tool": "l1 minimisation, uncertainty principles",
+   "source_field": "MA 42 90",
+   "who_when": "Candes, Romberg, Tao 2006",
+   "citation": "IEEE Trans Inf Theory 52(2):489-509, doi:10.1109/TIT.2005.862083",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC002",
+   "problem": "Recover sparse signals from few measurements",
+   "target_fields": [
+    "EN"
+   ],
+   "tool": "Compressed sensing, n-widths",
+   "source_field": "MA 41 42",
+   "who_when": "Donoho 2006",
+   "citation": "IEEE Trans Inf Theory 52(4):1289-1306, doi:10.1109/TIT.2006.871582",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC003",
+   "problem": "Shape of high-dimensional data",
+   "target_fields": [
+    "ST",
+    "CS"
+   ],
+   "tool": "Persistent homology",
+   "source_field": "MA 55",
+   "who_when": "Carlsson 2009",
+   "citation": "Bull AMS 46(2):255-308, doi:10.1090/S0273-0979-09-01249-X",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC004",
+   "problem": "Unstable GAN training",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Wasserstein optimal transport distance",
+   "source_field": "MA 49",
+   "who_when": "Arjovsky, Chintala, Bottou 2017",
+   "citation": "arXiv:1701.07875",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC005",
+   "problem": "Densest sphere packing in dimension 8",
+   "target_fields": [
+    "MA"
+   ],
+   "tool": "Modular forms",
+   "source_field": "MA 11",
+   "who_when": "Viazovska 2017",
+   "citation": "Ann Math 185(3):991-1015, doi:10.4007/annals.2017.185.3.7",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC006",
+   "problem": "Asymptotic count of integer partitions",
+   "target_fields": [
+    "MA"
+   ],
+   "tool": "Circle method (complex and Fourier analysis)",
+   "source_field": "MA 30 42",
+   "who_when": "Hardy and Ramanujan 1918",
+   "citation": "Proc LMS s2-17:75-115, doi:10.1112/plms/s2-17.1.75",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC007",
+   "problem": "Why animal contests are mostly limited war",
+   "target_fields": [
+    "BI"
+   ],
+   "tool": "Evolutionarily stable strategy (game theory)",
+   "source_field": "EC MA 91",
+   "who_when": "Maynard Smith and Price 1973",
+   "citation": "Nature 246:15-18, doi:10.1038/246015a0",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC008",
+   "problem": "Fair price of an option",
+   "target_fields": [
+    "BU",
+    "EC"
+   ],
+   "tool": "Heat-equation PDE",
+   "source_field": "PH MA 35",
+   "who_when": "Black and Scholes 1973",
+   "citation": "J Polit Econ 81(3):637-654, doi:10.1086/260062",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC009",
+   "problem": "Ranking web pages by importance",
+   "target_fields": [
+    "IS",
+    "CS"
+   ],
+   "tool": "Markov chain stationary distribution, principal eigenvector",
+   "source_field": "MA 60 15",
+   "who_when": "Brin and Page 1998",
+   "citation": "Comput Netw ISDN Syst 30:107-117, doi:10.1016/S0169-7552(98)00110-X",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC010",
+   "problem": "Classifying the zoo of hadrons",
+   "target_fields": [
+    "PH"
+   ],
+   "tool": "SU(3) representation theory",
+   "source_field": "MA 22",
+   "who_when": "Gell-Mann 1962",
+   "citation": "Phys Rev 125:1067-1084, doi:10.1103/PhysRev.125.1067",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC011",
+   "problem": "Classifying hadrons",
+   "target_fields": [
+    "PH"
+   ],
+   "tool": "SU(3) gauge invariance",
+   "source_field": "MA 22",
+   "who_when": "Ne'eman 1961",
+   "citation": "Nucl Phys 26:222-229, doi:10.1016/0029-5582(61)90134-1",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC012",
+   "problem": "Reconstruct tissue density from X-ray projections",
+   "target_fields": [
+    "MD"
+   ],
+   "tool": "Radon transform inversion",
+   "source_field": "MA 44",
+   "who_when": "Cormack 1963",
+   "citation": "J Appl Phys 34:2722-2727, doi:10.1063/1.1729798",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC013",
+   "problem": "Clinical CT scanner",
+   "target_fields": [
+    "MD"
+   ],
+   "tool": "Computational reconstruction",
+   "source_field": "EN CS",
+   "who_when": "Hounsfield 1973",
+   "citation": "Br J Radiol 46:1016-1022, doi:10.1259/0007-1285-46-552-1016",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC014",
+   "problem": "Mechanism of site-specific recombination on DNA",
+   "target_fields": [
+    "BI"
+   ],
+   "tool": "Tangle calculus (knot theory)",
+   "source_field": "MA 57",
+   "who_when": "Ernst and Sumners 1990",
+   "citation": "Math Proc Camb Phil Soc 108:489-515",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC015",
+   "problem": "Why viruses persist on the Internet",
+   "target_fields": [
+    "MD",
+    "CS"
+   ],
+   "tool": "Scale-free network mean-field theory",
+   "source_field": "PH",
+   "who_when": "Pastor-Satorras and Vespignani 2001",
+   "citation": "PRL 86:3200, doi:10.1103/PhysRevLett.86.3200",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC016",
+   "problem": "Collective states of neuron populations",
+   "target_fields": [
+    "MS",
+    "BI"
+   ],
+   "tool": "Maximum-entropy Ising model",
+   "source_field": "PH",
+   "who_when": "Schneidman, Berry, Segev, Bialek 2006",
+   "citation": "Nature 440:1007-1012, doi:10.1038/nature04701",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC017",
+   "problem": "Associative memory in neural circuits",
+   "target_fields": [
+    "MS",
+    "CS"
+   ],
+   "tool": "Spin-glass energy function",
+   "source_field": "PH",
+   "who_when": "Hopfield 1982",
+   "citation": "PNAS 79:2554-2558, doi:10.1073/pnas.79.8.2554",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC018",
+   "problem": "Chip placement and combinatorial optimisation",
+   "target_fields": [
+    "CS",
+    "EN"
+   ],
+   "tool": "Simulated annealing (Metropolis)",
+   "source_field": "PH",
+   "who_when": "Kirkpatrick, Gelatt, Vecchi 1983",
+   "citation": "Science 220:671-680, doi:10.1126/science.220.4598.671",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC019",
+   "problem": "Archaeological chronology from radiocarbon dates",
+   "target_fields": [
+    "HI"
+   ],
+   "tool": "Bayesian hierarchical models, MCMC",
+   "source_field": "MA 62",
+   "who_when": "Bronk Ramsey 2009",
+   "citation": "Radiocarbon 51(1):337-360, doi:10.1017/S0033822200033865",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC020",
+   "problem": "Allocating radio spectrum licences",
+   "target_fields": [
+    "PO",
+    "LA",
+    "EC"
+   ],
+   "tool": "Auction theory",
+   "source_field": "EC MA 91",
+   "who_when": "Milgrom 2000",
+   "citation": "J Polit Econ 108:245-272, doi:10.1086/262118",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC021",
+   "problem": "Dating the origin of Indo-European",
+   "target_fields": [
+    "LN",
+    "HI"
+   ],
+   "tool": "Bayesian phylogenetics",
+   "source_field": "BI",
+   "who_when": "Gray and Atkinson 2003",
+   "citation": "Nature 426:435-439, doi:10.1038/nature02029",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC022",
+   "problem": "Unravelling of the US medical residency match",
+   "target_fields": [
+    "MD"
+   ],
+   "tool": "Stable matching (deferred acceptance)",
+   "source_field": "MA EC 91",
+   "who_when": "Gale and Shapley 1962; Roth and Peranson 1999",
+   "citation": "AMM 69:9-15 doi:10.1080/00029890.1962.11989827; AER 89:748-780 doi:10.1257/aer.89.4.748",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC023",
+   "problem": "Kidney exchange between incompatible pairs",
+   "target_fields": [
+    "MD"
+   ],
+   "tool": "Top-trading cycles, matching",
+   "source_field": "EC",
+   "who_when": "Roth, Sonmez, Unver 2004",
+   "citation": "QJE 119:457-488",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC024",
+   "problem": "Public school assignment",
+   "target_fields": [
+    "ED"
+   ],
+   "tool": "Deferred acceptance",
+   "source_field": "EC MA 91",
+   "who_when": "Abdulkadiroglu and Sonmez 2003",
+   "citation": "AER 93:729-747",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC025",
+   "problem": "Real networks are both clustered and short-path",
+   "target_fields": [
+    "BI",
+    "EN",
+    "PO"
+   ],
+   "tool": "Rewired lattice graphs (small world)",
+   "source_field": "MA 05 PH",
+   "who_when": "Watts and Strogatz 1998",
+   "citation": "Nature 393:440-442, doi:10.1038/30918",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC026",
+   "problem": "Power laws in earthquakes, 1/f noise",
+   "target_fields": [
+    "EA"
+   ],
+   "tool": "Self-organised criticality",
+   "source_field": "PH",
+   "who_when": "Bak, Tang, Wiesenfeld 1987",
+   "citation": "PRL 59:381-384, doi:10.1103/PhysRevLett.59.381",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC027",
+   "problem": "Residential segregation from mild preferences",
+   "target_fields": [
+    "PO",
+    "MS"
+   ],
+   "tool": "Agent-based cellular model",
+   "source_field": "EC",
+   "who_when": "Schelling 1971",
+   "citation": "J Math Sociol 1:143-186, doi:10.1080/0022250X.1971.9989794",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC028",
+   "problem": "Choice under risk violating expected utility",
+   "target_fields": [
+    "EC"
+   ],
+   "tool": "Psychophysics of value and probability (prospect theory)",
+   "source_field": "MS",
+   "who_when": "Kahneman and Tversky 1979",
+   "citation": "Econometrica 47:263-291, doi:10.2307/1914185",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC029",
+   "problem": "Fast spectral analysis of long series",
+   "target_fields": [
+    "EA",
+    "EN"
+   ],
+   "tool": "FFT factorisation",
+   "source_field": "MA 65",
+   "who_when": "Cooley and Tukey 1965",
+   "citation": "Math Comp 19:297-301, doi:10.1090/S0025-5718-1965-0178586-1 (nuclear-test motivation UNVERIFIED)",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC030",
+   "problem": "Why epidemics end before everyone is infected",
+   "target_fields": [
+    "MD"
+   ],
+   "tool": "Threshold ODE model (SIR)",
+   "source_field": "MA 34 92",
+   "who_when": "Kermack and McKendrick 1927",
+   "citation": "Proc R Soc A 115:700-721, doi:10.1098/rspa.1927.0118",
+   "status": "VERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC031",
+   "problem": "Entropy and redundancy of English",
+   "target_fields": [
+    "LN"
+   ],
+   "tool": "Information theory",
+   "source_field": "EN MA 94",
+   "who_when": "Shannon 1951",
+   "citation": "Bell Syst Tech J 30:50-64",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC032",
+   "problem": "Information content of DNA binding sites",
+   "target_fields": [
+    "BI"
+   ],
+   "tool": "Shannon entropy",
+   "source_field": "MA 94",
+   "who_when": "Schneider, Stormo, Gold, Ehrenfeucht 1986",
+   "citation": "J Mol Biol 188:415-431",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC033",
+   "problem": "Letter dependence in Eugene Onegin",
+   "target_fields": [
+    "LN"
+   ],
+   "tool": "Markov chains",
+   "source_field": "MA 60",
+   "who_when": "Markov 1913",
+   "citation": "Bull Imp Acad Sci St Petersburg; see Hayes 2013, Am Sci 101:92",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC034",
+   "problem": "Computing posterior distributions in high dimensions",
+   "target_fields": [
+    "MA"
+   ],
+   "tool": "Metropolis algorithm, Gibbs sampling",
+   "source_field": "PH",
+   "who_when": "Metropolis et al. 1953; Gelfand and Smith 1990",
+   "citation": "J Chem Phys 21:1087; JASA 85:398",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC035",
+   "problem": "Automatic speech recognition",
+   "target_fields": [
+    "CS",
+    "LN"
+   ],
+   "tool": "Hidden Markov models",
+   "source_field": "MA 60 62",
+   "who_when": "Baker 1975; Rabiner 1989",
+   "citation": "Proc IEEE 77:257-286",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC036",
+   "problem": "Protein family modelling",
+   "target_fields": [
+    "BI"
+   ],
+   "tool": "Profile HMMs",
+   "source_field": "CS MA 62",
+   "who_when": "Krogh et al. 1994",
+   "citation": "J Mol Biol 235:1501-1531",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC037",
+   "problem": "Optimal protein and DNA sequence alignment",
+   "target_fields": [
+    "BI"
+   ],
+   "tool": "Dynamic programming",
+   "source_field": "MA 90",
+   "who_when": "Needleman and Wunsch 1970",
+   "citation": "J Mol Biol 48:443-453",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC038",
+   "problem": "Spacecraft navigation from noisy data",
+   "target_fields": [
+    "EN"
+   ],
+   "tool": "Recursive linear estimation (Kalman filter)",
+   "source_field": "MA 93 62",
+   "who_when": "Kalman 1960",
+   "citation": "J Basic Eng 82:35-45",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC039",
+   "problem": "Planning plywood production",
+   "target_fields": [
+    "EC",
+    "BU"
+   ],
+   "tool": "Linear programming",
+   "source_field": "MA 90",
+   "who_when": "Kantorovich 1939",
+   "citation": "Manag Sci 6:366-422 (1960 translation)",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC040",
+   "problem": "Post-WWI fish catch oscillations in the Adriatic",
+   "target_fields": [
+    "BI",
+    "AG"
+   ],
+   "tool": "Predator-prey ODEs",
+   "source_field": "MA 34",
+   "who_when": "Volterra 1926",
+   "citation": "Nature 118:558-560",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC041",
+   "problem": "How embryos form spots and stripes",
+   "target_fields": [
+    "BI"
+   ],
+   "tool": "Reaction-diffusion instability",
+   "source_field": "MA 35 CH",
+   "who_when": "Turing 1952",
+   "citation": "Phil Trans R Soc B 237:37-72",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC042",
+   "problem": "Mechanism of the action potential",
+   "target_fields": [
+    "BI",
+    "MD"
+   ],
+   "tool": "Equivalent-circuit and cable models",
+   "source_field": "EN",
+   "who_when": "Hodgkin and Huxley 1952",
+   "citation": "J Physiol 117:500-544",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC043",
+   "problem": "Structure of DNA",
+   "target_fields": [
+    "BI"
+   ],
+   "tool": "X-ray diffraction",
+   "source_field": "PH",
+   "who_when": "Franklin and Gosling; Watson and Crick 1953",
+   "citation": "Nature 171:737-738",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC044",
+   "problem": "Imaging soft tissue without ionising radiation",
+   "target_fields": [
+    "MD"
+   ],
+   "tool": "NMR with field gradients",
+   "source_field": "PH",
+   "who_when": "Lauterbur 1973",
+   "citation": "Nature 242:190-191",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC045",
+   "problem": "Absolute dating of archaeological organic remains",
+   "target_fields": [
+    "HI"
+   ],
+   "tool": "Radiocarbon decay",
+   "source_field": "PH CH",
+   "who_when": "Arnold and Libby 1949",
+   "citation": "Science 110:678-680",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC046",
+   "problem": "Dating Pueblo ruins",
+   "target_fields": [
+    "HI"
+   ],
+   "tool": "Tree-ring series",
+   "source_field": "PH EA",
+   "who_when": "A.E. Douglass 1929",
+   "citation": "Natl Geogr Mag 56:736-770",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC047",
+   "problem": "Continental drift mechanism",
+   "target_fields": [
+    "EA"
+   ],
+   "tool": "Paleomagnetic stripes",
+   "source_field": "PH",
+   "who_when": "Vine and Matthews 1963",
+   "citation": "Nature 199:947-949",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC048",
+   "problem": "Limits of weather prediction",
+   "target_fields": [
+    "EA"
+   ],
+   "tool": "Deterministic chaos",
+   "source_field": "MA 37",
+   "who_when": "Lorenz 1963",
+   "citation": "J Atmos Sci 20:130-141",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC049",
+   "problem": "Fat-tailed cotton price changes",
+   "target_fields": [
+    "EC"
+   ],
+   "tool": "Stable distributions, fractals",
+   "source_field": "MA 60",
+   "who_when": "Mandelbrot 1963",
+   "citation": "J Business 36:394-419",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC050",
+   "problem": "Measuring intelligence from test correlations",
+   "target_fields": [
+    "MS"
+   ],
+   "tool": "Factor analysis",
+   "source_field": "MA 62",
+   "who_when": "Spearman 1904",
+   "citation": "Am J Psychol 15:201-292",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC051",
+   "problem": "Fair, comparable test scoring",
+   "target_fields": [
+    "ED"
+   ],
+   "tool": "Rasch and IRT models",
+   "source_field": "MA 62 MS",
+   "who_when": "Rasch 1960",
+   "citation": "Probabilistic Models for Some Intelligence and Attainment Tests",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC052",
+   "problem": "Separating perceptual sensitivity from response bias",
+   "target_fields": [
+    "MS"
+   ],
+   "tool": "Signal detection theory",
+   "source_field": "EN",
+   "who_when": "Tanner and Swets 1954",
+   "citation": "Psychol Rev 61:401-409",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC053",
+   "problem": "Limits of short-term memory and judgement",
+   "target_fields": [
+    "MS"
+   ],
+   "tool": "Channel capacity",
+   "source_field": "MA 94",
+   "who_when": "Miller 1956",
+   "citation": "Psychol Rev 63:81-97",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC054",
+   "problem": "Learning internal representations",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Backpropagation",
+   "source_field": "MA MS",
+   "who_when": "Rumelhart, Hinton, Williams 1986",
+   "citation": "Nature 323:533-536",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC055",
+   "problem": "Search in rugged design spaces",
+   "target_fields": [
+    "CS",
+    "EN"
+   ],
+   "tool": "Evolution by selection (genetic algorithms)",
+   "source_field": "BI",
+   "who_when": "Holland 1975",
+   "citation": "Adaptation in Natural and Artificial Systems",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC056",
+   "problem": "Shortest routes in networks",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Ant pheromone trails",
+   "source_field": "BI",
+   "who_when": "Dorigo, Maniezzo, Colorni 1996",
+   "citation": "IEEE Trans SMC-B 26:29-41",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC057",
+   "problem": "Learning probability distributions",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Boltzmann distribution",
+   "source_field": "PH",
+   "who_when": "Ackley, Hinton, Sejnowski 1985",
+   "citation": "Cogn Sci 9:147-169",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC058",
+   "problem": "Generating images from noise",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Non-equilibrium thermodynamics, diffusion",
+   "source_field": "PH",
+   "who_when": "Sohl-Dickstein et al. 2015",
+   "citation": "arXiv:1503.03585",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC059",
+   "problem": "Secure communication without a shared secret",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Modular arithmetic, factoring",
+   "source_field": "MA 11",
+   "who_when": "Rivest, Shamir, Adleman 1978",
+   "citation": "CACM 21:120-126",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC060",
+   "problem": "Smaller cryptographic keys",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Elliptic curves over finite fields",
+   "source_field": "MA 11 14",
+   "who_when": "Koblitz 1987; Miller 1985",
+   "citation": "Math Comp 48:203-209",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC061",
+   "problem": "Error-free CD audio and deep-space links",
+   "target_fields": [
+    "EN"
+   ],
+   "tool": "Polynomials over finite fields (Reed-Solomon)",
+   "source_field": "MA 12 94",
+   "who_when": "Reed and Solomon 1960",
+   "citation": "J SIAM 8:300-304",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC062",
+   "problem": "Designing relay switching circuits",
+   "target_fields": [
+    "EN"
+   ],
+   "tool": "Boolean algebra",
+   "source_field": "MA 03 PL",
+   "who_when": "Shannon 1938",
+   "citation": "Trans AIEE 57:713-723",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC063",
+   "problem": "What is mechanically computable",
+   "target_fields": [
+    "MA",
+    "CS"
+   ],
+   "tool": "Turing machines",
+   "source_field": "PL MA 03",
+   "who_when": "Turing 1936",
+   "citation": "Proc LMS s2-42:230-265",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC064",
+   "problem": "Programming languages with functions as data",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Lambda calculus",
+   "source_field": "MA 03 PL",
+   "who_when": "Church 1936; McCarthy 1960",
+   "citation": "CACM 3:184-195",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC065",
+   "problem": "Gravity as geometry",
+   "target_fields": [
+    "PH"
+   ],
+   "tool": "Riemannian geometry",
+   "source_field": "MA 53",
+   "who_when": "Einstein and Grossmann 1913",
+   "citation": "Z Math Phys 62:225-261",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC066",
+   "problem": "Gauge fields and the Aharonov-Bohm effect",
+   "target_fields": [
+    "PH"
+   ],
+   "tool": "Fibre bundles",
+   "source_field": "MA 53 55",
+   "who_when": "Wu and Yang 1975",
+   "citation": "Phys Rev D 12:3845",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC067",
+   "problem": "Rigorous quantum mechanics",
+   "target_fields": [
+    "PH"
+   ],
+   "tool": "Hilbert-space operator theory",
+   "source_field": "MA 46 47",
+   "who_when": "von Neumann 1932",
+   "citation": "Mathematische Grundlagen der Quantenmechanik",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC068",
+   "problem": "Spacing of Riemann zeta zeros",
+   "target_fields": [
+    "MA"
+   ],
+   "tool": "Random matrix statistics from nuclear spectra",
+   "source_field": "PH",
+   "who_when": "Montgomery 1973 (with Dyson)",
+   "citation": "Proc Symp Pure Math 24:181-193",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC069",
+   "problem": "Quantised Hall conductance",
+   "target_fields": [
+    "PH"
+   ],
+   "tool": "Chern numbers, topology",
+   "source_field": "MA 55 57",
+   "who_when": "Thouless, Kohmoto, Nightingale, den Nijs 1982",
+   "citation": "PRL 49:405",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC070",
+   "problem": "Forbidden fivefold diffraction symmetry",
+   "target_fields": [
+    "CH"
+   ],
+   "tool": "Aperiodic (Penrose) tilings",
+   "source_field": "MA 52",
+   "who_when": "Shechtman et al. 1984",
+   "citation": "PRL 53:1951",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC071",
+   "problem": "Counting chemical isomers",
+   "target_fields": [
+    "CH"
+   ],
+   "tool": "Trees, Polya enumeration",
+   "source_field": "MA 05",
+   "who_when": "Cayley 1874; Polya 1937",
+   "citation": "Acta Math 68:145-254",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC072",
+   "problem": "Solving the crystallographic phase problem",
+   "target_fields": [
+    "CH"
+   ],
+   "tool": "Probabilistic direct methods",
+   "source_field": "MA 62",
+   "who_when": "Hauptman and Karle 1953",
+   "citation": "ACA Monograph 3",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC073",
+   "problem": "Tractable electronic structure of molecules",
+   "target_fields": [
+    "CH"
+   ],
+   "tool": "Density functional theory",
+   "source_field": "PH",
+   "who_when": "Kohn and Sham 1965",
+   "citation": "Phys Rev 140:A1133",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC074",
+   "problem": "Estimating ore grades between boreholes",
+   "target_fields": [
+    "EN"
+   ],
+   "tool": "Kriging, geostatistics",
+   "source_field": "MA 62",
+   "who_when": "Krige 1951; Matheron 1963",
+   "citation": "Econ Geol 58:1246-1266",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC075",
+   "problem": "Design of nature reserves",
+   "target_fields": [
+    "EV"
+   ],
+   "tool": "Island biogeography",
+   "source_field": "BI",
+   "who_when": "MacArthur and Wilson 1967; Diamond 1975",
+   "citation": "Biol Conserv 7:129-146",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC076",
+   "problem": "Is the tragedy of the commons inevitable",
+   "target_fields": [
+    "EC",
+    "PO"
+   ],
+   "tool": "Field studies of community resource institutions",
+   "source_field": "IK PO",
+   "who_when": "Ostrom 1990",
+   "citation": "Governing the Commons (CUP)",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC077",
+   "problem": "Reducing late-dry-season wildfire emissions",
+   "target_fields": [
+    "EV"
+   ],
+   "tool": "Aboriginal early-season burning",
+   "source_field": "IK",
+   "who_when": "Russell-Smith et al. 2013 (WALFA)",
+   "citation": "Front Ecol Environ 11:e55-e63",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC078",
+   "problem": "Documenting Arctic sea-ice change",
+   "target_fields": [
+    "EA"
+   ],
+   "tool": "Inuit observation and knowledge",
+   "source_field": "IK",
+   "who_when": "Krupnik and Jolly (eds) 2002",
+   "citation": "The Earth Is Faster Now (ARCUS)",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC079",
+   "problem": "Drug-resistant malaria",
+   "target_fields": [
+    "MD"
+   ],
+   "tool": "Ge Hong's 4th-century qinghao preparation",
+   "source_field": "IK HI",
+   "who_when": "Tu Youyou 1972; account 2011",
+   "citation": "Nat Med 17:1217-1220",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC080",
+   "problem": "Was Polynesia settled by deliberate voyaging",
+   "target_fields": [
+    "HI"
+   ],
+   "tool": "Traditional non-instrument wayfinding",
+   "source_field": "IK",
+   "who_when": "Finney and Mau Piailug, Hokule'a 1976",
+   "citation": "Finney 1979, Hokule'a: The Way to Tahiti",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC081",
+   "problem": "Fixing the date of Easter",
+   "target_fields": [
+    "RE"
+   ],
+   "tool": "Astronomical tables and computus",
+   "source_field": "PH MA",
+   "who_when": "Clavius, Gregorian reform 1582",
+   "citation": "Coyne, Hoskin, Pedersen (eds) 1983, Vatican Observatory",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC082",
+   "problem": "Manuscript genealogy of The Canterbury Tales",
+   "target_fields": [
+    "LN",
+    "HI"
+   ],
+   "tool": "Phylogenetic software",
+   "source_field": "BI",
+   "who_when": "Barbrook et al. 1998",
+   "citation": "Nature 394:839",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC083",
+   "problem": "Age of the Shroud of Turin",
+   "target_fields": [
+    "RE"
+   ],
+   "tool": "AMS radiocarbon",
+   "source_field": "PH",
+   "who_when": "Damon et al. 1989",
+   "citation": "Nature 337:611-615",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC084",
+   "problem": "Which Dead Sea Scroll fragments belong together",
+   "target_fields": [
+    "RE"
+   ],
+   "tool": "Ancient DNA of parchment animals",
+   "source_field": "BI",
+   "who_when": "Anava et al. 2020",
+   "citation": "Cell 181:1218-1231",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC085",
+   "problem": "Hidden earlier painting under a Van Gogh",
+   "target_fields": [
+    "AR"
+   ],
+   "tool": "Synchrotron X-ray fluorescence",
+   "source_field": "PH CH",
+   "who_when": "Dik et al. 2008",
+   "citation": "Anal Chem 80:6436-6442",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC086",
+   "problem": "Authenticating paintings by brushwork",
+   "target_fields": [
+    "AR"
+   ],
+   "tool": "Wavelet image statistics",
+   "source_field": "MA 42 CS",
+   "who_when": "Johnson et al. 2008",
+   "citation": "IEEE Signal Process Mag 25(4):37-48",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC087",
+   "problem": "Properties invariant under projection",
+   "target_fields": [
+    "MA"
+   ],
+   "tool": "Renaissance perspective practice",
+   "source_field": "AR",
+   "who_when": "Desargues 1639",
+   "citation": "Field 1997, The Invention of Infinity (OUP)",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC088",
+   "problem": "Quasi-periodic patterns in medieval architecture",
+   "target_fields": [
+    "AR",
+    "HI"
+   ],
+   "tool": "Quasicrystal geometry",
+   "source_field": "PH MA 52",
+   "who_when": "Lu and Steinhardt 2007",
+   "citation": "Science 315:1106-1110",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC089",
+   "problem": "Reusable solutions in object-oriented software",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Architectural pattern language",
+   "source_field": "DE",
+   "who_when": "Alexander 1977; Gamma et al. 1994",
+   "citation": "Design Patterns (Addison-Wesley)",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC090",
+   "problem": "Deployable solar arrays and maps",
+   "target_fields": [
+    "EN"
+   ],
+   "tool": "Origami folding",
+   "source_field": "AR DE",
+   "who_when": "Miura 1985",
+   "citation": "ISAS Report 618",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC091",
+   "problem": "Dry reversible adhesives",
+   "target_fields": [
+    "EN"
+   ],
+   "tool": "Gecko setae",
+   "source_field": "BI",
+   "who_when": "Autumn et al. 2000",
+   "citation": "Nature 405:681-685",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC092",
+   "problem": "Durable learning in schools",
+   "target_fields": [
+    "ED"
+   ],
+   "tool": "Spacing effect",
+   "source_field": "MS",
+   "who_when": "Ebbinghaus 1885; Cepeda et al. 2006",
+   "citation": "Psychol Bull 132:354-380",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC093",
+   "problem": "Probability errors in the Sally Clark trial",
+   "target_fields": [
+    "LA"
+   ],
+   "tool": "Independence and the prosecutor's fallacy",
+   "source_field": "MA 62",
+   "who_when": "Royal Statistical Society 2001",
+   "citation": "RSS press statement, 23 Oct 2001",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC094",
+   "problem": "Identifying individuals in criminal and immigration cases",
+   "target_fields": [
+    "LA"
+   ],
+   "tool": "Minisatellite DNA fingerprints",
+   "source_field": "BI",
+   "who_when": "Jeffreys, Wilson, Thein 1985",
+   "citation": "Nature 316:76-79",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC095",
+   "problem": "Detecting partisan gerrymanders in court",
+   "target_fields": [
+    "LA",
+    "PO"
+   ],
+   "tool": "Markov chain significance tests",
+   "source_field": "MA 60",
+   "who_when": "Chikina, Frieze, Pegden 2017",
+   "citation": "PNAS 114:2860-2864",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC096",
+   "problem": "Can any voting rule be fair",
+   "target_fields": [
+    "PO"
+   ],
+   "tool": "Axiomatic social choice",
+   "source_field": "MA EC",
+   "who_when": "Arrow 1951",
+   "citation": "Social Choice and Individual Values",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC097",
+   "problem": "Disputed authorship of the Federalist Papers",
+   "target_fields": [
+    "HI",
+    "PO"
+   ],
+   "tool": "Bayesian word-frequency discrimination",
+   "source_field": "MA 62",
+   "who_when": "Mosteller and Wallace 1963",
+   "citation": "JASA 58:275-309",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC098",
+   "problem": "Rise of the Medici",
+   "target_fields": [
+    "HI"
+   ],
+   "tool": "Social network analysis",
+   "source_field": "PO MA",
+   "who_when": "Padgett and Ansell 1993",
+   "citation": "Am J Sociol 98:1259-1319",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC099",
+   "problem": "Verifying concurrent programs",
+   "target_fields": [
+    "CS"
+   ],
+   "tool": "Temporal and modal logic",
+   "source_field": "PL",
+   "who_when": "Pnueli 1977",
+   "citation": "Proc 18th FOCS, 46-57",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  },
+  {
+   "id": "XC100",
+   "problem": "Inferring causation from observational data",
+   "target_fields": [
+    "MA",
+    "MD"
+   ],
+   "tool": "Graphical causal models",
+   "source_field": "PL",
+   "who_when": "Spirtes, Glymour, Scheines 1993; Pearl 2000",
+   "citation": "Causation, Prediction, and Search (Springer)",
+   "status": "UNVERIFIED",
+   "checked": "2026-10-11"
+  }
+ ]
+}

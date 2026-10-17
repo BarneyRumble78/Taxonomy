@@ -526,6 +526,11 @@
 | EV.O.A2.3 | Marine environment | EV | O/A2 | EA |
 | EV.O.A2.4 | Soil state | EV | O/A2 | EA |
 | EV.O.A2.5 | Biodiversity status | EV | O/A2 | BI |
+| EV.O.A2.6 | Natural hazards and processes | EV | O/A2 | EA, BI |
+| EV.O.A2.7 | Measured conditions | EV | O/A2 | — |
+| EV.O.A2.8 | RETIRED: not a state | EV | — | — |
+| EV.O.A2.9 | Natural resources | EV | O/A2 | — |
+| EV.O.A2.10 | RETIRED: see EA | EV | — | EA |
 | EV.O.A3 | Impacts | EV | O/A3 | — |
 | EV.O.A3.1 | Ecosystem harm | EV | O/A3 | BI |
 | EV.O.A3.2 | Human health impact | EV | O/A3 | MD |
@@ -536,6 +541,7 @@
 | EV.O.A4.2 | Conservation | EV | O/A4 | — |
 | EV.O.A4.3 | Regulation and instruments | EV | O/A4 | PO, EC, LA |
 | EV.O.A4.4 | Kaitiakitanga in practice | EV | O/A4 | IK |
+| EV.O.A4.7 | Environmental engineering | EV | O/A4 | — |
 | EV.O.A5 | Limits | EV | O/A5 | — |
 | EV.O.A5.1 | Thresholds and tipping points | EV | O/A5 | MA.O.A4 |
 | EV.O.A5.2 | Standards and bottom lines | EV | O/A5 | LA |

@@ -1,0 +1,73 @@
+{
+  "source": "pyramids/ANZSRC45.md",
+  "status": "provisional until Māori-led review",
+  "w13": "W13 never licenses a measurement, a date, a legal duty, or a word meaning.",
+  "default_owner": "IK",
+  "default_cell": "IK.O.A5",
+  "default_reason": "an indigenous-studies code is a knowledge-system claim and stays provisional",
+  "routes": [
+    {
+      "id": "treaty",
+      "pattern": "\\b(te tiriti|treaty of waitangi|treaty settlement)\\b",
+      "owner": "LA",
+      "cell": "LA.O.A4",
+      "reason": "a Treaty duty is law; W13 does not license it"
+    },
+    {
+      "id": "tikanga-law",
+      "pattern": "\\btikanga\\b.*\\blaw\\b|\\blaw\\b.*\\btikanga\\b",
+      "owner": "LA",
+      "cell": "LA.O.A1",
+      "reason": "tikanga as part of state law is law; W13 does not license the duty"
+    },
+    {
+      "id": "reo",
+      "pattern": "\\b(te reo|word meaning)\\b",
+      "owner": "LN",
+      "cell": "LN.O.A3",
+      "reason": "a word meaning is language; W13 does not license it"
+    },
+    {
+      "id": "rongoa",
+      "pattern": "\\brongo[aā]\\b",
+      "owner": "MD",
+      "cell": "MD.O.A4",
+      "reason": "efficacy for a named condition is medicine; W13 does not license it"
+    },
+    {
+      "id": "waka",
+      "pattern": "\\b(waka arrival|dated oral history)\\b",
+      "owner": "HI",
+      "cell": "HI.O.A1",
+      "reason": "a dated arrival is history; W13 does not license the date"
+    },
+    {
+      "id": "descent",
+      "pattern": "\\bwhakapapa\\b.*\\b(descent|tupuna|ancestor)\\b",
+      "owner": "HI",
+      "cell": "HI.O.A1",
+      "reason": "human descent from a named tupuna is history"
+    },
+    {
+      "id": "atua",
+      "pattern": "\\b(atua|tapu|noa)\\b",
+      "owner": "RE",
+      "cell": "RE.O.A1",
+      "reason": "a tradition-internal claim about atua, tapu, or noa is religion"
+    },
+    {
+      "id": "maramataka",
+      "pattern": "\\bmaramataka\\b",
+      "owner": "EA",
+      "cell": "EA.O.A4",
+      "reason": "an ecological sign is earth science; the traditional record is a source"
+    },
+    {
+      "id": "tikanga",
+      "pattern": "\\btikanga\\b",
+      "owner": "IK",
+      "cell": "IK.O.A3",
+      "reason": "tikanga as custom in social life is a knowledge-system claim"
+    }
+  ]
+}

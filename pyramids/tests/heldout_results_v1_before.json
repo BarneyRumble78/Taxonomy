@@ -1,0 +1,312 @@
+{
+ "method": "BM25 top-down (box, deterministic; Mac Qwen unreachable), node statements only",
+ "n": 10,
+ "accuracy": {
+  "field_top1": "4/10",
+  "field_top3": "6/10",
+  "pillar_top1": "3/10",
+  "pillar_top3": "4/10"
+ },
+ "results": [
+  {
+   "id": "H01",
+   "q": "Can large language models be trusted to grade student essays fairly?",
+   "gold_field": "ED",
+   "gold_pillar": "ED.K4",
+   "fields": [
+    "ED",
+    "CS",
+    "LN"
+   ],
+   "field_scores": [
+    12.43,
+    9.1,
+    7.53
+   ],
+   "pillars": [
+    "ED.K2",
+    "ED.K1",
+    "ED.K4"
+   ],
+   "section": "ED.K2.S3",
+   "groups": [
+    "ED.O.A5.G398",
+    "ED.O.A2.G155"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": false,
+   "pillar_top3": true
+  },
+  {
+   "id": "H02",
+   "q": "What does Pharmac consider when deciding whether to fund a new cancer drug in New Zealand?",
+   "gold_field": "MD",
+   "gold_pillar": "MD.K4",
+   "fields": [
+    "MD",
+    "LA",
+    "ED"
+   ],
+   "field_scores": [
+    10.55,
+    4.99,
+    3.91
+   ],
+   "pillars": [
+    "MD.K4",
+    "MD.K3",
+    "MD.K2"
+   ],
+   "section": "MD.K4.S1",
+   "groups": [
+    "MD.O.A1.G4",
+    "MD.O.A2.G3"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "H03",
+   "q": "How did the New Zealand Wars change Māori land ownership?",
+   "gold_field": "HI",
+   "gold_pillar": "HI.K4",
+   "fields": [
+    "IK",
+    "EA",
+    "EC"
+   ],
+   "field_scores": [
+    11.97,
+    7.81,
+    7.42
+   ],
+   "pillars": [
+    "IK.K2",
+    "IK.K3",
+    "IK.K1"
+   ],
+   "section": "IK.K2.S2",
+   "groups": [
+    "IK.K2.S2.U2",
+    "IK.K2.S2.U1"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "H04",
+   "q": "Is it ever morally permissible to lie to protect someone?",
+   "gold_field": "PL",
+   "gold_pillar": "PL.K4",
+   "fields": [
+    "MA",
+    "AG",
+    "ST"
+   ],
+   "field_scores": [
+    5.31,
+    2.57,
+    2.42
+   ],
+   "pillars": [
+    "MA.K2",
+    "MA.K5",
+    "MA.K4"
+   ],
+   "section": "MA.K2.S3",
+   "groups": [
+    "MSC:22-XX",
+    "MSC:20-XX"
+   ],
+   "field_top1": false,
+   "field_top3": false,
+   "pillar_top1": false,
+   "pillar_top3": false
+  },
+  {
+   "id": "H05",
+   "q": "How does a tsunami form after an undersea earthquake?",
+   "gold_field": "EA",
+   "gold_pillar": "EA.K2",
+   "fields": [
+    "AG",
+    "IS",
+    "CS"
+   ],
+   "field_scores": [
+    4.15,
+    4.0,
+    3.95
+   ],
+   "pillars": [
+    "AG.K4",
+    "AG.K1",
+    "AG.K3"
+   ],
+   "section": "AG.K4.S1",
+   "groups": [
+    "AG.K4.S1.U1",
+    "AG.K4.S1.U2"
+   ],
+   "field_top1": false,
+   "field_top3": false,
+   "pillar_top1": false,
+   "pillar_top3": false
+  },
+  {
+   "id": "H06",
+   "q": "Why do interest rate rises by a central bank lower inflation?",
+   "gold_field": "EC",
+   "gold_pillar": "EC.K4",
+   "fields": [
+    "EC",
+    "LN",
+    "CH"
+   ],
+   "field_scores": [
+    8.29,
+    5.53,
+    5.28
+   ],
+   "pillars": [
+    "EC.K4",
+    "EC.K3",
+    "EC.K2"
+   ],
+   "section": "EC.K4.S1",
+   "groups": [
+    "EC.O.A4.G9",
+    "EC.O.A5.G1"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "H07",
+   "q": "How do drones change the way small states defend themselves?",
+   "gold_field": "ST",
+   "gold_pillar": "ST.K3",
+   "fields": [
+    "LA",
+    "HI",
+    "EV"
+   ],
+   "field_scores": [
+    8.47,
+    7.55,
+    6.36
+   ],
+   "pillars": [
+    "LA.K1",
+    "LA.K5",
+    "LA.K2"
+   ],
+   "section": "LA.K1.S3",
+   "groups": [
+    "LA.O.A1.G18",
+    "UNESCO:5589"
+   ],
+   "field_top1": false,
+   "field_top3": false,
+   "pillar_top1": false,
+   "pillar_top3": false
+  },
+  {
+   "id": "H08",
+   "q": "What is the proof that there are infinitely many prime numbers?",
+   "gold_field": "MA",
+   "gold_pillar": "MA.K1",
+   "fields": [
+    "PH",
+    "MA",
+    "CS"
+   ],
+   "field_scores": [
+    7.32,
+    4.37,
+    4.2
+   ],
+   "pillars": [
+    "PH.K4",
+    "PH.K3",
+    "PH.K1"
+   ],
+   "section": "PH.K4.S1",
+   "groups": [
+    "PH.K4.S1.U2",
+    "PH.K4.S1.U1"
+   ],
+   "field_top1": false,
+   "field_top3": true,
+   "pillar_top1": false,
+   "pillar_top3": false
+  },
+  {
+   "id": "H09",
+   "q": "How does vaccination create herd immunity against measles?",
+   "gold_field": "MD",
+   "gold_pillar": "MD.K5",
+   "fields": [
+    "LA",
+    "MD",
+    "ST"
+   ],
+   "field_scores": [
+    6.47,
+    4.38,
+    4.18
+   ],
+   "pillars": [
+    "LA.K4",
+    "LA.K2",
+    "LA.K5"
+   ],
+   "section": "LA.K4.S2",
+   "groups": [
+    "LA.O.A1.G1",
+    "LA.O.A4.G3"
+   ],
+   "field_top1": false,
+   "field_top3": true,
+   "pillar_top1": false,
+   "pillar_top3": false
+  },
+  {
+   "id": "H10",
+   "q": "What makes a Gothic cathedral's flying buttresses hold up the walls?",
+   "gold_field": "EN",
+   "gold_pillar": "EN.K2",
+   "fields": [
+    "MS",
+    "BU",
+    "RE"
+   ],
+   "field_scores": [
+    5.0,
+    4.47,
+    4.43
+   ],
+   "pillars": [
+    "MS.K3",
+    "MS.K5",
+    "MS.K1"
+   ],
+   "section": "MS.K3.S2",
+   "groups": [
+    "MS.K3.S2.U2",
+    "MS.K3.S2.U3"
+   ],
+   "field_top1": false,
+   "field_top3": false,
+   "pillar_top1": false,
+   "pillar_top3": false
+  }
+ ]
+}

@@ -61,7 +61,7 @@ def test_index_matches_pyramid_text():
     index = te.load_index()
     assert index["chunks_sha256"] == digest
     assert index["model"] == "BAAI/bge-small-en-v1.5"
-    assert len(index["fields"]) == len(chunks) == 332
+    assert len(index["fields"]) == len(chunks) == 333
     assert all(len(v) == 384 for v in index["vectors"])
     text = json.loads((ROOT / "engine" / "retrieval_text.json").read_text(encoding="utf-8"))
     assert text["chunks_sha256"] == digest
@@ -148,6 +148,22 @@ def test_answered_owner_accuracy():
     assert answered, "cascade abstained on every claim"
     hit = sum(p["owner"] == r["owner"] for r, p in answered)
     assert hit / len(answered) >= 0.90
+
+
+def test_placement_floors_on_the_frozen_set():
+    """Abstentions count as misses. Floors are the published baseline, not a new score."""
+    rows = _rows()
+    assert len(rows) == 203
+    hit = {"owner": 0, "cell": 0, "warrant": 0, "method": 0}
+    for row in rows:
+        placed = te.rule_placement(row["claim"]) or {}
+        for key in hit:
+            if placed.get(key) == row[key]:
+                hit[key] += 1
+    assert hit["owner"] / 203 >= 0.621
+    assert hit["cell"] / 203 >= 0.48
+    assert hit["warrant"] / 203 >= 0.379
+    assert hit["method"] / 203 >= 0.42
 
 
 def test_growth_does_not_read_the_frozen_set():

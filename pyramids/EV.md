@@ -26,16 +26,20 @@ Dimension: **the link in the human–environment causal chain.** Order: causal.
 **SCQA.** Human activity loads the environment. What load, from what activity? Key line: emissions, land and sea use change, extraction, introduced species.
 - EV.O.A1.1 Emissions — greenhouse gases, pollutants. Inventories follow IPCC guidelines (W12 for method).
 - EV.O.A1.2 Land and sea use change — clearance, drainage, urbanisation.
-- EV.O.A1.3 Extraction — water, fish, minerals.
+- EV.O.A1.3 Extraction — water, fish, minerals. Fishing and the fishery are one taking, not two cells. Drivers, the activities that create a load, are grouped under pressures and are not a sixth key-line cell.
 - EV.O.A1.4 Introduced species — pests and invasives (e.g. possums and mustelids in NZ).
 
 ### EV.O.A2 States
-**SCQA.** Pressures change the state of air, water, soil and biota. What is the measured state? Key line: air, freshwater, marine, soil, biodiversity.
-- EV.O.A2.1 Air quality — the measurement uses CH and EA.
-- EV.O.A2.2 Freshwater quality — nitrate, E. coli, sediment.
-- EV.O.A2.3 Marine environment — acidification, warming.
-- EV.O.A2.4 Soil state — contamination, erosion.
-- EV.O.A2.5 Biodiversity status — threat classifications (IUCN Red List criteria, W12).
+**SCQA.** Pressures change the state of air, water, soil and biota. What is the measured state? Key line: measured conditions, natural hazards and processes, natural resources.
+- EV.O.A2.7 Measured conditions — air, freshwater, marine, soil, and biodiversity.
+  - EV.O.A2.1 Air quality — the measurement uses CH and EA.
+  - EV.O.A2.2 Freshwater quality — nitrate, E. coli, sediment.
+  - EV.O.A2.3 Marine environment — acidification, warming.
+  - EV.O.A2.4 Soil state — contamination, erosion.
+  - EV.O.A2.5 Biodiversity status — threat classifications (IUCN Red List criteria, W12).
+- EV.O.A2.6 Natural hazards and processes — geological, hydro-meteorological, and biogeochemical events. An earthquake or a volcanic eruption is a state, not an impact. Flood, storm, drought, heat wave, and natural disaster are hydro-meteorological hazards.
+- EV.O.A2.9 Natural resources — stocks of water, minerals, energy, and living systems.
+Environmental concepts are not a measured state. A name for the field, a culture, or a teaching term is routed to its own field. Earth-system sciences are EA. Both placements are retired in the registry and the ids are not reused.
 
 ### EV.O.A3 Impacts
 **SCQA.** A changed state harms ecosystems and people. What harm, attributed how? Key line: ecosystem harm, human health impact, attribution, ecosystem services.
@@ -45,10 +49,11 @@ Dimension: **the link in the human–environment causal chain.** Order: causal.
 - EV.O.A3.4 Ecosystem services — benefits people receive; valuation is EC.
 
 ### EV.O.A4 Responses
-**SCQA.** Societies respond. Which responses change pressures or states? Key line: restoration, conservation, regulation, monitoring of outcomes.
+**SCQA.** Societies respond. Which responses change pressures or states? Key line: restoration, conservation, regulation, environmental engineering, kaitiakitanga.
 - EV.O.A4.1 Restoration — measured recovery after intervention.
 - EV.O.A4.2 Conservation — protected areas, predator control (Predator Free 2050 is a stated goal, UNVERIFIED name and date).
 - EV.O.A4.3 Regulation and instruments — the policy is PO, the price instrument EC, the duty LA. EV owns the measured environmental effect.
+- EV.O.A4.7 Environmental engineering — technical work that changes a pressure or a state. Measurement, monitoring, and assessment are methods (EV.M.1 and EV.M.2), not a response cell.
 - EV.O.A4.4 Kaitiakitanga in practice — guardianship as a response; its tradition-internal meaning is IK.
 
 ### EV.O.A5 Limits
@@ -121,7 +126,7 @@ Precautionary principle (a decision rule, not evidence); polluter pays; "think g
 Coverage: 6 of 6 substantive groups land.
 
 ## 11. Validation
-Sizes: key line 5. Face O 5 cells + 20 sub-cells = 25. M roles 5. Heuristics 3. W rows 5. B bridges 6.
+Sizes: key line 5. Face O 5 cells + 24 sub-cells = 29. M roles 5. Heuristics 3. W rows 5. B bridges 6.
 Key line, word for word: Pressures. States. Impacts. Responses. Limits.
 CONTESTED: planetary boundary numbers; EV as a pyramid rather than an EA cell.
 OPEN: early warning of tipping points in real systems.
@@ -141,6 +146,11 @@ OPEN: early warning of tipping points in real systems.
 | EV.O.A2.3 | Marine environment | O/A2 | EA |
 | EV.O.A2.4 | Soil state | O/A2 | EA |
 | EV.O.A2.5 | Biodiversity status | O/A2 | BI |
+| EV.O.A2.6 | Natural hazards and processes | O/A2 | EA, BI |
+| EV.O.A2.7 | Measured conditions | O/A2 | — |
+| EV.O.A2.8 | RETIRED: not a state | — | — |
+| EV.O.A2.9 | Natural resources | O/A2 | — |
+| EV.O.A2.10 | RETIRED: see EA | — | EA |
 | EV.O.A3 | Impacts | O/A3 | — |
 | EV.O.A3.1 | Ecosystem harm | O/A3 | BI |
 | EV.O.A3.2 | Human health impact | O/A3 | MD |
@@ -151,6 +161,7 @@ OPEN: early warning of tipping points in real systems.
 | EV.O.A4.2 | Conservation | O/A4 | — |
 | EV.O.A4.3 | Regulation and instruments | O/A4 | PO, EC, LA |
 | EV.O.A4.4 | Kaitiakitanga in practice | O/A4 | IK |
+| EV.O.A4.7 | Environmental engineering | O/A4 | — |
 | EV.O.A5 | Limits | O/A5 | — |
 | EV.O.A5.1 | Thresholds and tipping points | O/A5 | MA.O.A4 |
 | EV.O.A5.2 | Standards and bottom lines | O/A5 | LA |

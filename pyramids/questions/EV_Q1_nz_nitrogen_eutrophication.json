@@ -1,0 +1,79 @@
+{
+  "kind": "question_pyramid",
+  "format": "A question pyramid answers one question. The governing thought is the answer. The introduction is Situation, Complication, Question. The key line is two to five yes/no issues (Minto, Chapter 9, p. 163). Each issue names the classification node it uses and the evidence that answers it. The hypothesis states what would defeat the answer (Minto, Appendix A). This is not the field classification.",
+  "field": "EV",
+  "question": "Is agricultural nitrogen runoff the main driver of freshwater eutrophication in New Zealand?",
+  "governing_thought": "Pastoral urine dominates leached nitrate, but the reports do not show that nitrogen is the main cause of eutrophication in every New Zealand freshwater body.",
+  "introduction": {
+    "situation": "New Zealand reports the state of rivers and lakes, and the nitrogen and phosphorus that reach them.",
+    "complication": "A dominant source of leached nitrate is not the same claim as the main cause of algal growth in every freshwater body.",
+    "question": "Is agricultural nitrogen runoff the main driver of freshwater eutrophication in New Zealand?"
+  },
+  "key_line": {
+    "logic_type": "inductive",
+    "basis": "kinds",
+    "order": "structure",
+    "mece_dimension": "whether the issue is the source, the load, or the harm",
+    "points": [
+      {
+        "id": "Q1.1",
+        "issue": "Is livestock urine the dominant source of nitrate-nitrogen that leaches from New Zealand soils?",
+        "answer": "yes",
+        "classification_id": "EV.P.1.1.19",
+        "classification_statement": "Fertilisers are nutrient loads applied to land.",
+        "evidence": [
+          {
+            "source": "Ministry for the Environment and Stats NZ, Our freshwater 2023",
+            "url": "https://environment.govt.nz/publications/our-freshwater-2023/",
+            "retrieved": "2026-10-12",
+            "finding": "Livestock urine is the dominant source of nitrate-nitrogen leaching."
+          }
+        ]
+      },
+      {
+        "id": "Q1.2",
+        "issue": "Did pastoral nitrogen loads to water rise from 1995 to 2015 while phosphorus loads fell?",
+        "answer": "yes",
+        "classification_id": "EV.P.1.5",
+        "classification_statement": "Drivers are the activities that create a load, grouped here because the load is the pressure.",
+        "evidence": [
+          {
+            "source": "Monaghan et al. 2021, New Zealand Journal of Agricultural Research 64(3), 365–389",
+            "url": "https://landscapedna.org/references/nzj-agres-2021.pdf",
+            "retrieved": "2026-10-12",
+            "finding": "Nitrogen loads from all pastoral land rose from 169 to 210 Gg per year between 1995 and 2015. Phosphorus loads fell from 11.5 to 8.8 Gg per year."
+          },
+          {
+            "source": "Ministry for the Environment and Stats NZ, Our freshwater 2023",
+            "url": "https://environment.govt.nz/publications/our-freshwater-2023/",
+            "retrieved": "2026-10-12",
+            "finding": "On-farm mitigations reduced phosphorus and sediment reaching rivers between 1995 and 2015, but not nitrogen. Dairy expansion increased the nitrogen that reached rivers."
+          }
+        ]
+      },
+      {
+        "id": "Q1.3",
+        "issue": "Do these reports show that nitrogen, rather than nutrients in general, is the main cause of excessive algal growth in every freshwater body?",
+        "answer": "no",
+        "classification_id": "EV.P.3.1.9",
+        "classification_statement": "System harm is degradation of an ecosystem, the environment, or freshwater, including a climate impact.",
+        "evidence": [
+          {
+            "source": "Ministry for the Environment and Stats NZ, Our freshwater 2023",
+            "url": "https://environment.govt.nz/publications/our-freshwater-2023/",
+            "retrieved": "2026-10-12",
+            "finding": "Elevated nutrient levels can lead to excessive algal growth, degrading river and lake habitats. The sentence names nutrients, not nitrogen alone."
+          }
+        ]
+      }
+    ]
+  },
+  "hypothesis": {
+    "null": "Agricultural nitrogen runoff is not the main driver of freshwater eutrophication in New Zealand.",
+    "alternative": "Agricultural nitrogen runoff is the main driver of freshwater eutrophication in New Zealand.",
+    "test": "Compare the stated source of leached nitrate with the stated cause of excessive algal growth.",
+    "result": "Reject the null for the source of leached nitrate. Do not reject the null for eutrophication in every freshwater body.",
+    "defeat": "A national study that attributes most algal-growth impairment to nitrogen rather than phosphorus, across rivers and lakes, would defeat this answer. Snelder et al. 2021 is cited by Our freshwater 2023, but its findings were not read here (UNVERIFIED)."
+  },
+  "state_node": "EV.P.2.2"
+}

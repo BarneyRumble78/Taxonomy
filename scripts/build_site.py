@@ -30,6 +30,7 @@ DRAWER = [
     ("/approach/", "Approach", "How we work"),
     ("/minerva/", "Minerva", "Truth-seeking and mapping"),
     ("/minerva/standard/", "Standard", "Minerva"),
+    ("/minerva/fields/", "Fields", "Minerva"),
     ("/minerva/browser/", "Browser tool", "Minerva"),
     ("/minerva/api/", "API", "Minerva"),
     ("/minerva/mathematics/", "Mathematics", "Minerva"),
@@ -170,7 +171,7 @@ def render_page(title, description, active, crumb_tail, body, hash_redirect=Fals
   <div class="fcols">
     <div><b>Taxonomy</b><a href="/">Home</a><a href="/approach/">Approach</a><a href="/chris-townsend/">About Chris</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
     <div><b>Divisions</b><a href="/minerva/">Minerva</a><a href="/skynet/">Skynet</a><a href="/defence/">Defence</a><a href="/blade-runner/">Blade Runner</a><a href="/medical/">Medical</a><a href="/tech/">Tech</a></div>
-    <div><b>Minerva</b><a href="/minerva/standard/">Standard</a><a href="/minerva/browser/">Browser tool</a><a href="/minerva/api/">API</a><a href="/minerva/mathematics/">Mathematics</a><a href="/minerva/claimguard/">ClaimGuard</a><a href="/minerva/evaluation/">Evaluation</a><a href="/minerva/changelog/">Changelog</a></div>
+    <div><b>Minerva</b><a href="/minerva/standard/">Standard</a><a href="/minerva/fields/">Fields</a><a href="/minerva/browser/">Browser tool</a><a href="/minerva/api/">API</a><a href="/minerva/mathematics/">Mathematics</a><a href="/minerva/claimguard/">ClaimGuard</a><a href="/minerva/evaluation/">Evaluation</a><a href="/minerva/changelog/">Changelog</a></div>
     <div><b>Chris Townsend</b><a href="/chris-townsend/speaking/">Speaking</a><a href="/chris-townsend/writing/">Writing</a><a href="/chris-townsend/video/">Video</a><a href="/chris-townsend/advisory/">Advisory</a></div>
   </div>
   <p>Taxonomy · New Zealand<br>
@@ -182,6 +183,78 @@ def render_page(title, description, active, crumb_tail, body, hash_redirect=Fals
 </body>
 </html>
 """
+
+
+def esc(text):
+    return (str(text).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;"))
+
+
+def build_fields():
+    catalog = json.loads((ROOT / "engine" / "minerva_catalog.json").read_text(encoding="utf-8"))
+    data_dir = DIST / "minerva" / "data"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    for src in sorted((ROOT / "pyramids").glob("*.json")):
+        shutil.copyfile(src, data_dir / src.name)
+    items = []
+    for field in catalog["fields"]:
+        code = field["code"]
+        holds = "holds" if field.get("holds") is True else ("legacy format" if field.get("holds") is None else "does not hold")
+        misplaced = field.get("misplaced")
+        extra = f" Misplaced items: {misplaced}." if isinstance(misplaced, int) else ""
+        items.append(
+            f'<li><a href="/minerva/fields/{code}/">{esc(code)} — {esc(field["name"])}</a>. {holds}.{extra}</li>'
+        )
+        sections = []
+        for section in field.get("sections") or []:
+            blob = " ".join([section.get("id") or "", section.get("statement") or "", " ".join(section.get("keywords") or [])]).lower()
+            sections.append(
+                f'<section data-sec="{esc(blob)}"><h2>{esc(section.get("id"))}</h2><p>{esc(section.get("statement"))}</p></section>'
+            )
+        body = f"""<aside class="side">
+  <div class="box"><h4>Minerva</h4><div class="in"><ul>
+    <li><a href="/minerva/fields/">All fields</a></li>
+    <li><a href="/minerva/standard/">Standard</a></li>
+  </ul></div></div>
+</aside>
+<main>
+  <h1>{esc(field["name"])}</h1>
+  <p class="lead">{esc(field.get("governing_thought") or "")}</p>
+  <p>Catalog depth is the key line and the section under it. The full pyramid JSON is <a href="/minerva/data/{code}.json">{code}.json</a>. This page does not fetch it.</p>
+  <p><label for="filter">Filter sections</label> <input id="filter" type="search" autocomplete="off"></p>
+  {''.join(sections)}
+</main>
+<script>
+document.getElementById("filter").addEventListener("input", function () {{
+  var q = this.value.toLowerCase();
+  var nodes = document.querySelectorAll("[data-sec]");
+  for (var i = 0; i < nodes.length; i++) {{
+    nodes[i].hidden = q && nodes[i].getAttribute("data-sec").indexOf(q) === -1;
+  }}
+}});
+</script>"""
+        write_page(
+            f"minerva/fields/{code}/index.html",
+            render_page(f"{code} · Fields · Minerva", f"{field['name']} in the Minerva catalog.", "minerva",
+                        f'<a href="/minerva/">Minerva</a> &gt; <a href="/minerva/fields/">Fields</a> &gt; {code}', body),
+        )
+    index_body = f"""<aside class="side">
+  <div class="box"><h4>Minerva</h4><div class="in"><ul>
+    <li><a href="/minerva/standard/">Standard</a></li>
+    <li><a href="/minerva/api/">API</a></li>
+  </ul></div></div>
+</aside>
+<main>
+  <h1>Fields</h1>
+  <p class="lead">Twenty-five fields, from the catalog built with the site. Each page lists the key line. The full JSON sits beside it.</p>
+  <ul>
+    {''.join(items)}
+  </ul>
+</main>"""
+    write_page(
+        "minerva/fields/index.html",
+        render_page("Fields · Minerva", "Browse the 25 Minerva fields.", "minerva",
+                    '<a href="/minerva/">Minerva</a> &gt; Fields', index_body),
+    )
 
 
 def write_page(rel, html):
@@ -220,7 +293,14 @@ def main():
     ]
     for rel, src, title, description, active, crumb, redirect in pages:
         body = (PAGES / src).read_text(encoding="utf-8").strip()
+        if rel.startswith("minerva/") and 'href="/minerva/standard/"' in body:
+            body = body.replace(
+                '<li><a href="/minerva/standard/">Standard</a></li>',
+                '<li><a href="/minerva/standard/">Standard</a></li>\n    <li><a href="/minerva/fields/">Fields</a></li>',
+                1,
+            )
         write_page(rel, render_page(title, description, active, crumb, body, redirect))
+    build_fields()
     about = DIST / "about"
     if about.exists():
         shutil.rmtree(about)

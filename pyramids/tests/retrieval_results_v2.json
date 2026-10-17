@@ -1,0 +1,612 @@
+{
+ "method": "v2: max-section BM25, keywords, cross-field pillar top-3 (box, deterministic; Mac offline)",
+ "n": 20,
+ "accuracy": {
+  "field_top1": "18/20",
+  "field_top3": "20/20",
+  "pillar_top1": "14/20",
+  "pillar_top3": "19/20"
+ },
+ "results": [
+  {
+   "id": "T01",
+   "q": "How can an AI agent with tool access be protected against prompt injection from web pages it reads?",
+   "gold_field": "CS",
+   "gold_pillar": "CS.K5",
+   "fields": [
+    "CS",
+    "IS",
+    "AG"
+   ],
+   "pillars": [
+    "CS.K5",
+    "IS.K5",
+    "CS.K3"
+   ],
+   "pillar_scores": [
+    22.77,
+    13.91,
+    12.6
+   ],
+   "section": "CS.K5.S3",
+   "groups": [
+    "CS.K5.S3.M1",
+    "CS.O.A5.G5"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T02",
+   "q": "What does New Zealand's Medsafe require before a new prescription medicine can be sold?",
+   "gold_field": "LA",
+   "gold_pillar": "LA.K4",
+   "fields": [
+    "MD",
+    "LA",
+    "HI"
+   ],
+   "pillars": [
+    "MD.K5",
+    "MD.K4",
+    "MD.K1"
+   ],
+   "pillar_scores": [
+    12.01,
+    8.72,
+    8.04
+   ],
+   "section": "MD.K5.S4",
+   "groups": [
+    "MD.O.A5.G12",
+    "MD.O.A5.G17"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": false,
+   "pillar_top3": true
+  },
+  {
+   "id": "T03",
+   "q": "How do militaries use satellite mapping and geospatial intelligence to locate targets?",
+   "gold_field": "ST",
+   "gold_pillar": "ST.K5",
+   "fields": [
+    "EA",
+    "ST",
+    "CS"
+   ],
+   "pillars": [
+    "EA.K5",
+    "ST.K5",
+    "CS.K4"
+   ],
+   "pillar_scores": [
+    35.91,
+    25.56,
+    12.17
+   ],
+   "section": "EA.K5.S1",
+   "groups": [
+    "EA.O.A4.G23",
+    "EA.O.A5.G9"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T04",
+   "q": "Why is the Riemann hypothesis about the zeros of the zeta function important for the distribution of prime numbers?",
+   "gold_field": "MA",
+   "gold_pillar": "MA.K1",
+   "fields": [
+    "MA",
+    "ST",
+    "AG"
+   ],
+   "pillars": [
+    "MA.K1",
+    "ST.K1",
+    "AG.K2"
+   ],
+   "pillar_scores": [
+    10.2,
+    9.18,
+    8.44
+   ],
+   "section": "MA.K1.S2",
+   "groups": [
+    "MSC:11-XX",
+    "MA.K1.S2.M1"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T05",
+   "q": "Is there a good argument that free will is compatible with determinism?",
+   "gold_field": "PL",
+   "gold_pillar": "PL.K1",
+   "fields": [
+    "PL",
+    "BU",
+    "EC"
+   ],
+   "pillars": [
+    "PL.K1",
+    "BU.K5",
+    "EC.K3"
+   ],
+   "pillar_scores": [
+    38.45,
+    9.54,
+    8.69
+   ],
+   "section": "PL.K1.M1",
+   "groups": [
+    "MINERVA:free-will",
+    "MINERVA:determinism-and-compatibilism"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T06",
+   "q": "What causes high-temperature superconductivity in cuprate materials?",
+   "gold_field": "PH",
+   "gold_pillar": "PH.K3",
+   "fields": [
+    "PH",
+    "EV",
+    "MD"
+   ],
+   "pillars": [
+    "PH.K3",
+    "EV.P.2",
+    "MD.K2"
+   ],
+   "pillar_scores": [
+    15.32,
+    11.99,
+    7.66
+   ],
+   "section": "PH.K3.S2",
+   "groups": [
+    "PH.O.A4.G744",
+    "PH.O.A4.G745"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T07",
+   "q": "How effective are statins at preventing heart attacks in people without heart disease?",
+   "gold_field": "MD",
+   "gold_pillar": "MD.K5",
+   "fields": [
+    "CS",
+    "MD",
+    "ED"
+   ],
+   "pillars": [
+    "CS.K5",
+    "MD.K5",
+    "MD.K4"
+   ],
+   "pillar_scores": [
+    16.72,
+    14.37,
+    12.41
+   ],
+   "section": "CS.K5.S3",
+   "groups": [
+    "CS.O.A5.G5",
+    "CS.K5.S3.M1"
+   ],
+   "field_top1": false,
+   "field_top3": true,
+   "pillar_top1": false,
+   "pillar_top3": true
+  },
+  {
+   "id": "T08",
+   "q": "Does raising the minimum wage reduce employment among young workers?",
+   "gold_field": "EC",
+   "gold_pillar": "EC.K3",
+   "fields": [
+    "EC",
+    "ED",
+    "LA"
+   ],
+   "pillars": [
+    "EC.K2",
+    "ED.K5",
+    "LA.K2"
+   ],
+   "pillar_scores": [
+    28.19,
+    11.95,
+    9.39
+   ],
+   "section": "EC.K2.S3",
+   "groups": [
+    "EC.K2.S3.M1",
+    "JEL:G1"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T09",
+   "q": "What are the best ways to reduce facial eczema in New Zealand dairy herds?",
+   "gold_field": "AG",
+   "gold_pillar": "AG.K2",
+   "fields": [
+    "AG",
+    "EV",
+    "CS"
+   ],
+   "pillars": [
+    "AG.K2",
+    "EV.P.1",
+    "CS.K2"
+   ],
+   "pillar_scores": [
+    19.59,
+    8.32,
+    6.75
+   ],
+   "section": "AG.K2.S3",
+   "groups": [
+    "AG.K2.S3.U3",
+    "AG.K2.S3.U1"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T10",
+   "q": "How is mātauranga Māori being used in managing freshwater and rāhui on rivers?",
+   "gold_field": "IK",
+   "gold_pillar": "IK.K2",
+   "fields": [
+    "IK",
+    "EV",
+    "BI"
+   ],
+   "pillars": [
+    "IK.K2",
+    "IK.K4",
+    "IK.K3"
+   ],
+   "pillar_scores": [
+    26.08,
+    20.7,
+    19.65
+   ],
+   "section": "IK.K2.S1",
+   "groups": [
+    "ANZSRC:450904",
+    "ANZSRC:450999"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T11",
+   "q": "What triggered the Alpine Fault earthquakes and how often do they recur?",
+   "gold_field": "EA",
+   "gold_pillar": "EA.K2",
+   "fields": [
+    "EA",
+    "BI",
+    "CS"
+   ],
+   "pillars": [
+    "EA.K2",
+    "BI.K2",
+    "CS.K3"
+   ],
+   "pillar_scores": [
+    21.12,
+    6.57,
+    5.82
+   ],
+   "section": "EA.K2.S3",
+   "groups": [
+    "PH.O.A3.G220",
+    "ANZSRC:370609"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T12",
+   "q": "How does CRISPR-Cas9 edit a specific gene sequence?",
+   "gold_field": "BI",
+   "gold_pillar": "BI.K1",
+   "fields": [
+    "BI",
+    "MD",
+    "IK"
+   ],
+   "pillars": [
+    "BI.K1",
+    "MD.K2",
+    "IK.K1"
+   ],
+   "pillar_scores": [
+    20.94,
+    7.6,
+    6.37
+   ],
+   "section": "BI.K1.S2",
+   "groups": [
+    "BI.O.A1.G4",
+    "BI.O.A1.G5"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T13",
+   "q": "What makes a catalytic converter reduce nitrogen oxide emissions from car exhausts?",
+   "gold_field": "CH",
+   "gold_pillar": "CH.K4",
+   "fields": [
+    "EV",
+    "EN",
+    "PH"
+   ],
+   "pillars": [
+    "EV.P.1",
+    "EN.K3",
+    "EV.P.2"
+   ],
+   "pillar_scores": [
+    10.05,
+    8.01,
+    7.69
+   ],
+   "section": "EV.P.1.1",
+   "groups": [
+    "EV.P.1.1.15",
+    "EV.P.1.1.16"
+   ],
+   "field_top1": false,
+   "field_top3": true,
+   "pillar_top1": false,
+   "pillar_top3": true
+  },
+  {
+   "id": "T14",
+   "q": "How should a bridge be designed to survive earthquake shaking?",
+   "gold_field": "EN",
+   "gold_pillar": "EN.K2",
+   "fields": [
+    "EN",
+    "MA",
+    "EA"
+   ],
+   "pillars": [
+    "EN.K2",
+    "MA.K2",
+    "EA.K2"
+   ],
+   "pillar_scores": [
+    27.48,
+    10.41,
+    9.19
+   ],
+   "section": "EN.K2.M1",
+   "groups": [
+    "MINERVA:earthquake-and-seismic-engineering",
+    "MINERVA:bridges"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T15",
+   "q": "What were the main causes of the First World War?",
+   "gold_field": "HI",
+   "gold_pillar": "HI.K3",
+   "fields": [
+    "HI",
+    "ST",
+    "CH"
+   ],
+   "pillars": [
+    "HI.K3",
+    "HI.K4",
+    "ST.K2"
+   ],
+   "pillar_scores": [
+    32.52,
+    15.38,
+    11.92
+   ],
+   "section": "HI.K3.S1",
+   "groups": [
+    "HI.K3.S1.M1",
+    "UNESCO:6393"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T16",
+   "q": "Does formative assessment improve student achievement in secondary schools?",
+   "gold_field": "ED",
+   "gold_pillar": "ED.K4",
+   "fields": [
+    "ED",
+    "IK",
+    "CS"
+   ],
+   "pillars": [
+    "ED.K2",
+    "ED.K4",
+    "ED.K1"
+   ],
+   "pillar_scores": [
+    20.28,
+    19.83,
+    16.72
+   ],
+   "section": "ED.K2.S3",
+   "groups": [
+    "ED.O.A5.G398",
+    "ED.O.A2.G155"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": false,
+   "pillar_top3": true
+  },
+  {
+   "id": "T17",
+   "q": "How do proportional representation systems like MMP change which parties win seats?",
+   "gold_field": "PO",
+   "gold_pillar": "PO.K2",
+   "fields": [
+    "PO",
+    "AG",
+    "AR"
+   ],
+   "pillars": [
+    "PO.K3",
+    "PO.K2",
+    "AG.K4"
+   ],
+   "pillar_scores": [
+    19.7,
+    16.34,
+    10.49
+   ],
+   "section": "PO.K3.S1",
+   "groups": [
+    "PO.K3.S1.M1",
+    "PO.K3.S1.U1"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": false,
+   "pillar_top3": true
+  },
+  {
+   "id": "T18",
+   "q": "How do children acquire the grammar of their first language?",
+   "gold_field": "LN",
+   "gold_pillar": "LN.K2",
+   "fields": [
+    "LN",
+    "ED",
+    "IS"
+   ],
+   "pillars": [
+    "LN.K2",
+    "ED.K1",
+    "IS.K5"
+   ],
+   "pillar_scores": [
+    24.89,
+    9.98,
+    9.93
+   ],
+   "section": "LN.K2.S1",
+   "groups": [
+    "LN.O.A2.G13",
+    "LN.O.A2.G6"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T19",
+   "q": "How should a company account for revenue from multi-year software subscriptions?",
+   "gold_field": "BU",
+   "gold_pillar": "BU.K1",
+   "fields": [
+    "BU",
+    "EC",
+    "CS"
+   ],
+   "pillars": [
+    "BU.K1",
+    "EC.K3",
+    "CS.K1"
+   ],
+   "pillar_scores": [
+    13.74,
+    12.04,
+    11.54
+   ],
+   "section": "BU.K1.S1",
+   "groups": [
+    "ANZSRC:3501",
+    "BU.O.A1.G2"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": true,
+   "pillar_top3": true
+  },
+  {
+   "id": "T20",
+   "q": "Who is legally liable when an autonomous vehicle causes a crash?",
+   "gold_field": "LA",
+   "gold_pillar": "LA.K3",
+   "fields": [
+    "EN",
+    "BU",
+    "CS"
+   ],
+   "pillars": [
+    "EN.K2",
+    "BU.K5",
+    "CS.K4"
+   ],
+   "pillar_scores": [
+    22.83,
+    8.0,
+    7.74
+   ],
+   "section": "EN.K2.S2",
+   "groups": [
+    "EN.K2.S2.U1",
+    "EN.K2.S2.U2"
+   ],
+   "field_top1": true,
+   "field_top3": true,
+   "pillar_top1": false,
+   "pillar_top3": false
+  }
+ ]
+}

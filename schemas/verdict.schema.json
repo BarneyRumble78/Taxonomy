@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://taxonomy.co.nz/schemas/verdict.schema.json",
+  "title": "ClaimGuard verify response",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["version", "engine", "claims", "summary"],
+  "properties": {
+    "version": { "const": "claimguard-0.1" },
+    "engine": { "type": "string" },
+    "claims": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/claim" }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["worst", "counts"],
+      "properties": {
+        "worst": { "$ref": "#/$defs/verdict" },
+        "counts": { "type": "object" }
+      }
+    },
+    "provenance": { "type": "object" }
+  },
+  "$defs": {
+    "verdict": {
+      "enum": ["out_of_scope", "contradicted", "contested", "overstated", "supported", "unverified"]
+    },
+    "claim": {
+      "type": "object",
+      "required": ["id", "text", "verdict", "reason", "status"],
+      "properties": {
+        "id": { "type": "string" },
+        "text": { "type": "string" },
+        "span": { "type": "array", "items": { "type": "integer" } },
+        "placement": { "type": ["object", "null"] },
+        "warrant_required": { "type": "object" },
+        "warrant_mismatch": { "type": "boolean" },
+        "certainty": { "type": "object" },
+        "evidence": { "type": "array" },
+        "checks": { "type": "array" },
+        "verdict": { "$ref": "#/$defs/verdict" },
+        "qualifier": { "type": ["string", "null"] },
+        "reason": { "type": "array", "items": { "type": "string" } },
+        "status": { "type": ["string", "null"] },
+        "certainty_without_evidence": { "type": "boolean" }
+      }
+    }
+  }
+}

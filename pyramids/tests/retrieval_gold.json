@@ -1,0 +1,25 @@
+{
+ "written": "2026-10-14 before any retrieval run; gold = expected primary field + pillar, with acceptable alternates for cross-field questions",
+ "questions": [
+  {"id":"T01","q":"How can an AI agent with tool access be protected against prompt injection from web pages it reads?","field":"CS","pillar":"CS.K5","alt_fields":[],"cross":true,"note":"AI-agent security"},
+  {"id":"T02","q":"What does New Zealand's Medsafe require before a new prescription medicine can be sold?","field":"LA","pillar":"LA.K4","alt_fields":["MD"],"alt_pillars":["MD.K4"],"cross":true,"note":"pharma regulation NZ"},
+  {"id":"T03","q":"How do militaries use satellite mapping and geospatial intelligence to locate targets?","field":"ST","pillar":"ST.K5","alt_fields":["EA"],"alt_pillars":["EA.K5"],"cross":true,"note":"defence and mapping"},
+  {"id":"T04","q":"Why is the Riemann hypothesis about the zeros of the zeta function important for the distribution of prime numbers?","field":"MA","pillar":"MA.K1","alt_fields":[],"cross":false},
+  {"id":"T05","q":"Is there a good argument that free will is compatible with determinism?","field":"PL","pillar":"PL.K1","alt_fields":[],"alt_pillars":["PL.K4"],"cross":false},
+  {"id":"T06","q":"What causes high-temperature superconductivity in cuprate materials?","field":"PH","pillar":"PH.K3","alt_fields":[],"cross":false},
+  {"id":"T07","q":"How effective are statins at preventing heart attacks in people without heart disease?","field":"MD","pillar":"MD.K5","alt_fields":[],"alt_pillars":["MD.K4"],"cross":false},
+  {"id":"T08","q":"Does raising the minimum wage reduce employment among young workers?","field":"EC","pillar":"EC.K3","alt_fields":[],"alt_pillars":["EC.K2"],"cross":false},
+  {"id":"T09","q":"What are the best ways to reduce facial eczema in New Zealand dairy herds?","field":"AG","pillar":"AG.K2","alt_fields":[],"cross":false},
+  {"id":"T10","q":"How is mātauranga Māori being used in managing freshwater and rāhui on rivers?","field":"IK","pillar":"IK.K2","alt_fields":["EV"],"alt_pillars":["EV.P.4"],"cross":true,"note":"IK x environment"},
+  {"id":"T11","q":"What triggered the Alpine Fault earthquakes and how often do they recur?","field":"EA","pillar":"EA.K2","alt_fields":[],"cross":false},
+  {"id":"T12","q":"How does CRISPR-Cas9 edit a specific gene sequence?","field":"BI","pillar":"BI.K1","alt_fields":[],"cross":false},
+  {"id":"T13","q":"What makes a catalytic converter reduce nitrogen oxide emissions from car exhausts?","field":"CH","pillar":"CH.K4","alt_fields":["EN"],"alt_pillars":["EN.K3"],"cross":false},
+  {"id":"T14","q":"How should a bridge be designed to survive earthquake shaking?","field":"EN","pillar":"EN.K2","alt_fields":[],"cross":false},
+  {"id":"T15","q":"What were the main causes of the First World War?","field":"HI","pillar":"HI.K3","alt_fields":[],"cross":false},
+  {"id":"T16","q":"Does formative assessment improve student achievement in secondary schools?","field":"ED","pillar":"ED.K4","alt_fields":[],"cross":false},
+  {"id":"T17","q":"How do proportional representation systems like MMP change which parties win seats?","field":"PO","pillar":"PO.K2","alt_fields":[],"cross":false},
+  {"id":"T18","q":"How do children acquire the grammar of their first language?","field":"LN","pillar":"LN.K2","alt_fields":["MS"],"alt_pillars":["MS.K1"],"cross":false},
+  {"id":"T19","q":"How should a company account for revenue from multi-year software subscriptions?","field":"BU","pillar":"BU.K1","alt_fields":[],"cross":false},
+  {"id":"T20","q":"Who is legally liable when an autonomous vehicle causes a crash?","field":"LA","pillar":"LA.K3","alt_fields":["CS","EN"],"cross":true,"note":"AI x law"}
+ ]
+}

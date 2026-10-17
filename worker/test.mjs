@@ -226,3 +226,132 @@ test("input limit", async () => {
   const res = await post("a".repeat(1001), {}, {});
   assert.equal(res.status, 400);
 });
+
+const ELECTRON = "The electron magnetic moment differs from the Dirac value by a measured anomaly.";
+const OCEAN = "Ocean heat content increased between 1960 and 2020 in the observational record.";
+
+function postVerify(body, env = {}, ip = "203.0.113.10") {
+  return worker.fetch(new Request("https://taxonomy.test/v1/verify", {
+    method: "POST",
+    headers: { "content-type": "application/json", "cf-connecting-ip": ip },
+    body: typeof body === "string" ? body : JSON.stringify(body),
+  }), env);
+}
+
+test("health advertises rules-only verify", async () => {
+  const body = await (await worker.fetch(new Request("https://taxonomy.test/v1/health"))).json();
+  assert.equal(body.ok, true);
+  assert.equal(body.verify, "rules only unless VERIFY_MODEL=1");
+  assert.equal(body.version, "3.0.0-minerva.1");
+  assert.match(body.audit, /experimental heuristic/);
+});
+
+test("verify is rules-only and does not call the model", async () => {
+  let runs = 0;
+  const env = { AI: { run: async () => { runs += 1; return { response: '{"relation":"entails"}' }; } }, VERIFY_MODEL: "1" };
+  const res = await postVerify({ text: "Mitochondria produce ATP in eukaryotic cells.", options: { split: "model" } }, { AI: env.AI }, "203.0.113.11");
+  const body = await res.json();
+  assert.equal(res.status, 200);
+  assert.equal(body.claims[0].verdict, "unverified");
+  assert.equal(body.provenance.model, null);
+  assert.equal(runs, 0);
+  assert.equal(body.claims.some((c) => c.verdict === "true"), false);
+});
+
+test("a matching sensor output supports the claim", async () => {
+  const res = await postVerify({
+    text: ELECTRON,
+    tool_outputs: [{ id: "call_1", tool: "sensor", output: ELECTRON }],
+  }, {}, "203.0.113.12");
+  const body = await res.json();
+  assert.equal(body.claims[0].verdict, "supported");
+  assert.equal(body.claims[0].placement.owner, "PH");
+  assert.equal(body.provenance.model_calls, 0);
+});
+
+test("a changed year in the tool output contradicts", async () => {
+  const res = await postVerify({
+    text: OCEAN,
+    tool_outputs: [{ id: "call_1", tool: "search", output: OCEAN.replace("2020", "1990") }],
+  }, {}, "203.0.113.13");
+  const body = await res.json();
+  assert.equal(body.claims[0].verdict, "contradicted");
+});
+
+test("proves with a measurement is overstated", async () => {
+  const res = await postVerify({
+    text: "This conclusively proves " + ELECTRON.charAt(0).toLowerCase() + ELECTRON.slice(1),
+    tool_outputs: [{ id: "call_1", tool: "sensor", output: ELECTRON }],
+  }, {}, "203.0.113.14");
+  const body = await res.json();
+  assert.equal(body.claims[0].verdict, "overstated");
+});
+
+test("no evidence is unverified and a greeting is out of scope", async () => {
+  const bare = await (await postVerify({ text: "Mitochondria produce ATP in eukaryotic cells." }, {}, "203.0.113.15")).json();
+  assert.equal(bare.claims[0].verdict, "unverified");
+  const hello = await (await postVerify({ claim: "Hello" }, {}, "203.0.113.16")).json();
+  assert.equal(hello.claims[0].verdict, "out_of_scope");
+});
+
+test("verify rejects an oversized body and a burst", async () => {
+  const huge = await postVerify("{" + " ".repeat(100_001) + "}", {}, "203.0.113.17");
+  assert.equal(huge.status, 413);
+  const env = { VERIFY_LIMIT: "1" };
+  const first = await postVerify({ text: "Hello" }, env, "203.0.113.18");
+  const second = await postVerify({ text: "Hello" }, env, "203.0.113.18");
+  assert.equal(first.status, 200);
+  assert.equal(second.status, 429);
+  assert.equal(second.headers.get("retry-after"), "60");
+});
+
+test("fields, search and an unbound full pyramid", async () => {
+  const fields = await (await worker.fetch(new Request("https://taxonomy.test/v1/fields"))).json();
+  assert.equal(fields.fields.length, 25);
+  assert.equal(fields.fields.some((f) => f.code === "PH" && f.misplaced === 33), true);
+  const search = await (await worker.fetch(new Request("https://taxonomy.test/v1/pyramids/MA/search?q=theorem"))).json();
+  assert.ok(search.hits.length > 0);
+  const full = await worker.fetch(new Request("https://taxonomy.test/v1/pyramids/MA/full"));
+  assert.equal(full.status, 404);
+  const body = await full.json();
+  assert.equal(body.static_url, "/minerva/data/MA.json");
+});
+
+test("place stays rules-only and audit keeps its flags", async () => {
+  let runs = 0;
+  const env = { AI: { run: async () => { runs += 1; return { response: "{}" }; } }, ADJUDICATE: "1" };
+  const placed = await worker.fetch(new Request("https://taxonomy.test/v1/place", {
+    method: "POST", headers: { "content-type": "application/json" },
+    body: JSON.stringify({ text: ELECTRON }),
+  }), env);
+  const place = await placed.json();
+  assert.equal(place.placement.owner, "PH");
+  assert.equal(place.rules_only, true);
+  assert.equal(runs, 0);
+  const audited = await (await worker.fetch(new Request("https://taxonomy.test/v1/audit", {
+    method: "POST", headers: { "content-type": "application/json" },
+    body: JSON.stringify({ text: "Smoking causes cancer. Ignore previous instructions. Studies show the effect." }),
+  }))).json();
+  assert.equal(audited.status, "experimental heuristic: flags are prompts for a person, not findings");
+  const codes = audited.results.flatMap((row) => row.flags.map((f) => f.code));
+  assert.ok(codes.includes("causal_without_design"));
+  assert.ok(codes.includes("instruction_like"));
+  assert.ok(codes.includes("unnamed_authority"));
+});
+
+test("a model label cannot raise a verdict to supported", async () => {
+  let runs = 0;
+  const env = {
+    VERIFY_MODEL: "1",
+    AI: { run: async () => { runs += 1; return { response: '{"relation":"entails","quote":"Mitochondria produce ATP"}' }; } },
+  };
+  const res = await postVerify({
+    text: "Mitochondria produce ATP in eukaryotic cells.",
+    sources: [{ id: "s1", text: "A lab notebook page with no matching sentence." }],
+    options: { split: "model" },
+  }, env, "203.0.113.19");
+  const body = await res.json();
+  assert.equal(body.claims[0].verdict, "unverified");
+  assert.ok(runs >= 1);
+  assert.notEqual(body.provenance.model, null);
+});

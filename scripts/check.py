@@ -29,5 +29,21 @@ for code, r in refs:
     r = r.rstrip(".")
     if r not in defined and not any(d.startswith(r + ".") for d in defined):
         problems.append(f"R1 {code}: cites undefined {r}")
+# Minto checks for a classification pyramid that states a basis on each group.
+sys.path.insert(0, str(ROOT / "engine" / "v3"))
+from minto_check import minto_counts
+from crosslinks import check as cross_check
+import json
+ev_path = ROOT / "pyramids" / "EV.json"
+if ev_path.exists():
+    counts = minto_counts(json.loads(ev_path.read_text(encoding="utf-8")))
+    for name, count in counts.items():
+        if count:
+            problems.append(f"Minto EV: {name} {count}")
+found = cross_check(ROOT)
+for item in found["dangling"]:
+    problems.append(f"Cross-link: {item}")
+for item in found["routes"]:
+    problems.append(f"Cross-link route: {item}")
 print("\n".join(sorted(set(problems))) or "All checks pass.")
 sys.exit(1 if problems else 0)

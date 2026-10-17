@@ -38,7 +38,7 @@ Run check, registry, tests and site build after any change to a pyramid, the lex
 - Look: circa-2010 government / standards-body site. Fixed 960px sheet, blue banner, big Menu button top left, tab bar, left sidebar boxes, breadcrumb, grey footer. Single light theme. Georgia headings, Arial body. New Zealand spelling on company pages.
 - Taxonomy is the company. The public site map is `/`, `/approach/`, `/minerva/` (standard, browser, API, mathematics, ClaimGuard, evaluation, changelog), `/skynet/`, `/defence/`, `/blade-runner/`, `/medical/`, `/tech/`, `/chris-townsend/` (speaking, writing, video, advisory), `/contact/`, `/privacy/` and `/terms/`. Minerva keeps the knowledge standard, the browser tool and the API design. Old hash URLs (`#try`, `#fields` and the rest) redirect into Minerva, and `/about/` redirects to `/chris-townsend/`. Division pages stay short until there is something true to say. Do not invent clients, prices or performance figures. Placeholders stay marked.
 - Name is "Taxonomy" (no "The", no "Pyramids of Knowledge").
-- Minerva leads with truth-seeking, then mathematics as the reference domain. The pyramids are the substrate, explained after the value. Plain human headings. ClaimGuard is the working product name and is in development. The pages do not claim to decide truth.
+- Minerva leads with truth-seeking, then mathematics as the reference domain. The pyramids are the substrate, explained after the value. Plain human headings. ClaimGuard is the working product name and is in development. Minerva decides only what it can show: every verdict carries its evidence and its reason; where evidence is missing, it says unverified.
 - Do not use "we publish our own failures" as a selling point. No invented testimonials, stats or endorsements.
 - Copy follows Bob Bly's formulas: benefit and USP in headline and first sentences, 4 U's, eight persuasion elements, technical-audience tone.
 - The page runs in a sandbox: no external fetches, only allowlisted CDNs, no Python in the browser. The JS engine in the template must stay a faithful port of `engine/taxonomy_engine.py`.
@@ -46,7 +46,8 @@ Run check, registry, tests and site build after any change to a pyramid, the lex
 
 ## v3 (branch v3-foundations): applying knowledge
 - Purpose and modes: `standard/STANDARD_V3.md` (Survey, Consult, Connect, Check, Zoom). R1 one-home applies to Check only.
-- `maps/<FIELD>/`: subfield maps from authority schemes (MSC2020 for MA; record licence per map).
+- `maps/<FIELD>/`: subfield maps copied from published taxonomies, every node placed under a cell of its owning field. ANZSRC 2020 for all fields; MSC2020 (MA), PhySH (PH), JEL (EC), GCMD (EA), MeSH 2026, ACM CCS 2012 and LCC outlines split by owner. `maps/index.json` names each field's primary map. Raw downloads in `sources/`. Rebuild: `python3 scripts/build_maps.py && python3 scripts/build_maps_more.py`; check: `python3 scripts/check_coverage.py`.
+- `bench/`: retrodiction problems, the locked answer key and the 100-case cross-connection catalogue (`python3 scripts/build_bench.py`). Never put `bench/retrodiction_answers.json` or `bench/cross_connections.json` into a prompt, card or lexicon.
 - `cards/lens/`: lens cards per field and cell (`python3 scripts/build_lens_cards.py`; MA written by hand).
 - `cards/toolkit/`: toolkit cards with problem signatures (`python3 scripts/build_toolkit_cards.py`).
 - `signatures/vocabulary.json`: controlled facets for problem signatures. `schemas/`: JSON schemas.

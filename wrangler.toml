@@ -6,3 +6,27 @@ compatibility_date = "2026-10-01"
 # A binding plus ADJUDICATE=1 calls a model and spends money. Leave both unset
 # until that spend is intended. assist=1 is a second opinion and cannot change a placement.
 # RETRIEVE=1 allows Workers AI embeddings. Without it, retrieval stays off.
+#
+# ClaimGuard verify is rules-only unless VERIFY_MODEL=1. That flag stays unset.
+# A paid model also needs an AI binding, and a valid key when VERIFY_KEYS is bound.
+# Do not set VERIFY_MODEL until that spend is intended.
+# [vars]
+# VERIFY_MODEL = "0"
+#
+# [[kv_namespaces]]
+# binding = "VERIFY_KEYS"
+# id = "replace-with-namespace-id"
+#
+# [[kv_namespaces]]
+# binding = "PYRAMIDS"
+# id = "replace-with-namespace-id"
+#
+# [[r2_buckets]]
+# binding = "PYRAMID_BUCKET"
+# bucket_name = "taxonomy-pyramids"
+#
+# [[unsafe.bindings]]
+# name = "VERIFY_LIMITER"
+# type = "ratelimit"
+# namespace_id = "1001"
+# simple = { limit = 30, period = 60 }

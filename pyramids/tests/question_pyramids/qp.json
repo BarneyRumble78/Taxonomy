@@ -1,0 +1,31 @@
+[
+{"kind":"question_pyramid","test_id":"T03","field":"ST","drafted_by":"Grok Bot (box; Mac Qwen offline), from general knowledge, no sources fetched",
+ "question":"How do militaries use satellite mapping and geospatial intelligence to locate targets?",
+ "introduction":{"situation":"Modern forces need precise positions for anything they intend to strike.","complication":"Imagery alone shows what is there, not exactly where it is or whether it is still there.","question":"How do militaries turn satellite mapping and geospatial intelligence into target locations?"},
+ "governing_thought":"Militaries locate targets by detecting them from orbit, fixing them on an accurate geodetic map, and confirming them with other intelligence before a strike.",
+ "key_line":{"logic_type":"inductive","order":"time","mece_dimension":"step in the targeting chain",
+  "points":[
+   {"id":"T03.1","point":"Detection: optical, radar (SAR) and signals satellites find candidate objects, with SAR working through cloud and at night.","linked_node":"ST.K5.S2"},
+   {"id":"T03.2","point":"Location: the object is geolocated against a precise geodetic reference (e.g. WGS 84) and elevation models so its coordinates are accurate enough for GPS-guided weapons.","linked_node":"ST.O.A5.G3"},
+   {"id":"T03.3","point":"Confirmation: geospatial intelligence is fused with signals and human intelligence and re-checked close to strike time, because targets move and decoys exist.","linked_node":"DTIC:15.04"}]},
+ "cross_field_nodes":["EA.K5"]},
+{"kind":"question_pyramid","test_id":"T04","field":"MA","drafted_by":"Grok Bot (box; Mac Qwen offline), from general knowledge, no sources fetched",
+ "question":"Why is the Riemann hypothesis about the zeros of the zeta function important for the distribution of prime numbers?",
+ "introduction":{"situation":"The prime number theorem says roughly x/ln x primes lie below x.","complication":"It says nothing about how large the error in that estimate can be.","question":"Why does the location of the zeta zeros control that error?"},
+ "governing_thought":"The Riemann hypothesis matters because the non-trivial zeros of the zeta function set the size of the error in counting primes, and the hypothesis would make that error as small as possible.",
+ "key_line":{"logic_type":"deductive","order":"structure","mece_dimension":"link from zeros to primes",
+  "points":[
+   {"id":"T04.1","point":"Riemann's explicit formula writes the prime-counting function as a main term minus a sum over the non-trivial zeros of zeta.","linked_node":"MSC:11-XX"},
+   {"id":"T04.2","point":"The further a zero's real part is from 1/2, the larger its oscillating contribution, so the zeros' positions bound the error term.","linked_node":"MA.K1.S2"},
+   {"id":"T04.3","point":"If all non-trivial zeros have real part 1/2, the error is O(sqrt(x) log x) (von Koch, 1901), essentially the best possible, and many results in number theory are proved conditional on it.","linked_node":"MSC:11-XX"}]},
+ "cross_field_nodes":["MA.K3"]},
+{"kind":"question_pyramid","test_id":"T09","field":"AG","drafted_by":"Grok Bot (box; Mac Qwen offline), from general knowledge, no sources fetched",
+ "question":"What are the best ways to reduce facial eczema in New Zealand dairy herds?",
+ "introduction":{"situation":"Facial eczema costs NZ dairy farmers through liver damage, photosensitivity and lost production in late summer and autumn.","complication":"It is caused by a fungal toxin (sporidesmin) in pasture, not by the skin, so treating skin symptoms does not prevent it.","question":"What reduces facial eczema in NZ dairy herds?"},
+ "governing_thought":"Facial eczema is best reduced by combining zinc protection during high spore-count periods, pasture management, and breeding for genetic tolerance.",
+ "key_line":{"logic_type":"inductive","order":"time","mece_dimension":"horizon of the control measure",
+  "points":[
+   {"id":"T09.1","point":"Short term: monitor pasture spore counts and give zinc (bolus, drench or water treatment) when counts rise, which protects the liver.","linked_node":"AG.K2.S3.U2"},
+   {"id":"T09.2","point":"Season: reduce exposure by avoiding hard grazing into the dead litter where Pithomyces chartarum grows, using fungicide or safer crops on high-risk paddocks.","linked_node":"AG.K2.S3.U3"},
+   {"id":"T09.3","point":"Long term: breed from facial-eczema-tolerance-tested sires, which lowers herd susceptibility permanently.","linked_node":"AG.K1"}]}}
+]

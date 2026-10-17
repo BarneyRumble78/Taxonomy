@@ -99,13 +99,32 @@ def _is_conclusion(obj):
     return isinstance(obj, dict) and any(k in obj for k in _CONCLUSION)
 
 
+def _shown_verdict(obj):
+    """R22: supported or contradicted needs a rule span or a check id."""
+    for item in obj.get("evidence") or []:
+        if isinstance(item, dict) and item.get("by") == "rule" and item.get("relation") in ("entails", "contradicts"):
+            if str(item.get("quote") or item.get("ref") or "").strip():
+                return True
+    for item in obj.get("checks") or []:
+        if isinstance(item, dict) and item.get("id") and item.get("kind") != "missing_hypotheses":
+            if item.get("result") in ("consistent", "contradicted"):
+                return True
+    return False
+
+
 def guard_status(obj):
     """A sourced established status may stand. Anything else a model concluded is unverified.
 
     source_found and tested without a source are not left standing. A code check
     (checked or contradicted on small cases) is left as the checker wrote it.
+    A supported or contradicted verdict with no shown evidence is unverified (R22).
     """
     if isinstance(obj, dict):
+        if obj.get("verdict") in ("supported", "contradicted") and not _shown_verdict(obj):
+            obj["verdict"] = "unverified"
+            obj["qualifier"] = None
+            obj["status"] = _UNVERIFIED
+            obj["status_note"] = "downgraded: verdict without shown evidence"
         status = obj.get("status")
         if status not in _CHECKED:
             if isinstance(status, str) and status in _ESTABLISHED and _sourced(obj):
@@ -157,6 +176,10 @@ def _nodes(field):
         nodes = []
         if folder.is_dir():
             files = sorted(p for p in folder.glob("*.json") if p.is_file())
+            index = ROOT / "maps" / "index.json"
+            if index.exists():
+                primary = json.loads(index.read_text(encoding="utf-8")).get(field, {}).get("primary")
+                files = [p for p in files if p.name == primary] + [p for p in files if p.name != primary]
             if files:
                 nodes = json.loads(files[0].read_text(encoding="utf-8")).get("nodes") or []
         _MAPS[key] = nodes
