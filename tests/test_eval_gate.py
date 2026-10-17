@@ -150,6 +150,22 @@ def test_answered_owner_accuracy():
     assert hit / len(answered) >= 0.90
 
 
+def test_placement_floors_on_the_frozen_set():
+    """Abstentions count as misses. Floors are the published baseline, not a new score."""
+    rows = _rows()
+    assert len(rows) == 203
+    hit = {"owner": 0, "cell": 0, "warrant": 0, "method": 0}
+    for row in rows:
+        placed = te.rule_placement(row["claim"]) or {}
+        for key in hit:
+            if placed.get(key) == row[key]:
+                hit[key] += 1
+    assert hit["owner"] / 203 >= 0.621
+    assert hit["cell"] / 203 >= 0.48
+    assert hit["warrant"] / 203 >= 0.379
+    assert hit["method"] / 203 >= 0.42
+
+
 def test_growth_does_not_read_the_frozen_set():
     src = (ROOT / "scripts" / "grow_lexicon.py").read_text(encoding="utf-8")
     assert "pilot/heldout.tsv" not in src
