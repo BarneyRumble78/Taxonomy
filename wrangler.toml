@@ -2,6 +2,11 @@ name = "taxonomy-api"
 main = "worker/index.js"
 compatibility_date = "2026-10-01"
 
+# The only public host is api.taxonomy.co.nz. Leave both false so a deploy
+# does not turn the workers.dev subdomain or preview URLs back on.
+workers_dev = false
+preview_urls = false
+
 # The Worker ships with no AI binding and no adjudicator flag.
 # A binding plus ADJUDICATE=1 calls a model and spends money. Leave both unset
 # until that spend is intended. assist=1 is a second opinion and cannot change a placement.

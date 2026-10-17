@@ -25,6 +25,8 @@ npx wrangler deploy
 
 `wrangler.toml` sets `name = "taxonomy-api"` and `main = "worker/index.js"`. Leave these unset: `VERIFY_MODEL`, `ADJUDICATE`, `RETRIEVE`. Do not add an AI binding until that spend is intended.
 
+The only public host is **api.taxonomy.co.nz**. `workers_dev` and `preview_urls` are both false, so `npx wrangler deploy` does not re-enable the workers.dev address or preview URLs. Chris turned the workers.dev address off on 17 October 2026.
+
 `GET /v1/health` should then report `version` `3.0.0-minerva.1` and `verify` `rules only unless VERIFY_MODEL=1`.
 
 ## Optional stores (not created here)
