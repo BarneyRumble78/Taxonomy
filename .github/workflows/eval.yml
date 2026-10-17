@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: "22"
       - name: Install test dependencies
-        run: pip install pytest fastembed numpy
+        run: pip install -r requirements.txt numpy
       - name: Parity, frozen set, geopolitics probe, distractors, mocked providers
         run: python3 -m pytest -q tests
       - name: Worker abstains without calling a model
-        run: node --test worker/test.mjs
+        run: node --test worker/test.mjs tests/claimguard_parity.mjs

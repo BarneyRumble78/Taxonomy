@@ -339,6 +339,20 @@ test("place stays rules-only and audit keeps its flags", async () => {
   assert.ok(codes.includes("unnamed_authority"));
 });
 
+test("an absolute health claim is unverified in medicine", async () => {
+  const text = "This supplement definitely cures anxiety in everyone who takes it.";
+  let runs = 0;
+  const env = { AI: { run: async () => { runs += 1; return { response: "{}" }; } } };
+  const res = await postVerify({ text }, env, "203.0.113.20");
+  const body = await res.json();
+  const claim = body.claims[0];
+  assert.equal(claim.verdict, "unverified");
+  assert.equal(claim.placement.owner, "MD");
+  assert.equal(claim.certainty.level, "absolute");
+  assert.equal(claim.certainty_without_evidence, true);
+  assert.equal(runs, 0);
+});
+
 test("a model label cannot raise a verdict to supported", async () => {
   let runs = 0;
   const env = {

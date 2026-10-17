@@ -4,12 +4,17 @@ import lex from "./certainty_lexicon.json" with { type: "json" };
 export const LEVELS = lex.levels;
 export const CEILING = lex.ceiling;
 const RANK = Object.fromEntries(LEVELS.map((name, i) => [name, i]));
+function cueRe(cue) {
+  const body = cue.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const lead = /^\w/.test(cue) ? "\\b" : "";
+  const trail = /\w$/.test(cue) ? "\\b" : "(?!\\w)";
+  return new RegExp(lead + body + trail, "i");
+}
+
 const CUES = [];
 for (const level of [...LEVELS].reverse()) {
   const cues = [...(lex.cues[level] || [])].sort((a, b) => b.length - a.length);
-  for (const cue of cues) {
-    CUES.push([level, cue, new RegExp("\\b" + cue.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i")]);
-  }
+  for (const cue of cues) CUES.push([level, cue, cueRe(cue)]);
 }
 
 export function certainty(text) {

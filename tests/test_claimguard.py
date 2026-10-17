@@ -92,6 +92,46 @@ def test_model_only_support_is_downgraded():
     assert bare["status_note"] == "downgraded: verdict without shown evidence"
 
 
+SUPPLEMENT = "This supplement definitely cures anxiety in everyone who takes it."
+
+
+def test_absolute_health_claim_is_unverified_in_medicine():
+    row = _one(SUPPLEMENT)
+    assert row["placement"]["owner"] == "MD"
+    assert row["placement"]["cell"] == "MD.O.A4"
+    assert row["certainty"]["level"] == "absolute"
+    assert row["verdict"] == "unverified"
+    assert row["verdict"] not in ("supported", "out_of_scope")
+    assert row["certainty_without_evidence"] is True
+    assert any("certainty without evidence" in reason for reason in row["reason"])
+    for text in (
+        "The drug cures all patients with the infection.",
+        "This vaccine is guaranteed to prevent flu in everybody.",
+        "The pill cures arthritis in 100% of cases.",
+        "This treatment is proven to cure the disease without doubt.",
+    ):
+        claim = _one(text)
+        assert claim["placement"]["owner"] == "MD", text
+        assert claim["certainty"]["level"] == "absolute", text
+        assert claim["verdict"] == "unverified", text
+        assert claim["verdict"] not in ("supported", "out_of_scope")
+        assert claim["certainty_without_evidence"] is True
+
+
+def test_hedged_health_claims_stay_hedged_and_are_not_supported():
+    for text in (
+        "This supplement may help some people with anxiety.",
+        "The drug might treat some infections.",
+        "Exercise likely helps some patients.",
+    ):
+        claim = _one(text)
+        assert claim["certainty"]["level"] == "hedged", text
+        assert claim["placement"]["owner"] == "MD", text
+        assert claim["verdict"] == "unverified", text
+        assert claim["verdict"] != "supported"
+        assert claim["certainty_without_evidence"] is False
+
+
 def test_w13_misuse_is_out_of_scope_and_questions_abstain():
     row = _one("Doctrine holds that the bridge was built in 1890.")
     assert row["verdict"] == "out_of_scope"
