@@ -1,0 +1,14 @@
+{
+  "note": "Forecast owes W9 (argument), not W6 (comparative inference). Skynet's emulated map used W6. This file is the contract both engines share. The warrant codes live in engine/adjudicate.mjs and engine/adjudicator.py and must stay equal to REQUIRED_WARRANT there.",
+  "forecast": "W9",
+  "priority": ["legal", "intent", "causal", "attribution", "event", "observation", "forecast"],
+  "cues": {
+    "legal": ["\\bact (?:19|20)\\d\\d\\b", "\\bunder the\\b", "\\bmust pay\\b", "\\blegal duty\\b", "\\bstatute\\b"],
+    "intent": ["\\bintend(?:s|ed|ing)?\\b", "\\bintention\\b", "\\baims to\\b"],
+    "causal": ["\\bcauses?\\b", "\\bcaused\\b", "\\bleads? to\\b", "\\bled to\\b", "\\bresults? in\\b", "\\bresulted in\\b"],
+    "attribution": ["\\bsaid\\b", "\\bstated\\b", "\\baccording to\\b"],
+    "event": ["\\b(?:19|20)\\d\\d\\b"],
+    "observation": ["\\bmeasured\\b", "\\bmeasurement\\b", "\\bgauge\\b", "\\bplus or minus\\b", "±"],
+    "forecast": ["\\bforecast\\b", "\\bpredict(?:s|ed)?\\b", "\\bexpected to\\b", "\\bwill\\b"]
+  }
+}

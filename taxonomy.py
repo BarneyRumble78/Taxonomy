@@ -5,6 +5,7 @@
   python3 taxonomy.py consult "problem" --field MA            [--deepen 3]
   python3 taxonomy.py connect "problem" --field MA            [--top 8]
   python3 taxonomy.py check   "a single claim"                (v2 classifier)
+  python3 taxonomy.py check   "a single claim" --verdict      [--sources FILE] [--tool-outputs FILE]
 
 Backend: TAXONOMY_LLM=ollama (default, local) | manual | anthropic.
 Anthropic also needs TAXONOMY_ADJUDICATE_PAID=1 (see engine/v3/llm.py).
@@ -55,10 +56,34 @@ def _main(argv=None):
     ap.add_argument("--deepen", type=int, default=3)
     ap.add_argument("--top", type=int, default=8)
     ap.add_argument("--llm")
+    ap.add_argument("--verdict", action="store_true", help="Check mode: print a ClaimGuard verdict")
+    ap.add_argument("--sources", help="JSON file of sources for --verdict")
+    ap.add_argument("--tool-outputs", help="JSON file of tool outputs for --verdict")
     a = ap.parse_args(argv)
+    if a.mode == "check" and a.verdict:
+        from claimguard import verify
+        sources = json.loads(Path(a.sources).read_text(encoding="utf-8")) if a.sources else None
+        tools = json.loads(Path(a.tool_outputs).read_text(encoding="utf-8")) if a.tool_outputs else None
+        llm = None
+        if a.llm:
+            from llm import get_llm
+            backend = get_llm(a.llm)
+
+            def llm(prompt, _backend=backend):
+                raw = _backend(prompt)
+                if isinstance(raw, dict):
+                    return raw
+                text = str(raw)
+                start, end = text.find("{"), text.rfind("}")
+                if start < 0 or end < start:
+                    return {}
+                return json.loads(text[start:end + 1])
+        print(json.dumps(verify(a.text, sources, tools, llm=llm, split="model" if llm else "rule"), indent=1, ensure_ascii=False))
+        return
     if a.mode == "check":
         import taxonomy_engine as te
         # None follows TAXONOMY_ADJUDICATE. Off, the default, calls no model.
+        # --llm without --verdict does not call a model.
         detail = te.place_detail(a.text)
         placed = detail.get("placement")
         if not placed:
