@@ -2,8 +2,8 @@
 import lex from "./lexicon.json" with { type: "json" };
 import { certainty } from "./certainty.mjs";
 import { matchSpans, registryHits, numbersAgree, words, NEG } from "./evidence.mjs";
-import { combine, ORDER } from "./verdict.mjs";
-import { rank, warrantCeiling } from "./certainty.mjs";
+import { combine, ORDER, SEVERITY } from "./verdict.mjs";
+import { ceilingOk } from "./certainty.mjs";
 import {
   CONFIDENCE_FLOOR, instructionHeuristic, rulePlacement, splitSentences,
 } from "./rules.mjs";
@@ -175,15 +175,16 @@ function siblings(rows) {
   const flags = {};
   for (const a of rows) {
     for (const b of rows) {
-      if (a === b) continue;
-      if (!NEG.test(b.text) || NEG.test(a.text)) continue;
+      if (a === b || flags[a.id]) continue;
+      const negA = NEG.test(a.text);
+      const negB = NEG.test(b.text);
+      if (negA === negB) continue;
       const wa = words(a.text);
       const wb = new Set(words(b.text));
       if (!wa.length || wa.filter((w) => wb.has(w)).length / wa.length < 0.6) continue;
       if (numbersAgree(a.text, b.text) === false) continue;
-      const sa = rank(warrantCeiling(a.warrant_required && a.warrant_required.code));
-      const sb = rank(warrantCeiling(b.warrant_required && b.warrant_required.code));
-      if (!flags[a.id]) flags[a.id] = sb > sa ? "stronger" : "same";
+      flags[a.id] = b;
+      flags[b.id] = a;
     }
   }
   return flags;
@@ -196,8 +197,9 @@ export async function verify(text, sources = null, toolOutputs = null, options =
   const claims = await splitClaims(text, split === "model" ? llm : null, maxClaims);
   const built = await Promise.all(claims.map(async (claim) => {
     const sentence = claim.text;
-    const instruction = instructionHeuristic(sentence) || QUESTION.test(sentence || "");
-    let placement = instruction ? null : rulePlacement(sentence, lex);
+    const instruction = Boolean(instructionHeuristic(sentence));
+    const question = QUESTION.test(sentence || "") && !instruction;
+    let placement = instruction || question ? null : rulePlacement(sentence, lex);
     if (placement && placement.confidence != null && placement.confidence < CONFIDENCE_FLOOR) placement = null;
     const wreq = requiredWarrant(placement, sentence);
     let evidence = []
@@ -219,23 +221,34 @@ export async function verify(text, sources = null, toolOutputs = null, options =
     }
     return {
       claim, text: sentence, placement, wreq, evidence,
-      checks: instruction ? [] : runChecks(sentence),
-      instruction, open: OPEN.test(sentence), w13: w13(sentence, placement),
+      checks: instruction || question ? [] : runChecks(sentence),
+      instruction, question, open: OPEN.test(sentence), w13: w13(sentence, placement),
       cert: certainty(sentence),
     };
   }));
-  const prepared = built.map((row) => ({ id: row.claim.id, text: row.text, warrant_required: row.wreq }));
+  const prepared = built.map((row) => ({
+    id: row.claim.id, text: row.text, span: row.claim.span, warrant_required: row.wreq,
+  }));
   const sibling = siblings(prepared);
   const results = built.map((row) => {
-    const contested = row.open || sibling[row.claim.id] === "same";
-    if (sibling[row.claim.id] === "stronger") {
+    const other = sibling[row.claim.id];
+    const contested = row.open || Boolean(other);
+    if (other) {
       row.evidence.push({
-        kind: "source", ref: "sibling", quote: "another claim in this text",
-        span: [0, 0], relation: "contradicts", warrant_held: row.wreq.code, by: "rule",
+        kind: "source",
+        ref: other.id,
+        quote: other.text,
+        span: other.span || [0, 0],
+        relation: "cross",
+        warrant_held: other.warrant_required && other.warrant_required.code,
+        warrant_graded: other.warrant_required && other.warrant_required.code,
+        warrant_declared_by_caller: false,
+        by: "rule",
       });
     }
     const decided = combine(row.placement, row.wreq, row.cert, row.evidence, row.checks, contested, {
-      instruction: row.instruction, w13: row.w13, ik: row.placement && row.placement.owner === "IK",
+      instruction: row.instruction, question: row.question, w13: row.w13,
+      ik: row.placement && row.placement.owner === "IK",
     });
     const mismatch = Boolean(
       row.placement && row.wreq.code && row.placement.warrant && row.wreq.code !== row.placement.warrant
@@ -250,7 +263,7 @@ export async function verify(text, sources = null, toolOutputs = null, options =
       } : null,
       warrant_required: row.wreq,
       warrant_mismatch: mismatch,
-      certainty: { level: row.cert.level, cues: row.cert.cues, ceiling_ok: decided.verdict !== "overstated" },
+      certainty: { level: row.cert.level, cues: row.cert.cues, ceiling_ok: ceilingOk(row.cert.level, decided.warrant_held) },
       evidence: decided.evidence || [],
       checks: decided.checks || [],
       verdict: decided.verdict,
@@ -262,7 +275,7 @@ export async function verify(text, sources = null, toolOutputs = null, options =
   });
   const counts = Object.fromEntries(ORDER.map((name) => [name, 0]));
   for (const row of results) counts[row.verdict] = (counts[row.verdict] || 0) + 1;
-  const worst = ORDER.find((name) => counts[name]) || "unverified";
+  const worst = SEVERITY.find((name) => counts[name]) || "unverified";
   return {
     version: "claimguard-0.1",
     engine: "3.0.0",

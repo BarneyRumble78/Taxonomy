@@ -305,6 +305,45 @@ test("verify rejects an oversized body and a burst", async () => {
   assert.equal(second.headers.get("retry-after"), "60");
 });
 
+test("classify and audit share the 429 path", async () => {
+  const env = { VERIFY_LIMIT: "1" };
+  const headers = { "content-type": "application/json", "cf-connecting-ip": "203.0.113.71" };
+  const first = await worker.fetch(new Request("https://taxonomy.test/v1/classify", {
+    method: "POST", headers, body: JSON.stringify({ text: "Hello" }),
+  }), env);
+  const second = await worker.fetch(new Request("https://taxonomy.test/v1/audit", {
+    method: "POST", headers: { ...headers, "cf-connecting-ip": "203.0.113.71" },
+    body: JSON.stringify({ text: "Hello" }),
+  }), env);
+  assert.equal(first.status, 200);
+  assert.equal(second.status, 200);
+  const third = await worker.fetch(new Request("https://taxonomy.test/v1/audit", {
+    method: "POST", headers, body: JSON.stringify({ text: "Hello again" }),
+  }), env);
+  assert.equal(third.status, 429);
+  assert.equal(third.headers.get("retry-after"), "60");
+  const classifyAgain = await worker.fetch(new Request("https://taxonomy.test/v1/classify", {
+    method: "POST", headers, body: JSON.stringify({ text: "Hello again" }),
+  }), env);
+  assert.equal(classifyAgain.status, 429);
+});
+
+test("the rate limit binding rejects when it says so", async () => {
+  const env = {
+    VERIFY_LIMITER: { limit: async ({ key }) => ({ success: !String(key).includes("/v1/verify") }) },
+  };
+  const headers = { "content-type": "application/json", "cf-connecting-ip": "203.0.113.72" };
+  const allowed = await worker.fetch(new Request("https://taxonomy.test/v1/classify", {
+    method: "POST", headers, body: JSON.stringify({ text: "Hello" }),
+  }), env);
+  const blocked = await worker.fetch(new Request("https://taxonomy.test/v1/verify", {
+    method: "POST", headers, body: JSON.stringify({ text: "Hello" }),
+  }), env);
+  assert.equal(allowed.status, 200);
+  assert.equal(blocked.status, 429);
+  assert.equal(blocked.headers.get("retry-after"), "60");
+});
+
 test("fields, search and an unbound full pyramid", async () => {
   const fields = await (await worker.fetch(new Request("https://taxonomy.test/v1/fields"))).json();
   assert.equal(fields.fields.length, 25);

@@ -10,15 +10,17 @@ Checked 17 October 2026. Figures below are measurements on files in this repo, o
 
 `pilot/claimguard_developer_sample.tsv`. One developer, 17 October 2026, not a second coder. Rules-only `verify`.
 
-7 of 8 rows matched the developer label. The miss is S8: a faithful paraphrase ("is not the Dirac value") was marked `contradicted` because the span matcher treats a negation at high token overlap as a contradiction. S7, a lighter paraphrase, did match and came back `supported`.
+5 of 8 rows matched the developer label on 17 October 2026, after exact-span binding. S7 and S8 are faithful paraphrases with no exact span. Both come back `unverified`. They are not supported. Overlap is not a match.
 
-That is 7/8 on this file. It is not a precision for `supported`, and it is not the launch bar.
+That is 5/8 on this file. It is not a precision for `supported`, and it is not the launch bar.
+
+Smoke, with no sources: `Smoking causes cancer.` is unverified (R19). It is not overstated. Overstated needs some evidence.
 
 ## Post-tool fixture
 
 `scripts/eval_post_tool.py` reads JSON lines of tool output, answer, and label (`faithful` or `hallucinated`). It calls `verify`. Faithful should be `supported` on every claim. Hallucinated should be `contradicted` or `unverified`.
 
-`pilot/post_tool_fixture.jsonl` has four rows. On 17 October 2026: the identical span was supported, the wrong year was contradicted, the unrelated answer was unverified, and the "is not" paraphrase (faithful) was contradicted. Faithful hit 1 of 2. Hallucinated hit 2 of 2. The ToolHACE dataset is not vendored and was not run.
+`pilot/post_tool_fixture.jsonl` has four rows. On 17 October 2026, after exact-span binding: the identical span was supported, the wrong year was contradicted, the unrelated answer was unverified, and the "is not" paraphrase (faithful) was unverified. Faithful hit 1 of 2. Hallucinated hit 2 of 2. The ToolHACE dataset is not vendored and was not run.
 
 ## Placement floors
 

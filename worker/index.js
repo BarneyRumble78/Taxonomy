@@ -284,14 +284,14 @@ function clientIp(request) {
   return request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for") || "local";
 }
 
-async function limited(request, env) {
-  const key = clientIp(request);
+async function limited(request, env, path) {
+  const key = `${clientIp(request)} ${path || "/"}`;
   if (env.VERIFY_LIMITER && typeof env.VERIFY_LIMITER.limit === "function") {
     const out = await env.VERIFY_LIMITER.limit({ key });
     const ok = out ? out.success !== false && out.ok !== false : true;
     return ok ? null : json({ error: "Rate limit exceeded." }, 429, { "retry-after": "60" });
   }
-  const cap = Number(env.VERIFY_LIMIT || 30);
+  const cap = Number(env.VERIFY_LIMIT || 60);
   const now = Date.now();
   const bucket = (verifyHits.get(key) || []).filter((t) => now - t < VERIFY_WINDOW_MS);
   if (bucket.length >= cap) {
@@ -404,8 +404,6 @@ async function placeRoute(request, url) {
 }
 
 async function verifyRoute(request, env) {
-  const stop = await limited(request, env || {});
-  if (stop) return stop;
   const inp = await readVerify(request);
   if (inp.error) return bad(inp.error, inp.status || 400);
   const key = await verifyKey(request, env || {});
@@ -450,6 +448,10 @@ export default {
     const p = url.pathname.replace(/\/+$/, "") || "/";
     const box = env || {};
     try {
+      if ((p === "/v1/verify" || p === "/v1/classify" || p === "/v1/audit") && request.method !== "OPTIONS") {
+        const stop = await limited(request, box, p);
+        if (stop) return stop;
+      }
       if (p === "/v1/health") return json({
         ok: true,
         version: "3.0.0-minerva.1",
