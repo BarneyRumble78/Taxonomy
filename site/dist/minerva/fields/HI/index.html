@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="History in the Minerva catalog.">
+<title>HI · Fields · Minerva</title>
+<style>
+/* Layout: a 2010-era standards-body site. Fixed 960px sheet on a grey ground, blue banner, tab bar, left sidebar boxes, breadcrumb, footer link columns. Deliberately single light theme. */
+:root{
+  color-scheme:light;
+  --ground:#e6e9ee; --sheet:#ffffff; --ink:#222; --muted:#5a6270; --line:#c9d0da; --pale:#f2f5f9;
+  --navy:#173a6b; --navy2:#25528f; --link:#1a4f9c; --gold:#c9a227; --tab:#e9edf3; --ok:#2e6b2e; --warn:#8a5a00;
+  --serif:Georgia,"Times New Roman",Times,serif; --sans:Arial,Helvetica,sans-serif; --mono:"Courier New",Courier,monospace;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font:13px/1.55 var(--sans);margin:0;padding-inline:0}
+.page{max-width:960px;margin:0 auto;background:var(--sheet);box-shadow:0 0 6px rgba(0,0,0,.18)}
+a{color:var(--link)}
+a:hover{color:#c0392b}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);font-weight:normal;margin:0 0 8px;text-wrap:balance}
+h1{font-size:26px;line-height:1.2}
+h2{font-size:20px;border-bottom:1px solid var(--line);padding-bottom:4px;margin-top:18px}
+h3{font-size:15px;font-weight:bold}
+p{margin:0 0 10px}
+ul{margin:0 0 10px;padding-left:20px}
+li{margin-bottom:4px}
+/* utility bar */
+.util{background:#0f2a50;color:#c8d3e3;font-size:11px;display:flex;justify-content:flex-end;gap:14px;padding:4px 14px;flex-wrap:wrap}
+.util span{white-space:nowrap}
+/* banner */
+.banner{background:linear-gradient(#25528f,#173a6b);color:#fff;display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:3px solid var(--gold);flex-wrap:wrap}
+.menubtn{font:bold 15px var(--sans);color:#173a6b;background:linear-gradient(#ffffff,#dde4ee);border:1px solid #0f2a50;border-radius:4px;padding:12px 18px 12px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:inset 0 1px 0 #fff}
+.menubtn .bars{display:grid;gap:3px}.menubtn .bars i{display:block;width:20px;height:3px;background:#173a6b}
+.menubtn:hover{background:linear-gradient(#fff,#cfd9e8)}
+.seal{width:54px;height:54px;flex:none}
+.brand{display:grid}
+.brand b{font:bold 26px/1.05 var(--serif);letter-spacing:.5px}
+.brand span{font-size:12px;color:#d6e0ee}
+.search{margin-left:auto;display:flex;gap:4px}
+.search input{font:12px var(--sans);padding:4px 6px;border:1px solid #0f2a50;width:170px;max-width:42vw}
+.search button{font:12px var(--sans);background:#e9edf3;border:1px solid #0f2a50;cursor:pointer}
+/* menu drawer */
+.drawer{background:#f7f9fc;border-bottom:2px solid var(--navy);padding:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 18px}
+.drawer[hidden]{display:none !important}
+.drawer a{display:block;padding:6px 4px;border-bottom:1px dotted var(--line);text-decoration:none;font-weight:bold}
+.drawer a small{display:block;font-weight:normal;color:var(--muted)}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:2px;background:var(--navy);padding:6px 8px 0}
+.tabs button{font:bold 12px var(--sans);color:#fff;background:linear-gradient(#3a6aa8,#25528f);border:1px solid #0f2a50;border-bottom:0;border-radius:5px 5px 0 0;padding:7px 12px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:#fff;color:var(--navy)}
+.tabs button:focus-visible,.menubtn:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.crumb{font-size:11px;color:var(--muted);padding:8px 14px;border-bottom:1px solid var(--line);background:var(--pale)}
+/* body grid */
+.body{display:grid;grid-template-columns:210px 1fr;gap:18px;padding:14px}
+.body>*{min-width:0}
+.side{display:grid;gap:12px;align-content:start}
+.box{border:1px solid var(--line);background:#fff}
+.box h4{font:bold 12px var(--sans);color:#fff;background:linear-gradient(#3a6aa8,#25528f);margin:0;padding:6px 8px}
+.box .in{padding:8px;font-size:12px}
+.box ul{list-style:square;padding-left:16px;margin:0}
+.box .news p{border-bottom:1px dotted var(--line);padding-bottom:6px}
+.box .news b{display:block;color:var(--muted);font-size:11px}
+.panel[hidden]{display:none}
+.hero{border:1px solid var(--line);background:linear-gradient(#f7f9fc,#e9eef6);padding:16px;margin-bottom:12px;display:grid;grid-template-columns:1fr 230px;gap:16px}
+.hero.solo{grid-template-columns:1fr}
+.hero>*{min-width:0}
+.hero .lead{font-size:14px}
+.hero .pull{font-family:var(--serif);font-style:italic;color:var(--navy);font-size:15px;border-left:4px solid var(--gold);padding-left:10px}
+.keyfacts{border:1px solid var(--line);background:#fff}
+.keyfacts table{width:100%;border-collapse:collapse;font-size:12px}
+.keyfacts td{padding:5px 8px;border-bottom:1px solid var(--pale)}
+.keyfacts td:first-child{font:bold 16px var(--serif);color:var(--navy);text-align:right;width:70px;font-variant-numeric:tabular-nums}
+.btn{display:inline-block;font:bold 13px var(--sans);color:#fff;background:linear-gradient(#e0b437,#b98f14);border:1px solid #8a6a0c;border-radius:4px;padding:9px 16px;cursor:pointer;text-decoration:none;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+.btn.blue{background:linear-gradient(#3a6aa8,#173a6b);border-color:#0f2a50}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cols2>*,.cols3>*{min-width:0}
+.card{border:1px solid var(--line);padding:10px;background:#fff}
+.card h3{margin-bottom:4px}
+.notice{border:1px solid #e0cf8a;background:#fffbea;padding:10px;font-size:12px;margin:10px 0}
+.tbl{overflow-x:auto;margin:8px 0 12px}
+table.data{border-collapse:collapse;width:100%;font-size:12px}
+table.data th{background:#dfe6f0;color:var(--navy);text-align:left;padding:6px;border:1px solid var(--line);font-weight:bold}
+table.data td{padding:6px;border:1px solid var(--line);vertical-align:top}
+table.data tr:nth-child(even) td{background:#f7f9fc}
+.code{font-family:var(--mono);font-size:12px;white-space:nowrap}
+.ticks{list-style:none;padding-left:0}
+.ticks li{padding-left:20px;position:relative}
+.ticks li:before{content:"\2714";color:var(--ok);position:absolute;left:2px}
+/* pyramid figure */
+.pyr{display:grid;gap:4px;justify-items:center;padding:10px;border:1px solid var(--line);background:#fff}
+.tier{display:flex;gap:4px}
+.chip{font:bold 11px var(--mono);width:40px;height:26px;border:1px solid #8ba3c7;background:linear-gradient(#fff,#e3eaf4);color:var(--navy);cursor:pointer;border-radius:2px}
+.chip.apex{background:linear-gradient(#fff4cf,#e7c763);border-color:#8a6a0c}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff}
+.figcap{font-size:11px;color:var(--muted);text-align:center;margin-top:4px}
+.fielddetail{border:1px solid var(--line);background:var(--pale);padding:10px;margin-top:8px}
+/* minto figure */
+.minto{display:grid;gap:6px;justify-items:center;border:1px solid var(--line);padding:12px;background:#fff}
+.mb{border:1px solid var(--navy);background:#f7f9fc;padding:6px 10px;text-align:center;font-size:12px;max-width:440px}
+.mb.top{border-width:2px;font-weight:bold}
+.mrow{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.mrow .mb{max-width:120px;font-size:11px}
+.ml{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+/* placer */
+.placer select{width:100%;font:12px var(--sans);padding:5px}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.slot{border:1px solid var(--line);background:#f7f9fc;padding:8px}
+.slot .l{font-size:10px;text-transform:uppercase;color:var(--muted)}
+.slot .v{font:bold 15px var(--mono);color:var(--navy)}
+.slot .s{font-size:11px;color:var(--muted)}
+.modes{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 0}.modes button{font:bold 12px var(--sans);background:linear-gradient(#fff,#e3eaf4);border:1px solid #8ba3c7;border-bottom:0;border-radius:4px 4px 0 0;padding:8px 12px;cursor:pointer;color:var(--navy)}.modes button[aria-selected="true"]{background:var(--navy);color:#fff}
+.mode{border-top:3px solid var(--navy)}
+.aiout{border:1px solid #e0cf8a;background:#fffbea;padding:10px;margin-top:10px;font-size:12px}
+.small{font-size:12px;color:var(--muted)}
+.tag{display:inline-block;font-size:10px;color:#fff;background:var(--ok);padding:1px 5px;border-radius:2px;margin-top:3px}
+.ribbon{background:#fffbea;border:1px solid #e0cf8a;padding:6px 10px;margin-bottom:10px;font-size:12px}.ribbon b{background:#c0392b;color:#fff;padding:1px 6px;border-radius:2px;margin-right:6px;font-size:11px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0 12px}.three>div{border:1px solid var(--line);border-top:3px solid var(--gold);padding:10px;background:#fff;min-width:0}.three h3{margin-bottom:4px}
+@media (max-width:760px){.three{grid-template-columns:1fr}}
+pre{background:#f4f4f4;border:1px solid #ccc;padding:10px;overflow-x:auto;font:12px/1.45 var(--mono);margin:0 0 10px}
+form{display:grid;gap:8px;max-width:520px}
+label{font-weight:bold;font-size:12px;display:grid;gap:3px}
+input,textarea,select{font:13px var(--sans);padding:5px;border:1px solid #9aa7b8}
+#formmsg{color:var(--ok);font-weight:bold}
+.faq dt{font-weight:bold;color:var(--navy);margin-top:10px}
+.faq dd{margin:4px 0 0 0}
+.ps{border-top:1px dashed var(--line);margin-top:12px;padding-top:8px;font-size:12px}
+footer{background:#2b3442;color:#c9d1dc;font-size:11px;padding:16px 14px}
+footer .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:12px}
+footer b{color:#fff;display:block;margin-bottom:4px}
+footer a{color:#c9d1dc;display:block;text-decoration:none;cursor:pointer}
+footer a:hover{color:#fff;text-decoration:underline}
+footer p a{display:inline;color:#c9d1dc}
+.banner .brand{color:#fff;text-decoration:none}
+.banner .brand:hover{color:#fff}
+.util a{color:#c8d3e3;text-decoration:none}
+.util a:hover{color:#fff;text-decoration:underline}
+.tabs a.tab{font:bold 12px var(--sans);color:#fff;background:linear-gradient(#3a6aa8,#25528f);border:1px solid #0f2a50;border-bottom:0;border-radius:5px 5px 0 0;padding:7px 12px;text-decoration:none;display:inline-block}
+.tabs a.tab[aria-current="page"]{background:#fff;color:var(--navy)}
+.tabs a.tab:hover{color:#fff}
+.tabs a.tab[aria-current="page"]:hover{color:var(--navy)}
+.divcards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:8px 0 12px}
+.divcard{border:1px solid var(--line);border-top:3px solid var(--navy);padding:12px;background:#fff;min-width:0}
+.divcard.lead{grid-column:1 / -1;border-top-color:var(--gold);background:linear-gradient(#fffdf6,#fff)}
+.divcard h3{margin-bottom:4px}
+.badge{display:inline-block;font:bold 10px var(--sans);letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--warn);padding:1px 6px;border-radius:2px;vertical-align:middle}
+.badge.soon{background:#5a6270}
+.placeholder{border:1px dashed #8a6a0c;background:#fffbea;padding:8px 10px;margin:8px 0;font-size:12px}
+.tbc{background:#fff3cd;border:1px dashed #8a6a0c;color:#6b4e00;padding:1px 5px;font-weight:bold}
+.tbc.block{display:block;padding:8px 10px;margin:8px 0}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+@media (max-width:760px){
+  .body{grid-template-columns:1fr}.side{order:2}
+  .hero,.cols2{grid-template-columns:1fr}.cols3{grid-template-columns:1fr}
+  .slots{grid-template-columns:1fr 1fr}footer .fcols{grid-template-columns:1fr 1fr}
+  .search{margin-left:0}
+  .divcards{grid-template-columns:1fr}.divcard.lead{grid-column:auto}
+}
+</style>
+
+</head>
+<body>
+<div class="page">
+<div class="util"><span>Taxonomy · New Zealand</span><span><a href="/minerva/">Minerva</a></span><span><a href="/chris-townsend/">Chris Townsend</a></span><span><a href="/contact/">Contact</a></span></div>
+<div class="banner">
+  <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="drawer"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>
+  <svg class="seal" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#173a6b" stroke="#c9a227" stroke-width="3"/><circle cx="30" cy="30" r="22" fill="none" stroke="#c9a227" stroke-width="1"/><polygon points="30,13 45,42 15,42" fill="#c9a227"/><line x1="20.5" y1="31" x2="39.5" y2="31" stroke="#173a6b" stroke-width="1.6"/><line x1="25.5" y1="22" x2="34.5" y2="22" stroke="#173a6b" stroke-width="1.6"/></svg>
+  <a class="brand" href="/"><b>Taxonomy</b><span>An AI company · New Zealand</span></a>
+  <form class="search" role="search" action="/minerva/" method="get"><label for="q" style="position:absolute;left:-9999px">Search a field</label><input id="q" name="q" placeholder="Search a field, e.g. Law"><button type="submit">Go</button></form>
+</div>
+<nav class="drawer" id="drawer" hidden aria-label="Site menu"><a href="/">Home<small>Company</small></a><a href="/approach/">Approach<small>How we work</small></a><a href="/minerva/">Minerva<small>Truth-seeking and mapping</small></a><a href="/minerva/standard/">Standard<small>Minerva</small></a><a href="/minerva/fields/">Fields<small>Minerva</small></a><a href="/minerva/browser/">Browser tool<small>Minerva</small></a><a href="/minerva/api/">API<small>Minerva</small></a><a href="/minerva/mathematics/">Mathematics<small>Minerva</small></a><a href="/minerva/claimguard/">ClaimGuard<small>Minerva</small></a><a href="/minerva/evaluation/">Evaluation<small>Minerva</small></a><a href="/minerva/changelog/">Changelog<small>Minerva</small></a><a href="/skynet/">Skynet<small>Division</small></a><a href="/defence/">Defence<small>Division</small></a><a href="/blade-runner/">Blade Runner<small>Division</small></a><a href="/medical/">Medical<small>Division</small></a><a href="/tech/">Tech<small>Division</small></a><a href="/chris-townsend/">Chris Townsend<small>Founder</small></a><a href="/chris-townsend/speaking/">Speaking<small>Chris Townsend</small></a><a href="/chris-townsend/writing/">Writing<small>Chris Townsend</small></a><a href="/chris-townsend/video/">Video<small>Chris Townsend</small></a><a href="/chris-townsend/advisory/">Advisory<small>Chris Townsend</small></a><a href="/contact/">Contact<small>Enquiry</small></a><a href="/privacy/">Privacy<small>Notice</small></a><a href="/terms/">Terms<small>Notice</small></a></nav>
+<nav class="tabs" aria-label="Taxonomy"><a class="tab" href="/">Home</a><a class="tab" href="/approach/">Approach</a><a class="tab" href="/minerva/" aria-current="page">Minerva</a><a class="tab" href="/skynet/">Skynet</a><a class="tab" href="/defence/">Defence</a><a class="tab" href="/blade-runner/">Blade Runner</a><a class="tab" href="/medical/">Medical</a><a class="tab" href="/tech/">Tech</a><a class="tab" href="/chris-townsend/">Chris</a><a class="tab" href="/contact/">Contact</a></nav>
+<div class="crumb">You are here: <a href="/">Home</a> &gt; <a href="/minerva/">Minerva</a> &gt; <a href="/minerva/fields/">Fields</a> &gt; HI</div>
+<div class="body">
+<aside class="side">
+  <div class="box"><h4>Minerva</h4><div class="in"><ul>
+    <li><a href="/minerva/fields/">All fields</a></li>
+    <li><a href="/minerva/standard/">Standard</a></li>
+  </ul></div></div>
+</aside>
+<main>
+  <h1>History</h1>
+  <p class="lead">History's objects divide by what a sentence asserts about the human past, running from the single fact to its meaning: occurrence, time, cause, change and continuity, and meaning and memory.</p>
+  <p>Catalog depth is the key line and the section under it. The full pyramid JSON is <a href="/minerva/data/HI.json">HI.json</a>. This page does not fetch it.</p>
+  <p><label for="filter">Filter sections</label> <input id="filter" type="search" autocomplete="off"></p>
+  <section data-sec="hi.k1 occurrence is the assertion that something happened, established from the material, written and personal evidence the past left behind. archaeology evidence sources what happened archaeological excl science digital sites excavations objects historical"><h2>HI.K1</h2><p>Occurrence is the assertion that something happened, established from the material, written and personal evidence the past left behind.</p></section><section data-sec="hi.k1.s1 archaeological evidence establishes that past events occurred by recovering sites, objects, remains and their context from the ground and water. archaeological archaeology science digital sites excavations objects"><h2>HI.K1.S1</h2><p>Archaeological evidence establishes that past events occurred by recovering sites, objects, remains and their context from the ground and water.</p></section><section data-sec="hi.k1.s2 archaeologies of particular settings assert occurrence through the traces left in industrial, maritime, bodily and regional contexts. archaeology excl historical incl industrial maritime human remains underwater archaeological sociology asia"><h2>HI.K1.S2</h2><p>Archaeologies of particular settings assert occurrence through the traces left in industrial, maritime, bodily and regional contexts.</p></section><section data-sec="hi.k1.s3 documentary and emblematic records assert occurrence through inscriptions, coins, lives, lineages and signs of identity. inscriptions epigraphy numismatics biography genealogy heraldry flags"><h2>HI.K1.S3</h2><p>Documentary and emblematic records assert occurrence through inscriptions, coins, lives, lineages and signs of identity.</p></section><section data-sec="hi.k2 time is the assertion that events belong to a particular moment, ordered by calendars and divided into eras. chronology periods dates eras ancient medieval modern history technical calendar prehistory classical"><h2>HI.K2</h2><p>Time is the assertion that events belong to a particular moment, ordered by calendars and divided into eras.</p></section><section data-sec="hi.k2.s1 chronology and the broad periods of the past assert when things happened by fixing dates and dividing time into eras. history technical chronology calendar prehistory ancient modern"><h2>HI.K2.S1</h2><p>Chronology and the broad periods of the past assert when things happened by fixing dates and dividing time into eras.</p></section><section data-sec="hi.k2.s2 era histories assert that the past divides into medieval, classical and contemporary periods, each with its own character. history classical greek roman medieval contemporary"><h2>HI.K2.S2</h2><p>Era histories assert that the past divides into medieval, classical and contemporary periods, each with its own character.</p></section><section data-sec="hi.k3 cause is the assertion that events happened because of political, social, imperial or other human forces that shaped them. causes why it happened wars revolutions empires political history history world historical political imperialism colonialism"><h2>HI.K3</h2><p>Cause is the assertion that events happened because of political, social, imperial or other human forces that shaped them.</p></section><section data-sec="hi.k3.s1 political and imperial histories assert that power, states and empires drove what happened. history world wars political empires imperialism colonialism military first second civil revolutions"><h2>HI.K3.S1</h2><p>Political and imperial histories assert that power, states and empires drove what happened.</p></section><section data-sec="hi.k3.s2 social and thematic histories assert that collective structures, group identities and particular human concerns caused historical outcomes. history historical social sociology histories race religious environmental gender studies crime religion"><h2>HI.K3.S2</h2><p>Social and thematic histories assert that collective structures, group identities and particular human concerns caused historical outcomes.</p></section><section data-sec="hi.k4 change and continuity is the assertion that peoples, states and the human past as a whole persisted or were transformed over time, within places and across borders. change over time nations migration social change history europe countries soviet world eastern south great"><h2>HI.K4</h2><p>Change and continuity is the assertion that peoples, states and the human past as a whole persisted or were transformed over time, within places and across borders.</p></section><section data-sec="hi.k4.s1 histories of peoples and states assert how particular nations and regions persisted and were transformed, in europe and beyond it. history europe countries soviet eastern south great britain austria central france germany"><h2>HI.K4.S1</h2><p>Histories of peoples and states assert how particular nations and regions persisted and were transformed, in Europe and beyond it.</p></section><section data-sec="hi.k4.s2 histories of movement and connection assert that change came through migration, exchange and relations that crossed borders. history migration transnational international"><h2>HI.K4.S2</h2><p>Histories of movement and connection assert that change came through migration, exchange and relations that crossed borders.</p></section><section data-sec="hi.k4.s3 histories of civilization as a whole assert continuity and transformation across the entire human past rather than within one nation or region. history historical civilization studies periods global world scholarship learning humanities elsewhere classified"><h2>HI.K4.S3</h2><p>Histories of civilization as a whole assert continuity and transformation across the entire human past rather than within one nation or region.</p></section><section data-sec="hi.k5 meaning and memory is the assertion that the past matters through how it is remembered, interpreted, kept and passed on. historical memory museums heritage historiography commemoration studies history historical digital cultural conservation philosophy"><h2>HI.K5</h2><p>Meaning and memory is the assertion that the past matters through how it is remembered, interpreted, kept and passed on.</p></section><section data-sec="hi.k5.s1 historical thought and method assert how the past should be understood, researched and reflected on. history historical philosophy methods research digital"><h2>HI.K5.S1</h2><p>Historical thought and method assert how the past should be understood, researched and reflected on.</p></section><section data-sec="hi.k5.s2 collective memory and myth assert that communities hold stories of the past that give it shared meaning. collective memory mythology"><h2>HI.K5.S2</h2><p>Collective memory and myth assert that communities hold stories of the past that give it shared meaning.</p></section><section data-sec="hi.k5.s3 archives, museums and collections assert that the past is preserved and interpreted through the institutions that keep its records and objects. studies heritage archival repository related critical museum archive collections interpretations museums collectors"><h2>HI.K5.S3</h2><p>Archives, museums and collections assert that the past is preserved and interpreted through the institutions that keep its records and objects.</p></section><section data-sec="hi.k5.s4 heritage management and conservation assert that the past is protected, managed and passed on, physically and digitally, to living audiences. heritage cultural conservation management incl world materials digital tourism visitor audience studies"><h2>HI.K5.S4</h2><p>Heritage management and conservation assert that the past is protected, managed and passed on, physically and digitally, to living audiences.</p></section>
+</main>
+<script>
+document.getElementById("filter").addEventListener("input", function () {
+  var q = this.value.toLowerCase();
+  var nodes = document.querySelectorAll("[data-sec]");
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].hidden = q && nodes[i].getAttribute("data-sec").indexOf(q) === -1;
+  }
+});
+</script>
+</div>
+<footer>
+  <div class="fcols">
+    <div><b>Taxonomy</b><a href="/">Home</a><a href="/approach/">Approach</a><a href="/chris-townsend/">About Chris</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+    <div><b>Divisions</b><a href="/minerva/">Minerva</a><a href="/skynet/">Skynet</a><a href="/defence/">Defence</a><a href="/blade-runner/">Blade Runner</a><a href="/medical/">Medical</a><a href="/tech/">Tech</a></div>
+    <div><b>Minerva</b><a href="/minerva/standard/">Standard</a><a href="/minerva/fields/">Fields</a><a href="/minerva/browser/">Browser tool</a><a href="/minerva/api/">API</a><a href="/minerva/mathematics/">Mathematics</a><a href="/minerva/claimguard/">ClaimGuard</a><a href="/minerva/evaluation/">Evaluation</a><a href="/minerva/changelog/">Changelog</a></div>
+    <div><b>Chris Townsend</b><a href="/chris-townsend/speaking/">Speaking</a><a href="/chris-townsend/writing/">Writing</a><a href="/chris-townsend/video/">Video</a><a href="/chris-townsend/advisory/">Advisory</a></div>
+  </div>
+  <p>Taxonomy · New Zealand<br>
+  <a href="/minerva/">Minerva</a> · <a href="/skynet/">Skynet</a> · <a href="/defence/">Defence</a> · <a href="/blade-runner/">Blade Runner</a> · <a href="/medical/">Medical</a> · <a href="/tech/">Tech</a> · <a href="/chris-townsend/">About Chris</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a><br>
+  <em>Know what the evidence can actually support.</em></p>
+</footer>
+</div>
+<script>
+document.getElementById('menubtn').addEventListener('click',function(){
+  var d=document.getElementById('drawer');
+  var open=d.hidden;
+  d.hidden=!open;
+  this.setAttribute('aria-expanded',open?'true':'false');
+});
+</script>
+</body>
+</html>

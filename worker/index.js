@@ -16,6 +16,9 @@ import {
   QUEUE_REASONS, SAMPLE_COUNT, SYSTEM, VERIFY_OWNERS, adjudicationMessages, agreeSamples, retrieveDefinitions,
 } from "../engine/adjudicate.mjs";
 import texts from "../engine/retrieval_text.json" with { type: "json" };
+import catalog from "../engine/minerva_catalog.json" with { type: "json" };
+import { verify } from "../engine/claimguard.mjs";
+import { audit, AUDIT_STATUS } from "../engine/audit.mjs";
 
 const MAX_CLAIM = 1000;
 const EMBED_MODEL = "@cf/baai/bge-small-en-v1.5";
@@ -28,7 +31,7 @@ const CODES = Object.keys(site.p);
 const CORS = {
   "access-control-allow-origin": "*",
   "access-control-allow-methods": "GET, POST, OPTIONS",
-  "access-control-allow-headers": "content-type",
+  "access-control-allow-headers": "content-type, authorization",
   "access-control-max-age": "86400",
 };
 const SECURITY = {
@@ -71,11 +74,18 @@ const NOTES = {
   error: "The model could not be asked. No field is assigned. This is not an abstention.",
 };
 
-const json = (obj, status = 200) =>
-  new Response(JSON.stringify(obj), {
+function json(obj, status = 200, extra = {}) {
+  return new Response(JSON.stringify(obj), {
     status,
-    headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", ...CORS, ...SECURITY },
+    headers: {
+      "content-type": "application/json; charset=utf-8",
+      "cache-control": "no-store",
+      ...CORS,
+      ...SECURITY,
+      ...extra,
+    },
   });
+}
 const bad = (msg, status = 400) => json({ error: msg }, status);
 
 function decorate(p) {
@@ -265,20 +275,218 @@ async function classifyRoute(request, url, env) {
   return json(await stamp(await withAssist(out, env, url, inp.value, placement.owner), model));
 }
 
+const MAX_VERIFY_BODY = 100_000;
+const VERIFY_WINDOW_MS = 60_000;
+const verifyHits = new Map();
+const FIELDS = new Map((catalog.fields || []).map((field) => [field.code, field]));
+
+function clientIp(request) {
+  return request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for") || "local";
+}
+
+async function limited(request, env) {
+  const key = clientIp(request);
+  if (env.VERIFY_LIMITER && typeof env.VERIFY_LIMITER.limit === "function") {
+    const out = await env.VERIFY_LIMITER.limit({ key });
+    const ok = out ? out.success !== false && out.ok !== false : true;
+    return ok ? null : json({ error: "Rate limit exceeded." }, 429, { "retry-after": "60" });
+  }
+  const cap = Number(env.VERIFY_LIMIT || 30);
+  const now = Date.now();
+  const bucket = (verifyHits.get(key) || []).filter((t) => now - t < VERIFY_WINDOW_MS);
+  if (bucket.length >= cap) {
+    verifyHits.set(key, bucket);
+    return json({ error: "Rate limit exceeded." }, 429, { "retry-after": "60" });
+  }
+  bucket.push(now);
+  verifyHits.set(key, bucket);
+  return null;
+}
+
+async function sha256Hex(value) {
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(value));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function verifyKey(request, env) {
+  if (!env.VERIFY_KEYS || typeof env.VERIFY_KEYS.get !== "function") return { bound: false, ok: false };
+  const header = request.headers.get("authorization") || "";
+  const match = header.match(/^Bearer\s+(\S+)\s*$/i);
+  if (!match) return { bound: true, ok: false };
+  const hex = await sha256Hex(match[1]);
+  const row = await env.VERIFY_KEYS.get("key:" + hex);
+  return { bound: true, ok: Boolean(row) };
+}
+
+function modelOn(env, key) {
+  if (!flagOn(env.VERIFY_MODEL) || !env.AI || typeof env.AI.run !== "function") return false;
+  if (key.bound && !key.ok) return false;
+  return true;
+}
+
+function clipList(list, name, textKey) {
+  if (list == null) return { value: [] };
+  if (!Array.isArray(list)) return { error: `"${name}" must be a list.` };
+  if (list.length > 10) return { error: `"${name}" is limited to 10 items.` };
+  const out = [];
+  for (const item of list) {
+    if (!item || typeof item !== "object") return { error: `"${name}" items must be objects.` };
+    const copy = { ...item };
+    const raw = copy[textKey];
+    if (typeof raw === "string") {
+      if (raw.length > 20000) return { error: `"${name}" item text is limited to 20000 characters.` };
+    } else if (raw != null && textKey === "output") {
+      if (JSON.stringify(raw).length > 20000) return { error: `"${name}" item text is limited to 20000 characters.` };
+    }
+    out.push(copy);
+  }
+  return { value: out };
+}
+
+async function readVerify(request) {
+  const raw = await request.text();
+  if (raw.length > MAX_VERIFY_BODY) return { error: "Body exceeds 100 KB.", status: 413 };
+  let body;
+  try { body = JSON.parse(raw || "{}"); } catch { return { error: "Body must be JSON." }; }
+  const hasClaim = typeof body.claim === "string" && !body.text;
+  const text = hasClaim ? body.claim : body.text;
+  if (typeof text !== "string" || !text.trim()) return { error: 'Provide "text" or "claim".' };
+  const cap = hasClaim ? 1000 : 4000;
+  if (text.length > cap) return { error: `"${hasClaim ? "claim" : "text"}" is limited to ${cap} characters.` };
+  const sources = clipList(body.sources, "sources", "text");
+  if (sources.error) return sources;
+  const tools = clipList(body.tool_outputs, "tool_outputs", "output");
+  if (tools.error) return tools;
+  const options = body.options && typeof body.options === "object" ? body.options : {};
+  return { text: text.trim(), sources: sources.value, tools: tools.value, options };
+}
+
+async function pyramidFull(code, env) {
+  const file = `pyramids/${code}.json`;
+  try {
+    if (env.PYRAMID_BUCKET && typeof env.PYRAMID_BUCKET.get === "function") {
+      const obj = await env.PYRAMID_BUCKET.get(file);
+      if (obj) return json(JSON.parse(await obj.text()));
+    }
+    if (env.PYRAMIDS && typeof env.PYRAMIDS.get === "function") {
+      const text = await env.PYRAMIDS.get(`pyramid:${code}`, "text");
+      if (text) return json(JSON.parse(text));
+    }
+  } catch {
+    return bad("Pyramid store failed.", 502);
+  }
+  return json({
+    error: "Full pyramid is not bound on this Worker.",
+    static_url: `/minerva/data/${code}.json`,
+    setup: "Bind R2 as PYRAMID_BUCKET (object pyramids/FIELD.json) or KV as PYRAMIDS (key pyramid:FIELD). Pages serves the same JSON at static_url.",
+  }, 404);
+}
+
+function searchField(field, q) {
+  const needle = q.toLowerCase();
+  const hits = [];
+  for (const section of field.sections || []) {
+    const blob = `${section.id} ${section.statement} ${(section.keywords || []).join(" ")}`.toLowerCase();
+    if (blob.includes(needle)) hits.push(section);
+    if (hits.length >= 40) break;
+  }
+  return hits;
+}
+
+async function placeRoute(request, url) {
+  const inp = await readInput(request, url);
+  if (inp.error) return bad(inp.error);
+  const staged = stageRule(inp.value, lex);
+  if (!staged.placement) {
+    return json({ placement: null, reason: staged.reason, rules_only: true });
+  }
+  return json({ placement: decorate(staged.placement), rules_only: true });
+}
+
+async function verifyRoute(request, env) {
+  const stop = await limited(request, env || {});
+  if (stop) return stop;
+  const inp = await readVerify(request);
+  if (inp.error) return bad(inp.error, inp.status || 400);
+  const key = await verifyKey(request, env || {});
+  const allow = modelOn(env || {}, key);
+  let runs = 0;
+  const llm = allow
+    ? async (prompt) => {
+      runs += 1;
+      const model = env.VERIFY_MODEL_NAME || ASSIST_MODEL;
+      const raw = await env.AI.run(model, { messages: [{ role: "user", content: prompt }], max_tokens: 200 });
+      const content = raw?.response ?? raw?.choices?.[0]?.message?.content ?? "";
+      const match = String(content).match(/\{[\s\S]*\}/);
+      try { return JSON.parse(match ? match[0] : "{}"); } catch { return {}; }
+    }
+    : null;
+  const wantModel = inp.options.split === "model" || inp.options.adjudicate === true;
+  const out = await verify(inp.text, inp.sources, inp.tools, {
+    llm,
+    split: allow && inp.options.split === "model" ? "model" : "rule",
+    max_claims: Math.min(Number(inp.options.max_claims) || 20, 20),
+  });
+  out.provenance = {
+    run_id: crypto.randomUUID(),
+    prompt_version: null,
+    model: allow ? (env.VERIFY_MODEL_NAME || ASSIST_MODEL) : null,
+    model_calls: runs,
+    rules: "R18-R22",
+    at: new Date().toISOString(),
+    adjudicate: "verify placement is rules-only",
+    note: allow
+      ? "Model labels are advisory and cannot raise a verdict (R22)."
+      : (wantModel ? "VERIFY_MODEL is off or no valid key. Rules only." : "Rules only."),
+  };
+  return json(out);
+}
+
 export default {
   async fetch(request, env) {
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: CORS });
     if (!["GET", "POST"].includes(request.method)) return bad("Method not allowed.", 405);
     const url = new URL(request.url);
     const p = url.pathname.replace(/\/+$/, "") || "/";
+    const box = env || {};
     try {
       if (p === "/v1/health") return json({
         ok: true,
+        version: "3.0.0-minerva.1",
         embed_model: EMBED_MODEL,
         assist: "only when assist=1",
         adjudicate: "three agreeing samples when ADJUDICATE=1, otherwise off",
+        verify: "rules only unless VERIFY_MODEL=1",
+        audit: AUDIT_STATUS,
       });
-      if (p === "/v1/classify") return await classifyRoute(request, url, env || {});
+      if (p === "/v1/classify") return await classifyRoute(request, url, box);
+      if (p === "/v1/fields" && request.method === "GET") {
+        return json({
+          version: catalog.version,
+          fields: (catalog.fields || []).map((field) => ({
+            code: field.code, name: field.name, holds: field.holds, misplaced: field.misplaced, format: field.format,
+          })),
+        });
+      }
+      const pyramid = p.match(/^\/v1\/pyramids\/([A-Z]{2})(\/search|\/full)?$/);
+      if (pyramid && request.method === "GET") {
+        const field = FIELDS.get(pyramid[1]);
+        if (!field) return bad("Unknown field.", 404);
+        if (pyramid[2] === "/full") return await pyramidFull(field.code, box);
+        if (pyramid[2] === "/search") {
+          const q = (url.searchParams.get("q") || "").trim();
+          if (!q) return bad('Provide "q".');
+          return json({ field: field.code, q, hits: searchField(field, q) });
+        }
+        return json(field);
+      }
+      if (p === "/v1/place") return await placeRoute(request, url);
+      if (p === "/v1/audit" && request.method === "POST") {
+        const inp = await readInput(request, url);
+        if (inp.error) return bad(inp.error);
+        return json(audit(inp.value));
+      }
+      if (p === "/v1/verify" && request.method === "POST") return await verifyRoute(request, box);
       return bad("Not found.", 404);
     } catch {
       return bad("Internal error.", 500);

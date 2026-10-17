@@ -17,6 +17,9 @@ PAGES = [
     "minerva/claimguard/index.html",
     "minerva/evaluation/index.html",
     "minerva/changelog/index.html",
+    "minerva/fields/index.html",
+    "minerva/fields/MA/index.html",
+    "minerva/fields/PH/index.html",
     "skynet/index.html",
     "defence/index.html",
     "blade-runner/index.html",
@@ -149,3 +152,13 @@ def test_site_map_pages_and_redirects():
         assert ".drawer[hidden]{display:none !important}" in page
         assert 'id="menubtn"' in page
         assert "Formula:" not in page
+    fields = read("minerva/fields/index.html")
+    assert "PH — Physics" in fields or "PH —" in fields
+    assert "Misplaced items: 33." in fields
+    ma = read("minerva/fields/MA/index.html")
+    assert 'id="filter"' in ma
+    assert "fetch(" not in ma
+    assert (DIST / "minerva" / "data" / "MA.json").is_file()
+    assert "DRAFT." in read("minerva/standard/index.html")
+    assert "POST /v1/verify" in read("minerva/api/index.html")
+    assert "does not publish a verdict accuracy figure" in read("minerva/evaluation/index.html")

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Environmental science in the Minerva catalog.">
+<title>EV · Fields · Minerva</title>
+<style>
+/* Layout: a 2010-era standards-body site. Fixed 960px sheet on a grey ground, blue banner, tab bar, left sidebar boxes, breadcrumb, footer link columns. Deliberately single light theme. */
+:root{
+  color-scheme:light;
+  --ground:#e6e9ee; --sheet:#ffffff; --ink:#222; --muted:#5a6270; --line:#c9d0da; --pale:#f2f5f9;
+  --navy:#173a6b; --navy2:#25528f; --link:#1a4f9c; --gold:#c9a227; --tab:#e9edf3; --ok:#2e6b2e; --warn:#8a5a00;
+  --serif:Georgia,"Times New Roman",Times,serif; --sans:Arial,Helvetica,sans-serif; --mono:"Courier New",Courier,monospace;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font:13px/1.55 var(--sans);margin:0;padding-inline:0}
+.page{max-width:960px;margin:0 auto;background:var(--sheet);box-shadow:0 0 6px rgba(0,0,0,.18)}
+a{color:var(--link)}
+a:hover{color:#c0392b}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);font-weight:normal;margin:0 0 8px;text-wrap:balance}
+h1{font-size:26px;line-height:1.2}
+h2{font-size:20px;border-bottom:1px solid var(--line);padding-bottom:4px;margin-top:18px}
+h3{font-size:15px;font-weight:bold}
+p{margin:0 0 10px}
+ul{margin:0 0 10px;padding-left:20px}
+li{margin-bottom:4px}
+/* utility bar */
+.util{background:#0f2a50;color:#c8d3e3;font-size:11px;display:flex;justify-content:flex-end;gap:14px;padding:4px 14px;flex-wrap:wrap}
+.util span{white-space:nowrap}
+/* banner */
+.banner{background:linear-gradient(#25528f,#173a6b);color:#fff;display:flex;align-items:center;gap:14px;padding:12px 14px;border-bottom:3px solid var(--gold);flex-wrap:wrap}
+.menubtn{font:bold 15px var(--sans);color:#173a6b;background:linear-gradient(#ffffff,#dde4ee);border:1px solid #0f2a50;border-radius:4px;padding:12px 18px 12px 14px;cursor:pointer;display:flex;align-items:center;gap:10px;box-shadow:inset 0 1px 0 #fff}
+.menubtn .bars{display:grid;gap:3px}.menubtn .bars i{display:block;width:20px;height:3px;background:#173a6b}
+.menubtn:hover{background:linear-gradient(#fff,#cfd9e8)}
+.seal{width:54px;height:54px;flex:none}
+.brand{display:grid}
+.brand b{font:bold 26px/1.05 var(--serif);letter-spacing:.5px}
+.brand span{font-size:12px;color:#d6e0ee}
+.search{margin-left:auto;display:flex;gap:4px}
+.search input{font:12px var(--sans);padding:4px 6px;border:1px solid #0f2a50;width:170px;max-width:42vw}
+.search button{font:12px var(--sans);background:#e9edf3;border:1px solid #0f2a50;cursor:pointer}
+/* menu drawer */
+.drawer{background:#f7f9fc;border-bottom:2px solid var(--navy);padding:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:4px 18px}
+.drawer[hidden]{display:none !important}
+.drawer a{display:block;padding:6px 4px;border-bottom:1px dotted var(--line);text-decoration:none;font-weight:bold}
+.drawer a small{display:block;font-weight:normal;color:var(--muted)}
+/* tabs */
+.tabs{display:flex;flex-wrap:wrap;gap:2px;background:var(--navy);padding:6px 8px 0}
+.tabs button{font:bold 12px var(--sans);color:#fff;background:linear-gradient(#3a6aa8,#25528f);border:1px solid #0f2a50;border-bottom:0;border-radius:5px 5px 0 0;padding:7px 12px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:#fff;color:var(--navy)}
+.tabs button:focus-visible,.menubtn:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.crumb{font-size:11px;color:var(--muted);padding:8px 14px;border-bottom:1px solid var(--line);background:var(--pale)}
+/* body grid */
+.body{display:grid;grid-template-columns:210px 1fr;gap:18px;padding:14px}
+.body>*{min-width:0}
+.side{display:grid;gap:12px;align-content:start}
+.box{border:1px solid var(--line);background:#fff}
+.box h4{font:bold 12px var(--sans);color:#fff;background:linear-gradient(#3a6aa8,#25528f);margin:0;padding:6px 8px}
+.box .in{padding:8px;font-size:12px}
+.box ul{list-style:square;padding-left:16px;margin:0}
+.box .news p{border-bottom:1px dotted var(--line);padding-bottom:6px}
+.box .news b{display:block;color:var(--muted);font-size:11px}
+.panel[hidden]{display:none}
+.hero{border:1px solid var(--line);background:linear-gradient(#f7f9fc,#e9eef6);padding:16px;margin-bottom:12px;display:grid;grid-template-columns:1fr 230px;gap:16px}
+.hero.solo{grid-template-columns:1fr}
+.hero>*{min-width:0}
+.hero .lead{font-size:14px}
+.hero .pull{font-family:var(--serif);font-style:italic;color:var(--navy);font-size:15px;border-left:4px solid var(--gold);padding-left:10px}
+.keyfacts{border:1px solid var(--line);background:#fff}
+.keyfacts table{width:100%;border-collapse:collapse;font-size:12px}
+.keyfacts td{padding:5px 8px;border-bottom:1px solid var(--pale)}
+.keyfacts td:first-child{font:bold 16px var(--serif);color:var(--navy);text-align:right;width:70px;font-variant-numeric:tabular-nums}
+.btn{display:inline-block;font:bold 13px var(--sans);color:#fff;background:linear-gradient(#e0b437,#b98f14);border:1px solid #8a6a0c;border-radius:4px;padding:9px 16px;cursor:pointer;text-decoration:none;text-shadow:0 1px 0 rgba(0,0,0,.25)}
+.btn.blue{background:linear-gradient(#3a6aa8,#173a6b);border-color:#0f2a50}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cols2>*,.cols3>*{min-width:0}
+.card{border:1px solid var(--line);padding:10px;background:#fff}
+.card h3{margin-bottom:4px}
+.notice{border:1px solid #e0cf8a;background:#fffbea;padding:10px;font-size:12px;margin:10px 0}
+.tbl{overflow-x:auto;margin:8px 0 12px}
+table.data{border-collapse:collapse;width:100%;font-size:12px}
+table.data th{background:#dfe6f0;color:var(--navy);text-align:left;padding:6px;border:1px solid var(--line);font-weight:bold}
+table.data td{padding:6px;border:1px solid var(--line);vertical-align:top}
+table.data tr:nth-child(even) td{background:#f7f9fc}
+.code{font-family:var(--mono);font-size:12px;white-space:nowrap}
+.ticks{list-style:none;padding-left:0}
+.ticks li{padding-left:20px;position:relative}
+.ticks li:before{content:"\2714";color:var(--ok);position:absolute;left:2px}
+/* pyramid figure */
+.pyr{display:grid;gap:4px;justify-items:center;padding:10px;border:1px solid var(--line);background:#fff}
+.tier{display:flex;gap:4px}
+.chip{font:bold 11px var(--mono);width:40px;height:26px;border:1px solid #8ba3c7;background:linear-gradient(#fff,#e3eaf4);color:var(--navy);cursor:pointer;border-radius:2px}
+.chip.apex{background:linear-gradient(#fff4cf,#e7c763);border-color:#8a6a0c}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff}
+.figcap{font-size:11px;color:var(--muted);text-align:center;margin-top:4px}
+.fielddetail{border:1px solid var(--line);background:var(--pale);padding:10px;margin-top:8px}
+/* minto figure */
+.minto{display:grid;gap:6px;justify-items:center;border:1px solid var(--line);padding:12px;background:#fff}
+.mb{border:1px solid var(--navy);background:#f7f9fc;padding:6px 10px;text-align:center;font-size:12px;max-width:440px}
+.mb.top{border-width:2px;font-weight:bold}
+.mrow{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.mrow .mb{max-width:120px;font-size:11px}
+.ml{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+/* placer */
+.placer select{width:100%;font:12px var(--sans);padding:5px}
+.slots{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.slot{border:1px solid var(--line);background:#f7f9fc;padding:8px}
+.slot .l{font-size:10px;text-transform:uppercase;color:var(--muted)}
+.slot .v{font:bold 15px var(--mono);color:var(--navy)}
+.slot .s{font-size:11px;color:var(--muted)}
+.modes{display:flex;flex-wrap:wrap;gap:4px;margin:10px 0 0}.modes button{font:bold 12px var(--sans);background:linear-gradient(#fff,#e3eaf4);border:1px solid #8ba3c7;border-bottom:0;border-radius:4px 4px 0 0;padding:8px 12px;cursor:pointer;color:var(--navy)}.modes button[aria-selected="true"]{background:var(--navy);color:#fff}
+.mode{border-top:3px solid var(--navy)}
+.aiout{border:1px solid #e0cf8a;background:#fffbea;padding:10px;margin-top:10px;font-size:12px}
+.small{font-size:12px;color:var(--muted)}
+.tag{display:inline-block;font-size:10px;color:#fff;background:var(--ok);padding:1px 5px;border-radius:2px;margin-top:3px}
+.ribbon{background:#fffbea;border:1px solid #e0cf8a;padding:6px 10px;margin-bottom:10px;font-size:12px}.ribbon b{background:#c0392b;color:#fff;padding:1px 6px;border-radius:2px;margin-right:6px;font-size:11px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0 12px}.three>div{border:1px solid var(--line);border-top:3px solid var(--gold);padding:10px;background:#fff;min-width:0}.three h3{margin-bottom:4px}
+@media (max-width:760px){.three{grid-template-columns:1fr}}
+pre{background:#f4f4f4;border:1px solid #ccc;padding:10px;overflow-x:auto;font:12px/1.45 var(--mono);margin:0 0 10px}
+form{display:grid;gap:8px;max-width:520px}
+label{font-weight:bold;font-size:12px;display:grid;gap:3px}
+input,textarea,select{font:13px var(--sans);padding:5px;border:1px solid #9aa7b8}
+#formmsg{color:var(--ok);font-weight:bold}
+.faq dt{font-weight:bold;color:var(--navy);margin-top:10px}
+.faq dd{margin:4px 0 0 0}
+.ps{border-top:1px dashed var(--line);margin-top:12px;padding-top:8px;font-size:12px}
+footer{background:#2b3442;color:#c9d1dc;font-size:11px;padding:16px 14px}
+footer .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:12px}
+footer b{color:#fff;display:block;margin-bottom:4px}
+footer a{color:#c9d1dc;display:block;text-decoration:none;cursor:pointer}
+footer a:hover{color:#fff;text-decoration:underline}
+footer p a{display:inline;color:#c9d1dc}
+.banner .brand{color:#fff;text-decoration:none}
+.banner .brand:hover{color:#fff}
+.util a{color:#c8d3e3;text-decoration:none}
+.util a:hover{color:#fff;text-decoration:underline}
+.tabs a.tab{font:bold 12px var(--sans);color:#fff;background:linear-gradient(#3a6aa8,#25528f);border:1px solid #0f2a50;border-bottom:0;border-radius:5px 5px 0 0;padding:7px 12px;text-decoration:none;display:inline-block}
+.tabs a.tab[aria-current="page"]{background:#fff;color:var(--navy)}
+.tabs a.tab:hover{color:#fff}
+.tabs a.tab[aria-current="page"]:hover{color:var(--navy)}
+.divcards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:8px 0 12px}
+.divcard{border:1px solid var(--line);border-top:3px solid var(--navy);padding:12px;background:#fff;min-width:0}
+.divcard.lead{grid-column:1 / -1;border-top-color:var(--gold);background:linear-gradient(#fffdf6,#fff)}
+.divcard h3{margin-bottom:4px}
+.badge{display:inline-block;font:bold 10px var(--sans);letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--warn);padding:1px 6px;border-radius:2px;vertical-align:middle}
+.badge.soon{background:#5a6270}
+.placeholder{border:1px dashed #8a6a0c;background:#fffbea;padding:8px 10px;margin:8px 0;font-size:12px}
+.tbc{background:#fff3cd;border:1px dashed #8a6a0c;color:#6b4e00;padding:1px 5px;font-weight:bold}
+.tbc.block{display:block;padding:8px 10px;margin:8px 0}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+@media (max-width:760px){
+  .body{grid-template-columns:1fr}.side{order:2}
+  .hero,.cols2{grid-template-columns:1fr}.cols3{grid-template-columns:1fr}
+  .slots{grid-template-columns:1fr 1fr}footer .fcols{grid-template-columns:1fr 1fr}
+  .search{margin-left:0}
+  .divcards{grid-template-columns:1fr}.divcard.lead{grid-column:auto}
+}
+</style>
+
+</head>
+<body>
+<div class="page">
+<div class="util"><span>Taxonomy · New Zealand</span><span><a href="/minerva/">Minerva</a></span><span><a href="/chris-townsend/">Chris Townsend</a></span><span><a href="/contact/">Contact</a></span></div>
+<div class="banner">
+  <button class="menubtn" id="menubtn" type="button" aria-expanded="false" aria-controls="drawer"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>Menu</button>
+  <svg class="seal" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="28" fill="#173a6b" stroke="#c9a227" stroke-width="3"/><circle cx="30" cy="30" r="22" fill="none" stroke="#c9a227" stroke-width="1"/><polygon points="30,13 45,42 15,42" fill="#c9a227"/><line x1="20.5" y1="31" x2="39.5" y2="31" stroke="#173a6b" stroke-width="1.6"/><line x1="25.5" y1="22" x2="34.5" y2="22" stroke="#173a6b" stroke-width="1.6"/></svg>
+  <a class="brand" href="/"><b>Taxonomy</b><span>An AI company · New Zealand</span></a>
+  <form class="search" role="search" action="/minerva/" method="get"><label for="q" style="position:absolute;left:-9999px">Search a field</label><input id="q" name="q" placeholder="Search a field, e.g. Law"><button type="submit">Go</button></form>
+</div>
+<nav class="drawer" id="drawer" hidden aria-label="Site menu"><a href="/">Home<small>Company</small></a><a href="/approach/">Approach<small>How we work</small></a><a href="/minerva/">Minerva<small>Truth-seeking and mapping</small></a><a href="/minerva/standard/">Standard<small>Minerva</small></a><a href="/minerva/fields/">Fields<small>Minerva</small></a><a href="/minerva/browser/">Browser tool<small>Minerva</small></a><a href="/minerva/api/">API<small>Minerva</small></a><a href="/minerva/mathematics/">Mathematics<small>Minerva</small></a><a href="/minerva/claimguard/">ClaimGuard<small>Minerva</small></a><a href="/minerva/evaluation/">Evaluation<small>Minerva</small></a><a href="/minerva/changelog/">Changelog<small>Minerva</small></a><a href="/skynet/">Skynet<small>Division</small></a><a href="/defence/">Defence<small>Division</small></a><a href="/blade-runner/">Blade Runner<small>Division</small></a><a href="/medical/">Medical<small>Division</small></a><a href="/tech/">Tech<small>Division</small></a><a href="/chris-townsend/">Chris Townsend<small>Founder</small></a><a href="/chris-townsend/speaking/">Speaking<small>Chris Townsend</small></a><a href="/chris-townsend/writing/">Writing<small>Chris Townsend</small></a><a href="/chris-townsend/video/">Video<small>Chris Townsend</small></a><a href="/chris-townsend/advisory/">Advisory<small>Chris Townsend</small></a><a href="/contact/">Contact<small>Enquiry</small></a><a href="/privacy/">Privacy<small>Notice</small></a><a href="/terms/">Terms<small>Notice</small></a></nav>
+<nav class="tabs" aria-label="Taxonomy"><a class="tab" href="/">Home</a><a class="tab" href="/approach/">Approach</a><a class="tab" href="/minerva/" aria-current="page">Minerva</a><a class="tab" href="/skynet/">Skynet</a><a class="tab" href="/defence/">Defence</a><a class="tab" href="/blade-runner/">Blade Runner</a><a class="tab" href="/medical/">Medical</a><a class="tab" href="/tech/">Tech</a><a class="tab" href="/chris-townsend/">Chris</a><a class="tab" href="/contact/">Contact</a></nav>
+<div class="crumb">You are here: <a href="/">Home</a> &gt; <a href="/minerva/">Minerva</a> &gt; <a href="/minerva/fields/">Fields</a> &gt; EV</div>
+<div class="body">
+<aside class="side">
+  <div class="box"><h4>Minerva</h4><div class="in"><ul>
+    <li><a href="/minerva/fields/">All fields</a></li>
+    <li><a href="/minerva/standard/">Standard</a></li>
+  </ul></div></div>
+</aside>
+<main>
+  <h1>Environmental science</h1>
+  <p class="lead">Environmental science places each coupled human–environment claim on one link of the causal chain: pressure, state, impact, response, or limit.</p>
+  <p>Catalog depth is the key line and the section under it. The full pyramid JSON is <a href="/minerva/data/EV.json">EV.json</a>. This page does not fetch it.</p>
+  <p><label for="filter">Filter sections</label> <input id="filter" type="search" autocomplete="off"></p>
+  <section data-sec="ev.p.1 pressures are the loads that human activity places on the environment. pollution emissions waste land clearance fertiliser runoff pollutant emission industry mining extraction fishing fuel"><h2>EV.P.1</h2><p>Pressures are the loads that human activity places on the environment.</p></section><section data-sec="ev.p.1.1 emissions are the loads from greenhouse gases and other pollutants. pollutant waste emission fuel fertiliser reduction organic radioactive heat dispersion inorganic chemical"><h2>EV.P.1.1</h2><p>Emissions are the loads from greenhouse gases and other pollutants.</p></section><section data-sec="ev.p.1.2 land and sea use changes are the loads from clearance, drainage, and building. urban development noise pollution traffic water supply coastal river basin"><h2>EV.P.1.2</h2><p>Land and sea use changes are the loads from clearance, drainage, and building.</p></section><section data-sec="ev.p.1.3 extraction is the load from taking water, minerals, or living stocks. mining extraction fishing fishery deep coal lignite rock salt offshore opencast strip"><h2>EV.P.1.3</h2><p>Extraction is the load from taking water, minerals, or living stocks.</p></section><section data-sec="ev.p.1.4 introduced species are the loads from pests and organisms people bring in. organisms introduction species accidental release animal plant genetically modified organism pest infestation"><h2>EV.P.1.4</h2><p>Introduced species are the loads from pests and organisms people bring in.</p></section><section data-sec="ev.p.1.5 drivers are the activities that create a load, grouped here because the load is the pressure. industry iron steel metal beverage brewing distilling dairy food non-ferrous cement coal"><h2>EV.P.1.5</h2><p>Drivers are the activities that create a load, grouped here because the load is the pressure.</p></section><section data-sec="ev.p.2 states are the measured conditions of air, water, soil, and living systems. water quality air quality environmental monitoring state of environment ecosystem climate resource ozone energy temperature ocean level"><h2>EV.P.2</h2><p>States are the measured conditions of air, water, soil, and living systems.</p></section><section data-sec="ev.p.2.7 measured conditions are the states of air, water, soil, and living systems. ecosystem climate ozone temperature ocean level coastal tropical river basin mountain temperate"><h2>EV.P.2.7</h2><p>Measured conditions are the states of air, water, soil, and living systems.</p></section><section data-sec="ev.p.2.6 natural hazards and processes are geological, weather, and ecological events. disaster flood cycle hydrologic avalanche earthquake geological landslide seismic activity volcanic eruption"><h2>EV.P.2.6</h2><p>Natural hazards and processes are geological, weather, and ecological events.</p></section><section data-sec="ev.p.2.9 natural resources are stocks of water, minerals, energy, and living systems. resource energy mineral natural renewable fluvial freshwater water fishery grain living marine"><h2>EV.P.2.9</h2><p>Natural resources are stocks of water, minerals, energy, and living systems.</p></section><section data-sec="ev.p.3 impacts are the harms a changed state causes, and the way those harms are attributed. environmental harm health effects biodiversity loss climate impacts degradation health effect environmental natural resources land soil"><h2>EV.P.3</h2><p>Impacts are the harms a changed state causes, and the way those harms are attributed.</p></section><section data-sec="ev.p.3.1 ecosystem harm is the loss of function or species after a changed state. degradation natural resources land soil climate change impact environment ecosystem freshwater nature"><h2>EV.P.3.1</h2><p>Ecosystem harm is the loss of function or species after a changed state.</p></section><section data-sec="ev.p.3.2 human health impact is the harm to people that follows an exposure. health effect environmental hazard noise human"><h2>EV.P.3.2</h2><p>Human health impact is the harm to people that follows an exposure.</p></section><section data-sec="ev.p.4 responses are the actions taken to change a pressure or a state. environmental policy conservation restoration environmental management treatment protection management water waste control system environmental"><h2>EV.P.4</h2><p>Responses are the actions taken to change a pressure or a state.</p></section><section data-sec="ev.p.4.1 restoration is the response that aims at measured recovery. restoration environmental rehabilitation installation land"><h2>EV.P.4.1</h2><p>Restoration is the response that aims at measured recovery.</p></section><section data-sec="ev.p.4.2 conservation is the response that protects areas and cuts pressures on them. protection conservation environmental area landscape water marine policy biotope estuarine site animal"><h2>EV.P.4.2</h2><p>Conservation is the response that protects areas and cuts pressures on them.</p></section><section data-sec="ev.p.4.3 regulation is the response whose environmental effect is what this field measures. treatment management waste water control measure system climate pollution manure mitigation plant"><h2>EV.P.4.3</h2><p>Regulation is the response whose environmental effect is what this field measures.</p></section><section data-sec="ev.p.4.7.2 environmental engineering is the technical work that changes a pressure or a state. system water environmental protection technology aqueduct pump sluice sluice-gate distribution waterworks bacterial"><h2>EV.P.4.7.2</h2><p>Environmental engineering is the technical work that changes a pressure or a state.</p></section><section data-sec="ev.p.5 limits are the thresholds a measured state is not meant to cross. environmental limits standards thresholds targets capacity environmental quality limit standard criterion carrying critical"><h2>EV.P.5</h2><p>Limits are the thresholds a measured state is not meant to cross.</p></section><section data-sec="ev.p.5.1 thresholds are the critical values past which a system shifts. critical level load irreversibility phenomenon noel threshold value"><h2>EV.P.5.1</h2><p>Thresholds are the critical values past which a system shifts.</p></section><section data-sec="ev.p.5.2 standards are the agreed limits a measured state is held to. environmental quality limit standard criterion maximum concentration immission norm pollution acceptable daily"><h2>EV.P.5.2</h2><p>Standards are the agreed limits a measured state is held to.</p></section><section data-sec="ev.p.5.3 carrying capacity is the limit of what a system can sustain. capacity carrying ecological biocapacity land waste assimilation world"><h2>EV.P.5.3</h2><p>Carrying capacity is the limit of what a system can sustain.</p></section>
+</main>
+<script>
+document.getElementById("filter").addEventListener("input", function () {
+  var q = this.value.toLowerCase();
+  var nodes = document.querySelectorAll("[data-sec]");
+  for (var i = 0; i < nodes.length; i++) {
+    nodes[i].hidden = q && nodes[i].getAttribute("data-sec").indexOf(q) === -1;
+  }
+});
+</script>
+</div>
+<footer>
+  <div class="fcols">
+    <div><b>Taxonomy</b><a href="/">Home</a><a href="/approach/">Approach</a><a href="/chris-townsend/">About Chris</a><a href="/contact/">Contact</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></div>
+    <div><b>Divisions</b><a href="/minerva/">Minerva</a><a href="/skynet/">Skynet</a><a href="/defence/">Defence</a><a href="/blade-runner/">Blade Runner</a><a href="/medical/">Medical</a><a href="/tech/">Tech</a></div>
+    <div><b>Minerva</b><a href="/minerva/standard/">Standard</a><a href="/minerva/fields/">Fields</a><a href="/minerva/browser/">Browser tool</a><a href="/minerva/api/">API</a><a href="/minerva/mathematics/">Mathematics</a><a href="/minerva/claimguard/">ClaimGuard</a><a href="/minerva/evaluation/">Evaluation</a><a href="/minerva/changelog/">Changelog</a></div>
+    <div><b>Chris Townsend</b><a href="/chris-townsend/speaking/">Speaking</a><a href="/chris-townsend/writing/">Writing</a><a href="/chris-townsend/video/">Video</a><a href="/chris-townsend/advisory/">Advisory</a></div>
+  </div>
+  <p>Taxonomy · New Zealand<br>
+  <a href="/minerva/">Minerva</a> · <a href="/skynet/">Skynet</a> · <a href="/defence/">Defence</a> · <a href="/blade-runner/">Blade Runner</a> · <a href="/medical/">Medical</a> · <a href="/tech/">Tech</a> · <a href="/chris-townsend/">About Chris</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a><br>
+  <em>Know what the evidence can actually support.</em></p>
+</footer>
+</div>
+<script>
+document.getElementById('menubtn').addEventListener('click',function(){
+  var d=document.getElementById('drawer');
+  var open=d.hidden;
+  d.hidden=!open;
+  this.setAttribute('aria-expanded',open?'true':'false');
+});
+</script>
+</body>
+</html>

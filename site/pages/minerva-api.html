@@ -12,6 +12,11 @@
 </aside>
 <main>
   <h1>API</h1>
-  <p class="lead">The interface is published as a design. Developer access is not open on this page.</p>
-  <p class="actions"><a class="btn" href="/minerva/#api">Read the API design</a></p>
+  <p class="lead">The Worker exposes classify, place, audit, verify, and the field catalog. Paid models stay off unless a flag is set.</p>
+  <h2>POST /v1/verify</h2>
+  <p>Send a text, or a single claim, plus any sources and tool outputs you already hold. The service does not fetch them. With no flag set, the check is rules only. A paid model runs only when VERIFY_MODEL=1, and that flag ships unset. A model label cannot raise a verdict to supported or contradicted.</p>
+  <p>The verdict is one of: out of scope, contradicted, contested, overstated, supported, unverified. The first match wins. The reply never uses the word true as a verdict.</p>
+  <p>POST /v1/classify and POST /v1/audit are unchanged. Classify places a claim. Audit returns wording flags for a person to read. Neither returns a verdict.</p>
+  <p>GET /v1/fields lists the 25 fields. GET /v1/pyramids/FIELD returns the catalog sections. GET /v1/pyramids/FIELD/full returns the full pyramid when R2 or KV is bound, and otherwise a link to the static JSON on this site.</p>
+  <p class="actions"><a class="btn" href="/minerva/#api">Read the API design</a><a class="btn blue" href="/minerva/claimguard/">ClaimGuard</a></p>
 </main>
