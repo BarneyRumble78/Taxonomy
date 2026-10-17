@@ -10,10 +10,18 @@ _LEX = json.loads((Path(__file__).resolve().parents[1] / "certainty_lexicon.json
 LEVELS = tuple(_LEX["levels"])
 CEILING = dict(_LEX["ceiling"])
 _RANK = {name: i for i, name in enumerate(LEVELS)}
+def _cue_re(cue):
+    """Word boundaries. A cue that ends on '%' still matches, because '%' is not a word character."""
+    body = re.escape(cue)
+    lead = r"\b" if re.match(r"\w", cue) else ""
+    trail = r"\b" if re.search(r"\w$", cue) else r"(?!\w)"
+    return re.compile(lead + body + trail, re.I)
+
+
 _CUES = []
 for level in reversed(LEVELS):
     for cue in sorted(_LEX["cues"].get(level, []), key=len, reverse=True):
-        _CUES.append((level, cue, re.compile(r"\b" + re.escape(cue) + r"\b", re.I)))
+        _CUES.append((level, cue, _cue_re(cue)))
 
 
 def certainty(text):
