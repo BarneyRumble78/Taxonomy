@@ -1,11 +1,17 @@
 """Ordered verdicts. The first match wins. The word true is never returned.
 
-Order: out_of_scope, contradicted, contested, overstated, supported, unverified.
+First-match order: out_of_scope, contradicted, contested, overstated, supported, unverified.
+That order is not severity. summary.worst uses SEVERITY:
+contradicted, overstated, contested, unverified, out_of_scope, supported.
+
+A supporting span and a contradicting span of the same warrant strength are contested.
+A contradicting span wins when it is stronger, or when it is the only bound evidence.
 """
 import core
 from certainty import ceiling_ok, rank, warrant_ceiling
 
 ORDER = ("out_of_scope", "contradicted", "contested", "overstated", "supported", "unverified")
+SEVERITY = ("contradicted", "overstated", "contested", "unverified", "out_of_scope", "supported")
 _STRONG = {"supported", "contradicted"}
 
 
@@ -25,7 +31,7 @@ def _shown(evidence, checks):
     return False
 
 
-def combine(placement, wreq, cert, evidence, checks, contested=False, *, instruction=False, w13=False, ik=False):
+def combine(placement, wreq, cert, evidence, checks, contested=False, *, instruction=False, question=False, w13=False, ik=False):
     """Return verdict, qualifier, reason, status, and certainty_without_evidence."""
     reasons = []
     evidence = list(evidence or [])
@@ -36,7 +42,7 @@ def combine(placement, wreq, cert, evidence, checks, contested=False, *, instruc
     entails = [e for e in rule if e.get("relation") == "entails"]
     contradicts = [e for e in rule if e.get("relation") == "contradicts"]
     model_contra = [e for e in evidence if e.get("by") == "model" and e.get("relation") == "contradicts"]
-    held_codes = [e.get("warrant_held") for e in entails if e.get("warrant_held")]
+    held_codes = [e.get("warrant_held") for e in entails + contradicts if e.get("warrant_held")]
     passed = [c for c in checks if c.get("result") == "consistent" and c.get("kind") != "missing_hypotheses"]
     failed = [c for c in checks if c.get("result") == "contradicted" and c.get("kind") != "missing_hypotheses"]
     missing_hyp = [c for c in checks if c.get("kind") == "missing_hypotheses"]
@@ -76,22 +82,42 @@ def combine(placement, wreq, cert, evidence, checks, contested=False, *, instruc
         status = "contradicted (small cases)" if item.get("kind") == "equation_small_cases" else "tested"
         return pack("contradicted", None, status)
 
-    if instruction or w13 or not placement:
-        if instruction:
+    if instruction or question or w13:
+        if question:
+            reasons.append("R18: the text is a question, not a claim.")
+        elif instruction:
             reasons.append("R18: the text reads as an instruction, not a claim.")
-        elif w13:
-            reasons.append("W13 does not license a measurement, a date, a legal duty, or a word meaning.")
         else:
-            reasons.append("R18: the engine abstained, so the text is out of scope.")
+            reasons.append("W13 does not license a measurement, a date, a legal duty, or a word meaning.")
         return pack("out_of_scope", None, "proposed")
 
-    if contradicts:
+    def strongest(items):
+        codes = [e.get("warrant_held") for e in items if e.get("warrant_held")]
+        return max(codes, key=_ceil) if codes else None
+
+    bound = bool(entails or contradicts or passed)
+    if entails and contradicts:
+        entail_held = strongest(entails)
+        contra_held = strongest(contradicts)
+        if _ceil(contra_held) > _ceil(entail_held):
+            item = contradicts[0]
+            reasons.append(f"R20: span {item.get('ref')} contradicts the claim.")
+            return pack("contradicted", None, "source_found")
+        if _ceil(contra_held) == _ceil(entail_held):
+            reasons.append("R20: support and contradiction hold the same warrant, so the claim is contested.")
+            return pack("contested", None, "source_found")
+        contradicts = []
+    elif contradicts:
         item = contradicts[0]
         reasons.append(f"R20: span {item.get('ref')} contradicts the claim.")
         return pack("contradicted", None, "source_found")
 
-    if contested:
-        reasons.append("R6: the claim is marked open or contested, or the evidence disagrees with itself.")
+    if contested and (placement or bound):
+        cross = [e for e in evidence if e.get("relation") == "cross"]
+        if cross:
+            reasons.append(f"R21: {cross[0].get('ref')} states the opposing claim, so the pair is contested.")
+        else:
+            reasons.append("R6: the claim is marked open or contested, or the evidence disagrees with itself.")
         return pack("contested", None, "proposed")
 
     small = [c for c in passed if c.get("kind") == "equation_small_cases"]
@@ -124,10 +150,15 @@ def combine(placement, wreq, cert, evidence, checks, contested=False, *, instruc
         return pack("overstated", None, "proposed")
 
     meets = False
-    if entails and code and wheld and _ceil(wheld) >= _ceil(code) and ceiling_ok(level, wheld):
+    warrant_ok = code is None or (wheld is not None and _ceil(wheld) >= _ceil(code))
+    if entails and wheld and warrant_ok and ceiling_ok(level, wheld):
         meets = True
         reasons.append(f"R20: span {entails[0].get('ref')} entails the claim at {wheld}.")
-    check_meet = [c for c in passed if c.get("kind") in ("arithmetic",) and code and _ceil(c.get("warrant_held")) >= _ceil(code)]
+    check_meet = [
+        c for c in passed
+        if c.get("kind") == "arithmetic"
+        and (code is None or _ceil(c.get("warrant_held")) >= _ceil(code))
+    ]
     if check_meet and ceiling_ok(level, check_meet[0].get("warrant_held")):
         meets = True
         reasons.append(f"R18: check {check_meet[0]['id']} passed.")
@@ -138,6 +169,10 @@ def combine(placement, wreq, cert, evidence, checks, contested=False, *, instruc
     if small and not only_none and ceiling_ok(level, "W9"):
         reasons.append("R18: a small-case search found no counterexample in range. This is not a proof.")
         return pack("supported", "small cases", "tested")
+
+    if not placement and not bound:
+        reasons.append("R18: the engine abstained, so the text is out of scope.")
+        return pack("out_of_scope", None, "proposed")
 
     if model_contra:
         reasons.append("R22: a model noted a possible contradiction. That alone is not a verdict.")

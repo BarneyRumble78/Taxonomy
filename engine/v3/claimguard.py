@@ -6,10 +6,10 @@ The word true is never returned.
 import json, re
 from pathlib import Path
 
-from certainty import certainty
+from certainty import ceiling_ok, certainty
 from checks import check_open, run_checks
 from evidence import match_spans, registry_hits
-from verdict import ORDER, combine
+from verdict import ORDER, SEVERITY, combine
 
 ROOT = Path(__file__).resolve().parents[2]
 _TYPES = json.loads((ROOT / "engine" / "claim_types.json").read_text(encoding="utf-8"))
@@ -116,28 +116,24 @@ def _public_placement(p):
 
 
 def _siblings(claims):
-    """R21: a later claim that negates an earlier one, at a stronger warrant, contradicts it."""
+    """A contradicting pair in one text is contested on both sides, with a cross-reference."""
     from evidence import _NEG, _words, numbers_agree
-    from certainty import warrant_ceiling
-    from certainty import rank
     flags = {}
-    for i, a in enumerate(claims):
+    for a in claims:
         for b in claims:
-            if a is b:
+            if a is b or a["id"] in flags:
                 continue
-            if not _NEG.search(b["text"]) or _NEG.search(a["text"]):
+            neg_a = _NEG.search(a["text"]) is not None
+            neg_b = _NEG.search(b["text"]) is not None
+            if neg_a == neg_b:
                 continue
             wa, wb = _words(a["text"]), set(_words(b["text"]))
             if not wa or sum(1 for w in wa if w in wb) / len(wa) < 0.6:
                 continue
             if numbers_agree(a["text"], b["text"]) is False:
                 continue
-            sa = rank(warrant_ceiling((a.get("warrant_required") or {}).get("code")))
-            sb = rank(warrant_ceiling((b.get("warrant_required") or {}).get("code")))
-            if sb > sa:
-                flags.setdefault(a["id"], "stronger")
-            else:
-                flags.setdefault(a["id"], "same")
+            flags[a["id"]] = b
+            flags[b["id"]] = a
     return flags
 
 
@@ -147,8 +143,9 @@ def verify(text, sources=None, tool_outputs=None, *, llm=None, split="rule", max
     built = []
     for claim in claims:
         sentence = claim["text"]
-        instr = instruction_heuristic(sentence) or bool(_Q.search(sentence or ""))
-        placement = None if instr else rule_placement(sentence)
+        instr = bool(instruction_heuristic(sentence))
+        question = bool(_Q.search(sentence or "")) and not instr
+        placement = None if instr or question else rule_placement(sentence)
         if placement and placement.get("confidence") is not None and placement["confidence"] < 0.4 and not instr:
             # The rule stage abstains under 0.40. Mirror that gate per atomic claim.
             placement = None
@@ -169,10 +166,10 @@ def verify(text, sources=None, tool_outputs=None, *, llm=None, split="rule", max
                     })
             except Exception:
                 pass
-        checks = [] if instr else run_checks(sentence)
+        checks = [] if instr or question else run_checks(sentence)
         built.append({
             "claim": claim, "text": sentence, "placement": placement, "wreq": wreq,
-            "evidence": evidence, "checks": checks, "instruction": instr,
+            "evidence": evidence, "checks": checks, "instruction": instr, "question": question,
             "open": check_open(sentence), "w13": _w13(sentence, placement),
             "cert": certainty(sentence),
         })
@@ -180,22 +177,30 @@ def verify(text, sources=None, tool_outputs=None, *, llm=None, split="rule", max
     for row in built:
         prepared.append({
             "id": row["claim"]["id"], "text": row["text"],
+            "span": row["claim"]["span"],
             "warrant_required": row["wreq"],
         })
     sibling = _siblings(prepared)
     results = []
     for row in built:
-        contested = row["open"] or sibling.get(row["claim"]["id"]) == "same"
-        if sibling.get(row["claim"]["id"]) == "stronger":
+        other = sibling.get(row["claim"]["id"])
+        contested = row["open"] or other is not None
+        if other is not None:
             row["evidence"].append({
-                "kind": "source", "ref": "sibling", "quote": "another claim in this text",
-                "span": [0, 0], "relation": "contradicts", "warrant_held": row["wreq"].get("code"),
+                "kind": "source",
+                "ref": other["id"],
+                "quote": other["text"],
+                "span": other.get("span") or [0, 0],
+                "relation": "cross",
+                "warrant_held": (other.get("warrant_required") or {}).get("code"),
+                "warrant_graded": (other.get("warrant_required") or {}).get("code"),
+                "warrant_declared_by_caller": False,
                 "by": "rule",
             })
         decided = combine(
             row["placement"], row["wreq"], row["cert"], row["evidence"], row["checks"],
-            contested=contested, instruction=row["instruction"], w13=row["w13"],
-            ik=(row["placement"] or {}).get("owner") == "IK",
+            contested=contested, instruction=row["instruction"], question=row["question"],
+            w13=row["w13"], ik=(row["placement"] or {}).get("owner") == "IK",
         )
         mismatch = bool(
             row["placement"] and row["wreq"].get("code") and row["placement"].get("warrant")
@@ -211,7 +216,7 @@ def verify(text, sources=None, tool_outputs=None, *, llm=None, split="rule", max
             "certainty": {
                 "level": row["cert"]["level"],
                 "cues": row["cert"]["cues"],
-                "ceiling_ok": decided["verdict"] != "overstated",
+                "ceiling_ok": ceiling_ok(row["cert"]["level"], decided.get("warrant_held")),
             },
             "evidence": decided.get("evidence") or [],
             "checks": decided.get("checks") or [],
@@ -224,7 +229,7 @@ def verify(text, sources=None, tool_outputs=None, *, llm=None, split="rule", max
     counts = {name: 0 for name in ORDER}
     for row in results:
         counts[row["verdict"]] = counts.get(row["verdict"], 0) + 1
-    worst = next((name for name in ORDER if counts.get(name)), "unverified")
+    worst = next((name for name in SEVERITY if counts.get(name)), "unverified")
     return {
         "version": "claimguard-0.1",
         "engine": "3.0.0",

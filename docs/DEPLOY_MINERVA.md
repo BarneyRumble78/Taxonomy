@@ -36,7 +36,7 @@ Full pyramids are not inside the Worker. Until one of these is bound, `GET /v1/p
 - R2 binding `PYRAMID_BUCKET`, object key `pyramids/FIELD.json`
 - KV binding `PYRAMIDS`, key `pyramid:FIELD`
 
-Commented sketches are in `wrangler.toml`. The rate limit in the Worker is in-memory and per isolate (30 requests a minute per IP). A global limit needs a Workers rate-limit binding named `VERIFY_LIMITER`. Keys, if used, go in KV `VERIFY_KEYS` as `key:` plus the SHA-256 of the bearer token. Raw keys are not stored.
+Commented sketches for R2, KV and the model flags are in `wrangler.toml`. The rate limit is on. `[[ratelimits]]` binds `VERIFY_LIMITER` at 60 requests a minute (`namespace_id` `1001`). The Worker applies it per IP on each of `/v1/verify`, `/v1/classify` and `/v1/audit`, and returns 429 with `Retry-After: 60`. `workers_dev` and `preview_urls` stay false. Keys, if used, go in KV `VERIFY_KEYS` as `key:` plus the SHA-256 of the bearer token. Raw keys are not stored.
 
 ## What a merge changes
 

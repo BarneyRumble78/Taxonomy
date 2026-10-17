@@ -19,8 +19,8 @@ def test_adapter_counts_the_paraphrase_as_a_miss():
     assert by_id["F2"]["verdicts"] == ["contradicted"]
     assert by_id["F3"]["verdicts"] == ["unverified"]
     assert by_id["F4"]["ok"] is False
-    # "is not the Dirac value" is a faithful paraphrase. The span matcher reads the negation as a contradiction.
-    assert by_id["F4"]["verdicts"] == ["contradicted"]
+    # "is not the Dirac value" is a faithful paraphrase. Exact-span binding leaves it unverified.
+    assert by_id["F4"]["verdicts"] == ["unverified"]
     assert report["faithful"]["hit"] == 1
     assert report["faithful"]["n"] == 2
     assert report["hallucinated"]["hit"] == 2

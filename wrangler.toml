@@ -30,8 +30,9 @@ preview_urls = false
 # binding = "PYRAMID_BUCKET"
 # bucket_name = "taxonomy-pyramids"
 #
-# [[unsafe.bindings]]
-# name = "VERIFY_LIMITER"
-# type = "ratelimit"
-# namespace_id = "1001"
-# simple = { limit = 30, period = 60 }
+# 60 requests a minute per IP on each of /v1/verify, /v1/classify and /v1/audit.
+# The Worker keys the limiter as "{ip} {path}". A miss returns 429 with Retry-After: 60.
+[[ratelimits]]
+name = "VERIFY_LIMITER"
+namespace_id = "1001"
+simple = { limit = 60, period = 60 }

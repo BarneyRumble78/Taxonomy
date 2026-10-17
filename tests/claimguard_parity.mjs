@@ -11,11 +11,21 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const fixtures = JSON.parse(readFileSync(join(root, "tests/claimguard_fixtures.json"), "utf8"));
 
 function slim(out) {
-  return out.claims.map((row) => ({
-    verdict: row.verdict,
-    qualifier: row.qualifier ?? null,
-    status: row.status,
-  }));
+  return {
+    worst: out.summary.worst,
+    claims: out.claims.map((row) => ({
+      verdict: row.verdict,
+      qualifier: row.qualifier ?? null,
+      status: row.status,
+      ceiling_ok: row.certainty.ceiling_ok,
+      evidence: (row.evidence || []).map((item) => ({
+        relation: item.relation,
+        span: item.span,
+        warrant_held: item.warrant_held ?? null,
+        warrant_declared_by_caller: item.warrant_declared_by_caller ?? false,
+      })),
+    })),
+  };
 }
 
 test("python and javascript verdicts match", async () => {
@@ -31,11 +41,21 @@ rows = json.load(sys.stdin)
 out = []
 for row in rows:
     result = verify(row["text"], row.get("sources") or [], row.get("tool_outputs") or [])
-    out.append([{
-        "verdict": c["verdict"],
-        "qualifier": c.get("qualifier"),
-        "status": c.get("status"),
-    } for c in result["claims"]])
+    out.append({
+        "worst": result["summary"]["worst"],
+        "claims": [{
+            "verdict": c["verdict"],
+            "qualifier": c.get("qualifier"),
+            "status": c.get("status"),
+            "ceiling_ok": c["certainty"]["ceiling_ok"],
+            "evidence": [{
+                "relation": e.get("relation"),
+                "span": e.get("span"),
+                "warrant_held": e.get("warrant_held"),
+                "warrant_declared_by_caller": bool(e.get("warrant_declared_by_caller")),
+            } for e in c["evidence"]],
+        } for c in result["claims"]],
+    })
 json.dump(out, sys.stdout)
 `], { cwd: root, input: JSON.stringify(fixtures), encoding: "utf8" });
   assert.equal(py.status, 0, py.stderr);

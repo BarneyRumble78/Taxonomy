@@ -1,7 +1,11 @@
 // Ordered verdicts. First match wins. The word true is never returned.
+// SEVERITY is what summary.worst uses. It is not the first-match order.
+// Same warrant strength on both sides is contested. A stronger contradicting
+// span, or a contradicting span alone, is contradicted.
 import { ceilingOk, rank, warrantCeiling } from "./certainty.mjs";
 
 export const ORDER = ["out_of_scope", "contradicted", "contested", "overstated", "supported", "unverified"];
+export const SEVERITY = ["contradicted", "overstated", "contested", "unverified", "out_of_scope", "supported"];
 
 function ceil(code) {
   return rank(warrantCeiling(code));
@@ -42,7 +46,7 @@ export function combine(placement, wreq, cert, evidenceIn, checksIn, contested =
   const contradicts = rule.filter((e) => e.relation === "contradicts");
   const modelContra = evidence.filter((e) => e.by === "model" && e.relation === "contradicts");
   const held = [];
-  for (const e of entails) if (e.warrant_held) held.push(e.warrant_held);
+  for (const e of entails.concat(contradicts)) if (e.warrant_held) held.push(e.warrant_held);
   const passed = checks.filter((c) => c.result === "consistent" && c.kind !== "missing_hypotheses");
   const failed = checks.filter((c) => c.result === "contradicted" && c.kind !== "missing_hypotheses");
   const missingHyp = checks.filter((c) => c.kind === "missing_hypotheses");
@@ -79,18 +83,41 @@ export function combine(placement, wreq, cert, evidenceIn, checksIn, contested =
     const status = item.kind === "equation_small_cases" ? "contradicted (small cases)" : "tested";
     return pack("contradicted", null, status);
   }
-  if (flags.instruction || flags.w13 || !placement) {
-    if (flags.instruction) reasons.push("R18: the text reads as an instruction, not a claim.");
-    else if (flags.w13) reasons.push("W13 does not license a measurement, a date, a legal duty, or a word meaning.");
-    else reasons.push("R18: the engine abstained, so the text is out of scope.");
+  if (flags.instruction || flags.question || flags.w13) {
+    if (flags.question) reasons.push("R18: the text is a question, not a claim.");
+    else if (flags.instruction) reasons.push("R18: the text reads as an instruction, not a claim.");
+    else reasons.push("W13 does not license a measurement, a date, a legal duty, or a word meaning.");
     return pack("out_of_scope", null, "proposed");
   }
-  if (contradicts.length) {
+  function strongest(items) {
+    let best = null;
+    for (const item of items) {
+      if (!item.warrant_held) continue;
+      if (best == null || ceil(item.warrant_held) > ceil(best)) best = item.warrant_held;
+    }
+    return best;
+  }
+  const bound = Boolean(entails.length || contradicts.length || passed.length);
+  if (entails.length && contradicts.length) {
+    const entailHeld = strongest(entails);
+    const contraHeld = strongest(contradicts);
+    if (ceil(contraHeld) > ceil(entailHeld)) {
+      reasons.push(`R20: span ${contradicts[0].ref} contradicts the claim.`);
+      return pack("contradicted", null, "source_found");
+    }
+    if (ceil(contraHeld) === ceil(entailHeld)) {
+      reasons.push("R20: support and contradiction hold the same warrant, so the claim is contested.");
+      return pack("contested", null, "source_found");
+    }
+    contradicts.length = 0;
+  } else if (contradicts.length) {
     reasons.push(`R20: span ${contradicts[0].ref} contradicts the claim.`);
     return pack("contradicted", null, "source_found");
   }
-  if (contested) {
-    reasons.push("R6: the claim is marked open or contested, or the evidence disagrees with itself.");
+  if (contested && (placement || bound)) {
+    const cross = evidence.filter((e) => e.relation === "cross");
+    if (cross.length) reasons.push(`R21: ${cross[0].ref} states the opposing claim, so the pair is contested.`);
+    else reasons.push("R6: the claim is marked open or contested, or the evidence disagrees with itself.");
     return pack("contested", null, "proposed");
   }
   const small = passed.filter((c) => c.kind === "equation_small_cases");
@@ -120,11 +147,12 @@ export function combine(placement, wreq, cert, evidenceIn, checksIn, contested =
   }
   let meets = false;
   let checkMeet = [];
-  if (entails.length && code && wheld && ceil(wheld) >= ceil(code) && ceilingOk(level, wheld)) {
+  const warrantOk = code == null || (wheld != null && ceil(wheld) >= ceil(code));
+  if (entails.length && wheld && warrantOk && ceilingOk(level, wheld)) {
     meets = true;
     reasons.push(`R20: span ${entails[0].ref} entails the claim at ${wheld}.`);
   }
-  checkMeet = passed.filter((c) => c.kind === "arithmetic" && code && ceil(c.warrant_held) >= ceil(code));
+  checkMeet = passed.filter((c) => c.kind === "arithmetic" && (code == null || ceil(c.warrant_held) >= ceil(code)));
   if (checkMeet.length && ceilingOk(level, checkMeet[0].warrant_held)) {
     meets = true;
     reasons.push(`R18: check ${checkMeet[0].id} passed.`);
@@ -135,6 +163,10 @@ export function combine(placement, wreq, cert, evidenceIn, checksIn, contested =
   if (small.length && !onlyNone && ceilingOk(level, "W9")) {
     reasons.push("R18: a small-case search found no counterexample in range. This is not a proof.");
     return pack("supported", "small cases", "tested");
+  }
+  if (!placement && !bound) {
+    reasons.push("R18: the engine abstained, so the text is out of scope.");
+    return pack("out_of_scope", null, "proposed");
   }
   if (modelContra.length) reasons.push("R22: a model noted a possible contradiction. That alone is not a verdict.");
   if (level !== "hedged" && !evidenceExists) {
