@@ -1,0 +1,94 @@
+{
+ "kind": "transfer-run",
+ "core": "RC-lyapunov-stability",
+ "name": "Stability by a Lyapunov function",
+ "ma_node": "MSC:93Dxx",
+ "target": {
+  "field": "MD",
+  "name": "Medicine and the drug",
+  "question": "What does medicine and the drug establish about this subject, divided by the clinical question asked of a disorder?"
+ },
+ "provisional": false,
+ "proposal": {
+  "candidate_tool": "Adaptive Dosing Control",
+  "roles": {
+   "state": "plasma drug concentration and biomarker levels",
+   "equilibrium": "steady-state therapeutic window (effective concentration without toxicity)",
+   "function": "deviation from target therapeutic concentration range",
+   "dynamics": "pharmacokinetic absorption, distribution, metabolism, and excretion (ADME) combined with dose administration schedules"
+  },
+  "assumptions": {
+   "a1": {
+    "met": "~",
+    "reason": "A deviation metric exists, but 'positive away from equilibrium' is ambiguous because both under-dosing and over-dosing are deviations, requiring a non-standard or weighted Lyapunov-like function."
+   },
+   "a2": {
+    "met": "n",
+    "reason": "Drug concentration does not naturally decrease toward equilibrium; it oscillates or requires active external intervention (dosing) to correct deviations, violating the passive 'never increases' condition of autonomous stability."
+   },
+   "a3": {
+    "met": "~",
+    "reason": "Pharmacokinetic models are often locally Lipschitz, but biological variability and stochastic absorption events introduce noise that challenges strict deterministic well-posedness."
+   },
+   "a4": {
+    "met": "n",
+    "reason": "Individual physiological variability, genetic differences, and disease progression mean the model rarely matches the real system precisely enough for strict stability guarantees."
+   }
+  },
+  "mismatches": [
+   "Lyapunov stability assumes autonomous system decay, whereas drug levels require active control input (dosing) to maintain equilibrium.",
+   "Biological systems are open and stochastic, unlike the closed deterministic systems typically assumed in Lyapunov theory.",
+   "The 'equilibrium' is often a safe range rather than a single point, complicating the definition of a strict Lyapunov function."
+  ],
+  "ideas": [
+   "Investigate 'Lyapunov-like' bounds for closed-loop adaptive control systems in personalized medicine.",
+   "Explore whether 'ultimate boundedness' rather than asymptotic stability is a more appropriate goal for therapeutic windows.",
+   "Develop stochastic Lyapunov methods to account for inter-patient variability in drug response."
+  ],
+  "already_known": "yes",
+  "already_known_note": "Model predictive control (MPC) and adaptive control theories in biomedical engineering already address stability of dosing regimens, often using Lyapunov-based analysis for the closed-loop error dynamics."
+ },
+ "guarantee": "The equilibrium is stable, and asymptotically stable when the function strictly decreases.",
+ "guarantee_carries": false,
+ "unfilled_roles": [],
+ "status": "generated-unverified",
+ "provenance": {
+  "sources": [
+   {
+    "field": "BI",
+    "cell": "BI.O.A5.2",
+    "tool": "Stability of interacting-species models",
+    "lineage_distance": 4
+   },
+   {
+    "field": "CS",
+    "cell": "CS.O.A4.2",
+    "tool": "Convergence proofs for training algorithms",
+    "lineage_distance": 4
+   },
+   {
+    "field": "EC",
+    "cell": "EC.O.A2.1",
+    "tool": "Stability of price adjustment",
+    "lineage_distance": 4
+   },
+   {
+    "field": "PH",
+    "cell": "PH.O.A4.1",
+    "tool": "Thermodynamic potentials as stability functions",
+    "lineage_distance": 3
+   },
+   {
+    "field": "EN",
+    "cell": "EN",
+    "tool": "Lyapunov-based control design",
+    "lineage_distance": 2
+   }
+  ],
+  "model": "qwen3.6:27b",
+  "date": "2026-11-10",
+  "prompt_sha1": "9e418a322073fa3fcf36e6a01d2cb6e0f8cfb66a",
+  "conditions_checked_by": "model only",
+  "note": "A model's proposal. No source was consulted and no person has checked it."
+ }
+}

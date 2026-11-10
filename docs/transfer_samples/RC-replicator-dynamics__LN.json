@@ -1,0 +1,95 @@
+{
+ "kind": "transfer-run",
+ "core": "RC-replicator-dynamics",
+ "name": "Replicator dynamics",
+ "ma_node": "MSC:91Axx",
+ "target": {
+  "field": "LN",
+  "name": "Language",
+  "question": "What does language establish about this subject, divided by the aspect of language the sentence is about?"
+ },
+ "provisional": false,
+ "proposal": {
+  "candidate_tool": "Cultural selection dynamics",
+  "roles": {
+   "types": "linguistic variants (e.g., competing constructions, words, or phonological features)",
+   "shares": "relative frequency of use within the language community or corpus",
+   "fitness": "communicative efficiency or processing advantage of a variant given the current distribution of usage",
+   "mean_fitness": "average communicative efficiency across all active variants"
+  },
+  "assumptions": {
+   "a1": {
+    "met": "~",
+    "reason": "Language users are not perfectly well-mixed due to geographic, social, and demographic clustering, though global connectivity improves mixing."
+   },
+   "a2": {
+    "met": "~",
+    "reason": "Fitness often depends on shared conventions (type frequencies), but also on individual memory, exposure history, and complex network structures beyond simple share counts."
+   },
+   "a3": {
+    "met": "n",
+    "reason": "Language constantly generates new types through metaphor, compounding, borrowing, and accidental error, violating the closed-system requirement."
+   },
+   "a4": {
+    "met": "n",
+    "reason": "Language change occurs in discrete generational or individual learning steps, not as a smooth continuous flow."
+   }
+  },
+  "mismatches": [
+   "Open-ended innovation violates the fixed type space required for standard replicator equations.",
+   "Discrete generational turnover contradicts continuous time dynamics.",
+   "Fitness is not purely frequency-dependent but involves absolute cognitive costs and external referents.",
+   "Social network structure creates non-well-mixed populations, leading to local equilibria rather than global ones."
+  ],
+  "ideas": [
+   "Develop replicator-mutator equations for language to model the constant influx of novel variants.",
+   "Investigate how social network topology shifts the stability of linguistic equilibria compared to well-mixed assumptions.",
+   "Explore whether discrete-time updating better captures language change than continuous approximations."
+  ],
+  "already_known": "yes",
+  "already_known_note": "Replicator dynamics and evolutionary game theory are extensively applied in evolutionary linguistics to model competition between grammatical structures, such as word order preferences or pronoun usage, often acknowledging the need for mutation terms."
+ },
+ "guarantee": "Shares rise for types fitter than average, and stable rest points correspond to evolutionarily stable states.",
+ "guarantee_carries": false,
+ "unfilled_roles": [],
+ "status": "generated-unverified",
+ "provenance": {
+  "sources": [
+   {
+    "field": "BI",
+    "cell": "BI.O.A4.1",
+    "tool": "Frequency-dependent natural selection",
+    "lineage_distance": 4
+   },
+   {
+    "field": "BI",
+    "cell": "BI.O.A5.2",
+    "tool": "Lotka–Volterra community dynamics",
+    "lineage_distance": 4
+   },
+   {
+    "field": "CH",
+    "cell": "CH.O.A4.3",
+    "tool": "Autocatalytic replicator kinetics",
+    "lineage_distance": 4
+   },
+   {
+    "field": "CS",
+    "cell": "CS.O.A4.1",
+    "tool": "Multiplicative-weights updating",
+    "lineage_distance": 4
+   },
+   {
+    "field": "EC",
+    "cell": "EC.O.A1.3",
+    "tool": "Imitation and learning dynamics in games",
+    "lineage_distance": 4
+   }
+  ],
+  "model": "qwen3.6:27b",
+  "date": "2026-11-10",
+  "prompt_sha1": "74f0bafa55d6736414a91a7a2d3b8622b4147d9d",
+  "conditions_checked_by": "model only",
+  "note": "A model's proposal. No source was consulted and no person has checked it."
+ }
+}

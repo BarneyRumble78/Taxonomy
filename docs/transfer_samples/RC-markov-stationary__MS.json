@@ -1,0 +1,95 @@
+{
+ "kind": "transfer-run",
+ "core": "RC-markov-stationary",
+ "name": "Convergence of a Markov chain to its stationary distribution",
+ "ma_node": "MSC:60Jxx",
+ "target": {
+  "field": "MS",
+  "name": "Mind, brain and society",
+  "question": "What does mind, brain and society establish about this subject, divided by the unit the claim is about?"
+ },
+ "provisional": false,
+ "proposal": {
+  "candidate_tool": "Markovian approximation of opinion dynamics",
+  "roles": {
+   "states": "Discrete cognitive states, neural firing patterns, or social roles (e.g., 'believer', 'skeptic', 'neutral')",
+   "kernel": "Transition probabilities derived from psychological biases, neural connectivity weights, or social influence networks",
+   "stationary": "The long-run distribution of mental states, neural activity regimes, or social consensus/opinion shares"
+  },
+  "assumptions": {
+   "a1": {
+    "met": "n",
+    "reason": "Cognitive and neural processes exhibit significant history dependence (memory, learning, plasticity) rather than being memoryless."
+   },
+   "a2": {
+    "met": "~",
+    "reason": "While many mental states are theoretically reachable, structural constraints in brain connectivity or rigid social hierarchies often create disconnected components."
+   },
+   "a3": {
+    "met": "~",
+    "reason": "Biological rhythms (circadian cycles, oscillatory neural firing) and periodic social rituals introduce strong periodicity into state transitions."
+   },
+   "a4": {
+    "met": "n",
+    "reason": "Transition probabilities change over time due to learning, maturation, environmental shifts, and evolving social norms."
+   }
+  },
+  "mismatches": [
+   "Human cognition retains long-term memory, violating the Markov property (a1).",
+   "Social and neural systems are non-stationary, evolving over time scales from minutes to generations, violating (a4).",
+   "Periodic biological and cultural rhythms violate aperiodicity (a3).",
+   "Strong attractors or cultural silos may prevent global connectivity (a2)."
+  ],
+  "ideas": [
+   "Model state transitions as Hidden Markov Models to account for unobserved memory states.",
+   "Use time-inhomogeneous Markov chains to capture learning and developmental changes.",
+   "Analyze convergence rates as a measure of cognitive rigidity or social polarization.",
+   "Investigate whether 'stationary' distributions exist only within short, quasi-static time windows."
+  ],
+  "already_known": "yes",
+  "already_known_note": "Markov chains are widely used in computational neuroscience (e.g., modeling ion channels, spike trains) and social science (e.g., DeGroot model, bounded confidence models), though often as simplified approximations."
+ },
+ "guarantee": "A unique stationary distribution exists and the chain converges to it from any start.",
+ "guarantee_carries": false,
+ "unfilled_roles": [],
+ "status": "generated-unverified",
+ "provenance": {
+  "sources": [
+   {
+    "field": "CH",
+    "cell": "CH.O.A4.1",
+    "tool": "Master-equation kinetics of first-order networks",
+    "lineage_distance": 4
+   },
+   {
+    "field": "CS",
+    "cell": "CS.O.A2.1",
+    "tool": "Link-analysis ranking (PageRank)",
+    "lineage_distance": 4
+   },
+   {
+    "field": "IS",
+    "cell": "IS.O.A4.3",
+    "tool": "Citation-network ranking of journals",
+    "lineage_distance": 4
+   },
+   {
+    "field": "PH",
+    "cell": "PH.O.A4.2",
+    "tool": "Monte Carlo sampling of equilibrium ensembles",
+    "lineage_distance": 4
+   },
+   {
+    "field": "BI",
+    "cell": "BI.O.A4.4",
+    "tool": "Substitution models in phylogenetics",
+    "lineage_distance": 2
+   }
+  ],
+  "model": "qwen3.6:27b",
+  "date": "2026-11-10",
+  "prompt_sha1": "2488481fc4c6f9745dfa43bfd16a0bf19f92ddfa",
+  "conditions_checked_by": "model only",
+  "note": "A model's proposal. No source was consulted and no person has checked it."
+ }
+}

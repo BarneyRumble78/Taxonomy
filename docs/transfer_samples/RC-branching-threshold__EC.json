@@ -1,0 +1,83 @@
+{
+ "kind": "transfer-run",
+ "core": "RC-branching-threshold",
+ "name": "Branching-process threshold",
+ "ma_node": "MSC:60Jxx",
+ "target": {
+  "field": "EC",
+  "name": "Economics",
+  "question": "What does economics establish about this subject, divided by the scale at which an allocation is settled?"
+ },
+ "provisional": false,
+ "proposal": {
+  "candidate_tool": "Critical Mass Threshold in Network Economics",
+  "roles": {
+   "individuals": "economic agents or investment projects attempting to scale",
+   "offspring": "newly acquired customers, followers, or subsequent investments attracted by the unit",
+   "mean": "average number of new agents attracted per existing agent (network externality strength or ROI)"
+  },
+  "assumptions": {
+   "a1": {
+    "met": "n",
+    "reason": "Agents interact through shared prices and resource constraints, meaning one agent's success directly reduces opportunities for others (negative correlation)."
+   },
+   "a2": {
+    "met": "n",
+    "reason": "Economic agents have heterogeneous endowments, risk preferences, and access to capital, violating the identical distribution assumption."
+   },
+   "a3": {
+    "met": "n",
+    "reason": "Market size, liquidity, and diminishing returns impose strict bounds on growth, preventing the unbounded exponential expansion required by the classic branching process limit."
+   }
+  },
+  "mismatches": [
+   "Independence fails due to competition for a finite pool of customers or capital.",
+   "Homogeneity fails due to varying agent capabilities and market positions.",
+   "Unbounded growth is impossible in closed or saturated markets; carrying capacity exists from the start."
+  ],
+  "ideas": [
+   "Model early-stage platform adoption using branching processes but introduce a density-dependent suppression term as user base grows.",
+   "Analyze the probability of 'startup extinction' not just by mean ROI, but by the variance of early adopter networks (fat-tailed offspring distributions).",
+   "Study how strategic interventions (marketing) alter the 'effective' mean offspring number to push a system across the critical threshold before saturation."
+  ],
+  "already_known": "yes",
+  "already_known_note": "The concept of critical mass in network effects and the analogy between epidemic spread and viral marketing/adoption is well-established in industrial organization and innovation diffusion literature (e.g., Rogers, Granovetter), though the specific rigorous branching-process extinction criteria are often simplified or adapted rather than used in their pure probabilistic form."
+ },
+ "guarantee": "Extinction is certain when the mean is at most one; above one, survival has positive probability and growth is exponential.",
+ "guarantee_carries": false,
+ "unfilled_roles": [],
+ "status": "generated-unverified",
+ "provenance": {
+  "sources": [
+   {
+    "field": "BI",
+    "cell": "BI.O.A4.1",
+    "tool": "Survival probability of a new beneficial mutation",
+    "lineage_distance": 4
+   },
+   {
+    "field": "EN",
+    "cell": "EN.O.A5.5",
+    "tool": "Reactor criticality",
+    "lineage_distance": 4
+   },
+   {
+    "field": "MD",
+    "cell": "MD.O.A5.2",
+    "tool": "Epidemic threshold (basic reproduction number)",
+    "lineage_distance": 4
+   },
+   {
+    "field": "MS",
+    "cell": "MS.O.A4.1",
+    "tool": "Cascade models of social spread",
+    "lineage_distance": 4
+   }
+  ],
+  "model": "qwen3.6:27b",
+  "date": "2026-11-10",
+  "prompt_sha1": "5b302c39031488e57d4036e8e0e6411167abecfe",
+  "conditions_checked_by": "model only",
+  "note": "A model's proposal. No source was consulted and no person has checked it."
+ }
+}

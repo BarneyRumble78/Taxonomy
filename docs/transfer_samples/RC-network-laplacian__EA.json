@@ -1,0 +1,95 @@
+{
+ "kind": "transfer-run",
+ "core": "RC-network-laplacian",
+ "name": "Linear flow on a network (graph Laplacian)",
+ "ma_node": "MSC:05Cxx",
+ "target": {
+  "field": "EA",
+  "name": "Earth: geography and geology",
+  "question": "What does earth: geography and geology establish about this subject, divided by what the claim is about?"
+ },
+ "provisional": false,
+ "proposal": {
+  "candidate_tool": "graph-based subsurface flow modeling",
+  "roles": {
+   "nodes": "junctions in a geological flow network (e.g., aquifer intersections, fault segment boundaries, or volcanic conduit nodes)",
+   "weights": "hydraulic or thermal conductance of the connecting medium",
+   "potential": "hydraulic head, thermal temperature, or chemical potential",
+   "flow": "volumetric fluid flux, heat flux, or mass transport rate"
+  },
+  "assumptions": {
+   "a1": {
+    "met": "~",
+    "reason": "Linearity holds for laminar flow in porous media (Darcy's Law) but fails for turbulent flow in large fractures or at high Reynolds numbers."
+   },
+   "a2": {
+    "met": "~",
+    "reason": "Conservation holds at steady state, but geological systems often involve storage (capacitance) or sources/sinks (leakage, injection) that violate strict interior node conservation during transients."
+   },
+   "a3": {
+    "met": "~",
+    "reason": "Conductance is typically symmetric, but directional flow effects (e.g., one-way valves in faults, or asymmetric roughness) can introduce effective asymmetry."
+   },
+   "a4": {
+    "met": "~",
+    "reason": "Natural networks are often fragmented or hierarchically connected rather than forming a single simple connected component, requiring percolation theory adjustments."
+   }
+  },
+  "mismatches": [
+   "Geological networks are rarely discrete graphs; they are continuous media discretized for computation, leading to scale-dependence in weights.",
+   "Flow is often non-linear (e.g., Forchheimer flow) or time-dependent, violating the static linear Laplacian assumption.",
+   "Geological boundaries are rarely fixed Dirichlet conditions; they are often dynamic feedback loops with surface processes.",
+   "The 'potential' in geology (e.g., pressure) is coupled to deformation (geomechanics), breaking the decoupled electrical analogy."
+  ],
+  "ideas": [
+   "Can spectral graph theory on discrete fracture networks predict dominant flow pathways better than continuum models?",
+   "How does the effective resistance of a fault network correlate with seismic slip distribution?",
+   "Can commute times on hydrological graphs serve as a metric for contaminant transport risk between wells?"
+  ],
+  "already_known": "yes",
+  "already_known_note": "The analogy between Darcy flow and electrical resistance networks is a standard textbook method in hydrogeology (e.g., using resistor analogies to model aquifer systems)."
+ },
+ "guarantee": "Potentials are unique given boundary values, and effective resistance between nodes is proportional to random-walk commute time.",
+ "guarantee_carries": false,
+ "unfilled_roles": [],
+ "status": "generated-unverified",
+ "provenance": {
+  "sources": [
+   {
+    "field": "BI",
+    "cell": "BI.O.A5.5",
+    "tool": "Circuit-theory models of landscape connectivity",
+    "lineage_distance": 4
+   },
+   {
+    "field": "CH",
+    "cell": "CH.O.A2.1",
+    "tool": "Hückel molecular-orbital theory",
+    "lineage_distance": 4
+   },
+   {
+    "field": "CS",
+    "cell": "CS.O.A4.2",
+    "tool": "Spectral clustering and label propagation",
+    "lineage_distance": 4
+   },
+   {
+    "field": "EN",
+    "cell": "EN.O.A2.1",
+    "tool": "Pipe-network analysis",
+    "lineage_distance": 4
+   },
+   {
+    "field": "EN",
+    "cell": "EN.O.A4.1",
+    "tool": "Resistor-network analysis",
+    "lineage_distance": 4
+   }
+  ],
+  "model": "qwen3.6:27b",
+  "date": "2026-11-10",
+  "prompt_sha1": "f511d036373083b14cee2f755d2b5059e9d929de",
+  "conditions_checked_by": "model only",
+  "note": "A model's proposal. No source was consulted and no person has checked it."
+ }
+}
