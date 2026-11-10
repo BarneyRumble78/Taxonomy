@@ -62,7 +62,7 @@ The physics-to-finance diffusion translation, for example, reports that independ
 
 ## 5. What is built today
 
-- `rosetta/cores.json`: 12 formal cores with 56 bindings across 13 fields. All are `draft`.
+- `rosetta/cores.json`: 12 formal cores with 56 bindings across 12 fields. All are `draft`.
 - `engine/v3/rosetta.py`: the operations above, with no model calls.
 - `correspondences/rosetta_edges.json`: 102 derived edges, each `generated-unverified`.
 - `python3 taxonomy.py rosetta translate RC-diffusion PH EC`, and `find`, `holes`, `matrix`, `distance`.
