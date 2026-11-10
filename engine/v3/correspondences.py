@@ -60,19 +60,30 @@ class NodeIndex:
         self._toolkit = None
 
     def _load_maps(self):
-        self._map_field = {}
+        self._map_field, self._map_node = {}, {}
         folder = self.root / "maps"
         for path in sorted(folder.glob("*/*.json")):
             data = json.loads(path.read_text(encoding="utf-8"))
             nodes = data["nodes"] if isinstance(data, dict) else data
             for node in nodes:
-                self._map_field.setdefault(node["id"], path.parent.name)
+                if node["id"] not in self._map_field:
+                    self._map_field[node["id"]] = path.parent.name
+                    self._map_node[node["id"]] = (node.get("parent"), node.get("taxonomy_cell"))
 
     def _load_toolkit(self):
         self._toolkit = set()
         for path in sorted((self.root / "cards" / "toolkit").glob("*.json")):
             for card in json.loads(path.read_text(encoding="utf-8")):
                 self._toolkit.add(card["id"])
+
+    def map_parent(self, node):
+        """Next node up from a map node: its map parent, else its cell, else its field."""
+        if self._map_field is None:
+            self._load_maps()
+        if node not in self._map_node:
+            return None
+        parent, cell = self._map_node[node]
+        return parent or cell or self._map_field[node]
 
     def field_of(self, node):
         """Field code that owns the node, or None when it does not resolve."""

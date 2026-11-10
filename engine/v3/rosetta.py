@@ -276,6 +276,7 @@ class Graph:
     def __init__(self, root=ROOT, cores=None, use_edges=True, use_cores=True):
         self.links = {}
         self.kinds = {}
+        self.index = NodeIndex(root)
         cores = load(root) if cores is None else cores
         if use_cores:
             for core in cores:
@@ -287,15 +288,7 @@ class Graph:
                 if edge["provenance"]["origin"] == "formal-core":
                     continue  # already represented by the core hub
                 self._link(edge["source"], edge["target"], "correspondence")
-        index = self.index = NodeIndex(root)
         for node in list(self.links):
-            if ":" in node:
-                if index._map_field is None:
-                    index._load_maps()
-                field = index._map_field.get(node)
-                if field:
-                    self._link(node, field, "map-node-to-field")
-                continue
             self._climb(node)
 
     def _link(self, a, b, kind):
@@ -303,11 +296,15 @@ class Graph:
         self.links.setdefault(b, set()).add(a)
         self.kinds[frozenset((a, b))] = kind
 
+    def _parent(self, node):
+        return self.index.map_parent(node) if ":" in node else _parents(node)
+
     def _climb(self, node):
-        parent = _parents(node)
+        """Link a node to its ancestors: map parents, then cell, field and root."""
+        parent = self._parent(node)
         while parent:
-            self._link(node, parent, "tree")
-            node, parent = parent, _parents(parent)
+            self._link(node, parent, "map" if ":" in node else "tree")
+            node, parent = parent, self._parent(parent)
 
     def path(self, a, b):
         """Shortest path as a list of nodes. Raises if either is unknown."""
@@ -342,8 +339,9 @@ class Graph:
 def lineage_distance(a, b, root=ROOT, **options):
     """Number of links on the shortest path between two nodes.
 
-    Links: tree (sub-cell, cell, field, root), core hubs and correspondence
-    edges, all undirected with weight 1. Shortest-path length on an undirected
+    Links: tree (sub-cell, cell, field, root), map (a map node to its parent,
+    and a top map node to its cell), core hubs and correspondence edges, all
+    undirected with weight 1. Shortest-path length on an undirected
     graph is a metric: zero only for identical nodes, symmetric, and it obeys
     the triangle inequality. Without cores or edges every pair of cells in
     different fields is joined only through the root.
