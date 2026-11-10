@@ -7,6 +7,7 @@
   python3 taxonomy.py check   "a single claim"                (v2 classifier)
   python3 taxonomy.py check   "a single claim" --verdict      [--sources FILE] [--tool-outputs FILE]
   python3 taxonomy.py rosetta find|translate|holes|matrix|distance ...   (no model; see engine/v3/rosetta.py)
+  python3 taxonomy.py transfer CORE FIELD [--fill] [--out FILE]         (--fill asks the local model)
 
 Backend: TAXONOMY_LLM=ollama (default, local) | manual | anthropic.
 Anthropic also needs TAXONOMY_ADJUDICATE_PAID=1 (see engine/v3/llm.py).
@@ -41,6 +42,9 @@ def main(argv=None):
     if args and args[0] == "rosetta":
         import rosetta
         sys.exit(rosetta.main(args[1:]))
+    if args and args[0] == "transfer":
+        import transfer
+        sys.exit(transfer.main(args[1:]))
     try:
         _main(argv)
     except SystemExit:
