@@ -144,10 +144,10 @@ def edge_problems(edge, index, validator):
             problems.append(f"{label}: {role} {node} does not resolve to a known node")
     origin = edge["provenance"]["origin"]
     status = edge["status"]
-    if origin == "transfer-operator" and status != "generated-unverified":
-        problems.append(f"{label}: a transfer-operator edge must be generated-unverified")
-    if status == "generated-unverified" and origin not in ("transfer-operator", "manual"):
-        problems.append(f"{label}: generated-unverified needs origin transfer-operator or manual")
+    if origin in ("transfer-operator", "formal-core") and status != "generated-unverified":
+        problems.append(f"{label}: a {origin} edge must be generated-unverified")
+    if status == "generated-unverified" and origin not in ("transfer-operator", "formal-core", "manual"):
+        problems.append(f"{label}: generated-unverified needs origin transfer-operator, formal-core or manual")
     if status in ("proved", "programme", "conjectured", "asserted") and not edge["provenance"]["locators"]:
         problems.append(f"{label}: status {status} needs at least one locator")
     for locator in edge["provenance"]["locators"]:

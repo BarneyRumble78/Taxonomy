@@ -1,0 +1,6055 @@
+{
+ "source": "rosetta/cores.json",
+ "generated_by": "scripts/build_rosetta_edges.py",
+ "date": "2026-11-10",
+ "note": "Generated. Do not edit by hand; rerun the script.",
+ "edges": [
+  {
+   "id": "CE-0022e7fa74",
+   "source": "BI.O.A5.3",
+   "target": "EA.O.A5.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "allocations of individuals and energy to species",
+      "target": "assignments of trips to origin–destination pairs",
+      "note": "states"
+     },
+     {
+      "source": "totals of species, individuals and metabolic rate",
+      "target": "trip totals and total travel cost",
+      "note": "constraints"
+     },
+     {
+      "source": "species-abundance distribution",
+      "target": "trip matrix",
+      "note": "distribution"
+     },
+     {
+      "source": "parameters fixed by the totals",
+      "target": "distance-decay parameter",
+      "note": "multipliers"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Maximum-entropy theory of ecology",
+      "target": "Entropy-maximising spatial interaction models"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The stated constraints are the only relevant information. (BI: ?; EA: ~)",
+    "The state space and its base measure are well defined. (BI: ~; EA: y)",
+    "The constrained averages are known accurately. (BI: ~; EA: ~)",
+    "BI: Contested: disturbed communities depart from the predictions.",
+    "BI: It gives patterns with no mechanism.",
+    "EA: Travellers are not interchangeable particles.",
+    "EA: The model describes a pattern and does not explain choices."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Maximum-entropy inference",
+    "group": "RC-maximum-entropy",
+    "note": "Both cells bind RC-maximum-entropy (mathematics node MSC:94Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-032ae87848",
+   "source": "BI.O.A5.2",
+   "target": "CS.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "species",
+      "target": "experts or actions",
+      "note": "types"
+     },
+     {
+      "source": "relative abundances",
+      "target": "weights",
+      "note": "shares"
+     },
+     {
+      "source": "per-capita growth given the other species",
+      "target": "reward in the round",
+      "note": "fitness"
+     },
+     {
+      "source": "total community growth",
+      "target": "weighted average reward",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Lotka–Volterra community dynamics",
+      "target": "Multiplicative-weights updating"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "No new types appear by mutation or innovation."
+   ],
+   "breaks_where": [
+    "The population is large and well mixed. (BI: ~; CS: y)",
+    "Fitness depends only on the current shares. (BI: y; CS: n)",
+    "Change is continuous in time. (BI: y; CS: n)",
+    "BI: The mapping needs interaction terms that are linear in abundance.",
+    "BI: Total abundance is an extra variable with no counterpart.",
+    "CS: Updates are discrete steps.",
+    "CS: Rewards may be set by an adversary, not by the weights."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-0508821fc5",
+   "source": "BI.O.A4.1",
+   "target": "EC.O.A1.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "probability density of an allele frequency",
+      "target": "option value as a function of price and time",
+      "note": "density"
+     },
+     {
+      "source": "sampling variance per generation",
+      "target": "half the squared volatility",
+      "note": "diffusivity"
+     },
+     {
+      "source": "random sampling of gametes",
+      "target": "replication by continuous hedging",
+      "note": "flux_law"
+     },
+     {
+      "source": "loss or fixation of the allele",
+      "target": "payoff at expiry",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Diffusion approximation of genetic drift",
+      "target": "Option pricing by the Black–Scholes equation"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Flux is proportional to the gradient of the density. (BI: y; EC: ~)",
+    "The underlying steps are many, independent and of finite variance. (BI: y; EC: n)",
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (BI: n; EC: n)",
+    "The quantity is conserved in the interior. (BI: y; EC: ~)",
+    "BI: Diffusivity depends on the frequency itself and vanishes at the boundaries.",
+    "BI: Small populations are not well approximated.",
+    "EC: Returns have heavy tails and jumps, which violates a2.",
+    "EC: Volatility changes over time and with price.",
+    "EC: Hedging is neither continuous nor free."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-05ed2fe4bb",
+   "source": "EC.O.A1.2",
+   "target": "EN.O.A3.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "option value as a function of price and time",
+      "target": "temperature",
+      "note": "density"
+     },
+     {
+      "source": "half the squared volatility",
+      "target": "thermal diffusivity of the material",
+      "note": "diffusivity"
+     },
+     {
+      "source": "replication by continuous hedging",
+      "target": "Fourier's law",
+      "note": "flux_law"
+     },
+     {
+      "source": "payoff at expiry",
+      "target": "convective or prescribed-flux surfaces",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Option pricing by the Black–Scholes equation",
+      "target": "Conduction heat-transfer analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Flux is proportional to the gradient of the density. (EC: ~; EN: y)",
+    "The underlying steps are many, independent and of finite variance. (EC: n; EN: y)",
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (EC: n; EN: ~)",
+    "The quantity is conserved in the interior. (EC: ~; EN: y)",
+    "EC: Returns have heavy tails and jumps, which violates a2.",
+    "EC: Volatility changes over time and with price.",
+    "EC: Hedging is neither continuous nor free.",
+    "EN: Properties vary with temperature in real materials.",
+    "EN: Phase change adds a moving boundary."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-07cc66cf30",
+   "source": "CH.O.A2.1",
+   "target": "EN.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "conjugated atoms",
+      "target": "circuit nodes",
+      "note": "nodes"
+     },
+     {
+      "source": "resonance integrals between bonded atoms",
+      "target": "conductances",
+      "note": "weights"
+     },
+     {
+      "source": "orbital coefficient on each atom",
+      "target": "voltage",
+      "note": "potential"
+     },
+     {
+      "source": "bond order",
+      "target": "current",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Hückel molecular-orbital theory",
+      "target": "Resistor-network analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flow on an edge is linear in the potential difference.",
+    "Edge weights are symmetric.",
+    "The network is connected."
+   ],
+   "breaks_where": [
+    "Flow is conserved at every interior node. (CH: ?; EN: y)",
+    "CH: The shared structure is the adjacency spectrum, not conserved flow.",
+    "CH: Electron repulsion is ignored.",
+    "EN: Diodes and transistors are nonlinear and one-way.",
+    "EN: High frequencies need distributed models."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-0888aa450c",
+   "source": "EN.O.A5.5",
+   "target": "MD.O.A5.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "neutrons",
+      "target": "infected people",
+      "note": "individuals"
+     },
+     {
+      "source": "neutrons from the fission one neutron causes",
+      "target": "people each one infects",
+      "note": "offspring"
+     },
+     {
+      "source": "effective multiplication factor",
+      "target": "basic reproduction number",
+      "note": "mean"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Reactor criticality",
+      "target": "Epidemic threshold (basic reproduction number)"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Units reproduce independently of one another. (EN: y; MD: ~)",
+    "All units share one offspring distribution. (EN: ~; MD: n)",
+    "Nothing limits growth in the phase considered. (EN: ~; MD: ~)",
+    "EN: Delayed neutrons and temperature feedback change the multiplication factor over time.",
+    "EN: Geometry makes neutrons non-identical.",
+    "MD: Infectiousness varies widely between people.",
+    "MD: Susceptibles run out, so a3 holds only early.",
+    "MD: Contact networks are clustered."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Branching-process threshold",
+    "group": "RC-branching-threshold",
+    "note": "Both cells bind RC-branching-threshold (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-0f17d505a3",
+   "source": "BI.O.A3.2",
+   "target": "EC.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "body size or reserves over the lifetime",
+      "target": "capital stock over time",
+      "note": "path"
+     },
+     {
+      "source": "share of energy given to growth or reproduction",
+      "target": "consumption",
+      "note": "control"
+     },
+     {
+      "source": "negative expected reproductive output",
+      "target": "negative discounted utility",
+      "note": "running_cost"
+     },
+     {
+      "source": "reproductive value of a unit of size",
+      "target": "shadow price of capital",
+      "note": "costate"
+     },
+     {
+      "source": "current fitness gain",
+      "target": "current value of output",
+      "note": "hamiltonian"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Optimal life-history allocation",
+      "target": "Optimal growth (Ramsey model)"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Dynamics and cost are smooth. (BI: ~; EC: y)",
+    "End conditions are specified. (BI: ~; EC: ~)",
+    "The system is deterministic. (BI: n; EC: ~)",
+    "Enough convexity holds for the stationary path to be a minimum. (BI: ?; EC: y)",
+    "BI: No agent performs the optimisation; selection only approximates it.",
+    "BI: Survival is random and environments vary.",
+    "EC: A single planner with known preferences is assumed.",
+    "EC: The horizon is infinite, so the end condition is a limit."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Variational principle and optimal control",
+    "group": "RC-variational-control",
+    "note": "Both cells bind RC-variational-control (mathematics node MSC:49-XX).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-0fd8b5289c",
+   "source": "CH.O.A2.3",
+   "target": "EN.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "electron density in the unit cell",
+      "target": "voltage or current over time",
+      "note": "signal"
+     },
+     {
+      "source": "plane waves indexed by reciprocal-lattice vectors",
+      "target": "sinusoidal steady states",
+      "note": "basis"
+     },
+     {
+      "source": "structure factors",
+      "target": "amplitude and phase at each frequency",
+      "note": "spectrum"
+     },
+     {
+      "source": "diffraction by a periodic crystal",
+      "target": "circuit transfer function",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "X-ray crystallography",
+      "target": "Frequency response and filter design"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The system is invariant under shifts in time or space."
+   ],
+   "breaks_where": [
+    "The system is linear. (CH: y; EN: ~)",
+    "The signal has finite energy, or is sampled above twice its highest frequency. (CH: ~; EN: y)",
+    "CH: Only magnitudes are measured, so the phases are lost.",
+    "CH: Disorder and multiple scattering break the simple transform.",
+    "EN: Saturation and switching devices are nonlinear.",
+    "EN: Component values drift, which breaks strict time invariance."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-116f751cfe",
+   "source": "EC.O.A4.2",
+   "target": "EN",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "unobserved trend, cycle or shock",
+      "target": "position, velocity, attitude",
+      "note": "state"
+     },
+     {
+      "source": "linearised structural or time-series model",
+      "target": "kinematic or plant model",
+      "note": "dynamics"
+     },
+     {
+      "source": "published macroeconomic series",
+      "target": "sensor readings (GPS, inertial, radar)",
+      "note": "observation"
+     },
+     {
+      "source": "shock and measurement-error variances",
+      "target": "sensor and disturbance covariances",
+      "note": "noise"
+     },
+     {
+      "source": "filter weight on the data surprise",
+      "target": "Kalman gain",
+      "note": "gain"
+     }
+    ],
+    "methods": [
+     {
+      "source": "State-space models of economic fluctuations",
+      "target": "Kalman filter for navigation and tracking"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Dynamics and observation are linear in the state. (EC: ~; EN: ~)",
+    "Noises are zero-mean, white and Gaussian with known covariances. (EC: ~; EN: ~)",
+    "The model is correct: no unmodelled bias or drift. (EC: n; EN: ~)",
+    "The state is detectable from the observations. (EC: ~; EN: y)",
+    "EC: The model itself is contested, so a3 is the weak point.",
+    "EC: Agents react to the estimate, which changes the dynamics.",
+    "EN: Sensor bias and outliers violate the noise model.",
+    "EN: Nonlinear plants need the extended or unscented variants, which lose the optimality guarantee."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Recursive linear-Gaussian state estimation",
+    "group": "RC-linear-gaussian-estimation",
+    "note": "Both cells bind RC-linear-gaussian-estimation (mathematics node MSC:93Exx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-11b373b5f9",
+   "source": "LA",
+   "target": "ST.O.A5.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "prosecution and defence propositions",
+      "target": "competing explanations of an adversary's behaviour",
+      "note": "hypotheses"
+     },
+     {
+      "source": "other evidence in the case",
+      "target": "base rates and standing assessments",
+      "note": "prior"
+     },
+     {
+      "source": "probability of the forensic finding under each proposition",
+      "target": "how expected each report is under each explanation",
+      "note": "likelihood"
+     },
+     {
+      "source": "question for the court",
+      "target": "revised assessment",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Likelihood ratios for forensic evidence",
+      "target": "Structured probabilistic judgement in intelligence analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The hypotheses are mutually exclusive and exhaustive. (LA: ~; ST: n)",
+    "The likelihood model is correct. (LA: ~; ST: n)",
+    "The prior is stated. (LA: n; ST: ~)",
+    "Items of evidence multiplied together are conditionally independent. (LA: ~; ST: n)",
+    "LA: Contested: courts differ on whether numbers may be put to a jury.",
+    "LA: The standard of proof is a legal warrant, not a probability threshold.",
+    "ST: The true explanation may not be on the list.",
+    "ST: An adversary may plant evidence, so the likelihood model is itself contested.",
+    "ST: Reports often share one source."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-159e311498",
+   "source": "BI.O.A4.4",
+   "target": "PH.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "nucleotides or amino acids at a site",
+      "target": "microstates of the system",
+      "note": "states"
+     },
+     {
+      "source": "substitution rate matrix",
+      "target": "proposal and acceptance rule",
+      "note": "kernel"
+     },
+     {
+      "source": "equilibrium base frequencies",
+      "target": "Boltzmann distribution",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Substitution models in phylogenetics",
+      "target": "Monte Carlo sampling of equilibrium ensembles"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Every state can be reached from every other state. (BI: y; PH: ~)",
+    "Transition probabilities do not change over time. (BI: ~; PH: y)",
+    "BI: Rates vary across sites and lineages.",
+    "BI: Sites are not independent of one another.",
+    "PH: Near phase transitions the chain mixes very slowly.",
+    "PH: Energy barriers can make a2 fail in practice."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-1838f1a8ad",
+   "source": "EA.O.A2.3",
+   "target": "PH.O.A1.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "ground motion over time",
+      "target": "field amplitude in space and time",
+      "note": "signal"
+     },
+     {
+      "source": "sinusoids or normal modes of the Earth",
+      "target": "plane waves or standing modes",
+      "note": "basis"
+     },
+     {
+      "source": "energy at each frequency",
+      "target": "mode amplitudes",
+      "note": "spectrum"
+     },
+     {
+      "source": "Earth response between source and station",
+      "target": "wave equation in a uniform medium",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Spectral analysis of seismic records",
+      "target": "Normal modes and wave superposition"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The system is linear. (EA: ~; PH: y)",
+    "The system is invariant under shifts in time or space. (EA: ~; PH: ~)",
+    "The signal has finite energy, or is sampled above twice its highest frequency. (EA: ~; PH: y)",
+    "EA: The Earth is laterally varied, so the response is not shift-invariant in space.",
+    "EA: Strong ground motion is nonlinear near the source.",
+    "PH: Non-uniform media couple the modes.",
+    "PH: Large amplitudes bring nonlinear effects."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-189ba9fb96",
+   "source": "MS.O.A1.5",
+   "target": "PH.O.A5.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "distribution of accumulated evidence",
+      "target": "temperature or particle concentration",
+      "note": "density"
+     },
+     {
+      "source": "within-trial noise",
+      "target": "thermal diffusivity or diffusion coefficient",
+      "note": "diffusivity"
+     },
+     {
+      "source": "noisy accumulation of evidence",
+      "target": "Fourier's or Fick's law",
+      "note": "flux_law"
+     },
+     {
+      "source": "decision thresholds",
+      "target": "fixed temperature or insulated wall",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Drift-diffusion model of two-choice decisions",
+      "target": "Heat conduction and Brownian motion"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Flux is proportional to the gradient of the density. (MS: ~; PH: y)",
+    "The underlying steps are many, independent and of finite variance. (MS: ~; PH: y)",
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (MS: ~; PH: ~)",
+    "MS: The accumulated evidence is inferred from response times, not observed.",
+    "MS: Fit quality depends on added parameters.",
+    "PH: Signals propagate at infinite speed in the model.",
+    "PH: Fails far from equilibrium and at scales near the mean free path."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-1e2744e887",
+   "source": "EC.O.A2.1",
+   "target": "EN.O.A1.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "allocation of goods and inputs",
+      "target": "collapse mechanism",
+      "note": "primal"
+     },
+     {
+      "source": "welfare or profit",
+      "target": "collapse load",
+      "note": "objective"
+     },
+     {
+      "source": "resource and technology limits",
+      "target": "equilibrium and yield conditions",
+      "note": "constraints"
+     },
+     {
+      "source": "prices",
+      "target": "admissible stress field",
+      "note": "dual"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Shadow prices and competitive equilibrium prices",
+      "target": "Limit analysis of structures"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A constraint qualification holds (for example a strictly feasible point exists)."
+   ],
+   "breaks_where": [
+    "The objective and the feasible set are convex. (EC: ~; EN: y)",
+    "The problem data are known. (EC: ~; EN: ~)",
+    "EC: Increasing returns and indivisible goods break convexity.",
+    "EC: Externalities mean prices no longer equal marginal social value.",
+    "EN: Assumes perfectly plastic material and small displacements.",
+    "EN: Buckling and brittle fracture fall outside the theory."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convex optimisation and its dual",
+    "group": "RC-convex-duality",
+    "note": "Both cells bind RC-convex-duality (mathematics node MSC:90Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-210164be47",
+   "source": "BI.O.A4.4",
+   "target": "ST.O.A5.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "trees and model parameters",
+      "target": "competing explanations of an adversary's behaviour",
+      "note": "hypotheses"
+     },
+     {
+      "source": "tree and rate priors",
+      "target": "base rates and standing assessments",
+      "note": "prior"
+     },
+     {
+      "source": "probability of the sequences given a tree",
+      "target": "how expected each report is under each explanation",
+      "note": "likelihood"
+     },
+     {
+      "source": "support for each clade",
+      "target": "revised assessment",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Bayesian phylogenetic inference",
+      "target": "Structured probabilistic judgement in intelligence analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The hypotheses are mutually exclusive and exhaustive. (BI: y; ST: n)",
+    "The likelihood model is correct. (BI: ~; ST: n)",
+    "The prior is stated. (BI: y; ST: ~)",
+    "Items of evidence multiplied together are conditionally independent. (BI: ~; ST: n)",
+    "BI: Substitution models are simplified.",
+    "BI: Priors on trees can dominate weak data.",
+    "ST: The true explanation may not be on the list.",
+    "ST: An adversary may plant evidence, so the likelihood model is itself contested.",
+    "ST: Reports often share one source."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-28db11ed13",
+   "source": "MD.O.A5.2",
+   "target": "MS.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "infected people",
+      "target": "people who adopt or share",
+      "note": "individuals"
+     },
+     {
+      "source": "people each one infects",
+      "target": "people each one persuades",
+      "note": "offspring"
+     },
+     {
+      "source": "basic reproduction number",
+      "target": "average number persuaded",
+      "note": "mean"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Epidemic threshold (basic reproduction number)",
+      "target": "Cascade models of social spread"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Units reproduce independently of one another. (MD: ~; MS: n)",
+    "All units share one offspring distribution. (MD: n; MS: n)",
+    "Nothing limits growth in the phase considered. (MD: ~; MS: ~)",
+    "MD: Infectiousness varies widely between people.",
+    "MD: Susceptibles run out, so a3 holds only early.",
+    "MD: Contact networks are clustered.",
+    "MS: Adoption often needs several exposures, which breaks independence.",
+    "MS: Influence is very unequal across people."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Branching-process threshold",
+    "group": "RC-branching-threshold",
+    "note": "Both cells bind RC-branching-threshold (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-2981e48376",
+   "source": "EA.O.A4.3",
+   "target": "EC.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "atmospheric or ocean fields on a grid",
+      "target": "unobserved trend, cycle or shock",
+      "note": "state"
+     },
+     {
+      "source": "numerical forecast model",
+      "target": "linearised structural or time-series model",
+      "note": "dynamics"
+     },
+     {
+      "source": "station, sonde and satellite measurements",
+      "target": "published macroeconomic series",
+      "note": "observation"
+     },
+     {
+      "source": "background and observation error covariances",
+      "target": "shock and measurement-error variances",
+      "note": "noise"
+     },
+     {
+      "source": "analysis weights",
+      "target": "filter weight on the data surprise",
+      "note": "gain"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Data assimilation in weather and ocean forecasting",
+      "target": "State-space models of economic fluctuations"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Dynamics and observation are linear in the state. (EA: n; EC: ~)",
+    "Noises are zero-mean, white and Gaussian with known covariances. (EA: ~; EC: ~)",
+    "The model is correct: no unmodelled bias or drift. (EA: ~; EC: n)",
+    "The state is detectable from the observations. (EA: ~; EC: ~)",
+    "EA: The dynamics are strongly nonlinear.",
+    "EA: The state is too large to hold a full covariance, so ensembles approximate it.",
+    "EC: The model itself is contested, so a3 is the weak point.",
+    "EC: Agents react to the estimate, which changes the dynamics."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Recursive linear-Gaussian state estimation",
+    "group": "RC-linear-gaussian-estimation",
+    "note": "Both cells bind RC-linear-gaussian-estimation (mathematics node MSC:93Exx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-2be26050ab",
+   "source": "BI.O.A5.2",
+   "target": "EC.O.A1.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "species",
+      "target": "strategies",
+      "note": "types"
+     },
+     {
+      "source": "relative abundances",
+      "target": "fraction of players using each",
+      "note": "shares"
+     },
+     {
+      "source": "per-capita growth given the other species",
+      "target": "payoff",
+      "note": "fitness"
+     },
+     {
+      "source": "total community growth",
+      "target": "average payoff",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Lotka–Volterra community dynamics",
+      "target": "Imitation and learning dynamics in games"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The population is large and well mixed. (BI: ~; EC: ~)",
+    "Fitness depends only on the current shares. (BI: y; EC: ~)",
+    "No new types appear by mutation or innovation. (BI: y; EC: n)",
+    "Change is continuous in time. (BI: y; EC: ~)",
+    "BI: The mapping needs interaction terms that are linear in abundance.",
+    "BI: Total abundance is an extra variable with no counterpart.",
+    "EC: People innovate and look ahead.",
+    "EC: Payoffs are not copied with reliable fidelity."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-2f4ac86bb9",
+   "source": "BI.O.A5.3",
+   "target": "PH.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "allocations of individuals and energy to species",
+      "target": "microstates",
+      "note": "states"
+     },
+     {
+      "source": "totals of species, individuals and metabolic rate",
+      "target": "mean energy",
+      "note": "constraints"
+     },
+     {
+      "source": "species-abundance distribution",
+      "target": "Boltzmann distribution",
+      "note": "distribution"
+     },
+     {
+      "source": "parameters fixed by the totals",
+      "target": "inverse temperature",
+      "note": "multipliers"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Maximum-entropy theory of ecology",
+      "target": "Canonical ensemble"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The stated constraints are the only relevant information. (BI: ?; PH: y)",
+    "The state space and its base measure are well defined. (BI: ~; PH: y)",
+    "The constrained averages are known accurately. (BI: ~; PH: y)",
+    "BI: Contested: disturbed communities depart from the predictions.",
+    "BI: It gives patterns with no mechanism.",
+    "PH: Applies at equilibrium only.",
+    "PH: Systems that do not explore their state space violate it."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Maximum-entropy inference",
+    "group": "RC-maximum-entropy",
+    "note": "Both cells bind RC-maximum-entropy (mathematics node MSC:94Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-3074d4dc41",
+   "source": "EN.O.A2.1",
+   "target": "EN.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "pipe junctions",
+      "target": "circuit nodes",
+      "note": "nodes"
+     },
+     {
+      "source": "pipe conductances",
+      "target": "conductances",
+      "note": "weights"
+     },
+     {
+      "source": "pressure head",
+      "target": "voltage",
+      "note": "potential"
+     },
+     {
+      "source": "volumetric flow",
+      "target": "current",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Pipe-network analysis",
+      "target": "Resistor-network analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flow is conserved at every interior node.",
+    "Edge weights are symmetric.",
+    "The network is connected."
+   ],
+   "breaks_where": [
+    "Flow on an edge is linear in the potential difference. (EN: n; EN: y)",
+    "EN: Turbulent head loss grows roughly with the square of flow.",
+    "EN: The network must be solved by iteration.",
+    "EN: Diodes and transistors are nonlinear and one-way.",
+    "EN: High frequencies need distributed models."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-32291f0ec9",
+   "source": "BI.O.A4.4",
+   "target": "MD.O.A3.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "trees and model parameters",
+      "target": "disease present or absent",
+      "note": "hypotheses"
+     },
+     {
+      "source": "tree and rate priors",
+      "target": "prevalence or pre-test probability",
+      "note": "prior"
+     },
+     {
+      "source": "probability of the sequences given a tree",
+      "target": "sensitivity and specificity",
+      "note": "likelihood"
+     },
+     {
+      "source": "support for each clade",
+      "target": "post-test probability",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Bayesian phylogenetic inference",
+      "target": "Predictive value of a diagnostic test"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The hypotheses are mutually exclusive and exhaustive."
+   ],
+   "breaks_where": [
+    "The likelihood model is correct. (BI: ~; MD: ~)",
+    "The prior is stated. (BI: y; MD: ~)",
+    "Items of evidence multiplied together are conditionally independent. (BI: ~; MD: ~)",
+    "BI: Substitution models are simplified.",
+    "BI: Priors on trees can dominate weak data.",
+    "MD: Sensitivity and specificity shift with the patient population.",
+    "MD: Repeated tests are rarely independent."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-32ce5c224b",
+   "source": "EN.O.A4.1",
+   "target": "PH.O.A1.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "voltage or current over time",
+      "target": "field amplitude in space and time",
+      "note": "signal"
+     },
+     {
+      "source": "sinusoidal steady states",
+      "target": "plane waves or standing modes",
+      "note": "basis"
+     },
+     {
+      "source": "amplitude and phase at each frequency",
+      "target": "mode amplitudes",
+      "note": "spectrum"
+     },
+     {
+      "source": "circuit transfer function",
+      "target": "wave equation in a uniform medium",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Frequency response and filter design",
+      "target": "Normal modes and wave superposition"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The signal has finite energy, or is sampled above twice its highest frequency."
+   ],
+   "breaks_where": [
+    "The system is linear. (EN: ~; PH: y)",
+    "The system is invariant under shifts in time or space. (EN: y; PH: ~)",
+    "EN: Saturation and switching devices are nonlinear.",
+    "EN: Component values drift, which breaks strict time invariance.",
+    "PH: Non-uniform media couple the modes.",
+    "PH: Large amplitudes bring nonlinear effects."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-33e7ed87e5",
+   "source": "CH.O.A4.1",
+   "target": "IS.O.A4.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "chemical species or conformations",
+      "target": "journals",
+      "note": "states"
+     },
+     {
+      "source": "rate constants",
+      "target": "follow a random citation",
+      "note": "kernel"
+     },
+     {
+      "source": "equilibrium populations",
+      "target": "influence score",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Master-equation kinetics of first-order networks",
+      "target": "Citation-network ranking of journals"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Every state can be reached from every other state. (CH: ~; IS: ~)",
+    "Transition probabilities do not change over time. (CH: ~; IS: n)",
+    "CH: Higher-order reactions make the kernel depend on concentrations.",
+    "CH: Rate constants change with temperature.",
+    "IS: Citation practice differs between fields and changes over time.",
+    "IS: The score measures attention, not quality."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-34060128c1",
+   "source": "CS.O.A4.2",
+   "target": "EN.O.A2.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "data points",
+      "target": "pipe junctions",
+      "note": "nodes"
+     },
+     {
+      "source": "similarities",
+      "target": "pipe conductances",
+      "note": "weights"
+     },
+     {
+      "source": "soft label or embedding coordinate",
+      "target": "pressure head",
+      "note": "potential"
+     },
+     {
+      "source": "label mass passed between neighbours",
+      "target": "volumetric flow",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Spectral clustering and label propagation",
+      "target": "Pipe-network analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flow is conserved at every interior node.",
+    "Edge weights are symmetric."
+   ],
+   "breaks_where": [
+    "Flow on an edge is linear in the potential difference. (CS: y; EN: n)",
+    "The network is connected. (CS: ~; EN: y)",
+    "CS: The similarity graph is a modelling choice.",
+    "CS: Directed relations do not fit symmetric weights.",
+    "EN: Turbulent head loss grows roughly with the square of flow.",
+    "EN: The network must be solved by iteration."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-34ee4b24de",
+   "source": "EA.O.A3.3",
+   "target": "ST.O.A5.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "calendar ages",
+      "target": "competing explanations of an adversary's behaviour",
+      "note": "hypotheses"
+     },
+     {
+      "source": "stratigraphic order and deposition model",
+      "target": "base rates and standing assessments",
+      "note": "prior"
+     },
+     {
+      "source": "measured isotope ratio given the calibration curve",
+      "target": "how expected each report is under each explanation",
+      "note": "likelihood"
+     },
+     {
+      "source": "calibrated age distribution",
+      "target": "revised assessment",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Bayesian age modelling and radiocarbon calibration",
+      "target": "Structured probabilistic judgement in intelligence analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The hypotheses are mutually exclusive and exhaustive. (EA: y; ST: n)",
+    "The likelihood model is correct. (EA: ~; ST: n)",
+    "The prior is stated. (EA: y; ST: ~)",
+    "Items of evidence multiplied together are conditionally independent. (EA: ~; ST: n)",
+    "EA: The calibration curve carries its own uncertainty.",
+    "EA: Reworked or contaminated samples violate the likelihood model.",
+    "ST: The true explanation may not be on the list.",
+    "ST: An adversary may plant evidence, so the likelihood model is itself contested.",
+    "ST: Reports often share one source."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-36a8669013",
+   "source": "CS.O.A4.2",
+   "target": "PH.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "class labels",
+      "target": "microstates",
+      "note": "states"
+     },
+     {
+      "source": "feature averages matched to the data",
+      "target": "mean energy",
+      "note": "constraints"
+     },
+     {
+      "source": "predicted class probabilities",
+      "target": "Boltzmann distribution",
+      "note": "distribution"
+     },
+     {
+      "source": "model weights",
+      "target": "inverse temperature",
+      "note": "multipliers"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Logistic and softmax models",
+      "target": "Canonical ensemble"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The state space and its base measure are well defined."
+   ],
+   "breaks_where": [
+    "The stated constraints are the only relevant information. (CS: ~; PH: y)",
+    "The constrained averages are known accurately. (CS: ~; PH: y)",
+    "CS: Feature choice decides what counts as information.",
+    "CS: Finite samples make the constrained averages noisy.",
+    "PH: Applies at equilibrium only.",
+    "PH: Systems that do not explore their state space violate it."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Maximum-entropy inference",
+    "group": "RC-maximum-entropy",
+    "note": "Both cells bind RC-maximum-entropy (mathematics node MSC:94Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-39cf8d9840",
+   "source": "BI.O.A4.1",
+   "target": "CS.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "probability density of an allele frequency",
+      "target": "distribution of noised data",
+      "note": "density"
+     },
+     {
+      "source": "sampling variance per generation",
+      "target": "noise schedule",
+      "note": "diffusivity"
+     },
+     {
+      "source": "random sampling of gametes",
+      "target": "forward noising process",
+      "note": "flux_law"
+     },
+     {
+      "source": "loss or fixation of the allele",
+      "target": "pure noise at the final step",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Diffusion approximation of genetic drift",
+      "target": "Diffusion generative models"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flux is proportional to the gradient of the density.",
+    "The underlying steps are many, independent and of finite variance.",
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (BI: n; CS: ~)",
+    "BI: Diffusivity depends on the frequency itself and vanishes at the boundaries.",
+    "BI: Small populations are not well approximated.",
+    "CS: Generation runs the process backwards, which needs a learned score function.",
+    "CS: The guarantee covers the forward process only."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-3bf8663b16",
+   "source": "EC.O.A2.1",
+   "target": "EN",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "prices",
+      "target": "plant and controller states",
+      "note": "state"
+     },
+     {
+      "source": "market-clearing prices",
+      "target": "set point",
+      "note": "equilibrium"
+     },
+     {
+      "source": "distance from equilibrium prices",
+      "target": "designed energy or error function",
+      "note": "function"
+     },
+     {
+      "source": "prices rise with excess demand",
+      "target": "closed-loop equations",
+      "note": "dynamics"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Stability of price adjustment",
+      "target": "Lyapunov-based control design"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A function exists that is positive away from the equilibrium and zero at it.",
+    "The dynamics are well posed (locally Lipschitz)."
+   ],
+   "breaks_where": [
+    "The function does not increase along any trajectory. (EC: ~; EN: y)",
+    "The model matches the real system. (EC: n; EN: ~)",
+    "EC: Stability needs strong conditions on demand, such as gross substitutes.",
+    "EC: No real market follows the assumed adjustment rule.",
+    "EN: Actuator saturation and delay are often left out of the model.",
+    "EN: The proof covers the model, not the hardware."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Stability by a Lyapunov function",
+    "group": "RC-lyapunov-stability",
+    "note": "Both cells bind RC-lyapunov-stability (mathematics node MSC:93Dxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-42187d9441",
+   "source": "EC.O.A1.2",
+   "target": "MS.O.A1.5",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "option value as a function of price and time",
+      "target": "distribution of accumulated evidence",
+      "note": "density"
+     },
+     {
+      "source": "half the squared volatility",
+      "target": "within-trial noise",
+      "note": "diffusivity"
+     },
+     {
+      "source": "replication by continuous hedging",
+      "target": "noisy accumulation of evidence",
+      "note": "flux_law"
+     },
+     {
+      "source": "payoff at expiry",
+      "target": "decision thresholds",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Option pricing by the Black–Scholes equation",
+      "target": "Drift-diffusion model of two-choice decisions"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Flux is proportional to the gradient of the density. (EC: ~; MS: ~)",
+    "The underlying steps are many, independent and of finite variance. (EC: n; MS: ~)",
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (EC: n; MS: ~)",
+    "The quantity is conserved in the interior. (EC: ~; MS: y)",
+    "EC: Returns have heavy tails and jumps, which violates a2.",
+    "EC: Volatility changes over time and with price.",
+    "EC: Hedging is neither continuous nor free.",
+    "MS: The accumulated evidence is inferred from response times, not observed.",
+    "MS: Fit quality depends on added parameters."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-47c0259f56",
+   "source": "BI.O.A3.2",
+   "target": "EN",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "body size or reserves over the lifetime",
+      "target": "plant state over time",
+      "note": "path"
+     },
+     {
+      "source": "share of energy given to growth or reproduction",
+      "target": "actuator command",
+      "note": "control"
+     },
+     {
+      "source": "negative expected reproductive output",
+      "target": "quadratic penalty on error and effort",
+      "note": "running_cost"
+     },
+     {
+      "source": "reproductive value of a unit of size",
+      "target": "adjoint state",
+      "note": "costate"
+     },
+     {
+      "source": "current fitness gain",
+      "target": "control Hamiltonian",
+      "note": "hamiltonian"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Optimal life-history allocation",
+      "target": "Optimal control (linear-quadratic regulator)"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Dynamics and cost are smooth. (BI: ~; EN: y)",
+    "End conditions are specified. (BI: ~; EN: y)",
+    "The system is deterministic. (BI: n; EN: ~)",
+    "Enough convexity holds for the stationary path to be a minimum. (BI: ?; EN: y)",
+    "BI: No agent performs the optimisation; selection only approximates it.",
+    "BI: Survival is random and environments vary.",
+    "EN: Actuator limits make the true problem constrained.",
+    "EN: Disturbances make the system stochastic."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Variational principle and optimal control",
+    "group": "RC-variational-control",
+    "note": "Both cells bind RC-variational-control (mathematics node MSC:49-XX).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-497d43fc00",
+   "source": "BI.O.A4.1",
+   "target": "CS.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "genotypes or strategies",
+      "target": "experts or actions",
+      "note": "types"
+     },
+     {
+      "source": "frequencies in the population",
+      "target": "weights",
+      "note": "shares"
+     },
+     {
+      "source": "reproductive success",
+      "target": "reward in the round",
+      "note": "fitness"
+     },
+     {
+      "source": "population mean fitness",
+      "target": "weighted average reward",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Frequency-dependent natural selection",
+      "target": "Multiplicative-weights updating"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The population is large and well mixed. (BI: ~; CS: y)",
+    "Fitness depends only on the current shares. (BI: ~; CS: n)",
+    "No new types appear by mutation or innovation. (BI: n; CS: y)",
+    "Change is continuous in time. (BI: ~; CS: n)",
+    "BI: Mutation and recombination create new types.",
+    "BI: Small populations drift.",
+    "BI: Spatial structure changes the outcome.",
+    "CS: Updates are discrete steps.",
+    "CS: Rewards may be set by an adversary, not by the weights."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-4c48178028",
+   "source": "EN",
+   "target": "MS.O.A1.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "position, velocity, attitude",
+      "target": "property of the world being perceived",
+      "note": "state"
+     },
+     {
+      "source": "kinematic or plant model",
+      "target": "expected change between glances",
+      "note": "dynamics"
+     },
+     {
+      "source": "sensor readings (GPS, inertial, radar)",
+      "target": "sensory cues",
+      "note": "observation"
+     },
+     {
+      "source": "sensor and disturbance covariances",
+      "target": "cue reliabilities",
+      "note": "noise"
+     },
+     {
+      "source": "Kalman gain",
+      "target": "weight given to each cue",
+      "note": "gain"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Kalman filter for navigation and tracking",
+      "target": "Optimal cue integration in perception"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Dynamics and observation are linear in the state. (EN: ~; MS: ~)",
+    "Noises are zero-mean, white and Gaussian with known covariances. (EN: ~; MS: ~)",
+    "The model is correct: no unmodelled bias or drift. (EN: ~; MS: ?)",
+    "The state is detectable from the observations. (EN: y; MS: ?)",
+    "EN: Sensor bias and outliers violate the noise model.",
+    "EN: Nonlinear plants need the extended or unscented variants, which lose the optimality guarantee.",
+    "MS: The nervous system's internal noise model cannot be read directly.",
+    "MS: Reported departures from optimal weighting are part of the evidence, not noise."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Recursive linear-Gaussian state estimation",
+    "group": "RC-linear-gaussian-estimation",
+    "note": "Both cells bind RC-linear-gaussian-estimation (mathematics node MSC:93Exx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-4c6dd910de",
+   "source": "BI.O.A5.5",
+   "target": "CH.O.A2.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "habitat cells",
+      "target": "conjugated atoms",
+      "note": "nodes"
+     },
+     {
+      "source": "ease of movement between cells",
+      "target": "resonance integrals between bonded atoms",
+      "note": "weights"
+     },
+     {
+      "source": "probability of reaching a target patch",
+      "target": "orbital coefficient on each atom",
+      "note": "potential"
+     },
+     {
+      "source": "expected net movement",
+      "target": "bond order",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Circuit-theory models of landscape connectivity",
+      "target": "Hückel molecular-orbital theory"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The network is connected."
+   ],
+   "breaks_where": [
+    "Flow on an edge is linear in the potential difference. (BI: ~; CH: y)",
+    "Flow is conserved at every interior node. (BI: ~; CH: ?)",
+    "Edge weights are symmetric. (BI: ~; CH: y)",
+    "BI: Animals do not move as memoryless random walkers.",
+    "BI: Movement is often easier one way than the other.",
+    "CH: The shared structure is the adjacency spectrum, not conserved flow.",
+    "CH: Electron repulsion is ignored."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-4ca0d10351",
+   "source": "CS.O.A4.2",
+   "target": "EN.O.A3.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "distribution of noised data",
+      "target": "temperature",
+      "note": "density"
+     },
+     {
+      "source": "noise schedule",
+      "target": "thermal diffusivity of the material",
+      "note": "diffusivity"
+     },
+     {
+      "source": "forward noising process",
+      "target": "Fourier's law",
+      "note": "flux_law"
+     },
+     {
+      "source": "pure noise at the final step",
+      "target": "convective or prescribed-flux surfaces",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Diffusion generative models",
+      "target": "Conduction heat-transfer analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flux is proportional to the gradient of the density.",
+    "The underlying steps are many, independent and of finite variance.",
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (CS: ~; EN: ~)",
+    "CS: Generation runs the process backwards, which needs a learned score function.",
+    "CS: The guarantee covers the forward process only.",
+    "EN: Properties vary with temperature in real materials.",
+    "EN: Phase change adds a moving boundary."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-4d715492a2",
+   "source": "CS.O.A4.2",
+   "target": "MS.O.A1.5",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "distribution of noised data",
+      "target": "distribution of accumulated evidence",
+      "note": "density"
+     },
+     {
+      "source": "noise schedule",
+      "target": "within-trial noise",
+      "note": "diffusivity"
+     },
+     {
+      "source": "forward noising process",
+      "target": "noisy accumulation of evidence",
+      "note": "flux_law"
+     },
+     {
+      "source": "pure noise at the final step",
+      "target": "decision thresholds",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Diffusion generative models",
+      "target": "Drift-diffusion model of two-choice decisions"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Flux is proportional to the gradient of the density. (CS: y; MS: ~)",
+    "The underlying steps are many, independent and of finite variance. (CS: y; MS: ~)",
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (CS: ~; MS: ~)",
+    "CS: Generation runs the process backwards, which needs a learned score function.",
+    "CS: The guarantee covers the forward process only.",
+    "MS: The accumulated evidence is inferred from response times, not observed.",
+    "MS: Fit quality depends on added parameters."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-53c26ce87f",
+   "source": "MD.O.A3.2",
+   "target": "ST.O.A5.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "disease present or absent",
+      "target": "competing explanations of an adversary's behaviour",
+      "note": "hypotheses"
+     },
+     {
+      "source": "prevalence or pre-test probability",
+      "target": "base rates and standing assessments",
+      "note": "prior"
+     },
+     {
+      "source": "sensitivity and specificity",
+      "target": "how expected each report is under each explanation",
+      "note": "likelihood"
+     },
+     {
+      "source": "post-test probability",
+      "target": "revised assessment",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Predictive value of a diagnostic test",
+      "target": "Structured probabilistic judgement in intelligence analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The hypotheses are mutually exclusive and exhaustive. (MD: y; ST: n)",
+    "The likelihood model is correct. (MD: ~; ST: n)",
+    "The prior is stated. (MD: ~; ST: ~)",
+    "Items of evidence multiplied together are conditionally independent. (MD: ~; ST: n)",
+    "MD: Sensitivity and specificity shift with the patient population.",
+    "MD: Repeated tests are rarely independent.",
+    "ST: The true explanation may not be on the list.",
+    "ST: An adversary may plant evidence, so the likelihood model is itself contested.",
+    "ST: Reports often share one source."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-55051af9cb",
+   "source": "EA.O.A3.3",
+   "target": "LA",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "calendar ages",
+      "target": "prosecution and defence propositions",
+      "note": "hypotheses"
+     },
+     {
+      "source": "stratigraphic order and deposition model",
+      "target": "other evidence in the case",
+      "note": "prior"
+     },
+     {
+      "source": "measured isotope ratio given the calibration curve",
+      "target": "probability of the forensic finding under each proposition",
+      "note": "likelihood"
+     },
+     {
+      "source": "calibrated age distribution",
+      "target": "question for the court",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Bayesian age modelling and radiocarbon calibration",
+      "target": "Likelihood ratios for forensic evidence"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The hypotheses are mutually exclusive and exhaustive. (EA: y; LA: ~)",
+    "The likelihood model is correct. (EA: ~; LA: ~)",
+    "The prior is stated. (EA: y; LA: n)",
+    "Items of evidence multiplied together are conditionally independent. (EA: ~; LA: ~)",
+    "EA: The calibration curve carries its own uncertainty.",
+    "EA: Reworked or contaminated samples violate the likelihood model.",
+    "LA: Contested: courts differ on whether numbers may be put to a jury.",
+    "LA: The standard of proof is a legal warrant, not a probability threshold."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-56100d1fde",
+   "source": "CS.O.A4.2",
+   "target": "EC.O.A1.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "distribution of noised data",
+      "target": "option value as a function of price and time",
+      "note": "density"
+     },
+     {
+      "source": "noise schedule",
+      "target": "half the squared volatility",
+      "note": "diffusivity"
+     },
+     {
+      "source": "forward noising process",
+      "target": "replication by continuous hedging",
+      "note": "flux_law"
+     },
+     {
+      "source": "pure noise at the final step",
+      "target": "payoff at expiry",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Diffusion generative models",
+      "target": "Option pricing by the Black–Scholes equation"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Flux is proportional to the gradient of the density. (CS: y; EC: ~)",
+    "The underlying steps are many, independent and of finite variance. (CS: y; EC: n)",
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (CS: ~; EC: n)",
+    "The quantity is conserved in the interior. (CS: y; EC: ~)",
+    "CS: Generation runs the process backwards, which needs a learned score function.",
+    "CS: The guarantee covers the forward process only.",
+    "EC: Returns have heavy tails and jumps, which violates a2.",
+    "EC: Volatility changes over time and with price.",
+    "EC: Hedging is neither continuous nor free."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-562ab4cb35",
+   "source": "EN",
+   "target": "PH.O.A1.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "plant state over time",
+      "target": "trajectory of the system",
+      "note": "path"
+     },
+     {
+      "source": "actuator command",
+      "target": "velocity along the path",
+      "note": "control"
+     },
+     {
+      "source": "quadratic penalty on error and effort",
+      "target": "Lagrangian",
+      "note": "running_cost"
+     },
+     {
+      "source": "adjoint state",
+      "target": "momentum",
+      "note": "costate"
+     },
+     {
+      "source": "control Hamiltonian",
+      "target": "energy",
+      "note": "hamiltonian"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Optimal control (linear-quadratic regulator)",
+      "target": "Principle of stationary action"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Dynamics and cost are smooth.",
+    "End conditions are specified."
+   ],
+   "breaks_where": [
+    "The system is deterministic. (EN: ~; PH: y)",
+    "Enough convexity holds for the stationary path to be a minimum. (EN: y; PH: ~)",
+    "EN: Actuator limits make the true problem constrained.",
+    "EN: Disturbances make the system stochastic.",
+    "PH: The action is stationary, not always minimal.",
+    "PH: Friction needs an extended formulation."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Variational principle and optimal control",
+    "group": "RC-variational-control",
+    "note": "Both cells bind RC-variational-control (mathematics node MSC:49-XX).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-58b92321cf",
+   "source": "IS.O.A4.3",
+   "target": "PH.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "journals",
+      "target": "microstates of the system",
+      "note": "states"
+     },
+     {
+      "source": "follow a random citation",
+      "target": "proposal and acceptance rule",
+      "note": "kernel"
+     },
+     {
+      "source": "influence score",
+      "target": "Boltzmann distribution",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Citation-network ranking of journals",
+      "target": "Monte Carlo sampling of equilibrium ensembles"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Every state can be reached from every other state. (IS: ~; PH: ~)",
+    "Transition probabilities do not change over time. (IS: n; PH: y)",
+    "IS: Citation practice differs between fields and changes over time.",
+    "IS: The score measures attention, not quality.",
+    "PH: Near phase transitions the chain mixes very slowly.",
+    "PH: Energy barriers can make a2 fail in practice."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-60a7b3dc70",
+   "source": "CS.O.A4.2",
+   "target": "EA.O.A5.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "class labels",
+      "target": "assignments of trips to origin–destination pairs",
+      "note": "states"
+     },
+     {
+      "source": "feature averages matched to the data",
+      "target": "trip totals and total travel cost",
+      "note": "constraints"
+     },
+     {
+      "source": "predicted class probabilities",
+      "target": "trip matrix",
+      "note": "distribution"
+     },
+     {
+      "source": "model weights",
+      "target": "distance-decay parameter",
+      "note": "multipliers"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Logistic and softmax models",
+      "target": "Entropy-maximising spatial interaction models"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The state space and its base measure are well defined."
+   ],
+   "breaks_where": [
+    "The stated constraints are the only relevant information. (CS: ~; EA: ~)",
+    "The constrained averages are known accurately. (CS: ~; EA: ~)",
+    "CS: Feature choice decides what counts as information.",
+    "CS: Finite samples make the constrained averages noisy.",
+    "EA: Travellers are not interchangeable particles.",
+    "EA: The model describes a pattern and does not explain choices."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Maximum-entropy inference",
+    "group": "RC-maximum-entropy",
+    "note": "Both cells bind RC-maximum-entropy (mathematics node MSC:94Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-63426a0286",
+   "source": "BI.O.A4.1",
+   "target": "MS.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "copies of the mutant allele",
+      "target": "people who adopt or share",
+      "note": "individuals"
+     },
+     {
+      "source": "copies left in the next generation",
+      "target": "people each one persuades",
+      "note": "offspring"
+     },
+     {
+      "source": "one plus the selective advantage",
+      "target": "average number persuaded",
+      "note": "mean"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Survival probability of a new beneficial mutation",
+      "target": "Cascade models of social spread"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Units reproduce independently of one another. (BI: y; MS: n)",
+    "All units share one offspring distribution. (BI: y; MS: n)",
+    "Nothing limits growth in the phase considered. (BI: ~; MS: ~)",
+    "BI: Valid while the mutant is rare.",
+    "BI: Linked selection breaks independence.",
+    "MS: Adoption often needs several exposures, which breaks independence.",
+    "MS: Influence is very unequal across people."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Branching-process threshold",
+    "group": "RC-branching-threshold",
+    "note": "Both cells bind RC-branching-threshold (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-676ca9a6bf",
+   "source": "BI.O.A5.2",
+   "target": "EN",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "species abundances",
+      "target": "plant and controller states",
+      "note": "state"
+     },
+     {
+      "source": "coexistence point",
+      "target": "set point",
+      "note": "equilibrium"
+     },
+     {
+      "source": "Volterra's logarithmic function",
+      "target": "designed energy or error function",
+      "note": "function"
+     },
+     {
+      "source": "Lotka–Volterra equations",
+      "target": "closed-loop equations",
+      "note": "dynamics"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Stability of interacting-species models",
+      "target": "Lyapunov-based control design"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A function exists that is positive away from the equilibrium and zero at it.",
+    "The dynamics are well posed (locally Lipschitz)."
+   ],
+   "breaks_where": [
+    "The function does not increase along any trajectory. (BI: ~; EN: y)",
+    "The model matches the real system. (BI: n; EN: ~)",
+    "BI: Real communities are noisy, seasonal and spatial.",
+    "BI: The function is known only for special interaction structures.",
+    "EN: Actuator saturation and delay are often left out of the model.",
+    "EN: The proof covers the model, not the hardware."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Stability by a Lyapunov function",
+    "group": "RC-lyapunov-stability",
+    "note": "Both cells bind RC-lyapunov-stability (mathematics node MSC:93Dxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-68a27ba9b8",
+   "source": "BI.O.A4.1",
+   "target": "CH.O.A4.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "genotypes or strategies",
+      "target": "self-replicating molecular species",
+      "note": "types"
+     },
+     {
+      "source": "frequencies in the population",
+      "target": "mole fractions",
+      "note": "shares"
+     },
+     {
+      "source": "reproductive success",
+      "target": "replication rate constant",
+      "note": "fitness"
+     },
+     {
+      "source": "population mean fitness",
+      "target": "dilution flux",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Frequency-dependent natural selection",
+      "target": "Autocatalytic replicator kinetics"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The population is large and well mixed. (BI: ~; CH: y)",
+    "Fitness depends only on the current shares. (BI: ~; CH: ~)",
+    "No new types appear by mutation or innovation. (BI: n; CH: n)",
+    "Change is continuous in time. (BI: ~; CH: y)",
+    "BI: Mutation and recombination create new types.",
+    "BI: Small populations drift.",
+    "BI: Spatial structure changes the outcome.",
+    "CH: Copying errors produce a mutant cloud.",
+    "CH: Constant total concentration must be enforced by the reactor."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-71751d7602",
+   "source": "EC.O.A1.2",
+   "target": "PH.O.A5.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "option value as a function of price and time",
+      "target": "temperature or particle concentration",
+      "note": "density"
+     },
+     {
+      "source": "half the squared volatility",
+      "target": "thermal diffusivity or diffusion coefficient",
+      "note": "diffusivity"
+     },
+     {
+      "source": "replication by continuous hedging",
+      "target": "Fourier's or Fick's law",
+      "note": "flux_law"
+     },
+     {
+      "source": "payoff at expiry",
+      "target": "fixed temperature or insulated wall",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Option pricing by the Black–Scholes equation",
+      "target": "Heat conduction and Brownian motion"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Flux is proportional to the gradient of the density. (EC: ~; PH: y)",
+    "The underlying steps are many, independent and of finite variance. (EC: n; PH: y)",
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (EC: n; PH: ~)",
+    "The quantity is conserved in the interior. (EC: ~; PH: y)",
+    "EC: Returns have heavy tails and jumps, which violates a2.",
+    "EC: Volatility changes over time and with price.",
+    "EC: Hedging is neither continuous nor free.",
+    "PH: Signals propagate at infinite speed in the model.",
+    "PH: Fails far from equilibrium and at scales near the mean free path."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-7a5c88dd07",
+   "source": "CS.O.A4.2",
+   "target": "EN.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "data points",
+      "target": "circuit nodes",
+      "note": "nodes"
+     },
+     {
+      "source": "similarities",
+      "target": "conductances",
+      "note": "weights"
+     },
+     {
+      "source": "soft label or embedding coordinate",
+      "target": "voltage",
+      "note": "potential"
+     },
+     {
+      "source": "label mass passed between neighbours",
+      "target": "current",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Spectral clustering and label propagation",
+      "target": "Resistor-network analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flow on an edge is linear in the potential difference.",
+    "Flow is conserved at every interior node.",
+    "Edge weights are symmetric."
+   ],
+   "breaks_where": [
+    "The network is connected. (CS: ~; EN: y)",
+    "CS: The similarity graph is a modelling choice.",
+    "CS: Directed relations do not fit symmetric weights.",
+    "EN: Diodes and transistors are nonlinear and one-way.",
+    "EN: High frequencies need distributed models."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-7c7b261a5d",
+   "source": "EN.O.A1.3",
+   "target": "PH.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "collapse mechanism",
+      "target": "extensive variables (energy, volume, particle number)",
+      "note": "primal"
+     },
+     {
+      "source": "collapse load",
+      "target": "entropy or energy",
+      "note": "objective"
+     },
+     {
+      "source": "equilibrium and yield conditions",
+      "target": "conservation laws",
+      "note": "constraints"
+     },
+     {
+      "source": "admissible stress field",
+      "target": "intensive variables (temperature, pressure, chemical potential)",
+      "note": "dual"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Limit analysis of structures",
+      "target": "Thermodynamic potentials by Legendre transform"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A constraint qualification holds (for example a strictly feasible point exists)."
+   ],
+   "breaks_where": [
+    "The objective and the feasible set are convex. (EN: y; PH: ~)",
+    "The problem data are known. (EN: ~; PH: y)",
+    "EN: Assumes perfectly plastic material and small displacements.",
+    "EN: Buckling and brittle fracture fall outside the theory.",
+    "PH: Convexity fails inside phase-coexistence regions.",
+    "PH: Small systems and long-range forces can make the potentials non-equivalent."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convex optimisation and its dual",
+    "group": "RC-convex-duality",
+    "note": "Both cells bind RC-convex-duality (mathematics node MSC:90Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-7ea9a6afd3",
+   "source": "EC.O.A4.1",
+   "target": "PH.O.A1.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "capital stock over time",
+      "target": "trajectory of the system",
+      "note": "path"
+     },
+     {
+      "source": "consumption",
+      "target": "velocity along the path",
+      "note": "control"
+     },
+     {
+      "source": "negative discounted utility",
+      "target": "Lagrangian",
+      "note": "running_cost"
+     },
+     {
+      "source": "shadow price of capital",
+      "target": "momentum",
+      "note": "costate"
+     },
+     {
+      "source": "current value of output",
+      "target": "energy",
+      "note": "hamiltonian"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Optimal growth (Ramsey model)",
+      "target": "Principle of stationary action"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Dynamics and cost are smooth."
+   ],
+   "breaks_where": [
+    "End conditions are specified. (EC: ~; PH: y)",
+    "The system is deterministic. (EC: ~; PH: y)",
+    "Enough convexity holds for the stationary path to be a minimum. (EC: y; PH: ~)",
+    "EC: A single planner with known preferences is assumed.",
+    "EC: The horizon is infinite, so the end condition is a limit.",
+    "PH: The action is stationary, not always minimal.",
+    "PH: Friction needs an extended formulation."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Variational principle and optimal control",
+    "group": "RC-variational-control",
+    "note": "Both cells bind RC-variational-control (mathematics node MSC:49-XX).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-8054b5eb54",
+   "source": "EN.O.A5.5",
+   "target": "MS.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "neutrons",
+      "target": "people who adopt or share",
+      "note": "individuals"
+     },
+     {
+      "source": "neutrons from the fission one neutron causes",
+      "target": "people each one persuades",
+      "note": "offspring"
+     },
+     {
+      "source": "effective multiplication factor",
+      "target": "average number persuaded",
+      "note": "mean"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Reactor criticality",
+      "target": "Cascade models of social spread"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Units reproduce independently of one another. (EN: y; MS: n)",
+    "All units share one offspring distribution. (EN: ~; MS: n)",
+    "Nothing limits growth in the phase considered. (EN: ~; MS: ~)",
+    "EN: Delayed neutrons and temperature feedback change the multiplication factor over time.",
+    "EN: Geometry makes neutrons non-identical.",
+    "MS: Adoption often needs several exposures, which breaks independence.",
+    "MS: Influence is very unequal across people."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Branching-process threshold",
+    "group": "RC-branching-threshold",
+    "note": "Both cells bind RC-branching-threshold (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-80af0ce8e6",
+   "source": "EN",
+   "target": "PH.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "plant and controller states",
+      "target": "macroscopic variables",
+      "note": "state"
+     },
+     {
+      "source": "set point",
+      "target": "thermodynamic equilibrium",
+      "note": "equilibrium"
+     },
+     {
+      "source": "designed energy or error function",
+      "target": "free energy, or negative entropy",
+      "note": "function"
+     },
+     {
+      "source": "closed-loop equations",
+      "target": "relaxation processes",
+      "note": "dynamics"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Lyapunov-based control design",
+      "target": "Thermodynamic potentials as stability functions"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A function exists that is positive away from the equilibrium and zero at it.",
+    "The function does not increase along any trajectory."
+   ],
+   "breaks_where": [
+    "The dynamics are well posed (locally Lipschitz). (EN: y; PH: ~)",
+    "The model matches the real system. (EN: ~; PH: y)",
+    "EN: Actuator saturation and delay are often left out of the model.",
+    "EN: The proof covers the model, not the hardware.",
+    "PH: Holds near equilibrium.",
+    "PH: Driven systems need not have such a function."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Stability by a Lyapunov function",
+    "group": "RC-lyapunov-stability",
+    "note": "Both cells bind RC-lyapunov-stability (mathematics node MSC:93Dxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-818e709c14",
+   "source": "CH.O.A4.1",
+   "target": "CS.O.A2.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "chemical species or conformations",
+      "target": "pages",
+      "note": "states"
+     },
+     {
+      "source": "rate constants",
+      "target": "follow a random link or jump at random",
+      "note": "kernel"
+     },
+     {
+      "source": "equilibrium populations",
+      "target": "rank of each page",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Master-equation kinetics of first-order networks",
+      "target": "Link-analysis ranking (PageRank)"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Every state can be reached from every other state. (CH: ~; CS: y)",
+    "Transition probabilities do not change over time. (CH: ~; CS: ~)",
+    "CH: Higher-order reactions make the kernel depend on concentrations.",
+    "CH: Rate constants change with temperature.",
+    "CS: The random jump is added to force a2 and a3.",
+    "CS: Real readers are not memoryless."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-81d4349acb",
+   "source": "BI.O.A4.4",
+   "target": "CS.O.A2.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "nucleotides or amino acids at a site",
+      "target": "pages",
+      "note": "states"
+     },
+     {
+      "source": "substitution rate matrix",
+      "target": "follow a random link or jump at random",
+      "note": "kernel"
+     },
+     {
+      "source": "equilibrium base frequencies",
+      "target": "rank of each page",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Substitution models in phylogenetics",
+      "target": "Link-analysis ranking (PageRank)"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "Every state can be reached from every other state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Transition probabilities do not change over time. (BI: ~; CS: ~)",
+    "BI: Rates vary across sites and lineages.",
+    "BI: Sites are not independent of one another.",
+    "CS: The random jump is added to force a2 and a3.",
+    "CS: Real readers are not memoryless."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-81d5f6c1ac",
+   "source": "EN.O.A3.3",
+   "target": "PH.O.A5.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "temperature",
+      "target": "temperature or particle concentration",
+      "note": "density"
+     },
+     {
+      "source": "thermal diffusivity of the material",
+      "target": "thermal diffusivity or diffusion coefficient",
+      "note": "diffusivity"
+     },
+     {
+      "source": "Fourier's law",
+      "target": "Fourier's or Fick's law",
+      "note": "flux_law"
+     },
+     {
+      "source": "convective or prescribed-flux surfaces",
+      "target": "fixed temperature or insulated wall",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Conduction heat-transfer analysis",
+      "target": "Heat conduction and Brownian motion"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flux is proportional to the gradient of the density.",
+    "The underlying steps are many, independent and of finite variance.",
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (EN: ~; PH: ~)",
+    "EN: Properties vary with temperature in real materials.",
+    "EN: Phase change adds a moving boundary.",
+    "PH: Signals propagate at infinite speed in the model.",
+    "PH: Fails far from equilibrium and at scales near the mean free path."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-82c6dca44c",
+   "source": "CH.O.A5.3",
+   "target": "EN.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "interferogram or free-induction decay",
+      "target": "voltage or current over time",
+      "note": "signal"
+     },
+     {
+      "source": "oscillations at each frequency",
+      "target": "sinusoidal steady states",
+      "note": "basis"
+     },
+     {
+      "source": "absorption or resonance spectrum",
+      "target": "amplitude and phase at each frequency",
+      "note": "spectrum"
+     },
+     {
+      "source": "spectrometer response",
+      "target": "circuit transfer function",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Fourier-transform spectroscopy",
+      "target": "Frequency response and filter design"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The system is invariant under shifts in time or space."
+   ],
+   "breaks_where": [
+    "The system is linear. (CH: y; EN: ~)",
+    "The signal has finite energy, or is sampled above twice its highest frequency. (CH: ~; EN: y)",
+    "CH: Finite acquisition time limits resolution.",
+    "CH: Detector nonlinearity distorts strong signals.",
+    "EN: Saturation and switching devices are nonlinear.",
+    "EN: Component values drift, which breaks strict time invariance."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-84c1304061",
+   "source": "BI.O.A5.2",
+   "target": "CH.O.A4.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "species",
+      "target": "self-replicating molecular species",
+      "note": "types"
+     },
+     {
+      "source": "relative abundances",
+      "target": "mole fractions",
+      "note": "shares"
+     },
+     {
+      "source": "per-capita growth given the other species",
+      "target": "replication rate constant",
+      "note": "fitness"
+     },
+     {
+      "source": "total community growth",
+      "target": "dilution flux",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Lotka–Volterra community dynamics",
+      "target": "Autocatalytic replicator kinetics"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Change is continuous in time."
+   ],
+   "breaks_where": [
+    "The population is large and well mixed. (BI: ~; CH: y)",
+    "Fitness depends only on the current shares. (BI: y; CH: ~)",
+    "No new types appear by mutation or innovation. (BI: y; CH: n)",
+    "BI: The mapping needs interaction terms that are linear in abundance.",
+    "BI: Total abundance is an extra variable with no counterpart.",
+    "CH: Copying errors produce a mutant cloud.",
+    "CH: Constant total concentration must be enforced by the reactor."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-89f7ac0f3f",
+   "source": "CS.O.A2.1",
+   "target": "PH.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "pages",
+      "target": "microstates of the system",
+      "note": "states"
+     },
+     {
+      "source": "follow a random link or jump at random",
+      "target": "proposal and acceptance rule",
+      "note": "kernel"
+     },
+     {
+      "source": "rank of each page",
+      "target": "Boltzmann distribution",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Link-analysis ranking (PageRank)",
+      "target": "Monte Carlo sampling of equilibrium ensembles"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Every state can be reached from every other state. (CS: y; PH: ~)",
+    "Transition probabilities do not change over time. (CS: ~; PH: y)",
+    "CS: The random jump is added to force a2 and a3.",
+    "CS: Real readers are not memoryless.",
+    "PH: Near phase transitions the chain mixes very slowly.",
+    "PH: Energy barriers can make a2 fail in practice."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-8a96fac0c9",
+   "source": "CH.O.A5.3",
+   "target": "EA.O.A2.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "interferogram or free-induction decay",
+      "target": "ground motion over time",
+      "note": "signal"
+     },
+     {
+      "source": "oscillations at each frequency",
+      "target": "sinusoids or normal modes of the Earth",
+      "note": "basis"
+     },
+     {
+      "source": "absorption or resonance spectrum",
+      "target": "energy at each frequency",
+      "note": "spectrum"
+     },
+     {
+      "source": "spectrometer response",
+      "target": "Earth response between source and station",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Fourier-transform spectroscopy",
+      "target": "Spectral analysis of seismic records"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The system is linear. (CH: y; EA: ~)",
+    "The system is invariant under shifts in time or space. (CH: y; EA: ~)",
+    "The signal has finite energy, or is sampled above twice its highest frequency. (CH: ~; EA: ~)",
+    "CH: Finite acquisition time limits resolution.",
+    "CH: Detector nonlinearity distorts strong signals.",
+    "EA: The Earth is laterally varied, so the response is not shift-invariant in space.",
+    "EA: Strong ground motion is nonlinear near the source."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-8ad126a000",
+   "source": "CH.O.A5.3",
+   "target": "PH.O.A1.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "interferogram or free-induction decay",
+      "target": "field amplitude in space and time",
+      "note": "signal"
+     },
+     {
+      "source": "oscillations at each frequency",
+      "target": "plane waves or standing modes",
+      "note": "basis"
+     },
+     {
+      "source": "absorption or resonance spectrum",
+      "target": "mode amplitudes",
+      "note": "spectrum"
+     },
+     {
+      "source": "spectrometer response",
+      "target": "wave equation in a uniform medium",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Fourier-transform spectroscopy",
+      "target": "Normal modes and wave superposition"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The system is linear."
+   ],
+   "breaks_where": [
+    "The system is invariant under shifts in time or space. (CH: y; PH: ~)",
+    "The signal has finite energy, or is sampled above twice its highest frequency. (CH: ~; PH: y)",
+    "CH: Finite acquisition time limits resolution.",
+    "CH: Detector nonlinearity distorts strong signals.",
+    "PH: Non-uniform media couple the modes.",
+    "PH: Large amplitudes bring nonlinear effects."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-8be86f8435",
+   "source": "BI.O.A4.4",
+   "target": "EA.O.A3.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "trees and model parameters",
+      "target": "calendar ages",
+      "note": "hypotheses"
+     },
+     {
+      "source": "tree and rate priors",
+      "target": "stratigraphic order and deposition model",
+      "note": "prior"
+     },
+     {
+      "source": "probability of the sequences given a tree",
+      "target": "measured isotope ratio given the calibration curve",
+      "note": "likelihood"
+     },
+     {
+      "source": "support for each clade",
+      "target": "calibrated age distribution",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Bayesian phylogenetic inference",
+      "target": "Bayesian age modelling and radiocarbon calibration"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The hypotheses are mutually exclusive and exhaustive.",
+    "The prior is stated."
+   ],
+   "breaks_where": [
+    "The likelihood model is correct. (BI: ~; EA: ~)",
+    "Items of evidence multiplied together are conditionally independent. (BI: ~; EA: ~)",
+    "BI: Substitution models are simplified.",
+    "BI: Priors on trees can dominate weak data.",
+    "EA: The calibration curve carries its own uncertainty.",
+    "EA: Reworked or contaminated samples violate the likelihood model."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-98d4f4e615",
+   "source": "EC.O.A4.2",
+   "target": "MS.O.A1.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "unobserved trend, cycle or shock",
+      "target": "property of the world being perceived",
+      "note": "state"
+     },
+     {
+      "source": "linearised structural or time-series model",
+      "target": "expected change between glances",
+      "note": "dynamics"
+     },
+     {
+      "source": "published macroeconomic series",
+      "target": "sensory cues",
+      "note": "observation"
+     },
+     {
+      "source": "shock and measurement-error variances",
+      "target": "cue reliabilities",
+      "note": "noise"
+     },
+     {
+      "source": "filter weight on the data surprise",
+      "target": "weight given to each cue",
+      "note": "gain"
+     }
+    ],
+    "methods": [
+     {
+      "source": "State-space models of economic fluctuations",
+      "target": "Optimal cue integration in perception"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Dynamics and observation are linear in the state. (EC: ~; MS: ~)",
+    "Noises are zero-mean, white and Gaussian with known covariances. (EC: ~; MS: ~)",
+    "The model is correct: no unmodelled bias or drift. (EC: n; MS: ?)",
+    "The state is detectable from the observations. (EC: ~; MS: ?)",
+    "EC: The model itself is contested, so a3 is the weak point.",
+    "EC: Agents react to the estimate, which changes the dynamics.",
+    "MS: The nervous system's internal noise model cannot be read directly.",
+    "MS: Reported departures from optimal weighting are part of the evidence, not noise."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Recursive linear-Gaussian state estimation",
+    "group": "RC-linear-gaussian-estimation",
+    "note": "Both cells bind RC-linear-gaussian-estimation (mathematics node MSC:93Exx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-9d76ef0685",
+   "source": "CH.O.A4.3",
+   "target": "EC.O.A1.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "self-replicating molecular species",
+      "target": "strategies",
+      "note": "types"
+     },
+     {
+      "source": "mole fractions",
+      "target": "fraction of players using each",
+      "note": "shares"
+     },
+     {
+      "source": "replication rate constant",
+      "target": "payoff",
+      "note": "fitness"
+     },
+     {
+      "source": "dilution flux",
+      "target": "average payoff",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Autocatalytic replicator kinetics",
+      "target": "Imitation and learning dynamics in games"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The population is large and well mixed. (CH: y; EC: ~)",
+    "Fitness depends only on the current shares. (CH: ~; EC: ~)",
+    "No new types appear by mutation or innovation. (CH: n; EC: n)",
+    "Change is continuous in time. (CH: y; EC: ~)",
+    "CH: Copying errors produce a mutant cloud.",
+    "CH: Constant total concentration must be enforced by the reactor.",
+    "EC: People innovate and look ahead.",
+    "EC: Payoffs are not copied with reliable fidelity."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-9d8c3c0b84",
+   "source": "CS.O.A4.2",
+   "target": "PH.O.A5.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "distribution of noised data",
+      "target": "temperature or particle concentration",
+      "note": "density"
+     },
+     {
+      "source": "noise schedule",
+      "target": "thermal diffusivity or diffusion coefficient",
+      "note": "diffusivity"
+     },
+     {
+      "source": "forward noising process",
+      "target": "Fourier's or Fick's law",
+      "note": "flux_law"
+     },
+     {
+      "source": "pure noise at the final step",
+      "target": "fixed temperature or insulated wall",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Diffusion generative models",
+      "target": "Heat conduction and Brownian motion"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flux is proportional to the gradient of the density.",
+    "The underlying steps are many, independent and of finite variance.",
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (CS: ~; PH: ~)",
+    "CS: Generation runs the process backwards, which needs a learned score function.",
+    "CS: The guarantee covers the forward process only.",
+    "PH: Signals propagate at infinite speed in the model.",
+    "PH: Fails far from equilibrium and at scales near the mean free path."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-9e3228a04d",
+   "source": "CS.O.A4.2",
+   "target": "PH.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "model weights",
+      "target": "extensive variables (energy, volume, particle number)",
+      "note": "primal"
+     },
+     {
+      "source": "regularised loss",
+      "target": "entropy or energy",
+      "note": "objective"
+     },
+     {
+      "source": "margin or norm limits",
+      "target": "conservation laws",
+      "note": "constraints"
+     },
+     {
+      "source": "per-example multipliers",
+      "target": "intensive variables (temperature, pressure, chemical potential)",
+      "note": "dual"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Dual formulations in model training",
+      "target": "Thermodynamic potentials by Legendre transform"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A constraint qualification holds (for example a strictly feasible point exists).",
+    "The problem data are known."
+   ],
+   "breaks_where": [
+    "The objective and the feasible set are convex. (CS: ~; PH: ~)",
+    "CS: Deep networks are not convex, so the duality guarantee is lost.",
+    "CS: It holds for linear and kernel models.",
+    "PH: Convexity fails inside phase-coexistence regions.",
+    "PH: Small systems and long-range forces can make the potentials non-equivalent."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convex optimisation and its dual",
+    "group": "RC-convex-duality",
+    "note": "Both cells bind RC-convex-duality (mathematics node MSC:90Cxx). Also linked through RC-lyapunov-stability.",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-9e97dfd697",
+   "source": "EA.O.A4.3",
+   "target": "EN",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "atmospheric or ocean fields on a grid",
+      "target": "position, velocity, attitude",
+      "note": "state"
+     },
+     {
+      "source": "numerical forecast model",
+      "target": "kinematic or plant model",
+      "note": "dynamics"
+     },
+     {
+      "source": "station, sonde and satellite measurements",
+      "target": "sensor readings (GPS, inertial, radar)",
+      "note": "observation"
+     },
+     {
+      "source": "background and observation error covariances",
+      "target": "sensor and disturbance covariances",
+      "note": "noise"
+     },
+     {
+      "source": "analysis weights",
+      "target": "Kalman gain",
+      "note": "gain"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Data assimilation in weather and ocean forecasting",
+      "target": "Kalman filter for navigation and tracking"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Dynamics and observation are linear in the state. (EA: n; EN: ~)",
+    "Noises are zero-mean, white and Gaussian with known covariances. (EA: ~; EN: ~)",
+    "The model is correct: no unmodelled bias or drift. (EA: ~; EN: ~)",
+    "The state is detectable from the observations. (EA: ~; EN: y)",
+    "EA: The dynamics are strongly nonlinear.",
+    "EA: The state is too large to hold a full covariance, so ensembles approximate it.",
+    "EN: Sensor bias and outliers violate the noise model.",
+    "EN: Nonlinear plants need the extended or unscented variants, which lose the optimality guarantee."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Recursive linear-Gaussian state estimation",
+    "group": "RC-linear-gaussian-estimation",
+    "note": "Both cells bind RC-linear-gaussian-estimation (mathematics node MSC:93Exx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-a2ab59a6bd",
+   "source": "BI.O.A5.3",
+   "target": "CS.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "allocations of individuals and energy to species",
+      "target": "class labels",
+      "note": "states"
+     },
+     {
+      "source": "totals of species, individuals and metabolic rate",
+      "target": "feature averages matched to the data",
+      "note": "constraints"
+     },
+     {
+      "source": "species-abundance distribution",
+      "target": "predicted class probabilities",
+      "note": "distribution"
+     },
+     {
+      "source": "parameters fixed by the totals",
+      "target": "model weights",
+      "note": "multipliers"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Maximum-entropy theory of ecology",
+      "target": "Logistic and softmax models"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The stated constraints are the only relevant information. (BI: ?; CS: ~)",
+    "The state space and its base measure are well defined. (BI: ~; CS: y)",
+    "The constrained averages are known accurately. (BI: ~; CS: ~)",
+    "BI: Contested: disturbed communities depart from the predictions.",
+    "BI: It gives patterns with no mechanism.",
+    "CS: Feature choice decides what counts as information.",
+    "CS: Finite samples make the constrained averages noisy."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Maximum-entropy inference",
+    "group": "RC-maximum-entropy",
+    "note": "Both cells bind RC-maximum-entropy (mathematics node MSC:94Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-a519ae0e77",
+   "source": "CH.O.A2.1",
+   "target": "CS.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "conjugated atoms",
+      "target": "data points",
+      "note": "nodes"
+     },
+     {
+      "source": "resonance integrals between bonded atoms",
+      "target": "similarities",
+      "note": "weights"
+     },
+     {
+      "source": "orbital coefficient on each atom",
+      "target": "soft label or embedding coordinate",
+      "note": "potential"
+     },
+     {
+      "source": "bond order",
+      "target": "label mass passed between neighbours",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Hückel molecular-orbital theory",
+      "target": "Spectral clustering and label propagation"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flow on an edge is linear in the potential difference.",
+    "Edge weights are symmetric."
+   ],
+   "breaks_where": [
+    "Flow is conserved at every interior node. (CH: ?; CS: y)",
+    "The network is connected. (CH: y; CS: ~)",
+    "CH: The shared structure is the adjacency spectrum, not conserved flow.",
+    "CH: Electron repulsion is ignored.",
+    "CS: The similarity graph is a modelling choice.",
+    "CS: Directed relations do not fit symmetric weights."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-a5ad427cff",
+   "source": "BI.O.A4.1",
+   "target": "MS.O.A1.5",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "probability density of an allele frequency",
+      "target": "distribution of accumulated evidence",
+      "note": "density"
+     },
+     {
+      "source": "sampling variance per generation",
+      "target": "within-trial noise",
+      "note": "diffusivity"
+     },
+     {
+      "source": "random sampling of gametes",
+      "target": "noisy accumulation of evidence",
+      "note": "flux_law"
+     },
+     {
+      "source": "loss or fixation of the allele",
+      "target": "decision thresholds",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Diffusion approximation of genetic drift",
+      "target": "Drift-diffusion model of two-choice decisions"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Flux is proportional to the gradient of the density. (BI: y; MS: ~)",
+    "The underlying steps are many, independent and of finite variance. (BI: y; MS: ~)",
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (BI: n; MS: ~)",
+    "BI: Diffusivity depends on the frequency itself and vanishes at the boundaries.",
+    "BI: Small populations are not well approximated.",
+    "MS: The accumulated evidence is inferred from response times, not observed.",
+    "MS: Fit quality depends on added parameters."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-a5e0622237",
+   "source": "BI.O.A5.5",
+   "target": "CS.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "habitat cells",
+      "target": "data points",
+      "note": "nodes"
+     },
+     {
+      "source": "ease of movement between cells",
+      "target": "similarities",
+      "note": "weights"
+     },
+     {
+      "source": "probability of reaching a target patch",
+      "target": "soft label or embedding coordinate",
+      "note": "potential"
+     },
+     {
+      "source": "expected net movement",
+      "target": "label mass passed between neighbours",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Circuit-theory models of landscape connectivity",
+      "target": "Spectral clustering and label propagation"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Flow on an edge is linear in the potential difference. (BI: ~; CS: y)",
+    "Flow is conserved at every interior node. (BI: ~; CS: y)",
+    "Edge weights are symmetric. (BI: ~; CS: y)",
+    "The network is connected. (BI: y; CS: ~)",
+    "BI: Animals do not move as memoryless random walkers.",
+    "BI: Movement is often easier one way than the other.",
+    "CS: The similarity graph is a modelling choice.",
+    "CS: Directed relations do not fit symmetric weights."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-a7d4e69b80",
+   "source": "BI.O.A4.1",
+   "target": "PH.O.A5.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "probability density of an allele frequency",
+      "target": "temperature or particle concentration",
+      "note": "density"
+     },
+     {
+      "source": "sampling variance per generation",
+      "target": "thermal diffusivity or diffusion coefficient",
+      "note": "diffusivity"
+     },
+     {
+      "source": "random sampling of gametes",
+      "target": "Fourier's or Fick's law",
+      "note": "flux_law"
+     },
+     {
+      "source": "loss or fixation of the allele",
+      "target": "fixed temperature or insulated wall",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Diffusion approximation of genetic drift",
+      "target": "Heat conduction and Brownian motion"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flux is proportional to the gradient of the density.",
+    "The underlying steps are many, independent and of finite variance.",
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (BI: n; PH: ~)",
+    "BI: Diffusivity depends on the frequency itself and vanishes at the boundaries.",
+    "BI: Small populations are not well approximated.",
+    "PH: Signals propagate at infinite speed in the model.",
+    "PH: Fails far from equilibrium and at scales near the mean free path."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-ae40b96265",
+   "source": "EA.O.A5.1",
+   "target": "PH.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "assignments of trips to origin–destination pairs",
+      "target": "microstates",
+      "note": "states"
+     },
+     {
+      "source": "trip totals and total travel cost",
+      "target": "mean energy",
+      "note": "constraints"
+     },
+     {
+      "source": "trip matrix",
+      "target": "Boltzmann distribution",
+      "note": "distribution"
+     },
+     {
+      "source": "distance-decay parameter",
+      "target": "inverse temperature",
+      "note": "multipliers"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Entropy-maximising spatial interaction models",
+      "target": "Canonical ensemble"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The state space and its base measure are well defined."
+   ],
+   "breaks_where": [
+    "The stated constraints are the only relevant information. (EA: ~; PH: y)",
+    "The constrained averages are known accurately. (EA: ~; PH: y)",
+    "EA: Travellers are not interchangeable particles.",
+    "EA: The model describes a pattern and does not explain choices.",
+    "PH: Applies at equilibrium only.",
+    "PH: Systems that do not explore their state space violate it."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Maximum-entropy inference",
+    "group": "RC-maximum-entropy",
+    "note": "Both cells bind RC-maximum-entropy (mathematics node MSC:94Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-aed609e231",
+   "source": "LA",
+   "target": "MD.O.A3.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "prosecution and defence propositions",
+      "target": "disease present or absent",
+      "note": "hypotheses"
+     },
+     {
+      "source": "other evidence in the case",
+      "target": "prevalence or pre-test probability",
+      "note": "prior"
+     },
+     {
+      "source": "probability of the forensic finding under each proposition",
+      "target": "sensitivity and specificity",
+      "note": "likelihood"
+     },
+     {
+      "source": "question for the court",
+      "target": "post-test probability",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Likelihood ratios for forensic evidence",
+      "target": "Predictive value of a diagnostic test"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The hypotheses are mutually exclusive and exhaustive. (LA: ~; MD: y)",
+    "The likelihood model is correct. (LA: ~; MD: ~)",
+    "The prior is stated. (LA: n; MD: ~)",
+    "Items of evidence multiplied together are conditionally independent. (LA: ~; MD: ~)",
+    "LA: Contested: courts differ on whether numbers may be put to a jury.",
+    "LA: The standard of proof is a legal warrant, not a probability threshold.",
+    "MD: Sensitivity and specificity shift with the patient population.",
+    "MD: Repeated tests are rarely independent."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-b06a71ff79",
+   "source": "CH.O.A2.3",
+   "target": "EA.O.A2.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "electron density in the unit cell",
+      "target": "ground motion over time",
+      "note": "signal"
+     },
+     {
+      "source": "plane waves indexed by reciprocal-lattice vectors",
+      "target": "sinusoids or normal modes of the Earth",
+      "note": "basis"
+     },
+     {
+      "source": "structure factors",
+      "target": "energy at each frequency",
+      "note": "spectrum"
+     },
+     {
+      "source": "diffraction by a periodic crystal",
+      "target": "Earth response between source and station",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "X-ray crystallography",
+      "target": "Spectral analysis of seismic records"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The system is linear. (CH: y; EA: ~)",
+    "The system is invariant under shifts in time or space. (CH: y; EA: ~)",
+    "The signal has finite energy, or is sampled above twice its highest frequency. (CH: ~; EA: ~)",
+    "CH: Only magnitudes are measured, so the phases are lost.",
+    "CH: Disorder and multiple scattering break the simple transform.",
+    "EA: The Earth is laterally varied, so the response is not shift-invariant in space.",
+    "EA: Strong ground motion is nonlinear near the source."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-b1bdfe1298",
+   "source": "CH.O.A2.3",
+   "target": "PH.O.A1.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "electron density in the unit cell",
+      "target": "field amplitude in space and time",
+      "note": "signal"
+     },
+     {
+      "source": "plane waves indexed by reciprocal-lattice vectors",
+      "target": "plane waves or standing modes",
+      "note": "basis"
+     },
+     {
+      "source": "structure factors",
+      "target": "mode amplitudes",
+      "note": "spectrum"
+     },
+     {
+      "source": "diffraction by a periodic crystal",
+      "target": "wave equation in a uniform medium",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "X-ray crystallography",
+      "target": "Normal modes and wave superposition"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The system is linear."
+   ],
+   "breaks_where": [
+    "The system is invariant under shifts in time or space. (CH: y; PH: ~)",
+    "The signal has finite energy, or is sampled above twice its highest frequency. (CH: ~; PH: y)",
+    "CH: Only magnitudes are measured, so the phases are lost.",
+    "CH: Disorder and multiple scattering break the simple transform.",
+    "PH: Non-uniform media couple the modes.",
+    "PH: Large amplitudes bring nonlinear effects."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-b295109cb1",
+   "source": "CH.O.A4.3",
+   "target": "CS.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "self-replicating molecular species",
+      "target": "experts or actions",
+      "note": "types"
+     },
+     {
+      "source": "mole fractions",
+      "target": "weights",
+      "note": "shares"
+     },
+     {
+      "source": "replication rate constant",
+      "target": "reward in the round",
+      "note": "fitness"
+     },
+     {
+      "source": "dilution flux",
+      "target": "weighted average reward",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Autocatalytic replicator kinetics",
+      "target": "Multiplicative-weights updating"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The population is large and well mixed."
+   ],
+   "breaks_where": [
+    "Fitness depends only on the current shares. (CH: ~; CS: n)",
+    "No new types appear by mutation or innovation. (CH: n; CS: y)",
+    "Change is continuous in time. (CH: y; CS: n)",
+    "CH: Copying errors produce a mutant cloud.",
+    "CH: Constant total concentration must be enforced by the reactor.",
+    "CS: Updates are discrete steps.",
+    "CS: Rewards may be set by an adversary, not by the weights."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-b5309b6715",
+   "source": "BI.O.A5.2",
+   "target": "PH.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "species abundances",
+      "target": "macroscopic variables",
+      "note": "state"
+     },
+     {
+      "source": "coexistence point",
+      "target": "thermodynamic equilibrium",
+      "note": "equilibrium"
+     },
+     {
+      "source": "Volterra's logarithmic function",
+      "target": "free energy, or negative entropy",
+      "note": "function"
+     },
+     {
+      "source": "Lotka–Volterra equations",
+      "target": "relaxation processes",
+      "note": "dynamics"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Stability of interacting-species models",
+      "target": "Thermodynamic potentials as stability functions"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A function exists that is positive away from the equilibrium and zero at it."
+   ],
+   "breaks_where": [
+    "The function does not increase along any trajectory. (BI: ~; PH: y)",
+    "The dynamics are well posed (locally Lipschitz). (BI: y; PH: ~)",
+    "The model matches the real system. (BI: n; PH: y)",
+    "BI: Real communities are noisy, seasonal and spatial.",
+    "BI: The function is known only for special interaction structures.",
+    "PH: Holds near equilibrium.",
+    "PH: Driven systems need not have such a function."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Stability by a Lyapunov function",
+    "group": "RC-lyapunov-stability",
+    "note": "Both cells bind RC-lyapunov-stability (mathematics node MSC:93Dxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-b657c0a58c",
+   "source": "EC.O.A4.1",
+   "target": "EN",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "capital stock over time",
+      "target": "plant state over time",
+      "note": "path"
+     },
+     {
+      "source": "consumption",
+      "target": "actuator command",
+      "note": "control"
+     },
+     {
+      "source": "negative discounted utility",
+      "target": "quadratic penalty on error and effort",
+      "note": "running_cost"
+     },
+     {
+      "source": "shadow price of capital",
+      "target": "adjoint state",
+      "note": "costate"
+     },
+     {
+      "source": "current value of output",
+      "target": "control Hamiltonian",
+      "note": "hamiltonian"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Optimal growth (Ramsey model)",
+      "target": "Optimal control (linear-quadratic regulator)"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Dynamics and cost are smooth.",
+    "Enough convexity holds for the stationary path to be a minimum."
+   ],
+   "breaks_where": [
+    "End conditions are specified. (EC: ~; EN: y)",
+    "The system is deterministic. (EC: ~; EN: ~)",
+    "EC: A single planner with known preferences is assumed.",
+    "EC: The horizon is infinite, so the end condition is a limit.",
+    "EN: Actuator limits make the true problem constrained.",
+    "EN: Disturbances make the system stochastic."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Variational principle and optimal control",
+    "group": "RC-variational-control",
+    "note": "Both cells bind RC-variational-control (mathematics node MSC:49-XX).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-ba3fb6ffb1",
+   "source": "CS.O.A2.1",
+   "target": "IS.O.A4.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "pages",
+      "target": "journals",
+      "note": "states"
+     },
+     {
+      "source": "follow a random link or jump at random",
+      "target": "follow a random citation",
+      "note": "kernel"
+     },
+     {
+      "source": "rank of each page",
+      "target": "influence score",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Link-analysis ranking (PageRank)",
+      "target": "Citation-network ranking of journals"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Every state can be reached from every other state. (CS: y; IS: ~)",
+    "Transition probabilities do not change over time. (CS: ~; IS: n)",
+    "CS: The random jump is added to force a2 and a3.",
+    "CS: Real readers are not memoryless.",
+    "IS: Citation practice differs between fields and changes over time.",
+    "IS: The score measures attention, not quality."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-bb065854e5",
+   "source": "EA.O.A2.3",
+   "target": "EN.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "ground motion over time",
+      "target": "voltage or current over time",
+      "note": "signal"
+     },
+     {
+      "source": "sinusoids or normal modes of the Earth",
+      "target": "sinusoidal steady states",
+      "note": "basis"
+     },
+     {
+      "source": "energy at each frequency",
+      "target": "amplitude and phase at each frequency",
+      "note": "spectrum"
+     },
+     {
+      "source": "Earth response between source and station",
+      "target": "circuit transfer function",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Spectral analysis of seismic records",
+      "target": "Frequency response and filter design"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The system is linear. (EA: ~; EN: ~)",
+    "The system is invariant under shifts in time or space. (EA: ~; EN: y)",
+    "The signal has finite energy, or is sampled above twice its highest frequency. (EA: ~; EN: y)",
+    "EA: The Earth is laterally varied, so the response is not shift-invariant in space.",
+    "EA: Strong ground motion is nonlinear near the source.",
+    "EN: Saturation and switching devices are nonlinear.",
+    "EN: Component values drift, which breaks strict time invariance."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-becb2e218c",
+   "source": "CH.O.A2.3",
+   "target": "CH.O.A5.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "electron density in the unit cell",
+      "target": "interferogram or free-induction decay",
+      "note": "signal"
+     },
+     {
+      "source": "plane waves indexed by reciprocal-lattice vectors",
+      "target": "oscillations at each frequency",
+      "note": "basis"
+     },
+     {
+      "source": "structure factors",
+      "target": "absorption or resonance spectrum",
+      "note": "spectrum"
+     },
+     {
+      "source": "diffraction by a periodic crystal",
+      "target": "spectrometer response",
+      "note": "system"
+     }
+    ],
+    "methods": [
+     {
+      "source": "X-ray crystallography",
+      "target": "Fourier-transform spectroscopy"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The system is linear.",
+    "The system is invariant under shifts in time or space."
+   ],
+   "breaks_where": [
+    "The signal has finite energy, or is sampled above twice its highest frequency. (CH: ~; CH: ~)",
+    "CH: Only magnitudes are measured, so the phases are lost.",
+    "CH: Disorder and multiple scattering break the simple transform.",
+    "CH: Finite acquisition time limits resolution.",
+    "CH: Detector nonlinearity distorts strong signals."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Fourier analysis of shift-invariant linear systems",
+    "group": "RC-fourier-diagonalisation",
+    "note": "Both cells bind RC-fourier-diagonalisation (mathematics node MSC:42Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-c11255fc88",
+   "source": "BI.O.A4.1",
+   "target": "EN.O.A5.5",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "copies of the mutant allele",
+      "target": "neutrons",
+      "note": "individuals"
+     },
+     {
+      "source": "copies left in the next generation",
+      "target": "neutrons from the fission one neutron causes",
+      "note": "offspring"
+     },
+     {
+      "source": "one plus the selective advantage",
+      "target": "effective multiplication factor",
+      "note": "mean"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Survival probability of a new beneficial mutation",
+      "target": "Reactor criticality"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Units reproduce independently of one another."
+   ],
+   "breaks_where": [
+    "All units share one offspring distribution. (BI: y; EN: ~)",
+    "Nothing limits growth in the phase considered. (BI: ~; EN: ~)",
+    "BI: Valid while the mutant is rare.",
+    "BI: Linked selection breaks independence.",
+    "EN: Delayed neutrons and temperature feedback change the multiplication factor over time.",
+    "EN: Geometry makes neutrons non-identical."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Branching-process threshold",
+    "group": "RC-branching-threshold",
+    "note": "Both cells bind RC-branching-threshold (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-c341302517",
+   "source": "BI.O.A5.5",
+   "target": "EN.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "habitat cells",
+      "target": "circuit nodes",
+      "note": "nodes"
+     },
+     {
+      "source": "ease of movement between cells",
+      "target": "conductances",
+      "note": "weights"
+     },
+     {
+      "source": "probability of reaching a target patch",
+      "target": "voltage",
+      "note": "potential"
+     },
+     {
+      "source": "expected net movement",
+      "target": "current",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Circuit-theory models of landscape connectivity",
+      "target": "Resistor-network analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The network is connected."
+   ],
+   "breaks_where": [
+    "Flow on an edge is linear in the potential difference. (BI: ~; EN: y)",
+    "Flow is conserved at every interior node. (BI: ~; EN: y)",
+    "Edge weights are symmetric. (BI: ~; EN: y)",
+    "BI: Animals do not move as memoryless random walkers.",
+    "BI: Movement is often easier one way than the other.",
+    "EN: Diodes and transistors are nonlinear and one-way.",
+    "EN: High frequencies need distributed models."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-c3e835320d",
+   "source": "EA.O.A4.3",
+   "target": "MS.O.A1.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "atmospheric or ocean fields on a grid",
+      "target": "property of the world being perceived",
+      "note": "state"
+     },
+     {
+      "source": "numerical forecast model",
+      "target": "expected change between glances",
+      "note": "dynamics"
+     },
+     {
+      "source": "station, sonde and satellite measurements",
+      "target": "sensory cues",
+      "note": "observation"
+     },
+     {
+      "source": "background and observation error covariances",
+      "target": "cue reliabilities",
+      "note": "noise"
+     },
+     {
+      "source": "analysis weights",
+      "target": "weight given to each cue",
+      "note": "gain"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Data assimilation in weather and ocean forecasting",
+      "target": "Optimal cue integration in perception"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Dynamics and observation are linear in the state. (EA: n; MS: ~)",
+    "Noises are zero-mean, white and Gaussian with known covariances. (EA: ~; MS: ~)",
+    "The model is correct: no unmodelled bias or drift. (EA: ~; MS: ?)",
+    "The state is detectable from the observations. (EA: ~; MS: ?)",
+    "EA: The dynamics are strongly nonlinear.",
+    "EA: The state is too large to hold a full covariance, so ensembles approximate it.",
+    "MS: The nervous system's internal noise model cannot be read directly.",
+    "MS: Reported departures from optimal weighting are part of the evidence, not noise."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Recursive linear-Gaussian state estimation",
+    "group": "RC-linear-gaussian-estimation",
+    "note": "Both cells bind RC-linear-gaussian-estimation (mathematics node MSC:93Exx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-c7b6699b59",
+   "source": "EN.O.A3.3",
+   "target": "MS.O.A1.5",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "temperature",
+      "target": "distribution of accumulated evidence",
+      "note": "density"
+     },
+     {
+      "source": "thermal diffusivity of the material",
+      "target": "within-trial noise",
+      "note": "diffusivity"
+     },
+     {
+      "source": "Fourier's law",
+      "target": "noisy accumulation of evidence",
+      "note": "flux_law"
+     },
+     {
+      "source": "convective or prescribed-flux surfaces",
+      "target": "decision thresholds",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Conduction heat-transfer analysis",
+      "target": "Drift-diffusion model of two-choice decisions"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Flux is proportional to the gradient of the density. (EN: y; MS: ~)",
+    "The underlying steps are many, independent and of finite variance. (EN: y; MS: ~)",
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (EN: ~; MS: ~)",
+    "EN: Properties vary with temperature in real materials.",
+    "EN: Phase change adds a moving boundary.",
+    "MS: The accumulated evidence is inferred from response times, not observed.",
+    "MS: Fit quality depends on added parameters."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-cae6e66a7e",
+   "source": "CS.O.A4.1",
+   "target": "EC.O.A1.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "experts or actions",
+      "target": "strategies",
+      "note": "types"
+     },
+     {
+      "source": "weights",
+      "target": "fraction of players using each",
+      "note": "shares"
+     },
+     {
+      "source": "reward in the round",
+      "target": "payoff",
+      "note": "fitness"
+     },
+     {
+      "source": "weighted average reward",
+      "target": "average payoff",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Multiplicative-weights updating",
+      "target": "Imitation and learning dynamics in games"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The population is large and well mixed. (CS: y; EC: ~)",
+    "Fitness depends only on the current shares. (CS: n; EC: ~)",
+    "No new types appear by mutation or innovation. (CS: y; EC: n)",
+    "Change is continuous in time. (CS: n; EC: ~)",
+    "CS: Updates are discrete steps.",
+    "CS: Rewards may be set by an adversary, not by the weights.",
+    "EC: People innovate and look ahead.",
+    "EC: Payoffs are not copied with reliable fidelity."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-ce4e55e0cf",
+   "source": "EC.O.A2.1",
+   "target": "PH.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "allocation of goods and inputs",
+      "target": "extensive variables (energy, volume, particle number)",
+      "note": "primal"
+     },
+     {
+      "source": "welfare or profit",
+      "target": "entropy or energy",
+      "note": "objective"
+     },
+     {
+      "source": "resource and technology limits",
+      "target": "conservation laws",
+      "note": "constraints"
+     },
+     {
+      "source": "prices",
+      "target": "intensive variables (temperature, pressure, chemical potential)",
+      "note": "dual"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Shadow prices and competitive equilibrium prices",
+      "target": "Thermodynamic potentials by Legendre transform"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A constraint qualification holds (for example a strictly feasible point exists)."
+   ],
+   "breaks_where": [
+    "The objective and the feasible set are convex. (EC: ~; PH: ~)",
+    "The problem data are known. (EC: ~; PH: y)",
+    "EC: Increasing returns and indivisible goods break convexity.",
+    "EC: Externalities mean prices no longer equal marginal social value.",
+    "PH: Convexity fails inside phase-coexistence regions.",
+    "PH: Small systems and long-range forces can make the potentials non-equivalent."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convex optimisation and its dual",
+    "group": "RC-convex-duality",
+    "note": "Both cells bind RC-convex-duality (mathematics node MSC:90Cxx). Also linked through RC-lyapunov-stability.",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-d150e30599",
+   "source": "BI.O.A5.2",
+   "target": "CS.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "species abundances",
+      "target": "model weights",
+      "note": "state"
+     },
+     {
+      "source": "coexistence point",
+      "target": "minimiser of the loss",
+      "note": "equilibrium"
+     },
+     {
+      "source": "Volterra's logarithmic function",
+      "target": "loss or distance to the minimiser",
+      "note": "function"
+     },
+     {
+      "source": "Lotka–Volterra equations",
+      "target": "gradient update rule",
+      "note": "dynamics"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Stability of interacting-species models",
+      "target": "Convergence proofs for training algorithms"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The dynamics are well posed (locally Lipschitz)."
+   ],
+   "breaks_where": [
+    "A function exists that is positive away from the equilibrium and zero at it. (BI: y; CS: ~)",
+    "The function does not increase along any trajectory. (BI: ~; CS: ~)",
+    "The model matches the real system. (BI: n; CS: y)",
+    "BI: Real communities are noisy, seasonal and spatial.",
+    "BI: The function is known only for special interaction structures.",
+    "CS: Stochastic gradients make the function decrease only on average.",
+    "CS: Non-convex losses have many rest points."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Stability by a Lyapunov function",
+    "group": "RC-lyapunov-stability",
+    "note": "Both cells bind RC-lyapunov-stability (mathematics node MSC:93Dxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-d51da9c8b3",
+   "source": "EA.O.A3.3",
+   "target": "MD.O.A3.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "calendar ages",
+      "target": "disease present or absent",
+      "note": "hypotheses"
+     },
+     {
+      "source": "stratigraphic order and deposition model",
+      "target": "prevalence or pre-test probability",
+      "note": "prior"
+     },
+     {
+      "source": "measured isotope ratio given the calibration curve",
+      "target": "sensitivity and specificity",
+      "note": "likelihood"
+     },
+     {
+      "source": "calibrated age distribution",
+      "target": "post-test probability",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Bayesian age modelling and radiocarbon calibration",
+      "target": "Predictive value of a diagnostic test"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The hypotheses are mutually exclusive and exhaustive."
+   ],
+   "breaks_where": [
+    "The likelihood model is correct. (EA: ~; MD: ~)",
+    "The prior is stated. (EA: y; MD: ~)",
+    "Items of evidence multiplied together are conditionally independent. (EA: ~; MD: ~)",
+    "EA: The calibration curve carries its own uncertainty.",
+    "EA: Reworked or contaminated samples violate the likelihood model.",
+    "MD: Sensitivity and specificity shift with the patient population.",
+    "MD: Repeated tests are rarely independent."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-d896d048a5",
+   "source": "BI.O.A4.1",
+   "target": "EN.O.A3.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "probability density of an allele frequency",
+      "target": "temperature",
+      "note": "density"
+     },
+     {
+      "source": "sampling variance per generation",
+      "target": "thermal diffusivity of the material",
+      "note": "diffusivity"
+     },
+     {
+      "source": "random sampling of gametes",
+      "target": "Fourier's law",
+      "note": "flux_law"
+     },
+     {
+      "source": "loss or fixation of the allele",
+      "target": "convective or prescribed-flux surfaces",
+      "note": "boundary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Diffusion approximation of genetic drift",
+      "target": "Conduction heat-transfer analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Flux is proportional to the gradient of the density.",
+    "The underlying steps are many, independent and of finite variance.",
+    "The quantity is conserved in the interior."
+   ],
+   "breaks_where": [
+    "Diffusivity is constant or varies smoothly and does not depend on the density. (BI: n; EN: ~)",
+    "BI: Diffusivity depends on the frequency itself and vanishes at the boundaries.",
+    "BI: Small populations are not well approximated.",
+    "EN: Properties vary with temperature in real materials.",
+    "EN: Phase change adds a moving boundary."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Diffusion (parabolic transport)",
+    "group": "RC-diffusion",
+    "note": "Both cells bind RC-diffusion (mathematics node MSC:35Kxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-dc1cb4f9e0",
+   "source": "CH.O.A2.1",
+   "target": "EN.O.A2.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "conjugated atoms",
+      "target": "pipe junctions",
+      "note": "nodes"
+     },
+     {
+      "source": "resonance integrals between bonded atoms",
+      "target": "pipe conductances",
+      "note": "weights"
+     },
+     {
+      "source": "orbital coefficient on each atom",
+      "target": "pressure head",
+      "note": "potential"
+     },
+     {
+      "source": "bond order",
+      "target": "volumetric flow",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Hückel molecular-orbital theory",
+      "target": "Pipe-network analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "Edge weights are symmetric.",
+    "The network is connected."
+   ],
+   "breaks_where": [
+    "Flow on an edge is linear in the potential difference. (CH: y; EN: n)",
+    "Flow is conserved at every interior node. (CH: ?; EN: y)",
+    "CH: The shared structure is the adjacency spectrum, not conserved flow.",
+    "CH: Electron repulsion is ignored.",
+    "EN: Turbulent head loss grows roughly with the square of flow.",
+    "EN: The network must be solved by iteration."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-dc295e4dab",
+   "source": "BI.O.A4.1",
+   "target": "EC.O.A1.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "genotypes or strategies",
+      "target": "strategies",
+      "note": "types"
+     },
+     {
+      "source": "frequencies in the population",
+      "target": "fraction of players using each",
+      "note": "shares"
+     },
+     {
+      "source": "reproductive success",
+      "target": "payoff",
+      "note": "fitness"
+     },
+     {
+      "source": "population mean fitness",
+      "target": "average payoff",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Frequency-dependent natural selection",
+      "target": "Imitation and learning dynamics in games"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The population is large and well mixed. (BI: ~; EC: ~)",
+    "Fitness depends only on the current shares. (BI: ~; EC: ~)",
+    "No new types appear by mutation or innovation. (BI: n; EC: n)",
+    "Change is continuous in time. (BI: ~; EC: ~)",
+    "BI: Mutation and recombination create new types.",
+    "BI: Small populations drift.",
+    "BI: Spatial structure changes the outcome.",
+    "EC: People innovate and look ahead.",
+    "EC: Payoffs are not copied with reliable fidelity."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-dde09e050b",
+   "source": "CS.O.A4.2",
+   "target": "EN.O.A1.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "model weights",
+      "target": "collapse mechanism",
+      "note": "primal"
+     },
+     {
+      "source": "regularised loss",
+      "target": "collapse load",
+      "note": "objective"
+     },
+     {
+      "source": "margin or norm limits",
+      "target": "equilibrium and yield conditions",
+      "note": "constraints"
+     },
+     {
+      "source": "per-example multipliers",
+      "target": "admissible stress field",
+      "note": "dual"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Dual formulations in model training",
+      "target": "Limit analysis of structures"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A constraint qualification holds (for example a strictly feasible point exists)."
+   ],
+   "breaks_where": [
+    "The objective and the feasible set are convex. (CS: ~; EN: y)",
+    "The problem data are known. (CS: y; EN: ~)",
+    "CS: Deep networks are not convex, so the duality guarantee is lost.",
+    "CS: It holds for linear and kernel models.",
+    "EN: Assumes perfectly plastic material and small displacements.",
+    "EN: Buckling and brittle fracture fall outside the theory."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convex optimisation and its dual",
+    "group": "RC-convex-duality",
+    "note": "Both cells bind RC-convex-duality (mathematics node MSC:90Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-de2e6045f4",
+   "source": "BI.O.A4.4",
+   "target": "IS.O.A4.3",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "nucleotides or amino acids at a site",
+      "target": "journals",
+      "note": "states"
+     },
+     {
+      "source": "substitution rate matrix",
+      "target": "follow a random citation",
+      "note": "kernel"
+     },
+     {
+      "source": "equilibrium base frequencies",
+      "target": "influence score",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Substitution models in phylogenetics",
+      "target": "Citation-network ranking of journals"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Every state can be reached from every other state. (BI: y; IS: ~)",
+    "Transition probabilities do not change over time. (BI: ~; IS: n)",
+    "BI: Rates vary across sites and lineages.",
+    "BI: Sites are not independent of one another.",
+    "IS: Citation practice differs between fields and changes over time.",
+    "IS: The score measures attention, not quality."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-df22675c91",
+   "source": "CS.O.A4.2",
+   "target": "EN",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "model weights",
+      "target": "plant and controller states",
+      "note": "state"
+     },
+     {
+      "source": "minimiser of the loss",
+      "target": "set point",
+      "note": "equilibrium"
+     },
+     {
+      "source": "loss or distance to the minimiser",
+      "target": "designed energy or error function",
+      "note": "function"
+     },
+     {
+      "source": "gradient update rule",
+      "target": "closed-loop equations",
+      "note": "dynamics"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Convergence proofs for training algorithms",
+      "target": "Lyapunov-based control design"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The dynamics are well posed (locally Lipschitz)."
+   ],
+   "breaks_where": [
+    "A function exists that is positive away from the equilibrium and zero at it. (CS: ~; EN: y)",
+    "The function does not increase along any trajectory. (CS: ~; EN: y)",
+    "The model matches the real system. (CS: y; EN: ~)",
+    "CS: Stochastic gradients make the function decrease only on average.",
+    "CS: Non-convex losses have many rest points.",
+    "EN: Actuator saturation and delay are often left out of the model.",
+    "EN: The proof covers the model, not the hardware."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Stability by a Lyapunov function",
+    "group": "RC-lyapunov-stability",
+    "note": "Both cells bind RC-lyapunov-stability (mathematics node MSC:93Dxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-e1e631e035",
+   "source": "BI.O.A4.1",
+   "target": "MD.O.A5.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "copies of the mutant allele",
+      "target": "infected people",
+      "note": "individuals"
+     },
+     {
+      "source": "copies left in the next generation",
+      "target": "people each one infects",
+      "note": "offspring"
+     },
+     {
+      "source": "one plus the selective advantage",
+      "target": "basic reproduction number",
+      "note": "mean"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Survival probability of a new beneficial mutation",
+      "target": "Epidemic threshold (basic reproduction number)"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Units reproduce independently of one another. (BI: y; MD: ~)",
+    "All units share one offspring distribution. (BI: y; MD: n)",
+    "Nothing limits growth in the phase considered. (BI: ~; MD: ~)",
+    "BI: Valid while the mutant is rare.",
+    "BI: Linked selection breaks independence.",
+    "MD: Infectiousness varies widely between people.",
+    "MD: Susceptibles run out, so a3 holds only early.",
+    "MD: Contact networks are clustered."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Branching-process threshold",
+    "group": "RC-branching-threshold",
+    "note": "Both cells bind RC-branching-threshold (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-e4d4476009",
+   "source": "BI.O.A4.4",
+   "target": "LA",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "trees and model parameters",
+      "target": "prosecution and defence propositions",
+      "note": "hypotheses"
+     },
+     {
+      "source": "tree and rate priors",
+      "target": "other evidence in the case",
+      "note": "prior"
+     },
+     {
+      "source": "probability of the sequences given a tree",
+      "target": "probability of the forensic finding under each proposition",
+      "note": "likelihood"
+     },
+     {
+      "source": "support for each clade",
+      "target": "question for the court",
+      "note": "posterior"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Bayesian phylogenetic inference",
+      "target": "Likelihood ratios for forensic evidence"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The hypotheses are mutually exclusive and exhaustive. (BI: y; LA: ~)",
+    "The likelihood model is correct. (BI: ~; LA: ~)",
+    "The prior is stated. (BI: y; LA: n)",
+    "Items of evidence multiplied together are conditionally independent. (BI: ~; LA: ~)",
+    "BI: Substitution models are simplified.",
+    "BI: Priors on trees can dominate weak data.",
+    "LA: Contested: courts differ on whether numbers may be put to a jury.",
+    "LA: The standard of proof is a legal warrant, not a probability threshold."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Bayesian updating",
+    "group": "RC-bayes-update",
+    "note": "Both cells bind RC-bayes-update (mathematics node MSC:62Fxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-e6cce7ea71",
+   "source": "CS.O.A4.2",
+   "target": "EC.O.A2.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "model weights",
+      "target": "allocation of goods and inputs",
+      "note": "primal"
+     },
+     {
+      "source": "regularised loss",
+      "target": "welfare or profit",
+      "note": "objective"
+     },
+     {
+      "source": "margin or norm limits",
+      "target": "resource and technology limits",
+      "note": "constraints"
+     },
+     {
+      "source": "per-example multipliers",
+      "target": "prices",
+      "note": "dual"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Dual formulations in model training",
+      "target": "Shadow prices and competitive equilibrium prices"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A constraint qualification holds (for example a strictly feasible point exists)."
+   ],
+   "breaks_where": [
+    "The objective and the feasible set are convex. (CS: ~; EC: ~)",
+    "The problem data are known. (CS: y; EC: ~)",
+    "CS: Deep networks are not convex, so the duality guarantee is lost.",
+    "CS: It holds for linear and kernel models.",
+    "EC: Increasing returns and indivisible goods break convexity.",
+    "EC: Externalities mean prices no longer equal marginal social value."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convex optimisation and its dual",
+    "group": "RC-convex-duality",
+    "note": "Both cells bind RC-convex-duality (mathematics node MSC:90Cxx). Also linked through RC-lyapunov-stability.",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-ec72063372",
+   "source": "BI.O.A5.5",
+   "target": "EN.O.A2.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "habitat cells",
+      "target": "pipe junctions",
+      "note": "nodes"
+     },
+     {
+      "source": "ease of movement between cells",
+      "target": "pipe conductances",
+      "note": "weights"
+     },
+     {
+      "source": "probability of reaching a target patch",
+      "target": "pressure head",
+      "note": "potential"
+     },
+     {
+      "source": "expected net movement",
+      "target": "volumetric flow",
+      "note": "flow"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Circuit-theory models of landscape connectivity",
+      "target": "Pipe-network analysis"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The network is connected."
+   ],
+   "breaks_where": [
+    "Flow on an edge is linear in the potential difference. (BI: ~; EN: n)",
+    "Flow is conserved at every interior node. (BI: ~; EN: y)",
+    "Edge weights are symmetric. (BI: ~; EN: y)",
+    "BI: Animals do not move as memoryless random walkers.",
+    "BI: Movement is often easier one way than the other.",
+    "EN: Turbulent head loss grows roughly with the square of flow.",
+    "EN: The network must be solved by iteration."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Linear flow on a network (graph Laplacian)",
+    "group": "RC-network-laplacian",
+    "note": "Both cells bind RC-network-laplacian (mathematics node MSC:05Cxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-f360be808c",
+   "source": "BI.O.A3.2",
+   "target": "PH.O.A1.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "body size or reserves over the lifetime",
+      "target": "trajectory of the system",
+      "note": "path"
+     },
+     {
+      "source": "share of energy given to growth or reproduction",
+      "target": "velocity along the path",
+      "note": "control"
+     },
+     {
+      "source": "negative expected reproductive output",
+      "target": "Lagrangian",
+      "note": "running_cost"
+     },
+     {
+      "source": "reproductive value of a unit of size",
+      "target": "momentum",
+      "note": "costate"
+     },
+     {
+      "source": "current fitness gain",
+      "target": "energy",
+      "note": "hamiltonian"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Optimal life-history allocation",
+      "target": "Principle of stationary action"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "Dynamics and cost are smooth. (BI: ~; PH: y)",
+    "End conditions are specified. (BI: ~; PH: y)",
+    "The system is deterministic. (BI: n; PH: y)",
+    "Enough convexity holds for the stationary path to be a minimum. (BI: ?; PH: ~)",
+    "BI: No agent performs the optimisation; selection only approximates it.",
+    "BI: Survival is random and environments vary.",
+    "PH: The action is stationary, not always minimal.",
+    "PH: Friction needs an extended formulation."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Variational principle and optimal control",
+    "group": "RC-variational-control",
+    "note": "Both cells bind RC-variational-control (mathematics node MSC:49-XX).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-f60a15d5fb",
+   "source": "BI.O.A4.4",
+   "target": "CH.O.A4.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "nucleotides or amino acids at a site",
+      "target": "chemical species or conformations",
+      "note": "states"
+     },
+     {
+      "source": "substitution rate matrix",
+      "target": "rate constants",
+      "note": "kernel"
+     },
+     {
+      "source": "equilibrium base frequencies",
+      "target": "equilibrium populations",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Substitution models in phylogenetics",
+      "target": "Master-equation kinetics of first-order networks"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Every state can be reached from every other state. (BI: y; CH: ~)",
+    "Transition probabilities do not change over time. (BI: ~; CH: ~)",
+    "BI: Rates vary across sites and lineages.",
+    "BI: Sites are not independent of one another.",
+    "CH: Higher-order reactions make the kernel depend on concentrations.",
+    "CH: Rate constants change with temperature."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-f74580a505",
+   "source": "BI.O.A4.1",
+   "target": "BI.O.A5.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "genotypes or strategies",
+      "target": "species",
+      "note": "types"
+     },
+     {
+      "source": "frequencies in the population",
+      "target": "relative abundances",
+      "note": "shares"
+     },
+     {
+      "source": "reproductive success",
+      "target": "per-capita growth given the other species",
+      "note": "fitness"
+     },
+     {
+      "source": "population mean fitness",
+      "target": "total community growth",
+      "note": "mean_fitness"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Frequency-dependent natural selection",
+      "target": "Lotka–Volterra community dynamics"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [
+    "The population is large and well mixed. (BI: ~; BI: ~)",
+    "Fitness depends only on the current shares. (BI: ~; BI: y)",
+    "No new types appear by mutation or innovation. (BI: n; BI: y)",
+    "Change is continuous in time. (BI: ~; BI: y)",
+    "BI: Mutation and recombination create new types.",
+    "BI: Small populations drift.",
+    "BI: Spatial structure changes the outcome.",
+    "BI: The mapping needs interaction terms that are linear in abundance.",
+    "BI: Total abundance is an extra variable with no counterpart."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Replicator dynamics",
+    "group": "RC-replicator-dynamics",
+    "note": "Both cells bind RC-replicator-dynamics (mathematics node MSC:91Axx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-fa9dbc0cb8",
+   "source": "CH.O.A4.1",
+   "target": "PH.O.A4.2",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "chemical species or conformations",
+      "target": "microstates of the system",
+      "note": "states"
+     },
+     {
+      "source": "rate constants",
+      "target": "proposal and acceptance rule",
+      "note": "kernel"
+     },
+     {
+      "source": "equilibrium populations",
+      "target": "Boltzmann distribution",
+      "note": "stationary"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Master-equation kinetics of first-order networks",
+      "target": "Monte Carlo sampling of equilibrium ensembles"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "The next state depends only on the current state.",
+    "The chain is aperiodic."
+   ],
+   "breaks_where": [
+    "Every state can be reached from every other state. (CH: ~; PH: ~)",
+    "Transition probabilities do not change over time. (CH: ~; PH: y)",
+    "CH: Higher-order reactions make the kernel depend on concentrations.",
+    "CH: Rate constants change with temperature.",
+    "PH: Near phase transitions the chain mixes very slowly.",
+    "PH: Energy barriers can make a2 fail in practice."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Convergence of a Markov chain to its stationary distribution",
+    "group": "RC-markov-stationary",
+    "note": "Both cells bind RC-markov-stationary (mathematics node MSC:60Jxx).",
+    "locators": []
+   }
+  },
+  {
+   "id": "CE-fdd681f99b",
+   "source": "BI.O.A5.2",
+   "target": "EC.O.A2.1",
+   "kind": "shared-formalism",
+   "directed": false,
+   "mapping": {
+    "objects": [
+     {
+      "source": "species abundances",
+      "target": "prices",
+      "note": "state"
+     },
+     {
+      "source": "coexistence point",
+      "target": "market-clearing prices",
+      "note": "equilibrium"
+     },
+     {
+      "source": "Volterra's logarithmic function",
+      "target": "distance from equilibrium prices",
+      "note": "function"
+     },
+     {
+      "source": "Lotka–Volterra equations",
+      "target": "prices rise with excess demand",
+      "note": "dynamics"
+     }
+    ],
+    "methods": [
+     {
+      "source": "Stability of interacting-species models",
+      "target": "Stability of price adjustment"
+     }
+    ],
+    "warrants": []
+   },
+   "holds_under": [
+    "A function exists that is positive away from the equilibrium and zero at it.",
+    "The dynamics are well posed (locally Lipschitz)."
+   ],
+   "breaks_where": [
+    "The function does not increase along any trajectory. (BI: ~; EC: ~)",
+    "The model matches the real system. (BI: n; EC: n)",
+    "BI: Real communities are noisy, seasonal and spatial.",
+    "BI: The function is known only for special interaction structures.",
+    "EC: Stability needs strong conditions on demand, such as gross substitutes.",
+    "EC: No real market follows the assumed adjustment rule."
+   ],
+   "status": "generated-unverified",
+   "provenance": {
+    "origin": "formal-core",
+    "date": "2026-11-10",
+    "generated_by": "engine/v3/rosetta.py from rosetta/cores.json",
+    "name": "Stability by a Lyapunov function",
+    "group": "RC-lyapunov-stability",
+    "note": "Both cells bind RC-lyapunov-stability (mathematics node MSC:93Dxx).",
+    "locators": []
+   }
+  }
+ ]
+}

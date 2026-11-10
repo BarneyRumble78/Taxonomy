@@ -60,6 +60,8 @@ Run check, registry, tests and site build after any change to a pyramid, the lex
 ## v4 (branch v4-generative): cross-field generation
 - `correspondences/*.json`: typed edges between nodes (schema `schemas/correspondence_edge.schema.json`, loader and validator `engine/v3/correspondences.py`). `seed_*.json` are generated from the pyramids: `python3 scripts/build_correspondences.py`. Never edit them by hand. The seed copies what the pyramids state and adds no mappings or conditions. `scripts/check.py` validates every edge.
 - Edge IDs (`CE-…`) are stable (R12). A generated edge stays `generated-unverified` until a person checks it.
+- `rosetta/cores.json`: formal cores (one mathematical structure, many field bindings; schema `schemas/formal_core.schema.json`). Engine `engine/v3/rosetta.py`, no model calls. CLI: `python3 taxonomy.py rosetta find|translate|holes|matrix|distance`. After editing cores run `python3 scripts/build_rosetta_edges.py`. Every binding must state where it breaks. Cores stay `draft` until reviewed against sources. Never draft cores from bench answer files.
+- Design: `docs/ROSETTA_DESIGN.md`. Plan: `docs/PLAN_V4.md`.
 - Starting numbers: `docs/BASELINE_2026-11.md`.
 
 ## Known open work

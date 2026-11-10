@@ -20,7 +20,7 @@
   "retired":{"type":"boolean"},
   "provenance":{"type":"object","additionalProperties":false,"required":["origin","date","generated_by","locators"],
    "properties":{
-    "origin":{"enum":["pyramid-uses-citation","ma-correspondence-table","transfer-operator","manual"]},
+    "origin":{"enum":["pyramid-uses-citation","ma-correspondence-table","formal-core","transfer-operator","manual"]},
     "date":{"type":"string","pattern":"^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
     "generated_by":{"type":"string"},
     "name":{"type":"string","description":"Name of the correspondence, where the source names it."},

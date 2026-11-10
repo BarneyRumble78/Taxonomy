@@ -6,6 +6,7 @@
   python3 taxonomy.py connect "problem" --field MA            [--top 8]
   python3 taxonomy.py check   "a single claim"                (v2 classifier)
   python3 taxonomy.py check   "a single claim" --verdict      [--sources FILE] [--tool-outputs FILE]
+  python3 taxonomy.py rosetta find|translate|holes|matrix|distance ...   (no model; see engine/v3/rosetta.py)
 
 Backend: TAXONOMY_LLM=ollama (default, local) | manual | anthropic.
 Anthropic also needs TAXONOMY_ADJUDICATE_PAID=1 (see engine/v3/llm.py).
@@ -36,6 +37,10 @@ def abstain_line(reason):
 
 
 def main(argv=None):
+    args = sys.argv[1:] if argv is None else list(argv)
+    if args and args[0] == "rosetta":
+        import rosetta
+        sys.exit(rosetta.main(args[1:]))
     try:
         _main(argv)
     except SystemExit:

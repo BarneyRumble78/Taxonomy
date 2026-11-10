@@ -49,5 +49,14 @@ for item in found["routes"]:
 from correspondences import check as correspondence_check
 for item in correspondence_check(ROOT):
     problems.append(f"Correspondence: {item}")
+# Rosetta layer: formal cores, bindings, and the edges derived from them.
+from rosetta import check as rosetta_check, derived_edges, load as rosetta_load
+rosetta_problems = rosetta_check(ROOT)
+for item in rosetta_problems:
+    problems.append(f"Rosetta: {item}")
+if not rosetta_problems:
+    stored = json.loads((ROOT / "correspondences" / "rosetta_edges.json").read_text(encoding="utf-8"))["edges"]
+    if stored != derived_edges(rosetta_load(ROOT)):
+        problems.append("Rosetta: correspondences/rosetta_edges.json is stale; run scripts/build_rosetta_edges.py")
 print("\n".join(sorted(set(problems))) or "All checks pass.")
 sys.exit(1 if problems else 0)
