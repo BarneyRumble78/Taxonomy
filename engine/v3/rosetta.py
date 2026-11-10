@@ -273,7 +273,7 @@ def _parents(node):
 class Graph:
     """Undirected graph of tree links, core hubs and correspondence edges."""
 
-    def __init__(self, root=ROOT, cores=None, use_edges=True, use_cores=True):
+    def __init__(self, root=ROOT, cores=None, use_edges=True, use_cores=True, exclude_field_edges=False):
         self.links = {}
         self.kinds = {}
         self.index = NodeIndex(root)
@@ -287,6 +287,8 @@ class Graph:
             for edge in load_edges(root):
                 if edge["provenance"]["origin"] == "formal-core":
                     continue  # already represented by the core hub
+                if exclude_field_edges and (edge["source"] in FIELDS or edge["target"] in FIELDS):
+                    continue
                 self._link(edge["source"], edge["target"], "correspondence")
         for node in list(self.links):
             self._climb(node)

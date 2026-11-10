@@ -176,10 +176,18 @@ class Ollama:
                 "think": False, "options": {"num_predict": max_tokens}}
         # Some models refuse structured output (HTTP 501). TAXONOMY_OLLAMA_FORMAT=none
         # drops the constraint; the reply is still parsed and validated as JSON.
-        if os.environ.get("TAXONOMY_OLLAMA_FORMAT", "json").strip().lower() == "none":
+        if os.environ.get("TAXONOMY_OLLAMA_FORMAT", "").strip().lower() == "none":
             del body["format"]
-        data = _post(f"{self.host}/api/generate", body,
-                     {"content-type": "application/json"}, timeout=self.timeout)
+        try:
+            data = _post(f"{self.host}/api/generate", body,
+                         {"content-type": "application/json"}, timeout=self.timeout)
+        except urllib.error.HTTPError as err:
+            if err.code == 501 and "format" in body:
+                del body["format"]
+                data = _post(f"{self.host}/api/generate", body,
+                             {"content-type": "application/json"}, timeout=self.timeout)
+            else:
+                raise
         return _reply_text(data)
 
     def __call__(self, prompt, max_tokens=4000):
