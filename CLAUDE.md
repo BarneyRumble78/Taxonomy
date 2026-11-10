@@ -57,5 +57,10 @@ Run check, registry, tests and site build after any change to a pyramid, the lex
 - Draft more toolkit cards: `python3 scripts/draft_toolkit_cards.py --field MA --level 2`. Validate: `python3 scripts/validate_cards.py`.
 - Plan and progress: `ROADMAP_V3.md`.
 
+## v4 (branch v4-generative): cross-field generation
+- `correspondences/*.json`: typed edges between nodes (schema `schemas/correspondence_edge.schema.json`, loader and validator `engine/v3/correspondences.py`). `seed_*.json` are generated from the pyramids: `python3 scripts/build_correspondences.py`. Never edit them by hand. The seed copies what the pyramids state and adds no mappings or conditions. `scripts/check.py` validates every edge.
+- Edge IDs (`CE-…`) are stable (R12). A generated edge stays `generated-unverified` until a person checks it.
+- Starting numbers: `docs/BASELINE_2026-11.md`.
+
 ## Known open work
 See `BACKLOG.md`.

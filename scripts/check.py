@@ -45,5 +45,9 @@ for item in found["dangling"]:
     problems.append(f"Cross-link: {item}")
 for item in found["routes"]:
     problems.append(f"Cross-link route: {item}")
+# Correspondence edges: schema, node resolution, status and provenance rules.
+from correspondences import check as correspondence_check
+for item in correspondence_check(ROOT):
+    problems.append(f"Correspondence: {item}")
 print("\n".join(sorted(set(problems))) or "All checks pass.")
 sys.exit(1 if problems else 0)
