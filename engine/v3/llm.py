@@ -172,9 +172,13 @@ class Ollama:
         self.timeout = ollama_timeout()
 
     def _fetch(self, prompt, model, max_tokens):
-        data = _post(f"{self.host}/api/generate",
-                     {"model": model, "prompt": prompt, "stream": False, "format": "json",
-                      "think": False, "options": {"num_predict": max_tokens}},
+        body = {"model": model, "prompt": prompt, "stream": False, "format": "json",
+                "think": False, "options": {"num_predict": max_tokens}}
+        # Some models refuse structured output (HTTP 501). TAXONOMY_OLLAMA_FORMAT=none
+        # drops the constraint; the reply is still parsed and validated as JSON.
+        if os.environ.get("TAXONOMY_OLLAMA_FORMAT", "json").strip().lower() == "none":
+            del body["format"]
+        data = _post(f"{self.host}/api/generate", body,
                      {"content-type": "application/json"}, timeout=self.timeout)
         return _reply_text(data)
 

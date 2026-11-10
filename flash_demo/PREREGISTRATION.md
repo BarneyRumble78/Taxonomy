@@ -1,6 +1,6 @@
 # Pre-registration: does knowledge distance predict failure diversity?
 
-Committed 11 November 2026, before any fault scenario was run on any variant.
+Committed 10 November 2026, before any fault scenario was run on any variant.
 The git history is the timestamp. Changes after this commit are listed under "Deviations" in `RESULTS.md`.
 
 ## Hypothesis

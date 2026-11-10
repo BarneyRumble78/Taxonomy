@@ -1,6 +1,6 @@
 # Specification: a single-output state estimator
 
-Status: fixed 11 November 2026, before any fault run. Code: `plants.py`, `campaign.py`, `verify.py`.
+Status: fixed 10 November 2026, before any fault run. Code: `plants.py`, `campaign.py`, `verify.py`.
 
 ## Component
 A discrete-time estimator. At each step it receives one measurement `z` (or none) and the known input `u`.
