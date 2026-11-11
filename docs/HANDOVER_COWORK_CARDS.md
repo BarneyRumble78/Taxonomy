@@ -90,8 +90,11 @@ Mathematics writes its sub-cells in short form (`- A2.5 Number and counting`) an
 - Add a `## 12. Registry rows` section to `pyramids/MA.md`, in the same four-column format as `pyramids/PH.md`.
 - Register only what MA.md already defines. Do not create new cells. Expected rows:
   - `MA.O.A1` to `MA.O.A5` and their existing sub-cells (`MA.O.A1.1` … `MA.O.A5.2`), labels copied from the headings.
-  - `MA.M.B1` … for each practice already listed under "Side B".
+  - `MA.M.B1` to `MA.M.B5`, from the table under "Side B" (Define and axiomatise, Prove, Compute, Infer from data, Model).
   - `MA.B.C1` to `MA.B.C5`.
+  - Ask Chris whether the heuristics register `MA.M.H` gets a row. Other fields register one `H` row.
+  - Note: `ma_short_cells()` currently recognises the A sub-cells only, not B1 to B5. One table row ("Computation ↔ everything")
+    was skipped from the edge seed for that reason. After registration, rerun `python3 scripts/build_correspondences.py` and report what changed.
 - **Show Chris the full row list before committing.** These IDs are permanent under R12.
 - Run `python3 scripts/build_registry.py`, `make check`, `make test`. Some tests may assert the old row count of 990; update the
   expected number only where the test is plainly a count check, and say so in your report.
