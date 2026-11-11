@@ -1,0 +1,576 @@
+[
+ {
+  "id": "BI.TK.3101",
+  "field": "BI",
+  "node": "ANZSRC:3101",
+  "name": "Biochemistry and cell biology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "measure how fast a catalysed step runs",
+   "find the shape of a large molecule"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Michaelis–Menten kinetics",
+    "does": "gives reaction rate as a saturating function of substrate",
+    "hypotheses": [
+     "substrate far exceeds enzyme",
+     "the enzyme-substrate complex is in steady state",
+     "initial rates, so product is negligible",
+     "one substrate"
+    ]
+   },
+   {
+    "name": "Single-particle cryo-electron microscopy",
+    "does": "reconstructs a three-dimensional structure from many images",
+    "hypotheses": [
+     "many copies of the same particle",
+     "particles lie in varied orientations",
+     "the sample is structurally homogeneous"
+    ]
+   }
+  ],
+  "inputs": [
+   "rate measurements",
+   "images of purified sample"
+  ],
+  "outputs": [
+   "kinetic constants",
+   "structure"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.3102",
+  "field": "BI",
+  "node": "ANZSRC:3102",
+  "name": "Bioinformatics and computational biology",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "find the best match between two long strings",
+   "rebuild a long string from short overlapping pieces"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "construct",
+    "compare"
+   ],
+   "structure": [
+    "sequence"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "scale": [
+    "large"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dynamic-programming alignment (Needleman–Wunsch, Smith–Waterman)",
+    "does": "finds the optimal alignment of two sequences",
+    "hypotheses": [
+     "scoring is additive over positions",
+     "gap penalties are fixed in advance"
+    ]
+   },
+   {
+    "name": "Hidden Markov models",
+    "does": "label a sequence with hidden states",
+    "hypotheses": [
+     "hidden states follow a Markov chain",
+     "each observation depends only on the current state"
+    ]
+   },
+   {
+    "name": "De Bruijn graph assembly",
+    "does": "rebuilds a sequence from short reads",
+    "hypotheses": [
+     "reads cover the sequence deeply enough",
+     "repeats are shorter than the word length used, or are resolved by other data"
+    ]
+   }
+  ],
+  "inputs": [
+   "sequences or reads",
+   "a scoring scheme"
+  ],
+  "outputs": [
+   "alignment",
+   "annotation",
+   "assembled sequence"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.3103",
+  "field": "BI",
+  "node": "ANZSRC:3103",
+  "name": "Ecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "predict numbers of interacting populations",
+   "estimate the size of a population that cannot be counted"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lotka–Volterra equations",
+    "does": "model coupled growth of interacting populations",
+    "hypotheses": [
+     "populations are well mixed",
+     "rates are constant",
+     "no age structure"
+    ]
+   },
+   {
+    "name": "Mark-recapture (Lincoln–Petersen estimator)",
+    "does": "estimates population size from two samples",
+    "hypotheses": [
+     "closed population between samples",
+     "marks are not lost",
+     "all individuals are equally catchable"
+    ]
+   },
+   {
+    "name": "Island biogeography theory",
+    "does": "predicts species number from area and isolation",
+    "hypotheses": [
+     "species number is at a balance of immigration and extinction"
+    ]
+   }
+  ],
+  "inputs": [
+   "counts over time",
+   "capture records",
+   "area and distance"
+  ],
+  "outputs": [
+   "population trajectory",
+   "population size",
+   "species number"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.3104",
+  "field": "BI",
+  "node": "ANZSRC:3104",
+  "name": "Evolutionary biology",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "test whether a population is changing and why",
+   "rebuild a branching history from present-day differences"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hardy–Weinberg equilibrium",
+    "does": "gives expected genotype frequencies as a null model",
+    "hypotheses": [
+     "random mating",
+     "no selection, mutation or migration",
+     "a very large population",
+     "diploid sexual organisms"
+    ]
+   },
+   {
+    "name": "Maximum-likelihood phylogenetics",
+    "does": "infers the tree that best explains aligned sequences",
+    "hypotheses": [
+     "a stated substitution model",
+     "sites evolve independently",
+     "the alignment is correct"
+    ]
+   },
+   {
+    "name": "Coalescent theory",
+    "does": "relates genetic variation to population history",
+    "hypotheses": [
+     "neutral variation",
+     "random mating",
+     "a stated model of population size"
+    ]
+   }
+  ],
+  "inputs": [
+   "genotype counts",
+   "aligned sequences"
+  ],
+  "outputs": [
+   "departure from the null",
+   "tree with support values",
+   "population history"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.3105",
+  "field": "BI",
+  "node": "ANZSRC:3105",
+  "name": "Genetics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "predict how traits pass between generations",
+   "find which inherited factors go with a trait"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "infer"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Mendelian segregation",
+    "does": "predicts offspring ratios",
+    "hypotheses": [
+     "diploid organism",
+     "one locus, or unlinked loci",
+     "no segregation distortion"
+    ]
+   },
+   {
+    "name": "Genome-wide association study",
+    "does": "finds variants statistically associated with a trait",
+    "hypotheses": [
+     "a large sample",
+     "population structure is controlled",
+     "tested markers are correlated with causal variants"
+    ]
+   },
+   {
+    "name": "Breeder's equation",
+    "does": "predicts response to selection from heritability",
+    "hypotheses": [
+     "heritability is measured in the same population and environment",
+     "genetic effects are additive"
+    ]
+   }
+  ],
+  "inputs": [
+   "pedigrees",
+   "genotypes and trait values"
+  ],
+  "outputs": [
+   "expected ratios",
+   "associated variants",
+   "predicted response"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.3106",
+  "field": "BI",
+  "node": "ANZSRC:3106",
+  "name": "Industrial biotechnology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "get a living system to make a product at scale"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise",
+    "control"
+   ],
+   "constraints": [
+    "resource_budget"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Monod growth kinetics",
+    "does": "relates growth rate to the level of one nutrient",
+    "hypotheses": [
+     "one limiting substrate",
+     "balanced growth"
+    ]
+   },
+   {
+    "name": "Flux balance analysis",
+    "does": "predicts metabolic flow rates by linear optimisation",
+    "hypotheses": [
+     "metabolism is at steady state",
+     "the reaction network is known",
+     "the assumed objective reflects what the cell maximises"
+    ]
+   }
+  ],
+  "inputs": [
+   "strain and feed conditions",
+   "reaction network"
+  ],
+  "outputs": [
+   "growth rate",
+   "predicted yields"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.3107",
+  "field": "BI",
+  "node": "ANZSRC:3107",
+  "name": "Microbiology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "identify which small organisms are present and what they cause",
+   "measure how well an agent stops growth"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer",
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Koch's postulates",
+    "does": "set criteria for naming an agent as the cause of a disease",
+    "hypotheses": [
+     "the agent can be isolated and grown",
+     "one agent causes the disease",
+     "a susceptible host can be tested"
+    ]
+   },
+   {
+    "name": "Viable plate count",
+    "does": "estimates the number of living cells",
+    "hypotheses": [
+     "cells can grow on the medium",
+     "each colony comes from one cell"
+    ]
+   },
+   {
+    "name": "Minimum inhibitory concentration test",
+    "does": "finds the lowest level of an agent that stops growth",
+    "hypotheses": [
+     "standard inoculum, medium and incubation"
+    ]
+   }
+  ],
+  "inputs": [
+   "samples",
+   "cultures"
+  ],
+  "outputs": [
+   "identity",
+   "cell count",
+   "susceptibility"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.3108",
+  "field": "BI",
+  "node": "ANZSRC:3108",
+  "name": "Plant biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "predict carbon and water exchange of a leaf or stand"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "constraints": [
+    "physical_law"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Farquhar–von Caemmerer–Berry model",
+    "does": "predicts leaf photosynthesis from light, carbon dioxide and temperature",
+    "hypotheses": [
+     "C3 photosynthesis",
+     "steady state"
+    ]
+   },
+   {
+    "name": "Cohesion-tension theory",
+    "does": "explains water rise by evaporation pulling a continuous column",
+    "hypotheses": [
+     "the water column is continuous"
+    ]
+   }
+  ],
+  "inputs": [
+   "light, gas and temperature conditions"
+  ],
+  "outputs": [
+   "assimilation rate",
+   "water flow"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.3109",
+  "field": "BI",
+  "node": "ANZSRC:3109",
+  "name": "Zoology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "compare traits across species without counting shared ancestry twice",
+   "relate body size to function"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "infer"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ],
+   "symmetry": [
+    "scaling"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Phylogenetically independent contrasts",
+    "does": "tests trait correlation across species",
+    "hypotheses": [
+     "the phylogeny and branch lengths are known",
+     "traits evolve by a Brownian-motion model"
+    ]
+   },
+   {
+    "name": "Allometric scaling",
+    "does": "fits a trait as a power of body size",
+    "hypotheses": [
+     "data span a wide size range",
+     "a single power law fits the range"
+    ]
+   }
+  ],
+  "inputs": [
+   "trait values per species",
+   "a phylogeny"
+  ],
+  "outputs": [
+   "corrected correlations",
+   "scaling exponent"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.3199",
+  "field": "BI",
+  "node": "ANZSRC:3199",
+  "name": "Other biological sciences",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

@@ -1,0 +1,1066 @@
+[
+ {
+  "id": "EC.TK.A",
+  "field": "EC",
+  "node": "JEL:A",
+  "name": "General Economics and Teaching",
+  "taxonomy_cell": "EC.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A general or miscellaneous heading of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.B",
+  "field": "EC",
+  "node": "JEL:B",
+  "name": "History of Economic Thought, Methodology, and Heterodox Approaches",
+  "taxonomy_cell": "EC.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for the history of ideas and method. Work here rests on reading texts, not on tools. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.C",
+  "field": "EC",
+  "node": "JEL:C",
+  "name": "Mathematical and Quantitative Methods",
+  "taxonomy_cell": "EC.O.A4",
+  "solves": [
+   "estimate a causal effect from data not produced by experiment",
+   "predict the outcome when several parties choose strategically"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer",
+    "predict"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "data": [
+    "data_rich"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ordinary least squares (Gauss–Markov theorem)",
+    "does": "gives the best linear unbiased estimator",
+    "hypotheses": [
+     "the model is linear in parameters",
+     "errors have zero mean given the regressors",
+     "no perfect collinearity",
+     "errors are uncorrelated with equal variance"
+    ]
+   },
+   {
+    "name": "Instrumental variables",
+    "does": "estimates an effect when the regressor is confounded",
+    "hypotheses": [
+     "the instrument affects the regressor",
+     "the instrument affects the outcome only through the regressor",
+     "monotonicity, for a local average effect"
+    ]
+   },
+   {
+    "name": "Difference-in-differences",
+    "does": "estimates an effect from before-after change against a comparison group",
+    "hypotheses": [
+     "the groups would have followed parallel trends",
+     "no anticipation of treatment"
+    ]
+   },
+   {
+    "name": "Nash equilibrium existence theorem",
+    "does": "guarantees an equilibrium in mixed strategies",
+    "hypotheses": [
+     "finitely many players",
+     "finitely many pure strategies each"
+    ]
+   }
+  ],
+  "inputs": [
+   "observational data",
+   "players, strategies and payoffs"
+  ],
+  "outputs": [
+   "effect estimate with standard error",
+   "equilibrium"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.D",
+  "field": "EC",
+  "node": "JEL:D",
+  "name": "Microeconomics",
+  "taxonomy_cell": "EC.O.A1",
+  "solves": [
+   "predict the choices of an agent with limited means",
+   "decide whether decentralised exchange wastes anything",
+   "design rules for selling to privately informed buyers"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "optimise",
+    "design"
+   ],
+   "agents": [
+    "single_decision_maker",
+    "multiple_competing"
+   ],
+   "constraints": [
+    "resource_budget"
+   ],
+   "linearity": [
+    "convex"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Utility maximisation and demand",
+    "does": "derives demand from preferences and a budget",
+    "hypotheses": [
+     "preferences are complete and transitive",
+     "preferences are continuous"
+    ]
+   },
+   {
+    "name": "First welfare theorem",
+    "does": "says a competitive equilibrium is Pareto efficient",
+    "hypotheses": [
+     "complete markets",
+     "price-taking behaviour",
+     "locally non-satiated preferences",
+     "no externalities"
+    ]
+   },
+   {
+    "name": "Revenue equivalence theorem",
+    "does": "says standard auctions yield the same expected revenue",
+    "hypotheses": [
+     "risk-neutral bidders",
+     "independent private values from one distribution",
+     "the lowest type expects zero surplus"
+    ]
+   }
+  ],
+  "inputs": [
+   "preferences, prices and income",
+   "valuations and auction rules"
+  ],
+  "outputs": [
+   "demand",
+   "efficiency verdict",
+   "expected revenue"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.E",
+  "field": "EC",
+  "node": "JEL:E",
+  "name": "Macroeconomics and Monetary Economics",
+  "taxonomy_cell": "EC.O.A4",
+  "solves": [
+   "explain long-run growth of output per head",
+   "predict how a whole economy responds to a shock or a policy rate"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Solow growth model",
+    "does": "gives steady-state output per worker from saving and population growth",
+    "hypotheses": [
+     "constant returns to scale",
+     "diminishing returns to capital",
+     "saving, population growth and technical progress are exogenous"
+    ]
+   },
+   {
+    "name": "Dynamic stochastic general equilibrium model",
+    "does": "simulates responses of the economy to shocks",
+    "hypotheses": [
+     "rational expectations",
+     "a representative agent, or few agent types",
+     "linearised near a steady state"
+    ]
+   },
+   {
+    "name": "Taylor rule",
+    "does": "describes a policy rate from inflation and the output gap",
+    "hypotheses": [
+     "estimates of the output gap and neutral rate exist",
+     "it describes behaviour and is not an optimum by itself"
+    ]
+   }
+  ],
+  "inputs": [
+   "national accounts series",
+   "shock and policy assumptions"
+  ],
+  "outputs": [
+   "steady state",
+   "impulse responses",
+   "implied policy rate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.F",
+  "field": "EC",
+  "node": "JEL:F",
+  "name": "International Economics",
+  "taxonomy_cell": "EC.O.A4",
+  "solves": [
+   "predict what a region will sell and buy from others",
+   "predict the volume of exchange between two places"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Comparative advantage (Ricardian model)",
+    "does": "predicts specialisation by relative productivity",
+    "hypotheses": [
+     "relative productivities differ",
+     "factors move within but not between countries",
+     "no trade costs"
+    ]
+   },
+   {
+    "name": "Heckscher–Ohlin theorem",
+    "does": "predicts exports from relative factor abundance",
+    "hypotheses": [
+     "identical technologies",
+     "identical homothetic preferences",
+     "no factor-intensity reversals"
+    ]
+   },
+   {
+    "name": "Gravity model of trade",
+    "does": "predicts flows from economic size and distance",
+    "hypotheses": [
+     "multilateral resistance terms are included",
+     "the relation is empirical"
+    ]
+   }
+  ],
+  "inputs": [
+   "productivities and endowments",
+   "trade flows, size and distance"
+  ],
+  "outputs": [
+   "pattern of trade",
+   "predicted flows"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.G",
+  "field": "EC",
+  "node": "JEL:G",
+  "name": "Financial Economics",
+  "taxonomy_cell": "EC.O.A2",
+  "solves": [
+   "price a risky asset",
+   "value a claim whose payoff depends on another price",
+   "choose a mix of risky holdings"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "optimise",
+    "predict"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Capital asset pricing model",
+    "does": "gives expected return from market risk",
+    "hypotheses": [
+     "investors care only about mean and variance",
+     "homogeneous expectations",
+     "frictionless markets",
+     "unlimited borrowing and lending at the risk-free rate"
+    ]
+   },
+   {
+    "name": "Black–Scholes formula",
+    "does": "prices a European option",
+    "hypotheses": [
+     "the price follows geometric Brownian motion with constant volatility",
+     "continuous trading with no transaction costs",
+     "no arbitrage",
+     "a constant risk-free rate"
+    ]
+   },
+   {
+    "name": "Modigliani–Miller theorem",
+    "does": "says firm value does not depend on financing mix",
+    "hypotheses": [
+     "no taxes",
+     "no bankruptcy costs",
+     "no asymmetric information"
+    ]
+   },
+   {
+    "name": "Mean-variance portfolio selection",
+    "does": "finds the lowest-risk mix for a target return",
+    "hypotheses": [
+     "means and covariances of returns are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "return series",
+   "contract terms"
+  ],
+  "outputs": [
+   "required return",
+   "option value",
+   "portfolio weights"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.H",
+  "field": "EC",
+  "node": "JEL:H",
+  "name": "Public Economics",
+  "taxonomy_cell": "EC.O.A5",
+  "solves": [
+   "raise a fixed sum with least distortion",
+   "decide how much of a shared good to provide",
+   "find who really bears a charge"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "design",
+    "explain"
+   ],
+   "constraints": [
+    "resource_budget",
+    "legal_or_normative"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ramsey rule",
+    "does": "sets commodity taxes to minimise distortion",
+    "hypotheses": [
+     "a representative consumer",
+     "lump-sum taxes are unavailable",
+     "a fixed revenue requirement"
+    ]
+   },
+   {
+    "name": "Samuelson condition",
+    "does": "gives efficient provision of a public good",
+    "hypotheses": [
+     "the good is non-rival and non-excludable",
+     "marginal rates of substitution can be summed"
+    ]
+   },
+   {
+    "name": "Tax incidence analysis",
+    "does": "shows the burden falls by relative elasticities, not legal liability",
+    "hypotheses": [
+     "a competitive market",
+     "elasticities of supply and demand are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "demand and supply elasticities",
+   "revenue target"
+  ],
+  "outputs": [
+   "tax rates",
+   "provision level",
+   "burden shares"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.I",
+  "field": "EC",
+  "node": "JEL:I",
+  "name": "Health, Education, and Welfare",
+  "taxonomy_cell": "EC.O.A5",
+  "solves": [
+   "estimate the return to schooling or a programme when people select themselves in"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Mincer earnings equation",
+    "does": "estimates the return to a year of schooling",
+    "hypotheses": [
+     "log earnings are linear in schooling",
+     "schooling is exogenous or instrumented"
+    ]
+   },
+   {
+    "name": "Regression discontinuity design",
+    "does": "estimates an effect at an eligibility cut-off",
+    "hypotheses": [
+     "potential outcomes are continuous at the cut-off",
+     "people cannot precisely manipulate their score"
+    ]
+   }
+  ],
+  "inputs": [
+   "earnings and schooling data",
+   "scores around a cut-off"
+  ],
+  "outputs": [
+   "rate of return",
+   "local effect"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.J",
+  "field": "EC",
+  "node": "JEL:J",
+  "name": "Labor and Demographic Economics",
+  "taxonomy_cell": "EC.O.A2",
+  "solves": [
+   "explain why unfilled posts and people seeking work coexist",
+   "split a pay gap into explained and unexplained parts"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "estimate"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Search and matching model (Diamond–Mortensen–Pissarides)",
+    "does": "explains equilibrium unemployment",
+    "hypotheses": [
+     "a matching function with constant returns",
+     "wages set by Nash bargaining",
+     "free entry of vacancies"
+    ]
+   },
+   {
+    "name": "Oaxaca–Blinder decomposition",
+    "does": "splits a mean gap into characteristics and coefficients",
+    "hypotheses": [
+     "linear outcome models",
+     "common support between groups",
+     "the result is descriptive, not causal"
+    ]
+   }
+  ],
+  "inputs": [
+   "vacancy and unemployment series",
+   "wages and characteristics by group"
+  ],
+  "outputs": [
+   "equilibrium unemployment",
+   "decomposed gap"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.K",
+  "field": "EC",
+  "node": "JEL:K",
+  "name": "Law and Economics",
+  "taxonomy_cell": "EC.O.A3",
+  "solves": [
+   "predict how a liability rule changes behaviour",
+   "decide whether the initial award of a right matters"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Coase theorem",
+    "does": "says bargaining reaches the efficient outcome whoever holds the right",
+    "hypotheses": [
+     "well-defined property rights",
+     "zero transaction costs",
+     "no wealth effects, for the outcome to be the same"
+    ]
+   },
+   {
+    "name": "Hand formula",
+    "does": "treats care as required when its cost is below expected harm",
+    "hypotheses": [
+     "cost of care, probability and size of harm can be estimated"
+    ]
+   }
+  ],
+  "inputs": [
+   "rights, costs and harms"
+  ],
+  "outputs": [
+   "predicted outcome",
+   "negligence verdict under the rule"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.L",
+  "field": "EC",
+  "node": "JEL:L",
+  "name": "Industrial Organization",
+  "taxonomy_cell": "EC.O.A2",
+  "solves": [
+   "predict prices when a few sellers compete",
+   "decide whether a merger lessens competition"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate",
+    "verify"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cournot model",
+    "does": "predicts output and price in quantity competition",
+    "hypotheses": [
+     "firms choose quantities at once",
+     "a homogeneous product",
+     "demand and costs are known"
+    ]
+   },
+   {
+    "name": "Hypothetical monopolist test and concentration index",
+    "does": "define a market and measure its concentration",
+    "hypotheses": [
+     "a relevant market can be defined",
+     "prevailing prices are near competitive, or the test misleads"
+    ]
+   },
+   {
+    "name": "Random-coefficients demand estimation (Berry–Levinsohn–Pakes)",
+    "does": "estimates substitution between differentiated products",
+    "hypotheses": [
+     "valid instruments for price",
+     "market shares observed across markets or time"
+    ]
+   }
+  ],
+  "inputs": [
+   "market shares, prices, costs"
+  ],
+  "outputs": [
+   "equilibrium price",
+   "concentration change",
+   "elasticities"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.M",
+  "field": "EC",
+  "node": "JEL:M",
+  "name": "Business Administration and Business Economics &bull; Marketing &bull; Accounting &bull; Personnel Economics",
+  "taxonomy_cell": "EC.O.A3",
+  "solves": [
+   "write a contract for someone whose effort cannot be observed"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Principal-agent model with moral hazard",
+    "does": "trades off incentive against insurance",
+    "hypotheses": [
+     "the agent's action is hidden",
+     "output is observable and contractible",
+     "the agent is risk-averse"
+    ]
+   }
+  ],
+  "inputs": [
+   "output distribution given effort",
+   "preferences"
+  ],
+  "outputs": [
+   "optimal contract"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.N",
+  "field": "EC",
+  "node": "JEL:N",
+  "name": "Economic History",
+  "taxonomy_cell": "EC.O.A4",
+  "solves": [
+   "estimate what would have happened without a past event"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "explain"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "data": [
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cliometric counterfactual",
+    "does": "compares the actual record with a modelled alternative",
+    "hypotheses": [
+     "an explicit model of the alternative",
+     "the reconstructed data are reliable enough for the question"
+    ]
+   }
+  ],
+  "inputs": [
+   "reconstructed historical series"
+  ],
+  "outputs": [
+   "estimated effect of the event"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.O",
+  "field": "EC",
+  "node": "JEL:O",
+  "name": "Economic Development, Innovation, Technological Change, and Growth",
+  "taxonomy_cell": "EC.O.A4",
+  "solves": [
+   "test whether a programme improves lives",
+   "split growth into inputs and productivity"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Randomised evaluation",
+    "does": "estimates a programme's effect",
+    "hypotheses": [
+     "random assignment",
+     "no spillovers between treated and untreated units",
+     "results hold for the setting studied"
+    ]
+   },
+   {
+    "name": "Growth accounting",
+    "does": "attributes output growth to capital, labour and a residual",
+    "hypotheses": [
+     "constant returns to scale",
+     "factors are paid their marginal products"
+    ]
+   }
+  ],
+  "inputs": [
+   "outcomes by assignment",
+   "output and input series"
+  ],
+  "outputs": [
+   "programme effect",
+   "productivity residual"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.P",
+  "field": "EC",
+  "node": "JEL:P",
+  "name": "Political Economy and Comparative Economic Systems",
+  "taxonomy_cell": "EC.O.A3",
+  "solves": [
+   "predict the outcome of a vote",
+   "decide whether any fair rule for combining rankings exists"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "prove"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "domain_type": [
+    "discrete"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Median voter theorem",
+    "does": "says the median voter's preferred policy wins",
+    "hypotheses": [
+     "one policy dimension",
+     "single-peaked preferences",
+     "pairwise majority voting"
+    ]
+   },
+   {
+    "name": "Arrow's impossibility theorem",
+    "does": "says no ranking rule meets all fairness conditions",
+    "hypotheses": [
+     "three or more alternatives",
+     "unrestricted preferences",
+     "the Pareto condition",
+     "independence of irrelevant alternatives"
+    ]
+   }
+  ],
+  "inputs": [
+   "voters' preferences",
+   "voting rule"
+  ],
+  "outputs": [
+   "predicted winner",
+   "impossibility result"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.Q",
+  "field": "EC",
+  "node": "JEL:Q",
+  "name": "Agricultural and Natural Resource Economics &bull; Environmental and Ecological Economics",
+  "taxonomy_cell": "EC.O.A2",
+  "solves": [
+   "choose how fast to use up a finite stock",
+   "make a decision-maker face a cost imposed on others",
+   "value something that has no market price"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "design",
+    "estimate"
+   ],
+   "constraints": [
+    "resource_budget"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hotelling's rule",
+    "does": "says the net price of an exhaustible resource rises at the interest rate",
+    "hypotheses": [
+     "a known finite stock",
+     "competitive owners",
+     "constant extraction cost"
+    ]
+   },
+   {
+    "name": "Pigouvian tax",
+    "does": "sets a charge equal to marginal external harm",
+    "hypotheses": [
+     "marginal external harm can be measured",
+     "the market is otherwise competitive"
+    ]
+   },
+   {
+    "name": "Hedonic pricing",
+    "does": "infers the value of an attribute from market prices",
+    "hypotheses": [
+     "the market is in equilibrium",
+     "buyers perceive the attribute",
+     "other attributes are controlled"
+    ]
+   }
+  ],
+  "inputs": [
+   "stock, cost and demand",
+   "damage estimates",
+   "prices and attributes"
+  ],
+  "outputs": [
+   "extraction path",
+   "tax rate",
+   "implicit price"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.R",
+  "field": "EC",
+  "node": "JEL:R",
+  "name": "Urban, Rural, Regional, Real Estate, and Transportation Economics",
+  "taxonomy_cell": "EC.O.A2",
+  "solves": [
+   "explain how prices and density vary with distance from a centre"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial",
+    "geometric_space"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Monocentric city model (Alonso–Muth–Mills)",
+    "does": "predicts rent and density falling with distance",
+    "hypotheses": [
+     "one employment centre",
+     "identical households",
+     "travel cost rises with distance"
+    ]
+   },
+   {
+    "name": "Spatial equilibrium (Rosen–Roback)",
+    "does": "says wages and rents adjust so no one gains by moving",
+    "hypotheses": [
+     "free mobility of households and firms"
+    ]
+   }
+  ],
+  "inputs": [
+   "rents, wages, distances"
+  ],
+  "outputs": [
+   "rent gradient",
+   "implied value of local amenities"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.Y",
+  "field": "EC",
+  "node": "JEL:Y",
+  "name": "Miscellaneous Categories",
+  "taxonomy_cell": "EC.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A general or miscellaneous heading of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EC.TK.Z",
+  "field": "EC",
+  "node": "JEL:Z",
+  "name": "Other Special Topics",
+  "taxonomy_cell": "EC.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A general or miscellaneous heading of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]
