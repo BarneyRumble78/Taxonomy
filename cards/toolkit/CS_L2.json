@@ -1,0 +1,2785 @@
+[
+ {
+  "id": "CS.TK.10002944.10011122",
+  "field": "CS",
+  "node": "ACM:10002944.10011122",
+  "name": "Document types",
+  "taxonomy_cell": "CS.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for document types. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002944.10011123",
+  "field": "CS",
+  "node": "ACM:10002944.10011123",
+  "name": "Cross-computing tools and techniques",
+  "taxonomy_cell": "CS.O.A1",
+  "solves": [
+   "apply general techniques such as measurement and validation across computing"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002950.10003624",
+  "field": "CS",
+  "node": "ACM:10002950.10003624",
+  "name": "Discrete mathematics",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "count, arrange and connect discrete objects"
+  ],
+  "signature": {
+   "task": [
+    "count",
+    "prove"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Graph search (breadth-first and depth-first)",
+    "does": "visits every reachable node of a graph",
+    "hypotheses": [
+     "the graph is finite, or the search is bounded"
+    ]
+   },
+   {
+    "name": "Recurrence solving (master theorem)",
+    "does": "gives the growth rate of a divide-and-conquer recurrence",
+    "hypotheses": [
+     "subproblems are of equal size",
+     "the recurrence fits one of the theorem's cases"
+    ]
+   }
+  ],
+  "inputs": [
+   "graph",
+   "recurrence"
+  ],
+  "outputs": [
+   "reachability",
+   "growth rate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Counted here as used in computing. The underlying theorems are owned by MA. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002950.10003648",
+  "field": "CS",
+  "node": "ACM:10002950.10003648",
+  "name": "Probability and statistics",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "estimate unknown quantities from data and sample from distributions"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Markov chain Monte Carlo",
+    "does": "samples a distribution known up to a constant",
+    "hypotheses": [
+     "the chain is ergodic with the target as its stationary distribution",
+     "the run is long against the mixing time"
+    ]
+   },
+   {
+    "name": "Maximum likelihood estimation",
+    "does": "picks the parameter that makes the data most probable",
+    "hypotheses": [
+     "the model is correctly specified",
+     "the parameter is identified"
+    ]
+   }
+  ],
+  "inputs": [
+   "data",
+   "model"
+  ],
+  "outputs": [
+   "samples",
+   "estimates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Counted here as used in computing. The underlying theorems are owned by MA. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002950.10003705",
+  "field": "CS",
+  "node": "ACM:10002950.10003705",
+  "name": "Mathematical software",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "build reliable programs that carry out mathematical computation"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "verify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002950.10003712",
+  "field": "CS",
+  "node": "ACM:10002950.10003712",
+  "name": "Information theory",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "find the limits of compressing and transmitting data"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "estimate"
+   ],
+   "goal_quality": [
+    "bound"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Source coding theorem",
+    "does": "says data cannot be compressed below its entropy rate on average",
+    "hypotheses": [
+     "a stationary ergodic source",
+     "long blocks"
+    ]
+   },
+   {
+    "name": "Channel coding theorem",
+    "does": "gives the highest rate of reliable communication",
+    "hypotheses": [
+     "a memoryless channel with known statistics",
+     "arbitrarily long codes"
+    ]
+   },
+   {
+    "name": "Huffman coding",
+    "does": "builds an optimal prefix code for known symbol probabilities",
+    "hypotheses": [
+     "symbol probabilities are known",
+     "symbols are coded one at a time"
+    ]
+   }
+  ],
+  "inputs": [
+   "source or channel statistics"
+  ],
+  "outputs": [
+   "entropy",
+   "capacity",
+   "code"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Counted here as used in computing. The underlying theorems are owned by MA. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002950.10003714",
+  "field": "CS",
+  "node": "ACM:10002950.10003714",
+  "name": "Mathematical analysis",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "solve equations and optimise numerically with known error"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "optimise"
+   ],
+   "domain_type": [
+    "continuous"
+   ],
+   "goal_quality": [
+    "approximate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Newton's method",
+    "does": "finds a root by repeated linearisation",
+    "hypotheses": [
+     "the function is differentiable",
+     "the start is close to the root",
+     "the derivative is non-zero there"
+    ]
+   },
+   {
+    "name": "Gradient descent",
+    "does": "minimises a function by stepping against the gradient",
+    "hypotheses": [
+     "the function is differentiable with Lipschitz gradient",
+     "the step is small enough",
+     "a global minimum is assured only for convex functions"
+    ]
+   }
+  ],
+  "inputs": [
+   "function",
+   "starting point"
+  ],
+  "outputs": [
+   "root",
+   "minimiser"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Counted here as used in computing. The underlying theorems are owned by MA. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002950.10003741",
+  "field": "CS",
+  "node": "ACM:10002950.10003741",
+  "name": "Continuous mathematics",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "compute with functions, shapes and continuous spaces"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "construct"
+   ],
+   "domain_type": [
+    "continuous"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10002979",
+  "field": "CS",
+  "node": "ACM:10002978.10002979",
+  "name": "Cryptography",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "keep data secret and authentic against an adversary"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "One-time pad (perfect secrecy)",
+    "does": "gives secrecy that no computation can break",
+    "hypotheses": [
+     "the key is truly random",
+     "the key is as long as the message",
+     "the key is never reused"
+    ]
+   },
+   {
+    "name": "RSA public-key encryption",
+    "does": "lets anyone encrypt and only the key holder decrypt",
+    "hypotheses": [
+     "the RSA problem is hard for the key size",
+     "secure padding is used",
+     "keys come from good randomness"
+    ]
+   },
+   {
+    "name": "Diffie–Hellman key exchange",
+    "does": "lets two parties agree a secret over an open channel",
+    "hypotheses": [
+     "the Diffie–Hellman problem is hard in the chosen group",
+     "the parties authenticate each other separately"
+    ]
+   },
+   {
+    "name": "Cryptographic hash function",
+    "does": "gives a short fingerprint of data",
+    "hypotheses": [
+     "collisions and preimages are infeasible to find for the chosen function"
+    ]
+   }
+  ],
+  "inputs": [
+   "messages",
+   "keys"
+  ],
+  "outputs": [
+   "ciphertext",
+   "shared key",
+   "digest"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10002986",
+  "field": "CS",
+  "node": "ACM:10002978.10002986",
+  "name": "Formal methods and theory of security",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "prove that a protocol keeps its secrets against a defined attacker"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "verify"
+   ],
+   "structure": [
+    "logical"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Symbolic protocol analysis (Dolev–Yao model)",
+    "does": "checks a protocol against an attacker who controls the network",
+    "hypotheses": [
+     "cryptographic primitives are treated as perfect",
+     "the attacker's abilities are those of the model"
+    ]
+   },
+   {
+    "name": "Reduction-based security proof",
+    "does": "shows that breaking the scheme would solve a hard problem",
+    "hypotheses": [
+     "a stated hardness assumption",
+     "a stated attacker model"
+    ]
+   }
+  ],
+  "inputs": [
+   "protocol specification"
+  ],
+  "outputs": [
+   "proof or attack trace"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10002991",
+  "field": "CS",
+  "node": "ACM:10002978.10002991",
+  "name": "Security services",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "confirm who is acting and limit what they may do"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "design"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Role-based access control",
+    "does": "grants permissions through roles",
+    "hypotheses": [
+     "roles and their permissions are defined",
+     "users are assigned roles correctly"
+    ]
+   },
+   {
+    "name": "Multi-factor authentication",
+    "does": "requires independent proofs of identity",
+    "hypotheses": [
+     "the factors are independent",
+     "the enrolment step is itself secure"
+    ]
+   }
+  ],
+  "inputs": [
+   "users",
+   "resources",
+   "policy"
+  ],
+  "outputs": [
+   "access decisions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10002997",
+  "field": "CS",
+  "node": "ACM:10002978.10002997",
+  "name": "Intrusion/anomaly detection and malware mitigation",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "spot activity that departs from normal or matches known attacks"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ],
+   "data": [
+    "streaming"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Signature-based detection",
+    "does": "matches activity against known attack patterns",
+    "hypotheses": [
+     "the attack has been seen before and a signature exists"
+    ]
+   },
+   {
+    "name": "Anomaly detection",
+    "does": "flags departures from a learned baseline",
+    "hypotheses": [
+     "the baseline was learned from clean data",
+     "normal behaviour is stable"
+    ]
+   },
+   {
+    "name": "Base-rate analysis of alarms",
+    "does": "shows that rare attacks make most alarms false",
+    "hypotheses": [
+     "the attack rate and the detector's error rates are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "event stream"
+  ],
+  "outputs": [
+   "alerts",
+   "expected false-alarm share"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10003001",
+  "field": "CS",
+  "node": "ACM:10002978.10003001",
+  "name": "Security in hardware",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "keep secrets and integrity at the level of the physical device"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10003006",
+  "field": "CS",
+  "node": "ACM:10002978.10003006",
+  "name": "Systems security",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "limit what a compromised part of a system can reach"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Principle of least privilege",
+    "does": "gives each component only the access it needs",
+    "hypotheses": [
+     "the access each component needs can be listed"
+    ]
+   },
+   {
+    "name": "Reference monitor",
+    "does": "mediates every access through one small checker",
+    "hypotheses": [
+     "the monitor cannot be bypassed",
+     "it is tamper-proof",
+     "it is small enough to verify"
+    ]
+   }
+  ],
+  "inputs": [
+   "system design"
+  ],
+  "outputs": [
+   "privilege assignment"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10003014",
+  "field": "CS",
+  "node": "ACM:10002978.10003014",
+  "name": "Network security",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "protect data in transit and control what crosses a boundary"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Transport Layer Security",
+    "does": "gives an encrypted, authenticated channel",
+    "hypotheses": [
+     "certificates are validated against trusted authorities",
+     "current protocol versions and cipher suites are used"
+    ]
+   },
+   {
+    "name": "Firewall filtering",
+    "does": "permits or blocks traffic by rule",
+    "hypotheses": [
+     "all traffic passes the firewall",
+     "the rules express the intended policy"
+    ]
+   }
+  ],
+  "inputs": [
+   "network traffic",
+   "policy"
+  ],
+  "outputs": [
+   "protected channel",
+   "filtered traffic"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10003018",
+  "field": "CS",
+  "node": "ACM:10002978.10003018",
+  "name": "Database and storage security",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "protect stored data from disclosure and tampering"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10003022",
+  "field": "CS",
+  "node": "ACM:10002978.10003022",
+  "name": "Software and application security",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "find and remove weaknesses in programs"
+  ],
+  "signature": {
+   "task": [
+    "verify"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fuzzing",
+    "does": "finds crashes by feeding many generated inputs",
+    "hypotheses": [
+     "the program can be run automatically",
+     "it finds some faults and proves none absent"
+    ]
+   },
+   {
+    "name": "Static analysis for vulnerabilities",
+    "does": "inspects code without running it",
+    "hypotheses": [
+     "results include false alarms or misses, depending on the tool's design"
+    ]
+   }
+  ],
+  "inputs": [
+   "program"
+  ],
+  "outputs": [
+   "crashing inputs",
+   "warnings"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978.10003029",
+  "field": "CS",
+  "node": "ACM:10002978.10003029",
+  "name": "Human and societal aspects of security and privacy",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "bound what a published result reveals about any person"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Differential privacy",
+    "does": "bounds the effect of one record on an output",
+    "hypotheses": [
+     "neighbouring datasets are defined",
+     "noise is calibrated to the query's sensitivity"
+    ]
+   },
+   {
+    "name": "k-anonymity",
+    "does": "makes each record match at least k-1 others on identifying fields",
+    "hypotheses": [
+     "the quasi-identifying fields are correctly listed",
+     "it does not prevent attribute disclosure"
+    ]
+   }
+  ],
+  "inputs": [
+   "dataset",
+   "queries"
+  ],
+  "outputs": [
+   "privacy-protected release"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003033.10003034",
+  "field": "CS",
+  "node": "ACM:10003033.10003034",
+  "name": "Network architectures",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "divide communication into layers that hide detail from each other"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Layered protocol architecture",
+    "does": "lets each layer rely only on the service of the one below",
+    "hypotheses": [
+     "interfaces between layers are fixed"
+    ]
+   },
+   {
+    "name": "End-to-end argument",
+    "does": "places a function at the endpoints when only they can do it completely",
+    "hypotheses": [
+     "the function needs knowledge only the endpoints have"
+    ]
+   }
+  ],
+  "inputs": [
+   "requirements"
+  ],
+  "outputs": [
+   "architecture"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003033.10003039",
+  "field": "CS",
+  "node": "ACM:10003033.10003039",
+  "name": "Network protocols",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "deliver data reliably over an unreliable path"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Sliding-window retransmission",
+    "does": "resends lost data and orders what arrives",
+    "hypotheses": [
+     "loss is detected by acknowledgement or timeout",
+     "sequence numbers do not wrap within the window"
+    ]
+   },
+   {
+    "name": "AIMD congestion control",
+    "does": "shares a bottleneck among flows",
+    "hypotheses": [
+     "loss or delay signals congestion",
+     "flows follow the same rule"
+    ]
+   }
+  ],
+  "inputs": [
+   "channel properties"
+  ],
+  "outputs": [
+   "protocol behaviour"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003033.10003058",
+  "field": "CS",
+  "node": "ACM:10003033.10003058",
+  "name": "Network components",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "build the devices that forward and connect traffic"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003033.10003068",
+  "field": "CS",
+  "node": "ACM:10003033.10003068",
+  "name": "Network algorithms",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "find routes and schedule traffic"
+  ],
+  "signature": {
+   "task": [
+    "optimise"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dijkstra's algorithm",
+    "does": "finds shortest paths",
+    "hypotheses": [
+     "non-negative link costs"
+    ]
+   },
+   {
+    "name": "Bellman–Ford algorithm",
+    "does": "finds shortest paths with negative costs allowed",
+    "hypotheses": [
+     "no negative-cost cycles"
+    ]
+   }
+  ],
+  "inputs": [
+   "topology",
+   "costs"
+  ],
+  "outputs": [
+   "routes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003033.10003079",
+  "field": "CS",
+  "node": "ACM:10003033.10003079",
+  "name": "Network performance evaluation",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "predict delay and throughput under load"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "M/M/1 queue",
+    "does": "gives mean delay and queue length",
+    "hypotheses": [
+     "Poisson arrivals",
+     "exponential service",
+     "one server",
+     "utilisation below one"
+    ]
+   },
+   {
+    "name": "Network calculus",
+    "does": "gives worst-case delay bounds",
+    "hypotheses": [
+     "arrival curves and service curves are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "arrival and service rates"
+  ],
+  "outputs": [
+   "delay",
+   "bounds"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003033.10003083",
+  "field": "CS",
+  "node": "ACM:10003033.10003083",
+  "name": "Network properties",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "characterise a network's reliability, security and structure"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003033.10003099",
+  "field": "CS",
+  "node": "ACM:10003033.10003099",
+  "name": "Network services",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "provide naming, location and management services on a network"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003033.10003106",
+  "field": "CS",
+  "node": "ACM:10003033.10003106",
+  "name": "Network types",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for kinds of network. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003120.10003121",
+  "field": "CS",
+  "node": "ACM:10003120.10003121",
+  "name": "Human computer interaction (HCI)",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "predict and measure how people perform with an interface"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fitts's law",
+    "does": "predicts pointing time from distance and target size",
+    "hypotheses": [
+     "rapid aimed movements",
+     "coefficients fitted for the device"
+    ]
+   },
+   {
+    "name": "Keystroke-level model",
+    "does": "predicts expert task time by adding operator times",
+    "hypotheses": [
+     "expert users",
+     "error-free routine tasks"
+    ]
+   },
+   {
+    "name": "Usability testing",
+    "does": "observes users doing set tasks",
+    "hypotheses": [
+     "participants and tasks represent real use"
+    ]
+   }
+  ],
+  "inputs": [
+   "interface design",
+   "tasks"
+  ],
+  "outputs": [
+   "predicted times",
+   "problems"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003120.10003123",
+  "field": "CS",
+  "node": "ACM:10003120.10003123",
+  "name": "Interaction design",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "shape how a person and a system exchange actions"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003120.10003130",
+  "field": "CS",
+  "node": "ACM:10003120.10003130",
+  "name": "Collaborative and social computing",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "design systems that groups of people use together"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003120.10003138",
+  "field": "CS",
+  "node": "ACM:10003120.10003138",
+  "name": "Ubiquitous and mobile computing",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "design computing that travels with people or sits in the surroundings"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003120.10003145",
+  "field": "CS",
+  "node": "ACM:10003120.10003145",
+  "name": "Visualization",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "show data so that its patterns are read correctly"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ranking of visual encodings (Cleveland–McGill)",
+    "does": "orders encodings by how accurately people read them",
+    "hypotheses": [
+     "the task is reading quantities",
+     "findings come from controlled experiments"
+    ]
+   }
+  ],
+  "inputs": [
+   "data",
+   "question"
+  ],
+  "outputs": [
+   "chart design"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003120.10011738",
+  "field": "CS",
+  "node": "ACM:10003120.10011738",
+  "name": "Accessibility",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "make systems usable by people with disabilities"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "design"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Conformance testing against WCAG",
+    "does": "checks content against published success criteria",
+    "hypotheses": [
+     "the content type is covered by the guidelines",
+     "some criteria need human judgement"
+    ]
+   }
+  ],
+  "inputs": [
+   "interface"
+  ],
+  "outputs": [
+   "conformance report"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003456.10003457",
+  "field": "CS",
+  "node": "ACM:10003456.10003457",
+  "name": "Professional topics",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for professional topics. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003456.10003462",
+  "field": "CS",
+  "node": "ACM:10003456.10003462",
+  "name": "Computing / technology policy",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for policy. Tools sit in law and politics. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003456.10010927",
+  "field": "CS",
+  "node": "ACM:10003456.10010927",
+  "name": "User characteristics",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for user groups. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003752.10003753",
+  "field": "CS",
+  "node": "ACM:10003752.10003753",
+  "name": "Models of computation",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "say what can be computed at all"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "decide_existence"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Undecidability of the halting problem",
+    "does": "shows no algorithm decides whether every program halts",
+    "hypotheses": [
+     "a Turing-complete model"
+    ]
+   },
+   {
+    "name": "Church–Turing thesis",
+    "does": "identifies the informally computable with the Turing computable",
+    "hypotheses": [
+     "it is a thesis, not a theorem"
+    ]
+   }
+  ],
+  "inputs": [
+   "formal problem"
+  ],
+  "outputs": [
+   "decidability verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003752.10003766",
+  "field": "CS",
+  "node": "ACM:10003752.10003766",
+  "name": "Formal languages and automata theory",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "recognise and describe sets of strings"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "prove"
+   ],
+   "structure": [
+    "sequence"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Equivalence of regular expressions and finite automata (Kleene)",
+    "does": "lets either describe the same languages",
+    "hypotheses": [
+     "regular languages only"
+    ]
+   },
+   {
+    "name": "Pumping lemma",
+    "does": "proves a language is not regular or not context-free",
+    "hypotheses": [
+     "it gives a necessary condition only"
+    ]
+   },
+   {
+    "name": "CYK parsing",
+    "does": "decides membership for a context-free grammar in cubic time",
+    "hypotheses": [
+     "the grammar is in Chomsky normal form"
+    ]
+   }
+  ],
+  "inputs": [
+   "grammar or automaton",
+   "string"
+  ],
+  "outputs": [
+   "membership",
+   "classification"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003752.10003777",
+  "field": "CS",
+  "node": "ACM:10003752.10003777",
+  "name": "Computational complexity and cryptography",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "classify problems by the resources they need"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "prove"
+   ],
+   "goal_quality": [
+    "bound"
+   ]
+  },
+  "tools": [
+   {
+    "name": "NP-completeness by reduction",
+    "does": "shows a problem is as hard as any in NP",
+    "hypotheses": [
+     "a polynomial-time reduction from a known NP-complete problem",
+     "the problem is in NP"
+    ]
+   },
+   {
+    "name": "Cook–Levin theorem",
+    "does": "shows Boolean satisfiability is NP-complete",
+    "hypotheses": [
+     "the standard Turing-machine model with polynomial-time reductions"
+    ]
+   },
+   {
+    "name": "Time hierarchy theorem",
+    "does": "shows more time allows more problems to be solved",
+    "hypotheses": [
+     "time bounds are time-constructible"
+    ]
+   }
+  ],
+  "inputs": [
+   "formal problem"
+  ],
+  "outputs": [
+   "complexity class"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003752.10003790",
+  "field": "CS",
+  "node": "ACM:10003752.10003790",
+  "name": "Logic",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "decide whether a statement follows from others"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "verify"
+   ],
+   "structure": [
+    "logical"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Resolution",
+    "does": "refutes a set of clauses",
+    "hypotheses": [
+     "formulas are in clausal form",
+     "it is refutation-complete for first-order logic"
+    ]
+   },
+   {
+    "name": "DPLL and clause-learning satisfiability solving",
+    "does": "decides satisfiability of propositional formulas",
+    "hypotheses": [
+     "propositional formulas",
+     "worst-case time is exponential"
+    ]
+   },
+   {
+    "name": "Model checking",
+    "does": "checks a finite-state system against a temporal-logic property",
+    "hypotheses": [
+     "the model is finite, or abstracted to finite",
+     "the property is expressed in the logic"
+    ]
+   }
+  ],
+  "inputs": [
+   "formulas",
+   "system model"
+  ],
+  "outputs": [
+   "proof, model or counter-example"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003752.10003809",
+  "field": "CS",
+  "node": "ACM:10003752.10003809",
+  "name": "Design and analysis of algorithms",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "solve a problem within a proven time bound"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "prove"
+   ],
+   "goal_quality": [
+    "exact",
+    "bound"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dynamic programming",
+    "does": "builds an optimal answer from optimal sub-answers",
+    "hypotheses": [
+     "optimal substructure",
+     "overlapping subproblems"
+    ]
+   },
+   {
+    "name": "Greedy algorithms with an exchange argument",
+    "does": "build an optimum by locally best choices",
+    "hypotheses": [
+     "the greedy-choice property holds, as in a matroid"
+    ]
+   },
+   {
+    "name": "Divide and conquer (master theorem)",
+    "does": "splits a problem and bounds the running time",
+    "hypotheses": [
+     "subproblems are independent and of equal size"
+    ]
+   },
+   {
+    "name": "Amortised analysis",
+    "does": "bounds the average cost per operation over a sequence",
+    "hypotheses": [
+     "a potential function is non-negative and starts at zero"
+    ]
+   }
+  ],
+  "inputs": [
+   "problem statement"
+  ],
+  "outputs": [
+   "algorithm with running time"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003752.10010061",
+  "field": "CS",
+  "node": "ACM:10003752.10010061",
+  "name": "Randomness, geometry and discrete structures",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "use chance and geometry to compute"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Chernoff bound",
+    "does": "bounds the chance that a sum strays far from its mean",
+    "hypotheses": [
+     "the summands are independent and bounded"
+    ]
+   },
+   {
+    "name": "Convex hull algorithms",
+    "does": "find the smallest convex set holding given points",
+    "hypotheses": [
+     "points are in a fixed low dimension"
+    ]
+   }
+  ],
+  "inputs": [
+   "random process",
+   "point set"
+  ],
+  "outputs": [
+   "tail bound",
+   "hull"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003752.10010070",
+  "field": "CS",
+  "node": "ACM:10003752.10010070",
+  "name": "Theory and algorithms for application domains",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "give algorithms with guarantees for particular application areas"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "prove"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003752.10010124",
+  "field": "CS",
+  "node": "ACM:10003752.10010124",
+  "name": "Semantics and reasoning",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "say precisely what a program means and prove what it does"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "verify"
+   ],
+   "structure": [
+    "logical"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hoare logic",
+    "does": "proves a program meets pre- and postconditions",
+    "hypotheses": [
+     "a formal specification",
+     "loop invariants are supplied",
+     "the basic proof gives partial correctness"
+    ]
+   },
+   {
+    "name": "Abstract interpretation",
+    "does": "computes a sound over-approximation of program behaviour",
+    "hypotheses": [
+     "the abstract domain forms a lattice",
+     "a Galois connection or equivalent soundness relation holds",
+     "widening ensures termination"
+    ]
+   },
+   {
+    "name": "Type soundness (progress and preservation)",
+    "does": "shows well-typed programs do not get stuck",
+    "hypotheses": [
+     "the language semantics are formalised"
+    ]
+   }
+  ],
+  "inputs": [
+   "program",
+   "specification"
+  ],
+  "outputs": [
+   "proof",
+   "invariants"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010147.10010148",
+  "field": "CS",
+  "node": "ACM:10010147.10010148",
+  "name": "Symbolic and algebraic manipulation",
+  "taxonomy_cell": "CS.O.A4",
+  "solves": [
+   "manipulate formulas exactly by machine"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "prove"
+   ],
+   "domain_type": [
+    "symbolic"
+   ],
+   "structure": [
+    "algebraic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gröbner bases (Buchberger's algorithm)",
+    "does": "solve and simplify systems of polynomial equations",
+    "hypotheses": [
+     "polynomials over a field",
+     "a monomial order is fixed"
+    ]
+   },
+   {
+    "name": "Risch algorithm",
+    "does": "decides whether an elementary function has an elementary antiderivative",
+    "hypotheses": [
+     "the integrand is an elementary function",
+     "the constant field is computable"
+    ]
+   }
+  ],
+  "inputs": [
+   "polynomials",
+   "expressions"
+  ],
+  "outputs": [
+   "canonical forms",
+   "antiderivative"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010147.10010169",
+  "field": "CS",
+  "node": "ACM:10010147.10010169",
+  "name": "Parallel computing methodologies",
+  "taxonomy_cell": "CS.O.A4",
+  "solves": [
+   "predict the gain from running parts of a task at once"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Amdahl's law",
+    "does": "bounds speed-up by the serial fraction",
+    "hypotheses": [
+     "fixed problem size",
+     "the parallel fraction is known"
+    ]
+   },
+   {
+    "name": "Gustafson's law",
+    "does": "gives scaled speed-up when the problem grows with processors",
+    "hypotheses": [
+     "the parallel part grows with the processor count",
+     "the serial part stays fixed"
+    ]
+   }
+  ],
+  "inputs": [
+   "workload profile"
+  ],
+  "outputs": [
+   "speed-up bound"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010147.10010178",
+  "field": "CS",
+  "node": "ACM:10010147.10010178",
+  "name": "Artificial intelligence",
+  "taxonomy_cell": "CS.O.A4",
+  "solves": [
+   "search, plan and reason to reach a goal"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "optimise"
+   ],
+   "linearity": [
+    "combinatorial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "A* search",
+    "does": "finds a least-cost path",
+    "hypotheses": [
+     "the heuristic never overestimates",
+     "for graph search it is consistent"
+    ]
+   },
+   {
+    "name": "Minimax with alpha-beta pruning",
+    "does": "finds the best move in a two-player game",
+    "hypotheses": [
+     "two players",
+     "zero-sum",
+     "perfect information"
+    ]
+   },
+   {
+    "name": "Bayesian networks",
+    "does": "compute probabilities from a graph of dependencies",
+    "hypotheses": [
+     "the graph's conditional independences hold",
+     "conditional probabilities are specified"
+    ]
+   }
+  ],
+  "inputs": [
+   "state space",
+   "game tree",
+   "evidence"
+  ],
+  "outputs": [
+   "plan",
+   "move",
+   "posterior"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010147.10010257",
+  "field": "CS",
+  "node": "ACM:10010147.10010257",
+  "name": "Machine learning",
+  "taxonomy_cell": "CS.O.A4",
+  "solves": [
+   "fit a model to examples so it predicts new cases"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "classify"
+   ],
+   "data": [
+    "data_rich"
+   ],
+   "uncertainty": [
+    "unknown_distribution"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Stochastic gradient descent with backpropagation",
+    "does": "fits model parameters",
+    "hypotheses": [
+     "the loss is differentiable",
+     "a global optimum is assured only for convex losses"
+    ]
+   },
+   {
+    "name": "PAC learning bound",
+    "does": "bounds the gap between training and true error",
+    "hypotheses": [
+     "independent examples from one fixed distribution",
+     "finite VC dimension"
+    ]
+   },
+   {
+    "name": "Cross-validation",
+    "does": "estimates out-of-sample error",
+    "hypotheses": [
+     "observations are exchangeable",
+     "no leakage between folds"
+    ]
+   },
+   {
+    "name": "Regularisation",
+    "does": "limits model complexity to reduce overfitting",
+    "hypotheses": [
+     "the penalty strength is chosen on held-out data"
+    ]
+   }
+  ],
+  "inputs": [
+   "labelled examples"
+  ],
+  "outputs": [
+   "fitted model",
+   "error estimate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010147.10010341",
+  "field": "CS",
+  "node": "ACM:10010147.10010341",
+  "name": "Modeling and simulation",
+  "taxonomy_cell": "CS.O.A4",
+  "solves": [
+   "imitate a system on a computer to predict its behaviour"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Discrete-event simulation",
+    "does": "advances a model from event to event",
+    "hypotheses": [
+     "the system changes state only at discrete events",
+     "input distributions are fitted to data"
+    ]
+   },
+   {
+    "name": "Monte Carlo simulation",
+    "does": "estimates a quantity from random runs",
+    "hypotheses": [
+     "independent runs",
+     "finite variance",
+     "enough runs for the stated error"
+    ]
+   },
+   {
+    "name": "Model validation against data",
+    "does": "checks simulated output against observed output",
+    "hypotheses": [
+     "observed data were not used to fit the model"
+    ]
+   }
+  ],
+  "inputs": [
+   "model",
+   "input distributions"
+  ],
+  "outputs": [
+   "output estimates with intervals"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010147.10010371",
+  "field": "CS",
+  "node": "ACM:10010147.10010371",
+  "name": "Computer graphics",
+  "taxonomy_cell": "CS.O.A4",
+  "solves": [
+   "produce an image of a described scene"
+  ],
+  "signature": {
+   "task": [
+    "construct"
+   ],
+   "structure": [
+    "geometric_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Rendering equation with path tracing",
+    "does": "computes light leaving each point by sampling paths",
+    "hypotheses": [
+     "geometric optics",
+     "the estimate is unbiased but noisy at finite samples"
+    ]
+   },
+   {
+    "name": "Rasterisation with a depth buffer",
+    "does": "draws triangles and keeps the nearest surface per pixel",
+    "hypotheses": [
+     "opaque surfaces",
+     "depth precision is sufficient"
+    ]
+   }
+  ],
+  "inputs": [
+   "scene description"
+  ],
+  "outputs": [
+   "image"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010147.10010919",
+  "field": "CS",
+  "node": "ACM:10010147.10010919",
+  "name": "Distributed computing methodologies",
+  "taxonomy_cell": "CS.O.A4",
+  "solves": [
+   "keep many machines consistent despite failures"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Consensus protocols (Paxos, Raft)",
+    "does": "make replicas agree on one sequence",
+    "hypotheses": [
+     "crash failures only",
+     "a majority is working",
+     "progress needs timely messages"
+    ]
+   },
+   {
+    "name": "FLP impossibility",
+    "does": "shows no deterministic protocol always reaches consensus",
+    "hypotheses": [
+     "a fully asynchronous system",
+     "at least one process may crash"
+    ]
+   },
+   {
+    "name": "Logical clocks (Lamport)",
+    "does": "order events consistently with causality",
+    "hypotheses": [
+     "every message carries a timestamp"
+    ]
+   }
+  ],
+  "inputs": [
+   "failure model"
+  ],
+  "outputs": [
+   "protocol",
+   "ordering"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010147.10011777",
+  "field": "CS",
+  "node": "ACM:10010147.10011777",
+  "name": "Concurrent computing methodologies",
+  "taxonomy_cell": "CS.O.A4",
+  "solves": [
+   "let several activities share state without corrupting it"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Mutual exclusion with locks",
+    "does": "lets one activity at a time into a critical section",
+    "hypotheses": [
+     "every access takes the lock",
+     "locks are acquired in a fixed order to avoid deadlock"
+    ]
+   },
+   {
+    "name": "Linearisability",
+    "does": "defines correctness of a concurrent object against a sequential one",
+    "hypotheses": [
+     "a sequential specification exists"
+    ]
+   }
+  ],
+  "inputs": [
+   "shared data",
+   "operations"
+  ],
+  "outputs": [
+   "safe design",
+   "correctness argument"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10003550",
+  "field": "CS",
+  "node": "ACM:10010405.10003550",
+  "name": "Electronic commerce",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010406",
+  "field": "CS",
+  "node": "ACM:10010405.10010406",
+  "name": "Enterprise computing",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010432",
+  "field": "CS",
+  "node": "ACM:10010405.10010432",
+  "name": "Physical sciences and engineering",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010444",
+  "field": "CS",
+  "node": "ACM:10010405.10010444",
+  "name": "Life and medical sciences",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010455",
+  "field": "CS",
+  "node": "ACM:10010405.10010455",
+  "name": "Law, social and behavioral sciences",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010462",
+  "field": "CS",
+  "node": "ACM:10010405.10010462",
+  "name": "Computer forensics",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "recover and preserve digital evidence"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "infer"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Forensic imaging with hash verification",
+    "does": "copies a device bit for bit and proves the copy unchanged",
+    "hypotheses": [
+     "a write blocker is used",
+     "hashes are recorded at acquisition",
+     "the chain of custody is documented"
+    ]
+   }
+  ],
+  "inputs": [
+   "storage device"
+  ],
+  "outputs": [
+   "verified image"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010469",
+  "field": "CS",
+  "node": "ACM:10010405.10010469",
+  "name": "Arts and humanities",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010476",
+  "field": "CS",
+  "node": "ACM:10010405.10010476",
+  "name": "Computers in other domains",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010481",
+  "field": "CS",
+  "node": "ACM:10010405.10010481",
+  "name": "Operations research",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "choose the best plan under limits"
+  ],
+  "signature": {
+   "task": [
+    "optimise"
+   ],
+   "constraints": [
+    "resource_budget",
+    "inequality"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linear programming (simplex method)",
+    "does": "maximises a linear objective under linear constraints",
+    "hypotheses": [
+     "linear objective and constraints",
+     "continuous variables"
+    ]
+   },
+   {
+    "name": "Branch and bound",
+    "does": "solves integer programmes by bounded search",
+    "hypotheses": [
+     "a relaxation gives valid bounds",
+     "worst-case time is exponential"
+    ]
+   }
+  ],
+  "inputs": [
+   "objective",
+   "constraints"
+  ],
+  "outputs": [
+   "optimal plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010489",
+  "field": "CS",
+  "node": "ACM:10010405.10010489",
+  "name": "Education",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405.10010497",
+  "field": "CS",
+  "node": "ACM:10010405.10010497",
+  "name": "Document management and text processing",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010520.10010521",
+  "field": "CS",
+  "node": "ACM:10010520.10010521",
+  "name": "Architectures",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "organise a processor and its memory for speed"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Amdahl's law",
+    "does": "bounds overall gain from speeding up one part",
+    "hypotheses": [
+     "the share of time in that part is known"
+    ]
+   },
+   {
+    "name": "Cache locality principle",
+    "does": "keeps recently and nearby used data close",
+    "hypotheses": [
+     "programmes reuse data in time and space",
+     "an empirical regularity"
+    ]
+   }
+  ],
+  "inputs": [
+   "workload"
+  ],
+  "outputs": [
+   "design choices",
+   "speed-up bound"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010520.10010553",
+  "field": "CS",
+  "node": "ACM:10010520.10010553",
+  "name": "Embedded and cyber-physical systems",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "build computers that sense and act on the physical world"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010520.10010570",
+  "field": "CS",
+  "node": "ACM:10010520.10010570",
+  "name": "Real-time systems",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "guarantee that every task meets its deadline"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "design"
+   ],
+   "constraints": [
+    "inequality"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Rate-monotonic scheduling bound (Liu–Layland)",
+    "does": "guarantees deadlines when utilisation is under a bound",
+    "hypotheses": [
+     "periodic independent tasks",
+     "deadlines equal periods",
+     "fixed priorities by rate",
+     "one processor"
+    ]
+   },
+   {
+    "name": "Earliest-deadline-first scheduling",
+    "does": "meets all deadlines when utilisation is at most one",
+    "hypotheses": [
+     "independent preemptible tasks",
+     "one processor",
+     "deadlines equal periods"
+    ]
+   }
+  ],
+  "inputs": [
+   "task periods and run times"
+  ],
+  "outputs": [
+   "schedulability verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010520.10010575",
+  "field": "CS",
+  "node": "ACM:10010520.10010575",
+  "name": "Dependable and fault-tolerant systems and networks",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "keep a system working when parts fail"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Triple modular redundancy",
+    "does": "masks one faulty unit by majority vote",
+    "hypotheses": [
+     "faults in the units are independent",
+     "the voter is reliable"
+    ]
+   },
+   {
+    "name": "Byzantine fault tolerance bound",
+    "does": "says agreement needs more than three times as many nodes as traitors",
+    "hypotheses": [
+     "nodes may behave arbitrarily",
+     "messages are not signed"
+    ]
+   }
+  ],
+  "inputs": [
+   "failure model"
+  ],
+  "outputs": [
+   "redundancy design"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10011007.10010940",
+  "field": "CS",
+  "node": "ACM:10011007.10010940",
+  "name": "Software organization and properties",
+  "taxonomy_cell": "CS.O.A1",
+  "solves": [
+   "structure software so that it has the properties wanted"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10011007.10011006",
+  "field": "CS",
+  "node": "ACM:10011007.10011006",
+  "name": "Software notations and tools",
+  "taxonomy_cell": "CS.O.A1",
+  "solves": [
+   "translate and check programs"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "verify"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Parsing (LL and LR)",
+    "does": "recovers the structure of a program text",
+    "hypotheses": [
+     "the grammar is in the class the parser handles"
+    ]
+   },
+   {
+    "name": "Sound static type checking",
+    "does": "rules out a class of run-time errors",
+    "hypotheses": [
+     "the type system is proved sound",
+     "unsafe escapes are not used"
+    ]
+   },
+   {
+    "name": "Data-flow analysis",
+    "does": "computes facts that hold at each program point",
+    "hypotheses": [
+     "transfer functions are monotone on a lattice of finite height"
+    ]
+   }
+  ],
+  "inputs": [
+   "source code",
+   "grammar"
+  ],
+  "outputs": [
+   "syntax tree",
+   "type errors",
+   "facts"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10011007.10011074",
+  "field": "CS",
+  "node": "ACM:10011007.10011074",
+  "name": "Software creation and management",
+  "taxonomy_cell": "CS.O.A1",
+  "solves": [
+   "build software with others and keep it correct as it changes"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Automated testing",
+    "does": "finds faults by running cases",
+    "hypotheses": [
+     "an expected result exists for each case",
+     "passing tests do not prove absence of faults"
+    ]
+   },
+   {
+    "name": "Version control with code review",
+    "does": "records every change and has a second person check it",
+    "hypotheses": [
+     "all changes go through the repository"
+    ]
+   },
+   {
+    "name": "Continuous integration",
+    "does": "builds and tests every change automatically",
+    "hypotheses": [
+     "the test suite runs quickly and reliably"
+    ]
+   }
+  ],
+  "inputs": [
+   "source code",
+   "changes"
+  ],
+  "outputs": [
+   "test report",
+   "reviewed history"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

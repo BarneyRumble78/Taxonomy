@@ -35,6 +35,16 @@ for src in sorted((ROOT / "cards" / "toolkit" / f"src_l{LEVEL}").glob("*.py")):
     NS = runpy.run_path(str(src), {"C": C, "K": K, "N": N})
     T, D = NS["T"], NS.get("D")  # D: stated catalogue default for flat thesaurus terms that are not subfields
     nodes = [n for n in json.loads((ROOT / "maps" / field / INDEX[field]["primary"]).read_text(encoding="utf-8"))["nodes"] if n["level"] == LEVEL]
+    uniq, dupmap = {}, 0
+    for n in nodes:                      # a map may list the same node id twice; one card per node id
+        if n["id"] in uniq: dupmap += 1
+        else: uniq[n["id"]] = n
+    nodes = list(uniq.values())
+    if dupmap: print(f"{field}: {dupmap} repeated node ids in the map were skipped")
+    cnt = {}
+    for n in nodes: cnt[n["code"]] = cnt.get(n["code"], 0) + 1
+    for n in nodes:                      # same code under two parents: key and card id use the node id tail
+        if cnt[n["code"]] > 1: n["code"] = n["id"].split(":", 1)[1]
     codes = {n["code"] for n in nodes}
     for k in T:
         if k not in codes: print(f"{field}: unknown code {k!r}"); fails += 1

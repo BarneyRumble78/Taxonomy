@@ -1,0 +1,28 @@
+D = C("A topic or jurisdiction heading of the scheme. General methods sit at K. Rules here apply only under that jurisdiction's own sources.")
+KZ = K("work out what states have bound themselves to", "task=decide_existence explain|structure=text_language|constraints=legal_or_normative",
+  [("Treaty interpretation under the Vienna Convention, articles 31 and 32", "reads a treaty by ordinary meaning, context and purpose", "the treaty is in force between the parties; the Convention applies or its rules are accepted as custom"),
+   ("Identification of customary international law", "finds a rule from practice accepted as law", "a general practice of states; the practice is accepted as law")],
+  "treaty texts; state practice", "reasoned conclusion on the obligation")
+T = {
+"K1-7720": K("work out what a binding text requires and compare how systems solve a problem", "task=decide_existence classify explain|structure=text_language|constraints=legal_or_normative",
+  [("Statutory interpretation", "reads a provision by text, context and purpose", "the text is in force; the jurisdiction's rules of interpretation are applied"),
+   ("Doctrine of precedent", "applies the reason for an earlier decision to like cases", "the earlier court binds the later one; the material facts are comparable"),
+   ("Functional method of comparative law", "compares how systems solve the same problem", "the systems face a comparable problem")],
+  "texts and decisions; facts", "reasoned conclusion"),
+"K2100-2385": K("decide which party must prove a fact and how firmly", "task=verify decide_existence|constraints=legal_or_normative",
+  [("Burden and standard of proof", "assigns who must prove and to what degree", "the jurisdiction's rules fix the burden and the standard for the type of case")],
+  "pleadings; evidence", "finding of fact"),
+"K3154-3370": K("decide whether a limit on a right is justified", "task=verify|constraints=legal_or_normative",
+  [("Proportionality test", "asks whether a measure has a legitimate aim, is suitable, is necessary and is balanced", "the jurisdiction applies proportionality review; the right is not absolute")],
+  "the measure; the right affected", "justified or not"),
+"K7000-7720": K("decide which country's law governs a cross-border dispute", "task=classify decide_existence|constraints=legal_or_normative",
+  [("Choice-of-law analysis", "characterises the issue, finds the connecting factor and applies the law it points to", "the forum's own conflict rules apply; the issue can be characterised")],
+  "facts with foreign elements", "applicable law"),
+"KF801-1241": K("decide whether an enforceable agreement exists", "task=decide_existence|constraints=legal_or_normative",
+  [("Elements of contract formation at common law", "require offer, acceptance, consideration and intention to be bound", "a common-law jurisdiction; statute may add formal requirements")],
+  "communications between the parties", "contract or no contract"),
+"KF1246-1327": K("decide whether one party must compensate another for harm", "task=decide_existence|constraints=legal_or_normative",
+  [("Elements of negligence", "require duty, breach, causation and damage", "a common-law jurisdiction; statute may modify the elements")],
+  "facts of the harm", "liable or not"),
+"KZ2-6795": KZ, "KZ1-6795": KZ, "KZ1-7500": KZ,
+}
