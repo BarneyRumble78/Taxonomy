@@ -30,10 +30,16 @@ fails = 0
 LEVEL = int(sys.argv[1]) if len(sys.argv) > 1 else 1   # python3 scripts/build_l1_cards.py 2  builds level 2 from src_l2/
 NEC = C("Residual class of the scheme (not elsewhere classified). It holds no tools of its own.")
 seen = {c["id"] for q in (ROOT / "cards" / "toolkit").glob("*_L*.json") if not q.name.endswith(f"_L{LEVEL}.json") for c in json.loads(q.read_text(encoding="utf-8"))}
-for src in sorted((ROOT / "cards" / "toolkit" / f"src_l{LEVEL}").glob("*.py")):
+SRC = ROOT / "cards" / "toolkit" / f"src_l{LEVEL}"
+for src in sorted(q for q in SRC.glob("*.py") if "__" not in q.stem):
     field = src.stem
     NS = runpy.run_path(str(src), {"C": C, "K": K, "N": N})
-    T, D = NS["T"], NS.get("D")  # D: stated catalogue default for flat thesaurus terms that are not subfields
+    T, D = dict(NS["T"]), NS.get("D")
+    for part in sorted(SRC.glob(f"{field}__*.py")):      # large fields are split across FIELD__n.py parts
+        PT = runpy.run_path(str(part), {"C": C, "K": K, "N": N})["T"]
+        for k in PT:
+            if k in T: print(f"{field}: {k!r} defined twice"); fails += 1
+        T.update(PT)  # D: stated catalogue default for flat thesaurus terms that are not subfields
     nodes = [n for n in json.loads((ROOT / "maps" / field / INDEX[field]["primary"]).read_text(encoding="utf-8"))["nodes"] if n["level"] == LEVEL]
     uniq, dupmap = {}, 0
     for n in nodes:                      # a map may list the same node id twice; one card per node id
