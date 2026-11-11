@@ -2,7 +2,7 @@
 
   python3 scripts/build_l1_cards.py            # all fields with a source file
 Each source defines T = {code: (solves, signature, tools, inputs, outputs)} or C("note") for a
-catalogue node that carries no tools. Signature values are space-separated strings per facet.
+catalogue node that carries no tools. A source may set D = C("note") as the stated default for unlisted nodes. Signature values are space-separated strings per facet.
 Fails loudly if a node is missing, a key is unknown or a signature value is outside the vocabulary.
 Writes cards/toolkit/<FIELD>_L1.json. Every card is status "draft".
 """
@@ -20,13 +20,15 @@ def C(note):
 fails = 0
 for src in sorted((ROOT / "cards" / "toolkit" / "src_l1").glob("*.py")):
     field = src.stem
-    T = runpy.run_path(str(src), {"C": C})["T"]
+    NS = runpy.run_path(str(src), {"C": C})
+    T, D = NS["T"], NS.get("D")  # D: stated catalogue default for flat thesaurus terms that are not subfields
     nodes = [n for n in json.loads((ROOT / "maps" / field / INDEX[field]["primary"]).read_text(encoding="utf-8"))["nodes"] if n["level"] == 1]
     codes = {n["code"] for n in nodes}
     for k in T:
         if k not in codes: print(f"{field}: unknown code {k!r}"); fails += 1
     cards = []
     for n in nodes:
+        if n["code"] not in T and D: T[n["code"]] = D
         if n["code"] not in T: print(f"{field}: no card for {n['code']!r}"); fails += 1; continue
         e = T[n["code"]]
         solves, sig, tools, inputs, outputs = e[:5]

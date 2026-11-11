@@ -1,0 +1,3038 @@
+[
+ {
+  "id": "EV.TK.25",
+  "field": "EV",
+  "node": "GEMET:25",
+  "name": "accident",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.95",
+  "field": "EV",
+  "node": "GEMET:95",
+  "name": "administration",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.232",
+  "field": "EV",
+  "node": "GEMET:232",
+  "name": "agriculture",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.397",
+  "field": "EV",
+  "node": "GEMET:397",
+  "name": "analysis",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "account for everything entering and leaving a bounded system"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "constraints": [
+    "equality",
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Material flow analysis (mass balance)",
+    "does": "balances inputs, outputs and stock change of a substance",
+    "hypotheses": [
+     "the system boundary and period are defined",
+     "every significant flow is measured or estimated"
+    ]
+   }
+  ],
+  "inputs": [
+   "flows and stocks"
+  ],
+  "outputs": [
+   "balanced account with unexplained remainder"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.429",
+  "field": "EV",
+  "node": "GEMET:429",
+  "name": "animal husbandry",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.617",
+  "field": "EV",
+  "node": "GEMET:617",
+  "name": "atmosphere",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "predict concentration downwind of a release"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gaussian plume model",
+    "does": "gives downwind concentration from a continuous point source",
+    "hypotheses": [
+     "a steady emission rate",
+     "steady wind and uniform turbulence",
+     "flat terrain",
+     "no chemical reaction or deposition, unless added"
+    ]
+   }
+  ],
+  "inputs": [
+   "emission rate, stack height, weather"
+  ],
+  "outputs": [
+   "concentration field"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.812",
+  "field": "EV",
+  "node": "GEMET:812",
+  "name": "biochemical process",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "measure the load of degradable matter in water"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Five-day biochemical oxygen demand test",
+    "does": "measures oxygen used by microbes breaking down organic matter",
+    "hypotheses": [
+     "five days of incubation at 20 degrees Celsius in the dark",
+     "a suitable microbial seed is present",
+     "no toxic substance inhibits the microbes"
+    ]
+   }
+  ],
+  "inputs": [
+   "water sample"
+  ],
+  "outputs": [
+   "oxygen demand"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.892",
+  "field": "EV",
+  "node": "GEMET:892",
+  "name": "biosphere",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "predict how many kinds of organism an area holds"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "symmetry": [
+    "scaling"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Species-area relationship",
+    "does": "fits species number as a power of area",
+    "hypotheses": [
+     "areas of similar habitat",
+     "comparable sampling effort across areas"
+    ]
+   }
+  ],
+  "inputs": [
+   "species counts and areas"
+  ],
+  "outputs": [
+   "fitted exponent",
+   "predicted richness"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.963",
+  "field": "EV",
+  "node": "GEMET:963",
+  "name": "border",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.1063",
+  "field": "EV",
+  "node": "GEMET:1063",
+  "name": "built environment",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.1084",
+  "field": "EV",
+  "node": "GEMET:1084",
+  "name": "business",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.1320",
+  "field": "EV",
+  "node": "GEMET:1320",
+  "name": "chemical process",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.1322",
+  "field": "EV",
+  "node": "GEMET:1322",
+  "name": "chemical property",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.1327",
+  "field": "EV",
+  "node": "GEMET:1327",
+  "name": "chemical",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.1462",
+  "field": "EV",
+  "node": "GEMET:1462",
+  "name": "climate",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "estimate how mean temperature responds to a change in energy balance"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "constraints": [
+    "physical_law"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Zero-dimensional energy balance model",
+    "does": "relates equilibrium temperature change to radiative forcing",
+    "hypotheses": [
+     "global and annual means",
+     "equilibrium is reached",
+     "the feedback parameter is constant"
+    ]
+   }
+  ],
+  "inputs": [
+   "forcing and feedback estimates"
+  ],
+  "outputs": [
+   "equilibrium temperature change"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.1850",
+  "field": "EV",
+  "node": "GEMET:1850",
+  "name": "craft",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.1921",
+  "field": "EV",
+  "node": "GEMET:1921",
+  "name": "culture (society)",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2060",
+  "field": "EV",
+  "node": "GEMET:2060",
+  "name": "demography",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2215",
+  "field": "EV",
+  "node": "GEMET:2215",
+  "name": "disaster",
+  "taxonomy_cell": "EV.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2232",
+  "field": "EV",
+  "node": "GEMET:2232",
+  "name": "disease",
+  "taxonomy_cell": "EV.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2516",
+  "field": "EV",
+  "node": "GEMET:2516",
+  "name": "economy",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2547",
+  "field": "EV",
+  "node": "GEMET:2547",
+  "name": "education",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2562",
+  "field": "EV",
+  "node": "GEMET:2562",
+  "name": "effect",
+  "taxonomy_cell": "EV.O.A3",
+  "solves": [
+   "set an exposure level below which harm is not expected"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dose-response assessment with a benchmark dose",
+    "does": "derives a reference exposure from tested doses",
+    "hypotheses": [
+     "a threshold exists for the effect",
+     "uncertainty factors cover differences between species and between people",
+     "the critical effect is identified"
+    ]
+   }
+  ],
+  "inputs": [
+   "dose and response data"
+  ],
+  "outputs": [
+   "reference dose"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2643",
+  "field": "EV",
+  "node": "GEMET:2643",
+  "name": "chemical element",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2712",
+  "field": "EV",
+  "node": "GEMET:2712",
+  "name": "energy",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2774",
+  "field": "EV",
+  "node": "GEMET:2774",
+  "name": "environmental assessment",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "compare the total burden of ways to deliver the same function",
+   "foresee the effects of a proposal before deciding"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "predict",
+    "verify"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ],
+   "scope": [
+    "global"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Life cycle assessment (ISO 14040)",
+    "does": "totals burdens from raw material to disposal",
+    "hypotheses": [
+     "a functional unit is defined",
+     "the system boundary is stated",
+     "inventory data represent the processes concerned"
+    ]
+   },
+   {
+    "name": "Environmental impact assessment",
+    "does": "predicts and reports the effects of a proposal and its alternatives",
+    "hypotheses": [
+     "the proposal and its alternatives are defined",
+     "baseline conditions are surveyed"
+    ]
+   }
+  ],
+  "inputs": [
+   "process inventory",
+   "proposal and baseline"
+  ],
+  "outputs": [
+   "impact totals per function",
+   "impact statement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2778",
+  "field": "EV",
+  "node": "GEMET:2778",
+  "name": "environmental awareness",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2795",
+  "field": "EV",
+  "node": "GEMET:2795",
+  "name": "environmental control",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2803",
+  "field": "EV",
+  "node": "GEMET:2803",
+  "name": "environmental data",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2810",
+  "field": "EV",
+  "node": "GEMET:2810",
+  "name": "environmental economy issue",
+  "taxonomy_cell": "EV.O.A5",
+  "solves": [
+   "put a value on something that is not traded",
+   "weigh costs now against benefits later"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ],
+   "constraints": [
+    "resource_budget"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Contingent valuation",
+    "does": "asks people what they would pay for a described change",
+    "hypotheses": [
+     "respondents understand the change described",
+     "hypothetical bias is tested or controlled",
+     "the sample represents the affected population"
+    ]
+   },
+   {
+    "name": "Cost-benefit analysis with discounting",
+    "does": "compares discounted benefits with discounted costs",
+    "hypotheses": [
+     "effects can be valued in money",
+     "the discount rate is stated and justified"
+    ]
+   }
+  ],
+  "inputs": [
+   "survey responses",
+   "costs and benefits over time"
+  ],
+  "outputs": [
+   "willingness to pay",
+   "net present value"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2829",
+  "field": "EV",
+  "node": "GEMET:2829",
+  "name": "environmental impact",
+  "taxonomy_cell": "EV.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2877",
+  "field": "EV",
+  "node": "GEMET:2877",
+  "name": "environmental management",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "manage a system whose response to action is uncertain"
+  ],
+  "signature": {
+   "task": [
+    "control"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ],
+   "uncertainty": [
+    "unknown_distribution"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Adaptive management",
+    "does": "treats management actions as experiments and revises them",
+    "hypotheses": [
+     "outcomes are monitored",
+     "managers are able to change course",
+     "competing hypotheses about the system are stated"
+    ]
+   }
+  ],
+  "inputs": [
+   "monitoring data",
+   "management options"
+  ],
+  "outputs": [
+   "revised action"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2889",
+  "field": "EV",
+  "node": "GEMET:2889",
+  "name": "environmental planning",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2900",
+  "field": "EV",
+  "node": "GEMET:2900",
+  "name": "environmental protection",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "choose a set of sites that together protect the most"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "design"
+   ],
+   "linearity": [
+    "combinatorial"
+   ],
+   "constraints": [
+    "resource_budget"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Systematic conservation planning",
+    "does": "selects sites that complement one another to meet targets",
+    "hypotheses": [
+     "distribution data exist for the features to protect",
+     "quantitative targets are set",
+     "site costs are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "feature distributions",
+   "targets and costs"
+  ],
+  "outputs": [
+   "set of priority sites"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2944",
+  "field": "EV",
+  "node": "GEMET:2944",
+  "name": "environment",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.2956",
+  "field": "EV",
+  "node": "GEMET:2956",
+  "name": "equipment",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3011",
+  "field": "EV",
+  "node": "GEMET:3011",
+  "name": "evaluation",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3050",
+  "field": "EV",
+  "node": "GEMET:3050",
+  "name": "experiment",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3194",
+  "field": "EV",
+  "node": "GEMET:3194",
+  "name": "finances",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3232",
+  "field": "EV",
+  "node": "GEMET:3232",
+  "name": "firm",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3237",
+  "field": "EV",
+  "node": "GEMET:3237",
+  "name": "fishery",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "find the largest catch a stock can sustain"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "estimate"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Surplus production model (Schaefer)",
+    "does": "gives maximum sustainable yield",
+    "hypotheses": [
+     "logistic population growth",
+     "the stock is at equilibrium",
+     "catch per unit effort is proportional to abundance"
+    ]
+   }
+  ],
+  "inputs": [
+   "catch and effort series"
+  ],
+  "outputs": [
+   "maximum sustainable yield and the effort that gives it"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3439",
+  "field": "EV",
+  "node": "GEMET:3439",
+  "name": "forestry",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "choose when to harvest a growing stand"
+  ],
+  "signature": {
+   "task": [
+    "optimise"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "constraints": [
+    "resource_budget"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Faustmann rotation",
+    "does": "gives the harvest age that maximises land value over repeated rotations",
+    "hypotheses": [
+     "the growth function is known",
+     "prices, costs and the interest rate are constant",
+     "the land is replanted after each harvest"
+    ]
+   }
+  ],
+  "inputs": [
+   "growth curve, prices, interest rate"
+  ],
+  "outputs": [
+   "optimal rotation age"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3648",
+  "field": "EV",
+  "node": "GEMET:3648",
+  "name": "geological process",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3852",
+  "field": "EV",
+  "node": "GEMET:3852",
+  "name": "hazard",
+  "taxonomy_cell": "EV.O.A3",
+  "solves": [
+   "state how often an extreme event of a given size occurs"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Extreme value analysis and return periods",
+    "does": "fits a distribution to annual maxima",
+    "hypotheses": [
+     "annual maxima are independent",
+     "the record is stationary",
+     "the record is long against the return period sought"
+    ]
+   }
+  ],
+  "inputs": [
+   "record of annual maxima"
+  ],
+  "outputs": [
+   "magnitude for a given return period"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3865",
+  "field": "EV",
+  "node": "GEMET:3865",
+  "name": "health",
+  "taxonomy_cell": "EV.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.3869",
+  "field": "EV",
+  "node": "GEMET:3869",
+  "name": "health-environment relationship",
+  "taxonomy_cell": "EV.O.A3",
+  "solves": [
+   "estimate the share of illness due to an exposure"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Population attributable fraction",
+    "does": "gives the share of cases that would not occur without the exposure",
+    "hypotheses": [
+     "the exposure causes the illness",
+     "the relative risk applies to this population",
+     "confounding is controlled"
+    ]
+   }
+  ],
+  "inputs": [
+   "exposure prevalence and relative risk"
+  ],
+  "outputs": [
+   "attributable share"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4124",
+  "field": "EV",
+  "node": "GEMET:4124",
+  "name": "hydrosphere",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "predict oxygen levels downstream of a discharge"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Streeter–Phelps oxygen sag model",
+    "does": "gives dissolved oxygen along a river",
+    "hypotheses": [
+     "steady flow",
+     "a single point source",
+     "first-order decay of the load and first-order reaeration"
+    ]
+   }
+  ],
+  "inputs": [
+   "load, flow and rate constants"
+  ],
+  "outputs": [
+   "oxygen profile and its minimum"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4163",
+  "field": "EV",
+  "node": "GEMET:4163",
+  "name": "impact source",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4257",
+  "field": "EV",
+  "node": "GEMET:4257",
+  "name": "industrial process",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4279",
+  "field": "EV",
+  "node": "GEMET:4279",
+  "name": "industry",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4303",
+  "field": "EV",
+  "node": "GEMET:4303",
+  "name": "information",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4438",
+  "field": "EV",
+  "node": "GEMET:4438",
+  "name": "international relations",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4577",
+  "field": "EV",
+  "node": "GEMET:4577",
+  "name": "labour",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4599",
+  "field": "EV",
+  "node": "GEMET:4599",
+  "name": "land",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "estimate long-term soil loss from a slope"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Universal Soil Loss Equation",
+    "does": "multiplies rainfall, soil, slope, cover and practice factors",
+    "hypotheses": [
+     "sheet and rill erosion only",
+     "a long-term average",
+     "the factors are calibrated for the region"
+    ]
+   }
+  ],
+  "inputs": [
+   "rainfall, soil, slope and cover data"
+  ],
+  "outputs": [
+   "average annual soil loss"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4666",
+  "field": "EV",
+  "node": "GEMET:4666",
+  "name": "land setup",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4707",
+  "field": "EV",
+  "node": "GEMET:4707",
+  "name": "law (individual)",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4749",
+  "field": "EV",
+  "node": "GEMET:4749",
+  "name": "legislation",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4855",
+  "field": "EV",
+  "node": "GEMET:4855",
+  "name": "lithosphere",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.4985",
+  "field": "EV",
+  "node": "GEMET:4985",
+  "name": "management",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.5086",
+  "field": "EV",
+  "node": "GEMET:5086",
+  "name": "material",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.5116",
+  "field": "EV",
+  "node": "GEMET:5116",
+  "name": "transportation mean",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.5144",
+  "field": "EV",
+  "node": "GEMET:5144",
+  "name": "medicine (practice)",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.5203",
+  "field": "EV",
+  "node": "GEMET:5203",
+  "name": "methodology",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.5241",
+  "field": "EV",
+  "node": "GEMET:5241",
+  "name": "military aspects",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.5243",
+  "field": "EV",
+  "node": "GEMET:5243",
+  "name": "military activities",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.5346",
+  "field": "EV",
+  "node": "GEMET:5346",
+  "name": "monitoring",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "detect whether an activity changed a site"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "compare"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Before-after-control-impact design",
+    "does": "compares change at an affected site with change at control sites",
+    "hypotheses": [
+     "control sites resemble the affected site",
+     "sampling occurs before and after at both",
+     "the control sites are not affected"
+    ]
+   }
+  ],
+  "inputs": [
+   "measurements before and after at both kinds of site"
+  ],
+  "outputs": [
+   "estimated effect"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.5765",
+  "field": "EV",
+  "node": "GEMET:5765",
+  "name": "nutrition",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.5956",
+  "field": "EV",
+  "node": "GEMET:5956",
+  "name": "overburden",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6033",
+  "field": "EV",
+  "node": "GEMET:6033",
+  "name": "parameter",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6094",
+  "field": "EV",
+  "node": "GEMET:6094",
+  "name": "pedosphere",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6228",
+  "field": "EV",
+  "node": "GEMET:6228",
+  "name": "physical process",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6229",
+  "field": "EV",
+  "node": "GEMET:6229",
+  "name": "physical property",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6233",
+  "field": "EV",
+  "node": "GEMET:6233",
+  "name": "physicochemical process",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6287",
+  "field": "EV",
+  "node": "GEMET:6287",
+  "name": "planning",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6370",
+  "field": "EV",
+  "node": "GEMET:6370",
+  "name": "policy",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6371",
+  "field": "EV",
+  "node": "GEMET:6371",
+  "name": "politics",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6395",
+  "field": "EV",
+  "node": "GEMET:6395",
+  "name": "pollutant",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "predict where a released substance ends up"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "constraints": [
+    "physical_law"
+   ],
+   "structure": [
+    "set"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fugacity multimedia model (Mackay)",
+    "does": "partitions a chemical among air, water, soil and biota",
+    "hypotheses": [
+     "each compartment is well mixed",
+     "equilibrium or steady state, by model level",
+     "partition coefficients are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "chemical properties and emission"
+  ],
+  "outputs": [
+   "amount in each compartment"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6445",
+  "field": "EV",
+  "node": "GEMET:6445",
+  "name": "pollution",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "find the deposition a system can take without harm"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "constraints": [
+    "inequality",
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Critical load",
+    "does": "gives the highest deposition that causes no harmful effect",
+    "hypotheses": [
+     "a steady-state mass balance",
+     "a chemical threshold for harm is known"
+    ]
+   }
+  ],
+  "inputs": [
+   "deposition and site chemistry"
+  ],
+  "outputs": [
+   "critical load and exceedance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6660",
+  "field": "EV",
+  "node": "GEMET:6660",
+  "name": "product",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.6884",
+  "field": "EV",
+  "node": "GEMET:6884",
+  "name": "radiation",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "estimate added harm from a small dose of ionising radiation"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linear no-threshold model",
+    "does": "takes risk as proportional to dose with no safe threshold",
+    "hypotheses": [
+     "stochastic effects such as cancer",
+     "it is a protection assumption at low doses and is disputed there"
+    ]
+   }
+  ],
+  "inputs": [
+   "dose"
+  ],
+  "outputs": [
+   "estimated added risk"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.7001",
+  "field": "EV",
+  "node": "GEMET:7001",
+  "name": "recreation",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.7127",
+  "field": "EV",
+  "node": "GEMET:7127",
+  "name": "research",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.7168",
+  "field": "EV",
+  "node": "GEMET:7168",
+  "name": "resource",
+  "taxonomy_cell": "EV.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.7233",
+  "field": "EV",
+  "node": "GEMET:7233",
+  "name": "risk",
+  "taxonomy_cell": "EV.O.A5",
+  "solves": [
+   "rank hazards by how likely and how severe they are"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Quantitative risk assessment",
+    "does": "combines frequency and consequence for each scenario",
+    "hypotheses": [
+     "the hazards are identified",
+     "frequencies come from data or stated judgement",
+     "consequence models fit the scenario"
+    ]
+   }
+  ],
+  "inputs": [
+   "scenarios, frequencies and consequences"
+  ],
+  "outputs": [
+   "risk per scenario and in total"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.7362",
+  "field": "EV",
+  "node": "GEMET:7362",
+  "name": "safety",
+  "taxonomy_cell": "EV.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.7472",
+  "field": "EV",
+  "node": "GEMET:7472",
+  "name": "science",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.7621",
+  "field": "EV",
+  "node": "GEMET:7621",
+  "name": "services",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.7823",
+  "field": "EV",
+  "node": "GEMET:7823",
+  "name": "society",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.7962",
+  "field": "EV",
+  "node": "GEMET:7962",
+  "name": "space (interplanetary)",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.8072",
+  "field": "EV",
+  "node": "GEMET:8072",
+  "name": "state of matter",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.8076",
+  "field": "EV",
+  "node": "GEMET:8076",
+  "name": "statistics",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.8339",
+  "field": "EV",
+  "node": "GEMET:8339",
+  "name": "technology",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.8522",
+  "field": "EV",
+  "node": "GEMET:8522",
+  "name": "tourism",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.8563",
+  "field": "EV",
+  "node": "GEMET:8563",
+  "name": "trade (services)",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.8582",
+  "field": "EV",
+  "node": "GEMET:8582",
+  "name": "traffic",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.8641",
+  "field": "EV",
+  "node": "GEMET:8641",
+  "name": "transportation",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.8879",
+  "field": "EV",
+  "node": "GEMET:8879",
+  "name": "resource utilisation",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.8959",
+  "field": "EV",
+  "node": "GEMET:8959",
+  "name": "vibration",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.9041",
+  "field": "EV",
+  "node": "GEMET:9041",
+  "name": "waste",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.11089",
+  "field": "EV",
+  "node": "GEMET:11089",
+  "name": "trade activity",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.11433",
+  "field": "EV",
+  "node": "GEMET:11433",
+  "name": "technical regulation",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.11499",
+  "field": "EV",
+  "node": "GEMET:11499",
+  "name": "law (corpus of rules)",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.11583",
+  "field": "EV",
+  "node": "GEMET:11583",
+  "name": "justice",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.13146",
+  "field": "EV",
+  "node": "GEMET:13146",
+  "name": "organisation of the legal system",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.13161",
+  "field": "EV",
+  "node": "GEMET:13161",
+  "name": "legal form of organisations",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.13187",
+  "field": "EV",
+  "node": "GEMET:13187",
+  "name": "environmental problem solving",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.13292",
+  "field": "EV",
+  "node": "GEMET:13292",
+  "name": "institutional structure",
+  "taxonomy_cell": "EV.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.14848",
+  "field": "EV",
+  "node": "GEMET:14848",
+  "name": "subject",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.15078",
+  "field": "EV",
+  "node": "GEMET:15078",
+  "name": "biological diversity",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "summarise how varied a community is"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "structure": [
+    "probability_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Shannon diversity index",
+    "does": "combines the number of kinds and their evenness",
+    "hypotheses": [
+     "individuals are sampled at random",
+     "every species present is represented in the sample"
+    ]
+   }
+  ],
+  "inputs": [
+   "counts per species"
+  ],
+  "outputs": [
+   "index value"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.15108",
+  "field": "EV",
+  "node": "GEMET:15108",
+  "name": "crop residue",
+  "taxonomy_cell": "EV.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.15353",
+  "field": "EV",
+  "node": "GEMET:15353",
+  "name": "biota",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EV.TK.15354",
+  "field": "EV",
+  "node": "GEMET:15354",
+  "name": "blue infrastructure",
+  "taxonomy_cell": "EV.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top concept of the thesaurus, not a subfield with its own methods. Tools sit in the field that owns the subject. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]
