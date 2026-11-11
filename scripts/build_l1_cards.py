@@ -17,17 +17,31 @@ IK_NOTE = "Placement and content are provisional and await Māori-led and Indige
 def C(note):
     return (["locate work on this subject within the field's catalogue"], {"task": "classify"}, [], [], [], note)
 
+def K(solves, sig, tools=(), inp="", out="", note=""):
+    """Compact form: sig 'task=predict estimate|structure=graph_network'; hypotheses, inputs, outputs split on '; '."""
+    sp = lambda x: [y.strip() for y in x.split("; ") if y.strip()]
+    e = (sp(solves), dict(kv.split("=") for kv in sig.split("|")), [(a, d, sp(h)) for a, d, h in tools], sp(inp), sp(out))
+    return e + (note,) if note else e
+
+def N(solves, sig):
+    return K(solves, sig, note="No tool is listed. None could be stated with confidence in this draft.")
+
 fails = 0
-for src in sorted((ROOT / "cards" / "toolkit" / "src_l1").glob("*.py")):
+LEVEL = int(sys.argv[1]) if len(sys.argv) > 1 else 1   # python3 scripts/build_l1_cards.py 2  builds level 2 from src_l2/
+NEC = C("Residual class of the scheme (not elsewhere classified). It holds no tools of its own.")
+seen = {c["id"] for q in (ROOT / "cards" / "toolkit").glob("*_L*.json") if not q.name.endswith(f"_L{LEVEL}.json") for c in json.loads(q.read_text(encoding="utf-8"))}
+for src in sorted((ROOT / "cards" / "toolkit" / f"src_l{LEVEL}").glob("*.py")):
     field = src.stem
-    NS = runpy.run_path(str(src), {"C": C})
+    NS = runpy.run_path(str(src), {"C": C, "K": K, "N": N})
     T, D = NS["T"], NS.get("D")  # D: stated catalogue default for flat thesaurus terms that are not subfields
-    nodes = [n for n in json.loads((ROOT / "maps" / field / INDEX[field]["primary"]).read_text(encoding="utf-8"))["nodes"] if n["level"] == 1]
+    nodes = [n for n in json.loads((ROOT / "maps" / field / INDEX[field]["primary"]).read_text(encoding="utf-8"))["nodes"] if n["level"] == LEVEL]
     codes = {n["code"] for n in nodes}
     for k in T:
         if k not in codes: print(f"{field}: unknown code {k!r}"); fails += 1
     cards = []
     for n in nodes:
+        if n["code"] not in T and "not elsewhere classified" in n["name"].lower(): T[n["code"]] = NEC
+        if f"{field}.TK.{n['code']}" in seen: print(f"{field}: id collision {n['code']!r}"); fails += 1
         if n["code"] not in T and D: T[n["code"]] = D
         if n["code"] not in T: print(f"{field}: no card for {n['code']!r}"); fails += 1; continue
         e = T[n["code"]]
@@ -47,6 +61,6 @@ for src in sorted((ROOT / "cards" / "toolkit" / "src_l1").glob("*.py")):
                       "tools": [{"name": a, "does": b, "hypotheses": c} for a, b, c in tools],
                       "inputs": inputs, "outputs": outputs, "cross_uses": [], "status": "draft",
                       "generated_by": BY, "date": DATE, "notes": notes})
-    (ROOT / "cards" / "toolkit" / f"{field}_L1.json").write_text(json.dumps(cards, indent=1, ensure_ascii=False), encoding="utf-8")
+    (ROOT / "cards" / "toolkit" / f"{field}_L{LEVEL}.json").write_text(json.dumps(cards, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"{field}: {len(cards)}/{len(nodes)} cards, {sum(1 for c in cards if c['tools'])} with tools, {sum(len(c['tools']) for c in cards)} tools")
 sys.exit(1 if fails else 0)

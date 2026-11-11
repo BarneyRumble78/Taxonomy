@@ -1,0 +1,3065 @@
+[
+ {
+  "id": "BI.TK.310101",
+  "field": "BI",
+  "node": "ANZSRC:310101",
+  "name": "Analytical biochemistry",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "measure how much of a biological molecule a sample holds"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bradford protein assay",
+    "does": "estimates protein concentration from dye binding",
+    "hypotheses": [
+     "the reading lies within the standard curve",
+     "the standard protein responds like the sample",
+     "no interfering detergent"
+    ]
+   },
+   {
+    "name": "Standard curve quantification",
+    "does": "converts a signal to a concentration",
+    "hypotheses": [
+     "the response is monotonic over the range used",
+     "standards and samples are treated alike"
+    ]
+   }
+  ],
+  "inputs": [
+   "sample",
+   "standards"
+  ],
+  "outputs": [
+   "concentration"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310102",
+  "field": "BI",
+  "node": "ANZSRC:310102",
+  "name": "Cell development, proliferation and death",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "count how many cells are in each stage of division or death"
+  ],
+  "signature": {
+   "task": [
+    "count",
+    "classify"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Flow cytometry of DNA content",
+    "does": "sorts cells by cell-cycle phase",
+    "hypotheses": [
+     "cells are in single-cell suspension",
+     "the dye binds DNA in proportion to amount",
+     "doublets are excluded"
+    ]
+   }
+  ],
+  "inputs": [
+   "stained cells"
+  ],
+  "outputs": [
+   "share of cells per phase"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310103",
+  "field": "BI",
+  "node": "ANZSRC:310103",
+  "name": "Cell metabolism",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "trace how matter flows through a network of conversions"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Isotope-labelled metabolic flux analysis",
+    "does": "infers reaction rates from labelling patterns",
+    "hypotheses": [
+     "metabolic steady state",
+     "isotopic steady state, or the time course is modelled",
+     "the reaction network and atom mappings are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "labelling measurements",
+   "network model"
+  ],
+  "outputs": [
+   "flux estimates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310104",
+  "field": "BI",
+  "node": "ANZSRC:310104",
+  "name": "Cell neurochemistry",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "relate chemical signals between nerve cells to their activity"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310105",
+  "field": "BI",
+  "node": "ANZSRC:310105",
+  "name": "Cellular interactions (incl. adhesion, matrix, cell wall)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "explain how cells attach to and signal their neighbours"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310106",
+  "field": "BI",
+  "node": "ANZSRC:310106",
+  "name": "Enzymes",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "characterise how fast a catalyst works and how it is slowed"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Michaelis–Menten kinetics",
+    "does": "gives rate as a saturating function of substrate",
+    "hypotheses": [
+     "substrate far exceeds enzyme",
+     "the enzyme-substrate complex is in steady state",
+     "initial rates",
+     "one substrate"
+    ]
+   },
+   {
+    "name": "Inhibition analysis",
+    "does": "classifies an inhibitor from how it changes the kinetic constants",
+    "hypotheses": [
+     "the inhibitor binds reversibly",
+     "Michaelis–Menten conditions hold"
+    ]
+   }
+  ],
+  "inputs": [
+   "initial rates at several concentrations"
+  ],
+  "outputs": [
+   "kinetic constants",
+   "inhibition type"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310107",
+  "field": "BI",
+  "node": "ANZSRC:310107",
+  "name": "Glycobiology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "determine the structure and role of sugar chains on molecules"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310108",
+  "field": "BI",
+  "node": "ANZSRC:310108",
+  "name": "Protein trafficking",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "explain how molecules are routed to the right compartment"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310109",
+  "field": "BI",
+  "node": "ANZSRC:310109",
+  "name": "Proteomics and intermolecular interactions (excl. medical proteomics)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "identify which proteins are present from fragments"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ],
+   "data": [
+    "data_rich"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Peptide mass spectrometry with database search",
+    "does": "matches fragment spectra to known sequences",
+    "hypotheses": [
+     "the protein's sequence is in the database",
+     "the false discovery rate is controlled with decoy sequences"
+    ]
+   }
+  ],
+  "inputs": [
+   "mass spectra",
+   "sequence database"
+  ],
+  "outputs": [
+   "identified proteins with confidence"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310110",
+  "field": "BI",
+  "node": "ANZSRC:310110",
+  "name": "Receptors and membrane biology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "measure how tightly a molecule binds its target"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Saturation binding analysis",
+    "does": "estimates affinity and number of binding sites",
+    "hypotheses": [
+     "binding has reached equilibrium",
+     "non-specific binding is subtracted",
+     "one class of independent sites"
+    ]
+   }
+  ],
+  "inputs": [
+   "bound amount at several concentrations"
+  ],
+  "outputs": [
+   "dissociation constant",
+   "site number"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310111",
+  "field": "BI",
+  "node": "ANZSRC:310111",
+  "name": "Signal transduction",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "trace how a signal at the surface changes behaviour inside"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310112",
+  "field": "BI",
+  "node": "ANZSRC:310112",
+  "name": "Structural biology (incl. macromolecular modelling)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "find the three-dimensional shape of a large molecule"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "construct"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "structure": [
+    "geometric_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "X-ray crystallography",
+    "does": "computes atomic positions from a diffraction pattern",
+    "hypotheses": [
+     "the molecule forms well-ordered crystals",
+     "the phases are obtained experimentally or by molecular replacement"
+    ]
+   },
+   {
+    "name": "Single-particle cryo-electron microscopy",
+    "does": "reconstructs a structure from many particle images",
+    "hypotheses": [
+     "many copies of the same particle",
+     "varied orientations",
+     "a structurally homogeneous sample"
+    ]
+   }
+  ],
+  "inputs": [
+   "diffraction data or particle images"
+  ],
+  "outputs": [
+   "atomic model with resolution"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310113",
+  "field": "BI",
+  "node": "ANZSRC:310113",
+  "name": "Synthetic biology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "build a living system with a designed function from standard parts"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "construct"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310114",
+  "field": "BI",
+  "node": "ANZSRC:310114",
+  "name": "Systems biology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "predict whole-system behaviour from interacting components"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ordinary differential equation network model",
+    "does": "simulates concentrations over time",
+    "hypotheses": [
+     "components are well mixed",
+     "molecule numbers are large enough to ignore chance",
+     "rate laws and parameters are known or fitted"
+    ]
+   },
+   {
+    "name": "Flux balance analysis",
+    "does": "predicts steady-state flows by linear optimisation",
+    "hypotheses": [
+     "steady state",
+     "the network is known",
+     "the assumed objective reflects what the cell maximises"
+    ]
+   }
+  ],
+  "inputs": [
+   "network and rate data"
+  ],
+  "outputs": [
+   "time courses",
+   "flux distribution"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310199",
+  "field": "BI",
+  "node": "ANZSRC:310199",
+  "name": "Biochemistry and cell biology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310201",
+  "field": "BI",
+  "node": "ANZSRC:310201",
+  "name": "Bioinformatic methods development",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "create and benchmark procedures for analysing biological data"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310202",
+  "field": "BI",
+  "node": "ANZSRC:310202",
+  "name": "Biological network analysis",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "find the important members and groups in a web of interactions"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Network centrality and module detection",
+    "does": "ranks nodes and finds densely linked groups",
+    "hypotheses": [
+     "the network is reasonably complete",
+     "false links are rare enough not to drive the result"
+    ]
+   }
+  ],
+  "inputs": [
+   "interaction list"
+  ],
+  "outputs": [
+   "ranked nodes",
+   "modules"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310203",
+  "field": "BI",
+  "node": "ANZSRC:310203",
+  "name": "Computational ecology and phylogenetics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "infer a branching history from present-day sequences"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Maximum-likelihood phylogenetics",
+    "does": "finds the tree that best explains aligned sequences",
+    "hypotheses": [
+     "a stated substitution model",
+     "sites evolve independently",
+     "the alignment is correct"
+    ]
+   },
+   {
+    "name": "Bootstrap support",
+    "does": "measures how stable each branch is to resampling sites",
+    "hypotheses": [
+     "sites are independent and alike in distribution"
+    ]
+   }
+  ],
+  "inputs": [
+   "aligned sequences"
+  ],
+  "outputs": [
+   "tree with support values"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310204",
+  "field": "BI",
+  "node": "ANZSRC:310204",
+  "name": "Genomics and transcriptomics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "find which genes differ in activity between conditions"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "infer"
+   ],
+   "scale": [
+    "high_dimensional"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Differential expression analysis of count data",
+    "does": "tests each gene for a change between groups",
+    "hypotheses": [
+     "biological replicates in each group",
+     "counts follow a negative binomial model",
+     "samples are normalised for depth"
+    ]
+   },
+   {
+    "name": "False discovery rate control (Benjamini–Hochberg)",
+    "does": "limits the expected share of false findings",
+    "hypotheses": [
+     "tests are independent or positively dependent"
+    ]
+   }
+  ],
+  "inputs": [
+   "read counts per gene and sample"
+  ],
+  "outputs": [
+   "list of changed genes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310205",
+  "field": "BI",
+  "node": "ANZSRC:310205",
+  "name": "Proteomics and metabolomics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "measure many proteins or small molecules at once and compare conditions"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "estimate"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310206",
+  "field": "BI",
+  "node": "ANZSRC:310206",
+  "name": "Sequence analysis",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "find regions of similarity between long strings"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "infer"
+   ],
+   "structure": [
+    "sequence"
+   ],
+   "domain_type": [
+    "discrete"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dynamic-programming alignment",
+    "does": "finds the optimal alignment of two sequences",
+    "hypotheses": [
+     "scoring is additive over positions",
+     "gap penalties are fixed in advance"
+    ]
+   },
+   {
+    "name": "Heuristic database search with E-values (BLAST)",
+    "does": "finds similar sequences quickly and scores their significance",
+    "hypotheses": [
+     "the score statistics assume random sequences of typical composition",
+     "low-complexity regions are masked"
+    ]
+   }
+  ],
+  "inputs": [
+   "query sequence",
+   "database"
+  ],
+  "outputs": [
+   "alignments with significance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310207",
+  "field": "BI",
+  "node": "ANZSRC:310207",
+  "name": "Statistical and quantitative genetics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "split variation in a trait into inherited and other parts"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linear mixed model with a relationship matrix",
+    "does": "estimates heritability and breeding values",
+    "hypotheses": [
+     "genetic effects are additive",
+     "relationships among individuals are known",
+     "residuals are independent of genetic effects"
+    ]
+   },
+   {
+    "name": "Genome-wide association study",
+    "does": "finds variants associated with a trait",
+    "hypotheses": [
+     "a large sample",
+     "population structure is controlled",
+     "markers are correlated with causal variants"
+    ]
+   }
+  ],
+  "inputs": [
+   "trait values",
+   "genotypes or pedigree"
+  ],
+  "outputs": [
+   "heritability",
+   "associated variants"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310208",
+  "field": "BI",
+  "node": "ANZSRC:310208",
+  "name": "Translational and applied bioinformatics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "turn sequence and molecular data into decisions in practice"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310299",
+  "field": "BI",
+  "node": "ANZSRC:310299",
+  "name": "Bioinformatics and computational biology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310301",
+  "field": "BI",
+  "node": "ANZSRC:310301",
+  "name": "Behavioural ecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "predict behaviour as the best response to costs and benefits"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Optimal foraging (marginal value theorem)",
+    "does": "predicts when to leave a depleting patch",
+    "hypotheses": [
+     "the forager maximises long-term average intake rate",
+     "gains in a patch diminish with time",
+     "travel time is known"
+    ]
+   },
+   {
+    "name": "Evolutionarily stable strategy",
+    "does": "finds a strategy that cannot be invaded",
+    "hypotheses": [
+     "pay-offs depend on the frequency of strategies",
+     "a large well-mixed population"
+    ]
+   }
+  ],
+  "inputs": [
+   "gain curves",
+   "pay-offs"
+  ],
+  "outputs": [
+   "predicted behaviour"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310302",
+  "field": "BI",
+  "node": "ANZSRC:310302",
+  "name": "Community ecology (excl. invasive species ecology)",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "describe and compare assemblages of many species"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "estimate"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Rarefaction",
+    "does": "compares richness at equal sampling effort",
+    "hypotheses": [
+     "individuals are sampled at random",
+     "the samples come from comparable communities"
+    ]
+   },
+   {
+    "name": "Ordination",
+    "does": "arranges samples by similarity in composition",
+    "hypotheses": [
+     "the chosen distance measure suits the data"
+    ]
+   }
+  ],
+  "inputs": [
+   "species counts per sample"
+  ],
+  "outputs": [
+   "richness comparison",
+   "ordination plot"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310303",
+  "field": "BI",
+  "node": "ANZSRC:310303",
+  "name": "Ecological physiology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "relate an organism's functioning to its surroundings"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310304",
+  "field": "BI",
+  "node": "ANZSRC:310304",
+  "name": "Freshwater ecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "explain the make-up and functioning of inland waters"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310305",
+  "field": "BI",
+  "node": "ANZSRC:310305",
+  "name": "Marine and estuarine ecology (incl. marine ichthyology)",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "explain the make-up and functioning of coastal and ocean systems"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310306",
+  "field": "BI",
+  "node": "ANZSRC:310306",
+  "name": "Palaeoecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "rebuild past communities from preserved remains"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Pollen analysis",
+    "does": "infers past vegetation from pollen in dated layers",
+    "hypotheses": [
+     "the layers are dated",
+     "pollen source area and differing pollen production are allowed for"
+    ]
+   }
+  ],
+  "inputs": [
+   "dated cores"
+  ],
+  "outputs": [
+   "vegetation history"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310307",
+  "field": "BI",
+  "node": "ANZSRC:310307",
+  "name": "Population ecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "project the size of a population from births and deaths"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "linear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Leslie matrix model",
+    "does": "projects an age-structured population",
+    "hypotheses": [
+     "survival and fertility rates are constant",
+     "no density dependence",
+     "a closed population"
+    ]
+   },
+   {
+    "name": "Mark-recapture estimation",
+    "does": "estimates population size from marked animals",
+    "hypotheses": [
+     "a closed population",
+     "marks are not lost",
+     "equal catchability"
+    ]
+   }
+  ],
+  "inputs": [
+   "age-specific rates",
+   "capture records"
+  ],
+  "outputs": [
+   "growth rate",
+   "population size"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310308",
+  "field": "BI",
+  "node": "ANZSRC:310308",
+  "name": "Terrestrial ecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "explain the make-up and functioning of land systems"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310399",
+  "field": "BI",
+  "node": "ANZSRC:310399",
+  "name": "Ecology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310401",
+  "field": "BI",
+  "node": "ANZSRC:310401",
+  "name": "Animal systematics and taxonomy",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "group animals so that each group has one common ancestor"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cladistic analysis",
+    "does": "groups taxa by shared derived characters",
+    "hypotheses": [
+     "characters are homologous",
+     "character states can be ordered from ancestral to derived"
+    ]
+   }
+  ],
+  "inputs": [
+   "character matrix"
+  ],
+  "outputs": [
+   "classification"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310402",
+  "field": "BI",
+  "node": "ANZSRC:310402",
+  "name": "Biogeography and phylogeography",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "explain why organisms live where they do"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310403",
+  "field": "BI",
+  "node": "ANZSRC:310403",
+  "name": "Biological adaptation",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "show that a trait was shaped by selection"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310404",
+  "field": "BI",
+  "node": "ANZSRC:310404",
+  "name": "Evolution of developmental systems",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "explain how changes in development produce new forms"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310405",
+  "field": "BI",
+  "node": "ANZSRC:310405",
+  "name": "Evolutionary ecology",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "explain ecological patterns by selection on traits"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310406",
+  "field": "BI",
+  "node": "ANZSRC:310406",
+  "name": "Evolutionary impacts of climate change",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "predict evolutionary response to a changing environment"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310407",
+  "field": "BI",
+  "node": "ANZSRC:310407",
+  "name": "Host-parasite interactions",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "predict whether an infection spreads through a host population"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Compartmental epidemic model (SIR)",
+    "does": "tracks susceptible, infected and recovered hosts",
+    "hypotheses": [
+     "homogeneous mixing",
+     "a closed population",
+     "constant transmission and recovery rates"
+    ]
+   }
+  ],
+  "inputs": [
+   "transmission and recovery rates"
+  ],
+  "outputs": [
+   "epidemic curve",
+   "threshold"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310408",
+  "field": "BI",
+  "node": "ANZSRC:310408",
+  "name": "Life histories",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "summarise survival and reproduction by age"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Life table and Euler–Lotka equation",
+    "does": "gives growth rate from age-specific survival and fertility",
+    "hypotheses": [
+     "rates are constant in time",
+     "a stable age distribution"
+    ]
+   }
+  ],
+  "inputs": [
+   "survival and fertility by age"
+  ],
+  "outputs": [
+   "growth rate",
+   "generation time"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310409",
+  "field": "BI",
+  "node": "ANZSRC:310409",
+  "name": "Microbial taxonomy",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "name and group micro-organisms consistently"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310410",
+  "field": "BI",
+  "node": "ANZSRC:310410",
+  "name": "Phylogeny and comparative analysis",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "compare traits across species without counting shared ancestry twice"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "infer"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Phylogenetically independent contrasts",
+    "does": "tests trait correlation across species",
+    "hypotheses": [
+     "the phylogeny and branch lengths are known",
+     "traits evolve by Brownian motion"
+    ]
+   }
+  ],
+  "inputs": [
+   "trait values",
+   "phylogeny"
+  ],
+  "outputs": [
+   "corrected correlation"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310411",
+  "field": "BI",
+  "node": "ANZSRC:310411",
+  "name": "Plant and fungus systematics and taxonomy",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "name and group plants and fungi consistently"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310412",
+  "field": "BI",
+  "node": "ANZSRC:310412",
+  "name": "Speciation and extinction",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "estimate how fast lineages split and die out"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310499",
+  "field": "BI",
+  "node": "ANZSRC:310499",
+  "name": "Evolutionary biology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310501",
+  "field": "BI",
+  "node": "ANZSRC:310501",
+  "name": "Anthropological genetics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "infer the history of human groups from inherited variation"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310502",
+  "field": "BI",
+  "node": "ANZSRC:310502",
+  "name": "Cell and nuclear division",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "explain how a cell copies and divides its contents accurately"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310503",
+  "field": "BI",
+  "node": "ANZSRC:310503",
+  "name": "Developmental genetics (incl. sex determination)",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "find which inherited factors direct the building of a body"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310504",
+  "field": "BI",
+  "node": "ANZSRC:310504",
+  "name": "Epigenetics (incl. genome methylation and epigenomics)",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "map heritable marks that change activity without changing sequence"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310505",
+  "field": "BI",
+  "node": "ANZSRC:310505",
+  "name": "Gene expression (incl. microarray and other genome-wide approaches)",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "measure the activity of many genes at once"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Differential expression analysis of count data",
+    "does": "tests each gene for a change between groups",
+    "hypotheses": [
+     "biological replicates in each group",
+     "counts follow a negative binomial model",
+     "samples are normalised for depth"
+    ]
+   }
+  ],
+  "inputs": [
+   "read counts"
+  ],
+  "outputs": [
+   "changed genes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310506",
+  "field": "BI",
+  "node": "ANZSRC:310506",
+  "name": "Gene mapping",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "locate the inherited factor behind a trait"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "structure": [
+    "sequence"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linkage analysis (LOD score)",
+    "does": "tests whether a marker and a trait are inherited together",
+    "hypotheses": [
+     "the pedigree is correct",
+     "the mode of inheritance is specified",
+     "marker order is known"
+    ]
+   }
+  ],
+  "inputs": [
+   "pedigree",
+   "marker genotypes",
+   "trait"
+  ],
+  "outputs": [
+   "candidate region"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310507",
+  "field": "BI",
+  "node": "ANZSRC:310507",
+  "name": "Genetic immunology",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "explain inherited variation in immune response"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310508",
+  "field": "BI",
+  "node": "ANZSRC:310508",
+  "name": "Genome structure and regulation",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "explain how the arrangement of a genome controls its activity"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310509",
+  "field": "BI",
+  "node": "ANZSRC:310509",
+  "name": "Genomics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "determine and annotate a complete genome"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "classify"
+   ],
+   "structure": [
+    "sequence"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "De Bruijn graph assembly",
+    "does": "rebuilds a sequence from short reads",
+    "hypotheses": [
+     "reads cover the genome deeply enough",
+     "repeats are shorter than the word length or resolved by other data"
+    ]
+   }
+  ],
+  "inputs": [
+   "sequencing reads"
+  ],
+  "outputs": [
+   "assembled genome"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310510",
+  "field": "BI",
+  "node": "ANZSRC:310510",
+  "name": "Molecular evolution",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "test whether sequence change was shaped by selection"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "structure": [
+    "sequence"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ratio of non-synonymous to synonymous change (dN/dS)",
+    "does": "detects selection on protein-coding sequence",
+    "hypotheses": [
+     "synonymous changes are neutral",
+     "the alignment and tree are correct"
+    ]
+   },
+   {
+    "name": "Molecular clock dating",
+    "does": "dates divergences from sequence difference",
+    "hypotheses": [
+     "the rate is constant, or its variation is modelled",
+     "reliable calibration points exist"
+    ]
+   }
+  ],
+  "inputs": [
+   "aligned coding sequences",
+   "tree"
+  ],
+  "outputs": [
+   "selection estimate",
+   "divergence dates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310511",
+  "field": "BI",
+  "node": "ANZSRC:310511",
+  "name": "Neurogenetics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "find inherited factors affecting the nervous system"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310599",
+  "field": "BI",
+  "node": "ANZSRC:310599",
+  "name": "Genetics not elsewhere classified",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310601",
+  "field": "BI",
+  "node": "ANZSRC:310601",
+  "name": "Biocatalysis and enzyme technology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "use biological catalysts to carry out industrial conversions"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310602",
+  "field": "BI",
+  "node": "ANZSRC:310602",
+  "name": "Bioprocessing, bioproduction and bioproducts",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "grow cells at scale to make a product"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control",
+    "optimise"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Monod growth kinetics",
+    "does": "relates growth rate to one nutrient",
+    "hypotheses": [
+     "one limiting substrate",
+     "balanced growth"
+    ]
+   },
+   {
+    "name": "Chemostat steady-state analysis",
+    "does": "fixes growth rate by the dilution rate",
+    "hypotheses": [
+     "the vessel is well mixed",
+     "constant feed and volume",
+     "dilution rate below the washout rate"
+    ]
+   }
+  ],
+  "inputs": [
+   "strain and feed data"
+  ],
+  "outputs": [
+   "growth rate",
+   "productivity"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310603",
+  "field": "BI",
+  "node": "ANZSRC:310603",
+  "name": "Fermentation",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "convert a feedstock into a product using microbes"
+  ],
+  "signature": {
+   "task": [
+    "control",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310604",
+  "field": "BI",
+  "node": "ANZSRC:310604",
+  "name": "Industrial biotechnology diagnostics (incl. biosensors)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "detect a target substance with a biological recognition element"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "estimate"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310605",
+  "field": "BI",
+  "node": "ANZSRC:310605",
+  "name": "Industrial microbiology (incl. biofeedstocks)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "select and use microbes for production"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310606",
+  "field": "BI",
+  "node": "ANZSRC:310606",
+  "name": "Industrial molecular engineering of nucleic acids and proteins",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "improve a molecule by rounds of variation and selection"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "design"
+   ],
+   "linearity": [
+    "combinatorial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Directed evolution",
+    "does": "improves a protein by repeated mutation and screening",
+    "hypotheses": [
+     "a screen or selection measures the wanted property",
+     "the starting molecule has some of that property"
+    ]
+   }
+  ],
+  "inputs": [
+   "starting gene",
+   "screen"
+  ],
+  "outputs": [
+   "improved variant"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310607",
+  "field": "BI",
+  "node": "ANZSRC:310607",
+  "name": "Nanobiotechnology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "use nanometre-scale structures with biological molecules"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310699",
+  "field": "BI",
+  "node": "ANZSRC:310699",
+  "name": "Industrial biotechnology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310701",
+  "field": "BI",
+  "node": "ANZSRC:310701",
+  "name": "Bacteriology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "identify a bacterium and count it"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "count"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gram stain",
+    "does": "sorts bacteria by cell-wall type",
+    "hypotheses": [
+     "a fresh culture",
+     "the staining protocol is followed"
+    ]
+   },
+   {
+    "name": "16S ribosomal RNA gene sequencing",
+    "does": "identifies bacteria by a marker gene",
+    "hypotheses": [
+     "reference sequences exist",
+     "resolution is often to genus, not species"
+    ]
+   }
+  ],
+  "inputs": [
+   "culture or sample"
+  ],
+  "outputs": [
+   "identity",
+   "count"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310702",
+  "field": "BI",
+  "node": "ANZSRC:310702",
+  "name": "Infectious agents",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "show that a particular agent causes a disease"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Koch's postulates",
+    "does": "set criteria for naming an agent as the cause",
+    "hypotheses": [
+     "the agent can be isolated and grown",
+     "one agent causes the disease",
+     "a susceptible host can be tested"
+    ]
+   }
+  ],
+  "inputs": [
+   "isolates",
+   "host tests"
+  ],
+  "outputs": [
+   "causal verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310703",
+  "field": "BI",
+  "node": "ANZSRC:310703",
+  "name": "Microbial ecology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain which microbes live together and what they do"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310704",
+  "field": "BI",
+  "node": "ANZSRC:310704",
+  "name": "Microbial genetics",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain how microbes inherit and exchange traits"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310705",
+  "field": "BI",
+  "node": "ANZSRC:310705",
+  "name": "Mycology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "identify fungi and explain how they live"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310706",
+  "field": "BI",
+  "node": "ANZSRC:310706",
+  "name": "Virology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "count infectious particles"
+  ],
+  "signature": {
+   "task": [
+    "count",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Plaque assay",
+    "does": "counts infectious particles by the clear zones they form",
+    "hypotheses": [
+     "the virus forms visible plaques in the cell line",
+     "each plaque comes from one particle"
+    ]
+   }
+  ],
+  "inputs": [
+   "diluted sample on a cell layer"
+  ],
+  "outputs": [
+   "infectious titre"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310799",
+  "field": "BI",
+  "node": "ANZSRC:310799",
+  "name": "Microbiology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310801",
+  "field": "BI",
+  "node": "ANZSRC:310801",
+  "name": "Phycology (incl. marine grasses)",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "identify algae and explain how they live"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310802",
+  "field": "BI",
+  "node": "ANZSRC:310802",
+  "name": "Plant biochemistry",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain the chemical conversions inside plants"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310803",
+  "field": "BI",
+  "node": "ANZSRC:310803",
+  "name": "Plant cell and molecular biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain how plant cells and their genes work"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310804",
+  "field": "BI",
+  "node": "ANZSRC:310804",
+  "name": "Plant developmental and reproductive biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain how plants grow, flower and set seed"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310805",
+  "field": "BI",
+  "node": "ANZSRC:310805",
+  "name": "Plant pathology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain when a plant disease breaks out"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Disease triangle",
+    "does": "says disease needs a susceptible host, a virulent pathogen and a favourable environment together",
+    "hypotheses": [
+     "it is a qualitative framework"
+    ]
+   }
+  ],
+  "inputs": [
+   "host, pathogen and weather information"
+  ],
+  "outputs": [
+   "outbreak risk judgement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310806",
+  "field": "BI",
+  "node": "ANZSRC:310806",
+  "name": "Plant physiology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "predict carbon and water exchange of a leaf"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Farquhar–von Caemmerer–Berry model",
+    "does": "predicts leaf photosynthesis",
+    "hypotheses": [
+     "C3 photosynthesis",
+     "steady state"
+    ]
+   }
+  ],
+  "inputs": [
+   "light, gas and temperature conditions"
+  ],
+  "outputs": [
+   "assimilation rate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310899",
+  "field": "BI",
+  "node": "ANZSRC:310899",
+  "name": "Plant biology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310901",
+  "field": "BI",
+  "node": "ANZSRC:310901",
+  "name": "Animal behaviour",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "describe behaviour so it can be counted and compared"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ethogram with systematic sampling",
+    "does": "records defined behaviours by a fixed sampling rule",
+    "hypotheses": [
+     "behaviours are defined in advance",
+     "observers agree reliably"
+    ]
+   }
+  ],
+  "inputs": [
+   "observation sessions"
+  ],
+  "outputs": [
+   "time budget"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310902",
+  "field": "BI",
+  "node": "ANZSRC:310902",
+  "name": "Animal cell and molecular biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain how animal cells and their genes work"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310903",
+  "field": "BI",
+  "node": "ANZSRC:310903",
+  "name": "Animal developmental and reproductive biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain how animals develop and reproduce"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310904",
+  "field": "BI",
+  "node": "ANZSRC:310904",
+  "name": "Animal diet and nutrition",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "work out what an animal needs to eat"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310905",
+  "field": "BI",
+  "node": "ANZSRC:310905",
+  "name": "Animal immunology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain how animals resist infection"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310906",
+  "field": "BI",
+  "node": "ANZSRC:310906",
+  "name": "Animal neurobiology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "relate nerve cells and circuits to animal behaviour"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310907",
+  "field": "BI",
+  "node": "ANZSRC:310907",
+  "name": "Animal physiological ecology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "relate an animal's functioning to where it lives"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310908",
+  "field": "BI",
+  "node": "ANZSRC:310908",
+  "name": "Animal physiology - biophysics",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "apply physical laws to how animal bodies work"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310909",
+  "field": "BI",
+  "node": "ANZSRC:310909",
+  "name": "Animal physiology - cell",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain how animal cells carry out their functions"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310910",
+  "field": "BI",
+  "node": "ANZSRC:310910",
+  "name": "Animal physiology - systems",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain how organ systems work together"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310911",
+  "field": "BI",
+  "node": "ANZSRC:310911",
+  "name": "Animal structure and function",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "relate the form of a body part to what it does"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310912",
+  "field": "BI",
+  "node": "ANZSRC:310912",
+  "name": "Comparative physiology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain differences in function between kinds of animal"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310913",
+  "field": "BI",
+  "node": "ANZSRC:310913",
+  "name": "Invertebrate biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "describe animals without backbones and how they live"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310914",
+  "field": "BI",
+  "node": "ANZSRC:310914",
+  "name": "Vertebrate biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "describe animals with backbones and how they live"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310999",
+  "field": "BI",
+  "node": "ANZSRC:310999",
+  "name": "Zoology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.319901",
+  "field": "BI",
+  "node": "ANZSRC:319901",
+  "name": "Forensic biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "link a biological trace to a person"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "DNA profile likelihood ratio",
+    "does": "weighs a match against the chance of a coincidental match",
+    "hypotheses": [
+     "allele frequencies from a relevant population",
+     "loci are independent after correction for relatedness",
+     "the sample is from one source, or the mixture is modelled"
+    ]
+   }
+  ],
+  "inputs": [
+   "trace profile",
+   "reference profile"
+  ],
+  "outputs": [
+   "likelihood ratio"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.319902",
+  "field": "BI",
+  "node": "ANZSRC:319902",
+  "name": "Global change biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "predict how living systems respond to planet-wide change"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.319999",
+  "field": "BI",
+  "node": "ANZSRC:319999",
+  "name": "Other biological sciences not elsewhere classified",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

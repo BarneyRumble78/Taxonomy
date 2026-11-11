@@ -1,0 +1,2710 @@
+[
+ {
+  "id": "BU.TK.350101",
+  "field": "BU",
+  "node": "ANZSRC:350101",
+  "name": "Accounting theory and standards",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "decide how transactions should be recognised and reported"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350102",
+  "field": "BU",
+  "node": "ANZSRC:350102",
+  "name": "Auditing and accountability",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "give assurance about a large set of records by testing a part"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Statistical audit sampling",
+    "does": "projects misstatement from a sample to the whole",
+    "hypotheses": [
+     "items are selected at random",
+     "tolerable misstatement is set in advance"
+    ]
+   },
+   {
+    "name": "Audit risk model",
+    "does": "plans testing from inherent, control and detection risk",
+    "hypotheses": [
+     "the three risks are assessed separately",
+     "it is a planning aid, not a measurement"
+    ]
+   }
+  ],
+  "inputs": [
+   "ledger population",
+   "control assessment"
+  ],
+  "outputs": [
+   "projected misstatement",
+   "test plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350103",
+  "field": "BU",
+  "node": "ANZSRC:350103",
+  "name": "Financial accounting",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "record every exchange so the books can be checked"
+  ],
+  "signature": {
+   "task": [
+    "verify"
+   ],
+   "constraints": [
+    "equality",
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Double-entry bookkeeping",
+    "does": "records each transaction as equal debits and credits",
+    "hypotheses": [
+     "the reporting entity is defined",
+     "every transaction is recorded"
+    ]
+   },
+   {
+    "name": "Accrual accounting",
+    "does": "recognises income and expense when earned or incurred",
+    "hypotheses": [
+     "the period is defined",
+     "estimates such as depreciation are disclosed"
+    ]
+   }
+  ],
+  "inputs": [
+   "transactions"
+  ],
+  "outputs": [
+   "financial statements"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350104",
+  "field": "BU",
+  "node": "ANZSRC:350104",
+  "name": "International accounting",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "compare and reconcile reporting rules across countries"
+  ],
+  "signature": {
+   "task": [
+    "compare"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350105",
+  "field": "BU",
+  "node": "ANZSRC:350105",
+  "name": "Management accounting",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "find what a product costs and how many must be sold to cover costs"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "optimise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cost-volume-profit analysis",
+    "does": "finds the break-even volume",
+    "hypotheses": [
+     "costs split into fixed and variable",
+     "price and unit variable cost are constant over the range",
+     "the sales mix is fixed"
+    ]
+   },
+   {
+    "name": "Activity-based costing",
+    "does": "assigns overhead by the activities that cause it",
+    "hypotheses": [
+     "activities and their cost drivers can be identified and measured"
+    ]
+   },
+   {
+    "name": "Variance analysis",
+    "does": "compares actual with budgeted results",
+    "hypotheses": [
+     "the budget standard is realistic"
+    ]
+   }
+  ],
+  "inputs": [
+   "costs, volumes, prices"
+  ],
+  "outputs": [
+   "break-even point",
+   "product costs",
+   "variances"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350106",
+  "field": "BU",
+  "node": "ANZSRC:350106",
+  "name": "Not-for-profit accounting and accountability",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "report on resources held for a purpose other than profit"
+  ],
+  "signature": {
+   "task": [
+    "verify"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350107",
+  "field": "BU",
+  "node": "ANZSRC:350107",
+  "name": "Sustainability accounting and reporting",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "measure and report environmental and social effects of an organisation"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350108",
+  "field": "BU",
+  "node": "ANZSRC:350108",
+  "name": "Taxation accounting",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "compute tax owed under the rules"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350199",
+  "field": "BU",
+  "node": "ANZSRC:350199",
+  "name": "Accounting, auditing and accountability not elsewhere classified",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350201",
+  "field": "BU",
+  "node": "ANZSRC:350201",
+  "name": "Environment and climate finance",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "price and fund responses to environmental risk"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350202",
+  "field": "BU",
+  "node": "ANZSRC:350202",
+  "name": "Finance",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "value a stream of future payments"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Net present value",
+    "does": "discounts forecast cash flows",
+    "hypotheses": [
+     "cash flows are forecast",
+     "the discount rate reflects their risk"
+    ]
+   },
+   {
+    "name": "Capital asset pricing model",
+    "does": "gives a required return from market risk",
+    "hypotheses": [
+     "mean-variance investors",
+     "homogeneous expectations",
+     "frictionless markets"
+    ]
+   }
+  ],
+  "inputs": [
+   "cash-flow forecasts",
+   "market data"
+  ],
+  "outputs": [
+   "present value",
+   "required return"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350203",
+  "field": "BU",
+  "node": "ANZSRC:350203",
+  "name": "Financial econometrics",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "model changing risk in financial series"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "GARCH model",
+    "does": "models volatility that clusters in time",
+    "hypotheses": [
+     "returns have a stable conditional-variance process",
+     "parameters satisfy the stationarity condition"
+    ]
+   },
+   {
+    "name": "Event study",
+    "does": "measures the price effect of an announcement",
+    "hypotheses": [
+     "the event date is known",
+     "no other news falls in the window",
+     "a model of normal returns is specified"
+    ]
+   }
+  ],
+  "inputs": [
+   "return series",
+   "event dates"
+  ],
+  "outputs": [
+   "volatility forecast",
+   "abnormal return"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350204",
+  "field": "BU",
+  "node": "ANZSRC:350204",
+  "name": "Financial institutions (incl. banking)",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "explain how banks and other intermediaries work and fail"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350205",
+  "field": "BU",
+  "node": "ANZSRC:350205",
+  "name": "Household finance and financial literacy",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "explain how households manage money"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350206",
+  "field": "BU",
+  "node": "ANZSRC:350206",
+  "name": "Insurance studies",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "price cover against uncertain losses"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Law of large numbers in risk pooling",
+    "does": "makes average loss predictable as the pool grows",
+    "hypotheses": [
+     "risks are independent or weakly dependent",
+     "losses have finite mean"
+    ]
+   },
+   {
+    "name": "Credibility theory",
+    "does": "blends own experience with class experience",
+    "hypotheses": [
+     "the risk class is homogeneous enough",
+     "claims within a risk are independent given its level"
+    ]
+   }
+  ],
+  "inputs": [
+   "claims history"
+  ],
+  "outputs": [
+   "premium"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350207",
+  "field": "BU",
+  "node": "ANZSRC:350207",
+  "name": "International finance",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "manage money across currencies and borders"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350208",
+  "field": "BU",
+  "node": "ANZSRC:350208",
+  "name": "Investment and risk management",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "choose holdings and limit possible loss"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Mean-variance portfolio selection",
+    "does": "finds the lowest-risk mix for a target return",
+    "hypotheses": [
+     "means and covariances are known"
+    ]
+   },
+   {
+    "name": "Value at risk",
+    "does": "gives a loss level exceeded with small probability",
+    "hypotheses": [
+     "a model of the return distribution",
+     "stable over the horizon",
+     "positions can be traded at market prices"
+    ]
+   },
+   {
+    "name": "Duration",
+    "does": "measures a bond's price sensitivity to yield",
+    "hypotheses": [
+     "small parallel shifts in the yield curve"
+    ]
+   }
+  ],
+  "inputs": [
+   "returns",
+   "positions"
+  ],
+  "outputs": [
+   "weights",
+   "loss quantile",
+   "sensitivity"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350209",
+  "field": "BU",
+  "node": "ANZSRC:350209",
+  "name": "Not-for-profit finance and risk",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "fund and protect organisations that do not seek profit"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350299",
+  "field": "BU",
+  "node": "ANZSRC:350299",
+  "name": "Banking, finance and investment not elsewhere classified",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350301",
+  "field": "BU",
+  "node": "ANZSRC:350301",
+  "name": "Business analytics",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "turn business records into forecasts and decisions"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "optimise"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Regression and classification models with hold-out validation",
+    "does": "predict an outcome from records",
+    "hypotheses": [
+     "the future resembles the data used",
+     "the hold-out set is not used in fitting"
+    ]
+   },
+   {
+    "name": "A/B testing",
+    "does": "compares two versions by random assignment",
+    "hypotheses": [
+     "random assignment",
+     "no interference between users",
+     "an adequate sample"
+    ]
+   }
+  ],
+  "inputs": [
+   "transaction records"
+  ],
+  "outputs": [
+   "predictions",
+   "effect estimates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350302",
+  "field": "BU",
+  "node": "ANZSRC:350302",
+  "name": "Business information management (incl. records, knowledge and intelligence)",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "keep an organisation's records and knowledge usable"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350303",
+  "field": "BU",
+  "node": "ANZSRC:350303",
+  "name": "Business information systems",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "fit information systems to an organisation's work"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350304",
+  "field": "BU",
+  "node": "ANZSRC:350304",
+  "name": "Business systems in context",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "explain how business systems depend on their setting"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350305",
+  "field": "BU",
+  "node": "ANZSRC:350305",
+  "name": "Forensic intelligence",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "turn case data into leads about linked events"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350306",
+  "field": "BU",
+  "node": "ANZSRC:350306",
+  "name": "Forensic science and management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "manage the collection and handling of evidence"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350307",
+  "field": "BU",
+  "node": "ANZSRC:350307",
+  "name": "Technology management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "choose and manage technologies in an organisation"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350399",
+  "field": "BU",
+  "node": "ANZSRC:350399",
+  "name": "Business systems in context not elsewhere classified",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350401",
+  "field": "BU",
+  "node": "ANZSRC:350401",
+  "name": "Food and hospitality services",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "run food and accommodation services"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350402",
+  "field": "BU",
+  "node": "ANZSRC:350402",
+  "name": "Hospitality management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "sell a fixed, perishable capacity at the best total return"
+  ],
+  "signature": {
+   "task": [
+    "optimise"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Revenue management (Littlewood's rule)",
+    "does": "sets how many units to hold back for higher-paying demand",
+    "hypotheses": [
+     "capacity is fixed and perishable",
+     "demand classes can be separated",
+     "low-fare demand arrives first"
+    ]
+   }
+  ],
+  "inputs": [
+   "demand forecasts by class",
+   "capacity"
+  ],
+  "outputs": [
+   "booking limits"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350403",
+  "field": "BU",
+  "node": "ANZSRC:350403",
+  "name": "Real estate and valuation services",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "estimate what a property is worth"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Sales comparison approach",
+    "does": "values a property from recent sales of similar ones",
+    "hypotheses": [
+     "comparable recent sales exist",
+     "differences are adjusted for"
+    ]
+   },
+   {
+    "name": "Income capitalisation",
+    "does": "values a property from the income it produces",
+    "hypotheses": [
+     "net income and a capitalisation rate can be estimated from market evidence"
+    ]
+   }
+  ],
+  "inputs": [
+   "sales evidence",
+   "rental income"
+  ],
+  "outputs": [
+   "value estimate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350404",
+  "field": "BU",
+  "node": "ANZSRC:350404",
+  "name": "Retail",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "run the sale of goods to the public"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350405",
+  "field": "BU",
+  "node": "ANZSRC:350405",
+  "name": "Sport and leisure management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "run sport and leisure organisations"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350499",
+  "field": "BU",
+  "node": "ANZSRC:350499",
+  "name": "Commercial services not elsewhere classified",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350501",
+  "field": "BU",
+  "node": "ANZSRC:350501",
+  "name": "Business and labour history",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "establish how work and business developed"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350502",
+  "field": "BU",
+  "node": "ANZSRC:350502",
+  "name": "Employment equity and diversity",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "measure and improve fairness in employment"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "compare"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350503",
+  "field": "BU",
+  "node": "ANZSRC:350503",
+  "name": "Human resources management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "choose among applicants by evidence of later performance"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "classify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Structured interviews and validated tests",
+    "does": "predict job performance",
+    "hypotheses": [
+     "a job analysis defines what is assessed",
+     "validity evidence exists for this kind of role"
+    ]
+   }
+  ],
+  "inputs": [
+   "applicant data",
+   "job analysis"
+  ],
+  "outputs": [
+   "ranked candidates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350504",
+  "field": "BU",
+  "node": "ANZSRC:350504",
+  "name": "Industrial and employee relations",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "explain and manage relations between employers and workers"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350505",
+  "field": "BU",
+  "node": "ANZSRC:350505",
+  "name": "Occupational and workplace health and safety",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "reduce the chance of harm at work"
+  ],
+  "signature": {
+   "task": [
+    "control",
+    "verify"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hierarchy of controls",
+    "does": "ranks measures from removing the hazard to protective equipment",
+    "hypotheses": [
+     "hazards have been identified",
+     "it is a ranking convention"
+    ]
+   }
+  ],
+  "inputs": [
+   "hazard register"
+  ],
+  "outputs": [
+   "control plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350506",
+  "field": "BU",
+  "node": "ANZSRC:350506",
+  "name": "Workforce planning",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "match the number and skills of staff to future need"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350507",
+  "field": "BU",
+  "node": "ANZSRC:350507",
+  "name": "Workplace wellbeing and quality of working life",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "measure and improve how people fare at work"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350599",
+  "field": "BU",
+  "node": "ANZSRC:350599",
+  "name": "Human resources and industrial relations not elsewhere classified",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350601",
+  "field": "BU",
+  "node": "ANZSRC:350601",
+  "name": "Consumer behaviour",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "explain how buyers choose"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350602",
+  "field": "BU",
+  "node": "ANZSRC:350602",
+  "name": "Consumer-oriented product or service development",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "develop a product around what buyers want"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350603",
+  "field": "BU",
+  "node": "ANZSRC:350603",
+  "name": "Industrial marketing",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "sell to organisations"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350604",
+  "field": "BU",
+  "node": "ANZSRC:350604",
+  "name": "Marketing communications",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "plan messages to buyers and judge their effect"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "estimate"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350605",
+  "field": "BU",
+  "node": "ANZSRC:350605",
+  "name": "Marketing management (incl. strategy and customer relations)",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "decide which customers are worth serving"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "optimise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Customer lifetime value",
+    "does": "discounts expected future margin from a customer",
+    "hypotheses": [
+     "retention rate and margin are stable or forecast",
+     "a discount rate is chosen"
+    ]
+   }
+  ],
+  "inputs": [
+   "retention and margin data"
+  ],
+  "outputs": [
+   "value per customer"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350606",
+  "field": "BU",
+  "node": "ANZSRC:350606",
+  "name": "Marketing research methodology",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "find how much buyers value each feature"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Conjoint analysis",
+    "does": "estimates the value of each attribute from choices",
+    "hypotheses": [
+     "the product splits into attributes",
+     "attribute values add up",
+     "stated choices reflect real ones"
+    ]
+   }
+  ],
+  "inputs": [
+   "choice responses"
+  ],
+  "outputs": [
+   "part-worths"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350607",
+  "field": "BU",
+  "node": "ANZSRC:350607",
+  "name": "Marketing technology",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "use digital tools to reach buyers"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350608",
+  "field": "BU",
+  "node": "ANZSRC:350608",
+  "name": "Marketing theory",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "build general accounts of how markets and exchange work"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350609",
+  "field": "BU",
+  "node": "ANZSRC:350609",
+  "name": "Not-for-profit marketing",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "promote causes and organisations that do not seek profit"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350610",
+  "field": "BU",
+  "node": "ANZSRC:350610",
+  "name": "Pricing (incl. consumer value estimation)",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "set a price"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Price elasticity of demand",
+    "does": "measures how quantity responds to price",
+    "hypotheses": [
+     "other influences are held fixed or controlled",
+     "estimated in the relevant price range"
+    ]
+   },
+   {
+    "name": "Van Westendorp price sensitivity meter",
+    "does": "finds an acceptable price range from survey answers",
+    "hypotheses": [
+     "respondents know the product category",
+     "stated answers reflect behaviour"
+    ]
+   }
+  ],
+  "inputs": [
+   "sales and price data",
+   "survey"
+  ],
+  "outputs": [
+   "elasticity",
+   "price range"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350611",
+  "field": "BU",
+  "node": "ANZSRC:350611",
+  "name": "Service marketing",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "measure the gap between expected and received service"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "SERVQUAL",
+    "does": "scores service quality on five dimensions",
+    "hypotheses": [
+     "the five dimensions fit the service",
+     "expectations and perceptions are both collected"
+    ]
+   }
+  ],
+  "inputs": [
+   "survey responses"
+  ],
+  "outputs": [
+   "gap scores"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350612",
+  "field": "BU",
+  "node": "ANZSRC:350612",
+  "name": "Social marketing",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "apply marketing methods to change behaviour for public benefit"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350699",
+  "field": "BU",
+  "node": "ANZSRC:350699",
+  "name": "Marketing not elsewhere classified",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350701",
+  "field": "BU",
+  "node": "ANZSRC:350701",
+  "name": "Corporate governance",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "design how a company is directed and held to account"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350702",
+  "field": "BU",
+  "node": "ANZSRC:350702",
+  "name": "Corporate social responsibility",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "define and report what a company owes to society"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "verify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350703",
+  "field": "BU",
+  "node": "ANZSRC:350703",
+  "name": "Disaster and emergency management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "prepare for and respond to emergencies"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350704",
+  "field": "BU",
+  "node": "ANZSRC:350704",
+  "name": "Entrepreneurship",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "explain how new ventures start and grow"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350705",
+  "field": "BU",
+  "node": "ANZSRC:350705",
+  "name": "Innovation management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "forecast uptake of something new"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bass diffusion model",
+    "does": "forecasts adoption from innovation and imitation",
+    "hypotheses": [
+     "a fixed market potential",
+     "each buyer adopts once"
+    ]
+   }
+  ],
+  "inputs": [
+   "early sales"
+  ],
+  "outputs": [
+   "adoption curve"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350706",
+  "field": "BU",
+  "node": "ANZSRC:350706",
+  "name": "International business",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "explain how firms operate across borders"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350707",
+  "field": "BU",
+  "node": "ANZSRC:350707",
+  "name": "Leadership",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "explain what makes leading effective"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350708",
+  "field": "BU",
+  "node": "ANZSRC:350708",
+  "name": "Not-for-profit business and management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "manage organisations that do not seek profit"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350709",
+  "field": "BU",
+  "node": "ANZSRC:350709",
+  "name": "Organisation and management theory",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "build general accounts of how organisations work"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350710",
+  "field": "BU",
+  "node": "ANZSRC:350710",
+  "name": "Organisational behaviour",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "explain how people behave inside organisations"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350711",
+  "field": "BU",
+  "node": "ANZSRC:350711",
+  "name": "Organisational planning and management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "set an organisation's aims and arrange work to meet them"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350712",
+  "field": "BU",
+  "node": "ANZSRC:350712",
+  "name": "Production and operations management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "plan production and stock"
+  ],
+  "signature": {
+   "task": [
+    "optimise"
+   ],
+   "constraints": [
+    "resource_budget"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Economic order quantity",
+    "does": "minimises ordering plus holding cost",
+    "hypotheses": [
+     "constant known demand",
+     "fixed order cost",
+     "constant holding cost",
+     "no shortages"
+    ]
+   },
+   {
+    "name": "Theory of constraints",
+    "does": "raises output by managing the one limiting resource",
+    "hypotheses": [
+     "a single bottleneck governs throughput at any time"
+    ]
+   },
+   {
+    "name": "Queueing analysis (M/M/1)",
+    "does": "predicts waiting from arrival and service rates",
+    "hypotheses": [
+     "Poisson arrivals",
+     "exponential service",
+     "one server",
+     "utilisation below one"
+    ]
+   }
+  ],
+  "inputs": [
+   "demand, costs, capacities"
+  ],
+  "outputs": [
+   "order size",
+   "schedule",
+   "waiting time"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350713",
+  "field": "BU",
+  "node": "ANZSRC:350713",
+  "name": "Project management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "schedule dependent tasks and track progress"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "control"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Critical path method",
+    "does": "finds the longest chain of dependent tasks",
+    "hypotheses": [
+     "durations and dependencies are known"
+    ]
+   },
+   {
+    "name": "Earned value management",
+    "does": "compares work done with plan and cost",
+    "hypotheses": [
+     "a baseline plan with budgeted cost per task exists"
+    ]
+   }
+  ],
+  "inputs": [
+   "task list",
+   "progress data"
+  ],
+  "outputs": [
+   "schedule",
+   "variances"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350714",
+  "field": "BU",
+  "node": "ANZSRC:350714",
+  "name": "Public sector organisation and management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "manage public bodies"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350715",
+  "field": "BU",
+  "node": "ANZSRC:350715",
+  "name": "Quality management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "keep a process on target and reduce defects"
+  ],
+  "signature": {
+   "task": [
+    "control",
+    "verify"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Statistical process control charts",
+    "does": "signal when a process drifts",
+    "hypotheses": [
+     "a stable baseline exists",
+     "samples are independent"
+    ]
+   },
+   {
+    "name": "Pareto analysis",
+    "does": "ranks causes by their share of defects",
+    "hypotheses": [
+     "defects are recorded by cause"
+    ]
+   }
+  ],
+  "inputs": [
+   "process measurements",
+   "defect records"
+  ],
+  "outputs": [
+   "out-of-control signals",
+   "ranked causes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350716",
+  "field": "BU",
+  "node": "ANZSRC:350716",
+  "name": "Small business organisation and management",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "run small firms"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350717",
+  "field": "BU",
+  "node": "ANZSRC:350717",
+  "name": "Stakeholder engagement",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "identify who is affected by a decision and involve them"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350718",
+  "field": "BU",
+  "node": "ANZSRC:350718",
+  "name": "Strategy",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "judge how profitable an industry can be and where advantage lies"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Five forces analysis",
+    "does": "assesses rivalry, entry, substitutes, suppliers and buyers",
+    "hypotheses": [
+     "an industry boundary can be drawn",
+     "the result is qualitative"
+    ]
+   },
+   {
+    "name": "Resource-based view (VRIO)",
+    "does": "tests whether a resource can sustain advantage",
+    "hypotheses": [
+     "resources can be identified and compared with rivals'"
+    ]
+   }
+  ],
+  "inputs": [
+   "industry and firm facts"
+  ],
+  "outputs": [
+   "attractiveness judgement",
+   "sources of advantage"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350799",
+  "field": "BU",
+  "node": "ANZSRC:350799",
+  "name": "Strategy, management and organisational behaviour not elsewhere classified",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350801",
+  "field": "BU",
+  "node": "ANZSRC:350801",
+  "name": "Impacts of tourism",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "estimate what visitors do to a place"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350802",
+  "field": "BU",
+  "node": "ANZSRC:350802",
+  "name": "Tourism forecasting",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "forecast visitor numbers"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Seasonal time-series forecasting",
+    "does": "projects a series with a yearly pattern",
+    "hypotheses": [
+     "the seasonal pattern is stable",
+     "no structural break in the forecast period"
+    ]
+   }
+  ],
+  "inputs": [
+   "monthly arrivals"
+  ],
+  "outputs": [
+   "forecast with interval"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350803",
+  "field": "BU",
+  "node": "ANZSRC:350803",
+  "name": "Tourism management",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "run tourism businesses and destinations"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350804",
+  "field": "BU",
+  "node": "ANZSRC:350804",
+  "name": "Tourism marketing",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "promote destinations"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350805",
+  "field": "BU",
+  "node": "ANZSRC:350805",
+  "name": "Tourism resource appraisal",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "assess what a place offers visitors and how much use it can bear"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350806",
+  "field": "BU",
+  "node": "ANZSRC:350806",
+  "name": "Tourist behaviour and visitor experience",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "explain what visitors do and feel"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350899",
+  "field": "BU",
+  "node": "ANZSRC:350899",
+  "name": "Tourism not elsewhere classified",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350901",
+  "field": "BU",
+  "node": "ANZSRC:350901",
+  "name": "Air transportation and freight services",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "run air transport of people and goods"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350902",
+  "field": "BU",
+  "node": "ANZSRC:350902",
+  "name": "Intelligent mobility",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "use data and automation to improve movement"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350903",
+  "field": "BU",
+  "node": "ANZSRC:350903",
+  "name": "Logistics",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "move goods from sources to destinations at least cost"
+  ],
+  "signature": {
+   "task": [
+    "optimise"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Transportation problem",
+    "does": "finds the cheapest shipping plan",
+    "hypotheses": [
+     "costs are linear in quantity",
+     "supplies and demands are known"
+    ]
+   },
+   {
+    "name": "Vehicle routing heuristics",
+    "does": "find good delivery routes",
+    "hypotheses": [
+     "distances and demands are known",
+     "the result is near-optimal, not proven optimal"
+    ]
+   }
+  ],
+  "inputs": [
+   "supplies, demands, costs"
+  ],
+  "outputs": [
+   "shipping plan",
+   "routes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350904",
+  "field": "BU",
+  "node": "ANZSRC:350904",
+  "name": "Maritime transportation and freight services",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "run sea transport of people and goods"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350905",
+  "field": "BU",
+  "node": "ANZSRC:350905",
+  "name": "Passenger needs",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "find what travellers need"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350906",
+  "field": "BU",
+  "node": "ANZSRC:350906",
+  "name": "Public transport",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "plan and run shared passenger services"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350907",
+  "field": "BU",
+  "node": "ANZSRC:350907",
+  "name": "Rail transportation and freight services",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "run rail transport of people and goods"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350908",
+  "field": "BU",
+  "node": "ANZSRC:350908",
+  "name": "Road transportation and freight services",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "run road transport of people and goods"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350909",
+  "field": "BU",
+  "node": "ANZSRC:350909",
+  "name": "Supply chains",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "coordinate a chain of suppliers so stock and service stay in balance"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "control"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Newsvendor model",
+    "does": "gives the best stock level for one period",
+    "hypotheses": [
+     "one period",
+     "known demand distribution",
+     "known shortage and surplus costs"
+    ]
+   },
+   {
+    "name": "Bullwhip effect analysis",
+    "does": "explains why order swings grow up the chain",
+    "hypotheses": [
+     "each stage forecasts from the orders it receives",
+     "lead times are positive"
+    ]
+   }
+  ],
+  "inputs": [
+   "demand data",
+   "lead times"
+  ],
+  "outputs": [
+   "stock levels",
+   "variance amplification"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.350999",
+  "field": "BU",
+  "node": "ANZSRC:350999",
+  "name": "Transportation, logistics and supply chains not elsewhere classified",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.359999",
+  "field": "BU",
+  "node": "ANZSRC:359999",
+  "name": "Other commerce, management, tourism and services not elsewhere classified",
+  "taxonomy_cell": "BU.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

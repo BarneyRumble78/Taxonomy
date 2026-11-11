@@ -1,0 +1,2180 @@
+[
+ {
+  "id": "CH.TK.340101",
+  "field": "CH",
+  "node": "ANZSRC:340101",
+  "name": "Analytical spectrometry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "identify and measure substances from how they interact with radiation or fields"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Beer–Lambert law",
+    "does": "gives concentration from absorbed light",
+    "hypotheses": [
+     "dilute solution",
+     "monochromatic light",
+     "no scattering",
+     "absorbing species do not interact"
+    ]
+   },
+   {
+    "name": "Mass spectrometry",
+    "does": "identifies a compound from the masses of its ions",
+    "hypotheses": [
+     "the compound can be ionised",
+     "mass accuracy and resolution suit the question"
+    ]
+   }
+  ],
+  "inputs": [
+   "sample",
+   "standards"
+  ],
+  "outputs": [
+   "identity",
+   "concentration"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340102",
+  "field": "CH",
+  "node": "ANZSRC:340102",
+  "name": "Bioassays",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "measure a substance by its effect on a living system"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dose-response bioassay",
+    "does": "estimates potency against a standard",
+    "hypotheses": [
+     "the standard and the sample act by the same mechanism",
+     "the dose-response curves are parallel"
+    ]
+   }
+  ],
+  "inputs": [
+   "responses at several doses"
+  ],
+  "outputs": [
+   "relative potency"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340103",
+  "field": "CH",
+  "node": "ANZSRC:340103",
+  "name": "Electroanalytical chemistry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "measure a substance from the current or voltage at an electrode"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Nernst equation",
+    "does": "relates electrode potential to activity",
+    "hypotheses": [
+     "the electrode reaction is reversible and at equilibrium",
+     "activities are known or held constant"
+    ]
+   },
+   {
+    "name": "Cyclic voltammetry with the Randles–Sevcik equation",
+    "does": "relates peak current to concentration and scan rate",
+    "hypotheses": [
+     "a reversible couple",
+     "transport by diffusion alone",
+     "a planar electrode"
+    ]
+   }
+  ],
+  "inputs": [
+   "potential or current readings"
+  ],
+  "outputs": [
+   "concentration",
+   "reversibility"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340104",
+  "field": "CH",
+  "node": "ANZSRC:340104",
+  "name": "Flow analysis",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "analyse a moving stream of sample automatically"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "control"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340105",
+  "field": "CH",
+  "node": "ANZSRC:340105",
+  "name": "Instrumental methods (excl. immunological and bioassay methods)",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "choose and run an instrument that measures a chemical property"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340106",
+  "field": "CH",
+  "node": "ANZSRC:340106",
+  "name": "Metabolomic chemistry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "measure many small molecules in a biological sample at once"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340107",
+  "field": "CH",
+  "node": "ANZSRC:340107",
+  "name": "Quality assurance, chemometrics, traceability and metrological chemistry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "state how far a measurement can be trusted and extract information from many variables"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Method validation",
+    "does": "establishes accuracy, precision, linearity and detection limit",
+    "hypotheses": [
+     "certified reference material or a reference method is available",
+     "the matrix matches real samples"
+    ]
+   },
+   {
+    "name": "Principal component analysis",
+    "does": "reduces many correlated variables to a few",
+    "hypotheses": [
+     "the structure of interest is linear",
+     "variables are scaled suitably"
+    ]
+   }
+  ],
+  "inputs": [
+   "replicate measurements",
+   "multivariate data"
+  ],
+  "outputs": [
+   "performance figures",
+   "scores and loadings"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340108",
+  "field": "CH",
+  "node": "ANZSRC:340108",
+  "name": "Sensor technology (incl. chemical aspects)",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "build a device that turns a chemical quantity into a signal"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "estimate"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340109",
+  "field": "CH",
+  "node": "ANZSRC:340109",
+  "name": "Separation science",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "separate a mixture and judge how well it is separated"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Van Deemter equation",
+    "does": "relates band broadening to flow rate",
+    "hypotheses": [
+     "a packed column",
+     "linear chromatography at low load"
+    ]
+   },
+   {
+    "name": "Resolution equation",
+    "does": "relates peak separation to efficiency, selectivity and retention",
+    "hypotheses": [
+     "peaks are roughly Gaussian",
+     "conditions are isocratic"
+    ]
+   }
+  ],
+  "inputs": [
+   "retention data"
+  ],
+  "outputs": [
+   "optimal flow",
+   "resolution"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340199",
+  "field": "CH",
+  "node": "ANZSRC:340199",
+  "name": "Analytical chemistry not elsewhere classified",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340201",
+  "field": "CH",
+  "node": "ANZSRC:340201",
+  "name": "Bioinorganic chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "explain the role of metals in living systems"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340202",
+  "field": "CH",
+  "node": "ANZSRC:340202",
+  "name": "Crystallography",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "find the arrangement of atoms in a crystal"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "symmetry": [
+    "translation"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bragg's law",
+    "does": "relates diffraction angle to lattice spacing",
+    "hypotheses": [
+     "a periodic crystal",
+     "monochromatic radiation",
+     "elastic scattering"
+    ]
+   },
+   {
+    "name": "Structure solution and refinement",
+    "does": "fits an atomic model to diffraction intensities",
+    "hypotheses": [
+     "a single crystal or good powder data",
+     "the phase problem is solved",
+     "twinning and disorder are modelled"
+    ]
+   }
+  ],
+  "inputs": [
+   "diffraction pattern"
+  ],
+  "outputs": [
+   "atomic positions",
+   "lattice parameters"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340203",
+  "field": "CH",
+  "node": "ANZSRC:340203",
+  "name": "F-block chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "explain the chemistry of lanthanide and actinide elements"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340204",
+  "field": "CH",
+  "node": "ANZSRC:340204",
+  "name": "Inorganic green chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "carry out inorganic chemistry with less waste and hazard"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340205",
+  "field": "CH",
+  "node": "ANZSRC:340205",
+  "name": "Main group metal chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "explain bonding and reactivity of main-group metals"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340206",
+  "field": "CH",
+  "node": "ANZSRC:340206",
+  "name": "Metal cluster chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "predict the shape of a cluster from its electron count"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "domain_type": [
+    "discrete"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Wade–Mingos rules",
+    "does": "relate skeletal electron pairs to cluster shape",
+    "hypotheses": [
+     "deltahedral clusters such as boranes",
+     "delocalised skeletal bonding"
+    ]
+   }
+  ],
+  "inputs": [
+   "formula and electron count"
+  ],
+  "outputs": [
+   "predicted shape"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340207",
+  "field": "CH",
+  "node": "ANZSRC:340207",
+  "name": "Metal organic frameworks",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "measure the internal surface of a porous solid"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "BET surface area analysis",
+    "does": "estimates surface area from gas adsorption",
+    "hypotheses": [
+     "multilayer adsorption on a uniform surface",
+     "applied in its valid pressure range",
+     "for micropores the value is only an apparent area"
+    ]
+   }
+  ],
+  "inputs": [
+   "adsorption isotherm"
+  ],
+  "outputs": [
+   "surface area"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340208",
+  "field": "CH",
+  "node": "ANZSRC:340208",
+  "name": "Non-metal chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "explain bonding and reactivity of non-metal elements"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340209",
+  "field": "CH",
+  "node": "ANZSRC:340209",
+  "name": "Organometallic chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "judge whether a metal-carbon compound is stable"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "domain_type": [
+    "discrete"
+   ]
+  },
+  "tools": [
+   {
+    "name": "18-electron rule",
+    "does": "predicts stable electron counts for transition-metal complexes",
+    "hypotheses": [
+     "it is a guide",
+     "it fits low-oxidation-state complexes with strong-field ligands best"
+    ]
+   }
+  ],
+  "inputs": [
+   "metal, ligands and charge"
+  ],
+  "outputs": [
+   "electron count",
+   "stability judgement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340210",
+  "field": "CH",
+  "node": "ANZSRC:340210",
+  "name": "Solid state chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "predict the structure and properties of extended solids"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "symmetry": [
+    "translation"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Band theory",
+    "does": "explains conduction from allowed energy bands",
+    "hypotheses": [
+     "a periodic solid",
+     "electrons treated as independent"
+    ]
+   },
+   {
+    "name": "Radius-ratio rules",
+    "does": "suggest coordination number in ionic solids",
+    "hypotheses": [
+     "ions behave as hard spheres",
+     "bonding is mainly ionic",
+     "the rules are approximate"
+    ]
+   }
+  ],
+  "inputs": [
+   "composition and structure"
+  ],
+  "outputs": [
+   "conductor or insulator",
+   "likely structure"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340211",
+  "field": "CH",
+  "node": "ANZSRC:340211",
+  "name": "Transition metal chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "explain colour and magnetism of metal complexes"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "symmetry": [
+    "rotation"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ligand field theory",
+    "does": "relates d-orbital splitting to spectra and magnetism",
+    "hypotheses": [
+     "a transition-metal centre",
+     "the ligand geometry is known"
+    ]
+   },
+   {
+    "name": "Tanabe–Sugano diagrams",
+    "does": "assign electronic transitions of octahedral complexes",
+    "hypotheses": [
+     "octahedral or near-octahedral geometry",
+     "a stated d-electron count"
+    ]
+   }
+  ],
+  "inputs": [
+   "complex geometry",
+   "spectrum"
+  ],
+  "outputs": [
+   "splitting energy",
+   "spin state"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340299",
+  "field": "CH",
+  "node": "ANZSRC:340299",
+  "name": "Inorganic chemistry not elsewhere classified",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340301",
+  "field": "CH",
+  "node": "ANZSRC:340301",
+  "name": "Inorganic materials (incl. nanomaterials)",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "make and characterise inorganic solids with useful properties"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "construct"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340302",
+  "field": "CH",
+  "node": "ANZSRC:340302",
+  "name": "Macromolecular materials",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "relate the make-up of very large molecules to material properties"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "predict"
+   ],
+   "scope": [
+    "multiscale"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340303",
+  "field": "CH",
+  "node": "ANZSRC:340303",
+  "name": "Nanochemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "make and characterise structures a few nanometres across"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "construct"
+   ],
+   "scale": [
+    "small"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340304",
+  "field": "CH",
+  "node": "ANZSRC:340304",
+  "name": "Optical properties of materials",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "explain how a material absorbs, emits and bends light"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340305",
+  "field": "CH",
+  "node": "ANZSRC:340305",
+  "name": "Physical properties of materials",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "measure and explain the mechanical, thermal and electrical behaviour of materials"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340306",
+  "field": "CH",
+  "node": "ANZSRC:340306",
+  "name": "Polymerisation mechanisms",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "predict chain length and composition from how chains grow"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Carothers equation",
+    "does": "gives chain length from extent of reaction",
+    "hypotheses": [
+     "step-growth polymerisation",
+     "equal reactivity of functional groups",
+     "no side reactions or rings"
+    ]
+   },
+   {
+    "name": "Mayo–Lewis copolymer equation",
+    "does": "gives copolymer composition from feed composition",
+    "hypotheses": [
+     "the terminal model: reactivity depends only on the chain-end unit",
+     "low conversion"
+    ]
+   }
+  ],
+  "inputs": [
+   "extent of reaction",
+   "reactivity ratios"
+  ],
+  "outputs": [
+   "chain length",
+   "composition"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340307",
+  "field": "CH",
+  "node": "ANZSRC:340307",
+  "name": "Structure and dynamics of materials",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "find how atoms in a material are arranged and move"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340308",
+  "field": "CH",
+  "node": "ANZSRC:340308",
+  "name": "Supramolecular chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "design molecules that assemble through weak reversible bonds"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340309",
+  "field": "CH",
+  "node": "ANZSRC:340309",
+  "name": "Theory and design of materials",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "predict a material's properties before it is made"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340399",
+  "field": "CH",
+  "node": "ANZSRC:340399",
+  "name": "Macromolecular and materials chemistry not elsewhere classified",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340401",
+  "field": "CH",
+  "node": "ANZSRC:340401",
+  "name": "Biologically active molecules",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "find and characterise molecules that act on living systems"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340402",
+  "field": "CH",
+  "node": "ANZSRC:340402",
+  "name": "Biomolecular modelling and design",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "predict how a small molecule fits a biological target"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "structure": [
+    "geometric_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Molecular docking",
+    "does": "ranks poses and molecules by predicted fit",
+    "hypotheses": [
+     "the target structure is known",
+     "the scoring function approximates binding energy"
+    ]
+   }
+  ],
+  "inputs": [
+   "target structure",
+   "candidate molecules"
+  ],
+  "outputs": [
+   "ranked poses"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340403",
+  "field": "CH",
+  "node": "ANZSRC:340403",
+  "name": "Characterisation of biological macromolecules",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "determine the size, shape and make-up of large biological molecules"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340404",
+  "field": "CH",
+  "node": "ANZSRC:340404",
+  "name": "Cheminformatics and quantitative structure-activity relationships",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "predict activity from molecular structure"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Quantitative structure-activity relationship",
+    "does": "fits activity to molecular descriptors",
+    "hypotheses": [
+     "compounds share one mechanism",
+     "the new compound lies in the model's applicability domain",
+     "the model is validated on held-out compounds"
+    ]
+   }
+  ],
+  "inputs": [
+   "structures and measured activities"
+  ],
+  "outputs": [
+   "predicted activity"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340405",
+  "field": "CH",
+  "node": "ANZSRC:340405",
+  "name": "Glycoconjugates",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "make and study molecules that join sugars to other units"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340406",
+  "field": "CH",
+  "node": "ANZSRC:340406",
+  "name": "Molecular medicine",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "apply chemistry to the molecular causes of disease"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340407",
+  "field": "CH",
+  "node": "ANZSRC:340407",
+  "name": "Proteins and peptides",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "build a chain of amino acids in a set order"
+  ],
+  "signature": {
+   "task": [
+    "construct"
+   ],
+   "structure": [
+    "sequence"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Solid-phase peptide synthesis",
+    "does": "adds residues one at a time to a chain fixed on a support",
+    "hypotheses": [
+     "each coupling goes nearly to completion",
+     "protecting groups are orthogonal"
+    ]
+   }
+  ],
+  "inputs": [
+   "target sequence"
+  ],
+  "outputs": [
+   "peptide"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340499",
+  "field": "CH",
+  "node": "ANZSRC:340499",
+  "name": "Medicinal and biomolecular chemistry not elsewhere classified",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340501",
+  "field": "CH",
+  "node": "ANZSRC:340501",
+  "name": "Free radical chemistry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "explain reactions that proceed through species with unpaired electrons"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340502",
+  "field": "CH",
+  "node": "ANZSRC:340502",
+  "name": "Natural products and bioactive compounds",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "isolate compounds from living sources and find their structures"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340503",
+  "field": "CH",
+  "node": "ANZSRC:340503",
+  "name": "Organic chemical synthesis",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "plan a route to build a target molecule"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "design"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Retrosynthetic analysis",
+    "does": "works backwards from the target to simpler precursors",
+    "hypotheses": [
+     "a reliable known reaction exists for each disconnection"
+    ]
+   }
+  ],
+  "inputs": [
+   "target structure"
+  ],
+  "outputs": [
+   "synthesis route"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340504",
+  "field": "CH",
+  "node": "ANZSRC:340504",
+  "name": "Organic green chemistry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "compare routes by how much waste they make"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "optimise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Atom economy and E-factor",
+    "does": "measure the share of input ending in product and the waste per unit product",
+    "hypotheses": [
+     "the balanced reaction and all inputs, including solvents, are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "reaction and process data"
+  ],
+  "outputs": [
+   "waste metrics"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340505",
+  "field": "CH",
+  "node": "ANZSRC:340505",
+  "name": "Physical organic chemistry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "relate changes in structure to changes in rate"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "linearity": [
+    "linear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hammett equation",
+    "does": "correlates rate or equilibrium with substituent constants",
+    "hypotheses": [
+     "meta- or para-substituted aromatic compounds",
+     "the mechanism is the same across the series"
+    ]
+   },
+   {
+    "name": "Kinetic isotope effect",
+    "does": "shows whether a bond to the labelled atom breaks in the slow step",
+    "hypotheses": [
+     "the isotope changes only the mass",
+     "one step limits the rate"
+    ]
+   }
+  ],
+  "inputs": [
+   "rates for a series of compounds"
+  ],
+  "outputs": [
+   "reaction constant",
+   "mechanistic inference"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340599",
+  "field": "CH",
+  "node": "ANZSRC:340599",
+  "name": "Organic chemistry not elsewhere classified",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340601",
+  "field": "CH",
+  "node": "ANZSRC:340601",
+  "name": "Catalysis and mechanisms of reactions",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "find the sequence of steps by which a reaction proceeds"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Steady-state approximation",
+    "does": "simplifies a rate law by holding intermediates constant",
+    "hypotheses": [
+     "the intermediate is reactive and stays at low, nearly constant concentration"
+    ]
+   },
+   {
+    "name": "Sabatier principle",
+    "does": "says the best catalyst binds neither too weakly nor too strongly",
+    "hypotheses": [
+     "one binding energy describes the catalyst's activity"
+    ]
+   }
+  ],
+  "inputs": [
+   "rate data"
+  ],
+  "outputs": [
+   "rate law",
+   "proposed mechanism"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340602",
+  "field": "CH",
+  "node": "ANZSRC:340602",
+  "name": "Chemical thermodynamics and energetics",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "predict the direction and extent of a change"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gibbs energy criterion",
+    "does": "says a change is spontaneous when Gibbs energy falls",
+    "hypotheses": [
+     "constant temperature and pressure",
+     "a closed system"
+    ]
+   },
+   {
+    "name": "Hess's law",
+    "does": "adds enthalpies of steps to get an overall enthalpy",
+    "hypotheses": [
+     "enthalpy is a state function",
+     "the steps share the same conditions"
+    ]
+   }
+  ],
+  "inputs": [
+   "thermodynamic data"
+  ],
+  "outputs": [
+   "direction",
+   "equilibrium constant"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340603",
+  "field": "CH",
+  "node": "ANZSRC:340603",
+  "name": "Colloid and surface chemistry",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "predict adsorption on a surface and stability of a dispersion"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Langmuir isotherm",
+    "does": "gives surface coverage from pressure or concentration",
+    "hypotheses": [
+     "one layer only",
+     "equivalent sites",
+     "no interaction between adsorbed molecules"
+    ]
+   },
+   {
+    "name": "DLVO theory",
+    "does": "predicts whether particles stay dispersed",
+    "hypotheses": [
+     "a dilute dispersion",
+     "mean-field electrostatics plus van der Waals attraction only"
+    ]
+   }
+  ],
+  "inputs": [
+   "adsorption data",
+   "salt conditions"
+  ],
+  "outputs": [
+   "coverage",
+   "stability"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340604",
+  "field": "CH",
+  "node": "ANZSRC:340604",
+  "name": "Electrochemistry",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "relate electrical quantities to chemical change at electrodes"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Nernst equation",
+    "does": "gives cell potential from composition",
+    "hypotheses": [
+     "reversible electrode reactions at equilibrium",
+     "activities are known"
+    ]
+   },
+   {
+    "name": "Butler–Volmer equation",
+    "does": "relates current to overpotential",
+    "hypotheses": [
+     "electron transfer limits the rate",
+     "mass transport is not limiting"
+    ]
+   },
+   {
+    "name": "Faraday's laws",
+    "does": "relate charge passed to amount reacted",
+    "hypotheses": [
+     "the current efficiency is known"
+    ]
+   }
+  ],
+  "inputs": [
+   "potentials, currents, concentrations"
+  ],
+  "outputs": [
+   "cell potential",
+   "rate",
+   "amount converted"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340605",
+  "field": "CH",
+  "node": "ANZSRC:340605",
+  "name": "Molecular imaging (incl. electron microscopy and neutron diffraction)",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "form an image of molecules or atoms in a sample"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340606",
+  "field": "CH",
+  "node": "ANZSRC:340606",
+  "name": "Photochemistry",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "predict what happens after a molecule absorbs light"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Stern–Volmer analysis",
+    "does": "measures how a quencher shortens an excited state",
+    "hypotheses": [
+     "one emitting species",
+     "quenching is purely dynamic or purely static"
+    ]
+   },
+   {
+    "name": "Quantum yield measurement",
+    "does": "gives events per photon absorbed",
+    "hypotheses": [
+     "the absorbed photon count is known",
+     "a suitable reference is used"
+    ]
+   }
+  ],
+  "inputs": [
+   "emission intensity against quencher level"
+  ],
+  "outputs": [
+   "quenching constant",
+   "quantum yield"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340607",
+  "field": "CH",
+  "node": "ANZSRC:340607",
+  "name": "Reaction kinetics and dynamics",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "measure how fast a reaction goes and how rate depends on conditions"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Arrhenius equation",
+    "does": "gives the temperature dependence of a rate",
+    "hypotheses": [
+     "one rate-limiting step",
+     "a limited temperature range"
+    ]
+   },
+   {
+    "name": "Transition state theory",
+    "does": "computes a rate constant from the activated complex",
+    "hypotheses": [
+     "quasi-equilibrium between reactants and activated complex",
+     "no recrossing",
+     "classical motion along the reaction coordinate"
+    ]
+   },
+   {
+    "name": "Integrated rate laws",
+    "does": "find reaction order from concentration against time",
+    "hypotheses": [
+     "one reaction dominates",
+     "constant temperature and volume"
+    ]
+   }
+  ],
+  "inputs": [
+   "concentration-time data at several temperatures"
+  ],
+  "outputs": [
+   "order",
+   "rate constant",
+   "activation energy"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340608",
+  "field": "CH",
+  "node": "ANZSRC:340608",
+  "name": "Solution chemistry",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "predict the behaviour of dissolved species"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Debye–Hückel limiting law",
+    "does": "gives activity coefficients of ions",
+    "hypotheses": [
+     "very dilute solution",
+     "ions as point charges",
+     "a complete dissociation"
+    ]
+   },
+   {
+    "name": "Henderson–Hasselbalch equation",
+    "does": "gives the pH of a buffer",
+    "hypotheses": [
+     "activities are close to concentrations",
+     "the acid and base forms are not very dilute"
+    ]
+   }
+  ],
+  "inputs": [
+   "concentrations and constants"
+  ],
+  "outputs": [
+   "activity coefficients",
+   "pH"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340609",
+  "field": "CH",
+  "node": "ANZSRC:340609",
+  "name": "Transport properties and non-equilibrium processes",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "predict how matter, heat and charge move in a system not at equilibrium"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fick's laws",
+    "does": "predict diffusion",
+    "hypotheses": [
+     "flux is proportional to the concentration gradient",
+     "the diffusion coefficient is constant"
+    ]
+   },
+   {
+    "name": "Onsager reciprocal relations",
+    "does": "relate coupled transport coefficients",
+    "hypotheses": [
+     "the system is near equilibrium",
+     "linear flux-force relations",
+     "microscopic reversibility"
+    ]
+   }
+  ],
+  "inputs": [
+   "gradients and coefficients"
+  ],
+  "outputs": [
+   "fluxes",
+   "concentration profiles"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340699",
+  "field": "CH",
+  "node": "ANZSRC:340699",
+  "name": "Physical chemistry not elsewhere classified",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340701",
+  "field": "CH",
+  "node": "ANZSRC:340701",
+  "name": "Computational chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "compute the structure and energy of molecules"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "scale": [
+    "high_dimensional"
+   ],
+   "goal_quality": [
+    "approximate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Kohn–Sham density functional theory",
+    "does": "computes ground-state energy from electron density",
+    "hypotheses": [
+     "ground state",
+     "the exchange-correlation functional is approximate"
+    ]
+   },
+   {
+    "name": "Molecular dynamics",
+    "does": "samples molecular motion over time",
+    "hypotheses": [
+     "nuclei move classically",
+     "the force field is valid for the system",
+     "the run is long enough to sample the states of interest"
+    ]
+   }
+  ],
+  "inputs": [
+   "atomic positions"
+  ],
+  "outputs": [
+   "energies",
+   "geometries",
+   "trajectories"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340702",
+  "field": "CH",
+  "node": "ANZSRC:340702",
+  "name": "Radiation and matter",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "explain how radiation is absorbed, emitted and scattered by matter"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340703",
+  "field": "CH",
+  "node": "ANZSRC:340703",
+  "name": "Statistical mechanics in chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "get bulk chemical properties from molecular energy levels"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "probability_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Partition function",
+    "does": "gives thermodynamic quantities from energy levels",
+    "hypotheses": [
+     "thermal equilibrium",
+     "the levels are known",
+     "for ideal gases, molecules are independent"
+    ]
+   }
+  ],
+  "inputs": [
+   "molecular energy levels",
+   "temperature"
+  ],
+  "outputs": [
+   "thermodynamic functions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340704",
+  "field": "CH",
+  "node": "ANZSRC:340704",
+  "name": "Theoretical quantum chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "solve the electronic structure of molecules with controlled accuracy"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "function_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hartree–Fock method",
+    "does": "approximates the wavefunction with one determinant",
+    "hypotheses": [
+     "Born–Oppenheimer approximation",
+     "electron correlation is neglected"
+    ]
+   },
+   {
+    "name": "Variational principle",
+    "does": "says any trial wavefunction gives an energy at or above the true ground state",
+    "hypotheses": [
+     "the trial function satisfies the boundary conditions",
+     "the Hamiltonian is bounded below"
+    ]
+   },
+   {
+    "name": "Coupled-cluster theory",
+    "does": "adds electron correlation systematically",
+    "hypotheses": [
+     "the ground state is dominated by one configuration"
+    ]
+   }
+  ],
+  "inputs": [
+   "molecular geometry",
+   "basis set"
+  ],
+  "outputs": [
+   "energy",
+   "wavefunction"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.340799",
+  "field": "CH",
+  "node": "ANZSRC:340799",
+  "name": "Theoretical and computational chemistry not elsewhere classified",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.349901",
+  "field": "CH",
+  "node": "ANZSRC:349901",
+  "name": "Forensic chemistry",
+  "taxonomy_cell": "CH.O.A1",
+  "solves": [
+   "identify trace materials as evidence"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "verify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.349999",
+  "field": "CH",
+  "node": "ANZSRC:349999",
+  "name": "Other chemical sciences not elsewhere classified",
+  "taxonomy_cell": "CH.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

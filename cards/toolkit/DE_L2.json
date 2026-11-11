@@ -1,0 +1,1527 @@
+[
+ {
+  "id": "DE.TK.330101",
+  "field": "DE",
+  "node": "ANZSRC:330101",
+  "name": "Architectural computing and visualisation methods",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "represent and generate building designs by computer"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "design"
+   ],
+   "structure": [
+    "geometric_space"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330102",
+  "field": "DE",
+  "node": "ANZSRC:330102",
+  "name": "Architectural design",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "arrange spaces and form to meet a brief"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330103",
+  "field": "DE",
+  "node": "ANZSRC:330103",
+  "name": "Architectural heritage and conservation",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "decide what to keep of an old building and how"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "design"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Conservation by significance assessment (Burra Charter process)",
+    "does": "bases action on the place's stated cultural significance",
+    "hypotheses": [
+     "significance is assessed before decisions",
+     "changes are kept to the minimum needed"
+    ]
+   }
+  ],
+  "inputs": [
+   "building record",
+   "history"
+  ],
+  "outputs": [
+   "statement of significance",
+   "conservation policy"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330104",
+  "field": "DE",
+  "node": "ANZSRC:330104",
+  "name": "Architectural history, theory and criticism",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "interpret buildings and ideas about them"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330105",
+  "field": "DE",
+  "node": "ANZSRC:330105",
+  "name": "Architectural science and technology",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "predict heat, light and sound in a building"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Steady-state heat loss (U-value)",
+    "does": "estimates heat flow through an element",
+    "hypotheses": [
+     "steady state",
+     "one-dimensional flow",
+     "storage ignored"
+    ]
+   },
+   {
+    "name": "Sabine reverberation formula",
+    "does": "estimates how long sound lingers in a room",
+    "hypotheses": [
+     "a diffuse sound field",
+     "absorption is evenly spread and not very high"
+    ]
+   },
+   {
+    "name": "Daylight factor",
+    "does": "gives indoor light as a share of outdoor light",
+    "hypotheses": [
+     "a standard overcast sky",
+     "fixed geometry"
+    ]
+   }
+  ],
+  "inputs": [
+   "geometry",
+   "materials"
+  ],
+  "outputs": [
+   "heat loss",
+   "reverberation time",
+   "daylight levels"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330106",
+  "field": "DE",
+  "node": "ANZSRC:330106",
+  "name": "Architecture for disaster relief",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "provide shelter quickly after a disaster"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "constraints": [
+    "resource_budget"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330107",
+  "field": "DE",
+  "node": "ANZSRC:330107",
+  "name": "Architecture management",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "run an architectural practice and its projects"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330108",
+  "field": "DE",
+  "node": "ANZSRC:330108",
+  "name": "Interior design",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "arrange the inside of a building for its users"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330109",
+  "field": "DE",
+  "node": "ANZSRC:330109",
+  "name": "Landscape architecture",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "shape outdoor space and planting"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330110",
+  "field": "DE",
+  "node": "ANZSRC:330110",
+  "name": "Sustainable architecture",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "reduce the resources a building uses over its life"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Life cycle assessment of buildings",
+    "does": "totals burdens from materials, use and disposal",
+    "hypotheses": [
+     "a functional unit and study period are set",
+     "the system boundary is stated"
+    ]
+   }
+  ],
+  "inputs": [
+   "bill of materials",
+   "energy model"
+  ],
+  "outputs": [
+   "whole-life impact"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330199",
+  "field": "DE",
+  "node": "ANZSRC:330199",
+  "name": "Architecture not elsewhere classified",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330201",
+  "field": "DE",
+  "node": "ANZSRC:330201",
+  "name": "Automation and technology in building and construction",
+  "taxonomy_cell": "DE.O.A5",
+  "solves": [
+   "automate building work"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330202",
+  "field": "DE",
+  "node": "ANZSRC:330202",
+  "name": "Building construction management and project planning",
+  "taxonomy_cell": "DE.O.A5",
+  "solves": [
+   "plan and control a building project"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "control"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Critical path method",
+    "does": "finds the longest chain of dependent tasks",
+    "hypotheses": [
+     "durations and dependencies are known"
+    ]
+   },
+   {
+    "name": "Earned value management",
+    "does": "compares work done with plan and cost",
+    "hypotheses": [
+     "a baseline plan with budgeted cost exists"
+    ]
+   }
+  ],
+  "inputs": [
+   "task list",
+   "progress"
+  ],
+  "outputs": [
+   "programme",
+   "variances"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330203",
+  "field": "DE",
+  "node": "ANZSRC:330203",
+  "name": "Building industry studies",
+  "taxonomy_cell": "DE.O.A5",
+  "solves": [
+   "explain how the building industry is organised and performs"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330204",
+  "field": "DE",
+  "node": "ANZSRC:330204",
+  "name": "Building information modelling and management",
+  "taxonomy_cell": "DE.O.A5",
+  "solves": [
+   "hold all information about a building in one shared model"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "construct"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330205",
+  "field": "DE",
+  "node": "ANZSRC:330205",
+  "name": "Building organisational studies",
+  "taxonomy_cell": "DE.O.A5",
+  "solves": [
+   "explain how building firms are organised"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330206",
+  "field": "DE",
+  "node": "ANZSRC:330206",
+  "name": "Building science, technologies and systems",
+  "taxonomy_cell": "DE.O.A5",
+  "solves": [
+   "make a building stand up and stay dry, warm and safe"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "constraints": [
+    "physical_law",
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Limit state design",
+    "does": "checks strength and serviceability against factored loads",
+    "hypotheses": [
+     "loads and material values come from the governing code",
+     "the structure is within its scope"
+    ]
+   },
+   {
+    "name": "Condensation risk assessment (Glaser method)",
+    "does": "checks whether vapour condenses inside a construction",
+    "hypotheses": [
+     "steady state",
+     "one-dimensional vapour diffusion",
+     "air leakage is ignored"
+    ]
+   }
+  ],
+  "inputs": [
+   "loads",
+   "construction layers"
+  ],
+  "outputs": [
+   "compliant design",
+   "condensation verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330207",
+  "field": "DE",
+  "node": "ANZSRC:330207",
+  "name": "Quantity surveying",
+  "taxonomy_cell": "DE.O.A5",
+  "solves": [
+   "estimate what a building will cost"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "constraints": [
+    "resource_budget"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Elemental cost planning",
+    "does": "builds an estimate from the cost of each building element",
+    "hypotheses": [
+     "cost data from comparable projects exist",
+     "prices are adjusted for time and place"
+    ]
+   }
+  ],
+  "inputs": [
+   "drawings",
+   "cost data"
+  ],
+  "outputs": [
+   "cost plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330299",
+  "field": "DE",
+  "node": "ANZSRC:330299",
+  "name": "Building not elsewhere classified",
+  "taxonomy_cell": "DE.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330301",
+  "field": "DE",
+  "node": "ANZSRC:330301",
+  "name": "Data visualisation and computational (incl. parametric and generative) design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "generate forms and show data by rule or algorithm"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330302",
+  "field": "DE",
+  "node": "ANZSRC:330302",
+  "name": "Design anthropology",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "study how people live with designed things, from inside their setting"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330303",
+  "field": "DE",
+  "node": "ANZSRC:330303",
+  "name": "Design for disaster relief",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "design products and services for disaster response"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330304",
+  "field": "DE",
+  "node": "ANZSRC:330304",
+  "name": "Design history, theory and criticism",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "interpret designed things and ideas about them"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330305",
+  "field": "DE",
+  "node": "ANZSRC:330305",
+  "name": "Design management",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "organise design work in an organisation"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330306",
+  "field": "DE",
+  "node": "ANZSRC:330306",
+  "name": "Design practice and methods",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "shape a product around its users"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Human-centred iterative design",
+    "does": "cycles through understanding users, prototyping and testing",
+    "hypotheses": [
+     "representative users can be reached"
+    ]
+   },
+   {
+    "name": "Morphological analysis",
+    "does": "generates options by combining solutions to sub-functions",
+    "hypotheses": [
+     "the problem splits into independent functions"
+    ]
+   }
+  ],
+  "inputs": [
+   "user needs",
+   "functions"
+  ],
+  "outputs": [
+   "revised design",
+   "option set"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330307",
+  "field": "DE",
+  "node": "ANZSRC:330307",
+  "name": "Ergonomics design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "fit a product or workplace to the bodies that use it"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Anthropometric design for percentiles",
+    "does": "sizes a design to fit a stated share of users",
+    "hypotheses": [
+     "body-size data exist for the user population",
+     "the critical dimension is identified"
+    ]
+   }
+  ],
+  "inputs": [
+   "body-size data"
+  ],
+  "outputs": [
+   "dimensions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330308",
+  "field": "DE",
+  "node": "ANZSRC:330308",
+  "name": "Fire safety design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "show that people can escape a fire in time"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "design"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Available versus required safe egress time",
+    "does": "compares time until conditions become untenable with time needed to escape",
+    "hypotheses": [
+     "a design fire is specified",
+     "occupant numbers and behaviour are assumed",
+     "a safety margin is applied"
+    ]
+   }
+  ],
+  "inputs": [
+   "building layout",
+   "design fire"
+  ],
+  "outputs": [
+   "egress verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330309",
+  "field": "DE",
+  "node": "ANZSRC:330309",
+  "name": "Industrial and product design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "design manufactured objects"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330310",
+  "field": "DE",
+  "node": "ANZSRC:330310",
+  "name": "Interaction and experience design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "find whether people can use an interactive product"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Usability testing",
+    "does": "observes representative users doing set tasks",
+    "hypotheses": [
+     "participants and tasks represent real use"
+    ]
+   },
+   {
+    "name": "Heuristic evaluation",
+    "does": "finds problems by expert inspection",
+    "hypotheses": [
+     "several evaluators inspect independently"
+    ]
+   }
+  ],
+  "inputs": [
+   "prototype",
+   "users"
+  ],
+  "outputs": [
+   "list of problems"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330311",
+  "field": "DE",
+  "node": "ANZSRC:330311",
+  "name": "Models and simulations of design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "model how designing proceeds"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330312",
+  "field": "DE",
+  "node": "ANZSRC:330312",
+  "name": "Service design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "design a service across all points of contact"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Service blueprint",
+    "does": "maps customer actions against visible and hidden operations",
+    "hypotheses": [
+     "the service can be laid out as a sequence of steps"
+    ]
+   }
+  ],
+  "inputs": [
+   "service description"
+  ],
+  "outputs": [
+   "blueprint"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330313",
+  "field": "DE",
+  "node": "ANZSRC:330313",
+  "name": "Social design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "design with communities for social benefit"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330314",
+  "field": "DE",
+  "node": "ANZSRC:330314",
+  "name": "Sustainable design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "design things that use fewer resources over their life"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330315",
+  "field": "DE",
+  "node": "ANZSRC:330315",
+  "name": "Textile and fashion design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "design cloth and clothing"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330316",
+  "field": "DE",
+  "node": "ANZSRC:330316",
+  "name": "Visual communication design (incl. graphic design)",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "arrange words and images to convey a message"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330399",
+  "field": "DE",
+  "node": "ANZSRC:330399",
+  "name": "Design not elsewhere classified",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330401",
+  "field": "DE",
+  "node": "ANZSRC:330401",
+  "name": "Community planning",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "plan with a community for its own area"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330402",
+  "field": "DE",
+  "node": "ANZSRC:330402",
+  "name": "History and theory of the built environment (excl. architecture)",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "interpret how towns and landscapes came to be"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330403",
+  "field": "DE",
+  "node": "ANZSRC:330403",
+  "name": "Housing markets, development and management",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "explain how housing is supplied, priced and managed"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330404",
+  "field": "DE",
+  "node": "ANZSRC:330404",
+  "name": "Land use and environmental planning",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "decide which land suits which use"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "design"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Map overlay suitability analysis",
+    "does": "combines mapped criteria to rank sites",
+    "hypotheses": [
+     "the criteria can be put on a common scale",
+     "the weights are justified"
+    ]
+   }
+  ],
+  "inputs": [
+   "mapped criteria"
+  ],
+  "outputs": [
+   "suitability map"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330405",
+  "field": "DE",
+  "node": "ANZSRC:330405",
+  "name": "Public participation and community engagement",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "involve the public in a decision to a stated degree"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Spectrum of public participation",
+    "does": "sets the level of involvement from informing to empowering",
+    "hypotheses": [
+     "the decision-maker states in advance how input will be used"
+    ]
+   }
+  ],
+  "inputs": [
+   "decision scope",
+   "stakeholders"
+  ],
+  "outputs": [
+   "engagement plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330406",
+  "field": "DE",
+  "node": "ANZSRC:330406",
+  "name": "Regional analysis and development",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "explain a region's growth and specialisation"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Shift-share analysis",
+    "does": "splits regional job change into national, industry-mix and regional parts",
+    "hypotheses": [
+     "it describes and does not explain",
+     "results depend on the industry classification"
+    ]
+   },
+   {
+    "name": "Location quotient",
+    "does": "measures regional specialisation",
+    "hypotheses": [
+     "a reference economy is chosen"
+    ]
+   }
+  ],
+  "inputs": [
+   "employment by industry and region"
+  ],
+  "outputs": [
+   "components of change"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330407",
+  "field": "DE",
+  "node": "ANZSRC:330407",
+  "name": "Regulatory planning and development assessment",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "assess a proposal against planning rules"
+  ],
+  "signature": {
+   "task": [
+    "verify"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330408",
+  "field": "DE",
+  "node": "ANZSRC:330408",
+  "name": "Strategic, metropolitan and regional planning",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "set long-term direction for a city or region"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330409",
+  "field": "DE",
+  "node": "ANZSRC:330409",
+  "name": "Transport planning",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "forecast travel on a network"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Four-step travel demand model",
+    "does": "forecasts trips, destinations, modes and routes",
+    "hypotheses": [
+     "travel behaviour stays as surveyed",
+     "the area is zoned",
+     "the model is calibrated to counts"
+    ]
+   }
+  ],
+  "inputs": [
+   "land use",
+   "surveys",
+   "network"
+  ],
+  "outputs": [
+   "link flows"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330410",
+  "field": "DE",
+  "node": "ANZSRC:330410",
+  "name": "Urban analysis and development",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "explain how cities grow and change"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330411",
+  "field": "DE",
+  "node": "ANZSRC:330411",
+  "name": "Urban design",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "shape streets and public spaces"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "structure": [
+    "graph_network",
+    "geometric_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Space syntax",
+    "does": "relates movement to how spaces connect",
+    "hypotheses": [
+     "the layout is a network of spaces",
+     "the link to movement is empirical"
+    ]
+   }
+  ],
+  "inputs": [
+   "street layout"
+  ],
+  "outputs": [
+   "integration values"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330412",
+  "field": "DE",
+  "node": "ANZSRC:330412",
+  "name": "Urban informatics",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "use city data to understand and run urban systems"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330413",
+  "field": "DE",
+  "node": "ANZSRC:330413",
+  "name": "Urban planning and health",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "plan places so that they support health"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.330499",
+  "field": "DE",
+  "node": "ANZSRC:330499",
+  "name": "Urban and regional planning not elsewhere classified",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.339999",
+  "field": "DE",
+  "node": "ANZSRC:339999",
+  "name": "Other built environment and design not elsewhere classified",
+  "taxonomy_cell": "DE.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]
