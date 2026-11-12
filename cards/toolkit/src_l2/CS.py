@@ -140,7 +140,7 @@ T = {
    ("Gustafson's law", "gives scaled speed-up when the problem grows with processors", "the parallel part grows with the processor count; the serial part stays fixed")],
   "workload profile", "speed-up bound"),
 "10010147.10010178": K("search, plan and reason to reach a goal", "task=construct optimise|linearity=combinatorial",
-  [("A* search", "finds a least-cost path", "the heuristic never overestimates; for graph search it is consistent"),
+  [("A* search", "finds a least-cost path", "the heuristic never overestimates; it must also be consistent if nodes already expanded are never reopened"),
    ("Minimax with alpha-beta pruning", "finds the best move in a two-player game", "two players; zero-sum; perfect information"),
    ("Bayesian networks", "compute probabilities from a graph of dependencies", "the graph's conditional independences hold; conditional probabilities are specified")],
   "state space; game tree; evidence", "plan; move; posterior"),

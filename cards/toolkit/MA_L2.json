@@ -560,7 +560,7 @@
     "name": "Euler's formula for planar graphs",
     "does": "relates vertices, edges and faces",
     "hypotheses": [
-     "a connected graph drawn in the plane without crossings"
+     "a finite connected graph drawn in the plane without crossings"
     ]
    },
    {
@@ -4238,7 +4238,7 @@
     "does": "says a map between irreducible representations is zero or an isomorphism",
     "hypotheses": [
      "irreducible representations",
-     "over an algebraically closed field the isomorphisms are scalars"
+     "the scalar form needs finite-dimensional representations over an algebraically closed field"
     ]
    },
    {
@@ -8432,7 +8432,7 @@
     "name": "Convolution theorem",
     "does": "turns convolution into multiplication",
     "hypotheses": [
-     "functions for which the transform converges"
+     "both functions are integrable, or of exponential order for the Laplace transform, so that the convolution and both transforms exist"
     ]
    },
    {
@@ -14417,7 +14417,7 @@
     "does": "says the first path found is a cheapest one",
     "hypotheses": [
      "the heuristic never overestimates",
-     "consistent for graph search"
+     "it must also be consistent if nodes already expanded are never reopened"
     ]
    }
   ],
@@ -15154,8 +15154,9 @@
     "does": "bracket the collapse load from below and above",
     "hypotheses": [
      "rigid-perfectly plastic material",
+     "a convex yield surface",
      "an associated flow rule",
-     "small displacements"
+     "small strains"
     ]
    }
   ],
@@ -15585,8 +15586,8 @@
     "name": "Finite element method with Céa's lemma",
     "does": "bounds the discretisation error by the best approximation error",
     "hypotheses": [
-     "a coercive bilinear form",
-     "a conforming subspace"
+     "a bounded coercive bilinear form on a Hilbert space",
+     "a conforming finite-dimensional subspace"
     ]
    }
   ],
@@ -17107,17 +17108,18 @@
     "name": "Penrose singularity theorem",
     "does": "shows geodesic incompleteness",
     "hypotheses": [
-     "a trapped surface",
+     "a closed trapped surface",
      "the null energy condition",
-     "a non-compact Cauchy surface"
+     "a non-compact connected Cauchy surface"
     ]
    },
    {
     "name": "Positive mass theorem",
     "does": "says the total mass of an isolated system is non-negative",
     "hypotheses": [
-     "an asymptotically flat initial data set",
-     "the dominant energy condition"
+     "a complete asymptotically flat initial data set",
+     "the dominant energy condition",
+     "the statement is for each asymptotic end"
     ]
    },
    {

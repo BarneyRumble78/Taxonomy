@@ -1872,7 +1872,7 @@
     "does": "finds a least-cost path",
     "hypotheses": [
      "the heuristic never overestimates",
-     "for graph search it is consistent"
+     "it must also be consistent if nodes already expanded are never reopened"
     ]
    },
    {

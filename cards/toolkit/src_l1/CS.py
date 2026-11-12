@@ -33,7 +33,7 @@ T = {
   {"task": "predict classify optimise", "data": "data_rich", "scale": "high_dimensional", "uncertainty": "unknown_distribution"},
   [("Stochastic gradient descent with backpropagation", "fits model parameters to data", ["the loss is differentiable", "convergence to a global optimum is assured only for convex losses with suitable step sizes"]),
    ("PAC learning bound (VC dimension)", "bounds the gap between training and true error", ["examples are independent draws from one fixed distribution", "the hypothesis class has finite VC dimension"]),
-   ("A* search", "finds a least-cost path", ["the heuristic never overestimates remaining cost", "for graph search the heuristic is consistent"])],
+   ("A* search", "finds a least-cost path", ["the heuristic never overestimates remaining cost", "the heuristic must also be consistent if nodes already expanded are never reopened"])],
   ["labelled examples", "state space with costs"], ["fitted model", "error bound", "optimal path"]),
 "10010405": C("A heading for application areas. Tools sit in the technique classes they draw on."),
 "10010520": (["predict the gain from adding processors", "keep many machines in agreement despite failures"],
