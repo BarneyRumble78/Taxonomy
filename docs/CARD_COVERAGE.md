@@ -55,7 +55,7 @@ A card has no tools in one of two cases. Its note says which.
    - EN (IEEE) level 2 mixes method areas with devices, materials and organisational topics.
    - In mathematics, history, education and collection classes carry no tools.
 2. **No tool could be stated with confidence.** The handover says to leave these out and not to guess.
-   This applies to many specialist classes in mathematics (237 of 534 carry no tools, about 60 of them administrative or application classes),
+   This applies to many specialist classes in mathematics (237 of 534 carry no tools, 55 of them administrative, education or application classes),
    physics, biology and medicine. These are the places where a specialist would add most.
 
 Indigenous knowledge (IK) carries no tools on any card at either level. Each card carries the note that placement and content
