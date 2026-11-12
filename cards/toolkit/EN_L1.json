@@ -1,0 +1,2311 @@
+[
+ {
+  "id": "EN.TK.Aerospace and electronic systems",
+  "field": "EN",
+  "node": "IEEE:Aerospace and electronic systems",
+  "name": "Aerospace and electronic systems",
+  "taxonomy_cell": "EN.O.A2",
+  "solves": [
+   "detect and track a distant moving object from noisy returns"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "data": [
+    "streaming"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Radar range equation",
+    "does": "gives received power, and so detection range",
+    "hypotheses": [
+     "free-space propagation",
+     "the target's radar cross-section is known",
+     "detection is limited by noise"
+    ]
+   },
+   {
+    "name": "Kalman filter",
+    "does": "gives the minimum-variance estimate of a moving state from noisy measurements",
+    "hypotheses": [
+     "linear dynamics and measurements",
+     "white Gaussian noise with known covariances",
+     "without Gaussian noise it is only the best linear estimator"
+    ]
+   }
+  ],
+  "inputs": [
+   "sensor returns",
+   "motion model"
+  ],
+  "outputs": [
+   "detection range",
+   "state estimate with covariance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Antennas and propagation",
+  "field": "EN",
+  "node": "IEEE:Antennas and propagation",
+  "name": "Antennas and propagation",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "predict how much radiated power reaches a receiver"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Friis transmission equation",
+    "does": "gives received power between two antennas",
+    "hypotheses": [
+     "far field",
+     "free space",
+     "matched polarisation and impedance"
+    ]
+   },
+   {
+    "name": "Reciprocity theorem",
+    "does": "says an antenna has the same pattern for sending and receiving",
+    "hypotheses": [
+     "linear, time-invariant, reciprocal media"
+    ]
+   },
+   {
+    "name": "Pattern multiplication for arrays",
+    "does": "gives array pattern as element pattern times array factor",
+    "hypotheses": [
+     "identical elements",
+     "mutual coupling is neglected"
+    ]
+   }
+  ],
+  "inputs": [
+   "antenna gains, distance, frequency"
+  ],
+  "outputs": [
+   "received power",
+   "radiation pattern"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Broadcast technology",
+  "field": "EN",
+  "node": "IEEE:Broadcast technology",
+  "name": "Broadcast technology",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "send one signal reliably to many receivers over a channel with echoes"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Orthogonal frequency-division multiplexing",
+    "does": "splits data over many narrow carriers to resist echoes",
+    "hypotheses": [
+     "the guard interval is longer than the channel delay spread",
+     "the channel is nearly constant over one symbol"
+    ]
+   }
+  ],
+  "inputs": [
+   "channel delay profile",
+   "bandwidth"
+  ],
+  "outputs": [
+   "modulation parameters"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Circuits and systems",
+  "field": "EN",
+  "node": "IEEE:Circuits and systems",
+  "name": "Circuits and systems",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "find every voltage and current in a network of connected elements"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "constraints": [
+    "equality"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Kirchhoff's laws",
+    "does": "balance current at nodes and voltage round loops",
+    "hypotheses": [
+     "lumped elements: the circuit is small against the wavelength"
+    ]
+   },
+   {
+    "name": "Thévenin and Norton equivalents",
+    "does": "replace a network by one source and one impedance",
+    "hypotheses": [
+     "a linear network"
+    ]
+   },
+   {
+    "name": "Transfer-function analysis",
+    "does": "describes input-output behaviour in the frequency domain",
+    "hypotheses": [
+     "a linear time-invariant system"
+    ]
+   }
+  ],
+  "inputs": [
+   "network topology and element values"
+  ],
+  "outputs": [
+   "voltages and currents",
+   "frequency response"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Communications technology",
+  "field": "EN",
+  "node": "IEEE:Communications technology",
+  "name": "Communications technology",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "send information reliably over a noisy channel at the highest possible rate"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ],
+   "uncertainty": [
+    "noise",
+    "probabilistic_model"
+   ],
+   "goal_quality": [
+    "bound"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Shannon channel capacity",
+    "does": "gives the highest rate of reliable communication",
+    "hypotheses": [
+     "a memoryless channel with known statistics",
+     "arbitrarily long codes are allowed",
+     "the bandwidth-power formula needs additive white Gaussian noise"
+    ]
+   },
+   {
+    "name": "Nyquist–Shannon sampling theorem",
+    "does": "says samples fully determine a signal",
+    "hypotheses": [
+     "the signal is band-limited",
+     "the sampling rate exceeds twice the bandwidth"
+    ]
+   },
+   {
+    "name": "Error-correcting codes",
+    "does": "add redundancy to detect and fix errors",
+    "hypotheses": [
+     "the number of errors per block is within the code's correcting capacity"
+    ]
+   }
+  ],
+  "inputs": [
+   "channel model",
+   "bandwidth and power"
+  ],
+  "outputs": [
+   "capacity bound",
+   "coding and sampling scheme"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Components, packaging, and manufacturing technology",
+  "field": "EN",
+  "node": "IEEE:Components, packaging, and manufacturing technology",
+  "name": "Components, packaging, and manufacturing technology",
+  "taxonomy_cell": "EN.O.A5",
+  "solves": [
+   "predict service life from short tests",
+   "keep a production process on target"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "control",
+    "verify"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Arrhenius accelerated life testing",
+    "does": "extrapolates life at use temperature from hot tests",
+    "hypotheses": [
+     "one thermally activated failure mechanism",
+     "the mechanism does not change across the test range"
+    ]
+   },
+   {
+    "name": "Statistical process control charts",
+    "does": "signal when a process drifts",
+    "hypotheses": [
+     "a stable in-control baseline exists",
+     "samples are independent"
+    ]
+   }
+  ],
+  "inputs": [
+   "failure times at stress",
+   "process measurements"
+  ],
+  "outputs": [
+   "life estimate",
+   "out-of-control signals"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Consumer electronics",
+  "field": "EN",
+  "node": "IEEE:Consumer electronics",
+  "name": "Consumer electronics",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Control systems",
+  "field": "EN",
+  "node": "IEEE:Control systems",
+  "name": "Control systems",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "make a system follow a target despite disturbance",
+   "prove a feedback loop is stable"
+  ],
+  "signature": {
+   "task": [
+    "control",
+    "design",
+    "verify"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Nyquist stability criterion",
+    "does": "decides closed-loop stability from the open-loop frequency response",
+    "hypotheses": [
+     "a linear time-invariant loop",
+     "the number of unstable open-loop poles is known"
+    ]
+   },
+   {
+    "name": "Lyapunov's direct method",
+    "does": "proves stability without solving the equations",
+    "hypotheses": [
+     "a positive-definite function exists that decreases along trajectories"
+    ]
+   },
+   {
+    "name": "Linear-quadratic regulator",
+    "does": "gives the optimal state feedback",
+    "hypotheses": [
+     "linear dynamics",
+     "quadratic cost",
+     "the system is stabilisable and detectable",
+     "the full state is available"
+    ]
+   },
+   {
+    "name": "PID control",
+    "does": "corrects error using its present value, sum and rate",
+    "hypotheses": [
+     "the plant is roughly low order",
+     "gains are tuned for the plant"
+    ]
+   }
+  ],
+  "inputs": [
+   "plant model or response data",
+   "performance target"
+  ],
+  "outputs": [
+   "controller",
+   "stability margins"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Dielectrics and electrical insulation",
+  "field": "EN",
+  "node": "IEEE:Dielectrics and electrical insulation",
+  "name": "Dielectrics and electrical insulation",
+  "taxonomy_cell": "EN.O.A5",
+  "solves": [
+   "predict when an insulator fails under voltage"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Paschen's law",
+    "does": "gives gas breakdown voltage from pressure times gap",
+    "hypotheses": [
+     "a uniform field",
+     "Townsend breakdown regime"
+    ]
+   },
+   {
+    "name": "Weibull breakdown statistics",
+    "does": "model failure as the weakest of many sites",
+    "hypotheses": [
+     "failure starts at the weakest flaw",
+     "flaws are independent"
+    ]
+   }
+  ],
+  "inputs": [
+   "gap, pressure, material",
+   "breakdown test data"
+  ],
+  "outputs": [
+   "breakdown voltage",
+   "failure probability"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Electromagnetic compatibility and interference",
+  "field": "EN",
+  "node": "IEEE:Electromagnetic compatibility and interference",
+  "name": "Electromagnetic compatibility and interference",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "keep unwanted energy from coupling between devices"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Shielding effectiveness",
+    "does": "estimates attenuation by an enclosure",
+    "hypotheses": [
+     "a far-field plane wave",
+     "a continuous shield without openings"
+    ]
+   }
+  ],
+  "inputs": [
+   "source spectrum",
+   "enclosure material and geometry"
+  ],
+  "outputs": [
+   "attenuation estimate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Electron devices",
+  "field": "EN",
+  "node": "IEEE:Electron devices",
+  "name": "Electron devices",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "predict current through a structure of doped material"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "linearity": [
+    "nonlinear"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Shockley diode equation",
+    "does": "gives junction current from voltage",
+    "hypotheses": [
+     "low-level injection",
+     "no recombination in the depletion region",
+     "an abrupt junction"
+    ]
+   },
+   {
+    "name": "Square-law transistor model",
+    "does": "gives drain current from gate voltage",
+    "hypotheses": [
+     "a long channel",
+     "the gradual-channel approximation"
+    ]
+   },
+   {
+    "name": "Drift-diffusion model",
+    "does": "computes carrier flow in a device",
+    "hypotheses": [
+     "carriers are near thermal equilibrium",
+     "the device is large against the mean free path"
+    ]
+   }
+  ],
+  "inputs": [
+   "doping profile and geometry",
+   "bias voltages"
+  ],
+  "outputs": [
+   "current-voltage curves"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Electronic design automation and methodology",
+  "field": "EN",
+  "node": "IEEE:Electronic design automation and methodology",
+  "name": "Electronic design automation and methodology",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "check that a very large design meets its specification before it is built"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "optimise"
+   ],
+   "structure": [
+    "graph_network",
+    "logical"
+   ],
+   "linearity": [
+    "combinatorial"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Static timing analysis",
+    "does": "checks that every signal path meets its deadline",
+    "hypotheses": [
+     "a synchronous design",
+     "worst-case delay models are valid"
+    ]
+   },
+   {
+    "name": "Satisfiability-based equivalence checking",
+    "does": "proves two logic designs compute the same function",
+    "hypotheses": [
+     "both designs are finite combinational logic, or are bounded"
+    ]
+   }
+  ],
+  "inputs": [
+   "netlist",
+   "timing constraints"
+  ],
+  "outputs": [
+   "pass or fail with a counter-example"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Engineering – general",
+  "field": "EN",
+  "node": "IEEE:Engineering – general",
+  "name": "Engineering – general",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "build something that carries its loads with a stated margin"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "constraints": [
+    "inequality",
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Design to a code with a safety factor",
+    "does": "sets allowable load as strength divided by a factor",
+    "hypotheses": [
+     "loads and materials lie within the code's stated scope"
+    ]
+   }
+  ],
+  "inputs": [
+   "loads",
+   "material strengths"
+  ],
+  "outputs": [
+   "a design that passes the code"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Engineering in medicine and biology",
+  "field": "EN",
+  "node": "IEEE:Engineering in medicine and biology",
+  "name": "Engineering in medicine and biology",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "image the inside of a body from outside measurements"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "construct"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "linearity": [
+    "linear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Filtered back-projection",
+    "does": "reconstructs a cross-section from line integrals",
+    "hypotheses": [
+     "projections at enough angles",
+     "the object does not move",
+     "a single-energy beam, or beam hardening is corrected"
+    ]
+   },
+   {
+    "name": "Fourier reconstruction in magnetic resonance imaging",
+    "does": "forms an image from sampled spatial frequencies",
+    "hypotheses": [
+     "sampling meets the Nyquist rate",
+     "the main field is homogeneous"
+    ]
+   }
+  ],
+  "inputs": [
+   "projection or frequency data"
+  ],
+  "outputs": [
+   "cross-sectional image"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Engineering management",
+  "field": "EN",
+  "node": "IEEE:Engineering management",
+  "name": "Engineering management",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "schedule dependent tasks and track cost against plan"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "control"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "constraints": [
+    "resource_budget"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Critical path method",
+    "does": "finds the longest chain of dependent tasks",
+    "hypotheses": [
+     "task durations and dependencies are known"
+    ]
+   },
+   {
+    "name": "Earned value management",
+    "does": "compares work done with work planned and cost spent",
+    "hypotheses": [
+     "a baseline plan with budgeted cost per task exists"
+    ]
+   }
+  ],
+  "inputs": [
+   "task list with durations and dependencies",
+   "actual cost and progress"
+  ],
+  "outputs": [
+   "schedule and slack",
+   "variance measures"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.IEEE organization",
+  "field": "EN",
+  "node": "IEEE:IEEE organization",
+  "name": "IEEE organization",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An administrative or general heading of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Imaging",
+  "field": "EN",
+  "node": "IEEE:Imaging",
+  "name": "Imaging",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "recover a sharp picture from a blurred, noisy one",
+   "state the finest detail a system can show"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "structure": [
+    "grid_lattice"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Convolution model with a point spread function",
+    "does": "describes the image as the object blurred by the system",
+    "hypotheses": [
+     "a linear shift-invariant imaging system"
+    ]
+   },
+   {
+    "name": "Diffraction limit (Abbe, Rayleigh)",
+    "does": "bounds resolution by wavelength over aperture",
+    "hypotheses": [
+     "far-field imaging with a conventional lens"
+    ]
+   },
+   {
+    "name": "Regularised deconvolution",
+    "does": "reverses known blur",
+    "hypotheses": [
+     "the point spread function is known",
+     "a regulariser controls noise amplification"
+    ]
+   }
+  ],
+  "inputs": [
+   "recorded image",
+   "system response"
+  ],
+  "outputs": [
+   "restored image",
+   "resolution bound"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Industrial electronics",
+  "field": "EN",
+  "node": "IEEE:Industrial electronics",
+  "name": "Industrial electronics",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "control the torque and speed of an electric machine"
+  ],
+  "signature": {
+   "task": [
+    "control"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Field-oriented control",
+    "does": "controls torque and flux separately in a rotating frame",
+    "hypotheses": [
+     "rotor flux position is known or well estimated",
+     "machine parameters are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "current and position measurements"
+  ],
+  "outputs": [
+   "switching commands"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Industry applications",
+  "field": "EN",
+  "node": "IEEE:Industry applications",
+  "name": "Industry applications",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An application area. Its tools sit in the technique classes it draws on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Instrumentation and measurement",
+  "field": "EN",
+  "node": "IEEE:Instrumentation and measurement",
+  "name": "Instrumentation and measurement",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "state a measured value with a defensible uncertainty"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Propagation of uncertainty (GUM method)",
+    "does": "combines input uncertainties into one output uncertainty",
+    "hypotheses": [
+     "the measurement model is known",
+     "the model is nearly linear over the uncertainties",
+     "correlations between inputs are known"
+    ]
+   },
+   {
+    "name": "Calibration against traceable standards",
+    "does": "ties an instrument's readings to recognised units",
+    "hypotheses": [
+     "the standard's uncertainty is known and smaller than the instrument's"
+    ]
+   }
+  ],
+  "inputs": [
+   "readings",
+   "measurement model",
+   "standards"
+  ],
+  "outputs": [
+   "value with combined uncertainty"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Intelligent transportation systems",
+  "field": "EN",
+  "node": "IEEE:Intelligent transportation systems",
+  "name": "Intelligent transportation systems",
+  "taxonomy_cell": "EN.O.A2",
+  "solves": [
+   "predict congestion on a route network",
+   "find the cheapest route"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "optimise"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lighthill–Whitham–Richards traffic model",
+    "does": "treats traffic as a compressible flow",
+    "hypotheses": [
+     "a fixed relation between flow and density",
+     "enough vehicles to treat as a continuum"
+    ]
+   },
+   {
+    "name": "Dijkstra's algorithm",
+    "does": "finds shortest paths",
+    "hypotheses": [
+     "edge weights are non-negative"
+    ]
+   }
+  ],
+  "inputs": [
+   "counts and speeds",
+   "network with travel costs"
+  ],
+  "outputs": [
+   "density waves",
+   "routes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Lasers and electrooptics",
+  "field": "EN",
+  "node": "IEEE:Lasers and electrooptics",
+  "name": "Lasers and electrooptics",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "produce and steer a coherent beam of light"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "linearity": [
+    "linear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Laser threshold condition",
+    "does": "gives the gain at which oscillation starts",
+    "hypotheses": [
+     "round-trip gain equals round-trip loss",
+     "a population inversion is maintained"
+    ]
+   },
+   {
+    "name": "Gaussian beam propagation with ray matrices",
+    "does": "tracks beam size through optical elements",
+    "hypotheses": [
+     "the paraxial approximation holds"
+    ]
+   }
+  ],
+  "inputs": [
+   "cavity losses and gain medium",
+   "optical layout"
+  ],
+  "outputs": [
+   "threshold",
+   "beam size along the path"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Magnetics",
+  "field": "EN",
+  "node": "IEEE:Magnetics",
+  "name": "Magnetics",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "predict magnetic flux in a device and the motion of magnetisation"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Magnetic circuit model",
+    "does": "treats flux like current in a circuit",
+    "hypotheses": [
+     "flux stays in the core",
+     "the material is unsaturated and linear",
+     "leakage is negligible"
+    ]
+   },
+   {
+    "name": "Landau–Lifshitz–Gilbert equation",
+    "does": "evolves magnetisation in time",
+    "hypotheses": [
+     "magnetisation has constant magnitude",
+     "a continuum description holds"
+    ]
+   }
+  ],
+  "inputs": [
+   "geometry, windings, material curves"
+  ],
+  "outputs": [
+   "flux and force",
+   "switching behaviour"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Materials, elements, and compounds",
+  "field": "EN",
+  "node": "IEEE:Materials, elements, and compounds",
+  "name": "Materials, elements, and compounds",
+  "taxonomy_cell": "EN.O.A5",
+  "solves": [
+   "predict which phases are present and how strength depends on structure"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "classify"
+   ],
+   "constraints": [
+    "physical_law"
+   ],
+   "scope": [
+    "multiscale"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gibbs phase rule and phase diagrams",
+    "does": "state which phases coexist at given conditions",
+    "hypotheses": [
+     "thermodynamic equilibrium"
+    ]
+   },
+   {
+    "name": "Hall–Petch relation",
+    "does": "relates yield strength to grain size",
+    "hypotheses": [
+     "polycrystalline metals",
+     "grain size above the nanometre range where the relation reverses"
+    ]
+   },
+   {
+    "name": "Fick's laws",
+    "does": "predict diffusion of atoms",
+    "hypotheses": [
+     "flux is proportional to the concentration gradient",
+     "the diffusion coefficient is known for the temperature"
+    ]
+   }
+  ],
+  "inputs": [
+   "composition, temperature, microstructure"
+  ],
+  "outputs": [
+   "phases",
+   "strength estimate",
+   "concentration profile"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Mathematics",
+  "field": "EN",
+  "node": "IEEE:Mathematics",
+  "name": "Mathematics",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading that points to mathematics. Tools are owned by MA. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Microwave theory and techniques",
+  "field": "EN",
+  "node": "IEEE:Microwave theory and techniques",
+  "name": "Microwave theory and techniques",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "describe a high-frequency network by how it scatters waves"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Scattering parameters",
+    "does": "relate outgoing to incoming waves at each port",
+    "hypotheses": [
+     "a linear network",
+     "reference impedances are defined"
+    ]
+   },
+   {
+    "name": "Transmission line theory (telegrapher's equations)",
+    "does": "predicts voltage and current waves on a line",
+    "hypotheses": [
+     "TEM or quasi-TEM propagation",
+     "a uniform line"
+    ]
+   }
+  ],
+  "inputs": [
+   "port measurements",
+   "line geometry"
+  ],
+  "outputs": [
+   "reflection and transmission",
+   "matching design"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Nanotechnology",
+  "field": "EN",
+  "node": "IEEE:Nanotechnology",
+  "name": "Nanotechnology",
+  "taxonomy_cell": "EN.O.A5",
+  "solves": [
+   "predict how properties change when a structure is only a few atoms across"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "scale": [
+    "small"
+   ],
+   "domain_type": [
+    "discrete"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Quantum confinement (particle-in-a-box model)",
+    "does": "gives size-dependent energy levels",
+    "hypotheses": [
+     "the effective-mass approximation holds",
+     "the size is comparable to the carrier wavelength"
+    ]
+   }
+  ],
+  "inputs": [
+   "size and material"
+  ],
+  "outputs": [
+   "energy levels",
+   "optical gap"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Nuclear and plasma sciences",
+  "field": "EN",
+  "node": "IEEE:Nuclear and plasma sciences",
+  "name": "Nuclear and plasma sciences",
+  "taxonomy_cell": "EN.O.A3",
+  "solves": [
+   "decide whether a chain reaction sustains itself",
+   "count random events correctly"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Neutron diffusion and the multiplication factor",
+    "does": "decide whether a system is critical",
+    "hypotheses": [
+     "diffusion theory holds away from boundaries and strong absorbers"
+    ]
+   },
+   {
+    "name": "Poisson counting statistics",
+    "does": "give the uncertainty of a count",
+    "hypotheses": [
+     "events are independent",
+     "the rate is constant",
+     "dead time is corrected"
+    ]
+   },
+   {
+    "name": "Bethe formula",
+    "does": "gives energy loss of charged particles in matter",
+    "hypotheses": [
+     "heavy charged particles",
+     "moderate relativistic speeds"
+    ]
+   }
+  ],
+  "inputs": [
+   "geometry and material cross-sections",
+   "counts"
+  ],
+  "outputs": [
+   "criticality verdict",
+   "count uncertainty",
+   "range in matter"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Oceanic engineering and marine technology",
+  "field": "EN",
+  "node": "IEEE:Oceanic engineering and marine technology",
+  "name": "Oceanic engineering and marine technology",
+  "taxonomy_cell": "EN.O.A2",
+  "solves": [
+   "detect objects under water by sound",
+   "estimate wave loads on a slender structure"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "design"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Sonar equation",
+    "does": "balances source level, loss and noise to give detection margin",
+    "hypotheses": [
+     "the transmission-loss model fits the environment",
+     "noise level is known"
+    ]
+   },
+   {
+    "name": "Morison equation",
+    "does": "gives wave force as drag plus inertia",
+    "hypotheses": [
+     "the member is slender against the wavelength",
+     "coefficients are chosen empirically"
+    ]
+   }
+  ],
+  "inputs": [
+   "source, range and noise data",
+   "wave conditions and member size"
+  ],
+  "outputs": [
+   "detection range",
+   "force on the member"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Power electronics",
+  "field": "EN",
+  "node": "IEEE:Power electronics",
+  "name": "Power electronics",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "convert electrical power between forms by fast switching"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "State-space averaging",
+    "does": "replaces a switched converter by a smooth model",
+    "hypotheses": [
+     "switching is much faster than the converter's natural frequencies",
+     "ripple is small"
+    ]
+   },
+   {
+    "name": "Volt-second balance",
+    "does": "fixes steady-state conversion ratio",
+    "hypotheses": [
+     "periodic steady state"
+    ]
+   }
+  ],
+  "inputs": [
+   "topology, duty cycle, component values"
+  ],
+  "outputs": [
+   "conversion ratio",
+   "small-signal model"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Power engineering and energy",
+  "field": "EN",
+  "node": "IEEE:Power engineering and energy",
+  "name": "Power engineering and energy",
+  "taxonomy_cell": "EN.O.A3",
+  "solves": [
+   "find flows in a large supply network",
+   "decide whether it stays in step after a fault",
+   "share load at least cost"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "optimise",
+    "verify"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "linearity": [
+    "nonlinear"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Power-flow analysis (Newton–Raphson)",
+    "does": "solves bus voltages and line flows",
+    "hypotheses": [
+     "balanced three-phase steady state",
+     "network data are known"
+    ]
+   },
+   {
+    "name": "Equal-area criterion",
+    "does": "decides transient stability after a fault",
+    "hypotheses": [
+     "one machine against an infinite bus",
+     "classical machine model",
+     "constant mechanical power"
+    ]
+   },
+   {
+    "name": "Economic dispatch by equal incremental cost",
+    "does": "minimises generation cost",
+    "hypotheses": [
+     "convex cost curves",
+     "losses and limits are handled separately"
+    ]
+   },
+   {
+    "name": "Symmetrical components",
+    "does": "turn an unbalanced three-phase problem into three balanced ones",
+    "hypotheses": [
+     "a linear network"
+    ]
+   }
+  ],
+  "inputs": [
+   "network, loads, generator data"
+  ],
+  "outputs": [
+   "flows and voltages",
+   "stability verdict",
+   "dispatch"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Product safety engineering",
+  "field": "EN",
+  "node": "IEEE:Product safety engineering",
+  "name": "Product safety engineering",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "find how a product can fail and harm before it does"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "classify"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Failure mode and effects analysis",
+    "does": "lists each part's failure modes and their effects",
+    "hypotheses": [
+     "the system can be broken into parts with identifiable failure modes",
+     "single failures are considered one at a time"
+    ]
+   },
+   {
+    "name": "Fault tree analysis",
+    "does": "traces a top-level hazard to combinations of basic events",
+    "hypotheses": [
+     "for the numerical step, basic events are independent or their dependence is modelled"
+    ]
+   }
+  ],
+  "inputs": [
+   "design description"
+  ],
+  "outputs": [
+   "ranked failure modes",
+   "hazard probability"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Professional communication",
+  "field": "EN",
+  "node": "IEEE:Professional communication",
+  "name": "Professional communication",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An administrative or general heading of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Reliability",
+  "field": "EN",
+  "node": "IEEE:Reliability",
+  "name": "Reliability",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "predict how long something lasts and how often a system of parts fails"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "data": [
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Weibull analysis",
+    "does": "fits a life distribution to failure times",
+    "hypotheses": [
+     "failures come from one failure mode",
+     "units are independent and alike"
+    ]
+   },
+   {
+    "name": "Reliability block diagrams",
+    "does": "combine part reliabilities in series and parallel",
+    "hypotheses": [
+     "part failures are statistically independent"
+    ]
+   },
+   {
+    "name": "Constant failure rate (exponential) model",
+    "does": "gives mean time between failures",
+    "hypotheses": [
+     "the failure rate is constant, so no wear-out or infant mortality"
+    ]
+   }
+  ],
+  "inputs": [
+   "failure and censoring times",
+   "system structure"
+  ],
+  "outputs": [
+   "life distribution",
+   "system reliability"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Resonance",
+  "field": "EN",
+  "node": "IEEE:Resonance",
+  "name": "Resonance",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "predict the response of a system driven near its natural frequency"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "linear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bloch equations",
+    "does": "describe magnetic resonance of spins with two relaxation times",
+    "hypotheses": [
+     "an ensemble of non-interacting spins",
+     "relaxation is exponential"
+    ]
+   }
+  ],
+  "inputs": [
+   "drive frequency and field strength"
+  ],
+  "outputs": [
+   "signal amplitude and decay"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Robotics and automation",
+  "field": "EN",
+  "node": "IEEE:Robotics and automation",
+  "name": "Robotics and automation",
+  "taxonomy_cell": "EN.O.A2",
+  "solves": [
+   "compute joint motions that put a tool where it is wanted",
+   "find a collision-free path"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "control"
+   ],
+   "structure": [
+    "geometric_space"
+   ],
+   "direction": [
+    "both"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Forward and inverse kinematics",
+    "does": "relate joint angles to tool position",
+    "hypotheses": [
+     "rigid links",
+     "joint axes are known"
+    ]
+   },
+   {
+    "name": "Sampling-based motion planning (PRM, RRT)",
+    "does": "finds a path that avoids obstacles",
+    "hypotheses": [
+     "an obstacle model is known",
+     "completeness is only probabilistic"
+    ]
+   },
+   {
+    "name": "Simultaneous localisation and mapping",
+    "does": "builds a map while tracking position",
+    "hypotheses": [
+     "most landmarks are static",
+     "sensor noise models are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "robot geometry",
+   "obstacle map or sensor stream"
+  ],
+  "outputs": [
+   "joint trajectory",
+   "path",
+   "map and pose"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Science – general",
+  "field": "EN",
+  "node": "IEEE:Science – general",
+  "name": "Science – general",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "An administrative or general heading of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Sensors",
+  "field": "EN",
+  "node": "IEEE:Sensors",
+  "name": "Sensors",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "turn a physical quantity into a readable signal and know its noise floor"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "design"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Wheatstone bridge",
+    "does": "measures small resistance changes",
+    "hypotheses": [
+     "changes are small, for a linear output",
+     "excitation is stable"
+    ]
+   },
+   {
+    "name": "Johnson–Nyquist noise formula",
+    "does": "gives the thermal noise floor of a resistor",
+    "hypotheses": [
+     "thermal equilibrium"
+    ]
+   }
+  ],
+  "inputs": [
+   "transducer output",
+   "temperature and bandwidth"
+  ],
+  "outputs": [
+   "calibrated reading",
+   "noise floor"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Signal processing",
+  "field": "EN",
+  "node": "IEEE:Signal processing",
+  "name": "Signal processing",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "separate a wanted signal from noise",
+   "recover a signal from few samples"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "data": [
+    "streaming"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Discrete Fourier transform",
+    "does": "gives the frequency content of a sampled record",
+    "hypotheses": [
+     "uniform sampling",
+     "the record is treated as periodic, so leakage must be handled"
+    ]
+   },
+   {
+    "name": "Wiener filter",
+    "does": "is the best linear estimate of a signal in noise",
+    "hypotheses": [
+     "signal and noise are wide-sense stationary",
+     "their spectra are known"
+    ]
+   },
+   {
+    "name": "Matched filter",
+    "does": "maximises signal-to-noise ratio for detection",
+    "hypotheses": [
+     "the signal shape is known",
+     "noise is additive and stationary with known spectrum"
+    ]
+   },
+   {
+    "name": "Compressed sensing",
+    "does": "recovers a signal from fewer samples than Nyquist requires",
+    "hypotheses": [
+     "the signal is sparse in a known basis",
+     "the measurement matrix is incoherent with that basis"
+    ]
+   }
+  ],
+  "inputs": [
+   "sampled data",
+   "signal and noise models"
+  ],
+  "outputs": [
+   "spectrum",
+   "filtered or reconstructed signal"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Social implications of technology",
+  "field": "EN",
+  "node": "IEEE:Social implications of technology",
+  "name": "Social implications of technology",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A crossing-point heading. Tools sit in philosophy, law and the social sciences. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Solid state circuits",
+  "field": "EN",
+  "node": "IEEE:Solid state circuits",
+  "name": "Solid state circuits",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "predict gain and stability of an amplifier built from nonlinear devices"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "predict"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "scope": [
+    "local"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Small-signal analysis",
+    "does": "linearises a circuit about its bias point",
+    "hypotheses": [
+     "signals are small about a fixed bias point"
+    ]
+   },
+   {
+    "name": "Gain and phase margins (Bode)",
+    "does": "measure how close a feedback amplifier is to oscillation",
+    "hypotheses": [
+     "a linear time-invariant loop",
+     "the loop is minimum phase"
+    ]
+   }
+  ],
+  "inputs": [
+   "schematic and bias point"
+  ],
+  "outputs": [
+   "gain, bandwidth, margins"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Superconductivity",
+  "field": "EN",
+  "node": "IEEE:Superconductivity",
+  "name": "Superconductivity",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "predict current flow without resistance and how fields are expelled"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "London equations",
+    "does": "describe field expulsion to a penetration depth",
+    "hypotheses": [
+     "local electrodynamics: penetration depth exceeds coherence length"
+    ]
+   },
+   {
+    "name": "Ginzburg–Landau theory",
+    "does": "describes the superconducting state with an order parameter",
+    "hypotheses": [
+     "temperature near the transition",
+     "the order parameter varies slowly"
+    ]
+   },
+   {
+    "name": "Josephson relations",
+    "does": "give current and voltage across a weak link",
+    "hypotheses": [
+     "a weak link between two superconductors"
+    ]
+   }
+  ],
+  "inputs": [
+   "material parameters, geometry, field"
+  ],
+  "outputs": [
+   "field profile",
+   "critical values",
+   "junction behaviour"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Systems engineering and theory",
+  "field": "EN",
+  "node": "IEEE:Systems engineering and theory",
+  "name": "Systems engineering and theory",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "turn a need into verified parts that work together",
+   "size a service against random demand"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Requirements decomposition with staged verification (V-model)",
+    "does": "splits a system into levels, each verified against its requirements",
+    "hypotheses": [
+     "requirements can be stated and tested at each level"
+    ]
+   },
+   {
+    "name": "M/M/1 queue",
+    "does": "gives waiting time and queue length",
+    "hypotheses": [
+     "Poisson arrivals",
+     "exponential service times",
+     "one server",
+     "utilisation below one"
+    ]
+   }
+  ],
+  "inputs": [
+   "stakeholder needs",
+   "arrival and service rates"
+  ],
+  "outputs": [
+   "verified design",
+   "expected delay"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Systems, man, and cybernetics",
+  "field": "EN",
+  "node": "IEEE:Systems, man, and cybernetics",
+  "name": "Systems, man, and cybernetics",
+  "taxonomy_cell": "EN.O.A1",
+  "solves": [
+   "predict human performance when working with a machine"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fitts's law",
+    "does": "predicts time to reach a target from distance and size",
+    "hypotheses": [
+     "rapid aimed movements",
+     "coefficients fitted for the device and user group"
+    ]
+   },
+   {
+    "name": "Signal detection theory",
+    "does": "separates sensitivity from response bias",
+    "hypotheses": [
+     "the sensitivity index assumes equal-variance Gaussian evidence"
+    ]
+   }
+  ],
+  "inputs": [
+   "task layout",
+   "hit and false-alarm rates"
+  ],
+  "outputs": [
+   "movement time",
+   "sensitivity and bias"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Ultrasonics, ferroelectrics, and frequency control",
+  "field": "EN",
+  "node": "IEEE:Ultrasonics, ferroelectrics, and frequency control",
+  "name": "Ultrasonics, ferroelectrics, and frequency control",
+  "taxonomy_cell": "EN.O.A4",
+  "solves": [
+   "measure distance or flaws by echo",
+   "state how stable an oscillator is"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Pulse-echo time of flight",
+    "does": "gives distance from echo delay",
+    "hypotheses": [
+     "sound speed in the medium is known",
+     "the medium is homogeneous along the path"
+    ]
+   },
+   {
+    "name": "Allan variance",
+    "does": "measures frequency stability over averaging time",
+    "hypotheses": [
+     "frequency fluctuations have stationary increments"
+    ]
+   }
+  ],
+  "inputs": [
+   "echo records",
+   "frequency readings"
+  ],
+  "outputs": [
+   "distance or thickness",
+   "stability curve"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EN.TK.Vehicular and wireless technologies",
+  "field": "EN",
+  "node": "IEEE:Vehicular and wireless technologies",
+  "name": "Vehicular and wireless technologies",
+  "taxonomy_cell": "EN.O.A2",
+  "solves": [
+   "predict radio coverage for moving users",
+   "raise capacity with several antennas"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Empirical path-loss models (log-distance, Okumura–Hata)",
+    "does": "predict median signal loss with distance",
+    "hypotheses": [
+     "frequency, distance and environment lie inside the model's fitted ranges"
+    ]
+   },
+   {
+    "name": "MIMO channel capacity",
+    "does": "gives capacity gain from multiple antennas",
+    "hypotheses": [
+     "rich scattering gives independent paths",
+     "the receiver knows the channel"
+    ]
+   }
+  ],
+  "inputs": [
+   "site and terrain data",
+   "antenna counts and signal-to-noise ratio"
+  ],
+  "outputs": [
+   "coverage map",
+   "capacity estimate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

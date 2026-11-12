@@ -1,0 +1,478 @@
+[
+ {
+  "id": "PO.TK.HX1-970.7",
+  "field": "PO",
+  "node": "LCC:HX1-970.7",
+  "name": "Socialism. Communism. Anarchism",
+  "taxonomy_cell": "PO.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for bodies of political doctrine. Work here rests on argument and on reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.J80-87",
+  "field": "PO",
+  "node": "LCC:J80-87",
+  "name": "United States",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Methods sit at the general classes. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.J100-981",
+  "field": "PO",
+  "node": "LCC:J100-981",
+  "name": "Other regions and countries",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Methods sit at the general classes. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JA1-92",
+  "field": "PO",
+  "node": "LCC:JA1-92",
+  "name": "Political science (General)",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "explain an outcome by comparing cases or tracing a process"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer",
+    "compare"
+   ],
+   "data": [
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Mill's methods of agreement and difference",
+    "does": "isolate a cause by comparing cases",
+    "hypotheses": [
+     "cases are comparable",
+     "candidate causes are all listed",
+     "causation is treated as deterministic"
+    ]
+   },
+   {
+    "name": "Process tracing",
+    "does": "tests a causal account against evidence within a case",
+    "hypotheses": [
+     "tests are stated before the evidence is read",
+     "sources are independent of the account"
+    ]
+   },
+   {
+    "name": "Qualitative comparative analysis",
+    "does": "finds combinations of conditions that go with an outcome",
+    "hypotheses": [
+     "conditions and outcome are coded by stated rules",
+     "enough cases for the number of conditions"
+    ]
+   }
+  ],
+  "inputs": [
+   "case records"
+  ],
+  "outputs": [
+   "supported or rejected explanation"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JC11-605",
+  "field": "PO",
+  "node": "LCC:JC11-605",
+  "name": "Political theory. The state. Theories of the state",
+  "taxonomy_cell": "PO.O.A1",
+  "solves": [
+   "justify or criticise a form of rule by argument"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Social contract argument",
+    "does": "tests an arrangement by whether parties would agree to it",
+    "hypotheses": [
+     "the choice situation and the parties are specified"
+    ]
+   }
+  ],
+  "inputs": [
+   "premises"
+  ],
+  "outputs": [
+   "argued conclusion"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JF20-2112",
+  "field": "PO",
+  "node": "LCC:JF20-2112",
+  "name": "Political institutions and public administration",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "predict how institutional rules shape outcomes"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Veto player analysis",
+    "does": "predicts policy stability from actors whose consent is needed",
+    "hypotheses": [
+     "actors and their positions can be identified",
+     "change needs every veto player's agreement"
+    ]
+   },
+   {
+    "name": "Duverger's law",
+    "does": "says plurality voting in single-member districts favours two parties",
+    "hypotheses": [
+     "single-member plurality elections",
+     "a district-level tendency"
+    ]
+   },
+   {
+    "name": "Principal-agent analysis of delegation",
+    "does": "explains bureaucratic drift and oversight",
+    "hypotheses": [
+     "the agent has information the principal lacks",
+     "their preferences differ"
+    ]
+   }
+  ],
+  "inputs": [
+   "rules",
+   "actors' positions"
+  ],
+  "outputs": [
+   "likelihood of change",
+   "party system"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JJ1000-1019",
+  "field": "PO",
+  "node": "LCC:JJ1000-1019",
+  "name": "Political institutions and public administration",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Methods sit at the general classes. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JK1-9993",
+  "field": "PO",
+  "node": "LCC:JK1-9993",
+  "name": "Political institutions and public administration",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Methods sit at the general classes. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JL1-3899",
+  "field": "PO",
+  "node": "LCC:JL1-3899",
+  "name": "Political institutions and public administration",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Methods sit at the general classes. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JN1-9689",
+  "field": "PO",
+  "node": "LCC:JN1-9689",
+  "name": "Political institutions and public administration (Europe)",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Methods sit at the general classes. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JQ21-6651",
+  "field": "PO",
+  "node": "LCC:JQ21-6651",
+  "name": "Political institutions and public administration (Asia,",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Methods sit at the general classes. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JS39-8500",
+  "field": "PO",
+  "node": "LCC:JS39-8500",
+  "name": "Local government. Municipal government",
+  "taxonomy_cell": "PO.O.A4",
+  "solves": [
+   "explain how people sort among local authorities"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Tiebout model",
+    "does": "says households move to the authority whose services and taxes suit them",
+    "hypotheses": [
+     "costless mobility",
+     "many authorities",
+     "full information",
+     "no spillovers"
+    ]
+   }
+  ],
+  "inputs": [
+   "service and tax levels"
+  ],
+  "outputs": [
+   "predicted sorting"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JV1-9480",
+  "field": "PO",
+  "node": "LCC:JV1-9480",
+  "name": "Colonies and colonization. Emigration and",
+  "taxonomy_cell": "PO.O.A4",
+  "solves": [
+   "predict movement between places"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gravity model of migration",
+    "does": "predicts flows from sizes and distance",
+    "hypotheses": [
+     "the relation is empirical",
+     "fitted to past flows"
+    ]
+   }
+  ],
+  "inputs": [
+   "populations",
+   "distances"
+  ],
+  "outputs": [
+   "predicted flows"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JZ5-6530",
+  "field": "PO",
+  "node": "LCC:JZ5-6530",
+  "name": "International relations",
+  "taxonomy_cell": "PO.O.A5",
+  "solves": [
+   "explain conflict and restraint between states"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bargaining model of war",
+    "does": "shows a bargain exists unless specific obstacles block it",
+    "hypotheses": [
+     "rational unitary actors",
+     "war is costly",
+     "obstacles are private information, commitment problems or indivisible stakes"
+    ]
+   },
+   {
+    "name": "Deterrence theory",
+    "does": "says a threat prevents action when credible and costly enough",
+    "hypotheses": [
+     "the opponent weighs costs and benefits",
+     "the threat is communicated and believed"
+    ]
+   },
+   {
+    "name": "Security dilemma",
+    "does": "explains how defensive measures by one state alarm another",
+    "hypotheses": [
+     "states cannot be sure of each other's intentions",
+     "offence and defence are hard to tell apart"
+    ]
+   }
+  ],
+  "inputs": [
+   "actors, stakes, capabilities"
+  ],
+  "outputs": [
+   "explanation of conflict or restraint"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

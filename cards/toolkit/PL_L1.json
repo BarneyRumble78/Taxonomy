@@ -1,0 +1,281 @@
+[
+ {
+  "id": "PL.TK.metaphysics-and-epistemology",
+  "field": "PL",
+  "node": "PP:metaphysics-and-epistemology",
+  "name": "Metaphysics and Epistemology",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "test a general claim against a possible case",
+   "say how belief should change with evidence"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "explain"
+   ],
+   "structure": [
+    "logical"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Method of cases (thought experiment)",
+    "does": "tests a principle against a described case",
+    "hypotheses": [
+     "the case is described coherently",
+     "the judgement about the case is shared or defended"
+    ]
+   },
+   {
+    "name": "Bayesian conditionalisation",
+    "does": "updates degrees of belief on new evidence",
+    "hypotheses": [
+     "prior degrees of belief obey the probability axioms",
+     "the evidence is learned with certainty"
+    ]
+   }
+  ],
+  "inputs": [
+   "a principle and a case",
+   "priors and evidence"
+  ],
+  "outputs": [
+   "counter-example or support",
+   "updated degrees of belief"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.value-theory",
+  "field": "PL",
+  "node": "PP:value-theory",
+  "name": "Value Theory",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "bring principles and judgements about cases into agreement",
+   "choose under uncertainty in a consistent way"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Reflective equilibrium",
+    "does": "adjusts principles and case judgements until they fit",
+    "hypotheses": [
+     "both the principles and the judgements are open to revision"
+    ]
+   },
+   {
+    "name": "Expected utility theory (von Neumann–Morgenstern)",
+    "does": "represents consistent preferences as maximising expected utility",
+    "hypotheses": [
+     "preferences over lotteries are complete and transitive",
+     "continuity",
+     "independence"
+    ]
+   }
+  ],
+  "inputs": [
+   "principles and considered judgements",
+   "options with probabilities"
+  ],
+  "outputs": [
+   "a coherent position",
+   "a ranking of options"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.science-logic-and-mathematics",
+  "field": "PL",
+  "node": "PP:science-logic-and-mathematics",
+  "name": "Science, Logic, and Mathematics",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "decide whether a conclusion follows from premises",
+   "say when an observation supports a hypothesis"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "verify"
+   ],
+   "structure": [
+    "logical"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "First-order logic",
+    "does": "tests validity of arguments by formal proof",
+    "hypotheses": [
+     "the argument can be expressed in a first-order language"
+    ]
+   },
+   {
+    "name": "Bayesian confirmation",
+    "does": "says evidence supports a hypothesis when it raises its probability",
+    "hypotheses": [
+     "prior and likelihoods are specified"
+    ]
+   },
+   {
+    "name": "Falsification",
+    "does": "tests a hypothesis by a prediction that could fail",
+    "hypotheses": [
+     "the hypothesis yields a testable prediction",
+     "auxiliary assumptions are held fixed"
+    ]
+   }
+  ],
+  "inputs": [
+   "premises and conclusion",
+   "hypothesis and evidence"
+  ],
+  "outputs": [
+   "validity verdict",
+   "degree of support"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "The logical theorems are owned by MA. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.history-of-western-philosophy",
+  "field": "PL",
+  "node": "PP:history-of-western-philosophy",
+  "name": "History of Western Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "establish what an author meant in a text"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Charitable exegesis",
+    "does": "reads a text so that its argument is as strong as the words allow",
+    "hypotheses": [
+     "a reliable text is established",
+     "the historical context is taken into account"
+    ]
+   }
+  ],
+  "inputs": [
+   "the text and its context"
+  ],
+  "outputs": [
+   "an interpretation traced to passages"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophical-traditions",
+  "field": "PL",
+  "node": "PP:philosophical-traditions",
+  "name": "Philosophical Traditions",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for traditions and regions. Work here rests on reading texts within each tradition. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-misc",
+  "field": "PL",
+  "node": "PP:philosophy-misc",
+  "name": "Philosophy, Misc",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A miscellaneous heading of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.other-academic-areas",
+  "field": "PL",
+  "node": "PP:other-academic-areas",
+  "name": "Other Academic Areas",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading that points to other fields. Tools are owned by those fields. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

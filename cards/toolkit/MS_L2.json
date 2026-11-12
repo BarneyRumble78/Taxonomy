@@ -1,0 +1,2690 @@
+[
+ {
+  "id": "MS.TK.320901",
+  "field": "MS",
+  "node": "ANZSRC:320901",
+  "name": "Autonomic nervous system",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "explain how involuntary body functions are regulated by nerves"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320902",
+  "field": "MS",
+  "node": "ANZSRC:320902",
+  "name": "Cellular nervous system",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "predict the electrical behaviour of a single nerve cell"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hodgkin–Huxley model",
+    "does": "predicts the action potential from ion currents",
+    "hypotheses": [
+     "a uniform patch of membrane",
+     "ion channels act as independent gates",
+     "parameters fitted to the cell type"
+    ]
+   },
+   {
+    "name": "Cable equation",
+    "does": "predicts passive spread of voltage along a fibre",
+    "hypotheses": [
+     "passive membrane",
+     "a uniform cylinder",
+     "current flows along the axis"
+    ]
+   }
+  ],
+  "inputs": [
+   "voltage and current recordings"
+  ],
+  "outputs": [
+   "predicted voltage over time and distance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320903",
+  "field": "MS",
+  "node": "ANZSRC:320903",
+  "name": "Central nervous system",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "relate brain and spinal cord structure to function"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320904",
+  "field": "MS",
+  "node": "ANZSRC:320904",
+  "name": "Computational neuroscience (incl. mathematical neuroscience and theoretical neuroscience)",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "explain how networks of nerve cells compute"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Integrate-and-fire neuron model",
+    "does": "simulates spiking with a threshold rule",
+    "hypotheses": [
+     "spike shape is ignored",
+     "the membrane is a single compartment"
+    ]
+   },
+   {
+    "name": "Temporal-difference learning model",
+    "does": "explains reward learning by prediction error",
+    "hypotheses": [
+     "learning is driven by the gap between expected and received reward"
+    ]
+   }
+  ],
+  "inputs": [
+   "spike trains",
+   "behaviour records"
+  ],
+  "outputs": [
+   "simulated activity",
+   "fitted learning parameters"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320905",
+  "field": "MS",
+  "node": "ANZSRC:320905",
+  "name": "Neurology and neuromuscular diseases",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "identify and explain disorders of nerves and muscles"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320906",
+  "field": "MS",
+  "node": "ANZSRC:320906",
+  "name": "Peripheral nervous system",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "explain how nerves outside the brain and spinal cord carry signals"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320907",
+  "field": "MS",
+  "node": "ANZSRC:320907",
+  "name": "Sensory systems",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "relate physical stimulus strength to what is sensed"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Psychometric function fitting",
+    "does": "estimates a detection threshold",
+    "hypotheses": [
+     "responses are independent across trials",
+     "the observer's criterion is stable"
+    ]
+   },
+   {
+    "name": "Weber's law",
+    "does": "says the just-noticeable change is a constant fraction of intensity",
+    "hypotheses": [
+     "mid-range intensities",
+     "it fails near threshold and at extremes"
+    ]
+   }
+  ],
+  "inputs": [
+   "responses at several stimulus levels"
+  ],
+  "outputs": [
+   "threshold",
+   "Weber fraction"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320999",
+  "field": "MS",
+  "node": "ANZSRC:320999",
+  "name": "Neurosciences not elsewhere classified",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440101",
+  "field": "MS",
+  "node": "ANZSRC:440101",
+  "name": "Anthropology of development",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how planned change affects a community from inside it"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440102",
+  "field": "MS",
+  "node": "ANZSRC:440102",
+  "name": "Anthropology of gender and sexuality",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how gender and sexuality are lived in a society"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440103",
+  "field": "MS",
+  "node": "ANZSRC:440103",
+  "name": "Biological (physical) anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "infer human biological history and variation from remains and living people"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440104",
+  "field": "MS",
+  "node": "ANZSRC:440104",
+  "name": "Environmental anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how a group understands and uses its surroundings"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440105",
+  "field": "MS",
+  "node": "ANZSRC:440105",
+  "name": "Linguistic anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "relate ways of speaking to social life"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440106",
+  "field": "MS",
+  "node": "ANZSRC:440106",
+  "name": "Medical anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how illness and healing are understood in a society"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440107",
+  "field": "MS",
+  "node": "ANZSRC:440107",
+  "name": "Social and cultural anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how a group lives from inside it"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "data": [
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Participant observation",
+    "does": "builds an account from long stays with a group",
+    "hypotheses": [
+     "prolonged immersion",
+     "the observer's effect and position are reported"
+    ]
+   }
+  ],
+  "inputs": [
+   "field notes"
+  ],
+  "outputs": [
+   "ethnographic account"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440199",
+  "field": "MS",
+  "node": "ANZSRC:440199",
+  "name": "Anthropology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440301",
+  "field": "MS",
+  "node": "ANZSRC:440301",
+  "name": "Family and household studies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how households form, change and dissolve"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440302",
+  "field": "MS",
+  "node": "ANZSRC:440302",
+  "name": "Fertility",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "summarise the level of childbearing"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Total fertility rate",
+    "does": "sums age-specific birth rates",
+    "hypotheses": [
+     "a period measure: it assumes today's rates hold through a woman's life"
+    ]
+   }
+  ],
+  "inputs": [
+   "births and women by age"
+  ],
+  "outputs": [
+   "total fertility rate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440303",
+  "field": "MS",
+  "node": "ANZSRC:440303",
+  "name": "Migration",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "predict movement between places"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gravity model of migration",
+    "does": "predicts flows from population sizes and distance",
+    "hypotheses": [
+     "the relation is empirical",
+     "it is fitted to past flows"
+    ]
+   }
+  ],
+  "inputs": [
+   "populations, distances, past flows"
+  ],
+  "outputs": [
+   "predicted flows"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440304",
+  "field": "MS",
+  "node": "ANZSRC:440304",
+  "name": "Mortality",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "summarise survival by age"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Life table",
+    "does": "turns age-specific death rates into life expectancy",
+    "hypotheses": [
+     "a period table assumes today's rates hold through a lifetime"
+    ]
+   },
+   {
+    "name": "Direct age standardisation",
+    "does": "compares death rates between populations of different age make-up",
+    "hypotheses": [
+     "age-specific rates are stable enough in each group",
+     "a standard population is chosen"
+    ]
+   }
+  ],
+  "inputs": [
+   "deaths and population by age"
+  ],
+  "outputs": [
+   "life expectancy",
+   "standardised rates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440305",
+  "field": "MS",
+  "node": "ANZSRC:440305",
+  "name": "Population trends and policies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "project population size and age make-up"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cohort-component projection",
+    "does": "projects a population by age and sex",
+    "hypotheses": [
+     "stated assumptions for fertility, mortality and migration"
+    ]
+   }
+  ],
+  "inputs": [
+   "base population",
+   "assumed rates"
+  ],
+  "outputs": [
+   "projected population"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440399",
+  "field": "MS",
+  "node": "ANZSRC:440399",
+  "name": "Demography not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440501",
+  "field": "MS",
+  "node": "ANZSRC:440501",
+  "name": "Feminist and queer theory",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "analyse how norms of gender and sexuality are made and contested"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440502",
+  "field": "MS",
+  "node": "ANZSRC:440502",
+  "name": "Feminist methodologies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "design research that accounts for the researcher's position and for power"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440503",
+  "field": "MS",
+  "node": "ANZSRC:440503",
+  "name": "Feminist theory",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain inequality between genders by argument"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "goal_quality": [
+    "qualitative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440504",
+  "field": "MS",
+  "node": "ANZSRC:440504",
+  "name": "Gender relations",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how relations between genders are organised"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440505",
+  "field": "MS",
+  "node": "ANZSRC:440505",
+  "name": "Intersectional studies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "examine outcomes at combinations of social categories"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectional analysis",
+    "does": "compares outcomes across combined categories",
+    "hypotheses": [
+     "the categories are recorded in the data",
+     "subgroups are large enough to compare"
+    ]
+   }
+  ],
+  "inputs": [
+   "records with category labels"
+  ],
+  "outputs": [
+   "subgroup comparisons"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440506",
+  "field": "MS",
+  "node": "ANZSRC:440506",
+  "name": "Sexualities",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how sexualities are lived and regulated"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440507",
+  "field": "MS",
+  "node": "ANZSRC:440507",
+  "name": "Studies of men and masculinities",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how masculinities are formed and vary"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440508",
+  "field": "MS",
+  "node": "ANZSRC:440508",
+  "name": "Transgender studies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe the lives and standing of transgender people"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440509",
+  "field": "MS",
+  "node": "ANZSRC:440509",
+  "name": "Women's studies (incl. girls' studies)",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe the lives and standing of women and girls"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440599",
+  "field": "MS",
+  "node": "ANZSRC:440599",
+  "name": "Gender studies not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440901",
+  "field": "MS",
+  "node": "ANZSRC:440901",
+  "name": "Clinical social work practice",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "judge whether support for one person is working"
+  ],
+  "signature": {
+   "task": [
+    "verify"
+   ],
+   "data": [
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Single-case design",
+    "does": "tests an intervention on one case by repeated measurement",
+    "hypotheses": [
+     "a stable baseline is recorded first",
+     "the outcome is measured the same way each time"
+    ]
+   }
+  ],
+  "inputs": [
+   "repeated outcome measures"
+  ],
+  "outputs": [
+   "evidence of change"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440902",
+  "field": "MS",
+  "node": "ANZSRC:440902",
+  "name": "Counselling, wellbeing and community services",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "help people with personal difficulties and connect them to services"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440903",
+  "field": "MS",
+  "node": "ANZSRC:440903",
+  "name": "Social program evaluation",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "find whether a social programme achieved its aims"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Theory of change with outcome evaluation",
+    "does": "tests each link from activity to outcome",
+    "hypotheses": [
+     "the intended chain is stated in advance",
+     "outcomes are measured for a comparison group or period"
+    ]
+   }
+  ],
+  "inputs": [
+   "programme records",
+   "outcome data"
+  ],
+  "outputs": [
+   "evaluation findings"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440999",
+  "field": "MS",
+  "node": "ANZSRC:440999",
+  "name": "Social work not elsewhere classified",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441001",
+  "field": "MS",
+  "node": "ANZSRC:441001",
+  "name": "Applied sociology, program evaluation and social impact assessment",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "foresee how a proposal will affect people"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Social impact assessment",
+    "does": "identifies who is affected and how, before a decision",
+    "hypotheses": [
+     "affected groups are identified and consulted",
+     "baseline conditions are described"
+    ]
+   }
+  ],
+  "inputs": [
+   "proposal",
+   "baseline",
+   "consultation records"
+  ],
+  "outputs": [
+   "impact statement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441002",
+  "field": "MS",
+  "node": "ANZSRC:441002",
+  "name": "Environmental sociology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain how societies shape and respond to their surroundings"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441003",
+  "field": "MS",
+  "node": "ANZSRC:441003",
+  "name": "Rural sociology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain social life outside cities"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441004",
+  "field": "MS",
+  "node": "ANZSRC:441004",
+  "name": "Social change",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain why and how societies change"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441005",
+  "field": "MS",
+  "node": "ANZSRC:441005",
+  "name": "Social theory",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "build general accounts of how society works"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "goal_quality": [
+    "qualitative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441006",
+  "field": "MS",
+  "node": "ANZSRC:441006",
+  "name": "Sociological methodology and research methods",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "estimate what a population thinks or does from a part of it"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Probability survey sampling",
+    "does": "estimates population values with known error",
+    "hypotheses": [
+     "every unit has a known non-zero chance of selection",
+     "non-response is small or adjusted for"
+    ]
+   },
+   {
+    "name": "Grounded theory",
+    "does": "builds categories from qualitative data",
+    "hypotheses": [
+     "sampling continues until new cases add no new categories"
+    ]
+   },
+   {
+    "name": "Multilevel regression",
+    "does": "separates effects at individual and group level",
+    "hypotheses": [
+     "groups are a sample from a population of groups",
+     "residuals at each level are independent of predictors"
+    ]
+   }
+  ],
+  "inputs": [
+   "survey responses",
+   "interviews"
+  ],
+  "outputs": [
+   "estimates with error",
+   "category scheme"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441007",
+  "field": "MS",
+  "node": "ANZSRC:441007",
+  "name": "Sociology and social studies of science and technology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain how knowledge and devices are made and taken up"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441008",
+  "field": "MS",
+  "node": "ANZSRC:441008",
+  "name": "Sociology of culture",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain how tastes and meanings are shared and ranked"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441009",
+  "field": "MS",
+  "node": "ANZSRC:441009",
+  "name": "Sociology of family and relationships",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain how families and close ties form and change"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441010",
+  "field": "MS",
+  "node": "ANZSRC:441010",
+  "name": "Sociology of gender",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain how gender organises social life"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441011",
+  "field": "MS",
+  "node": "ANZSRC:441011",
+  "name": "Sociology of health",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain how social position shapes health"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441012",
+  "field": "MS",
+  "node": "ANZSRC:441012",
+  "name": "Sociology of inequalities",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "measure how unequally something is shared"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gini coefficient",
+    "does": "summarises inequality as one number from the Lorenz curve",
+    "hypotheses": [
+     "the unit and the income concept are stated",
+     "values are non-negative"
+    ]
+   },
+   {
+    "name": "Intergenerational mobility table",
+    "does": "compares parents' and children's positions",
+    "hypotheses": [
+     "positions are measured comparably across generations"
+    ]
+   }
+  ],
+  "inputs": [
+   "incomes",
+   "paired positions"
+  ],
+  "outputs": [
+   "inequality index",
+   "mobility rates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441013",
+  "field": "MS",
+  "node": "ANZSRC:441013",
+  "name": "Sociology of migration, ethnicity and multiculturalism",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain movement, ethnic difference and living together"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441014",
+  "field": "MS",
+  "node": "ANZSRC:441014",
+  "name": "Sociology of religion",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explain religious belonging and practice as social facts"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441015",
+  "field": "MS",
+  "node": "ANZSRC:441015",
+  "name": "Sociology of the life course",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "analyse the timing of events in people's lives"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Event history analysis (Cox model)",
+    "does": "relates the hazard of an event to covariates",
+    "hypotheses": [
+     "hazards are proportional over time",
+     "censoring is unrelated to the event"
+    ]
+   }
+  ],
+  "inputs": [
+   "dated life events"
+  ],
+  "outputs": [
+   "hazard ratios"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441016",
+  "field": "MS",
+  "node": "ANZSRC:441016",
+  "name": "Urban sociology and community studies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "measure how separately groups live"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Index of dissimilarity",
+    "does": "gives the share of a group that would have to move for an even spread",
+    "hypotheses": [
+     "two groups",
+     "results depend on the size of the areal units used"
+    ]
+   }
+  ],
+  "inputs": [
+   "group counts by area"
+  ],
+  "outputs": [
+   "segregation index"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441099",
+  "field": "MS",
+  "node": "ANZSRC:441099",
+  "name": "Sociology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.449901",
+  "field": "MS",
+  "node": "ANZSRC:449901",
+  "name": "Studies of Asian society",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe the societies of one region"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.449999",
+  "field": "MS",
+  "node": "ANZSRC:449999",
+  "name": "Other human society not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520101",
+  "field": "MS",
+  "node": "ANZSRC:520101",
+  "name": "Child and adolescent development",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "track change in children over time"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Longitudinal design",
+    "does": "measures the same children repeatedly",
+    "hypotheses": [
+     "the measure means the same thing at each age",
+     "drop-out is random or modelled"
+    ]
+   }
+  ],
+  "inputs": [
+   "repeated measures"
+  ],
+  "outputs": [
+   "growth curves"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520102",
+  "field": "MS",
+  "node": "ANZSRC:520102",
+  "name": "Educational psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "explain how people learn in taught settings"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520103",
+  "field": "MS",
+  "node": "ANZSRC:520103",
+  "name": "Forensic psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "apply psychological assessment to legal questions"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520104",
+  "field": "MS",
+  "node": "ANZSRC:520104",
+  "name": "Industrial and organisational psychology (incl. human factors)",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "select people and design work by evidence"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Validated selection methods",
+    "does": "predict job performance",
+    "hypotheses": [
+     "a job analysis defines what is assessed",
+     "validity evidence exists for this kind of role"
+    ]
+   }
+  ],
+  "inputs": [
+   "applicant data",
+   "job analysis"
+  ],
+  "outputs": [
+   "ranked candidates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520105",
+  "field": "MS",
+  "node": "ANZSRC:520105",
+  "name": "Psychological methodology, design and analysis",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "design a study that can answer its question"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Statistical power analysis",
+    "does": "gives the sample needed to detect a stated effect",
+    "hypotheses": [
+     "the smallest effect of interest is set in advance",
+     "significance level and power are chosen"
+    ]
+   },
+   {
+    "name": "Preregistration",
+    "does": "fixes hypotheses and analysis before data are seen",
+    "hypotheses": [
+     "the plan is registered before data collection or access"
+    ]
+   }
+  ],
+  "inputs": [
+   "expected effect",
+   "design"
+  ],
+  "outputs": [
+   "sample size",
+   "registered plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520106",
+  "field": "MS",
+  "node": "ANZSRC:520106",
+  "name": "Psychology of ageing",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "describe how mind and behaviour change in later life"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "estimate"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520107",
+  "field": "MS",
+  "node": "ANZSRC:520107",
+  "name": "Sport and exercise psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "explain performance and participation in sport and exercise"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520108",
+  "field": "MS",
+  "node": "ANZSRC:520108",
+  "name": "Testing, assessment and psychometrics",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "build and check a scale that measures a mental attribute"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Item response theory",
+    "does": "models the chance of a response from a latent trait",
+    "hypotheses": [
+     "one dimension underlies the responses",
+     "responses are independent given the trait",
+     "the chance rises with the trait"
+    ]
+   },
+   {
+    "name": "Cronbach's alpha",
+    "does": "estimates internal consistency",
+    "hypotheses": [
+     "the items measure one dimension",
+     "items are roughly equally related to it"
+    ]
+   }
+  ],
+  "inputs": [
+   "item responses"
+  ],
+  "outputs": [
+   "item parameters",
+   "reliability"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520199",
+  "field": "MS",
+  "node": "ANZSRC:520199",
+  "name": "Applied and developmental psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520201",
+  "field": "MS",
+  "node": "ANZSRC:520201",
+  "name": "Behavioural genetics",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "separate inherited from environmental sources of difference"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Classical twin design",
+    "does": "splits trait variance into genetic and environmental parts",
+    "hypotheses": [
+     "identical and fraternal twins share environments equally",
+     "no assortative mating",
+     "estimates apply to the population studied"
+    ]
+   }
+  ],
+  "inputs": [
+   "twin-pair data"
+  ],
+  "outputs": [
+   "variance components"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520202",
+  "field": "MS",
+  "node": "ANZSRC:520202",
+  "name": "Behavioural neuroscience",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "relate brain mechanisms to behaviour, largely in animals"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520203",
+  "field": "MS",
+  "node": "ANZSRC:520203",
+  "name": "Cognitive neuroscience",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "map where and when the brain responds during a task"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "General linear model for functional imaging",
+    "does": "maps where a signal follows a task",
+    "hypotheses": [
+     "the signal responds linearly to neural activity",
+     "the assumed response shape fits the region",
+     "multiple comparisons are corrected"
+    ]
+   }
+  ],
+  "inputs": [
+   "image series",
+   "task timing"
+  ],
+  "outputs": [
+   "activation maps"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520204",
+  "field": "MS",
+  "node": "ANZSRC:520204",
+  "name": "Evolutionary psychological studies",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "explain mental traits as products of selection"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520205",
+  "field": "MS",
+  "node": "ANZSRC:520205",
+  "name": "Psychopharmacology",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "relate drugs to changes in mood, thought and behaviour"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520206",
+  "field": "MS",
+  "node": "ANZSRC:520206",
+  "name": "Psychophysiology",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "relate bodily signals to mental states"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520207",
+  "field": "MS",
+  "node": "ANZSRC:520207",
+  "name": "Social and affective neuroscience",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "relate brain activity to social behaviour and feeling"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520299",
+  "field": "MS",
+  "node": "ANZSRC:520299",
+  "name": "Biological psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520301",
+  "field": "MS",
+  "node": "ANZSRC:520301",
+  "name": "Clinical neuropsychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "assess thinking and behaviour after brain injury or disease"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520302",
+  "field": "MS",
+  "node": "ANZSRC:520302",
+  "name": "Clinical psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "decide whether a person's change is real and meaningful"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Reliable change index",
+    "does": "tests whether a score change exceeds measurement error",
+    "hypotheses": [
+     "the test-retest reliability of the scale is known"
+    ]
+   }
+  ],
+  "inputs": [
+   "scores before and after"
+  ],
+  "outputs": [
+   "change verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520303",
+  "field": "MS",
+  "node": "ANZSRC:520303",
+  "name": "Counselling psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "help people with life difficulties through talking"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520304",
+  "field": "MS",
+  "node": "ANZSRC:520304",
+  "name": "Health psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "explain and change behaviour that affects health"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520399",
+  "field": "MS",
+  "node": "ANZSRC:520399",
+  "name": "Clinical and health psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520401",
+  "field": "MS",
+  "node": "ANZSRC:520401",
+  "name": "Cognition",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "explain how people think, reason and solve problems"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520402",
+  "field": "MS",
+  "node": "ANZSRC:520402",
+  "name": "Decision making",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "describe how people actually choose under risk"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Prospect theory",
+    "does": "models choice with reference points, loss aversion and probability weighting",
+    "hypotheses": [
+     "outcomes are framed as gains or losses from a reference point",
+     "parameters are fitted to the group studied"
+    ]
+   },
+   {
+    "name": "Drift-diffusion model",
+    "does": "explains choice and response time by noisy evidence accumulation",
+    "hypotheses": [
+     "two-choice decisions",
+     "fast single-stage decisions",
+     "constant drift within a trial"
+    ]
+   }
+  ],
+  "inputs": [
+   "choices",
+   "response times"
+  ],
+  "outputs": [
+   "fitted parameters"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520403",
+  "field": "MS",
+  "node": "ANZSRC:520403",
+  "name": "Learning, motivation and emotion",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "predict how associations form"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Rescorla–Wagner model",
+    "does": "updates associative strength by prediction error",
+    "hypotheses": [
+     "learning is driven by the gap between expected and actual outcome",
+     "cues present together share one error term"
+    ]
+   }
+  ],
+  "inputs": [
+   "trial records"
+  ],
+  "outputs": [
+   "predicted response strength"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520404",
+  "field": "MS",
+  "node": "ANZSRC:520404",
+  "name": "Memory and attention",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "explain what is retained and what is attended to"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520405",
+  "field": "MS",
+  "node": "ANZSRC:520405",
+  "name": "Psycholinguistics (incl. speech production and comprehension)",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "explain how language is understood and produced in real time"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520406",
+  "field": "MS",
+  "node": "ANZSRC:520406",
+  "name": "Sensory processes, perception and performance",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "separate ability to detect from willingness to respond"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Signal detection theory",
+    "does": "separates sensitivity from response bias",
+    "hypotheses": [
+     "the sensitivity index assumes equal-variance Gaussian evidence"
+    ]
+   },
+   {
+    "name": "Fitts's law",
+    "does": "predicts movement time from distance and target size",
+    "hypotheses": [
+     "rapid aimed movements",
+     "coefficients fitted for the task"
+    ]
+   }
+  ],
+  "inputs": [
+   "hit and false-alarm rates",
+   "movement times"
+  ],
+  "outputs": [
+   "sensitivity and bias",
+   "predicted time"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520499",
+  "field": "MS",
+  "node": "ANZSRC:520499",
+  "name": "Cognitive and computational psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520501",
+  "field": "MS",
+  "node": "ANZSRC:520501",
+  "name": "Community psychology",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "study and strengthen wellbeing at community level"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520502",
+  "field": "MS",
+  "node": "ANZSRC:520502",
+  "name": "Gender psychology",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "describe psychological similarities and differences related to gender"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520503",
+  "field": "MS",
+  "node": "ANZSRC:520503",
+  "name": "Personality and individual differences",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "describe stable differences between people with a few dimensions"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Factor analysis",
+    "does": "finds latent dimensions behind correlated items",
+    "hypotheses": [
+     "a linear common-factor model",
+     "an adequate sample",
+     "measurement invariance before groups are compared"
+    ]
+   }
+  ],
+  "inputs": [
+   "item responses"
+  ],
+  "outputs": [
+   "factor scores"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520504",
+  "field": "MS",
+  "node": "ANZSRC:520504",
+  "name": "Psychology of religion",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "describe religious experience and behaviour psychologically"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520505",
+  "field": "MS",
+  "node": "ANZSRC:520505",
+  "name": "Social psychology",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "explain how other people affect thought and behaviour"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520599",
+  "field": "MS",
+  "node": "ANZSRC:520599",
+  "name": "Social and personality psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.529999",
+  "field": "MS",
+  "node": "ANZSRC:529999",
+  "name": "Other psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

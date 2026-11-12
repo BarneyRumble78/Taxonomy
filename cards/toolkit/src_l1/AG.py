@@ -1,0 +1,28 @@
+FAC = "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map."
+ODD = "A single topic or group that the thesaurus extract places at the top level. It is not a subfield. No tools are listed."
+T = {
+"c_4788": (["compare treatments fairly when the test ground is uneven"],
+  {"task": "compare estimate", "uncertainty": "noise", "structure": "field_spatial"},
+  [("Randomised complete block design", "removes known variation between plots from the comparison", ["plots within a block are alike", "treatments are randomised within each block", "block and treatment effects add"])],
+  ["yields by plot, block and treatment"], ["treatment differences with error"],
+  "A top-level facet of the thesaurus, not a subfield."),
+"c_330991": (["decide when control of a pest is worth its cost"],
+  {"task": "control optimise", "constraints": "resource_budget", "agents": "single_decision_maker"},
+  [("Economic threshold in integrated pest management", "sets the pest density at which control pays", ["pest density is monitored", "the cost of control and the damage per pest are known"])],
+  ["pest counts", "costs and crop value"], ["act or wait decision"],
+  "A top-level facet of the thesaurus, not a subfield."),
+"c_d79597fb": (["show that a study's data can be trusted and reconstructed"],
+  {"task": "verify", "constraints": "legal_or_normative"},
+  [("Good laboratory practice audit", "checks a study against a written plan and procedures", ["a study plan and standard operating procedures exist", "raw data are kept"])],
+  ["study records"], ["compliance findings"], ODD[:95]),
+"c_cd848dc0": (["show that each batch is made the same way to a stated standard"],
+  {"task": "verify control", "constraints": "legal_or_normative"},
+  [("Good manufacturing practice audit", "checks production against documented procedures", ["documented procedures and batch records exist"])],
+  ["batch and process records"], ["compliance findings"], ODD[:95]),
+"c_6211": C(FAC), "c_7644": C(FAC), "c_7778": C(FAC), "c_13586": C(FAC), "c_49874": C(FAC), "c_49904": C(FAC),
+"c_330493": C(FAC), "c_330704": C(FAC), "c_330705": C(FAC), "c_330829": C(FAC), "c_330834": C(FAC), "c_330892": C(FAC),
+"c_330919": C(FAC), "c_330979": C(FAC), "c_330985": C(FAC), "c_330988": C(FAC), "c_330995": C(FAC), "c_330998": C(FAC),
+"c_331000": C(FAC), "c_331061": C(FAC), "c_331093": C(FAC), "c_9001017": C(FAC), "c_50227": C(FAC), "agrovoc": C(FAC),
+"c_24415": C(ODD), "c_6840": C(ODD), "c_36693": C(ODD), "c_76109b15": C(ODD), "c_e2e02057": C(ODD),
+"skosCollection_cb7b7c4a": C(ODD), "skosCollection_47b33e75": C(ODD), "skosCollection_c346d422": C(ODD),
+}

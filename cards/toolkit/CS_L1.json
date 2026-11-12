@@ -1,0 +1,562 @@
+[
+ {
+  "id": "CS.TK.10002944",
+  "field": "CS",
+  "node": "ACM:10002944",
+  "name": "General and reference",
+  "taxonomy_cell": "CS.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A general and reference heading of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002950",
+  "field": "CS",
+  "node": "ACM:10002950",
+  "name": "Mathematics of computing",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "compute with real numbers on a finite machine and know the error",
+   "estimate a quantity by random sampling"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "domain_type": [
+    "continuous"
+   ],
+   "goal_quality": [
+    "approximate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Backward error analysis",
+    "does": "shows a computed answer is exact for slightly changed data",
+    "hypotheses": [
+     "IEEE 754 floating-point arithmetic",
+     "no overflow or underflow"
+    ]
+   },
+   {
+    "name": "Monte Carlo estimation",
+    "does": "estimates an expectation with error falling as one over root n",
+    "hypotheses": [
+     "independent samples from the target distribution",
+     "finite variance"
+    ]
+   }
+  ],
+  "inputs": [
+   "algorithm and data",
+   "a sampler"
+  ],
+  "outputs": [
+   "error bound",
+   "estimate with standard error"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "The underlying theorems are owned by MA. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10002978",
+  "field": "CS",
+  "node": "ACM:10002978",
+  "name": "Security and privacy",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "keep data secret and intact against an adversary",
+   "publish statistics without exposing individuals"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "RSA public-key encryption",
+    "does": "lets anyone encrypt and only the key holder decrypt",
+    "hypotheses": [
+     "the RSA problem is hard for the key size",
+     "secure padding is used",
+     "keys are generated with good randomness"
+    ]
+   },
+   {
+    "name": "Differential privacy",
+    "does": "bounds what an output reveals about any one record",
+    "hypotheses": [
+     "a definition of neighbouring datasets is fixed",
+     "noise is calibrated to the query's sensitivity"
+    ]
+   },
+   {
+    "name": "Threat modelling",
+    "does": "lists assets, adversaries and attack paths before design",
+    "hypotheses": [
+     "the system boundary and adversary capabilities are stated"
+    ]
+   }
+  ],
+  "inputs": [
+   "system description",
+   "adversary model"
+  ],
+  "outputs": [
+   "protocol",
+   "privacy guarantee",
+   "ranked threats"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003033",
+  "field": "CS",
+  "node": "ACM:10003033",
+  "name": "Networks",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "move data between many nodes over shared unreliable links"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control",
+    "optimise"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Additive-increase multiplicative-decrease congestion control",
+    "does": "shares a bottleneck fairly among flows",
+    "hypotheses": [
+     "loss or delay signals congestion",
+     "flows share the bottleneck and follow the same rule"
+    ]
+   },
+   {
+    "name": "Shortest-path routing (Dijkstra, Bellman–Ford)",
+    "does": "finds least-cost routes",
+    "hypotheses": [
+     "Dijkstra needs non-negative link costs",
+     "Bellman–Ford needs no negative cycles"
+    ]
+   }
+  ],
+  "inputs": [
+   "topology and link costs",
+   "traffic"
+  ],
+  "outputs": [
+   "routes",
+   "sending rates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003120",
+  "field": "CS",
+  "node": "ACM:10003120",
+  "name": "Human-centered computing",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "find whether people can use a design and which version works better"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "verify",
+    "design"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Usability testing",
+    "does": "observes representative users doing set tasks",
+    "hypotheses": [
+     "participants and tasks represent real use"
+    ]
+   },
+   {
+    "name": "A/B testing",
+    "does": "compares two versions by random assignment",
+    "hypotheses": [
+     "users are assigned at random",
+     "one user's version does not affect another's outcome",
+     "the sample is large enough for the effect sought"
+    ]
+   }
+  ],
+  "inputs": [
+   "prototype",
+   "users and tasks"
+  ],
+  "outputs": [
+   "usability problems",
+   "effect estimate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003456",
+  "field": "CS",
+  "node": "ACM:10003456",
+  "name": "Social and professional topics",
+  "taxonomy_cell": "CS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for professional, legal and social topics. Tools sit in law, philosophy and the social sciences. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10003752",
+  "field": "CS",
+  "node": "ACM:10003752",
+  "name": "Theory of computation",
+  "taxonomy_cell": "CS.O.A2",
+  "solves": [
+   "decide whether a problem can be solved at all, and at what cost",
+   "solve a problem by reusing answers to its parts"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "classify",
+    "decide_existence"
+   ],
+   "domain_type": [
+    "discrete",
+    "symbolic"
+   ],
+   "structure": [
+    "logical"
+   ],
+   "goal_quality": [
+    "bound"
+   ]
+  },
+  "tools": [
+   {
+    "name": "NP-completeness by reduction",
+    "does": "shows a problem is as hard as any in NP",
+    "hypotheses": [
+     "a polynomial-time reduction from a known NP-complete problem",
+     "the problem is in NP"
+    ]
+   },
+   {
+    "name": "Undecidability of the halting problem",
+    "does": "shows no algorithm decides whether every program halts",
+    "hypotheses": [
+     "a Turing-complete model of computation"
+    ]
+   },
+   {
+    "name": "Dynamic programming",
+    "does": "builds an optimal answer from optimal sub-answers",
+    "hypotheses": [
+     "optimal substructure",
+     "overlapping subproblems"
+    ]
+   }
+  ],
+  "inputs": [
+   "a formal problem statement"
+  ],
+  "outputs": [
+   "hardness class",
+   "algorithm with running time"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010147",
+  "field": "CS",
+  "node": "ACM:10010147",
+  "name": "Computing methodologies",
+  "taxonomy_cell": "CS.O.A4",
+  "solves": [
+   "fit a model to examples so it predicts new cases",
+   "search a large space of possibilities for a best path"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "classify",
+    "optimise"
+   ],
+   "data": [
+    "data_rich"
+   ],
+   "scale": [
+    "high_dimensional"
+   ],
+   "uncertainty": [
+    "unknown_distribution"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Stochastic gradient descent with backpropagation",
+    "does": "fits model parameters to data",
+    "hypotheses": [
+     "the loss is differentiable",
+     "convergence to a global optimum is assured only for convex losses with suitable step sizes"
+    ]
+   },
+   {
+    "name": "PAC learning bound (VC dimension)",
+    "does": "bounds the gap between training and true error",
+    "hypotheses": [
+     "examples are independent draws from one fixed distribution",
+     "the hypothesis class has finite VC dimension"
+    ]
+   },
+   {
+    "name": "A* search",
+    "does": "finds a least-cost path",
+    "hypotheses": [
+     "the heuristic never overestimates remaining cost",
+     "the heuristic must also be consistent if nodes already expanded are never reopened"
+    ]
+   }
+  ],
+  "inputs": [
+   "labelled examples",
+   "state space with costs"
+  ],
+  "outputs": [
+   "fitted model",
+   "error bound",
+   "optimal path"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010405",
+  "field": "CS",
+  "node": "ACM:10010405",
+  "name": "Applied computing",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for application areas. Tools sit in the technique classes they draw on. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10010520",
+  "field": "CS",
+  "node": "ACM:10010520",
+  "name": "Computer systems organization",
+  "taxonomy_cell": "CS.O.A3",
+  "solves": [
+   "predict the gain from adding processors",
+   "keep many machines in agreement despite failures"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "predict",
+    "verify"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Amdahl's law",
+    "does": "bounds speed-up by the serial fraction",
+    "hypotheses": [
+     "fixed problem size",
+     "the parallel fraction is known"
+    ]
+   },
+   {
+    "name": "CAP theorem",
+    "does": "says a system cannot keep both consistency and availability during a partition",
+    "hypotheses": [
+     "an asynchronous network",
+     "consistency means linearisability",
+     "a partition occurs"
+    ]
+   },
+   {
+    "name": "Consensus protocols (Paxos, Raft)",
+    "does": "make replicas agree on one sequence of values",
+    "hypotheses": [
+     "nodes fail by crashing, not by lying",
+     "a majority of nodes is working",
+     "progress needs periods of timely messages"
+    ]
+   }
+  ],
+  "inputs": [
+   "workload profile",
+   "failure model"
+  ],
+  "outputs": [
+   "speed-up bound",
+   "replication design"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CS.TK.10011007",
+  "field": "CS",
+  "node": "ACM:10011007",
+  "name": "Software and its engineering",
+  "taxonomy_cell": "CS.O.A1",
+  "solves": [
+   "show that a program does what its specification says"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "prove",
+    "design"
+   ],
+   "structure": [
+    "logical"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hoare logic",
+    "does": "proves a program meets pre- and postconditions",
+    "hypotheses": [
+     "a formal specification exists",
+     "loop invariants are supplied",
+     "the basic proof gives partial correctness, not termination"
+    ]
+   },
+   {
+    "name": "Automated testing",
+    "does": "finds faults by running cases against expected results",
+    "hypotheses": [
+     "an expected result is available for each case",
+     "passing tests do not prove absence of faults"
+    ]
+   },
+   {
+    "name": "Sound static type checking",
+    "does": "rules out a class of run-time errors before running",
+    "hypotheses": [
+     "the language's type system is proved sound",
+     "unsafe escapes are not used"
+    ]
+   }
+  ],
+  "inputs": [
+   "source code",
+   "specification"
+  ],
+  "outputs": [
+   "proof or counter-example",
+   "test report"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

@@ -1,0 +1,3484 @@
+[
+ {
+  "id": "PL.TK.epistemology",
+  "field": "PL",
+  "node": "PP:epistemology",
+  "name": "Epistemology",
+  "taxonomy_cell": "PL.O.A2",
+  "solves": [
+   "say when a belief counts as knowledge and how belief should change with evidence"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "explain"
+   ],
+   "structure": [
+    "logical"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Method of cases (Gettier-style counter-example)",
+    "does": "tests an analysis of knowledge against a described case",
+    "hypotheses": [
+     "the case is coherent",
+     "the judgement about it is shared or defended"
+    ]
+   },
+   {
+    "name": "Bayesian conditionalisation",
+    "does": "updates degrees of belief on evidence",
+    "hypotheses": [
+     "priors obey the probability axioms",
+     "the evidence is learned with certainty"
+    ]
+   },
+   {
+    "name": "Dutch book argument",
+    "does": "shows that degrees of belief violating the probability axioms allow a sure loss",
+    "hypotheses": [
+     "degrees of belief are identified with betting prices",
+     "the agent accepts every bet judged fair"
+    ]
+   }
+  ],
+  "inputs": [
+   "analysis and case",
+   "priors and evidence"
+  ],
+  "outputs": [
+   "counter-example or support",
+   "updated beliefs"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.metaphilosophy",
+  "field": "PL",
+  "node": "PP:metaphilosophy",
+  "name": "Metaphilosophy",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "say what philosophy is and what its methods can establish"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.metaphysics",
+  "field": "PL",
+  "node": "PP:metaphysics",
+  "name": "Metaphysics",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "say what exists and what is possible or necessary"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "explain"
+   ],
+   "structure": [
+    "logical"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Possible-worlds semantics for modality",
+    "does": "treats necessity as truth in all accessible worlds",
+    "hypotheses": [
+     "a modal logic and accessibility relation are specified"
+    ]
+   },
+   {
+    "name": "Quine's criterion of ontological commitment",
+    "does": "reads what a theory says exists from what its quantifiers range over",
+    "hypotheses": [
+     "the theory is regimented in first-order logic"
+    ]
+   }
+  ],
+  "inputs": [
+   "claims",
+   "a regimented theory"
+  ],
+  "outputs": [
+   "argued conclusion",
+   "list of commitments"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-action",
+  "field": "PL",
+  "node": "PP:philosophy-of-action",
+  "name": "Philosophy of Action",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "say what makes a movement an action done for a reason"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-language",
+  "field": "PL",
+  "node": "PP:philosophy-of-language",
+  "name": "Philosophy of Language",
+  "taxonomy_cell": "PL.O.A3",
+  "solves": [
+   "say how words come to mean and refer"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "prove"
+   ],
+   "structure": [
+    "text_language",
+    "logical"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Truth-conditional compositional semantics",
+    "does": "derives a sentence's meaning from its parts and structure",
+    "hypotheses": [
+     "meaning is compositional",
+     "a syntactic structure is given"
+    ]
+   },
+   {
+    "name": "Gricean conversational implicature",
+    "does": "derives what is meant beyond what is said",
+    "hypotheses": [
+     "speakers are presumed cooperative",
+     "the hearer can work out the inference"
+    ]
+   }
+  ],
+  "inputs": [
+   "sentences in context"
+  ],
+  "outputs": [
+   "truth conditions",
+   "implicatures"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-mind",
+  "field": "PL",
+  "node": "PP:philosophy-of-mind",
+  "name": "Philosophy of Mind",
+  "taxonomy_cell": "PL.O.A2",
+  "solves": [
+   "say how mind relates to body"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Conceivability argument",
+    "does": "argues from what can be conceived to what is possible",
+    "hypotheses": [
+     "conceivability is a guide to possibility, which is disputed"
+    ]
+   }
+  ],
+  "inputs": [
+   "a described scenario"
+  ],
+  "outputs": [
+   "argued conclusion"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-religion",
+  "field": "PL",
+  "node": "PP:philosophy-of-religion",
+  "name": "Philosophy of Religion",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "assess arguments about the existence and nature of the divine"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "explain"
+   ],
+   "structure": [
+    "logical"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.me-misc",
+  "field": "PL",
+  "node": "PP:me-misc",
+  "name": "M&E, Misc",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.aesthetics",
+  "field": "PL",
+  "node": "PP:aesthetics",
+  "name": "Aesthetics",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "say what art and beauty are and how they are judged"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.applied-ethics",
+  "field": "PL",
+  "node": "PP:applied-ethics",
+  "name": "Applied Ethics",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "reach a defensible judgement on a practical moral question"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "explain"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Principlism (four principles)",
+    "does": "weighs autonomy, beneficence, non-maleficence and justice",
+    "hypotheses": [
+     "the principles are accepted as prima facie",
+     "they must be specified and balanced case by case"
+    ]
+   },
+   {
+    "name": "Reflective equilibrium",
+    "does": "adjusts principles and case judgements until they fit",
+    "hypotheses": [
+     "both are open to revision"
+    ]
+   }
+  ],
+  "inputs": [
+   "the case",
+   "principles"
+  ],
+  "outputs": [
+   "reasoned judgement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.meta-ethics",
+  "field": "PL",
+  "node": "PP:meta-ethics",
+  "name": "Meta-Ethics",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "say what moral claims mean and whether they can be true"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.normative-ethics",
+  "field": "PL",
+  "node": "PP:normative-ethics",
+  "name": "Normative Ethics",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "say what makes an act right"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "explain"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Universalisability test",
+    "does": "asks whether the maxim of an act could be willed as a rule for all",
+    "hypotheses": [
+     "the maxim is stated at the right level of generality"
+    ]
+   },
+   {
+    "name": "Expected-value consequentialist calculation",
+    "does": "ranks acts by the expected goodness of outcomes",
+    "hypotheses": [
+     "outcomes can be valued on one scale",
+     "probabilities can be assigned"
+    ]
+   }
+  ],
+  "inputs": [
+   "act and circumstances"
+  ],
+  "outputs": [
+   "verdict with reasons"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.feminist-philosophy",
+  "field": "PL",
+  "node": "PP:feminist-philosophy",
+  "name": "Feminist Philosophy",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "examine philosophical questions with attention to gender and power"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-gender",
+  "field": "PL",
+  "node": "PP:philosophy-of-gender",
+  "name": "Philosophy of Gender",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "say what gender is"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-race",
+  "field": "PL",
+  "node": "PP:philosophy-of-race",
+  "name": "Philosophy of Race",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "say what race is and how it bears on justice"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.the-nature-of-sexual-orientation",
+  "field": "PL",
+  "node": "PP:the-nature-of-sexual-orientation",
+  "name": "The Nature of Sexual Orientation",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.sexual-orientations",
+  "field": "PL",
+  "node": "PP:sexual-orientations",
+  "name": "Sexual Orientations",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.sexual-orientation-and-morality",
+  "field": "PL",
+  "node": "PP:sexual-orientation-and-morality",
+  "name": "Sexual Orientation and Morality",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.sexual-orientation-politics-and-the-law",
+  "field": "PL",
+  "node": "PP:sexual-orientation-politics-and-the-law",
+  "name": "Sexual Orientation, Politics, and the Law",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.queer-theory",
+  "field": "PL",
+  "node": "PP:queer-theory",
+  "name": "Queer Theory",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.topics-in-the-philosophy-of-sexual-orientation",
+  "field": "PL",
+  "node": "PP:topics-in-the-philosophy-of-sexual-orientation",
+  "name": "Topics in the Philosophy of Sexual Orientation",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.the-nature-of-sex",
+  "field": "PL",
+  "node": "PP:the-nature-of-sex",
+  "name": "The Nature of Sex",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.sexual-activities",
+  "field": "PL",
+  "node": "PP:sexual-activities",
+  "name": "Sexual Activities",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.sexual-phenomena",
+  "field": "PL",
+  "node": "PP:sexual-phenomena",
+  "name": "Sexual Phenomena",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.sexual-ethics",
+  "field": "PL",
+  "node": "PP:sexual-ethics",
+  "name": "Sexual Ethics",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.defining-love",
+  "field": "PL",
+  "node": "PP:defining-love",
+  "name": "Defining Love",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.features-of-love",
+  "field": "PL",
+  "node": "PP:features-of-love",
+  "name": "Features of Love",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.theories-of-love",
+  "field": "PL",
+  "node": "PP:theories-of-love",
+  "name": "Theories of Love",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.varieties-of-love",
+  "field": "PL",
+  "node": "PP:varieties-of-love",
+  "name": "Varieties of Love",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.ethics-of-love",
+  "field": "PL",
+  "node": "PP:ethics-of-love",
+  "name": "Ethics of Love",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-love-misc",
+  "field": "PL",
+  "node": "PP:philosophy-of-love-misc",
+  "name": "Philosophy of Love, Misc",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.relationships-and-marriage",
+  "field": "PL",
+  "node": "PP:relationships-and-marriage",
+  "name": "Relationships and Marriage",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-sexuality-miscellaneous",
+  "field": "PL",
+  "node": "PP:philosophy-of-sexuality-miscellaneous",
+  "name": "Philosophy of Sexuality, Miscellaneous",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-law",
+  "field": "PL",
+  "node": "PP:philosophy-of-law",
+  "name": "Philosophy of Law",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "say what law is and how it relates to morality"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.social-and-political-philosophy",
+  "field": "PL",
+  "node": "PP:social-and-political-philosophy",
+  "name": "Social and Political Philosophy",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "say what makes social arrangements just"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Original position (veil of ignorance)",
+    "does": "tests principles by what parties would choose without knowing their place",
+    "hypotheses": [
+     "the choice situation is specified",
+     "the parties are rational and mutually disinterested"
+    ]
+   }
+  ],
+  "inputs": [
+   "candidate principles"
+  ],
+  "outputs": [
+   "argued choice"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.value-theory-miscellaneous",
+  "field": "PL",
+  "node": "PP:value-theory-miscellaneous",
+  "name": "Value Theory, Miscellaneous",
+  "taxonomy_cell": "PL.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.logic-and-philosophy-of-logic",
+  "field": "PL",
+  "node": "PP:logic-and-philosophy-of-logic",
+  "name": "Logic and Philosophy of Logic",
+  "taxonomy_cell": "PL.O.A3",
+  "solves": [
+   "decide whether a conclusion follows"
+  ],
+  "signature": {
+   "task": [
+    "prove",
+    "verify"
+   ],
+   "structure": [
+    "logical"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "First-order logic with natural deduction",
+    "does": "tests validity by formal proof",
+    "hypotheses": [
+     "the argument can be expressed in a first-order language"
+    ]
+   },
+   {
+    "name": "Truth tables",
+    "does": "decide validity of propositional arguments",
+    "hypotheses": [
+     "propositional logic",
+     "classical two truth values"
+    ]
+   }
+  ],
+  "inputs": [
+   "premises and conclusion"
+  ],
+  "outputs": [
+   "validity verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "The logical theorems are owned by MA. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-biology",
+  "field": "PL",
+  "node": "PP:philosophy-of-biology",
+  "name": "Philosophy of Biology",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "clarify the concepts and explanations of biology"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-artificial-intelligence",
+  "field": "PL",
+  "node": "PP:philosophy-of-artificial-intelligence",
+  "name": "Philosophy of Artificial Intelligence",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "say whether and how a machine could think"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-psychology",
+  "field": "PL",
+  "node": "PP:philosophy-of-psychology",
+  "name": "Philosophy of Psychology",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "clarify the concepts and explanations of psychology"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-neuroscience",
+  "field": "PL",
+  "node": "PP:philosophy-of-neuroscience",
+  "name": "Philosophy of Neuroscience",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "clarify how brain science explains mind"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.alzheimers-disease",
+  "field": "PL",
+  "node": "PP:alzheimers-disease",
+  "name": "Alzheimer's Disease",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.autism",
+  "field": "PL",
+  "node": "PP:autism",
+  "name": "Autism",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.delirium",
+  "field": "PL",
+  "node": "PP:delirium",
+  "name": "Delirium",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.dementia",
+  "field": "PL",
+  "node": "PP:dementia",
+  "name": "Dementia",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.cognitive-disabilities-and-disorders-misc",
+  "field": "PL",
+  "node": "PP:cognitive-disabilities-and-disorders-misc",
+  "name": "Cognitive Disabilities and Disorders, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.schizophrenia",
+  "field": "PL",
+  "node": "PP:schizophrenia",
+  "name": "Schizophrenia",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.depression",
+  "field": "PL",
+  "node": "PP:depression",
+  "name": "Depression",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.bipolar-disorders",
+  "field": "PL",
+  "node": "PP:bipolar-disorders",
+  "name": "Bipolar Disorders",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.personality-disorders",
+  "field": "PL",
+  "node": "PP:personality-disorders",
+  "name": "Personality Disorders",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.psychopathy",
+  "field": "PL",
+  "node": "PP:psychopathy",
+  "name": "Psychopathy",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.other-mental-disorders",
+  "field": "PL",
+  "node": "PP:other-mental-disorders",
+  "name": "Other Mental Disorders",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.mental-illness",
+  "field": "PL",
+  "node": "PP:mental-illness",
+  "name": "Mental Illness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.disorders-and-syndromes-of-consciousness",
+  "field": "PL",
+  "node": "PP:disorders-and-syndromes-of-consciousness",
+  "name": "Disorders and Syndromes of Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.mental-disorders-misc",
+  "field": "PL",
+  "node": "PP:mental-disorders-misc",
+  "name": "Mental Disorders, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.psychopathology-misc",
+  "field": "PL",
+  "node": "PP:psychopathology-misc",
+  "name": "Psychopathology, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-psychiatry",
+  "field": "PL",
+  "node": "PP:philosophy-of-psychiatry",
+  "name": "Philosophy of Psychiatry",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "say what mental disorder is"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.psychotherapy-and-psychoanalysis",
+  "field": "PL",
+  "node": "PP:psychotherapy-and-psychoanalysis",
+  "name": "Psychotherapy and Psychoanalysis",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-psychiatry-and-psychopathology-misc",
+  "field": "PL",
+  "node": "PP:philosophy-of-psychiatry-and-psychopathology-misc",
+  "name": "Philosophy of Psychiatry and Psychopathology, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-cognitive-science-miscellaneous",
+  "field": "PL",
+  "node": "PP:philosophy-of-cognitive-science-miscellaneous",
+  "name": "Philosophy of Cognitive Science, Miscellaneous",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.neural-correlates-of-consciousness",
+  "field": "PL",
+  "node": "PP:neural-correlates-of-consciousness",
+  "name": "Neural Correlates of Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.cerebral-hemispheres-and-consciousness",
+  "field": "PL",
+  "node": "PP:cerebral-hemispheres-and-consciousness",
+  "name": "Cerebral Hemispheres and Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.neural-timing-and-consciousness",
+  "field": "PL",
+  "node": "PP:neural-timing-and-consciousness",
+  "name": "Neural Timing and Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.neural-synchrony-and-binding",
+  "field": "PL",
+  "node": "PP:neural-synchrony-and-binding",
+  "name": "Neural Synchrony and Binding",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.consciousness-and-neuroscience-foundational-issues",
+  "field": "PL",
+  "node": "PP:consciousness-and-neuroscience-foundational-issues",
+  "name": "Consciousness and Neuroscience, Foundational Issues",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.consciousness-and-neuroscience-misc",
+  "field": "PL",
+  "node": "PP:consciousness-and-neuroscience-misc",
+  "name": "Consciousness and Neuroscience, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.neural-correlates-of-visual-consciousness",
+  "field": "PL",
+  "node": "PP:neural-correlates-of-visual-consciousness",
+  "name": "Neural Correlates of Visual Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.science-of-visual-consciousness-misc",
+  "field": "PL",
+  "node": "PP:science-of-visual-consciousness-misc",
+  "name": "Science of Visual Consciousness, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.unconscious-and-conscious-processes",
+  "field": "PL",
+  "node": "PP:unconscious-and-conscious-processes",
+  "name": "Unconscious and Conscious Processes",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.neglect-and-extinction",
+  "field": "PL",
+  "node": "PP:neglect-and-extinction",
+  "name": "Neglect and Extinction",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.anosognosia",
+  "field": "PL",
+  "node": "PP:anosognosia",
+  "name": "Anosognosia",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.the-minimally-conscious-state",
+  "field": "PL",
+  "node": "PP:the-minimally-conscious-state",
+  "name": "The Minimally Conscious State",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.other-disorders-and-syndromes",
+  "field": "PL",
+  "node": "PP:other-disorders-and-syndromes",
+  "name": "Other Disorders and Syndromes",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.metacognition-and-consciousness",
+  "field": "PL",
+  "node": "PP:metacognition-and-consciousness",
+  "name": "Metacognition and Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.control-and-consciousness",
+  "field": "PL",
+  "node": "PP:control-and-consciousness",
+  "name": "Control and Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.action-and-consciousness-in-psychology",
+  "field": "PL",
+  "node": "PP:action-and-consciousness-in-psychology",
+  "name": "Action and Consciousness in Psychology",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.time-and-consciousness-in-psychology",
+  "field": "PL",
+  "node": "PP:time-and-consciousness-in-psychology",
+  "name": "Time and Consciousness in Psychology",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.the-stream-of-consciousness",
+  "field": "PL",
+  "node": "PP:the-stream-of-consciousness",
+  "name": "The Stream of Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.consciousness-and-psychology-foundational-issues",
+  "field": "PL",
+  "node": "PP:consciousness-and-psychology-foundational-issues",
+  "name": "Consciousness and Psychology, Foundational Issues",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.consciousness-and-psychology-misc",
+  "field": "PL",
+  "node": "PP:consciousness-and-psychology-misc",
+  "name": "Consciousness and Psychology, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.states-of-consciousness",
+  "field": "PL",
+  "node": "PP:states-of-consciousness",
+  "name": "States of Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.consciousness-and-physics",
+  "field": "PL",
+  "node": "PP:consciousness-and-physics",
+  "name": "Consciousness and Physics",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.consciousness-and-biology-misc",
+  "field": "PL",
+  "node": "PP:consciousness-and-biology-misc",
+  "name": "Consciousness and Biology, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.verbal-reports-and-heterophenomenology",
+  "field": "PL",
+  "node": "PP:verbal-reports-and-heterophenomenology",
+  "name": "Verbal Reports and Heterophenomenology",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.phenomenology-and-consciousness",
+  "field": "PL",
+  "node": "PP:phenomenology-and-consciousness",
+  "name": "Phenomenology and Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.eastern-approaches-to-consciousness",
+  "field": "PL",
+  "node": "PP:eastern-approaches-to-consciousness",
+  "name": "Eastern Approaches to Consciousness",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.first-person-approaches-in-the-science-of-consciousness-misc",
+  "field": "PL",
+  "node": "PP:first-person-approaches-in-the-science-of-consciousness-misc",
+  "name": "First-Person Approaches in the Science of Consciousness, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.science-of-consciousness-miscellaneous",
+  "field": "PL",
+  "node": "PP:science-of-consciousness-miscellaneous",
+  "name": "Science of Consciousness, Miscellaneous",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-computing-and-information",
+  "field": "PL",
+  "node": "PP:philosophy-of-computing-and-information",
+  "name": "Philosophy of Computing and Information",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "say what computation and information are"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-mathematics",
+  "field": "PL",
+  "node": "PP:philosophy-of-mathematics",
+  "name": "Philosophy of Mathematics",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "say what mathematical objects are and how they are known"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-physical-science",
+  "field": "PL",
+  "node": "PP:philosophy-of-physical-science",
+  "name": "Philosophy of Physical Science",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "clarify what physical theories say about the world"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-anthropology",
+  "field": "PL",
+  "node": "PP:philosophy-of-anthropology",
+  "name": "Philosophy of Anthropology",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-archaeology",
+  "field": "PL",
+  "node": "PP:philosophy-of-archaeology",
+  "name": "Philosophy of Archaeology",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-economics",
+  "field": "PL",
+  "node": "PP:philosophy-of-economics",
+  "name": "Philosophy of Economics",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "clarify the assumptions and values of economics"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-education",
+  "field": "PL",
+  "node": "PP:philosophy-of-education",
+  "name": "Philosophy of Education",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-geography",
+  "field": "PL",
+  "node": "PP:philosophy-of-geography",
+  "name": "Philosophy of Geography",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-history",
+  "field": "PL",
+  "node": "PP:philosophy-of-history",
+  "name": "Philosophy of History",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "say what historical explanation is"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-sociology",
+  "field": "PL",
+  "node": "PP:philosophy-of-sociology",
+  "name": "Philosophy of Sociology",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-social-science-miscellaneous",
+  "field": "PL",
+  "node": "PP:philosophy-of-social-science-miscellaneous",
+  "name": "Philosophy of Social Science, Miscellaneous",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-probability",
+  "field": "PL",
+  "node": "PP:philosophy-of-probability",
+  "name": "Philosophy of Probability",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "say what a probability statement means"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "prove"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dutch book argument",
+    "does": "shows incoherent degrees of belief allow a sure loss",
+    "hypotheses": [
+     "degrees of belief are betting prices",
+     "every fair bet is accepted"
+    ]
+   },
+   {
+    "name": "Principal Principle",
+    "does": "says belief should match known objective chance",
+    "hypotheses": [
+     "no inadmissible evidence about the outcome is held"
+    ]
+   }
+  ],
+  "inputs": [
+   "probability claims"
+  ],
+  "outputs": [
+   "interpretation",
+   "coherence verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.general-philosophy-of-science",
+  "field": "PL",
+  "node": "PP:general-philosophy-of-science",
+  "name": "General Philosophy of Science",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "say when evidence supports a theory and what explanation is"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bayesian confirmation",
+    "does": "says evidence supports a hypothesis when it raises its probability",
+    "hypotheses": [
+     "prior and likelihoods are specified"
+    ]
+   },
+   {
+    "name": "Falsification",
+    "does": "tests a hypothesis by a prediction that could fail",
+    "hypotheses": [
+     "a testable prediction",
+     "auxiliary assumptions held fixed"
+    ]
+   },
+   {
+    "name": "Inference to the best explanation",
+    "does": "prefers the hypothesis that would best explain the evidence",
+    "hypotheses": [
+     "rival hypotheses are listed",
+     "criteria of explanatory quality are stated"
+    ]
+   }
+  ],
+  "inputs": [
+   "hypothesis and evidence"
+  ],
+  "outputs": [
+   "degree of support"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-science-misc",
+  "field": "PL",
+  "node": "PP:philosophy-of-science-misc",
+  "name": "Philosophy of Science, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.ancient-greek-and-roman-philosophy",
+  "field": "PL",
+  "node": "PP:ancient-greek-and-roman-philosophy",
+  "name": "Ancient Greek and Roman Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "establish what an author meant"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Charitable exegesis",
+    "does": "reads a text so its argument is as strong as the words allow",
+    "hypotheses": [
+     "a reliable text is established",
+     "historical context is taken into account"
+    ]
+   }
+  ],
+  "inputs": [
+   "the text and context"
+  ],
+  "outputs": [
+   "interpretation traced to passages"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.medieval-and-renaissance-philosophy",
+  "field": "PL",
+  "node": "PP:medieval-and-renaissance-philosophy",
+  "name": "Medieval and Renaissance Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "establish what an author meant"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Charitable exegesis",
+    "does": "reads a text so its argument is as strong as the words allow",
+    "hypotheses": [
+     "a reliable text is established",
+     "historical context is taken into account"
+    ]
+   }
+  ],
+  "inputs": [
+   "the text and context"
+  ],
+  "outputs": [
+   "interpretation traced to passages"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.17th18th-century-philosophy",
+  "field": "PL",
+  "node": "PP:17th18th-century-philosophy",
+  "name": "17th/18th Century Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "establish what an author meant"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Charitable exegesis",
+    "does": "reads a text so its argument is as strong as the words allow",
+    "hypotheses": [
+     "a reliable text is established",
+     "historical context is taken into account"
+    ]
+   }
+  ],
+  "inputs": [
+   "the text and context"
+  ],
+  "outputs": [
+   "interpretation traced to passages"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.19th-century-philosophy",
+  "field": "PL",
+  "node": "PP:19th-century-philosophy",
+  "name": "19th Century Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "establish what an author meant"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Charitable exegesis",
+    "does": "reads a text so its argument is as strong as the words allow",
+    "hypotheses": [
+     "a reliable text is established",
+     "historical context is taken into account"
+    ]
+   }
+  ],
+  "inputs": [
+   "the text and context"
+  ],
+  "outputs": [
+   "interpretation traced to passages"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.20th-century-philosophy",
+  "field": "PL",
+  "node": "PP:20th-century-philosophy",
+  "name": "20th Century Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "establish what an author meant"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Charitable exegesis",
+    "does": "reads a text so its argument is as strong as the words allow",
+    "hypotheses": [
+     "a reliable text is established",
+     "historical context is taken into account"
+    ]
+   }
+  ],
+  "inputs": [
+   "the text and context"
+  ],
+  "outputs": [
+   "interpretation traced to passages"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.history-of-western-philosophy-misc",
+  "field": "PL",
+  "node": "PP:history-of-western-philosophy-misc",
+  "name": "History of Western Philosophy, Misc",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.africanafricana-philosophy",
+  "field": "PL",
+  "node": "PP:africanafricana-philosophy",
+  "name": "African/Africana Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.asian-philosophy",
+  "field": "PL",
+  "node": "PP:asian-philosophy",
+  "name": "Asian Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.continental-philosophy",
+  "field": "PL",
+  "node": "PP:continental-philosophy",
+  "name": "Continental Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.european-philosophy",
+  "field": "PL",
+  "node": "PP:european-philosophy",
+  "name": "European Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-of-the-americas",
+  "field": "PL",
+  "node": "PP:philosophy-of-the-americas",
+  "name": "Philosophy of the Americas",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophical-traditions-miscellaneous",
+  "field": "PL",
+  "node": "PP:philosophical-traditions-miscellaneous",
+  "name": "Philosophical Traditions, Miscellaneous",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-introductions-and-anthologies",
+  "field": "PL",
+  "node": "PP:philosophy-introductions-and-anthologies",
+  "name": "Philosophy, Introductions and Anthologies",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-general-works",
+  "field": "PL",
+  "node": "PP:philosophy-general-works",
+  "name": "Philosophy, General Works",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-aesthetics",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-aesthetics",
+  "name": "Philosophy for Children: Aesthetics",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-community-of-inquiry",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-community-of-inquiry",
+  "name": "Philosophy for Children: Community of Inquiry",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-educational-theory-and-methods",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-educational-theory-and-methods",
+  "name": "Philosophy for Children: Educational Theory and Methods",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-ethics",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-ethics",
+  "name": "Philosophy for Children: Ethics",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-metaphilosophy",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-metaphilosophy",
+  "name": "Philosophy for Children: Metaphilosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-religion-and-spirituality",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-religion-and-spirituality",
+  "name": "Philosophy for Children: Religion and Spirituality",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-political-philosophy",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-political-philosophy",
+  "name": "Philosophy for Children: Political Philosophy",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-reasoning",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-reasoning",
+  "name": "Philosophy for Children: Reasoning",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-specific-philosophers",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-specific-philosophers",
+  "name": "Philosophy for Children: Specific Philosophers",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-introductions",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-introductions",
+  "name": "Philosophy for Children: Introductions",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-in-schools",
+  "field": "PL",
+  "node": "PP:philosophy-in-schools",
+  "name": "Philosophy in Schools",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-for-children-misc",
+  "field": "PL",
+  "node": "PP:philosophy-for-children-misc",
+  "name": "Philosophy for Children, Misc",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.teaching-philosophy-misc",
+  "field": "PL",
+  "node": "PP:teaching-philosophy-misc",
+  "name": "Teaching Philosophy, Misc",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.philosophy-miscellaneous",
+  "field": "PL",
+  "node": "PP:philosophy-miscellaneous",
+  "name": "Philosophy, Miscellaneous",
+  "taxonomy_cell": "PL.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.natural-sciences",
+  "field": "PL",
+  "node": "PP:natural-sciences",
+  "name": "Natural Sciences",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.social-sciences",
+  "field": "PL",
+  "node": "PP:social-sciences",
+  "name": "Social Sciences",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.cognitive-sciences",
+  "field": "PL",
+  "node": "PP:cognitive-sciences",
+  "name": "Cognitive Sciences",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.formal-sciences",
+  "field": "PL",
+  "node": "PP:formal-sciences",
+  "name": "Formal Sciences",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.arts-and-humanities",
+  "field": "PL",
+  "node": "PP:arts-and-humanities",
+  "name": "Arts and Humanities",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.professional-areas",
+  "field": "PL",
+  "node": "PP:professional-areas",
+  "name": "Professional Areas",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PL.TK.other-academic-areas-misc",
+  "field": "PL",
+  "node": "PP:other-academic-areas-misc",
+  "name": "Other Academic Areas, Misc",
+  "taxonomy_cell": "PL.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A topic heading of the scheme. Philosophical work here uses the general methods listed at level 1: argument, cases and reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

@@ -1,0 +1,491 @@
+[
+ {
+  "id": "MD.TK.C",
+  "field": "MD",
+  "node": "MeSH:C",
+  "name": "Diseases",
+  "taxonomy_cell": "MD.O.A1",
+  "solves": [
+   "decide which of several conditions explains a set of findings"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bayesian diagnostic reasoning with likelihood ratios",
+    "does": "updates the probability of a condition after a test result",
+    "hypotheses": [
+     "the pre-test probability is estimated for this setting",
+     "test accuracy comes from a comparable population",
+     "tests combined are conditionally independent"
+    ]
+   }
+  ],
+  "inputs": [
+   "history, signs and test results"
+  ],
+  "outputs": [
+   "ranked diagnoses with probabilities"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MD.TK.E",
+  "field": "MD",
+  "node": "MeSH:E",
+  "name": "Analytical, Diagnostic and Therapeutic Techniques, and Equipment",
+  "taxonomy_cell": "MD.O.A3",
+  "solves": [
+   "find whether an intervention works",
+   "find how well a test detects a condition",
+   "estimate time to an event"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare",
+    "verify"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Randomised controlled trial",
+    "does": "estimates the causal effect of an intervention",
+    "hypotheses": [
+     "allocation is random and concealed",
+     "the sample gives adequate power",
+     "outcomes are assessed blind where possible",
+     "analysis is by intention to treat"
+    ]
+   },
+   {
+    "name": "Diagnostic accuracy study",
+    "does": "measures sensitivity and specificity",
+    "hypotheses": [
+     "every participant receives the reference standard",
+     "participants reflect the range seen in practice"
+    ]
+   },
+   {
+    "name": "Kaplan–Meier estimator",
+    "does": "estimates survival over time",
+    "hypotheses": [
+     "censoring is unrelated to outcome"
+    ]
+   }
+  ],
+  "inputs": [
+   "participants and outcomes",
+   "test and reference results",
+   "follow-up times"
+  ],
+  "outputs": [
+   "effect size with interval",
+   "sensitivity and specificity",
+   "survival curve"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MD.TK.N",
+  "field": "MD",
+  "node": "MeSH:N",
+  "name": "Health Care",
+  "taxonomy_cell": "MD.O.A5",
+  "solves": [
+   "choose between interventions under a fixed budget",
+   "compare outcomes between populations of different make-up"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "optimise"
+   ],
+   "constraints": [
+    "resource_budget"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cost-effectiveness analysis",
+    "does": "compares cost per unit of health gained",
+    "hypotheses": [
+     "the alternatives are comparable",
+     "the perspective and time horizon are stated",
+     "the utility weights are valid for the population"
+    ]
+   },
+   {
+    "name": "Standardised mortality ratio",
+    "does": "compares observed with expected deaths",
+    "hypotheses": [
+     "age-specific rates from a suitable reference population"
+    ]
+   }
+  ],
+  "inputs": [
+   "costs and outcomes",
+   "deaths and population by age"
+  ],
+  "outputs": [
+   "incremental cost-effectiveness ratio",
+   "standardised ratio"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MD.TK.A15",
+  "field": "MD",
+  "node": "MeSH:A15",
+  "name": "Hemic and Immune Systems",
+  "taxonomy_cell": "MD.O.A2",
+  "solves": [
+   "count and sort cells by the markers they carry"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "count"
+   ],
+   "data": [
+    "data_rich"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Flow cytometry immunophenotyping",
+    "does": "counts cell types by fluorescent markers",
+    "hypotheses": [
+     "antibodies are specific to their markers",
+     "cells are in single-cell suspension",
+     "spectral overlap is compensated"
+    ]
+   }
+  ],
+  "inputs": [
+   "blood or tissue sample"
+  ],
+  "outputs": [
+   "counts per cell type"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MD.TK.B04",
+  "field": "MD",
+  "node": "MeSH:B04",
+  "name": "Viruses",
+  "taxonomy_cell": "MD.O.A2",
+  "solves": [
+   "detect a replicating agent too small to see",
+   "predict whether it will spread"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Polymerase chain reaction test",
+    "does": "detects a target nucleic-acid sequence",
+    "hypotheses": [
+     "primers match the target sequence",
+     "no contamination",
+     "target is above the detection limit"
+    ]
+   },
+   {
+    "name": "Plaque assay",
+    "does": "counts infectious particles",
+    "hypotheses": [
+     "the agent forms visible plaques in the cell line used"
+    ]
+   },
+   {
+    "name": "Epidemic threshold (basic reproduction number)",
+    "does": "says spread occurs when each case causes more than one new case",
+    "hypotheses": [
+     "homogeneous mixing",
+     "a fully susceptible population"
+    ]
+   }
+  ],
+  "inputs": [
+   "clinical samples",
+   "contact and transmission rates"
+  ],
+  "outputs": [
+   "presence or absence",
+   "infectious titre",
+   "threshold verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MD.TK.D27",
+  "field": "MD",
+  "node": "MeSH:D27",
+  "name": "Chemical Actions and Uses",
+  "taxonomy_cell": "MD.O.A4",
+  "solves": [
+   "relate the amount given to the size of the effect",
+   "predict the level in the body over time"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hill dose-response model",
+    "does": "fits effect as a saturating function of concentration",
+    "hypotheses": [
+     "reversible binding at equilibrium",
+     "one receptor population"
+    ]
+   },
+   {
+    "name": "Compartmental pharmacokinetics",
+    "does": "predicts concentration over time",
+    "hypotheses": [
+     "each compartment is well mixed",
+     "elimination is first order"
+    ]
+   }
+  ],
+  "inputs": [
+   "dose and effect measurements",
+   "concentration over time"
+  ],
+  "outputs": [
+   "potency and maximum effect",
+   "half-life and clearance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MD.TK.F03",
+  "field": "MD",
+  "node": "MeSH:F03",
+  "name": "Mental Disorders",
+  "taxonomy_cell": "MD.O.A1",
+  "solves": [
+   "assign a condition from reported experience and observed behaviour",
+   "measure severity over time"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Criterion-based diagnosis (DSM, ICD)",
+    "does": "assigns a category when listed criteria are met",
+    "hypotheses": [
+     "a structured assessment is used",
+     "the categories are conventions that describe syndromes"
+    ]
+   },
+   {
+    "name": "Validated rating scales",
+    "does": "measure severity as a score",
+    "hypotheses": [
+     "the scale is validated for this population and language"
+    ]
+   }
+  ],
+  "inputs": [
+   "interview and history",
+   "scale responses"
+  ],
+  "outputs": [
+   "diagnosis",
+   "severity score"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MD.TK.G09",
+  "field": "MD",
+  "node": "MeSH:G09",
+  "name": "Circulatory and Respiratory Physiological Phenomena",
+  "taxonomy_cell": "MD.O.A2",
+  "solves": [
+   "measure flow that cannot be observed directly",
+   "relate pressure to flow in a vessel"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "constraints": [
+    "physical_law"
+   ],
+   "domain_type": [
+    "continuous"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fick principle",
+    "does": "computes flow from uptake of a marker and its concentration difference",
+    "hypotheses": [
+     "steady state",
+     "the marker is neither made nor used elsewhere on the path"
+    ]
+   },
+   {
+    "name": "Poiseuille's law",
+    "does": "relates flow to pressure drop and the fourth power of radius",
+    "hypotheses": [
+     "laminar flow",
+     "a Newtonian fluid",
+     "a rigid straight tube",
+     "these hold only roughly for blood in vessels"
+    ]
+   }
+  ],
+  "inputs": [
+   "marker uptake and concentrations",
+   "pressure and vessel size"
+  ],
+  "outputs": [
+   "flow rate",
+   "resistance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MD.TK.G12",
+  "field": "MD",
+  "node": "MeSH:G12",
+  "name": "Immune System Phenomena",
+  "taxonomy_cell": "MD.O.A2",
+  "solves": [
+   "measure a specific binding molecule in a fluid",
+   "state the coverage needed to stop spread"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Enzyme-linked immunosorbent assay",
+    "does": "measures the amount of a target by antibody binding",
+    "hypotheses": [
+     "the antibody is specific",
+     "the reading lies within the standard curve"
+    ]
+   },
+   {
+    "name": "Herd immunity threshold",
+    "does": "gives the immune share needed to stop sustained spread",
+    "hypotheses": [
+     "homogeneous mixing",
+     "immunity is fully protective, or the formula is adjusted for effectiveness"
+    ]
+   }
+  ],
+  "inputs": [
+   "fluid sample",
+   "reproduction number"
+  ],
+  "outputs": [
+   "concentration",
+   "threshold coverage"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

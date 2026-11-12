@@ -1,0 +1,1208 @@
+[
+ {
+  "id": "IS.TK.460501",
+  "field": "IS",
+  "node": "ANZSRC:460501",
+  "name": "Data engineering and data science",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "build pipelines that turn raw data into usable results"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "construct"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460502",
+  "field": "IS",
+  "node": "ANZSRC:460502",
+  "name": "Data mining and knowledge discovery",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "find regular patterns in large collections of records"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "classify"
+   ],
+   "data": [
+    "data_rich"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Association rule mining (Apriori)",
+    "does": "finds items that occur together",
+    "hypotheses": [
+     "a minimum support threshold is set",
+     "any subset of a frequent set is frequent"
+    ]
+   },
+   {
+    "name": "k-means clustering",
+    "does": "groups records around k centres",
+    "hypotheses": [
+     "the number of clusters is chosen",
+     "clusters are roughly round and similar in size",
+     "it finds a local optimum"
+    ]
+   }
+  ],
+  "inputs": [
+   "transaction or feature data"
+  ],
+  "outputs": [
+   "rules",
+   "clusters"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460503",
+  "field": "IS",
+  "node": "ANZSRC:460503",
+  "name": "Data models, storage and indexing",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "store data so it can be found quickly"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "B-tree index",
+    "does": "keeps keys sorted for logarithmic-time search",
+    "hypotheses": [
+     "keys have a total order"
+    ]
+   },
+   {
+    "name": "Hash index",
+    "does": "finds a record by exact key in near-constant time",
+    "hypotheses": [
+     "exact-match queries",
+     "the hash spreads keys evenly"
+    ]
+   }
+  ],
+  "inputs": [
+   "data and query patterns"
+  ],
+  "outputs": [
+   "index design"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460504",
+  "field": "IS",
+  "node": "ANZSRC:460504",
+  "name": "Data quality",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "find and fix records that are wrong or duplicated"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "classify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Probabilistic record linkage (Fellegi–Sunter)",
+    "does": "decides whether two records refer to the same entity",
+    "hypotheses": [
+     "field agreements are conditionally independent given match status",
+     "match and non-match probabilities are estimated"
+    ]
+   }
+  ],
+  "inputs": [
+   "two record sets"
+  ],
+  "outputs": [
+   "linked pairs"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460505",
+  "field": "IS",
+  "node": "ANZSRC:460505",
+  "name": "Database systems",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "keep shared data correct when many users change it at once"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "ACID transactions",
+    "does": "make each group of changes all-or-nothing and isolated",
+    "hypotheses": [
+     "the system logs changes durably",
+     "an isolation level is chosen"
+    ]
+   },
+   {
+    "name": "Relational normalisation",
+    "does": "removes redundancy by splitting tables",
+    "hypotheses": [
+     "functional dependencies among attributes are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "schema",
+   "workload"
+  ],
+  "outputs": [
+   "transaction design",
+   "normalised schema"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460506",
+  "field": "IS",
+  "node": "ANZSRC:460506",
+  "name": "Graph, social and multimedia data",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "rank the items in a web of links"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "classify"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "PageRank",
+    "does": "scores nodes by the stationary distribution of a random walk",
+    "hypotheses": [
+     "a damping factor makes the walk irreducible and aperiodic"
+    ]
+   }
+  ],
+  "inputs": [
+   "link graph"
+  ],
+  "outputs": [
+   "node scores"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460507",
+  "field": "IS",
+  "node": "ANZSRC:460507",
+  "name": "Information extraction and fusion",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "pull structured facts out of text and combine sources"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "construct"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460508",
+  "field": "IS",
+  "node": "ANZSRC:460508",
+  "name": "Information retrieval and web search",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "return the most relevant documents for a query"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ],
+   "structure": [
+    "text_language"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Inverted index",
+    "does": "maps each term to the documents holding it",
+    "hypotheses": [
+     "documents are split into terms"
+    ]
+   },
+   {
+    "name": "BM25 ranking",
+    "does": "scores documents by term frequency and rarity",
+    "hypotheses": [
+     "terms are treated as independent",
+     "parameters are tuned for the collection"
+    ]
+   },
+   {
+    "name": "Precision and recall evaluation",
+    "does": "scores a system against known relevant items",
+    "hypotheses": [
+     "relevance judgements exist for a test collection"
+    ]
+   }
+  ],
+  "inputs": [
+   "document collection",
+   "queries"
+  ],
+  "outputs": [
+   "ranked results",
+   "scores"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460509",
+  "field": "IS",
+  "node": "ANZSRC:460509",
+  "name": "Query processing and optimisation",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "choose the cheapest way to answer a query"
+  ],
+  "signature": {
+   "task": [
+    "optimise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cost-based query optimisation",
+    "does": "picks a plan using estimated result sizes",
+    "hypotheses": [
+     "table statistics are current",
+     "attribute values are assumed independent unless joint statistics exist"
+    ]
+   }
+  ],
+  "inputs": [
+   "query",
+   "statistics"
+  ],
+  "outputs": [
+   "execution plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460510",
+  "field": "IS",
+  "node": "ANZSRC:460510",
+  "name": "Recommender systems",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "predict what a person will like from past behaviour"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "data": [
+    "data_rich"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Collaborative filtering by matrix factorisation",
+    "does": "predicts ratings from low-rank structure",
+    "hypotheses": [
+     "preferences have low-rank structure",
+     "enough ratings per user and item",
+     "missing ratings are not strongly selective"
+    ]
+   }
+  ],
+  "inputs": [
+   "user-item ratings"
+  ],
+  "outputs": [
+   "predicted ratings"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460511",
+  "field": "IS",
+  "node": "ANZSRC:460511",
+  "name": "Stream and sensor data",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "summarise data that arrives too fast to store"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "data": [
+    "streaming"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Count-min sketch",
+    "does": "estimates item frequencies in small memory",
+    "hypotheses": [
+     "it overestimates by a bounded amount with stated probability",
+     "hash functions are pairwise independent"
+    ]
+   },
+   {
+    "name": "Reservoir sampling",
+    "does": "keeps a uniform random sample of a stream",
+    "hypotheses": [
+     "the stream is read once",
+     "its length need not be known"
+    ]
+   }
+  ],
+  "inputs": [
+   "data stream"
+  ],
+  "outputs": [
+   "frequency estimates",
+   "sample"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460599",
+  "field": "IS",
+  "node": "ANZSRC:460599",
+  "name": "Data management and data science not elsewhere classified",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460901",
+  "field": "IS",
+  "node": "ANZSRC:460901",
+  "name": "Business process management",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "describe and improve how work flows through an organisation"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Business process modelling (BPMN)",
+    "does": "draws a process as tasks, events and gateways",
+    "hypotheses": [
+     "the process can be described as discrete steps"
+    ]
+   },
+   {
+    "name": "Process mining",
+    "does": "discovers the actual process from event logs",
+    "hypotheses": [
+     "events carry a case identifier, an activity and a timestamp"
+    ]
+   }
+  ],
+  "inputs": [
+   "process description",
+   "event log"
+  ],
+  "outputs": [
+   "process model",
+   "deviations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460902",
+  "field": "IS",
+  "node": "ANZSRC:460902",
+  "name": "Decision support and group support systems",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "support decisions with data and models"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460903",
+  "field": "IS",
+  "node": "ANZSRC:460903",
+  "name": "Information modelling, management and ontologies",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "describe a domain so a system can hold it"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Entity-relationship modelling",
+    "does": "describes a domain as things and links",
+    "hypotheses": [
+     "the domain can be described as entities with relationships"
+    ]
+   },
+   {
+    "name": "Ontology in description logic (OWL)",
+    "does": "defines classes and relations so that inferences can be checked",
+    "hypotheses": [
+     "the chosen logic fragment is decidable",
+     "the open-world assumption is intended"
+    ]
+   }
+  ],
+  "inputs": [
+   "requirements"
+  ],
+  "outputs": [
+   "data model",
+   "ontology"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460904",
+  "field": "IS",
+  "node": "ANZSRC:460904",
+  "name": "Information security management",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "decide which information risks to treat"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "control"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Risk assessment under ISO/IEC 27001",
+    "does": "identifies assets, threats and controls",
+    "hypotheses": [
+     "the scope is defined",
+     "risk criteria are set by management"
+    ]
+   }
+  ],
+  "inputs": [
+   "asset register",
+   "threats"
+  ],
+  "outputs": [
+   "risk treatment plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460905",
+  "field": "IS",
+  "node": "ANZSRC:460905",
+  "name": "Information systems development methodologies and practice",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "organise the building of an information system"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460906",
+  "field": "IS",
+  "node": "ANZSRC:460906",
+  "name": "Information systems education",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "teach information systems"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460907",
+  "field": "IS",
+  "node": "ANZSRC:460907",
+  "name": "Information systems for sustainable development and the public good",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "apply information systems to public benefit"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460908",
+  "field": "IS",
+  "node": "ANZSRC:460908",
+  "name": "Information systems organisation and management",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "manage information systems in an organisation"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460909",
+  "field": "IS",
+  "node": "ANZSRC:460909",
+  "name": "Information systems philosophy, research methods and theory",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "say what counts as knowledge about information systems"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460910",
+  "field": "IS",
+  "node": "ANZSRC:460910",
+  "name": "Information systems user experience design and development",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "predict and test whether people will use a system"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Technology acceptance model",
+    "does": "predicts use from perceived usefulness and ease of use",
+    "hypotheses": [
+     "perceptions come from a valid survey",
+     "use is voluntary"
+    ]
+   },
+   {
+    "name": "Usability testing",
+    "does": "observes users doing set tasks",
+    "hypotheses": [
+     "participants and tasks represent real use"
+    ]
+   }
+  ],
+  "inputs": [
+   "survey responses",
+   "prototype"
+  ],
+  "outputs": [
+   "predicted uptake",
+   "problems"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460911",
+  "field": "IS",
+  "node": "ANZSRC:460911",
+  "name": "Inter-organisational, extra-organisational and global information systems",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "link the information systems of separate organisations"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460912",
+  "field": "IS",
+  "node": "ANZSRC:460912",
+  "name": "Knowledge and information management",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "capture and share what an organisation knows"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.460999",
+  "field": "IS",
+  "node": "ANZSRC:460999",
+  "name": "Information systems not elsewhere classified",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461001",
+  "field": "IS",
+  "node": "ANZSRC:461001",
+  "name": "Digital curation and preservation",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "keep digital material usable over time"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "OAIS reference model",
+    "does": "defines the functions of an archive",
+    "hypotheses": [
+     "a designated community of users is identified"
+    ]
+   },
+   {
+    "name": "Fixity checking with checksums",
+    "does": "detects unintended change to a file",
+    "hypotheses": [
+     "checksums are stored separately and recomputed on a schedule"
+    ]
+   }
+  ],
+  "inputs": [
+   "digital objects"
+  ],
+  "outputs": [
+   "preservation plan",
+   "integrity report"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461002",
+  "field": "IS",
+  "node": "ANZSRC:461002",
+  "name": "Human information behaviour",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "explain how people look for and use information"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461003",
+  "field": "IS",
+  "node": "ANZSRC:461003",
+  "name": "Human information interaction and retrieval",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "design how people search and interact with information"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461004",
+  "field": "IS",
+  "node": "ANZSRC:461004",
+  "name": "Information governance, policy and ethics",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "set rules for holding and using information"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461005",
+  "field": "IS",
+  "node": "ANZSRC:461005",
+  "name": "Informetrics",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "measure the production and use of publications"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Citation analysis",
+    "does": "counts and normalises citations",
+    "hypotheses": [
+     "citation practices are comparable within the field",
+     "counts indicate use, not quality"
+    ]
+   },
+   {
+    "name": "Bradford's law",
+    "does": "says a few sources carry most papers on a subject",
+    "hypotheses": [
+     "an empirical regularity",
+     "a large bibliography on one subject"
+    ]
+   }
+  ],
+  "inputs": [
+   "publication and citation records"
+  ],
+  "outputs": [
+   "indicators",
+   "core sources"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461006",
+  "field": "IS",
+  "node": "ANZSRC:461006",
+  "name": "Library studies",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "run libraries and their services"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461007",
+  "field": "IS",
+  "node": "ANZSRC:461007",
+  "name": "Open access",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "make publications free to read and reuse"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461008",
+  "field": "IS",
+  "node": "ANZSRC:461008",
+  "name": "Organisation of information and knowledge resources",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "organise a collection so items can be found"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Faceted classification",
+    "does": "describes each item by independent facets",
+    "hypotheses": [
+     "mutually exclusive facets can be defined"
+    ]
+   },
+   {
+    "name": "Authority control",
+    "does": "uses one established form for each name or subject",
+    "hypotheses": [
+     "an authority file is maintained"
+    ]
+   }
+  ],
+  "inputs": [
+   "collection"
+  ],
+  "outputs": [
+   "classification",
+   "consistent headings"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461009",
+  "field": "IS",
+  "node": "ANZSRC:461009",
+  "name": "Recordkeeping informatics",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "keep records that serve as evidence of activity"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "design"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461010",
+  "field": "IS",
+  "node": "ANZSRC:461010",
+  "name": "Social and community informatics",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "study how communities use information technology"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.461099",
+  "field": "IS",
+  "node": "ANZSRC:461099",
+  "name": "Library and information studies not elsewhere classified",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

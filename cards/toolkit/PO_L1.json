@@ -1,0 +1,461 @@
+[
+ {
+  "id": "PO.TK.HX",
+  "field": "PO",
+  "node": "LCC:HX",
+  "name": "Socialism. Communism. Anarchism",
+  "taxonomy_cell": "PO.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for bodies of political doctrine. Work here rests on argument and on reading texts. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.J",
+  "field": "PO",
+  "node": "LCC:J",
+  "name": "General legislative and executive papers",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue of official papers. These are sources, not tools. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JA",
+  "field": "PO",
+  "node": "LCC:JA",
+  "name": "Political science (General)",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "explain an outcome by comparing a few cases",
+   "test a causal story inside one case"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer",
+    "compare"
+   ],
+   "data": [
+    "data_poor"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Mill's methods of agreement and difference",
+    "does": "isolate a cause by comparing cases",
+    "hypotheses": [
+     "the cases are comparable",
+     "the candidate causes are all listed",
+     "causation is treated as deterministic"
+    ]
+   },
+   {
+    "name": "Process tracing",
+    "does": "tests a causal account against evidence from within a case",
+    "hypotheses": [
+     "the tests are stated before the evidence is read",
+     "sources are independent of the account"
+    ]
+   }
+  ],
+  "inputs": [
+   "case records"
+  ],
+  "outputs": [
+   "supported or rejected explanation"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JC",
+  "field": "PO",
+  "node": "LCC:JC",
+  "name": "Political theory",
+  "taxonomy_cell": "PO.O.A1",
+  "solves": [
+   "justify or criticise a form of rule by argument"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ],
+   "goal_quality": [
+    "qualitative"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Social contract argument",
+    "does": "tests an arrangement by whether parties would agree to it",
+    "hypotheses": [
+     "the choice situation and the parties are specified"
+    ]
+   }
+  ],
+  "inputs": [
+   "premises about persons and circumstances"
+  ],
+  "outputs": [
+   "argued conclusion with replies to objections"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JF",
+  "field": "PO",
+  "node": "LCC:JF",
+  "name": "Political institutions and public administration",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "predict whether rules will change",
+   "predict how many parties a voting rule sustains"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Veto player analysis",
+    "does": "predicts policy stability from the actors whose consent is needed",
+    "hypotheses": [
+     "the actors and their preferred positions can be identified",
+     "change needs every veto player's agreement"
+    ]
+   },
+   {
+    "name": "Duverger's law",
+    "does": "says plurality voting in single-member districts favours two parties",
+    "hypotheses": [
+     "single-member plurality elections",
+     "it is a tendency at district level, not a strict law"
+    ]
+   }
+  ],
+  "inputs": [
+   "institutional rules",
+   "actors' positions"
+  ],
+  "outputs": [
+   "likelihood of change",
+   "expected party system"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JJ",
+  "field": "PO",
+  "node": "LCC:JJ",
+  "name": "Political institutions and public administration (North America)",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Tools sit at JA and JF. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JK",
+  "field": "PO",
+  "node": "LCC:JK",
+  "name": "Political institutions and public administration (United States)",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Tools sit at JA and JF. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JL",
+  "field": "PO",
+  "node": "LCC:JL",
+  "name": "Political institutions and public administration (Canada, Latin",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Tools sit at JA and JF. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JN",
+  "field": "PO",
+  "node": "LCC:JN",
+  "name": "Political institutions and public administration (Europe)",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Tools sit at JA and JF. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JQ",
+  "field": "PO",
+  "node": "LCC:JQ",
+  "name": "Political institutions and public administration (Asia, Africa,",
+  "taxonomy_cell": "PO.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional catalogue heading. Tools sit at JA and JF. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JS",
+  "field": "PO",
+  "node": "LCC:JS",
+  "name": "Local government. Municipal government",
+  "taxonomy_cell": "PO.O.A4",
+  "solves": [
+   "explain how people sort themselves among local authorities"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Tiebout model",
+    "does": "says households move to the authority whose services and taxes suit them",
+    "hypotheses": [
+     "moving is costless",
+     "many authorities to choose among",
+     "full information",
+     "no spillovers between authorities"
+    ]
+   }
+  ],
+  "inputs": [
+   "service and tax levels",
+   "household preferences"
+  ],
+  "outputs": [
+   "predicted sorting"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JV",
+  "field": "PO",
+  "node": "LCC:JV",
+  "name": "Colonies and colonization. Emigration and immigration.",
+  "taxonomy_cell": "PO.O.A4",
+  "solves": [
+   "predict the size of movement between two places"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gravity model of migration",
+    "does": "predicts flows from the sizes of two places and the distance between them",
+    "hypotheses": [
+     "the relation is empirical",
+     "it is fitted to past flows"
+    ]
+   }
+  ],
+  "inputs": [
+   "populations and distances",
+   "past flows"
+  ],
+  "outputs": [
+   "predicted flows"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PO.TK.JZ",
+  "field": "PO",
+  "node": "LCC:JZ",
+  "name": "International relations",
+  "taxonomy_cell": "PO.O.A5",
+  "solves": [
+   "explain why costly conflict happens between parties who could bargain",
+   "judge whether a threat will hold an opponent back"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bargaining model of war (Fearon)",
+    "does": "shows a bargain exists unless specific obstacles block it",
+    "hypotheses": [
+     "rational unitary actors",
+     "war is costly",
+     "the obstacles are private information, commitment problems or indivisible stakes"
+    ]
+   },
+   {
+    "name": "Deterrence theory",
+    "does": "says a threat prevents action when it is credible and costly enough",
+    "hypotheses": [
+     "the opponent weighs costs and benefits",
+     "the threat is communicated and believed"
+    ]
+   },
+   {
+    "name": "Democratic peace",
+    "does": "is the observed rarity of war between democracies",
+    "hypotheses": [
+     "it is an empirical regularity between pairs of states",
+     "it depends on how democracy and war are defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "actors, stakes and capabilities"
+  ],
+  "outputs": [
+   "explanation of conflict or restraint"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

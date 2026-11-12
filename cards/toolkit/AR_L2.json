@@ -1,0 +1,1082 @@
+[
+ {
+  "id": "AR.TK.GR1-950",
+  "field": "AR",
+  "node": "LCC:GR1-950",
+  "name": "Folklore",
+  "taxonomy_cell": "AR.O.A4",
+  "solves": [
+   "identify a story as a version of a known type and trace its spread"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Tale-type index (Aarne–Thompson–Uther)",
+    "does": "assigns a tale to a catalogued type",
+    "hypotheses": [
+     "the tale matches a catalogued type"
+    ]
+   },
+   {
+    "name": "Morphology of the folktale (Propp)",
+    "does": "describes a tale as a sequence of functions",
+    "hypotheses": [
+     "wonder tales of the kind the scheme was built on"
+    ]
+   }
+  ],
+  "inputs": [
+   "recorded tales"
+  ],
+  "outputs": [
+   "type number",
+   "function sequence"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.M1-5000",
+  "field": "AR",
+  "node": "LCC:M1-5000",
+  "name": "Music",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "describe how chords relate to a key"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ],
+   "structure": [
+    "sequence"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Roman-numeral harmonic analysis",
+    "does": "labels each chord by its function",
+    "hypotheses": [
+     "tonal music with a key centre"
+    ]
+   }
+  ],
+  "inputs": [
+   "score"
+  ],
+  "outputs": [
+   "labelled progression"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.ML1-3930",
+  "field": "AR",
+  "node": "LCC:ML1-3930",
+  "name": "Literature on music",
+  "taxonomy_cell": "AR.O.A4",
+  "solves": [
+   "show how a piece grows from a simple underlying line"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Schenkerian analysis",
+    "does": "reduces a piece through layers",
+    "hypotheses": [
+     "tonal repertoire of the common-practice period"
+    ]
+   },
+   {
+    "name": "Pitch-class set analysis",
+    "does": "describes groups of notes in post-tonal music by their interval content",
+    "hypotheses": [
+     "octave and enharmonic equivalence are accepted",
+     "segmentation into sets is justified"
+    ]
+   }
+  ],
+  "inputs": [
+   "score"
+  ],
+  "outputs": [
+   "layered reduction",
+   "set classes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.MT1-960",
+  "field": "AR",
+  "node": "LCC:MT1-960",
+  "name": "Instruction and study",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N1-58",
+  "field": "AR",
+  "node": "LCC:N1-58",
+  "name": "General",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N61-72",
+  "field": "AR",
+  "node": "LCC:N61-72",
+  "name": "Theory. Philosophy. Aesthetics of the visual arts",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "say what art is and how it is valued, by argument"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "goal_quality": [
+    "qualitative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N81-390",
+  "field": "AR",
+  "node": "LCC:N81-390",
+  "name": "Study and teaching. Research",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N400-3990",
+  "field": "AR",
+  "node": "LCC:N400-3990",
+  "name": "Art museums, galleries, etc.",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N4390-5098",
+  "field": "AR",
+  "node": "LCC:N4390-5098",
+  "name": "Exhibitions",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N5198-5299",
+  "field": "AR",
+  "node": "LCC:N5198-5299",
+  "name": "Private collections and collectors",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N5300-7418",
+  "field": "AR",
+  "node": "LCC:N5300-7418",
+  "name": "History",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "place a work in time and school by its look"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Formal analysis",
+    "does": "describes line, colour, composition and space",
+    "hypotheses": [
+     "the work is examined directly or in good reproduction"
+    ]
+   },
+   {
+    "name": "Attribution by comparison",
+    "does": "assigns a work to a maker by style",
+    "hypotheses": [
+     "securely attributed works exist for comparison"
+    ]
+   }
+  ],
+  "inputs": [
+   "the work",
+   "comparison works"
+  ],
+  "outputs": [
+   "description",
+   "attribution"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N7420-7525.8",
+  "field": "AR",
+  "node": "LCC:N7420-7525.8",
+  "name": "General works",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N7560-8266",
+  "field": "AR",
+  "node": "LCC:N7560-8266",
+  "name": "Special subjects of art",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "identify what an image shows and means"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Iconographic analysis",
+    "does": "identifies subjects and their meaning",
+    "hypotheses": [
+     "the motifs can be traced through texts or traditions of the period"
+    ]
+   }
+  ],
+  "inputs": [
+   "the work",
+   "period sources"
+  ],
+  "outputs": [
+   "subject and meaning"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N8350-8356",
+  "field": "AR",
+  "node": "LCC:N8350-8356",
+  "name": "Art as a profession. Artists",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N8510-8553",
+  "field": "AR",
+  "node": "LCC:N8510-8553",
+  "name": "Art studios, materials, etc.",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N8554-8585",
+  "field": "AR",
+  "node": "LCC:N8554-8585",
+  "name": "Examination and conservation of works of art",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "find what a work is made of and what lies under its surface"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "verify"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Pigment analysis",
+    "does": "gives an earliest possible date from materials",
+    "hypotheses": [
+     "the date each pigment came into use is known",
+     "the sampled paint is original"
+    ]
+   },
+   {
+    "name": "Infrared reflectography and X-radiography",
+    "does": "show underdrawing and changes beneath the paint",
+    "hypotheses": [
+     "the materials differ in how they absorb the radiation used"
+    ]
+   }
+  ],
+  "inputs": [
+   "the work",
+   "samples"
+  ],
+  "outputs": [
+   "materials",
+   "earliest date",
+   "hidden layers"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N8600-8675",
+  "field": "AR",
+  "node": "LCC:N8600-8675",
+  "name": "Economics of art",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N8700-9165",
+  "field": "AR",
+  "node": "LCC:N8700-9165",
+  "name": "Art and the state. Public art",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.NB1-1952",
+  "field": "AR",
+  "node": "LCC:NB1-1952",
+  "name": "Sculpture",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.NC1-1940",
+  "field": "AR",
+  "node": "LCC:NC1-1940",
+  "name": "Drawing. Design. Illustration",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "draw a three-dimensional scene on a flat surface"
+  ],
+  "signature": {
+   "task": [
+    "construct"
+   ],
+   "structure": [
+    "geometric_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linear perspective",
+    "does": "projects a scene onto a picture plane",
+    "hypotheses": [
+     "a single fixed viewpoint",
+     "a flat picture plane"
+    ]
+   }
+  ],
+  "inputs": [
+   "scene geometry"
+  ],
+  "outputs": [
+   "perspective drawing"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.ND25-3416",
+  "field": "AR",
+  "node": "LCC:ND25-3416",
+  "name": "Painting",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "date a painted wooden panel"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dendrochronology of panel supports",
+    "does": "gives the earliest possible felling date",
+    "hypotheses": [
+     "enough rings",
+     "a reference sequence for the region and species"
+    ]
+   }
+  ],
+  "inputs": [
+   "ring-width measurements"
+  ],
+  "outputs": [
+   "earliest date"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.NE1-3002",
+  "field": "AR",
+  "node": "LCC:NE1-3002",
+  "name": "Print media",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "date a sheet of paper or a print"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Watermark dating",
+    "does": "dates paper by matching its watermark",
+    "hypotheses": [
+     "the watermark matches a dated reference",
+     "the paper was used soon after it was made"
+    ]
+   }
+  ],
+  "inputs": [
+   "watermark image"
+  ],
+  "outputs": [
+   "date range"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.NX1-820",
+  "field": "AR",
+  "node": "LCC:NX1-820",
+  "name": "Arts in general",
+  "taxonomy_cell": "AR.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PN1-6790",
+  "field": "AR",
+  "node": "LCC:PN1-6790",
+  "name": "Literature (General)",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "explain how a text makes its meaning and decide who wrote it"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Close reading",
+    "does": "builds an interpretation from the wording",
+    "hypotheses": [
+     "a reliable text is established"
+    ]
+   },
+   {
+    "name": "Narratological analysis",
+    "does": "separates the events told from the way they are told",
+    "hypotheses": [
+     "the text is a narrative"
+    ]
+   },
+   {
+    "name": "Stylometric authorship attribution",
+    "does": "compares word-use patterns with candidates",
+    "hypotheses": [
+     "the text is long enough",
+     "reference texts in the same genre and period",
+     "the author is among the candidates"
+    ]
+   }
+  ],
+  "inputs": [
+   "the text",
+   "reference texts"
+  ],
+  "outputs": [
+   "interpretation",
+   "ranked candidates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PN1992.93-19",
+  "field": "AR",
+  "node": "LCC:PN1992.93-19",
+  "name": "92.95           Nonbroadcast video recordings",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PQ1-3999",
+  "field": "AR",
+  "node": "LCC:PQ1-3999",
+  "name": "French literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PQ4001-5999",
+  "field": "AR",
+  "node": "LCC:PQ4001-5999",
+  "name": "Italian literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PQ6001-8929",
+  "field": "AR",
+  "node": "LCC:PQ6001-8929",
+  "name": "Spanish literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PQ9000-9999",
+  "field": "AR",
+  "node": "LCC:PQ9000-9999",
+  "name": "Portuguese literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PQ9500-9698.436",
+  "field": "AR",
+  "node": "LCC:PQ9500-9698.436",
+  "name": "Brazil",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PR1-9680",
+  "field": "AR",
+  "node": "LCC:PR1-9680",
+  "name": "English literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PS1-3576",
+  "field": "AR",
+  "node": "LCC:PS1-3576",
+  "name": "American literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PT1-4897",
+  "field": "AR",
+  "node": "LCC:PT1-4897",
+  "name": "German literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PT5001-5980",
+  "field": "AR",
+  "node": "LCC:PT5001-5980",
+  "name": "Dutch literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PZ5-90",
+  "field": "AR",
+  "node": "LCC:PZ5-90",
+  "name": "Juvenile belles lettres",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.TR1-1050",
+  "field": "AR",
+  "node": "LCC:TR1-1050",
+  "name": "Photography",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "record the right amount of light"
+  ],
+  "signature": {
+   "task": [
+    "control"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Exposure reciprocity",
+    "does": "trades intensity against time",
+    "hypotheses": [
+     "exposure time is inside the range where the response is proportional"
+    ]
+   }
+  ],
+  "inputs": [
+   "scene brightness"
+  ],
+  "outputs": [
+   "aperture and shutter setting"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.TT1-999",
+  "field": "AR",
+  "node": "LCC:TT1-999",
+  "name": "Handicrafts. Arts and crafts",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue heading of the scheme. Methods sit at the general classes N, PN, M and GR in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

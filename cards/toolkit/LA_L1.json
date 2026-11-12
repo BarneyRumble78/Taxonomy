@@ -1,0 +1,237 @@
+[
+ {
+  "id": "LA.TK.K",
+  "field": "LA",
+  "node": "LCC:K",
+  "name": "Law in general. Comparative and uniform law. Jurisprudence",
+  "taxonomy_cell": "LA.O.A1",
+  "solves": [
+   "work out what a binding text requires in a given case",
+   "decide whether an earlier decision governs a new one"
+  ],
+  "signature": {
+   "task": [
+    "decide_existence",
+    "classify",
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Statutory interpretation",
+    "does": "reads a provision by its text, context and purpose",
+    "hypotheses": [
+     "the text is in force",
+     "the jurisdiction's own rules of interpretation are applied"
+    ]
+   },
+   {
+    "name": "Doctrine of precedent",
+    "does": "applies the reason for an earlier decision to like cases",
+    "hypotheses": [
+     "the earlier court binds the later one",
+     "the material facts are comparable"
+    ]
+   },
+   {
+    "name": "Functional method of comparative law",
+    "does": "compares how different systems solve the same problem",
+    "hypotheses": [
+     "the systems face a comparable problem"
+    ]
+   }
+  ],
+  "inputs": [
+   "the texts and decisions",
+   "the facts"
+  ],
+  "outputs": [
+   "a reasoned conclusion on what the law requires"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LA.TK.KDZ",
+  "field": "LA",
+  "node": "LCC:KDZ",
+  "name": "America. North America",
+  "taxonomy_cell": "LA.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A jurisdiction catalogue heading. Tools sit at K and apply under that jurisdiction's own sources. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LA.TK.KE",
+  "field": "LA",
+  "node": "LCC:KE",
+  "name": "Canada",
+  "taxonomy_cell": "LA.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A jurisdiction catalogue heading. Tools sit at K and apply under that jurisdiction's own sources. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LA.TK.KF",
+  "field": "LA",
+  "node": "LCC:KF",
+  "name": "United States",
+  "taxonomy_cell": "LA.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A jurisdiction catalogue heading. Tools sit at K and apply under that jurisdiction's own sources. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LA.TK.KG",
+  "field": "LA",
+  "node": "LCC:KG",
+  "name": "Latin America - Mexico and Central America -",
+  "taxonomy_cell": "LA.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A jurisdiction catalogue heading. Tools sit at K and apply under that jurisdiction's own sources. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LA.TK.KH",
+  "field": "LA",
+  "node": "LCC:KH",
+  "name": "South America",
+  "taxonomy_cell": "LA.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A jurisdiction catalogue heading. Tools sit at K and apply under that jurisdiction's own sources. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LA.TK.KZ",
+  "field": "LA",
+  "node": "LCC:KZ",
+  "name": "Law of nations",
+  "taxonomy_cell": "LA.O.A1",
+  "solves": [
+   "work out what states have bound themselves to",
+   "decide whether an unwritten rule binds states"
+  ],
+  "signature": {
+   "task": [
+    "decide_existence",
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Treaty interpretation under the Vienna Convention, articles 31 and 32",
+    "does": "reads a treaty in good faith by ordinary meaning, context and purpose",
+    "hypotheses": [
+     "the treaty is in force between the parties",
+     "the Convention applies, or its rules are accepted as custom"
+    ]
+   },
+   {
+    "name": "Identification of customary international law",
+    "does": "finds a rule from what states do and accept as law",
+    "hypotheses": [
+     "a general practice of states",
+     "the practice is accepted as law"
+    ]
+   }
+  ],
+  "inputs": [
+   "treaty texts",
+   "records of state practice"
+  ],
+  "outputs": [
+   "a reasoned conclusion on the obligation"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

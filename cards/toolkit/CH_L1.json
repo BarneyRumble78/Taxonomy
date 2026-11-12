@@ -1,0 +1,451 @@
+[
+ {
+  "id": "CH.TK.3401",
+  "field": "CH",
+  "node": "ANZSRC:3401",
+  "name": "Analytical chemistry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "find what a sample contains and how much",
+   "separate a mixture into its parts"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "classify"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Beer–Lambert law",
+    "does": "gives concentration from absorbed light",
+    "hypotheses": [
+     "dilute solution",
+     "monochromatic light",
+     "no scattering",
+     "absorbing species do not interact"
+    ]
+   },
+   {
+    "name": "Calibration curve",
+    "does": "converts instrument signal to amount",
+    "hypotheses": [
+     "the response is linear over the range used",
+     "standards match the sample matrix"
+    ]
+   },
+   {
+    "name": "Chromatographic separation",
+    "does": "splits a mixture by differing affinity for two phases",
+    "hypotheses": [
+     "the components partition differently between the phases"
+    ]
+   }
+  ],
+  "inputs": [
+   "a sample",
+   "reference standards"
+  ],
+  "outputs": [
+   "identity of components",
+   "concentration with uncertainty"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.3402",
+  "field": "CH",
+  "node": "ANZSRC:3402",
+  "name": "Inorganic chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "predict the shape, colour and magnetism of compounds from electron arrangement"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "symmetry": [
+    "rotation"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ligand field theory",
+    "does": "explains colour and magnetism of metal complexes from d-orbital splitting",
+    "hypotheses": [
+     "a transition-metal centre",
+     "the ligand geometry is known"
+    ]
+   },
+   {
+    "name": "VSEPR model",
+    "does": "predicts molecular shape from electron-pair repulsion",
+    "hypotheses": [
+     "main-group central atom",
+     "a qualitative answer is enough"
+    ]
+   }
+  ],
+  "inputs": [
+   "composition and geometry"
+  ],
+  "outputs": [
+   "shape",
+   "spectral and magnetic properties"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.3403",
+  "field": "CH",
+  "node": "ANZSRC:3403",
+  "name": "Macromolecular and materials chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "relate the size and mixing of very large molecules to bulk material properties"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "scope": [
+    "multiscale"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Carothers equation",
+    "does": "gives chain length from the extent of reaction",
+    "hypotheses": [
+     "step-growth polymerisation",
+     "all functional groups are equally reactive",
+     "no side reactions or ring formation"
+    ]
+   },
+   {
+    "name": "Flory–Huggins theory",
+    "does": "predicts whether a polymer mixes with a solvent or another polymer",
+    "hypotheses": [
+     "a lattice mean-field model",
+     "random mixing of segments"
+    ]
+   }
+  ],
+  "inputs": [
+   "monomers and reaction extent",
+   "composition and temperature"
+  ],
+  "outputs": [
+   "chain length",
+   "miscibility"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.3404",
+  "field": "CH",
+  "node": "ANZSRC:3404",
+  "name": "Medicinal and biomolecular chemistry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "design a small molecule that binds a chosen target and reaches it"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "predict",
+    "optimise"
+   ],
+   "structure": [
+    "geometric_space"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Quantitative structure-activity relationship",
+    "does": "predicts activity from molecular descriptors",
+    "hypotheses": [
+     "compounds share one mechanism of action",
+     "the new compound lies inside the model's applicability domain"
+    ]
+   },
+   {
+    "name": "Molecular docking",
+    "does": "ranks candidate molecules by predicted fit to a binding site",
+    "hypotheses": [
+     "the target structure is known",
+     "the scoring function approximates binding energy"
+    ]
+   },
+   {
+    "name": "Lipinski's rule of five",
+    "does": "screens for likely oral absorption",
+    "hypotheses": [
+     "orally taken small molecules",
+     "absorption is passive",
+     "the compound is not a transporter substrate"
+    ]
+   }
+  ],
+  "inputs": [
+   "target structure",
+   "measured activities of known compounds"
+  ],
+  "outputs": [
+   "ranked candidate molecules"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.3405",
+  "field": "CH",
+  "node": "ANZSRC:3405",
+  "name": "Organic chemistry",
+  "taxonomy_cell": "CH.O.A5",
+  "solves": [
+   "plan a route to build a target molecule from available parts",
+   "predict which product a reaction gives"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "design"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "linearity": [
+    "combinatorial"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Retrosynthetic analysis",
+    "does": "works backwards from the target to simpler precursors",
+    "hypotheses": [
+     "a reliable known reaction exists for each disconnection"
+    ]
+   },
+   {
+    "name": "Woodward–Hoffmann rules",
+    "does": "predict whether a pericyclic reaction is allowed and its stereochemistry",
+    "hypotheses": [
+     "the reaction is concerted",
+     "the reaction is pericyclic"
+    ]
+   }
+  ],
+  "inputs": [
+   "target structure",
+   "available reactions and starting materials"
+  ],
+  "outputs": [
+   "a synthesis route",
+   "expected stereochemistry"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.3406",
+  "field": "CH",
+  "node": "ANZSRC:3406",
+  "name": "Physical chemistry",
+  "taxonomy_cell": "CH.O.A3",
+  "solves": [
+   "predict whether a change happens and how fast"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "domain_type": [
+    "continuous"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gibbs energy criterion",
+    "does": "says a change is spontaneous when Gibbs energy falls",
+    "hypotheses": [
+     "constant temperature and pressure",
+     "closed system"
+    ]
+   },
+   {
+    "name": "Arrhenius equation",
+    "does": "gives the temperature dependence of a rate",
+    "hypotheses": [
+     "one rate-limiting step",
+     "a limited temperature range"
+    ]
+   },
+   {
+    "name": "Transition state theory",
+    "does": "computes a rate constant from the activated complex",
+    "hypotheses": [
+     "reactants and activated complex are in quasi-equilibrium",
+     "no recrossing of the barrier",
+     "motion along the reaction coordinate is classical"
+    ]
+   },
+   {
+    "name": "Nernst equation",
+    "does": "gives electrode potential from concentrations",
+    "hypotheses": [
+     "the electrode reaction is reversible and at equilibrium",
+     "activities are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "thermodynamic data",
+   "rate measurements"
+  ],
+  "outputs": [
+   "direction of change",
+   "rate constant",
+   "cell potential"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.3407",
+  "field": "CH",
+  "node": "ANZSRC:3407",
+  "name": "Theoretical and computational chemistry",
+  "taxonomy_cell": "CH.O.A2",
+  "solves": [
+   "compute the structure and energy of molecules from first principles"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "function_space"
+   ],
+   "scale": [
+    "high_dimensional"
+   ],
+   "goal_quality": [
+    "approximate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hartree–Fock method",
+    "does": "approximates the electronic wavefunction with one determinant",
+    "hypotheses": [
+     "Born–Oppenheimer approximation",
+     "electron correlation is neglected"
+    ]
+   },
+   {
+    "name": "Kohn–Sham density functional theory",
+    "does": "computes ground-state energy from the electron density",
+    "hypotheses": [
+     "ground state",
+     "the exchange-correlation functional is approximate"
+    ]
+   },
+   {
+    "name": "Molecular dynamics",
+    "does": "samples molecular motion over time",
+    "hypotheses": [
+     "nuclei move classically",
+     "the force field is valid for the system",
+     "the run is long enough to sample the states of interest"
+    ]
+   }
+  ],
+  "inputs": [
+   "atomic positions and charges"
+  ],
+  "outputs": [
+   "energies",
+   "geometries",
+   "trajectories"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "CH.TK.3499",
+  "field": "CH",
+  "node": "ANZSRC:3499",
+  "name": "Other chemical sciences",
+  "taxonomy_cell": "CH.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

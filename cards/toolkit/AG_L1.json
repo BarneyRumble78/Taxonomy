@@ -1,0 +1,904 @@
+[
+ {
+  "id": "AG.TK.c_4788",
+  "field": "AG",
+  "node": "AGROVOC:c_4788",
+  "name": "methods",
+  "taxonomy_cell": "AG.O.A2",
+  "solves": [
+   "compare treatments fairly when the test ground is uneven"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Randomised complete block design",
+    "does": "removes known variation between plots from the comparison",
+    "hypotheses": [
+     "plots within a block are alike",
+     "treatments are randomised within each block",
+     "block and treatment effects add"
+    ]
+   }
+  ],
+  "inputs": [
+   "yields by plot, block and treatment"
+  ],
+  "outputs": [
+   "treatment differences with error"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_6211",
+  "field": "AG",
+  "node": "AGROVOC:c_6211",
+  "name": "products",
+  "taxonomy_cell": "AG.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_7644",
+  "field": "AG",
+  "node": "AGROVOC:c_7644",
+  "name": "technology",
+  "taxonomy_cell": "AG.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_7778",
+  "field": "AG",
+  "node": "AGROVOC:c_7778",
+  "name": "time",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_13586",
+  "field": "AG",
+  "node": "AGROVOC:c_13586",
+  "name": "processes",
+  "taxonomy_cell": "AG.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_49874",
+  "field": "AG",
+  "node": "AGROVOC:c_49874",
+  "name": "properties",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_49904",
+  "field": "AG",
+  "node": "AGROVOC:c_49904",
+  "name": "organisms",
+  "taxonomy_cell": "AG.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_24415",
+  "field": "AG",
+  "node": "AGROVOC:c_24415",
+  "name": "Vesicular arbuscular mycorrhizae",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfield. No tools are listed. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330493",
+  "field": "AG",
+  "node": "AGROVOC:c_330493",
+  "name": "measure",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330704",
+  "field": "AG",
+  "node": "AGROVOC:c_330704",
+  "name": "phenomena",
+  "taxonomy_cell": "AG.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330705",
+  "field": "AG",
+  "node": "AGROVOC:c_330705",
+  "name": "substances",
+  "taxonomy_cell": "AG.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330829",
+  "field": "AG",
+  "node": "AGROVOC:c_330829",
+  "name": "subjects",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330834",
+  "field": "AG",
+  "node": "AGROVOC:c_330834",
+  "name": "activities",
+  "taxonomy_cell": "AG.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330892",
+  "field": "AG",
+  "node": "AGROVOC:c_330892",
+  "name": "entities",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_6840",
+  "field": "AG",
+  "node": "AGROVOC:c_6840",
+  "name": "Scandinavia",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfield. No tools are listed. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_36693",
+  "field": "AG",
+  "node": "AGROVOC:c_36693",
+  "name": "Baltic States",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfield. No tools are listed. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330919",
+  "field": "AG",
+  "node": "AGROVOC:c_330919",
+  "name": "objects",
+  "taxonomy_cell": "AG.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330979",
+  "field": "AG",
+  "node": "AGROVOC:c_330979",
+  "name": "events",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330985",
+  "field": "AG",
+  "node": "AGROVOC:c_330985",
+  "name": "systems",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330988",
+  "field": "AG",
+  "node": "AGROVOC:c_330988",
+  "name": "location",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330991",
+  "field": "AG",
+  "node": "AGROVOC:c_330991",
+  "name": "strategies",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "decide when control of a pest is worth its cost"
+  ],
+  "signature": {
+   "task": [
+    "control",
+    "optimise"
+   ],
+   "constraints": [
+    "resource_budget"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Economic threshold in integrated pest management",
+    "does": "sets the pest density at which control pays",
+    "hypotheses": [
+     "pest density is monitored",
+     "the cost of control and the damage per pest are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "pest counts",
+   "costs and crop value"
+  ],
+  "outputs": [
+   "act or wait decision"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330995",
+  "field": "AG",
+  "node": "AGROVOC:c_330995",
+  "name": "stages",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_330998",
+  "field": "AG",
+  "node": "AGROVOC:c_330998",
+  "name": "state",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_331000",
+  "field": "AG",
+  "node": "AGROVOC:c_331000",
+  "name": "site",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_331061",
+  "field": "AG",
+  "node": "AGROVOC:c_331061",
+  "name": "features",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_331093",
+  "field": "AG",
+  "node": "AGROVOC:c_331093",
+  "name": "factors",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_9001017",
+  "field": "AG",
+  "node": "AGROVOC:c_9001017",
+  "name": "resources",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_50227",
+  "field": "AG",
+  "node": "AGROVOC:c_50227",
+  "name": "groups",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.agrovoc",
+  "field": "AG",
+  "node": "AGROVOC:agrovoc",
+  "name": "AGROVOC",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A top-level facet of the thesaurus, not a subfield. Tools sit at lower levels of the map. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_d79597fb",
+  "field": "AG",
+  "node": "AGROVOC:c_d79597fb",
+  "name": "good laboratory practices",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "show that a study's data can be trusted and reconstructed"
+  ],
+  "signature": {
+   "task": [
+    "verify"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Good laboratory practice audit",
+    "does": "checks a study against a written plan and procedures",
+    "hypotheses": [
+     "a study plan and standard operating procedures exist",
+     "raw data are kept"
+    ]
+   }
+  ],
+  "inputs": [
+   "study records"
+  ],
+  "outputs": [
+   "compliance findings"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfiel Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_cd848dc0",
+  "field": "AG",
+  "node": "AGROVOC:c_cd848dc0",
+  "name": "good manufacturing practices",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "show that each batch is made the same way to a stated standard"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "control"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Good manufacturing practice audit",
+    "does": "checks production against documented procedures",
+    "hypotheses": [
+     "documented procedures and batch records exist"
+    ]
+   }
+  ],
+  "inputs": [
+   "batch and process records"
+  ],
+  "outputs": [
+   "compliance findings"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfiel Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_76109b15",
+  "field": "AG",
+  "node": "AGROVOC:c_76109b15",
+  "name": "rights to the city",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfield. No tools are listed. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.c_e2e02057",
+  "field": "AG",
+  "node": "AGROVOC:c_e2e02057",
+  "name": "child advocacy",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfield. No tools are listed. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.skosCollection_cb7b7c4a",
+  "field": "AG",
+  "node": "AGROVOC:skosCollection_cb7b7c4a",
+  "name": "Indigenous Peoples Group",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfield. No tools are listed. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.skosCollection_47b33e75",
+  "field": "AG",
+  "node": "AGROVOC:skosCollection_47b33e75",
+  "name": "Land Governance Group",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfield. No tools are listed. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AG.TK.skosCollection_c346d422",
+  "field": "AG",
+  "node": "AGROVOC:skosCollection_c346d422",
+  "name": "Millets and Sorghum Group",
+  "taxonomy_cell": "AG.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A single topic or group that the thesaurus extract places at the top level. It is not a subfield. No tools are listed. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]
