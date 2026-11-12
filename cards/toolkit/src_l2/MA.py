@@ -7,7 +7,7 @@ _T = {
 "00A": ADM, "00B": ADM, "01A": ADM,
 "03A": C("A class for philosophical discussion of logic and foundations. Work here rests on argument, not on theorems."),
 "03B": K("decide whether a statement follows from axioms and whether axioms can all be true together", "task=prove decide_existence|structure=logical|domain_type=symbolic",
-  [("Gödel's completeness theorem", "says a first-order sentence is provable from a theory exactly when it holds in every model of the theory", "first-order logic; a standard proof system"),
+  [("Gödel's completeness theorem", "says a first-order sentence is provable from a theory exactly when it holds in every model of the theory", "first-order logic; a countable language, or a choice principle such as the ultrafilter lemma for uncountable languages"),
    ("Compactness theorem", "says a set of sentences has a model if every finite subset has one", "first-order logic")],
   "axioms; a sentence", "proof or countermodel"),
 "03C": K("control which structures satisfy a given set of axioms", "task=prove construct|structure=logical",
