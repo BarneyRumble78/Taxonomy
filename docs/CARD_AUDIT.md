@@ -180,5 +180,6 @@ The low miss rate here should be read with that in mind: an unsettled condition 
 
 ## Not yet audited
 
-- The 24 non-mathematics fields, levels 1 and 2 (the handover asks for 10 cards per field).
+- Non-mathematics cards outside the ten-card samples. Each field's sample gives an estimate only.
+- Indigenous knowledge cards (no tools; awaiting Māori-led review).
 - `cards/toolkit/MA.json`, the 63 two-digit cards that predate this work.
