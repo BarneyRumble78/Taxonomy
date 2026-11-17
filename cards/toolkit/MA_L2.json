@@ -11694,6 +11694,7 @@
     "name": "h-cobordism theorem (Smale)",
     "does": "says a simply connected h-cobordism is a product",
     "hypotheses": [
+     "a compact h-cobordism between simply connected closed manifolds",
      "dimension of the cobordism at least six"
     ]
    }
@@ -12046,7 +12047,8 @@
     "name": "Thom's classification of elementary catastrophes",
     "does": "lists seven types of stable degenerate behaviour",
     "hypotheses": [
-     "families of smooth functions with at most four control parameters"
+     "generic (structurally stable) families of smooth functions",
+     "at most four control parameters"
     ]
    }
   ],
@@ -12867,7 +12869,8 @@
     "name": "Bernstein–von Mises theorem",
     "does": "says the posterior is approximately normal round the maximum likelihood estimate",
     "hypotheses": [
-     "a regular finite-dimensional model",
+     "independent identically distributed data from a correctly specified, identifiable finite-dimensional model",
+     "differentiable in quadratic mean with non-singular Fisher information",
      "a prior positive and continuous at the true value"
     ]
    }
@@ -14273,7 +14276,7 @@
     "name": "Shannon's source coding theorem",
     "does": "says the average code length cannot fall below the entropy",
     "hypotheses": [
-     "a source with known symbol probabilities",
+     "a memoryless (independent identically distributed) source over a finite alphabet with known symbol probabilities",
      "uniquely decodable codes"
     ]
    }
@@ -14541,7 +14544,8 @@
     "name": "Approximation guarantee by linear programming relaxation",
     "does": "bounds how far a rounded solution is from the optimum",
     "hypotheses": [
-     "the integrality gap of the relaxation is bounded"
+     "a rounding scheme with a proven ratio between the rounded value and the relaxation's value",
+     "the ratio cannot beat the integrality gap"
     ]
    }
   ],
@@ -15077,7 +15081,8 @@
     "does": "says the traction on a surface depends linearly on its normal",
     "hypotheses": [
      "a continuous body obeying balance of linear momentum",
-     "tractions depend continuously on position"
+     "traction depends only on position and the surface's unit normal (Cauchy's postulate)",
+     "traction is continuous"
     ]
    }
   ],
@@ -16888,7 +16893,9 @@
     "name": "Peierls argument",
     "does": "proves a phase transition at low temperature",
     "hypotheses": [
-     "the Ising model in dimension at least two"
+     "the ferromagnetic Ising model with zero external field",
+     "dimension at least two",
+     "low temperature"
     ]
    },
    {
@@ -17304,9 +17311,11 @@
     "name": "Economic order quantity formula",
     "does": "gives the order size that minimises ordering plus holding cost",
     "hypotheses": [
+     "a single item",
      "constant known demand",
      "fixed order cost",
      "constant holding cost",
+     "instantaneous replenishment",
      "no shortages"
     ]
    },
@@ -17490,9 +17499,9 @@
     "name": "Arrow–Debreu existence theorem",
     "does": "gives a competitive equilibrium",
     "hypotheses": [
-     "convex continuous preferences",
-     "convex production sets",
-     "each consumer has a positive endowment"
+     "convex, continuous, locally non-satiated preferences",
+     "closed convex production sets that allow inaction and rule out free production",
+     "each consumer can survive without trade, for example a positive endowment"
     ]
    },
    {
@@ -17651,16 +17660,17 @@
     "does": "equates absence of arbitrage with existence of an equivalent martingale measure",
     "hypotheses": [
      "a finite discrete-time market",
-     "in continuous time the condition is no free lunch with vanishing risk"
+     "in continuous time, prices are locally bounded semimartingales and the condition is no free lunch with vanishing risk"
     ]
    },
    {
     "name": "Black–Scholes formula",
     "does": "prices a European option",
     "hypotheses": [
-     "geometric Brownian motion with constant volatility",
-     "continuous costless trading",
-     "a constant interest rate",
+     "the price follows geometric Brownian motion with constant volatility",
+     "no dividends during the option's life",
+     "continuous trading with no transaction costs",
+     "a constant risk-free rate",
      "no arbitrage"
     ]
    },
@@ -17769,9 +17779,11 @@
     "name": "Hardy–Weinberg law",
     "does": "gives constant genotype frequencies",
     "hypotheses": [
+     "diploid organisms reproducing sexually",
      "random mating",
      "no selection, mutation or migration",
-     "a very large population"
+     "a very large population",
+     "non-overlapping generations"
     ]
    },
    {

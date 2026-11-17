@@ -1,0 +1,632 @@
+[
+ {
+  "cards": [
+   "28A"
+  ],
+  "tool": "Monotone convergence theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires a pointwise non-decreasing sequence of non-negative measurable functions, as the card states.",
+  "source": "https://en.wikipedia.org/wiki/Monotone_convergence_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "28A"
+  ],
+  "tool": "Fubini–Tonelli theorem",
+  "verdict": "miss",
+  "reason": "Source requires the function to be measurable on the product space; Tonelli fails for non-negative non-measurable functions.",
+  "source": "https://en.wikipedia.org/wiki/Fubini%27s_theorem",
+  "corrected_hypotheses": "sigma-finite measures; the function is measurable on the product space; the function is non-negative or integrable"
+ },
+ {
+  "cards": [
+   "28A"
+  ],
+  "tool": "Radon–Nikodym theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires two sigma-finite measures on one measurable space with one absolutely continuous with respect to the other.",
+  "source": "https://en.wikipedia.org/wiki/Radon%E2%80%93Nikodym_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "28C"
+  ],
+  "tool": "Riesz–Markov representation theorem",
+  "verdict": "miss",
+  "reason": "Source requires a positive linear functional on the compactly supported continuous functions; the card never states the functional or its positivity.",
+  "source": "https://en.wikipedia.org/wiki/Riesz%E2%80%93Markov%E2%80%93Kakutani_representation_theorem",
+  "corrected_hypotheses": "a locally compact Hausdorff space; a positive linear functional on the continuous functions of compact support"
+ },
+ {
+  "cards": [
+   "28D"
+  ],
+  "tool": "Birkhoff ergodic theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires a measure-preserving map and an integrable function, with the limit equal to the space average under ergodicity and finite measure.",
+  "source": "https://en.wikipedia.org/wiki/Ergodic_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "28D"
+  ],
+  "tool": "Poincaré recurrence theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires a measure-preserving map on a finite measure space, as the card states.",
+  "source": "https://en.wikipedia.org/wiki/Poincar%C3%A9_recurrence_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "30B"
+  ],
+  "tool": "Laurent series expansion",
+  "verdict": "confirmed",
+  "reason": "Source states a function holomorphic on an annulus has a unique Laurent series converging there.",
+  "source": "https://en.wikipedia.org/wiki/Laurent_series",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "30C"
+  ],
+  "tool": "Riemann mapping theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires a non-empty simply connected open proper subset of the plane; non-emptiness is the only unstated, trivial condition.",
+  "source": "https://en.wikipedia.org/wiki/Riemann_mapping_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "30D"
+  ],
+  "tool": "Liouville's theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires an entire bounded function, as the card states.",
+  "source": "https://en.wikipedia.org/wiki/Liouville%27s_theorem_(complex_analysis)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "30D"
+  ],
+  "tool": "Picard's little theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires an entire non-constant function; it then omits at most one value.",
+  "source": "https://en.wikipedia.org/wiki/Picard_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "30E"
+  ],
+  "tool": "Residue theorem",
+  "verdict": "miss",
+  "reason": "Source has finitely many singularities off the curve; the card's wording permits singularities on the contour, where the theorem fails.",
+  "source": "https://en.wikipedia.org/wiki/Residue_theorem",
+  "corrected_hypotheses": "holomorphic inside and on a simple closed positively oriented contour except at finitely many isolated singularities inside it; no singularity lies on the contour"
+ },
+ {
+  "cards": [
+   "30F"
+  ],
+  "tool": "Uniformisation theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires only a simply connected Riemann surface.",
+  "source": "https://en.wikipedia.org/wiki/Uniformization_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "30J"
+  ],
+  "tool": "Schwarz lemma",
+  "verdict": "confirmed",
+  "reason": "Source requires a holomorphic map of the open unit disc into itself fixing the origin.",
+  "source": "https://en.wikipedia.org/wiki/Schwarz_lemma",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "31B"
+  ],
+  "tool": "Mean value property",
+  "verdict": "confirmed",
+  "reason": "Source requires a harmonic function on an open set and a ball completely contained in it.",
+  "source": "https://en.wikipedia.org/wiki/Harmonic_function",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "32A"
+  ],
+  "tool": "Hartogs' extension theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires at least two variables, a compact subset of the domain with connected complement in it, and a function holomorphic there.",
+  "source": "https://en.wikipedia.org/wiki/Hartogs%27s_extension_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "32C"
+  ],
+  "tool": "Cartan's theorems A and B",
+  "verdict": "confirmed",
+  "reason": "Source states both theorems for coherent sheaves on Stein manifolds; card setting is at least as strong.",
+  "source": "https://en.wikipedia.org/wiki/Cartan%27s_theorems_A_and_B",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "32D"
+  ],
+  "tool": "Hartogs' extension theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires at least two variables and connected complement of the compact set in the domain; card is terser but consistent.",
+  "source": "https://en.wikipedia.org/wiki/Hartogs%27s_extension_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "32Q"
+  ],
+  "tool": "Kodaira embedding theorem",
+  "verdict": "confirmed",
+  "reason": "Positive line bundle on compact complex manifold implies Kähler; source gives embedding for compact Kähler with Hodge metric.",
+  "source": "https://en.wikipedia.org/wiki/Kodaira_embedding_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "32Q"
+  ],
+  "tool": "Newlander–Nirenberg theorem",
+  "verdict": "confirmed",
+  "reason": "Source: almost complex structure is integrable iff Nijenhuis tensor vanishes (smooth J).",
+  "source": "https://en.wikipedia.org/wiki/Newlander-Nirenberg_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "32T"
+  ],
+  "tool": "Solution of the Levi problem (Oka)",
+  "verdict": "miss",
+  "reason": "Oka solved Levi problem: pseudoconvex domains in C^n are domains of holomorphy; pseudoconvexity omitted.",
+  "source": "https://en.wikipedia.org/wiki/Domain_of_holomorphy",
+  "corrected_hypotheses": "a pseudoconvex domain in complex n-space"
+ },
+ {
+  "cards": [
+   "33B"
+  ],
+  "tool": "Stirling's formula",
+  "verdict": "miss",
+  "reason": "Source requires large |z| within sector |arg z| < pi - epsilon; large argument alone is insufficient.",
+  "source": "https://en.wikipedia.org/wiki/Stirling%27s_approximation",
+  "corrected_hypotheses": "the argument is large in absolute value; it stays in a sector |arg z| < pi - epsilon, away from the negative real axis"
+ },
+ {
+  "cards": [
+   "33B"
+  ],
+  "tool": "Reflection formula for the gamma function",
+  "verdict": "unconfirmed",
+  "reason": "Page does not state the formula or excluded points; says only gamma is undefined at non-positive integers.",
+  "source": "https://en.wikipedia.org/wiki/Gamma_function",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "33C"
+  ],
+  "tool": "Gauss's summation theorem",
+  "verdict": "unconfirmed",
+  "reason": "Page lacks the summation formula and condition; only notes undefined when c is a non-positive integer.",
+  "source": "https://en.wikipedia.org/wiki/Hypergeometric_function",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "33C"
+  ],
+  "tool": "Three-term recurrence for orthogonal polynomials",
+  "verdict": "confirmed",
+  "reason": "Source: orthogonal polynomials for a measure satisfy a three-term recurrence; converse is Favard.",
+  "source": "https://en.wikipedia.org/wiki/Orthogonal_polynomials",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "34A"
+  ],
+  "tool": "Picard–Lindelöf theorem",
+  "verdict": "confirmed",
+  "reason": "Source: f continuous and Lipschitz in y with constant independent of t gives unique local solution.",
+  "source": "https://en.wikipedia.org/wiki/Picard%E2%80%93Lindel%C3%B6f_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "34A"
+  ],
+  "tool": "Peano existence theorem",
+  "verdict": "confirmed",
+  "reason": "Source: continuity of f on open set suffices for local existence; uniqueness not claimed.",
+  "source": "https://en.wikipedia.org/wiki/Peano_existence_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "34B"
+  ],
+  "tool": "Sturm–Liouville theory",
+  "verdict": "confirmed",
+  "reason": "Regular problem (continuous coefficients, positive p and w, separated conditions) gives real discrete spectrum and orthonormal basis.",
+  "source": "https://en.wikipedia.org/wiki/Sturm%E2%80%93Liouville_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "34C"
+  ],
+  "tool": "Poincaré–Bendixson theorem",
+  "verdict": "confirmed",
+  "reason": "Source needs non-empty compact omega-limit set with finitely many fixed points; bounded planar trajectory supplies it.",
+  "source": "https://en.wikipedia.org/wiki/Poincar%C3%A9%E2%80%93Bendixson_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "34D"
+  ],
+  "tool": "Lyapunov's stability theorem",
+  "verdict": "confirmed",
+  "reason": "Source: positive definite V with non-positive derivative gives stability; negative definite gives asymptotic stability.",
+  "source": "https://en.wikipedia.org/wiki/Lyapunov_stability",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "34D"
+  ],
+  "tool": "Hartman–Grobman theorem",
+  "verdict": "confirmed",
+  "reason": "Source states smooth field with hyperbolic equilibrium; C^1 is the standard sufficient class.",
+  "source": "https://en.wikipedia.org/wiki/Hartman%E2%80%93Grobman_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "34D"
+  ],
+  "tool": "Floquet theory",
+  "verdict": "confirmed",
+  "reason": "Source: Floquet normal form for linear systems with periodic coefficient matrix; continuity is standard.",
+  "source": "https://en.wikipedia.org/wiki/Floquet_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "34E"
+  ],
+  "tool": "WKB approximation",
+  "verdict": "confirmed",
+  "reason": "Source: valid when potential varies slowly over a wavelength and away from classical turning points.",
+  "source": "https://en.wikipedia.org/wiki/WKB_approximation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "34E"
+  ],
+  "tool": "Method of averaging",
+  "verdict": "miss",
+  "reason": "Source requires f smooth or Lipschitz, bounded on bounded sets, periodic in t, initial data in a compact region; regularity omitted.",
+  "source": "https://en.wikipedia.org/wiki/Method_of_averaging",
+  "corrected_hypotheses": "a small parameter; the vector field is smooth or Lipschitz and bounded on bounded sets; periodic or has a mean in the fast variable; initial condition in a compact region; a time scale of one over the parameter"
+ },
+ {
+  "cards": [
+   "35A"
+  ],
+  "tool": "Cauchy–Kovalevskaya theorem",
+  "verdict": "confirmed",
+  "reason": "Source: analytic coefficients and data give unique local analytic solution; non-characteristic condition is standard.",
+  "source": "https://en.wikipedia.org/wiki/Cauchy%E2%80%93Kovalevskaya_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35B"
+  ],
+  "tool": "Maximum principle",
+  "verdict": "confirmed",
+  "reason": "Source gives bounded-domain weak principle and shows zero-order term sign matters; card hypotheses sufficient.",
+  "source": "https://en.wikipedia.org/wiki/Maximum_principle",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35C"
+  ],
+  "tool": "Green's function representation",
+  "verdict": "confirmed",
+  "reason": "Source: linear operator with Green function (right inverse) gives solution by integral representation.",
+  "source": "https://en.wikipedia.org/wiki/Green%27s_function",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35C"
+  ],
+  "tool": "D'Alembert's formula",
+  "verdict": "unconfirmed",
+  "reason": "Page gives no smoothness class for initial data; whole-line setting only implied.",
+  "source": "https://en.wikipedia.org/wiki/D%27Alembert%27s_formula",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35D"
+  ],
+  "tool": "Lax–Milgram theorem",
+  "verdict": "confirmed",
+  "reason": "Source: bounded coercive bilinear form on Hilbert space and bounded functional.",
+  "source": "https://en.wikipedia.org/wiki/Lax%E2%80%93Milgram_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35E"
+  ],
+  "tool": "Malgrange–Ehrenpreis theorem",
+  "verdict": "confirmed",
+  "reason": "Source: every non-zero constant-coefficient linear differential operator has a fundamental solution.",
+  "source": "https://en.wikipedia.org/wiki/Malgrange%E2%80%93Ehrenpreis_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35F"
+  ],
+  "tool": "Method of characteristics",
+  "verdict": "confirmed",
+  "reason": "Source: quasilinear first-order PDE solved locally via characteristic ODEs; card hypotheses cover this.",
+  "source": "https://en.wikipedia.org/wiki/Method_of_characteristics",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35H"
+  ],
+  "tool": "Hörmander's theorem on hypoellipticity",
+  "verdict": "confirmed",
+  "reason": "Source: smooth vector fields whose iterated brackets span at every point give smooth fundamental solution.",
+  "source": "https://en.wikipedia.org/wiki/H%C3%B6rmander%27s_condition",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35J"
+  ],
+  "tool": "Lax–Milgram theorem",
+  "verdict": "confirmed",
+  "reason": "Source: bounded coercive bilinear form on Hilbert space and bounded functional suffice.",
+  "source": "https://en.wikipedia.org/wiki/Lax%E2%80%93Milgram_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35J"
+  ],
+  "tool": "Elliptic regularity",
+  "verdict": "confirmed",
+  "reason": "Source: elliptic operators with smooth coefficients are hypoelliptic; card is at least as strong.",
+  "source": "https://en.wikipedia.org/wiki/Elliptic_regularity",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35K"
+  ],
+  "tool": "Parabolic maximum principle",
+  "verdict": "unconfirmed",
+  "reason": "Page read does not state the parabolic maximum principle or its hypotheses.",
+  "source": "https://en.wikipedia.org/wiki/Parabolic_partial_differential_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35K"
+  ],
+  "tool": "Smoothing property of the heat equation",
+  "verdict": "unconfirmed",
+  "reason": "Page states only bounded continuous data; no integrable-data or smoothing statement given.",
+  "source": "https://en.wikipedia.org/wiki/Heat_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35L"
+  ],
+  "tool": "Energy estimates",
+  "verdict": "unconfirmed",
+  "reason": "Page does not treat hyperbolic energy estimates or coefficient hypotheses.",
+  "source": "https://en.wikipedia.org/wiki/Energy_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35L"
+  ],
+  "tool": "Finite speed of propagation",
+  "verdict": "confirmed",
+  "reason": "Source: finite propagation speed holds for hyperbolic equations, including linear systems.",
+  "source": "https://en.wikipedia.org/wiki/Hyperbolic_partial_differential_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35L"
+  ],
+  "tool": "Rankine–Hugoniot condition",
+  "verdict": "confirmed",
+  "reason": "Source: weak solution with jump, smooth either side, gives jump conditions.",
+  "source": "https://en.wikipedia.org/wiki/Rankine%E2%80%93Hugoniot_conditions",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35P"
+  ],
+  "tool": "Weyl's law",
+  "verdict": "confirmed",
+  "reason": "Source: Dirichlet Laplacian on bounded Euclidean domain; no boundary regularity required for Weyl leading term.",
+  "source": "https://en.wikipedia.org/wiki/Weyl_law",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "35P"
+  ],
+  "tool": "Min-max principle (Courant–Fischer)",
+  "verdict": "confirmed",
+  "reason": "Source: min-max holds for self-adjoint operators bounded below; card adds compact resolvent, which is stronger.",
+  "source": "https://en.wikipedia.org/wiki/Min-max_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "37A"
+  ],
+  "tool": "Birkhoff ergodic theorem",
+  "verdict": "confirmed",
+  "reason": "Source: measure-preserving map, integrable f, finite measure gives almost-everywhere time average.",
+  "source": "https://en.wikipedia.org/wiki/Ergodic_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "37C"
+  ],
+  "tool": "Stable manifold theorem",
+  "verdict": "confirmed",
+  "reason": "Source: smooth map with hyperbolic fixed point; C^1 is the standard class.",
+  "source": "https://en.wikipedia.org/wiki/Stable_manifold_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "37D"
+  ],
+  "tool": "Smale–Birkhoff homoclinic theorem",
+  "verdict": "unconfirmed",
+  "reason": "Page does not state theorem or transversality; only that one homoclinic point implies infinitely many.",
+  "source": "https://en.wikipedia.org/wiki/Homoclinic_orbit",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "37D"
+  ],
+  "tool": "Structural stability of Anosov diffeomorphisms",
+  "verdict": "confirmed",
+  "reason": "Source: Anosov diffeomorphisms are structurally stable in the C^1 topology.",
+  "source": "https://en.wikipedia.org/wiki/Anosov_diffeomorphism",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "37E"
+  ],
+  "tool": "Sharkovskii's theorem",
+  "verdict": "confirmed",
+  "reason": "Source: continuous map of an interval to itself; interval and continuity both necessary.",
+  "source": "https://en.wikipedia.org/wiki/Sharkovskii%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "37G"
+  ],
+  "tool": "Hopf bifurcation theorem",
+  "verdict": "confirmed",
+  "reason": "Source: eigenvalue pair crossing imaginary axis, others off axis, Lyapunov coefficient nonzero for nondegeneracy.",
+  "source": "https://en.wikipedia.org/wiki/Hopf_bifurcation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "37H"
+  ],
+  "tool": "Oseledets multiplicative ergodic theorem",
+  "verdict": "miss",
+  "reason": "Source states an ergodic invariant measure with integrable cocycle; ergodicity omitted, needed for constant exponents.",
+  "source": "https://en.wikipedia.org/wiki/Oseledets_theorem",
+  "corrected_hypotheses": "an ergodic invariant measure; a matrix cocycle satisfying a logarithmic integrability condition"
+ },
+ {
+  "cards": [
+   "37J"
+  ],
+  "tool": "Liouville–Arnold theorem",
+  "verdict": "confirmed",
+  "reason": "Source: n independent Poisson-commuting integrals, compact connected level set gives n-torus.",
+  "source": "https://en.wikipedia.org/wiki/Liouville%E2%80%93Arnold_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "37J"
+  ],
+  "tool": "KAM theorem",
+  "verdict": "confirmed",
+  "reason": "Source: integrable system, non-degeneracy, Diophantine frequencies, small perturbation.",
+  "source": "https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Arnold%E2%80%93Moser_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "39A"
+  ],
+  "tool": "Characteristic-root solution of linear difference equations",
+  "verdict": "miss",
+  "reason": "Source: method assumes homogeneous recurrence; repeated roots give polynomial multiples; inhomogeneous case needs conversion first.",
+  "source": "https://en.wikipedia.org/wiki/Linear_recurrence_with_constant_coefficients",
+  "corrected_hypotheses": "a homogeneous linear recurrence with constant coefficients; roots of the characteristic polynomial (repeated roots multiplied by powers of n)"
+ },
+ {
+  "cards": [
+   "39B"
+  ],
+  "tool": "Solution of Cauchy's functional equation",
+  "verdict": "confirmed",
+  "reason": "Source: additive function linear if continuous at a point, monotone, or measurable.",
+  "source": "https://en.wikipedia.org/wiki/Cauchy%27s_functional_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "40A"
+  ],
+  "tool": "Comparison and ratio tests",
+  "verdict": "confirmed",
+  "reason": "Comparison needs non-negative terms eventually dominated; ratio test inconclusive when limit equals one.",
+  "source": "https://en.wikipedia.org/wiki/Ratio_test",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "40E"
+  ],
+  "tool": "Hardy–Littlewood Tauberian theorem",
+  "verdict": "unconfirmed",
+  "reason": "Page does not state Hardy-Littlewood hypotheses; only Tauber and Littlewood conditions.",
+  "source": "https://en.wikipedia.org/wiki/Tauberian_theorem",
+  "corrected_hypotheses": ""
+ }
+]

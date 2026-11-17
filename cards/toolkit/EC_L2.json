@@ -1836,10 +1836,11 @@
     "name": "Black–Scholes formula",
     "does": "prices a European option",
     "hypotheses": [
-     "geometric Brownian motion with constant volatility",
-     "continuous costless trading",
-     "no arbitrage",
-     "a constant risk-free rate"
+     "the price follows geometric Brownian motion with constant volatility",
+     "no dividends during the option's life",
+     "continuous trading with no transaction costs",
+     "a constant risk-free rate",
+     "no arbitrage"
     ]
    },
    {

@@ -64,30 +64,38 @@ These were neither supported nor contradicted. They need a better source.
 ### What was done afterwards
 
 The eight misses were corrected in the source files, and the same A* wording was corrected where it also appears in the computing cards.
-**The figures above describe the cards as drafted, before those corrections.** The other 267 mathematics cards with tools were not checked,
-so the same error rate should be expected in them until they are.
+**The figures above describe the cards as drafted, before those corrections.** The other 267 mathematics cards were then checked in full in audit 2.
 
-## Audit 2: mathematics, all remaining cards with tools (in progress)
+## Audit 2: mathematics, every remaining card with tools
 
-Started 13 November 2026. Same method and rule as audit 1. The 267 cards outside the first sample hold 489 distinct tool statements.
+Date: 13 to 18 November 2026. Same rule as audit 1. Every distinct tool statement on the 267 mathematics cards outside the first
+sample was checked: 488 statements.
 
-**Progress: 49 of 489 checked** (classes 03 to 13, part).
+**Method.** 49 were checked by the drafting model directly. The other 439 were split into seven batches and checked by helper agents
+running a smaller model (claude-sonnet), each reading English Wikipedia or, where no page existed, another named source.
+The helpers flagged 52 misses. The drafting model reviewed each one against the card's full text and accepted 23.
+The 29 rejected were mostly cases where the card's own description already states the condition the reviewer thought was missing
+(for example, the open mapping card says "a surjective bounded linear map is open"). Each decision and its reason is in
+`docs/audit/review_1.json`; every verdict and source URL is in `docs/audit/out_*.json`.
 
-| | Count |
-|---|---:|
-| Confirmed | 44 |
-| Miss | 1 |
-| Not confirmed by the source read | 4 |
+| | Count | Share |
+|---|---:|---:|
+| Confirmed | 406 | 83% |
+| Miss (after review) | 24 | 4.9%, Wilson 95% 3.3% to 7.2% |
+| Not confirmed by the source read | 58 | 12% |
+| **Total** | **488** | |
 
-Miss: 03Bxx, Gödel's completeness theorem. The card did not say that uncountable languages need a choice principle. Corrected.
+All 24 misses are corrected in the card sources. They include Gödel's completeness theorem, Fubini–Tonelli, the residue theorem,
+the snake lemma, the mean value theorem, Hahn–Banach separation, Black–Scholes, Hardy–Weinberg, Arrow–Debreu existence and
+Shannon's source coding theorem.
 
-Not confirmed: 11Jxx Dirichlet's approximation theorem (page formula unreadable); 12Fxx Abel–Ruffini (characteristic zero is implied, not stated);
-12Hxx Liouville's theorem (the equal-constants condition is not on the page); 12Lxx and 14Pxx Tarski–Seidenberg (page treats the real numbers only).
+**Why this rate is lower than audit 1's 13%.** Audit 1 was done entirely by the drafting model reading each page itself and counted a
+miss per tool. Here most lookups used a smaller model, and its misses were then filtered. Part of the difference may reflect the
+reviewer rather than the cards. Taking both audits together, a fair summary is that roughly one mathematics tool in ten to twenty
+had a needed hypothesis missing as drafted, and those found have been fixed.
 
-The page reader flagged two further items that were judged not to be misses on reading its reason:
-quadratic reciprocity (the card's hypothesis, two distinct odd primes, is the page's) and Hensel's lemma (the simple-root form does not need a monic polynomial).
-
-**440 tool statements remain unchecked** (classes 13 to 94).
+**What is still unsettled.** The 58 "not confirmed" tools are listed in the batch files. The largest groups are numerical analysis,
+statistics and partial differential equations, where encyclopaedia pages often omit exact hypotheses.
 
 ## Audit 3: the 23 other fields with tools, ten cards each
 

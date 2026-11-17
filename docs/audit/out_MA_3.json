@@ -1,0 +1,633 @@
+[
+ {
+  "cards": [
+   "40G"
+  ],
+  "tool": "Abel's theorem",
+  "verdict": "confirmed",
+  "reason": "Convergence of the power series at the boundary point suffices; radial limit then equals the sum.",
+  "source": "https://en.wikipedia.org/wiki/Abel%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "41A"
+  ],
+  "tool": "Weierstrass approximation theorem",
+  "verdict": "confirmed",
+  "reason": "Continuous function on a closed bounded interval suffices for uniform polynomial approximation.",
+  "source": "https://en.wikipedia.org/wiki/Weierstrass_approximation_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "41A"
+  ],
+  "tool": "Stone\u2013Weierstrass theorem",
+  "verdict": "confirmed",
+  "reason": "Compact Hausdorff, separating subalgebra with constants (and conjugation-closed in complex case) is dense; stricter than needed.",
+  "source": "https://en.wikipedia.org/wiki/Stone%E2%80%93Weierstrass_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "41A"
+  ],
+  "tool": "Chebyshev equioscillation theorem",
+  "verdict": "confirmed",
+  "reason": "Continuous real function on closed interval, degree-n polynomials, uniform norm: best approximation iff n+2 alternation points.",
+  "source": "https://en.wikipedia.org/wiki/Equioscillation_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "41A"
+  ],
+  "tool": "Jackson's theorem",
+  "verdict": "confirmed",
+  "reason": "Jackson bounds use periodic continuous f and modulus of continuity or smoothness.",
+  "source": "https://en.wikipedia.org/wiki/Jackson%27s_inequality",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "42A"
+  ],
+  "tool": "Fej\u00e9r's theorem",
+  "verdict": "confirmed",
+  "reason": "Continuous periodic f gives uniform Ces\u00e0ro convergence of the Fourier series.",
+  "source": "https://en.wikipedia.org/wiki/Fej%C3%A9r%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "42A"
+  ],
+  "tool": "Carleson's theorem",
+  "verdict": "confirmed",
+  "reason": "Periodic L2 function gives almost-everywhere convergence of Fourier series.",
+  "source": "https://en.wikipedia.org/wiki/Carleson%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "42A"
+  ],
+  "tool": "Parseval's identity",
+  "verdict": "confirmed",
+  "reason": "Square-integrable function suffices for Parseval's identity.",
+  "source": "https://en.wikipedia.org/wiki/Parseval%27s_identity",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "42B"
+  ],
+  "tool": "Plancherel theorem",
+  "verdict": "confirmed",
+  "reason": "L2 functions suffice via unitary extension from L1 and L2.",
+  "source": "https://en.wikipedia.org/wiki/Plancherel_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "42B"
+  ],
+  "tool": "Calder\u00f3n\u2013Zygmund theorem",
+  "verdict": "confirmed",
+  "reason": "Standard kernel size/smoothness plus L2 boundedness give boundedness on Lp; source formulas partly garbled.",
+  "source": "https://en.wikipedia.org/wiki/Singular_integral",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "42C"
+  ],
+  "tool": "Whittaker\u2013Shannon sampling theorem",
+  "verdict": "confirmed",
+  "reason": "Band-limited signal with sampling rate strictly above twice the bandwidth.",
+  "source": "https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "42C"
+  ],
+  "tool": "Multiresolution analysis",
+  "verdict": "confirmed",
+  "reason": "Nested subspaces with scaling-function shifts spanning V0, plus density and trivial intersection, are the standard axioms.",
+  "source": "https://en.wikipedia.org/wiki/Multiresolution_analysis",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "43A"
+  ],
+  "tool": "Plancherel theorem for locally compact abelian groups",
+  "verdict": "confirmed",
+  "reason": "LCA group with Haar measure and matching dual measure gives unitary Fourier transform on L2.",
+  "source": "https://en.wikipedia.org/wiki/Pontryagin_duality",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "45B"
+  ],
+  "tool": "Fredholm alternative",
+  "verdict": "confirmed",
+  "reason": "Holds for compact operators, including integral operators, on Banach spaces, for nonzero lambda; card's hypotheses suffice.",
+  "source": "https://en.wikipedia.org/wiki/Fredholm_alternative",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "45C"
+  ],
+  "tool": "Hilbert\u2013Schmidt theorem",
+  "verdict": "confirmed",
+  "reason": "Compact self-adjoint operator on a Hilbert space is exactly the source's hypothesis.",
+  "source": "https://en.wikipedia.org/wiki/Hilbert%E2%80%93Schmidt_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "45C"
+  ],
+  "tool": "Mercer's theorem",
+  "verdict": "miss",
+  "reason": "Beyond a continuous symmetric positive kernel on a compact set, a finite Borel measure with full support is needed.",
+  "source": "https://en.wikipedia.org/wiki/Mercer%27s_theorem",
+  "corrected_hypotheses": "continuous symmetric positive semi-definite kernel on a compact set; a finite Borel measure with support the whole set"
+ },
+ {
+  "cards": [
+   "45D"
+  ],
+  "tool": "Existence and uniqueness for Volterra equations of the second kind",
+  "verdict": "unconfirmed",
+  "reason": "Source page gives no existence/uniqueness hypotheses for second-kind Volterra equations.",
+  "source": "https://en.wikipedia.org/wiki/Volterra_integral_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "45P"
+  ],
+  "tool": "Schur test",
+  "verdict": "confirmed",
+  "reason": "Non-negative kernel with positive weights satisfying the two Schur inequalities gives L2 boundedness.",
+  "source": "https://en.wikipedia.org/wiki/Schur_test",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "45Q"
+  ],
+  "tool": "Tikhonov regularisation",
+  "verdict": "unconfirmed",
+  "reason": "Page treats ridge regression; it gives no result tying the parameter to noise level for bounded operators.",
+  "source": "https://en.wikipedia.org/wiki/Ridge_regression",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46A"
+  ],
+  "tool": "Hahn\u2013Banach separation theorem",
+  "verdict": "miss",
+  "reason": "Separation needs the two sets to be non-empty, disjoint and convex; card omits this.",
+  "source": "https://en.wikipedia.org/wiki/Hahn%E2%80%93Banach_theorem",
+  "corrected_hypotheses": "a real locally convex space; two non-empty disjoint convex sets; one compact and the other closed (strict separation), or one open"
+ },
+ {
+  "cards": [
+   "46B"
+  ],
+  "tool": "Hahn\u2013Banach theorem",
+  "verdict": "miss",
+  "reason": "Extension needs a bounded (norm-dominated) linear functional on the subspace; card names only the subspace.",
+  "source": "https://en.wikipedia.org/wiki/Hahn%E2%80%93Banach_theorem",
+  "corrected_hypotheses": "a normed space; a linear subspace; a bounded linear functional on that subspace (or one dominated by a sublinear function)"
+ },
+ {
+  "cards": [
+   "46B"
+  ],
+  "tool": "Uniform boundedness principle",
+  "verdict": "miss",
+  "reason": "Pointwise boundedness of the family at every point is the key hypothesis and is absent.",
+  "source": "https://en.wikipedia.org/wiki/Uniform_boundedness_principle",
+  "corrected_hypotheses": "a family of bounded linear operators from a Banach space to a normed space; pointwise bounded at every point"
+ },
+ {
+  "cards": [
+   "46B"
+  ],
+  "tool": "Open mapping theorem",
+  "verdict": "miss",
+  "reason": "Theorem needs a continuous, linear, surjective map between the Banach spaces; surjectivity is absent.",
+  "source": "https://en.wikipedia.org/wiki/Open_mapping_theorem_(functional_analysis)",
+  "corrected_hypotheses": "a continuous linear surjection between Banach spaces"
+ },
+ {
+  "cards": [
+   "46B"
+  ],
+  "tool": "Banach\u2013Alaoglu theorem",
+  "verdict": "confirmed",
+  "reason": "Normed space X: closed unit ball of the dual is weak-* compact.",
+  "source": "https://en.wikipedia.org/wiki/Banach%E2%80%93Alaoglu_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46C"
+  ],
+  "tool": "Projection theorem",
+  "verdict": "confirmed",
+  "reason": "Hilbert space with non-empty closed convex set gives unique nearest point; closed subspace gives orthogonality.",
+  "source": "https://en.wikipedia.org/wiki/Hilbert_projection_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46C"
+  ],
+  "tool": "Riesz representation theorem",
+  "verdict": "confirmed",
+  "reason": "Every continuous linear functional on a Hilbert space is represented by a unique vector.",
+  "source": "https://en.wikipedia.org/wiki/Riesz_representation_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46E"
+  ],
+  "tool": "Sobolev embedding theorem",
+  "verdict": "confirmed",
+  "reason": "Lipschitz-boundary domain (or whole space) with exponent range gives the embeddings.",
+  "source": "https://en.wikipedia.org/wiki/Sobolev_inequality",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46E"
+  ],
+  "tool": "Rellich\u2013Kondrachov theorem",
+  "verdict": "confirmed",
+  "reason": "Bounded Lipschitz domain with exponent below the critical one gives compact embedding.",
+  "source": "https://en.wikipedia.org/wiki/Rellich%E2%80%93Kondrachov_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46E"
+  ],
+  "tool": "Arzel\u00e0\u2013Ascoli theorem",
+  "verdict": "confirmed",
+  "reason": "Uniformly bounded, equicontinuous family on a compact space has a uniformly convergent subsequence; card is stronger.",
+  "source": "https://en.wikipedia.org/wiki/Arzel%C3%A0%E2%80%93Ascoli_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46F"
+  ],
+  "tool": "Schwartz theory of distributions",
+  "verdict": "confirmed",
+  "reason": "Distributions are continuous linear functionals on test functions; locally integrable functions give distributions.",
+  "source": "https://en.wikipedia.org/wiki/Distribution_(mathematics)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46F"
+  ],
+  "tool": "Schwartz kernel theorem",
+  "verdict": "confirmed",
+  "reason": "Continuous linear map from test functions to distributions has a unique distributional kernel.",
+  "source": "https://en.wikipedia.org/wiki/Schwartz_kernel_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46J"
+  ],
+  "tool": "Gelfand representation",
+  "verdict": "confirmed",
+  "reason": "Commutative complex Banach algebra gives the transform; isometric isomorphism for commutative unital C*-algebras.",
+  "source": "https://en.wikipedia.org/wiki/Gelfand_representation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46L"
+  ],
+  "tool": "Gelfand\u2013Naimark theorem",
+  "verdict": "confirmed",
+  "reason": "Any C*-algebra embeds isometrically *-isomorphically into bounded operators on a Hilbert space.",
+  "source": "https://en.wikipedia.org/wiki/Gelfand%E2%80%93Naimark_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46L"
+  ],
+  "tool": "Von Neumann bicommutant theorem",
+  "verdict": "confirmed",
+  "reason": "Unital self-adjoint algebra of bounded operators: bicommutant equals weak/strong closure.",
+  "source": "https://en.wikipedia.org/wiki/Von_Neumann_bicommutant_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46T"
+  ],
+  "tool": "Schauder fixed-point theorem",
+  "verdict": "confirmed",
+  "reason": "Continuous self-map of a non-empty compact convex set has a fixed point; stricter than the general version.",
+  "source": "https://en.wikipedia.org/wiki/Schauder_fixed-point_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "46T"
+  ],
+  "tool": "Implicit function theorem in Banach spaces",
+  "verdict": "confirmed",
+  "reason": "Continuously Fr\u00e9chet-differentiable map with invertible partial derivative at a zero gives a local implicit function.",
+  "source": "https://en.wikipedia.org/wiki/Implicit_function_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "47A"
+  ],
+  "tool": "Spectral theorem for self-adjoint operators",
+  "verdict": "confirmed",
+  "reason": "Self-adjoint operators on a Hilbert space, bounded or unbounded (densely defined by definition), have a spectral decomposition.",
+  "source": "https://en.wikipedia.org/wiki/Spectral_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "47A"
+  ],
+  "tool": "Closed graph theorem",
+  "verdict": "confirmed",
+  "reason": "Linear operator between Banach spaces is bounded iff its graph is closed.",
+  "source": "https://en.wikipedia.org/wiki/Closed_graph_theorem_(functional_analysis)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "47B"
+  ],
+  "tool": "Spectral theorem for compact self-adjoint operators",
+  "verdict": "confirmed",
+  "reason": "Compact self-adjoint operator on a Hilbert space has an orthonormal eigenbasis for the complement of its kernel.",
+  "source": "https://en.wikipedia.org/wiki/Compact_operator_on_Hilbert_space",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "47B"
+  ],
+  "tool": "Riesz\u2013Schauder theory",
+  "verdict": "confirmed",
+  "reason": "Theory concerns compact operators on a Banach space.",
+  "source": "https://en.wikipedia.org/wiki/Spectral_theory_of_compact_operators",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "47D"
+  ],
+  "tool": "Hille\u2013Yosida theorem",
+  "verdict": "confirmed",
+  "reason": "Closed densely defined operator with resolvent power bounds for real lambda above omega characterises semigroup generators.",
+  "source": "https://en.wikipedia.org/wiki/Hille%E2%80%93Yosida_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "47D"
+  ],
+  "tool": "Stone's theorem",
+  "verdict": "miss",
+  "reason": "Strong continuity of the one-parameter unitary group is the essential hypothesis; a bare Hilbert space is not enough.",
+  "source": "https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-parameter_unitary_groups",
+  "corrected_hypotheses": "a strongly continuous one-parameter unitary group on a Hilbert space"
+ },
+ {
+  "cards": [
+   "47H",
+   "54H"
+  ],
+  "tool": "Banach fixed-point theorem",
+  "verdict": "confirmed",
+  "reason": "Contraction of a non-empty complete metric space into itself has a unique fixed point.",
+  "source": "https://en.wikipedia.org/wiki/Banach_fixed-point_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "47H"
+  ],
+  "tool": "Browder\u2013Minty theorem",
+  "verdict": "unconfirmed",
+  "reason": "Page states separable reflexive space with bounded, continuous, coercive, monotone map; card's weaker hemicontinuity version is not on the page.",
+  "source": "https://en.wikipedia.org/wiki/Browder%E2%80%93Minty_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "47H"
+  ],
+  "tool": "Brouwer fixed-point theorem",
+  "verdict": "confirmed",
+  "reason": "Continuous self-map of a non-empty compact convex set in Euclidean space has a fixed point.",
+  "source": "https://en.wikipedia.org/wiki/Brouwer_fixed-point_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "47J"
+  ],
+  "tool": "Stampacchia's theorem",
+  "verdict": "confirmed",
+  "reason": "Continuous coercive bilinear form on a real Hilbert space with non-empty closed convex set gives a unique solution.",
+  "source": "https://mathworld.wolfram.com/StampacchiaTheorem.html",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "49K"
+  ],
+  "tool": "Euler\u2013Lagrange equation",
+  "verdict": "confirmed",
+  "reason": "Smooth integrand and extremal with fixed endpoints are the page's assumptions; natural conditions are a standard variant.",
+  "source": "https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "49K"
+  ],
+  "tool": "Pontryagin's maximum principle",
+  "verdict": "confirmed",
+  "reason": "Page states conditions are necessary, sufficient only under convexity; smooth dynamics is the standard assumption.",
+  "source": "https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "49K"
+  ],
+  "tool": "Karush\u2013Kuhn\u2013Tucker conditions",
+  "verdict": "confirmed",
+  "reason": "Differentiability plus a constraint qualification gives necessity; convexity gives sufficiency.",
+  "source": "https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "49R"
+  ],
+  "tool": "Rayleigh\u2013Ritz method",
+  "verdict": "unconfirmed",
+  "reason": "Page assumes a Hermitian operator and trial space but never mentions boundedness below or form domain.",
+  "source": "https://en.wikipedia.org/wiki/Rayleigh%E2%80%93Ritz_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "49S"
+  ],
+  "tool": "Noether's theorem",
+  "verdict": "confirmed",
+  "reason": "Action-derived equations with continuous symmetry leaving the action invariant up to a divergence.",
+  "source": "https://en.wikipedia.org/wiki/Noether%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "51A"
+  ],
+  "tool": "Desargues's theorem",
+  "verdict": "confirmed",
+  "reason": "Holds in projective spaces of dimension at least 3 and in planes over a division ring.",
+  "source": "https://en.wikipedia.org/wiki/Desargues%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "51A"
+  ],
+  "tool": "Pappus's theorem",
+  "verdict": "confirmed",
+  "reason": "Holds in a projective plane over a commutative field; fails over noncommutative division rings.",
+  "source": "https://en.wikipedia.org/wiki/Pappus%27s_hexagon_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "51E"
+  ],
+  "tool": "Bruck\u2013Ryser theorem",
+  "verdict": "confirmed",
+  "reason": "Non-existence of a plane of order n when n is 1 or 2 mod 4 and not a sum of two squares.",
+  "source": "https://en.wikipedia.org/wiki/Bruck%E2%80%93Ryser_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "51K"
+  ],
+  "tool": "Cayley\u2013Menger determinant conditions",
+  "verdict": "confirmed",
+  "reason": "Embeddability of a finite semimetric is decided by Cayley-Menger determinant conditions; prescribed distances are the data.",
+  "source": "https://en.wikipedia.org/wiki/Cayley%E2%80%93Menger_determinant",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "51M"
+  ],
+  "tool": "Pythagoras's theorem",
+  "verdict": "miss",
+  "reason": "The right angle (or orthogonality of vectors) is the essential hypothesis; Euclidean geometry alone is insufficient.",
+  "source": "https://en.wikipedia.org/wiki/Pythagorean_theorem",
+  "corrected_hypotheses": "a triangle with a right angle in Euclidean geometry; equivalently orthogonal vectors in an inner product space"
+ },
+ {
+  "cards": [
+   "51M"
+  ],
+  "tool": "Gauss\u2013Bonnet theorem for geodesic triangles",
+  "verdict": "confirmed",
+  "reason": "Constant curvature is stricter than needed; general result holds for a geodesic triangle on any Riemannian surface.",
+  "source": "https://en.wikipedia.org/wiki/Gauss%E2%80%93Bonnet_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "52A"
+  ],
+  "tool": "Helly's theorem",
+  "verdict": "confirmed",
+  "reason": "Finite convex families in R^d, or infinite families of compact convex sets, with every d+1 meeting.",
+  "source": "https://en.wikipedia.org/wiki/Helly%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "52A"
+  ],
+  "tool": "Carath\u00e9odory's theorem",
+  "verdict": "confirmed",
+  "reason": "Any subset of R^d suffices; point in convex hull is a combination of at most d+1 points.",
+  "source": "https://en.wikipedia.org/wiki/Carath%C3%A9odory%27s_theorem_(convex_hull)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "52A"
+  ],
+  "tool": "Brunn\u2013Minkowski inequality",
+  "verdict": "confirmed",
+  "reason": "Non-empty compact subsets of R^n suffice for Brunn-Minkowski.",
+  "source": "https://en.wikipedia.org/wiki/Brunn%E2%80%93Minkowski_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "52A"
+  ],
+  "tool": "Separating hyperplane theorem",
+  "verdict": "confirmed",
+  "reason": "Disjoint non-empty convex subsets of Euclidean space admit a separating hyperplane (weak separation).",
+  "source": "https://en.wikipedia.org/wiki/Hyperplane_separation_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "52B"
+  ],
+  "tool": "Euler's polyhedron formula",
+  "verdict": "confirmed",
+  "reason": "Convexity is stricter than needed; sphere-like polyhedra give V-E+F=2.",
+  "source": "https://en.wikipedia.org/wiki/Euler_characteristic",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "52B"
+  ],
+  "tool": "Upper bound theorem (McMullen)",
+  "verdict": "confirmed",
+  "reason": "Holds for convex polytopes of given dimension and vertex count; simplicial case proved, non-simplicial follows by perturbation.",
+  "source": "https://en.wikipedia.org/wiki/Upper_bound_theorem",
+  "corrected_hypotheses": ""
+ }
+]

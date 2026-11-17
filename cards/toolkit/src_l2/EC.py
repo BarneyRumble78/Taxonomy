@@ -130,7 +130,7 @@ T.update({
 "F6": N("estimate what closer world integration does to wages, growth and inequality", "task=estimate explain"),
 "G1": K("price a risky asset and choose a portfolio", "task=estimate optimise|uncertainty=probabilistic_model",
   [("Capital asset pricing model", "gives expected return from market risk", "mean-variance investors; homogeneous expectations; frictionless markets; unlimited risk-free borrowing and lending"),
-   ("Black–Scholes formula", "prices a European option", "geometric Brownian motion with constant volatility; continuous costless trading; no arbitrage; a constant risk-free rate"),
+   ("Black–Scholes formula", "prices a European option", "the price follows geometric Brownian motion with constant volatility; no dividends during the option's life; continuous trading with no transaction costs; a constant risk-free rate; no arbitrage"),
    ("Mean-variance portfolio selection", "finds the lowest-risk mix for a target return", "means and covariances of returns are known"),
    ("Efficient markets hypothesis", "says prices reflect available information", "testable only jointly with a model of expected returns")],
   "return series; contract terms", "required return; option value; weights"),

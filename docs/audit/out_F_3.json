@@ -1,0 +1,750 @@
+[
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10010147.10010371"
+  ],
+  "tool": "Rendering equation with path tracing",
+  "verdict": "confirmed",
+  "reason": "Monte Carlo solution of rendering equation; unbiased but noisy; geometric optics simplification stated.",
+  "source": "https://en.wikipedia.org/wiki/Path_tracing",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10010147.10010371"
+  ],
+  "tool": "Rasterisation with a depth buffer",
+  "verdict": "confirmed",
+  "reason": "Per-pixel depth comparison keeps nearest fragment; precision limits and opacity limitation consistent.",
+  "source": "https://en.wikipedia.org/wiki/Z-buffering",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10010147.10011777"
+  ],
+  "tool": "Mutual exclusion with locks",
+  "verdict": "confirmed",
+  "reason": "Locks give mutual exclusion; fixed acquisition order is the standard deadlock prevention.",
+  "source": "https://en.wikipedia.org/wiki/Lock_(computer_science)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10010147.10011777"
+  ],
+  "tool": "Linearisability",
+  "verdict": "confirmed",
+  "reason": "Correctness against sequential specification plus real-time order.",
+  "source": "https://en.wikipedia.org/wiki/Linearizability",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10003752.10010061"
+  ],
+  "tool": "Chernoff bound",
+  "verdict": "confirmed",
+  "reason": "Chernoff bounds require independent summands; bounded forms cover bounded variables.",
+  "source": "https://en.wikipedia.org/wiki/Chernoff_bound",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10003752.10010061"
+  ],
+  "tool": "Convex hull algorithms",
+  "verdict": "confirmed",
+  "reason": "Smallest convex enclosing set; algorithms are for plane, 3D and harder in high dimension.",
+  "source": "https://en.wikipedia.org/wiki/Convex_hull_algorithms",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10002950.10003624"
+  ],
+  "tool": "Graph search (breadth-first and depth-first)",
+  "verdict": "confirmed",
+  "reason": "BFS/DFS visit the root's reachable component; described for finite graphs.",
+  "source": "https://en.wikipedia.org/wiki/Graph_traversal",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10002950.10003624"
+  ],
+  "tool": "Recurrence solving (master theorem)",
+  "verdict": "confirmed",
+  "reason": "Equal-size subproblems and case conditions (regularity for case 3) match.",
+  "source": "https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10002950.10003714"
+  ],
+  "tool": "Newton's method",
+  "verdict": "confirmed",
+  "reason": "Local convergence needs differentiability, nearby start, non-zero derivative at root.",
+  "source": "https://en.wikipedia.org/wiki/Newton%27s_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10002950.10003714"
+  ],
+  "tool": "Gradient descent",
+  "verdict": "confirmed",
+  "reason": "Differentiable, Lipschitz gradient, small step; global minimum for convex functions.",
+  "source": "https://en.wikipedia.org/wiki/Gradient_descent",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10003752.10003777"
+  ],
+  "tool": "NP-completeness by reduction",
+  "verdict": "confirmed",
+  "reason": "NP-complete needs membership in NP plus polynomial reduction from known NP-complete problem.",
+  "source": "https://en.wikipedia.org/wiki/NP-completeness",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10003752.10003777"
+  ],
+  "tool": "Cook\u2013Levin theorem",
+  "verdict": "confirmed",
+  "reason": "SAT NP-complete via Turing-machine encoding and polynomial-time many-one reductions.",
+  "source": "https://en.wikipedia.org/wiki/Cook%E2%80%93Levin_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10003752.10003777"
+  ],
+  "tool": "Time hierarchy theorem",
+  "verdict": "confirmed",
+  "reason": "Hierarchy theorem requires time-constructible bounds.",
+  "source": "https://en.wikipedia.org/wiki/Time_hierarchy_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10003033.10003079"
+  ],
+  "tool": "M/M/1 queue",
+  "verdict": "confirmed",
+  "reason": "Poisson arrivals, exponential service, single server, rho<1 match source.",
+  "source": "https://en.wikipedia.org/wiki/M/M/1_queue",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10003033.10003079"
+  ],
+  "tool": "Network calculus",
+  "verdict": "confirmed",
+  "reason": "Delay and backlog bounds from arrival and service curves.",
+  "source": "https://en.wikipedia.org/wiki/Network_calculus",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10003120.10011738"
+  ],
+  "tool": "Conformance testing against WCAG",
+  "verdict": "unconfirmed",
+  "reason": "Source lists testable success criteria but says nothing on scope or human judgement.",
+  "source": "https://en.wikipedia.org/wiki/Web_Content_Accessibility_Guidelines",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10010147"
+  ],
+  "tool": "Stochastic gradient descent with backpropagation",
+  "verdict": "confirmed",
+  "reason": "Differentiable loss; global convergence for convex objectives with decreasing step sizes.",
+  "source": "https://en.wikipedia.org/wiki/Stochastic_gradient_descent",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10010147"
+  ],
+  "tool": "PAC learning bound (VC dimension)",
+  "verdict": "confirmed",
+  "reason": "Samples drawn from distribution D; learnability equals finite VC dimension.",
+  "source": "https://en.wikipedia.org/wiki/Probably_approximately_correct_learning",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10010147"
+  ],
+  "tool": "A* search",
+  "verdict": "confirmed",
+  "reason": "Admissible heuristic gives optimality; consistency needed when nodes not reopened.",
+  "source": "https://en.wikipedia.org/wiki/A*_search_algorithm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10002950.10003648"
+  ],
+  "tool": "Markov chain Monte Carlo",
+  "verdict": "confirmed",
+  "reason": "Ergodic chain with target stationary distribution; mixing matters; unnormalised target allowed.",
+  "source": "https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CS",
+  "cards": [
+   "CS.TK.10002950.10003648"
+  ],
+  "tool": "Maximum likelihood estimation",
+  "verdict": "confirmed",
+  "reason": "Consistency needs identification and correct specification within model.",
+  "source": "https://en.wikipedia.org/wiki/Maximum_likelihood_estimation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.461001"
+  ],
+  "tool": "OAIS reference model",
+  "verdict": "confirmed",
+  "reason": "Defines archive functions; designated community defined by the archive as consumers who can understand the data.",
+  "source": "https://en.wikipedia.org/wiki/Open_Archival_Information_System",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.461001"
+  ],
+  "tool": "Fixity checking with checksums",
+  "verdict": "unconfirmed",
+  "reason": "Checksums detect change; source does not say they are stored separately or rechecked on a schedule.",
+  "source": "https://blogs.loc.gov/thesignal/2014/04/protect-your-data-file-fixity-and-data-integrity/",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.460502"
+  ],
+  "tool": "Association rule mining (Apriori)",
+  "verdict": "confirmed",
+  "reason": "Minimum support threshold and downward closure (subsets of frequent sets are frequent) match.",
+  "source": "https://en.wikipedia.org/wiki/Apriori_algorithm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.460502"
+  ],
+  "tool": "k-means clustering",
+  "verdict": "confirmed",
+  "reason": "k is preset; converges to local optimum; assumes roughly spherical, similar-size clusters.",
+  "source": "https://en.wikipedia.org/wiki/K-means_clustering",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.4609"
+  ],
+  "tool": "Entity-relationship modelling",
+  "verdict": "confirmed",
+  "reason": "Describes domain as entities, attributes and relationships.",
+  "source": "https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.4609"
+  ],
+  "tool": "Technology acceptance model",
+  "verdict": "confirmed",
+  "reason": "PU and PEOU predict use via questionnaire; voluntariness assumed.",
+  "source": "https://en.wikipedia.org/wiki/Technology_acceptance_model",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.460511"
+  ],
+  "tool": "Count-min sketch",
+  "verdict": "confirmed",
+  "reason": "Overestimates only, bounded error with probability 1-delta, pairwise independent hashes.",
+  "source": "https://en.wikipedia.org/wiki/Count%E2%80%93min_sketch",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.460511"
+  ],
+  "tool": "Reservoir sampling",
+  "verdict": "confirmed",
+  "reason": "Single pass uniform sample without knowing stream length.",
+  "source": "https://en.wikipedia.org/wiki/Reservoir_sampling",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.460510"
+  ],
+  "tool": "Collaborative filtering by matrix factorisation",
+  "verdict": "unconfirmed",
+  "reason": "Low-rank latent factors supported; source silent on rating density or selectivity of missing ratings.",
+  "source": "https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.461005"
+  ],
+  "tool": "Citation analysis",
+  "verdict": "confirmed",
+  "reason": "Field-dependent citation practices; citations measure impact or influence, not quality.",
+  "source": "https://en.wikipedia.org/wiki/Citation_analysis",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.461005"
+  ],
+  "tool": "Bradford's law",
+  "verdict": "confirmed",
+  "reason": "Empirical 1:n:n2 regularity in journal scatter; holds across many subjects.",
+  "source": "https://en.wikipedia.org/wiki/Bradford%27s_law",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.460503"
+  ],
+  "tool": "B-tree index",
+  "verdict": "confirmed",
+  "reason": "Sorted keys, O(log n) search; consistent ordering implied.",
+  "source": "https://en.wikipedia.org/wiki/B-tree",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.460503"
+  ],
+  "tool": "Hash index",
+  "verdict": "confirmed",
+  "reason": "Average constant-time exact-key lookup; uniform hashing fundamental.",
+  "source": "https://en.wikipedia.org/wiki/Hash_table",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.4610"
+  ],
+  "tool": "Faceted classification",
+  "verdict": "confirmed",
+  "reason": "Mutually exclusive facets are the stated ideal.",
+  "source": "https://en.wikipedia.org/wiki/Faceted_classification",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.4610"
+  ],
+  "tool": "Precision and recall evaluation",
+  "verdict": "confirmed",
+  "reason": "Both measures need trusted relevance judgements.",
+  "source": "https://en.wikipedia.org/wiki/Precision_and_recall",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.461008"
+  ],
+  "tool": "Authority control",
+  "verdict": "confirmed",
+  "reason": "One heading per topic, maintained through authority files.",
+  "source": "https://en.wikipedia.org/wiki/Authority_control",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.460901"
+  ],
+  "tool": "Business process modelling (BPMN)",
+  "verdict": "confirmed",
+  "reason": "BPMN uses tasks, events and gateways to draw processes.",
+  "source": "https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "IS",
+  "cards": [
+   "IS.TK.460901"
+  ],
+  "tool": "Process mining",
+  "verdict": "confirmed",
+  "reason": "Event log needs case ID, activity and timestamp.",
+  "source": "https://en.wikipedia.org/wiki/Process_mining",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.330206"
+  ],
+  "tool": "Limit state design",
+  "verdict": "confirmed",
+  "reason": "Checks ultimate and serviceability states with factored loads from codes.",
+  "source": "https://en.wikipedia.org/wiki/Limit_state_design",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.330206"
+  ],
+  "tool": "Condensation risk assessment (Glaser method)",
+  "verdict": "confirmed",
+  "reason": "Glaser is a 1D steady-state vapour model; air transport is a noted source of error.",
+  "source": "https://facadetectonics.org/papers/interstitial-condensation-risk-assessment",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.3303"
+  ],
+  "tool": "Human-centred iterative design",
+  "verdict": "confirmed",
+  "reason": "Iterative cycle depending on user participation and feedback.",
+  "source": "https://en.wikipedia.org/wiki/Human-centered_design",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.3303"
+  ],
+  "tool": "Heuristic evaluation",
+  "verdict": "confirmed",
+  "reason": "Several experts (3 to 5) review independently first; finds problems qualitatively.",
+  "source": "https://en.wikipedia.org/wiki/Heuristic_evaluation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.3302"
+  ],
+  "tool": "Steady-state heat loss (U-value)",
+  "verdict": "unconfirmed",
+  "reason": "Source gives Phi=A*U*dT and series layers but does not state steady-state or storage assumptions.",
+  "source": "https://en.wikipedia.org/wiki/Thermal_transmittance",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.3302"
+  ],
+  "tool": "Critical path method",
+  "verdict": "confirmed",
+  "reason": "Longest dependent chain; needs known durations and dependencies.",
+  "source": "https://en.wikipedia.org/wiki/Critical_path_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.330207"
+  ],
+  "tool": "Elemental cost planning",
+  "verdict": "unconfirmed",
+  "reason": "Page describes elemental cost plan as cost targets per element; silent on comparable-project data and time/place adjustment.",
+  "source": "https://www.designingbuildings.co.uk/wiki/Elemental_cost_plan",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.330312"
+  ],
+  "tool": "Service blueprint",
+  "verdict": "confirmed",
+  "reason": "Maps customer actions against front-stage and back-stage activities by line of visibility.",
+  "source": "https://en.wikipedia.org/wiki/Service_blueprint",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.330307"
+  ],
+  "tool": "Anthropometric design for percentiles",
+  "verdict": "unconfirmed",
+  "reason": "Population anthropometric data needed (supported); critical dimension and percentile sizing not covered by source.",
+  "source": "https://en.wikipedia.org/wiki/Anthropometry",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.3304"
+  ],
+  "tool": "Four-step travel demand model",
+  "verdict": "unconfirmed",
+  "reason": "Four steps and zones confirmed; calibration to counts and constant behaviour not described in source.",
+  "source": "https://en.wikipedia.org/wiki/Transportation_forecasting",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.3304"
+  ],
+  "tool": "Map overlay suitability analysis",
+  "verdict": "unconfirmed",
+  "reason": "Overlay and weighted index models exist; source does not cover common scaling or justification of weights.",
+  "source": "https://en.wikipedia.org/wiki/Geographic_information_system",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.330202"
+  ],
+  "tool": "Earned value management",
+  "verdict": "confirmed",
+  "reason": "Compares earned value with planned value and actual cost; needs baseline schedule and budget.",
+  "source": "https://en.wikipedia.org/wiki/Earned_value_management",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.330110"
+  ],
+  "tool": "Life cycle assessment of buildings",
+  "verdict": "confirmed",
+  "reason": "Functional unit and system boundary required; temporal scope documented.",
+  "source": "https://en.wikipedia.org/wiki/Life-cycle_assessment",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "DE",
+  "cards": [
+   "DE.TK.330103"
+  ],
+  "tool": "Conservation by significance assessment (Burra Charter process)",
+  "verdict": "unconfirmed",
+  "reason": "Source ties conservation to cultural significance but does not state assessment-first or minimal-change principles.",
+  "source": "https://en.wikipedia.org/wiki/Burra_Charter",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.UG1500-1530"
+  ],
+  "tool": "Two-body orbit (Kepler's laws)",
+  "verdict": "confirmed",
+  "reason": "Kepler orbits assume two bodies; perturbations treated as corrections.",
+  "source": "https://en.wikipedia.org/wiki/Kepler%27s_laws_of_planetary_motion",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.UG"
+  ],
+  "tool": "Breguet range equation",
+  "verdict": "confirmed",
+  "reason": "Assumes quasi-steady level flight, constant L/D and constant specific fuel consumption.",
+  "source": "https://en.wikipedia.org/wiki/Range_(aeronautics)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.UF"
+  ],
+  "tool": "Point-mass trajectory model",
+  "verdict": "confirmed",
+  "reason": "Point-mass projectile with drag needs numerical integration given known drag; uniform gravity.",
+  "source": "https://en.wikipedia.org/wiki/Trajectory_of_a_projectile",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.UF"
+  ],
+  "tool": "Circular error probable",
+  "verdict": "confirmed",
+  "reason": "CEP assumes circular bivariate normal error; poor if elliptical or biased.",
+  "source": "https://en.wikipedia.org/wiki/Circular_error_probable",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.VF1-580"
+  ],
+  "tool": "Bearings-only target motion analysis",
+  "verdict": "confirmed",
+  "reason": "Single constant-velocity target; single-array observer needs a manoeuvre for observability.",
+  "source": "https://mdpi.com/2078-2489/11/9/432",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.U1-900"
+  ],
+  "tool": "Lanchester's laws",
+  "verdict": "confirmed",
+  "reason": "Square law needs aimed fire, equal units, all engaged, fixed forces; reinforcement only in extensions.",
+  "source": "https://en.wikipedia.org/wiki/Lanchester%27s_laws",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.U1-900"
+  ],
+  "tool": "Wargaming",
+  "verdict": "confirmed",
+  "reason": "Umpire adjudication and stated rules; used for insight and training, predictive validity doubtful.",
+  "source": "https://en.wikipedia.org/wiki/Wargame",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.U1-900"
+  ],
+  "tool": "Centre of gravity analysis",
+  "verdict": "confirmed",
+  "reason": "COG linked to critical vulnerabilities via system analysis; CFA relies on subjective judgement.",
+  "source": "https://en.wikipedia.org/wiki/Center_of_gravity_(military)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.UB1-900"
+  ],
+  "tool": "Military decision-making process",
+  "verdict": "unconfirmed",
+  "reason": "Seven steps listed with COA development and comparison; source silent on mission and intent as inputs.",
+  "source": "https://en.wikipedia.org/wiki/Military_Decision_Making_Process",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.UB1-900"
+  ],
+  "tool": "Intelligence preparation of the battlefield",
+  "verdict": "confirmed",
+  "reason": "Four IPB steps; define environment, describe effects, evaluate threat with doctrinal templates.",
+  "source": "https://www.globalsecurity.org/intell/library/policy/army/fm/34-130/ch4.htm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.UC10-780"
+  ],
+  "tool": "Logistics planning factors",
+  "verdict": "confirmed",
+  "reason": "Planners use consumption factors; past experience may not predict future cases.",
+  "source": "https://en.wikipedia.org/wiki/Military_logistics",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.V1-995"
+  ],
+  "tool": "Random search formula",
+  "verdict": "confirmed",
+  "reason": "POD=1-exp(-C); stationary target, uniform distribution, random search, known sweep width.",
+  "source": "https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.V1-995"
+  ],
+  "tool": "Salvo model",
+  "verdict": "confirmed",
+  "reason": "Hughes salvo model uses offensive, defensive and staying power with identical ships per side.",
+  "source": "https://en.wikipedia.org/wiki/Salvo_combat_model",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.UH"
+  ],
+  "tool": "Mass-casualty triage",
+  "verdict": "confirmed",
+  "reason": "Used when casualties exceed care capacity; standard immediate/delayed/minimal/expectant categories.",
+  "source": "https://en.wikipedia.org/wiki/Triage",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "ST",
+  "cards": [
+   "ST.TK.UA10-997"
+  ],
+  "tool": "Order-of-battle analysis",
+  "verdict": "unconfirmed",
+  "reason": "Order of battle covers units, strength, disposition; source does not mention dating or grading sources.",
+  "source": "https://en.wikipedia.org/wiki/Order_of_battle",
+  "corrected_hypotheses": ""
+ }
+]

@@ -1,0 +1,632 @@
+[
+ {
+  "cards": [
+   "68M"
+  ],
+  "tool": "Amdahl's law",
+  "verdict": "confirmed",
+  "reason": "Source assumes fixed problem size and fixed serial fraction; card's hypotheses suffice.",
+  "source": "https://en.wikipedia.org/wiki/Amdahl's_law",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68N"
+  ],
+  "tool": "Hoare logic soundness",
+  "verdict": "confirmed",
+  "reason": "Standard rules give partial correctness; invariants for While rule; semantics needed. Card consistent.",
+  "source": "https://en.wikipedia.org/wiki/Hoare_logic",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68N"
+  ],
+  "tool": "Type soundness (progress and preservation)",
+  "verdict": "confirmed",
+  "reason": "Wright-Felleisen soundness needs operational semantics and type system; progress and preservation.",
+  "source": "https://en.wikipedia.org/wiki/Type_safety",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68P"
+  ],
+  "tool": "Comparison sorting lower bound",
+  "verdict": "confirmed",
+  "reason": "Omega(n log n) for comparison-only algorithms; card's hypothesis sufficient.",
+  "source": "https://en.wikipedia.org/wiki/Comparison_sort",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68P"
+  ],
+  "tool": "Shannon's source coding theorem",
+  "verdict": "miss",
+  "reason": "Source requires an i.i.d. source and finite alphabets; known probabilities alone are not enough.",
+  "source": "https://en.wikipedia.org/wiki/Shannon%27s_source_coding_theorem",
+  "corrected_hypotheses": "an i.i.d. (memoryless) source with known distribution; finite source and code alphabets; uniquely decodable codes"
+ },
+ {
+  "cards": [
+   "68Q"
+  ],
+  "tool": "Cook–Levin theorem",
+  "verdict": "confirmed",
+  "reason": "SAT is NP-complete under polynomial-time many-one (Karp) reductions on Turing machines.",
+  "source": "https://en.wikipedia.org/wiki/Cook–Levin_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68Q"
+  ],
+  "tool": "Time hierarchy theorem",
+  "verdict": "confirmed",
+  "reason": "Requires time-constructible f; card's hypothesis matches.",
+  "source": "https://en.wikipedia.org/wiki/Time_hierarchy_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68Q"
+  ],
+  "tool": "Savitch's theorem",
+  "verdict": "unconfirmed",
+  "reason": "Page cites space-constructibility only; says nothing on a logarithmic lower bound; formula missing.",
+  "source": "https://en.wikipedia.org/wiki/Savitch%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68Q"
+  ],
+  "tool": "PAC learning bound",
+  "verdict": "confirmed",
+  "reason": "Samples drawn from a distribution D; learnability equivalent to finite VC dimension under regularity conditions.",
+  "source": "https://en.wikipedia.org/wiki/Probably_approximately_correct_learning",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68R"
+  ],
+  "tool": "Master theorem",
+  "verdict": "confirmed",
+  "reason": "Needs a>=1, b>1, equal-sized subproblems, f asymptotically positive; regularity for case 3 (covered by cases).",
+  "source": "https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68V"
+  ],
+  "tool": "Proof checking by a small trusted kernel",
+  "verdict": "unconfirmed",
+  "reason": "Page implies trusting kernel code and runtime; does not discuss consistency of the logic.",
+  "source": "https://en.wikipedia.org/wiki/Proof_assistant",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68W"
+  ],
+  "tool": "Dynamic programming",
+  "verdict": "confirmed",
+  "reason": "Optimal substructure and overlapping subproblems are the stated conditions.",
+  "source": "https://en.wikipedia.org/wiki/Dynamic_programming",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68W"
+  ],
+  "tool": "Greedy algorithm on matroids",
+  "verdict": "confirmed",
+  "reason": "Greedy finds maximum-weight independent set in a weighted matroid.",
+  "source": "https://en.wikipedia.org/wiki/Matroid",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "68W"
+  ],
+  "tool": "Approximation guarantee by linear programming relaxation",
+  "verdict": "miss",
+  "reason": "Guarantee needs a rounding scheme with proven ratio; integrality gap only bounds what rounding can achieve.",
+  "source": "https://en.wikipedia.org/wiki/Linear_programming_relaxation",
+  "corrected_hypotheses": "a rounding (or primal-dual) procedure producing a feasible integer solution within a stated factor of the LP optimum; the gap bounds the best possible factor"
+ },
+ {
+  "cards": [
+   "70B"
+  ],
+  "tool": "Chasles's theorem",
+  "verdict": "confirmed",
+  "reason": "Source: any direct (orientation-preserving) Euclidean isometry in 3D is a screw displacement; rigid motion suffices.",
+  "source": "https://en.wikipedia.org/wiki/Chasles%27_theorem_(kinematics)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70C"
+  ],
+  "tool": "Principle of virtual work",
+  "verdict": "confirmed",
+  "reason": "Virtual displacements must respect kinematic constraints; ideal constraint forces do no virtual work. Card matches.",
+  "source": "https://en.wikipedia.org/wiki/Virtual_work",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70E"
+  ],
+  "tool": "Euler's equations of rigid body motion",
+  "verdict": "confirmed",
+  "reason": "Body-fixed principal axes, torques about centre of mass; card's hypotheses suffice.",
+  "source": "https://en.wikipedia.org/wiki/Euler%27s_equations_(rigid_body_dynamics)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70F"
+  ],
+  "tool": "Solution of the two-body problem",
+  "verdict": "confirmed",
+  "reason": "Isolated point masses with central force; inverse-square gives closed-form conics.",
+  "source": "https://en.wikipedia.org/wiki/Two-body_problem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70F"
+  ],
+  "tool": "Virial theorem",
+  "verdict": "confirmed",
+  "reason": "Needs bounded motion and time averaging; power-law potential gives 2<T>=n<V>. Card stricter.",
+  "source": "https://en.wikipedia.org/wiki/Virial_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70H"
+  ],
+  "tool": "Euler–Lagrange equations",
+  "verdict": "confirmed",
+  "reason": "Holonomic constraints required; forces from potential or generalised forces. Card matches.",
+  "source": "https://en.wikipedia.org/wiki/Lagrangian_mechanics",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70H"
+  ],
+  "tool": "Liouville's theorem",
+  "verdict": "confirmed",
+  "reason": "Hamiltonian dynamics under Hamilton's equations; phase-space density conserved along trajectories.",
+  "source": "https://en.wikipedia.org/wiki/Liouville%27s_theorem_(Hamiltonian)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70H"
+  ],
+  "tool": "Noether's theorem",
+  "verdict": "confirmed",
+  "reason": "Action principle and differentiable continuous symmetry of the action.",
+  "source": "https://en.wikipedia.org/wiki/Noether%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70J"
+  ],
+  "tool": "Normal mode decomposition",
+  "verdict": "unconfirmed",
+  "reason": "Source gives small displacements from equilibrium and linearity; silent on symmetric, positive-definite matrices.",
+  "source": "https://en.wikipedia.org/wiki/Normal_mode",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70K"
+  ],
+  "tool": "Poincaré–Lindstedt method",
+  "verdict": "confirmed",
+  "reason": "Weakly nonlinear oscillators with small parameter, removing secular terms.",
+  "source": "https://en.wikipedia.org/wiki/Poincar%C3%A9%E2%80%93Lindstedt_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70M"
+  ],
+  "tool": "Kepler's equation",
+  "verdict": "confirmed",
+  "reason": "Standard form M = E - e sin E holds for elliptical orbits 0<=e<1 (two-body motion).",
+  "source": "https://en.wikipedia.org/wiki/Kepler%27s_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70M"
+  ],
+  "tool": "Vis-viva equation",
+  "verdict": "confirmed",
+  "reason": "Gravity-only two-body Keplerian orbit; card's inverse-square two-body hypothesis suffices.",
+  "source": "https://en.wikipedia.org/wiki/Vis-viva_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70P"
+  ],
+  "tool": "Tsiolkovsky rocket equation",
+  "verdict": "confirmed",
+  "reason": "Assumes no external forces and constant exhaust velocity (also non-relativistic); card's two cover the stated ones.",
+  "source": "https://en.wikipedia.org/wiki/Tsiolkovsky_rocket_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "70S"
+  ],
+  "tool": "Noether's theorem for fields",
+  "verdict": "confirmed",
+  "reason": "Field version: spacetime integral of a Lagrangian density; continuous symmetry of action gives conserved current.",
+  "source": "https://en.wikipedia.org/wiki/Noether%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "74A"
+  ],
+  "tool": "Cauchy's stress theorem",
+  "verdict": "miss",
+  "reason": "Source: traction depends only on point and normal (Cauchy's postulate), continuous in the normal; card omits postulate and misplaces continuity.",
+  "source": "https://en.wikipedia.org/wiki/Cauchy_stress_tensor",
+  "corrected_hypotheses": "a continuum obeying balance of linear momentum; traction depends only on position and unit normal (Cauchy's postulate); traction varies continuously with the normal"
+ },
+ {
+  "cards": [
+   "74B"
+  ],
+  "tool": "Korn's inequality",
+  "verdict": "unconfirmed",
+  "reason": "Page gives open connected domain only; silent on Lipschitz regularity and boundary conditions; formula did not render.",
+  "source": "https://en.wikipedia.org/wiki/Korn%27s_inequality",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "74B"
+  ],
+  "tool": "Uniqueness theorem of linear elasticity (Kirchhoff)",
+  "verdict": "unconfirmed",
+  "reason": "Page does not state the uniqueness theorem or positive-definiteness; only infinitesimal strains and boundary conditions.",
+  "source": "https://en.wikipedia.org/wiki/Linear_elasticity",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "74G"
+  ],
+  "tool": "Euler buckling formula",
+  "verdict": "confirmed",
+  "reason": "Ideal straight, slender, linearly elastic column, axial centroidal load, effective-length factor for end conditions.",
+  "source": "https://en.wikipedia.org/wiki/Buckling",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "74J"
+  ],
+  "tool": "Wave speeds in an isotropic elastic solid",
+  "verdict": "confirmed",
+  "reason": "P-wave speed assumes homogeneous isotropic elastic solid; card's hypotheses suffice.",
+  "source": "https://en.wikipedia.org/wiki/P-wave",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "74K"
+  ],
+  "tool": "Euler–Bernoulli beam theory",
+  "verdict": "confirmed",
+  "reason": "Small deflections, plane sections normal to neutral axis, slender beam, linear elastic.",
+  "source": "https://en.wikipedia.org/wiki/Euler%E2%80%93Bernoulli_beam_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "74K"
+  ],
+  "tool": "Kirchhoff–Love plate theory",
+  "verdict": "confirmed",
+  "reason": "Normals stay straight and normal, thickness unchanged, small strains; card matches.",
+  "source": "https://en.wikipedia.org/wiki/Kirchhoff%E2%80%93Love_plate_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "74Q"
+  ],
+  "tool": "Periodic homogenisation",
+  "verdict": "unconfirmed",
+  "reason": "Page mentions only periodic coefficients; uniform ellipticity not stated in the extract.",
+  "source": "https://en.wikipedia.org/wiki/Homogenization_(mathematics)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "74Q"
+  ],
+  "tool": "Voigt and Reuss bounds",
+  "verdict": "unconfirmed",
+  "reason": "Page frames bounds via isostrain/isostress with known moduli and volume fractions; linear elasticity not stated.",
+  "source": "https://en.wikipedia.org/wiki/Rule_of_mixtures",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "74R"
+  ],
+  "tool": "Griffith criterion",
+  "verdict": "confirmed",
+  "reason": "Brittle linear elastic material, energy balance of released elastic and surface energy.",
+  "source": "https://en.wikipedia.org/wiki/Fracture_mechanics",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76A"
+  ],
+  "tool": "Reynolds transport theorem",
+  "verdict": "confirmed",
+  "reason": "Time-dependent region with boundary velocity; material region gives flow velocity; smoothness implicit.",
+  "source": "https://en.wikipedia.org/wiki/Reynolds_transport_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76B"
+  ],
+  "tool": "Kelvin's circulation theorem",
+  "verdict": "confirmed",
+  "reason": "Inviscid, barotropic, conservative body forces, material closed contour.",
+  "source": "https://en.wikipedia.org/wiki/Kelvin%27s_circulation_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76B"
+  ],
+  "tool": "Bernoulli's theorem",
+  "verdict": "confirmed",
+  "reason": "Steady, incompressible, inviscid flow along a streamline; card's hypotheses suffice.",
+  "source": "https://en.wikipedia.org/wiki/Bernoulli%27s_principle",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76E"
+  ],
+  "tool": "Rayleigh's inflection point criterion",
+  "verdict": "confirmed",
+  "reason": "Inviscid linear parallel flow; inflection point necessary, not sufficient.",
+  "source": "https://arxiv.org/pdf/1309.0325",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76E"
+  ],
+  "tool": "Squire's theorem",
+  "verdict": "confirmed",
+  "reason": "Parallel viscous flow, linear disturbances; 3D modes map to more unstable 2D modes.",
+  "source": "https://en.wikipedia.org/wiki/Orr%E2%80%93Sommerfeld_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76F"
+  ],
+  "tool": "Kolmogorov's four-fifths law",
+  "verdict": "confirmed",
+  "reason": "Homogeneous isotropic turbulence, high Reynolds number, inertial range, as stated.",
+  "source": "https://arxiv.org/pdf/nlin/0302045",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76L"
+  ],
+  "tool": "Rankine–Hugoniot relations",
+  "verdict": "confirmed",
+  "reason": "Jump conditions from conservation of mass, momentum, energy across a sharp discontinuity.",
+  "source": "https://en.wikipedia.org/wiki/Rankine%E2%80%93Hugoniot_conditions",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76M"
+  ],
+  "tool": "Buckingham pi theorem",
+  "verdict": "confirmed",
+  "reason": "Needs a physically meaningful law invariant under unit rescaling and a complete variable set.",
+  "source": "https://en.wikipedia.org/wiki/Buckingham_%CF%80_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76P"
+  ],
+  "tool": "Boltzmann's H-theorem",
+  "verdict": "confirmed",
+  "reason": "Rests on molecular chaos (Stosszahlansatz) for a nearly ideal gas; card matches.",
+  "source": "https://en.wikipedia.org/wiki/H-theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76S"
+  ],
+  "tool": "Darcy's law",
+  "verdict": "confirmed",
+  "reason": "Valid for slow viscous laminar flow at low Reynolds number; single-phase flow in porous medium.",
+  "source": "https://en.wikipedia.org/wiki/Darcy%27s_law",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76U"
+  ],
+  "tool": "Taylor–Proudman theorem",
+  "verdict": "confirmed",
+  "reason": "Inviscid, steady, incompressible, Coriolis-dominated flow at small Rossby number.",
+  "source": "https://en.wikipedia.org/wiki/Taylor%E2%80%93Proudman_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "76W"
+  ],
+  "tool": "Alfvén's theorem",
+  "verdict": "confirmed",
+  "reason": "Ideal MHD with negligible magnetic diffusion (perfect conductor) gives frozen-in flux.",
+  "source": "https://en.wikipedia.org/wiki/Alfv%C3%A9n%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "78A"
+  ],
+  "tool": "Uniqueness theorem for Maxwell's equations",
+  "verdict": "miss",
+  "reason": "Source also requires fixed sources and initial fields at t=0; boundary tangential E or H must be known at all times.",
+  "source": "https://phys.libretexts.org/Bookshelves/Electricity_and_Magnetism/Electromagnetics_and_Applications_(Staelin)/02%3A_Introduction_to_Electrodynamics/2.08%3A_Uniqueness_theorem",
+  "corrected_hypotheses": "given fixed sources; linear media (D = eps E, B = mu H); a bounded region; initial fields specified at t = 0; tangential E or H prescribed on the boundary for all times"
+ },
+ {
+  "cards": [
+   "78A"
+  ],
+  "tool": "Fresnel equations",
+  "verdict": "confirmed",
+  "reason": "Flat interface, homogeneous isotropic linear media, plane incident wave; card's setting suffices.",
+  "source": "https://en.wikipedia.org/wiki/Fresnel_equations",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "78A"
+  ],
+  "tool": "Mie theory",
+  "verdict": "confirmed",
+  "reason": "Homogeneous sphere and plane incident wave, as stated.",
+  "source": "https://en.wikipedia.org/wiki/Mie_scattering",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "78M"
+  ],
+  "tool": "Finite-difference time-domain method (Yee scheme)",
+  "verdict": "confirmed",
+  "reason": "Grid must resolve wavelength and features; CFL limit needed for stability.",
+  "source": "https://en.wikipedia.org/wiki/Finite-difference_time-domain_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "80A"
+  ],
+  "tool": "Carnot's theorem",
+  "verdict": "confirmed",
+  "reason": "No engine between two reservoirs beats a reversible one; card's setting matches.",
+  "source": "https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "80A"
+  ],
+  "tool": "Fourier's law with the heat equation",
+  "verdict": "confirmed",
+  "reason": "Flux linear in temperature gradient; energy conservation excluding mass transfer.",
+  "source": "https://en.wikipedia.org/wiki/Heat_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "80M"
+  ],
+  "tool": "Separation of variables for the heat equation",
+  "verdict": "confirmed",
+  "reason": "Linear PDE, separable geometry, homogeneous boundary conditions, as stated.",
+  "source": "https://en.wikipedia.org/wiki/Separation_of_variables",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81P"
+  ],
+  "tool": "Bell's theorem",
+  "verdict": "confirmed",
+  "reason": "Local hidden variables with measurement independence (realism implied by hidden variables); card matches.",
+  "source": "https://en.wikipedia.org/wiki/Bell%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81P"
+  ],
+  "tool": "Gleason's theorem",
+  "verdict": "confirmed",
+  "reason": "Hilbert space of dimension at least three; page does not discuss separability, card is stricter.",
+  "source": "https://en.wikipedia.org/wiki/Gleason%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81P"
+  ],
+  "tool": "No-cloning theorem",
+  "verdict": "confirmed",
+  "reason": "Unitary (hence linear) evolution cannot copy an arbitrary unknown state.",
+  "source": "https://en.wikipedia.org/wiki/No-cloning_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81P"
+  ],
+  "tool": "Kochen–Specker theorem",
+  "verdict": "confirmed",
+  "reason": "Dimension at least three; rules out noncontextual value assignments. Setting suffices as named.",
+  "source": "https://en.wikipedia.org/wiki/Kochen%E2%80%93Specker_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81Q"
+  ],
+  "tool": "Kato–Rellich theorem",
+  "verdict": "confirmed",
+  "reason": "A self-adjoint, B symmetric with D(B) containing D(A) and A-bound below one gives A+B self-adjoint.",
+  "source": "https://pillowmath.github.io/Math 255B/Lec14.pdf",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81Q"
+  ],
+  "tool": "Variational principle",
+  "verdict": "confirmed",
+  "reason": "Hermitian Hamiltonian bounded below; normalised trial state in appropriate domain.",
+  "source": "https://en.wikipedia.org/wiki/Variational_method_(quantum_mechanics)",
+  "corrected_hypotheses": ""
+ }
+]
