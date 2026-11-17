@@ -95,7 +95,7 @@ T.update({
   "aggregate data; shocks", "output, interest rate; impulse responses"),
 "E2": K("explain aggregate spending, saving, investment and work", "task=explain predict",
   [("Permanent income hypothesis", "says consumption follows expected lifetime income", "households can borrow and save freely; forward-looking behaviour"),
-   ("Tobin's q theory of investment", "says firms invest when market value exceeds replacement cost", "convex adjustment costs; marginal q is proxied by average q only under constant returns and competition")],
+   ("Tobin's q theory of investment", "says firms invest when market value exceeds replacement cost", "convex adjustment costs; marginal q equals average q only when the firm is a price-taker and both its production and adjustment-cost functions are linearly homogeneous (Hayashi)")],
   "aggregate series", "predicted consumption and investment"),
 "E3": K("explain inflation and ups and downs in activity", "task=explain predict|dynamics=dynamic_stochastic",
   [("Phillips curve", "relates inflation to economic slack and expected inflation", "expectations are measured or modelled; the relation is unstable across periods"),

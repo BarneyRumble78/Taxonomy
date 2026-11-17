@@ -89,16 +89,86 @@ quadratic reciprocity (the card's hypothesis, two distinct odd primes, is the pa
 
 **440 tool statements remain unchecked** (classes 13 to 94).
 
-## Audit 3: the 24 other fields, ten cards each (in progress)
+## Audit 3: the 23 other fields with tools, ten cards each
 
-Samples are drawn with seed `20261113 + sum of the character codes of the field code`, from cards carrying tools at levels 1 and 2 together.
-The sample lists are reproducible from that rule. Roughly 400 tools are in the samples.
+Date: 14 to 18 November 2026. Indigenous knowledge has no tools to check.
 
-**Progress: BI partly checked, 14 of 17 tools.** No misses. Nine confirmed. Five not confirmed by the page read
-(alignment correctness and site independence for phylogenetics; De Bruijn coverage and repeat conditions; breeder's equation scope;
-segregation distortion; decoy-based false discovery rate; ethogram reliability requirement counted with these).
+**Sample.** For each field, ten cards drawn at random from the cards carrying tools at levels 1 and 2 together,
+seed `20261113 + sum of the character codes of the field code`. Every distinct tool on those cards was checked: 315 tools.
 
-Other fields: not started.
+**Method.** Same rule as audit 1. The lookups were done by helper agents running a smaller model (claude-sonnet), each reading
+English Wikipedia or, where no page existed, another named source. Every reported miss was then reviewed by the drafting model
+against the card's own description before being accepted. This is not an independent specialist review.
+
+| Code | Field | Tools | Confirmed | Miss | Not confirmed | Miss rate, Wilson 95% |
+|---|---|---:|---:|---:|---:|---:|
+| BI | Biology | 17 | 11 | 0 | 6 | 0% to 18% |
+| CH | Chemistry | 18 | 14 | 1 | 3 | 1% to 26% |
+| MD | Medicine | 17 | 9 | 0 | 8 | 0% to 18% |
+| AG | Agriculture | 10 | 6 | 0 | 4 | 0% to 28% |
+| PH | Physics | 20 | 14 | 0 | 6 | 0% to 16% |
+| EA | Earth science | 15 | 6 | 0 | 9 | 0% to 20% |
+| EV | Environment | 11 | 6 | 0 | 5 | 0% to 26% |
+| EN | Engineering | 11 | 7 | 0 | 4 | 0% to 26% |
+| CS | Computing | 21 | 20 | 0 | 1 | 0% to 15% |
+| IS | Information science | 18 | 16 | 0 | 2 | 0% to 18% |
+| DE | Design | 14 | 8 | 0 | 6 | 0% to 22% |
+| ST | Strategy | 15 | 13 | 0 | 2 | 0% to 20% |
+| EC | Economics | 18 | 12 | 1 | 5 | 1% to 26% |
+| BU | Business | 15 | 13 | 0 | 2 | 0% to 20% |
+| MS | Mind and society | 14 | 8 | 0 | 6 | 0% to 22% |
+| ED | Education | 10 | 5 | 0 | 5 | 0% to 28% |
+| PO | Politics | 11 | 9 | 0 | 2 | 0% to 26% |
+| LA | Law | 10 | 8 | 0 | 2 | 0% to 28% |
+| PL | Philosophy | 13 | 11 | 0 | 2 | 0% to 23% |
+| LN | Languages | 6 | 6 | 0 | 0 | 0% to 39% |
+| HI | History | 13 | 11 | 0 | 2 | 0% to 23% |
+| AR | Arts | 13 | 6 | 0 | 7 | 0% to 23% |
+| RE | Religion | 5 | 4 | 0 | 1 | 0% to 43% |
+| | **All** | **315** | **223** | **2** | **90** | **0% to 2%** |
+
+### Misses (both accepted and corrected)
+
+| Card | Tool | What was wrong |
+|---|---|---|
+| CH.TK.340306 (and level 1 CH.TK.3403) | Carothers equation | Equal amounts of the two functional groups, and linear bifunctional monomers, were not stated |
+| EC.TK.E2 | Tobin's q theory of investment | Hayashi's condition also needs linearly homogeneous adjustment costs and price-taking, not only constant returns |
+
+### What the "not confirmed" column means
+
+90 of 315 tools (29%) could not be settled from the source read. In almost every case the page did not
+mention the condition at all, rather than contradicting it. The share is highest in fields whose "hypotheses" are conditions of good
+practice rather than theorem statements: Earth science, Arts, Medicine, Design, Mind and society, Education. A specialist or a textbook
+would settle these better than an encyclopaedia.
+
+The low miss rate here should be read with that in mind: an unsettled condition is not a confirmed one.
+
+<details><summary>Tools not confirmed, by field</summary>
+
+- **BI**: Peptide mass spectrometry with database search; Network centrality and module detection; Ordinary differential equation network model; Flux balance analysis; De Bruijn graph assembly; Mendelian segregation
+- **CH**: Dose-response bioassay; Arrhenius equation; Retrosynthetic analysis
+- **MD**: Hill dose-response model; Fick principle; Direct age standardisation; Pedigree analysis; Validated rating scales; Bayesian diagnostic reasoning with likelihood ratios; Cost-effectiveness analysis; Multivariable risk score (Framingham-type)
+- **AG**: Standardised Precipitation Index; Reference evapotranspiration with crop coefficients (FAO-56); Difference-in-differences; Monin–Obukhov similarity theory
+- **PH**: Equations of stellar structure; Reynolds-averaged Navier–Stokes with a closure model; Renormalisation group; Momentum from track curvature; Calorimetry; Percolation analysis of robustness
+- **EA**: Oxygen-isotope proxies; Gaussian plume model; Degree-day melt model; Monin–Obukhov similarity theory; Eddy covariance; Universal Soil Loss Equation; Shields criterion; Lossless entropy coding; Stefan solution
+- **EV**: Cohort-component projection; Travel cost method; Hedonic pricing; Surplus production model; Quantitative structure-activity relationship
+- **EN**: Smith predictor; Time study; Bloch equations; Allan variance
+- **CS**: Conformance testing against WCAG
+- **IS**: Fixity checking with checksums; Collaborative filtering by matrix factorisation
+- **DE**: Steady-state heat loss (U-value); Elemental cost planning; Anthropometric design for percentiles; Four-step travel demand model; Map overlay suitability analysis; Conservation by significance assessment (Burra Charter process)
+- **ST**: Military decision-making process; Order-of-battle analysis
+- **EC**: Spatial equilibrium (Rosen–Roback); Oates decentralisation theorem; Monocentric city model; Hedonic price model; Life-cycle and permanent income hypothesis
+- **BU**: Van Westendorp price sensitivity meter; Event study
+- **MS**: Intergenerational mobility table; Factor analysis; Intersectional analysis; Event history analysis (Cox model); Drift-diffusion model; General linear model for functional imaging
+- **ED**: Classical test theory; Cluster randomised trial; Critical incident technique; Generalisability study; Logic model with outcome evaluation
+- **PO**: Mill's methods of agreement and difference; Process tracing
+- **LA**: Functional method of comparative law; Proportionality test
+- **PL**: Charitable exegesis; Dutch book argument
+- **HI**: Comparative history; Dating by letter forms
+- **AR**: Close reading; Stylometric authorship attribution; Pigment analysis; Infrared reflectography and X-radiography; Attribution by comparison; Historic-geographic method; Watermark dating
+- **RE**: Comparative method in the study of religion
+
+</details>
 
 ## Not yet audited
 

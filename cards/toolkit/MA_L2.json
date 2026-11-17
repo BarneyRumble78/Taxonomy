@@ -1065,8 +1065,9 @@
     "name": "Solution of linear recurrences by characteristic roots",
     "does": "gives a closed form for the terms",
     "hypotheses": [
-     "a linear recurrence with constant coefficients",
-     "the roots, with multiplicity, of its characteristic polynomial"
+     "a homogeneous linear recurrence with constant coefficients",
+     "roots of the characteristic polynomial in the complex numbers, counted with multiplicity",
+     "initial values fix the constants"
     ]
    }
   ],
@@ -3794,7 +3795,9 @@
     "name": "Snake lemma",
     "does": "joins kernels and cokernels into one exact sequence",
     "hypotheses": [
-     "a commutative diagram with exact rows in an abelian category"
+     "a commutative diagram in an abelian category",
+     "exact top row ending in zero",
+     "exact bottom row starting with zero"
     ]
    },
    {
@@ -4666,7 +4669,7 @@
     "name": "Peter–Weyl theorem",
     "does": "says matrix coefficients of irreducible representations span a dense subspace of the square-integrable functions",
     "hypotheses": [
-     "a compact topological group"
+     "a compact Hausdorff topological group"
     ]
    }
   ],
@@ -4807,6 +4810,7 @@
     "name": "Mean value theorem",
     "does": "gives a point where the derivative equals the average slope",
     "hypotheses": [
+     "a real-valued function",
      "continuous on a closed interval",
      "differentiable on its interior"
     ]
@@ -5061,6 +5065,7 @@
     "does": "lets a double integral be computed in either order",
     "hypotheses": [
      "sigma-finite measures",
+     "the function is measurable on the product space",
      "the function is non-negative or integrable"
     ]
    },
@@ -5393,8 +5398,8 @@
     "name": "Residue theorem",
     "does": "equates a contour integral with the sum of residues inside",
     "hypotheses": [
-     "holomorphic inside and on a closed contour except at isolated singularities",
-     "a simple closed positively oriented contour"
+     "holomorphic inside and on a simple closed positively oriented contour except at finitely many isolated singularities inside it",
+     "no singularity on the contour"
     ]
    }
   ],
@@ -6634,8 +6639,10 @@
     "does": "replaces a rapidly oscillating system by its average",
     "hypotheses": [
      "a small parameter",
-     "the vector field is periodic or has a mean in the fast variable",
-     "a time scale of one over the parameter"
+     "the vector field is Lipschitz and bounded on bounded sets",
+     "it is periodic or has a mean in the fast variable",
+     "initial data in a compact region",
+     "valid on a time scale of one over the parameter"
     ]
    }
   ],
@@ -7868,7 +7875,9 @@
     "name": "Characteristic-root solution of linear difference equations",
     "does": "gives the general solution",
     "hypotheses": [
-     "a linear difference equation with constant coefficients"
+     "a homogeneous linear difference equation with constant coefficients",
+     "repeated roots contribute powers of n",
+     "an inhomogeneous equation needs a particular solution added"
     ]
    }
   ],
@@ -8548,7 +8557,8 @@
     "name": "Mercer's theorem",
     "does": "expands a kernel in its eigenfunctions with uniform convergence",
     "hypotheses": [
-     "a continuous symmetric positive semi-definite kernel on a compact set"
+     "a continuous symmetric positive semi-definite kernel on a compact set",
+     "a finite measure on the set with full support"
     ]
    }
   ],
@@ -8932,8 +8942,9 @@
     "name": "Hahn–Banach separation theorem",
     "does": "separates disjoint convex sets by a closed hyperplane",
     "hypotheses": [
-     "a locally convex space",
-     "one set compact and the other closed, or one set open"
+     "a real locally convex space",
+     "two non-empty disjoint convex sets",
+     "one compact and the other closed, or one open"
     ]
    }
   ],

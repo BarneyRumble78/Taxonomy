@@ -12,7 +12,7 @@ T = {
   ["composition and geometry"], ["shape", "spectral and magnetic properties"]),
 "3403": (["relate the size and mixing of very large molecules to bulk material properties"],
   {"task": "predict design", "scope": "multiscale", "uncertainty": "probabilistic_model"},
-  [("Carothers equation", "gives chain length from the extent of reaction", ["step-growth polymerisation", "all functional groups are equally reactive", "no side reactions or ring formation"]),
+  [("Carothers equation", "gives chain length from the extent of reaction", ["step-growth polymerisation", "linear bifunctional monomers", "functional groups in equal amounts, or the stoichiometric ratio is included", "equal reactivity of functional groups", "no side reactions or rings"]),
    ("Flory–Huggins theory", "predicts whether a polymer mixes with a solvent or another polymer", ["a lattice mean-field model", "random mixing of segments"])],
   ["monomers and reaction extent", "composition and temperature"], ["chain length", "miscibility"]),
 "3404": (["design a small molecule that binds a chosen target and reaches it"],

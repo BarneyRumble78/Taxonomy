@@ -54,7 +54,7 @@ T = {
 "340304": N("explain how a material absorbs, emits and bends light", "task=explain predict"),
 "340305": N("measure and explain the mechanical, thermal and electrical behaviour of materials", "task=estimate explain"),
 "340306": K("predict chain length and composition from how chains grow", "task=predict|uncertainty=probabilistic_model",
-  [("Carothers equation", "gives chain length from extent of reaction", "step-growth polymerisation; equal reactivity of functional groups; no side reactions or rings"),
+  [("Carothers equation", "gives chain length from extent of reaction", "step-growth polymerisation; linear bifunctional monomers; functional groups in equal amounts, or the stoichiometric ratio is included; equal reactivity of functional groups; no side reactions or rings"),
    ("Mayo–Lewis copolymer equation", "gives copolymer composition from feed composition", "the terminal model: reactivity depends only on the chain-end unit; low conversion")],
   "extent of reaction; reactivity ratios", "chain length; composition"),
 "340307": N("find how atoms in a material are arranged and move", "task=infer estimate|direction=inverse"),
