@@ -98,7 +98,8 @@
   "name": "History of Economic Thought through 1925",
   "taxonomy_cell": "EC.O.A1",
   "solves": [
-   "establish what earlier writers argued and why"
+   "evolution of economic paradigms",
+   "conceptual origins of modern economic theory"
   ],
   "signature": {
    "task": [
@@ -108,14 +109,49 @@
     "text_language"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Ricardian comparative advantage",
+    "does": "Shows trade gains from differing opportunity costs",
+    "hypotheses": [
+     "two countries and two goods",
+     "labour sole factor, constant unit labour costs",
+     "no transport costs, no international labour mobility"
+    ]
+   },
+   {
+    "name": "Say's law",
+    "does": "Holds supply creates its own demand",
+    "hypotheses": [
+     "flexible prices and wages",
+     "no hoarding of money"
+    ]
+   },
+   {
+    "name": "Malthusian population model",
+    "does": "Links population growth to subsistence limits",
+    "hypotheses": [
+     "fixed land",
+     "population grows geometrically",
+     "food supply grows arithmetically"
+    ]
+   }
+  ],
+  "inputs": [
+   "historical texts",
+   "archaic data sets",
+   "contemporary economic assumptions"
+  ],
+  "outputs": [
+   "genealogy of ideas",
+   "critical analysis of obsolete theories",
+   "contextualised economic frameworks"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Ricardo and Malthus conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.B2",
@@ -124,7 +160,8 @@
   "name": "History of Economic Thought since 1925",
   "taxonomy_cell": "EC.O.A1",
   "solves": [
-   "establish what recent writers argued and why"
+   "evolution of economic paradigms",
+   "intellectual genealogy of economic theories"
   ],
   "signature": {
    "task": [
@@ -135,13 +172,21 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "historical economic texts",
+   "archival data",
+   "theoretical manuscripts"
+  ],
+  "outputs": [
+   "conceptual histories",
+   "comparative theoretical analyses",
+   "chronologies of economic thought"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (No specific named tool belongs to this heading; kept empty). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.B3",
@@ -150,7 +195,8 @@
   "name": "History of Economic Thought:  Individuals",
   "taxonomy_cell": "EC.O.A1",
   "solves": [
-   "establish what one writer argued and why"
+   "attribution of economic ideas to specific thinkers",
+   "evolution of theoretical frameworks through individual contributions"
   ],
   "signature": {
    "task": [
@@ -161,13 +207,20 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "historical texts",
+   "biographical data",
+   "archival correspondence"
+  ],
+  "outputs": [
+   "intellectual genealogies",
+   "critical interpretations of an author's work"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (No specific named tool belongs to this heading; kept empty). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.B4",
@@ -176,7 +229,8 @@
   "name": "Economic Methodology",
   "taxonomy_cell": "EC.O.A1",
   "solves": [
-   "say what makes an economic claim well supported"
+   "justification of economic reasoning",
+   "evaluation of model validity and scientific inference"
   ],
   "signature": {
    "task": [
@@ -184,14 +238,47 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Popperian falsificationism",
+    "does": "Demands theories be refutable by empirical test",
+    "hypotheses": [
+     "theory empirically testable",
+     "potential falsifiers specified"
+    ]
+   },
+   {
+    "name": "Lakatosian research programmes",
+    "does": "Appraises theories as progressive or degenerating programmes",
+    "hypotheses": [
+     "hard core protected from refutation",
+     "positive heuristic guides auxiliary changes"
+    ]
+   },
+   {
+    "name": "Friedman's methodology of positive economics",
+    "does": "Judges theories by predictive success, not realism of assumptions",
+    "hypotheses": [
+     "predictions testable",
+     "positive and normative analysis separable (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "theoretical postulates",
+   "empirical data",
+   "logical arguments"
+  ],
+  "outputs": [
+   "epistemological critique",
+   "methodological framework",
+   "assessment of theoretical robustness"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Lakatos conditions; added Friedman positive economics). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.B5",
@@ -200,21 +287,48 @@
   "name": "Current Heterodox Approaches",
   "taxonomy_cell": "EC.O.A1",
   "solves": [
-   "analyse the economy with approaches outside the mainstream"
+   "failures of neoclassical equilibrium models",
+   "systemic economic instability and inequality"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Stock-flow consistent modelling",
+    "does": "Tracks all sectoral flows and stocks with coherent accounting",
+    "hypotheses": [
+     "accounting identities hold",
+     "closed system of sectoral balance sheets"
+    ]
+   },
+   {
+    "name": "Agent-based modelling",
+    "does": "Simulates macro outcomes from interacting heterogeneous agents",
+    "hypotheses": [
+     "agent behaviour rules specified",
+     "interaction structure specified",
+     "model calibrated or validated against data"
+    ]
+   }
+  ],
+  "inputs": [
+   "sectoral balance sheets",
+   "agent behavioural rules",
+   "empirical flow data"
+  ],
+  "outputs": [
+   "dynamic macroeconomic trajectories",
+   "emergent systemic properties",
+   "policy impact simulations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed ABM conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.C0",
@@ -1531,21 +1645,39 @@
   "name": "Macro-Based Behavioral Economics",
   "taxonomy_cell": "EC.O.A4",
   "solves": [
-   "explain aggregate outcomes using departures from full rationality"
+   "aggregate effects of cognitive biases",
+   "systemic instability from bounded rationality"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "De Grauwe behavioural macroeconomic model",
+    "does": "Models aggregate cycles from agents using simple forecasting rules",
+    "hypotheses": [
+     "agents use simple heuristics under limited information",
+     "agents switch rules by past performance (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "individual psychological data",
+   "aggregate economic indicators",
+   "decision-making heuristics"
+  ],
+  "outputs": [
+   "macroeconomic forecasts",
+   "policy impact simulations",
+   "equilibrium stability analysis"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced unnamed models with De Grauwe behavioural macro model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.F0",
@@ -1636,7 +1768,8 @@
   "name": "International Factor Movements and International Business",
   "taxonomy_cell": "EC.O.A4",
   "solves": [
-   "explain why capital, people and firms move across borders"
+   "optimal allocation of capital and labour across borders",
+   "determinants of foreign direct investment flows"
   ],
   "signature": {
    "task": [
@@ -1644,14 +1777,51 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Heckscher-Ohlin model",
+    "does": "Predicts trade from differing factor endowments",
+    "hypotheses": [
+     "identical technology across countries",
+     "constant returns to scale",
+     "perfect competition, no transport costs"
+    ]
+   },
+   {
+    "name": "Eclectic (OLI) paradigm",
+    "does": "Explains foreign direct investment by ownership, location, internalisation advantages",
+    "hypotheses": [
+     "firm holds ownership advantage",
+     "location advantage abroad",
+     "internalisation advantage over licensing"
+    ]
+   },
+   {
+    "name": "Rybczynski theorem",
+    "does": "Shows factor growth expands output of the intensive good",
+    "hypotheses": [
+     "constant goods prices",
+     "full employment",
+     "two goods and two factors"
+    ]
+   }
+  ],
+  "inputs": [
+   "factor endowment data",
+   "relative factor prices",
+   "firm-specific assets",
+   "market entry costs"
+  ],
+  "outputs": [
+   "predicted trade flows",
+   "FDI location decisions",
+   "equilibrium factor prices"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Rybczynski theorem; reworded conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.F3",
@@ -1713,7 +1883,8 @@
   "name": "Macroeconomic Aspects of International Trade and Finance",
   "taxonomy_cell": "EC.O.A4",
   "solves": [
-   "explain how openness changes aggregate output, prices and balances"
+   "global imbalances and exchange rate determination",
+   "impact of international capital flows on national macroeconomics"
   ],
   "signature": {
    "task": [
@@ -1721,14 +1892,52 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Mundell-Fleming model",
+    "does": "Analyses policy effects in open economy with capital mobility",
+    "hypotheses": [
+     "small open economy",
+     "perfect capital mobility",
+     "sticky prices"
+    ]
+   },
+   {
+    "name": "Interest parity condition",
+    "does": "Links expected exchange rate change to interest differential",
+    "hypotheses": [
+     "absence of arbitrage",
+     "capital mobile across borders"
+    ]
+   },
+   {
+    "name": "Intertemporal approach to the current account",
+    "does": "Explains current account as saving smoothing over time",
+    "hypotheses": [
+     "rational expectations",
+     "access to international capital markets",
+     "intertemporal utility maximisation"
+    ]
+   }
+  ],
+  "inputs": [
+   "interest rates",
+   "exchange rates",
+   "fiscal policy targets",
+   "monetary aggregates",
+   "national income data"
+  ],
+  "outputs": [
+   "equilibrium exchange rates",
+   "current account balances",
+   "GDP growth projections",
+   "policy effectiveness assessments"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Mundell-Fleming conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.F5",
@@ -1737,7 +1946,8 @@
   "name": "International Relations, National Security, and International Political Economy",
   "taxonomy_cell": "EC.O.A4",
   "solves": [
-   "explain how power and security shape economic relations between states"
+   "interstate economic conflict",
+   "global governance of trade and finance"
   ],
   "signature": {
    "task": [
@@ -1747,14 +1957,49 @@
     "multiple_competing"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Nash equilibrium",
+    "does": "Identifies strategy profiles where no player gains by deviating",
+    "hypotheses": [
+     "players rational",
+     "payoffs and strategies known to all"
+    ]
+   },
+   {
+    "name": "Open-economy trilemma",
+    "does": "Shows exchange-rate stability, capital mobility, monetary autonomy cannot all hold",
+    "hypotheses": [
+     "interest parity holds",
+     "exchange rate regime credible"
+    ]
+   },
+   {
+    "name": "Hegemonic stability theory",
+    "does": "Explains open trade order by a dominant state supplying public goods",
+    "hypotheses": [
+     "a dominant power exists (UNVERIFIED)",
+     "hegemon willing to bear costs (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "factor endowments",
+   "exchange rate regimes",
+   "strategic payoffs",
+   "monetary policy settings"
+  ],
+  "outputs": [
+   "comparative advantage",
+   "equilibrium exchange rates",
+   "strategic stability",
+   "trade flows"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Heckscher-Ohlin and Mundell-Fleming; added hegemonic stability and trilemma). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.F6",
@@ -1763,7 +2008,8 @@
   "name": "Economic Impacts of Globalization",
   "taxonomy_cell": "EC.O.A4",
   "solves": [
-   "estimate what closer world integration does to wages, growth and inequality"
+   "measuring welfare changes from trade",
+   "analysing income inequality due to global integration"
   ],
   "signature": {
    "task": [
@@ -1771,14 +2017,49 @@
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Stolper-Samuelson theorem",
+    "does": "Links goods price changes to factor returns",
+    "hypotheses": [
+     "two goods, two factors, two countries",
+     "perfect competition and constant returns",
+     "incomplete specialisation, domestic factor mobility"
+    ]
+   },
+   {
+    "name": "Heckscher-Ohlin model",
+    "does": "Predicts trade from differing factor endowments",
+    "hypotheses": [
+     "identical technology across countries",
+     "constant returns to scale",
+     "no trade costs"
+    ]
+   },
+   {
+    "name": "Melitz heterogeneous-firm model",
+    "does": "Shows trade raises average productivity by selecting exporters",
+    "hypotheses": [
+     "monopolistic competition",
+     "firm productivity heterogeneous",
+     "fixed export costs"
+    ]
+   }
+  ],
+  "inputs": [
+   "factor endowment data",
+   "relative price indices",
+   "trade volume statistics"
+  ],
+  "outputs": [
+   "predicted trade flows",
+   "real income distribution effects"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Melitz; fixed conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.G0",
@@ -1977,21 +2258,56 @@
   "name": "Behavioral Finance",
   "taxonomy_cell": "EC.O.A2",
   "solves": [
-   "explain asset prices using investor psychology and limits to arbitrage"
+   "market anomalies",
+   "non-rational investor decision-making"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Prospect theory",
+    "does": "Describes risky choice via reference-dependent, loss-averse value and weighted probabilities",
+    "hypotheses": [
+     "choices among prospects with stated outcomes and probabilities",
+     "reference point defined",
+     "editing of prospects before evaluation"
+    ]
+   },
+   {
+    "name": "Limits to arbitrage",
+    "does": "Explains persistent mispricing from constrained arbitrageurs",
+    "hypotheses": [
+     "arbitrageurs have limited capital",
+     "noise trader risk",
+     "imperfect substitutes for mispriced assets"
+    ]
+   },
+   {
+    "name": "Noise trader model (DeLong, Shleifer, Summers, Waldmann)",
+    "does": "Shows irrational traders can affect prices and earn higher returns",
+    "hypotheses": [
+     "noise traders hold random beliefs",
+     "arbitrageurs risk averse with short horizons"
+    ]
+   }
+  ],
+  "inputs": [
+   "perceived utility",
+   "market price data",
+   "investor psychological profiles"
+  ],
+  "outputs": [
+   "predicted choice behaviour",
+   "asset price mispricing estimates"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed prospect theory conditions; added limits to arbitrage and noise trader model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.G5",
@@ -2000,7 +2316,8 @@
   "name": "Household Finance",
   "taxonomy_cell": "EC.O.A2",
   "solves": [
-   "explain how households borrow, save and invest"
+   "optimisation of individual consumption and saving",
+   "management of household portfolios and liabilities"
   ],
   "signature": {
    "task": [
@@ -2008,14 +2325,52 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Life-cycle hypothesis",
+    "does": "Households smooth consumption over lifetime given expected income",
+    "hypotheses": [
+     "forward-looking rational consumers",
+     "borrowing and saving at same rate",
+     "known lifetime horizon"
+    ]
+   },
+   {
+    "name": "Permanent income hypothesis",
+    "does": "Consumption depends on permanent rather than transitory income",
+    "hypotheses": [
+     "income has permanent and transitory components",
+     "borrowing and lending possible at same rate",
+     "rational expectations"
+    ]
+   },
+   {
+    "name": "Consumption Euler equation",
+    "does": "Links expected consumption growth to interest rate and impatience",
+    "hypotheses": [
+     "rational expectations",
+     "time-separable utility",
+     "no binding liquidity constraints"
+    ]
+   }
+  ],
+  "inputs": [
+   "current income",
+   "expected future earnings",
+   "interest rates",
+   "discount rate",
+   "wealth levels"
+  ],
+  "outputs": [
+   "optimal consumption paths",
+   "savings rates",
+   "asset allocation"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded conditions; added consumption Euler equation). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.H0",
@@ -2047,7 +2402,8 @@
   "name": "Structure and Scope of Government",
   "taxonomy_cell": "EC.O.A5",
   "solves": [
-   "say what government should and does do"
+   "optimal division of government functions",
+   "centralisation versus decentralisation of authority"
   ],
   "signature": {
    "task": [
@@ -2057,14 +2413,49 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Tiebout model",
+    "does": "Shows mobile households sort into communities by public goods and taxes",
+    "hypotheses": [
+     "mobile households with full information",
+     "many jurisdictions",
+     "no spillovers across jurisdictions"
+    ]
+   },
+   {
+    "name": "Oates decentralisation theorem",
+    "does": "Favours local provision when preferences differ and spillovers are absent",
+    "hypotheses": [
+     "benefits confined to jurisdiction",
+     "preferences heterogeneous across regions",
+     "equal cost of provision"
+    ]
+   },
+   {
+    "name": "Median voter theorem",
+    "does": "Predicts majority rule picks the median voter's preferred outcome",
+    "hypotheses": [
+     "single-peaked preferences",
+     "one-dimensional issue",
+     "majority voting"
+    ]
+   }
+  ],
+  "inputs": [
+   "preference distributions",
+   "cost of administration",
+   "taxation capabilities"
+  ],
+  "outputs": [
+   "optimal level of government",
+   "allocation of public service provision"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added median voter theorem). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.H2",
@@ -2131,7 +2522,8 @@
   "name": "Fiscal Policies and Behavior of Economic Agents",
   "taxonomy_cell": "EC.O.A5",
   "solves": [
-   "predict how people and firms respond to taxes and spending"
+   "impact of government spending on private consumption",
+   "tax-induced distortions in agent decision-making"
   ],
   "signature": {
    "task": [
@@ -2139,14 +2531,52 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Ricardian equivalence",
+    "does": "Holds debt-financed and tax-financed spending have same effect",
+    "hypotheses": [
+     "rational forward-looking agents",
+     "lump-sum taxes",
+     "no liquidity constraints",
+     "operative bequest motive (infinite horizon)"
+    ]
+   },
+   {
+    "name": "Ramsey rule",
+    "does": "Sets commodity taxes inversely to demand elasticities to minimise excess burden",
+    "hypotheses": [
+     "lump-sum taxation unavailable",
+     "revenue requirement fixed",
+     "independent demands for inverse-elasticity form"
+    ]
+   },
+   {
+    "name": "Mirrlees optimal income tax",
+    "does": "Chooses income tax schedule under unobservable ability",
+    "hypotheses": [
+     "ability private information",
+     "social welfare function specified",
+     "labour supply responds to taxes"
+    ]
+   }
+  ],
+  "inputs": [
+   "tax rates",
+   "government expenditure levels",
+   "agent utility functions",
+   "budget constraints"
+  ],
+  "outputs": [
+   "equilibrium consumption levels",
+   "optimal tax structures",
+   "aggregate demand forecasts"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added missing conditions; added Mirrlees optimal income tax). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.H4",
@@ -2201,7 +2631,8 @@
   "name": "National Government Expenditures and Related Policies",
   "taxonomy_cell": "EC.O.A5",
   "solves": [
-   "assess national spending programmes"
+   "optimal allocation of public funds",
+   "impact of government spending on economic growth"
   ],
   "signature": {
    "task": [
@@ -2209,14 +2640,47 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Wagner's law",
+    "does": "Predicts public spending share rises with national income",
+    "hypotheses": [
+     "rising per capita income",
+     "industrialisation and urbanisation"
+    ]
+   },
+   {
+    "name": "Peacock-Wiseman displacement hypothesis",
+    "does": "Holds crises shift tolerable tax levels, ratcheting spending upwards",
+    "hypotheses": [
+     "social upheaval raises spending",
+     "tolerable tax burden shifts and persists"
+    ]
+   },
+   {
+    "name": "Baumol's cost disease",
+    "does": "Explains rising public service costs from uneven productivity growth",
+    "hypotheses": [
+     "productivity growth differs across sectors",
+     "wages equalise across sectors"
+    ]
+   }
+  ],
+  "inputs": [
+   "GDP data",
+   "public expenditure records",
+   "tax revenue levels"
+  ],
+  "outputs": [
+   "expenditure forecasts",
+   "fiscal multipliers",
+   "budgetary efficiency metrics"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed P-W conditions; added Baumol cost disease). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.H6",
@@ -2516,7 +2980,8 @@
   "name": "Demographic Economics",
   "taxonomy_cell": "EC.O.A2",
   "solves": [
-   "explain choices about family, fertility and ageing with economic tools"
+   "impact of population structure on economic growth",
+   "determinants of fertility and mortality rates"
   ],
   "signature": {
    "task": [
@@ -2524,14 +2989,49 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Becker's household model of fertility",
+    "does": "Explains fertility by quantity-quality trade-off in household choice",
+    "hypotheses": [
+     "rational utility-maximising households",
+     "budget constraint including time cost"
+    ]
+   },
+   {
+    "name": "Demographic transition model",
+    "does": "Describes shift from high to low mortality then fertility",
+    "hypotheses": [
+     "falling mortality precedes fertility decline",
+     "industrialisation and improved public health"
+    ]
+   },
+   {
+    "name": "Overlapping generations model",
+    "does": "Analyses saving and growth with successive cohorts",
+    "hypotheses": [
+     "agents live finite periods",
+     "new cohort enters each period",
+     "market clearing"
+    ]
+   }
+  ],
+  "inputs": [
+   "age-sex population data",
+   "fertility rates",
+   "mortality statistics",
+   "household income"
+  ],
+  "outputs": [
+   "dependency ratios",
+   "population growth projections",
+   "optimal family size"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded; added overlapping generations model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.J2",
@@ -2662,7 +3162,8 @@
   "name": "Labor&ndash;Management Relations, Trade Unions, and Collective Bargaining",
   "taxonomy_cell": "EC.O.A2",
   "solves": [
-   "explain bargaining between workers and employers"
+   "wage determination in unionised sectors",
+   "collective agreement negotiation outcomes"
   ],
   "signature": {
    "task": [
@@ -2673,14 +3174,50 @@
     "multiple_competing"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Nash bargaining solution",
+    "does": "Picks unique split satisfying Nash axioms",
+    "hypotheses": [
+     "feasible set convex and compact",
+     "disagreement point known",
+     "Pareto efficiency, symmetry, independence of irrelevant alternatives"
+    ]
+   },
+   {
+    "name": "Monopoly union model",
+    "does": "Union sets wage and firm chooses employment",
+    "hypotheses": [
+     "union sets wage unilaterally",
+     "firm free to choose employment",
+     "union objective specified"
+    ]
+   },
+   {
+    "name": "Efficient bargaining model (McDonald-Solow)",
+    "does": "Union and firm bargain over wages and employment jointly",
+    "hypotheses": [
+     "bargaining over both wage and employment",
+     "outcome lies on contract curve"
+    ]
+   }
+  ],
+  "inputs": [
+   "bargaining power weights",
+   "outside options",
+   "cost of strikes",
+   "labour productivity"
+  ],
+  "outputs": [
+   "equilibrium wage rates",
+   "contract duration",
+   "employment levels"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed hold-up problem; added monopoly union and efficient bargaining models). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.J6",
@@ -2787,7 +3324,8 @@
   "name": "Labor Standards: National and International",
   "taxonomy_cell": "EC.O.A2",
   "solves": [
-   "assess rules on pay and working conditions"
+   "regulatory compliance for employment",
+   "cross-border labour standard harmonisation"
   ],
   "signature": {
    "task": [
@@ -2798,14 +3336,39 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "ILO Declaration on Fundamental Principles and Rights at Work",
+    "does": "Sets four core labour standards for all ILO members",
+    "hypotheses": [
+     "applies to ILO members whether or not conventions ratified",
+     "ratified conventions bind member states"
+    ]
+   },
+   {
+    "name": "Monopsony model of minimum wages",
+    "does": "Shows minimum wage can raise employment under employer wage power",
+    "hypotheses": [
+     "employer has wage-setting power",
+     "upward-sloping firm labour supply"
+    ]
+   }
+  ],
+  "inputs": [
+   "national labour laws",
+   "international treaties",
+   "employment contracts"
+  ],
+  "outputs": [
+   "compliance audits",
+   "policy recommendations",
+   "legal frameworks"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed ILO conditions; added monopsony model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.K0",
@@ -2885,7 +3448,8 @@
   "name": "Regulation and Business Law",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "assess rules that govern firms and markets"
+   "legal compliance and risk mitigation",
+   "regulatory impact on market competition"
   ],
   "signature": {
    "task": [
@@ -2896,14 +3460,48 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Cost-benefit analysis",
+    "does": "Compares monetised costs and benefits of regulation",
+    "hypotheses": [
+     "costs and benefits quantifiable",
+     "discount rate defined"
+    ]
+   },
+   {
+    "name": "Regulatory impact analysis",
+    "does": "Assesses costs, benefits and alternatives of proposed regulation",
+    "hypotheses": [
+     "baseline scenario identifiable",
+     "regulatory goals measurable"
+    ]
+   },
+   {
+    "name": "Coase theorem",
+    "does": "Shows bargaining yields efficient outcomes irrespective of initial rights",
+    "hypotheses": [
+     "well-defined property rights",
+     "zero or low transaction costs",
+     "no wealth effects"
+    ]
+   }
+  ],
+  "inputs": [
+   "proposed legislative text",
+   "compliance cost data",
+   "market structure metrics"
+  ],
+  "outputs": [
+   "compliance frameworks",
+   "regulatory burden estimates",
+   "policy recommendations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Coase theorem). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.K3",
@@ -2912,7 +3510,8 @@
   "name": "Other Substantive Areas of Law",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "apply economic reasoning to other areas of law"
+   "legal-economic analysis of non-standard substantive law",
+   "efficiency of specific regulatory frameworks"
   ],
   "signature": {
    "task": [
@@ -2921,13 +3520,20 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "legal statutes",
+   "regulatory frameworks",
+   "transaction data"
+  ],
+  "outputs": [
+   "efficiency assessments",
+   "optimal rule proposals"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (No specific named tool belongs to this heading; kept empty). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.K4",
@@ -3097,21 +3703,56 @@
   "name": "Nonprofit Organizations and Public Enterprise",
   "taxonomy_cell": "EC.O.A2",
   "solves": [
-   "explain the behaviour of organisations that do not seek profit"
+   "resource allocation in non-market entities",
+   "incentive alignment in public-sector governance"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Principal-agent model",
+    "does": "Analyses incentive design when agents have private information or actions",
+    "hypotheses": [
+     "asymmetric information",
+     "divergent objectives"
+    ]
+   },
+   {
+    "name": "Contract failure theory (Hansmann)",
+    "does": "Explains nonprofits as response to consumers unable to judge quality",
+    "hypotheses": [
+     "consumers cannot evaluate service quality",
+     "non-distribution constraint limits exploitation"
+    ]
+   },
+   {
+    "name": "Weisbrod three-sector model",
+    "does": "Explains nonprofits as filling unmet demand left by government provision",
+    "hypotheses": [
+     "government provides to median voter",
+     "demand heterogeneous across consumers"
+    ]
+   }
+  ],
+  "inputs": [
+   "governance structures",
+   "funding sources",
+   "mission statements",
+   "cost functions"
+  ],
+  "outputs": [
+   "optimal contract designs",
+   "efficiency benchmarks",
+   "organisational boundaries"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced unnamed variant with Hansmann contract failure and Weisbrod government failure). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.L4",
@@ -3339,7 +3980,8 @@
   "name": "Business Administration",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "apply economic reasoning to running a business"
+   "organisational inefficiency",
+   "resource allocation and coordination"
   ],
   "signature": {
    "task": [
@@ -3347,14 +3989,50 @@
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Agency theory",
+    "does": "Analyses conflict and contracting between owners and managers",
+    "hypotheses": [
+     "information asymmetry",
+     "divergent goals",
+     "self-interested actors"
+    ]
+   },
+   {
+    "name": "Transaction cost economics",
+    "does": "Explains firm boundaries by cost of using markets versus hierarchy",
+    "hypotheses": [
+     "bounded rationality",
+     "opportunism",
+     "asset specificity"
+    ]
+   },
+   {
+    "name": "Resource-based view",
+    "does": "Links sustained advantage to valuable, rare, inimitable resources",
+    "hypotheses": [
+     "resources heterogeneous across firms",
+     "resources imperfectly mobile"
+    ]
+   }
+  ],
+  "inputs": [
+   "contractual terms",
+   "governance structures",
+   "market prices",
+   "operational costs"
+  ],
+  "outputs": [
+   "optimal organisational structure",
+   "incentive schemes",
+   "make-or-buy decisions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added resource-based view). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.M2",
@@ -3363,7 +4041,8 @@
   "name": "Business Economics",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "apply economic analysis to a firm's decisions"
+   "optimisation of firm resources",
+   "strategic decision-making for profit maximisation"
   ],
   "signature": {
    "task": [
@@ -3371,14 +4050,51 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Profit maximisation rule (MR = MC)",
+    "does": "Sets output where marginal revenue equals marginal cost",
+    "hypotheses": [
+     "revenue and cost functions known",
+     "marginal cost cuts marginal revenue from below"
+    ]
+   },
+   {
+    "name": "Break-even (cost-volume-profit) analysis",
+    "does": "Finds volume at which revenue equals total cost",
+    "hypotheses": [
+     "linear cost and revenue functions",
+     "constant price per unit",
+     "fixed and variable costs separable"
+    ]
+   },
+   {
+    "name": "Cournot oligopoly model",
+    "does": "Finds equilibrium when firms choose quantities simultaneously",
+    "hypotheses": [
+     "firms choose quantities simultaneously",
+     "homogeneous product",
+     "costs and demand common knowledge"
+    ]
+   }
+  ],
+  "inputs": [
+   "fixed costs",
+   "variable costs",
+   "price per unit",
+   "marginal revenue",
+   "marginal cost"
+  ],
+  "outputs": [
+   "optimal production quantity",
+   "break-even point",
+   "projected profit/loss"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed marginal rule conditions; added Cournot model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.M3",
@@ -3387,7 +4103,8 @@
   "name": "Marketing and Advertising",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "explain how selling and advertising affect demand"
+   "optimising customer acquisition",
+   "maximising brand equity and market share"
   ],
   "signature": {
    "task": [
@@ -3395,14 +4112,50 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Dorfman-Steiner condition",
+    "does": "Sets advertising-to-sales ratio by ratio of advertising and price elasticities",
+    "hypotheses": [
+     "profit-maximising firm",
+     "advertising shifts demand",
+     "constant marginal cost"
+    ]
+   },
+   {
+    "name": "Marketing mix (4Ps)",
+    "does": "Organises controllable levers: product, price, place, promotion",
+    "hypotheses": [
+     "firm controls the four variables",
+     "target market defined"
+    ]
+   },
+   {
+    "name": "Segmentation, targeting and positioning",
+    "does": "Splits markets into segments then selects and positions offers",
+    "hypotheses": [
+     "market heterogeneous",
+     "segments measurable and reachable"
+    ]
+   }
+  ],
+  "inputs": [
+   "consumer behaviour data",
+   "competitor pricing",
+   "budget constraints",
+   "market demographics"
+  ],
+  "outputs": [
+   "marketing strategy",
+   "promotional campaigns",
+   "pricing schedules",
+   "distribution channels"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced AIDA with Dorfman-Steiner condition). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.M4",
@@ -3411,7 +4164,8 @@
   "name": "Accounting and Auditing",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "explain the economic role of financial reports and audits"
+   "financial reporting and transparency",
+   "verification of financial statements"
   ],
   "signature": {
    "task": [
@@ -3419,14 +4173,48 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Double-entry bookkeeping",
+    "does": "Records every transaction as equal debits and credits",
+    "hypotheses": [
+     "accounting entity assumption",
+     "monetary unit assumption"
+    ]
+   },
+   {
+    "name": "Audit risk model",
+    "does": "Combines inherent, control and detection risk: AR = IR x CR x DR",
+    "hypotheses": [
+     "risk components independent",
+     "audit risk target set"
+    ]
+   },
+   {
+    "name": "Monetary unit sampling",
+    "does": "Samples dollars rather than items to test overstatement",
+    "hypotheses": [
+     "population complete",
+     "low expected error rate",
+     "items independent"
+    ]
+   }
+  ],
+  "inputs": [
+   "transaction records",
+   "financial ledgers",
+   "internal control documentation"
+  ],
+  "outputs": [
+   "financial statements",
+   "audit opinions",
+   "compliance reports"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced materiality and generic sampling with audit risk model and monetary unit sampling). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.M5",
@@ -3753,7 +4541,8 @@
   "name": "Development Planning and Policy",
   "taxonomy_cell": "EC.O.A4",
   "solves": [
-   "plan and assess policies meant to raise living standards"
+   "long-term economic growth coordination",
+   "resource allocation for national development"
   ],
   "signature": {
    "task": [
@@ -3761,14 +4550,51 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Harrod-Domar model",
+    "does": "Links growth to saving rate divided by capital-output ratio",
+    "hypotheses": [
+     "fixed capital-output ratio",
+     "constant saving rate",
+     "labour not a constraint"
+    ]
+   },
+   {
+    "name": "Lewis two-sector model",
+    "does": "Explains growth by moving surplus labour from subsistence to capitalist sector",
+    "hypotheses": [
+     "unlimited labour supply at subsistence wage",
+     "capitalists reinvest profits",
+     "wage in capitalist sector fixed"
+    ]
+   },
+   {
+    "name": "Leontief input-output model",
+    "does": "Traces sector interdependence to plan output and inputs",
+    "hypotheses": [
+     "fixed technical coefficients",
+     "constant returns to scale",
+     "no input substitution"
+    ]
+   }
+  ],
+  "inputs": [
+   "savings rates",
+   "investment data",
+   "labour force statistics",
+   "capital-output ratios"
+  ],
+  "outputs": [
+   "projected GDP growth rates",
+   "required investment levels",
+   "structural transition timelines"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Harrod-Domar conditions; added Leontief input-output). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.O3",
@@ -3777,7 +4603,8 @@
   "name": "Innovation &bull; Research and Development &bull; Technological Change &bull; Intellectual Property Rights",
   "taxonomy_cell": "EC.O.A4",
   "solves": [
-   "explain what drives new ideas and their spread"
+   "incentivising innovation",
+   "optimal patent duration and protection"
   ],
   "signature": {
    "task": [
@@ -3785,14 +4612,50 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Romer endogenous growth model",
+    "does": "Explains growth through non-rival ideas produced by research",
+    "hypotheses": [
+     "ideas non-rival",
+     "monopolistic competition in intermediate goods",
+     "research sector employs labour or human capital"
+    ]
+   },
+   {
+    "name": "Schumpeterian growth model (Aghion-Howitt)",
+    "does": "Models growth via creative destruction of incumbents by innovators",
+    "hypotheses": [
+     "innovations arrive randomly",
+     "innovator earns temporary monopoly rent",
+     "new product displaces old"
+    ]
+   },
+   {
+    "name": "Arrow's replacement effect",
+    "does": "Shows monopolist gains less from innovation than a competitive entrant",
+    "hypotheses": [
+     "incumbent monopoly replaces its own profits",
+     "innovation is cost-reducing (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "R&D expenditure",
+   "patent filing data",
+   "market share",
+   "innovation rates"
+  ],
+  "outputs": [
+   "optimal patent length",
+   "innovation equilibrium",
+   "total factor productivity growth"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Arrow conditions; added Romer model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.O4",
@@ -3848,21 +4711,49 @@
   "name": "Economywide Country Studies",
   "taxonomy_cell": "EC.O.A4",
   "solves": [
-   "describe the economy of one country as a whole"
+   "analysis of national economic performance",
+   "assessment of structural constraints to growth"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Computable general equilibrium model",
+    "does": "Simulates economy-wide effects of policy shocks",
+    "hypotheses": [
+     "markets clear",
+     "calibrated to a base-year social accounting matrix",
+     "agents optimise"
+    ]
+   },
+   {
+    "name": "Growth accounting",
+    "does": "Splits output growth into factor inputs and total factor productivity",
+    "hypotheses": [
+     "constant returns to scale",
+     "competitive factor markets",
+     "neutral technical change"
+    ]
+   }
+  ],
+  "inputs": [
+   "national accounts data",
+   "household surveys",
+   "trade statistics"
+  ],
+  "outputs": [
+   "growth projections",
+   "policy impact assessments",
+   "productivity trends"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Specified conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.P0",
@@ -3894,7 +4785,8 @@
   "name": "Capitalist Economies",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "explain how market economies are organised and perform"
+   "analysis of capital accumulation",
+   "mechanisms of market-driven resource allocation"
   ],
   "signature": {
    "task": [
@@ -3902,14 +4794,50 @@
     "compare"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Solow-Swan growth model",
+    "does": "Explains capital accumulation and growth with exogenous technology",
+    "hypotheses": [
+     "constant returns to scale",
+     "diminishing returns to capital",
+     "exogenous saving, labour and technology growth"
+    ]
+   },
+   {
+    "name": "Goodwin growth cycle",
+    "does": "Models class conflict as predator-prey cycle of wages and employment",
+    "hypotheses": [
+     "constant capital-output ratio",
+     "real wages rise with employment",
+     "profits fully invested"
+    ]
+   },
+   {
+    "name": "Varieties of capitalism",
+    "does": "Contrasts liberal and coordinated market economies by firm coordination",
+    "hypotheses": [
+     "firms coordinate through market or non-market institutions",
+     "institutional complementarities (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "investment rates",
+   "labour force growth",
+   "factor endowments",
+   "technological growth rates"
+  ],
+  "outputs": [
+   "steady-state capital stock",
+   "per capita output",
+   "comparative advantage patterns"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed Heckscher-Ohlin; added Goodwin cycle and Varieties of Capitalism). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.P2",
@@ -3918,7 +4846,8 @@
   "name": "Socialist and Transition Economies",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "explain how planned economies work and change"
+   "price liberalisation and privatisation",
+   "institutional shift from command to market systems"
   ],
   "signature": {
    "task": [
@@ -3926,14 +4855,47 @@
     "compare"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Soft budget constraint (Kornai)",
+    "does": "Explains weak enterprise discipline when losses are bailed out",
+    "hypotheses": [
+     "state enterprises expect bailouts",
+     "paternalistic state"
+    ]
+   },
+   {
+    "name": "Shock therapy (big bang)",
+    "does": "Liberalises prices and privatises rapidly in one package",
+    "hypotheses": [
+     "political window for rapid reform (UNVERIFIED)",
+     "macroeconomic stabilisation accompanies reform (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Gradualism",
+    "does": "Sequences transition reforms to preserve institutions and output",
+    "hypotheses": [
+     "state capacity retained",
+     "reform sequence credible (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "state ownership levels",
+   "price controls",
+   "institutional legal frameworks"
+  ],
+  "outputs": [
+   "market equilibrium prices",
+   "private property rights",
+   "GDP growth rates"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced conditions; added Kornai soft budget constraint). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.P3",
@@ -3942,21 +4904,55 @@
   "name": "Socialist Institutions and Their Transitions",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "explain how planned-economy institutions are reformed"
+   "analysis of systemic shifts from planned to market economies",
+   "institutional reform in socialist states"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Comparative institutional analysis (Aoki)",
+    "does": "Models institutions as self-sustaining equilibria of strategic play",
+    "hypotheses": [
+     "institutions modelled as equilibria",
+     "institutional complementarities possible (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Lange-Lerner market socialism model",
+    "does": "Simulates market pricing under public ownership by trial and error",
+    "hypotheses": [
+     "central board adjusts prices to excess demand",
+     "managers follow marginal-cost pricing"
+    ]
+   },
+   {
+    "name": "Soft budget constraint (Kornai)",
+    "does": "Explains weak enterprise discipline when losses are bailed out",
+    "hypotheses": [
+     "state enterprises expect bailouts",
+     "paternalistic state"
+    ]
+   }
+  ],
+  "inputs": [
+   "state ownership data",
+   "price control mechanisms",
+   "legal frameworks for property rights"
+  ],
+  "outputs": [
+   "transition trajectories",
+   "equilibrium price levels",
+   "institutional efficiency metrics"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Price Liberalisation Model; added Lange model and soft budget constraint). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.P4",
@@ -3965,7 +4961,8 @@
   "name": "Other Economic Systems",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "explain economies organised on other principles"
+   "analysis of non-market resource allocation",
+   "comparative evaluation of alternative economic organisations"
   ],
   "signature": {
    "task": [
@@ -3973,13 +4970,21 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "institutional rules",
+   "resource constraints",
+   "social objectives"
+  ],
+  "outputs": [
+   "allocation efficiency metrics",
+   "distributional outcomes",
+   "systemic stability analysis"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (No specific named tool belongs to this heading; kept empty). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.P5",
@@ -3988,7 +4993,8 @@
   "name": "Comparative Economic Systems",
   "taxonomy_cell": "EC.O.A3",
   "solves": [
-   "compare how different economic systems perform"
+   "resource allocation efficiency across different regimes",
+   "performance comparison of market versus planned economies"
   ],
   "signature": {
    "task": [
@@ -3996,14 +5002,42 @@
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Production possibility frontier",
+    "does": "Shows maximum feasible output combinations from given resources",
+    "hypotheses": [
+     "resources fixed",
+     "technology fixed",
+     "resources fully and efficiently employed"
+    ]
+   },
+   {
+    "name": "First fundamental welfare theorem",
+    "does": "Shows competitive equilibrium is Pareto efficient",
+    "hypotheses": [
+     "competitive markets",
+     "complete markets, no externalities",
+     "local non-satiation"
+    ]
+   }
+  ],
+  "inputs": [
+   "resource constraints",
+   "ownership structures",
+   "incentive mechanisms",
+   "production data"
+  ],
+  "outputs": [
+   "comparative efficiency metrics",
+   "optimal allocation states",
+   "systemic performance evaluations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Pareto efficiency with first welfare theorem; fixed PPF conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.Q0",
@@ -4163,7 +5197,8 @@
   "name": "Energy",
   "taxonomy_cell": "EC.O.A2",
   "solves": [
-   "explain energy demand, supply and prices"
+   "optimal resource extraction rates",
+   "energy market equilibrium and pricing"
   ],
   "signature": {
    "task": [
@@ -4171,14 +5206,47 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hotelling's rule",
+    "does": "Makes resource price net of marginal cost rise at the interest rate",
+    "hypotheses": [
+     "finite known stock",
+     "competitive markets",
+     "perfect foresight"
+    ]
+   },
+   {
+    "name": "Levelised cost of energy",
+    "does": "Compares lifetime cost per unit of generation across technologies",
+    "hypotheses": [
+     "constant discount rate",
+     "output and cost profiles known"
+    ]
+   },
+   {
+    "name": "Hubbert curve",
+    "does": "Fits bell-shaped production path for a depleting resource",
+    "hypotheses": [
+     "finite recoverable resource",
+     "logistic cumulative production (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "resource stock size",
+   "market demand",
+   "discount rate"
+  ],
+  "outputs": [
+   "shadow price of resource",
+   "optimal extraction schedule"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Hotelling conditions; added LCOE and Hubbert). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.Q5",
@@ -4310,7 +5378,8 @@
   "name": "Household Analysis",
   "taxonomy_cell": "EC.O.A2",
   "solves": [
-   "explain where households choose to live"
+   "optimisation of resource allocation within a home",
+   "analysis of intra-household bargaining and distribution"
   ],
   "signature": {
    "task": [
@@ -4318,14 +5387,49 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Collective model (Chiappori)",
+    "does": "Models household decisions as Pareto-efficient outcomes with distinct preferences",
+    "hypotheses": [
+     "household members have own preferences",
+     "allocations Pareto efficient",
+     "sharing rule depends on distribution factors"
+    ]
+   },
+   {
+    "name": "Unitary household model",
+    "does": "Treats household as one decision-maker with single utility",
+    "hypotheses": [
+     "pooled income",
+     "single or altruistic decision-maker"
+    ]
+   },
+   {
+    "name": "Nash bargaining household model",
+    "does": "Predicts intra-household allocation from threat points",
+    "hypotheses": [
+     "cooperative bargaining",
+     "threat points defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "household income",
+   "member preferences",
+   "resource constraints",
+   "relative bargaining power"
+  ],
+  "outputs": [
+   "expenditure patterns",
+   "allocation of leisure and labour",
+   "distribution of consumption"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed collective model conditions; added Nash bargaining model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.R3",
@@ -4420,7 +5524,8 @@
   "name": "Regional Government Analysis",
   "taxonomy_cell": "EC.O.A2",
   "solves": [
-   "analyse the taxing and spending of regional governments"
+   "optimal allocation of public services",
+   "intergovernmental fiscal imbalances"
   ],
   "signature": {
    "task": [
@@ -4428,14 +5533,42 @@
     "compare"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Tiebout model",
+    "does": "Shows mobile households sort into communities by public goods and taxes",
+    "hypotheses": [
+     "mobile households with full information",
+     "many jurisdictions",
+     "no spillovers across jurisdictions"
+    ]
+   },
+   {
+    "name": "Oates decentralisation theorem",
+    "does": "Favours local provision when preferences differ and spillovers are absent",
+    "hypotheses": [
+     "benefits confined to jurisdiction",
+     "preferences heterogeneous across regions",
+     "equal cost of provision"
+    ]
+   }
+  ],
+  "inputs": [
+   "population density",
+   "local preference data",
+   "tax revenue capacities",
+   "expenditure requirements"
+  ],
+  "outputs": [
+   "optimal fiscal decentralisation level",
+   "predicted migration patterns",
+   "intergovernmental transfer requirements"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.Y1",
@@ -4674,21 +5807,57 @@
   "name": "Cultural Economics &bull; Economic Sociology &bull; Economic Anthropology",
   "taxonomy_cell": "EC.O.A5",
   "solves": [
-   "explain economic life using culture and social ties"
+   "non-market valuation of cultural goods",
+   "social embeddedness of economic action"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Contingent valuation method",
+    "does": "Elicits willingness to pay for non-market goods by survey",
+    "hypotheses": [
+     "respondents understand the hypothetical market",
+     "responses truthful",
+     "plausible payment vehicle"
+    ]
+   },
+   {
+    "name": "Social network analysis",
+    "does": "Maps and measures relational structure among actors",
+    "hypotheses": [
+     "relational data available",
+     "tie definitions capture meaningful interaction",
+     "network boundary defined"
+    ]
+   },
+   {
+    "name": "Baumol's cost disease",
+    "does": "Explains rising costs in performing arts from stagnant productivity",
+    "hypotheses": [
+     "productivity growth differs across sectors",
+     "wages equalise across sectors"
+    ]
+   }
+  ],
+  "inputs": [
+   "survey responses",
+   "relational data",
+   "cultural consumption patterns"
+  ],
+  "outputs": [
+   "monetary value estimates",
+   "network centrality measures",
+   "social capital indices"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Baumol cost disease; reworded conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.Z2",
@@ -4697,7 +5866,8 @@
   "name": "Sports Economics",
   "taxonomy_cell": "EC.O.A5",
   "solves": [
-   "apply economic reasoning to sport"
+   "valuation of professional athletes",
+   "optimal league structure and competition design"
   ],
   "signature": {
    "task": [
@@ -4705,14 +5875,49 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Rottenberg invariance proposition",
+    "does": "Holds talent allocation is unaffected by who owns player contracts",
+    "hypotheses": [
+     "player market competitive",
+     "zero transaction costs",
+     "teams maximise profit or wins (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Noll-Scully ratio",
+    "does": "Measures competitive balance as ratio of actual to idealised win-share spread",
+    "hypotheses": [
+     "equal-strength coin-flip benchmark",
+     "fixed season length"
+    ]
+   },
+   {
+    "name": "Marginal revenue product of players",
+    "does": "Values athletes by revenue attributable to their performance",
+    "hypotheses": [
+     "performance measurable",
+     "revenue contribution estimable"
+    ]
+   }
+  ],
+  "inputs": [
+   "player performance statistics",
+   "salary data",
+   "win-loss records",
+   "ticket revenue"
+  ],
+  "outputs": [
+   "market value of players",
+   "league stability metrics",
+   "optimal salary caps"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Human Capital and generic balance with Rottenberg, Noll-Scully, MRP). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EC.TK.Z3",
@@ -4721,7 +5926,8 @@
   "name": "Tourism Economics",
   "taxonomy_cell": "EC.O.A5",
   "solves": [
-   "apply economic reasoning to travel for leisure"
+   "valuation of tourism impacts",
+   "optimisation of destination capacity"
   ],
   "signature": {
    "task": [
@@ -4729,13 +5935,49 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Travel cost method",
+    "does": "Infers site value from visitors' travel costs",
+    "hypotheses": [
+     "travel cost proxies price",
+     "visits for single purpose",
+     "visitors maximise utility"
+    ]
+   },
+   {
+    "name": "Tourism satellite account",
+    "does": "Measures tourism's economic contribution within national accounts",
+    "hypotheses": [
+     "consistent with national accounts definitions",
+     "visitor and resident consumption distinguished"
+    ]
+   },
+   {
+    "name": "Input-output multiplier analysis",
+    "does": "Estimates spending impacts through inter-industry linkages",
+    "hypotheses": [
+     "fixed technical coefficients",
+     "no supply constraints",
+     "no price effects"
+    ]
+   }
+  ],
+  "inputs": [
+   "visitor expenditure data",
+   "travel distance",
+   "site visitation rates",
+   "national accounts data"
+  ],
+  "outputs": [
+   "consumer surplus",
+   "economic impact multipliers",
+   "tourism GDP contribution"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added input-output multiplier analysis; fixed conditions). No source checked except spot checks; needs specialist review."
  }
 ]

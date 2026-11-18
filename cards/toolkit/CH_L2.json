@@ -149,7 +149,8 @@
   "name": "Flow analysis",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "analyse a moving stream of sample automatically"
+   "determination of chemical species distribution in flowing systems",
+   "optimisation of residence time distributions in reactors"
   ],
   "signature": {
    "task": [
@@ -157,14 +158,51 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Flow injection analysis",
+    "does": "Measures analytes by injecting sample into a carrier stream with controlled dispersion",
+    "hypotheses": [
+     "reproducible injection volume and timing",
+     "controlled partial mixing in laminar flow",
+     "detector response proportional to concentration"
+    ]
+   },
+   {
+    "name": "Taylor-Aris dispersion",
+    "does": "Describes axial spreading of a solute pulse in laminar tube flow",
+    "hypotheses": [
+     "laminar flow in a circular tube",
+     "radial diffusion fast relative to transit time",
+     "long enough tube for fully developed dispersion"
+    ]
+   },
+   {
+    "name": "Residence time distribution",
+    "does": "Characterises time fluid elements spend in a flow system via tracer",
+    "hypotheses": [
+     "tracer inert and not altering flow",
+     "steady flow",
+     "defined inlet and outlet boundary conditions"
+    ]
+   }
+  ],
+  "inputs": [
+   "tracer concentration profiles",
+   "flow rates",
+   "reactor volume",
+   "diffusion coefficients"
+  ],
+  "outputs": [
+   "E-curve (exit age distribution)",
+   "dispersion coefficients",
+   "mixing efficiency"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Peclet number (dimensionless number); added flow injection and Taylor-Aris dispersion). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340105",
@@ -173,7 +211,8 @@
   "name": "Instrumental methods (excl. immunological and bioassay methods)",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "choose and run an instrument that measures a chemical property"
+   "determination of chemical composition",
+   "identification of molecular structure"
   ],
   "signature": {
    "task": [
@@ -181,14 +220,50 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Beer-Lambert law",
+    "does": "Relates absorbance to concentration and path length",
+    "hypotheses": [
+     "monochromatic light",
+     "dilute solution of non-interacting absorbers",
+     "no scattering or fluorescence loss"
+    ]
+   },
+   {
+    "name": "Fourier transform spectroscopy",
+    "does": "Converts interferograms or free-induction decays into spectra",
+    "hypotheses": [
+     "linear, time-invariant response",
+     "sampling at or above Nyquist rate",
+     "signal captured over sufficient duration"
+    ]
+   },
+   {
+    "name": "Method of standard additions",
+    "does": "Quantifies analyte in complex matrices by spiking known amounts",
+    "hypotheses": [
+     "linear response",
+     "spike behaves like native analyte",
+     "matrix effect constant"
+    ]
+   }
+  ],
+  "inputs": [
+   "electromagnetic radiation",
+   "electrical current",
+   "mass-to-charge ratios"
+  ],
+  "outputs": [
+   "spectra",
+   "chromatograms",
+   "quantitative concentration values"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added standard additions; refined Fourier and Beer-Lambert conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340106",
@@ -197,7 +272,8 @@
   "name": "Metabolomic chemistry",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "measure many small molecules in a biological sample at once"
+   "identification of small-molecule metabolites",
+   "mapping of biochemical pathways"
   ],
   "signature": {
    "task": [
@@ -208,14 +284,50 @@
     "high_dimensional"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Liquid chromatography-mass spectrometry",
+    "does": "Separates metabolites by chromatography and detects them by mass-to-charge ratio",
+    "hypotheses": [
+     "analytes ionisable",
+     "stable molecular ions",
+     "matrix effects controlled"
+    ]
+   },
+   {
+    "name": "NMR spectroscopy",
+    "does": "Identifies and quantifies metabolites from chemical shifts and couplings",
+    "hypotheses": [
+     "nuclei with non-zero spin",
+     "full relaxation between scans for quantitative use",
+     "sufficient concentration"
+    ]
+   },
+   {
+    "name": "Principal component analysis",
+    "does": "Reduces dimensionality to show patterns among metabolic profiles",
+    "hypotheses": [
+     "variance carries relevant information",
+     "variables suitably scaled and normalised",
+     "approximately linear relationships"
+    ]
+   }
+  ],
+  "inputs": [
+   "biological extracts",
+   "mass spectra",
+   "chemical shifts"
+  ],
+  "outputs": [
+   "metabolite identities",
+   "concentration profiles",
+   "metabolic maps"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined hypotheses; list-formatted). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340107",
@@ -277,7 +389,8 @@
   "name": "Sensor technology (incl. chemical aspects)",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "build a device that turns a chemical quantity into a signal"
+   "detection and quantification of chemical species",
+   "conversion of chemical signals to measurable electrical signals"
   ],
   "signature": {
    "task": [
@@ -285,14 +398,51 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Nernst equation",
+    "does": "Relates electrode potential to ion activity in potentiometric sensors",
+    "hypotheses": [
+     "reversible electrode process at equilibrium",
+     "activities approximate concentrations",
+     "membrane selective for the ion"
+    ]
+   },
+   {
+    "name": "Sauerbrey equation",
+    "does": "Relates quartz crystal frequency shift to added mass",
+    "hypotheses": [
+     "thin, rigid, uniformly distributed film",
+     "mass change small relative to crystal (below about 2 percent)",
+     "measured in air or vacuum"
+    ]
+   },
+   {
+    "name": "Cottrell equation",
+    "does": "Gives diffusion-limited current after a potential step",
+    "hypotheses": [
+     "planar electrode, semi-infinite linear diffusion",
+     "fully diffusion-controlled step",
+     "no convection or migration"
+    ]
+   }
+  ],
+  "inputs": [
+   "analyte concentration",
+   "electrode potential",
+   "resonant frequency",
+   "temperature"
+  ],
+  "outputs": [
+   "chemical concentration",
+   "molecular mass",
+   "binding affinity"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Cottrell equation for amperometric sensors; fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340109",
@@ -370,21 +520,57 @@
   "name": "Bioinorganic chemistry",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "explain the role of metals in living systems"
+   "metal ion function in biological systems",
+   "design of biomimetic catalysts"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hard-soft acid-base principle",
+    "does": "Qualitatively predicts which metals and ligands bind preferentially",
+    "hypotheses": [
+     "qualitative rule of thumb",
+     "thermodynamic control of complexation",
+     "comparable steric factors"
+    ]
+   },
+   {
+    "name": "Ligand field theory",
+    "does": "Explains d-orbital splitting, spectra and magnetism of metal complexes",
+    "hypotheses": [
+     "metal ion in defined coordination geometry",
+     "orbital overlap treated by symmetry (crystal field is point-charge limit)"
+    ]
+   },
+   {
+    "name": "Irving-Williams series",
+    "does": "Orders stability of divalent first-row metal complexes, peaking at copper",
+    "hypotheses": [
+     "divalent first-row ions",
+     "same ligand",
+     "comparable coordination geometry"
+    ]
+   }
+  ],
+  "inputs": [
+   "metal ion oxidation state",
+   "ligand coordination geometry",
+   "electronegativity"
+  ],
+  "outputs": [
+   "binding affinity",
+   "electronic spectra",
+   "magnetic properties"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Irving-Williams; clarified ligand field and HSAB conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340202",
@@ -446,7 +632,8 @@
   "name": "F-block chemistry",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "explain the chemistry of lanthanide and actinide elements"
+   "electronic structure of lanthanides and actinides",
+   "coordination chemistry of f-elements"
   ],
   "signature": {
    "task": [
@@ -454,14 +641,37 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Lanthanide contraction",
+    "does": "Explains steady decrease in Ln3+ radii across the 4f series",
+    "hypotheses": [
+     "compare at the same coordination number",
+     "progressive 4f filling with poor shielding"
+    ]
+   },
+   {
+    "name": "Judd-Ofelt theory",
+    "does": "Models intensities of f-f transitions from three fitted parameters",
+    "hypotheses": [
+     "configuration mixing with opposite-parity states",
+     "excited configurations treated as degenerate (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "atomic number",
+   "oxidation state"
+  ],
+  "outputs": [
+   "ionic radius",
+   "chemical periodicity"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Judd-Ofelt theory; added coordination-number condition). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340204",
@@ -470,7 +680,8 @@
   "name": "Inorganic green chemistry",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "carry out inorganic chemistry with less waste and hazard"
+   "reduction of hazardous waste in inorganic synthesis",
+   "minimisation of toxic metal emissions"
   ],
   "signature": {
    "task": [
@@ -478,14 +689,38 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "E-factor",
+    "does": "Gives mass of waste per mass of product",
+    "hypotheses": [
+     "system boundary defined (solvents and water inclusion stated)",
+     "masses of all waste streams known"
+    ]
+   },
+   {
+    "name": "Atom economy",
+    "does": "Gives fraction of reactant mass incorporated into product",
+    "hypotheses": [
+     "balanced stoichiometric equation",
+     "assumes complete yield, ignores solvents and reagents"
+    ]
+   }
+  ],
+  "inputs": [
+   "mass of reactants",
+   "mass of waste",
+   "molecular weights of precursors and products"
+  ],
+  "outputs": [
+   "waste-to-product ratio",
+   "percentage of atom efficiency"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Clarified conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340205",
@@ -494,7 +729,8 @@
   "name": "Main group metal chemistry",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "explain bonding and reactivity of main-group metals"
+   "synthesis and characterisation of s-block and p-block organometallics",
+   "prediction of reactivity and bonding in main group compounds"
   ],
   "signature": {
    "task": [
@@ -502,14 +738,48 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "VSEPR theory",
+    "does": "Predicts molecular geometry from minimising valence electron pair repulsion",
+    "hypotheses": [
+     "geometry set by valence electron pairs on the central atom",
+     "lone pairs repel more strongly than bonding pairs",
+     "no significant d-orbital participation or strong ligand crowding"
+    ]
+   },
+   {
+    "name": "Bent's rule",
+    "does": "Predicts that s character concentrates in orbitals toward electropositive substituents",
+    "hypotheses": [
+     "central atom with hybrid orbitals",
+     "substituents differ in electronegativity"
+    ]
+   },
+   {
+    "name": "Wade-Mingos rules",
+    "does": "Predict cluster geometry from skeletal electron count",
+    "hypotheses": [
+     "polyhedral cluster bonding",
+     "skeletal electrons counted correctly (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "valence electron count",
+   "electronegativity values",
+   "molecular formula"
+  ],
+  "outputs": [
+   "molecular geometry",
+   "bond angles",
+   "hybridisation state"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Wade-Mingos rules; refined VSEPR hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340206",
@@ -594,7 +864,8 @@
   "name": "Non-metal chemistry",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "explain bonding and reactivity of non-metal elements"
+   "synthesis and reactivity of p-block elements",
+   "structure and bonding of non-metallic compounds"
   ],
   "signature": {
    "task": [
@@ -602,14 +873,41 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "VSEPR theory",
+    "does": "Predicts molecular geometry from minimising valence electron pair repulsion",
+    "hypotheses": [
+     "geometry set by valence electron pairs on the central atom",
+     "lone pairs repel more strongly than bonding pairs",
+     "no significant d-orbital participation or strong ligand crowding"
+    ]
+   },
+   {
+    "name": "Molecular orbital theory",
+    "does": "Builds delocalised molecular orbitals from linear combinations of atomic orbitals",
+    "hypotheses": [
+     "LCAO approximation",
+     "orbitals combine only if similar energy and compatible symmetry",
+     "Born-Oppenheimer approximation"
+    ]
+   }
+  ],
+  "inputs": [
+   "valence electron configurations",
+   "atomic numbers",
+   "electronegativity values"
+  ],
+  "outputs": [
+   "molecular geometry",
+   "bond orders",
+   "magnetic properties"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined VSEPR and MO conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340209",
@@ -780,7 +1078,8 @@
   "name": "Inorganic materials (incl. nanomaterials)",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "make and characterise inorganic solids with useful properties"
+   "synthesis and characterisation of non-carbon based solids",
+   "optimisation of material properties at the nanoscale"
   ],
   "signature": {
    "task": [
@@ -788,14 +1087,41 @@
     "construct"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bragg's law",
+    "does": "Relates diffraction angle to lattice spacing and wavelength",
+    "hypotheses": [
+     "periodic crystalline lattice",
+     "coherent elastic scattering",
+     "wavelength comparable to lattice spacing"
+    ]
+   },
+   {
+    "name": "Scherrer equation",
+    "does": "Estimates mean crystallite size from X-ray peak broadening",
+    "hypotheses": [
+     "crystallites below about 100 nm",
+     "broadening from size only (strain absent)",
+     "instrumental broadening subtracted"
+    ]
+   }
+  ],
+  "inputs": [
+   "diffraction angles",
+   "wavelength of radiation",
+   "peak full-width at half-maximum"
+  ],
+  "outputs": [
+   "interplanar spacing",
+   "lattice parameters",
+   "average crystallite size"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected Bragg and Scherrer conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340302",
@@ -804,7 +1130,8 @@
   "name": "Macromolecular materials",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "relate the make-up of very large molecules to material properties"
+   "design of synthetic polymers",
+   "characterisation of macromolecular structures"
   ],
   "signature": {
    "task": [
@@ -815,14 +1142,51 @@
     "multiscale"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Flory-Huggins theory",
+    "does": "Describes thermodynamics of mixing for polymer solutions and blends",
+    "hypotheses": [
+     "mean-field lattice model",
+     "random mixing",
+     "no volume change on mixing",
+     "interaction parameter independent of composition (approximation)"
+    ]
+   },
+   {
+    "name": "Mark-Houwink equation",
+    "does": "Relates intrinsic viscosity to molar mass",
+    "hypotheses": [
+     "dilute solution",
+     "fixed polymer-solvent-temperature system",
+     "viscosity-average molar mass defined"
+    ]
+   },
+   {
+    "name": "Size exclusion chromatography",
+    "does": "Separates macromolecules by hydrodynamic volume",
+    "hypotheses": [
+     "purely entropic exclusion, no adsorption",
+     "calibration with suitable standards (universal calibration)"
+    ]
+   }
+  ],
+  "inputs": [
+   "monomer concentration",
+   "viscosity measurements",
+   "solvent type",
+   "temperature"
+  ],
+  "outputs": [
+   "molecular weight distribution",
+   "interaction parameters",
+   "hydrodynamic radius"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340303",
@@ -831,7 +1195,8 @@
   "name": "Nanochemistry",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "make and characterise structures a few nanometres across"
+   "synthesis of nanoscale materials",
+   "control of surface-to-volume ratio properties"
   ],
   "signature": {
    "task": [
@@ -842,14 +1207,48 @@
     "small"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "LaMer model",
+    "does": "Explains monodisperse colloid formation by a burst of nucleation then growth",
+    "hypotheses": [
+     "monomer supersaturation exceeds critical value briefly",
+     "nucleation then diffusion-controlled growth with no further nucleation"
+    ]
+   },
+   {
+    "name": "DLVO theory",
+    "does": "Predicts colloidal stability from van der Waals and double-layer forces",
+    "hypotheses": [
+     "additive van der Waals and electrostatic forces",
+     "dilute electrolyte (low ionic strength)",
+     "smooth charged particles"
+    ]
+   },
+   {
+    "name": "Lifshitz-Slyozov-Wagner theory",
+    "does": "Describes Ostwald ripening of dispersed particles",
+    "hypotheses": [
+     "diffusion-limited coarsening",
+     "dilute, spherical particles"
+    ]
+   }
+  ],
+  "inputs": [
+   "precursor concentration",
+   "surface charge",
+   "ionic strength of medium"
+  ],
+  "outputs": [
+   "particle size distribution",
+   "colloidal stability",
+   "critical coagulation concentration"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Ostwald ripening theory; refined DLVO conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340304",
@@ -858,7 +1257,8 @@
   "name": "Optical properties of materials",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "explain how a material absorbs, emits and bends light"
+   "predicting light-matter interactions",
+   "characterising material refractive indices and absorption"
   ],
   "signature": {
    "task": [
@@ -866,14 +1266,51 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Beer-Lambert law",
+    "does": "Relates absorbance to concentration and path length",
+    "hypotheses": [
+     "monochromatic light",
+     "dilute solution of non-interacting absorbers",
+     "no scattering or fluorescence loss"
+    ]
+   },
+   {
+    "name": "Lorentz-Lorenz equation",
+    "does": "Relates refractive index to molecular polarisability",
+    "hypotheses": [
+     "isotropic or cubic medium",
+     "Lorentz local-field approximation",
+     "non-absorbing at wavelength"
+    ]
+   },
+   {
+    "name": "Drude model",
+    "does": "Describes optical response of conduction electrons in metals",
+    "hypotheses": [
+     "free electron gas",
+     "scattering by single relaxation time",
+     "interband transitions neglected"
+    ]
+   }
+  ],
+  "inputs": [
+   "wavelength",
+   "absorbance",
+   "molecular polarisability",
+   "electron density"
+  ],
+  "outputs": [
+   "molar absorptivity",
+   "refractive index",
+   "dielectric constant"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340305",
@@ -882,7 +1319,8 @@
   "name": "Physical properties of materials",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "measure and explain the mechanical, thermal and electrical behaviour of materials"
+   "predicting material behaviour under external stimuli",
+   "characterising bulk and surface material characteristics"
   ],
   "signature": {
    "task": [
@@ -890,14 +1328,52 @@
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hooke's law",
+    "does": "Relates stress and strain in elastic deformation",
+    "hypotheses": [
+     "linear elastic regime",
+     "small strains",
+     "isotropic material for a scalar modulus"
+    ]
+   },
+   {
+    "name": "Fourier's law of heat conduction",
+    "does": "Relates heat flux to temperature gradient",
+    "hypotheses": [
+     "small gradients (linear response)",
+     "isotropic medium",
+     "constant conductivity"
+    ]
+   },
+   {
+    "name": "Ohm's law",
+    "does": "Relates current density to electric field",
+    "hypotheses": [
+     "ohmic (linear) material",
+     "constant temperature",
+     "direct current"
+    ]
+   }
+  ],
+  "inputs": [
+   "applied force",
+   "temperature gradient",
+   "electric potential",
+   "material composition"
+  ],
+  "outputs": [
+   "elastic modulus",
+   "thermal conductivity",
+   "electrical resistivity",
+   "deformation rate"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected Fourier's law (steady state not required)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340306",
@@ -958,7 +1434,8 @@
   "name": "Structure and dynamics of materials",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "find how atoms in a material are arranged and move"
+   "predicting material stability",
+   "analysing atomic-scale structural arrangements"
   ],
   "signature": {
    "task": [
@@ -969,14 +1446,51 @@
     "inverse"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bragg's law",
+    "does": "Relates diffraction angle to lattice spacing and wavelength",
+    "hypotheses": [
+     "periodic crystalline lattice",
+     "coherent elastic scattering",
+     "wavelength comparable to lattice spacing"
+    ]
+   },
+   {
+    "name": "Density functional theory",
+    "does": "Computes electronic ground-state energy and density via Kohn-Sham equations",
+    "hypotheses": [
+     "Born-Oppenheimer approximation",
+     "ground state treated",
+     "approximate exchange-correlation functional chosen"
+    ]
+   },
+   {
+    "name": "Molecular dynamics",
+    "does": "Simulates atomic motion by integrating Newton's equations",
+    "hypotheses": [
+     "classical nuclei",
+     "defined interatomic potentials",
+     "ergodic sampling for averages",
+     "small enough time step"
+    ]
+   }
+  ],
+  "inputs": [
+   "diffraction patterns",
+   "atomic coordinates",
+   "interatomic potentials"
+  ],
+  "outputs": [
+   "crystal structure",
+   "binding energy",
+   "diffusion coefficients"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined DFT and MD conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340308",
@@ -985,21 +1499,48 @@
   "name": "Supramolecular chemistry",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "design molecules that assemble through weak reversible bonds"
+   "design of non-covalent molecular assemblies",
+   "molecular recognition and host-guest binding"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Job plot",
+    "does": "Finds host-guest stoichiometry by continuous variation",
+    "hypotheses": [
+     "single complex forms",
+     "total concentration constant"
+    ]
+   },
+   {
+    "name": "1:1 host-guest binding isotherm",
+    "does": "Fits titration data to give association constant",
+    "hypotheses": [
+     "single 1:1 equilibrium",
+     "fast exchange for NMR titrations",
+     "activities approximate concentrations"
+    ]
+   }
+  ],
+  "inputs": [
+   "molecular structures",
+   "binding constants",
+   "solvent properties"
+  ],
+  "outputs": [
+   "supramolecular complexes",
+   "binding isotherms",
+   "molecular architectures"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic host-guest and self-assembly entries with named quantitative methods). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340309",
@@ -1008,7 +1549,8 @@
   "name": "Theory and design of materials",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "predict a material's properties before it is made"
+   "prediction of material properties from atomic structure",
+   "optimisation of material composition for specific functions"
   ],
   "signature": {
    "task": [
@@ -1016,14 +1558,49 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Density functional theory",
+    "does": "Computes electronic ground-state energy and density via Kohn-Sham equations",
+    "hypotheses": [
+     "Born-Oppenheimer approximation",
+     "ground state treated",
+     "approximate exchange-correlation functional chosen"
+    ]
+   },
+   {
+    "name": "Hume-Rothery rules",
+    "does": "Predict extent of solid solubility in metallic alloys",
+    "hypotheses": [
+     "atomic size difference below about 15 percent",
+     "same crystal structure",
+     "similar electronegativity and valence"
+    ]
+   },
+   {
+    "name": "CALPHAD method",
+    "does": "Computes phase diagrams from fitted Gibbs energy models",
+    "hypotheses": [
+     "each phase described by a parameterised Gibbs energy model",
+     "higher-order systems extrapolated from lower-order ones"
+    ]
+   }
+  ],
+  "inputs": [
+   "atomic numbers",
+   "crystal symmetry",
+   "lattice parameters"
+  ],
+  "outputs": [
+   "band structures",
+   "elastic moduli",
+   "phase stability"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added CALPHAD; fixed Hume-Rothery and DFT conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340399",
@@ -1055,7 +1632,8 @@
   "name": "Biologically active molecules",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "find and characterise molecules that act on living systems"
+   "identification of bioactive compounds",
+   "optimisation of molecule-target interactions"
   ],
   "signature": {
    "task": [
@@ -1063,14 +1641,50 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Quantitative structure-activity relationship (QSAR)",
+    "does": "Relates structure descriptors to activity by statistical models",
+    "hypotheses": [
+     "similar structures have similar activity",
+     "compounds within the model's applicability domain",
+     "same mode of action across the series"
+    ]
+   },
+   {
+    "name": "Molecular docking",
+    "does": "Predicts binding pose and score of a ligand in a receptor site",
+    "hypotheses": [
+     "receptor rigid or limited flexibility",
+     "scoring approximates binding free energy",
+     "known binding site"
+    ]
+   },
+   {
+    "name": "Lipinski's rule of five",
+    "does": "Flags poor oral absorption likelihood from four property thresholds",
+    "hypotheses": [
+     "orally administered small molecules",
+     "passive absorption route",
+     "heuristic, not absolute"
+    ]
+   }
+  ],
+  "inputs": [
+   "chemical structures",
+   "biological assay data",
+   "protein crystal structures"
+  ],
+  "outputs": [
+   "predicted activity coefficients",
+   "binding affinity scores",
+   "bioavailability predictions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340402",
@@ -1120,7 +1734,8 @@
   "name": "Characterisation of biological macromolecules",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "determine the size, shape and make-up of large biological molecules"
+   "determination of molecular weight and purity",
+   "identification of primary and tertiary structures"
   ],
   "signature": {
    "task": [
@@ -1128,14 +1743,47 @@
     "infer"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Mass spectrometry",
+    "does": "Measures mass-to-charge ratio of ions to give molecular mass",
+    "hypotheses": [
+     "soft ionisation (ESI or MALDI) keeps macromolecule intact",
+     "analyte ionisable and desolvated"
+    ]
+   },
+   {
+    "name": "X-ray crystallography",
+    "does": "Determines 3D structure from diffraction of crystals",
+    "hypotheses": [
+     "well-ordered crystals diffracting to adequate resolution",
+     "phase problem solved",
+     "structure static on average"
+    ]
+   },
+   {
+    "name": "NMR spectroscopy",
+    "does": "Gives solution structure and dynamics from nuclear spins",
+    "hypotheses": [
+     "isotope labelling (13C, 15N) for proteins",
+     "molecule small enough to tumble fast",
+     "sufficient concentration and stability"
+    ]
+   }
+  ],
+  "inputs": [
+   "purified biological macromolecules in solution or crystalline form"
+  ],
+  "outputs": [
+   "molecular mass",
+   "amino acid or nucleotide sequence",
+   "3D atomic coordinates"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced inaccurate MS and NMR conditions; list-formatted). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340404",
@@ -1184,7 +1832,8 @@
   "name": "Glycoconjugates",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "make and study molecules that join sugars to other units"
+   "characterisation of carbohydrate-protein or carbohydrate-lipid complexes",
+   "synthesis and modification of glycosylated molecules"
   ],
   "signature": {
    "task": [
@@ -1192,14 +1841,38 @@
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Lectin affinity chromatography",
+    "does": "Separates glycoconjugates by reversible binding to immobilised lectins",
+    "hypotheses": [
+     "known lectin-glycan specificity",
+     "binding specific relative to non-specific interactions"
+    ]
+   },
+   {
+    "name": "Tandem mass spectrometry (ESI-MS/MS)",
+    "does": "Infers glycan mass, composition and sequence from fragment ions",
+    "hypotheses": [
+     "analytes ionisable",
+     "stable, interpretable gas-phase fragmentation"
+    ]
+   }
+  ],
+  "inputs": [
+   "purified glycoconjugate samples",
+   "specific lectins"
+  ],
+  "outputs": [
+   "molecular mass",
+   "glycan composition",
+   "purified glycoforms"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Standardised names; removed odd input). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340406",
@@ -1208,7 +1881,8 @@
   "name": "Molecular medicine",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "apply chemistry to the molecular causes of disease"
+   "molecular basis of disease",
+   "design of targeted molecular therapies"
   ],
   "signature": {
    "task": [
@@ -1216,14 +1890,52 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "CRISPR-Cas9 gene editing",
+    "does": "Makes targeted cuts for knockout or edit of genomic sequences",
+    "hypotheses": [
+     "PAM adjacent to target site",
+     "guide RNA specific with limited off-target cutting",
+     "efficient delivery into cells"
+    ]
+   },
+   {
+    "name": "X-ray crystallography",
+    "does": "Determines 3D structure from diffraction of crystals",
+    "hypotheses": [
+     "well-ordered crystals",
+     "phase problem solved",
+     "complex stable in the crystal"
+    ]
+   },
+   {
+    "name": "Quantitative PCR (qPCR)",
+    "does": "Quantifies specific nucleic acid sequences by real-time amplification",
+    "hypotheses": [
+     "amplification efficiency known and similar across assays",
+     "single specific amplicon",
+     "stable reference genes or standards"
+    ]
+   }
+  ],
+  "inputs": [
+   "genomic DNA",
+   "protein crystals",
+   "RNA transcripts",
+   "small molecule ligands"
+  ],
+  "outputs": [
+   "gene-edited cells",
+   "atomic coordinates",
+   "gene expression levels",
+   "binding affinities"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced vague hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340407",
@@ -1294,7 +2006,8 @@
   "name": "Free radical chemistry",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "explain reactions that proceed through species with unpaired electrons"
+   "prediction of reaction rates for unpaired electrons",
+   "mechanism elucidation of chain reactions"
   ],
   "signature": {
    "task": [
@@ -1302,14 +2015,48 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Steady-state approximation",
+    "does": "Sets reactive intermediate concentration constant to simplify rate laws",
+    "hypotheses": [
+     "intermediate highly reactive and at low concentration",
+     "formation rate equals consumption rate after induction period"
+    ]
+   },
+   {
+    "name": "Hammett equation",
+    "does": "Correlates rates and equilibria with substituent electronic constants",
+    "hypotheses": [
+     "meta or para substituents on benzene derivatives",
+     "same mechanism across the series",
+     "fixed temperature and solvent"
+    ]
+   },
+   {
+    "name": "EPR spectroscopy",
+    "does": "Detects and characterises species with unpaired electrons",
+    "hypotheses": [
+     "unpaired electrons present",
+     "sufficient radical concentration or lifetime (spin traps if short-lived)"
+    ]
+   }
+  ],
+  "inputs": [
+   "initial reactant concentrations",
+   "rate constants",
+   "substituent constants"
+  ],
+  "outputs": [
+   "overall reaction rate laws",
+   "relative reactivity ratios",
+   "predicted product distributions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added EPR for radical detection; refined conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340502",
@@ -1318,7 +2065,8 @@
   "name": "Natural products and bioactive compounds",
   "taxonomy_cell": "CH.O.A5",
   "solves": [
-   "isolate compounds from living sources and find their structures"
+   "identification of secondary metabolites",
+   "determination of chemical structures from biological sources"
   ],
   "signature": {
    "task": [
@@ -1326,14 +2074,47 @@
     "infer"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bioassay-guided fractionation",
+    "does": "Isolates active compounds by testing fractions for bioactivity",
+    "hypotheses": [
+     "bioactivity measurable in assay",
+     "compound stable during extraction"
+    ]
+   },
+   {
+    "name": "NMR spectroscopy",
+    "does": "Determines structure and connectivity of organic molecules",
+    "hypotheses": [
+     "sufficient purity and solubility",
+     "NMR-active nuclei present"
+    ]
+   },
+   {
+    "name": "Liquid chromatography-mass spectrometry",
+    "does": "Separates compounds and gives molecular mass",
+    "hypotheses": [
+     "compounds ionisable",
+     "soluble in mobile phase"
+    ]
+   }
+  ],
+  "inputs": [
+   "crude biological extracts",
+   "purified metabolites",
+   "spectral data"
+  ],
+  "outputs": [
+   "chemical structures",
+   "molecular formulae",
+   "bioactivity profiles"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Trivial wording changes). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340503",
@@ -1692,7 +2473,8 @@
   "name": "Molecular imaging (incl. electron microscopy and neutron diffraction)",
   "taxonomy_cell": "CH.O.A3",
   "solves": [
-   "form an image of molecules or atoms in a sample"
+   "determination of molecular and atomic structures",
+   "visualisation of subcellular components"
   ],
   "signature": {
    "task": [
@@ -1702,14 +2484,51 @@
     "inverse"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bragg's law",
+    "does": "Relates diffraction angle to lattice spacing and wavelength",
+    "hypotheses": [
+     "periodic crystalline lattice",
+     "coherent elastic scattering",
+     "wavelength comparable to lattice spacing"
+    ]
+   },
+   {
+    "name": "Contrast transfer function",
+    "does": "Describes how an electron microscope modulates image spatial frequencies",
+    "hypotheses": [
+     "weak phase object approximation",
+     "thin specimen",
+     "linear imaging"
+    ]
+   },
+   {
+    "name": "Projection-slice theorem",
+    "does": "Links 2D projections to central slices of the 3D Fourier transform for reconstruction",
+    "hypotheses": [
+     "projections along known orientations",
+     "adequate angular coverage"
+    ]
+   }
+  ],
+  "inputs": [
+   "diffraction patterns",
+   "electron beams",
+   "neutron beams",
+   "crystallised samples"
+  ],
+  "outputs": [
+   "atomic coordinates",
+   "electron density maps",
+   "molecular geometry",
+   "crystallite size"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Scherrer and generic Fourier entries with cryo-EM tools). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340606",
@@ -1993,7 +2812,8 @@
   "name": "Radiation and matter",
   "taxonomy_cell": "CH.O.A2",
   "solves": [
-   "explain how radiation is absorbed, emitted and scattered by matter"
+   "interaction of electromagnetic radiation with chemical species",
+   "determination of molecular structure via spectroscopy"
   ],
   "signature": {
    "task": [
@@ -2001,14 +2821,49 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Beer-Lambert law",
+    "does": "Relates absorbance to concentration and path length",
+    "hypotheses": [
+     "monochromatic light",
+     "dilute solution of non-interacting absorbers",
+     "no scattering or fluorescence loss"
+    ]
+   },
+   {
+    "name": "Franck-Condon principle",
+    "does": "Predicts vibronic band intensities from vibrational wavefunction overlap",
+    "hypotheses": [
+     "Born-Oppenheimer approximation",
+     "electronic transition fast relative to nuclear motion"
+    ]
+   },
+   {
+    "name": "Fermi's golden rule",
+    "does": "Gives transition rate from weak perturbation by radiation",
+    "hypotheses": [
+     "weak perturbation (first-order)",
+     "continuum or dense final states"
+    ]
+   }
+  ],
+  "inputs": [
+   "wavelength",
+   "absorbance",
+   "molar absorptivity",
+   "path length"
+  ],
+  "outputs": [
+   "concentration",
+   "electronic transition probability",
+   "molecular geometry"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Fermi's golden rule; refined Beer-Lambert). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.340703",
@@ -2139,7 +2994,8 @@
   "name": "Forensic chemistry",
   "taxonomy_cell": "CH.O.A1",
   "solves": [
-   "identify trace materials as evidence"
+   "identification of unknown substances",
+   "quantification of illicit drugs or toxins"
   ],
   "signature": {
    "task": [
@@ -2147,14 +3003,38 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Gas chromatography-mass spectrometry",
+    "does": "Separates volatiles and identifies them by library-matched mass spectra",
+    "hypotheses": [
+     "analytes volatile and thermally stable (or derivatised)",
+     "reproducible 70 eV electron ionisation spectra"
+    ]
+   },
+   {
+    "name": "Fourier-transform infrared spectroscopy",
+    "does": "Identifies functional groups by infrared absorption",
+    "hypotheses": [
+     "vibrations cause dipole change (IR-active)",
+     "reference spectra available"
+    ]
+   }
+  ],
+  "inputs": [
+   "chemical samples",
+   "forensic evidence"
+  ],
+  "outputs": [
+   "chemical identity",
+   "purity levels",
+   "concentration"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined conditions; list-formatted). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CH.TK.349999",

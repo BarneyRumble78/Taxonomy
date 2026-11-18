@@ -6,7 +6,8 @@
   "name": "Architectural computing and visualisation methods",
   "taxonomy_cell": "DE.O.A2",
   "solves": [
-   "represent and generate building designs by computer"
+   "spatial representation and simulation",
+   "automated design generation and analysis"
   ],
   "signature": {
    "task": [
@@ -17,14 +18,49 @@
     "geometric_space"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Building Information Modelling (BIM)",
+    "does": "manages shared digital models of a building's physical and functional data",
+    "hypotheses": [
+     "shared data standard (e.g. IFC)",
+     "consistent coordinate system across disciplines"
+    ]
+   },
+   {
+    "name": "Parametric modelling",
+    "does": "drives geometry from explicit variables and relationships",
+    "hypotheses": [
+     "design intent expressed as explicit relationships",
+     "variables have defined ranges"
+    ]
+   },
+   {
+    "name": "Ray tracing",
+    "does": "traces light rays through a scene to render images",
+    "hypotheses": [
+     "geometric optics (straight rays)",
+     "scene geometry and material reflectance known"
+    ]
+   }
+  ],
+  "inputs": [
+   "geometric constraints",
+   "material properties",
+   "spatial data",
+   "algorithmic parameters"
+  ],
+  "outputs": [
+   "3D models",
+   "photorealistic renders",
+   "performance simulations",
+   "automated design iterations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (hypotheses made specific). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330102",
@@ -33,21 +69,40 @@
   "name": "Architectural design",
   "taxonomy_cell": "DE.O.A2",
   "solves": [
-   "arrange spaces and form to meet a brief"
+   "spatial organisation of buildings",
+   "integration of form, function and site"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Space syntax",
+    "does": "analyses spatial configuration to predict movement and use",
+    "hypotheses": [
+     "space representable as axial, convex or visibility graph",
+     "movement largely shaped by configuration"
+    ]
+   }
+  ],
+  "inputs": [
+   "site constraints",
+   "client brief",
+   "building codes",
+   "user requirements"
+  ],
+  "outputs": [
+   "schematic designs",
+   "spatial layouts",
+   "architectural specifications"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (removed 'architectural programming' as generic). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330103",
@@ -98,7 +153,8 @@
   "name": "Architectural history, theory and criticism",
   "taxonomy_cell": "DE.O.A2",
   "solves": [
-   "interpret buildings and ideas about them"
+   "interpretation of built forms",
+   "evaluation of architectural significance"
   ],
   "signature": {
    "task": [
@@ -108,14 +164,40 @@
     "text_language"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Formal analysis",
+    "does": "reads building form and composition from drawings or survey",
+    "hypotheses": [
+     "form recorded in drawings or survey",
+     "form carries interpretable meaning (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Typological analysis",
+    "does": "classifies buildings into types by shared formal or functional traits",
+    "hypotheses": [
+     "recurring forms recognisable",
+     "comparable functions across the sample"
+    ]
+   }
+  ],
+  "inputs": [
+   "architectural drawings",
+   "built structures",
+   "historical texts",
+   "spatial data"
+  ],
+  "outputs": [
+   "critical interpretations",
+   "historical classifications",
+   "theoretical frameworks"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced definitional hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330105",
@@ -184,7 +266,8 @@
   "name": "Architecture for disaster relief",
   "taxonomy_cell": "DE.O.A2",
   "solves": [
-   "provide shelter quickly after a disaster"
+   "rapid provision of emergency shelter",
+   "reconstruction of critical infrastructure post-disaster"
   ],
   "signature": {
    "task": [
@@ -194,14 +277,32 @@
     "resource_budget"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Sphere Handbook minimum standards",
+    "does": "sets minimum humanitarian standards for shelter, water and sanitation",
+    "hypotheses": [
+     "humanitarian response context",
+     "applied as minimums and adapted to local conditions"
+    ]
+   }
+  ],
+  "inputs": [
+   "population size",
+   "climate data",
+   "available local materials",
+   "site topography"
+  ],
+  "outputs": [
+   "minimum space requirements",
+   "shelter design specifications",
+   "site layout plans"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (corrected hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330107",
@@ -210,7 +311,8 @@
   "name": "Architecture management",
   "taxonomy_cell": "DE.O.A2",
   "solves": [
-   "run an architectural practice and its projects"
+   "optimising building portfolio performance",
+   "aligning physical assets with organisational strategy"
   ],
   "signature": {
    "task": [
@@ -218,14 +320,41 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "ISO 41001 facility management system",
+    "does": "specifies requirements for a facility management system",
+    "hypotheses": [
+     "organisation adopts it as a management system",
+     "scope of facilities defined"
+    ]
+   },
+   {
+    "name": "Life cycle costing (LCC)",
+    "does": "totals discounted cost of ownership over an analysis period",
+    "hypotheses": [
+     "analysis period defined",
+     "discount rate specified",
+     "cost and service-life estimates available"
+    ]
+   }
+  ],
+  "inputs": [
+   "asset inventories",
+   "operational costs",
+   "strategic objectives",
+   "building performance data"
+  ],
+  "outputs": [
+   "asset management plans",
+   "cost-benefit analyses",
+   "space utilisation strategies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced 'predictable discount rates'). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330108",
@@ -234,21 +363,49 @@
   "name": "Interior design",
   "taxonomy_cell": "DE.O.A2",
   "solves": [
-   "arrange the inside of a building for its users"
+   "optimisation of indoor spatial functionality",
+   "enhancement of occupant wellbeing and aesthetic coherence"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Biophilic design framework",
+    "does": "applies patterns of nature to indoor design to support wellbeing",
+    "hypotheses": [
+     "occupants benefit from nature contact (biophilia hypothesis, contested)",
+     "nature elements feasible in the interior"
+    ]
+   },
+   {
+    "name": "Universal design principles",
+    "does": "designs spaces usable by the widest range of people",
+    "hypotheses": [
+     "no special adaptation required",
+     "range of user abilities considered"
+    ]
+   }
+  ],
+  "inputs": [
+   "spatial dimensions",
+   "user requirements",
+   "building codes",
+   "environmental conditions"
+  ],
+  "outputs": [
+   "floor plans",
+   "material specifications",
+   "lighting schemes",
+   "furniture layouts"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced definitional hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330109",
@@ -257,7 +414,8 @@
   "name": "Landscape architecture",
   "taxonomy_cell": "DE.O.A2",
   "solves": [
-   "shape outdoor space and planting"
+   "spatial organisation of outdoor environments",
+   "integration of natural and built systems"
   ],
   "signature": {
    "task": [
@@ -267,14 +425,42 @@
     "field_spatial"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Overlay suitability analysis (McHarg)",
+    "does": "combines mapped site layers to rank land suitability",
+    "hypotheses": [
+     "layers co-registered",
+     "suitability criteria and weights defined"
+    ]
+   },
+   {
+    "name": "Rational method",
+    "does": "estimates peak stormwater runoff from rainfall intensity and area (Q=CiA)",
+    "hypotheses": [
+     "small catchment",
+     "uniform rainfall over time of concentration",
+     "constant runoff coefficient"
+    ]
+   }
+  ],
+  "inputs": [
+   "topographic surveys",
+   "ecological data",
+   "zoning regulations",
+   "client briefs"
+  ],
+  "outputs": [
+   "master plans",
+   "planting schedules",
+   "grading plans",
+   "conceptual designs"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced generic site analysis and stormwater plan). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330110",
@@ -344,7 +530,8 @@
   "name": "Automation and technology in building and construction",
   "taxonomy_cell": "DE.O.A5",
   "solves": [
-   "automate building work"
+   "inefficiencies in manual construction processes",
+   "optimisation of building lifecycle management"
   ],
   "signature": {
    "task": [
@@ -352,14 +539,41 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Building Information Modelling (BIM)",
+    "does": "manages shared digital models of a building's physical and functional data",
+    "hypotheses": [
+     "shared data standard (e.g. IFC)",
+     "all disciplines contribute to one model"
+    ]
+   },
+   {
+    "name": "Lean construction",
+    "does": "reduces waste and variability in construction workflow",
+    "hypotheses": [
+     "production viewed as flow",
+     "work packages can be made reliable"
+    ]
+   }
+  ],
+  "inputs": [
+   "architectural specifications",
+   "site data",
+   "resource constraints",
+   "regulatory requirements"
+  ],
+  "outputs": [
+   "digital twins",
+   "automated schedules",
+   "optimised material quantities",
+   "clash detection reports"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (made hypotheses specific). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330202",
@@ -416,21 +630,57 @@
   "name": "Building industry studies",
   "taxonomy_cell": "DE.O.A5",
   "solves": [
-   "explain how the building industry is organised and performs"
+   "optimising construction processes",
+   "managing built environment lifecycles"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Building Information Modelling (BIM)",
+    "does": "manages shared digital models of a building's physical and functional data",
+    "hypotheses": [
+     "shared data standard (e.g. IFC)",
+     "all disciplines contribute to one model"
+    ]
+   },
+   {
+    "name": "Lean construction",
+    "does": "reduces waste and variability in construction workflow",
+    "hypotheses": [
+     "production viewed as flow",
+     "work packages can be made reliable"
+    ]
+   },
+   {
+    "name": "Last Planner System",
+    "does": "plans work through collaborative look-ahead and weekly commitments",
+    "hypotheses": [
+     "team members make reliable promises",
+     "constraints identified before work starts"
+    ]
+   }
+  ],
+  "inputs": [
+   "architectural specifications",
+   "site constraints",
+   "resource availability",
+   "regulatory requirements"
+  ],
+  "outputs": [
+   "construction schedules",
+   "cost estimates",
+   "lifecycle performance data",
+   "risk mitigation plans"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (made hypotheses specific). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330204",
@@ -439,7 +689,8 @@
   "name": "Building information modelling and management",
   "taxonomy_cell": "DE.O.A5",
   "solves": [
-   "hold all information about a building in one shared model"
+   "interoperability of digital building data",
+   "lifecycle coordination of built assets"
   ],
   "signature": {
    "task": [
@@ -447,14 +698,41 @@
     "construct"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Industry Foundation Classes (IFC)",
+    "does": "provides an open schema for exchanging building model data",
+    "hypotheses": [
+     "software exports and imports IFC",
+     "model elements mapped to IFC entities"
+    ]
+   },
+   {
+    "name": "BIM execution plan (BEP)",
+    "does": "sets roles, information requirements and exchange protocols for a project",
+    "hypotheses": [
+     "project follows an information management standard (e.g. ISO 19650)",
+     "responsibilities of disciplines defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "architectural designs",
+   "engineering specifications",
+   "spatial data",
+   "asset management requirements"
+  ],
+  "outputs": [
+   "coordinated 3D models",
+   "clash detection reports",
+   "COBie data sets",
+   "digital twins"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (removed generic hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330205",
@@ -463,21 +741,49 @@
   "name": "Building organisational studies",
   "taxonomy_cell": "DE.O.A5",
   "solves": [
-   "explain how building firms are organised"
+   "optimising building performance",
+   "managing built environment lifecycles"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Life cycle assessment (ISO 14040/44)",
+    "does": "quantifies a building's environmental impacts across its life",
+    "hypotheses": [
+     "functional unit defined",
+     "system boundary defined",
+     "inventory data available"
+    ]
+   },
+   {
+    "name": "Post-occupancy evaluation",
+    "does": "assesses building performance from occupant feedback and measurement",
+    "hypotheses": [
+     "building occupied long enough to settle",
+     "occupants accessible for survey"
+    ]
+   }
+  ],
+  "inputs": [
+   "material specifications",
+   "energy usage data",
+   "occupant surveys",
+   "spatial geometries"
+  ],
+  "outputs": [
+   "carbon footprint metrics",
+   "performance gap analysis",
+   "optimised design iterations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (removed BIM as misplaced). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330206",
@@ -601,7 +907,8 @@
   "name": "Data visualisation and computational (incl. parametric and generative) design",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "generate forms and show data by rule or algorithm"
+   "complex spatial pattern generation",
+   "visual representation of high-dimensional data"
   ],
   "signature": {
    "task": [
@@ -609,14 +916,49 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "L-system",
+    "does": "generates branching forms by parallel string rewriting",
+    "hypotheses": [
+     "axiom and production rules defined",
+     "string interpreted as geometry (e.g. turtle graphics)"
+    ]
+   },
+   {
+    "name": "Voronoi diagram",
+    "does": "partitions the plane into cells nearest to each seed point",
+    "hypotheses": [
+     "finite set of distinct seed points",
+     "distance metric chosen (usually Euclidean)"
+    ]
+   },
+   {
+    "name": "Bézier curve",
+    "does": "defines smooth curves as polynomial blends of control points",
+    "hypotheses": [
+     "degree equals number of control points minus one",
+     "curve approximates, not interpolates, interior control points"
+    ]
+   }
+  ],
+  "inputs": [
+   "coordinate data",
+   "algorithmic rules",
+   "parameter ranges",
+   "seed points"
+  ],
+  "outputs": [
+   "geometric meshes",
+   "parametric models",
+   "visualisations",
+   "spatial partitions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (removed wrong 'interpolation' condition). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330302",
@@ -625,21 +967,47 @@
   "name": "Design anthropology",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "study how people live with designed things, from inside their setting"
+   "misalignment between product function and cultural practice",
+   "complex human-material interactions in lived environments"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Ethnographic fieldwork",
+    "does": "studies practices through sustained participant observation",
+    "hypotheses": [
+     "sustained access to participants",
+     "practices observed in their setting"
+    ]
+   },
+   {
+    "name": "Co-design",
+    "does": "involves users as partners in designing solutions",
+    "hypotheses": [
+     "stakeholders willing and able to take part",
+     "power shared in decisions"
+    ]
+   }
+  ],
+  "inputs": [
+   "cultural artefacts",
+   "behavioural observations",
+   "stakeholder narratives"
+  ],
+  "outputs": [
+   "thick descriptions",
+   "culturally situated design requirements",
+   "prototypes for social intervention"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (made hypotheses specific). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330303",
@@ -648,21 +1016,40 @@
   "name": "Design for disaster relief",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "design products and services for disaster response"
+   "rapid deployment of emergency shelter",
+   "resilient infrastructure for crisis zones"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Sphere Handbook minimum standards",
+    "does": "sets minimum humanitarian standards for shelter, water and sanitation",
+    "hypotheses": [
+     "humanitarian response context",
+     "applied as minimums and adapted to local conditions"
+    ]
+   }
+  ],
+  "inputs": [
+   "population size",
+   "climate data",
+   "available local materials",
+   "budget constraints"
+  ],
+  "outputs": [
+   "minimum space requirements",
+   "shelter specifications",
+   "site layout plans"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (corrected hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330304",
@@ -671,21 +1058,49 @@
   "name": "Design history, theory and criticism",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "interpret designed things and ideas about them"
+   "interpretation of design artefacts",
+   "evaluation of design movements and paradigms"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Formal analysis",
+    "does": "reads artefact form and composition to interpret design",
+    "hypotheses": [
+     "artefact available directly or by reproduction",
+     "form carries interpretable meaning (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Semiotic analysis",
+    "does": "interprets design as signs within a code",
+    "hypotheses": [
+     "shared cultural codes exist",
+     "design works as a communication system"
+    ]
+   }
+  ],
+  "inputs": [
+   "design artefacts",
+   "archival records",
+   "cultural contexts",
+   "visual evidence"
+  ],
+  "outputs": [
+   "critical interpretations",
+   "historical narratives",
+   "theoretical frameworks",
+   "typologies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330305",
@@ -694,7 +1109,8 @@
   "name": "Design management",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "organise design work in an organisation"
+   "alignment of design strategy with business goals",
+   "optimisation of design workflows and resource allocation"
   ],
   "signature": {
    "task": [
@@ -702,14 +1118,31 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Double Diamond",
+    "does": "structures design as discover, define, develop and deliver phases",
+    "hypotheses": [
+     "problem open to reframing",
+     "phases may be repeated"
+    ]
+   }
+  ],
+  "inputs": [
+   "business objectives",
+   "user research",
+   "resource constraints"
+  ],
+  "outputs": [
+   "design roadmaps",
+   "validated prototypes",
+   "operational frameworks"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced definitional hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330306",
@@ -842,21 +1275,49 @@
   "name": "Industrial and product design",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "design manufactured objects"
+   "optimising product functionality and aesthetics",
+   "improving user interaction and manufacturability"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Design for manufacture and assembly (DFMA)",
+    "does": "cuts part count and assembly effort using scored design rules",
+    "hypotheses": [
+     "production process and volume known",
+     "assembly sequence defined"
+    ]
+   },
+   {
+    "name": "Quality function deployment (QFD)",
+    "does": "maps ranked customer needs to engineering characteristics (house of quality)",
+    "hypotheses": [
+     "customer needs elicited and ranked",
+     "engineering characteristics measurable"
+    ]
+   }
+  ],
+  "inputs": [
+   "user requirements",
+   "material properties",
+   "manufacturing constraints",
+   "ergonomic data"
+  ],
+  "outputs": [
+   "technical specifications",
+   "prototypes",
+   "production drawings",
+   "bill of materials"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330310",
@@ -909,7 +1370,8 @@
   "name": "Models and simulations of design",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "model how designing proceeds"
+   "predicting performance of design prototypes",
+   "optimising spatial and structural configurations"
   ],
   "signature": {
    "task": [
@@ -917,14 +1379,41 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Computational fluid dynamics (CFD)",
+    "does": "numerically solves fluid flow and heat transfer",
+    "hypotheses": [
+     "continuum fluid (Navier-Stokes)",
+     "boundary and initial conditions defined",
+     "turbulence model appropriate"
+    ]
+   },
+   {
+    "name": "Agent-based modelling (ABM)",
+    "does": "simulates autonomous agents interacting in a space",
+    "hypotheses": [
+     "agent rules defined",
+     "environment represented explicitly"
+    ]
+   }
+  ],
+  "inputs": [
+   "geometric constraints",
+   "material properties",
+   "environmental boundary conditions",
+   "user behaviour rules"
+  ],
+  "outputs": [
+   "performance predictions",
+   "optimised design iterations",
+   "visualisations of system behaviour"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (removed BIM as misplaced). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330312",
@@ -968,21 +1457,48 @@
   "name": "Social design",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "design with communities for social benefit"
+   "social inequality in built environments",
+   "community fragmentation and social exclusion"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Participatory design",
+    "does": "involves end users as co-designers",
+    "hypotheses": [
+     "users hold relevant local knowledge",
+     "users can access the design process"
+    ]
+   },
+   {
+    "name": "Theory of change",
+    "does": "maps assumed causal links from intervention to outcome",
+    "hypotheses": [
+     "causal assumptions made explicit",
+     "outcomes measurable"
+    ]
+   }
+  ],
+  "inputs": [
+   "stakeholder perspectives",
+   "community demographics",
+   "spatial constraints",
+   "social goals"
+  ],
+  "outputs": [
+   "co-designed prototypes",
+   "social impact frameworks",
+   "inclusive spatial plans"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced vague causality hypothesis). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330314",
@@ -991,7 +1507,8 @@
   "name": "Sustainable design",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "design things that use fewer resources over their life"
+   "environmental impact of built environments",
+   "resource depletion in design cycles"
   ],
   "signature": {
    "task": [
@@ -999,14 +1516,40 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Life cycle assessment (ISO 14040/44)",
+    "does": "quantifies environmental impacts across a product's life",
+    "hypotheses": [
+     "functional unit defined",
+     "system boundary defined",
+     "inventory data available"
+    ]
+   },
+   {
+    "name": "Cradle to Cradle",
+    "does": "designs products for continuous technical or biological material cycles",
+    "hypotheses": [
+     "materials classifiable into technical or biological cycles",
+     "material composition known"
+    ]
+   }
+  ],
+  "inputs": [
+   "material inventories",
+   "energy consumption data",
+   "waste streams"
+  ],
+  "outputs": [
+   "carbon footprint metrics",
+   "circularity scores",
+   "environmental impact categories"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330315",
@@ -1015,21 +1558,47 @@
   "name": "Textile and fashion design",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "design cloth and clothing"
+   "aesthetic and functional garment construction",
+   "textile material selection and surface design"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Pattern drafting",
+    "does": "constructs flat garment patterns from body measurements",
+    "hypotheses": [
+     "measurement set or size chart",
+     "ease allowances specified"
+    ]
+   },
+   {
+    "name": "Draping",
+    "does": "shapes fabric on a dress form to develop a pattern",
+    "hypotheses": [
+     "fabric of representative drape",
+     "dress form of target size"
+    ]
+   }
+  ],
+  "inputs": [
+   "body measurements",
+   "textile specifications",
+   "design sketches"
+  ],
+  "outputs": [
+   "technical patterns",
+   "prototypes",
+   "textile specifications"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (corrected 'does' and hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330316",
@@ -1038,21 +1607,49 @@
   "name": "Visual communication design (incl. graphic design)",
   "taxonomy_cell": "DE.O.A1",
   "solves": [
-   "arrange words and images to convey a message"
+   "visual transmission of information",
+   "brand identity and perception"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Grid systems",
+    "does": "organise layout into modular columns and rows",
+    "hypotheses": [
+     "content fits modular units",
+     "modules applied consistently"
+    ]
+   },
+   {
+    "name": "Gestalt principles",
+    "does": "describe how viewers group visual elements (proximity, similarity)",
+    "hypotheses": [
+     "elements perceived together as a whole",
+     "viewer has typical visual perception"
+    ]
+   }
+  ],
+  "inputs": [
+   "textual content",
+   "imagery",
+   "brand guidelines",
+   "target audience data"
+  ],
+  "outputs": [
+   "visual layouts",
+   "typography systems",
+   "logos",
+   "information graphics"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (removed generic colour theory). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330399",
@@ -1084,7 +1681,8 @@
   "name": "Community planning",
   "taxonomy_cell": "DE.O.A4",
   "solves": [
-   "plan with a community for its own area"
+   "spatial organisation of land use",
+   "integration of infrastructure and community needs"
   ],
   "signature": {
    "task": [
@@ -1094,14 +1692,31 @@
     "multiple_cooperative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Arnstein's ladder of citizen participation",
+    "does": "grades participation by degree of citizen power",
+    "hypotheses": [
+     "participation classifiable by power shared between citizens and authority"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "environmental constraints",
+   "community requirements",
+   "zoning regulations"
+  ],
+  "outputs": [
+   "local area plans",
+   "zoning maps",
+   "development frameworks"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced generic planning tools with one named model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330402",
@@ -1110,21 +1725,48 @@
   "name": "History and theory of the built environment (excl. architecture)",
   "taxonomy_cell": "DE.O.A4",
   "solves": [
-   "interpret how towns and landscapes came to be"
+   "understanding spatial evolution",
+   "critiquing urban and landscape development"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Conzenian morphological analysis",
+    "does": "reads urban form from plan units: streets, plots, buildings",
+    "hypotheses": [
+     "plan units identifiable on maps",
+     "successive maps available for comparison"
+    ]
+   },
+   {
+    "name": "Historical GIS",
+    "does": "reconstructs past landscapes from georeferenced historical sources",
+    "hypotheses": [
+     "historical maps georeferenced",
+     "consistent coordinate systems"
+    ]
+   }
+  ],
+  "inputs": [
+   "archival maps",
+   "land registries",
+   "urban plans",
+   "historical texts"
+  ],
+  "outputs": [
+   "spatial chronologies",
+   "typological classifications",
+   "evolutionary models of built form"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (named method precisely). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330403",
@@ -1133,7 +1775,8 @@
   "name": "Housing markets, development and management",
   "taxonomy_cell": "DE.O.A4",
   "solves": [
-   "explain how housing is supplied, priced and managed"
+   "housing supply and demand imbalances",
+   "urban residential development feasibility"
   ],
   "signature": {
    "task": [
@@ -1141,14 +1784,42 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Residual land value method",
+    "does": "derives maximum land price as development value less costs and profit",
+    "hypotheses": [
+     "gross development value estimated",
+     "construction costs and target profit known"
+    ]
+   },
+   {
+    "name": "Hedonic price model",
+    "does": "estimates the price contribution of each property attribute",
+    "hypotheses": [
+     "market in competitive equilibrium",
+     "attributes measurable",
+     "enough transaction data"
+    ]
+   }
+  ],
+  "inputs": [
+   "market rental data",
+   "construction cost estimates",
+   "zoning regulations",
+   "property attribute data"
+  ],
+  "outputs": [
+   "land valuation",
+   "project feasibility",
+   "price elasticity",
+   "rental yield projections"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (removed 'additive utility'). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330404",
@@ -1280,7 +1951,8 @@
   "name": "Regulatory planning and development assessment",
   "taxonomy_cell": "DE.O.A4",
   "solves": [
-   "assess a proposal against planning rules"
+   "compliance with land-use regulations",
+   "impact assessment for built environment developments"
   ],
   "signature": {
    "task": [
@@ -1290,14 +1962,41 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Environmental impact assessment (EIA)",
+    "does": "predicts and evaluates environmental effects of a proposed project",
+    "hypotheses": [
+     "specific proposal defined",
+     "environmental baseline measurable"
+    ]
+   },
+   {
+    "name": "Strategic environmental assessment (SEA)",
+    "does": "assesses environmental effects of policies, plans and programmes",
+    "hypotheses": [
+     "applied at plan or programme stage",
+     "alternatives can be compared"
+    ]
+   }
+  ],
+  "inputs": [
+   "proposed site plans",
+   "zoning laws",
+   "environmental baseline data",
+   "statutory planning frameworks"
+  ],
+  "outputs": [
+   "impact statements",
+   "planning permits",
+   "mitigation strategies",
+   "compliance reports"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (trivial edits). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330408",
@@ -1306,21 +2005,48 @@
   "name": "Strategic, metropolitan and regional planning",
   "taxonomy_cell": "DE.O.A4",
   "solves": [
-   "set long-term direction for a city or region"
+   "long-term spatial organisation of urban and regional areas",
+   "coordination of land use and infrastructure investment"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Transit-oriented development (TOD)",
+    "does": "concentrates mixed development within walking distance of high-capacity transit",
+    "hypotheses": [
+     "high-capacity transit present or planned",
+     "supportive zoning"
+    ]
+   },
+   {
+    "name": "Strategic environmental assessment (SEA)",
+    "does": "assesses environmental effects of plans and programmes",
+    "hypotheses": [
+     "applied at plan stage",
+     "alternatives can be compared"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic projections",
+   "land use data",
+   "environmental constraints",
+   "transport network capacity"
+  ],
+  "outputs": [
+   "spatial strategy maps",
+   "zoning frameworks",
+   "infrastructure investment plans"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (trivial edits). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330409",
@@ -1371,7 +2097,8 @@
   "name": "Urban analysis and development",
   "taxonomy_cell": "DE.O.A4",
   "solves": [
-   "explain how cities grow and change"
+   "optimising land use and spatial configuration",
+   "managing urban growth and infrastructure capacity"
   ],
   "signature": {
    "task": [
@@ -1379,14 +2106,42 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Space syntax",
+    "does": "analyses street and spatial configuration to predict movement",
+    "hypotheses": [
+     "movement largely shaped by network configuration",
+     "space represented as graph or axial map"
+    ]
+   },
+   {
+    "name": "Central place theory",
+    "does": "explains size and spacing of settlements by service range",
+    "hypotheses": [
+     "isotropic plain",
+     "uniform population and purchasing power",
+     "consumers use nearest centre"
+    ]
+   }
+  ],
+  "inputs": [
+   "geographic information systems (GIS) data",
+   "demographic statistics",
+   "cadastral maps",
+   "transport network data"
+  ],
+  "outputs": [
+   "zoning frameworks",
+   "accessibility maps",
+   "urban growth projections",
+   "land-use plans"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330411",
@@ -1435,7 +2190,8 @@
   "name": "Urban informatics",
   "taxonomy_cell": "DE.O.A4",
   "solves": [
-   "use city data to understand and run urban systems"
+   "optimising urban systems through data",
+   "modelling spatio-temporal urban dynamics"
   ],
   "signature": {
    "task": [
@@ -1446,14 +2202,41 @@
     "data_rich"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Space syntax",
+    "does": "analyses street configuration to predict movement",
+    "hypotheses": [
+     "movement largely shaped by network configuration",
+     "space represented as graph or axial map"
+    ]
+   },
+   {
+    "name": "Land use-transport interaction (LUTI) modelling",
+    "does": "simulates feedback between land use and transport",
+    "hypotheses": [
+     "accessibility influences location choice",
+     "study area divided into zones",
+     "feedback lags specified"
+    ]
+   }
+  ],
+  "inputs": [
+   "GIS spatial data",
+   "mobile phone signal data",
+   "sensor network streams",
+   "census demographics"
+  ],
+  "outputs": [
+   "accessibility maps",
+   "predictive urban growth models",
+   "network centrality metrics"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330413",
@@ -1462,21 +2245,48 @@
   "name": "Urban planning and health",
   "taxonomy_cell": "DE.O.A4",
   "solves": [
-   "plan places so that they support health"
+   "health disparities linked to urban form",
+   "environmental determinants of public health"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Health impact assessment",
+    "does": "appraises likely health effects of a proposal",
+    "hypotheses": [
+     "proposal clearly defined",
+     "baseline health data available"
+    ]
+   },
+   {
+    "name": "Walkability index",
+    "does": "combines density, land-use mix and street connectivity into one score",
+    "hypotheses": [
+     "spatial data for components available",
+     "catchment area defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "land-use maps",
+   "demographic data",
+   "transport network layouts",
+   "epidemiological statistics"
+  ],
+  "outputs": [
+   "health risk profiles",
+   "urban design recommendations",
+   "accessibility scores"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (made hypotheses specific). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "DE.TK.330499",

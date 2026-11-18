@@ -1104,7 +1104,8 @@
   "name": "Phenomenology",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "connect theory to measurable quantities"
+   "linking fundamental theory to experimental data",
+   "predicting observable signatures of models"
   ],
   "signature": {
    "task": [
@@ -1112,14 +1113,41 @@
     "compare"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Effective field theory",
+    "does": "Describes low-energy physics with heavy degrees of freedom integrated out",
+    "hypotheses": [
+     "separation of energy scales",
+     "locality",
+     "symmetries of low-energy theory respected"
+    ]
+   },
+   {
+    "name": "Monte Carlo event generation",
+    "does": "Samples stochastic processes to predict event rates and distributions",
+    "hypotheses": [
+     "matrix elements known to chosen order",
+     "factorisation of hard process and showering (UNVERIFIED)",
+     "adequate sampling statistics"
+    ]
+   }
+  ],
+  "inputs": [
+   "Lagrangians",
+   "coupling constants",
+   "experimental cross-sections"
+  ],
+  "outputs": [
+   "observable predictions",
+   "parameter constraints",
+   "exclusion limits"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Tightened hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.38d21c20",
@@ -1212,21 +1240,48 @@
   "name": "Correlation function measurements",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "measure how fluctuations at two points or times are related"
+   "characterising spatial and temporal dependencies",
+   "determining coherence lengths and times"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Wiener-Khinchin theorem",
+    "does": "Relates power spectral density to the autocorrelation function by Fourier transform",
+    "hypotheses": [
+     "wide-sense stationary process",
+     "autocorrelation integrable"
+    ]
+   },
+   {
+    "name": "Hanbury Brown-Twiss interferometry",
+    "does": "Measures second-order intensity correlation g2 of light",
+    "hypotheses": [
+     "chaotic (thermal) light gives bunching",
+     "detector response time resolved",
+     "stationary intensity"
+    ]
+   }
+  ],
+  "inputs": [
+   "time-series data",
+   "spatial intensity distributions",
+   "stochastic signal samples"
+  ],
+  "outputs": [
+   "correlation coefficients",
+   "coherence time",
+   "correlation length"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed HBT hypotheses (works for any light, thermal case gives g2(0)=2)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.4027c276",
@@ -1586,7 +1641,8 @@
   "name": "Instructional strategies",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "choose ways of teaching and test their effect"
+   "ineffective knowledge transfer in physics teaching",
+   "student misconceptions"
   ],
   "signature": {
    "task": [
@@ -1595,13 +1651,21 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "curriculum standards",
+   "student prior knowledge",
+   "learning objectives"
+  ],
+  "outputs": [
+   "lesson plans",
+   "teaching interventions",
+   "learning outcomes"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Education heading; draft items are generic pedagogy, no specific physics law or model. A specialist tool would be e.g. Force Concept Inventory (UNVERIFIED as fit), left out). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.52f61d50",
@@ -2172,7 +2236,8 @@
   "name": "Resonance fluorescence",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "study light re-emitted by a driven atom"
+   "determining atomic transition frequencies",
+   "measuring atomic vapour density"
   ],
   "signature": {
    "task": [
@@ -2180,14 +2245,40 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Optical Bloch equations",
+    "does": "Describe driven two-level atom dynamics including spontaneous emission",
+    "hypotheses": [
+     "two-level atom",
+     "rotating-wave approximation",
+     "classical monochromatic driving field"
+    ]
+   },
+   {
+    "name": "Einstein A and B coefficients",
+    "does": "Relate rates of spontaneous and stimulated emission and absorption",
+    "hypotheses": [
+     "thermal equilibrium with radiation (for the relations)",
+     "non-degenerate or statistically weighted levels"
+    ]
+   }
+  ],
+  "inputs": [
+   "laser frequency and intensity",
+   "atomic transition dipole moment",
+   "number density of atoms"
+  ],
+  "outputs": [
+   "spectral line profile",
+   "photon scattering rate",
+   "saturation parameter"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added optical Bloch equations (central to resonance fluorescence); dropped Beer-Lambert (absorption, misplaced); fixed Einstein hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.73187d36",
@@ -2393,21 +2484,56 @@
   "name": "Research methodology",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "design studies of how physics is learned"
+   "designing and validating experiments",
+   "interpreting physical data statistically"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Least-squares estimation",
+    "does": "Estimates parameters by minimising summed squared residuals",
+    "hypotheses": [
+     "independent errors with known or equal variance",
+     "model correctly specified",
+     "Gaussian errors for maximum-likelihood equivalence"
+    ]
+   },
+   {
+    "name": "Bayesian inference",
+    "does": "Updates parameter probabilities from data via Bayes' theorem",
+    "hypotheses": [
+     "prior distribution specified",
+     "likelihood function specified"
+    ]
+   },
+   {
+    "name": "Monte Carlo error propagation",
+    "does": "Propagates uncertainties by repeated random sampling of inputs",
+    "hypotheses": [
+     "input distributions known",
+     "adequate number of samples"
+    ]
+   }
+  ],
+  "inputs": [
+   "raw experimental data",
+   "theoretical models",
+   "prior distributions"
+  ],
+  "outputs": [
+   "parameter estimates",
+   "uncertainty bounds",
+   "statistical significance"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed least-squares hypotheses (linearity not required)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.7c2da745",
@@ -2819,21 +2945,59 @@
   "name": "Materials modeling",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "build models that predict material behaviour"
+   "predicting material properties",
+   "simulating microstructure evolution"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Density functional theory",
+    "does": "Computes ground-state electronic structure from electron density",
+    "hypotheses": [
+     "Born-Oppenheimer approximation",
+     "approximate exchange-correlation functional",
+     "ground state (zero temperature electrons)"
+    ]
+   },
+   {
+    "name": "Classical molecular dynamics",
+    "does": "Integrates Newton's equations for atoms under model potentials",
+    "hypotheses": [
+     "nuclei treated classically",
+     "accurate interatomic potential",
+     "ergodic sampling"
+    ]
+   },
+   {
+    "name": "Phase-field method",
+    "does": "Models microstructure evolution with diffuse-interface order parameters",
+    "hypotheses": [
+     "diffuse interface of finite width",
+     "free-energy functional decreases (gradient flow)"
+    ]
+   }
+  ],
+  "inputs": [
+   "atomic coordinates",
+   "interatomic potentials",
+   "crystal structure",
+   "boundary conditions"
+  ],
+  "outputs": [
+   "elastic constants",
+   "lattice parameters",
+   "thermal conductivity",
+   "microstructure morphologies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Phase-field does not need equilibrium; hypotheses fixed; removed phase diagrams output). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.93b6be1a",
@@ -2865,21 +3029,49 @@
   "name": "Spectrometers & spectroscopic techniques",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "measure the energies of emitted radiation and particles"
+   "determining chemical composition",
+   "analysing electronic and molecular energy levels"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Beer-Lambert law",
+    "does": "Relates absorbance to concentration and path length",
+    "hypotheses": [
+     "monochromatic light",
+     "non-scattering medium",
+     "dilute solution without interactions"
+    ]
+   },
+   {
+    "name": "Fourier-transform spectroscopy",
+    "does": "Obtains spectra by Fourier transforming an interferogram",
+    "hypotheses": [
+     "linear, time-invariant interferometer",
+     "adequate sampling (Nyquist)",
+     "accurate optical path difference"
+    ]
+   }
+  ],
+  "inputs": [
+   "radiation intensity",
+   "wavelength or frequency",
+   "sample path length"
+  ],
+  "outputs": [
+   "absorption or emission spectra",
+   "molar absorptivity",
+   "analyte concentration"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Generic Fourier transform replaced by FT spectroscopy). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.9c5b281b",
@@ -2888,21 +3080,50 @@
   "name": "Shear flows",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "predict flow in which adjacent layers move at different speeds"
+   "determining velocity profiles in fluid layers",
+   "analysing stability of shear flows"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Rayleigh inflection point criterion",
+    "does": "Gives necessary condition for inviscid shear instability: inflection point in profile",
+    "hypotheses": [
+     "inviscid fluid",
+     "parallel flow",
+     "incompressible",
+     "linear perturbations"
+    ]
+   },
+   {
+    "name": "Orr-Sommerfeld equation",
+    "does": "Governs linear stability of viscous parallel shear flow",
+    "hypotheses": [
+     "incompressible Newtonian fluid",
+     "parallel base flow",
+     "linearised normal-mode perturbations"
+    ]
+   }
+  ],
+  "inputs": [
+   "velocity profile",
+   "Reynolds number",
+   "perturbation wavenumber"
+  ],
+  "outputs": [
+   "growth rates",
+   "critical Reynolds number",
+   "stability boundaries"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Rayleigh is necessary (not sufficient) condition; removed 2D restriction (Squire's theorem covers viscous case)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.9cb101d6",
@@ -2957,21 +3178,47 @@
   "name": "Lagrangian flow field",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "describe a flow by following fluid parcels"
+   "tracking fluid parcels",
+   "computing material deformation and transport"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Flow map and deformation gradient",
+    "does": "Maps initial to current positions; its Jacobian gives local deformation",
+    "hypotheses": [
+     "smooth invertible velocity field",
+     "continuum hypothesis"
+    ]
+   },
+   {
+    "name": "Finite-time Lyapunov exponent",
+    "does": "Measures parcel separation rates to find Lagrangian coherent structures",
+    "hypotheses": [
+     "finite integration time",
+     "smooth flow map (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "initial coordinates",
+   "velocity field",
+   "time interval"
+  ],
+  "outputs": [
+   "trajectories",
+   "deformation gradient",
+   "Lagrangian coherent structures"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Merged two flow-map entries; added FTLE). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.a15f9e32",
@@ -3003,21 +3250,40 @@
   "name": "Weak measurements",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "extract information from a system while disturbing it little"
+   "extracting information with minimal disturbance",
+   "measuring non-commuting observables via post-selection"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Weak value (Aharonov-Albert-Vaidman)",
+    "does": "Defines weak value A_w = <f|A|i>/<f|i> read from pointer shift",
+    "hypotheses": [
+     "weak system-pointer coupling",
+     "pre- and post-selected states",
+     "small pointer shift relative to its width",
+     "post-selection not nearly orthogonal for perturbative validity (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "initial state",
+   "weak interaction Hamiltonian",
+   "post-selected final state"
+  ],
+  "outputs": [
+   "weak value",
+   "pointer shift"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Merged amplification and AAV formula into one tool). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.a3ff37a7",
@@ -3580,21 +3846,49 @@
   "name": "Eulerian flow field",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "describe a flow by its values at fixed points"
+   "finding fluid properties at fixed points",
+   "analysing flow fields"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Navier-Stokes equations",
+    "does": "Describe momentum balance of viscous Newtonian fluid",
+    "hypotheses": [
+     "continuum hypothesis",
+     "Newtonian linear viscosity",
+     "conservation of mass and momentum"
+    ]
+   },
+   {
+    "name": "Continuity equation",
+    "does": "States mass conservation for fluid flow",
+    "hypotheses": [
+     "no mass sources or sinks",
+     "continuum hypothesis"
+    ]
+   }
+  ],
+  "inputs": [
+   "velocity field",
+   "pressure gradient",
+   "fluid density",
+   "viscosity"
+  ],
+  "outputs": [
+   "velocity at fixed points",
+   "pressure distribution",
+   "flow rate"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tidied). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.c9842cda",
@@ -3690,21 +3984,55 @@
   "name": "Super-resolution techniques",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "image detail finer than the diffraction limit"
+   "overcoming diffraction-limited imaging",
+   "sub-wavelength resolution"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "STED microscopy",
+    "does": "Narrows effective focus using stimulated-emission depletion",
+    "hypotheses": [
+     "fluorophore depletable by saturation",
+     "aligned doughnut depletion beam"
+    ]
+   },
+   {
+    "name": "PALM/STORM single-molecule localisation",
+    "does": "Localises sparsely activated emitters to a fraction of the diffraction limit",
+    "hypotheses": [
+     "photo-switchable probes",
+     "sparse activation per frame",
+     "emitter fits a known point spread function"
+    ]
+   },
+   {
+    "name": "Structured illumination microscopy",
+    "does": "Recovers high-frequency information from moiré patterns",
+    "hypotheses": [
+     "known illumination patterns",
+     "linear fluorescence response"
+    ]
+   }
+  ],
+  "inputs": [
+   "diffraction-limited images",
+   "fluorescence signals",
+   "illumination patterns"
+  ],
+  "outputs": [
+   "super-resolved images",
+   "molecular coordinates"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened only). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.d0a4d1a0",
@@ -4391,7 +4719,8 @@
   "name": "Plasma transport",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "predict how particles and heat leak across a confining field"
+   "particle and heat flux in ionised gases",
+   "plasma confinement and leakage"
   ],
   "signature": {
    "task": [
@@ -4399,14 +4728,51 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Braginskii transport equations",
+    "does": "Give collisional transport coefficients for magnetised plasma",
+    "hypotheses": [
+     "collision-dominated (mean free path short)",
+     "Larmor radius much less than scale lengths",
+     "Maxwellian near-equilibrium"
+    ]
+   },
+   {
+    "name": "Neoclassical transport theory",
+    "does": "Gives transport from collisions plus particle orbits in toroidal fields",
+    "hypotheses": [
+     "axisymmetric toroidal field",
+     "small gyroradius relative to scale lengths",
+     "Coulomb collisions"
+    ]
+   },
+   {
+    "name": "Gyrokinetic theory",
+    "does": "Averages fast gyromotion to model low-frequency turbulent transport",
+    "hypotheses": [
+     "strong magnetic field",
+     "fluctuation frequency far below gyrofrequency",
+     "small perturbation amplitude"
+    ]
+   }
+  ],
+  "inputs": [
+   "magnetic field geometry",
+   "plasma density",
+   "temperature gradients",
+   "collision frequency"
+  ],
+  "outputs": [
+   "diffusion coefficients",
+   "thermal conductivity",
+   "particle fluxes"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Neoclassical hypotheses fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.f6dd23e2",
@@ -4653,7 +5019,8 @@
   "name": "Bioinformatics",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "analyse sequence and molecular data"
+   "analysing biological sequence data",
+   "predicting molecular structure and function"
   ],
   "signature": {
    "task": [
@@ -4661,14 +5028,48 @@
     "classify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Needleman-Wunsch algorithm",
+    "does": "Computes optimal global alignment by dynamic programming",
+    "hypotheses": [
+     "additive scoring",
+     "substitution matrix and gap penalty defined"
+    ]
+   },
+   {
+    "name": "Smith-Waterman algorithm",
+    "does": "Computes optimal local alignment by dynamic programming",
+    "hypotheses": [
+     "additive scoring",
+     "negative expected score for random alignments",
+     "substitution matrix and gap penalty defined"
+    ]
+   },
+   {
+    "name": "Hidden Markov model",
+    "does": "Models sequence families with hidden states and emissions",
+    "hypotheses": [
+     "Markov property for hidden states",
+     "emissions depend only on current state"
+    ]
+   }
+  ],
+  "inputs": [
+   "nucleotide sequences",
+   "amino acid sequences",
+   "structural coordinates"
+  ],
+  "outputs": [
+   "sequence alignments",
+   "homology scores",
+   "gene or profile predictions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Dropped structure prediction output as unsupported). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.0cb3aade",
@@ -4948,21 +5349,50 @@
   "name": "Network optimization",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "find the best network or flow under constraints"
+   "maximising flow in networks",
+   "minimising losses in transport networks"
   ],
   "signature": {
    "task": [
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Max-flow min-cut theorem",
+    "does": "Equates maximum s-t flow with minimum cut capacity",
+    "hypotheses": [
+     "directed graph with non-negative capacities",
+     "single source and sink",
+     "flow conservation at internal nodes"
+    ]
+   },
+   {
+    "name": "Kirchhoff's circuit laws",
+    "does": "Give currents and voltages in lumped electrical networks",
+    "hypotheses": [
+     "lumped-element approximation",
+     "charge conservation at nodes",
+     "no time-varying magnetic flux linking loops"
+    ]
+   }
+  ],
+  "inputs": [
+   "network topology",
+   "edge capacities",
+   "node demands",
+   "physical constraints"
+  ],
+  "outputs": [
+   "optimal flow distribution",
+   "bottleneck identification",
+   "current and voltage distribution"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Kirchhoff steady state not required; removed 'minimum cost paths' output). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.37c11ef8",
@@ -5132,21 +5562,59 @@
   "name": "Hydrodynamics",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "treat a plasma as a single fluid"
+   "describing fluid motion",
+   "pressure and velocity distributions"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Navier-Stokes equations",
+    "does": "Describe motion of viscous Newtonian fluid",
+    "hypotheses": [
+     "continuum hypothesis",
+     "Newtonian fluid",
+     "conservation of mass and momentum"
+    ]
+   },
+   {
+    "name": "Bernoulli's equation",
+    "does": "Relates pressure, speed and height along a streamline",
+    "hypotheses": [
+     "steady flow",
+     "incompressible",
+     "inviscid",
+     "along one streamline (or irrotational)"
+    ]
+   },
+   {
+    "name": "Reynolds number similarity",
+    "does": "Compares inertial and viscous forces to indicate regime",
+    "hypotheses": [
+     "geometrically similar flows",
+     "same boundary conditions"
+    ]
+   }
+  ],
+  "inputs": [
+   "fluid density",
+   "viscosity",
+   "velocity field",
+   "boundary conditions"
+  ],
+  "outputs": [
+   "flow regime",
+   "pressure gradients",
+   "velocity vectors"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Bernoulli hypotheses made precise). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.560043c3",
@@ -5178,7 +5646,8 @@
   "name": "Nonequilibrium systems",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "describe systems kept away from equilibrium"
+   "time evolution far from equilibrium",
+   "transport and steady-state fluxes"
   ],
   "signature": {
    "task": [
@@ -5186,14 +5655,49 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Fluctuation-dissipation theorem",
+    "does": "Links linear response to equilibrium fluctuations",
+    "hypotheses": [
+     "system in thermal equilibrium before perturbation",
+     "linear response to weak perturbation"
+    ]
+   },
+   {
+    "name": "Onsager reciprocal relations",
+    "does": "Show coupled transport coefficients form a symmetric matrix",
+    "hypotheses": [
+     "microscopic reversibility",
+     "linear flux-force relations",
+     "local equilibrium"
+    ]
+   },
+   {
+    "name": "Jarzynski equality",
+    "does": "Relates free-energy difference to exponentiated non-equilibrium work",
+    "hypotheses": [
+     "initial equilibrium state",
+     "prescribed work protocol",
+     "any speed of driving (valid arbitrarily far from equilibrium)"
+    ]
+   }
+  ],
+  "inputs": [
+   "external driving forces",
+   "initial state distributions",
+   "transport coefficients"
+  ],
+  "outputs": [
+   "entropy production rates",
+   "steady-state distributions",
+   "free energy changes"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Jarzynski does not need Markovian dynamics; fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.69e160e2",
@@ -5202,21 +5706,48 @@
   "name": "Self-organized systems",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "explain order that arises without outside design"
+   "emergence of order from local interactions",
+   "spontaneous pattern formation"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Slaving principle (Haken)",
+    "does": "Eliminates fast variables, leaving slow order parameters",
+    "hypotheses": [
+     "time-scale separation",
+     "near instability threshold"
+    ]
+   },
+   {
+    "name": "Turing instability analysis",
+    "does": "Gives conditions for diffusion-driven pattern formation",
+    "hypotheses": [
+     "reaction-diffusion system",
+     "activator-inhibitor with unequal diffusion rates",
+     "stable without diffusion"
+    ]
+   }
+  ],
+  "inputs": [
+   "local interaction rules",
+   "energy flux rates",
+   "boundary conditions"
+  ],
+  "outputs": [
+   "order parameters",
+   "steady-state patterns",
+   "instability thresholds"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced 'Synergetics' (a field, not a tool) with Turing analysis). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.6d0b28b1",
@@ -5225,21 +5756,47 @@
   "name": "Non-Hermitian systems",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "describe open systems with gain and loss"
+   "open quantum systems with gain and loss",
+   "wave propagation in active or dissipative media"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "PT-symmetric non-Hermitian Hamiltonian",
+    "does": "Gives real spectra for non-Hermitian Hamiltonians with PT symmetry",
+    "hypotheses": [
+     "Hamiltonian commutes with PT",
+     "eigenstates also PT symmetric (unbroken phase)"
+    ]
+   },
+   {
+    "name": "Exceptional point analysis",
+    "does": "Locates parameter points where eigenvalues and eigenvectors coalesce",
+    "hypotheses": [
+     "non-Hermitian matrix",
+     "parameters tuned to defective degeneracy"
+    ]
+   }
+  ],
+  "inputs": [
+   "Hamiltonian operator",
+   "symmetry constraints",
+   "system parameters"
+  ],
+  "outputs": [
+   "complex eigenvalues",
+   "phase transition boundaries",
+   "mode coalescence"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Merged generic non-Hermitian Hamiltonian into PT-symmetry; fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.709975fc",
@@ -5376,7 +5933,8 @@
   "name": "Qubit architectures",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "build physical two-level systems that can be controlled and read"
+   "physically implementing qubits",
+   "optimising coherence and gate fidelity"
   ],
   "signature": {
    "task": [
@@ -5384,14 +5942,41 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Lindblad master equation",
+    "does": "Describes Markovian open-system quantum evolution with decoherence",
+    "hypotheses": [
+     "Markov approximation",
+     "weak system-environment coupling",
+     "complete positivity (trace-preserving)"
+    ]
+   },
+   {
+    "name": "Surface code",
+    "does": "Provides fault-tolerant error correction on a 2D qubit lattice",
+    "hypotheses": [
+     "local nearest-neighbour stabiliser measurements",
+     "physical error rate below threshold",
+     "approximately independent errors"
+    ]
+   }
+  ],
+  "inputs": [
+   "system Hamiltonian",
+   "noise spectral density",
+   "qubit connectivity map"
+  ],
+  "outputs": [
+   "coherence times T1 and T2",
+   "gate error rates",
+   "logical error rates"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.85f8341d",
@@ -5438,21 +6023,50 @@
   "name": "Space weather",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "forecast disturbances of the space environment near a planet"
+   "predicting geomagnetic disturbances",
+   "assessing satellite and power grid vulnerability"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Ideal magnetohydrodynamics",
+    "does": "Models conducting plasma as a single magnetised fluid",
+    "hypotheses": [
+     "continuum fluid",
+     "high conductivity (frozen-in field)",
+     "non-relativistic flow",
+     "quasi-neutral"
+    ]
+   },
+   {
+    "name": "WSA-Enlil model",
+    "does": "Couples WSA coronal field with Enlil MHD heliosphere to propagate CMEs",
+    "hypotheses": [
+     "steady-state ambient corona from magnetogram",
+     "supersonic solar wind beyond inner boundary",
+     "CME as injected cone model (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "solar wind velocity",
+   "interplanetary magnetic field data",
+   "coronagraph and flare observations"
+  ],
+  "outputs": [
+   "Kp-index forecasts",
+   "geomagnetic storm warnings",
+   "plasma density maps"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.9af709f6",
@@ -5697,21 +6311,47 @@
   "name": "Mathematical physics",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "supply rigorous mathematical methods for physics"
+   "formulating physical theories mathematically",
+   "solving field equations analytically"
   ],
   "signature": {
    "task": [
     "prove"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Noether's theorem",
+    "does": "Links continuous symmetries of the action to conserved quantities",
+    "hypotheses": [
+     "action invariant under continuous symmetry group",
+     "equations of motion satisfied (on-shell)"
+    ]
+   },
+   {
+    "name": "Hamilton-Jacobi equation",
+    "does": "Recasts mechanics as a first-order PDE for the action",
+    "hypotheses": [
+     "Hamiltonian system",
+     "canonical transformation to constant momenta exists"
+    ]
+   }
+  ],
+  "inputs": [
+   "symmetries of the action",
+   "Hamiltonian functions",
+   "differential manifolds"
+  ],
+  "outputs": [
+   "conserved quantities",
+   "action-angle variables",
+   "exact solutions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Minor condition additions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.c21e7551",
@@ -6061,7 +6701,8 @@
   "name": "Microfluidics",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "handle tiny volumes of fluid in small channels"
+   "manipulating fluids at sub-millimetre scale",
+   "high-throughput analysis in miniaturised systems"
   ],
   "signature": {
    "task": [
@@ -6069,14 +6710,44 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hagen-Poiseuille law",
+    "does": "Gives pressure drop for laminar flow in a circular channel",
+    "hypotheses": [
+     "steady fully developed laminar flow",
+     "incompressible Newtonian fluid",
+     "circular cross-section (or shape-corrected)",
+     "channel length much greater than width"
+    ]
+   },
+   {
+    "name": "Young-Laplace equation",
+    "does": "Relates capillary pressure jump to interface curvature and surface tension",
+    "hypotheses": [
+     "static interface (mechanical equilibrium)",
+     "constant surface tension",
+     "continuum interface"
+    ]
+   }
+  ],
+  "inputs": [
+   "channel geometry",
+   "fluid viscosity",
+   "pressure gradients",
+   "surface tension coefficients"
+  ],
+  "outputs": [
+   "flow rates",
+   "pressure drops",
+   "droplet size",
+   "mixing efficiency"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened; steady state is not a separate condition). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.f10e180c",
@@ -6159,7 +6830,8 @@
   "name": "Glassy systems",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "describe materials that are solid without being ordered"
+   "structural relaxation in amorphous solids",
+   "glass transition dynamics"
   ],
   "signature": {
    "task": [
@@ -6167,14 +6839,40 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Mode-coupling theory",
+    "does": "Predicts dynamical slowing of supercooled liquids from density correlations",
+    "hypotheses": [
+     "dense supercooled liquid",
+     "closure of memory kernel via density-pair factorisation",
+     "structure factor known"
+    ]
+   },
+   {
+    "name": "Random first-order transition theory",
+    "does": "Explains glass transition through configurational entropy and mosaic states",
+    "hypotheses": [
+     "extensive configurational entropy of amorphous states",
+     "mean-field picture applies (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "particle density",
+   "temperature",
+   "interparticle potential"
+  ],
+  "outputs": [
+   "diffusion coefficients",
+   "viscosity",
+   "relaxation time"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.fd960e5c",
@@ -6364,7 +7062,8 @@
   "name": "Dynamics of networks",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "predict how processes on a network unfold in time"
+   "evolution of network topology",
+   "synchronisation and transport on graphs"
   ],
   "signature": {
    "task": [
@@ -6374,14 +7073,49 @@
     "graph_network"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Barabasi-Albert model",
+    "does": "Generates scale-free networks by growth with preferential attachment",
+    "hypotheses": [
+     "continual addition of nodes",
+     "attachment probability proportional to degree",
+     "large network limit"
+    ]
+   },
+   {
+    "name": "Kuramoto model",
+    "does": "Describes synchronisation of coupled phase oscillators",
+    "hypotheses": [
+     "phase-only oscillators",
+     "sinusoidal pairwise coupling",
+     "distributed natural frequencies"
+    ]
+   },
+   {
+    "name": "Master equation on networks",
+    "does": "Evolves probabilities of network states in time",
+    "hypotheses": [
+     "Markov process",
+     "discrete states"
+    ]
+   }
+  ],
+  "inputs": [
+   "adjacency matrix",
+   "node states",
+   "coupling constants"
+  ],
+  "outputs": [
+   "degree distribution",
+   "order parameters",
+   "stability criteria"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tidied). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.373a7206",
@@ -6390,7 +7124,8 @@
   "name": "Disordered systems",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "describe systems with frozen randomness"
+   "transport and localisation in random media",
+   "phase transitions in amorphous materials"
   ],
   "signature": {
    "task": [
@@ -6398,14 +7133,49 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Anderson localisation",
+    "does": "Predicts exponentially localised states in sufficiently disordered potentials",
+    "hypotheses": [
+     "non-interacting waves or particles",
+     "static disorder",
+     "strong enough disorder (always in 1D and 2D)"
+    ]
+   },
+   {
+    "name": "Replica method",
+    "does": "Averages free energy over quenched disorder using replicas",
+    "hypotheses": [
+     "quenched disorder",
+     "replica number analytically continued to zero",
+     "thermodynamic limit"
+    ]
+   },
+   {
+    "name": "Cavity method",
+    "does": "Solves disordered models on sparse graphs via message passing",
+    "hypotheses": [
+     "locally tree-like graph",
+     "correlation decay or replica-symmetry-breaking ansatz"
+    ]
+   }
+  ],
+  "inputs": [
+   "disorder distribution",
+   "Hamiltonian",
+   "scattering potential"
+  ],
+  "outputs": [
+   "localisation length",
+   "free energy",
+   "density of states"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Anderson hypothesis fixed (low dimension is not required)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.3bbe5675",
@@ -6707,7 +7477,8 @@
   "name": "Cryogenics & vacuum technology",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "provide the cold and the vacuum that accelerators need"
+   "thermal management at very low temperatures",
+   "creating and maintaining low pressure"
   ],
   "signature": {
    "task": [
@@ -6715,14 +7486,51 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Knudsen number regime classification",
+    "does": "Classifies gas flow as continuum, slip, transitional or molecular",
+    "hypotheses": [
+     "mean free path and characteristic length defined",
+     "dilute gas"
+    ]
+   },
+   {
+    "name": "Kinetic theory of effusion (Knudsen flow conductance)",
+    "does": "Gives molecular-flow conductance of vacuum components",
+    "hypotheses": [
+     "free molecular flow (Kn greater than 1)",
+     "diffuse wall reflection",
+     "ideal gas"
+    ]
+   },
+   {
+    "name": "Stefan-Boltzmann law",
+    "does": "Gives radiated power from emissivity and temperature",
+    "hypotheses": [
+     "grey diffuse surface",
+     "surfaces at uniform temperatures",
+     "vacuum between surfaces"
+    ]
+   }
+  ],
+  "inputs": [
+   "gas pressure",
+   "temperature",
+   "chamber volume",
+   "material emissivity"
+  ],
+  "outputs": [
+   "pumping speed",
+   "heat leak rates",
+   "vacuum level",
+   "cooling power"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed ideal gas law (too generic); added molecular flow conductance; Stefan-Boltzmann hypotheses fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.7dd874c0",
@@ -7026,21 +7834,57 @@
   "name": "Nuclear many-body theory",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "solve the problem of many interacting nucleons"
+   "nuclear ground and excited state properties",
+   "nuclear structure and reaction dynamics"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hartree-Fock method",
+    "does": "Approximates the nucleus as one Slater determinant of nucleons",
+    "hypotheses": [
+     "independent-particle mean field",
+     "antisymmetrised single determinant",
+     "effective interaction (e.g. Skyrme)"
+    ]
+   },
+   {
+    "name": "Nuclear shell model",
+    "does": "Describes nucleons in orbitals with spin-orbit coupling and residual interaction",
+    "hypotheses": [
+     "mean-field potential with strong spin-orbit term",
+     "valence space truncation",
+     "effective interaction"
+    ]
+   },
+   {
+    "name": "Energy density functional theory",
+    "does": "Computes nuclear ground states from functionals of nucleon densities",
+    "hypotheses": [
+     "existence of an energy functional (Hohenberg-Kohn analogue)",
+     "phenomenological functional parameters fitted (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "nucleon-nucleon interactions",
+   "particle number",
+   "isospin"
+  ],
+  "outputs": [
+   "binding energies",
+   "charge radii",
+   "excitation spectra"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Shell model spherical symmetry is not required; fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.c2ed1d79",
@@ -7072,7 +7916,8 @@
   "name": "Packing & jamming problems",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "predict how densely objects pack and when they jam"
+   "maximum density of non-overlapping objects",
+   "stability of jammed granular media"
   ],
   "signature": {
    "task": [
@@ -7080,14 +7925,40 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Kepler conjecture (Hales theorem)",
+    "does": "Gives densest packing of equal spheres in three dimensions, pi/sqrt(18)",
+    "hypotheses": [
+     "identical non-overlapping spheres",
+     "three-dimensional Euclidean space"
+    ]
+   },
+   {
+    "name": "Isostatic (Maxwell) counting for jamming",
+    "does": "Gives minimal contacts for mechanical stability of jammed packings",
+    "hypotheses": [
+     "frictionless spheres",
+     "force balance at each particle",
+     "at jamming point"
+    ]
+   }
+  ],
+  "inputs": [
+   "object geometry",
+   "boundary conditions",
+   "particle size distribution"
+  ],
+  "outputs": [
+   "packing fraction",
+   "coordination number",
+   "jamming transition point"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced random close packing (empirical value, ill-defined) with isostatic counting; Kepler is a theorem since proof (Hales)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.cf6b1eea",
@@ -7165,7 +8036,8 @@
   "name": "Complex systems",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "study systems whose collective behaviour is not obvious from the parts"
+   "emergent behaviour of interacting components",
+   "stability and phase transitions"
   ],
   "signature": {
    "task": [
@@ -7173,14 +8045,49 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Mean field theory",
+    "does": "Replaces interactions with an average field",
+    "hypotheses": [
+     "many weakly coupled neighbours (high connectivity)",
+     "fluctuations negligible",
+     "dimension above upper critical dimension"
+    ]
+   },
+   {
+    "name": "Renormalisation group",
+    "does": "Explains scale-dependent behaviour and universality near criticality",
+    "hypotheses": [
+     "near a critical point",
+     "scale invariance",
+     "short-range interactions (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Percolation theory",
+    "does": "Gives connectivity thresholds in random networks or lattices",
+    "hypotheses": [
+     "random independent occupation",
+     "defined lattice or graph"
+    ]
+   }
+  ],
+  "inputs": [
+   "interaction rules",
+   "network topology",
+   "initial state parameters"
+  ],
+  "outputs": [
+   "emergent properties",
+   "critical exponents",
+   "stability limits"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed generic agent-based modelling and network theory; added RG and percolation). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.d794d6b2",
@@ -7630,7 +8537,8 @@
   "name": "Social dynamics",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "model collective human behaviour with interacting-particle methods"
+   "collective behaviour of interacting agents",
+   "large-scale patterns from local rules"
   ],
   "signature": {
    "task": [
@@ -7638,14 +8546,49 @@
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Schelling segregation model",
+    "does": "Shows mild neighbour preferences give strong segregation",
+    "hypotheses": [
+     "agents on a lattice with vacant sites",
+     "fixed tolerance threshold",
+     "agents move to satisfy threshold"
+    ]
+   },
+   {
+    "name": "Vicsek model",
+    "does": "Simulates flocking by local velocity alignment with noise",
+    "hypotheses": [
+     "constant speed",
+     "alignment with neighbours within radius",
+     "angular noise"
+    ]
+   },
+   {
+    "name": "Voter model",
+    "does": "Evolves binary opinions by copying a random neighbour",
+    "hypotheses": [
+     "binary states",
+     "random neighbour copying (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "agent interaction rules",
+   "initial spatial distribution",
+   "noise parameters"
+  ],
+  "outputs": [
+   "order parameters",
+   "steady-state configurations",
+   "transition thresholds"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added voter model; Schelling does not imply total segregation). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.422ebc8c",
@@ -7700,7 +8643,8 @@
   "name": "Complex fluids",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "describe fluids whose internal structure changes how they flow"
+   "predicting flow of non-Newtonian materials",
+   "modelling rheology of structured fluids"
   ],
   "signature": {
    "task": [
@@ -7708,14 +8652,41 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Ostwald-de Waele power-law model",
+    "does": "Relates shear stress to shear rate by a power law",
+    "hypotheses": [
+     "steady simple shear",
+     "rate-independent consistency and index",
+     "intermediate shear rates only"
+    ]
+   },
+   {
+    "name": "Oldroyd-B model",
+    "does": "Describes viscoelastic polymer solutions with relaxation time",
+    "hypotheses": [
+     "dilute polymer solution (Hookean dumbbells)",
+     "continuum hypothesis"
+    ]
+   }
+  ],
+  "inputs": [
+   "viscosity",
+   "shear rate",
+   "pressure gradients",
+   "boundary conditions"
+  ],
+  "outputs": [
+   "velocity profiles",
+   "flow curves",
+   "apparent viscosity"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Navier-Stokes (Newtonian) with Oldroyd-B). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.6f991c28",
@@ -8035,7 +9006,8 @@
   "name": "Flow control",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "change a flow by actuation to reach a goal"
+   "reducing drag",
+   "suppressing separation and turbulence"
   ],
   "signature": {
    "task": [
@@ -8043,13 +9015,21 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "boundary layer profiles",
+   "Reynolds number",
+   "surface geometry"
+  ],
+  "outputs": [
+   "drag coefficient",
+   "separation point",
+   "lift-to-drag ratio"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Draft items were generic categories (active, passive control), not named laws or models; no specific tool kept). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.b96ba7a9",
@@ -8367,7 +9347,8 @@
   "name": "Precision measurements",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "test theory by measuring a quantity very precisely"
+   "determining physical constants",
+   "quantifying measurement uncertainty"
   ],
   "signature": {
    "task": [
@@ -8375,14 +9356,40 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "GUM uncertainty propagation",
+    "does": "Combines input uncertainties into a combined standard uncertainty",
+    "hypotheses": [
+     "model function linearisable to first order",
+     "inputs uncorrelated or covariance known",
+     "output near-Gaussian for coverage factors"
+    ]
+   },
+   {
+    "name": "Allan variance",
+    "does": "Characterises noise and stability of oscillators and sensors over averaging times",
+    "hypotheses": [
+     "stationary noise process",
+     "regular sampling"
+    ]
+   }
+  ],
+  "inputs": [
+   "raw measurement data",
+   "calibration standards",
+   "instrument specifications"
+  ],
+  "outputs": [
+   "best estimate",
+   "uncertainty budget",
+   "noise type and stability"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Bayesian inference (generic) with Allan variance; GUM hypotheses added). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.22b17e02",
@@ -8391,21 +9398,50 @@
   "name": "Cryogenics",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "reach and hold very low temperatures"
+   "thermal management at very low temperature",
+   "material behaviour near absolute zero"
   ],
   "signature": {
    "task": [
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Joule-Thomson effect",
+    "does": "Gives gas temperature change on isenthalpic throttling",
+    "hypotheses": [
+     "constant enthalpy expansion",
+     "real (non-ideal) gas",
+     "below inversion temperature to cool"
+    ]
+   },
+   {
+    "name": "Debye model of specific heat",
+    "does": "Gives lattice heat capacity proportional to T cubed at low T",
+    "hypotheses": [
+     "low-temperature limit",
+     "phonon spectrum with linear dispersion",
+     "insulating solid (no electronic term)"
+    ]
+   }
+  ],
+  "inputs": [
+   "initial temperature",
+   "pressure",
+   "gas composition",
+   "material properties"
+  ],
+  "outputs": [
+   "final temperature",
+   "heat capacity",
+   "entropy change"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Third law is a general law, not a cryogenic tool; added Debye model; JT is isenthalpic, not adiabatic reversible). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.2375c1d2",
@@ -8608,21 +9644,49 @@
   "name": "Reacting flows",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "predict flow with chemical reaction and heat release"
+   "species distribution in flowing systems",
+   "reaction-diffusion-advection coupling"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Damkohler number analysis",
+    "does": "Compares reaction rate with transport rate to identify regime",
+    "hypotheses": [
+     "characteristic length and time scales defined",
+     "single dominant reaction (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Reaction-diffusion-advection equations",
+    "does": "Conserve species with convection, diffusion and chemical source terms",
+    "hypotheses": [
+     "continuum flow",
+     "Fickian diffusion",
+     "known reaction kinetics"
+    ]
+   }
+  ],
+  "inputs": [
+   "flow velocity",
+   "diffusion coefficients",
+   "reaction rate constants",
+   "initial concentrations"
+  ],
+  "outputs": [
+   "concentration profiles",
+   "conversion rates",
+   "residence time distributions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Peclet number (dimensionless group alone) with the governing equations). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.5d582b16",
@@ -9359,7 +10423,8 @@
   "name": "Nonlinear dynamics in fluids",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "describe pattern and chaos arising in flows"
+   "predicting chaotic flow",
+   "characterising turbulence and instabilities"
   ],
   "signature": {
    "task": [
@@ -9367,14 +10432,50 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Lyapunov exponent",
+    "does": "Quantifies exponential divergence of nearby trajectories",
+    "hypotheses": [
+     "dynamical system with bounded attractor",
+     "long time averaging",
+     "smooth flow"
+    ]
+   },
+   {
+    "name": "Reynolds-averaged Navier-Stokes (RANS)",
+    "does": "Models mean turbulent flow with closure for Reynolds stresses",
+    "hypotheses": [
+     "statistically steady (or slowly varying) mean flow",
+     "turbulence closure model chosen"
+    ]
+   },
+   {
+    "name": "Bifurcation analysis",
+    "does": "Locates onset of instability as parameters change",
+    "hypotheses": [
+     "smooth parameter dependence",
+     "fixed points or periodic orbits identified"
+    ]
+   }
+  ],
+  "inputs": [
+   "boundary and initial conditions",
+   "fluid viscosity",
+   "velocity fields",
+   "pressure gradients"
+  ],
+  "outputs": [
+   "stability limits",
+   "bifurcation points",
+   "attractor dimensions",
+   "turbulence intensity"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Navier-Stokes (generic) with bifurcation analysis; RANS homogeneity not required). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.29bd219f",
@@ -9429,21 +10530,48 @@
   "name": "Energy utilization",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "use energy with less waste"
+   "energy conversion efficiency",
+   "power distribution and consumption"
   ],
   "signature": {
    "task": [
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "First law of thermodynamics (energy balance)",
+    "does": "Balances heat, work and internal energy change",
+    "hypotheses": [
+     "energy accounted across system boundary",
+     "closed or open control volume with flows included"
+    ]
+   },
+   {
+    "name": "Carnot efficiency",
+    "does": "Gives upper bound on heat engine efficiency from reservoir temperatures",
+    "hypotheses": [
+     "reversible cycle",
+     "two heat reservoirs",
+     "absolute temperatures"
+    ]
+   }
+  ],
+  "inputs": [
+   "heat input",
+   "work output",
+   "reservoir temperatures"
+  ],
+  "outputs": [
+   "efficiency",
+   "energy balance",
+   "waste heat"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.4722b240",
@@ -9552,7 +10680,8 @@
   "name": "Sustainability",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "judge whether an energy system can continue"
+   "optimising energy efficiency",
+   "modelling resource depletion"
   ],
   "signature": {
    "task": [
@@ -9560,14 +10689,41 @@
     "compare"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Exergy analysis (second-law efficiency)",
+    "does": "Measures useful work potential destroyed in processes",
+    "hypotheses": [
+     "defined dead state (environment)",
+     "steady state or defined time interval",
+     "system boundaries defined"
+    ]
+   },
+   {
+    "name": "Life cycle assessment (ISO 14040/14044)",
+    "does": "Quantifies environmental impacts across a product life cycle",
+    "hypotheses": [
+     "defined functional unit",
+     "defined system boundary",
+     "inventory data complete"
+    ]
+   }
+  ],
+  "inputs": [
+   "energy consumption data",
+   "material flow rates",
+   "emission factors"
+  ],
+  "outputs": [
+   "efficiency coefficients",
+   "carbon footprint",
+   "energy payback time"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic thermodynamic efficiency with exergy analysis). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.6e3ddc0a",
@@ -9576,7 +10732,8 @@
   "name": "Network phase transitions",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "describe abrupt changes in the structure or function of a network"
+   "critical behaviour of networks",
+   "emergence of giant components"
   ],
   "signature": {
    "task": [
@@ -9584,14 +10741,40 @@
     "classify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Molloy-Reed criterion",
+    "does": "Gives giant component condition from degree moments, <k^2> / <k> greater than 2",
+    "hypotheses": [
+     "configuration model (random given degrees)",
+     "large network limit",
+     "locally tree-like"
+    ]
+   },
+   {
+    "name": "Generating function method",
+    "does": "Computes component size distribution using degree generating functions",
+    "hypotheses": [
+     "locally tree-like structure",
+     "uncorrelated random wiring"
+    ]
+   }
+  ],
+  "inputs": [
+   "degree distribution",
+   "edge probability",
+   "node connectivity"
+  ],
+  "outputs": [
+   "critical threshold",
+   "giant component fraction",
+   "percolation probability"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.7f613135",
@@ -9838,21 +11021,59 @@
   "name": "Methods in transport",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "compute transport properties"
+   "predicting particle or fluid movement",
+   "calculating transport coefficients"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Fick's laws of diffusion",
+    "does": "Relate diffusive flux to concentration gradient and conservation",
+    "hypotheses": [
+     "linear flux-gradient relation",
+     "isotropic medium (or tensor D)",
+     "no bulk flow or coupling"
+    ]
+   },
+   {
+    "name": "Fourier's law of heat conduction",
+    "does": "Relates heat flux to temperature gradient",
+    "hypotheses": [
+     "local thermodynamic equilibrium",
+     "small gradients",
+     "isotropic medium"
+    ]
+   },
+   {
+    "name": "Boltzmann transport equation",
+    "does": "Gives distribution evolution and transport coefficients in kinetic theory",
+    "hypotheses": [
+     "dilute gas or weakly interacting carriers",
+     "molecular chaos",
+     "relaxation-time approximation if used"
+    ]
+   }
+  ],
+  "inputs": [
+   "concentration gradients",
+   "temperature gradients",
+   "pressure fields",
+   "viscosity"
+  ],
+  "outputs": [
+   "flux rates",
+   "velocity fields",
+   "diffusion coefficients"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Navier-Stokes with Boltzmann transport equation; fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.f5372742",
@@ -9861,21 +11082,58 @@
   "name": "Interfacial flows",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "predict flow shaped by an interface between fluids"
+   "fluid motion at phase boundaries",
+   "stability of fluid interfaces"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Young-Laplace equation",
+    "does": "Relates pressure jump to interface curvature and surface tension",
+    "hypotheses": [
+     "static interface",
+     "constant surface tension",
+     "sharp interface"
+    ]
+   },
+   {
+    "name": "Kelvin-Helmholtz instability",
+    "does": "Gives instability of an interface with velocity shear",
+    "hypotheses": [
+     "inviscid fluids",
+     "parallel flow with velocity jump",
+     "linear perturbations"
+    ]
+   },
+   {
+    "name": "Marangoni flow",
+    "does": "Describes flow driven by surface-tension gradients",
+    "hypotheses": [
+     "surface tension varies with temperature or concentration",
+     "free or fluid interface"
+    ]
+   }
+  ],
+  "inputs": [
+   "surface tension",
+   "velocity profiles",
+   "curvature",
+   "density difference"
+  ],
+  "outputs": [
+   "pressure jump",
+   "perturbation growth rates",
+   "interfacial velocity"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tidied). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.ff402d94",
@@ -9954,21 +11212,60 @@
   "name": "Rheological properties",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "measure and describe how a fluid resists deformation"
+   "describing deformation and flow of matter",
+   "describing viscoelastic behaviour"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Maxwell model",
+    "does": "Spring and dashpot in series; stress relaxes exponentially under constant strain",
+    "hypotheses": [
+     "linear viscoelasticity",
+     "small strains",
+     "constant temperature"
+    ]
+   },
+   {
+    "name": "Kelvin-Voigt model",
+    "does": "Spring and dashpot in parallel; strain creeps toward a limit under constant stress",
+    "hypotheses": [
+     "linear viscoelasticity",
+     "small strains",
+     "constant temperature"
+    ]
+   },
+   {
+    "name": "Ostwald-de Waele power-law model",
+    "does": "Relates shear stress to shear rate by a power law",
+    "hypotheses": [
+     "steady simple shear",
+     "intermediate shear rates",
+     "time-independent fluid"
+    ]
+   }
+  ],
+  "inputs": [
+   "applied stress",
+   "strain rate",
+   "time",
+   "temperature"
+  ],
+  "outputs": [
+   "viscosity",
+   "elastic modulus",
+   "shear stress",
+   "relaxation or creep time"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Maxwell/Kelvin-Voigt: spring-dashpot topology correct, hypotheses tightened; named power law properly). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.347c621b",
@@ -10204,21 +11501,59 @@
   "name": "Granular flows",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "predict the flow of moving grains"
+   "predicting granular flow and discharge",
+   "understanding stress in granular piles and silos"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Mu(I) rheology (GDR MiDi)",
+    "does": "Gives friction coefficient as function of inertial number for dense flows",
+    "hypotheses": [
+     "dense, rate-independent-to-inertial regime",
+     "incompressible (constant volume fraction) approximation",
+     "grains rigid, non-cohesive"
+    ]
+   },
+   {
+    "name": "Janssen model",
+    "does": "Predicts saturating pressure with depth in silos due to wall friction",
+    "hypotheses": [
+     "wall friction fully mobilised",
+     "constant ratio of horizontal to vertical stress",
+     "uniform stress over cross-section"
+    ]
+   },
+   {
+    "name": "Mohr-Coulomb yield criterion",
+    "does": "Gives shear stress limit for granular material from normal stress",
+    "hypotheses": [
+     "cohesionless or known cohesion",
+     "friction angle constant",
+     "material at yield"
+    ]
+   }
+  ],
+  "inputs": [
+   "grain size and density",
+   "friction coefficients",
+   "flow geometry",
+   "applied load"
+  ],
+  "outputs": [
+   "flow rate",
+   "velocity profiles",
+   "stress distributions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Draft was an error; written from scratch). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.90223563",
@@ -10775,7 +12110,8 @@
   "name": "Numerical techniques",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "compute material properties numerically"
+   "approximating continuous models numerically",
+   "solving equations without closed form"
   ],
   "signature": {
    "task": [
@@ -10783,14 +12119,50 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Runge-Kutta methods",
+    "does": "Integrate ordinary differential equations stepwise to given order",
+    "hypotheses": [
+     "initial value problem",
+     "right-hand side Lipschitz continuous",
+     "step size small enough for stability"
+    ]
+   },
+   {
+    "name": "Finite element method",
+    "does": "Approximates PDE solutions with piecewise basis functions on a mesh",
+    "hypotheses": [
+     "weak formulation exists",
+     "domain meshed into elements",
+     "well-posed boundary conditions"
+    ]
+   },
+   {
+    "name": "Monte Carlo integration",
+    "does": "Estimates integrals and expectations by random sampling",
+    "hypotheses": [
+     "samples independent (or correlation accounted)",
+     "finite variance"
+    ]
+   }
+  ],
+  "inputs": [
+   "differential equations",
+   "boundary conditions",
+   "initial values",
+   "probability distributions"
+  ],
+  "outputs": [
+   "numerical approximations",
+   "error estimates",
+   "converged values"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.5114e95c",
@@ -10959,7 +12331,8 @@
   "name": "Electromagnetic radiation astronomy",
   "taxonomy_cell": "PH.O.A3",
   "solves": [
-   "observe the sky across the wavelengths of light"
+   "characterising celestial objects from emitted radiation",
+   "mapping structure across the spectrum"
   ],
   "signature": {
    "task": [
@@ -10967,14 +12340,49 @@
     "infer"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Planck's law",
+    "does": "Gives blackbody spectral radiance for a temperature",
+    "hypotheses": [
+     "thermal equilibrium cavity radiation",
+     "ideal blackbody (or emissivity applied)"
+    ]
+   },
+   {
+    "name": "Wien's displacement law",
+    "does": "Gives peak wavelength of blackbody spectrum from temperature",
+    "hypotheses": [
+     "blackbody emitter",
+     "peak of spectrum in wavelength form"
+    ]
+   },
+   {
+    "name": "Radiative transfer equation",
+    "does": "Tracks intensity along a ray through absorbing and emitting medium",
+    "hypotheses": [
+     "known absorption and emission coefficients",
+     "negligible scattering unless included"
+    ]
+   }
+  ],
+  "inputs": [
+   "observed flux",
+   "wavelength",
+   "frequency",
+   "angular resolution"
+  ],
+  "outputs": [
+   "effective temperature",
+   "luminosity",
+   "optical depth",
+   "column density"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Rayleigh-Jeans (limit of Planck) with radiative transfer; removed composition and redshift as outputs of these tools). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.a0889633",
@@ -11006,21 +12414,59 @@
   "name": "Lattice models in condensed matter",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "study idealised models of electrons and spins on a lattice"
+   "phase transitions in discrete systems",
+   "collective behaviour on lattices"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Ising model",
+    "does": "Models magnetism with binary spins coupled on a lattice",
+    "hypotheses": [
+     "binary spin variables",
+     "short-range (nearest-neighbour) interaction",
+     "ordering needs dimension at least two"
+    ]
+   },
+   {
+    "name": "Hubbard model",
+    "does": "Describes correlated electrons with hopping and on-site repulsion",
+    "hypotheses": [
+     "single band (tight-binding)",
+     "on-site interaction only",
+     "fixed lattice"
+    ]
+   },
+   {
+    "name": "Metropolis Monte Carlo",
+    "does": "Samples equilibrium lattice configurations stochastically",
+    "hypotheses": [
+     "ergodic update scheme",
+     "detailed balance",
+     "equilibration before sampling"
+    ]
+   }
+  ],
+  "inputs": [
+   "lattice geometry",
+   "interaction strengths",
+   "temperature",
+   "chemical potential"
+  ],
+  "outputs": [
+   "order parameters",
+   "critical exponents",
+   "correlation functions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Ising dimension caveat added; Monte Carlo named Metropolis). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.b30d0b9e",
@@ -11365,7 +12811,8 @@
   "name": "Geophysics",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "apply physics to the planet"
+   "determining Earth's internal structure",
+   "estimating planetary physical properties"
   ],
   "signature": {
    "task": [
@@ -11373,14 +12820,47 @@
     "infer"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Snell's law for seismic rays",
+    "does": "Gives ray refraction angle at velocity interfaces",
+    "hypotheses": [
+     "sharp planar interface",
+     "geometric (high-frequency) ray approximation",
+     "isotropic media"
+    ]
+   },
+   {
+    "name": "Isostasy (Airy and Pratt models)",
+    "does": "Balances crustal columns to estimate thickness and density",
+    "hypotheses": [
+     "hydrostatic equilibrium at compensation depth",
+     "long-wavelength loads"
+    ]
+   },
+   {
+    "name": "Gauss's law for gravity",
+    "does": "Relates gravitational flux to enclosed mass",
+    "hypotheses": [
+     "spherically symmetric mass distribution for simple shell results"
+    ]
+   }
+  ],
+  "inputs": [
+   "seismic travel times",
+   "gravity measurements",
+   "magnetic field data"
+  ],
+  "outputs": [
+   "density profiles",
+   "crustal thickness",
+   "velocity structure"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added isostasy; Gauss hypotheses clarified). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.3741a35f",
@@ -11640,21 +13120,59 @@
   "name": "Multiphase flows",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "predict flow of several phases together"
+   "transporting several fluid phases",
+   "modelling interfacial dynamics"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Euler-Euler two-fluid model",
+    "does": "Treats phases as interpenetrating continua with volume fractions",
+    "hypotheses": [
+     "averaged phase properties",
+     "closures for interphase forces",
+     "volume fractions sum to one"
+    ]
+   },
+   {
+    "name": "Volume of fluid method",
+    "does": "Tracks interfaces via a transported volume fraction field",
+    "hypotheses": [
+     "immiscible phases",
+     "sharp interface reconstructed or compressed",
+     "fine enough mesh for interface"
+    ]
+   },
+   {
+    "name": "Young-Laplace equation",
+    "does": "Gives capillary pressure jump across curved interfaces",
+    "hypotheses": [
+     "static interface",
+     "constant surface tension"
+    ]
+   }
+  ],
+  "inputs": [
+   "phase volume fractions",
+   "interfacial tension",
+   "viscosity",
+   "pressure gradients"
+  ],
+  "outputs": [
+   "phase distribution",
+   "interface shape",
+   "flow rates",
+   "pressure drop"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (VOF does not need incompressibility restriction beyond standard use; hypotheses revised). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.cdaf7295",
@@ -11961,7 +13479,8 @@
   "name": "Galaxies",
   "taxonomy_cell": "PH.O.A3",
   "solves": [
-   "describe the structure and motion of star systems"
+   "describing galactic structure and evolution",
+   "mapping mass and dark matter"
   ],
   "signature": {
    "task": [
@@ -11969,14 +13488,50 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Tully-Fisher relation",
+    "does": "Links spiral galaxy luminosity to rotation velocity",
+    "hypotheses": [
+     "rotation-supported spiral galaxy",
+     "empirical power-law relation holds",
+     "inclination-corrected velocity"
+    ]
+   },
+   {
+    "name": "Virial theorem",
+    "does": "Gives total mass from velocity dispersion and radius",
+    "hypotheses": [
+     "system in dynamical equilibrium",
+     "time-averaged 2K + U = 0",
+     "bound system with known tracer distribution"
+    ]
+   },
+   {
+    "name": "Faber-Jackson relation",
+    "does": "Links elliptical galaxy luminosity to stellar velocity dispersion",
+    "hypotheses": [
+     "early-type galaxy",
+     "empirical power-law relation holds"
+    ]
+   }
+  ],
+  "inputs": [
+   "rotation velocity",
+   "velocity dispersion",
+   "apparent magnitude",
+   "angular size"
+  ],
+  "outputs": [
+   "intrinsic luminosity",
+   "galactic mass",
+   "distance estimates"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Virial hypotheses fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.b4d51608",
@@ -12031,7 +13586,8 @@
   "name": "Methods in magnetism",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "compute and measure magnetism"
+   "characterising magnetic materials",
+   "determining magnetic structure and dynamics"
   ],
   "signature": {
    "task": [
@@ -12039,14 +13595,51 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Magnetic neutron diffraction",
+    "does": "Determines magnetic order and moment directions from Bragg peaks",
+    "hypotheses": [
+     "ordered magnetic structure",
+     "neutron magnetic dipole scattering",
+     "elastic scattering"
+    ]
+   },
+   {
+    "name": "Ferromagnetic resonance",
+    "does": "Probes magnetisation precession to extract anisotropy and damping",
+    "hypotheses": [
+     "uniform magnetisation precession",
+     "microwave field perpendicular to static field",
+     "saturated sample"
+    ]
+   },
+   {
+    "name": "Landau-Lifshitz-Gilbert equation",
+    "does": "Describes magnetisation dynamics with damping",
+    "hypotheses": [
+     "constant magnetisation magnitude",
+     "phenomenological damping",
+     "micromagnetic continuum"
+    ]
+   }
+  ],
+  "inputs": [
+   "magnetic field strength",
+   "sample temperature",
+   "neutron beam energy",
+   "microwave frequency"
+  ],
+  "outputs": [
+   "magnetic structure",
+   "anisotropy constants",
+   "damping parameter"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced SQUID (instrument, covered under magnetic techniques) with LLG equation). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.c485f44d",
@@ -12399,21 +13992,58 @@
   "name": "Drop & bubble phenomena",
   "taxonomy_cell": "PH.O.A1",
   "solves": [
-   "predict how drops and bubbles form, move and merge"
+   "analysing bubble dynamics and stability",
+   "explaining droplet formation and impact"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Young-Laplace equation",
+    "does": "Gives pressure jump across curved interface",
+    "hypotheses": [
+     "static interface",
+     "constant surface tension"
+    ]
+   },
+   {
+    "name": "Rayleigh-Plateau instability",
+    "does": "Predicts breakup of a liquid cylinder into droplets",
+    "hypotheses": [
+     "cylindrical liquid column",
+     "surface-tension driven",
+     "perturbation wavelength above circumference"
+    ]
+   },
+   {
+    "name": "Rayleigh-Plesset equation",
+    "does": "Describes spherical bubble radius dynamics in liquid",
+    "hypotheses": [
+     "spherical symmetry",
+     "incompressible surrounding liquid",
+     "uniform pressure inside bubble"
+    ]
+   }
+  ],
+  "inputs": [
+   "surface tension",
+   "curvature",
+   "pressure field",
+   "viscosity"
+  ],
+  "outputs": [
+   "pressure difference",
+   "critical wavelength",
+   "bubble radius history"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Young's equation (contact angle, belongs to wetting) with Rayleigh-Plesset). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.d2fd5563",
@@ -12475,21 +14105,49 @@
   "name": "Magnetic techniques",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "measure magnetic properties"
+   "characterising magnetic properties of materials",
+   "measuring magnetic flux and field"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Vibrating sample magnetometry",
+    "does": "Measures sample moment from induced voltage in pickup coils (Faraday induction)",
+    "hypotheses": [
+     "small sample treated as point dipole",
+     "steady uniform applied field",
+     "vibration frequency and amplitude stable"
+    ]
+   },
+   {
+    "name": "SQUID magnetometry",
+    "does": "Measures tiny magnetic moments via Josephson-junction flux quantisation",
+    "hypotheses": [
+     "superconducting loop below critical temperature",
+     "magnetic shielding or compensation",
+     "sample moves through gradiometer"
+    ]
+   }
+  ],
+  "inputs": [
+   "magnetic field strength",
+   "sample temperature",
+   "induced voltage"
+  ],
+  "outputs": [
+   "magnetisation curves",
+   "magnetic susceptibility",
+   "coercivity"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.2250b5f3",
@@ -12779,7 +14437,8 @@
   "name": "Mathematical physics methods",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "supply mathematical methods for field theories"
+   "solving field equations analytically",
+   "building mathematical foundations of physical theories"
   ],
   "signature": {
    "task": [
@@ -12787,14 +14446,49 @@
     "construct"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Fourier transform",
+    "does": "Converts functions between position or time and frequency domains",
+    "hypotheses": [
+     "function integrable or square-integrable (or distributional)",
+     "linear shift-invariant problem"
+    ]
+   },
+   {
+    "name": "Green's function method",
+    "does": "Solves linear inhomogeneous equations by superposing impulse responses",
+    "hypotheses": [
+     "linear differential operator",
+     "homogeneous boundary conditions",
+     "uniqueness of solution"
+    ]
+   },
+   {
+    "name": "Rayleigh-Ritz variational method",
+    "does": "Bounds ground-state energy using trial functions",
+    "hypotheses": [
+     "trial function in domain of Hamiltonian",
+     "normalisable",
+     "applies to ground state (upper bound)"
+    ]
+   }
+  ],
+  "inputs": [
+   "differential equations",
+   "boundary conditions",
+   "physical constraints"
+  ],
+  "outputs": [
+   "closed-form solutions",
+   "eigenvalue spectra",
+   "asymptotic approximations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Variational method named Rayleigh-Ritz). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.0a677b11",
@@ -12873,7 +14567,8 @@
   "name": "Chemical Physics & Physical Chemistry",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "apply physical methods to chemical systems"
+   "computing molecular electronic structure",
+   "analysing chemical reaction dynamics"
   ],
   "signature": {
    "task": [
@@ -12881,14 +14576,49 @@
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Born-Oppenheimer approximation",
+    "does": "Separates electronic and nuclear motion in molecules",
+    "hypotheses": [
+     "nuclear mass much greater than electron mass",
+     "electronic states well separated (no near-degeneracy)"
+    ]
+   },
+   {
+    "name": "Transition state theory (Eyring)",
+    "does": "Calculates reaction rate from activated complex at saddle point",
+    "hypotheses": [
+     "quasi-equilibrium between reactants and activated complex",
+     "no recrossing of dividing surface",
+     "classical nuclear motion over barrier"
+    ]
+   },
+   {
+    "name": "Hartree-Fock method",
+    "does": "Gives approximate molecular orbitals from single determinant",
+    "hypotheses": [
+     "single Slater determinant",
+     "mean-field electron repulsion",
+     "non-relativistic"
+    ]
+   }
+  ],
+  "inputs": [
+   "atomic coordinates",
+   "charge and spin state",
+   "potential energy surface"
+  ],
+  "outputs": [
+   "binding energies",
+   "rate constants",
+   "molecular orbitals"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced the Schrodinger equation (too generic) with Hartree-Fock). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.e8836b5d",
@@ -13233,7 +14963,8 @@
   "name": "Interactions & forces",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "describe the forces acting between soft objects"
+   "determining net force on a body",
+   "predicting trajectories under fields"
   ],
   "signature": {
    "task": [
@@ -13241,14 +14972,49 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Newton's second law",
+    "does": "Relates net force to rate of change of momentum",
+    "hypotheses": [
+     "inertial frame",
+     "speeds much below light",
+     "classical (non-quantum) regime"
+    ]
+   },
+   {
+    "name": "Coulomb's law",
+    "does": "Gives electrostatic force between two point charges",
+    "hypotheses": [
+     "static point charges",
+     "homogeneous medium of known permittivity"
+    ]
+   },
+   {
+    "name": "Newton's law of gravitation",
+    "does": "Gives gravitational attraction between two masses",
+    "hypotheses": [
+     "point masses or spherically symmetric bodies",
+     "weak field, low speeds"
+    ]
+   }
+  ],
+  "inputs": [
+   "masses",
+   "charges",
+   "separations",
+   "accelerations"
+  ],
+  "outputs": [
+   "force vectors",
+   "interaction magnitude",
+   "net force"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.fa2a6718",
@@ -13337,7 +15103,8 @@
   "name": "Resonance techniques",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "probe matter with magnetic resonance"
+   "maximising energy transfer between oscillators",
+   "characterising materials from frequency response"
   ],
   "signature": {
    "task": [
@@ -13345,14 +15112,43 @@
     "infer"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Driven damped harmonic oscillator",
+    "does": "Gives amplitude and phase response to periodic forcing",
+    "hypotheses": [
+     "linear restoring force",
+     "viscous (linear) damping",
+     "steady-state response after transients"
+    ]
+   },
+   {
+    "name": "Quality factor analysis",
+    "does": "Measures resonance sharpness as stored energy over energy lost per cycle",
+    "hypotheses": [
+     "weak damping (high Q)",
+     "linear regime",
+     "single isolated resonance"
+    ]
+   }
+  ],
+  "inputs": [
+   "driving frequency",
+   "natural frequency",
+   "damping ratio",
+   "forcing amplitude"
+  ],
+  "outputs": [
+   "resonant frequency",
+   "amplitude response",
+   "phase shift",
+   "energy dissipation rate"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Q-factor hypotheses fixed (underdamped is a weak-damping limit)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.9e019803",
@@ -13361,7 +15157,8 @@
   "name": "Electronic structure",
   "taxonomy_cell": "PH.O.A4",
   "solves": [
-   "describe the states available to electrons in a material"
+   "distributing electrons in atoms and molecules",
+   "ground-state energy and density"
   ],
   "signature": {
    "task": [
@@ -13369,14 +15166,49 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hohenberg-Kohn density functional theory",
+    "does": "Treats ground-state energy as functional of electron density",
+    "hypotheses": [
+     "non-degenerate ground state",
+     "Born-Oppenheimer approximation",
+     "approximate exchange-correlation functional"
+    ]
+   },
+   {
+    "name": "Kohn-Sham equations",
+    "does": "Map interacting electrons onto non-interacting ones with same density",
+    "hypotheses": [
+     "non-interacting v-representable density",
+     "exchange-correlation functional chosen"
+    ]
+   },
+   {
+    "name": "Hartree-Fock method",
+    "does": "Approximates wavefunction by a single Slater determinant",
+    "hypotheses": [
+     "mean-field approximation",
+     "non-relativistic electrons",
+     "fixed nuclei"
+    ]
+   }
+  ],
+  "inputs": [
+   "atomic numbers",
+   "nuclear coordinates",
+   "basis sets"
+  ],
+  "outputs": [
+   "electron density",
+   "total energy",
+   "molecular orbitals"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Separated DFT foundation (Hohenberg-Kohn) from Kohn-Sham). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.aa36bec0",
@@ -13846,21 +15678,49 @@
   "name": "Strings & branes",
   "taxonomy_cell": "PH.O.A2",
   "solves": [
-   "model particles as extended objects"
+   "unifying quantum gravity",
+   "analysing high-energy interactions"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "AdS/CFT correspondence",
+    "does": "Relates gravity in anti-de Sitter bulk to boundary conformal field theory",
+    "hypotheses": [
+     "large N and strong coupling for classical gravity",
+     "asymptotically AdS spacetime",
+     "conjectural duality, no rigorous proof"
+    ]
+   },
+   {
+    "name": "T-duality",
+    "does": "Relates string theories on circles of radius R and alpha-prime over R",
+    "hypotheses": [
+     "compact circle dimension",
+     "closed strings",
+     "perturbative string theory"
+    ]
+   }
+  ],
+  "inputs": [
+   "spacetime geometry",
+   "string tension",
+   "boundary conditions"
+  ],
+  "outputs": [
+   "particle spectra",
+   "correlation functions",
+   "gravitational potentials"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses fixed (AdS/CFT is conjectural)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.f2a9db78",
@@ -14412,21 +16272,51 @@
   "name": "X-ray techniques",
   "taxonomy_cell": "PH.O.A5",
   "solves": [
-   "probe structure with X-rays"
+   "determining atomic and molecular structure",
+   "imaging internal structure non-destructively"
   ],
   "signature": {
    "task": [
     "infer"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bragg's law",
+    "does": "Gives diffraction condition n lambda = 2 d sin theta",
+    "hypotheses": [
+     "periodic crystalline lattice",
+     "elastic coherent scattering",
+     "wavelength comparable to lattice spacing"
+    ]
+   },
+   {
+    "name": "Beer-Lambert attenuation law",
+    "does": "Gives transmitted intensity decaying exponentially with thickness",
+    "hypotheses": [
+     "monochromatic beam",
+     "homogeneous material",
+     "narrow-beam geometry (negligible scatter into detector)"
+    ]
+   }
+  ],
+  "inputs": [
+   "X-ray wavelength",
+   "diffraction angles",
+   "incident intensity",
+   "material thickness"
+  ],
+  "outputs": [
+   "interplanar spacing",
+   "crystal structure",
+   "absorption coefficients",
+   "density maps"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PH.TK.41dd58dd",

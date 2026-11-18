@@ -228,7 +228,8 @@
   "name": "Electronic warfare",
   "taxonomy_cell": "EN.O.A2",
   "solves": [
-   "deny an opponent use of the radio spectrum while keeping one's own"
+   "denial of enemy use of electromagnetic spectrum",
+   "protection of friendly spectrum access"
   ],
   "signature": {
    "task": [
@@ -238,14 +239,51 @@
     "adversarial"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Friis transmission equation",
+    "does": "gives received power from transmitter power, antenna gains and range",
+    "hypotheses": [
+     "far-field",
+     "free-space, line-of-sight path",
+     "matched polarisation and impedance"
+    ]
+   },
+   {
+    "name": "Radar range equation",
+    "does": "relates detection range to power, gain and target cross section",
+    "hypotheses": [
+     "free-space propagation",
+     "target in far field",
+     "radar cross section known"
+    ]
+   },
+   {
+    "name": "Radar cross-section modelling",
+    "does": "predicts a target's radar reflectivity",
+    "hypotheses": [
+     "frequency and aspect angle specified",
+     "target geometry and materials known"
+    ]
+   }
+  ],
+  "inputs": [
+   "transmit power",
+   "antenna gain",
+   "frequency",
+   "distance",
+   "target material properties"
+  ],
+  "outputs": [
+   "received signal strength",
+   "detectability metrics",
+   "jamming effectiveness"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (added radar range equation; fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Military equipment",
@@ -339,21 +377,46 @@
   "name": "Telemetry",
   "taxonomy_cell": "EN.O.A2",
   "solves": [
-   "send measurements from a remote object"
+   "remote measurement of physical quantities",
+   "real-time data transmission from remote sensors"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Nyquist-Shannon sampling theorem",
+    "does": "sets sampling rate for exact reconstruction of a band-limited signal",
+    "hypotheses": [
+     "signal band-limited",
+     "uniform sampling above twice the bandwidth"
+    ]
+   },
+   {
+    "name": "Pulse code modulation",
+    "does": "converts analogue signals into digital words by sampling and quantising",
+    "hypotheses": [
+     "sampling meets Nyquist rate",
+     "finite quantisation levels"
+    ]
+   }
+  ],
+  "inputs": [
+   "analogue sensor readings",
+   "sampling frequency",
+   "quantisation levels"
+  ],
+  "outputs": [
+   "digital telemetry frames",
+   "reconstructed remote signals"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (trivial edits). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Antennas",
@@ -1181,7 +1244,8 @@
   "name": "Network topology",
   "taxonomy_cell": "EN.O.A4",
   "solves": [
-   "choose how nodes of a network are linked"
+   "optimising physical and logical node connectivity",
+   "minimising cabling costs and latency"
   ],
   "signature": {
    "task": [
@@ -1191,14 +1255,47 @@
     "graph_network"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Dijkstra's algorithm",
+    "does": "finds shortest paths from one node to all others",
+    "hypotheses": [
+     "non-negative edge weights",
+     "finite graph"
+    ]
+   },
+   {
+    "name": "Kruskal's algorithm",
+    "does": "finds a minimum-cost spanning tree, e.g. for cabling",
+    "hypotheses": [
+     "connected undirected weighted graph"
+    ]
+   },
+   {
+    "name": "Spanning tree protocol (IEEE 802.1D)",
+    "does": "prevents bridging loops in switched Ethernet",
+    "hypotheses": [
+     "bridged layer 2 network with redundant links",
+     "unique bridge identifiers"
+    ]
+   }
+  ],
+  "inputs": [
+   "node count",
+   "link capacities",
+   "adjacency matrices",
+   "cost metrics"
+  ],
+  "outputs": [
+   "optimal layout design",
+   "routing tables",
+   "redundancy analysis"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (removed generic 'graph theory'; added Kruskal). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Presence network agents",
@@ -2248,7 +2345,8 @@
   "name": "Decentralized control",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "control a large system with local controllers"
+   "control of large-scale interconnected systems",
+   "reduction of computational complexity in multi-agent coordination"
   ],
   "signature": {
    "task": [
@@ -2258,14 +2356,39 @@
     "multiple_cooperative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Decentralised fixed modes (Wang-Davison)",
+    "does": "finds modes no decentralised linear controller can move",
+    "hypotheses": [
+     "linear time-invariant system",
+     "fixed local information structure"
+    ]
+   },
+   {
+    "name": "Vector Lyapunov function method",
+    "does": "proves stability of interconnected subsystems from local Lyapunov functions",
+    "hypotheses": [
+     "local Lyapunov functions exist",
+     "interconnections bounded and aggregation matrix an M-matrix (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "subsystem dynamics",
+   "interconnection matrices",
+   "local state measurements"
+  ],
+  "outputs": [
+   "local control laws",
+   "stability bounds",
+   "system-wide performance metrics"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced vague Lyapunov decentralised control). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Delay systems",
@@ -2357,7 +2480,8 @@
   "name": "Fault tolerant control",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "keep control when a sensor or actuator fails"
+   "system instability due to component failure",
+   "performance degradation after hardware or software faults"
   ],
   "signature": {
    "task": [
@@ -2365,14 +2489,39 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Analytical redundancy",
+    "does": "estimates sensor values from models and other measurements",
+    "hypotheses": [
+     "accurate plant model available",
+     "sufficient observability"
+    ]
+   },
+   {
+    "name": "Observer-based residual generation",
+    "does": "detects and isolates faults by comparing observer output with measurements",
+    "hypotheses": [
+     "nominal model known",
+     "faults visible in the residual"
+    ]
+   }
+  ],
+  "inputs": [
+   "real-time sensor data",
+   "system state models",
+   "fault detection signals"
+  ],
+  "outputs": [
+   "reconfigured control signals",
+   "estimated state vectors",
+   "residual errors"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced generic control reconfiguration). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Feedback",
@@ -2777,21 +2926,48 @@
   "name": "Networked control systems",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "control over a network with delay and loss"
+   "control of dynamical systems over communication networks",
+   "instability caused by network-induced delays and packet loss"
   ],
   "signature": {
    "task": [
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Lyapunov-Krasovskii functional",
+    "does": "proves stability of systems with time delays",
+    "hypotheses": [
+     "delay bounded",
+     "functional positive definite",
+     "derivative negative along trajectories"
+    ]
+   },
+   {
+    "name": "Linear matrix inequality (LMI) synthesis",
+    "does": "computes stabilising gains by convex semidefinite programming",
+    "hypotheses": [
+     "problem expressible as convex LMI",
+     "linear or linearisable dynamics"
+    ]
+   }
+  ],
+  "inputs": [
+   "plant dynamics",
+   "network delay bounds",
+   "packet loss probability"
+  ],
+  "outputs": [
+   "stability margins",
+   "optimal controller gains",
+   "maximum allowable transfer interval"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Nonlinear control systems",
@@ -3241,7 +3417,8 @@
   "name": "Sensorless control",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "control without measuring the controlled variable directly"
+   "estimation of motor state without physical sensors",
+   "reduction of system cost and size by removing encoders"
   ],
   "signature": {
    "task": [
@@ -3249,14 +3426,48 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Sliding mode observer",
+    "does": "estimates states using a discontinuous correction term",
+    "hypotheses": [
+     "motor model known with bounded uncertainty",
+     "switching gain exceeds disturbance bound"
+    ]
+   },
+   {
+    "name": "Extended Kalman filter",
+    "does": "estimates states of nonlinear systems by local linearisation",
+    "hypotheses": [
+     "Gaussian white noise with known covariances",
+     "differentiable models",
+     "linearisation valid near estimate"
+    ]
+   },
+   {
+    "name": "Model reference adaptive system (MRAS)",
+    "does": "adjusts estimated speed to match a reference model",
+    "hypotheses": [
+     "reference model independent of estimated parameter",
+     "adaptation law stable (positive-real condition)",
+     "persistent excitation"
+    ]
+   }
+  ],
+  "inputs": [
+   "measured phase currents",
+   "applied voltages",
+   "machine parameters"
+  ],
+  "outputs": [
+   "estimated rotor position",
+   "estimated rotor speed"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (made hypotheses specific). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Sliding mode control",
@@ -3366,7 +3577,8 @@
   "name": "Traffic control",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "regulate vehicle flow at junctions and on networks"
+   "optimisation of vehicle flow",
+   "reduction of congestion and delays"
   ],
   "signature": {
    "task": [
@@ -3374,14 +3586,41 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Webster's method",
+    "does": "computes optimal signal cycle length to minimise delay",
+    "hypotheses": [
+     "undersaturated flow",
+     "fixed-time control",
+     "isolated intersection with uniform arrivals"
+    ]
+   },
+   {
+    "name": "Lighthill-Whitham-Richards model",
+    "does": "treats traffic as a conserved compressible continuum",
+    "hypotheses": [
+     "vehicle conservation",
+     "flow depends only on density",
+     "homogeneous traffic"
+    ]
+   }
+  ],
+  "inputs": [
+   "traffic volume",
+   "saturation flow rates",
+   "vehicle density"
+  ],
+  "outputs": [
+   "signal timings",
+   "queue lengths",
+   "travel time estimates"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (made hypotheses specific). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Dielectrics",
@@ -4929,7 +5168,8 @@
   "name": "Reverse engineering",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "recover a design from the finished thing"
+   "recovery of design specifications from physical artefacts",
+   "analysis of undocumented systems or proprietary hardware"
   ],
   "signature": {
    "task": [
@@ -4939,14 +5179,41 @@
     "inverse"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Decompilation",
+    "does": "reconstructs high-level code from machine code",
+    "hypotheses": [
+     "executable available",
+     "instruction set known"
+    ]
+   },
+   {
+    "name": "Iterative closest point (ICP)",
+    "does": "aligns scanned point clouds into one model",
+    "hypotheses": [
+     "good initial alignment",
+     "overlapping scans",
+     "rigid transformation"
+    ]
+   }
+  ],
+  "inputs": [
+   "compiled binaries",
+   "physical components",
+   "circuit boards"
+  ],
+  "outputs": [
+   "source code",
+   "CAD models",
+   "schematics",
+   "functional specifications"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced '3D scanning' (hardware) with ICP). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Sanitary engineering",
@@ -4978,7 +5245,8 @@
   "name": "Standardization",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "agree common specifications"
+   "interoperability between disparate systems",
+   "consistency in product quality and safety"
   ],
   "signature": {
    "task": [
@@ -4989,13 +5257,21 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "technical specifications",
+   "industry requirements",
+   "regulatory constraints"
+  ],
+  "outputs": [
+   "standardised protocols",
+   "compliance certifications",
+   "technical specifications"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (empty list kept; no specific named tool belongs to this heading). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Thermal engineering",
@@ -5122,21 +5398,49 @@
   "name": "Biomedical engineering",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "apply engineering to the body and to care"
+   "integration of engineering principles into healthcare",
+   "design of medical devices and prosthetic systems"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hodgkin-Huxley model",
+    "does": "describes action potentials via voltage-gated ion conductances",
+    "hypotheses": [
+     "membrane space-clamped (uniform)",
+     "voltage-dependent gating",
+     "constant temperature"
+    ]
+   },
+   {
+    "name": "Pennes bioheat equation",
+    "does": "models tissue heat transfer with blood perfusion",
+    "hypotheses": [
+     "perfusion acts as heat sink at arterial temperature",
+     "homogeneous tissue",
+     "constant perfusion and metabolic heat"
+    ]
+   }
+  ],
+  "inputs": [
+   "physiological signals",
+   "anatomical dimensions",
+   "biomaterial properties"
+  ],
+  "outputs": [
+   "device specifications",
+   "biophysical simulations",
+   "diagnostic data"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (corrected hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Biomedical equipment",
@@ -5237,7 +5541,8 @@
   "name": "Computational biology",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "model biological systems by computer"
+   "biological data analysis",
+   "molecular structure prediction"
   ],
   "signature": {
    "task": [
@@ -5245,14 +5550,49 @@
     "infer"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Needleman-Wunsch algorithm",
+    "does": "finds optimal global alignment of two sequences",
+    "hypotheses": [
+     "substitution matrix defined",
+     "linear or affine gap penalty",
+     "positions scored independently"
+    ]
+   },
+   {
+    "name": "Hidden Markov model",
+    "does": "models sequences with hidden states and emissions",
+    "hypotheses": [
+     "first-order Markov states",
+     "emission depends only on current state"
+    ]
+   },
+   {
+    "name": "Molecular dynamics simulation",
+    "does": "integrates Newton's equations for atoms under a force field",
+    "hypotheses": [
+     "classical mechanics adequate",
+     "force field accurate",
+     "sufficient sampling"
+    ]
+   }
+  ],
+  "inputs": [
+   "nucleotide sequences",
+   "amino acid sequences",
+   "atomic coordinates"
+  ],
+  "outputs": [
+   "sequence alignments",
+   "structural trajectories",
+   "functional annotations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Genetic engineering",
@@ -5553,21 +5893,59 @@
   "name": "Planning",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "set aims and the steps to reach them"
+   "resource allocation and scheduling",
+   "project timeline and milestone definition"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Critical path method",
+    "does": "finds the longest dependent task chain fixing minimum duration",
+    "hypotheses": [
+     "deterministic durations",
+     "acyclic dependency network",
+     "unlimited resources"
+    ]
+   },
+   {
+    "name": "PERT",
+    "does": "estimates project duration from three-point task estimates",
+    "hypotheses": [
+     "beta-distributed durations (approximation)",
+     "independent activities",
+     "critical path dominates"
+    ]
+   },
+   {
+    "name": "Work breakdown structure",
+    "does": "decomposes project scope into work packages",
+    "hypotheses": [
+     "scope defined",
+     "packages cover all scope without overlap"
+    ]
+   }
+  ],
+  "inputs": [
+   "task lists",
+   "dependency maps",
+   "resource availability",
+   "time estimates"
+  ],
+  "outputs": [
+   "Gantt charts",
+   "project schedules",
+   "critical path identification",
+   "resource histograms"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Product development",
@@ -5913,7 +6291,8 @@
   "name": "Ground penetrating radar",
   "taxonomy_cell": "EN.O.A4",
   "solves": [
-   "image the shallow subsurface by radio echo"
+   "subsurface object detection",
+   "stratigraphic mapping"
   ],
   "signature": {
    "task": [
@@ -5923,14 +6302,41 @@
     "inverse"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hyperbola fitting",
+    "does": "estimates depth and velocity from reflection hyperbolas",
+    "hypotheses": [
+     "point-like target",
+     "uniform velocity in the medium",
+     "antenna scanned across target"
+    ]
+   },
+   {
+    "name": "Common midpoint (CMP) velocity analysis",
+    "does": "estimates subsurface velocity from varying antenna separation",
+    "hypotheses": [
+     "horizontal layering",
+     "constant velocity per layer",
+     "small dips"
+    ]
+   }
+  ],
+  "inputs": [
+   "electromagnetic wave travel time",
+   "dielectric permittivity",
+   "antenna frequency"
+  ],
+  "outputs": [
+   "radargrams",
+   "target depth",
+   "material interface boundaries"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (CMP 'does' corrected). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Holography",
@@ -7114,21 +7520,48 @@
   "name": "Inspection",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "check items against a specification"
+   "detection of structural defects",
+   "verification of compliance with specifications"
   ],
   "signature": {
    "task": [
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Statistical process control",
+    "does": "monitors process drift with control charts",
+    "hypotheses": [
+     "common-cause variation random",
+     "measurements independent and roughly normal"
+    ]
+   },
+   {
+    "name": "Acceptance sampling",
+    "does": "decides lot acceptance from a random sample",
+    "hypotheses": [
+     "lots homogeneous",
+     "random sampling",
+     "sampling plan fixed in advance"
+    ]
+   }
+  ],
+  "inputs": [
+   "physical components",
+   "measurement data",
+   "design specifications"
+  ],
+  "outputs": [
+   "pass/fail status",
+   "defect location",
+   "compliance reports"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced generic NDT; fixed SPC hypothesis). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Machinery",
@@ -7482,7 +7915,8 @@
   "name": "Monitoring",
   "taxonomy_cell": "EN.O.A4",
   "solves": [
-   "watch a quantity over time and signal change"
+   "system state tracking",
+   "performance degradation detection"
   ],
   "signature": {
    "task": [
@@ -7490,14 +7924,39 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Kalman filter",
+    "does": "estimates states recursively from noisy measurements",
+    "hypotheses": [
+     "linear dynamics",
+     "Gaussian white noise with known covariances"
+    ]
+   },
+   {
+    "name": "Nyquist-Shannon sampling theorem",
+    "does": "sets sampling rate for exact reconstruction of a band-limited signal",
+    "hypotheses": [
+     "signal band-limited",
+     "uniform sampling above twice the bandwidth"
+    ]
+   }
+  ],
+  "inputs": [
+   "sensor data",
+   "time-series measurements",
+   "system models"
+  ],
+  "outputs": [
+   "state estimates",
+   "alert triggers",
+   "performance metrics"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (added known-covariance condition). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Pulse oximetry",
@@ -7891,21 +8350,58 @@
   "name": "Photonics",
   "taxonomy_cell": "EN.O.A4",
   "solves": [
-   "generate, guide and detect light in devices"
+   "manipulation of light for information transfer",
+   "generation and control of photons for sensing"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Maxwell's equations",
+    "does": "govern electromagnetic fields and their interaction with matter",
+    "hypotheses": [
+     "classical (non-quantum) fields",
+     "constitutive relations for media"
+    ]
+   },
+   {
+    "name": "Fresnel equations",
+    "does": "give reflection and transmission at an interface",
+    "hypotheses": [
+     "planar interface",
+     "linear isotropic homogeneous media",
+     "plane wave"
+    ]
+   },
+   {
+    "name": "Ray transfer matrix (ABCD) analysis",
+    "does": "traces rays through optics using 2x2 matrices",
+    "hypotheses": [
+     "paraxial rays",
+     "axially symmetric elements"
+    ]
+   }
+  ],
+  "inputs": [
+   "wavelength",
+   "refractive index",
+   "geometry of optical components",
+   "electric field vectors"
+  ],
+  "outputs": [
+   "transmission coefficients",
+   "beam divergence",
+   "focal length",
+   "phase shift"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Biomagnetics",
@@ -11019,7 +11515,8 @@
   "name": "Uncertain systems",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "analyse systems whose parameters are not exactly known"
+   "system behaviour under stochastic perturbations",
+   "stability analysis of systems with parameter uncertainty"
   ],
   "signature": {
    "task": [
@@ -11029,14 +11526,49 @@
     "adversarial"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Lyapunov stability theorem",
+    "does": "proves stability from an energy-like function",
+    "hypotheses": [
+     "V positive definite",
+     "dV/dt negative semi-definite for stability",
+     "negative definite for asymptotic stability"
+    ]
+   },
+   {
+    "name": "Monte Carlo method",
+    "does": "estimates response statistics by random sampling",
+    "hypotheses": [
+     "input distributions known",
+     "enough samples"
+    ]
+   },
+   {
+    "name": "H-infinity control",
+    "does": "minimises worst-case disturbance-to-error gain",
+    "hypotheses": [
+     "linear time-invariant plant",
+     "disturbances of bounded energy",
+     "stabilisable and detectable"
+    ]
+   }
+  ],
+  "inputs": [
+   "stochastic models",
+   "uncertainty bounds",
+   "probability density functions"
+  ],
+  "outputs": [
+   "stability margins",
+   "error bounds",
+   "probabilistic performance metrics"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (fixed Lyapunov condition). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Utility theory",
@@ -11713,21 +12245,46 @@
   "name": "Self-assembly",
   "taxonomy_cell": "EN.O.A5",
   "solves": [
-   "make structures that build themselves"
+   "bottom-up fabrication of nanostructures",
+   "autonomous organisation of components into ordered patterns"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "DNA origami",
+    "does": "folds a long scaffold strand into shapes with staple strands",
+    "hypotheses": [
+     "complementary base pairing",
+     "staples in excess",
+     "thermal annealing in suitable buffer"
+    ]
+   },
+   {
+    "name": "Block copolymer self-assembly",
+    "does": "forms periodic nanostructures by microphase separation",
+    "hypotheses": [
+     "blocks covalently bonded and incompatible",
+     "chi-N above order-disorder threshold"
+    ]
+   }
+  ],
+  "inputs": [
+   "molecular building blocks",
+   "environmental parameters (temperature, pH, concentration)"
+  ],
+  "outputs": [
+   "ordered nanostructures",
+   "functional molecular architectures"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (made hypotheses specific). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Self-replicating machines",
@@ -12275,21 +12832,49 @@
   "name": "Radiation effects",
   "taxonomy_cell": "EN.O.A3",
   "solves": [
-   "predict damage to materials and devices from radiation"
+   "prediction of material degradation under ionising radiation",
+   "estimation of electronic component failure rates in radiation environments"
   ],
   "signature": {
    "task": [
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "NIEL scaling",
+    "does": "scales displacement damage across particles using non-ionising energy loss",
+    "hypotheses": [
+     "displacement damage dominates",
+     "damage proportional to NIEL",
+     "particle spectra known"
+    ]
+   },
+   {
+    "name": "Total ionising dose (TID) modelling",
+    "does": "computes dose absorbed from ionising radiation",
+    "hypotheses": [
+     "dose-depth profile known",
+     "shielding geometry defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "particle flux",
+   "particle energy spectrum",
+   "material composition",
+   "exposure duration"
+  ],
+  "outputs": [
+   "displacement damage dose",
+   "absorbed dose (Gray)",
+   "predicted device lifetime"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Radiation hardening (electronics)",
@@ -12489,21 +13074,56 @@
   "name": "Marine navigation",
   "taxonomy_cell": "EN.O.A2",
   "solves": [
-   "fix a vessel's position and course"
+   "vessel positioning and routing",
+   "collision avoidance and trajectory planning"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Dead reckoning",
+    "does": "propagates position from heading, speed and elapsed time",
+    "hypotheses": [
+     "known start position",
+     "heading and speed measured",
+     "errors accumulate without fixes"
+    ]
+   },
+   {
+    "name": "Kalman filter",
+    "does": "fuses noisy sensor data into a state estimate",
+    "hypotheses": [
+     "linear dynamics",
+     "Gaussian white noise"
+    ]
+   },
+   {
+    "name": "CPA and TCPA calculation",
+    "does": "finds closest approach distance and time between vessels",
+    "hypotheses": [
+     "constant course and speed for both vessels"
+    ]
+   }
+  ],
+  "inputs": [
+   "compass heading",
+   "speed over ground",
+   "GNSS coordinates",
+   "radar targets"
+  ],
+  "outputs": [
+   "estimated position",
+   "course to steer",
+   "closest point of approach"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (added CPA/TCPA). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Marine technology",
@@ -12558,21 +13178,57 @@
   "name": "Oceanographic techniques",
   "taxonomy_cell": "EN.O.A2",
   "solves": [
-   "measure the sea"
+   "measurement of physical and chemical ocean properties",
+   "mapping of the seabed and water column"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "CTD profiling",
+    "does": "measures conductivity, temperature and depth to derive salinity and density",
+    "hypotheses": [
+     "sensors calibrated",
+     "conductivity converted using the practical salinity scale"
+    ]
+   },
+   {
+    "name": "Multibeam echosounding",
+    "does": "maps bathymetry with swaths of acoustic beams",
+    "hypotheses": [
+     "sound speed profile known",
+     "platform position and attitude known"
+    ]
+   },
+   {
+    "name": "Acoustic Doppler current profiler (ADCP)",
+    "does": "measures current velocity through depth by Doppler shift",
+    "hypotheses": [
+     "scatterers move with the water",
+     "sound speed known"
+    ]
+   }
+  ],
+  "inputs": [
+   "acoustic travel time",
+   "electrical conductivity",
+   "hydrostatic pressure",
+   "temperature"
+  ],
+  "outputs": [
+   "salinity profiles",
+   "bathymetric maps",
+   "current velocity vectors",
+   "water density"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (trivial edits). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Water pollution",
@@ -12947,21 +13603,59 @@
   "name": "Power engineering",
   "taxonomy_cell": "EN.O.A3",
   "solves": [
-   "generate, move and use electrical power"
+   "generation and transmission of electrical power",
+   "stability and control of power grids"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Power flow analysis",
+    "does": "solves bus voltages and angles in a network",
+    "hypotheses": [
+     "steady state",
+     "balanced three-phase, positive sequence",
+     "bus types and injections specified"
+    ]
+   },
+   {
+    "name": "Swing equation",
+    "does": "models synchronous machine rotor angle dynamics",
+    "hypotheses": [
+     "rigid rotor",
+     "classical model (constant voltage behind reactance)",
+     "damping known"
+    ]
+   },
+   {
+    "name": "Per-unit system",
+    "does": "normalises quantities to common bases",
+    "hypotheses": [
+     "base power chosen",
+     "base voltages related through transformer ratios"
+    ]
+   }
+  ],
+  "inputs": [
+   "bus admittance matrices",
+   "generator set-points",
+   "load demands",
+   "machine inertia constants"
+  ],
+  "outputs": [
+   "bus voltages",
+   "line power flows",
+   "system frequency stability",
+   "phase angles"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Power generation",
@@ -13763,7 +14457,8 @@
   "name": "Rhetoric",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "persuade an audience by argument, character and feeling"
+   "ineffective technical communication",
+   "lack of persuasion in engineering proposals"
   ],
   "signature": {
    "task": [
@@ -13773,14 +14468,30 @@
     "text_language"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Rhetorical triangle",
+    "does": "balances ethos, pathos and logos to persuade",
+    "hypotheses": [
+     "speaker and audience present",
+     "persuasive purpose defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "technical data",
+   "audience analysis",
+   "communication objective"
+  ],
+  "outputs": [
+   "persuasive technical arguments",
+   "tailored communication strategies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (trivial edits). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Writing",
@@ -13971,7 +14682,8 @@
   "name": "Maintenance",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "keep equipment working"
+   "asset degradation and failure",
+   "optimisation of service intervals"
   ],
   "signature": {
    "task": [
@@ -13979,14 +14691,40 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Reliability-centred maintenance",
+    "does": "selects maintenance tasks from failure modes and consequences",
+    "hypotheses": [
+     "functions and failure modes identified",
+     "consequences assessable"
+    ]
+   },
+   {
+    "name": "Age replacement policy",
+    "does": "chooses replacement age minimising long-run cost rate",
+    "hypotheses": [
+     "increasing failure rate",
+     "replacement restores as-new",
+     "planned and failure costs known"
+    ]
+   }
+  ],
+  "inputs": [
+   "failure data",
+   "maintenance costs",
+   "system criticality"
+  ],
+  "outputs": [
+   "maintenance schedules",
+   "optimal replacement intervals",
+   "task lists"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Maldistribution",
@@ -14135,7 +14873,8 @@
   "name": "Robustness",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "keep performance when the model is wrong"
+   "performance degradation under uncertainty",
+   "sensitivity to parameter variations"
   ],
   "signature": {
    "task": [
@@ -14145,14 +14884,48 @@
     "adversarial"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "H-infinity control",
+    "does": "minimises worst-case disturbance-to-error gain",
+    "hypotheses": [
+     "linear time-invariant plant",
+     "disturbances of bounded energy",
+     "stabilisable and detectable"
+    ]
+   },
+   {
+    "name": "Taguchi method",
+    "does": "selects settings that maximise signal-to-noise ratio",
+    "hypotheses": [
+     "orthogonal array experiments",
+     "noise factors controllable in experiment"
+    ]
+   },
+   {
+    "name": "Monte Carlo simulation",
+    "does": "estimates performance across parameter distributions",
+    "hypotheses": [
+     "parameter distributions known",
+     "enough samples"
+    ]
+   }
+  ],
+  "inputs": [
+   "system model",
+   "uncertainty bounds",
+   "performance specifications"
+  ],
+  "outputs": [
+   "robustness margins",
+   "optimal parameter sets",
+   "sensitivity indices"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Semiconductor device reliability",
@@ -14370,21 +15143,48 @@
   "name": "Stochastic resonance",
   "taxonomy_cell": "EN.O.A4",
   "solves": [
-   "explain how noise can improve detection of a weak signal"
+   "signal detection in noisy environments",
+   "enhancing weak periodic signals via noise"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Adiabatic (two-state) theory of stochastic resonance",
+    "does": "predicts output from slow periodic forcing of a bistable system",
+    "hypotheses": [
+     "forcing frequency far below relaxation rate",
+     "bistable potential",
+     "forcing subthreshold"
+    ]
+   },
+   {
+    "name": "Kramers' rate theory",
+    "does": "gives noise-driven escape rate over a barrier",
+    "hypotheses": [
+     "barrier much higher than noise intensity",
+     "overdamped motion",
+     "Gaussian white noise"
+    ]
+   }
+  ],
+  "inputs": [
+   "sub-threshold signal amplitude",
+   "noise power spectral density",
+   "system potential function"
+  ],
+  "outputs": [
+   "signal-to-noise ratio (SNR)",
+   "spectral amplification factor"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Animatronics",
@@ -14416,7 +15216,8 @@
   "name": "Automation",
   "taxonomy_cell": "EN.O.A2",
   "solves": [
-   "replace human operation by machines"
+   "reduction of human intervention in processes",
+   "optimisation of system throughput and consistency"
   ],
   "signature": {
    "task": [
@@ -14424,14 +15225,40 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "PID control",
+    "does": "corrects error using proportional, integral and derivative terms",
+    "hypotheses": [
+     "plant approximately linear near operating point",
+     "output measurable",
+     "actuator not saturated"
+    ]
+   },
+   {
+    "name": "State-space representation",
+    "does": "models dynamics with state, input and output equations",
+    "hypotheses": [
+     "finite-dimensional lumped system",
+     "state variables defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "set-point targets",
+   "sensor feedback",
+   "system state variables"
+  ],
+  "outputs": [
+   "actuator control signals",
+   "system stability analysis",
+   "process set-point convergence"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Autonomous systems",
@@ -17195,7 +18022,8 @@
   "name": "Ethics",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "judge what ought to be done in engineering practice"
+   "moral dilemmas in technical design",
+   "conflicts between safety and commercial interests"
   ],
   "signature": {
    "task": [
@@ -17205,14 +18033,38 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Utilitarianism",
+    "does": "chooses the action maximising overall welfare",
+    "hypotheses": [
+     "outcomes foreseeable",
+     "welfare comparable across affected parties"
+    ]
+   },
+   {
+    "name": "Deontological ethics",
+    "does": "judges actions by duties and rules",
+    "hypotheses": [
+     "duties identifiable",
+     "duties not in unresolved conflict"
+    ]
+   }
+  ],
+  "inputs": [
+   "proposed technical action",
+   "stakeholder impact analysis",
+   "professional codes of conduct"
+  ],
+  "outputs": [
+   "ethical justification",
+   "decision on action permissibility"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced odd hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Globalization",
@@ -18053,7 +18905,8 @@
   "name": "Modeling",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "build a simplified description that predicts behaviour"
+   "representation of physical systems",
+   "prediction of system behaviour"
   ],
   "signature": {
    "task": [
@@ -18061,14 +18914,47 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bond graph modelling",
+    "does": "represents power flow between physical domains",
+    "hypotheses": [
+     "lumped parameters",
+     "power conserved at junctions",
+     "effort and flow as power variables"
+    ]
+   },
+   {
+    "name": "State-space representation",
+    "does": "models dynamics with state, input and output equations",
+    "hypotheses": [
+     "finite-dimensional lumped system"
+    ]
+   },
+   {
+    "name": "Transfer function",
+    "does": "relates output to input in the Laplace domain",
+    "hypotheses": [
+     "linear time-invariant system",
+     "zero initial conditions"
+    ]
+   }
+  ],
+  "inputs": [
+   "system specifications",
+   "physical laws",
+   "boundary conditions"
+  ],
+  "outputs": [
+   "mathematical models",
+   "simulation results",
+   "system response predictions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Multidimensional systems",
@@ -18184,7 +19070,8 @@
   "name": "Requirements engineering",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "state what a system must do in testable form"
+   "specification of system behaviour",
+   "alignment of stakeholder needs with technical design"
   ],
   "signature": {
    "task": [
@@ -18192,14 +19079,39 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Volere requirements specification template",
+    "does": "structures capture of functional and non-functional requirements",
+    "hypotheses": [
+     "stakeholder needs identifiable",
+     "system boundary defined"
+    ]
+   },
+   {
+    "name": "Use case modelling",
+    "does": "describes system behaviour as actor goals",
+    "hypotheses": [
+     "actors identifiable",
+     "goals definable"
+    ]
+   }
+  ],
+  "inputs": [
+   "stakeholder interviews",
+   "business goals",
+   "regulatory constraints"
+  ],
+  "outputs": [
+   "Software Requirements Specification (SRS)",
+   "traceability matrix",
+   "validated requirements baseline"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (trivial edits). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Requirements management",
@@ -18277,7 +19189,8 @@
   "name": "Stochastic systems",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "analyse systems driven by random inputs"
+   "prediction of systems with random variables",
+   "analysis of uncertainty in dynamic processes"
   ],
   "signature": {
    "task": [
@@ -18287,14 +19200,47 @@
     "dynamic_stochastic"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Markov chain",
+    "does": "models state transitions depending only on current state",
+    "hypotheses": [
+     "Markov (memoryless) property",
+     "countable state space"
+    ]
+   },
+   {
+    "name": "Kalman filter",
+    "does": "estimates states recursively from noisy measurements",
+    "hypotheses": [
+     "linear dynamics",
+     "Gaussian white noise with known covariances"
+    ]
+   },
+   {
+    "name": "Fokker-Planck equation",
+    "does": "gives time evolution of a diffusion's probability density",
+    "hypotheses": [
+     "Markov diffusion (Itô) process",
+     "drift and diffusion coefficients known"
+    ]
+   }
+  ],
+  "inputs": [
+   "stochastic differential equations",
+   "probability distributions",
+   "noisy observation data"
+  ],
+  "outputs": [
+   "state probability distributions",
+   "optimal state estimates",
+   "steady-state probabilities"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.System analysis and design",
@@ -18441,21 +19387,48 @@
   "name": "System validation",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "show the system meets the user's real need"
+   "confirmation that a system meets its intended use",
+   "demonstration of system effectiveness in operational environments"
   ],
   "signature": {
    "task": [
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "V-model",
+    "does": "pairs each development stage with a verification or validation stage",
+    "hypotheses": [
+     "requirements baselined before design",
+     "sequential lifecycle"
+    ]
+   },
+   {
+    "name": "Acceptance testing",
+    "does": "checks a built system against agreed acceptance criteria",
+    "hypotheses": [
+     "completed system available",
+     "acceptance criteria agreed"
+    ]
+   }
+  ],
+  "inputs": [
+   "user requirements",
+   "operational profiles",
+   "system prototypes",
+   "acceptance criteria"
+  ],
+  "outputs": [
+   "validation reports",
+   "compliance matrices",
+   "fitness-for-purpose certification"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.System verification",
@@ -18500,7 +19473,8 @@
   "name": "Systems architecture",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "divide a system into parts and interfaces"
+   "structural decomposition of complex systems",
+   "allocation of functional requirements to physical components"
   ],
   "signature": {
    "task": [
@@ -18510,14 +19484,39 @@
     "hierarchy_tree"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Design structure matrix (DSM)",
+    "does": "maps interactions among system elements to guide partitioning",
+    "hypotheses": [
+     "elements and interactions enumerated",
+     "dependencies recorded as matrix entries"
+    ]
+   },
+   {
+    "name": "Functional analysis and allocation",
+    "does": "decomposes top-level functions and allocates them to physical elements",
+    "hypotheses": [
+     "system boundary defined",
+     "functions allocatable to elements"
+    ]
+   }
+  ],
+  "inputs": [
+   "stakeholder requirements",
+   "operational constraints",
+   "performance specifications"
+  ],
+  "outputs": [
+   "system architecture document",
+   "interface control documents",
+   "functional hierarchy"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced V-model with DSM). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Systems engineering education",
@@ -18655,7 +19654,8 @@
   "name": "Task analysis",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "break a job into the steps a person performs"
+   "decomposition of complex goals into discrete steps",
+   "identification of cognitive and physical requirements for system design"
   ],
   "signature": {
    "task": [
@@ -18663,14 +19663,40 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hierarchical task analysis",
+    "does": "breaks a goal into subtasks with plans for sequencing",
+    "hypotheses": [
+     "goal well defined",
+     "plans (sequencing conditions) can be stated",
+     "task observable or elicitable"
+    ]
+   },
+   {
+    "name": "GOMS model",
+    "does": "predicts expert task time from goals, operators, methods and selection rules",
+    "hypotheses": [
+     "expert user",
+     "routine error-free task"
+    ]
+   }
+  ],
+  "inputs": [
+   "user goals",
+   "observed workflows",
+   "system constraints"
+  ],
+  "outputs": [
+   "task hierarchies",
+   "performance predictions",
+   "operational sequences"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Technical management",
@@ -18748,7 +19774,8 @@
   "name": "Computational linguistics",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "process language by computer"
+   "automated processing of natural language",
+   "modelling linguistic structures computationally"
   ],
   "signature": {
    "task": [
@@ -18759,14 +19786,48 @@
     "text_language"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hidden Markov model",
+    "does": "models sequences with hidden states and emissions",
+    "hypotheses": [
+     "first-order Markov states",
+     "emission depends only on current state"
+    ]
+   },
+   {
+    "name": "Viterbi algorithm",
+    "does": "finds the most probable hidden state sequence",
+    "hypotheses": [
+     "HMM parameters known",
+     "discrete states"
+    ]
+   },
+   {
+    "name": "Transformer architecture",
+    "does": "maps token sequences using self-attention",
+    "hypotheses": [
+     "input tokenised",
+     "positional information supplied",
+     "fixed maximum context length"
+    ]
+   }
+  ],
+  "inputs": [
+   "textual data",
+   "speech signals",
+   "corpora"
+  ],
+  "outputs": [
+   "parsed structures",
+   "translated text",
+   "semantic labels"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced 'large datasets' condition). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Cybernetics",
@@ -18775,7 +19836,8 @@
   "name": "Cybernetics",
   "taxonomy_cell": "EN.O.A1",
   "solves": [
-   "study control and communication in machines and living things"
+   "circular causality and feedback control",
+   "system stability and goal-directed behaviour"
   ],
   "signature": {
    "task": [
@@ -18783,14 +19845,40 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Negative feedback principle (Wiener)",
+    "does": "regulates output by feeding error back to the input",
+    "hypotheses": [
+     "output measurable",
+     "input controllable",
+     "loop delay compatible with stability"
+    ]
+   },
+   {
+    "name": "Ashby's law of requisite variety",
+    "does": "states a regulator needs at least the variety of the disturbances",
+    "hypotheses": [
+     "variety counted as distinguishable states",
+     "regulator aims to keep outcomes within a set"
+    ]
+   }
+  ],
+  "inputs": [
+   "system state",
+   "environmental perturbations",
+   "target set-points"
+  ],
+  "outputs": [
+   "control signals",
+   "system stability analysis",
+   "variety requirements"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Ergonomics",
@@ -19242,21 +20330,49 @@
   "name": "Automotive engineering",
   "taxonomy_cell": "EN.O.A2",
   "solves": [
-   "design road vehicles"
+   "vehicle dynamics and stability",
+   "powertrain and chassis optimisation"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bicycle model",
+    "does": "reduces vehicle lateral dynamics to two axles",
+    "hypotheses": [
+     "small slip angles (linear tyres)",
+     "constant forward speed",
+     "roll and load transfer neglected"
+    ]
+   },
+   {
+    "name": "Pacejka Magic Formula",
+    "does": "fits tyre force against slip",
+    "hypotheses": [
+     "steady-state slip",
+     "coefficients fitted to specific tyre and conditions"
+    ]
+   }
+  ],
+  "inputs": [
+   "steering angle",
+   "vehicle speed",
+   "tyre pressure",
+   "road friction coefficient"
+  ],
+  "outputs": [
+   "lateral acceleration",
+   "yaw rate",
+   "longitudinal and lateral forces"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EN.TK.Land mobile radio equipment",
@@ -19388,7 +20504,8 @@
   "name": "Wireless sensor networks",
   "taxonomy_cell": "EN.O.A2",
   "solves": [
-   "gather measurements from many small radio nodes"
+   "distributed environmental monitoring",
+   "remote data acquisition in inaccessible areas"
   ],
   "signature": {
    "task": [
@@ -19398,13 +20515,39 @@
     "multiple_cooperative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "LEACH",
+    "does": "rotates cluster heads to spread energy use in sensor networks",
+    "hypotheses": [
+     "nodes start with similar energy",
+     "cluster heads reach the sink directly",
+     "nodes have data every round"
+    ]
+   },
+   {
+    "name": "Directed diffusion",
+    "does": "routes data by named attributes along reinforced paths",
+    "hypotheses": [
+     "data named by attributes",
+     "sinks can flood interests"
+    ]
+   }
+  ],
+  "inputs": [
+   "sensor readings",
+   "node energy levels",
+   "network topology"
+  ],
+  "outputs": [
+   "aggregated data",
+   "network lifetime estimates",
+   "routing paths"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (edited hypotheses). No source checked except spot checks; needs specialist review."
  }
 ]

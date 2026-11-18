@@ -67,7 +67,8 @@
   "name": "Immune System",
   "taxonomy_cell": "MD.O.A2",
   "solves": [
-   "describe the organs and cells that defend the body"
+   "understanding pathogen defence",
+   "understanding transplantation and autoimmunity"
   ],
   "signature": {
    "task": [
@@ -75,14 +76,42 @@
     "classify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Clonal selection theory",
+    "does": "Explains specific immunity by selective expansion of antigen-matched lymphocyte clones",
+    "hypotheses": [
+     "each lymphocyte carries one receptor specificity",
+     "pre-existing receptor diversity",
+     "self-reactive clones deleted or silenced"
+    ]
+   },
+   {
+    "name": "Flow cytometry",
+    "does": "Measures fluorescence and scatter of single cells in a fluid stream",
+    "hypotheses": [
+     "single-cell suspension",
+     "fluorescent labelling of markers",
+     "compensation for spectral overlap"
+    ]
+   }
+  ],
+  "inputs": [
+   "antigens",
+   "patient serum",
+   "cell suspensions",
+   "monoclonal antibodies"
+  ],
+  "outputs": [
+   "antibody titres",
+   "cell population counts",
+   "immune response profiles"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed ELISA (assay, not specific to immunology theory); kept clonal selection and flow cytometry; added conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "MD.TK.B04.080",
@@ -1289,21 +1318,41 @@
   "name": "Anesthesia and Analgesia",
   "taxonomy_cell": "MD.O.A3",
   "solves": [
-   "remove pain and awareness safely during procedures"
+   "producing anaesthesia for surgery",
+   "managing acute and chronic pain"
   ],
   "signature": {
    "task": [
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Minimum alveolar concentration (MAC)",
+    "does": "Measures potency of inhaled anaesthetics as concentration preventing movement in 50%",
+    "hypotheses": [
+     "alveolar concentration at equilibrium with brain",
+     "defined endpoint (no movement to surgical incision in 50%)",
+     "additive across agents (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "patient age and weight",
+   "vital signs",
+   "pain scores",
+   "end-tidal agent concentration"
+  ],
+  "outputs": [
+   "depth of anaesthesia",
+   "analgesic effect",
+   "haemodynamic stability"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed MAC hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "MD.TK.E04",
@@ -1312,21 +1361,38 @@
   "name": "Surgical Procedures, Operative",
   "taxonomy_cell": "MD.O.A4",
   "solves": [
-   "repair or remove tissue by operation"
+   "correcting anatomical pathology",
+   "repairing organ dysfunction"
   ],
   "signature": {
    "task": [
     "construct"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "WHO Surgical Safety Checklist",
+    "does": "Reduces surgical errors through standardised pre, intra and post-operative checks",
+    "hypotheses": [
+     "whole team participates in checks",
+     "checks completed at defined time points"
+    ]
+   }
+  ],
+  "inputs": [
+   "patient identity",
+   "surgical site verification",
+   "anaesthesia status"
+  ],
+  "outputs": [
+   "verified surgical readiness",
+   "risk mitigation confirmation"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened; tool kept). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "MD.TK.E05",
@@ -1393,21 +1459,47 @@
   "name": "Dentistry",
   "taxonomy_cell": "MD.O.A3",
   "solves": [
-   "prevent and treat disease of teeth and mouth"
+   "diagnosing and treating oral disease",
+   "restoring dental anatomy"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Black's classification of cavities",
+    "does": "Categorises carious lesions into classes I to VI by tooth site",
+    "hypotheses": [
+     "lesion on tooth surface per class definition",
+     "caries (not non-carious loss) present"
+    ]
+   },
+   {
+    "name": "ICDAS caries scoring",
+    "does": "Grades caries lesion severity visually on a standard scale",
+    "hypotheses": [
+     "clean, dry tooth surface",
+     "trained examiner"
+    ]
+   }
+  ],
+  "inputs": [
+   "clinical examination",
+   "dental radiographs",
+   "patient symptoms"
+  ],
+  "outputs": [
+   "treatment plan",
+   "restored dental function",
+   "caries classification"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Black's principles with classification (standard named); added ICDAS). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "MD.TK.F03.080",
@@ -1830,7 +1922,8 @@
   "name": "Blood Physiological Phenomena",
   "taxonomy_cell": "MD.O.A2",
   "solves": [
-   "explain how blood carries gases and clots"
+   "characterising blood flow dynamics",
+   "analysing blood gas transport"
   ],
   "signature": {
    "task": [
@@ -1838,14 +1931,42 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hagen-Poiseuille law",
+    "does": "Gives laminar flow rate in a tube from pressure drop, radius and viscosity",
+    "hypotheses": [
+     "steady laminar flow",
+     "Newtonian fluid",
+     "rigid straight circular tube",
+     "no-slip wall"
+    ]
+   },
+   {
+    "name": "Oxygen-haemoglobin dissociation curve (Hill equation)",
+    "does": "Relates haemoglobin saturation to oxygen partial pressure",
+    "hypotheses": [
+     "equilibrium binding",
+     "fixed temperature, pH and 2,3-DPG"
+    ]
+   }
+  ],
+  "inputs": [
+   "vessel radius",
+   "blood viscosity",
+   "pressure gradient",
+   "vessel length"
+  ],
+  "outputs": [
+   "volumetric flow rate",
+   "vascular resistance",
+   "haemoglobin saturation"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Merged duplicate Poiseuille entries; added oxygen dissociation (Hill) for gas transport. Blood is non-Newtonian in small vessels). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "MD.TK.G09.330",
@@ -2761,7 +2882,8 @@
   "name": "Population Characteristics",
   "taxonomy_cell": "MD.O.A5",
   "solves": [
-   "describe a population by age, health and social make-up"
+   "characterising study cohorts",
+   "identifying population-level risk factors"
   ],
   "signature": {
    "task": [
@@ -2769,14 +2891,41 @@
     "compare"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Direct age standardisation",
+    "does": "Adjusts rates to a standard population for fair comparison",
+    "hypotheses": [
+     "same age bands in all groups",
+     "stable age-specific rates",
+     "standard population chosen"
+    ]
+   },
+   {
+    "name": "Stratified sampling",
+    "does": "Samples within subgroups to ensure representative estimates",
+    "hypotheses": [
+     "known stratum sizes",
+     "sampling frame covers population",
+     "strata internally homogeneous"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "clinical registries",
+   "census records"
+  ],
+  "outputs": [
+   "population profiles",
+   "prevalence rates",
+   "demographic distributions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic descriptive statistics with age standardisation; fixed input/output to lists). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "MD.TK.N02",
@@ -2785,7 +2934,8 @@
   "name": "Health Care Facilities Workforce and Services",
   "taxonomy_cell": "MD.O.A5",
   "solves": [
-   "describe the places, people and services that deliver care"
+   "allocating healthcare resources",
+   "planning workforce capacity"
   ],
   "signature": {
    "task": [
@@ -2793,14 +2943,32 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Queueing theory (M/M/c model)",
+    "does": "Predicts waiting times and server utilisation for given arrivals and capacity",
+    "hypotheses": [
+     "Poisson arrivals",
+     "exponential service times",
+     "utilisation below one (stable)",
+     "first-come first-served"
+    ]
+   }
+  ],
+  "inputs": [
+   "patient arrival rates",
+   "staffing levels",
+   "service times"
+  ],
+  "outputs": [
+   "predicted wait times",
+   "optimal staffing ratios"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed Lean Six Sigma (management, not law/model); sharpened queueing to M/M/c). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "MD.TK.N04",
@@ -2809,7 +2977,8 @@
   "name": "Health Services Administration",
   "taxonomy_cell": "MD.O.A5",
   "solves": [
-   "organise and run health services"
+   "optimising healthcare delivery",
+   "governing resource allocation"
   ],
   "signature": {
    "task": [
@@ -2817,14 +2986,33 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Donabedian model",
+    "does": "Evaluates care quality through structure, process and outcome",
+    "hypotheses": [
+     "structure influences process",
+     "process influences outcome",
+     "outcomes measurable and attributable"
+    ]
+   }
+  ],
+  "inputs": [
+   "patient throughput data",
+   "clinical outcome metrics",
+   "resource capacity",
+   "budget constraints"
+  ],
+  "outputs": [
+   "quality improvement plans",
+   "operational benchmarks",
+   "staffing requirements"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Dropped duplicate queueing theory). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "MD.TK.N05",

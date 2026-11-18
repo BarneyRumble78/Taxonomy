@@ -29,7 +29,8 @@
   "name": "Cross-computing tools and techniques",
   "taxonomy_cell": "CS.O.A1",
   "solves": [
-   "apply general techniques such as measurement and validation across computing"
+   "interoperability between disparate computing architectures",
+   "optimisation of workloads across heterogeneous hardware"
   ],
   "signature": {
    "task": [
@@ -38,13 +39,21 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "hardware specifications",
+   "software workloads",
+   "communication protocols"
+  ],
+  "outputs": [
+   "cross-platform execution plans",
+   "interoperability layers",
+   "resource allocation maps"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (empty list kept; no specific named tool belongs to this heading). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10002950.10003624",
@@ -155,7 +164,8 @@
   "name": "Mathematical software",
   "taxonomy_cell": "CS.O.A2",
   "solves": [
-   "build reliable programs that carry out mathematical computation"
+   "automated symbolic computation",
+   "numerical approximation of mathematical functions"
   ],
   "signature": {
    "task": [
@@ -163,14 +173,40 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Buchberger's algorithm",
+    "does": "computes a Gröbner basis of a polynomial ideal",
+    "hypotheses": [
+     "polynomial ring over a field",
+     "fixed monomial ordering"
+    ]
+   },
+   {
+    "name": "Risch algorithm",
+    "does": "decides whether an elementary function has an elementary antiderivative",
+    "hypotheses": [
+     "integrand in an elementary function field",
+     "constant field of characteristic zero"
+    ]
+   }
+  ],
+  "inputs": [
+   "mathematical expressions",
+   "polynomial sets",
+   "differential equations"
+  ],
+  "outputs": [
+   "simplified expressions",
+   "basis sets",
+   "numerical solutions",
+   "symbolic proofs"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (tightened hypotheses of both tools). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10002950.10003712",
@@ -295,7 +331,8 @@
   "name": "Continuous mathematics",
   "taxonomy_cell": "CS.O.A2",
   "solves": [
-   "compute with functions, shapes and continuous spaces"
+   "modelling systems with continuous variables",
+   "optimisation of differentiable functions"
   ],
   "signature": {
    "task": [
@@ -306,14 +343,51 @@
     "continuous"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Gradient descent",
+    "does": "iteratively moves against the gradient to find a local minimum",
+    "hypotheses": [
+     "differentiable objective",
+     "Lipschitz-continuous gradient for convergence guarantees",
+     "suitable step size"
+    ]
+   },
+   {
+    "name": "Runge-Kutta methods",
+    "does": "approximate solutions of ordinary differential equations stepwise",
+    "hypotheses": [
+     "initial value problem",
+     "right-hand side Lipschitz continuous in the state",
+     "solution smooth enough for the method's order"
+    ]
+   },
+   {
+    "name": "Karush-Kuhn-Tucker conditions",
+    "does": "give necessary conditions for optimality in constrained nonlinear programmes",
+    "hypotheses": [
+     "differentiable objective and constraints",
+     "constraint qualification holds (e.g. LICQ)",
+     "sufficient only if problem is convex"
+    ]
+   }
+  ],
+  "inputs": [
+   "differential equations",
+   "objective functions",
+   "initial states",
+   "constraints"
+  ],
+  "outputs": [
+   "approximate solutions",
+   "local/global minima",
+   "state trajectories"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (fixed hypotheses (Lipschitz applies to ODE right-hand side, regularity named, convexity for sufficiency)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10002978.10002979",
@@ -548,7 +622,8 @@
   "name": "Security in hardware",
   "taxonomy_cell": "CS.O.A5",
   "solves": [
-   "keep secrets and integrity at the level of the physical device"
+   "hardware-level vulnerabilities",
+   "physical attacks on integrated circuits"
   ],
   "signature": {
    "task": [
@@ -559,14 +634,40 @@
     "adversarial"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Physical unclonable function (PUF)",
+    "does": "derives device-unique responses from uncontrollable manufacturing variation",
+    "hypotheses": [
+     "manufacturing variation is random and unclonable",
+     "responses reproducible after error correction across voltage and temperature"
+    ]
+   },
+   {
+    "name": "Differential power analysis",
+    "does": "recovers secret keys statistically from many power traces",
+    "hypotheses": [
+     "attacker can measure power or EM traces",
+     "leakage depends on intermediate data values",
+     "known plaintext or ciphertext for many runs"
+    ]
+   }
+  ],
+  "inputs": [
+   "physical device characteristics",
+   "power consumption traces",
+   "electromagnetic emissions"
+  ],
+  "outputs": [
+   "cryptographic keys",
+   "device fingerprints",
+   "vulnerability reports"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced generic 'side-channel analysis' with named differential power analysis; fixed PUF hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10002978.10003006",
@@ -672,7 +773,8 @@
   "name": "Database and storage security",
   "taxonomy_cell": "CS.O.A5",
   "solves": [
-   "protect stored data from disclosure and tampering"
+   "unauthorised data access",
+   "data breaches and leakage"
   ],
   "signature": {
    "task": [
@@ -683,14 +785,48 @@
     "adversarial"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bell-LaPadula model",
+    "does": "enforces confidentiality by no read up and no write down",
+    "hypotheses": [
+     "subjects and objects carry fixed security labels",
+     "label levels form a lattice",
+     "labels not changed during use (tranquility)"
+    ]
+   },
+   {
+    "name": "Biba integrity model",
+    "does": "protects integrity by no read down and no write up",
+    "hypotheses": [
+     "subjects and objects carry fixed integrity labels",
+     "labels form a lattice"
+    ]
+   },
+   {
+    "name": "Role-based access control (RBAC)",
+    "does": "grants permissions to roles, with users assigned to roles",
+    "hypotheses": [
+     "permissions attach to roles not users",
+     "user-role assignments administered centrally"
+    ]
+   }
+  ],
+  "inputs": [
+   "user credentials",
+   "security clearance levels",
+   "access request logs"
+  ],
+  "outputs": [
+   "access grant or denial",
+   "audit trails",
+   "encrypted data stores"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (added missing conditions (labels, lattice, tranquility)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10002978.10003022",
@@ -885,7 +1021,8 @@
   "name": "Network components",
   "taxonomy_cell": "CS.O.A3",
   "solves": [
-   "build the devices that forward and connect traffic"
+   "physical and logical connectivity of network nodes",
+   "hardware selection for data transmission"
   ],
   "signature": {
    "task": [
@@ -893,13 +1030,21 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "network requirements",
+   "traffic volume",
+   "topology constraints"
+  ],
+  "outputs": [
+   "hardware specifications",
+   "layer assignments",
+   "interconnection diagrams"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (OSI and TCP/IP are reference architectures, not tools for hardware components; no specific named tool fits). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10003033.10003068",
@@ -1004,7 +1149,8 @@
   "name": "Network properties",
   "taxonomy_cell": "CS.O.A3",
   "solves": [
-   "characterise a network's reliability, security and structure"
+   "characterising network topology",
+   "analysing connectivity and robustness"
   ],
   "signature": {
    "task": [
@@ -1015,14 +1161,43 @@
     "graph_network"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Degree distribution",
+    "does": "gives the probability that a node has a given number of links",
+    "hypotheses": [
+     "graph fully specified",
+     "network large enough for a meaningful empirical distribution"
+    ]
+   },
+   {
+    "name": "Clustering coefficient",
+    "does": "measures how often a node's neighbours are also linked",
+    "hypotheses": [
+     "simple graph without self-loops",
+     "undirected in the standard definition"
+    ]
+   },
+   {
+    "name": "Betweenness centrality",
+    "does": "scores nodes by the share of shortest paths passing through them",
+    "hypotheses": [
+     "paths between node pairs exist",
+     "flow follows shortest paths"
+    ]
+   }
+  ],
+  "inputs": [
+   "adjacency matrix or edge list"
+  ],
+  "outputs": [
+   "topological metrics and structural descriptors"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (made hypotheses specific). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10003033.10003099",
@@ -1031,7 +1206,8 @@
   "name": "Network services",
   "taxonomy_cell": "CS.O.A3",
   "solves": [
-   "provide naming, location and management services on a network"
+   "resource sharing across distributed nodes",
+   "inter-process communication over networks"
   ],
   "signature": {
    "task": [
@@ -1039,13 +1215,21 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "data packets",
+   "network protocols",
+   "service requests"
+  ],
+  "outputs": [
+   "delivered payloads",
+   "established connections",
+   "service responses"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (OSI and TCP/IP are generic reference models, not tools for network services; emptied). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10003033.10003106",
@@ -1131,21 +1315,58 @@
   "name": "Interaction design",
   "taxonomy_cell": "CS.O.A3",
   "solves": [
-   "shape how a person and a system exchange actions"
+   "optimising user-system interfaces",
+   "improving usability and accessibility"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Fitts's law",
+    "does": "predicts movement time to a target from distance and width",
+    "hypotheses": [
+     "rapid aimed movement",
+     "target width and distance well defined",
+     "movement time grows with log of distance over width"
+    ]
+   },
+   {
+    "name": "Nielsen's usability heuristics",
+    "does": "guide expert inspection of an interface for usability problems",
+    "hypotheses": [
+     "several independent evaluators",
+     "evaluators trained in usability"
+    ]
+   },
+   {
+    "name": "GOMS model",
+    "does": "predicts expert task time from goals, operators, methods and selection rules",
+    "hypotheses": [
+     "expert user",
+     "routine error-free task",
+     "cognitive skill already learned"
+    ]
+   }
+  ],
+  "inputs": [
+   "target size",
+   "distance to target",
+   "user task flows",
+   "interface prototypes"
+  ],
+  "outputs": [
+   "predicted movement time",
+   "usability flaw reports",
+   "estimated task completion time"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (removed wrong '2D surface' condition; added evaluator conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10003120.10003130",
@@ -1154,7 +1375,8 @@
   "name": "Collaborative and social computing",
   "taxonomy_cell": "CS.O.A3",
   "solves": [
-   "design systems that groups of people use together"
+   "coordination of distributed human agents",
+   "design of computer-supported cooperative work (CSCW) systems"
   ],
   "signature": {
    "task": [
@@ -1164,14 +1386,41 @@
     "multiple_cooperative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Social network analysis",
+    "does": "measures relational structure and flow of information among actors",
+    "hypotheses": [
+     "nodes represent actors",
+     "edges represent observed ties",
+     "network boundary defined"
+    ]
+   },
+   {
+    "name": "Activity theory",
+    "does": "analyses collective work as activity systems mediated by tools",
+    "hypotheses": [
+     "activity directed at an object",
+     "action mediated by artefacts and rules",
+     "analysis at the activity-system level"
+    ]
+   }
+  ],
+  "inputs": [
+   "interaction logs",
+   "user relationship data",
+   "workflow specifications"
+  ],
+  "outputs": [
+   "centrality metrics",
+   "collaboration frameworks",
+   "communication patterns"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (replaced distributed-cognition condition with activity-theory conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10003120.10003138",
@@ -1180,7 +1429,8 @@
   "name": "Ubiquitous and mobile computing",
   "taxonomy_cell": "CS.O.A3",
   "solves": [
-   "design computing that travels with people or sits in the surroundings"
+   "seamless computation integration into everyday environments",
+   "resource-constrained mobile device coordination"
   ],
   "signature": {
    "task": [
@@ -1188,13 +1438,20 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "sensor data",
+   "user location",
+   "device state"
+  ],
+  "outputs": [
+   "context-adaptive application responses",
+   "optimised resource allocation"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session ('Context-aware computing model' is not a standard named tool; emptied). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10003120.10003145",
@@ -1674,7 +1931,8 @@
   "name": "Theory and algorithms for application domains",
   "taxonomy_cell": "CS.O.A2",
   "solves": [
-   "give algorithms with guarantees for particular application areas"
+   "domain-specific computational complexity",
+   "algorithmic efficiency for specialised data structures"
   ],
   "signature": {
    "task": [
@@ -1683,13 +1941,19 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "domain constraints",
+   "problem specifications"
+  ],
+  "outputs": [
+   "optimised algorithms",
+   "complexity bounds"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (empty list kept; no specific named tool belongs to this heading). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10003752.10010124",
@@ -2532,7 +2796,8 @@
   "name": "Embedded and cyber-physical systems",
   "taxonomy_cell": "CS.O.A3",
   "solves": [
-   "build computers that sense and act on the physical world"
+   "real-time constraint satisfaction",
+   "integration of computation with physical processes"
   ],
   "signature": {
    "task": [
@@ -2540,14 +2805,41 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Rate-monotonic scheduling",
+    "does": "assigns fixed priorities by period so periodic tasks meet deadlines",
+    "hypotheses": [
+     "single processor, preemptive fixed priority",
+     "independent periodic tasks",
+     "deadline equals period",
+     "utilisation within n(2^(1/n)-1) bound for sufficiency"
+    ]
+   },
+   {
+    "name": "Nyquist-Shannon sampling theorem",
+    "does": "sets sampling rate needed to reconstruct a band-limited signal",
+    "hypotheses": [
+     "signal strictly band-limited",
+     "uniform sampling above twice the bandwidth"
+    ]
+   }
+  ],
+  "inputs": [
+   "task periods",
+   "worst-case execution times",
+   "analogue signal bandwidth"
+  ],
+  "outputs": [
+   "task priority assignments",
+   "minimum sampling frequency",
+   "schedulability guarantees"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (added single-processor, independence and utilisation-bound conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10010520.10010570",
@@ -2655,7 +2947,8 @@
   "name": "Software organization and properties",
   "taxonomy_cell": "CS.O.A1",
   "solves": [
-   "structure software so that it has the properties wanted"
+   "managing software complexity",
+   "optimising system modularity and maintainability"
   ],
   "signature": {
    "task": [
@@ -2663,14 +2956,39 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Information hiding (Parnas)",
+    "does": "partitions modules so each hides one likely-to-change design decision",
+    "hypotheses": [
+     "likely design changes identified",
+     "module interfaces defined"
+    ]
+   },
+   {
+    "name": "Coupling and cohesion",
+    "does": "rates inter-module dependency and intra-module relatedness",
+    "hypotheses": [
+     "system decomposed into modules",
+     "module boundaries identifiable"
+    ]
+   }
+  ],
+  "inputs": [
+   "software architecture diagrams",
+   "source code structure",
+   "module interface definitions"
+  ],
+  "outputs": [
+   "modularity assessments",
+   "dependency maps",
+   "refactoring recommendations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (trivial edits). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "CS.TK.10011007.10011006",

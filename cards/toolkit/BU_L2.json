@@ -6,7 +6,8 @@
   "name": "Accounting theory and standards",
   "taxonomy_cell": "BU.O.A1",
   "solves": [
-   "decide how transactions should be recognised and reported"
+   "financial reporting consistency",
+   "valuation of assets and liabilities"
   ],
   "signature": {
    "task": [
@@ -16,14 +17,39 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "IFRS Conceptual Framework",
+    "does": "Sets concepts underlying development and interpretation of accounting standards",
+    "hypotheses": [
+     "accrual basis of accounting",
+     "going concern assumption"
+    ]
+   },
+   {
+    "name": "Fair value measurement (IFRS 13)",
+    "does": "Measures fair value as the exit price in an orderly transaction",
+    "hypotheses": [
+     "orderly transaction between market participants at measurement date",
+     "principal or most advantageous market accessible to the entity"
+    ]
+   }
+  ],
+  "inputs": [
+   "transaction data",
+   "market prices",
+   "economic assumptions"
+  ],
+  "outputs": [
+   "financial statements",
+   "accounting policies",
+   "asset valuations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed IFRS 13 conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350102",
@@ -130,7 +156,8 @@
   "name": "International accounting",
   "taxonomy_cell": "BU.O.A1",
   "solves": [
-   "compare and reconcile reporting rules across countries"
+   "cross-border financial reporting inconsistencies",
+   "consolidation of multi-national entity accounts"
   ],
   "signature": {
    "task": [
@@ -140,14 +167,39 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "IAS 21 foreign currency translation",
+    "does": "Translates foreign transactions and foreign operations into presentation currency",
+    "hypotheses": [
+     "functional currency of each entity can be determined",
+     "exchange rates at transaction or reporting dates observable"
+    ]
+   },
+   {
+    "name": "IFRS 10 consolidated financial statements",
+    "does": "Consolidates entities controlled by a parent into group accounts",
+    "hypotheses": [
+     "parent controls the investee",
+     "uniform group accounting policies applied"
+    ]
+   }
+  ],
+  "inputs": [
+   "local currency financial data",
+   "foreign exchange rates",
+   "national accounting standards"
+  ],
+  "outputs": [
+   "consolidated financial statements",
+   "comparable financial reports",
+   "currency translation adjustments"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Dropped generic IFRS; added IFRS 10; fixed IAS 21 conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350105",
@@ -210,7 +262,8 @@
   "name": "Not-for-profit accounting and accountability",
   "taxonomy_cell": "BU.O.A1",
   "solves": [
-   "report on resources held for a purpose other than profit"
+   "financial reporting for non-profit entities",
+   "demonstrating stewardship of restricted funds"
   ],
   "signature": {
    "task": [
@@ -220,14 +273,31 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Fund accounting",
+    "does": "Tracks resources separately by donor or board-imposed restriction",
+    "hypotheses": [
+     "restricted and unrestricted resources exist",
+     "segregated reporting required by funders or regulation"
+    ]
+   }
+  ],
+  "inputs": [
+   "transaction records",
+   "donor restriction agreements",
+   "grant conditions"
+  ],
+  "outputs": [
+   "financial statements",
+   "compliance reports",
+   "fund balance summaries"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed generic Statement of Financial Performance). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350107",
@@ -236,7 +306,8 @@
   "name": "Sustainability accounting and reporting",
   "taxonomy_cell": "BU.O.A1",
   "solves": [
-   "measure and report environmental and social effects of an organisation"
+   "measurement of environmental and social impact",
+   "disclosure of non-financial performance"
   ],
   "signature": {
    "task": [
@@ -244,14 +315,48 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "GRI Standards",
+    "does": "Frames disclosure of an organisation's economic, environmental and social impacts",
+    "hypotheses": [
+     "impacts material to stakeholders identified",
+     "stakeholder inclusiveness"
+    ]
+   },
+   {
+    "name": "SASB Standards",
+    "does": "Gives industry-specific sustainability metrics for investor decisions",
+    "hypotheses": [
+     "financial materiality is the lens",
+     "industry classification applicable"
+    ]
+   },
+   {
+    "name": "Double materiality assessment (ESRS)",
+    "does": "Assesses both impact and financial materiality of sustainability matters",
+    "hypotheses": [
+     "impact and financial materiality assessed separately",
+     "stakeholder input available (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "environmental data",
+   "social impact metrics",
+   "governance policies",
+   "stakeholder feedback"
+  ],
+  "outputs": [
+   "sustainability reports",
+   "ESG disclosures",
+   "integrated reports"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded conditions; Double materiality tied to ESRS). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350108",
@@ -260,7 +365,8 @@
   "name": "Taxation accounting",
   "taxonomy_cell": "BU.O.A1",
   "solves": [
-   "compute tax owed under the rules"
+   "determination of tax liabilities",
+   "compliance with statutory tax obligations"
   ],
   "signature": {
    "task": [
@@ -270,14 +376,32 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Deferred tax accounting (IAS 12 liability method)",
+    "does": "Recognises tax effects of temporary differences between carrying and tax bases",
+    "hypotheses": [
+     "temporary differences between accounting and tax bases",
+     "enacted or substantively enacted tax rates known",
+     "future taxable profit probable for recognising deferred tax assets"
+    ]
+   }
+  ],
+  "inputs": [
+   "financial statements",
+   "tax legislation",
+   "taxable income calculations"
+  ],
+  "outputs": [
+   "tax expense",
+   "deferred tax assets and liabilities",
+   "effective tax rate"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Named to IAS 12 method; fixed conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350199",
@@ -309,7 +433,8 @@
   "name": "Environment and climate finance",
   "taxonomy_cell": "BU.O.A2",
   "solves": [
-   "price and fund responses to environmental risk"
+   "funding gaps for climate mitigation and adaptation",
+   "allocation of capital for sustainable infrastructure"
   ],
   "signature": {
    "task": [
@@ -317,14 +442,40 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Social cost of carbon",
+    "does": "Estimates monetised damage of one extra tonne of CO2 emissions",
+    "hypotheses": [
+     "discount rate specified",
+     "damage function from integrated assessment model"
+    ]
+   },
+   {
+    "name": "Green Bond Principles (ICMA)",
+    "does": "Voluntary guidelines for labelling and reporting green bond issuance",
+    "hypotheses": [
+     "proceeds directed to eligible green projects",
+     "transparent use-of-proceeds reporting"
+    ]
+   }
+  ],
+  "inputs": [
+   "carbon emission projections",
+   "discount rates",
+   "projected environmental impact",
+   "capital expenditure requirements"
+  ],
+  "outputs": [
+   "monetary value of climate externalities",
+   "certified green financing instruments",
+   "investment risk profiles"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Green Bond Framework renamed to ICMA Green Bond Principles). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350202",
@@ -438,7 +589,8 @@
   "name": "Financial institutions (incl. banking)",
   "taxonomy_cell": "BU.O.A2",
   "solves": [
-   "explain how banks and other intermediaries work and fail"
+   "capital adequacy and liquidity management",
+   "credit risk assessment and monetary transmission"
   ],
   "signature": {
    "task": [
@@ -446,14 +598,41 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Basel III",
+    "does": "Sets bank capital, leverage and liquidity requirements",
+    "hypotheses": [
+     "bank subject to national adoption of the accord",
+     "risk-weighted assets measurable"
+    ]
+   },
+   {
+    "name": "Merton structural credit model",
+    "does": "Prices default risk by treating equity as call option on assets",
+    "hypotheses": [
+     "asset value follows geometric Brownian motion",
+     "single zero-coupon debt maturing at T",
+     "frictionless markets, no arbitrage"
+    ]
+   }
+  ],
+  "inputs": [
+   "tier 1 capital ratios",
+   "asset volatility",
+   "liability maturity profiles",
+   "credit ratings"
+  ],
+  "outputs": [
+   "capital requirement buffers",
+   "probability of default",
+   "liquidity coverage ratios"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Merton conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350205",
@@ -462,21 +641,50 @@
   "name": "Household finance and financial literacy",
   "taxonomy_cell": "BU.O.A2",
   "solves": [
-   "explain how households manage money"
+   "optimising household resource allocation",
+   "improving individual financial decision-making"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Life-cycle hypothesis",
+    "does": "Households smooth consumption over lifetime given expected income",
+    "hypotheses": [
+     "forward-looking rational consumers",
+     "borrowing and saving at same rate",
+     "known lifetime horizon"
+    ]
+   },
+   {
+    "name": "Permanent income hypothesis",
+    "does": "Consumption depends on permanent rather than transitory income",
+    "hypotheses": [
+     "income has permanent and transitory components",
+     "borrowing and lending possible at same rate",
+     "rational expectations"
+    ]
+   }
+  ],
+  "inputs": [
+   "current income",
+   "expected future earnings",
+   "asset holdings",
+   "interest rates"
+  ],
+  "outputs": [
+   "optimal consumption levels",
+   "savings rates",
+   "debt-to-income ratios"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced weak conditions; added borrowing-rate condition). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350206",
@@ -532,7 +740,8 @@
   "name": "International finance",
   "taxonomy_cell": "BU.O.A2",
   "solves": [
-   "manage money across currencies and borders"
+   "cross-border capital flows",
+   "currency risk management"
   ],
   "signature": {
    "task": [
@@ -540,14 +749,51 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Covered interest parity",
+    "does": "Links forward premium to interest differential between currencies",
+    "hypotheses": [
+     "no arbitrage",
+     "negligible transaction costs",
+     "no capital controls"
+    ]
+   },
+   {
+    "name": "Purchasing power parity",
+    "does": "Ties exchange rates to relative price levels",
+    "hypotheses": [
+     "law of one price holds",
+     "no trade barriers or transport costs",
+     "comparable price baskets"
+    ]
+   },
+   {
+    "name": "Mundell-Fleming model",
+    "does": "Analyses policy effects in open economy with capital mobility",
+    "hypotheses": [
+     "small open economy",
+     "perfect capital mobility",
+     "sticky prices"
+    ]
+   }
+  ],
+  "inputs": [
+   "interest rates",
+   "consumer price indices",
+   "exchange rates",
+   "policy variables"
+  ],
+  "outputs": [
+   "forecasted exchange rates",
+   "equilibrium output",
+   "currency valuations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Specified covered interest parity; fixed conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350208",
@@ -614,21 +860,40 @@
   "name": "Not-for-profit finance and risk",
   "taxonomy_cell": "BU.O.A2",
   "solves": [
-   "fund and protect organisations that do not seek profit"
+   "financial sustainability of non-profit entities",
+   "mitigation of operational and fiduciary risks in NFP governance"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Fund accounting",
+    "does": "Tracks resources separately by donor or board-imposed restriction",
+    "hypotheses": [
+     "restricted and unrestricted funds exist",
+     "donor-imposed constraints must be reported"
+    ]
+   }
+  ],
+  "inputs": [
+   "donor agreements",
+   "grant conditions",
+   "expenditure data",
+   "risk identification workshops"
+  ],
+  "outputs": [
+   "statement of financial position by fund",
+   "risk mitigation plans",
+   "compliance reports"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed generic Risk Register). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350299",
@@ -710,21 +975,47 @@
   "name": "Business information management (incl. records, knowledge and intelligence)",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "keep an organisation's records and knowledge usable"
+   "inefficient information retrieval",
+   "loss of institutional memory"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "SECI model",
+    "does": "Describes knowledge creation by socialisation, externalisation, combination, internalisation",
+    "hypotheses": [
+     "knowledge exists in tacit and explicit forms",
+     "shared context enables conversion between forms"
+    ]
+   },
+   {
+    "name": "ISO 15489 records management",
+    "does": "Sets principles for creating and managing authentic, reliable records",
+    "hypotheses": [
+     "records must be authentic, reliable and usable",
+     "organisational accountability requires evidence"
+    ]
+   }
+  ],
+  "inputs": [
+   "unstructured data",
+   "organisational processes",
+   "document archives"
+  ],
+  "outputs": [
+   "knowledge repositories",
+   "compliant record systems",
+   "information taxonomies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Minor wording). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350303",
@@ -733,21 +1024,47 @@
   "name": "Business information systems",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "fit information systems to an organisation's work"
+   "inefficiencies in organisational data flow",
+   "misalignment between IT infrastructure and business goals"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "TOGAF Architecture Development Method",
+    "does": "Iterative method for developing enterprise architecture aligned to business goals",
+    "hypotheses": [
+     "business goals and scope defined",
+     "executive sponsorship (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Entity-relationship modelling",
+    "does": "Models business data as entities, attributes and relationships",
+    "hypotheses": [
+     "business entities and relationships identifiable",
+     "data requirements specified"
+    ]
+   }
+  ],
+  "inputs": [
+   "business requirements",
+   "process maps",
+   "legacy system specifications"
+  ],
+  "outputs": [
+   "system architecture diagrams",
+   "entity-relationship diagrams",
+   "IT strategic roadmaps"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic tools with TOGAF ADM and entity-relationship modelling). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350304",
@@ -756,21 +1073,48 @@
   "name": "Business systems in context",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "explain how business systems depend on their setting"
+   "misalignment between business processes and external environments",
+   "inefficiencies in organisational system integration"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Porter's Five Forces",
+    "does": "Assesses industry structure through five competitive forces",
+    "hypotheses": [
+     "industry boundary definable",
+     "rivals, entrants, substitutes, buyers, suppliers identifiable"
+    ]
+   },
+   {
+    "name": "Viable System Model (Beer)",
+    "does": "Diagnoses organisational viability through five interacting subsystems",
+    "hypotheses": [
+     "organisation treated as viable system within an environment (UNVERIFIED)",
+     "recursive structure of subsystems (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "market data",
+   "regulatory frameworks",
+   "organisational charts",
+   "competitor behaviour"
+  ],
+  "outputs": [
+   "environmental scan",
+   "strategic risk assessment",
+   "systemic bottleneck identification"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed generic PESTEL and Systems Thinking; added Viable System Model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350305",
@@ -779,7 +1123,8 @@
   "name": "Forensic intelligence",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "turn case data into leads about linked events"
+   "identifying patterns in criminal activity",
+   "linking disparate crime scenes to common sources"
   ],
   "signature": {
    "task": [
@@ -787,14 +1132,40 @@
     "classify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Behavioural case linkage analysis",
+    "does": "Links offences to one offender by behavioural similarity",
+    "hypotheses": [
+     "offender behaviour consistent across offences",
+     "behaviour distinctive between offenders",
+     "comparable case data"
+    ]
+   },
+   {
+    "name": "Bayesian networks",
+    "does": "Models probabilistic dependencies among evidence and hypotheses",
+    "hypotheses": [
+     "conditional independence structure specified",
+     "conditional probabilities estimable"
+    ]
+   }
+  ],
+  "inputs": [
+   "forensic evidence",
+   "crime scene reports",
+   "database records"
+  ],
+  "outputs": [
+   "crime series identification",
+   "probabilistic links",
+   "intelligence leads"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Specified conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350306",
@@ -803,7 +1174,8 @@
   "name": "Forensic science and management",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "manage the collection and handling of evidence"
+   "optimisation of forensic laboratory operations",
+   "quality management in criminalistics"
   ],
   "signature": {
    "task": [
@@ -811,14 +1183,39 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "ISO/IEC 17025",
+    "does": "Sets competence and impartiality requirements for testing laboratories",
+    "hypotheses": [
+     "laboratory seeks accreditation of testing competence",
+     "documented, validated methods"
+    ]
+   },
+   {
+    "name": "Six Sigma (DMAIC)",
+    "does": "Reduces process variation through data-driven define-measure-analyse-improve-control",
+    "hypotheses": [
+     "measurable process outputs",
+     "process reasonably stable for capability estimates"
+    ]
+   }
+  ],
+  "inputs": [
+   "laboratory workflow data",
+   "quality audit results",
+   "resource capacity metrics"
+  ],
+  "outputs": [
+   "accreditation status",
+   "process efficiency gains",
+   "standard operating procedures"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350307",
@@ -827,21 +1224,48 @@
   "name": "Technology management",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "choose and manage technologies in an organisation"
+   "optimising technology lifecycles",
+   "aligning technical capabilities with business strategy"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Technology readiness levels",
+    "does": "Rates technology maturity on a nine-point scale",
+    "hypotheses": [
+     "technology and system boundary defined",
+     "evidence demonstrated at each level"
+    ]
+   },
+   {
+    "name": "Technology S-curve",
+    "does": "Describes performance growth then saturation of a technology",
+    "hypotheses": [
+     "performance measurable over time",
+     "finite physical or theoretical limit exists"
+    ]
+   }
+  ],
+  "inputs": [
+   "technical performance data",
+   "R&D investment levels",
+   "market requirements",
+   "prototype test results"
+  ],
+  "outputs": [
+   "maturity ratings",
+   "investment timing decisions",
+   "technology development schedules"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Dropped generic roadmap). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350399",
@@ -873,7 +1297,8 @@
   "name": "Food and hospitality services",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "run food and accommodation services"
+   "optimising food service operations",
+   "managing hospitality resource allocation"
   ],
   "signature": {
    "task": [
@@ -881,14 +1306,38 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "First-in, first-out stock rotation",
+    "does": "Uses oldest stock first to limit spoilage",
+    "hypotheses": [
+     "perishable stock with dated batches",
+     "storage allows access by batch"
+    ]
+   },
+   {
+    "name": "Menu engineering matrix",
+    "does": "Classifies menu items by popularity and contribution margin",
+    "hypotheses": [
+     "sales mix and item costs known",
+     "items compete on the same menu"
+    ]
+   }
+  ],
+  "inputs": [
+   "inventory dates",
+   "item contribution margins",
+   "sales volume"
+  ],
+  "outputs": [
+   "stock rotation schedules",
+   "menu item classifications (stars, dogs, puzzles, plowhorses)"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Specified conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350402",
@@ -982,7 +1431,8 @@
   "name": "Retail",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "run the sale of goods to the public"
+   "optimising product distribution and sales",
+   "managing consumer touchpoints and inventory"
   ],
   "signature": {
    "task": [
@@ -990,14 +1440,41 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Economic order quantity",
+    "does": "Finds order size minimising ordering plus holding cost",
+    "hypotheses": [
+     "constant known demand",
+     "fixed lead time",
+     "no stockouts, constant unit costs"
+    ]
+   },
+   {
+    "name": "Huff retail gravity model",
+    "does": "Estimates probability a consumer patronises a store by size and distance",
+    "hypotheses": [
+     "patronage rises with store attractiveness and falls with distance",
+     "defined set of competing stores"
+    ]
+   }
+  ],
+  "inputs": [
+   "demand forecasts",
+   "holding costs",
+   "store square footage",
+   "geographic coordinates"
+  ],
+  "outputs": [
+   "optimal stock levels",
+   "predicted market share",
+   "estimated footfall"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Retail Gravity Model made Huff model; EOQ conditions added). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350405",
@@ -1006,21 +1483,40 @@
   "name": "Sport and leisure management",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "run sport and leisure organisations"
+   "optimising sports facility utilisation",
+   "strategic management of leisure services"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Balanced scorecard",
+    "does": "Tracks strategy through financial, customer, process and learning measures",
+    "hypotheses": [
+     "strategy articulated",
+     "measurable indicators for each perspective"
+    ]
+   }
+  ],
+  "inputs": [
+   "financial reports",
+   "customer satisfaction data",
+   "market trends",
+   "facility capacity metrics"
+  ],
+  "outputs": [
+   "strategic plans",
+   "performance benchmarks",
+   "resource allocation models"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed SWOT). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350499",
@@ -1052,7 +1548,8 @@
   "name": "Business and labour history",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "establish how work and business developed"
+   "evolution of commercial organisations",
+   "historical labour relations and workforce dynamics"
   ],
   "signature": {
    "task": [
@@ -1062,14 +1559,40 @@
     "inverse"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Comparative historical analysis",
+    "does": "Compares cases across time to explain organisational and labour outcomes",
+    "hypotheses": [
+     "longitudinal records available",
+     "cases sufficiently comparable"
+    ]
+   },
+   {
+    "name": "Prosopography",
+    "does": "Studies collective biography of a defined group from archival records",
+    "hypotheses": [
+     "group membership identifiable",
+     "sufficient archival records on individuals"
+    ]
+   }
+  ],
+  "inputs": [
+   "archival records",
+   "company ledgers",
+   "trade union minutes",
+   "census data"
+  ],
+  "outputs": [
+   "institutional trajectories",
+   "socio-economic trends",
+   "causal explanations for industrial change"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (No change). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350502",
@@ -1078,7 +1601,8 @@
   "name": "Employment equity and diversity",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "measure and improve fairness in employment"
+   "systemic workplace discrimination",
+   "under-representation of minority groups"
   ],
   "signature": {
    "task": [
@@ -1089,14 +1613,40 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Four-fifths (80%) rule",
+    "does": "Flags adverse impact when a group's selection rate is below 80% of the highest",
+    "hypotheses": [
+     "selection rates computed per group",
+     "adequate sample sizes",
+     "US-origin rule, used as screening only"
+    ]
+   },
+   {
+    "name": "Oaxaca-Blinder decomposition",
+    "does": "Splits group pay gap into explained and unexplained components",
+    "hypotheses": [
+     "linear wage equations for each group",
+     "characteristics observable and comparable"
+    ]
+   }
+  ],
+  "inputs": [
+   "hiring and promotion rates",
+   "employee demographic data",
+   "labour market availability statistics"
+  ],
+  "outputs": [
+   "evidence of adverse impact",
+   "diversity gap analysis",
+   "equity compliance reports"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Four-fifths conditions fixed; removed generic Diversity Audit; added Oaxaca-Blinder). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350503",
@@ -1143,7 +1693,8 @@
   "name": "Industrial and employee relations",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "explain and manage relations between employers and workers"
+   "workplace conflict and dispute resolution",
+   "collective bargaining and employment contract negotiation"
   ],
   "signature": {
    "task": [
@@ -1153,14 +1704,39 @@
     "multiple_competing"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Frames of reference (unitary, pluralist, radical)",
+    "does": "Contrasts views of workplace interests and conflict",
+    "hypotheses": [
+     "organisation viewed as team, coalition or class arena (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Dunlop's industrial relations system",
+    "does": "Treats industrial relations as system of actors, contexts and rules",
+    "hypotheses": [
+     "actors, context and shared ideology identifiable",
+     "output is a web of rules"
+    ]
+   }
+  ],
+  "inputs": [
+   "employment contracts",
+   "collective agreements",
+   "labour market data",
+   "statutory regulations"
+  ],
+  "outputs": [
+   "industrial agreements",
+   "grievance resolutions",
+   "workplace policies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Renamed to Fox frames of reference; conditions rewritten). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350505",
@@ -1209,7 +1785,8 @@
   "name": "Workforce planning",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "match the number and skills of staff to future need"
+   "labour supply and demand gaps",
+   "optimising headcount and skill distribution"
   ],
   "signature": {
    "task": [
@@ -1217,14 +1794,33 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Markov workforce flow model",
+    "does": "Projects headcount by grade from transition probabilities",
+    "hypotheses": [
+     "stable transition probabilities",
+     "future state depends only on current state",
+     "employees in each category homogeneous"
+    ]
+   }
+  ],
+  "inputs": [
+   "current headcount",
+   "historical turnover rates",
+   "business growth forecasts",
+   "productivity ratios"
+  ],
+  "outputs": [
+   "staffing gap analysis",
+   "recruitment and retention targets",
+   "future skill requirements"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed Ratio Analysis (not a named method here)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350507",
@@ -1233,7 +1829,8 @@
   "name": "Workplace wellbeing and quality of working life",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "measure and improve how people fare at work"
+   "employee burnout and stress",
+   "low job satisfaction and engagement"
   ],
   "signature": {
    "task": [
@@ -1241,14 +1838,38 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Job demands-resources model",
+    "does": "Explains strain and engagement from job demands and resources",
+    "hypotheses": [
+     "job characteristics classifiable as demands or resources",
+     "demands drive strain and resources drive motivation"
+    ]
+   },
+   {
+    "name": "Karasek demand-control model",
+    "does": "Predicts strain from high demands combined with low decision latitude",
+    "hypotheses": [
+     "demands and control measured separately",
+     "strain arises from their interaction"
+    ]
+   }
+  ],
+  "inputs": [
+   "employee surveys",
+   "workload metrics",
+   "autonomy levels"
+  ],
+  "outputs": [
+   "stress risk profiles",
+   "wellbeing intervention strategies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Rewrote conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350599",
@@ -1280,7 +1901,8 @@
   "name": "Consumer behaviour",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "explain how buyers choose"
+   "predicting purchase decisions",
+   "understanding customer motivations"
   ],
   "signature": {
    "task": [
@@ -1291,14 +1913,49 @@
     "single_decision_maker"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Theory of planned behaviour",
+    "does": "Predicts behaviour from attitude, norms and perceived control via intention",
+    "hypotheses": [
+     "behaviour at least partly under volitional control",
+     "intention measured at same specificity as behaviour"
+    ]
+   },
+   {
+    "name": "Consumer decision journey",
+    "does": "Maps consideration, evaluation, purchase and post-purchase loyalty loop",
+    "hypotheses": [
+     "stages describe real choices (UNVERIFIED)",
+     "post-purchase experience feeds later choice"
+    ]
+   },
+   {
+    "name": "Multi-attribute utility theory",
+    "does": "Scores alternatives by weighted utility across attributes",
+    "hypotheses": [
+     "attributes identifiable",
+     "preferences additive and compensatory",
+     "weights and values elicitable"
+    ]
+   }
+  ],
+  "inputs": [
+   "customer demographics",
+   "psychographic data",
+   "product attribute ratings",
+   "perceived social pressures"
+  ],
+  "outputs": [
+   "predicted purchase probability",
+   "customer segment profiles",
+   "attribute importance weights"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed TPB and MAUT conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350602",
@@ -1307,21 +1964,55 @@
   "name": "Consumer-oriented product or service development",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "develop a product around what buyers want"
+   "mismatch between product features and customer needs",
+   "inefficient product-market fit"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Jobs-to-be-done",
+    "does": "Frames demand around the progress customers seek in a circumstance",
+    "hypotheses": [
+     "customer goals and circumstances elicitable"
+    ]
+   },
+   {
+    "name": "Kano model",
+    "does": "Classifies features as must-be, one-dimensional or attractive",
+    "hypotheses": [
+     "features classifiable by paired survey questions",
+     "customer needs stable over survey period"
+    ]
+   },
+   {
+    "name": "Lean Startup (build-measure-learn)",
+    "does": "Tests product hypotheses with minimum viable products",
+    "hypotheses": [
+     "high market uncertainty",
+     "minimum viable products can be tested cheaply"
+    ]
+   }
+  ],
+  "inputs": [
+   "customer pain points",
+   "market data",
+   "user feedback",
+   "prototype performance"
+  ],
+  "outputs": [
+   "product requirements",
+   "validated value propositions",
+   "product roadmaps"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Design Thinking with Kano model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350603",
@@ -1330,21 +2021,39 @@
   "name": "Industrial marketing",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "sell to organisations"
+   "B2B demand generation",
+   "industrial product positioning and pricing"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Webster-Wind buying centre model",
+    "does": "Describes organisational purchasing as shared roles among participants",
+    "hypotheses": [
+     "purchase involves several people",
+     "roles (user, influencer, buyer, decider, gatekeeper) identifiable"
+    ]
+   }
+  ],
+  "inputs": [
+   "market data",
+   "customer organisational structures",
+   "competitor pricing"
+  ],
+  "outputs": [
+   "marketing strategies",
+   "target account lists",
+   "pricing models"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed generic product life cycle). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350604",
@@ -1353,7 +2062,8 @@
   "name": "Marketing communications",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "plan messages to buyers and judge their effect"
+   "optimising brand messaging",
+   "coordinating promotional activities"
   ],
   "signature": {
    "task": [
@@ -1361,14 +2071,41 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Elaboration likelihood model",
+    "does": "Predicts persuasion by central or peripheral processing",
+    "hypotheses": [
+     "processing depends on motivation and ability",
+     "attitude change route determines durability"
+    ]
+   },
+   {
+    "name": "AIDA model",
+    "does": "Orders response as attention, interest, desire, action",
+    "hypotheses": [
+     "consumers pass through stages in order (contested)",
+     "message exposure achieved"
+    ]
+   }
+  ],
+  "inputs": [
+   "brand objectives",
+   "target audience data",
+   "budget constraints",
+   "channel availability"
+  ],
+  "outputs": [
+   "communication strategy",
+   "media plan",
+   "creative briefs",
+   "campaign metrics"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced IMC concept with Elaboration Likelihood Model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350605",
@@ -1451,21 +2188,48 @@
   "name": "Marketing technology",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "use digital tools to reach buyers"
+   "optimising customer acquisition and retention",
+   "integrating disparate marketing data streams"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Multi-touch attribution (Shapley or Markov)",
+    "does": "Allocates conversion credit across marketing touchpoints",
+    "hypotheses": [
+     "users trackable across touchpoints",
+     "conversions recorded",
+     "touchpoint data complete enough"
+    ]
+   },
+   {
+    "name": "RFM analysis",
+    "does": "Segments customers by recency, frequency and monetary value",
+    "hypotheses": [
+     "past purchasing predicts future behaviour",
+     "transaction history available"
+    ]
+   }
+  ],
+  "inputs": [
+   "customer behavioural data",
+   "campaign performance metrics",
+   "CRM records"
+  ],
+  "outputs": [
+   "conversion rates",
+   "customer lifetime value",
+   "automated communication sequences"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Dropped generic workflow; added RFM analysis). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350608",
@@ -1474,21 +2238,56 @@
   "name": "Marketing theory",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "build general accounts of how markets and exchange work"
+   "optimising market positioning",
+   "understanding consumer behaviour patterns"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Marketing mix (4Ps)",
+    "does": "Organises controllable levers: product, price, place, promotion",
+    "hypotheses": [
+     "firm controls the four variables",
+     "target market defined"
+    ]
+   },
+   {
+    "name": "Segmentation, targeting and positioning",
+    "does": "Splits markets into segments then selects and positions offers",
+    "hypotheses": [
+     "market heterogeneous",
+     "segments measurable and reachable"
+    ]
+   },
+   {
+    "name": "BCG growth-share matrix",
+    "does": "Classifies business units by market growth and relative share",
+    "hypotheses": [
+     "relative share correlates with cost advantage",
+     "growth implies cash demand"
+    ]
+   }
+  ],
+  "inputs": [
+   "market data",
+   "consumer demographics",
+   "competitor analysis",
+   "product attributes"
+  ],
+  "outputs": [
+   "strategic positioning",
+   "resource allocation plans",
+   "target market definitions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350609",
@@ -1497,21 +2296,48 @@
   "name": "Not-for-profit marketing",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "promote causes and organisations that do not seek profit"
+   "resource scarcity in promotion",
+   "donor acquisition and retention"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Theory of planned behaviour",
+    "does": "Predicts giving from attitude, norms and perceived control via intention",
+    "hypotheses": [
+     "behaviour partly under volitional control",
+     "intention measured at same specificity as behaviour"
+    ]
+   },
+   {
+    "name": "Segmentation, targeting and positioning",
+    "does": "Splits donors or beneficiaries into segments and positions offers",
+    "hypotheses": [
+     "market heterogeneous",
+     "segments measurable"
+    ]
+   }
+  ],
+  "inputs": [
+   "donor demographics",
+   "psychographic data",
+   "available budget",
+   "organisational mission"
+  ],
+  "outputs": [
+   "targeted communication strategies",
+   "donor personas",
+   "fundraising campaigns"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350610",
@@ -1603,21 +2429,56 @@
   "name": "Social marketing",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "apply marketing methods to change behaviour for public benefit"
+   "behavioural change for social good",
+   "public health and environmental challenges"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Stages of change (transtheoretical model)",
+    "does": "Matches interventions to readiness to change behaviour",
+    "hypotheses": [
+     "change proceeds through distinct stages",
+     "individual stage assessable"
+    ]
+   },
+   {
+    "name": "Theory of planned behaviour",
+    "does": "Predicts behaviour from attitude, norms and perceived control via intention",
+    "hypotheses": [
+     "behaviour partly under volitional control",
+     "intention measured at same specificity as behaviour"
+    ]
+   },
+   {
+    "name": "COM-B model (Behaviour Change Wheel)",
+    "does": "Explains behaviour by capability, opportunity and motivation",
+    "hypotheses": [
+     "behaviour specified precisely",
+     "all three components assessed (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "target audience demographics",
+   "behavioural barriers",
+   "desired social outcome",
+   "available incentives"
+  ],
+  "outputs": [
+   "behavioural change strategies",
+   "communication campaigns",
+   "intervention frameworks"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Social Marketing Mix with COM-B). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350699",
@@ -1649,7 +2510,8 @@
   "name": "Corporate governance",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "design how a company is directed and held to account"
+   "agency conflicts between shareholders and managers",
+   "board effectiveness and accountability"
   ],
   "signature": {
    "task": [
@@ -1659,14 +2521,41 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Agency theory",
+    "does": "Analyses conflict and contracting between owners and managers",
+    "hypotheses": [
+     "information asymmetry",
+     "divergent interests",
+     "self-interested actors"
+    ]
+   },
+   {
+    "name": "Stewardship theory",
+    "does": "Assumes managers act in the organisation's interest when empowered",
+    "hypotheses": [
+     "goals aligned with the organisation",
+     "intrinsic motivation",
+     "high-trust setting"
+    ]
+   }
+  ],
+  "inputs": [
+   "Corporate charters",
+   "Executive compensation structures",
+   "Board composition data"
+  ],
+  "outputs": [
+   "Governance frameworks",
+   "Incentive alignment strategies",
+   "Compliance reports"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Tidied wording). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350702",
@@ -1675,7 +2564,8 @@
   "name": "Corporate social responsibility",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "define and report what a company owes to society"
+   "balancing profit with social and environmental impact",
+   "managing corporate stakeholder expectations"
   ],
   "signature": {
    "task": [
@@ -1683,14 +2573,40 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Carroll's CSR pyramid",
+    "does": "Layers economic, legal, ethical and philanthropic responsibilities",
+    "hypotheses": [
+     "four responsibility types distinguishable",
+     "firm operates within a societal context"
+    ]
+   },
+   {
+    "name": "Triple bottom line",
+    "does": "Reports profit, people and planet outcomes together",
+    "hypotheses": [
+     "social and environmental impacts measurable",
+     "boundaries of reporting defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "financial reports",
+   "environmental impact data",
+   "social performance metrics",
+   "stakeholder feedback"
+  ],
+  "outputs": [
+   "sustainability reports",
+   "CSR strategies",
+   "integrated performance assessments"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350703",
@@ -1699,7 +2615,8 @@
   "name": "Disaster and emergency management",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "prepare for and respond to emergencies"
+   "organisational resilience to shocks",
+   "minimising loss of life and assets during crises"
   ],
   "signature": {
    "task": [
@@ -1707,14 +2624,41 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Haddon matrix",
+    "does": "Cross-tabulates pre-event, event, post-event phases with host, agent, environment",
+    "hypotheses": [
+     "event divisible into phases",
+     "risk factors identifiable per phase"
+    ]
+   },
+   {
+    "name": "Business impact analysis (ISO 22301)",
+    "does": "Identifies critical functions and recovery time objectives",
+    "hypotheses": [
+     "critical functions identifiable",
+     "tolerable downtime estimable"
+    ]
+   }
+  ],
+  "inputs": [
+   "risk assessments",
+   "resource inventories",
+   "threat intelligence",
+   "impact analysis"
+  ],
+  "outputs": [
+   "mitigation strategies",
+   "response protocols",
+   "recovery timelines",
+   "contingency plans"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Haddon conditions fixed; BCP made business impact analysis (ISO 22301)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350704",
@@ -1723,21 +2667,56 @@
   "name": "Entrepreneurship",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "explain how new ventures start and grow"
+   "identifying and exploiting market opportunities",
+   "scaling new ventures from concept to commercialisation"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Business model canvas",
+    "does": "Describes a venture across nine building blocks",
+    "hypotheses": [
+     "value proposition definable",
+     "customer segments identifiable"
+    ]
+   },
+   {
+    "name": "Lean Startup (build-measure-learn)",
+    "does": "Tests venture hypotheses with minimum viable products",
+    "hypotheses": [
+     "high market uncertainty",
+     "minimum viable product can be built cheaply"
+    ]
+   },
+   {
+    "name": "Effectuation",
+    "does": "Describes entrepreneurs acting from available means under unpredictable futures",
+    "hypotheses": [
+     "future unpredictable",
+     "entrepreneur controls some resources (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "customer hypotheses",
+   "resource availability",
+   "market data",
+   "value propositions"
+  ],
+  "outputs": [
+   "validated business models",
+   "pivot or persevere decisions",
+   "product-market fit"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added effectuation). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350705",
@@ -1782,21 +2761,56 @@
   "name": "International business",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "explain how firms operate across borders"
+   "market entry strategy",
+   "cross-border operational scaling"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "CAGE distance framework",
+    "does": "Compares countries by cultural, administrative, geographic, economic distance",
+    "hypotheses": [
+     "distance dimensions matter to cross-border activity",
+     "two or more countries compared"
+    ]
+   },
+   {
+    "name": "Eclectic (OLI) paradigm",
+    "does": "Explains foreign direct investment by ownership, location, internalisation advantages",
+    "hypotheses": [
+     "firm holds ownership advantage",
+     "location advantage abroad",
+     "internalisation advantage over licensing"
+    ]
+   },
+   {
+    "name": "Uppsala internationalisation model",
+    "does": "Explains stepwise foreign expansion through experiential market knowledge",
+    "hypotheses": [
+     "market knowledge gained incrementally",
+     "psychic distance shapes entry order"
+    ]
+   }
+  ],
+  "inputs": [
+   "country-level socio-economic data",
+   "firm-specific resource capabilities",
+   "regulatory environments"
+  ],
+  "outputs": [
+   "market selection priority",
+   "optimal entry mode",
+   "risk assessment"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Uppsala model). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350707",
@@ -1805,21 +2819,56 @@
   "name": "Leadership",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "explain what makes leading effective"
+   "organisational direction and alignment",
+   "optimising team performance and motivation"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Situational leadership model",
+    "does": "Matches leadership style to follower readiness",
+    "hypotheses": [
+     "follower readiness assessable",
+     "leader can adapt style"
+    ]
+   },
+   {
+    "name": "Transformational leadership",
+    "does": "Motivates followers beyond self-interest through vision and inspiration",
+    "hypotheses": [
+     "followers' values can be raised (UNVERIFIED)",
+     "leader-follower relationship exists"
+    ]
+   },
+   {
+    "name": "Adair's action-centred leadership",
+    "does": "Balances task, team and individual needs",
+    "hypotheses": [
+     "task, team and individual needs interdependent",
+     "leader can influence all three"
+    ]
+   }
+  ],
+  "inputs": [
+   "follower skill levels",
+   "organisational goals",
+   "team dynamics",
+   "performance data"
+  ],
+  "outputs": [
+   "leadership style selection",
+   "strategic direction",
+   "employee engagement levels"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed transformational conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350708",
@@ -1828,21 +2877,57 @@
   "name": "Not-for-profit business and management",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "manage organisations that do not seek profit"
+   "governance and operational efficiency of non-profit organisations",
+   "balancing social mission with financial sustainability"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Theory of change",
+    "does": "Maps pathway from activities to long-term outcomes",
+    "hypotheses": [
+     "long-term goal defined",
+     "causal links and assumptions explicit"
+    ]
+   },
+   {
+    "name": "Logic model",
+    "does": "Lays out inputs, activities, outputs and outcomes",
+    "hypotheses": [
+     "programme causal chain can be specified",
+     "indicators measurable"
+    ]
+   },
+   {
+    "name": "Social return on investment",
+    "does": "Values social outcomes in money relative to cost",
+    "hypotheses": [
+     "outcomes monetisable via proxies",
+     "stakeholders identified",
+     "deadweight and attribution estimated"
+    ]
+   }
+  ],
+  "inputs": [
+   "mission statements",
+   "resource availability",
+   "stakeholder feedback",
+   "financial expenditure"
+  ],
+  "outputs": [
+   "impact frameworks",
+   "performance indicators",
+   "social value ratios"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350709",
@@ -1851,21 +2936,57 @@
   "name": "Organisation and management theory",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "build general accounts of how organisations work"
+   "optimising organisational structure",
+   "improving managerial efficiency and coordination"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Agency theory",
+    "does": "Analyses contracting between principals and agents",
+    "hypotheses": [
+     "information asymmetry",
+     "divergent goals",
+     "self-interested actors"
+    ]
+   },
+   {
+    "name": "Mintzberg's organisational configurations",
+    "does": "Classifies structures into five ideal types by coordination mechanism",
+    "hypotheses": [
+     "organisations approximate ideal types",
+     "structure fits situation"
+    ]
+   },
+   {
+    "name": "Contingency theory",
+    "does": "Links best structure to size, technology and environment",
+    "hypotheses": [
+     "no single best way to organise",
+     "fit with contingencies drives performance"
+    ]
+   }
+  ],
+  "inputs": [
+   "organisational goals",
+   "environmental variables",
+   "incentive structures",
+   "reporting lines"
+  ],
+  "outputs": [
+   "optimal structural design",
+   "governance frameworks",
+   "management strategies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350710",
@@ -1874,7 +2995,8 @@
   "name": "Organisational behaviour",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "explain how people behave inside organisations"
+   "inefficiencies in workplace dynamics",
+   "low employee engagement and productivity"
   ],
   "signature": {
    "task": [
@@ -1882,14 +3004,48 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Herzberg's two-factor theory",
+    "does": "Separates hygiene factors from motivators in job satisfaction",
+    "hypotheses": [
+     "satisfaction and dissatisfaction are distinct dimensions",
+     "factors classifiable as hygiene or motivator"
+    ]
+   },
+   {
+    "name": "Lewin's change model (force field)",
+    "does": "Describes change as unfreeze, move, refreeze under opposing forces",
+    "hypotheses": [
+     "driving and restraining forces identifiable",
+     "behaviour equilibrium can be shifted"
+    ]
+   },
+   {
+    "name": "Expectancy theory (Vroom)",
+    "does": "Predicts effort from expectancy, instrumentality and valence",
+    "hypotheses": [
+     "effort-performance link perceived",
+     "performance-reward link perceived",
+     "rewards valued"
+    ]
+   }
+  ],
+  "inputs": [
+   "employee performance data",
+   "cultural surveys",
+   "management structures"
+  ],
+  "outputs": [
+   "intervention strategies",
+   "motivational frameworks",
+   "organisational design recommendations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced vague conditions with substantive ones). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350711",
@@ -1898,21 +3054,49 @@
   "name": "Organisational planning and management",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "set an organisation's aims and arrange work to meet them"
+   "strategic alignment of resources",
+   "optimisation of operational efficiency"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Balanced scorecard",
+    "does": "Tracks strategy through financial, customer, process and learning measures",
+    "hypotheses": [
+     "strategy articulated",
+     "measurable indicators"
+    ]
+   },
+   {
+    "name": "Management by objectives",
+    "does": "Cascades agreed measurable objectives through the organisation",
+    "hypotheses": [
+     "objectives specific and measurable",
+     "goals agreed between managers and staff"
+    ]
+   }
+  ],
+  "inputs": [
+   "market data",
+   "organisational goals",
+   "resource capacity",
+   "competitor activity"
+  ],
+  "outputs": [
+   "strategic plans",
+   "performance metrics",
+   "risk assessments",
+   "resource allocations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed SWOT and Five Forces; added management by objectives). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350712",
@@ -2029,21 +3213,55 @@
   "name": "Public sector organisation and management",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "manage public bodies"
+   "inefficiency in government service delivery",
+   "public sector governance and accountability"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "New public management",
+    "does": "Applies private-sector techniques to public service delivery",
+    "hypotheses": [
+     "services can be disaggregated and contracted",
+     "market-type incentives improve performance (contested)"
+    ]
+   },
+   {
+    "name": "Logic model",
+    "does": "Lays out inputs, activities, outputs and outcomes",
+    "hypotheses": [
+     "causal links between activities and results identifiable",
+     "indicators measurable"
+    ]
+   },
+   {
+    "name": "Moore's public value strategic triangle",
+    "does": "Aligns public value, authorising environment and operational capacity",
+    "hypotheses": [
+     "public value definable",
+     "authorising environment identifiable (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "policy objectives",
+   "resource allocations",
+   "performance data"
+  ],
+  "outputs": [
+   "service delivery frameworks",
+   "impact evaluations",
+   "governance structures"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reframed NPM conditions; added public value framework). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350715",
@@ -2101,21 +3319,48 @@
   "name": "Small business organisation and management",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "run small firms"
+   "optimising small-scale operational efficiency",
+   "managing resource constraints in small enterprises"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Business model canvas",
+    "does": "Describes a venture across nine building blocks",
+    "hypotheses": [
+     "value proposition definable",
+     "customer segments identifiable"
+    ]
+   },
+   {
+    "name": "Churchill-Lewis small business growth stages",
+    "does": "Describes stages of small firm growth and associated management problems",
+    "hypotheses": [
+     "firms pass through recognisable stages (UNVERIFIED)",
+     "owner involvement changes by stage (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "market data",
+   "resource availability",
+   "customer feedback",
+   "competitor analysis"
+  ],
+  "outputs": [
+   "strategic roadmap",
+   "value proposition",
+   "operational plan"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced SWOT with Churchill-Lewis growth stages). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350717",
@@ -2124,7 +3369,8 @@
   "name": "Stakeholder engagement",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "identify who is affected by a decision and involve them"
+   "misalignment of project goals with external interests",
+   "lack of social licence to operate"
   ],
   "signature": {
    "task": [
@@ -2132,14 +3378,39 @@
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Stakeholder salience model (Mitchell, Agle, Wood)",
+    "does": "Prioritises stakeholders by power, legitimacy and urgency",
+    "hypotheses": [
+     "attributes are perceived and variable",
+     "managers can assess each attribute"
+    ]
+   },
+   {
+    "name": "Power-interest matrix",
+    "does": "Sorts stakeholders by power and interest to set engagement",
+    "hypotheses": [
+     "power and interest assessable",
+     "stakeholders identifiable"
+    ]
+   }
+  ],
+  "inputs": [
+   "stakeholder lists",
+   "influence assessments",
+   "project objectives"
+  ],
+  "outputs": [
+   "engagement strategy",
+   "communication plan",
+   "prioritisation matrix"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350718",
@@ -2219,7 +3490,8 @@
   "name": "Impacts of tourism",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "estimate what visitors do to a place"
+   "assessment of tourism's socio-economic and environmental effects",
+   "management of destination overcapacity"
   ],
   "signature": {
    "task": [
@@ -2227,14 +3499,49 @@
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Butler tourism area life cycle",
+    "does": "Describes destination stages from exploration to decline or rejuvenation",
+    "hypotheses": [
+     "destination passes through stages",
+     "visitor numbers follow S-shaped path",
+     "capacity limits eventually bind"
+    ]
+   },
+   {
+    "name": "Carrying capacity analysis",
+    "does": "Estimates visitor levels a site can sustain",
+    "hypotheses": [
+     "thresholds definable",
+     "impact indicators measurable"
+    ]
+   },
+   {
+    "name": "Limits of acceptable change",
+    "does": "Sets agreed indicators and standards for acceptable visitor impact",
+    "hypotheses": [
+     "indicators and standards agreed",
+     "monitoring in place"
+    ]
+   }
+  ],
+  "inputs": [
+   "visitor arrival data",
+   "environmental quality metrics",
+   "local community sentiment",
+   "infrastructure capacity"
+  ],
+  "outputs": [
+   "development stage classification",
+   "maximum sustainable visitor thresholds",
+   "impact mitigation strategies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added limits of acceptable change). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350802",
@@ -2282,21 +3589,46 @@
   "name": "Tourism management",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "run tourism businesses and destinations"
+   "optimising destination attractiveness",
+   "managing tourism growth and sustainability"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Butler tourism area life cycle",
+    "does": "Describes destination stages from exploration to decline or rejuvenation",
+    "hypotheses": [
+     "destination passes through stages",
+     "capacity limits eventually bind"
+    ]
+   },
+   {
+    "name": "Leiper's tourism system",
+    "does": "Models tourism as generating region, transit route and destination",
+    "hypotheses": [
+     "tourism treated as open system",
+     "travellers, regions and industry identifiable"
+    ]
+   }
+  ],
+  "inputs": [
+   "visitor arrival statistics",
+   "infrastructure capacity",
+   "environmental impact data"
+  ],
+  "outputs": [
+   "development stage classification",
+   "strategic management interventions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Merged duplicate TALC entries; added Leiper tourism system). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350804",
@@ -2305,21 +3637,54 @@
   "name": "Tourism marketing",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "promote destinations"
+   "attracting visitors to destinations",
+   "optimising tourism product positioning"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Butler tourism area life cycle",
+    "does": "Informs positioning by destination stage",
+    "hypotheses": [
+     "destination passes through stages",
+     "visitor numbers measurable"
+    ]
+   },
+   {
+    "name": "Services marketing mix (7Ps)",
+    "does": "Adds people, process and physical evidence to the 4Ps",
+    "hypotheses": [
+     "firm controls the marketing variables",
+     "target market defined"
+    ]
+   },
+   {
+    "name": "Push-pull motivation model",
+    "does": "Explains travel by internal push and destination pull factors",
+    "hypotheses": [
+     "motivations identifiable (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "visitor arrival data",
+   "competitor analysis",
+   "market demographics"
+  ],
+  "outputs": [
+   "strategic growth plans",
+   "promotional campaigns",
+   "positioning statements"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Marketing mix extended to services 7Ps; added push-pull motivation). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350805",
@@ -2328,7 +3693,8 @@
   "name": "Tourism resource appraisal",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "assess what a place offers visitors and how much use it can bear"
+   "valuation of tourism assets",
+   "assessment of destination potential"
   ],
   "signature": {
    "task": [
@@ -2336,14 +3702,48 @@
     "classify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Travel cost method",
+    "does": "Infers site value from visitors' travel costs",
+    "hypotheses": [
+     "travel cost proxies price",
+     "visits are for a single purpose",
+     "visitors maximise utility"
+    ]
+   },
+   {
+    "name": "Contingent valuation method",
+    "does": "Elicits willingness to pay for non-market assets by survey",
+    "hypotheses": [
+     "respondents understand the hypothetical market",
+     "responses are truthful",
+     "plausible payment vehicle"
+    ]
+   },
+   {
+    "name": "Recreation Opportunity Spectrum",
+    "does": "Classifies settings along a range of recreation opportunities",
+    "hypotheses": [
+     "settings classifiable by physical, social and managerial attributes (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "visitor expenditure data",
+   "survey responses",
+   "geographic distance data"
+  ],
+  "outputs": [
+   "economic value of resources",
+   "consumer surplus",
+   "resource viability scores"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Recreation Opportunity Spectrum). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350806",
@@ -2352,21 +3752,55 @@
   "name": "Tourist behaviour and visitor experience",
   "taxonomy_cell": "BU.O.A4",
   "solves": [
-   "explain what visitors do and feel"
+   "optimising visitor satisfaction",
+   "predicting tourist decision-making"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Theory of planned behaviour",
+    "does": "Predicts travel choice from attitude, norms and perceived control via intention",
+    "hypotheses": [
+     "behaviour partly under volitional control",
+     "intention measured at same specificity as behaviour"
+    ]
+   },
+   {
+    "name": "Experience economy model (Pine and Gilmore)",
+    "does": "Positions value by level of customer engagement and immersion",
+    "hypotheses": [
+     "experience is staged as distinct offering",
+     "memorable engagement is valued"
+    ]
+   },
+   {
+    "name": "Expectation-disconfirmation paradigm",
+    "does": "Explains satisfaction as gap between expectations and perceived performance",
+    "hypotheses": [
+     "expectations formed before the visit",
+     "performance perceived"
+    ]
+   }
+  ],
+  "inputs": [
+   "visitor surveys",
+   "demographic data",
+   "behavioural observations"
+  ],
+  "outputs": [
+   "satisfaction metrics",
+   "predictive behavioural models",
+   "service improvement strategies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced NPS with expectation-disconfirmation). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350899",
@@ -2398,7 +3832,8 @@
   "name": "Air transportation and freight services",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "run air transport of people and goods"
+   "optimising air cargo logistics",
+   "managing air freight capacity and scheduling"
   ],
   "signature": {
    "task": [
@@ -2406,14 +3841,50 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hub-and-spoke network",
+    "does": "Routes flows through hubs to consolidate volume",
+    "hypotheses": [
+     "network economies from consolidation",
+     "hub capacity avoids congestion"
+    ]
+   },
+   {
+    "name": "Mixed-integer linear programming",
+    "does": "Optimises schedules and capacity with linear objective and integer decisions",
+    "hypotheses": [
+     "linear objective and constraints",
+     "some variables integer",
+     "data deterministic"
+    ]
+   },
+   {
+    "name": "Littlewood's rule",
+    "does": "Sets seat protection for high fares against discount demand",
+    "hypotheses": [
+     "two fare classes",
+     "independent demand per class",
+     "discount demand books first"
+    ]
+   }
+  ],
+  "inputs": [
+   "cargo volume",
+   "aircraft capacity",
+   "route distances",
+   "fuel costs"
+  ],
+  "outputs": [
+   "optimal routing schedules",
+   "load factor percentages",
+   "cost-minimised logistics plans"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Reworded conditions; added Littlewood rule). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350902",
@@ -2422,7 +3893,8 @@
   "name": "Intelligent mobility",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "use data and automation to improve movement"
+   "inefficiencies in urban transport",
+   "optimisation of multi-modal transit networks"
   ],
   "signature": {
    "task": [
@@ -2430,14 +3902,42 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Four-step travel demand model",
+    "does": "Forecasts trips by generation, distribution, mode choice, assignment",
+    "hypotheses": [
+     "zones aggregated",
+     "land use fixed over forecast",
+     "travellers respond to generalised cost"
+    ]
+   },
+   {
+    "name": "Wardrop user equilibrium",
+    "does": "Equilibrium where no traveller gains by changing route",
+    "hypotheses": [
+     "travellers identical and minimise own travel time",
+     "perfect information",
+     "travel time depends on flow"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "network topology",
+   "current traffic volumes",
+   "cost of travel"
+  ],
+  "outputs": [
+   "predicted trip matrices",
+   "network congestion levels",
+   "optimal route assignments"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Specified conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350903",
@@ -2497,7 +3997,8 @@
   "name": "Maritime transportation and freight services",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "run sea transport of people and goods"
+   "optimising sea freight logistics",
+   "managing maritime trade capacity and routing"
   ],
   "signature": {
    "task": [
@@ -2505,14 +4006,41 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Hub-and-spoke network",
+    "does": "Routes flows through hubs to consolidate volume",
+    "hypotheses": [
+     "network economies from consolidation",
+     "hub capacity avoids congestion"
+    ]
+   },
+   {
+    "name": "M/M/c queueing model",
+    "does": "Estimates vessel waiting time for c identical berths",
+    "hypotheses": [
+     "Poisson arrivals",
+     "exponential service times",
+     "first-come first-served discipline"
+    ]
+   }
+  ],
+  "inputs": [
+   "shipping volumes",
+   "port capacity",
+   "freight rates",
+   "lead times"
+  ],
+  "outputs": [
+   "optimal routing paths",
+   "inventory levels",
+   "cost-efficient shipment schedules"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced misplaced EOQ with M/M/c berth queue). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350905",
@@ -2521,7 +4049,8 @@
   "name": "Passenger needs",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "find what travellers need"
+   "identifying unmet traveller requirements",
+   "optimising service accessibility and inclusivity"
   ],
   "signature": {
    "task": [
@@ -2529,14 +4058,39 @@
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Kano model",
+    "does": "Classifies service attributes as must-be, one-dimensional or attractive",
+    "hypotheses": [
+     "attributes classifiable by paired survey questions",
+     "needs stable over survey period"
+    ]
+   },
+   {
+    "name": "SERVQUAL",
+    "does": "Measures service quality as gap between expectation and perception",
+    "hypotheses": [
+     "quality has five dimensions (UNVERIFIED)",
+     "expectations measurable"
+    ]
+   }
+  ],
+  "inputs": [
+   "passenger interviews",
+   "observational data",
+   "service touchpoint logs"
+  ],
+  "outputs": [
+   "user personas",
+   "service gap analysis",
+   "prioritised feature requirements"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced journey mapping and JTBD with Kano and SERVQUAL). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350906",
@@ -2545,7 +4099,8 @@
   "name": "Public transport",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "plan and run shared passenger services"
+   "optimising passenger throughput",
+   "network accessibility and route planning"
   ],
   "signature": {
    "task": [
@@ -2553,14 +4108,41 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Mohring effect",
+    "does": "Shows higher patronage justifies more frequent service, cutting wait times",
+    "hypotheses": [
+     "passengers arrive randomly",
+     "waiting time scales with headway",
+     "service frequency adjusts to demand"
+    ]
+   },
+   {
+    "name": "Four-step travel demand model",
+    "does": "Forecasts trips by generation, distribution, mode choice, assignment",
+    "hypotheses": [
+     "zones aggregated",
+     "land use fixed over forecast"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "network topology",
+   "passenger demand",
+   "operational costs"
+  ],
+  "outputs": [
+   "optimal service frequency",
+   "predicted passenger flows",
+   "infrastructure requirements"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Mohring effect conditions fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350907",
@@ -2569,7 +4151,8 @@
   "name": "Rail transportation and freight services",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "run rail transport of people and goods"
+   "optimising rail freight logistics",
+   "capacity and scheduling of rail networks"
   ],
   "signature": {
    "task": [
@@ -2577,14 +4160,41 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Mixed-integer linear programming",
+    "does": "Optimises timetables and allocations with integer decisions",
+    "hypotheses": [
+     "linear objective and constraints",
+     "some variables integer",
+     "data deterministic"
+    ]
+   },
+   {
+    "name": "UIC 406 capacity method",
+    "does": "Measures line capacity by compressing a timetable on a corridor",
+    "hypotheses": [
+     "timetable structure fixed",
+     "train mix and infrastructure defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "network topology",
+   "freight demand volumes",
+   "rolling stock capacity",
+   "time windows"
+  ],
+  "outputs": [
+   "optimal routing schedules",
+   "resource allocation plans",
+   "cost projections"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced hub-and-spoke with UIC 406). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350908",
@@ -2593,7 +4203,8 @@
   "name": "Road transportation and freight services",
   "taxonomy_cell": "BU.O.A3",
   "solves": [
-   "run road transport of people and goods"
+   "optimising vehicle routing and scheduling",
+   "reducing freight transport costs"
   ],
   "signature": {
    "task": [
@@ -2601,14 +4212,50 @@
     "optimise"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Vehicle routing problem",
+    "does": "Finds least-cost routes for a vehicle fleet serving customers",
+    "hypotheses": [
+     "customer locations and demands known",
+     "vehicle capacities defined",
+     "depot specified"
+    ]
+   },
+   {
+    "name": "Clarke-Wright savings algorithm",
+    "does": "Builds routes by merging customers with greatest savings",
+    "hypotheses": [
+     "single depot",
+     "symmetric distances",
+     "homogeneous vehicles"
+    ]
+   },
+   {
+    "name": "Hub-and-spoke network",
+    "does": "Routes freight through hubs to consolidate volume",
+    "hypotheses": [
+     "network economies from consolidation",
+     "hub capacity avoids congestion"
+    ]
+   }
+  ],
+  "inputs": [
+   "delivery coordinates",
+   "vehicle capacity",
+   "demand volume",
+   "fuel costs"
+  ],
+  "outputs": [
+   "optimal route sequences",
+   "fleet size requirements",
+   "estimated delivery times"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Clarke-Wright savings). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "BU.TK.350909",

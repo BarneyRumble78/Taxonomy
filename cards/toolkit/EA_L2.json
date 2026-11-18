@@ -1110,7 +1110,8 @@
   "name": "Ecosystems",
   "taxonomy_cell": "EA.O.A4",
   "solves": [
-   "describe the flows of energy and matter through a living community"
+   "quantifying energy flow and nutrient cycling",
+   "predicting community structure and stability"
   ],
   "signature": {
    "task": [
@@ -1118,14 +1119,43 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Lotka-Volterra equations",
+    "does": "Models coupled predator-prey population dynamics over time",
+    "hypotheses": [
+     "two species only",
+     "no prey density limit",
+     "constant encounter and conversion rates",
+     "well-mixed homogeneous environment"
+    ]
+   },
+   {
+    "name": "MacArthur-Wilson island biogeography theory",
+    "does": "Predicts equilibrium species richness from island area and isolation",
+    "hypotheses": [
+     "immigration and extinction rates balance at equilibrium",
+     "species pool on mainland is fixed",
+     "species interact weakly (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "population counts",
+   "species richness",
+   "geographic area",
+   "distance from mainland"
+  ],
+  "outputs": [
+   "population growth rates",
+   "equilibrium species number",
+   "stability predictions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Lotka-Volterra hypotheses (closed system is not the standard condition); renamed island biogeography). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.BIOSPHERE > OMICS",
@@ -1931,21 +1961,50 @@
   "name": "Population",
   "taxonomy_cell": "EA.O.A5",
   "solves": [
-   "describe where people are and how numbers change"
+   "estimating population size and distribution",
+   "analysing demographic trends and growth rates"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Logistic growth model",
+    "does": "Models population growth limited by a carrying capacity",
+    "hypotheses": [
+     "constant carrying capacity",
+     "density-dependent growth rate falling linearly with size",
+     "closed population (no migration)"
+    ]
+   },
+   {
+    "name": "Cohort component method",
+    "does": "Projects population by age and sex from fertility, mortality and migration",
+    "hypotheses": [
+     "known base population by age and sex",
+     "fertility, mortality and migration assumptions specified"
+    ]
+   }
+  ],
+  "inputs": [
+   "census data",
+   "birth rates",
+   "death rates",
+   "migration statistics",
+   "carrying capacity"
+  ],
+  "outputs": [
+   "population projections",
+   "growth rate estimates",
+   "population density maps"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Dropped exponential growth (special case of logistic); fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.HUMAN DIMENSIONS > PUBLIC HEALTH",
@@ -2023,7 +2082,8 @@
   "name": "Sustainability",
   "taxonomy_cell": "EA.O.A5",
   "solves": [
-   "judge whether a use of resources can continue"
+   "measuring resource depletion and environmental degradation",
+   "assessing long-term viability of human-earth systems"
   ],
   "signature": {
    "task": [
@@ -2031,14 +2091,40 @@
     "compare"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Life cycle assessment (ISO 14040/14044)",
+    "does": "Evaluates environmental impacts of a product across its whole life cycle",
+    "hypotheses": [
+     "defined functional unit",
+     "defined system boundary",
+     "inventory data available for all stages"
+    ]
+   },
+   {
+    "name": "Planetary boundaries framework",
+    "does": "Defines a safe operating space for humanity using Earth-system thresholds",
+    "hypotheses": [
+     "measurable biophysical control variables",
+     "thresholds exist and can be estimated (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "material flow data",
+   "energy consumption metrics",
+   "biogeochemical cycle measurements"
+  ],
+  "outputs": [
+   "environmental impact scores",
+   "sustainability thresholds",
+   "carbon footprints"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.LAND SURFACE > EROSION/SEDIMENTATION",
@@ -2118,7 +2204,8 @@
   "name": "Geomorphic Landforms/Processes",
   "taxonomy_cell": "EA.O.A4",
   "solves": [
-   "explain how landforms are made and change"
+   "characterising surface morphology",
+   "predicting landscape evolution"
   ],
   "signature": {
    "task": [
@@ -2126,14 +2213,42 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Stream power incision model",
+    "does": "Gives bedrock river incision rate from drainage area (discharge) and slope",
+    "hypotheses": [
+     "detachment-limited erosion",
+     "power-law dependence on area and slope",
+     "bedrock channel"
+    ]
+   },
+   {
+    "name": "Exner equation",
+    "does": "Conserves sediment mass to link transport divergence to bed elevation change",
+    "hypotheses": [
+     "conservation of sediment mass",
+     "bed elevation changes only by transport divergence"
+    ]
+   }
+  ],
+  "inputs": [
+   "digital elevation models",
+   "hydrological discharge data",
+   "sediment grain size",
+   "lithological properties"
+  ],
+  "outputs": [
+   "erosion rates",
+   "sediment flux",
+   "landform classification",
+   "denudation timescales"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Renamed stream power law; replaced Bagnold formula (misplaced for landform evolution) with Exner equation). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.LAND SURFACE > LAND SURFACE COLOR",
@@ -2235,7 +2350,8 @@
   "name": "Soils",
   "taxonomy_cell": "EA.O.A4",
   "solves": [
-   "describe and classify soils"
+   "soil classification and mapping",
+   "analysing soil fertility and water movement"
   ],
   "signature": {
    "task": [
@@ -2243,14 +2359,42 @@
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "USDA Soil Taxonomy",
+    "does": "Classifies soils hierarchically by diagnostic horizons and properties",
+    "hypotheses": [
+     "diagnostic horizons and properties measurable in the pedon",
+     "classification at a defined hierarchical level"
+    ]
+   },
+   {
+    "name": "Darcy's law",
+    "does": "Gives water flux through porous soil from hydraulic gradient and conductivity",
+    "hypotheses": [
+     "laminar flow at low Reynolds number",
+     "saturated medium",
+     "homogeneous isotropic medium (or tensor conductivity)"
+    ]
+   }
+  ],
+  "inputs": [
+   "soil texture",
+   "pH",
+   "organic matter content",
+   "hydraulic conductivity",
+   "hydraulic gradient"
+  ],
+  "outputs": [
+   "soil order/group classification",
+   "water flux rates",
+   "nutrient availability profiles"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Darcy hypotheses fixed). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.LAND SURFACE > SURFACE RADIATIVE PROPERTIES",
@@ -2439,7 +2583,8 @@
   "name": "Coastal Processes",
   "taxonomy_cell": "EA.O.A4",
   "solves": [
-   "explain how waves, tides and sediment shape a shore"
+   "shoreline evolution and morphology",
+   "sediment transport and coastal erosion"
   ],
   "signature": {
    "task": [
@@ -2447,14 +2592,42 @@
     "predict"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bruun rule",
+    "does": "Estimates shoreline retreat from sea-level rise using an equilibrium profile",
+    "hypotheses": [
+     "equilibrium beach profile maintained",
+     "closed sediment budget in cross-shore",
+     "profile shifts upward and landward"
+    ]
+   },
+   {
+    "name": "CERC longshore sediment transport formula",
+    "does": "Estimates longshore sediment transport from breaking wave energy flux",
+    "hypotheses": [
+     "transport proportional to longshore wave energy flux",
+     "sandy beach",
+     "straight parallel depth contours (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "wave energy",
+   "tidal range",
+   "sediment grain size",
+   "sea-level change rates"
+  ],
+  "outputs": [
+   "sediment flux",
+   "shoreline position",
+   "beach profile geometry"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Bagnold with CERC formula; fixed Bruun hypotheses (closed budget, not constant supply)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.OCEANS > GEOLOGICAL FEATURES",
@@ -2736,7 +2909,8 @@
   "name": "Ocean Heat Budget",
   "taxonomy_cell": "EA.O.A4",
   "solves": [
-   "account for heat entering, leaving and stored in the sea"
+   "quantifying net energy gain or loss in the ocean",
+   "determining ocean heat content changes"
   ],
   "signature": {
    "task": [
@@ -2746,14 +2920,41 @@
     "equality"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Ocean heat content integral",
+    "does": "Integrates density, specific heat and temperature over depth",
+    "hypotheses": [
+     "known seawater density and specific heat",
+     "temperature profile known over the layer",
+     "reference temperature defined"
+    ]
+   },
+   {
+    "name": "Bulk formulae for surface heat flux",
+    "does": "Estimates sensible and latent heat exchange from wind, temperature and humidity",
+    "hypotheses": [
+     "surface-layer similarity theory holds",
+     "empirical transfer coefficients applicable"
+    ]
+   }
+  ],
+  "inputs": [
+   "sea surface temperature",
+   "ocean temperature profiles",
+   "atmospheric heat flux",
+   "salinity"
+  ],
+  "outputs": [
+   "stored energy in joules",
+   "heat uptake rates",
+   "net surface flux"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Renamed net heat flux tool to bulk formulae; fixed hypotheses; removed thermal expansion coefficient output). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.OCEANS > OCEAN OPTICS",
@@ -3807,7 +4008,8 @@
   "name": "Microwave",
   "taxonomy_cell": "EA.O.A1",
   "solves": [
-   "sense the surface and air at centimetre wavelengths"
+   "remote sensing of atmospheric and surface properties",
+   "retrieving soil moisture and sea ice"
   ],
   "signature": {
    "task": [
@@ -3817,14 +4019,40 @@
     "inverse"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Microwave radiative transfer equation",
+    "does": "Models microwave emission, absorption and scattering along a path",
+    "hypotheses": [
+     "local thermodynamic equilibrium",
+     "plane-parallel atmosphere (UNVERIFIED)",
+     "known absorption and emissivity"
+    ]
+   },
+   {
+    "name": "Rayleigh-Jeans approximation",
+    "does": "Relates radiance to brightness temperature at microwave frequencies",
+    "hypotheses": [
+     "hν much less than kT",
+     "blackbody or greybody emitter"
+    ]
+   }
+  ],
+  "inputs": [
+   "spectral radiance",
+   "frequency",
+   "incidence angle"
+  ],
+  "outputs": [
+   "brightness temperature",
+   "dielectric constant",
+   "soil moisture content"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic brightness temperature retrieval with Rayleigh-Jeans approximation). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.SPECTRAL/ENGINEERING > MULTISPECTRAL IMAGERY",
@@ -4145,7 +4373,8 @@
   "name": "Solar Activity",
   "taxonomy_cell": "EA.O.A4",
   "solves": [
-   "describe and forecast changes in the sun's output"
+   "predicting space weather effects",
+   "modelling solar magnetic cycle"
   ],
   "signature": {
    "task": [
@@ -4156,14 +4385,39 @@
     "time_series"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Parker spiral",
+    "does": "Describes interplanetary magnetic field shape from solar rotation and wind speed",
+    "hypotheses": [
+     "steady radial solar wind",
+     "frozen-in magnetic field",
+     "rotating solar source"
+    ]
+   },
+   {
+    "name": "Hale's polarity law",
+    "does": "Gives sunspot-pair magnetic polarity pattern, reversing each cycle",
+    "hypotheses": [
+     "bipolar sunspot groups",
+     "polarity pattern alternates every 11-year cycle (22-year magnetic cycle)"
+    ]
+   }
+  ],
+  "inputs": [
+   "solar magnetic field measurements",
+   "solar wind velocity",
+   "sunspot positions"
+  ],
+  "outputs": [
+   "interplanetary magnetic field geometry",
+   "solar cycle polarity predictions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hale hypotheses fixed (dynamo is an explanation, not a condition)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.SUN-EARTH INTERACTIONS > SOLAR ENERGETIC PARTICLE FLUX",
@@ -4218,21 +4472,50 @@
   "name": "Glaciers/Ice Sheets",
   "taxonomy_cell": "EA.O.A4",
   "solves": [
-   "measure land ice as part of the water cycle"
+   "ice mass balance and flow dynamics",
+   "sea-level rise projections"
   ],
   "signature": {
    "task": [
     "estimate"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Glen's flow law",
+    "does": "Relates ice strain rate to stress by a power law",
+    "hypotheses": [
+     "incompressible isotropic ice",
+     "power-law creep with exponent about 3",
+     "temperature-dependent rate factor"
+    ]
+   },
+   {
+    "name": "Shallow ice approximation",
+    "does": "Simplifies ice flow equations using small aspect ratio",
+    "hypotheses": [
+     "thin ice relative to horizontal extent",
+     "small surface slopes",
+     "shear stress dominated by vertical shear"
+    ]
+   }
+  ],
+  "inputs": [
+   "ice thickness",
+   "surface velocity",
+   "accumulation and ablation rates",
+   "basal friction"
+  ],
+  "outputs": [
+   "ice velocity fields",
+   "mass change rates",
+   "ice sheet geometry"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed hypotheses (steady-state creep wrong)). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "EA.TK.TERRESTRIAL HYDROSPHERE > GROUND WATER",

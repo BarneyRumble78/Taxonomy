@@ -7,34 +7,41 @@ from the hand-written sources in `cards/toolkit/src_l1/` and `cards/toolkit/src_
 |---|---|---:|---:|---:|---:|---:|---:|
 | AG | agrovoc.json | 36 | 4 | 4 | 1020 | 76 | 76 |
 | AR | lcc.json | 18 | 9 | 13 | 37 | 11 | 17 |
-| BI | anzsrc2020.json | 10 | 9 | 23 | 98 | 34 | 48 |
-| BU | anzsrc2020.json | 10 | 7 | 13 | 91 | 24 | 43 |
-| CH | anzsrc2020.json | 8 | 7 | 19 | 63 | 29 | 51 |
-| CS | acm_ccs2012.json | 11 | 8 | 21 | 69 | 41 | 97 |
-| DE | anzsrc2020.json | 5 | 4 | 9 | 51 | 16 | 23 |
-| EA | gcmd.json | 24 | 14 | 31 | 226 | 78 | 102 |
-| EC | jel.json | 20 | 16 | 40 | 139 | 57 | 121 |
+| BI | anzsrc2020.json | 10 | 9 | 23 | 98 | 88 | 190 |
+| BU | anzsrc2020.json | 10 | 7 | 13 | 91 | 81 | 170 |
+| CH | anzsrc2020.json | 8 | 7 | 19 | 63 | 55 | 122 |
+| CS | acm_ccs2012.json | 11 | 8 | 21 | 69 | 50 | 119 |
+| DE | anzsrc2020.json | 5 | 4 | 9 | 51 | 46 | 81 |
+| EA | gcmd.json | 24 | 14 | 31 | 226 | 88 | 122 |
+| EC | jel.json | 20 | 16 | 40 | 139 | 92 | 219 |
 | ED | eric.json | 686 | 24 | 25 | 1569 | 86 | 97 |
-| EN | ieee.json | 46 | 39 | 88 | 682 | 201 | 276 |
+| EN | ieee.json | 46 | 39 | 88 | 682 | 239 | 365 |
 | EV | gemet.json | 112 | 22 | 24 | 1092 | 79 | 81 |
 | HI | lcc.json | 34 | 11 | 19 | 77 | 11 | 20 |
 | IK | anzsrc2020.json | 20 | 0 | 0 | 320 | 0 | 0 |
-| IS | anzsrc2020.json | 3 | 3 | 7 | 36 | 16 | 28 |
+| IS | anzsrc2020.json | 3 | 3 | 7 | 36 | 33 | 68 |
 | LA | lcc.json | 7 | 2 | 5 | 39 | 9 | 14 |
 | LN | lcc.json | 13 | 2 | 4 | 45 | 3 | 6 |
-| MA | msc2020.json | 63 | 60 | 109 | 534 | 297 | 551 |
-| MD | mesh2026.json | 9 | 9 | 18 | 113 | 14 | 23 |
-| MS | anzsrc2020.json | 13 | 11 | 20 | 91 | 27 | 38 |
-| PH | physh.json | 18 | 17 | 46 | 465 | 202 | 315 |
-| PL | philpapers.json | 7 | 4 | 8 | 137 | 15 | 25 |
+| MA | msc2020.json | 63 | 60 | 109 | 534 | 453 | 936 |
+| MD | mesh2026.json | 9 | 9 | 18 | 113 | 22 | 35 |
+| MS | anzsrc2020.json | 13 | 11 | 20 | 91 | 76 | 158 |
+| PH | physh.json | 18 | 17 | 46 | 465 | 260 | 460 |
+| PL | philpapers.json | 7 | 4 | 8 | 137 | 31 | 64 |
 | PO | lcc.json | 13 | 6 | 10 | 14 | 6 | 12 |
 | RE | lcc.json | 14 | 2 | 3 | 46 | 2 | 5 |
 | ST | lcc.json | 17 | 9 | 13 | 24 | 9 | 14 |
-| **All** | | **1217** | **299** | **572** | **7078** | **1343** | **2083** |
+| **All** | | **1217** | **299** | **572** | **7078** | **1906** | **3451** |
 
 Mathematics level 1 is the existing `cards/toolkit/MA.json` (63 two-digit cards), unchanged.
 Mathematics level 2 is the 534 three-digit MSC classes in `cards/toolkit/MA_L2.json`.
 Every tool on every card lists at least one hypothesis: yes.
+
+## Local-model drafts (19 November 2026)
+
+607 level-2 cards that said "No tool is listed" were drafted by `gemma4:31b` running in Ollama on Chris's Mac, then reviewed card by card in session (claude-sonnet-5-5 helpers): 80 accepted, 439 corrected, 59 rewritten, 29 emptied. 563 now carry 1,368 tools; 44 stay empty with a note. 82 hypotheses are marked (UNVERIFIED).
+The reviewed versions live in `cards/toolkit/reviewed/L2.json` and are applied by `scripts/build_l1_cards.py`; the raw model output is kept in `cards/toolkit/drafts_local/gemma4_31b_raw.jsonl`.
+These cards record `generated_by: gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5`. No source-checked audit sample has been drawn for them yet.
+Before drafting, the local models were tested on 48 audited hypothesis lists (24 known gaps, 24 sound): gemma4:31b and qwen3.6:27b each scored 58% balanced accuracy, close to chance, so their output is treated as a draft only.
 
 ## What these cards are
 

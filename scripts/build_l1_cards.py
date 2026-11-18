@@ -77,6 +77,15 @@ for src in sorted(q for q in SRC.glob("*.py") if "__" not in q.stem):
                       "tools": [{"name": a, "does": b, "hypotheses": c} for a, b, c in tools],
                       "inputs": inputs, "outputs": outputs, "cross_uses": [], "status": "draft",
                       "generated_by": BY, "date": DATE, "notes": notes})
+    # Overlay: cards first drafted by a local model, then reviewed in session (cards/toolkit/reviewed/L<n>.json).
+    ov_path = ROOT / "cards" / "toolkit" / "reviewed" / f"L{LEVEL}.json"
+    OV = json.loads(ov_path.read_text(encoding="utf-8")) if ov_path.exists() else {}
+    for c in cards:
+        o = OV.get(c["id"])
+        if not o: continue
+        for t in o["tools"]:
+            if not t.get("hypotheses"): print(f"{c['id']}: overlay tool {t['name']!r} lacks hypotheses (R5)"); fails += 1
+        c.update({k: o[k] for k in ("solves", "tools", "inputs", "outputs", "generated_by", "date", "notes")})
     (ROOT / "cards" / "toolkit" / f"{field}_L{LEVEL}.json").write_text(json.dumps(cards, indent=1, ensure_ascii=False), encoding="utf-8")
     print(f"{field}: {len(cards)}/{len(nodes)} cards, {sum(1 for c in cards if c['tools'])} with tools, {sum(len(c['tools']) for c in cards)} tools")
 sys.exit(1 if fails else 0)

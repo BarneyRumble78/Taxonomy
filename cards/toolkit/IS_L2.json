@@ -6,7 +6,8 @@
   "name": "Data engineering and data science",
   "taxonomy_cell": "IS.O.A4",
   "solves": [
-   "build pipelines that turn raw data into usable results"
+   "large-scale data integration and transformation",
+   "insight extraction from structured and unstructured data"
   ],
   "signature": {
    "task": [
@@ -17,14 +18,48 @@
     "data_rich"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "ETL (Extract, Transform, Load)",
+    "does": "Moves data from source systems into a target store after cleaning and conforming it",
+    "hypotheses": [
+     "source data accessible",
+     "target schema defined"
+    ]
+   },
+   {
+    "name": "CRISP-DM",
+    "does": "Process model for planning and running data mining projects",
+    "hypotheses": [
+     "business objective defined",
+     "data available for the objective"
+    ]
+   },
+   {
+    "name": "CAP theorem",
+    "does": "Shows a distributed store cannot guarantee consistency, availability and partition tolerance together",
+    "hypotheses": [
+     "distributed data store",
+     "network partitions can occur",
+     "consistency means linearizability (Gilbert-Lynch formulation)"
+    ]
+   }
+  ],
+  "inputs": [
+   "raw data streams",
+   "database records",
+   "business requirements"
+  ],
+  "outputs": [
+   "cleaned datasets",
+   "predictive models",
+   "data pipelines"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Tightened CAP and ETL hypotheses; removed process-description hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460502",
@@ -254,7 +289,8 @@
   "name": "Information extraction and fusion",
   "taxonomy_cell": "IS.O.A4",
   "solves": [
-   "pull structured facts out of text and combine sources"
+   "structured data recovery from unstructured text",
+   "integration of disparate data sources"
   ],
   "signature": {
    "task": [
@@ -265,14 +301,47 @@
     "text_language"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Named entity recognition",
+    "does": "Identifies and classifies entity mentions in text",
+    "hypotheses": [
+     "tokenised text input",
+     "pre-defined entity classes"
+    ]
+   },
+   {
+    "name": "Relation extraction",
+    "does": "Determines semantic relations between identified entities",
+    "hypotheses": [
+     "entity mentions already identified",
+     "defined relation schema"
+    ]
+   },
+   {
+    "name": "Fellegi-Sunter record linkage",
+    "does": "Decides whether records from two sources refer to the same entity",
+    "hypotheses": [
+     "common identifying fields in both sources",
+     "field agreements conditionally independent given match status"
+    ]
+   }
+  ],
+  "inputs": [
+   "unstructured text",
+   "semi-structured documents",
+   "heterogeneous datasets"
+  ],
+  "outputs": [
+   "structured records",
+   "knowledge graphs",
+   "unified data representations"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic 'Knowledge Graph Fusion' with Fellegi-Sunter record linkage). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460508",
@@ -539,7 +608,8 @@
   "name": "Decision support and group support systems",
   "taxonomy_cell": "IS.O.A3",
   "solves": [
-   "support decisions with data and models"
+   "collaborative decision-making",
+   "group consensus and coordination"
   ],
   "signature": {
    "task": [
@@ -549,14 +619,42 @@
     "single_decision_maker"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Delphi method",
+    "does": "Reaches expert consensus through anonymous iterated questionnaires with controlled feedback",
+    "hypotheses": [
+     "expert panel",
+     "anonymity between rounds",
+     "feedback given between rounds"
+    ]
+   },
+   {
+    "name": "Analytic hierarchy process (AHP)",
+    "does": "Ranks alternatives from pairwise comparisons across a criteria hierarchy",
+    "hypotheses": [
+     "problem decomposable into a hierarchy",
+     "pairwise judgements reasonably consistent",
+     "criteria independent (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "expert opinions",
+   "decision criteria",
+   "alternative options",
+   "group preferences"
+  ],
+  "outputs": [
+   "consensus agreement",
+   "ranked alternatives",
+   "prioritised decision choice"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed GDSS (a system class, not a method); replaced generic MCDA with AHP). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460903",
@@ -653,7 +751,8 @@
   "name": "Information systems development methodologies and practice",
   "taxonomy_cell": "IS.O.A3",
   "solves": [
-   "organise the building of an information system"
+   "systematic design of information systems",
+   "managing the development lifecycle"
   ],
   "signature": {
    "task": [
@@ -661,14 +760,48 @@
     "control"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Waterfall model",
+    "does": "Sequential phase-based development with each phase completed before the next",
+    "hypotheses": [
+     "requirements stable and understood upfront",
+     "phases completed in order"
+    ]
+   },
+   {
+    "name": "Scrum",
+    "does": "Develops software in time-boxed sprints from a prioritised backlog",
+    "hypotheses": [
+     "cross-functional self-organising team",
+     "work divisible into sprint-sized items",
+     "prioritised product backlog maintained"
+    ]
+   },
+   {
+    "name": "Unified Modeling Language (UML)",
+    "does": "Standard graphical notation for modelling system structure and behaviour",
+    "hypotheses": [
+     "team shares understanding of the notation",
+     "system modelled with suitable diagram types"
+    ]
+   }
+  ],
+  "inputs": [
+   "user requirements",
+   "business constraints",
+   "functional specifications"
+  ],
+  "outputs": [
+   "system architecture",
+   "implementation roadmaps",
+   "verified software products"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced 'Agile Manifesto' (a statement of values) with Scrum; fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460906",
@@ -677,21 +810,55 @@
   "name": "Information systems education",
   "taxonomy_cell": "IS.O.A3",
   "solves": [
-   "teach information systems"
+   "curriculum design for information systems",
+   "aligning IS education with industry needs"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Bloom's taxonomy",
+    "does": "Classifies learning objectives by cognitive complexity level",
+    "hypotheses": [
+     "outcomes stated as observable behaviours",
+     "levels treated as cumulative (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "ADDIE model",
+    "does": "Staged instructional design: analyse, design, develop, implement, evaluate",
+    "hypotheses": [
+     "learner needs analysed first",
+     "learning objectives specified"
+    ]
+   },
+   {
+    "name": "Constructive alignment",
+    "does": "Aligns outcomes, teaching activities and assessment tasks",
+    "hypotheses": [
+     "intended outcomes explicit",
+     "assessment measures stated outcomes"
+    ]
+   }
+  ],
+  "inputs": [
+   "learning objectives",
+   "industry competency standards",
+   "student performance data"
+  ],
+  "outputs": [
+   "curriculum frameworks",
+   "instructional materials",
+   "assessment strategies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added constructive alignment; reworded hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460907",
@@ -700,21 +867,48 @@
   "name": "Information systems for sustainable development and the public good",
   "taxonomy_cell": "IS.O.A3",
   "solves": [
-   "apply information systems to public benefit"
+   "inequitable access to digital resources",
+   "misalignment of systems with development goals"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Capability approach (Sen)",
+    "does": "Evaluates systems by the freedoms and functionings people can achieve",
+    "hypotheses": [
+     "valued functionings identifiable",
+     "conversion factors considered",
+     "individual agency recognised"
+    ]
+   },
+   {
+    "name": "Sustainable livelihoods framework",
+    "does": "Analyses household assets, vulnerability and institutions affecting livelihood outcomes",
+    "hypotheses": [
+     "livelihood assets can be identified at household or community level (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "socio-economic indicators",
+   "infrastructure capacity",
+   "policy goals",
+   "user accessibility data"
+  ],
+  "outputs": [
+   "impact assessments",
+   "inclusive governance models",
+   "sustainable system designs"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced vague 'ICT4D Framework' with sustainable livelihoods framework). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460908",
@@ -723,21 +917,55 @@
   "name": "Information systems organisation and management",
   "taxonomy_cell": "IS.O.A3",
   "solves": [
-   "manage information systems in an organisation"
+   "aligning IT strategy with business goals",
+   "governing information resources"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "COBIT",
+    "does": "Framework for governing and managing enterprise IT",
+    "hypotheses": [
+     "enterprise governance objectives defined",
+     "management commitment to the framework"
+    ]
+   },
+   {
+    "name": "ITIL",
+    "does": "Service management practices across the IT service lifecycle",
+    "hypotheses": [
+     "IT delivered as services",
+     "service processes owned and measured"
+    ]
+   },
+   {
+    "name": "Strategic alignment model (Henderson-Venkatraman)",
+    "does": "Analyses fit between business and IT strategy and infrastructure",
+    "hypotheses": [
+     "business and IT domains interdependent",
+     "strategy and infrastructure can be separately assessed"
+    ]
+   }
+  ],
+  "inputs": [
+   "organisational goals",
+   "IT infrastructure capabilities",
+   "regulatory requirements"
+  ],
+  "outputs": [
+   "governance frameworks",
+   "service level agreements",
+   "strategic roadmaps"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed hypotheses; named Henderson-Venkatraman). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460909",
@@ -746,21 +974,47 @@
   "name": "Information systems philosophy, research methods and theory",
   "taxonomy_cell": "IS.O.A3",
   "solves": [
-   "say what counts as knowledge about information systems"
+   "conceptual frameworks for information systems",
+   "rigorous IS research"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Design science research",
+    "does": "Builds and evaluates artefacts to solve problems while adding knowledge",
+    "hypotheses": [
+     "relevant problem identified",
+     "artefact can be evaluated against requirements"
+    ]
+   },
+   {
+    "name": "Socio-technical systems theory",
+    "does": "Analyses interaction of social and technical subsystems",
+    "hypotheses": [
+     "subsystems interdependent",
+     "joint optimisation sought"
+    ]
+   }
+  ],
+  "inputs": [
+   "organisational problems",
+   "theoretical gaps",
+   "system performance data"
+  ],
+  "outputs": [
+   "design artefacts",
+   "validated theories",
+   "methodological frameworks"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses rewritten as conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460910",
@@ -815,21 +1069,47 @@
   "name": "Inter-organisational, extra-organisational and global information systems",
   "taxonomy_cell": "IS.O.A3",
   "solves": [
-   "link the information systems of separate organisations"
+   "cross-boundary data exchange",
+   "interoperability between organisational systems"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Transaction cost economics",
+    "does": "Explains governance choice of inter-firm exchange by transaction costs",
+    "hypotheses": [
+     "bounded rationality",
+     "opportunism possible",
+     "asset specificity varies"
+    ]
+   },
+   {
+    "name": "UN/EDIFACT (ISO 9735)",
+    "does": "Standard syntax for electronic business messages between organisations",
+    "hypotheses": [
+     "partners agree on message standard",
+     "message implementation guidelines shared"
+    ]
+   }
+  ],
+  "inputs": [
+   "organisational data standards",
+   "communication protocols",
+   "governance agreements"
+  ],
+  "outputs": [
+   "interoperability specifications",
+   "integrated information workflows"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic IOIS framework). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460912",
@@ -838,21 +1118,39 @@
   "name": "Knowledge and information management",
   "taxonomy_cell": "IS.O.A3",
   "solves": [
-   "capture and share what an organisation knows"
+   "inefficient information retrieval",
+   "loss of institutional memory"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "SECI model (Nonaka-Takeuchi)",
+    "does": "Describes knowledge creation through socialisation, externalisation, combination, internalisation",
+    "hypotheses": [
+     "tacit and explicit knowledge both present",
+     "social interaction supports sharing"
+    ]
+   }
+  ],
+  "inputs": [
+   "unstructured data",
+   "expert experience",
+   "organisational workflows"
+  ],
+  "outputs": [
+   "knowledge maps",
+   "taxonomies",
+   "explicit documentation"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed generic 'Knowledge Audit'). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.460999",
@@ -928,21 +1226,55 @@
   "name": "Human information behaviour",
   "taxonomy_cell": "IS.O.A2",
   "solves": [
-   "explain how people look for and use information"
+   "how people seek and use information",
+   "barriers to information access"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Wilson's model of information behaviour",
+    "does": "Links information need, context, barriers and seeking behaviour",
+    "hypotheses": [
+     "person recognises an information need",
+     "seeking occurs in a particular context"
+    ]
+   },
+   {
+    "name": "Zipf's principle of least effort",
+    "does": "Predicts people choose the least effortful adequate source",
+    "hypotheses": [
+     "multiple sources available",
+     "effort differences perceived"
+    ]
+   },
+   {
+    "name": "Kuhlthau's information search process",
+    "does": "Describes feelings, thoughts and actions across stages of a search",
+    "hypotheses": [
+     "extended search task",
+     "user constructs understanding over time (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "user contexts",
+   "observed search patterns",
+   "perceived information gaps"
+  ],
+  "outputs": [
+   "behavioural models",
+   "information-seeking pathways",
+   "design requirements"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Kuhlthau; reworded hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.461003",
@@ -951,7 +1283,8 @@
   "name": "Human information interaction and retrieval",
   "taxonomy_cell": "IS.O.A2",
   "solves": [
-   "design how people search and interact with information"
+   "search interface design",
+   "understanding user search behaviour"
   ],
   "signature": {
    "task": [
@@ -959,14 +1292,48 @@
     "verify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Precision and recall",
+    "does": "Measure fraction of retrieved items relevant and relevant items retrieved",
+    "hypotheses": [
+     "binary relevance judgements",
+     "relevance judged per document",
+     "full set of relevant items known"
+    ]
+   },
+   {
+    "name": "Cranfield paradigm",
+    "does": "Evaluates retrieval with fixed collection, topics and relevance judgements",
+    "hypotheses": [
+     "static test collection",
+     "relevance judgements consistent across assessors",
+     "documents judged independently"
+    ]
+   },
+   {
+    "name": "BM25",
+    "does": "Ranks documents by query-term weights with length normalisation",
+    "hypotheses": [
+     "bag-of-words representation",
+     "terms treated independently"
+    ]
+   }
+  ],
+  "inputs": [
+   "user queries",
+   "document collections",
+   "relevance judgements"
+  ],
+  "outputs": [
+   "performance metrics",
+   "ranked result lists"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added BM25; fixed Cranfield hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.461004",
@@ -975,7 +1342,8 @@
   "name": "Information governance, policy and ethics",
   "taxonomy_cell": "IS.O.A2",
   "solves": [
-   "set rules for holding and using information"
+   "regulatory compliance and data risk",
+   "ethical dilemmas in data management"
   ],
   "signature": {
    "task": [
@@ -985,14 +1353,39 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Fair information practice principles (FIPPs)",
+    "does": "Principles for fair handling of personal information",
+    "hypotheses": [
+     "personal data collected by an organisation",
+     "data subjects identifiable"
+    ]
+   },
+   {
+    "name": "Privacy impact assessment",
+    "does": "Identifies and mitigates privacy risks of a project or system",
+    "hypotheses": [
+     "proposed system or change defined",
+     "personal information processed"
+    ]
+   }
+  ],
+  "inputs": [
+   "data processing workflows",
+   "legislative requirements",
+   "organisational policies"
+  ],
+  "outputs": [
+   "governance frameworks",
+   "compliance audits",
+   "ethical guidelines"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Trivial hypothesis edits). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.461005",
@@ -1047,21 +1440,47 @@
   "name": "Library studies",
   "taxonomy_cell": "IS.O.A2",
   "solves": [
-   "run libraries and their services"
+   "organising and retrieving information",
+   "managing information resources"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Ranganathan's five laws of library science",
+    "does": "Principles guiding library service and collection management",
+    "hypotheses": [
+     "library serves identifiable users",
+     "resources are meant to be used"
+    ]
+   },
+   {
+    "name": "Dewey Decimal Classification",
+    "does": "Arranges knowledge into ten main classes with decimal subdivision",
+    "hypotheses": [
+     "knowledge divisible into hierarchical classes",
+     "each item given one main subject place"
+    ]
+   }
+  ],
+  "inputs": [
+   "information objects",
+   "user requirements",
+   "bibliographic data"
+  ],
+  "outputs": [
+   "classification schemes",
+   "catalogues",
+   "retrieval systems"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses corrected to conditions). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.461007",
@@ -1070,21 +1489,47 @@
   "name": "Open access",
   "taxonomy_cell": "IS.O.A2",
   "solves": [
-   "make publications free to read and reuse"
+   "barriers to scholarly communication",
+   "inequities in knowledge dissemination"
   ],
   "signature": {
    "task": [
     "design"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Budapest Open Access Initiative",
+    "does": "Defines open access and its green (self-archiving) and gold (journal) routes",
+    "hypotheses": [
+     "work available free online",
+     "rights-holder permits reuse with attribution"
+    ]
+   },
+   {
+    "name": "Berlin Declaration on Open Access",
+    "does": "States principles of open access to scholarly knowledge",
+    "hypotheses": [
+     "contributors grant free access and licence",
+     "work deposited in an online repository"
+    ]
+   }
+  ],
+  "inputs": [
+   "scholarly manuscripts",
+   "funding mandates",
+   "licensing terms"
+  ],
+  "outputs": [
+   "open access policies",
+   "publicly available research",
+   "repository deposits"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses rewritten; both are declarations rather than methods, kept as the standard named OA instruments). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.461008",
@@ -1139,7 +1584,8 @@
   "name": "Recordkeeping informatics",
   "taxonomy_cell": "IS.O.A2",
   "solves": [
-   "keep records that serve as evidence of activity"
+   "managing the record lifecycle",
+   "interoperability of digital archives"
   ],
   "signature": {
    "task": [
@@ -1150,14 +1596,39 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "OAIS reference model (ISO 14721)",
+    "does": "Functional and information model for long-term digital preservation",
+    "hypotheses": [
+     "archive accepts responsibility for long-term preservation",
+     "designated user community defined"
+    ]
+   },
+   {
+    "name": "ISO 15489",
+    "does": "Principles and processes for creating and managing records",
+    "hypotheses": [
+     "records created in business activity",
+     "metadata captured over time"
+    ]
+   }
+  ],
+  "inputs": [
+   "digital objects",
+   "metadata",
+   "organisational business rules"
+  ],
+  "outputs": [
+   "preservation strategies",
+   "system requirements",
+   "managed digital archives"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added standard number to OAIS; fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.461010",
@@ -1166,21 +1637,47 @@
   "name": "Social and community informatics",
   "taxonomy_cell": "IS.O.A2",
   "solves": [
-   "study how communities use information technology"
+   "digital divide and social exclusion",
+   "ICT impact on community development"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Participatory design",
+    "does": "Involves end users as co-designers of systems",
+    "hypotheses": [
+     "users willing and able to participate",
+     "designers share decision power"
+    ]
+   },
+   {
+    "name": "Asset-based community development",
+    "does": "Builds on existing community assets rather than deficits",
+    "hypotheses": [
+     "community assets identifiable",
+     "residents lead the process"
+    ]
+   }
+  ],
+  "inputs": [
+   "community needs assessments",
+   "social network data",
+   "user requirements"
+  ],
+  "outputs": [
+   "inclusive information systems",
+   "social impact assessments",
+   "community-led ICT policies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic 'Community Informatics Framework' with ABCD). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "IS.TK.461099",

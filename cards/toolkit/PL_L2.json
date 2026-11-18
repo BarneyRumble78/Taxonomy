@@ -64,7 +64,8 @@
   "name": "Metaphilosophy",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "say what philosophy is and what its methods can establish"
+   "nature and methods of philosophy",
+   "aims and limits of enquiry"
   ],
   "signature": {
    "task": [
@@ -72,13 +73,19 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "philosophical practices",
+   "claims about progress"
+  ],
+  "outputs": [
+   "methodological frameworks",
+   "accounts of philosophical success"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (No specific named tool belongs here; draft already empty). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.metaphysics",
@@ -135,21 +142,47 @@
   "name": "Philosophy of Action",
   "taxonomy_cell": "PL.O.A1",
   "solves": [
-   "say what makes a movement an action done for a reason"
+   "actions versus mere happenings",
+   "intentionality and agency"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Davidson's causal theory of action",
+    "does": "Explains action as event caused by agent's belief-desire reason",
+    "hypotheses": [
+     "reasons are causes",
+     "primary reason is belief-desire pair"
+    ]
+   },
+   {
+    "name": "Bratman's planning theory of intention",
+    "does": "Treats intentions as plans constraining later reasoning",
+    "hypotheses": [
+     "agents have limited resources",
+     "intentions stable and guide deliberation"
+    ]
+   }
+  ],
+  "inputs": [
+   "agent mental states",
+   "observed events",
+   "goals"
+  ],
+  "outputs": [
+   "causal explanations of action",
+   "classification of agency",
+   "rationality assessments"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced AI-origin BDI model with Bratman's planning theory). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-language",
@@ -243,7 +276,8 @@
   "name": "Philosophy of Religion",
   "taxonomy_cell": "PL.O.A1",
   "solves": [
-   "assess arguments about the existence and nature of the divine"
+   "existence and nature of the divine",
+   "faith and reason"
   ],
   "signature": {
    "task": [
@@ -254,14 +288,47 @@
     "logical"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Ontological argument (Anselm)",
+    "does": "Argues God exists from the concept of a maximally great being",
+    "hypotheses": [
+     "existence a great-making property",
+     "coherent concept of maximal greatness"
+    ]
+   },
+   {
+    "name": "Kalam cosmological argument",
+    "does": "Argues the universe began to exist and so has a cause",
+    "hypotheses": [
+     "whatever begins has a cause",
+     "actual infinite past impossible"
+    ]
+   },
+   {
+    "name": "Logical problem of evil (Mackie)",
+    "does": "Argues God's attributes are inconsistent with evil",
+    "hypotheses": [
+     "God omnipotent, omniscient and wholly good",
+     "evil exists",
+     "no morally sufficient reason (premise)"
+    ]
+   }
+  ],
+  "inputs": [
+   "metaphysical definitions",
+   "logical axioms",
+   "observations"
+  ],
+  "outputs": [
+   "arguments for or against theism",
+   "theodicies"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses rewritten as premises). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.me-misc",
@@ -293,7 +360,8 @@
   "name": "Aesthetics",
   "taxonomy_cell": "PL.O.A4",
   "solves": [
-   "say what art and beauty are and how they are judged"
+   "nature of beauty and art",
+   "aesthetic judgement"
   ],
   "signature": {
    "task": [
@@ -301,13 +369,20 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "artworks",
+   "experiences",
+   "artefacts"
+  ],
+  "outputs": [
+   "evaluations",
+   "theories of art"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (No single named tool; draft already empty). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.applied-ethics",
@@ -364,21 +439,45 @@
   "name": "Meta-Ethics",
   "taxonomy_cell": "PL.O.A4",
   "solves": [
-   "say what moral claims mean and whether they can be true"
+   "nature of moral judgement",
+   "validity of ethical values"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Open question argument (Moore)",
+    "does": "Argues goodness cannot be analysed as a natural property",
+    "hypotheses": [
+     "a proposed definition would be analytic",
+     "competent speakers can still sensibly ask whether it is good"
+    ]
+   },
+   {
+    "name": "Hume's is-ought gap",
+    "does": "Argues moral conclusions need moral premises",
+    "hypotheses": [
+     "argument deductively valid",
+     "conclusion contains moral terms absent from premises"
+    ]
+   }
+  ],
+  "inputs": [
+   "moral claims",
+   "linguistic analysis"
+  ],
+  "outputs": [
+   "theories of moral truth",
+   "accounts of moral properties"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Draft empty; added two standard named arguments). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.normative-ethics",
@@ -434,21 +533,55 @@
   "name": "Feminist Philosophy",
   "taxonomy_cell": "PL.O.A4",
   "solves": [
-   "examine philosophical questions with attention to gender and power"
+   "gender-based epistemic injustice",
+   "biases in philosophical concepts"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Standpoint theory",
+    "does": "Treats marginalised social positions as sources of critical knowledge",
+    "hypotheses": [
+     "knowledge socially situated",
+     "standpoint achieved through critical reflection"
+    ]
+   },
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories jointly shape disadvantage",
+    "hypotheses": [
+     "categories interact rather than add",
+     "structural power relations considered"
+    ]
+   },
+   {
+    "name": "Epistemic injustice (Fricker)",
+    "does": "Names testimonial and hermeneutical wrongs done to knowers",
+    "hypotheses": [
+     "identity prejudice affects credibility",
+     "gaps in shared interpretive resources"
+    ]
+   }
+  ],
+  "inputs": [
+   "social hierarchies",
+   "lived experience",
+   "philosophical canons"
+  ],
+  "outputs": [
+   "critiques of objectivity",
+   "reconceptualised ethics",
+   "situated knowledge"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added epistemic injustice; fixed hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-gender",
@@ -457,21 +590,45 @@
   "name": "Philosophy of Gender",
   "taxonomy_cell": "PL.O.A4",
   "solves": [
-   "say what gender is"
+   "analysing gender identity",
+   "metaphysical status of gender"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Gender performativity (Butler)",
+    "does": "Treats gender as constituted by repeated norm-governed acts",
+    "hypotheses": [
+     "gender not natural essence (premise)",
+     "norms reiterated through practice"
+    ]
+   },
+   {
+    "name": "Ameliorative analysis (Haslanger)",
+    "does": "Defines concepts by the social purposes they should serve",
+    "hypotheses": [
+     "concepts assessed by political aims",
+     "social position defines the category"
+    ]
+   }
+  ],
+  "inputs": [
+   "conceptual definitions",
+   "social observations"
+  ],
+  "outputs": [
+   "theoretical frameworks",
+   "ontological classifications"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Draft empty; added two standard named approaches). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-race",
@@ -480,7 +637,8 @@
   "name": "Philosophy of Race",
   "taxonomy_cell": "PL.O.A4",
   "solves": [
-   "say what race is and how it bears on justice"
+   "definition of race",
+   "moral and political status of racial categories"
   ],
   "signature": {
    "task": [
@@ -488,13 +646,19 @@
    ]
   },
   "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "inputs": [
+   "data on human variation",
+   "legal definitions"
+  ],
+  "outputs": [
+   "ontological claims",
+   "normative frameworks"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (No single standard tool I am confident of; draft already empty). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.the-nature-of-sexual-orientation",
@@ -917,7 +1081,8 @@
   "name": "Philosophy of Law",
   "taxonomy_cell": "PL.O.A4",
   "solves": [
-   "say what law is and how it relates to morality"
+   "legal authority",
+   "law and morality"
   ],
   "signature": {
    "task": [
@@ -927,14 +1092,46 @@
     "legal_or_normative"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Rule of recognition (Hart)",
+    "does": "Identifies criteria of legal validity in a system",
+    "hypotheses": [
+     "system has primary and secondary rules",
+     "officials accept rule from the internal point of view"
+    ]
+   },
+   {
+    "name": "Hohfeldian analysis of rights",
+    "does": "Analyses rights into claims, privileges, powers and immunities",
+    "hypotheses": [
+     "jural relations pair as correlatives or opposites"
+    ]
+   },
+   {
+    "name": "Law as integrity (Dworkin)",
+    "does": "Interprets law as the best fit and moral justification of practice",
+    "hypotheses": [
+     "law includes principles",
+     "interpretation must fit and justify precedent"
+    ]
+   }
+  ],
+  "inputs": [
+   "statutes",
+   "decisions",
+   "moral arguments"
+  ],
+  "outputs": [
+   "legal validity",
+   "normative justifications",
+   "interpretive frameworks"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hart-Fuller is a debate; replaced). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.social-and-political-philosophy",
@@ -1056,21 +1253,45 @@
   "name": "Philosophy of Biology",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "clarify the concepts and explanations of biology"
+   "foundations of biological theory",
+   "nature of species"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Price equation",
+    "does": "Partitions change in mean trait into selection and transmission",
+    "hypotheses": [
+     "parent-offspring mapping defined",
+     "any population and trait"
+    ]
+   },
+   {
+    "name": "Biological species concept (Mayr)",
+    "does": "Defines species as reproductively isolated interbreeding groups",
+    "hypotheses": [
+     "sexually reproducing organisms",
+     "gene flow assessed"
+    ]
+   }
+  ],
+  "inputs": [
+   "biological theories",
+   "empirical data"
+  ],
+  "outputs": [
+   "conceptual clarifications",
+   "evaluations of models"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Draft empty; added named tools). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-artificial-intelligence",
@@ -1079,21 +1300,46 @@
   "name": "Philosophy of Artificial Intelligence",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "say whether and how a machine could think"
+   "machine consciousness",
+   "possibility of strong AI"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Turing test",
+    "does": "Judges machine intelligence by indistinguishability in text conversation",
+    "hypotheses": [
+     "blind interrogation",
+     "natural language exchange",
+     "judges unable to tell machine from human"
+    ]
+   },
+   {
+    "name": "Chinese room argument (Searle)",
+    "does": "Argues symbol manipulation alone does not yield understanding",
+    "hypotheses": [
+     "program purely formal",
+     "syntax insufficient for semantics (premise)"
+    ]
+   }
+  ],
+  "inputs": [
+   "behavioural responses",
+   "computational models"
+  ],
+  "outputs": [
+   "intelligence criteria",
+   "arguments against functionalism"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses corrected). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-psychology",
@@ -1102,21 +1348,45 @@
   "name": "Philosophy of Psychology",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "clarify the concepts and explanations of psychology"
+   "mind-body problem",
+   "foundations of psychological theory"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Functionalism",
+    "does": "Defines mental states by causal role",
+    "hypotheses": [
+     "multiple realisability",
+     "states individuated by inputs, outputs and other states"
+    ]
+   },
+   {
+    "name": "Language of thought hypothesis (Fodor)",
+    "does": "Holds cognition is computation over symbolic representations",
+    "hypotheses": [
+     "mental states have syntactic structure",
+     "productivity and systematicity"
+    ]
+   }
+  ],
+  "inputs": [
+   "cognitive architectures",
+   "behavioural data"
+  ],
+  "outputs": [
+   "theories of mind",
+   "critiques of reductionism"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced misplaced Turing test). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-neuroscience",
@@ -1125,21 +1395,45 @@
   "name": "Philosophy of Neuroscience",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "clarify how brain science explains mind"
+   "mind-body problem",
+   "neural basis of consciousness"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Mechanistic explanation",
+    "does": "Explains phenomena by components, operations and organisation",
+    "hypotheses": [
+     "phenomenon bounded",
+     "components and operations identifiable"
+    ]
+   },
+   {
+    "name": "Reverse inference",
+    "does": "Infers cognitive process from brain activation",
+    "hypotheses": [
+     "region selectively engaged by the process",
+     "selectivity independently established"
+    ]
+   }
+  ],
+  "inputs": [
+   "neuroscientific data",
+   "conceptual frameworks"
+  ],
+  "outputs": [
+   "models of mental causation",
+   "claims about consciousness"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Draft empty; added tools). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.alzheimers-disease",
@@ -1493,7 +1787,8 @@
   "name": "Philosophy of Psychiatry",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "say what mental disorder is"
+   "conceptual foundations of mental disorder",
+   "validity of diagnosis"
   ],
   "signature": {
    "task": [
@@ -1501,14 +1796,45 @@
     "classify"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Harmful dysfunction analysis (Wakefield)",
+    "does": "Defines disorder as harmful failure of a natural mechanism",
+    "hypotheses": [
+     "dysfunction in evolutionary sense",
+     "harm judged by social values"
+    ]
+   },
+   {
+    "name": "Biostatistical theory (Boorse)",
+    "does": "Defines disease as deviation from species-typical function",
+    "hypotheses": [
+     "reference class specified",
+     "function defined biologically"
+    ]
+   },
+   {
+    "name": "Jaspers's understanding versus explanation",
+    "does": "Separates empathic understanding from causal explanation",
+    "hypotheses": [
+     "empathic understanding possible",
+     "meaning connections distinguished from causes (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "clinical observations",
+   "diagnostic criteria"
+  ],
+  "outputs": [
+   "conceptual analyses",
+   "critiques of nosology"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Draft empty; added named tools). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.psychotherapy-and-psychoanalysis",
@@ -2230,21 +2556,45 @@
   "name": "Philosophy of Computing and Information",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "say what computation and information are"
+   "foundations of computation",
+   "status of information"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Church-Turing thesis",
+    "does": "Identifies effective calculability with Turing computability",
+    "hypotheses": [
+     "effective procedure is finite and mechanical",
+     "no insight required"
+    ]
+   },
+   {
+    "name": "Halting problem undecidability",
+    "does": "Shows no algorithm decides halting for all programs",
+    "hypotheses": [
+     "Turing machine model",
+     "diagonal argument applicable"
+    ]
+   }
+  ],
+  "inputs": [
+   "formal languages",
+   "computational models"
+  ],
+  "outputs": [
+   "decidability results",
+   "complexity bounds"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Church-Turing hypotheses). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-mathematics",
@@ -2253,21 +2603,54 @@
   "name": "Philosophy of Mathematics",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "say what mathematical objects are and how they are known"
+   "nature of mathematical objects",
+   "foundations of truth"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Goedel's incompleteness theorems",
+    "does": "Show consistent arithmetical theories cannot prove all truths or own consistency",
+    "hypotheses": [
+     "consistent (omega-consistent for first version)",
+     "recursively axiomatisable",
+     "interprets basic arithmetic"
+    ]
+   },
+   {
+    "name": "Tarski's undefinability theorem",
+    "does": "Shows arithmetical truth is not definable within arithmetic",
+    "hypotheses": [
+     "language contains arithmetic",
+     "classical logic"
+    ]
+   },
+   {
+    "name": "Lowenheim-Skolem theorem",
+    "does": "Gives countable models for countable first-order theories with infinite models",
+    "hypotheses": [
+     "first-order logic",
+     "countable language"
+    ]
+   }
+  ],
+  "inputs": [
+   "axiomatic systems",
+   "logical propositions"
+  ],
+  "outputs": [
+   "unprovability results",
+   "metamathematical limits"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Goedel hypotheses; added Lowenheim-Skolem). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-physical-science",
@@ -2276,21 +2659,54 @@
   "name": "Philosophy of Physical Science",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "clarify what physical theories say about the world"
+   "validity of physical theories",
+   "interpretation of laws and evidence"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Popper's falsificationism",
+    "does": "Demarcates science by testable, refutable predictions",
+    "hypotheses": [
+     "theory forbids some observations",
+     "observation statements accepted"
+    ]
+   },
+   {
+    "name": "Bayesian confirmation theory",
+    "does": "Updates degrees of belief by conditionalisation on evidence",
+    "hypotheses": [
+     "coherent probabilities",
+     "priors assigned",
+     "likelihoods specified"
+    ]
+   },
+   {
+    "name": "Duhem-Quine thesis",
+    "does": "Holds hypotheses are tested only with auxiliary assumptions",
+    "hypotheses": [
+     "test involves auxiliary assumptions"
+    ]
+   }
+  ],
+  "inputs": [
+   "empirical data",
+   "hypotheses",
+   "priors"
+  ],
+  "outputs": [
+   "demarcation criteria",
+   "updated credences"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Duhem-Quine thesis). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-anthropology",
@@ -2345,21 +2761,57 @@
   "name": "Philosophy of Economics",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "clarify the assumptions and values of economics"
+   "foundations of economic theory",
+   "normative justification of value and distribution"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Arrow's impossibility theorem",
+    "does": "Shows no rank-order voting rule meets all fairness conditions",
+    "hypotheses": [
+     "at least three alternatives",
+     "unrestricted domain",
+     "Pareto efficiency",
+     "independence of irrelevant alternatives",
+     "non-dictatorship"
+    ]
+   },
+   {
+    "name": "Coase theorem",
+    "does": "Predicts efficient bargaining irrespective of initial rights",
+    "hypotheses": [
+     "zero transaction costs",
+     "well-defined enforceable property rights"
+    ]
+   },
+   {
+    "name": "Revealed preference theory",
+    "does": "Infers preferences from observed choices",
+    "hypotheses": [
+     "choices consistent (weak axiom)",
+     "choice data observed"
+    ]
+   }
+  ],
+  "inputs": [
+   "choice axioms",
+   "preference profiles",
+   "property assignments"
+  ],
+  "outputs": [
+   "impossibility results",
+   "efficiency conditions"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Arrow requires at least three alternatives, not finite; added revealed preference). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-education",
@@ -2414,21 +2866,45 @@
   "name": "Philosophy of History",
   "taxonomy_cell": "PL.O.A5",
   "solves": [
-   "say what historical explanation is"
+   "historical causation",
+   "validity of historical narratives"
   ],
   "signature": {
    "task": [
     "explain"
    ]
   },
-  "tools": [],
-  "inputs": [],
-  "outputs": [],
+  "tools": [
+   {
+    "name": "Covering-law model (Hempel)",
+    "does": "Explains events by deduction from general laws and conditions",
+    "hypotheses": [
+     "general laws available",
+     "initial conditions stated"
+    ]
+   },
+   {
+    "name": "Re-enactment (Collingwood)",
+    "does": "Explains actions by rethinking the agent's thought",
+    "hypotheses": [
+     "agent's thought recoverable from evidence (UNVERIFIED)",
+     "action expresses intention"
+    ]
+   }
+  ],
+  "inputs": [
+   "historical evidence",
+   "narratives"
+  ],
+  "outputs": [
+   "epistemic frameworks",
+   "theories of progress"
+  ],
   "cross_uses": [],
   "status": "draft",
-  "generated_by": "claude-fable-5-2",
-  "date": "2026-11-11",
-  "notes": "No tool is listed. None could be stated with confidence in this draft. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Draft empty; added named tools). No source checked except spot checks; needs specialist review."
  },
  {
   "id": "PL.TK.philosophy-of-sociology",
