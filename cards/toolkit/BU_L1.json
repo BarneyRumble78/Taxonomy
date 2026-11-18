@@ -1,0 +1,443 @@
+[
+ {
+  "id": "BU.TK.3501",
+  "field": "BU",
+  "node": "ANZSRC:3501",
+  "name": "Accounting, auditing and accountability",
+  "taxonomy_cell": "BU.O.A1",
+  "solves": [
+   "record every exchange so the books can be checked",
+   "give assurance about a large set of records by testing a part"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ],
+   "constraints": [
+    "equality",
+    "legal_or_normative"
+   ],
+   "domain_type": [
+    "discrete"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Double-entry bookkeeping",
+    "does": "records each transaction as equal debits and credits",
+    "hypotheses": [
+     "the reporting entity is defined",
+     "every transaction is recorded"
+    ]
+   },
+   {
+    "name": "Statistical audit sampling",
+    "does": "projects misstatement from a sample to the whole",
+    "hypotheses": [
+     "items are selected at random",
+     "a tolerable misstatement is set in advance"
+    ]
+   }
+  ],
+  "inputs": [
+   "transactions",
+   "ledger population"
+  ],
+  "outputs": [
+   "balanced accounts",
+   "projected misstatement with confidence"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.3502",
+  "field": "BU",
+  "node": "ANZSRC:3502",
+  "name": "Banking, finance and investment",
+  "taxonomy_cell": "BU.O.A2",
+  "solves": [
+   "decide whether a stream of future payments is worth its cost today",
+   "state how much could be lost over a period"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Net present value",
+    "does": "discounts forecast cash flows to today",
+    "hypotheses": [
+     "cash flows are forecast",
+     "the discount rate reflects the risk of those flows"
+    ]
+   },
+   {
+    "name": "Value at risk",
+    "does": "gives a loss level exceeded with a stated small probability",
+    "hypotheses": [
+     "a model of the return distribution",
+     "the distribution is stable over the horizon",
+     "positions can be traded at market prices"
+    ]
+   }
+  ],
+  "inputs": [
+   "cash-flow forecasts",
+   "position and return data"
+  ],
+  "outputs": [
+   "present value",
+   "loss quantile"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.3503",
+  "field": "BU",
+  "node": "ANZSRC:3503",
+  "name": "Business systems in context",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for the setting of business. Tools sit in law, economics and politics. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.3504",
+  "field": "BU",
+  "node": "ANZSRC:3504",
+  "name": "Commercial services",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for service industries. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.3505",
+  "field": "BU",
+  "node": "ANZSRC:3505",
+  "name": "Human resources and industrial relations",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "choose among applicants by evidence of later performance"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "classify"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Structured interviews and validated selection tests",
+    "does": "predict job performance",
+    "hypotheses": [
+     "a job analysis defines what is assessed",
+     "validity evidence exists for this kind of role"
+    ]
+   }
+  ],
+  "inputs": [
+   "applicant responses",
+   "job analysis"
+  ],
+  "outputs": [
+   "ranked candidates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.3506",
+  "field": "BU",
+  "node": "ANZSRC:3506",
+  "name": "Marketing",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "find how much buyers value each feature",
+   "forecast uptake of something new"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Conjoint analysis",
+    "does": "estimates the value placed on each attribute from choices among bundles",
+    "hypotheses": [
+     "the product can be split into attributes",
+     "attribute values add up",
+     "stated choices reflect real ones"
+    ]
+   },
+   {
+    "name": "Bass diffusion model",
+    "does": "forecasts adoption over time from innovation and imitation",
+    "hypotheses": [
+     "a fixed market potential",
+     "each buyer adopts once"
+    ]
+   }
+  ],
+  "inputs": [
+   "choice responses",
+   "early sales"
+  ],
+  "outputs": [
+   "part-worths",
+   "adoption curve"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.3507",
+  "field": "BU",
+  "node": "ANZSRC:3507",
+  "name": "Strategy, management and organisational behaviour",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "judge how profitable an industry can be",
+   "decide whether to make or buy"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "goal_quality": [
+    "qualitative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Five forces analysis",
+    "does": "assesses rivalry, entry, substitutes, suppliers and buyers",
+    "hypotheses": [
+     "an industry boundary can be drawn",
+     "the result is qualitative"
+    ]
+   },
+   {
+    "name": "Transaction cost analysis",
+    "does": "compares the cost of market contracting with in-house production",
+    "hypotheses": [
+     "asset specificity, uncertainty and frequency can be assessed"
+    ]
+   }
+  ],
+  "inputs": [
+   "industry facts",
+   "features of the transaction"
+  ],
+  "outputs": [
+   "attractiveness judgement",
+   "make-or-buy choice"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.3508",
+  "field": "BU",
+  "node": "ANZSRC:3508",
+  "name": "Tourism",
+  "taxonomy_cell": "BU.O.A4",
+  "solves": [
+   "forecast visitor numbers with strong seasonal swings"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Seasonal time-series forecasting",
+    "does": "projects a series with a repeating yearly pattern",
+    "hypotheses": [
+     "the seasonal pattern is stable",
+     "no structural break in the forecast period"
+    ]
+   }
+  ],
+  "inputs": [
+   "monthly arrivals"
+  ],
+  "outputs": [
+   "forecast with interval"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.3509",
+  "field": "BU",
+  "node": "ANZSRC:3509",
+  "name": "Transportation, logistics and supply chains",
+  "taxonomy_cell": "BU.O.A3",
+  "solves": [
+   "decide how much to order and when",
+   "move goods from sources to destinations at least cost"
+  ],
+  "signature": {
+   "task": [
+    "optimise"
+   ],
+   "constraints": [
+    "resource_budget"
+   ],
+   "linearity": [
+    "linear",
+    "convex"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Economic order quantity",
+    "does": "gives the order size that minimises ordering plus holding cost",
+    "hypotheses": [
+     "constant known demand",
+     "a fixed cost per order",
+     "a constant holding cost",
+     "instant replenishment and no shortages"
+    ]
+   },
+   {
+    "name": "Newsvendor model",
+    "does": "gives the best stock level for one selling period",
+    "hypotheses": [
+     "one period",
+     "the demand distribution is known",
+     "unit costs of shortage and surplus are known"
+    ]
+   },
+   {
+    "name": "Transportation problem",
+    "does": "finds the cheapest shipping plan by linear programming",
+    "hypotheses": [
+     "costs are linear in quantity",
+     "supplies and demands are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "demand, costs, capacities"
+  ],
+  "outputs": [
+   "order quantity",
+   "stock level",
+   "shipping plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BU.TK.3599",
+  "field": "BU",
+  "node": "ANZSRC:3599",
+  "name": "Other commerce, management, tourism and services",
+  "taxonomy_cell": "BU.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

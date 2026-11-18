@@ -1,0 +1,632 @@
+[
+ {
+  "cards": [
+   "60J"
+  ],
+  "tool": "Convergence theorem for Markov chains",
+  "verdict": "confirmed",
+  "reason": "Convergence to stationary distribution needs irreducible, aperiodic; finite chains positive recurrent.",
+  "source": "https://en.wikipedia.org/wiki/Markov_chain",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "60J"
+  ],
+  "tool": "Perron–Frobenius theorem for stochastic matrices",
+  "verdict": "confirmed",
+  "reason": "Irreducible stochastic matrix has unique stationary distribution (Perron projection rows equal).",
+  "source": "https://en.wikipedia.org/wiki/Perron%E2%80%93Frobenius_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "60J"
+  ],
+  "tool": "Donsker's invariance principle",
+  "verdict": "confirmed",
+  "reason": "iid mean zero finite variance (normalised to 1) steps give convergence to Brownian motion.",
+  "source": "https://en.wikipedia.org/wiki/Donsker%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62B"
+  ],
+  "tool": "Cramér–Rao bound",
+  "verdict": "confirmed",
+  "reason": "Unbiased estimator, finite Fisher information, differentiation under integral permitted.",
+  "source": "https://en.wikipedia.org/wiki/Cram%C3%A9r%E2%80%93Rao_bound",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62B"
+  ],
+  "tool": "Fisher–Neyman factorisation theorem",
+  "verdict": "unconfirmed",
+  "reason": "Page gives no dominating-measure condition; cites Halmos–Savage for general proof.",
+  "source": "https://en.wikipedia.org/wiki/Sufficient_statistic",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62B"
+  ],
+  "tool": "Rao–Blackwell theorem",
+  "verdict": "confirmed",
+  "reason": "Any estimator, sufficient statistic, convex loss suffice.",
+  "source": "https://en.wikipedia.org/wiki/Rao%E2%80%93Blackwell_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62C"
+  ],
+  "tool": "Complete class theorem",
+  "verdict": "unconfirmed",
+  "reason": "Page says only 'mild conditions'; compactness and convexity not stated.",
+  "source": "https://en.wikipedia.org/wiki/Admissible_decision_rule",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62C"
+  ],
+  "tool": "Minimax theorem for statistical games",
+  "verdict": "unconfirmed",
+  "reason": "Page states no finite or compact parameter-space hypothesis.",
+  "source": "https://en.wikipedia.org/wiki/Minimax_estimator",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62D"
+  ],
+  "tool": "Horvitz–Thompson estimator",
+  "verdict": "unconfirmed",
+  "reason": "Page gives no explicit inclusion-probability condition; formulas missing.",
+  "source": "https://en.wikipedia.org/wiki/Horvitz%E2%80%93Thompson_estimator",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62E"
+  ],
+  "tool": "Delta method",
+  "verdict": "confirmed",
+  "reason": "Asymptotic normality, g differentiable with non-zero derivative at the point.",
+  "source": "https://en.wikipedia.org/wiki/Delta_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62E"
+  ],
+  "tool": "Cochran's theorem",
+  "verdict": "confirmed",
+  "reason": "Normal data with quadratic forms from symmetric matrices summing to identity; projections suffice.",
+  "source": "https://en.wikipedia.org/wiki/Cochran%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62F"
+  ],
+  "tool": "Asymptotic normality of maximum likelihood",
+  "verdict": "unconfirmed",
+  "reason": "Page cites unnamed 'certain conditions'; interior point and regularity not mentioned.",
+  "source": "https://en.wikipedia.org/wiki/Maximum_likelihood_estimation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62F"
+  ],
+  "tool": "Neyman–Pearson lemma",
+  "verdict": "confirmed",
+  "reason": "Lemma concerns testing two simple hypotheses.",
+  "source": "https://en.wikipedia.org/wiki/Neyman%E2%80%93Pearson_lemma",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62F"
+  ],
+  "tool": "Wilks's theorem",
+  "verdict": "confirmed",
+  "reason": "Nested models, true value interior, regularity assumptions; chi-squared limit.",
+  "source": "https://en.wikipedia.org/wiki/Wilks%27_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62F"
+  ],
+  "tool": "Bernstein–von Mises theorem",
+  "verdict": "miss",
+  "reason": "Page also requires iid well-specified data and existence of uniformly consistent tests for alternatives; card omits these.",
+  "source": "https://en.wikipedia.org/wiki/Bernstein%E2%80%93von_Mises_theorem",
+  "corrected_hypotheses": "independent identically distributed data from a well-specified identifiable model; differentiable in quadratic mean with non-singular Fisher information; uniformly consistent tests exist for alternatives; prior positive and continuous at the true value"
+ },
+ {
+  "cards": [
+   "62G"
+  ],
+  "tool": "Glivenko–Cantelli theorem",
+  "verdict": "confirmed",
+  "reason": "iid real random variables suffice for almost sure uniform convergence.",
+  "source": "https://en.wikipedia.org/wiki/Glivenko%E2%80%93Cantelli_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62G"
+  ],
+  "tool": "Bootstrap consistency",
+  "verdict": "unconfirmed",
+  "reason": "Page assumes iid observations and notes heavy-tail failure; smoothness condition not stated.",
+  "source": "https://en.wikipedia.org/wiki/Bootstrapping_(statistics)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62G"
+  ],
+  "tool": "Kolmogorov–Smirnov test",
+  "verdict": "unconfirmed",
+  "reason": "Page states only fully specified reference distribution; continuity and independence not stated.",
+  "source": "https://en.wikipedia.org/wiki/Kolmogorov%E2%80%93Smirnov_test",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62H"
+  ],
+  "tool": "Principal component analysis",
+  "verdict": "confirmed",
+  "reason": "PCA rests on covariance eigendecomposition and linear structure; second moments presupposed.",
+  "source": "https://en.wikipedia.org/wiki/Principal_component_analysis",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62H"
+  ],
+  "tool": "Eckart–Young theorem",
+  "verdict": "confirmed",
+  "reason": "Holds for Frobenius and spectral norms (and unitarily invariant norms).",
+  "source": "https://en.wikipedia.org/wiki/Low-rank_approximation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62H"
+  ],
+  "tool": "Hotelling's T-squared test",
+  "verdict": "confirmed",
+  "reason": "Multivariate normal data; F-relation needs sample size exceeding dimension.",
+  "source": "https://en.wikipedia.org/wiki/Hotelling%27s_T-squared_distribution",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62J"
+  ],
+  "tool": "Gauss–Markov theorem",
+  "verdict": "confirmed",
+  "reason": "Zero-mean, equal-variance, uncorrelated errors, linear model, full column rank.",
+  "source": "https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62J"
+  ],
+  "tool": "F-test for nested linear models",
+  "verdict": "unconfirmed",
+  "reason": "Page gives nested models and F distribution but no normal-error statement.",
+  "source": "https://en.wikipedia.org/wiki/F-test",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62K"
+  ],
+  "tool": "Kiefer–Wolfowitz equivalence theorem",
+  "verdict": "unconfirmed",
+  "reason": "Page does not state linear model, compact region or approximate-design hypotheses.",
+  "source": "https://en.wikipedia.org/wiki/Optimal_experimental_design",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62K"
+  ],
+  "tool": "Randomisation",
+  "verdict": "unconfirmed",
+  "reason": "Page describes chance-based assignment; does not require a 'known random mechanism'.",
+  "source": "https://en.wikipedia.org/wiki/Random_assignment",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62L"
+  ],
+  "tool": "Sequential probability ratio test (Wald)",
+  "verdict": "unconfirmed",
+  "reason": "Page confirms two pre-specified hypotheses; iid and error-rate conditions not shown.",
+  "source": "https://en.wikipedia.org/wiki/Sequential_probability_ratio_test",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62M"
+  ],
+  "tool": "Wold decomposition",
+  "verdict": "confirmed",
+  "reason": "Requires covariance-stationary series; innovations uncorrelated.",
+  "source": "https://en.wikipedia.org/wiki/Wold%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62M"
+  ],
+  "tool": "Kalman filter",
+  "verdict": "confirmed",
+  "reason": "Linear models, known covariances; Gaussianity not needed for linear optimality.",
+  "source": "https://en.wikipedia.org/wiki/Kalman_filter",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62N"
+  ],
+  "tool": "Kaplan–Meier estimator",
+  "verdict": "confirmed",
+  "reason": "Event times treated independently of censoring; right-censored data.",
+  "source": "https://en.wikipedia.org/wiki/Kaplan%E2%80%93Meier_estimator",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62N"
+  ],
+  "tool": "Cox partial likelihood",
+  "verdict": "confirmed",
+  "reason": "Proportional hazards with independent subjects; censored subjects stay in risk sets.",
+  "source": "https://en.wikipedia.org/wiki/Proportional_hazards_model",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62N"
+  ],
+  "tool": "Log-rank test",
+  "verdict": "confirmed",
+  "reason": "Needs non-informative censoring; score test under proportional hazards.",
+  "source": "https://en.wikipedia.org/wiki/Logrank_test",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "62R"
+  ],
+  "tool": "Fréchet mean",
+  "verdict": "unconfirmed",
+  "reason": "Page gives complete metric setting; no curvature or concentration criterion stated.",
+  "source": "https://en.wikipedia.org/wiki/Fr%C3%A9chet_mean",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65B"
+  ],
+  "tool": "Richardson extrapolation",
+  "verdict": "confirmed",
+  "reason": "Error with asymptotic expansion in powers of step with known exponents.",
+  "source": "https://en.wikipedia.org/wiki/Richardson_extrapolation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65B"
+  ],
+  "tool": "Aitken's delta-squared process",
+  "verdict": "confirmed",
+  "reason": "Most useful for linearly converging sequences.",
+  "source": "https://en.wikipedia.org/wiki/Aitken%27s_delta-squared_process",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65C"
+  ],
+  "tool": "Monte Carlo integration",
+  "verdict": "confirmed",
+  "reason": "Samples with finite variance give 1/sqrt(N) error via law of large numbers.",
+  "source": "https://en.wikipedia.org/wiki/Monte_Carlo_integration",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65C"
+  ],
+  "tool": "Metropolis–Hastings algorithm",
+  "verdict": "unconfirmed",
+  "reason": "Page cites detailed balance plus aperiodic positive recurrent (ergodic); irreducibility not listed.",
+  "source": "https://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65C"
+  ],
+  "tool": "Euler–Maruyama method",
+  "verdict": "confirmed",
+  "reason": "Strong convergence for Lipschitz drift and diffusion with linear growth.",
+  "source": "https://en.wikipedia.org/wiki/Euler%E2%80%93Maruyama_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65D"
+  ],
+  "tool": "Polynomial interpolation error formula",
+  "verdict": "confirmed",
+  "reason": "Error formula needs f to be n+1 times continuously differentiable on an interval.",
+  "source": "https://en.wikipedia.org/wiki/Polynomial_interpolation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65D"
+  ],
+  "tool": "Gaussian quadrature",
+  "verdict": "confirmed",
+  "reason": "Positive weight function; nodes are roots of the associated orthogonal polynomial.",
+  "source": "https://en.wikipedia.org/wiki/Gaussian_quadrature",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65D"
+  ],
+  "tool": "Cubic spline interpolation",
+  "verdict": "unconfirmed",
+  "reason": "Page states no error-bound smoothness hypothesis; cites Hall and Meyer for bounds.",
+  "source": "https://en.wikipedia.org/wiki/Spline_interpolation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65F"
+  ],
+  "tool": "LU factorisation with partial pivoting",
+  "verdict": "confirmed",
+  "reason": "Partial pivoting stable in practice except pathological cases; non-singularity is stricter than needed.",
+  "source": "https://en.wikipedia.org/wiki/LU_decomposition",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65F"
+  ],
+  "tool": "Conjugate gradient method",
+  "verdict": "confirmed",
+  "reason": "Requires symmetric positive-definite matrix.",
+  "source": "https://en.wikipedia.org/wiki/Conjugate_gradient_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65F"
+  ],
+  "tool": "QR algorithm",
+  "verdict": "unconfirmed",
+  "reason": "Page says convergence guaranteed for symmetric matrices, not in general; normal matrices not mentioned.",
+  "source": "https://en.wikipedia.org/wiki/QR_algorithm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65F"
+  ],
+  "tool": "Condition number bound",
+  "verdict": "confirmed",
+  "reason": "Error bound for Ax=b assumes non-singular A and perturbation sensitivity.",
+  "source": "https://en.wikipedia.org/wiki/Condition_number",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65G"
+  ],
+  "tool": "Backward error analysis",
+  "verdict": "unconfirmed",
+  "reason": "Page does not state IEEE or no-overflow assumption; only finite-precision context.",
+  "source": "https://en.wikipedia.org/wiki/Numerical_stability",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65G"
+  ],
+  "tool": "Interval arithmetic",
+  "verdict": "confirmed",
+  "reason": "Outward rounding keeps enclosure; dependency problem widens bounds for repeated variables.",
+  "source": "https://en.wikipedia.org/wiki/Interval_arithmetic",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65H"
+  ],
+  "tool": "Newton's method with local quadratic convergence",
+  "verdict": "confirmed",
+  "reason": "Needs non-zero derivative or invertible Jacobian at root, smoothness, close start.",
+  "source": "https://en.wikipedia.org/wiki/Newton%27s_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65H"
+  ],
+  "tool": "Bisection method",
+  "verdict": "confirmed",
+  "reason": "Continuous function with opposite signs at interval ends.",
+  "source": "https://en.wikipedia.org/wiki/Bisection_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65J"
+  ],
+  "tool": "Tikhonov regularisation",
+  "verdict": "confirmed",
+  "reason": "Operator between Hilbert spaces; parameter chosen using noise information.",
+  "source": "https://en.wikipedia.org/wiki/Tikhonov_regularization",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65J"
+  ],
+  "tool": "Kantorovich theorem",
+  "verdict": "confirmed",
+  "reason": "Differentiable map with Lipschitz Jacobian and an initial-point inequality; stricter than needed.",
+  "source": "https://en.wikipedia.org/wiki/Kantorovich_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65L"
+  ],
+  "tool": "Dahlquist equivalence theorem",
+  "verdict": "miss",
+  "reason": "Theorem needs a consistent method with convergent starting values; convergence iff zero-stable. Card omits these.",
+  "source": "https://en.wikipedia.org/wiki/Linear_multistep_method",
+  "corrected_hypotheses": "a consistent linear multistep method; starting values converging to the initial value; sufficiently smooth (Lipschitz) right-hand side; convergence holds if and only if the method is zero-stable"
+ },
+ {
+  "cards": [
+   "65L"
+  ],
+  "tool": "Runge–Kutta methods",
+  "verdict": "confirmed",
+  "reason": "Order derivation uses smooth f; stability region governed by stability function.",
+  "source": "https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65L"
+  ],
+  "tool": "A-stability for stiff problems",
+  "verdict": "confirmed",
+  "reason": "A-stable linear multistep methods have order at most two (Dahlquist barrier).",
+  "source": "https://en.wikipedia.org/wiki/Stiff_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65M"
+  ],
+  "tool": "Lax equivalence theorem",
+  "verdict": "miss",
+  "reason": "Theorem also needs a linear, consistent finite difference scheme; card lists only the well-posed problem.",
+  "source": "https://en.wikipedia.org/wiki/Lax_equivalence_theorem",
+  "corrected_hypotheses": "a well-posed linear initial-value problem; a linear finite difference scheme; consistency of the scheme with the equation; then convergence holds if and only if the scheme is stable"
+ },
+ {
+  "cards": [
+   "65M"
+  ],
+  "tool": "Courant–Friedrichs–Lewy condition",
+  "verdict": "confirmed",
+  "reason": "CFL is a necessary condition for explicit schemes on hyperbolic problems.",
+  "source": "https://en.wikipedia.org/wiki/Courant%E2%80%93Friedrichs%E2%80%93Lewy_condition",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65M"
+  ],
+  "tool": "Von Neumann stability analysis",
+  "verdict": "unconfirmed",
+  "reason": "Page backs linear, constant-coefficient, periodic case; uniform grid not stated; sufficiency needs two levels.",
+  "source": "https://en.wikipedia.org/wiki/Von_Neumann_stability_analysis",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65N"
+  ],
+  "tool": "Céa's lemma",
+  "verdict": "confirmed",
+  "reason": "Bounded coercive bilinear form on Hilbert space; conforming subspace gives quasi-optimality.",
+  "source": "https://en.wikipedia.org/wiki/C%C3%A9a%27s_lemma",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65N"
+  ],
+  "tool": "Finite element a priori error estimate",
+  "verdict": "unconfirmed",
+  "reason": "Page names no shape-regularity or Sobolev regularity hypotheses; mentions convex domain.",
+  "source": "https://en.wikipedia.org/wiki/Finite_element_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65N"
+  ],
+  "tool": "Multigrid method",
+  "verdict": "unconfirmed",
+  "reason": "Page gives no formal smoothing or approximation hypotheses; cites elliptic setting only.",
+  "source": "https://en.wikipedia.org/wiki/Multigrid_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65P"
+  ],
+  "tool": "Symplectic integration",
+  "verdict": "confirmed",
+  "reason": "Hamiltonian system with symplectic scheme conserves 2-form and a perturbed Hamiltonian.",
+  "source": "https://en.wikipedia.org/wiki/Symplectic_integrator",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65R"
+  ],
+  "tool": "Nyström method",
+  "verdict": "unconfirmed",
+  "reason": "Page does not address second-kind Fredholm, continuous kernel or quadrature convergence conditions.",
+  "source": "https://en.wikipedia.org/wiki/Nystr%C3%B6m_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65T"
+  ],
+  "tool": "Fast Fourier transform",
+  "verdict": "confirmed",
+  "reason": "DFT defined for equispaced data; FFTs exist for all n.",
+  "source": "https://en.wikipedia.org/wiki/Fast_Fourier_transform",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "65T"
+  ],
+  "tool": "Aliasing formula",
+  "verdict": "confirmed",
+  "reason": "Alias frequencies f + N fs arise from uniform sampling at rate fs.",
+  "source": "https://en.wikipedia.org/wiki/Aliasing",
+  "corrected_hypotheses": ""
+ }
+]

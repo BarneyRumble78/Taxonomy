@@ -1,0 +1,761 @@
+[
+ {
+  "id": "ST.TK.U1-900",
+  "field": "ST",
+  "node": "LCC:U1-900",
+  "name": "Military science (General)",
+  "taxonomy_cell": "ST.O.A2",
+  "solves": [
+   "predict attrition and test a plan against a thinking opponent"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "compare"
+   ],
+   "agents": [
+    "multiple_competing"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lanchester's laws",
+    "does": "model attrition between two forces",
+    "hypotheses": [
+     "homogeneous forces",
+     "constant effectiveness",
+     "the square law needs aimed fire with all units engaged",
+     "no reinforcement"
+    ]
+   },
+   {
+    "name": "Wargaming",
+    "does": "tests a plan against an opposing player",
+    "hypotheses": [
+     "rules and adjudication are stated",
+     "results give insight, not prediction"
+    ]
+   },
+   {
+    "name": "Centre of gravity analysis",
+    "does": "identifies the source of an opponent's strength and its critical vulnerabilities",
+    "hypotheses": [
+     "the opponent can be described as a system",
+     "the result is a judgement"
+    ]
+   }
+  ],
+  "inputs": [
+   "force data",
+   "plans"
+  ],
+  "outputs": [
+   "attrition estimate",
+   "weaknesses"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UA10-997",
+  "field": "ST",
+  "node": "LCC:UA10-997",
+  "name": "Armies: Organization, distribution, military situation",
+  "taxonomy_cell": "ST.O.A1",
+  "solves": [
+   "describe the make-up, strength and placement of a force"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Order-of-battle analysis",
+    "does": "builds a picture of units, strength and location",
+    "hypotheses": [
+     "sources are dated and graded for reliability"
+    ]
+   }
+  ],
+  "inputs": [
+   "reports on units"
+  ],
+  "outputs": [
+   "order of battle"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UB1-900",
+  "field": "ST",
+  "node": "LCC:UB1-900",
+  "name": "Military administration",
+  "taxonomy_cell": "ST.O.A1",
+  "solves": [
+   "turn an aim into a workable plan and anticipate the opponent"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "predict"
+   ],
+   "uncertainty": [
+    "adversarial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Military decision-making process",
+    "does": "develops and compares courses of action",
+    "hypotheses": [
+     "the mission and intent are stated"
+    ]
+   },
+   {
+    "name": "Intelligence preparation of the battlefield",
+    "does": "relates terrain, weather and doctrine to likely actions",
+    "hypotheses": [
+     "the area is defined",
+     "the opponent's usual methods are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "mission",
+   "terrain and opponent information"
+  ],
+  "outputs": [
+   "course of action",
+   "likely opponent actions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UC10-780",
+  "field": "ST",
+  "node": "LCC:UC10-780",
+  "name": "Maintenance and transportation",
+  "taxonomy_cell": "ST.O.A4",
+  "solves": [
+   "work out what a force needs and how to deliver it"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "optimise"
+   ],
+   "constraints": [
+    "resource_budget"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Logistics planning factors",
+    "does": "estimate consumption from standard rates",
+    "hypotheses": [
+     "rates come from past or doctrinal data",
+     "the operation resembles those cases"
+    ]
+   }
+  ],
+  "inputs": [
+   "force size and activity"
+  ],
+  "outputs": [
+   "supply requirement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UD1-495",
+  "field": "ST",
+  "node": "LCC:UD1-495",
+  "name": "Infantry",
+  "taxonomy_cell": "ST.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UE1-500",
+  "field": "ST",
+  "node": "LCC:UE1-500",
+  "name": "Cavalry. Armor",
+  "taxonomy_cell": "ST.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UF1-910",
+  "field": "ST",
+  "node": "LCC:UF1-910",
+  "name": "Artillery",
+  "taxonomy_cell": "ST.O.A3",
+  "solves": [
+   "predict where a projectile lands and how shots group"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Point-mass trajectory model",
+    "does": "computes the flight path",
+    "hypotheses": [
+     "drag, launch speed and weather are known",
+     "the projectile is a point mass"
+    ]
+   },
+   {
+    "name": "Circular error probable",
+    "does": "gives the radius holding half of impacts",
+    "hypotheses": [
+     "independent normal errors",
+     "equal spread in both directions"
+    ]
+   }
+  ],
+  "inputs": [
+   "launch conditions",
+   "impact records"
+  ],
+  "outputs": [
+   "impact point",
+   "dispersion"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UG1-620",
+  "field": "ST",
+  "node": "LCC:UG1-620",
+  "name": "Military engineering",
+  "taxonomy_cell": "ST.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UG622-1435",
+  "field": "ST",
+  "node": "LCC:UG622-1435",
+  "name": "Air forces. Air warfare",
+  "taxonomy_cell": "ST.O.A3",
+  "solves": [
+   "estimate how far an aircraft can fly"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Breguet range equation",
+    "does": "gives range from efficiency and fuel fraction",
+    "hypotheses": [
+     "steady level cruise",
+     "constant lift-to-drag ratio",
+     "constant specific fuel consumption"
+    ]
+   }
+  ],
+  "inputs": [
+   "aircraft data"
+  ],
+  "outputs": [
+   "range"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UG1500-1530",
+  "field": "ST",
+  "node": "LCC:UG1500-1530",
+  "name": "Military astronautics. Space warfare. Space surveillance",
+  "taxonomy_cell": "ST.O.A3",
+  "solves": [
+   "predict where a satellite will be"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "constraints": [
+    "physical_law"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Two-body orbit (Kepler's laws)",
+    "does": "gives position from orbital elements",
+    "hypotheses": [
+     "only the central body's gravity acts",
+     "perturbations such as drag and oblateness are ignored or added separately"
+    ]
+   }
+  ],
+  "inputs": [
+   "orbital elements"
+  ],
+  "outputs": [
+   "predicted position"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.UH20-910",
+  "field": "ST",
+  "node": "LCC:UH20-910",
+  "name": "Other services",
+  "taxonomy_cell": "ST.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.V1-995",
+  "field": "ST",
+  "node": "LCC:V1-995",
+  "name": "Naval science (General)",
+  "taxonomy_cell": "ST.O.A2",
+  "solves": [
+   "estimate the chance of finding a target and the outcome of a salvo exchange"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "predict"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Random search formula",
+    "does": "gives detection probability from effort and area",
+    "hypotheses": [
+     "the target is stationary and equally likely anywhere",
+     "effort is spread at random",
+     "the sweep width is known"
+    ]
+   },
+   {
+    "name": "Salvo model",
+    "does": "predicts losses in a missile exchange",
+    "hypotheses": [
+     "ships on each side are alike",
+     "striking, defensive and staying power are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "area and sweep width",
+   "force data"
+  ],
+  "outputs": [
+   "detection probability",
+   "losses"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VA10-750",
+  "field": "ST",
+  "node": "LCC:VA10-750",
+  "name": "Navies: Organization, distribution, naval situation",
+  "taxonomy_cell": "ST.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VB21-124",
+  "field": "ST",
+  "node": "LCC:VB21-124",
+  "name": "By region or country",
+  "taxonomy_cell": "ST.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VB170-187",
+  "field": "ST",
+  "node": "LCC:VB170-187",
+  "name": "Civil department",
+  "taxonomy_cell": "ST.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VB260-275",
+  "field": "ST",
+  "node": "LCC:VB260-275",
+  "name": "Enlisted personnel",
+  "taxonomy_cell": "ST.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VB307-309",
+  "field": "ST",
+  "node": "LCC:VB307-309",
+  "name": "Warrant officers",
+  "taxonomy_cell": "ST.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VB310-315",
+  "field": "ST",
+  "node": "LCC:VB310-315",
+  "name": "Officers",
+  "taxonomy_cell": "ST.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VB320-325",
+  "field": "ST",
+  "node": "LCC:VB320-325",
+  "name": "Minorities, women, etc. in navies",
+  "taxonomy_cell": "ST.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VC10-580",
+  "field": "ST",
+  "node": "LCC:VC10-580",
+  "name": "Naval maintenance",
+  "taxonomy_cell": "ST.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VD7-430",
+  "field": "ST",
+  "node": "LCC:VD7-430",
+  "name": "Naval seamen",
+  "taxonomy_cell": "ST.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VE7-500",
+  "field": "ST",
+  "node": "LCC:VE7-500",
+  "name": "Marines",
+  "taxonomy_cell": "ST.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VF1-580",
+  "field": "ST",
+  "node": "LCC:VF1-580",
+  "name": "Naval ordnance",
+  "taxonomy_cell": "ST.O.A3",
+  "solves": [
+   "work out a target's course from bearings alone"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bearings-only target motion analysis",
+    "does": "estimates range, course and speed",
+    "hypotheses": [
+     "the target holds steady course and speed",
+     "the observer manoeuvres"
+    ]
+   }
+  ],
+  "inputs": [
+   "timed bearings",
+   "own track"
+  ],
+  "outputs": [
+   "target solution"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "ST.TK.VG20-2029",
+  "field": "ST",
+  "node": "LCC:VG20-2029",
+  "name": "Minor services of navies",
+  "taxonomy_cell": "ST.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A branch, service or personnel heading of the scheme. Tools sit at the general classes U, UB and V. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

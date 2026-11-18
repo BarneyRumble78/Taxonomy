@@ -1,0 +1,4846 @@
+[
+ {
+  "id": "BI.TK.310101",
+  "field": "BI",
+  "node": "ANZSRC:310101",
+  "name": "Analytical biochemistry",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "measure how much of a biological molecule a sample holds"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bradford protein assay",
+    "does": "estimates protein concentration from dye binding",
+    "hypotheses": [
+     "the reading lies within the standard curve",
+     "the standard protein responds like the sample",
+     "no interfering detergent"
+    ]
+   },
+   {
+    "name": "Standard curve quantification",
+    "does": "converts a signal to a concentration",
+    "hypotheses": [
+     "the response is monotonic over the range used",
+     "standards and samples are treated alike"
+    ]
+   }
+  ],
+  "inputs": [
+   "sample",
+   "standards"
+  ],
+  "outputs": [
+   "concentration"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310102",
+  "field": "BI",
+  "node": "ANZSRC:310102",
+  "name": "Cell development, proliferation and death",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "count how many cells are in each stage of division or death"
+  ],
+  "signature": {
+   "task": [
+    "count",
+    "classify"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Flow cytometry of DNA content",
+    "does": "sorts cells by cell-cycle phase",
+    "hypotheses": [
+     "cells are in single-cell suspension",
+     "the dye binds DNA in proportion to amount",
+     "doublets are excluded"
+    ]
+   }
+  ],
+  "inputs": [
+   "stained cells"
+  ],
+  "outputs": [
+   "share of cells per phase"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310103",
+  "field": "BI",
+  "node": "ANZSRC:310103",
+  "name": "Cell metabolism",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "trace how matter flows through a network of conversions"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Isotope-labelled metabolic flux analysis",
+    "does": "infers reaction rates from labelling patterns",
+    "hypotheses": [
+     "metabolic steady state",
+     "isotopic steady state, or the time course is modelled",
+     "the reaction network and atom mappings are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "labelling measurements",
+   "network model"
+  ],
+  "outputs": [
+   "flux estimates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310104",
+  "field": "BI",
+  "node": "ANZSRC:310104",
+  "name": "Cell neurochemistry",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "molecular mechanisms of neuronal signalling",
+   "chemical basis of synaptic transmission"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Nernst equation",
+    "does": "Gives equilibrium potential of one permeant ion from its concentration ratio",
+    "hypotheses": [
+     "single ion species at thermodynamic equilibrium (zero net flux)",
+     "ideal dilute solution (activities approximate concentrations)",
+     "known, constant temperature"
+    ]
+   },
+   {
+    "name": "Goldman-Hodgkin-Katz equation",
+    "does": "Gives membrane potential from concentrations and permeabilities of several ions",
+    "hypotheses": [
+     "constant electric field across membrane",
+     "independent ion movement",
+     "constant permeabilities at steady state"
+    ]
+   },
+   {
+    "name": "Patch-clamp technique",
+    "does": "Records ionic currents through single channels or whole cells under controlled voltage",
+    "hypotheses": [
+     "gigaohm seal between pipette and membrane",
+     "stable, low-noise recording configuration"
+    ]
+   }
+  ],
+  "inputs": [
+   "ion concentrations",
+   "membrane permeability",
+   "temperature",
+   "voltage"
+  ],
+  "outputs": [
+   "equilibrium potentials",
+   "resting membrane potential",
+   "ionic current traces"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Nernst hypotheses (equilibrium, not steady state); refined GHK and patch-clamp conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310105",
+  "field": "BI",
+  "node": "ANZSRC:310105",
+  "name": "Cellular interactions (incl. adhesion, matrix, cell wall)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "mechanisms of cell-cell and cell-matrix attachment",
+   "structural integrity of cellular boundaries"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Atomic force microscopy (single-cell force spectroscopy)",
+    "does": "Measures adhesion forces between cells, or cells and ligands, with a cantilever",
+    "hypotheses": [
+     "calibrated cantilever spring constant",
+     "cell or ligand firmly immobilised on its support",
+     "physiological buffer and temperature maintained"
+    ]
+   },
+   {
+    "name": "Traction force microscopy",
+    "does": "Estimates cell traction stresses from fiducial bead displacements in a gel",
+    "hypotheses": [
+     "linear elastic substrate with known Young's modulus",
+     "small deformations",
+     "cell forces applied only at the substrate surface"
+    ]
+   }
+  ],
+  "inputs": [
+   "cell-surface protein expression",
+   "substrate elasticity",
+   "ligand density"
+  ],
+  "outputs": [
+   "binding affinity",
+   "adhesion force magnitude",
+   "matrix deformation maps"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced vague hypotheses with the standard elasticity and calibration conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310106",
+  "field": "BI",
+  "node": "ANZSRC:310106",
+  "name": "Enzymes",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "characterise how fast a catalyst works and how it is slowed"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Michaelis–Menten kinetics",
+    "does": "gives rate as a saturating function of substrate",
+    "hypotheses": [
+     "substrate far exceeds enzyme",
+     "the enzyme-substrate complex is in steady state",
+     "initial rates",
+     "one substrate"
+    ]
+   },
+   {
+    "name": "Inhibition analysis",
+    "does": "classifies an inhibitor from how it changes the kinetic constants",
+    "hypotheses": [
+     "the inhibitor binds reversibly",
+     "Michaelis–Menten conditions hold"
+    ]
+   }
+  ],
+  "inputs": [
+   "initial rates at several concentrations"
+  ],
+  "outputs": [
+   "kinetic constants",
+   "inhibition type"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310107",
+  "field": "BI",
+  "node": "ANZSRC:310107",
+  "name": "Glycobiology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "characterisation of glycan structures",
+   "analysis of glycosylation patterns in proteins and lipids"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lectin affinity chromatography",
+    "does": "Separates glycoconjugates by reversible binding to immobilised lectins",
+    "hypotheses": [
+     "known lectin-glycan specificity",
+     "accessible glycan epitopes"
+    ]
+   },
+   {
+    "name": "Tandem mass spectrometry of glycans (MS/MS)",
+    "does": "Infers glycan composition and sequence from fragment ions",
+    "hypotheses": [
+     "glycans ionisable (often after derivatisation)",
+     "stable, interpretable gas-phase fragmentation"
+    ]
+   },
+   {
+    "name": "HPAEC-PAD",
+    "does": "Separates carbohydrates by anion exchange at high pH, detected by pulsed amperometry",
+    "hypotheses": [
+     "high pH (above 12) ionises carbohydrate hydroxyls",
+     "analytes electroactive at gold electrode"
+    ]
+   }
+  ],
+  "inputs": [
+   "purified glycoproteins",
+   "glycolipids",
+   "released oligosaccharides"
+  ],
+  "outputs": [
+   "glycan sequence",
+   "monosaccharide composition",
+   "glycosylation site mapping"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Standardised names; clarified HPAEC-PAD conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310108",
+  "field": "BI",
+  "node": "ANZSRC:310108",
+  "name": "Protein trafficking",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "protein localisation within cells",
+   "mechanisms of intracellular transport"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Signal hypothesis",
+    "does": "Explains targeting of secretory proteins to the ER by N-terminal signal peptides",
+    "hypotheses": [
+     "signal peptide present and recognised by SRP",
+     "co-translational translocation across ER membrane"
+    ]
+   },
+   {
+    "name": "Fluorescence recovery after photobleaching (FRAP)",
+    "does": "Measures mobility and exchange of fluorescent proteins in live cells",
+    "hypotheses": [
+     "tag does not alter protein behaviour",
+     "bleaching irreversible and non-damaging",
+     "recovery occurs by diffusion or transport from unbleached pool"
+    ]
+   }
+  ],
+  "inputs": [
+   "amino acid sequences",
+   "fluorescently labelled proteins",
+   "cellular organelles"
+  ],
+  "outputs": [
+   "predicted subcellular localisation",
+   "diffusion coefficients",
+   "transport kinetics"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced FRAP hypotheses (focal plane is not a condition of the method)). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310109",
+  "field": "BI",
+  "node": "ANZSRC:310109",
+  "name": "Proteomics and intermolecular interactions (excl. medical proteomics)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "identify which proteins are present from fragments"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ],
+   "data": [
+    "data_rich"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Peptide mass spectrometry with database search",
+    "does": "matches fragment spectra to known sequences",
+    "hypotheses": [
+     "the protein's sequence is in the database",
+     "the false discovery rate is controlled with decoy sequences"
+    ]
+   }
+  ],
+  "inputs": [
+   "mass spectra",
+   "sequence database"
+  ],
+  "outputs": [
+   "identified proteins with confidence"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310110",
+  "field": "BI",
+  "node": "ANZSRC:310110",
+  "name": "Receptors and membrane biology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "measure how tightly a molecule binds its target"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Saturation binding analysis",
+    "does": "estimates affinity and number of binding sites",
+    "hypotheses": [
+     "binding has reached equilibrium",
+     "non-specific binding is subtracted",
+     "one class of independent sites"
+    ]
+   }
+  ],
+  "inputs": [
+   "bound amount at several concentrations"
+  ],
+  "outputs": [
+   "dissociation constant",
+   "site number"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310111",
+  "field": "BI",
+  "node": "ANZSRC:310111",
+  "name": "Signal transduction",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "cellular response to external stimuli",
+   "intercellular communication mechanisms"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Michaelis-Menten kinetics",
+    "does": "Relates reaction velocity to substrate concentration for a single enzyme step",
+    "hypotheses": [
+     "quasi-steady-state for enzyme-substrate complex",
+     "substrate in large excess over enzyme",
+     "single substrate, irreversible product formation"
+    ]
+   },
+   {
+    "name": "Hill equation",
+    "does": "Describes cooperative ligand binding with an empirical cooperativity coefficient",
+    "hypotheses": [
+     "binding at equilibrium",
+     "ligand concentration much greater than receptor",
+     "cooperativity approximated as a single effective step"
+    ]
+   },
+   {
+    "name": "Goldbeter-Koshland function",
+    "does": "Gives ultrasensitive response of a covalent modification cycle to kinase/phosphatase ratio",
+    "hypotheses": [
+     "opposing enzymes operate near saturation (zero-order)",
+     "cycle at steady state"
+    ]
+   }
+  ],
+  "inputs": [
+   "ligand concentration",
+   "enzyme kinetic constants",
+   "receptor binding affinity"
+  ],
+  "outputs": [
+   "reaction velocity",
+   "fractional occupancy",
+   "signal amplification factor"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Hill hypotheses; added Goldbeter-Koshland ultrasensitivity for signalling cycles). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310112",
+  "field": "BI",
+  "node": "ANZSRC:310112",
+  "name": "Structural biology (incl. macromolecular modelling)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "find the three-dimensional shape of a large molecule"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "construct"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "structure": [
+    "geometric_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "X-ray crystallography",
+    "does": "computes atomic positions from a diffraction pattern",
+    "hypotheses": [
+     "the molecule forms well-ordered crystals",
+     "the phases are obtained experimentally or by molecular replacement"
+    ]
+   },
+   {
+    "name": "Single-particle cryo-electron microscopy",
+    "does": "reconstructs a structure from many particle images",
+    "hypotheses": [
+     "many copies of the same particle",
+     "varied orientations",
+     "a structurally homogeneous sample"
+    ]
+   }
+  ],
+  "inputs": [
+   "diffraction data or particle images"
+  ],
+  "outputs": [
+   "atomic model with resolution"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310113",
+  "field": "BI",
+  "node": "ANZSRC:310113",
+  "name": "Synthetic biology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "design of novel biological functions",
+   "standardisation of genetic parts"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "construct"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Design-Build-Test-Learn cycle",
+    "does": "Iterates design, construction, characterisation and refinement of genetic constructs",
+    "hypotheses": [
+     "measurable phenotype or assay readout",
+     "reproducible DNA assembly"
+    ]
+   },
+   {
+    "name": "BioBricks assembly standard",
+    "does": "Allows modular assembly of standard DNA parts by shared restriction sites",
+    "hypotheses": [
+     "parts lack internal EcoRI, XbaI, SpeI and PstI sites",
+     "standard prefix and suffix flank each part"
+    ]
+   }
+  ],
+  "inputs": [
+   "genetic sequences",
+   "metabolic models",
+   "desired phenotypic traits"
+  ],
+  "outputs": [
+   "engineered organisms",
+   "novel biomolecules",
+   "characterised genetic circuits"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected BioBricks condition (internal site absence); sharpened DBTL hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310114",
+  "field": "BI",
+  "node": "ANZSRC:310114",
+  "name": "Systems biology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "predict whole-system behaviour from interacting components"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ordinary differential equation network model",
+    "does": "simulates concentrations over time",
+    "hypotheses": [
+     "components are well mixed",
+     "molecule numbers are large enough to ignore chance",
+     "rate laws and parameters are known or fitted"
+    ]
+   },
+   {
+    "name": "Flux balance analysis",
+    "does": "predicts steady-state flows by linear optimisation",
+    "hypotheses": [
+     "steady state",
+     "the network is known",
+     "the assumed objective reflects what the cell maximises"
+    ]
+   }
+  ],
+  "inputs": [
+   "network and rate data"
+  ],
+  "outputs": [
+   "time courses",
+   "flux distribution"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310199",
+  "field": "BI",
+  "node": "ANZSRC:310199",
+  "name": "Biochemistry and cell biology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310201",
+  "field": "BI",
+  "node": "ANZSRC:310201",
+  "name": "Bioinformatic methods development",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "computational analysis of biological data",
+   "algorithmic optimisation for genomic and proteomic sequences"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Needleman-Wunsch and Smith-Waterman alignment",
+    "does": "Finds optimal global or local sequence alignments by dynamic programming",
+    "hypotheses": [
+     "additive scoring scheme",
+     "alignment positions scored independently",
+     "fixed substitution matrix and gap penalties"
+    ]
+   },
+   {
+    "name": "Hidden Markov models",
+    "does": "Models sequences as emissions from hidden states, e.g. gene or profile models",
+    "hypotheses": [
+     "next state depends only on current state (Markov property)",
+     "emission depends only on current state",
+     "fixed model topology with stationary parameters"
+    ]
+   },
+   {
+    "name": "Markov chain Monte Carlo (Metropolis-Hastings)",
+    "does": "Samples posterior distributions for Bayesian inference in sequence analysis",
+    "hypotheses": [
+     "target density known up to a constant",
+     "chain ergodic and converged",
+     "samples after burn-in adequate"
+    ]
+   }
+  ],
+  "inputs": [
+   "biological sequences",
+   "structural data",
+   "statistical parameters"
+  ],
+  "outputs": [
+   "alignment scores",
+   "probabilistic models",
+   "algorithmic complexity bounds"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Named dynamic programming as the actual alignment algorithms; changed generic Monte Carlo to MCMC). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310202",
+  "field": "BI",
+  "node": "ANZSRC:310202",
+  "name": "Biological network analysis",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "find the important members and groups in a web of interactions"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Network centrality and module detection",
+    "does": "ranks nodes and finds densely linked groups",
+    "hypotheses": [
+     "the network is reasonably complete",
+     "false links are rare enough not to drive the result"
+    ]
+   }
+  ],
+  "inputs": [
+   "interaction list"
+  ],
+  "outputs": [
+   "ranked nodes",
+   "modules"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310203",
+  "field": "BI",
+  "node": "ANZSRC:310203",
+  "name": "Computational ecology and phylogenetics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "infer a branching history from present-day sequences"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Maximum-likelihood phylogenetics",
+    "does": "finds the tree that best explains aligned sequences",
+    "hypotheses": [
+     "a stated substitution model",
+     "sites evolve independently",
+     "the alignment is correct"
+    ]
+   },
+   {
+    "name": "Bootstrap support",
+    "does": "measures how stable each branch is to resampling sites",
+    "hypotheses": [
+     "sites are independent and alike in distribution"
+    ]
+   }
+  ],
+  "inputs": [
+   "aligned sequences"
+  ],
+  "outputs": [
+   "tree with support values"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310204",
+  "field": "BI",
+  "node": "ANZSRC:310204",
+  "name": "Genomics and transcriptomics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "find which genes differ in activity between conditions"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "infer"
+   ],
+   "scale": [
+    "high_dimensional"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Differential expression analysis of count data",
+    "does": "tests each gene for a change between groups",
+    "hypotheses": [
+     "biological replicates in each group",
+     "counts follow a negative binomial model",
+     "samples are normalised for depth"
+    ]
+   },
+   {
+    "name": "False discovery rate control (Benjamini–Hochberg)",
+    "does": "limits the expected share of false findings",
+    "hypotheses": [
+     "tests are independent or positively dependent"
+    ]
+   }
+  ],
+  "inputs": [
+   "read counts per gene and sample"
+  ],
+  "outputs": [
+   "list of changed genes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310205",
+  "field": "BI",
+  "node": "ANZSRC:310205",
+  "name": "Proteomics and metabolomics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "identification and quantification of proteins and metabolites",
+   "characterisation of molecular pathways and biomarkers"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "estimate"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Isoelectric focusing",
+    "does": "Separates proteins in a pH gradient by isoelectric point",
+    "hypotheses": [
+     "stable pH gradient",
+     "protein soluble near its pI"
+    ]
+   },
+   {
+    "name": "Data-dependent LC-MS/MS shotgun proteomics",
+    "does": "Identifies peptides by fragment spectra matched to sequence databases after LC separation",
+    "hypotheses": [
+     "proteolytic peptides ionisable",
+     "precursor ion isolation before fragmentation",
+     "protein sequence database contains the proteins"
+    ]
+   },
+   {
+    "name": "Target-decoy false discovery rate estimation",
+    "does": "Estimates false identification rate using reversed or shuffled decoy sequences",
+    "hypotheses": [
+     "decoy matches distributed like incorrect target matches",
+     "incorrect matches equally likely to hit target or decoy"
+    ]
+   }
+  ],
+  "inputs": [
+   "biological samples (tissues, fluids, cell lysates)"
+  ],
+  "outputs": [
+   "protein and metabolite profiles",
+   "molecular weights",
+   "sequence identifications"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Merged duplicate MS entries; added target-decoy FDR; list-formatted inputs/outputs). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310206",
+  "field": "BI",
+  "node": "ANZSRC:310206",
+  "name": "Sequence analysis",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "find regions of similarity between long strings"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "infer"
+   ],
+   "structure": [
+    "sequence"
+   ],
+   "domain_type": [
+    "discrete"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dynamic-programming alignment",
+    "does": "finds the optimal alignment of two sequences",
+    "hypotheses": [
+     "scoring is additive over positions",
+     "gap penalties are fixed in advance"
+    ]
+   },
+   {
+    "name": "Heuristic database search with E-values (BLAST)",
+    "does": "finds similar sequences quickly and scores their significance",
+    "hypotheses": [
+     "the score statistics assume random sequences of typical composition",
+     "low-complexity regions are masked"
+    ]
+   }
+  ],
+  "inputs": [
+   "query sequence",
+   "database"
+  ],
+  "outputs": [
+   "alignments with significance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310207",
+  "field": "BI",
+  "node": "ANZSRC:310207",
+  "name": "Statistical and quantitative genetics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "split variation in a trait into inherited and other parts"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linear mixed model with a relationship matrix",
+    "does": "estimates heritability and breeding values",
+    "hypotheses": [
+     "genetic effects are additive",
+     "relationships among individuals are known",
+     "residuals are independent of genetic effects"
+    ]
+   },
+   {
+    "name": "Genome-wide association study",
+    "does": "finds variants associated with a trait",
+    "hypotheses": [
+     "a large sample",
+     "population structure is controlled",
+     "markers are correlated with causal variants"
+    ]
+   }
+  ],
+  "inputs": [
+   "trait values",
+   "genotypes or pedigree"
+  ],
+  "outputs": [
+   "heritability",
+   "associated variants"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310208",
+  "field": "BI",
+  "node": "ANZSRC:310208",
+  "name": "Translational and applied bioinformatics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "clinical application of genomic data",
+   "biomarker discovery for diagnostics"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Genome-wide association study (GWAS)",
+    "does": "Tests many variants for association with a phenotype across a population",
+    "hypotheses": [
+     "population stratification controlled",
+     "genotype quality control incl. Hardy-Weinberg equilibrium in controls",
+     "multiple-testing correction (genome-wide significance)",
+     "adequate sample size and power"
+    ]
+   },
+   {
+    "name": "Differential expression analysis (negative binomial models)",
+    "does": "Tests gene expression differences between conditions from count data",
+    "hypotheses": [
+     "counts overdispersed, modelled as negative binomial",
+     "independent biological replicates",
+     "most genes not differentially expressed (normalisation)"
+    ]
+   }
+  ],
+  "inputs": [
+   "high-throughput sequencing data",
+   "patient clinical phenotypes"
+  ],
+  "outputs": [
+   "candidate biomarkers",
+   "therapeutic targets"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Clarified GWAS and differential expression conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310299",
+  "field": "BI",
+  "node": "ANZSRC:310299",
+  "name": "Bioinformatics and computational biology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310301",
+  "field": "BI",
+  "node": "ANZSRC:310301",
+  "name": "Behavioural ecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "predict behaviour as the best response to costs and benefits"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "agents": [
+    "multiple_competing"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Optimal foraging (marginal value theorem)",
+    "does": "predicts when to leave a depleting patch",
+    "hypotheses": [
+     "the forager maximises long-term average intake rate",
+     "gains in a patch diminish with time",
+     "travel time is known"
+    ]
+   },
+   {
+    "name": "Evolutionarily stable strategy",
+    "does": "finds a strategy that cannot be invaded",
+    "hypotheses": [
+     "pay-offs depend on the frequency of strategies",
+     "a large well-mixed population"
+    ]
+   }
+  ],
+  "inputs": [
+   "gain curves",
+   "pay-offs"
+  ],
+  "outputs": [
+   "predicted behaviour"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310302",
+  "field": "BI",
+  "node": "ANZSRC:310302",
+  "name": "Community ecology (excl. invasive species ecology)",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "describe and compare assemblages of many species"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "estimate"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Rarefaction",
+    "does": "compares richness at equal sampling effort",
+    "hypotheses": [
+     "individuals are sampled at random",
+     "the samples come from comparable communities"
+    ]
+   },
+   {
+    "name": "Ordination",
+    "does": "arranges samples by similarity in composition",
+    "hypotheses": [
+     "the chosen distance measure suits the data"
+    ]
+   }
+  ],
+  "inputs": [
+   "species counts per sample"
+  ],
+  "outputs": [
+   "richness comparison",
+   "ordination plot"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310303",
+  "field": "BI",
+  "node": "ANZSRC:310303",
+  "name": "Ecological physiology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "organismal response to environmental stress",
+   "physiological limits of species distribution"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Shelford's law of tolerance",
+    "does": "Treats organism performance as bounded by minimum and maximum tolerance of each factor",
+    "hypotheses": [
+     "other factors not limiting",
+     "tolerance range fixed for the acclimated population"
+    ]
+   },
+   {
+    "name": "Q10 temperature coefficient",
+    "does": "Gives fold-change of a biological rate for a 10 degree Celsius rise",
+    "hypotheses": [
+     "rate roughly exponential in temperature",
+     "within non-damaging temperature range"
+    ]
+   }
+  ],
+  "inputs": [
+   "environmental variables",
+   "metabolic rates",
+   "organismal performance metrics"
+  ],
+  "outputs": [
+   "tolerance limits",
+   "optimal operating ranges",
+   "metabolic scaling factors"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Shelford and Q10 hypotheses with standard ones). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310304",
+  "field": "BI",
+  "node": "ANZSRC:310304",
+  "name": "Freshwater ecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "freshwater ecosystem function and health",
+   "aquatic biodiversity and nutrient cycling"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "River continuum concept",
+    "does": "Predicts community structure along a river from headwaters to mouth",
+    "hypotheses": [
+     "continuous longitudinal gradient in physical conditions",
+     "unregulated, undisturbed river",
+     "downstream communities exploit upstream processing"
+    ]
+   },
+   {
+    "name": "Shannon diversity index",
+    "does": "Combines richness and evenness into one diversity measure",
+    "hypotheses": [
+     "random, representative sample of the community",
+     "all species represented in the sample",
+     "taxa correctly identified"
+    ]
+   }
+  ],
+  "inputs": [
+   "species abundance data",
+   "river order",
+   "water chemistry",
+   "physical habitat characteristics"
+  ],
+  "outputs": [
+   "diversity indices",
+   "community structure predictions",
+   "ecosystem health assessments"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected RCC and Shannon conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310305",
+  "field": "BI",
+  "node": "ANZSRC:310305",
+  "name": "Marine and estuarine ecology (incl. marine ichthyology)",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "marine ecosystem dynamics",
+   "fish population and community structure"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Lotka-Volterra predator-prey equations",
+    "does": "Models coupled oscillations of predator and prey populations",
+    "hypotheses": [
+     "prey grow exponentially without predators",
+     "linear (type I) functional response",
+     "well-mixed homogeneous environment",
+     "predators depend only on this prey"
+    ]
+   },
+   {
+    "name": "Schaefer surplus production model",
+    "does": "Relates fish stock growth and sustainable yield to biomass",
+    "hypotheses": [
+     "logistic population growth",
+     "catch proportional to effort and biomass (constant catchability)",
+     "stock closed to migration"
+    ]
+   },
+   {
+    "name": "Shannon diversity index",
+    "does": "Combines richness and evenness into one diversity measure",
+    "hypotheses": [
+     "representative random sample",
+     "all species represented in the sample"
+    ]
+   }
+  ],
+  "inputs": [
+   "species abundance data",
+   "population growth rates",
+   "interaction coefficients"
+  ],
+  "outputs": [
+   "diversity indices",
+   "population stability predictions",
+   "community composition"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected Lotka-Volterra hypotheses; added fisheries surplus-production model). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310306",
+  "field": "BI",
+  "node": "ANZSRC:310306",
+  "name": "Palaeoecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "rebuild past communities from preserved remains"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Pollen analysis",
+    "does": "infers past vegetation from pollen in dated layers",
+    "hypotheses": [
+     "the layers are dated",
+     "pollen source area and differing pollen production are allowed for"
+    ]
+   }
+  ],
+  "inputs": [
+   "dated cores"
+  ],
+  "outputs": [
+   "vegetation history"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310307",
+  "field": "BI",
+  "node": "ANZSRC:310307",
+  "name": "Population ecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "project the size of a population from births and deaths"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "linear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Leslie matrix model",
+    "does": "projects an age-structured population",
+    "hypotheses": [
+     "survival and fertility rates are constant",
+     "no density dependence",
+     "a closed population"
+    ]
+   },
+   {
+    "name": "Mark-recapture estimation",
+    "does": "estimates population size from marked animals",
+    "hypotheses": [
+     "a closed population",
+     "marks are not lost",
+     "equal catchability"
+    ]
+   }
+  ],
+  "inputs": [
+   "age-specific rates",
+   "capture records"
+  ],
+  "outputs": [
+   "growth rate",
+   "population size"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310308",
+  "field": "BI",
+  "node": "ANZSRC:310308",
+  "name": "Terrestrial ecology",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "ecosystem function and structure",
+   "species distribution and community dynamics"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Equilibrium theory of island biogeography",
+    "does": "Predicts richness from balance of immigration and extinction",
+    "hypotheses": [
+     "dynamic equilibrium between immigration and extinction",
+     "immigration falls with isolation; extinction rises as area falls",
+     "species treated as equivalent"
+    ]
+   },
+   {
+    "name": "Lotka-Volterra competition equations",
+    "does": "Models outcome of competition between two species",
+    "hypotheses": [
+     "logistic growth of each species",
+     "constant competition coefficients",
+     "homogeneous environment"
+    ]
+   },
+   {
+    "name": "Species-area relationship (power law)",
+    "does": "Relates species number to habitat area",
+    "hypotheses": [
+     "consistent sampling effort",
+     "similar habitat type",
+     "approximately power-law scaling over the range"
+    ]
+   }
+  ],
+  "inputs": [
+   "species counts",
+   "habitat area",
+   "geographic distance",
+   "population growth rates"
+  ],
+  "outputs": [
+   "species richness estimates",
+   "population stability predictions",
+   "biodiversity patterns"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected Lotka-Volterra to the competition form; refined conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310399",
+  "field": "BI",
+  "node": "ANZSRC:310399",
+  "name": "Ecology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310401",
+  "field": "BI",
+  "node": "ANZSRC:310401",
+  "name": "Animal systematics and taxonomy",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "group animals so that each group has one common ancestor"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cladistic analysis",
+    "does": "groups taxa by shared derived characters",
+    "hypotheses": [
+     "characters are homologous",
+     "character states can be ordered from ancestral to derived"
+    ]
+   }
+  ],
+  "inputs": [
+   "character matrix"
+  ],
+  "outputs": [
+   "classification"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310402",
+  "field": "BI",
+  "node": "ANZSRC:310402",
+  "name": "Biogeography and phylogeography",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "spatial distribution of species",
+   "evolutionary history of geographic lineages"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Coalescent theory",
+    "does": "Models gene genealogies backwards in time to infer population history",
+    "hypotheses": [
+     "selectively neutral loci",
+     "random mating within population",
+     "no recombination within locus",
+     "sample small relative to population size"
+    ]
+   },
+   {
+    "name": "Equilibrium theory of island biogeography",
+    "does": "Predicts species richness from island area and isolation",
+    "hypotheses": [
+     "dynamic immigration-extinction equilibrium",
+     "species treated as equivalent"
+    ]
+   },
+   {
+    "name": "Maximum likelihood phylogenetic inference",
+    "does": "Finds the tree maximising data likelihood under a substitution model",
+    "hypotheses": [
+     "explicit substitution model adequate",
+     "sites evolve independently",
+     "alignment reflects homology"
+    ]
+   }
+  ],
+  "inputs": [
+   "DNA sequences",
+   "geographic coordinates",
+   "species occurrence data",
+   "island area",
+   "distance from mainland"
+  ],
+  "outputs": [
+   "phylogenetic trees",
+   "ancestral area reconstructions",
+   "species richness estimates",
+   "divergence times"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined coalescent and island biogeography conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310403",
+  "field": "BI",
+  "node": "ANZSRC:310403",
+  "name": "Biological adaptation",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "explaining trait evolution",
+   "analysing fitness trade-offs"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Price equation",
+    "does": "Partitions change in mean trait into selection and transmission terms",
+    "hypotheses": [
+     "defined ancestor-descendant population mapping",
+     "fitness measurable per individual"
+    ]
+   },
+   {
+    "name": "Fisher's fundamental theorem of natural selection",
+    "does": "Equates rate of mean fitness increase to additive genetic variance in fitness",
+    "hypotheses": [
+     "constant environment (fitness effects fixed)",
+     "no mutation, migration or drift",
+     "additive genetic variance in fitness"
+    ]
+   }
+  ],
+  "inputs": [
+   "trait measurements",
+   "fitness data",
+   "genetic variance"
+  ],
+  "outputs": [
+   "rate of evolutionary change",
+   "selection coefficients"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced misattributed Price hypotheses; fixed Fisher theorem conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310404",
+  "field": "BI",
+  "node": "ANZSRC:310404",
+  "name": "Evolution of developmental systems",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "origins of developmental mechanisms",
+   "evolutionary changes in ontogeny"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ancestral state reconstruction (Mk model)",
+    "does": "Infers ancestral character states on a phylogeny from extant states",
+    "hypotheses": [
+     "phylogeny known with branch lengths",
+     "Markov model of character change",
+     "homologous characters scored consistently"
+    ]
+   },
+   {
+    "name": "Heterochrony framework",
+    "does": "Describes shifts in timing or rate of development between ancestor and descendant",
+    "hypotheses": [
+     "homologous developmental stages or landmarks comparable",
+     "ancestral ontogeny known or inferred"
+    ]
+   }
+  ],
+  "inputs": [
+   "embryonic morphology",
+   "gene expression patterns",
+   "phylogenetic data"
+  ],
+  "outputs": [
+   "developmental trajectories",
+   "ancestral state reconstructions",
+   "mechanisms of morphological novelty"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Dropped non-tool entries (comparative embryology, evo-devo synthesis); heterochrony hypotheses modest). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310405",
+  "field": "BI",
+  "node": "ANZSRC:310405",
+  "name": "Evolutionary ecology",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "adaptation of populations to environments",
+   "evolutionary drivers of community structure"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Price equation",
+    "does": "Partitions change in mean trait into selection and transmission terms",
+    "hypotheses": [
+     "defined ancestor-descendant population mapping",
+     "fitness measurable per individual"
+    ]
+   },
+   {
+    "name": "Wright's adaptive landscape",
+    "does": "Maps mean fitness over genotype or allele frequency space",
+    "hypotheses": [
+     "fitness a function of genotype or phenotype",
+     "fixed environment",
+     "large population for deterministic movement uphill"
+    ]
+   },
+   {
+    "name": "Evolutionarily stable strategy (ESS)",
+    "does": "Identifies strategies uninvadable by rare alternatives under frequency dependence",
+    "hypotheses": [
+     "large population",
+     "random pairwise interactions",
+     "phenotypic gambit (genetics ignored)"
+    ]
+   }
+  ],
+  "inputs": [
+   "trait measurements",
+   "fitness data",
+   "phylogenetic trees",
+   "environmental variables"
+  ],
+  "outputs": [
+   "selection coefficients",
+   "evolutionary trajectories",
+   "adaptive peaks"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added ESS; fixed Price and landscape hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310406",
+  "field": "BI",
+  "node": "ANZSRC:310406",
+  "name": "Evolutionary impacts of climate change",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "predicting adaptive responses to environmental shifts",
+   "analysing shifts in species distribution and genetic diversity"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Breeder's equation",
+    "does": "Predicts response to selection as heritability times selection differential",
+    "hypotheses": [
+     "additive genetic variance",
+     "linear parent-offspring regression",
+     "no environmental covariance between trait and fitness"
+    ]
+   },
+   {
+    "name": "Species distribution modelling (MaxEnt)",
+    "does": "Estimates suitable range from occurrence records and climate layers",
+    "hypotheses": [
+     "species in equilibrium with climate",
+     "niche conserved over projection period",
+     "sampling bias accounted for"
+    ]
+   }
+  ],
+  "inputs": [
+   "phenotypic data",
+   "genotypic data",
+   "environmental variables",
+   "fitness metrics"
+  ],
+  "outputs": [
+   "rate of evolutionary change",
+   "predicted trait shifts",
+   "selection coefficients"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Dropped repeated Price equation; added species distribution modelling). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310407",
+  "field": "BI",
+  "node": "ANZSRC:310407",
+  "name": "Host-parasite interactions",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "predict whether an infection spreads through a host population"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Compartmental epidemic model (SIR)",
+    "does": "tracks susceptible, infected and recovered hosts",
+    "hypotheses": [
+     "homogeneous mixing",
+     "a closed population",
+     "constant transmission and recovery rates"
+    ]
+   }
+  ],
+  "inputs": [
+   "transmission and recovery rates"
+  ],
+  "outputs": [
+   "epidemic curve",
+   "threshold"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310408",
+  "field": "BI",
+  "node": "ANZSRC:310408",
+  "name": "Life histories",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "summarise survival and reproduction by age"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Life table and Euler–Lotka equation",
+    "does": "gives growth rate from age-specific survival and fertility",
+    "hypotheses": [
+     "rates are constant in time",
+     "a stable age distribution"
+    ]
+   }
+  ],
+  "inputs": [
+   "survival and fertility by age"
+  ],
+  "outputs": [
+   "growth rate",
+   "generation time"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310409",
+  "field": "BI",
+  "node": "ANZSRC:310409",
+  "name": "Microbial taxonomy",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "classification of microorganisms",
+   "identification of novel microbial species"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "16S rRNA gene sequencing",
+    "does": "Identifies and classifies bacteria and archaea by conserved rRNA gene variation",
+    "hypotheses": [
+     "gene present and orthologous",
+     "interspecies variation exceeds intraspecies variation"
+    ]
+   },
+   {
+    "name": "Average nucleotide identity (ANI)",
+    "does": "Compares whole genomes; about 95-96 percent identity is the conventional species cut-off",
+    "hypotheses": [
+     "high-quality genome assemblies",
+     "sufficient aligned fraction",
+     "species threshold conventional (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Polyphasic taxonomy",
+    "does": "Combines phenotypic, genotypic and phylogenetic evidence to delimit taxa",
+    "hypotheses": [
+     "congruent evidence from independent data types",
+     "standardised phenotypic tests"
+    ]
+   }
+  ],
+  "inputs": [
+   "genomic DNA",
+   "phenotypic traits",
+   "metabolic profiles"
+  ],
+  "outputs": [
+   "taxonomic rank",
+   "phylogenetic tree",
+   "species description"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected ANI hypotheses (threshold is a convention)). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310410",
+  "field": "BI",
+  "node": "ANZSRC:310410",
+  "name": "Phylogeny and comparative analysis",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "compare traits across species without counting shared ancestry twice"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "infer"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Phylogenetically independent contrasts",
+    "does": "tests trait correlation across species",
+    "hypotheses": [
+     "the phylogeny and branch lengths are known",
+     "traits evolve by Brownian motion"
+    ]
+   }
+  ],
+  "inputs": [
+   "trait values",
+   "phylogeny"
+  ],
+  "outputs": [
+   "corrected correlation"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310411",
+  "field": "BI",
+  "node": "ANZSRC:310411",
+  "name": "Plant and fungus systematics and taxonomy",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "organism classification and naming",
+   "reconstructing evolutionary relationships"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Maximum likelihood phylogenetic inference",
+    "does": "Finds the tree maximising data likelihood under a substitution model",
+    "hypotheses": [
+     "explicit substitution model adequate",
+     "sites evolve independently",
+     "alignment reflects homology"
+    ]
+   },
+   {
+    "name": "Bayesian phylogenetic inference",
+    "does": "Estimates posterior distribution of trees by MCMC",
+    "hypotheses": [
+     "prior distributions specified",
+     "MCMC converged with adequate effective sample size",
+     "explicit substitution model adequate"
+    ]
+   },
+   {
+    "name": "Maximum parsimony",
+    "does": "Chooses the tree needing fewest character changes",
+    "hypotheses": [
+     "characters homologous and independent",
+     "change rare and rates roughly equal across lineages"
+    ]
+   }
+  ],
+  "inputs": [
+   "morphological character matrices",
+   "DNA or protein sequences"
+  ],
+  "outputs": [
+   "phylogenetic trees",
+   "taxonomic descriptions",
+   "nomenclature"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Bayesian and parsimony conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310412",
+  "field": "BI",
+  "node": "ANZSRC:310412",
+  "name": "Speciation and extinction",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "mechanisms of lineage divergence",
+   "patterns of biodiversity loss"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Allopatric speciation model",
+    "does": "Explains divergence of populations separated by a geographic barrier",
+    "hypotheses": [
+     "barrier prevents gene flow",
+     "reproductive isolation accumulates as by-product"
+    ]
+   },
+   {
+    "name": "Bateson-Dobzhansky-Muller model",
+    "does": "Explains hybrid incompatibility from independent substitutions in isolated populations",
+    "hypotheses": [
+     "populations isolated",
+     "incompatible alleles at two or more loci",
+     "new alleles compatible within own background"
+    ]
+   },
+   {
+    "name": "Birth-death model of diversification",
+    "does": "Estimates speciation and extinction rates from phylogenies or fossil counts",
+    "hypotheses": [
+     "lineages evolve independently",
+     "per-lineage rates constant (or modelled as varying)",
+     "sampling complete or modelled"
+    ]
+   }
+  ],
+  "inputs": [
+   "geographic distribution data",
+   "phylogenetic trees",
+   "fossil record abundance"
+  ],
+  "outputs": [
+   "speciation rates",
+   "extinction probability",
+   "cladograms"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Red Queen (not a rate model) with BDM and birth-death model). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310499",
+  "field": "BI",
+  "node": "ANZSRC:310499",
+  "name": "Evolutionary biology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310501",
+  "field": "BI",
+  "node": "ANZSRC:310501",
+  "name": "Anthropological genetics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "human evolutionary history",
+   "population genetic structure and migration"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Coalescent theory",
+    "does": "Models gene genealogies backwards in time to infer population history",
+    "hypotheses": [
+     "selectively neutral loci",
+     "random mating within population",
+     "no recombination within locus"
+    ]
+   },
+   {
+    "name": "Fixation index (Fst)",
+    "does": "Measures genetic differentiation between populations",
+    "hypotheses": [
+     "neutral loci",
+     "discrete subpopulations",
+     "sample-size bias corrected in estimator"
+    ]
+   },
+   {
+    "name": "Principal component analysis of genotypes",
+    "does": "Summarises genetic variation to reveal population structure",
+    "hypotheses": [
+     "SNPs approximately independent (pruned for linkage disequilibrium)",
+     "no close relatives dominating sample"
+    ]
+   }
+  ],
+  "inputs": [
+   "genomic sequences",
+   "allele frequencies",
+   "haplotypes"
+  ],
+  "outputs": [
+   "phylogenetic trees",
+   "population divergence metrics",
+   "ancestral proportions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Fst and PCA conditions; list-formatted inputs/outputs). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310502",
+  "field": "BI",
+  "node": "ANZSRC:310502",
+  "name": "Cell and nuclear division",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "mechanisms of genetic inheritance",
+   "regulation of cell proliferation"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Karyotyping",
+    "does": "Visualises chromosome number and structure from metaphase spreads",
+    "hypotheses": [
+     "cells arrested in metaphase",
+     "chromosomes adequately condensed and banded"
+    ]
+   },
+   {
+    "name": "Flow cytometry of DNA content",
+    "does": "Assigns cell cycle phase from stoichiometric DNA dye fluorescence",
+    "hypotheses": [
+     "dye binds DNA stoichiometrically (RNase-treated)",
+     "single-cell suspension",
+     "cells fixed and permeabilised"
+    ]
+   }
+  ],
+  "inputs": [
+   "metaphase chromosome spreads",
+   "fluorescently labelled cells"
+  ],
+  "outputs": [
+   "idiograms",
+   "cell cycle distribution histograms"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined flow cytometry conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310503",
+  "field": "BI",
+  "node": "ANZSRC:310503",
+  "name": "Developmental genetics (incl. sex determination)",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "mechanisms of embryonic pattern formation",
+   "genetic control of sex determination"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "In situ hybridisation",
+    "does": "Localises specific transcripts in tissue with labelled complementary probes",
+    "hypotheses": [
+     "probe complementary to target",
+     "tissue fixed to preserve mRNA"
+    ]
+   },
+   {
+    "name": "CRISPR-Cas9 gene editing",
+    "does": "Creates targeted mutations to test gene function",
+    "hypotheses": [
+     "PAM adjacent to target site",
+     "guide RNA specific with limited off-target cutting",
+     "efficient delivery into cells or embryos"
+    ]
+   },
+   {
+    "name": "French flag model (morphogen gradient)",
+    "does": "Explains positional specification by concentration thresholds",
+    "hypotheses": [
+     "stable morphogen gradient from a source",
+     "cells interpret concentration thresholds"
+    ]
+   }
+  ],
+  "inputs": [
+   "genetic sequences",
+   "embryonic tissue",
+   "mRNA probes"
+  ],
+  "outputs": [
+   "gene expression maps",
+   "phenotypic mutant analysis"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added morphogen gradient model for pattern formation; corrected CRISPR conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310504",
+  "field": "BI",
+  "node": "ANZSRC:310504",
+  "name": "Epigenetics (incl. genome methylation and epigenomics)",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "gene expression regulation without DNA sequence change",
+   "heritability of acquired phenotypic traits"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bisulfite sequencing",
+    "does": "Maps 5-methylcytosine by converting unmethylated cytosine to uracil",
+    "hypotheses": [
+     "complete conversion of unmethylated cytosine",
+     "5-methylcytosine protected from conversion",
+     "5mC and 5hmC not distinguished"
+    ]
+   },
+   {
+    "name": "ChIP-seq",
+    "does": "Maps protein-DNA binding or histone marks genome-wide by immunoprecipitation",
+    "hypotheses": [
+     "specific, validated antibody",
+     "cross-linking reflects in vivo binding",
+     "adequate input control"
+    ]
+   }
+  ],
+  "inputs": [
+   "genomic DNA",
+   "chromatin-bound proteins"
+  ],
+  "outputs": [
+   "methylation maps",
+   "histone modification profiles",
+   "DNA-protein binding sites"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added essential bisulfite conditions; list-formatted). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310505",
+  "field": "BI",
+  "node": "ANZSRC:310505",
+  "name": "Gene expression (incl. microarray and other genome-wide approaches)",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "measure the activity of many genes at once"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Differential expression analysis of count data",
+    "does": "tests each gene for a change between groups",
+    "hypotheses": [
+     "biological replicates in each group",
+     "counts follow a negative binomial model",
+     "samples are normalised for depth"
+    ]
+   }
+  ],
+  "inputs": [
+   "read counts"
+  ],
+  "outputs": [
+   "changed genes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310506",
+  "field": "BI",
+  "node": "ANZSRC:310506",
+  "name": "Gene mapping",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "locate the inherited factor behind a trait"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "structure": [
+    "sequence"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linkage analysis (LOD score)",
+    "does": "tests whether a marker and a trait are inherited together",
+    "hypotheses": [
+     "the pedigree is correct",
+     "the mode of inheritance is specified",
+     "marker order is known"
+    ]
+   }
+  ],
+  "inputs": [
+   "pedigree",
+   "marker genotypes",
+   "trait"
+  ],
+  "outputs": [
+   "candidate region"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310507",
+  "field": "BI",
+  "node": "ANZSRC:310507",
+  "name": "Genetic immunology",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "genetic basis of immune responses",
+   "heritability of autoimmune and autoinflammatory disorders"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Genome-wide association study (GWAS)",
+    "does": "Tests many variants for association with immune phenotypes",
+    "hypotheses": [
+     "population stratification controlled",
+     "genotype quality control",
+     "multiple-testing correction",
+     "adequate sample size"
+    ]
+   },
+   {
+    "name": "HLA typing",
+    "does": "Determines alleles of the major histocompatibility complex",
+    "hypotheses": [
+     "high-quality genomic DNA",
+     "reference allele database current (e.g. IPD-IMGT/HLA)"
+    ]
+   }
+  ],
+  "inputs": [
+   "genomic DNA",
+   "phenotypic immune data",
+   "single nucleotide polymorphisms (SNPs)"
+  ],
+  "outputs": [
+   "risk alleles",
+   "loci associated with immune disease",
+   "HLA haplotypes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Renamed MHC typing to HLA typing; refined GWAS conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310508",
+  "field": "BI",
+  "node": "ANZSRC:310508",
+  "name": "Genome structure and regulation",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "determination of genomic architecture",
+   "mechanisms of gene expression control"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "ATAC-seq",
+    "does": "Maps open chromatin using Tn5 transposase insertion",
+    "hypotheses": [
+     "intact nuclei",
+     "Tn5 inserts preferentially into accessible DNA"
+    ]
+   },
+   {
+    "name": "ChIP-seq",
+    "does": "Maps protein-DNA binding sites genome-wide",
+    "hypotheses": [
+     "specific, validated antibody",
+     "cross-linking reflects in vivo binding"
+    ]
+   },
+   {
+    "name": "Hi-C",
+    "does": "Measures genome-wide chromatin contact frequencies",
+    "hypotheses": [
+     "formaldehyde cross-linking preserves spatial proximity",
+     "ligation joins only cross-linked, nearby fragments"
+    ]
+   }
+  ],
+  "inputs": [
+   "genomic DNA",
+   "cellular nuclei",
+   "specific antibodies"
+  ],
+  "outputs": [
+   "chromatin accessibility maps",
+   "protein-binding peaks",
+   "3D genome contact maps"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced Hi-C hypotheses with cross-linking and proximity ligation). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310509",
+  "field": "BI",
+  "node": "ANZSRC:310509",
+  "name": "Genomics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "determine and annotate a complete genome"
+  ],
+  "signature": {
+   "task": [
+    "construct",
+    "classify"
+   ],
+   "structure": [
+    "sequence"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "De Bruijn graph assembly",
+    "does": "rebuilds a sequence from short reads",
+    "hypotheses": [
+     "reads cover the genome deeply enough",
+     "repeats are shorter than the word length or resolved by other data"
+    ]
+   }
+  ],
+  "inputs": [
+   "sequencing reads"
+  ],
+  "outputs": [
+   "assembled genome"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310510",
+  "field": "BI",
+  "node": "ANZSRC:310510",
+  "name": "Molecular evolution",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "test whether sequence change was shaped by selection"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "structure": [
+    "sequence"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ratio of non-synonymous to synonymous change (dN/dS)",
+    "does": "detects selection on protein-coding sequence",
+    "hypotheses": [
+     "synonymous changes are neutral",
+     "the alignment and tree are correct"
+    ]
+   },
+   {
+    "name": "Molecular clock dating",
+    "does": "dates divergences from sequence difference",
+    "hypotheses": [
+     "the rate is constant, or its variation is modelled",
+     "reliable calibration points exist"
+    ]
+   }
+  ],
+  "inputs": [
+   "aligned coding sequences",
+   "tree"
+  ],
+  "outputs": [
+   "selection estimate",
+   "divergence dates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310511",
+  "field": "BI",
+  "node": "ANZSRC:310511",
+  "name": "Neurogenetics",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "genetic basis of neurological disorders",
+   "molecular mechanisms of neuronal development"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Genome-wide association study (GWAS)",
+    "does": "Tests many variants for association with neurological phenotypes",
+    "hypotheses": [
+     "population stratification controlled",
+     "precise phenotype definition",
+     "multiple-testing correction"
+    ]
+   },
+   {
+    "name": "Linkage analysis (LOD score)",
+    "does": "Locates disease genes by co-segregation with markers in pedigrees",
+    "hypotheses": [
+     "Mendelian inheritance with specified model",
+     "informative pedigrees",
+     "known recombination model"
+    ]
+   },
+   {
+    "name": "CRISPR-Cas9 gene editing",
+    "does": "Edits specific sequences to test gene function in neurons",
+    "hypotheses": [
+     "PAM adjacent to target site",
+     "effective delivery into neurons",
+     "guide RNA specific"
+    ]
+   }
+  ],
+  "inputs": [
+   "genomic DNA",
+   "phenotypic data",
+   "guide RNA"
+  ],
+  "outputs": [
+   "risk alleles",
+   "gene-disease associations",
+   "modified cell lines"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added linkage analysis with LOD score; refined GWAS and CRISPR conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310599",
+  "field": "BI",
+  "node": "ANZSRC:310599",
+  "name": "Genetics not elsewhere classified",
+  "taxonomy_cell": "BI.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310601",
+  "field": "BI",
+  "node": "ANZSRC:310601",
+  "name": "Biocatalysis and enzyme technology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "efficient chemical synthesis using biological catalysts",
+   "optimisation of enzyme-driven industrial processes"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Michaelis-Menten kinetics",
+    "does": "Relates initial reaction rate to substrate concentration",
+    "hypotheses": [
+     "quasi-steady-state for enzyme-substrate complex",
+     "substrate in large excess over enzyme",
+     "initial rates, negligible product inhibition",
+     "single substrate"
+    ]
+   },
+   {
+    "name": "Directed evolution",
+    "does": "Improves enzyme properties by iterated mutation and screening",
+    "hypotheses": [
+     "genotype-phenotype linkage in screen",
+     "library diversity sufficient",
+     "screen reflects desired function"
+    ]
+   }
+  ],
+  "inputs": [
+   "substrate concentration",
+   "enzyme concentration",
+   "protein sequences",
+   "reaction rates"
+  ],
+  "outputs": [
+   "kinetic constants (Km, Vmax)",
+   "improved enzyme variants",
+   "catalytic efficiency metrics"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added missing MM conditions; replaced directed evolution hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310602",
+  "field": "BI",
+  "node": "ANZSRC:310602",
+  "name": "Bioprocessing, bioproduction and bioproducts",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "grow cells at scale to make a product"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "control",
+    "optimise"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Monod growth kinetics",
+    "does": "relates growth rate to one nutrient",
+    "hypotheses": [
+     "one limiting substrate",
+     "balanced growth"
+    ]
+   },
+   {
+    "name": "Chemostat steady-state analysis",
+    "does": "fixes growth rate by the dilution rate",
+    "hypotheses": [
+     "the vessel is well mixed",
+     "constant feed and volume",
+     "dilution rate below the washout rate"
+    ]
+   }
+  ],
+  "inputs": [
+   "strain and feed data"
+  ],
+  "outputs": [
+   "growth rate",
+   "productivity"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310603",
+  "field": "BI",
+  "node": "ANZSRC:310603",
+  "name": "Fermentation",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "anaerobic energy production",
+   "metabolic byproduct synthesis"
+  ],
+  "signature": {
+   "task": [
+    "control",
+    "optimise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gay-Lussac equation of alcoholic fermentation",
+    "does": "Gives theoretical stoichiometry of glucose to two ethanol and two CO2",
+    "hypotheses": [
+     "sugar converted only to ethanol and CO2",
+     "by-products and biomass ignored (real yield lower)"
+    ]
+   },
+   {
+    "name": "Pasteur effect",
+    "does": "Describes slower sugar consumption when oxygen allows respiration",
+    "hypotheses": [
+     "facultative organism",
+     "oxygen available"
+    ]
+   },
+   {
+    "name": "Luedeking-Piret model",
+    "does": "Splits product formation into growth-associated and non-growth-associated terms",
+    "hypotheses": [
+     "product rate linear in growth rate and biomass",
+     "constant coefficients"
+    ]
+   }
+  ],
+  "inputs": [
+   "substrate concentration",
+   "oxygen levels",
+   "microbial strain"
+  ],
+  "outputs": [
+   "metabolite yield",
+   "ATP production rate",
+   "gas evolution volume"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Gay-Lussac conditions; added Luedeking-Piret). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310604",
+  "field": "BI",
+  "node": "ANZSRC:310604",
+  "name": "Industrial biotechnology diagnostics (incl. biosensors)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "detection of industrial contaminants",
+   "real-time monitoring of bioprocesses"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Surface plasmon resonance",
+    "does": "Detects binding in real time via refractive index change at a metal film",
+    "hypotheses": [
+     "binding within evanescent field at thin gold film",
+     "mass transport not limiting"
+    ]
+   },
+   {
+    "name": "Electrochemical impedance spectroscopy",
+    "does": "Probes electrode interface by small-amplitude AC response",
+    "hypotheses": [
+     "linear (small-amplitude) response",
+     "stable, time-invariant system",
+     "causal system (Kramers-Kronig valid)"
+    ]
+   },
+   {
+    "name": "Langmuir adsorption isotherm",
+    "does": "Relates surface binding to analyte concentration at equilibrium",
+    "hypotheses": [
+     "identical, independent binding sites",
+     "monolayer",
+     "equilibrium"
+    ]
+   }
+  ],
+  "inputs": [
+   "analytes",
+   "bioreactor samples",
+   "electrical signals"
+  ],
+  "outputs": [
+   "analyte concentration",
+   "binding kinetics",
+   "metabolic activity levels"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed EIS conditions; added Langmuir binding model). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310605",
+  "field": "BI",
+  "node": "ANZSRC:310605",
+  "name": "Industrial microbiology (incl. biofeedstocks)",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "large-scale production of biological products",
+   "conversion of biofeedstocks into value-added chemicals"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "optimise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Monod equation",
+    "does": "Relates specific growth rate to limiting substrate concentration",
+    "hypotheses": [
+     "balanced exponential growth",
+     "single limiting substrate",
+     "no substrate or product inhibition"
+    ]
+   },
+   {
+    "name": "Fed-batch cultivation",
+    "does": "Controls growth by feeding limiting nutrient to avoid inhibition",
+    "hypotheses": [
+     "feed rate controls growth (substrate-limited)",
+     "volume change accounted for"
+    ]
+   },
+   {
+    "name": "Pirt maintenance model",
+    "does": "Splits substrate use into growth and maintenance",
+    "hypotheses": [
+     "constant true yield and maintenance coefficient"
+    ]
+   }
+  ],
+  "inputs": [
+   "substrate concentration",
+   "biomass growth rates",
+   "feed rates"
+  ],
+  "outputs": [
+   "maximum specific growth rate",
+   "half-saturation constant",
+   "product yield"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Monod hypotheses (not steady state); added Pirt maintenance). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310606",
+  "field": "BI",
+  "node": "ANZSRC:310606",
+  "name": "Industrial molecular engineering of nucleic acids and proteins",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "improve a molecule by rounds of variation and selection"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "design"
+   ],
+   "linearity": [
+    "combinatorial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Directed evolution",
+    "does": "improves a protein by repeated mutation and screening",
+    "hypotheses": [
+     "a screen or selection measures the wanted property",
+     "the starting molecule has some of that property"
+    ]
+   }
+  ],
+  "inputs": [
+   "starting gene",
+   "screen"
+  ],
+  "outputs": [
+   "improved variant"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310607",
+  "field": "BI",
+  "node": "ANZSRC:310607",
+  "name": "Nanobiotechnology",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "targeted drug delivery",
+   "high-sensitivity biosensing"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Surface plasmon resonance",
+    "does": "Detects molecular binding via refractive index change at a metal film",
+    "hypotheses": [
+     "thin metal film supporting surface plasmons",
+     "analyte binds within evanescent field"
+    ]
+   },
+   {
+    "name": "Dynamic light scattering",
+    "does": "Estimates hydrodynamic size from Brownian motion fluctuations of scattered light",
+    "hypotheses": [
+     "dilute, non-interacting particles",
+     "Stokes-Einstein relation with known viscosity and temperature",
+     "approximately spherical particles"
+    ]
+   },
+   {
+    "name": "DLVO theory",
+    "does": "Predicts colloidal stability from van der Waals and double-layer forces",
+    "hypotheses": [
+     "additive van der Waals and electrostatic forces",
+     "dilute electrolyte (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "biomolecules",
+   "nanomaterials",
+   "light scattering patterns"
+  ],
+  "outputs": [
+   "binding kinetics",
+   "particle size distribution"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added DLVO colloidal stability; fixed DLS and SPR conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310699",
+  "field": "BI",
+  "node": "ANZSRC:310699",
+  "name": "Industrial biotechnology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310701",
+  "field": "BI",
+  "node": "ANZSRC:310701",
+  "name": "Bacteriology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "identify a bacterium and count it"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "count"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gram stain",
+    "does": "sorts bacteria by cell-wall type",
+    "hypotheses": [
+     "a fresh culture",
+     "the staining protocol is followed"
+    ]
+   },
+   {
+    "name": "16S ribosomal RNA gene sequencing",
+    "does": "identifies bacteria by a marker gene",
+    "hypotheses": [
+     "reference sequences exist",
+     "resolution is often to genus, not species"
+    ]
+   }
+  ],
+  "inputs": [
+   "culture or sample"
+  ],
+  "outputs": [
+   "identity",
+   "count"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310702",
+  "field": "BI",
+  "node": "ANZSRC:310702",
+  "name": "Infectious agents",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "show that a particular agent causes a disease"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Koch's postulates",
+    "does": "set criteria for naming an agent as the cause",
+    "hypotheses": [
+     "the agent can be isolated and grown",
+     "one agent causes the disease",
+     "a susceptible host can be tested"
+    ]
+   }
+  ],
+  "inputs": [
+   "isolates",
+   "host tests"
+  ],
+  "outputs": [
+   "causal verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310703",
+  "field": "BI",
+  "node": "ANZSRC:310703",
+  "name": "Microbial ecology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "microbial community structure and function",
+   "microbe-environment interactions"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "classify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "16S rRNA gene sequencing",
+    "does": "Profiles taxonomic composition via conserved marker gene amplicons",
+    "hypotheses": [
+     "primers bind conserved sites across target taxa",
+     "reference database covers taxa",
+     "unbiased extraction and amplification"
+    ]
+   },
+   {
+    "name": "Shotgun metagenomics",
+    "does": "Sequences total community DNA to assess taxa and functional genes",
+    "hypotheses": [
+     "sufficient DNA yield",
+     "representative sampling",
+     "reference databases cover taxa"
+    ]
+   },
+   {
+    "name": "Monod equation",
+    "does": "Relates microbial growth rate to limiting substrate concentration",
+    "hypotheses": [
+     "balanced growth",
+     "single limiting nutrient",
+     "no inhibition"
+    ]
+   }
+  ],
+  "inputs": [
+   "environmental DNA",
+   "substrate concentration",
+   "microbial biomass"
+  ],
+  "outputs": [
+   "taxonomic profiles",
+   "functional gene abundance",
+   "growth kinetics"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Monod hypotheses; clarified marker gene and metagenomic conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310704",
+  "field": "BI",
+  "node": "ANZSRC:310704",
+  "name": "Microbial genetics",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "mechanisms of genetic variation in microbes",
+   "regulation of microbial gene expression"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ]
+  },
+  "tools": [
+   {
+    "name": "CRISPR-Cas9 gene editing",
+    "does": "Makes targeted cuts for genome modification in bacteria",
+    "hypotheses": [
+     "PAM adjacent to target",
+     "repair template supplied (bacteria lack efficient NHEJ)",
+     "guide RNA specific"
+    ]
+   },
+   {
+    "name": "Bacterial two-hybrid system",
+    "does": "Detects protein-protein interactions via reconstituted adenylate cyclase",
+    "hypotheses": [
+     "interaction reconstitutes reporter function",
+     "proteins fold and are soluble in E. coli"
+    ]
+   },
+   {
+    "name": "Luria-Delbruck fluctuation test",
+    "does": "Estimates mutation rates from variation in mutant counts among cultures",
+    "hypotheses": [
+     "mutations arise randomly before selection",
+     "constant mutation rate and growth",
+     "mutants no fitness disadvantage"
+    ]
+   }
+  ],
+  "inputs": [
+   "DNA sequences",
+   "guide RNA",
+   "protein candidates",
+   "inducer molecules"
+  ],
+  "outputs": [
+   "modified genotypes",
+   "protein interaction data",
+   "quantified gene expression levels"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic inducible promoter with fluctuation test). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310705",
+  "field": "BI",
+  "node": "ANZSRC:310705",
+  "name": "Mycology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "fungal identification and classification",
+   "analysis of fungal ecology and pathogenesis"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "ITS barcoding",
+    "does": "Identifies fungi from internal transcribed spacer sequences",
+    "hypotheses": [
+     "barcode gap between intra- and interspecific variation",
+     "curated reference database"
+    ]
+   },
+   {
+    "name": "Genealogical concordance phylogenetic species recognition",
+    "does": "Delimits species by concordance of unlinked gene genealogies",
+    "hypotheses": [
+     "multiple unlinked loci sampled",
+     "genealogies resolved"
+    ]
+   },
+   {
+    "name": "Koch's postulates",
+    "does": "Establish causal link between a fungus and a disease",
+    "hypotheses": [
+     "organism culturable in pure culture",
+     "susceptible host available",
+     "disease reproducible on reinoculation"
+    ]
+   }
+  ],
+  "inputs": [
+   "environmental samples",
+   "clinical specimens",
+   "fungal isolates"
+  ],
+  "outputs": [
+   "taxonomic identification",
+   "phylogenetic trees",
+   "pure cultures"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic culture isolation; added species recognition and Koch's postulates). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310706",
+  "field": "BI",
+  "node": "ANZSRC:310706",
+  "name": "Virology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "count infectious particles"
+  ],
+  "signature": {
+   "task": [
+    "count",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Plaque assay",
+    "does": "counts infectious particles by the clear zones they form",
+    "hypotheses": [
+     "the virus forms visible plaques in the cell line",
+     "each plaque comes from one particle"
+    ]
+   }
+  ],
+  "inputs": [
+   "diluted sample on a cell layer"
+  ],
+  "outputs": [
+   "infectious titre"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310799",
+  "field": "BI",
+  "node": "ANZSRC:310799",
+  "name": "Microbiology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310801",
+  "field": "BI",
+  "node": "ANZSRC:310801",
+  "name": "Phycology (incl. marine grasses)",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "classification of algae and seagrasses",
+   "assessment of primary productivity in aquatic ecosystems"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Pulse-amplitude-modulated chlorophyll fluorescence (Fv/Fm)",
+    "does": "Estimates maximum photosystem II quantum yield and stress in algae",
+    "hypotheses": [
+     "dark-adapted sample (open PSII centres)",
+     "saturating light pulse",
+     "chlorophyll fluorescence reflects PSII state"
+    ]
+   },
+   {
+    "name": "DNA barcoding",
+    "does": "Identifies species from standard marker sequences (e.g. rbcL, tufA)",
+    "hypotheses": [
+     "barcode gap present",
+     "reference database available",
+     "good quality DNA"
+    ]
+   },
+   {
+    "name": "Photosynthesis-irradiance curve",
+    "does": "Characterises productivity versus light, giving alpha and Pmax",
+    "hypotheses": [
+     "steady-state photosynthesis during incubation",
+     "photoacclimation state unchanged (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "algal biomass",
+   "spectral fluorescence data",
+   "genetic samples"
+  ],
+  "outputs": [
+   "taxonomic identification",
+   "photosynthetic yield rates",
+   "species distribution maps"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined fluorescence conditions; added P-I curve). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310802",
+  "field": "BI",
+  "node": "ANZSRC:310802",
+  "name": "Plant biochemistry",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "metabolic pathway regulation in plants",
+   "chemical basis of plant growth and stress response"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Farquhar-von Caemmerer-Berry model",
+    "does": "Predicts leaf photosynthesis as limited by Rubisco, RuBP regeneration or triose phosphate use",
+    "hypotheses": [
+     "steady state",
+     "minimum of limiting rates applies",
+     "uniform CO2 at carboxylation sites (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "13C metabolic flux analysis",
+    "does": "Infers intracellular fluxes from isotope labelling patterns",
+    "hypotheses": [
+     "metabolic and isotopic steady state",
+     "known network stoichiometry"
+    ]
+   },
+   {
+    "name": "Metabolic control analysis",
+    "does": "Quantifies control of flux by enzymes via control coefficients",
+    "hypotheses": [
+     "steady state",
+     "small perturbations",
+     "known elasticities"
+    ]
+   }
+  ],
+  "inputs": [
+   "metabolite concentrations",
+   "enzyme activity levels",
+   "environmental parameters"
+  ],
+  "outputs": [
+   "metabolic flux rates",
+   "biochemical pathway maps",
+   "carbon assimilation rates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced pathways (not tools) with modelling and flux methods). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310803",
+  "field": "BI",
+  "node": "ANZSRC:310803",
+  "name": "Plant cell and molecular biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "mechanisms of plant growth and development",
+   "molecular basis of plant stress responses"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "CRISPR-Cas9 gene editing",
+    "does": "Makes targeted mutations in plant genomes",
+    "hypotheses": [
+     "PAM adjacent to target",
+     "guide RNA specific",
+     "efficient delivery and regeneration"
+    ]
+   },
+   {
+    "name": "Agrobacterium-mediated transformation",
+    "does": "Transfers T-DNA into plant cells",
+    "hypotheses": [
+     "competent, regenerable tissue",
+     "virulence genes induced"
+    ]
+   },
+   {
+    "name": "RT-qPCR (comparative Ct method)",
+    "does": "Quantifies transcripts relative to reference genes",
+    "hypotheses": [
+     "efficient reverse transcription",
+     "similar amplification efficiency",
+     "stable reference genes"
+    ]
+   }
+  ],
+  "inputs": [
+   "genomic DNA",
+   "mRNA",
+   "plant tissue",
+   "guide RNA"
+  ],
+  "outputs": [
+   "modified genotypes",
+   "gene expression levels",
+   "transgenic plants"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Specified RT-qPCR and its hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310804",
+  "field": "BI",
+  "node": "ANZSRC:310804",
+  "name": "Plant developmental and reproductive biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "mechanisms of plant growth and morphogenesis",
+   "regulation of flowering and seed development"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "ABC(E) model of floral organ identity",
+    "does": "Explains whorl identity by combinatorial homeotic gene activity",
+    "hypotheses": [
+     "floral organs arranged in whorls (angiosperm models Arabidopsis, Antirrhinum)",
+     "combinatorial A, B, C and E function"
+    ]
+   },
+   {
+    "name": "External coincidence model of photoperiodic flowering",
+    "does": "Explains day-length control of flowering by light coinciding with clock-gated expression",
+    "hypotheses": [
+     "circadian clock phases expression",
+     "light sensed at the sensitive phase (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "gene expression profiles",
+   "morphological data"
+  ],
+  "outputs": [
+   "predicted organ identity",
+   "developmental pathways"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added photoperiod flowering model). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310805",
+  "field": "BI",
+  "node": "ANZSRC:310805",
+  "name": "Plant pathology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "explain when a plant disease breaks out"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Disease triangle",
+    "does": "says disease needs a susceptible host, a virulent pathogen and a favourable environment together",
+    "hypotheses": [
+     "it is a qualitative framework"
+    ]
+   }
+  ],
+  "inputs": [
+   "host, pathogen and weather information"
+  ],
+  "outputs": [
+   "outbreak risk judgement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310806",
+  "field": "BI",
+  "node": "ANZSRC:310806",
+  "name": "Plant physiology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "predict carbon and water exchange of a leaf"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Farquhar–von Caemmerer–Berry model",
+    "does": "predicts leaf photosynthesis",
+    "hypotheses": [
+     "C3 photosynthesis",
+     "steady state"
+    ]
+   }
+  ],
+  "inputs": [
+   "light, gas and temperature conditions"
+  ],
+  "outputs": [
+   "assimilation rate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310899",
+  "field": "BI",
+  "node": "ANZSRC:310899",
+  "name": "Plant biology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310901",
+  "field": "BI",
+  "node": "ANZSRC:310901",
+  "name": "Animal behaviour",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "describe behaviour so it can be counted and compared"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ethogram with systematic sampling",
+    "does": "records defined behaviours by a fixed sampling rule",
+    "hypotheses": [
+     "behaviours are defined in advance",
+     "observers agree reliably"
+    ]
+   }
+  ],
+  "inputs": [
+   "observation sessions"
+  ],
+  "outputs": [
+   "time budget"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.310902",
+  "field": "BI",
+  "node": "ANZSRC:310902",
+  "name": "Animal cell and molecular biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "mechanisms of cellular function",
+   "molecular basis of animal disease"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "CRISPR-Cas9 gene editing",
+    "does": "Makes targeted cuts for knockout or edit of genomic sequences",
+    "hypotheses": [
+     "PAM adjacent to target site",
+     "guide RNA specific with limited off-target cutting",
+     "efficient delivery into cells"
+    ]
+   },
+   {
+    "name": "Western blot",
+    "does": "Detects and sizes specific proteins after gel separation and antibody probing",
+    "hypotheses": [
+     "specific validated antibody",
+     "proteins denatured and transferred efficiently",
+     "signal within linear range with loading control"
+    ]
+   },
+   {
+    "name": "Quantitative PCR (qPCR)",
+    "does": "Quantifies specific nucleic acid sequences by real-time amplification",
+    "hypotheses": [
+     "amplification efficiency known and similar across assays",
+     "single specific amplicon",
+     "stable reference genes or standards"
+    ]
+   }
+  ],
+  "inputs": [
+   "cellular lysates",
+   "genomic DNA",
+   "mRNA",
+   "cell cultures"
+  ],
+  "outputs": [
+   "gene expression levels",
+   "protein concentration",
+   "modified genetic sequences"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced vague hypotheses with standard assay conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310903",
+  "field": "BI",
+  "node": "ANZSRC:310903",
+  "name": "Animal developmental and reproductive biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "mechanisms of embryonic development",
+   "regulation of gametogenesis and reproduction"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "In situ hybridisation",
+    "does": "Localises specific nucleic acids in tissue with labelled complementary probes",
+    "hypotheses": [
+     "probe complementary to target",
+     "tissue fixed to preserve nucleic acids"
+    ]
+   },
+   {
+    "name": "Lineage tracing",
+    "does": "Follows descendants of labelled progenitor cells",
+    "hypotheses": [
+     "label heritable and not transferred to neighbours",
+     "label non-toxic and stable",
+     "labelled cells identifiable at endpoint"
+    ]
+   }
+  ],
+  "inputs": [
+   "tissue samples",
+   "genetic sequences",
+   "cellular markers"
+  ],
+  "outputs": [
+   "gene expression maps",
+   "cell fate maps",
+   "developmental trajectories"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected lineage-tracing conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310904",
+  "field": "BI",
+  "node": "ANZSRC:310904",
+  "name": "Animal diet and nutrition",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "optimising nutrient intake for growth and health",
+   "determining dietary requirements for specific species"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Kleiber's law",
+    "does": "Relates basal metabolic rate to body mass as mass raised to about 0.75",
+    "hypotheses": [
+     "basal conditions (resting, post-absorptive, thermoneutral)",
+     "wide body-mass range across species",
+     "exponent debated (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Factorial method for nutrient requirements",
+    "does": "Sums maintenance, growth and production needs to give daily requirement",
+    "hypotheses": [
+     "components are additive",
+     "utilisation efficiencies constant",
+     "requirements defined for species and life stage"
+    ]
+   }
+  ],
+  "inputs": [
+   "body mass",
+   "species type",
+   "age",
+   "activity level"
+  ],
+  "outputs": [
+   "basal metabolic rate",
+   "daily nutrient requirements",
+   "caloric intake targets"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced NRC tables (a data source, not a method) with factorial method; fixed Kleiber conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310905",
+  "field": "BI",
+  "node": "ANZSRC:310905",
+  "name": "Animal immunology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "host defence mechanisms",
+   "immune response to pathogens"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "ELISA",
+    "does": "Quantifies antigens or antibodies by enzyme-linked antibody binding",
+    "hypotheses": [
+     "specific antibody-antigen binding",
+     "signal within linear range of standard curve",
+     "adequate blocking of non-specific binding"
+    ]
+   },
+   {
+    "name": "Flow cytometry",
+    "does": "Measures fluorescence and scatter of single cells in suspension",
+    "hypotheses": [
+     "single-cell suspension",
+     "spectral overlap compensated",
+     "stable fluorophores and valid controls"
+    ]
+   }
+  ],
+  "inputs": [
+   "serum",
+   "tissue biopsies",
+   "cell suspensions"
+  ],
+  "outputs": [
+   "antibody concentrations",
+   "cell surface marker profiles",
+   "cytokine levels"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310906",
+  "field": "BI",
+  "node": "ANZSRC:310906",
+  "name": "Animal neurobiology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "mechanisms of neural signal transmission",
+   "neural basis of animal behaviour"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hodgkin-Huxley model",
+    "does": "Describes action potential generation and propagation from voltage-gated conductances",
+    "hypotheses": [
+     "independent voltage-gated gating variables with first-order kinetics",
+     "isopotential (space-clamped) membrane patch",
+     "fixed temperature"
+    ]
+   },
+   {
+    "name": "Patch-clamp technique",
+    "does": "Records ionic currents through single channels or whole cells under controlled voltage",
+    "hypotheses": [
+     "gigaohm seal between pipette and membrane",
+     "stable, low-noise recording configuration"
+    ]
+   },
+   {
+    "name": "Optogenetics",
+    "does": "Controls genetically targeted neurons with light-gated opsins",
+    "hypotheses": [
+     "opsin expressed in target cells",
+     "sufficient light reaches target tissue"
+    ]
+   }
+  ],
+  "inputs": [
+   "membrane voltage",
+   "ionic concentrations",
+   "light stimuli",
+   "electrochemical gradients"
+  ],
+  "outputs": [
+   "action potential waveforms",
+   "current-voltage curves",
+   "behavioural responses"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected Hodgkin-Huxley conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310907",
+  "field": "BI",
+  "node": "ANZSRC:310907",
+  "name": "Animal physiological ecology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "organismal responses to environmental stress",
+   "metabolic constraints on animal distribution"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Kleiber's law",
+    "does": "Relates basal metabolic rate to body mass as mass raised to about 0.75",
+    "hypotheses": [
+     "basal conditions (resting, post-absorptive, thermoneutral)",
+     "wide body-mass range across species",
+     "exponent debated (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Dynamic energy budget theory",
+    "does": "Models allocation of assimilated energy to maintenance, growth and reproduction",
+    "hypotheses": [
+     "reserve and structure of constant composition",
+     "isomorphic growth (constant shape)",
+     "fixed fraction of mobilised reserve to somatic needs (kappa rule)",
+     "temperature effect via Arrhenius correction"
+    ]
+   }
+  ],
+  "inputs": [
+   "body mass",
+   "ambient temperature",
+   "food intake rate",
+   "oxygen consumption"
+  ],
+  "outputs": [
+   "metabolic rate",
+   "energy budget",
+   "thermal tolerance limits"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced incorrect DEB hypothesis (energy currency)). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310908",
+  "field": "BI",
+  "node": "ANZSRC:310908",
+  "name": "Animal physiology - biophysics",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "physical mechanisms of biological functions",
+   "energy transduction in animal tissues"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Nernst equation",
+    "does": "Gives equilibrium potential of one permeant ion from its concentration ratio",
+    "hypotheses": [
+     "single ion species at thermodynamic equilibrium (zero net flux)",
+     "ideal dilute solution (activities approximate concentrations)",
+     "membrane selectively permeable to that ion",
+     "known, constant temperature"
+    ]
+   },
+   {
+    "name": "Hodgkin-Huxley model",
+    "does": "Describes action potential generation and propagation from voltage-gated conductances",
+    "hypotheses": [
+     "independent voltage-gated gating variables with first-order kinetics",
+     "isopotential (space-clamped) membrane patch",
+     "fixed temperature"
+    ]
+   },
+   {
+    "name": "Fick's laws of diffusion",
+    "does": "Relate diffusive flux to concentration gradient and its change in time",
+    "hypotheses": [
+     "constant diffusion coefficient",
+     "dilute solution",
+     "isotropic medium"
+    ]
+   }
+  ],
+  "inputs": [
+   "ion concentrations",
+   "membrane capacitance",
+   "diffusion coefficients",
+   "temperature"
+  ],
+  "outputs": [
+   "membrane potential",
+   "flux rates",
+   "voltage-time curves"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Nernst, Hodgkin-Huxley and Fick conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310909",
+  "field": "BI",
+  "node": "ANZSRC:310909",
+  "name": "Animal physiology - cell",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "cellular mechanism of animal organ function",
+   "homeostasis at the cellular level"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Nernst equation",
+    "does": "Gives equilibrium potential of one permeant ion from its concentration ratio",
+    "hypotheses": [
+     "single ion species at thermodynamic equilibrium (zero net flux)",
+     "ideal dilute solution (activities approximate concentrations)",
+     "membrane selectively permeable to that ion",
+     "known, constant temperature"
+    ]
+   },
+   {
+    "name": "Goldman-Hodgkin-Katz equation",
+    "does": "Gives membrane potential from concentrations and permeabilities of several ions",
+    "hypotheses": [
+     "constant electric field across membrane",
+     "independent ion movement",
+     "constant permeabilities at steady state"
+    ]
+   },
+   {
+    "name": "Fick's first law",
+    "does": "Relates passive flux to concentration gradient",
+    "hypotheses": [
+     "constant diffusion coefficient",
+     "dilute solution",
+     "isotropic medium"
+    ]
+   }
+  ],
+  "inputs": [
+   "ion concentrations",
+   "membrane permeability",
+   "temperature",
+   "surface area"
+  ],
+  "outputs": [
+   "membrane potential",
+   "diffusion rate",
+   "flux"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Nernst and Fick conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310910",
+  "field": "BI",
+  "node": "ANZSRC:310910",
+  "name": "Animal physiology - systems",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "mechanisms of organ system function",
+   "homeostatic regulation of physiological processes"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fick's first law",
+    "does": "Relates diffusive gas or solute flux to concentration gradient",
+    "hypotheses": [
+     "constant diffusion coefficient",
+     "passive transport",
+     "steady state for constant flux across the barrier"
+    ]
+   },
+   {
+    "name": "Starling equation",
+    "does": "Gives net fluid flux across capillary wall from hydrostatic and oncotic pressures",
+    "hypotheses": [
+     "semipermeable wall with reflection coefficient",
+     "pressures uniform over the capillary segment",
+     "steady state"
+    ]
+   },
+   {
+    "name": "Hagen-Poiseuille law",
+    "does": "Gives volumetric flow in a tube from pressure drop, radius and viscosity",
+    "hypotheses": [
+     "laminar, steady, fully developed flow",
+     "Newtonian incompressible fluid",
+     "rigid straight cylindrical tube"
+    ]
+   }
+  ],
+  "inputs": [
+   "concentration gradients",
+   "pressure differentials",
+   "vessel radius",
+   "membrane permeability"
+  ],
+  "outputs": [
+   "diffusion rates",
+   "net fluid flux",
+   "volumetric flow rate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Corrected Poiseuille and Starling conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310911",
+  "field": "BI",
+  "node": "ANZSRC:310911",
+  "name": "Animal structure and function",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "mechanisms of physiological processes",
+   "relationship between anatomical structure and biological function"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Allometric scaling",
+    "does": "Fits trait versus body size as a power law (Y = aM^b)",
+    "hypotheses": [
+     "power law holds across the size range sampled",
+     "log-log relationship approximately linear",
+     "comparable taxa or conditions"
+    ]
+   },
+   {
+    "name": "Fick's first law",
+    "does": "Relates diffusive exchange to concentration gradient",
+    "hypotheses": [
+     "constant diffusion coefficient",
+     "passive transport",
+     "steady state"
+    ]
+   },
+   {
+    "name": "Hagen-Poiseuille law",
+    "does": "Gives volumetric flow in a tube from pressure drop, radius and viscosity",
+    "hypotheses": [
+     "laminar, steady, fully developed flow",
+     "Newtonian incompressible fluid",
+     "rigid straight cylindrical tube"
+    ]
+   }
+  ],
+  "inputs": [
+   "organism mass",
+   "surface area",
+   "concentration gradients",
+   "vessel radius",
+   "fluid viscosity"
+  ],
+  "outputs": [
+   "metabolic rate",
+   "diffusion flux",
+   "volumetric flow rate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Standardised Hagen-Poiseuille name and conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310912",
+  "field": "BI",
+  "node": "ANZSRC:310912",
+  "name": "Comparative physiology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "adaptation of physiological systems across species",
+   "evolutionary convergence of biological functions"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Allometric scaling",
+    "does": "Fits trait versus body size as a power law (Y = aM^b)",
+    "hypotheses": [
+     "power law holds across the size range sampled",
+     "log-log relationship approximately linear",
+     "comparable taxa or conditions"
+    ]
+   },
+   {
+    "name": "Q10 temperature coefficient",
+    "does": "Gives fold-change of a biological rate for a 10 degree Celsius rise",
+    "hypotheses": [
+     "rate roughly exponential in temperature",
+     "within non-damaging temperature range"
+    ]
+   },
+   {
+    "name": "Phylogenetically independent contrasts",
+    "does": "Removes shared ancestry when comparing traits across species",
+    "hypotheses": [
+     "phylogeny and branch lengths known",
+     "traits evolve by Brownian motion"
+    ]
+   }
+  ],
+  "inputs": [
+   "body mass",
+   "metabolic rates",
+   "temperature",
+   "reaction rates"
+  ],
+  "outputs": [
+   "scaling exponents",
+   "metabolic constants",
+   "thermal sensitivity coefficients"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added phylogenetic contrasts, essential to cross-species comparison). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310913",
+  "field": "BI",
+  "node": "ANZSRC:310913",
+  "name": "Invertebrate biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "classification of non-vertebrate organisms",
+   "analysis of invertebrate physiological and anatomical systems"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cladistic analysis",
+    "does": "Reconstructs phylogeny from shared derived characters (synapomorphies)",
+    "hypotheses": [
+     "characters homologous",
+     "hierarchical branching descent",
+     "parsimony or model-based optimality criterion"
+    ]
+   },
+   {
+    "name": "Geometric morphometrics",
+    "does": "Quantifies shape using Procrustes-aligned landmarks",
+    "hypotheses": [
+     "homologous landmarks",
+     "adequate sampling",
+     "size, position, orientation removed by superimposition"
+    ]
+   }
+  ],
+  "inputs": [
+   "morphological traits",
+   "genetic sequences",
+   "anatomical measurements"
+  ],
+  "outputs": [
+   "phylogenetic trees",
+   "taxonomic classifications",
+   "morphological descriptions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Specified standard cladistic and morphometric methods). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310914",
+  "field": "BI",
+  "node": "ANZSRC:310914",
+  "name": "Vertebrate biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "understanding vertebrate physiological systems",
+   "classifying vertebrate species and evolutionary relationships"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Maximum likelihood phylogenetic inference",
+    "does": "Finds the tree maximising data likelihood under a substitution model",
+    "hypotheses": [
+     "explicit substitution model adequate",
+     "sites evolve independently",
+     "alignment reflects homology"
+    ]
+   },
+   {
+    "name": "Allometric scaling",
+    "does": "Fits trait versus body size as a power law (Y = aM^b)",
+    "hypotheses": [
+     "power law holds across the size range sampled",
+     "log-log relationship approximately linear",
+     "comparable taxa or conditions"
+    ]
+   },
+   {
+    "name": "Phylogenetically independent contrasts",
+    "does": "Removes shared ancestry when comparing traits across species",
+    "hypotheses": [
+     "phylogeny and branch lengths known",
+     "traits evolve by Brownian motion"
+    ]
+   }
+  ],
+  "inputs": [
+   "morphological measurements",
+   "DNA sequences",
+   "physiological data"
+  ],
+  "outputs": [
+   "cladograms",
+   "scaling exponents",
+   "taxonomic classifications"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic phylogenetic analysis; added contrasts). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.310999",
+  "field": "BI",
+  "node": "ANZSRC:310999",
+  "name": "Zoology not elsewhere classified",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.319901",
+  "field": "BI",
+  "node": "ANZSRC:319901",
+  "name": "Forensic biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "link a biological trace to a person"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "DNA profile likelihood ratio",
+    "does": "weighs a match against the chance of a coincidental match",
+    "hypotheses": [
+     "allele frequencies from a relevant population",
+     "loci are independent after correction for relatedness",
+     "the sample is from one source, or the mixture is modelled"
+    ]
+   }
+  ],
+  "inputs": [
+   "trace profile",
+   "reference profile"
+  ],
+  "outputs": [
+   "likelihood ratio"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "BI.TK.319902",
+  "field": "BI",
+  "node": "ANZSRC:319902",
+  "name": "Global change biology",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "impact of anthropogenic environmental change on biodiversity",
+   "species distribution shifts under climate change"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Species distribution models",
+    "does": "Predict suitable range from occurrences and environmental layers",
+    "hypotheses": [
+     "species in equilibrium with climate",
+     "niche conserved under projection",
+     "sampling bias accounted for"
+    ]
+   },
+   {
+    "name": "Population viability analysis",
+    "does": "Estimates extinction risk over a time horizon from demographic models",
+    "hypotheses": [
+     "demographic rates and variances estimated from adequate data",
+     "environmental stochasticity stationary",
+     "density dependence specified"
+    ]
+   }
+  ],
+  "inputs": [
+   "occurrence data",
+   "climatic variables",
+   "demographic parameters"
+  ],
+  "outputs": [
+   "predicted range maps",
+   "extinction risk probabilities"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Refined SDM and PVA conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "BI.TK.319999",
+  "field": "BI",
+  "node": "ANZSRC:319999",
+  "name": "Other biological sciences not elsewhere classified",
+  "taxonomy_cell": "BI.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

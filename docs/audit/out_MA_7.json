@@ -1,0 +1,612 @@
+[
+ {
+  "cards": [
+   "81Q"
+  ],
+  "tool": "WKB approximation",
+  "verdict": "confirmed",
+  "reason": "Valid when potential varies slowly over a local wavelength; breaks down at turning points.",
+  "source": "https://en.wikipedia.org/wiki/WKB_approximation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81Q"
+  ],
+  "tool": "Adiabatic theorem",
+  "verdict": "confirmed",
+  "reason": "Born\u2013Fock form needs slow change and a gap between the eigenvalue and the rest of the spectrum.",
+  "source": "https://en.wikipedia.org/wiki/Adiabatic_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81R"
+  ],
+  "tool": "Wigner's theorem",
+  "verdict": "confirmed",
+  "reason": "Requires a bijection on rays preserving transition probabilities; yields unitary or antiunitary operator.",
+  "source": "https://en.wikipedia.org/wiki/Wigner%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81R"
+  ],
+  "tool": "Wigner\u2013Eckart theorem",
+  "verdict": "confirmed",
+  "reason": "Statement concerns spherical tensor operators between angular momentum eigenstates; card's setting matches.",
+  "source": "https://en.wikipedia.org/wiki/Wigner%E2%80%93Eckart_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81S"
+  ],
+  "tool": "Stone\u2013von Neumann theorem",
+  "verdict": "miss",
+  "reason": "Needs Weyl (exponentiated) commutation relations and joint irreducibility on a separable Hilbert space; bare Heisenberg relation insufficient.",
+  "source": "https://en.wikipedia.org/wiki/Stone%E2%80%93von_Neumann_theorem",
+  "corrected_hypotheses": "finitely many degrees of freedom; strongly continuous one-parameter unitary groups satisfying the Weyl (exponentiated) commutation relations; irreducible representation on a separable Hilbert space"
+ },
+ {
+  "cards": [
+   "81S"
+  ],
+  "tool": "Uncertainty relation (Robertson)",
+  "verdict": "confirmed",
+  "reason": "Requires state in operator domains so products are defined; card's self-adjoint assumption is stricter than needed.",
+  "source": "https://en.wikipedia.org/wiki/Uncertainty_principle",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81T"
+  ],
+  "tool": "CPT theorem",
+  "verdict": "confirmed",
+  "reason": "Applies to any Lorentz-invariant local quantum field theory with Hermitian Hamiltonian.",
+  "source": "https://en.wikipedia.org/wiki/CPT_symmetry",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81T"
+  ],
+  "tool": "Spin-statistics theorem",
+  "verdict": "miss",
+  "reason": "Source lists positive-definite Hilbert-space norm as a separate postulate, plus spacelike commutation (microcausality), absent from card.",
+  "source": "https://en.wikipedia.org/wiki/Spin%E2%80%93statistics_theorem",
+  "corrected_hypotheses": "a relativistic quantum field theory; positive energy; positive-definite norm on the Hilbert space; microcausality (fields commute or anticommute at spacelike separation)"
+ },
+ {
+  "cards": [
+   "81T"
+  ],
+  "tool": "Goldstone's theorem",
+  "verdict": "confirmed",
+  "reason": "Needs spontaneously broken continuous global symmetry; Lorentz invariance is stricter than the translation invariance the source uses.",
+  "source": "https://en.wikipedia.org/wiki/Goldstone_boson",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81U"
+  ],
+  "tool": "Optical theorem",
+  "verdict": "confirmed",
+  "reason": "General form follows from unitarity of the scattering operator, as the source attributes to Heisenberg.",
+  "source": "https://en.wikipedia.org/wiki/Optical_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "81U"
+  ],
+  "tool": "Born approximation",
+  "verdict": "unconfirmed",
+  "reason": "Source only says the Born approximation holds when the scattered field is small against the incident field; high-energy condition not stated.",
+  "source": "https://en.wikipedia.org/wiki/Born_approximation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "82B"
+  ],
+  "tool": "Onsager's solution of the two-dimensional Ising model",
+  "verdict": "confirmed",
+  "reason": "Source covers square lattice, anisotropic or isotropic nearest-neighbour couplings, zero field (periodic boundaries).",
+  "source": "https://en.wikipedia.org/wiki/Square-lattice_Ising_model",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "82B"
+  ],
+  "tool": "Mermin\u2013Wagner theorem",
+  "verdict": "miss",
+  "reason": "Theorem concerns continuous symmetry (not discrete, e.g. Ising) at finite temperature; card omits both.",
+  "source": "https://en.wikipedia.org/wiki/Mermin%E2%80%93Wagner_theorem",
+  "corrected_hypotheses": "a Hamiltonian with a continuous symmetry (e.g. O(n)); dimension at most two; sufficiently short-range interactions; finite temperature, infinite system"
+ },
+ {
+  "cards": [
+   "82B"
+  ],
+  "tool": "Peierls argument",
+  "verdict": "miss",
+  "reason": "Source setting is the ferromagnetic nearest-neighbour model at zero field and low temperature; card omits ferromagnetic and low temperature.",
+  "source": "https://en.wikipedia.org/wiki/Peierls_argument",
+  "corrected_hypotheses": "the ferromagnetic nearest-neighbour Ising model in dimension at least two; zero external field; sufficiently low temperature"
+ },
+ {
+  "cards": [
+   "82B"
+  ],
+  "tool": "Lee\u2013Yang circle theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires ferromagnetic (non-negative) couplings; zeros then lie on the unit circle in the Ising case.",
+  "source": "https://en.wikipedia.org/wiki/Lee%E2%80%93Yang_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "82C"
+  ],
+  "tool": "Boltzmann's H-theorem",
+  "verdict": "confirmed",
+  "reason": "Source uses molecular chaos for a dilute gas obeying the Boltzmann equation.",
+  "source": "https://en.wikipedia.org/wiki/H-theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "82C"
+  ],
+  "tool": "Fluctuation-dissipation theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires linear (weak) response about thermal equilibrium; card's conditions suffice.",
+  "source": "https://en.wikipedia.org/wiki/Fluctuation%E2%80%93dissipation_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "82C"
+  ],
+  "tool": "Onsager reciprocal relations",
+  "verdict": "confirmed",
+  "reason": "Source needs near-equilibrium linear response, microscopic reversibility and entropy-conjugate fluxes and forces.",
+  "source": "https://en.wikipedia.org/wiki/Onsager_reciprocal_relations",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "82M"
+  ],
+  "tool": "Metropolis Monte Carlo",
+  "verdict": "confirmed",
+  "reason": "Source requires stationary target via detailed balance and ergodicity; run-length is practical, not a theorem condition.",
+  "source": "https://en.wikipedia.org/wiki/Metropolis%E2%80%93Hastings_algorithm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "83A"
+  ],
+  "tool": "Lorentz transformation",
+  "verdict": "confirmed",
+  "reason": "Source assumes inertial frames and invariant speed of light (plus standard configuration, relativity principle).",
+  "source": "https://en.wikipedia.org/wiki/Lorentz_transformation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "83F"
+  ],
+  "tool": "Friedmann equations",
+  "verdict": "miss",
+  "reason": "Source lists a perfect fluid source (density, pressure) as a core assumption alongside FLRW metric and Einstein equations; card omits it.",
+  "source": "https://en.wikipedia.org/wiki/Friedmann_equations",
+  "corrected_hypotheses": "general relativity (Einstein field equations); spatial homogeneity and isotropy (FLRW metric); a perfect-fluid source with density and pressure"
+ },
+ {
+  "cards": [
+   "90B"
+  ],
+  "tool": "Economic order quantity formula",
+  "verdict": "miss",
+  "reason": "Source also assumes each order is delivered in full instantly when inventory reaches zero, and a single item; card omits instantaneous replenishment.",
+  "source": "https://en.wikipedia.org/wiki/Economic_order_quantity",
+  "corrected_hypotheses": "constant known demand; fixed cost per order; constant holding cost per unit; no shortages; instantaneous full replenishment; a single item"
+ },
+ {
+  "cards": [
+   "90B"
+  ],
+  "tool": "Critical path method",
+  "verdict": "confirmed",
+  "reason": "Source: known activities with durations and defined dependencies; critical path is longest dependent chain.",
+  "source": "https://en.wikipedia.org/wiki/Critical_path_method",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "90B"
+  ],
+  "tool": "Ford\u2013Fulkerson max-flow min-cut theorem",
+  "verdict": "confirmed",
+  "reason": "Source: finite directed graph with source and sink and edge capacities; card's non-negative finite capacities are sufficient.",
+  "source": "https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "90C"
+  ],
+  "tool": "Strong duality for linear programming",
+  "verdict": "confirmed",
+  "reason": "Both programmes feasible implies bounded, hence optimal solutions exist, which is the source's stated hypothesis.",
+  "source": "https://en.wikipedia.org/wiki/Dual_linear_program",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "90C"
+  ],
+  "tool": "Karush\u2013Kuhn\u2013Tucker conditions",
+  "verdict": "confirmed",
+  "reason": "Source: differentiability, a constraint qualification for necessity, and convexity for sufficiency.",
+  "source": "https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "90C"
+  ],
+  "tool": "Slater's condition",
+  "verdict": "confirmed",
+  "reason": "Slater's condition is existence of a strictly feasible point (relative interior) for a convex program.",
+  "source": "https://en.wikipedia.org/wiki/Slater%27s_condition",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "90C"
+  ],
+  "tool": "Total unimodularity",
+  "verdict": "confirmed",
+  "reason": "Source: A totally unimodular and b integral gives an integral polyhedron.",
+  "source": "https://en.wikipedia.org/wiki/Unimodular_matrix",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "91A"
+  ],
+  "tool": "Nash's existence theorem",
+  "verdict": "confirmed",
+  "reason": "Source states exactly finitely many players with finitely many pure strategies (mixed equilibrium).",
+  "source": "https://en.wikipedia.org/wiki/Nash_equilibrium",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "91A"
+  ],
+  "tool": "Von Neumann's minimax theorem",
+  "verdict": "confirmed",
+  "reason": "Original theorem is for bilinear payoff over simplexes, i.e. finite zero-sum matrix game.",
+  "source": "https://en.wikipedia.org/wiki/Minimax_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "91A"
+  ],
+  "tool": "Zermelo's theorem",
+  "verdict": "miss",
+  "reason": "Source requires strictly opposed interests (zero-sum), alternating moves, and in basic form no draws; card omits these.",
+  "source": "https://en.wikipedia.org/wiki/Zermelo%27s_theorem_(game_theory)",
+  "corrected_hypotheses": "a finite two-player zero-sum game of perfect information with alternating moves and no chance moves; in the basic form, no draws"
+ },
+ {
+  "cards": [
+   "91A"
+  ],
+  "tool": "Shapley value",
+  "verdict": "confirmed",
+  "reason": "Source: cooperative game with finite players and a coalition value function (transferable utility).",
+  "source": "https://en.wikipedia.org/wiki/Shapley_value",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "91B"
+  ],
+  "tool": "Arrow\u2013Debreu existence theorem",
+  "verdict": "miss",
+  "reason": "Source requires local nonsatiation, closed consumption sets, and closed bounded-type production sets containing zero; positive endowments not required for existence.",
+  "source": "https://en.wikipedia.org/wiki/Arrow%E2%80%93Debreu_model",
+  "corrected_hypotheses": "closed consumption sets; continuous convex preferences; local nonsatiation; convex closed production sets containing the zero plan, with bounded intersection with the nonnegative orthant and with their negatives; each household has a feasible consumption plan"
+ },
+ {
+  "cards": [
+   "91B"
+  ],
+  "tool": "Arrow's impossibility theorem",
+  "verdict": "confirmed",
+  "reason": "Source: at least three alternatives, ordinal rankings, unrestricted domain, Pareto, IIA; non-dictatorship is the conclusion.",
+  "source": "https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "91B"
+  ],
+  "tool": "Gale\u2013Shapley theorem",
+  "verdict": "confirmed",
+  "reason": "Source: two sides with ordered preferences; stable matching exists; unequal sizes handled in the generalisation.",
+  "source": "https://en.wikipedia.org/wiki/Gale%E2%80%93Shapley_algorithm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "91B"
+  ],
+  "tool": "Von Neumann\u2013Morgenstern expected utility theorem",
+  "verdict": "confirmed",
+  "reason": "Source gives completeness, transitivity, continuity, independence over lotteries.",
+  "source": "https://en.wikipedia.org/wiki/Von_Neumann%E2%80%93Morgenstern_utility_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "91G"
+  ],
+  "tool": "Fundamental theorem of asset pricing",
+  "verdict": "miss",
+  "reason": "Continuous-time statement needs a semimartingale market with locally bounded price processes; card omits this.",
+  "source": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_asset_pricing",
+  "corrected_hypotheses": "a finite-state discrete-time market; in continuous time, a semimartingale market with locally bounded prices and the condition of no free lunch with vanishing risk"
+ },
+ {
+  "cards": [
+   "91G"
+  ],
+  "tool": "Black\u2013Scholes formula",
+  "verdict": "miss",
+  "reason": "Source lists no dividends during the option's life as an assumption; card omits it.",
+  "source": "https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model",
+  "corrected_hypotheses": "geometric Brownian motion with constant drift and volatility; a constant risk-free rate; no dividends; continuous costless trading with unlimited borrowing and short selling; no arbitrage"
+ },
+ {
+  "cards": [
+   "91G"
+  ],
+  "tool": "Cram\u00e9r\u2013Lundberg ruin bound",
+  "verdict": "unconfirmed",
+  "reason": "Page gives only the compound-Poisson model; it does not state light tails or safety loading conditions of the bound.",
+  "source": "https://en.wikipedia.org/wiki/Ruin_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "92C"
+  ],
+  "tool": "Turing instability conditions",
+  "verdict": "unconfirmed",
+  "reason": "Page describes unequal diffusion qualitatively but gives no exact conditions; stability without diffusion is not stated.",
+  "source": "https://en.wikipedia.org/wiki/Turing_pattern",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "92D"
+  ],
+  "tool": "Hardy\u2013Weinberg law",
+  "verdict": "miss",
+  "reason": "Source also assumes diploid sexual organisms with non-overlapping generations; card omits these.",
+  "source": "https://en.wikipedia.org/wiki/Hardy%E2%80%93Weinberg_principle",
+  "corrected_hypotheses": "diploid sexual reproduction; non-overlapping generations; random mating; no selection, mutation or migration; a very large population"
+ },
+ {
+  "cards": [
+   "92D"
+  ],
+  "tool": "Epidemic threshold theorem (Kermack\u2013McKendrick)",
+  "verdict": "confirmed",
+  "reason": "Source assumes homogeneous mixing, closed population and constant rates (mass action).",
+  "source": "https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "92D"
+  ],
+  "tool": "Kimura's fixation probability",
+  "verdict": "unconfirmed",
+  "reason": "Page omits the formula and any diffusion approximation; it only mentions population size N and selection coefficient s.",
+  "source": "https://en.wikipedia.org/wiki/Fixation_(population_genetics)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "93B"
+  ],
+  "tool": "Kalman rank condition",
+  "verdict": "confirmed",
+  "reason": "Source states the rank test for linear time-invariant systems.",
+  "source": "https://en.wikipedia.org/wiki/Controllability",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "93B"
+  ],
+  "tool": "Duality of controllability and observability",
+  "verdict": "confirmed",
+  "reason": "Source states duality for linear systems and time-invariant state-space form.",
+  "source": "https://en.wikipedia.org/wiki/Observability",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "93B"
+  ],
+  "tool": "Pole placement theorem",
+  "verdict": "confirmed",
+  "reason": "Source requires a controllable system with full-state feedback u = -Kx.",
+  "source": "https://en.wikipedia.org/wiki/Pole_placement",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "93D"
+  ],
+  "tool": "Lyapunov's direct method",
+  "verdict": "confirmed",
+  "reason": "Source: positive-definite V with non-positive derivative gives stability; negative definite gives asymptotic stability.",
+  "source": "https://en.wikipedia.org/wiki/Lyapunov_stability",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "93D"
+  ],
+  "tool": "Nyquist stability criterion",
+  "verdict": "confirmed",
+  "reason": "Source: LTI negative-feedback loop with known number of right-half-plane open-loop poles.",
+  "source": "https://en.wikipedia.org/wiki/Nyquist_stability_criterion",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "93D"
+  ],
+  "tool": "Small gain theorem",
+  "verdict": "miss",
+  "reason": "Theorem needs a gain condition linking the two systems (loop gain below one); card gives only stability and finite gains.",
+  "source": "https://en.wikipedia.org/wiki/Small-gain_theorem",
+  "corrected_hypotheses": "two input-output stable systems in a feedback loop with finite gains whose product (loop gain) is less than one"
+ },
+ {
+  "cards": [
+   "93D"
+  ],
+  "tool": "LaSalle's invariance principle",
+  "verdict": "confirmed",
+  "reason": "Source: autonomous system, smooth V with non-positive derivative; bounded trajectories give the invariant-set conclusion.",
+  "source": "https://en.wikipedia.org/wiki/LaSalle%27s_invariance_principle",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "93E"
+  ],
+  "tool": "Kalman filter optimality",
+  "verdict": "unconfirmed",
+  "reason": "Source supports linear model, white noise, known covariances; it does not mention detectability for a steady-state filter.",
+  "source": "https://en.wikipedia.org/wiki/Kalman_filter",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "93E"
+  ],
+  "tool": "Separation principle",
+  "verdict": "confirmed",
+  "reason": "Source: linear system with Gaussian noise and quadratic cost splits into Kalman filter and LQR.",
+  "source": "https://en.wikipedia.org/wiki/Separation_principle",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "94A"
+  ],
+  "tool": "Shannon's noisy-channel coding theorem",
+  "verdict": "miss",
+  "reason": "Source's achievability part requires rate below channel capacity, which the card omits.",
+  "source": "https://en.wikipedia.org/wiki/Noisy-channel_coding_theorem",
+  "corrected_hypotheses": "a discrete memoryless channel with known transition probabilities; transmission rate below channel capacity; arbitrarily long block codes"
+ },
+ {
+  "cards": [
+   "94A"
+  ],
+  "tool": "Shannon's source coding theorem",
+  "verdict": "unconfirmed",
+  "reason": "Source states the theorem for i.i.d. sources over finite alphabets; stationary ergodic generality is not supported there.",
+  "source": "https://en.wikipedia.org/wiki/Shannon%27s_source_coding_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "94A"
+  ],
+  "tool": "Nyquist\u2013Shannon sampling theorem",
+  "verdict": "confirmed",
+  "reason": "Source: band-limited signal sampled above twice its bandwidth; bandwidth presupposes band-limitation.",
+  "source": "https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "94A"
+  ],
+  "tool": "Perfect secrecy theorem (Shannon)",
+  "verdict": "unconfirmed",
+  "reason": "Page names the one-time-pad result but states no hypotheses for Shannon's perfect secrecy theorem.",
+  "source": "https://en.wikipedia.org/wiki/Information-theoretic_security",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "94B"
+  ],
+  "tool": "Singleton bound",
+  "verdict": "confirmed",
+  "reason": "Source states the bound for arbitrary q-ary block codes (and linear codes).",
+  "source": "https://en.wikipedia.org/wiki/Singleton_bound",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "94B"
+  ],
+  "tool": "Hamming bound",
+  "verdict": "confirmed",
+  "reason": "Source: q-ary block code of fixed length with minimum distance d; no linearity needed.",
+  "source": "https://en.wikipedia.org/wiki/Hamming_bound",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "94B"
+  ],
+  "tool": "Reed\u2013Solomon codes",
+  "verdict": "confirmed",
+  "reason": "Source requires a finite field of prime-power order with block length at most the field size.",
+  "source": "https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "94C"
+  ],
+  "tool": "Shannon's switching theorem",
+  "verdict": "unconfirmed",
+  "reason": "Page does not state a Shannon switching theorem; it only says two-valued Boolean algebra describes switching circuits.",
+  "source": "https://en.wikipedia.org/wiki/Switching_circuit_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "94C"
+  ],
+  "tool": "Tellegen's theorem",
+  "verdict": "confirmed",
+  "reason": "Source: lumped network whose branch voltages and currents satisfy KVL and KCL; no element restrictions.",
+  "source": "https://en.wikipedia.org/wiki/Tellegen%27s_theorem",
+  "corrected_hypotheses": ""
+ }
+]

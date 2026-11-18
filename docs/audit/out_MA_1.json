@@ -1,0 +1,632 @@
+[
+ {
+  "cards": [
+   "03E"
+  ],
+  "tool": "Cantor's theorem",
+  "verdict": "confirmed",
+  "reason": "Only hypothesis is a set X and map to its power set; any set works.",
+  "source": "https://en.wikipedia.org/wiki/Cantor%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "11A"
+  ],
+  "tool": "Euclidean algorithm",
+  "verdict": "confirmed",
+  "reason": "Integers (division version) and Euclidean domains with Euclidean function are covered.",
+  "source": "https://en.wikipedia.org/wiki/Euclidean_algorithm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "11B"
+  ],
+  "tool": "Solution of linear recurrences by characteristic roots",
+  "verdict": "miss",
+  "reason": "Method needs a homogeneous recurrence; roots must lie in the field (e.g. complex); n initial values fix coefficients.",
+  "source": "https://en.wikipedia.org/wiki/Linear_recurrence_with_constant_coefficients",
+  "corrected_hypotheses": "a homogeneous linear recurrence with constant coefficients; characteristic polynomial splits over the field (e.g. complex numbers) with roots counted with multiplicity; initial values given"
+ },
+ {
+  "cards": [
+   "11N"
+  ],
+  "tool": "Prime number theorem",
+  "verdict": "confirmed",
+  "reason": "Statement is pi(x) ~ x/log x as x tends to infinity; no further hypotheses.",
+  "source": "https://en.wikipedia.org/wiki/Prime_number_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "11P"
+  ],
+  "tool": "Lagrange's four-square theorem",
+  "verdict": "confirmed",
+  "reason": "Page states every nonnegative integer is a sum of four squares; positive integers is stricter.",
+  "source": "https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "11P"
+  ],
+  "tool": "Hardy\u2013Ramanujan asymptotic formula",
+  "verdict": "confirmed",
+  "reason": "Asymptotic as n tends to infinity for non-negative integer n.",
+  "source": "https://en.wikipedia.org/wiki/Partition_function_(number_theory)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "11R"
+  ],
+  "tool": "Finiteness of the class number",
+  "verdict": "confirmed",
+  "reason": "Class number finite for the ring of integers of an algebraic number field.",
+  "source": "https://en.wikipedia.org/wiki/Ideal_class_group",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "12D"
+  ],
+  "tool": "Fundamental theorem of algebra",
+  "verdict": "miss",
+  "reason": "Theorem needs a non-constant polynomial; constants have no roots.",
+  "source": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra",
+  "corrected_hypotheses": "a non-constant single-variable polynomial; complex coefficients"
+ },
+ {
+  "cards": [
+   "13D"
+  ],
+  "tool": "Hilbert's syzygy theorem",
+  "verdict": "confirmed",
+  "reason": "Module finitely generated over polynomial ring in n variables over a field; syzygy module free.",
+  "source": "https://en.wikipedia.org/wiki/Hilbert%27s_syzygy_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "13E"
+  ],
+  "tool": "Hilbert's basis theorem",
+  "verdict": "confirmed",
+  "reason": "Noetherian ring A gives A[X1..Xn] Noetherian; commutative case stated.",
+  "source": "https://en.wikipedia.org/wiki/Hilbert%27s_basis_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "13E"
+  ],
+  "tool": "Lasker\u2013Noether theorem",
+  "verdict": "confirmed",
+  "reason": "Commutative Noetherian ring; every ideal has primary decomposition.",
+  "source": "https://en.wikipedia.org/wiki/Lasker%E2%80%93Noether_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "13F"
+  ],
+  "tool": "Principal ideal domains are unique factorisation domains",
+  "verdict": "confirmed",
+  "reason": "Page states every PID is a UFD; no further assumptions.",
+  "source": "https://en.wikipedia.org/wiki/Principal_ideal_domain",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "13F"
+  ],
+  "tool": "Gauss's lemma",
+  "verdict": "confirmed",
+  "reason": "R a UFD; product of primitive polynomials is primitive; irreducibility criterion over fraction field.",
+  "source": "https://en.wikipedia.org/wiki/Gauss%27s_lemma_(polynomial)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "13H"
+  ],
+  "tool": "Krull's principal ideal theorem",
+  "verdict": "confirmed",
+  "reason": "Commutative Noetherian ring; minimal prime over a principal ideal has height at most one.",
+  "source": "https://en.wikipedia.org/wiki/Krull%27s_principal_ideal_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "13P"
+  ],
+  "tool": "Buchberger's algorithm",
+  "verdict": "confirmed",
+  "reason": "Needs monomial ordering and finite generating set over a field; terminates by Dickson's lemma.",
+  "source": "https://en.wikipedia.org/wiki/Buchberger%27s_algorithm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "14A"
+  ],
+  "tool": "Hilbert's Nullstellensatz",
+  "verdict": "confirmed",
+  "reason": "Both Nullstellensatz forms require an algebraically closed field.",
+  "source": "https://en.wikipedia.org/wiki/Hilbert%27s_Nullstellensatz",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "14E"
+  ],
+  "tool": "Hironaka's resolution of singularities",
+  "verdict": "confirmed",
+  "reason": "Applies to algebraic varieties over a field of characteristic 0.",
+  "source": "https://en.wikipedia.org/wiki/Resolution_of_singularities",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "14G"
+  ],
+  "tool": "Hasse bound",
+  "verdict": "confirmed",
+  "reason": "Elliptic curve over finite field with q elements; |N-(q+1)| <= 2 sqrt q.",
+  "source": "https://en.wikipedia.org/wiki/Hasse%27s_theorem_on_elliptic_curves",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "14G"
+  ],
+  "tool": "Weil conjectures (Deligne)",
+  "verdict": "confirmed",
+  "reason": "Non-singular projective variety over finite field F_q.",
+  "source": "https://en.wikipedia.org/wiki/Weil_conjectures",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "14H"
+  ],
+  "tool": "Riemann\u2013Roch theorem for curves",
+  "verdict": "confirmed",
+  "reason": "Smooth projective curve over algebraically closed field; formula over any field with adjustments.",
+  "source": "https://en.wikipedia.org/wiki/Riemann%E2%80%93Roch_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "14H"
+  ],
+  "tool": "Riemann\u2013Hurwitz formula",
+  "verdict": "unconfirmed",
+  "reason": "Page treats complex analytic maps of Riemann surfaces; says nothing on separability or wild ramification in positive characteristic.",
+  "source": "https://en.wikipedia.org/wiki/Riemann%E2%80%93Hurwitz_formula",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "14Q"
+  ],
+  "tool": "Gr\u00f6bner basis methods",
+  "verdict": "confirmed",
+  "reason": "Field coefficients, admissible monomial order; Buchberger terminates; computability needs computable field.",
+  "source": "https://en.wikipedia.org/wiki/Gr%C3%B6bner_basis",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "15A"
+  ],
+  "tool": "Rank-nullity theorem",
+  "verdict": "confirmed",
+  "reason": "Needs only linear map with finite-dimensional domain.",
+  "source": "https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "15A"
+  ],
+  "tool": "Spectral theorem",
+  "verdict": "confirmed",
+  "reason": "Real symmetric, Hermitian and normal operators on finite-dimensional inner product space diagonalise.",
+  "source": "https://en.wikipedia.org/wiki/Spectral_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "15A"
+  ],
+  "tool": "Singular value decomposition",
+  "verdict": "confirmed",
+  "reason": "Exists for any real or complex m by n matrix.",
+  "source": "https://en.wikipedia.org/wiki/Singular_value_decomposition",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "15A"
+  ],
+  "tool": "Cayley\u2013Hamilton theorem",
+  "verdict": "confirmed",
+  "reason": "Square matrix over a commutative ring satisfies its characteristic equation.",
+  "source": "https://en.wikipedia.org/wiki/Cayley%E2%80%93Hamilton_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "16G"
+  ],
+  "tool": "Gabriel's theorem",
+  "verdict": "confirmed",
+  "reason": "Connected quiver is of finite type iff Dynkin; card's hypotheses suffice.",
+  "source": "https://en.wikipedia.org/wiki/Gabriel%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "16K"
+  ],
+  "tool": "Artin\u2013Wedderburn theorem",
+  "verdict": "confirmed",
+  "reason": "Artinian semisimple ring is a finite product of matrix rings over division rings.",
+  "source": "https://en.wikipedia.org/wiki/Artin%E2%80%93Wedderburn_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "16P"
+  ],
+  "tool": "Hopkins\u2013Levitzki theorem",
+  "verdict": "miss",
+  "reason": "Needs R semiprimary (R/J semisimple, J nilpotent), not just identity; without it only one implication holds.",
+  "source": "https://en.wikipedia.org/wiki/Hopkins%E2%80%93Levitzki_theorem",
+  "corrected_hypotheses": "a ring with identity that is semiprimary (Jacobson radical nilpotent and quotient semisimple); a module over it"
+ },
+ {
+  "cards": [
+   "16R"
+  ],
+  "tool": "Amitsur\u2013Levitzki theorem",
+  "verdict": "confirmed",
+  "reason": "Matrices n by n over commutative ring satisfy standard identity of degree 2n.",
+  "source": "https://en.wikipedia.org/wiki/Amitsur%E2%80%93Levitzki_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "17B"
+  ],
+  "tool": "Classification of simple Lie algebras (Killing, Cartan)",
+  "verdict": "unconfirmed",
+  "reason": "Page only says complex semisimple Lie algebras classified by Dynkin diagrams; characteristic and algebraically closed generality not stated.",
+  "source": "https://en.wikipedia.org/wiki/Simple_Lie_group",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "17B"
+  ],
+  "tool": "Poincar\u00e9\u2013Birkhoff\u2013Witt theorem",
+  "verdict": "confirmed",
+  "reason": "Base case: Lie algebra over a field gives ordered-monomial basis of U(L).",
+  "source": "https://en.wikipedia.org/wiki/Poincar%C3%A9%E2%80%93Birkhoff%E2%80%93Witt_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "17B"
+  ],
+  "tool": "Weyl's theorem on complete reducibility",
+  "verdict": "miss",
+  "reason": "Page requires finite-dimensional representations; card omits finite dimensionality.",
+  "source": "https://en.wikipedia.org/wiki/Weyl%27s_theorem_on_complete_reducibility",
+  "corrected_hypotheses": "a finite-dimensional semisimple Lie algebra over a field of characteristic zero; a finite-dimensional representation"
+ },
+ {
+  "cards": [
+   "18A"
+  ],
+  "tool": "Yoneda lemma",
+  "verdict": "confirmed",
+  "reason": "Locally small category, set-valued functor, any object c: natural transformations correspond to F(c).",
+  "source": "https://en.wikipedia.org/wiki/Yoneda_lemma",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "18E"
+  ],
+  "tool": "Freyd\u2013Mitchell embedding theorem",
+  "verdict": "confirmed",
+  "reason": "Small abelian category embeds fully, faithfully, exactly into R-Mod.",
+  "source": "https://en.wikipedia.org/wiki/Mitchell%27s_embedding_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "18G"
+  ],
+  "tool": "Snake lemma",
+  "verdict": "miss",
+  "reason": "Rows must be exact with zeros at ends (top ends in 0, bottom starts with 0); card omits this.",
+  "source": "https://en.wikipedia.org/wiki/Snake_lemma",
+  "corrected_hypotheses": "a commutative diagram in an abelian category; top row exact A to B to C to 0; bottom row exact 0 to A' to B' to C'"
+ },
+ {
+  "cards": [
+   "18G"
+  ],
+  "tool": "Long exact sequence in homology",
+  "verdict": "miss",
+  "reason": "Needs a short exact sequence of chain complexes 0 to A to B to C to 0; card gives only complexes.",
+  "source": "https://en.wikipedia.org/wiki/Zig-zag_lemma",
+  "corrected_hypotheses": "a short exact sequence of chain complexes in an abelian category"
+ },
+ {
+  "cards": [
+   "18M"
+  ],
+  "tool": "Mac Lane's coherence theorem",
+  "verdict": "confirmed",
+  "reason": "Setting is a monoidal category with associator; checking the one four-object diagram suffices.",
+  "source": "https://en.wikipedia.org/wiki/Coherence_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "20D"
+  ],
+  "tool": "Lagrange's theorem",
+  "verdict": "confirmed",
+  "reason": "G finite and H subgroup gives |H| divides |G|.",
+  "source": "https://en.wikipedia.org/wiki/Lagrange%27s_theorem_(group_theory)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "20D"
+  ],
+  "tool": "Sylow theorems",
+  "verdict": "confirmed",
+  "reason": "All three Sylow theorems assume a finite group and prime p dividing its order.",
+  "source": "https://en.wikipedia.org/wiki/Sylow_theorems",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "20D"
+  ],
+  "tool": "Feit\u2013Thompson theorem",
+  "verdict": "confirmed",
+  "reason": "Every finite group of odd order is solvable.",
+  "source": "https://en.wikipedia.org/wiki/Feit%E2%80%93Thompson_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "20E"
+  ],
+  "tool": "Jordan\u2013H\u00f6lder theorem",
+  "verdict": "confirmed",
+  "reason": "Applies whenever a composition series exists.",
+  "source": "https://en.wikipedia.org/wiki/Composition_series",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "20F"
+  ],
+  "tool": "Novikov\u2013Boone theorem",
+  "verdict": "confirmed",
+  "reason": "Existence of a finitely presented group with undecidable word problem; only hypothesis is finite presentation.",
+  "source": "https://en.wikipedia.org/wiki/Word_problem_for_groups",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "20F"
+  ],
+  "tool": "Gromov's theorem on polynomial growth",
+  "verdict": "confirmed",
+  "reason": "Finitely generated group has polynomial growth iff it has a nilpotent subgroup of finite index.",
+  "source": "https://en.wikipedia.org/wiki/Gromov%27s_theorem_on_groups_of_polynomial_growth",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "20K"
+  ],
+  "tool": "Fundamental theorem of finitely generated abelian groups",
+  "verdict": "confirmed",
+  "reason": "Any finitely generated abelian group is a direct sum of cyclic groups, rank and torsion unique.",
+  "source": "https://en.wikipedia.org/wiki/Finitely_generated_abelian_group",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "22B"
+  ],
+  "tool": "Pontryagin duality",
+  "verdict": "confirmed",
+  "reason": "Locally compact Hausdorff abelian topological group.",
+  "source": "https://en.wikipedia.org/wiki/Pontryagin_duality",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "22C"
+  ],
+  "tool": "Peter\u2013Weyl theorem",
+  "verdict": "miss",
+  "reason": "Page assumes the compact group is Hausdorff for the structure statement and Haar measure; card omits Hausdorff.",
+  "source": "https://en.wikipedia.org/wiki/Peter%E2%80%93Weyl_theorem",
+  "corrected_hypotheses": "a compact Hausdorff topological group"
+ },
+ {
+  "cards": [
+   "22D"
+  ],
+  "tool": "Existence and uniqueness of Haar measure",
+  "verdict": "confirmed",
+  "reason": "Locally compact Hausdorff topological group gives left Haar measure, unique up to positive scalar.",
+  "source": "https://en.wikipedia.org/wiki/Haar_measure",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "22E"
+  ],
+  "tool": "Lie group-Lie algebra correspondence",
+  "verdict": "confirmed",
+  "reason": "Equivalence of simply connected real Lie groups with finite-dimensional real Lie algebras; card suffices.",
+  "source": "https://en.wikipedia.org/wiki/Lie%27s_third_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "22E"
+  ],
+  "tool": "Closed subgroup theorem (Cartan)",
+  "verdict": "miss",
+  "reason": "Theorem concerns a closed subgroup of a Lie group; card omits the ambient Lie group.",
+  "source": "https://en.wikipedia.org/wiki/Closed-subgroup_theorem",
+  "corrected_hypotheses": "a closed subgroup of a Lie group"
+ },
+ {
+  "cards": [
+   "26A"
+  ],
+  "tool": "Mean value theorem",
+  "verdict": "miss",
+  "reason": "Page requires f real-valued; theorem fails for complex-valued functions; card omits this.",
+  "source": "https://en.wikipedia.org/wiki/Mean_value_theorem",
+  "corrected_hypotheses": "a real-valued function; continuous on a closed interval; differentiable on its interior"
+ },
+ {
+  "cards": [
+   "26A"
+  ],
+  "tool": "Intermediate value theorem",
+  "verdict": "confirmed",
+  "reason": "Continuous real function on an interval attains intermediate values; relies on completeness of reals.",
+  "source": "https://en.wikipedia.org/wiki/Intermediate_value_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26A"
+  ],
+  "tool": "Fundamental theorem of calculus",
+  "verdict": "confirmed",
+  "reason": "Part one needs continuous integrand; part two needs Riemann-integrable derivative.",
+  "source": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26A"
+  ],
+  "tool": "Taylor's theorem",
+  "verdict": "confirmed",
+  "reason": "Lagrange form needs f^(k) continuous on closed interval and (k+1)-times differentiable inside.",
+  "source": "https://en.wikipedia.org/wiki/Taylor%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26B"
+  ],
+  "tool": "Implicit function theorem",
+  "verdict": "confirmed",
+  "reason": "Continuously differentiable near the point with invertible partial Jacobian in solved variables.",
+  "source": "https://en.wikipedia.org/wiki/Implicit_function_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26B"
+  ],
+  "tool": "Inverse function theorem",
+  "verdict": "confirmed",
+  "reason": "C1 map with invertible derivative at the point gives local C1 inverse.",
+  "source": "https://en.wikipedia.org/wiki/Inverse_function_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26B"
+  ],
+  "tool": "Change of variables formula",
+  "verdict": "confirmed",
+  "reason": "Injective C1 map with nonzero Jacobian and integrand; card's integrable version is the standard generalisation.",
+  "source": "https://en.wikipedia.org/wiki/Integration_by_substitution",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26C"
+  ],
+  "tool": "Sturm's theorem",
+  "verdict": "confirmed",
+  "reason": "Square-free polynomial; non-square-free case needs endpoints not multiple roots; card's stronger condition suffices.",
+  "source": "https://en.wikipedia.org/wiki/Sturm%27s_theorem",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26C"
+  ],
+  "tool": "Descartes' rule of signs",
+  "verdict": "confirmed",
+  "reason": "Single-variable real polynomial; roots counted with multiplicity.",
+  "source": "https://en.wikipedia.org/wiki/Descartes%27_rule_of_signs",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26D"
+  ],
+  "tool": "Cauchy\u2013Schwarz inequality",
+  "verdict": "confirmed",
+  "reason": "Arbitrary vectors in an inner product space over R or C.",
+  "source": "https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26D"
+  ],
+  "tool": "Jensen's inequality",
+  "verdict": "confirmed",
+  "reason": "Probability space, integrable g, convex phi.",
+  "source": "https://en.wikipedia.org/wiki/Jensen%27s_inequality",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "26D"
+  ],
+  "tool": "H\u00f6lder's inequality",
+  "verdict": "confirmed",
+  "reason": "Conjugate exponents, measurable functions on a measure space.",
+  "source": "https://en.wikipedia.org/wiki/H%C3%B6lder%27s_inequality",
+  "corrected_hypotheses": ""
+ },
+ {
+  "cards": [
+   "28A"
+  ],
+  "tool": "Dominated convergence theorem",
+  "verdict": "confirmed",
+  "reason": "Measurable f_n converge a.e., dominated by integrable g gives integral convergence.",
+  "source": "https://en.wikipedia.org/wiki/Dominated_convergence_theorem",
+  "corrected_hypotheses": ""
+ }
+]

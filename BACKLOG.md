@@ -5,7 +5,8 @@
 - [ ] Cite the remaining UNVERIFIED dates (see the ledger in docs/COMBINED_v2.2.md, Part 4).
 - [ ] CH: map ACS's 32 technical divisions one by one. PH: transcribe PhySH's 17 disciplines and map them.
 - [ ] HI, LA: subclass-level LCC maps (D–F, K).
-- [ ] Deepen thin pyramids (CH, MD, CS, EC, BU, PO, LA, HI, LN, ED, DE, AG, EV, IS, IK) toward the depth of BI/EN/ST (5,000+ words, second key lines, named objects with hypotheses).
+- [x] Deepen thin pyramids (CH, MD, CS, EC, BU, PO, LA, HI, LN, ED, DE, AG, EV, IS; also RE, PH, MS) toward the depth of BI/EN/ST (5,000+ words, second key lines, named objects with hypotheses). Drafts: claims marked UNVERIFIED or CONTESTED need specialist review.
+- [ ] Deepen IK (waits for Māori-led review) and MA (waits for registry-row approval).
 - [ ] Review semantic meaning of script-remapped cross-references in BI, EA, EN, MS, PL, ST, AR.
 - [ ] Sharpen DE A2/A3 and EV A2/A3 cell definitions (pilot disagreements).
 

@@ -1,0 +1,684 @@
+[
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310109"
+  ],
+  "tool": "Peptide mass spectrometry with database search",
+  "verdict": "unconfirmed",
+  "reason": "Page confirms database searching; it does not mention decoy sequences or FDR control.",
+  "source": "https://en.wikipedia.org/wiki/Shotgun_proteomics",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310901"
+  ],
+  "tool": "Ethogram with systematic sampling",
+  "verdict": "confirmed",
+  "reason": "Page supports predefined, objective behaviour definitions and inter-observer reliability; sampling rules not detailed.",
+  "source": "https://en.wikipedia.org/wiki/Ethogram",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310202"
+  ],
+  "tool": "Network centrality and module detection",
+  "verdict": "unconfirmed",
+  "reason": "Page defines centrality but says nothing on network completeness or false links.",
+  "source": "https://en.wikipedia.org/wiki/Centrality",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310203"
+  ],
+  "tool": "Maximum-likelihood phylogenetics",
+  "verdict": "confirmed",
+  "reason": "Page states ML needs a substitution model and site independence; alignment issues noted.",
+  "source": "https://en.wikipedia.org/wiki/Computational_phylogenetics",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310203"
+  ],
+  "tool": "Bootstrap support",
+  "verdict": "confirmed",
+  "reason": "Page describes resampling columns and node support share; i.i.d. sites implicit in method and general bootstrap page.",
+  "source": "https://en.wikipedia.org/wiki/Computational_phylogenetics",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310114"
+  ],
+  "tool": "Ordinary differential equation network model",
+  "verdict": "unconfirmed",
+  "reason": "Page gives ODE rate laws and parameters but not well-mixed or large-number conditions.",
+  "source": "https://en.wikipedia.org/wiki/Metabolic_network_modelling",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310114"
+  ],
+  "tool": "Flux balance analysis",
+  "verdict": "unconfirmed",
+  "reason": "Page describes linear programming with an objective; steady state not stated for FBA there.",
+  "source": "https://en.wikipedia.org/wiki/Metabolic_network_modelling",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.3102"
+  ],
+  "tool": "Dynamic-programming alignment (Needleman\u2013Wunsch, Smith\u2013Waterman)",
+  "verdict": "confirmed",
+  "reason": "Page confirms additive scoring and fixed gap penalties for global alignment.",
+  "source": "https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.3102"
+  ],
+  "tool": "Hidden Markov models",
+  "verdict": "confirmed",
+  "reason": "Page states Markov hidden states and observation depending only on current state.",
+  "source": "https://en.wikipedia.org/wiki/Hidden_Markov_model",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.3102"
+  ],
+  "tool": "De Bruijn graph assembly",
+  "verdict": "unconfirmed",
+  "reason": "Page confirms assembly from observed k-mers; coverage and repeat conditions not addressed.",
+  "source": "https://en.wikipedia.org/wiki/De_Bruijn_graph",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310706"
+  ],
+  "tool": "Plaque assay",
+  "verdict": "confirmed",
+  "reason": "Page supports plaque formation in the host cell line and one infectious particle per plaque.",
+  "source": "https://en.wikipedia.org/wiki/Plaque_assay",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310103"
+  ],
+  "tool": "Isotope-labelled metabolic flux analysis",
+  "verdict": "confirmed",
+  "reason": "Page requires metabolic and isotopic steady state (else INST-MFA) and a known stoichiometric network with atom transitions.",
+  "source": "https://en.wikipedia.org/wiki/Metabolic_flux_analysis",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.3105"
+  ],
+  "tool": "Mendelian segregation",
+  "verdict": "unconfirmed",
+  "reason": "Page supports diploid, single locus and unlinked loci; segregation distortion not addressed.",
+  "source": "https://en.wikipedia.org/wiki/Mendelian_inheritance",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.3105"
+  ],
+  "tool": "Genome-wide association study",
+  "verdict": "confirmed",
+  "reason": "Page states large samples, population stratification control and proxy markers via linkage disequilibrium.",
+  "source": "https://en.wikipedia.org/wiki/Genome-wide_association_study",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.3105"
+  ],
+  "tool": "Breeder's equation",
+  "verdict": "confirmed",
+  "reason": "Page states estimates hold only for the studied population and environment, and assume additivity.",
+  "source": "https://en.wikipedia.org/wiki/Breeder%27s_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310101"
+  ],
+  "tool": "Bradford protein assay",
+  "verdict": "confirmed",
+  "reason": "Page supports linear range limits, protein-to-protein dye response differences and SDS/detergent interference.",
+  "source": "https://en.wikipedia.org/wiki/Bradford_protein_assay",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "BI",
+  "cards": [
+   "BI.TK.310101"
+  ],
+  "tool": "Standard curve quantification",
+  "verdict": "confirmed",
+  "reason": "Page requires standards within working range and shared matrix with the unknown; linear response assumed (stricter than monotonic).",
+  "source": "https://en.wikipedia.org/wiki/Standard_curve",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340206"
+  ],
+  "tool": "Wade\u2013Mingos rules",
+  "verdict": "confirmed",
+  "reason": "Page confirms electron counting for deltahedral boranes with delocalised skeletal molecular orbitals.",
+  "source": "https://en.wikipedia.org/wiki/Polyhedral_skeletal_electron_pair_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340211"
+  ],
+  "tool": "Ligand field theory",
+  "verdict": "confirmed",
+  "reason": "Page confirms transition-metal d-orbital splitting for spectra and spin state, geometry-dependent.",
+  "source": "https://en.wikipedia.org/wiki/Ligand_field_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340211"
+  ],
+  "tool": "Tanabe\u2013Sugano diagrams",
+  "verdict": "confirmed",
+  "reason": "Page confirms octahedral diagrams per d-electron count used to assign bands and estimate 10Dq.",
+  "source": "https://en.wikipedia.org/wiki/Tanabe%E2%80%93Sugano_diagram",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340306"
+  ],
+  "tool": "Carothers equation",
+  "verdict": "miss",
+  "reason": "Page ties the basic equation to equimolar stoichiometry and linear bifunctional monomers; card omits stoichiometric balance.",
+  "source": "https://en.wikipedia.org/wiki/Carothers_equation",
+  "corrected_hypotheses": "step-growth polymerisation; equimolar (balanced) functional groups, or a known stoichiometric ratio; linear bifunctional monomers; equal reactivity of functional groups; no side reactions or rings"
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340306"
+  ],
+  "tool": "Mayo\u2013Lewis copolymer equation",
+  "verdict": "confirmed",
+  "reason": "Page derivation implies terminal model with steady state, and constant monomer concentration at low conversion.",
+  "source": "https://en.wikipedia.org/wiki/Mayo%E2%80%93Lewis_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340210"
+  ],
+  "tool": "Band theory",
+  "verdict": "confirmed",
+  "reason": "Page treats electrons as independent in a periodic lattice potential and notes failure for correlated materials.",
+  "source": "https://en.wikipedia.org/wiki/Electronic_band_structure",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340210"
+  ],
+  "tool": "Radius-ratio rules",
+  "verdict": "confirmed",
+  "reason": "Page confirms hard-sphere ionic model, first approximation with many exceptions.",
+  "source": "https://en.wikipedia.org/wiki/Pauling%27s_rules",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.3402"
+  ],
+  "tool": "VSEPR model",
+  "verdict": "confirmed",
+  "reason": "Page confirms main-group central atoms and qualitative shape predictions.",
+  "source": "https://en.wikipedia.org/wiki/VSEPR_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340102"
+  ],
+  "tool": "Dose-response bioassay",
+  "verdict": "unconfirmed",
+  "reason": "Page says potency is relative to a standard; same mechanism and parallel curves not stated.",
+  "source": "https://en.wikipedia.org/wiki/Bioassay",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.3406"
+  ],
+  "tool": "Gibbs energy criterion",
+  "verdict": "confirmed",
+  "reason": "Page states decrease in Gibbs energy is needed for spontaneity at constant T and P in a closed system.",
+  "source": "https://en.wikipedia.org/wiki/Gibbs_free_energy",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.3406"
+  ],
+  "tool": "Arrhenius equation",
+  "verdict": "unconfirmed",
+  "reason": "Page supports narrow temperature range; single rate-limiting step not addressed.",
+  "source": "https://en.wikipedia.org/wiki/Arrhenius_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.3406"
+  ],
+  "tool": "Transition state theory",
+  "verdict": "confirmed",
+  "reason": "Page lists quasi-equilibrium, no recrossing and classical nuclear motion as assumptions.",
+  "source": "https://en.wikipedia.org/wiki/Transition_state_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.3406"
+  ],
+  "tool": "Nernst equation",
+  "verdict": "confirmed",
+  "reason": "Page states equilibrium with no net current, and activities needed (concentrations only if dilute).",
+  "source": "https://en.wikipedia.org/wiki/Nernst_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.3403"
+  ],
+  "tool": "Flory\u2013Huggins theory",
+  "verdict": "confirmed",
+  "reason": "Page lists lattice model, mean-field averaged interaction and random mixing as assumptions.",
+  "source": "https://en.wikipedia.org/wiki/Flory%E2%80%93Huggins_solution_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340601"
+  ],
+  "tool": "Steady-state approximation",
+  "verdict": "confirmed",
+  "reason": "Page requires intermediate at low, slowly varying concentration, consumed much faster than formed.",
+  "source": "https://en.wikipedia.org/wiki/Steady-state_approximation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.340601"
+  ],
+  "tool": "Sabatier principle",
+  "verdict": "confirmed",
+  "reason": "Page describes a single descriptor volcano plot, noting multi-descriptor needs for complex systems.",
+  "source": "https://en.wikipedia.org/wiki/Sabatier_principle",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.3405"
+  ],
+  "tool": "Retrosynthetic analysis",
+  "verdict": "unconfirmed",
+  "reason": "Page describes working backwards to precursors; says nothing explicit on reliable known reactions for each disconnection.",
+  "source": "https://en.wikipedia.org/wiki/Retrosynthetic_analysis",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "CH",
+  "cards": [
+   "CH.TK.3405"
+  ],
+  "tool": "Woodward\u2013Hoffmann rules",
+  "verdict": "confirmed",
+  "reason": "Page states rules apply to concerted pericyclic reactions with a single cyclic transition state.",
+  "source": "https://en.wikipedia.org/wiki/Woodward%E2%80%93Hoffmann_rules",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.E05"
+  ],
+  "tool": "Cohort study",
+  "verdict": "confirmed",
+  "reason": "Page supports confounder adjustment or matching and sensitivity to attrition in cohort studies.",
+  "source": "https://en.wikipedia.org/wiki/Cohort_study",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.E05"
+  ],
+  "tool": "Case-control study",
+  "verdict": "confirmed",
+  "reason": "Page states controls from same population as cases, and odds ratio approximates relative risk when disease is rare.",
+  "source": "https://en.wikipedia.org/wiki/Case%E2%80%93control_study",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.E05"
+  ],
+  "tool": "Kaplan\u2013Meier estimator",
+  "verdict": "confirmed",
+  "reason": "Page's derivation implies non-informative censoring; right-censoring only.",
+  "source": "https://en.wikipedia.org/wiki/Kaplan%E2%80%93Meier_estimator",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.D27.505"
+  ],
+  "tool": "Hill dose-response model",
+  "verdict": "unconfirmed",
+  "reason": "Page implies reversible equilibrium binding; single receptor population is not addressed.",
+  "source": "https://en.wikipedia.org/wiki/Hill_equation_(biochemistry)",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.G09.330"
+  ],
+  "tool": "Fick principle",
+  "verdict": "unconfirmed",
+  "reason": "Page gives uptake divided by arteriovenous difference; steady state and marker conditions not stated.",
+  "source": "https://en.wikipedia.org/wiki/Fick_principle",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.G09.330"
+  ],
+  "tool": "Frank\u2013Starling law",
+  "verdict": "confirmed",
+  "reason": "Page states relationship holds when all other factors remain constant; stroke volume rises with filling.",
+  "source": "https://en.wikipedia.org/wiki/Frank%E2%80%93Starling_law",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.G09.330"
+  ],
+  "tool": "Poiseuille's law",
+  "verdict": "confirmed",
+  "reason": "Page lists laminar, Newtonian, straight constant-section pipe; steady-flow result not directly valid for large arteries.",
+  "source": "https://en.wikipedia.org/wiki/Hagen%E2%80%93Poiseuille_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.N06"
+  ],
+  "tool": "Outbreak investigation",
+  "verdict": "confirmed",
+  "reason": "Source lists case definition, descriptive epidemiology by person, place, time, then analytical study with comparison group.",
+  "source": "https://healthknowledge.org.uk/public-health-textbook/disease-causation-diagnostic/2g-communicable-disease/outbreak-investigation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.N06"
+  ],
+  "tool": "Direct age standardisation",
+  "verdict": "unconfirmed",
+  "reason": "Page supports comparing populations using a chosen standard population; stable age-specific rates not stated.",
+  "source": "https://en.wikipedia.org/wiki/Age_adjustment",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.C16"
+  ],
+  "tool": "Pedigree analysis",
+  "verdict": "unconfirmed",
+  "reason": "Page supports inheritance rules and reliance on accurate family history; penetrance not discussed.",
+  "source": "https://en.wikipedia.org/wiki/Pedigree_chart",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.A15.145"
+  ],
+  "tool": "Flow cytometry immunophenotyping",
+  "verdict": "confirmed",
+  "reason": "Page supports labelled antibodies, single-cell suspension for tissue, and compensation for fluorochrome spillover.",
+  "source": "https://en.wikipedia.org/wiki/Flow_cytometry",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.F03"
+  ],
+  "tool": "Criterion-based diagnosis (DSM, ICD)",
+  "verdict": "confirmed",
+  "reason": "Page says diagnoses use operational criteria, structured interviews aid consistency, categories are descriptive prototypes.",
+  "source": "https://en.wikipedia.org/wiki/Diagnostic_and_Statistical_Manual_of_Mental_Disorders",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.F03"
+  ],
+  "tool": "Validated rating scales",
+  "verdict": "unconfirmed",
+  "reason": "Page covers validity generally and norm groups; population and language validation not explicitly addressed.",
+  "source": "https://en.wikipedia.org/wiki/Psychometrics",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.C"
+  ],
+  "tool": "Bayesian diagnostic reasoning with likelihood ratios",
+  "verdict": "unconfirmed",
+  "reason": "Page supports pre-test probability dependence; combining tests and conditional independence not discussed.",
+  "source": "https://en.wikipedia.org/wiki/Likelihood_ratios_in_diagnostic_testing",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.N"
+  ],
+  "tool": "Cost-effectiveness analysis",
+  "verdict": "unconfirmed",
+  "reason": "Page defines comparison of costs and effects; perspective, time horizon and utility weights not addressed.",
+  "source": "https://en.wikipedia.org/wiki/Cost-effectiveness_analysis",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.N"
+  ],
+  "tool": "Standardised mortality ratio",
+  "verdict": "confirmed",
+  "reason": "Page defines SMR as observed over expected deaths using reference age-specific rates applied to study age groups.",
+  "source": "https://en.wikipedia.org/wiki/Standardized_mortality_ratio",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "MD",
+  "cards": [
+   "MD.TK.C14"
+  ],
+  "tool": "Multivariable risk score (Framingham-type)",
+  "verdict": "unconfirmed",
+  "reason": "Page says score was validated in US groups and may misestimate elsewhere; recalibration is not described.",
+  "source": "https://en.wikipedia.org/wiki/Framingham_Risk_Score",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_c8292b89"
+  ],
+  "tool": "Standardised Precipitation Index",
+  "verdict": "unconfirmed",
+  "reason": "SPI page not found; SPEI page read does not cover SPI record length or distribution fit. Other sources blocked.",
+  "source": "https://en.wikipedia.org/wiki/Standardised_Precipitation_Evapotranspiration_Index",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_aff6c2e0"
+  ],
+  "tool": "Wright's inbreeding coefficient by path analysis",
+  "verdict": "confirmed",
+  "reason": "Page describes loops through common ancestors, summed per loop, with unrelated non-inbred founders in its examples.",
+  "source": "https://en.wikipedia.org/wiki/Coefficient_of_inbreeding",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_3954"
+  ],
+  "tool": "Reference evapotranspiration with crop coefficients (FAO-56)",
+  "verdict": "unconfirmed",
+  "reason": "Page supports Kc as crop adjustment of reference ET for unstressed crops; weather data representativeness not addressed. FAO page blocked.",
+  "source": "https://en.wikipedia.org/wiki/Penman%E2%80%93Monteith_equation",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_7b2f7e21"
+  ],
+  "tool": "Difference-in-differences",
+  "verdict": "unconfirmed",
+  "reason": "Page supports parallel trends and stable group composition; no anticipation not mentioned.",
+  "source": "https://en.wikipedia.org/wiki/Difference_in_differences",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_0e551f76"
+  ],
+  "tool": "Tidal harmonic analysis",
+  "verdict": "confirmed",
+  "reason": "Page states constant amplitude and phase per constituent, sufficiently long record, and fixed local response.",
+  "source": "https://en.wikipedia.org/wiki/Tide",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_6909223e"
+  ],
+  "tool": "Composite index by geometric mean",
+  "verdict": "confirmed",
+  "reason": "Page confirms geometric mean of three normalised indices, fixed minimum and maximum goalposts, and equal one-third weights.",
+  "source": "https://en.wikipedia.org/wiki/Human_Development_Index",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_fb04b64e"
+  ],
+  "tool": "Monin\u2013Obukhov similarity theory",
+  "verdict": "unconfirmed",
+  "reason": "Page limits it to the surface layer and warns of discrepancies over complex surfaces; steady conditions not stated.",
+  "source": "https://en.wikipedia.org/wiki/Monin%E2%80%93Obukhov_similarity_theory",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_3791"
+  ],
+  "tool": "Dichotomous key",
+  "verdict": "confirmed",
+  "reason": "Page describes fixed paired choices that rely on observable characters; key sorts only items it includes.",
+  "source": "https://en.wikipedia.org/wiki/Dichotomous_key",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_6774"
+  ],
+  "tool": "Probability sampling",
+  "verdict": "confirmed",
+  "reason": "Page defines probability sample as every unit having an accurately determinable non-zero chance of selection.",
+  "source": "https://en.wikipedia.org/wiki/Probability_sampling",
+  "corrected_hypotheses": ""
+ },
+ {
+  "field": "AG",
+  "cards": [
+   "AG.TK.c_d8c74b28"
+  ],
+  "tool": "Propagation of uncertainty",
+  "verdict": "confirmed",
+  "reason": "Page states first-order linearisation is good only when nearly linear, and covariances must be included.",
+  "source": "https://en.wikipedia.org/wiki/Propagation_of_uncertainty",
+  "corrected_hypotheses": ""
+ }
+]

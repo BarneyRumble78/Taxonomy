@@ -2,28 +2,103 @@
 |---|---|---|---|---|
 | AG.O.A1 | Breeding | AG | O/A1 | — |
 | AG.O.A1.1 | Selection | AG | O/A1 | BI |
+| AG.O.A1.1.1 | Realised heritability | AG | O/A1 | BI.O.A4.2 |
+| AG.O.A1.1.2 | Annual genetic gain | AG | O/A1 | — |
+| AG.O.A1.1.3 | Selection index | AG | O/A1 | — |
+| AG.O.A1.1.4 | Breeding value prediction | AG | O/A1 | — |
 | AG.O.A1.2 | Genetic improvement | AG | O/A1 | BI, LA |
+| AG.O.A1.2.1 | Heterosis | AG | O/A1 | — |
+| AG.O.A1.2.2 | Marker-assisted and genomic selection | AG | O/A1 | BI.O.A1.3 |
+| AG.O.A1.2.3 | Gene editing | AG | O/A1 | BI.O.A1.4, LA.O.A1.1 |
+| AG.O.A1.2.4 | Transgenic events | AG | O/A1 | — |
 | AG.O.A1.3 | Genetic resources | AG | O/A1 | — |
+| AG.O.A1.3.1 | Seed storage | AG | O/A1 | — |
+| AG.O.A1.3.2 | Effective population size and inbreeding | AG | O/A1 | BI.O.A4.1 |
+| AG.O.A1.3.3 | Landraces | AG | O/A1 | — |
+| AG.O.A1.3.4 | Core collections | AG | O/A1 | — |
 | AG.O.A2 | Cultivation and husbandry | AG | O/A2 | — |
 | AG.O.A2.1 | Soils and nutrients | AG | O/A2 | EA |
+| AG.O.A2.1.1 | Law of the minimum | AG | O/A2 | — |
+| AG.O.A2.1.2 | Response curves | AG | O/A2 | — |
+| AG.O.A2.1.3 | Soil test calibration | AG | O/A2 | EA.O.A4.5, CH.O.A5.3 |
+| AG.O.A2.1.4 | Nutrient recovery | AG | O/A2 | — |
 | AG.O.A2.2 | Water and irrigation | AG | O/A2 | EA |
+| AG.O.A2.2.1 | Crop water requirement | AG | O/A2 | EA.O.A4.2 |
+| AG.O.A2.2.2 | Yield response to water | AG | O/A2 | — |
+| AG.O.A2.2.3 | Irrigation scheduling | AG | O/A2 | — |
+| AG.O.A2.2.4 | Salinity and sodicity | AG | O/A2 | EA.O.A4.5 |
 | AG.O.A2.3 | Crop management | AG | O/A2 | — |
+| AG.O.A2.3.1 | Rotation | AG | O/A2 | — |
+| AG.O.A2.3.2 | Tillage | AG | O/A2 | — |
+| AG.O.A2.3.3 | Intercropping | AG | O/A2 | — |
+| AG.O.A2.3.4 | Phenology and sowing date | AG | O/A2 | EA.O.A4.3 |
 | AG.O.A2.4 | Animal husbandry | AG | O/A2 | — |
+| AG.O.A2.4.1 | Energy requirement | AG | O/A2 | — |
+| AG.O.A2.4.2 | Stocking rate | AG | O/A2 | — |
+| AG.O.A2.4.3 | Rumen digestion and methane | AG | O/A2 | EV |
+| AG.O.A2.4.4 | Welfare measurement | AG | O/A2 | LA.O.A1.1 |
 | AG.O.A2.5 | Aquaculture, fisheries, forestry | AG | O/A2 | BI |
+| AG.O.A2.5.1 | Surplus production | AG | O/A2 | BI.O.A5.1 |
+| AG.O.A2.5.2 | Catch per unit effort | AG | O/A2 | — |
+| AG.O.A2.5.3 | Forest stand growth | AG | O/A2 | — |
+| AG.O.A2.5.4 | Feed conversion in aquaculture | AG | O/A2 | — |
 | AG.O.A3 | Crop and animal health | AG | O/A3 | — |
 | AG.O.A3.1 | Plant protection | AG | O/A3 | BI |
+| AG.O.A3.1.1 | Economic injury level | AG | O/A3 | — |
+| AG.O.A3.1.2 | Resistance management | AG | O/A3 | BI.O.A4.1 |
+| AG.O.A3.1.3 | Biological control | AG | O/A3 | BI.O.A5.2 |
+| AG.O.A3.1.4 | Critical period of weed control | AG | O/A3 | — |
 | AG.O.A3.2 | Veterinary medicine | AG | O/A3 | — |
+| AG.O.A3.2.1 | Test accuracy in animals | AG | O/A3 | MD.O.A3.2 |
+| AG.O.A3.2.2 | Withholding periods | AG | O/A3 | MD.O.A4.4.1 |
+| AG.O.A3.2.3 | Antimicrobial use and resistance | AG | O/A3 | MD.O.A2.1.1 |
+| AG.O.A3.2.4 | Trials in veterinary practice | AG | O/A3 | — |
 | AG.O.A3.3 | Biosecurity | AG | O/A3 | LA |
+| AG.O.A3.3.1 | Inspection and sampling | AG | O/A3 | MA.O.A5 |
+| AG.O.A3.3.2 | Surveillance sensitivity | AG | O/A3 | MA.O.A5 |
+| AG.O.A3.3.3 | Eradication feasibility | AG | O/A3 | MD.O.A5.2, MD.O.A5.2.3 |
+| AG.O.A3.3.4 | Establishment of introduced pests | AG | O/A3 | EV.O.A1.4 |
 | AG.O.A3.4 | Zoonoses | AG | O/A3 | MD |
+| AG.O.A3.4.1 | Reservoirs | AG | O/A3 | — |
+| AG.O.A3.4.2 | Control at source | AG | O/A3 | MD.O.A5.1 |
+| AG.O.A3.4.3 | Spillover | AG | O/A3 | — |
+| AG.O.A3.4.4 | Foodborne zoonoses | AG | O/A3 | MD.O.A5.1 |
 | AG.O.A4 | Food | AG | O/A4 | — |
 | AG.O.A4.1 | Composition and nutrition | AG | O/A4 | CH, MD |
+| AG.O.A4.1.1 | Proximate analysis | AG | O/A4 | CH.O.A5.3 |
+| AG.O.A4.1.2 | Natural variation | AG | O/A4 | — |
+| AG.O.A4.1.3 | Retention in processing | AG | O/A4 | CH.O.A4.1 |
+| AG.O.A4.1.4 | Food security measures | AG | O/A4 | EC, MD |
 | AG.O.A4.2 | Processing and preservation | AG | O/A4 | CH, BI |
+| AG.O.A4.2.1 | Thermal death time | AG | O/A4 | CH.O.A4.2 |
+| AG.O.A4.2.2 | Water activity | AG | O/A4 | — |
+| AG.O.A4.2.3 | Pasteurisation | AG | O/A4 | — |
+| AG.O.A4.2.4 | Fermentation yield and growth | AG | O/A4 | CH.O.A1.2, BI.O.A2.3 |
 | AG.O.A4.3 | Food safety | AG | O/A4 | — |
+| AG.O.A4.3.1 | HACCP principles | AG | O/A4 | — |
+| AG.O.A4.3.2 | End-product testing | AG | O/A4 | MA.O.A5 |
+| AG.O.A4.3.3 | Predictive microbiology | AG | O/A4 | — |
+| AG.O.A4.3.4 | Chemical hazards | AG | O/A4 | — |
 | AG.O.A4.4 | Food standards | AG | O/A4 | LA |
+| AG.O.A4.4.1 | Codex Alimentarius | AG | O/A4 | LA.O.A1.4 |
+| AG.O.A4.4.2 | Australia New Zealand Food Standards Code | AG | O/A4 | LA.O.A1.1 |
+| AG.O.A4.4.3 | Maximum residue limits | AG | O/A4 | MD |
+| AG.O.A4.4.4 | Labelling and certification | AG | O/A4 | — |
 | AG.O.A5 | Farming systems | AG | O/A5 | — |
 | AG.O.A5.1 | System productivity | AG | O/A5 | EC |
+| AG.O.A5.1.1 | Partial and total productivity | AG | O/A5 | EC.O.A4.1 |
+| AG.O.A5.1.2 | Yield gap | AG | O/A5 | — |
+| AG.O.A5.1.3 | Livestock system efficiency | AG | O/A5 | — |
 | AG.O.A5.2 | Farm management | AG | O/A5 | EC |
+| AG.O.A5.2.1 | Gross margin and partial budget | AG | O/A5 | EC |
+| AG.O.A5.2.2 | Investment appraisal | AG | O/A5 | — |
+| AG.O.A5.2.3 | Income risk | AG | O/A5 | MA.O.A5 |
+| AG.O.A5.2.4 | Whole-farm models | AG | O/A5 | MA |
 | AG.O.A5.3 | Environmental effect of farming | AG | O/A5 | EV |
+| AG.O.A5.3.1 | Nitrogen balance | AG | O/A5 | EV.O.A2.2 |
+| AG.O.A5.3.2 | Methane intensity and total | AG | O/A5 | EV.O.A1.1 |
+| AG.O.A5.3.3 | Mitigation effect | AG | O/A5 | — |
+| AG.O.A5.3.4 | Soil carbon change | AG | O/A5 | EA.O.A4.5 |
 | AR.O.A1 | Medium and making | AR | O | — |
 | AR.O.A1.1 | Material and technique | AR | O/A1 | CH.O.A1 |
 | AR.O.A1.2 | Agency and attribution | AR | O/A1 | — |
@@ -188,6 +263,69 @@
 | BU.O.A5.3 | Tax computation | BU | O/A5 | EC.O.A2.5, LA |
 | BU.O.A5.4 | Transfer pricing | BU | O/A5 | LA |
 | BU.O.A5.5 | Payments and trade finance | BU | O/A5 | — |
+| BU.O.A1.1.1 | Trial balance limits | BU | O/A1 | — |
+| BU.O.A1.1.2 | Accrual basis | BU | O/A1 | — |
+| BU.O.A1.1.3 | Profit versus cash flow | BU | O/A1 | — |
+| BU.O.A1.2.1 | Conceptual framework | BU | O/A1 | — |
+| BU.O.A1.2.2 | Measurement bases and fair value | BU | O/A1 | — |
+| BU.O.A1.2.3 | Jurisdiction sets the standard | BU | O/A1 | LA.O.A1.1 |
+| BU.O.A1.3.1 | Cost-volume-profit analysis | BU | O/A1 | — |
+| BU.O.A1.3.2 | Activity-based costing | BU | O/A1 | — |
+| BU.O.A1.3.3 | Variance analysis | BU | O/A1 | — |
+| BU.O.A1.4.1 | Audit risk model | BU | O/A1 | — |
+| BU.O.A1.4.2 | Statistical audit sampling | BU | O/A1 | — |
+| BU.O.A1.4.3 | Auditor independence | BU | O/A1 | — |
+| BU.O.A2.1.1 | NPV versus IRR ranking | BU | O/A2 | — |
+| BU.O.A2.1.2 | Terminal value sensitivity | BU | O/A2 | — |
+| BU.O.A2.1.3 | Real options (CONTESTED) | BU | O/A2 | MA.B.C4 |
+| BU.O.A2.2.1 | Trade-off theory | BU | O/A2 | — |
+| BU.O.A2.2.2 | Pecking-order theory | BU | O/A2 | EC.O.A2.3 |
+| BU.O.A2.2.3 | WACC and constant leverage | BU | O/A2 | — |
+| BU.O.A2.3.1 | Mean–variance portfolio selection | BU | O/A2 | — |
+| BU.O.A2.3.2 | Multi-factor models (CONTESTED) | BU | O/A2 | — |
+| BU.O.A2.3.3 | Value at risk | BU | O/A2 | — |
+| BU.O.A2.4.1 | Put–call parity | BU | O/A2 | — |
+| BU.O.A2.4.2 | Implied volatility smile | BU | O/A2 | — |
+| BU.O.A2.4.3 | Hedging and basis risk | BU | O/A2 | BU.O.A1.2 |
+| BU.O.A2.5.1 | Event study | BU | O/A2 | — |
+| BU.O.A2.5.2 | Anomalies and joint hypothesis (CONTESTED) | BU | O/A2 | — |
+| BU.O.A2.5.3 | Duration | BU | O/A2 | — |
+| BU.O.A3.1.1 | M/M/1 waiting and utilisation | BU | O/A3 | MA.O.A5 |
+| BU.O.A3.1.2 | Theory of constraints | BU | O/A3 | — |
+| BU.O.A3.1.3 | Control charts | BU | O/A3 | — |
+| BU.O.A3.2.1 | Economic order quantity | BU | O/A3 | — |
+| BU.O.A3.2.2 | Newsvendor model | BU | O/A3 | — |
+| BU.O.A3.2.3 | Shared demand data and bullwhip | BU | O/A3 | — |
+| BU.O.A3.3.1 | Corporate governance remedies | BU | O/A3 | — |
+| BU.O.A3.3.2 | Make-or-buy boundary | BU | O/A3 | EC.O.A3.3 |
+| BU.O.A3.3.3 | Contingency theory (CONTESTED) | BU | O/A3 | — |
+| BU.O.A3.4.1 | Structured selection | BU | O/A3 | — |
+| BU.O.A3.4.2 | Hierarchy of controls | BU | O/A3 | — |
+| BU.O.A3.4.3 | Employment duty versus practice | BU | O/A3 | LA.O.A2.1 |
+| BU.O.A3.5.1 | Bass diffusion model | BU | O/A3 | — |
+| BU.O.A3.5.2 | Resource-based view (VRIO) | BU | O/A3 | — |
+| BU.O.A3.5.3 | New-firm survival (UNVERIFIED NZ) | BU | O/A3 | — |
+| BU.O.A4.1.1 | Customer lifetime value | BU | O/A4 | — |
+| BU.O.A4.1.2 | A/B testing | BU | O/A4 | — |
+| BU.O.A4.1.3 | Segmentation conditions | BU | O/A4 | — |
+| BU.O.A4.2.1 | Conjoint analysis | BU | O/A4 | — |
+| BU.O.A4.2.2 | SERVQUAL (CONTESTED) | BU | O/A4 | — |
+| BU.O.A4.3.1 | Price elasticity of demand | BU | O/A4 | EC.O.A1.1 |
+| BU.O.A4.3.2 | Littlewood's rule | BU | O/A4 | — |
+| BU.O.A4.3.3 | Van Westendorp meter | BU | O/A4 | — |
+| BU.O.A4.4.1 | Channel conflict | BU | O/A4 | — |
+| BU.O.A4.4.2 | Digital attribution | BU | O/A4 | BU.O.A4.1.2 |
+| BU.O.A5.1.1 | Incoterms by incorporation | BU | O/A5 | — |
+| BU.O.A5.1.2 | Risk passing in F and C rules | BU | O/A5 | LA.O.A2.1 |
+| BU.O.A5.2.1 | Harmonized System digits | BU | O/A5 | — |
+| BU.O.A5.2.2 | Preferential rules of origin | BU | O/A5 | — |
+| BU.O.A5.3.1 | VAT credit chain | BU | O/A5 | — |
+| BU.O.A5.3.2 | Taxable income versus profit | BU | O/A5 | BU.O.A1.2 |
+| BU.O.A5.3.3 | Incidence, duty and computation | BU | O/A5 | EC.O.A2.5, LA.O.A2.5 |
+| BU.O.A5.4.1 | Comparable uncontrolled price | BU | O/A5 | — |
+| BU.O.A5.4.2 | Advance pricing agreements | BU | O/A5 | — |
+| BU.O.A5.5.1 | Documentary credit compliance | BU | O/A5 | — |
+| BU.O.A5.5.2 | Open account and credit risk | BU | O/A5 | — |
 | CH.O.A1 | Composition and identity | CH | O/A1 | — |
 | CH.O.A1.1 | Elements and the periodic table | CH | O/A1 | PH.O.A2.1 |
 | CH.O.A1.1.1 | Atomic weights are published by IUPAC (CIAAW), some as intervals refle | CH | O/A1 | — |
@@ -230,6 +368,76 @@
 | CH.O.A5.3.1 | The Beer–Lambert law holds for dilute solutions and monochromatic ligh | CH | O/A5 | — |
 | CH.O.A5.4 | Materials and polymers | CH | O/A5 | EN |
 | CH.O.A5.5 | Green chemistry | CH | O/A5 | EV |
+| CH.O.A1.1.2 | Periodic trends | CH | O/A1 | — |
+| CH.O.A1.1.3 | Relativistic effects | CH | O/A1 | PH.O.A2.1 |
+| CH.O.A1.1.4 | Placement of hydrogen and of the group 3 elements in the table is... | CH | O/A1 | — |
+| CH.O.A1.2.2 | Conservation of mass in a chemical reaction holds to within measur... | CH | O/A1 | — |
+| CH.O.A1.2.3 | An empirical formula follows from elemental analysis; a molecular... | CH | O/A1 | — |
+| CH.O.A1.2.4 | Limiting reagent | CH | O/A1 | — |
+| CH.O.A1.3.3 | Azeotropes | CH | O/A1 | — |
+| CH.O.A1.3.4 | Real solutions are described by activity coefficients | CH | O/A1 | — |
+| CH.O.A1.4.1 | One structure has one standard InChI, given the layer options | CH | O/A1 | — |
+| CH.O.A1.4.2 | The Cahn–Ingold–Prelog rules assign R or S to each stereocentre fr... | CH | O/A1 | — |
+| CH.O.A1.5.1 | Isotope ratios are reported as δ values against named reference ma... | CH | O/A1 | — |
+| CH.O.A1.5.2 | Mass-dependent fractionation scales with the mass difference of th... | CH | O/A1 | — |
+| CH.O.A1.5.3 | Isotope labelling (²H, ¹³C, ¹⁵N, ¹⁸O) traces atoms through a react... | CH | O/A1 | BI.O.A2.3 |
+| CH.O.A2.1.3 | Born–Oppenheimer fails where electronic states come close, as at c... | CH | O/A2 | PH.O.A2.4 |
+| CH.O.A2.1.4 | Bond order from molecular orbital theory predicts that O₂ is param... | CH | O/A2 | — |
+| CH.O.A2.1.5 | Ionic lattice energies follow the Born–Haber cycle, given Hess's l... | CH | O/A2 | CH.O.A3.1 |
+| CH.O.A2.2.2 | Point-group symmetry predicts which vibrations are IR or Raman active | CH | O/A2 | MA.O.A2 |
+| CH.O.A2.2.3 | Conformer populations follow a Boltzmann distribution when interco... | CH | O/A2 | PH.O.A4.2 |
+| CH.O.A2.2.4 | Atropisomers are stereoisomers from hindered rotation | CH | O/A2 | — |
+| CH.O.A2.3.2 | Ligand field splitting orders ligands in the spectrochemical series | CH | O/A2 | — |
+| CH.O.A2.3.3 | The Jahn–Teller theorem: a non-linear molecule in an orbitally deg... | CH | O/A2 | MA.O.A2 |
+| CH.O.A2.3.4 | Band structure describes metals and semiconductors | CH | O/A2 | PH.O.A4.4 |
+| CH.O.A2.4.1 | Boiling points within a homologous series rise with chain length,... | CH | O/A2 | — |
+| CH.O.A2.4.2 | The hydrophobic effect is largely entropic at room temperature, fr... | CH | O/A2 | — |
+| CH.O.A2.4.3 | Supramolecular assembly (host–guest binding) is driven by many wea... | CH | O/A2 | — |
+| CH.O.A3.1.1 | Standard enthalpies of formation, at a stated standard state, comb... | CH | O/A3 | PH.O.A4.1 |
+| CH.O.A3.1.2 | Bond enthalpies are averages over compounds | CH | O/A3 | — |
+| CH.O.A3.1.3 | Calorimetry measures heat at constant pressure (ΔH) or constant vo... | CH | O/A3 | — |
+| CH.O.A3.2.2 | K is written with activities | CH | O/A3 | — |
+| CH.O.A3.2.3 | Solubility product Ksp predicts precipitation when the ion activit... | CH | O/A3 | — |
+| CH.O.A3.2.4 | Gibbs phase rule F = C − P + 2 gives the degrees of freedom of a s... | CH | O/A3 | PH.O.A4.3 |
+| CH.O.A3.3.2 | ΔG = −nFE links cell potential to reaction free energy | CH | O/A3 | — |
+| CH.O.A3.3.3 | Faraday's laws: charge passed is proportional to amount of substan... | CH | O/A3 | — |
+| CH.O.A3.3.4 | The Butler–Volmer equation gives current versus overpotential for... | CH | O/A3 | CH.O.A4, CH.O.A4.2 |
+| CH.O.A3.4.1 | The Henderson–Hasselbalch equation gives buffer pH, assuming activ... | CH | O/A3 | — |
+| CH.O.A3.4.2 | Levelling | CH | O/A3 | — |
+| CH.O.A3.4.3 | Hard–soft acid–base (HSAB) theory predicts preferred pairings qual... | CH | O/A3 | — |
+| CH.O.A3.5.1 | Coupled free energies add only when the steps share a common inter... | CH | O/A3 | — |
+| CH.O.A3.5.2 | Electrolysis couples electrical work to a reaction with positive Δ... | CH | O/A3 | CH.O.A3.3 |
+| CH.O.A4.1.1 | Integrated rate laws give linear plots for each order | CH | O/A4 | MA.O.A4 |
+| CH.O.A4.1.2 | Pseudo-first-order conditions hold when one reagent is in large ex... | CH | O/A4 | — |
+| CH.O.A4.1.3 | The method of initial rates finds order in each reagent, given no... | CH | O/A4 | — |
+| CH.O.A4.2.1 | Eyring analysis gives activation enthalpy and entropy | CH | O/A4 | — |
+| CH.O.A4.2.2 | Tunnelling makes rates exceed transition-state theory for light-at... | CH | O/A4 | — |
+| CH.O.A4.2.3 | Collision theory under-predicts or over-predicts rates by a steric... | CH | O/A4 | — |
+| CH.O.A4.3.2 | The principle of microscopic reversibility: at equilibrium, forwar... | CH | O/A4 | — |
+| CH.O.A4.3.3 | Linear free-energy relations (Hammett equation) correlate rates wi... | CH | O/A4 | — |
+| CH.O.A4.3.4 | Curtin–Hammett principle: when conformers interconvert faster than... | CH | O/A4 | — |
+| CH.O.A4.4.1 | Sabatier principle: the best heterogeneous catalyst binds intermed... | CH | O/A4 | — |
+| CH.O.A4.4.2 | Langmuir adsorption assumes equivalent sites, a monolayer and no i... | CH | O/A4 | — |
+| CH.O.A4.4.3 | Turnover number and turnover frequency state catalyst productivity... | CH | O/A4 | — |
+| CH.O.A4.4.4 | Enzyme rate enhancement as transition-state stabilisation is the s... | CH | O/A4 | — |
+| CH.O.A4.5.1 | Stark–Einstein law: one absorbed photon excites one molecule in th... | CH | O/A4 | — |
+| CH.O.A4.5.2 | Kasha's rule: emission comes mainly from the lowest excited state... | CH | O/A4 | — |
+| CH.O.A4.5.3 | The Woodward–Hoffmann rules predict allowed pericyclic reactions u... | CH | O/A4 | — |
+| CH.O.A5.1.2 | Overall yield of a linear route is the product of step yields | CH | O/A5 | — |
+| CH.O.A5.1.3 | Asymmetric catalysis gives one enantiomer in excess | CH | O/A5 | — |
+| CH.O.A5.1.4 | Reproducibility of a reported yield is OPEN as a field-wide questi... | CH | O/A5 | — |
+| CH.O.A5.2.1 | Chromatographic retention depends on the partition coefficient bet... | CH | O/A5 | — |
+| CH.O.A5.2.2 | Fractional distillation separates by volatility, limited by azeotr... | CH | O/A5 | CH.O.A1.3 |
+| CH.O.A5.2.3 | Recrystallisation purifies when impurities stay in solution at the... | CH | O/A5 | — |
+| CH.O.A5.3.2 | NMR chemical shift and coupling identify local structure | CH | O/A5 | — |
+| CH.O.A5.3.3 | High-resolution mass spectrometry gives an elemental formula from... | CH | O/A5 | — |
+| CH.O.A5.3.4 | Calibration by standard addition corrects for matrix effects, give... | CH | O/A5 | — |
+| CH.O.A5.4.1 | Polymer properties depend on molar-mass distribution | CH | O/A5 | — |
+| CH.O.A5.4.2 | Step-growth polymerisation reaches high molar mass only at high co... | CH | O/A5 | — |
+| CH.O.A5.4.3 | Glass transition temperature marks a change in chain mobility; it... | CH | O/A5 | EN.O.A5 |
+| CH.O.A5.5.1 | Atom economy is computed from the balanced equation | CH | O/A5 | — |
+| CH.O.A5.5.2 | The E-factor is mass of waste per mass of product | CH | O/A5 | — |
+| CH.O.A5.5.3 | Whether a lower metric means lower environmental harm is EV's clai... | CH | O/A5 | EV.O.A3 |
 | CS.O.A1 | Correctness | CS | O/A1 | — |
 | CS.O.A1.1 | Semantics | CS | O/A1 | MA.O.A1 |
 | CS.O.A1.2 | Specification and verification | CS | O/A1 | MA.O.A1 |
@@ -259,30 +467,178 @@
 | CS.O.A5.2 | Systems security | CS | O/A5 | — |
 | CS.O.A5.3 | Privacy | CS | O/A5 | MA.O.A5 |
 | CS.O.A5.4 | Quantum threats | CS | O/A5 | PH.O.A2, MA.B.C3 |
+| CS.O.A1.1.1 | Operational semantics | CS | O/A1 | — |
+| CS.O.A1.1.2 | Denotational semantics | CS | O/A1 | MA.O.A2 |
+| CS.O.A1.1.3 | Adequacy | CS | O/A1 | — |
+| CS.O.A1.1.4 | Church–Turing thesis | CS | O/A1 | PL.O.A5 |
+| CS.O.A1.2.1 | Hoare triples | CS | O/A1 | — |
+| CS.O.A1.2.2 | Termination | CS | O/A1 | MA.O.A1 |
+| CS.O.A1.2.3 | Model checking | CS | O/A1 | — |
+| CS.O.A1.2.4 | Separation logic | CS | O/A1 | — |
+| CS.O.A1.3.1 | Progress and preservation | CS | O/A1 | — |
+| CS.O.A1.3.2 | Type inference | CS | O/A1 | — |
+| CS.O.A1.3.3 | Curry–Howard correspondence | CS | O/A1 | MA.O.A1 |
+| CS.O.A1.4.1 | Coverage criteria | CS | O/A1 | — |
+| CS.O.A1.4.2 | Property-based testing | CS | O/A1 | — |
+| CS.O.A1.4.3 | Mutation testing | CS | O/A1 | — |
+| CS.O.A1.5.1 | Halting problem | CS | O/A1 | MA.O.A1 |
+| CS.O.A1.5.2 | Sound but incomplete analysis | CS | O/A1 | — |
+| CS.O.A1.5.3 | Specification gap | CS | O/A1 | — |
+| CS.O.A2.1.1 | Asymptotic cost | CS | O/A2 | — |
+| CS.O.A2.1.2 | Design paradigms | CS | O/A2 | — |
+| CS.O.A2.1.3 | Randomised algorithms | CS | O/A2 | MA.O.A5 |
+| CS.O.A2.1.4 | Approximation | CS | O/A2 | MA.B.C3 |
+| CS.O.A2.2.1 | Amortised analysis | CS | O/A2 | — |
+| CS.O.A2.2.2 | Hashing | CS | O/A2 | — |
+| CS.O.A2.2.3 | Balanced search trees | CS | O/A2 | — |
+| CS.O.A2.2.4 | External memory | CS | O/A2 | — |
+| CS.O.A2.3.1 | Reductions in practice | CS | O/A2 | — |
+| CS.O.A2.3.2 | Hardness assumptions as engineering inputs | CS | O/A2 | MA.B.C3 |
+| CS.O.A2.3.3 | Parameterised complexity | CS | O/A2 | — |
+| CS.O.A2.4.1 | Locality | CS | O/A2 | — |
+| CS.O.A2.4.2 | Gustafson's law | CS | O/A2 | — |
+| CS.O.A2.4.3 | Instruction-level parallelism | CS | O/A2 | — |
+| CS.O.A2.4.4 | Accelerators | CS | O/A2 | — |
+| CS.O.A2.5.1 | End of Dennard scaling | CS | O/A2 | PH.O.A4 |
+| CS.O.A2.5.2 | Landauer's bound | CS | O/A2 | PH.O.A4 |
+| CS.O.A2.5.3 | Energy as a cost measure | CS | O/A2 | — |
+| CS.O.A3.1.1 | Coffman conditions | CS | O/A3 | — |
+| CS.O.A3.1.2 | Linearisability | CS | O/A3 | — |
+| CS.O.A3.1.3 | Memory models | CS | O/A3 | — |
+| CS.O.A3.1.4 | Wait-free hierarchy | CS | O/A3 | MA.B.C3 |
+| CS.O.A3.2.1 | Partial synchrony | CS | O/A3 | — |
+| CS.O.A3.2.2 | Crash-fault consensus protocols | CS | O/A3 | — |
+| CS.O.A3.2.3 | Randomised consensus | CS | O/A3 | — |
+| CS.O.A3.2.4 | Signed messages | CS | O/A3 | — |
+| CS.O.A3.3.1 | Scope of CAP | CS | O/A3 | — |
+| CS.O.A3.3.2 | Latency trade-off | CS | O/A3 | — |
+| CS.O.A3.3.3 | Convergent replicated data types | CS | O/A3 | — |
+| CS.O.A3.4.1 | Layering | CS | O/A3 | — |
+| CS.O.A3.4.2 | End-to-end argument | CS | O/A3 | — |
+| CS.O.A3.4.3 | Congestion control | CS | O/A3 | — |
+| CS.O.A3.4.4 | Two Generals problem | CS | O/A3 | — |
+| CS.O.A3.5.1 | Relational model | CS | O/A3 | MA.O.A1 |
+| CS.O.A3.5.2 | Serialisability | CS | O/A3 | — |
+| CS.O.A3.5.3 | Weaker isolation | CS | O/A3 | — |
+| CS.O.A3.5.4 | Query optimisation | CS | O/A3 | — |
+| CS.O.A4.1.1 | Sample complexity | CS | O/A4 | — |
+| CS.O.A4.1.2 | Bias–variance trade-off | CS | O/A4 | — |
+| CS.O.A4.1.3 | Online learning | CS | O/A4 | — |
+| CS.O.A4.1.4 | Generalisation of deep networks | CS | O/A4 | — |
+| CS.O.A4.2.1 | Gradient-based training | CS | O/A4 | MA.O.A4 |
+| CS.O.A4.2.2 | Scaling laws | CS | O/A4 | — |
+| CS.O.A4.2.3 | Architectures | CS | O/A4 | — |
+| CS.O.A4.2.4 | Regularisation | CS | O/A4 | — |
+| CS.O.A4.3.1 | Heuristic search | CS | O/A4 | — |
+| CS.O.A4.3.2 | SAT solving | CS | O/A4 | — |
+| CS.O.A4.3.3 | Markov decision processes | CS | O/A4 | — |
+| CS.O.A4.3.4 | Probabilistic inference | CS | O/A4 | MA.B.C3 |
+| CS.O.A4.4.1 | Benchmark performance | CS | O/A4 | — |
+| CS.O.A4.4.2 | Language models | CS | O/A4 | — |
+| CS.O.A4.4.3 | Adversarial examples | CS | O/A4 | — |
+| CS.O.A4.5.1 | Specification gaming | CS | O/A4 | — |
+| CS.O.A4.5.2 | Learning from human feedback | CS | O/A4 | — |
+| CS.O.A4.5.3 | Interpretability | CS | O/A4 | — |
+| CS.O.A4.5.4 | Evaluation validity | CS | O/A4 | — |
+| CS.O.A5.1.1 | Reduction-based security | CS | O/A5 | MA.B.C3 |
+| CS.O.A5.1.2 | Composition | CS | O/A5 | — |
+| CS.O.A5.1.3 | Implementation gap | CS | O/A5 | — |
+| CS.O.A5.2.1 | Memory safety | CS | O/A5 | — |
+| CS.O.A5.2.2 | Least privilege | CS | O/A5 | — |
+| CS.O.A5.2.3 | Side channels | CS | O/A5 | — |
+| CS.O.A5.2.4 | Information-flow control | CS | O/A5 | — |
+| CS.O.A5.3.1 | Composition of privacy loss | CS | O/A5 | MA.O.A5 |
+| CS.O.A5.3.2 | Failure of de-identification | CS | O/A5 | — |
+| CS.O.A5.3.3 | Privacy–utility trade-off | CS | O/A5 | — |
+| CS.O.A5.4.1 | Grover's speed-up | CS | O/A5 | — |
+| CS.O.A5.4.2 | Post-quantum cryptography | CS | O/A5 | — |
+| CS.O.A5.4.3 | Harvest now, decrypt later | CS | O/A5 | — |
 | CS.M.1–5 | Method roles | CS | M | — |
 | CS.B.C1–C9 | Bridges | CS | B | as tabled |
 | DE.O.A1 | Use and need | DE | O/A1 | — |
 | DE.O.A1.1 | Users and activities | DE | O/A1 | MS |
+| DE.O.A1.1.1 | User research samples | DE | O/A1 | — |
+| DE.O.A1.1.2 | Activities and behaviour settings | DE | O/A1 | MS.O.A4.4 |
+| DE.O.A1.1.3 | Variation among users | DE | O/A1 | — |
 | DE.O.A1.2 | The brief | DE | O/A1 | — |
+| DE.O.A1.2.1 | Programme and adjacency | DE | O/A1 | — |
+| DE.O.A1.2.2 | The agreed brief as stipulation | DE | O/A1 | — |
+| DE.O.A1.2.3 | Problem framing and process models | DE | O/A1 | — |
 | DE.O.A1.3 | Accessibility | DE | O/A1 | LA |
+| DE.O.A1.3.1 | Universal design principles | DE | O/A1 | — |
+| DE.O.A1.3.2 | Dimensional envelopes and percentile design | DE | O/A1 | LA.O.A1.1 |
+| DE.O.A1.3.3 | Sensory and cognitive access | DE | O/A1 | MS.O.A1.1 |
+| DE.O.A1.3.4 | Models of disability | DE | O/A1 | — |
 | DE.O.A2 | Form | DE | O/A2 | — |
 | DE.O.A2.1 | Spatial organisation | DE | O/A2 | MA.O.A3 |
+| DE.O.A2.1.1 | Adjacency and plan graphs | DE | O/A2 | MA.O.A2 |
+| DE.O.A2.1.2 | Depth and circulation | DE | O/A2 | — |
+| DE.O.A2.1.3 | Section and plan depth | DE | O/A2 | — |
+| DE.O.A2.1.4 | Visibility and enclosure | DE | O/A2 | — |
 | DE.O.A2.2 | Typology | DE | O/A2 | — |
+| DE.O.A2.2.1 | Types as classes | DE | O/A2 | — |
+| DE.O.A2.2.2 | Persistence and transformation | DE | O/A2 | to housing is common. A claim that form constrains use must name the constraint, such as plan depth, structural grid or floor-to-floor height. The history of a type is traced through dated buildings (W7, W6 |
+| DE.O.A2.2.3 | Product types and dominant designs | DE | O/A2 | BU |
 | DE.O.A2.3 | Visual and material language | DE | O/A2 | AR.O.A5 |
+| DE.O.A2.3.1 | Composition and proportion | DE | O/A2 | — |
+| DE.O.A2.3.2 | Colour and light | DE | O/A2 | MS.O.A1.1 |
+| DE.O.A2.3.3 | Material selection and expression | DE | O/A2 | CH.O.A5.4, EN.M.B3 |
+| DE.O.A2.3.4 | Visual communication and legibility | DE | O/A2 | MS.O.A1.1 |
 | DE.O.A3 | Performance in use | DE | O/A3 | — |
 | DE.O.A3.1 | Comfort and environment | DE | O/A3 | PH, EN |
+| DE.O.A3.1.1 | Thermal comfort | DE | O/A3 | PH.O.A4.1 |
+| DE.O.A3.1.2 | Heat, moisture and air through the envelope | DE | O/A3 | EN.O.A3.3, EV.O.A2.1 |
+| DE.O.A3.1.3 | Acoustic comfort | DE | O/A3 | EN.O.A2.4 |
+| DE.O.A3.1.4 | Daylight and glare | DE | O/A3 | PH.O.A1.2.3 |
 | DE.O.A3.2 | Wayfinding and usability | DE | O/A3 | MS |
+| DE.O.A3.2.1 | Wayfinding in buildings and cities | DE | O/A3 | MS.O.A1.5 |
+| DE.O.A3.2.2 | Usability evaluation methods | DE | O/A3 | — |
+| DE.O.A3.2.3 | Usability measures | DE | O/A3 | — |
+| DE.O.A3.2.4 | Affordance and signifiers | DE | O/A3 | MS.O.A1.1 |
 | DE.O.A3.3 | Safety in use | DE | O/A3 | LA, EN |
+| DE.O.A3.3.1 | Egress time | DE | O/A3 | EN.O.A3.4 |
+| DE.O.A3.3.2 | Falls and stairs | DE | O/A3 | — |
+| DE.O.A3.3.3 | Environmental crime prevention | DE | O/A3 | MS |
+| DE.O.A3.3.4 | Prescriptive and performance codes | DE | O/A3 | LA.O.A1.1 |
 | DE.O.A3.4 | Post-occupancy evaluation | DE | O/A3 | — |
+| DE.O.A3.4.1 | Occupant surveys | DE | O/A3 | — |
+| DE.O.A3.4.2 | Measured against predicted performance | DE | O/A3 | — |
+| DE.O.A3.4.3 | Feedback into practice | DE | O/A3 | — |
 | DE.O.A4 | Place and settlement | DE | O/A4 | — |
 | DE.O.A4.1 | Site | DE | O/A4 | EA.O.A5 |
+| DE.O.A4.1.1 | Site analysis | DE | O/A4 | — |
+| DE.O.A4.1.2 | Orientation and solar access | DE | O/A4 | PH |
+| DE.O.A4.1.3 | Hazard-informed siting | DE | O/A4 | EV.O.A2.6 |
 | DE.O.A4.2 | Urban form | DE | O/A4 | — |
+| DE.O.A4.2.1 | Density measures | DE | O/A4 | — |
+| DE.O.A4.2.2 | Street networks and connectivity | DE | O/A4 | MA.O.A2 |
+| DE.O.A4.2.3 | Mixed use and diversity | DE | O/A4 | — |
+| DE.O.A4.2.4 | Urban morphology | DE | O/A4 | — |
 | DE.O.A4.3 | Landscape architecture | DE | O/A4 | — |
+| DE.O.A4.3.1 | Landscape character and visual effect | DE | O/A4 | — |
+| DE.O.A4.3.2 | Green infrastructure and stormwater | DE | O/A4 | EA.O.A4.2 |
+| DE.O.A4.3.3 | Planting and ecological function | DE | O/A4 | BI.O.A5.3 |
 | DE.O.A4.4 | Planning | DE | O/A4 | LA, PO |
+| DE.O.A4.4.1 | Zoning and land-use control | DE | O/A4 | or limits height, coverage or floor area ratio. Rules may regulate by activity, by effect or by built form, and which applies is jurisdiction-specific (uses LA.O.A4.2, EC.O.A2.4 |
+| DE.O.A4.4.2 | Land suitability analysis | DE | O/A4 | — |
+| DE.O.A4.4.3 | Participation | DE | O/A4 | PO.O.A4.1 |
+| DE.O.A4.4.4 | Travel demand and land use | DE | O/A4 | — |
 | DE.O.A5 | Life of the built thing | DE | O/A5 | — |
 | DE.O.A5.1 | Maintenance and reuse | DE | O/A5 | — |
+| DE.O.A5.1.1 | Layers of change | DE | O/A5 | — |
+| DE.O.A5.1.2 | Service life and maintenance | DE | O/A5 | EC |
+| DE.O.A5.1.3 | Adaptive reuse | DE | O/A5 | — |
+| DE.O.A5.1.4 | Weathertightness and moisture durability | DE | O/A5 | PH, EN |
 | DE.O.A5.2 | Sustainability | DE | O/A5 | EV |
+| DE.O.A5.2.1 | Operational energy and carbon | DE | O/A5 | EV.O.A1.1 |
+| DE.O.A5.2.2 | Embodied carbon and life cycle assessment | DE | O/A5 | — |
+| DE.O.A5.2.3 | Standards and rating tools | DE | O/A5 | — |
+| DE.O.A5.2.4 | Circularity and disassembly | DE | O/A5 | — |
 | DE.O.A5.3 | Built heritage conservation | DE | O/A5 | HI.O.A5.3 |
+| DE.O.A5.3.1 | Cultural significance | DE | O/A5 | HI.O.A5.3 |
+| DE.O.A5.3.2 | Authenticity and principles of intervention | DE | O/A5 | — |
+| DE.O.A5.3.3 | Compatibility of repair materials | DE | O/A5 | CH.O.A5.4 |
+| DE.O.A5.3.4 | Strengthening and significance | DE | O/A5 | LA.O.A4.2 |
 | EA.O.A1 | Materials | EA | O/A1 | — |
 | EA.O.A1.1 | Minerals | EA | O/A1 | CH |
 | EA.O.A1.2 | Igneous rocks | EA | O/A1 | — |
@@ -362,32 +718,173 @@
 | EC.O.A5.3 | Market failure | EC | O/A5 | EV.O.A3 |
 | EC.O.A5.4 | Public finance (VAT vs sales tax) | EC | O/A5 | BU.O.A5, LA |
 | EC.O.A5.5 | Social choice (Arrow) | EC | O/A5 | MA.B.C4, PL |
+| EC.O.A1.1.1 | Utility representation | EC | O/A1 | MA.O.A3 |
+| EC.O.A1.1.2 | Slutsky decomposition | EC | O/A1 | — |
+| EC.O.A1.1.3 | Revealed preference | EC | O/A1 | MA |
+| EC.O.A1.2.1 | Representation and uniqueness | EC | O/A1 | MA.O.A5 |
+| EC.O.A1.2.2 | Risk aversion | EC | O/A1 | — |
+| EC.O.A1.3.1 | Allais pattern | EC | O/A1 | — |
+| EC.O.A1.3.2 | Reference dependence | EC | O/A1 | MS.O.A1 |
+| EC.O.A1.3.3 | Endowment effect | EC | O/A1 | — |
+| EC.O.A1.4.1 | Exponential discounting | EC | O/A1 | — |
+| EC.O.A1.4.2 | Present bias | EC | O/A1 | — |
+| EC.O.A2.1.1 | Existence | EC | O/A2 | MA.B.C4, MA.O.A3 |
+| EC.O.A2.1.2 | Indeterminacy of aggregate demand | EC | O/A2 | MA |
+| EC.O.A2.1.3 | Partial equilibrium | EC | O/A2 | — |
+| EC.O.A2.2.1 | Monopoly markup | EC | O/A2 | — |
+| EC.O.A2.2.2 | Bertrand outcome | EC | O/A2 | — |
+| EC.O.A2.2.3 | Cournot outcome | EC | O/A2 | — |
+| EC.O.A2.3.1 | Unravelling | EC | O/A2 | — |
+| EC.O.A2.3.2 | Signalling | EC | O/A2 | — |
+| EC.O.A2.3.3 | Moral hazard | EC | O/A2 | — |
+| EC.O.A2.4.1 | Competitive factor pricing | EC | O/A2 | — |
+| EC.O.A2.4.2 | Monopsony | EC | O/A2 | — |
+| EC.O.A2.5.1 | Elasticity rule | EC | O/A2 | — |
+| EC.O.A2.5.2 | Excess burden | EC | O/A2 | — |
+| EC.O.A3.1.1 | Revelation principle | EC | O/A3 | MA.B.C4 |
+| EC.O.A3.1.2 | Second-price auction | EC | O/A3 | — |
+| EC.O.A3.1.3 | Revenue equivalence | EC | O/A3 | — |
+| EC.O.A3.1.4 | Bilateral trade impossibility | EC | O/A3 | MA |
+| EC.O.A3.2.1 | Unique immediate agreement | EC | O/A3 | ST.O.A2 |
+| EC.O.A3.2.2 | Patience advantage | EC | O/A3 | — |
+| EC.O.A3.2.3 | Nash bargaining solution | EC | O/A3 | — |
+| EC.O.A3.3.1 | Coase benchmark | EC | O/A3 | — |
+| EC.O.A3.3.2 | Costly exchange | EC | O/A3 | LA |
+| EC.O.A3.4.1 | Boundaries of the firm | EC | O/A3 | — |
+| EC.O.A3.4.2 | Hold-up | EC | O/A3 | — |
+| EC.O.A3.4.3 | Institutions and growth | EC | O/A3 | — |
+| EC.O.A3.5.1 | Folk theorem | EC | O/A3 | — |
+| EC.O.A3.5.2 | Finite horizon | EC | O/A3 | — |
+| EC.O.A3.5.3 | Collusion conditions | EC | O/A3 | — |
+| EC.O.A4.1.1 | Steady state | EC | O/A4 | MA.O.A4 |
+| EC.O.A4.1.2 | Conditional convergence | EC | O/A4 | — |
+| EC.O.A4.1.3 | Endogenous growth | EC | O/A4 | — |
+| EC.O.A4.2.1 | Phillips instability | EC | O/A4 | — |
+| EC.O.A4.2.2 | Okun's relation | EC | O/A4 | — |
+| EC.O.A4.2.3 | Sources of shocks | EC | O/A4 | — |
+| EC.O.A4.3.1 | Identity versus theory | EC | O/A4 | — |
+| EC.O.A4.3.2 | Long-run neutrality | EC | O/A4 | — |
+| EC.O.A4.3.3 | Taylor principle | EC | O/A4 | — |
+| EC.O.A4.4.1 | Comparative advantage | EC | O/A4 | — |
+| EC.O.A4.4.2 | Heckscher–Ohlin | EC | O/A4 | — |
+| EC.O.A4.4.3 | Stolper–Samuelson | EC | O/A4 | — |
+| EC.O.A4.4.4 | Gravity | EC | O/A4 | — |
+| EC.O.A4.5.1 | Lucas critique | EC | O/A4 | — |
+| EC.O.A4.5.2 | Time inconsistency | EC | O/A4 | — |
+| EC.O.A4.5.3 | Rational expectations | EC | O/A4 | — |
+| EC.O.A5.1.1 | Statement | EC | O/A5 | MA.B.C4 |
+| EC.O.A5.1.2 | Failure conditions | EC | O/A5 | — |
+| EC.O.A5.2.1 | Statement | EC | O/A5 | MA.B.C4 |
+| EC.O.A5.2.2 | Practical limit | EC | O/A5 | — |
+| EC.O.A5.3.1 | Pigouvian correction | EC | O/A5 | — |
+| EC.O.A5.3.2 | Public goods | EC | O/A5 | — |
+| EC.O.A5.3.3 | Common pool resources | EC | O/A5 | EV.O.A3 |
+| EC.O.A5.4.1 | VAT mechanics | EC | O/A5 | — |
+| EC.O.A5.4.2 | Single-stage sales tax | EC | O/A5 | BU.O.A5.3 |
+| EC.O.A5.4.3 | Ramsey rule | EC | O/A5 | — |
+| EC.O.A5.5.1 | Arrow's theorem | EC | O/A5 | MA.B.C4 |
+| EC.O.A5.5.2 | Median voter | EC | O/A5 | — |
+| EC.O.A5.5.3 | Manipulability | EC | O/A5 | MA |
 | ED.O.A1 | Aims and curricula | ED | O/A1 | — |
 | ED.O.A1.1 | Aims | ED | O/A1 | PL |
+| ED.O.A1.1.1 | Stated aims of a framework | ED | O/A1 | PO.O.A4.3 |
+| ED.O.A1.1.2 | Aim families | ED | O/A1 | PL.O.A4 |
+| ED.O.A1.1.3 | Aims and what is measured | ED | O/A1 | — |
 | ED.O.A1.2 | Curriculum content | ED | O/A1 | MA, PH |
+| ED.O.A1.2.1 | Intended, implemented and attained curriculum | ED | O/A1 | — |
+| ED.O.A1.2.2 | Opportunity to learn | ED | O/A1 | — |
+| ED.O.A1.2.3 | Simple view of reading | ED | O/A1 | — |
 | ED.O.A1.3 | Sequence and progression | ED | O/A1 | — |
+| ED.O.A1.3.1 | Prerequisite structure | ED | O/A1 | — |
+| ED.O.A1.3.2 | Learning progressions | ED | O/A1 | — |
+| ED.O.A1.3.3 | Spiral curriculum | ED | O/A1 | — |
 | ED.O.A1.4 | National curricula | ED | O/A1 | IK |
+| ED.O.A1.4.1 | The New Zealand Curriculum (2007) | ED | O/A1 | — |
+| ED.O.A1.4.2 | Australian Curriculum general capabilities | ED | O/A1 | — |
+| ED.O.A1.4.3 | Level-based and year-based frameworks | ED | O/A1 | — |
 | ED.O.A2 | Learners | ED | O/A2 | — |
 | ED.O.A2.1 | Prior knowledge and misconceptions | ED | O/A2 | MS, PH |
+| ED.O.A2.1.1 | Prior knowledge effect | ED | O/A2 | — |
+| ED.O.A2.1.2 | Force Concept Inventory | ED | O/A2 | — |
+| ED.O.A2.1.3 | Conceptual change | ED | O/A2 | — |
 | ED.O.A2.2 | Development | ED | O/A2 | MS |
+| ED.O.A2.2.1 | Zone of proximal development | ED | O/A2 | MS.O.A3.3 |
+| ED.O.A2.2.2 | Stage theories in teaching | ED | O/A2 | MS.O.A3.3.1 |
+| ED.O.A2.2.3 | Cumulative advantage in reading | ED | O/A2 | — |
 | ED.O.A2.3 | Motivation | ED | O/A2 | MS |
+| ED.O.A2.3.1 | Self-determination theory | ED | O/A2 | MS.O.A1.4.2 |
+| ED.O.A2.3.2 | Expectancy–value model | ED | O/A2 | — |
+| ED.O.A2.3.3 | Mindset interventions | ED | O/A2 | — |
 | ED.O.A2.4 | Diversity and learning need | ED | O/A2 | — |
+| ED.O.A2.4.1 | Identification thresholds | ED | O/A2 | — |
+| ED.O.A2.4.2 | Response to intervention | ED | O/A2 | — |
+| ED.O.A2.4.3 | Learning styles | ED | O/A2 | — |
+| ED.O.A2.4.4 | Stereotype threat | ED | O/A2 | MS.O.A4.5 |
 | ED.O.A3 | Teaching | ED | O/A3 | — |
 | ED.O.A3.1 | Instruction | ED | O/A3 | — |
+| ED.O.A3.1.1 | Cognitive load theory | ED | O/A3 | MS.O.A1.3.4 |
+| ED.O.A3.1.2 | Worked-example and expertise reversal | ED | O/A3 | — |
+| ED.O.A3.1.3 | Guidance debate | ED | O/A3 | — |
+| ED.O.A3.1.4 | Active learning in undergraduate STEM | ED | O/A3 | — |
 | ED.O.A3.2 | Feedback | ED | O/A3 | — |
+| ED.O.A3.2.1 | Feedback interventions | ED | O/A3 | — |
+| ED.O.A3.2.2 | Levels of feedback | ED | O/A3 | — |
+| ED.O.A3.2.3 | Timing of feedback | ED | O/A3 | — |
 | ED.O.A3.3 | Practice and retrieval | ED | O/A3 | MS |
+| ED.O.A3.3.1 | Spacing effect | ED | O/A3 | — |
+| ED.O.A3.3.2 | Testing effect | ED | O/A3 | — |
+| ED.O.A3.3.3 | Transfer of practice gains | ED | O/A3 | — |
+| ED.O.A3.3.4 | Interleaving | ED | O/A3 | — |
 | ED.O.A3.4 | Technology in teaching | ED | O/A3 | CS |
+| ED.O.A3.4.1 | Intelligent tutoring systems | ED | O/A3 | CS.O.A4 |
+| ED.O.A3.4.2 | Device provision | ED | O/A3 | — |
+| ED.O.A3.4.3 | Multimedia design | ED | O/A3 | — |
+| ED.O.A3.4.4 | Generative AI tutors | ED | O/A3 | CS.O.A4 |
 | ED.O.A3.5 | Culturally sustaining pedagogy | ED | O/A3 | IK |
+| ED.O.A3.5.1 | Culturally relevant pedagogy | ED | O/A3 | — |
+| ED.O.A3.5.2 | Culturally sustaining pedagogy | ED | O/A3 | — |
+| ED.O.A3.5.3 | Bilingual and immersion programmes | ED | O/A3 | — |
 | ED.O.A4 | Assessment | ED | O/A4 | — |
 | ED.O.A4.1 | Validity | ED | O/A4 | — |
+| ED.O.A4.1.1 | Unified validity | ED | O/A4 | — |
+| ED.O.A4.1.2 | Argument-based validation | ED | O/A4 | — |
+| ED.O.A4.1.3 | Construct-irrelevant variance | ED | O/A4 | — |
+| ED.O.A4.1.4 | Predictive validity | ED | O/A4 | — |
 | ED.O.A4.2 | Reliability | ED | O/A4 | MA.O.A5 |
+| ED.O.A4.2.1 | Classical test theory | ED | O/A4 | MA.O.A5 |
+| ED.O.A4.2.2 | Coefficient alpha | ED | O/A4 | MA.O.A5 |
+| ED.O.A4.2.3 | Item response theory | ED | O/A4 | MA.O.A5 |
+| ED.O.A4.2.4 | Rater agreement | ED | O/A4 | — |
 | ED.O.A4.3 | Formative assessment | ED | O/A4 | — |
+| ED.O.A4.3.1 | Reported effect sizes | ED | O/A4 | — |
+| ED.O.A4.3.2 | The feedback loop | ED | O/A4 | — |
+| ED.O.A4.3.3 | Diagnostic items | ED | O/A4 | — |
 | ED.O.A4.4 | High-stakes testing | ED | O/A4 | PO |
+| ED.O.A4.4.1 | Score inflation | ED | O/A4 | — |
+| ED.O.A4.4.2 | Narrowing | ED | O/A4 | PO.O.A4.4 |
+| ED.O.A4.4.3 | Value-added accountability | ED | O/A4 | — |
+| ED.O.A4.4.4 | Standard setting | ED | O/A4 | — |
 | ED.O.A5 | Institutions and systems | ED | O/A5 | — |
 | ED.O.A5.1 | Schools | ED | O/A5 | — |
+| ED.O.A5.1.1 | Coleman Report | ED | O/A5 | — |
+| ED.O.A5.1.2 | Class size | ED | O/A5 | — |
+| ED.O.A5.1.3 | Teacher effects | ED | O/A5 | — |
+| ED.O.A5.1.4 | Leadership and teacher learning | ED | O/A5 | — |
 | ED.O.A5.2 | School systems | ED | O/A5 | — |
+| ED.O.A5.2.1 | PISA | ED | O/A5 | — |
+| ED.O.A5.2.2 | TIMSS and PIRLS | ED | O/A5 | — |
+| ED.O.A5.2.3 | Rank uncertainty | ED | O/A5 | — |
+| ED.O.A5.2.4 | Cause from comparison | ED | O/A5 | — |
 | ED.O.A5.3 | Higher education | ED | O/A5 | — |
+| ED.O.A5.3.1 | Integration model of persistence | ED | O/A5 | — |
+| ED.O.A5.3.2 | Massification | ED | O/A5 | — |
+| ED.O.A5.3.3 | Learning gains in college | ED | O/A5 | EC.O.A2.3 |
+| ED.O.A5.3.4 | Student ratings of teaching | ED | O/A5 | — |
 | ED.O.A5.4 | Equity and access | ED | O/A5 | EC, LA |
+| ED.O.A5.4.1 | Measuring a gap | ED | O/A5 | — |
+| ED.O.A5.4.2 | Summer learning loss | ED | O/A5 | — |
+| ED.O.A5.4.3 | Early childhood programmes | ED | O/A5 | — |
+| ED.O.A5.4.4 | Compulsory schooling | ED | O/A5 | — |
 | EN.O.A1 | Force and deformation | EN | O | — |
 | EN.O.A1.1 | Rigid bodies | EN | O.A1 | PH.O.A1.1 |
 | EN.O.A1.1.1 | Free-body diagram, determinacy | EN | O.A1.1 | — |
@@ -517,35 +1014,125 @@
 | EN.B.C5 | Industrial and systems engineering | EN | B | MA.O.A5, MA.B.C4, MS, EC, BU |
 | EV.O.A1 | Pressures | EV | O/A1 | — |
 | EV.O.A1.1 | Emissions | EV | O/A1 | CH |
+| EV.O.A1.1.1 | Greenhouse gas inventories | EV | O/A1 | — |
+| EV.O.A1.1.2 | Warming potential metrics | EV | O/A1 | EA.O.A4.3 |
+| EV.O.A1.1.3 | Primary and secondary pollutants | EV | O/A1 | CH.O.A4.5 |
+| EV.O.A1.1.4 | Point and diffuse discharges | EV | O/A1 | — |
 | EV.O.A1.2 | Land and sea use change | EV | O/A1 | EA |
+| EV.O.A1.2.1 | Cover conversion from imagery | EV | O/A1 | — |
+| EV.O.A1.2.2 | Habitat loss and fragmentation | EV | O/A1 | BI.O.A5.5 |
+| EV.O.A1.2.3 | Hydrological modification | EV | O/A1 | EA.O.A4.2 |
+| EV.O.A1.2.4 | Seabed and coastal disturbance | EV | O/A1 | — |
 | EV.O.A1.3 | Extraction | EV | O/A1 | — |
+| EV.O.A1.3.1 | Water abstraction | EV | O/A1 | EA.O.A4.2 |
+| EV.O.A1.3.2 | Harvest of living stocks | EV | O/A1 | BI.O.A5.1, AG.O.A2.5 |
+| EV.O.A1.3.3 | Mineral and aggregate extraction | EV | O/A1 | EA.O.A1.5 |
+| EV.O.A1.3.4 | Forest and biomass removal | EV | O/A1 | EC |
 | EV.O.A1.4 | Introduced species | EV | O/A1 | BI |
+| EV.O.A1.4.1 | Pathways and vectors | EV | O/A1 | — |
+| EV.O.A1.4.2 | Propagule pressure | EV | O/A1 | AG.O.A3.3 |
+| EV.O.A1.4.3 | Invasion stages | EV | O/A1 | — |
+| EV.O.A1.4.4 | Pest density as pressure | EV | O/A1 | BI.O.A5.2 |
 | EV.O.A2 | States | EV | O/A2 | — |
 | EV.O.A2.1 | Air quality | EV | O/A2 | CH, EA |
+| EV.O.A2.1.1 | Particulate matter | EV | O/A2 | MD.O.A2.4 |
+| EV.O.A2.1.2 | Averaging time and exceedance | EV | O/A2 | — |
+| EV.O.A2.1.3 | Dispersion and airsheds | EV | O/A2 | EA.O.A4.3 |
+| EV.O.A2.1.4 | Source apportionment | EV | O/A2 | — |
 | EV.O.A2.2 | Freshwater quality | EV | O/A2 | EA |
+| EV.O.A2.2.1 | Nutrients and algal response | EV | O/A2 | — |
+| EV.O.A2.2.2 | Faecal indicators | EV | O/A2 | MD.O.A5.1 |
+| EV.O.A2.2.3 | Oxygen and organic load | EV | O/A2 | CH.O.A4.1 |
+| EV.O.A2.2.4 | Sediment and clarity | EV | O/A2 | EA.O.A4.1 |
 | EV.O.A2.3 | Marine environment | EV | O/A2 | EA |
+| EV.O.A2.3.1 | Acidification | EV | O/A2 | CH.O.A3.4 |
+| EV.O.A2.3.2 | Warming and marine heatwaves | EV | O/A2 | EA.O.A4.3 |
+| EV.O.A2.3.3 | Coastal habitat extent | EV | O/A2 | — |
+| EV.O.A2.3.4 | Marine debris | EV | O/A2 | — |
 | EV.O.A2.4 | Soil state | EV | O/A2 | EA |
+| EV.O.A2.4.1 | Contaminant concentration and availability | EV | O/A2 | CH |
+| EV.O.A2.4.2 | Erosion rate | EV | O/A2 | EA.O.A4.1 |
+| EV.O.A2.4.3 | Soil organic carbon stock | EV | O/A2 | — |
 | EV.O.A2.5 | Biodiversity status | EV | O/A2 | BI |
+| EV.O.A2.5.1 | Threat categories | EV | O/A2 | — |
+| EV.O.A2.5.2 | Abundance and detection | EV | O/A2 | — |
+| EV.O.A2.5.3 | Richness and diversity indices | EV | O/A2 | BI.O.A5.3 |
+| EV.O.A2.5.4 | Extinction declarations | EV | O/A2 | — |
 | EV.O.A2.6 | Natural hazards and processes | EV | O/A2 | EA, BI |
+| EV.O.A2.6.1 | Geological events | EV | O/A2 | EA.O.A2, EA.O.A2.5, EA.O.A5.5 |
+| EV.O.A2.6.2 | Hydro-meteorological events and return periods | EV | O/A2 | EA.O.A4.2 |
+| EV.O.A2.6.3 | Wildfire | EV | O/A2 | — |
+| EV.O.A2.6.4 | Biogeochemical episodes | EV | O/A2 | BI.O.A5.4, EA.O.A4.2 |
 | EV.O.A2.7 | Measured conditions | EV | O/A2 | — |
+| EV.O.A2.7.1 | Reference condition | EV | O/A2 | — |
+| EV.O.A2.7.2 | Composite indices | EV | O/A2 | — |
+| EV.O.A2.7.3 | Trend detection | EV | O/A2 | MA.O.A5 |
 | EV.O.A2.8 | RETIRED: not a state | EV | — | — |
 | EV.O.A2.9 | Natural resources | EV | O/A2 | — |
+| EV.O.A2.9.1 | Stock and renewal | EV | O/A2 | EA.O.A4.2 |
+| EV.O.A2.9.2 | Resources and reserves | EV | O/A2 | EA.O.A1.5 |
+| EV.O.A2.9.3 | Status of harvested stocks | EV | O/A2 | BI.O.A5.1 |
+| EV.O.A2.9.4 | Natural capital accounts | EV | O/A2 | — |
 | EV.O.A2.10 | RETIRED: see EA | EV | — | EA |
 | EV.O.A3 | Impacts | EV | O/A3 | — |
 | EV.O.A3.1 | Ecosystem harm | EV | O/A3 | BI |
+| EV.O.A3.1.1 | Toxic effect and species sensitivity | EV | O/A3 | — |
+| EV.O.A3.1.2 | Eutrophication effects | EV | O/A3 | BI.O.A5.4 |
+| EV.O.A3.1.3 | Extinction debt | EV | O/A3 | BI.O.A5.5 |
+| EV.O.A3.1.4 | Critical loads | EV | O/A3 | CH.O.A3.4 |
 | EV.O.A3.2 | Human health impact | EV | O/A3 | MD |
+| EV.O.A3.2.1 | Exposure assessment | EV | O/A3 | MD.O.A5.1 |
+| EV.O.A3.2.2 | Reference doses | EV | O/A3 | MD.O.A2.4 |
+| EV.O.A3.2.3 | Low-dose radiation | EV | O/A3 | — |
+| EV.O.A3.2.4 | Attributable fraction of illness | EV | O/A3 | MD.O.A5.1 |
 | EV.O.A3.3 | Attribution | EV | O/A3 | EA |
+| EV.O.A3.3.1 | Detection and attribution | EV | O/A3 | EA.O.A4.3 |
+| EV.O.A3.3.2 | Event attribution | EV | O/A3 | EA.O.A4.3 |
+| EV.O.A3.3.3 | Ecological attribution by design | EV | O/A3 | — |
+| EV.O.A3.3.4 | Interacting pressures | EV | O/A3 | — |
 | EV.O.A3.4 | Ecosystem services | EV | O/A3 | EC |
+| EV.O.A3.4.1 | Service classification | EV | O/A3 | — |
+| EV.O.A3.4.2 | Biophysical supply | EV | O/A3 | — |
+| EV.O.A3.4.3 | Valuation methods | EV | O/A3 | EC.O.A1.4, EC.O.A5.3 |
+| EV.O.A3.4.4 | Trade-offs between services | EV | O/A3 | AG.O.A5.3 |
 | EV.O.A4 | Responses | EV | O/A4 | — |
 | EV.O.A4.1 | Restoration | EV | O/A4 | — |
+| EV.O.A4.1.1 | Recovery trajectories | EV | O/A4 | — |
+| EV.O.A4.1.2 | Active and passive restoration | EV | O/A4 | — |
+| EV.O.A4.1.3 | Success criteria | EV | O/A4 | — |
+| EV.O.A4.1.4 | Bioremediation | EV | O/A4 | BI.O.A2.3 |
 | EV.O.A4.2 | Conservation | EV | O/A4 | — |
+| EV.O.A4.2.1 | Protected area effect | EV | O/A4 | — |
+| EV.O.A4.2.2 | Systematic conservation planning | EV | O/A4 | — |
+| EV.O.A4.2.3 | Eradication and suppression | EV | O/A4 | — |
+| EV.O.A4.2.4 | Translocation and viability analysis | EV | O/A4 | BI.O.A5.1 |
 | EV.O.A4.3 | Regulation and instruments | EV | O/A4 | PO, EC, LA |
+| EV.O.A4.3.1 | Compliance and outcome | EV | O/A4 | — |
+| EV.O.A4.3.2 | Caps and leakage | EV | O/A4 | EC.O.A5.3, PO.O.A4.4 |
+| EV.O.A4.3.3 | Impact assessment as procedure | EV | O/A4 | LA.O.A1.1 |
+| EV.O.A4.3.4 | Treaties and controlled substances | EV | O/A4 | LA.O.A1.4, PO.O.A5.2 |
 | EV.O.A4.4 | Kaitiakitanga in practice | EV | O/A4 | IK |
 | EV.O.A4.7 | Environmental engineering | EV | O/A4 | — |
+| EV.O.A4.7.1 | Treatment performance | EV | O/A4 | CH.O.A4.1 |
+| EV.O.A4.7.2 | Comparing options by life cycle | EV | O/A4 | — |
+| EV.O.A4.7.3 | Stormwater and flood works | EV | O/A4 | EN.O.A2.3 |
+| EV.O.A4.7.4 | Waste flows | EV | O/A4 | — |
 | EV.O.A5 | Limits | EV | O/A5 | — |
 | EV.O.A5.1 | Thresholds and tipping points | EV | O/A5 | MA.O.A4 |
+| EV.O.A5.1.1 | Alternative stable states | EV | O/A5 | MA.O.A4 |
+| EV.O.A5.1.2 | Hysteresis | EV | O/A5 | — |
+| EV.O.A5.1.3 | Early warning signals | EV | O/A5 | MA.O.A4 |
+| EV.O.A5.1.4 | Climate tipping elements | EV | O/A5 | EA.O.A4.4, EA.O.A4.3 |
 | EV.O.A5.2 | Standards and bottom lines | EV | O/A5 | LA |
+| EV.O.A5.2.1 | Health-based standards | EV | O/A5 | — |
+| EV.O.A5.2.2 | Ecosystem-based standards | EV | O/A5 | — |
+| EV.O.A5.2.3 | Numeric bottom lines | EV | O/A5 | — |
+| EV.O.A5.2.4 | Compliance statistics | EV | O/A5 | MA.O.A5 |
 | EV.O.A5.3 | Planetary boundaries | EV | O/A5 | — |
+| EV.O.A5.3.1 | Carrying capacity | EV | O/A5 | BI.O.A5.1 |
+| EV.O.A5.3.2 | The nine boundary processes | EV | O/A5 | — |
+| EV.O.A5.3.3 | Boundary and uncertainty | EV | O/A5 | — |
+| EV.O.A5.3.4 | Catchment and regional limits | EV | O/A5 | — |
 | HI.O.A1 | Occurrence | HI | O/A1 | — |
 | HI.O.A1.1 | The event | HI | O/A1 | — |
 | HI.O.A1.2 | The actor | HI | O/A1 | — |
@@ -574,6 +1161,65 @@
 | HI.O.A5.3 | Heritage and commemoration | HI | O/A5 | LA |
 | HI.O.A5.4 | Historiography | HI | O/A5 | — |
 | HI.O.A5.5 | Oral history | HI | O/A5 | IK |
+| HI.O.A1.1.1 | Event boundaries are stipulated | HI | O/A1 | — |
+| HI.O.A1.1.2 | Selection is not fabrication | HI | O/A1 | — |
+| HI.O.A1.1.3 | An argument from silence needs an expected record | HI | O/A1 | — |
+| HI.O.A1.2.1 | Identity across records is a linkage claim | HI | O/A1 | — |
+| HI.O.A1.2.2 | Prosopography infers group patterns from many careers | HI | O/A1 | — |
+| HI.O.A1.2.3 | A collective actor is a shorthand | HI | O/A1 | — |
+| HI.O.A1.3.1 | Historical place names need identification | HI | O/A1 | — |
+| HI.O.A1.3.2 | The coordinates are borrowed | HI | O/A1 | EA.O.A5 |
+| HI.O.A1.4.1 | Anachronism defeats a claimed date | HI | O/A1 | LN.O.A5 |
+| HI.O.A1.4.2 | Diplomatics tests a document by its form | HI | O/A1 | — |
+| HI.O.A1.4.3 | Interpolation is local forgery | HI | O/A1 | — |
+| HI.O.A1.4.4 | Provenance is evidence of authenticity, not proof | HI | O/A1 | — |
+| HI.O.A2.1.1 | Calendar conversion holds only with known rules | HI | O/A2 | — |
+| HI.O.A2.1.2 | Reform dates differ by place | HI | O/A2 | — |
+| HI.O.A2.1.3 | The start of the year varies | HI | O/A2 | — |
+| HI.O.A2.2.1 | A latest dated element sets the earliest date | HI | O/A2 | — |
+| HI.O.A2.2.2 | Stratigraphy orders deposits | HI | O/A2 | EA.O.A3 |
+| HI.O.A2.2.3 | Seriation orders assemblages by style | HI | O/A2 | — |
+| HI.O.A2.3.1 | Shared datable phenomena anchor alignment | HI | O/A2 | — |
+| HI.O.A2.3.2 | King lists are not independent clocks | HI | O/A2 | — |
+| HI.O.A2.4.1 | Period boundaries vary by region and theme | HI | O/A2 | — |
+| HI.O.A2.4.2 | Labels carry judgements | HI | O/A2 | — |
+| HI.O.A2.5.1 | Radiocarbon dates are calibrated ranges | HI | O/A2 | EA.O.A3 |
+| HI.O.A2.5.2 | The sample dates the organism, not the event | HI | O/A2 | — |
+| HI.O.A2.5.3 | Dendrochronology gives a felling date only with bark edge | HI | O/A2 | — |
+| HI.O.A3.1.1 | Stated reasons are evidence, not proof | HI | O/A3 | — |
+| HI.O.A3.1.2 | Reasons must be available at the time | HI | O/A3 | — |
+| HI.O.A3.1.3 | Re-enactment is a method of interpretation | HI | O/A3 | — |
+| HI.O.A3.2.1 | A necessary condition claim must survive comparison | HI | O/A3 | — |
+| HI.O.A3.2.2 | Structural and intentional explanations can combine | HI | O/A3 | — |
+| HI.O.A3.2.3 | Multiple causes need weighting reasons | HI | O/A3 | — |
+| HI.O.A3.3.1 | Contingency is relative to a description | HI | O/A3 | — |
+| HI.O.A3.3.2 | Contingency claims need a plausible alternative | HI | O/A3 | — |
+| HI.O.A3.4.1 | Minimal rewrite constrains the antecedent | HI | O/A3 | — |
+| HI.O.A3.4.2 | Confidence falls with distance | HI | O/A3 | — |
+| HI.O.A3.4.3 | Comparative cases discipline counterfactuals | HI | O/A3 | — |
+| HI.O.A3.5.1 | Historical series carry construction error | HI | O/A3 | — |
+| HI.O.A3.5.2 | Causal identification is borrowed | HI | O/A3 | EC |
+| HI.O.A4.1.1 | Time-scales are analytic choices | HI | O/A4 | — |
+| HI.O.A4.1.2 | Slow change needs long series | HI | O/A4 | — |
+| HI.O.A4.2.1 | A process name is not an explanation | HI | O/A4 | — |
+| HI.O.A4.2.2 | Stage theories are CONTESTED | HI | O/A4 | — |
+| HI.O.A4.2.3 | Demographic models are cited | HI | O/A4 | MS.O.A5 |
+| HI.O.A4.3.1 | Persistence needs a continuity criterion | HI | O/A4 | — |
+| HI.O.A4.3.2 | Environmental history uses borrowed proxies | HI | O/A4 | EA, EA.O.A3 |
+| HI.O.A4.4.1 | Cases must be comparable on stated dimensions | HI | O/A4 | — |
+| HI.O.A4.4.2 | Connection is not comparison | HI | O/A4 | — |
+| HI.O.A4.4.3 | Few cases limit inference | HI | O/A4 | MA.O.A5 |
+| HI.O.A5.1.1 | Meaning is read from contemporary usage | HI | O/A5 | LN.O.A4 |
+| HI.O.A5.1.2 | Literate records over-represent some groups | HI | O/A5 | — |
+| HI.O.A5.2.1 | Memory is dated too | HI | O/A5 | — |
+| HI.O.A5.2.2 | Memory is evidence of the rememberers | HI | O/A5 | — |
+| HI.O.A5.3.1 | Significance assessments are W12 judgements | HI | O/A5 | — |
+| HI.O.A5.3.2 | A monument dates its makers | HI | O/A5 | — |
+| HI.O.A5.4.1 | Interpretations are tested against shared records | HI | O/A5 | — |
+| HI.O.A5.4.2 | New sources and new questions both move interpretations | HI | O/A5 | — |
+| HI.O.A5.4.3 | Presentism is a defeater, not a ban | HI | O/A5 | — |
+| HI.O.A5.5.1 | The interview is the record | HI | O/A5 | — |
+| HI.O.A5.5.2 | Testimony is tested like documents | HI | O/A5 | — |
 | IK.O.A1 | Ordering principles | IK | O/A1 | — |
 | IK.O.A1.1 | Whakapapa as ordering | IK | O/A1 | HI, RE.O.A1.2 |
 | IK.O.A1.2 | Categories of status | IK | O/A1 | RE.O.A1.2 |
@@ -597,29 +1243,106 @@
 | IK.O.A5.3 | Consent and benefit | IK | O/A5 | LA |
 | IS.O.A1 | Items | IS | O/A1 | — |
 | IS.O.A1.1 | Works and manifestations | IS | O/A1 | — |
+| IS.O.A1.1.1 | Work and expression | IS | O/A1 | — |
+| IS.O.A1.1.2 | Manifestation and item | IS | O/A1 | — |
+| IS.O.A1.1.3 | BIBFRAME entities | IS | O/A1 | — |
 | IS.O.A1.2 | Records as evidence | IS | O/A1 | HI |
+| IS.O.A1.2.1 | Record characteristics | IS | O/A1 | — |
+| IS.O.A1.2.2 | Life cycle and continuum | IS | O/A1 | — |
+| IS.O.A1.2.3 | Diplomatics | IS | O/A1 | HI.O.A1.4 |
+| IS.O.A1.2.4 | Appraisal values | IS | O/A1 | LA |
 | IS.O.A1.3 | Data sets | IS | O/A1 | — |
+| IS.O.A1.3.1 | Versioned citation | IS | O/A1 | — |
+| IS.O.A1.3.2 | FAIR principles | IS | O/A1 | — |
+| IS.O.A1.3.3 | Data set boundary | IS | O/A1 | — |
+| IS.O.A1.3.4 | Provenance model | IS | O/A1 | — |
 | IS.O.A1.4 | Persistent identifiers | IS | O/A1 | — |
+| IS.O.A1.4.1 | Check digits | IS | O/A1 | MA.O.A2 |
+| IS.O.A1.4.2 | Persistence as service | IS | O/A1 | — |
+| IS.O.A1.4.3 | Identifier scope | IS | O/A1 | — |
 | IS.O.A2 | Description | IS | O/A2 | — |
 | IS.O.A2.1 | Metadata standards | IS | O/A2 | — |
+| IS.O.A2.1.1 | Dublin Core elements | IS | O/A2 | — |
+| IS.O.A2.1.2 | MARC 21 structure | IS | O/A2 | — |
+| IS.O.A2.1.3 | Crosswalks | IS | O/A2 | — |
+| IS.O.A2.1.4 | Application profiles | IS | O/A2 | — |
 | IS.O.A2.2 | Cataloguing rules | IS | O/A2 | — |
+| IS.O.A2.2.1 | User tasks | IS | O/A2 | — |
+| IS.O.A2.2.2 | Authority control | IS | O/A2 | — |
+| IS.O.A2.2.3 | Content, media and carrier types | IS | O/A2 | — |
+| IS.O.A2.2.4 | Cataloguer consistency | IS | O/A2 | — |
 | IS.O.A2.3 | Subject indexing | IS | O/A2 | — |
+| IS.O.A2.3.1 | Thesaurus relations | IS | O/A2 | — |
+| IS.O.A2.3.2 | Pre- and post-coordination | IS | O/A2 | — |
+| IS.O.A2.3.3 | Exhaustivity and specificity | IS | O/A2 | — |
+| IS.O.A2.3.4 | Indexing consistency | IS | O/A2 | — |
 | IS.O.A2.4 | Linked data | IS | O/A2 | MA.O.A1 |
+| IS.O.A2.4.1 | Four principles | IS | O/A2 | — |
+| IS.O.A2.4.2 | SKOS hierarchy | IS | O/A2 | — |
+| IS.O.A2.4.3 | Open-world reading | IS | O/A2 | MA.O.A1 |
+| IS.O.A2.4.4 | Identity links | IS | O/A2 | — |
 | IS.O.A3 | Arrangement | IS | O/A3 | — |
 | IS.O.A3.1 | Classification schemes | IS | O/A3 | — |
+| IS.O.A3.1.1 | Dewey Decimal | IS | O/A3 | — |
+| IS.O.A3.1.2 | Library of Congress | IS | O/A3 | — |
+| IS.O.A3.1.3 | Exclusivity test | IS | O/A3 | — |
+| IS.O.A3.1.4 | Single location | IS | O/A3 | — |
 | IS.O.A3.2 | Faceted classification | IS | O/A3 | — |
+| IS.O.A3.2.1 | PMEST | IS | O/A3 | — |
+| IS.O.A3.2.2 | Facet independence | IS | O/A3 | — |
+| IS.O.A3.2.3 | Citation order | IS | O/A3 | — |
+| IS.O.A3.2.4 | Faceted search | IS | O/A3 | — |
 | IS.O.A3.3 | Archival arrangement | IS | O/A3 | — |
+| IS.O.A3.3.1 | Provenance | IS | O/A3 | — |
+| IS.O.A3.3.2 | Original order | IS | O/A3 | — |
+| IS.O.A3.3.3 | Multilevel description | IS | O/A3 | — |
+| IS.O.A3.3.4 | Digital original order | IS | O/A3 | — |
 | IS.O.A3.4 | Ontologies | IS | O/A3 | PL |
+| IS.O.A3.4.1 | Definition and test | IS | O/A3 | — |
+| IS.O.A3.4.2 | OWL 2 DL | IS | O/A3 | MA.O.A1, CS.O.A2.3 |
+| IS.O.A3.4.3 | Upper-level ontologies | IS | O/A3 | PL.O.A1.1 |
+| IS.O.A3.4.4 | Alignment | IS | O/A3 | — |
 | IS.O.A3.5 | This taxonomy | IS | O/A3 | — |
+| IS.O.A3.5.1 | Unit of claim | IS | O/A3 | — |
+| IS.O.A3.5.2 | One home | IS | O/A3 | — |
+| IS.O.A3.5.3 | Key-line discipline | IS | O/A3 | — |
+| IS.O.A3.5.4 | Protocol reliability | IS | O/A3 | — |
 | IS.O.A4 | Retrieval | IS | O/A4 | — |
 | IS.O.A4.1 | Retrieval effectiveness | IS | O/A4 | CS |
+| IS.O.A4.1.1 | Precision and recall | IS | O/A4 | — |
+| IS.O.A4.1.2 | Cranfield design | IS | O/A4 | — |
+| IS.O.A4.1.3 | Pooling | IS | O/A4 | — |
+| IS.O.A4.1.4 | Rank-based measures | IS | O/A4 | — |
 | IS.O.A4.2 | Relevance | IS | O/A4 | — |
+| IS.O.A4.2.1 | Topical and user relevance | IS | O/A4 | — |
+| IS.O.A4.2.2 | Assessor disagreement | IS | O/A4 | — |
+| IS.O.A4.2.3 | Graded relevance | IS | O/A4 | — |
+| IS.O.A4.2.4 | Relevance feedback | IS | O/A4 | CS |
 | IS.O.A4.3 | Bibliometrics | IS | O/A4 | — |
+| IS.O.A4.3.1 | Lotka's law | IS | O/A4 | — |
+| IS.O.A4.3.2 | Bradford's law | IS | O/A4 | — |
+| IS.O.A4.3.3 | Citation analysis | IS | O/A4 | — |
+| IS.O.A4.3.4 | Indicators | IS | O/A4 | — |
 | IS.O.A4.4 | Information behaviour | IS | O/A4 | MS |
+| IS.O.A4.4.1 | Information search process | IS | O/A4 | — |
+| IS.O.A4.4.2 | Berrypicking | IS | O/A4 | — |
+| IS.O.A4.4.3 | Information foraging | IS | O/A4 | — |
+| IS.O.A4.4.4 | Information need | IS | O/A4 | — |
 | IS.O.A5 | Preservation | IS | O/A5 | — |
 | IS.O.A5.1 | Physical conservation | IS | O/A5 | CH |
+| IS.O.A5.1.1 | Agents of deterioration | IS | O/A5 | — |
+| IS.O.A5.1.2 | Storage conditions | IS | O/A5 | CH.O.A4.2 |
+| IS.O.A5.1.3 | Intervention | IS | O/A5 | — |
+| IS.O.A5.1.4 | Media decay | IS | O/A5 | CH.O.A4 |
 | IS.O.A5.2 | Digital preservation | IS | O/A5 | — |
+| IS.O.A5.2.1 | OAIS entities | IS | O/A5 | — |
+| IS.O.A5.2.2 | Designated community | IS | O/A5 | — |
+| IS.O.A5.2.3 | Migration and emulation | IS | O/A5 | — |
+| IS.O.A5.2.4 | Fixity and copies | IS | O/A5 | CS.O.A5.1 |
 | IS.O.A5.3 | Access and rights | IS | O/A5 | LA |
+| IS.O.A5.3.1 | Gold and green | IS | O/A5 | — |
+| IS.O.A5.3.2 | Licence statements | IS | O/A5 | LA |
+| IS.O.A5.3.3 | Conditions of access | IS | O/A5 | LA |
 | IS.O.A5.4 | Indigenous data governance | IS | O/A5 | IK |
 | LA.O.A1 | Sources | LA | O/A1 | — |
 | LA.O.A1.1 | Legislation | LA | O/A1 | — |
@@ -647,68 +1370,257 @@
 | LA.O.A5.2 | Procedure | LA | O/A5 | — |
 | LA.O.A5.3 | Evidence and proof | LA | O/A5 | — |
 | LA.O.A5.4 | Arbitration and ADR | LA | O/A5 | — |
+| LA.O.A1.1.1 | Parliamentary sovereignty in NZ | LA | O/A1 | — |
+| LA.O.A1.1.2 | Delegated legislation within parent power | LA | O/A1 | — |
+| LA.O.A1.1.3 | Text read with purpose and context | LA | O/A1 | — |
+| LA.O.A1.1.4 | Later statute prevails; implied repeal | LA | O/A1 | — |
+| LA.O.A1.2.1 | Only the ratio binds | LA | O/A1 | — |
+| LA.O.A1.2.2 | Apex courts may depart from own precedent | LA | O/A1 | — |
+| LA.O.A1.2.3 | Jurisprudence constante in civil law | LA | O/A1 | — |
+| LA.O.A1.4.1 | Custom needs practice and opinio juris | LA | O/A1 | — |
+| LA.O.A1.4.2 | NZ dualism and consistent reading | LA | O/A1 | — |
+| LA.O.A1.4.3 | Jus cogens voids conflicting treaties | LA | O/A1 | — |
+| LA.O.A1.5.1 | Ranking of sources | LA | O/A1 | PL |
+| LA.O.A1.5.2 | Validity distinct from efficacy | LA | O/A1 | PO, MS |
+| LA.O.A2.1.1 | Remoteness limits contract damages | LA | O/A2 | — |
+| LA.O.A2.1.2 | Vitiating factors | LA | O/A2 | — |
+| LA.O.A2.1.3 | Privity and third-party beneficiaries | LA | O/A2 | — |
+| LA.O.A2.2.1 | Torrens indefeasibility | LA | O/A2 | — |
+| LA.O.A2.2.2 | Nemo dat | LA | O/A2 | — |
+| LA.O.A2.2.3 | Relative title and priority | LA | O/A2 | — |
+| LA.O.A2.3.1 | Three certainties | LA | O/A2 | — |
+| LA.O.A2.3.2 | Fiduciary loyalty | LA | O/A2 | — |
+| LA.O.A2.3.3 | Mandatory trustee duties | LA | O/A2 | — |
+| LA.O.A2.4.1 | Equal sharing of relationship property | LA | O/A2 | — |
+| LA.O.A2.4.2 | Paramountcy of child welfare | LA | O/A2 | — |
+| LA.O.A2.4.3 | Family protection claims | LA | O/A2 | — |
+| LA.O.A2.5.1 | No tax without statute | LA | O/A2 | — |
+| LA.O.A2.5.2 | General anti-avoidance rule | LA | O/A2 | BU, EC |
+| LA.O.A3.1.1 | Reasonable person standard | LA | O/A3 | — |
+| LA.O.A3.1.2 | But-for causation | LA | O/A3 | — |
+| LA.O.A3.1.3 | Scope of the ACC bar | LA | O/A3 | — |
+| LA.O.A3.1.4 | Pure economic loss | LA | O/A3 | EC |
+| LA.O.A3.2.1 | Prosecution burden of proof | LA | O/A3 | — |
+| LA.O.A3.2.2 | Presumption of fault; strict liability | LA | O/A3 | — |
+| LA.O.A3.2.3 | Criminal defences | LA | O/A3 | — |
+| LA.O.A3.3.1 | Measures of damages | LA | O/A3 | — |
+| LA.O.A3.3.2 | Discretionary equitable remedies | LA | O/A3 | — |
+| LA.O.A3.3.3 | Sentencing purposes and principles | LA | O/A3 | — |
+| LA.O.A4.1.1 | Electoral entrenchment | LA | O/A4 | — |
+| LA.O.A4.1.2 | Conventions not court-enforced | LA | O/A4 | PO |
+| LA.O.A4.1.3 | Self-entrenchment | LA | O/A4 | PL |
+| LA.O.A4.2.1 | Review of process, not merits | LA | O/A4 | — |
+| LA.O.A4.2.2 | Natural justice | LA | O/A4 | — |
+| LA.O.A4.2.3 | Legitimate expectation | LA | O/A4 | — |
+| LA.O.A4.3.1 | Consistent interpretation | LA | O/A4 | — |
+| LA.O.A4.3.2 | Declarations of inconsistency | LA | O/A4 | — |
+| LA.O.A4.3.3 | Proportionality under s 5 | LA | O/A4 | PL |
+| LA.O.A4.4.1 | Statutory Treaty clauses reviewable | LA | O/A4 | — |
+| LA.O.A4.4.2 | Binding Tribunal powers | LA | O/A4 | — |
+| LA.O.A5.1.1 | NZ court hierarchy | LA | O/A5 | — |
+| LA.O.A5.1.2 | Forum non conveniens | LA | O/A5 | — |
+| LA.O.A5.1.3 | Choice of law | LA | O/A5 | — |
+| LA.O.A5.2.1 | Adversarial and inquisitorial procedure | LA | O/A5 | — |
+| LA.O.A5.2.2 | Res judicata and issue estoppel | LA | O/A5 | — |
+| LA.O.A5.2.3 | Leave to appeal to the Supreme Court | LA | O/A5 | — |
+| LA.O.A5.3.1 | Relevance and unfair prejudice | LA | O/A5 | — |
+| LA.O.A5.3.2 | Hearsay | LA | O/A5 | — |
+| LA.O.A5.3.3 | Improperly obtained evidence | LA | O/A5 | — |
+| LA.O.A5.4.1 | Limited refusal of foreign awards | LA | O/A5 | — |
+| LA.O.A5.4.2 | Competence-competence | LA | O/A5 | — |
+| LA.O.A5.4.3 | Mediated settlement as contract | LA | O/A5 | LA.O.A2.1 |
 | LN.O.A1 | Signal | LN | O/A1 | — |
 | LN.O.A1.1 | Phonetics | LN | O/A1 | PH |
+| LN.O.A1.1.1 | Articulatory classes | LN | O/A1.1 | — |
+| LN.O.A1.1.2 | Source–filter model | LN | O/A1.1 | PH |
+| LN.O.A1.1.3 | Acoustic correlates | LN | O/A1.1 | — |
+| LN.O.A1.1.4 | Speech perception | LN | O/A1.1 | MS.O.A1.1 |
 | LN.O.A1.2 | Phonology | LN | O/A1 | — |
+| LN.O.A1.2.1 | Phoneme and allophone | LN | O/A1.2 | — |
+| LN.O.A1.2.2 | Distinctive features | LN | O/A1.2 | — |
+| LN.O.A1.2.3 | Optimality Theory | LN | O/A1.2 | — |
+| LN.O.A1.2.4 | Syllable, stress and tone | LN | O/A1.2 | AR.O.A2.1 |
 | LN.O.A1.3 | Sign phonology | LN | O/A1 | — |
+| LN.O.A1.3.1 | Parameters | LN | O/A1.3 | — |
+| LN.O.A1.3.2 | Duality of patterning | LN | O/A1.3 | — |
+| LN.O.A1.3.3 | Modality effects | LN | O/A1.3 | — |
+| LN.O.A1.3.4 | Independent sign languages | LN | O/A1.3 | — |
 | LN.O.A1.4 | Writing systems | LN | O/A1 | — |
+| LN.O.A1.4.1 | Script types | LN | O/A1.4 | — |
+| LN.O.A1.4.2 | Orthographic depth | LN | O/A1.4 | MS.O.A1.5.3 |
+| LN.O.A1.4.3 | Phonetic notation | LN | O/A1.4 | — |
+| LN.O.A1.4.4 | Writing is secondary | LN | O/A1.4 | — |
 | LN.O.A2 | Form | LN | O/A2 | — |
 | LN.O.A2.1 | Morphology | LN | O/A2 | — |
+| LN.O.A2.1.1 | Morpheme and exponence | LN | O/A2.1 | — |
+| LN.O.A2.1.2 | Inflection and derivation | LN | O/A2.1 | — |
+| LN.O.A2.1.3 | Productivity | LN | O/A2.1 | MS.O.A1.5.3 |
+| LN.O.A2.1.4 | Degree of synthesis | LN | O/A2.1 | — |
 | LN.O.A2.2 | Syntax | LN | O/A2 | — |
+| LN.O.A2.2.1 | Constituency tests | LN | O/A2.2 | — |
+| LN.O.A2.2.2 | Phrase structure and dependency | LN | O/A2.2 | MA.O.A1 |
+| LN.O.A2.2.3 | Recursion | LN | O/A2.2 | — |
+| LN.O.A2.2.4 | Alignment and agreement | LN | O/A2.2 | — |
 | LN.O.A2.3 | Lexicon | LN | O/A2 | — |
+| LN.O.A2.3.1 | Word classes | LN | O/A2.3 | — |
+| LN.O.A2.3.2 | Argument structure | LN | O/A2.3 | — |
+| LN.O.A2.3.3 | Frequency laws | LN | O/A2.3 | MA.O.A5 |
+| LN.O.A2.3.4 | Idioms and constructions | LN | O/A2.3 | — |
 | LN.O.A2.4 | Formal grammars | LN | O/A2 | MA.O.A1 |
+| LN.O.A2.4.1 | Non-regularity | LN | O/A2.4 | MA.O.A1 |
+| LN.O.A2.4.2 | Cross-serial dependencies | LN | O/A2.4 | MA.O.A1 |
+| LN.O.A2.4.3 | Mild context-sensitivity | LN | O/A2.4 | — |
+| LN.O.A2.4.4 | Probabilistic grammars | LN | O/A2.4 | CS.O.A4.4 |
 | LN.O.A3 | Meaning | LN | O/A3 | — |
 | LN.O.A3.1 | Lexical semantics | LN | O/A3 | — |
+| LN.O.A3.1.1 | Sense relations | LN | O/A3.1 | — |
+| LN.O.A3.1.2 | Arbitrariness | LN | O/A3.1 | — |
+| LN.O.A3.1.3 | Polysemy and homonymy | LN | O/A3.1 | — |
+| LN.O.A3.1.4 | Colour terms and categories | LN | O/A3.1 | MS.O.A1.1 |
 | LN.O.A3.2 | Compositional semantics | LN | O/A3 | PL |
+| LN.O.A3.2.1 | Compositionality as a hypothesis | LN | O/A3.2 | PL.O.A3.1 |
+| LN.O.A3.2.2 | Montague grammar | LN | O/A3.2 | MA.O.A1 |
+| LN.O.A3.2.3 | Generalised quantifiers | LN | O/A3.2 | MA.O.A1 |
+| LN.O.A3.2.4 | Entailment and polarity | LN | O/A3.2 | — |
 | LN.O.A3.3 | Pragmatics | LN | O/A3 | PL |
+| LN.O.A3.3.1 | Implicature | LN | O/A3.3 | PL.O.A3.1 |
+| LN.O.A3.3.2 | Presupposition | LN | O/A3.3 | — |
+| LN.O.A3.3.3 | Deixis | LN | O/A3.3 | — |
+| LN.O.A3.3.4 | Speech acts and politeness | LN | O/A3.3 | — |
 | LN.O.A3.4 | Grammaticalised meaning | LN | O/A3 | — |
+| LN.O.A3.4.1 | Person and number | LN | O/A3.4 | — |
+| LN.O.A3.4.2 | Tense, aspect and mood | LN | O/A3.4 | — |
+| LN.O.A3.4.3 | Evidentiality | LN | O/A3.4 | — |
+| LN.O.A3.4.4 | Spatial reference | LN | O/A3.4 | MS |
 | LN.O.A4 | Variation in use | LN | O/A4 | — |
 | LN.O.A4.1 | Social variation | LN | O/A4 | MS |
+| LN.O.A4.1.1 | The variable | LN | O/A4.1 | — |
+| LN.O.A4.1.2 | Stratification | LN | O/A4.1 | — |
+| LN.O.A4.1.3 | Apparent time | LN | O/A4.1 | — |
+| LN.O.A4.1.4 | Gender, age and ethnicity | LN | O/A4.1 | — |
 | LN.O.A4.2 | Register and genre | LN | O/A4 | — |
+| LN.O.A4.2.1 | Diglossia | LN | O/A4.2 | — |
+| LN.O.A4.2.2 | Register | LN | O/A4.2 | — |
+| LN.O.A4.2.3 | Style and audience | LN | O/A4.2 | — |
+| LN.O.A4.2.4 | Address terms | LN | O/A4.2 | — |
 | LN.O.A4.3 | Contact and multilingualism | LN | O/A4 | — |
+| LN.O.A4.3.1 | Borrowing | LN | O/A4.3 | — |
+| LN.O.A4.3.2 | Code-switching | LN | O/A4.3 | — |
+| LN.O.A4.3.3 | Pidgins and creoles | LN | O/A4.3 | — |
+| LN.O.A4.3.4 | Bilingualism | LN | O/A4.3 | MS.O.A1.5.3 |
 | LN.O.A4.4 | Endangerment and revitalisation | LN | O/A4 | IK |
+| LN.O.A4.4.1 | Language shift | LN | O/A4.4 | — |
+| LN.O.A4.4.2 | Counting languages | LN | O/A4.4 | — |
+| LN.O.A4.4.3 | Documentation | LN | O/A4.4 | IK.O.A5.2 |
+| LN.O.A4.4.4 | Revitalisation outcomes | LN | O/A4.4 | — |
 | LN.O.A5 | Diversity | LN | O/A5 | — |
 | LN.O.A5.1 | Change | LN | O/A5 | — |
+| LN.O.A5.1.1 | Neogrammarian hypothesis | LN | O/A5.1 | — |
+| LN.O.A5.1.2 | Grimm's and Verner's laws | LN | O/A5.1 | — |
+| LN.O.A5.1.3 | Grammaticalisation | LN | O/A5.1 | — |
+| LN.O.A5.1.4 | Rates and sources | LN | O/A5.1 | — |
 | LN.O.A5.2 | Descent and families | LN | O/A5 | HI |
+| LN.O.A5.2.1 | Comparative method | LN | O/A5.2 | — |
+| LN.O.A5.2.2 | Subgrouping | LN | O/A5.2 | — |
+| LN.O.A5.2.3 | Phylogenetic models | LN | O/A5.2 | BI.O.A4.4 |
+| LN.O.A5.2.4 | Limits of the method | LN | O/A5.2 | — |
 | LN.O.A5.3 | Typology and universals | LN | O/A5 | — |
+| LN.O.A5.3.1 | Word order and implication | LN | O/A5.3 | — |
+| LN.O.A5.3.2 | Sampling | LN | O/A5.3 | — |
+| LN.O.A5.3.3 | Hierarchies | LN | O/A5.3 | — |
+| LN.O.A5.3.4 | Explaining universals | LN | O/A5.3 | MS.O.A3.3 |
 | LN.O.A5.4 | Origin of language | LN | O/A5 | BI |
+| LN.O.A5.4.1 | Evidence limits | LN | O/A5.4 | BI.O.A4.5 |
+| LN.O.A5.4.2 | Rival programmes | LN | O/A5.4 | — |
+| LN.O.A5.4.3 | Comparative evidence | LN | O/A5.4 | BI.O.A3.4 |
+| LN.O.A5.4.4 | Emerging languages | LN | O/A5.4 | — |
 | MD.O.A1 | Disorders | MD | O/A1 | — |
 | MD.O.A1.1 | Disease entities | MD | O/A1 | BI, PL |
 | MD.O.A1.1.1 | Immune disorders | MD | O/A1 | BI |
 | MD.O.A1.1.2 | Neoplasms | MD | O/A1 | BI |
+| MD.O.A1.1.3 | A disease entity is individuated by at least one of aetiology | MD | O/A1 | — |
+| MD.O.A1.1.4 | Harm is part of the working definition | MD | O/A1 | — |
 | MD.O.A1.2 | Classification | MD | O/A1 | — |
 | MD.O.A1.2.1 | Diagnostic thresholds, such as HbA1c for diabetes, are conventions set | MD | O/A1 | — |
+| MD.O.A1.2.2 | A change in a threshold changes measured prevalence without any | MD | O/A1 | — |
+| MD.O.A1.2.3 | Inter-rater reliability, usually reported as Cohen's kappa, is a | MD | O/A1 | — |
 | MD.O.A1.3 | Mental disorder | MD | O/A1 | MS, PL |
 | MD.O.A1.3.1 | Categorical against dimensional models (RDoC, HiTOP) as competing clas | MD | O/A1 | — |
+| MD.O.A1.3.2 | Most DSM categories are defined by symptom criteria, not by a known | MD | O/A1 | — |
+| MD.O.A1.3.3 | Comorbidity between psychiatric categories is common | MD | O/A1 | — |
 | MD.O.A1.4 | Syndromes and multimorbidity | MD | O/A1 | — |
+| MD.O.A1.4.1 | A syndrome is a recurring cluster of signs and symptoms whose | MD | O/A1 | — |
+| MD.O.A1.4.2 | Multimorbidity, two or more chronic conditions in one person, rises | MD | O/A1 | — |
 | MD.O.A2 | Causes and mechanisms | MD | O/A2 | — |
 | MD.O.A2.1 | Pathogens | MD | O/A2 | — |
 | MD.O.A2.1.1 | Antimicrobial resistance | MD | O/A2 | BI |
+| MD.O.A2.1.2 | Molecular criteria, based on finding pathogen nucleic acid in | MD | O/A2 | — |
+| MD.O.A2.1.3 | Host factors change the outcome of exposure to the same agent | MD | O/A2 | — |
 | MD.O.A2.2 | Genetic causes | MD | O/A2 | — |
+| MD.O.A2.2.1 | Penetrance, the fraction of carriers who develop the disorder, is | MD | O/A2 | — |
+| MD.O.A2.2.2 | A polygenic score built in one ancestry group usually predicts less | MD | O/A2 | — |
+| MD.O.A2.2.3 | Mendelian randomisation uses genetic variants as instruments for an | MD | O/A2 | — |
 | MD.O.A2.3 | Pathophysiology | MD | O/A2 | — |
+| MD.O.A2.3.1 | A mechanism shown in cells or animals is a hypothesis about | MD | O/A2 | — |
+| MD.O.A2.3.2 | Many chronic disorders arise from several interacting mechanisms | MD | O/A2 | — |
 | MD.O.A2.4 | Environmental and social determinants | MD | O/A2 | EV, MS |
+| MD.O.A2.4.1 | The link between smoking and lung cancer is a model case of causal | MD | O/A2 | — |
+| MD.O.A2.4.2 | Socioeconomic gradients in health hold across many conditions | MD | O/A2 | — |
+| MD.O.A2.4.3 | Exposure–response functions for air pollutants are estimated in | MD | O/A2 | — |
 | MD.O.A3 | Diagnosis and prognosis | MD | O/A3 | — |
 | MD.O.A3.1 | Signs, symptoms and tests | MD | O/A3 | — |
+| MD.O.A3.1.1 | History taking supplies much of the information used in many | MD | O/A3 | — |
+| MD.O.A3.1.2 | Laboratory reference intervals are usually the central 95 per cent | MD | O/A3 | — |
 | MD.O.A3.2 | Test accuracy | MD | O/A3 | MA.O.A5 |
 | MD.O.A3.2.1 | Likelihood ratios combine with pre-test odds to give post-test odds, a | MD | O/A3 | — |
+| MD.O.A3.2.2 | A receiver operating characteristic curve shows sensitivity against | MD | O/A3 | — |
+| MD.O.A3.2.3 | Spectrum bias arises when accuracy is measured in very sick cases | MD | O/A3 | — |
 | MD.O.A3.3 | Prognosis | MD | O/A3 | — |
+| MD.O.A3.3.1 | The Kaplan–Meier estimator gives survival over time | MD | O/A3 | — |
+| MD.O.A3.3.2 | A model with good discrimination can be poorly calibrated in a new | MD | O/A3 | — |
+| MD.O.A3.3.3 | Cancer staging, such as TNM, is a prognostic classification | MD | O/A3 | — |
 | MD.O.A3.4 | Screening tests | MD | O/A3 | — |
+| MD.O.A3.4.1 | At low prevalence, even a highly specific test yields many false | MD | O/A3 | MA.O.A5 |
+| MD.O.A3.4.2 | Overdiagnosis is the detection of disease that would never have | MD | O/A3 | — |
 | MD.O.A4 | Treatment and drugs | MD | O/A4 | — |
 | MD.O.A4.1 | Pharmacology | MD | O/A4 | CH |
 | MD.O.A4.1.1 | First-order elimination | MD | O/A4 | — |
 | MD.O.A4.1.2 | Therapeutic index as the ratio of toxic to effective dose. | MD | O/A4 | — |
 | MD.O.A4.1.3 | Pharmacogenomics | MD | O/A4 | — |
+| MD.O.A4.1.4 | The Hill dose–response model fits effect as a saturating function | MD | O/A4 | — |
 | MD.O.A4.2 | Surgery and procedures. | MD | O/A4 | — |
+| MD.O.A4.2.1 | Surgical outcomes depend on operator and centre volume for many | MD | O/A4 | — |
+| MD.O.A4.2.2 | Sham-controlled trials are possible for some procedures | MD | O/A4 | — |
 | MD.O.A4.3 | Psychological and rehabilitative therapy | MD | O/A4 | MS |
+| MD.O.A4.3.1 | Blinding of patients is rarely possible in psychological therapy | MD | O/A4 | — |
+| MD.O.A4.3.2 | Rehabilitation outcomes are measured as function and participation | MD | O/A4 | — |
 | MD.O.A4.4 | Drug safety | MD | O/A4 | — |
 | MD.O.A4.4.1 | Residues of veterinary drugs in human food | MD | O/A4 | AG |
+| MD.O.A4.4.2 | Rare adverse effects are often undetectable in pre-approval trials | MD | O/A4 | MA.O.A5 |
+| MD.O.A4.4.3 | Spontaneous reporting systems detect signals, not rates | MD | O/A4 | — |
 | MD.O.A4.5 | Drug development and regulation | MD | O/A4 | LA |
+| MD.O.A4.5.1 | Phase I establishes safety and dose, phase II early efficacy, phase | MD | O/A4 | — |
+| MD.O.A4.5.2 | Effects on a surrogate endpoint do not guarantee effects on patient | MD | O/A4 | — |
+| MD.O.A4.5.3 | The randomised controlled trial estimates the average effect of a | MD | O/A4 | — |
 | MD.O.A5 | Populations and prevention | MD | O/A5 | — |
 | MD.O.A5.1 | Epidemiology | MD | O/A5 | — |
+| MD.O.A5.1.1 | Prevalence approximates incidence times mean duration in a steady | MD | O/A5 | — |
+| MD.O.A5.1.2 | Relative risk alone does not convey benefit | MD | O/A5 | — |
+| MD.O.A5.1.3 | Direct age standardisation compares rates across populations of | MD | O/A5 | — |
 | MD.O.A5.2 | Transmission | MD | O/A5 | — |
+| MD.O.A5.2.1 | The SIR compartmental model describes susceptible, infected and | MD | O/A5 | MA.O.A4 |
+| MD.O.A5.2.2 | The effective reproduction number Rt falls as immunity rises and | MD | O/A5 | — |
+| MD.O.A5.2.3 | Heterogeneous contact can lower the herd-immunity threshold below 1 | MD | O/A5 | — |
 | MD.O.A5.3 | Prevention and screening programmes | MD | O/A5 | — |
+| MD.O.A5.3.1 | Vaccine efficacy is measured in trials; vaccine effectiveness is | MD | O/A5 | — |
+| MD.O.A5.3.2 | Screening benefit is shown by reduced disease-specific or all-cause | MD | O/A5 | — |
+| MD.O.A5.3.3 | Programme criteria, such as those of Wilson and Jungner, are guides | MD | O/A5 | — |
 | MD.O.A5.4 | Health systems | MD | O/A5 | EC, LA, PO |
+| MD.O.A5.4.1 | The Donabedian framework assesses quality by structure, process and | MD | O/A5 | — |
+| MD.O.A5.4.2 | Comparisons of providers need risk adjustment for patient mix | MD | O/A5 | — |
 | MD.O.A5.5 | Global and Māori health | MD | O/A5 | IK |
+| MD.O.A5.5.1 | Inequity is stated as an absolute and a relative gap in a named | MD | O/A5 | — |
+| MD.O.A5.5.2 | Differences in access, quality and outcome of care between | MD | O/A5 | — |
 | MS.O.A1 | Mental processes | MS | O/A1 | — |
 | MS.O.A1.1 | Sensation and perception | MS | O/A1 | — |
 | MS.O.A1.1.1 | Weber's law | MS | O/A1.1 | — |
@@ -741,6 +1653,8 @@
 | MS.O.A2.1.3 | Glia | MS | O/A2.1 | — |
 | MS.O.A2.2 | Plasticity | MS | O/A2 | — |
 | MS.O.A2.2.1 | LTP and LTD | MS | O/A2.2 | — |
+| MS.O.A2.2.2 | Hebbian rule and spike-timing dependence | MS | O/A2.2 | — |
+| MS.O.A2.2.3 | Homeostatic regulation (synaptic scaling) | MS | O/A2.2 | — |
 | MS.O.A2.3 | Circuits and systems | MS | O/A2 | — |
 | MS.O.A2.3.1 | Sensory and motor pathways | MS | O/A2.3 | — |
 | MS.O.A2.3.2 | Hypothalamus and homeostasis | MS | O/A2.3 | — |
@@ -765,16 +1679,47 @@
 | MS.O.A3.4.2 | RDoC | MS | O/A3.4 | — |
 | MS.O.A4 | Interactions | MS | O/A4 | — |
 | MS.O.A4.1 | Social influence | MS | O/A4 | — |
+| MS.O.A4.1.1 | Conformity to a unanimous majority | MS | O/A4.1 | — |
+| MS.O.A4.1.2 | Obedience to an experimenter | MS | O/A4.1 | — |
+| MS.O.A4.1.3 | Bystander response | MS | O/A4.1 | — |
 | MS.O.A4.2 | Social cognition | MS | O/A4 | — |
+| MS.O.A4.2.1 | Correspondence bias | MS | O/A4.2 | — |
+| MS.O.A4.2.2 | Actor–observer asymmetry | MS | O/A4.2 | — |
+| MS.O.A4.2.3 | Implicit association measures | MS | O/A4.2 | — |
 | MS.O.A4.3 | Attitudes | MS | O/A4 | — |
+| MS.O.A4.3.1 | Insufficient justification; self-perception rival | MS | O/A4.3 | — |
+| MS.O.A4.3.2 | Attitude–behaviour correspondence; planned behaviour | MS | O/A4.3 | — |
+| MS.O.A4.3.3 | Dual-process persuasion | MS | O/A4.3 | — |
 | MS.O.A4.4 | Groups and relationships | MS | O/A4 | — |
+| MS.O.A4.4.1 | Social loafing | MS | O/A4.4 | — |
+| MS.O.A4.4.2 | Intergroup contact | MS | O/A4.4 | — |
+| MS.O.A4.4.3 | Conversational timing | MS | O/A4.4 | — |
 | MS.O.A4.5 | Self and identity | MS | O/A4 | — |
+| MS.O.A4.5.1 | Looking-glass self | MS | O/A4.5 | — |
+| MS.O.A4.5.2 | Minimal group effect; social identity theory | MS | O/A4.5 | — |
+| MS.O.A4.5.3 | Bodily self (rubber-hand illusion) | MS | O/A4.5 | MS.O.A2.3 |
 | MS.O.A5 | Social structures | MS | O/A5 | — |
 | MS.O.A5.1 | Positions and inequality | MS | O/A5 | — |
+| MS.O.A5.1.1 | Status attainment | MS | O/A5.1 | — |
+| MS.O.A5.1.2 | Residual group gaps (Oaxaca–Blinder) | MS | O/A5.1 | MA.O.A5 |
+| MS.O.A5.1.3 | Distribution and mobility measures | MS | O/A5.1 | — |
 | MS.O.A5.2 | Organisations | MS | O/A5 | — |
+| MS.O.A5.2.1 | Dimensions of formal structure | MS | O/A5.2 | — |
+| MS.O.A5.2.2 | Weak ties | MS | O/A5.2 | — |
+| MS.O.A5.2.3 | Institutional isomorphism | MS | O/A5.2 | — |
 | MS.O.A5.3 | Institutions and culture | MS | O/A5 | — |
+| MS.O.A5.3.1 | Secularisation | MS | O/A5.3 | — |
+| MS.O.A5.3.2 | Taste and position | MS | O/A5.3 | — |
+| MS.O.A5.3.3 | Social integration and rates | MS | O/A5.3 | MD.O.A1 |
 | MS.O.A5.4 | Populations | MS | O/A5 | — |
+| MS.O.A5.4.1 | Fertility measures | MS | O/A5.4 | — |
+| MS.O.A5.4.2 | Survival measures; Gompertz law | MS | O/A5.4 | — |
+| MS.O.A5.4.3 | Migration flows (gravity model) | MS | O/A5.4 | — |
+| MS.O.A5.4.4 | Projection and stable population theory | MS | O/A5.4 | — |
 | MS.O.A5.5 | Collective action and change | MS | O/A5 | PO.O.A3.3, EC.O.A5.3 |
+| MS.O.A5.5.1 | Resource mobilisation | MS | O/A5.5 | EC.O.A5.3 |
+| MS.O.A5.5.2 | Diffusion of practices | MS | O/A5.5 | — |
+| MS.O.A5.5.3 | Theories of long-run change | MS | O/A5.5 | HI |
 | MS.M.1 | Measure | MS | M | — |
 | MS.M.2 | Perturb | MS | M | — |
 | MS.M.3 | Compare and interpret | MS | M | — |
@@ -817,11 +1762,15 @@
 | PH.O.A2.3.2 | The Higgs boson was observed in 2012 (ATLAS and CMS). | PH | O/A2 | — |
 | PH.O.A2.3.3 | Neutrino oscillation implies non-zero neutrino masses | PH | O/A2 | — |
 | PH.O.A2.3.4 | Renormalisation | PH | O/A2 | — |
+| PH.O.A2.3.5 | Nuclear structure and decay | PH | O/A2 | EA |
 | PH.O.A2.4 | Atomic, molecular and optical physics | PH | O/A2 | CH |
 | PH.O.A2.4.1 | Lasers | PH | O/A2 | — |
 | PH.O.A2.4.2 | Laser cooling and Bose–Einstein condensation of dilute gases (first ac | PH | O/A2 | — |
 | PH.O.A2.4.3 | Atomic clocks and precision measurement | PH | O/A2 | — |
 | PH.O.A2.5 | Interpretation of quantum mechanics | PH | O/A2 | PL |
+| PH.O.A2.5.1 | Interpretations without new dynamics agree on statistics | PH | O/A2 | PL |
+| PH.O.A2.5.2 | Collapse models and experimental bounds | PH | O/A2 | PL |
+| PH.O.A2.5.3 | Matter-wave interference of large molecules | PH | O/A2 | — |
 | PH.O.A3 | Gravitation and the cosmos | PH | O/A3 | — |
 | PH.O.A3.1 | Newtonian gravity | PH | O/A3 | — |
 | PH.O.A3.1.1 | Kepler's laws follow for two point masses. | PH | O/A3 | — |
@@ -880,6 +1829,9 @@
 | PH.O.A5.4.3 | Nuclear decay and radiation interaction with matter | PH | O/A5 | — |
 | PH.O.A5.5 | Nonlinear dynamics and complex systems | PH | O/A5 | MA.O.A4 |
 | PH.O.A5.5.1 | Non-equilibrium fluctuation theorems (Jarzynski, Crooks) for systems d | PH | O/A5 | — |
+| PH.O.A5.5.2 | Lyapunov exponent from a time series | PH | O/A5 | MA.O.A4 |
+| PH.O.A5.5.3 | Turing instability and pattern formation | PH | O/A5 | BI.O.A3.2 |
+| PH.O.A5.5.4 | Long-range order in two-dimensional active matter | PH | O/A5 | PH.O.A4.3.4 |
 | PL.O.A1 | Being | PL | Face O | — |
 | PL.O.A1.1 | Ontology and existence | PL | O/A1 | — |
 | PL.O.A1.2 | Modality | PL | O/A1 | MA.O.A1 |
@@ -937,6 +1889,67 @@
 | PO.O.A5.1 | International order | PO | O/A5 | — |
 | PO.O.A5.2 | Cooperation and institutions | PO | O/A5 | LA |
 | PO.O.A5.3 | War and peace | PO | O/A5 | ST |
+| PO.O.A1.1.1 | State capacity as a degree | PO | O/A1 | — |
+| PO.O.A1.1.2 | Four components of sovereignty (Krasner) | PO | O/A1 | — |
+| PO.O.A1.1.3 | Bellicist thesis of state formation | PO | O/A1 | HI |
+| PO.O.A1.2.1 | Measuring legitimacy by belief and compliance | PO | O/A1 | — |
+| PO.O.A1.2.2 | Weber's three grounds of legitimacy | PO | O/A1 | PL |
+| PO.O.A1.2.3 | Diffuse and specific support (Easton) | PO | O/A1 | — |
+| PO.O.A1.3.1 | Minimal and thick definitions of democracy | PO | O/A1 | — |
+| PO.O.A1.3.2 | Competitive authoritarianism | PO | O/A1 | — |
+| PO.O.A1.3.3 | Modernisation hypothesis | PO | O/A1 | EC |
+| PO.O.A1.3.4 | Democratic erosion by executives | PO | O/A1 | — |
+| PO.O.A2.1.1 | Presidentialism and breakdown | PO | O/A2 | — |
+| PO.O.A2.1.2 | Federalism and conflict | PO | O/A2 | — |
+| PO.O.A2.1.3 | Judicial review and court independence | PO | O/A2 | LA.O.A4.1 |
+| PO.O.A2.2.1 | Mechanical and psychological effects | PO | O/A2 | — |
+| PO.O.A2.2.2 | Effective number of parties; M+1 rule | PO | O/A2 | — |
+| PO.O.A2.2.3 | Proportionality and district magnitude | PO | O/A2 | — |
+| PO.O.A2.2.4 | New Zealand's change to MMP | PO | O/A2 | — |
+| PO.O.A2.3.1 | Cleavages and the freezing hypothesis | PO | O/A2 | — |
+| PO.O.A2.3.2 | Cartel party thesis | PO | O/A2 | — |
+| PO.O.A2.3.3 | Party identification and vote choice | PO | O/A2 | MS |
+| PO.O.A2.4.1 | Agenda setter in the veto-player model | PO | O/A2 | — |
+| PO.O.A2.4.2 | Riker's size principle | PO | O/A2 | MA.B.C4 |
+| PO.O.A2.4.3 | Divided government and lawmaking | PO | O/A2 | — |
+| PO.O.A2.5.1 | Public goods rise with W | PO | O/A2 | — |
+| PO.O.A2.5.2 | Small-W leaders survive longer | PO | O/A2 | — |
+| PO.O.A2.5.3 | Measuring W apart from regime type | PO | O/A2 | — |
+| PO.O.A3.1.1 | Downsian convergence | PO | O/A3 | MA.B.C4 |
+| PO.O.A3.1.2 | Multidimensional instability | PO | O/A3 | MA.B.C4, EC.O.A5.5 |
+| PO.O.A3.1.3 | Retrospective economic voting | PO | O/A3 | — |
+| PO.O.A3.1.4 | Paradox of voting | PO | O/A3 | — |
+| PO.O.A3.2.1 | Receive–accept–sample model | PO | O/A3 | MS.O.A1 |
+| PO.O.A3.2.2 | Thermostatic model of opinion | PO | O/A3 | — |
+| PO.O.A3.2.3 | Framing effects | PO | O/A3 | MS.O.A1 |
+| PO.O.A3.3.1 | Selective incentives in large groups | PO | O/A3 | EC.O.A5.3 |
+| PO.O.A3.3.2 | Resource model of participation | PO | O/A3 | — |
+| PO.O.A3.3.3 | Social pressure raises turnout | PO | O/A3 | — |
+| PO.O.A3.3.4 | Nonviolent campaign success | PO | O/A3 | — |
+| PO.O.A3.4.1 | Correlates of civil war onset | PO | O/A3 | — |
+| PO.O.A3.4.2 | Hybrid regimes and civil war | PO | O/A3 | — |
+| PO.O.A3.4.3 | Coup-proofing | PO | O/A3 | ST |
+| PO.O.A4.1.1 | Leptokurtic budget changes | PO | O/A4 | — |
+| PO.O.A4.1.2 | Multiple streams as framework | PO | O/A4 | — |
+| PO.O.A4.1.3 | Incrementalism | PO | O/A4 | — |
+| PO.O.A4.2.1 | Bureaucratic drift | PO | O/A4 | EC.O.A2.3 |
+| PO.O.A4.2.2 | Police-patrol and fire-alarm oversight | PO | O/A4 | — |
+| PO.O.A4.2.3 | Weberian bureaucracy and growth | PO | O/A4 | EC |
+| PO.O.A4.3.1 | Clearance points and delivery | PO | O/A4 | — |
+| PO.O.A4.3.2 | Street-level bureaucrats | PO | O/A4 | — |
+| PO.O.A4.4.1 | Partisan effects on policy | PO | O/A4 | — |
+| PO.O.A4.4.2 | Policy feedback | PO | O/A4 | — |
+| PO.O.A4.4.3 | Policy diffusion | PO | O/A4 | — |
+| PO.O.A5.1.1 | Balancing and bandwagoning | PO | O/A5 | — |
+| PO.O.A5.1.2 | Hegemonic stability theory | PO | O/A5 | — |
+| PO.O.A5.1.3 | Power transition theory | PO | O/A5 | — |
+| PO.O.A5.2.1 | Institutions lower transaction costs | PO | O/A5 | EC.O.A3.3 |
+| PO.O.A5.2.2 | Cooperation under repeated play | PO | O/A5 | EC.O.A3.5 |
+| PO.O.A5.2.3 | Alliance reliability | PO | O/A5 | — |
+| PO.O.A5.3.1 | Democratic peace is dyadic | PO | O/A5 | — |
+| PO.O.A5.3.2 | Bargaining model of war | PO | O/A5 | ST.O.A3.1, ST.O.A3.4 |
+| PO.O.A5.3.3 | Audience costs | PO | O/A5 | — |
+| PO.O.A5.3.4 | Capitalist peace | PO | O/A5 | EC |
 | RE.O.A1 | The ultimate and the human condition | RE | O/A1 | — |
 | RE.O.A1.1 | The ultimate itself | RE | O/A1 | PL (arguments from shared premises) |
 | RE.O.A1.2 | The world's relation to the ultimate | RE | O/A1 | IK (whakapapa cosmogony) |

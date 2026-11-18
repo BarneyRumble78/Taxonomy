@@ -1,0 +1,625 @@
+[
+ {
+  "id": "AR.TK.GR",
+  "field": "AR",
+  "node": "LCC:GR",
+  "name": "Folklore",
+  "taxonomy_cell": "AR.O.A4",
+  "solves": [
+   "identify a story as a version of a known type",
+   "trace where a story came from"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer"
+   ],
+   "structure": [
+    "text_language"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Tale-type index (Aarne–Thompson–Uther)",
+    "does": "assigns a tale to a catalogued type",
+    "hypotheses": [
+     "the tale matches a catalogued type"
+    ]
+   },
+   {
+    "name": "Historic-geographic method",
+    "does": "traces a tale's origin from its variants",
+    "hypotheses": [
+     "many variants exist with dates and places"
+    ]
+   }
+  ],
+  "inputs": [
+   "recorded tales"
+  ],
+  "outputs": [
+   "type number",
+   "proposed origin and spread"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.M",
+  "field": "AR",
+  "node": "LCC:M",
+  "name": "Music",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "describe how the chords of a piece relate to its key"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ],
+   "structure": [
+    "sequence"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Roman-numeral harmonic analysis",
+    "does": "labels each chord by its function in the key",
+    "hypotheses": [
+     "the music is tonal and has a key centre"
+    ]
+   }
+  ],
+  "inputs": [
+   "a score"
+  ],
+  "outputs": [
+   "labelled harmonic progression"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.ML",
+  "field": "AR",
+  "node": "LCC:ML",
+  "name": "Literature on music",
+  "taxonomy_cell": "AR.O.A4",
+  "solves": [
+   "show how the surface of a piece grows from a simple underlying line"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "hierarchy_tree",
+    "sequence"
+   ],
+   "scope": [
+    "multiscale"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Schenkerian analysis",
+    "does": "reduces a piece through layers to a basic structure",
+    "hypotheses": [
+     "tonal repertoire of the common-practice period"
+    ]
+   }
+  ],
+  "inputs": [
+   "a score"
+  ],
+  "outputs": [
+   "layered reduction"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.MT",
+  "field": "AR",
+  "node": "LCC:MT",
+  "name": "Instruction and study",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A heading for teaching material. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.N",
+  "field": "AR",
+  "node": "LCC:N",
+  "name": "Visual arts",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "identify what an image shows and means",
+   "decide who made a work and when"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "infer",
+    "verify"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "data": [
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Iconographic analysis (Panofsky)",
+    "does": "identifies subjects and their meaning",
+    "hypotheses": [
+     "the motifs can be traced through texts or traditions of the period"
+    ]
+   },
+   {
+    "name": "Attribution by comparison",
+    "does": "assigns a work to a maker by style",
+    "hypotheses": [
+     "securely attributed works exist for comparison"
+    ]
+   },
+   {
+    "name": "Pigment analysis",
+    "does": "gives an earliest possible date from the materials",
+    "hypotheses": [
+     "the date each pigment came into use is known",
+     "the sampled paint is original"
+    ]
+   }
+  ],
+  "inputs": [
+   "the work",
+   "comparison works",
+   "paint samples"
+  ],
+  "outputs": [
+   "subject and meaning",
+   "attribution",
+   "earliest date"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.NB",
+  "field": "AR",
+  "node": "LCC:NB",
+  "name": "Sculpture",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A practice heading. Attribution and dating tools sit at N. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.NC",
+  "field": "AR",
+  "node": "LCC:NC",
+  "name": "Drawing. Design. Illustration",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "draw a three-dimensional scene on a flat surface so it looks right from one position"
+  ],
+  "signature": {
+   "task": [
+    "construct"
+   ],
+   "structure": [
+    "geometric_space"
+   ],
+   "linearity": [
+    "linear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linear perspective",
+    "does": "projects a scene onto a picture plane",
+    "hypotheses": [
+     "a single fixed viewpoint",
+     "a flat picture plane"
+    ]
+   }
+  ],
+  "inputs": [
+   "scene geometry and viewpoint"
+  ],
+  "outputs": [
+   "a perspective drawing"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.ND",
+  "field": "AR",
+  "node": "LCC:ND",
+  "name": "Painting",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "date a painted wooden panel"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dendrochronology of panel supports",
+    "does": "gives the earliest possible felling date of the wood",
+    "hypotheses": [
+     "the panel shows enough rings",
+     "a reference ring sequence exists for the region and species"
+    ]
+   }
+  ],
+  "inputs": [
+   "ring-width measurements"
+  ],
+  "outputs": [
+   "earliest possible date"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.NE",
+  "field": "AR",
+  "node": "LCC:NE",
+  "name": "Print media",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "date a sheet of paper or a print"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Watermark dating",
+    "does": "dates paper by matching its watermark",
+    "hypotheses": [
+     "the watermark matches a dated reference",
+     "the paper was used soon after it was made"
+    ]
+   }
+  ],
+  "inputs": [
+   "watermark tracing or image"
+  ],
+  "outputs": [
+   "date range"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.NX",
+  "field": "AR",
+  "node": "LCC:NX",
+  "name": "Arts in general",
+  "taxonomy_cell": "AR.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A general heading for the arts. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PN",
+  "field": "AR",
+  "node": "LCC:PN",
+  "name": "Literature (General)",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "explain how a text produces its meaning",
+   "decide who wrote an unsigned text"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer",
+    "classify"
+   ],
+   "structure": [
+    "text_language"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Close reading",
+    "does": "builds an interpretation from the detail of the wording",
+    "hypotheses": [
+     "a reliable text is established"
+    ]
+   },
+   {
+    "name": "Stylometric authorship attribution",
+    "does": "compares word-use patterns with those of candidate authors",
+    "hypotheses": [
+     "the disputed text is long enough",
+     "reference texts by each candidate exist in the same genre and period",
+     "the true author is among the candidates"
+    ]
+   }
+  ],
+  "inputs": [
+   "the text",
+   "reference texts"
+  ],
+  "outputs": [
+   "an interpretation traced to passages",
+   "ranked candidate authors"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PQ",
+  "field": "AR",
+  "node": "LCC:PQ",
+  "name": "French literature - Italian literature - Spanish literature - Portuguese",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue of national literatures. Methods sit at PN. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PR",
+  "field": "AR",
+  "node": "LCC:PR",
+  "name": "English literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue of national literatures. Methods sit at PN. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PS",
+  "field": "AR",
+  "node": "LCC:PS",
+  "name": "American literature",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue of national literatures. Methods sit at PN. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PT",
+  "field": "AR",
+  "node": "LCC:PT",
+  "name": "German literature - Dutch literature - Flemish literature since 1830",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue of national literatures. Methods sit at PN. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.PZ",
+  "field": "AR",
+  "node": "LCC:PZ",
+  "name": "Fiction and juvenile belles lettres",
+  "taxonomy_cell": "AR.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A shelving class for fiction. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.TR",
+  "field": "AR",
+  "node": "LCC:TR",
+  "name": "Photography",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "set a camera so the right amount of light is recorded"
+  ],
+  "signature": {
+   "task": [
+    "control"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Exposure reciprocity",
+    "does": "trades light intensity against exposure time",
+    "hypotheses": [
+     "exposure time is inside the range where the film or sensor responds proportionally"
+    ]
+   }
+  ],
+  "inputs": [
+   "scene brightness"
+  ],
+  "outputs": [
+   "aperture and shutter setting"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "AR.TK.TT",
+  "field": "AR",
+  "node": "LCC:TT",
+  "name": "Handicrafts. Arts and crafts",
+  "taxonomy_cell": "AR.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A practice heading for crafts. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

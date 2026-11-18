@@ -1,0 +1,18 @@
+T = {
+"4605": (["store facts once so they cannot contradict each other", "estimate how well a fitted model will do on new cases"],
+  {"task": "design estimate verify", "structure": "set", "data": "data_rich"},
+  [("Relational normalisation", "removes redundancy by splitting tables", ["the functional dependencies among attributes are known"]),
+   ("Cross-validation", "estimates out-of-sample error by holding data out in turn", ["observations are independent or exchangeable", "no information leaks between folds"])],
+  ["attributes and their dependencies", "a dataset and a model"], ["a normalised schema", "error estimate"]),
+"4609": (["describe an organisation's information so a system can hold it", "predict whether people will take up a system"],
+  {"task": "design predict", "structure": "graph_network", "agents": "single_decision_maker"},
+  [("Entity-relationship modelling", "describes a domain as things and the links between them", ["the domain can be described as entities with relationships"]),
+   ("Technology acceptance model", "predicts use from perceived usefulness and ease of use", ["perceptions are self-reported in a valid survey", "use is voluntary"])],
+  ["requirements", "survey responses"], ["data model", "predicted uptake"]),
+"4610": (["organise a collection so items can be found", "measure how well a search finds what is wanted"],
+  {"task": "classify verify estimate", "structure": "hierarchy_tree set", "scale": "large"},
+  [("Faceted classification", "describes each item by independent facets", ["mutually exclusive facets can be defined for the subject"]),
+   ("Precision and recall evaluation", "scores a search system against known relevant items", ["relevance judgements exist for a test collection"]),
+   ("Bradford's law", "says a few sources carry most of the papers on a subject", ["it is an empirical regularity", "a large bibliography on one subject"])],
+  ["a collection", "queries with relevance judgements"], ["classification scheme", "precision and recall", "core source list"]),
+}

@@ -1,0 +1,368 @@
+[
+ {
+  "id": "LN.TK.P",
+  "field": "LN",
+  "node": "LCC:P",
+  "name": "Philology. Linguistics",
+  "taxonomy_cell": "LN.O.A2",
+  "solves": [
+   "show that two languages descend from one source",
+   "find which sounds a language treats as distinct",
+   "measure usage in a large body of text"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "classify",
+    "compare"
+   ],
+   "structure": [
+    "text_language",
+    "hierarchy_tree",
+    "sequence"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Comparative method",
+    "does": "reconstructs a parent language from regular correspondences",
+    "hypotheses": [
+     "sound correspondences are regular",
+     "the compared words are inherited, not borrowed",
+     "enough related word sets exist"
+    ]
+   },
+   {
+    "name": "Minimal pair test",
+    "does": "shows two sounds are distinct units",
+    "hypotheses": [
+     "the two words differ in one sound in the same position",
+     "both come from the same language variety"
+    ]
+   },
+   {
+    "name": "Corpus frequency analysis",
+    "does": "counts forms and patterns in a text collection",
+    "hypotheses": [
+     "the collection represents the variety studied"
+    ]
+   }
+  ],
+  "inputs": [
+   "word lists",
+   "recordings",
+   "text collection"
+  ],
+  "outputs": [
+   "reconstructed forms",
+   "sound inventory",
+   "frequency tables"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PA",
+  "field": "LN",
+  "node": "LCC:PA",
+  "name": "Greek language and literature. Latin language and literature",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "recover the wording of a text that survives only in copies"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "construct"
+   ],
+   "structure": [
+    "hierarchy_tree",
+    "text_language"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Stemmatics",
+    "does": "builds a family tree of manuscripts from shared errors",
+    "hypotheses": [
+     "each copy was made from one exemplar",
+     "shared errors show shared descent"
+    ]
+   }
+  ],
+  "inputs": [
+   "collated manuscripts"
+  ],
+  "outputs": [
+   "family tree of copies",
+   "reconstructed text"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PB",
+  "field": "LN",
+  "node": "LCC:PB",
+  "name": "Modern languages. Celtic languages",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PC",
+  "field": "LN",
+  "node": "LCC:PC",
+  "name": "Romanic languages",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PD",
+  "field": "LN",
+  "node": "LCC:PD",
+  "name": "Germanic languages. Scandinavian languages",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PE",
+  "field": "LN",
+  "node": "LCC:PE",
+  "name": "English language",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PF",
+  "field": "LN",
+  "node": "LCC:PF",
+  "name": "West Germanic languages",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PG",
+  "field": "LN",
+  "node": "LCC:PG",
+  "name": "Slavic languages. Baltic languages. Albanian language",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PH",
+  "field": "LN",
+  "node": "LCC:PH",
+  "name": "Uralic languages. Basque language",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PJ",
+  "field": "LN",
+  "node": "LCC:PJ",
+  "name": "Oriental languages and literatures",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PK",
+  "field": "LN",
+  "node": "LCC:PK",
+  "name": "Indo-Iranian languages and literatures",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PL",
+  "field": "LN",
+  "node": "LCC:PL",
+  "name": "Languages and literatures of Eastern Asia, Africa, Oceania",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "LN.TK.PM",
+  "field": "LN",
+  "node": "LCC:PM",
+  "name": "Hyperborean, Indian, and artificial languages",
+  "taxonomy_cell": "LN.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A language-family catalogue heading. Methods sit at P. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

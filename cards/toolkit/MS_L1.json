@@ -1,0 +1,622 @@
+[
+ {
+  "id": "MS.TK.3209",
+  "field": "MS",
+  "node": "ANZSRC:3209",
+  "name": "Neurosciences",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "relate activity in a network of excitable cells to behaviour",
+   "predict the electrical response of a cell"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict",
+    "infer"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hodgkin–Huxley model",
+    "does": "predicts the action potential from ion currents",
+    "hypotheses": [
+     "a uniform patch of membrane",
+     "ion channels act as independent gates",
+     "parameters fitted to the cell type"
+    ]
+   },
+   {
+    "name": "General linear model for functional imaging",
+    "does": "maps where a signal follows a task",
+    "hypotheses": [
+     "the measured signal responds linearly and consistently to neural activity",
+     "the assumed response shape fits the region"
+    ]
+   }
+  ],
+  "inputs": [
+   "voltage and current recordings",
+   "image series with task timing"
+  ],
+  "outputs": [
+   "predicted spikes",
+   "activation maps"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.4401",
+  "field": "MS",
+  "node": "ANZSRC:4401",
+  "name": "Anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how a group lives from inside it",
+   "compare ways of life across groups"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ],
+   "data": [
+    "data_poor"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Participant observation",
+    "does": "builds an account from long stays with a group",
+    "hypotheses": [
+     "prolonged immersion",
+     "the observer's effect and position are reported"
+    ]
+   },
+   {
+    "name": "Cross-cultural comparison",
+    "does": "tests a pattern across many societies",
+    "hypotheses": [
+     "societies sampled are independent, or shared descent and contact are controlled"
+    ]
+   }
+  ],
+  "inputs": [
+   "field notes",
+   "coded society records"
+  ],
+  "outputs": [
+   "ethnographic account",
+   "tested regularity"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.4403",
+  "field": "MS",
+  "node": "ANZSRC:4403",
+  "name": "Demography",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "summarise survival by age",
+   "project the size and age make-up of a population"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Life table",
+    "does": "turns age-specific death rates into survival and life expectancy",
+    "hypotheses": [
+     "a period table assumes today's rates hold through a lifetime"
+    ]
+   },
+   {
+    "name": "Cohort-component projection",
+    "does": "projects a population by age and sex",
+    "hypotheses": [
+     "stated assumptions for fertility, mortality and migration"
+    ]
+   },
+   {
+    "name": "Stable population theory",
+    "does": "gives the long-run age structure and growth rate",
+    "hypotheses": [
+     "age-specific rates stay constant",
+     "a closed population"
+    ]
+   }
+  ],
+  "inputs": [
+   "deaths, births and population by age"
+  ],
+  "outputs": [
+   "life expectancy",
+   "projection",
+   "stable age structure"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.4405",
+  "field": "MS",
+  "node": "ANZSRC:4405",
+  "name": "Gender studies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "examine outcomes at combinations of social categories"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectional analysis",
+    "does": "compares outcomes across combined categories, not one at a time",
+    "hypotheses": [
+     "the categories are recorded in the data",
+     "subgroups are large enough to compare"
+    ]
+   }
+  ],
+  "inputs": [
+   "records with category labels",
+   "texts"
+  ],
+  "outputs": [
+   "subgroup comparisons",
+   "interpretation"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.4409",
+  "field": "MS",
+  "node": "ANZSRC:4409",
+  "name": "Social work",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "judge whether support given to one person or family is working"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "compare"
+   ],
+   "data": [
+    "data_poor"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Single-case design",
+    "does": "tests an intervention on one case by repeated measurement",
+    "hypotheses": [
+     "a stable baseline is recorded first",
+     "the outcome is measured repeatedly in the same way"
+    ]
+   }
+  ],
+  "inputs": [
+   "repeated outcome measures"
+  ],
+  "outputs": [
+   "evidence of change for the case"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.4410",
+  "field": "MS",
+  "node": "ANZSRC:4410",
+  "name": "Sociology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "estimate what a large population thinks or does from a part of it",
+   "find who holds key positions in a web of ties"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer",
+    "explain"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Probability survey sampling",
+    "does": "estimates population values with known error",
+    "hypotheses": [
+     "every unit has a known non-zero chance of selection",
+     "non-response is small or adjusted for"
+    ]
+   },
+   {
+    "name": "Social network analysis",
+    "does": "measures position and grouping in a network",
+    "hypotheses": [
+     "the network boundary is specified",
+     "ties are measured reliably"
+    ]
+   },
+   {
+    "name": "Grounded theory",
+    "does": "builds categories from qualitative data",
+    "hypotheses": [
+     "sampling continues until new cases add no new categories"
+    ]
+   }
+  ],
+  "inputs": [
+   "sample responses",
+   "tie data",
+   "interviews"
+  ],
+  "outputs": [
+   "population estimates",
+   "centrality and clusters",
+   "category scheme"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.4499",
+  "field": "MS",
+  "node": "ANZSRC:4499",
+  "name": "Other human society",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.5201",
+  "field": "MS",
+  "node": "ANZSRC:5201",
+  "name": "Applied and developmental psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "track change in people over time",
+   "separate inherited from environmental sources of difference"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Longitudinal design",
+    "does": "measures the same people repeatedly",
+    "hypotheses": [
+     "the measure means the same thing at each age",
+     "drop-out is random or modelled"
+    ]
+   },
+   {
+    "name": "Classical twin design",
+    "does": "splits trait variance into genetic and environmental parts",
+    "hypotheses": [
+     "identical and fraternal twins share environments equally",
+     "no assortative mating",
+     "estimates apply to the population and environment studied"
+    ]
+   }
+  ],
+  "inputs": [
+   "repeated measures",
+   "twin-pair data"
+  ],
+  "outputs": [
+   "growth curves",
+   "variance components"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.5202",
+  "field": "MS",
+  "node": "ANZSRC:5202",
+  "name": "Biological psychology",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "predict how an association forms between a signal and an outcome"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Rescorla–Wagner model",
+    "does": "updates associative strength by prediction error",
+    "hypotheses": [
+     "learning is driven by the gap between expected and actual outcome",
+     "cues present together share one error term"
+    ]
+   }
+  ],
+  "inputs": [
+   "trial-by-trial cue and outcome records"
+  ],
+  "outputs": [
+   "predicted response strength"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.5203",
+  "field": "MS",
+  "node": "ANZSRC:5203",
+  "name": "Clinical and health psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "measure a state reliably by questionnaire",
+   "decide whether a person's change is more than measurement error"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cronbach's alpha",
+    "does": "estimates the internal consistency of a scale",
+    "hypotheses": [
+     "the items measure one dimension",
+     "items are roughly equally related to it"
+    ]
+   },
+   {
+    "name": "Reliable change index",
+    "does": "tests whether a score change exceeds measurement error",
+    "hypotheses": [
+     "the test-retest reliability of the scale is known"
+    ]
+   }
+  ],
+  "inputs": [
+   "item responses",
+   "scores before and after"
+  ],
+  "outputs": [
+   "reliability coefficient",
+   "change verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.5204",
+  "field": "MS",
+  "node": "ANZSRC:5204",
+  "name": "Cognitive and computational psychology",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "separate ability to detect from willingness to respond",
+   "explain speed and accuracy of fast choices"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise",
+    "probabilistic_model"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Signal detection theory",
+    "does": "separates sensitivity from response bias",
+    "hypotheses": [
+     "the sensitivity index assumes equal-variance Gaussian evidence"
+    ]
+   },
+   {
+    "name": "Drift-diffusion model",
+    "does": "explains choice and response time as noisy evidence accumulation to a bound",
+    "hypotheses": [
+     "two-choice decisions",
+     "fast single-stage decisions",
+     "drift is constant within a trial"
+    ]
+   }
+  ],
+  "inputs": [
+   "hit and false-alarm rates",
+   "response times and choices"
+  ],
+  "outputs": [
+   "sensitivity and bias",
+   "drift, bound and non-decision time"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.5205",
+  "field": "MS",
+  "node": "ANZSRC:5205",
+  "name": "Social and personality psychology",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "reduce many observed measures to a few underlying dimensions"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "classify"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "scale": [
+    "high_dimensional"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Factor analysis",
+    "does": "finds latent dimensions behind correlated items",
+    "hypotheses": [
+     "a linear common-factor model",
+     "an adequate sample",
+     "measurement invariance before groups are compared"
+    ]
+   }
+  ],
+  "inputs": [
+   "item responses"
+  ],
+  "outputs": [
+   "factor loadings and scores"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.5299",
+  "field": "MS",
+  "node": "ANZSRC:5299",
+  "name": "Other psychology",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

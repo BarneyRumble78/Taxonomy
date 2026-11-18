@@ -1,0 +1,250 @@
+[
+ {
+  "id": "DE.TK.3301",
+  "field": "DE",
+  "node": "ANZSRC:3301",
+  "name": "Architecture",
+  "taxonomy_cell": "DE.O.A2",
+  "solves": [
+   "predict how people move through a layout",
+   "estimate how much natural light reaches a room"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "structure": [
+    "graph_network",
+    "geometric_space"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Space syntax",
+    "does": "relates movement to how spaces connect",
+    "hypotheses": [
+     "the layout can be drawn as a network of spaces",
+     "the link to movement is empirical"
+    ]
+   },
+   {
+    "name": "Daylight factor",
+    "does": "gives indoor light as a share of outdoor light",
+    "hypotheses": [
+     "a standard overcast sky",
+     "a fixed geometry"
+    ]
+   }
+  ],
+  "inputs": [
+   "floor plans",
+   "window and room geometry"
+  ],
+  "outputs": [
+   "integration values",
+   "daylight levels"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.3302",
+  "field": "DE",
+  "node": "ANZSRC:3302",
+  "name": "Building",
+  "taxonomy_cell": "DE.O.A5",
+  "solves": [
+   "make a structure safe against the loads it will meet",
+   "estimate heat lost through an envelope"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify",
+    "estimate"
+   ],
+   "constraints": [
+    "inequality",
+    "physical_law",
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Limit state design",
+    "does": "checks strength and serviceability against factored loads",
+    "hypotheses": [
+     "load combinations and material values come from the governing code",
+     "the structure is within the code's scope"
+    ]
+   },
+   {
+    "name": "Steady-state heat loss (U-value)",
+    "does": "estimates heat flow through a wall or roof",
+    "hypotheses": [
+     "steady state",
+     "one-dimensional heat flow",
+     "heat storage in the fabric is ignored"
+    ]
+   },
+   {
+    "name": "Critical path method",
+    "does": "finds the longest chain of dependent tasks",
+    "hypotheses": [
+     "task durations and dependencies are known"
+    ]
+   }
+  ],
+  "inputs": [
+   "loads and materials",
+   "construction layers",
+   "task list"
+  ],
+  "outputs": [
+   "a compliant design",
+   "heat loss rate",
+   "programme"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.3303",
+  "field": "DE",
+  "node": "ANZSRC:3303",
+  "name": "Design",
+  "taxonomy_cell": "DE.O.A1",
+  "solves": [
+   "shape a product around the people who will use it"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ],
+   "goal_quality": [
+    "qualitative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Human-centred iterative design",
+    "does": "cycles through understanding users, prototyping and testing",
+    "hypotheses": [
+     "representative users can be reached"
+    ]
+   },
+   {
+    "name": "Heuristic evaluation",
+    "does": "finds usability problems by expert inspection",
+    "hypotheses": [
+     "several evaluators inspect independently",
+     "it finds problems but not how often they occur"
+    ]
+   }
+  ],
+  "inputs": [
+   "user needs",
+   "prototypes"
+  ],
+  "outputs": [
+   "revised design",
+   "list of problems"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.3304",
+  "field": "DE",
+  "node": "ANZSRC:3304",
+  "name": "Urban and regional planning",
+  "taxonomy_cell": "DE.O.A4",
+  "solves": [
+   "forecast travel on a network",
+   "find land suited to a use by combining mapped factors"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "classify",
+    "design"
+   ],
+   "structure": [
+    "field_spatial",
+    "graph_network"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Four-step travel demand model",
+    "does": "forecasts trips, their destinations, modes and routes",
+    "hypotheses": [
+     "travel behaviour stays as surveyed",
+     "the area is divided into zones",
+     "the model is calibrated to counts"
+    ]
+   },
+   {
+    "name": "Map overlay suitability analysis",
+    "does": "combines mapped criteria to rank sites",
+    "hypotheses": [
+     "the criteria can be put on a common scale",
+     "the weights are justified"
+    ]
+   }
+  ],
+  "inputs": [
+   "land use, surveys and networks",
+   "mapped criteria"
+  ],
+  "outputs": [
+   "link flows",
+   "suitability map"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "DE.TK.3399",
+  "field": "DE",
+  "node": "ANZSRC:3399",
+  "name": "Other built environment and design",
+  "taxonomy_cell": "DE.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

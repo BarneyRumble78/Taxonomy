@@ -1,0 +1,1093 @@
+[
+ {
+  "id": "PH.TK.780edcc1",
+  "field": "PH",
+  "node": "PhySH:780edcc1-705f-432b-9121-76105d540fe1",
+  "name": "General Physics",
+  "taxonomy_cell": "PH.O.A1",
+  "solves": [
+   "predict motion and fields from a small set of conservation laws",
+   "check a proposed relation between quantities before solving anything"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "domain_type": [
+    "continuous"
+   ],
+   "symmetry": [
+    "conserved_quantity"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Noether's theorem",
+    "does": "gives one conserved quantity for each continuous symmetry",
+    "hypotheses": [
+     "the system is derived from an action principle",
+     "the symmetry is continuous and leaves the action invariant up to a boundary term",
+     "the equations of motion hold"
+    ]
+   },
+   {
+    "name": "Dimensional analysis (Buckingham pi theorem)",
+    "does": "reduces a relation among n quantities to one among dimensionless groups",
+    "hypotheses": [
+     "the relation is dimensionally homogeneous",
+     "the list of relevant quantities is complete"
+    ]
+   }
+  ],
+  "inputs": [
+   "quantities and their units",
+   "symmetries of the system"
+  ],
+  "outputs": [
+   "conserved quantities",
+   "dimensionless groups"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.510fc218",
+  "field": "PH",
+  "node": "PhySH:510fc218-8774-4547-ab09-fc6cef0c9a03",
+  "name": "Quantum Information, Science & Technology",
+  "taxonomy_cell": "PH.O.A2",
+  "solves": [
+   "process or protect information held in states that cannot be copied",
+   "find a speed-up that depends on interference"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "construct"
+   ],
+   "structure": [
+    "algebraic"
+   ],
+   "linearity": [
+    "linear"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "No-cloning theorem",
+    "does": "rules out a device that copies an arbitrary unknown state",
+    "hypotheses": [
+     "the state is unknown and arbitrary",
+     "evolution is linear and unitary"
+    ]
+   },
+   {
+    "name": "Quantum error correction with a threshold",
+    "does": "allows arbitrarily long computation from imperfect parts",
+    "hypotheses": [
+     "the physical error rate is below a threshold",
+     "errors are local or weakly correlated",
+     "fresh ancilla qubits and parallel operations are available"
+    ]
+   },
+   {
+    "name": "Shor's algorithm",
+    "does": "factors integers in polynomial time",
+    "hypotheses": [
+     "a fault-tolerant quantum computer with enough logical qubits exists"
+    ]
+   }
+  ],
+  "inputs": [
+   "a state space and allowed operations",
+   "a noise model"
+  ],
+  "outputs": [
+   "a protocol or circuit",
+   "a bound on what is possible"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.e6f3f236",
+  "field": "PH",
+  "node": "PhySH:e6f3f236-70e5-473b-bcca-82da13857537",
+  "name": "Energy Science & Technology",
+  "taxonomy_cell": "PH.O.A5",
+  "solves": [
+   "bound the efficiency of converting one form of energy to another"
+  ],
+  "signature": {
+   "task": [
+    "optimise",
+    "estimate"
+   ],
+   "constraints": [
+    "physical_law"
+   ],
+   "goal_quality": [
+    "bound"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Carnot limit",
+    "does": "bounds the efficiency of a heat engine by the two reservoir temperatures",
+    "hypotheses": [
+     "the engine works in a cycle between two reservoirs at fixed temperatures"
+    ]
+   },
+   {
+    "name": "Shockley–Queisser limit",
+    "does": "bounds the efficiency of a solar cell",
+    "hypotheses": [
+     "a single junction",
+     "one electron-hole pair per absorbed photon",
+     "radiative recombination only",
+     "unconcentrated sunlight"
+    ]
+   },
+   {
+    "name": "Betz limit",
+    "does": "bounds the power a turbine can take from a free stream",
+    "hypotheses": [
+     "an ideal actuator disc",
+     "steady incompressible flow",
+     "no wake rotation"
+    ]
+   }
+  ],
+  "inputs": [
+   "source and sink conditions",
+   "device type"
+  ],
+  "outputs": [
+   "an upper bound on efficiency"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.c3ec1cb0",
+  "field": "PH",
+  "node": "PhySH:c3ec1cb0-fc2e-4669-a886-a82178c6ceda",
+  "name": "Accelerators & Beams",
+  "taxonomy_cell": "PH.O.A1",
+  "solves": [
+   "keep a bunch of moving particles confined and focused over a long path"
+  ],
+  "signature": {
+   "task": [
+    "control",
+    "design"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "symmetry": [
+    "conserved_quantity"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Liouville's theorem",
+    "does": "states that phase-space density is conserved, so beam emittance is preserved",
+    "hypotheses": [
+     "the motion is Hamiltonian",
+     "no dissipation, scattering or radiation loss"
+    ]
+   },
+   {
+    "name": "Alternating-gradient (strong) focusing",
+    "does": "keeps transverse motion stable with alternating lenses",
+    "hypotheses": [
+     "linear focusing elements",
+     "the one-period transfer matrix has trace of magnitude below two"
+    ]
+   }
+  ],
+  "inputs": [
+   "beam distribution",
+   "lattice of focusing elements"
+  ],
+  "outputs": [
+   "stability condition",
+   "beam size along the path"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.e4211828",
+  "field": "PH",
+  "node": "PhySH:e4211828-5d99-4bc4-b986-eb2bbbc8b248",
+  "name": "Interdisciplinary Physics",
+  "taxonomy_cell": "PH.O.A5",
+  "solves": [
+   "carry models built for matter over to systems outside physics"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "scope": [
+    "multiscale"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A crossing-point class. Tools sit in the classes it borrows from. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.6f025065",
+  "field": "PH",
+  "node": "PhySH:6f025065-4b96-4156-b146-2c285d0994c4",
+  "name": "Nonlinear Dynamics",
+  "taxonomy_cell": "PH.O.A5",
+  "solves": [
+   "decide whether a state is stable and what long-run behaviour follows",
+   "measure sensitivity to initial conditions"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "classify"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ],
+   "domain_type": [
+    "continuous"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linear stability analysis (Hartman–Grobman theorem)",
+    "does": "reads local behaviour near a fixed point from the linearised system",
+    "hypotheses": [
+     "the vector field is smooth",
+     "the fixed point is hyperbolic"
+    ]
+   },
+   {
+    "name": "Poincaré–Bendixson theorem",
+    "does": "limits long-run behaviour to fixed points or closed orbits, so chaos is excluded",
+    "hypotheses": [
+     "a continuous autonomous flow in the plane",
+     "the trajectory stays in a bounded region with finitely many fixed points"
+    ]
+   },
+   {
+    "name": "Lyapunov exponents",
+    "does": "measure the average rate at which nearby trajectories separate",
+    "hypotheses": [
+     "an ergodic invariant measure exists",
+     "the trajectory is long enough for the average to converge"
+    ]
+   }
+  ],
+  "inputs": [
+   "equations of motion or a long time series"
+  ],
+  "outputs": [
+   "stability verdict",
+   "type of attractor",
+   "predictability horizon"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.88db3168",
+  "field": "PH",
+  "node": "PhySH:88db3168-1ae3-4ee7-a7f8-b83018cc5f17",
+  "name": "Physics Education Research",
+  "taxonomy_cell": "PH.O.A1",
+  "solves": [
+   "measure whether teaching changed understanding"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Concept inventory with normalised gain",
+    "does": "compares conceptual understanding before and after teaching",
+    "hypotheses": [
+     "the instrument is validated for the population",
+     "the same instrument is given before and after",
+     "groups compared are similar at the start"
+    ]
+   }
+  ],
+  "inputs": [
+   "test scores before and after"
+  ],
+  "outputs": [
+   "a gain measure per group"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.0f4313da",
+  "field": "PH",
+  "node": "PhySH:0f4313da-ec73-46f5-b24f-521a1fcb6db7",
+  "name": "Gravitation, Cosmology & Astrophysics",
+  "taxonomy_cell": "PH.O.A3",
+  "solves": [
+   "relate the content of a region to its geometry and expansion",
+   "measure distances that cannot be reached"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "infer"
+   ],
+   "structure": [
+    "manifold"
+   ],
+   "linearity": [
+    "nonlinear"
+   ],
+   "scale": [
+    "large"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Friedmann equations",
+    "does": "give the expansion history from the energy content",
+    "hypotheses": [
+     "general relativity holds",
+     "the universe is homogeneous and isotropic on large scales"
+    ]
+   },
+   {
+    "name": "Birkhoff's theorem",
+    "does": "fixes the exterior field of a spherical body as the Schwarzschild solution",
+    "hypotheses": [
+     "spherical symmetry",
+     "vacuum outside the body"
+    ]
+   },
+   {
+    "name": "Standard candles",
+    "does": "give distance from apparent brightness",
+    "hypotheses": [
+     "the intrinsic luminosity is calibrated",
+     "absorption along the line of sight is corrected"
+    ]
+   }
+  ],
+  "inputs": [
+   "energy content",
+   "brightness and redshift data"
+  ],
+  "outputs": [
+   "expansion history",
+   "distances",
+   "exterior geometry"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.0213a5a0",
+  "field": "PH",
+  "node": "PhySH:0213a5a0-0742-43f3-804b-3ccea08a13c0",
+  "name": "Nuclear Physics",
+  "taxonomy_cell": "PH.O.A2",
+  "solves": [
+   "predict which bound states of many strongly interacting particles are stable",
+   "date or count by spontaneous decay"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Nuclear shell model",
+    "does": "explains magic numbers and ground-state spins",
+    "hypotheses": [
+     "nucleons move independently in a mean field",
+     "strong spin-orbit coupling is included"
+    ]
+   },
+   {
+    "name": "Semi-empirical mass formula",
+    "does": "estimates binding energy from mass and charge number",
+    "hypotheses": [
+     "the nucleus behaves as a charged liquid drop",
+     "medium or heavy nuclei"
+    ]
+   },
+   {
+    "name": "Radioactive decay law",
+    "does": "gives exponential decline of a population",
+    "hypotheses": [
+     "each nucleus has a constant decay probability per unit time",
+     "nuclei decay independently"
+    ]
+   }
+  ],
+  "inputs": [
+   "proton and neutron numbers",
+   "count rates"
+  ],
+  "outputs": [
+   "binding energy",
+   "half-life",
+   "age"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.9f5c878e",
+  "field": "PH",
+  "node": "PhySH:9f5c878e-b7b7-4030-bdb9-21a24ad97422",
+  "name": "Particles & Fields",
+  "taxonomy_cell": "PH.O.A2",
+  "solves": [
+   "compute outcome rates for interactions of elementary fields",
+   "relate behaviour at one scale to another"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "function_space"
+   ],
+   "symmetry": [
+    "gauge_or_local"
+   ],
+   "scope": [
+    "multiscale"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Perturbation theory with Feynman diagrams",
+    "does": "expands amplitudes in powers of a coupling",
+    "hypotheses": [
+     "the coupling is small at the energy concerned",
+     "the theory is renormalisable or treated as an effective theory"
+    ]
+   },
+   {
+    "name": "Renormalisation group",
+    "does": "tracks how couplings change with scale",
+    "hypotheses": [
+     "a separation of scales exists"
+    ]
+   },
+   {
+    "name": "Lattice gauge theory",
+    "does": "computes strongly coupled quantities numerically",
+    "hypotheses": [
+     "Euclidean time formulation",
+     "results are extrapolated to zero lattice spacing and infinite volume"
+    ]
+   }
+  ],
+  "inputs": [
+   "a Lagrangian and its symmetries"
+  ],
+  "outputs": [
+   "cross-sections",
+   "running couplings",
+   "bound-state masses"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.5375b253",
+  "field": "PH",
+  "node": "PhySH:5375b253-b0a1-4ece-bb50-4c34ea7218bd",
+  "name": "Plasma Physics",
+  "taxonomy_cell": "PH.O.A5",
+  "solves": [
+   "predict collective motion of charged particles and fields",
+   "decide whether a hot gas yields net energy"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "control"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "linearity": [
+    "nonlinear"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Magnetohydrodynamics",
+    "does": "treats the plasma as one conducting fluid",
+    "hypotheses": [
+     "scales are large against the gyroradius and Debye length",
+     "the plasma is quasi-neutral",
+     "frequencies are low against the cyclotron frequency"
+    ]
+   },
+   {
+    "name": "Vlasov equation",
+    "does": "evolves the particle distribution without collisions",
+    "hypotheses": [
+     "collisions are negligible on the timescale",
+     "many particles sit within a Debye sphere"
+    ]
+   },
+   {
+    "name": "Lawson criterion",
+    "does": "gives the density, temperature and confinement time needed for net fusion power",
+    "hypotheses": [
+     "a thermal plasma",
+     "steady-state power balance"
+    ]
+   }
+  ],
+  "inputs": [
+   "density, temperature and field profiles"
+  ],
+  "outputs": [
+   "stability verdict",
+   "confinement requirement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.c9174048",
+  "field": "PH",
+  "node": "PhySH:c9174048-b368-4b5b-b065-20094708fa4d",
+  "name": "Networks",
+  "taxonomy_cell": "PH.O.A5",
+  "solves": [
+   "predict when local links produce global connection",
+   "predict spread over a web of contacts"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Percolation theory",
+    "does": "finds the threshold at which a giant connected component appears",
+    "hypotheses": [
+     "links or nodes are occupied at random",
+     "the network is large"
+    ]
+   },
+   {
+    "name": "Generating-function method for random graphs",
+    "does": "computes component sizes from the degree distribution",
+    "hypotheses": [
+     "the graph is random given its degree distribution",
+     "the graph is locally tree-like"
+    ]
+   }
+  ],
+  "inputs": [
+   "degree distribution or the network itself"
+  ],
+  "outputs": [
+   "connection threshold",
+   "component sizes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.8ab3d2b7",
+  "field": "PH",
+  "node": "PhySH:8ab3d2b7-b50b-460e-b086-8990cfcbd350",
+  "name": "Atomic, Molecular & Optical",
+  "taxonomy_cell": "PH.O.A2",
+  "solves": [
+   "control single quantum systems with light",
+   "identify matter from the light it absorbs or emits"
+  ],
+  "signature": {
+   "task": [
+    "control",
+    "infer"
+   ],
+   "domain_type": [
+    "discrete"
+   ],
+   "linearity": [
+    "linear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Two-level model with the rotating-wave approximation",
+    "does": "predicts coherent oscillation of a driven transition",
+    "hypotheses": [
+     "the drive is near resonance",
+     "the coupling is weak against the transition frequency",
+     "other levels are far detuned"
+    ]
+   },
+   {
+    "name": "Doppler laser cooling",
+    "does": "slows atoms by repeated photon scattering",
+    "hypotheses": [
+     "a closed cycling transition exists",
+     "light is tuned below resonance"
+    ]
+   },
+   {
+    "name": "Electric-dipole selection rules",
+    "does": "state which transitions are allowed",
+    "hypotheses": [
+     "the wavelength is large against the atom",
+     "the electric-dipole approximation holds"
+    ]
+   }
+  ],
+  "inputs": [
+   "level structure",
+   "light frequency and intensity"
+  ],
+  "outputs": [
+   "transition rates",
+   "achievable temperature",
+   "spectral lines"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.0e9db8ef",
+  "field": "PH",
+  "node": "PhySH:0e9db8ef-5aa8-40bc-a0c8-9d93f5fcc2eb",
+  "name": "Physics of Living Systems",
+  "taxonomy_cell": "PH.O.A5",
+  "solves": [
+   "explain pattern and motion in active, noisy, small-scale systems"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Turing reaction-diffusion instability",
+    "does": "produces spatial pattern from a uniform state",
+    "hypotheses": [
+     "at least two interacting species",
+     "the uniform state is stable without diffusion",
+     "the species diffuse at sufficiently different rates"
+    ]
+   },
+   {
+    "name": "Overdamped Langevin dynamics",
+    "does": "models motion where friction dominates inertia",
+    "hypotheses": [
+     "low Reynolds number",
+     "the surrounding fluid acts as a thermal bath"
+    ]
+   }
+  ],
+  "inputs": [
+   "reaction rates and diffusivities",
+   "forces and friction"
+  ],
+  "outputs": [
+   "pattern wavelength",
+   "distribution of positions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.512fd433",
+  "field": "PH",
+  "node": "PhySH:512fd433-7b6d-4535-bb60-78f3bf431bc3",
+  "name": "Fluid Dynamics",
+  "taxonomy_cell": "PH.O.A1",
+  "solves": [
+   "predict the flow of a continuous medium",
+   "transfer a result from a model to full scale"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "domain_type": [
+    "continuous"
+   ],
+   "linearity": [
+    "nonlinear"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Navier–Stokes equations",
+    "does": "govern momentum balance in a viscous fluid",
+    "hypotheses": [
+     "the continuum approximation holds",
+     "the fluid is Newtonian"
+    ]
+   },
+   {
+    "name": "Dynamic similarity",
+    "does": "lets a scale model predict the full-size flow",
+    "hypotheses": [
+     "geometric similarity",
+     "the governing dimensionless numbers match"
+    ]
+   },
+   {
+    "name": "Bernoulli's equation",
+    "does": "relates pressure, speed and height",
+    "hypotheses": [
+     "steady flow",
+     "negligible viscosity",
+     "incompressible fluid",
+     "applied along a streamline"
+    ]
+   }
+  ],
+  "inputs": [
+   "geometry and boundary conditions",
+   "fluid properties"
+  ],
+  "outputs": [
+   "velocity and pressure fields",
+   "forces on bodies"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.2bd35371",
+  "field": "PH",
+  "node": "PhySH:2bd35371-7fda-477a-8e1a-c346c797a232",
+  "name": "Polymers & Soft Matter",
+  "taxonomy_cell": "PH.O.A5",
+  "solves": [
+   "predict the size and flow of long flexible chains and suspended particles"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "scope": [
+    "multiscale"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "symmetry": [
+    "scaling"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Flory scaling for chain size",
+    "does": "gives chain size as a power of chain length",
+    "hypotheses": [
+     "long flexible chains",
+     "solvent quality is stated (good or theta)"
+    ]
+   },
+   {
+    "name": "Reptation model",
+    "does": "predicts relaxation time and viscosity of entangled melts",
+    "hypotheses": [
+     "long linear chains",
+     "chains are well above the entanglement length"
+    ]
+   },
+   {
+    "name": "DLVO theory",
+    "does": "predicts whether a colloid stays dispersed",
+    "hypotheses": [
+     "dilute suspension",
+     "mean-field electrostatics plus van der Waals attraction only"
+    ]
+   }
+  ],
+  "inputs": [
+   "chain length or particle size",
+   "solvent and salt conditions"
+  ],
+  "outputs": [
+   "size scaling",
+   "viscosity",
+   "stability verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.a48f173e",
+  "field": "PH",
+  "node": "PhySH:a48f173e-6459-4642-a711-a6e731807625",
+  "name": "Condensed Matter, Materials & Applied Physics",
+  "taxonomy_cell": "PH.O.A4",
+  "solves": [
+   "predict the properties of many interacting particles in an ordered solid"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "structure": [
+    "grid_lattice"
+   ],
+   "symmetry": [
+    "translation"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bloch's theorem",
+    "does": "gives electron states as band structure",
+    "hypotheses": [
+     "a periodic potential",
+     "electrons treated as independent"
+    ]
+   },
+   {
+    "name": "Density functional theory",
+    "does": "computes ground-state properties from the electron density",
+    "hypotheses": [
+     "ground state only",
+     "the exchange-correlation functional is approximate"
+    ]
+   },
+   {
+    "name": "BCS theory",
+    "does": "explains conventional superconductivity by paired electrons",
+    "hypotheses": [
+     "a weak attractive interaction near the Fermi surface",
+     "phonon-mediated pairing"
+    ]
+   }
+  ],
+  "inputs": [
+   "crystal structure and composition"
+  ],
+  "outputs": [
+   "band structure",
+   "ground-state energy",
+   "transition temperature"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "PH.TK.419d860e",
+  "field": "PH",
+  "node": "PhySH:419d860e-ce5c-42f1-b6ad-4dee9f4fbf60",
+  "name": "Statistical Physics & Thermodynamics",
+  "taxonomy_cell": "PH.O.A4",
+  "solves": [
+   "get bulk behaviour from the statistics of many small parts",
+   "predict behaviour near a continuous change of phase"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "probability_space"
+   ],
+   "scale": [
+    "large"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "symmetry": [
+    "scaling"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Boltzmann distribution and partition function",
+    "does": "give all equilibrium averages",
+    "hypotheses": [
+     "equilibrium with a heat bath at fixed temperature"
+    ]
+   },
+   {
+    "name": "Fluctuation-dissipation theorem",
+    "does": "links response to a small push with spontaneous fluctuations",
+    "hypotheses": [
+     "linear response",
+     "the system starts in thermal equilibrium"
+    ]
+   },
+   {
+    "name": "Universality near critical points",
+    "does": "shows that critical exponents depend only on dimension and symmetry",
+    "hypotheses": [
+     "a continuous phase transition",
+     "short-range interactions"
+    ]
+   },
+   {
+    "name": "Metropolis Monte Carlo",
+    "does": "samples a distribution known up to a constant",
+    "hypotheses": [
+     "the chain satisfies detailed balance",
+     "the chain is ergodic",
+     "the run is long against the correlation time"
+    ]
+   }
+  ],
+  "inputs": [
+   "energy function or Hamiltonian",
+   "temperature"
+  ],
+  "outputs": [
+   "averages",
+   "response functions",
+   "critical exponents"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

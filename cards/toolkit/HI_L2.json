@@ -1,0 +1,2020 @@
+[
+ {
+  "id": "HI.TK.AM10-100",
+  "field": "HI",
+  "node": "LCC:AM10-100",
+  "name": "By country",
+  "taxonomy_cell": "HI.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.AM111-160",
+  "field": "HI",
+  "node": "LCC:AM111-160",
+  "name": "Museology. Museum methods, technique, etc.",
+  "taxonomy_cell": "HI.O.A5",
+  "solves": [
+   "record objects so they can be found and their history known"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Collections documentation with accession records",
+    "does": "gives each object a number, description and history of ownership",
+    "hypotheses": [
+     "every object is recorded on entry",
+     "records are kept with the object's number"
+    ]
+   },
+   {
+    "name": "Provenance research",
+    "does": "rebuilds the chain of custody",
+    "hypotheses": [
+     "ownership records survive and are authentic"
+    ]
+   }
+  ],
+  "inputs": [
+   "objects",
+   "ownership records"
+  ],
+  "outputs": [
+   "catalogue",
+   "chain of custody"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.AZ191-193",
+  "field": "HI",
+  "node": "LCC:AZ191-193",
+  "name": "Evaluation",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.AZ200-361",
+  "field": "HI",
+  "node": "LCC:AZ200-361",
+  "name": "History",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.AZ501-908",
+  "field": "HI",
+  "node": "LCC:AZ501-908",
+  "name": "By region or country",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.C1-51",
+  "field": "HI",
+  "node": "LCC:C1-51",
+  "name": "Auxiliary Sciences of History (General)",
+  "taxonomy_cell": "HI.O.A1",
+  "solves": [
+   "decide whether a record is what it claims to be"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Source criticism",
+    "does": "tests origin, date, authorship and reliability",
+    "hypotheses": [
+     "the record's origin can be investigated",
+     "independent records exist to compare"
+    ]
+   },
+   {
+    "name": "Diplomatics",
+    "does": "tests a document's authenticity from its form",
+    "hypotheses": [
+     "dated authentic documents of the same kind exist"
+    ]
+   },
+   {
+    "name": "Palaeographic dating",
+    "does": "dates a manuscript from its handwriting",
+    "hypotheses": [
+     "dated examples of the same script and region exist"
+    ]
+   }
+  ],
+  "inputs": [
+   "the record",
+   "comparable records"
+  ],
+  "outputs": [
+   "judgement of authenticity",
+   "date range"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.CB3-482",
+  "field": "HI",
+  "node": "LCC:CB3-482",
+  "name": "History of Civilization",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "compare how large societies developed"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "explain"
+   ],
+   "goal_quality": [
+    "qualitative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Comparative history",
+    "does": "explains by setting cases side by side",
+    "hypotheses": [
+     "cases are comparable on stated dimensions"
+    ]
+   }
+  ],
+  "inputs": [
+   "case histories"
+  ],
+  "outputs": [
+   "argued similarities and differences"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.CC1-960",
+  "field": "HI",
+  "node": "LCC:CC1-960",
+  "name": "Archaeology",
+  "taxonomy_cell": "HI.O.A1",
+  "solves": [
+   "order and date material remains"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Stratigraphy",
+    "does": "orders deposits by layer",
+    "hypotheses": [
+     "the deposits are undisturbed"
+    ]
+   },
+   {
+    "name": "Seriation",
+    "does": "orders assemblages by changing styles",
+    "hypotheses": [
+     "styles rise and fall gradually",
+     "one tradition",
+     "similar time spans"
+    ]
+   },
+   {
+    "name": "Radiocarbon dating",
+    "does": "dates organic remains",
+    "hypotheses": [
+     "closed system since death",
+     "calibration applied",
+     "within about 50,000 years"
+    ]
+   },
+   {
+    "name": "Harris matrix",
+    "does": "records the sequence of all contexts on a site as a diagram",
+    "hypotheses": [
+     "each context's physical relations to its neighbours were recorded during excavation"
+    ]
+   }
+  ],
+  "inputs": [
+   "excavation records",
+   "samples"
+  ],
+  "outputs": [
+   "sequence",
+   "calibrated dates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.CE1-97",
+  "field": "HI",
+  "node": "LCC:CE1-97",
+  "name": "Technical Chronology. Calendar",
+  "taxonomy_cell": "HI.O.A2",
+  "solves": [
+   "convert and fix dates"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Calendar conversion",
+    "does": "translates a date between calendars",
+    "hypotheses": [
+     "the rules and starting point of each calendar are known",
+     "the local date of any reform is known"
+    ]
+   }
+  ],
+  "inputs": [
+   "dated statements"
+  ],
+  "outputs": [
+   "equivalent dates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.CJ1-6661",
+  "field": "HI",
+  "node": "LCC:CJ1-6661",
+  "name": "Numismatics",
+  "taxonomy_cell": "HI.O.A1",
+  "solves": [
+   "order coin issues and date a deposit"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "classify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Die-link study",
+    "does": "orders issues by shared dies",
+    "hypotheses": [
+     "hand-cut dies",
+     "a large enough sample"
+    ]
+   },
+   {
+    "name": "Hoard dating",
+    "does": "gives the earliest possible burial date from the latest coin",
+    "hypotheses": [
+     "the hoard is one closed deposit"
+    ]
+   }
+  ],
+  "inputs": [
+   "coins",
+   "find records"
+  ],
+  "outputs": [
+   "issue sequence",
+   "earliest burial date"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.CN1-1355",
+  "field": "HI",
+  "node": "LCC:CN1-1355",
+  "name": "Inscriptions. Epigraphy",
+  "taxonomy_cell": "HI.O.A1",
+  "solves": [
+   "date and complete a damaged inscription"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "construct"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dating by letter forms",
+    "does": "dates an inscription from its lettering",
+    "hypotheses": [
+     "dated inscriptions from the same region exist"
+    ]
+   },
+   {
+    "name": "Restoration by formula",
+    "does": "fills gaps from standard wording",
+    "hypotheses": [
+     "the inscription belongs to a known formulaic type"
+    ]
+   }
+  ],
+  "inputs": [
+   "the inscription"
+  ],
+  "outputs": [
+   "date range",
+   "restored text"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.CR1-6305",
+  "field": "HI",
+  "node": "LCC:CR1-6305",
+  "name": "Heraldry",
+  "taxonomy_cell": "HI.O.A5",
+  "solves": [
+   "describe a coat of arms exactly"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ],
+   "domain_type": [
+    "symbolic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Blazon",
+    "does": "describes arms in a fixed technical language",
+    "hypotheses": [
+     "the arms follow a heraldic tradition"
+    ]
+   }
+  ],
+  "inputs": [
+   "image of the arms"
+  ],
+  "outputs": [
+   "formal description"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.CS1-3090",
+  "field": "HI",
+  "node": "LCC:CS1-3090",
+  "name": "Genealogy",
+  "taxonomy_cell": "HI.O.A1",
+  "solves": [
+   "prove a line of descent"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "infer"
+   ],
+   "structure": [
+    "hierarchy_tree"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Genealogical Proof Standard",
+    "does": "sets conditions for a proved conclusion",
+    "hypotheses": [
+     "a reasonably exhaustive search",
+     "conflicts resolved",
+     "reasoning written down"
+    ]
+   }
+  ],
+  "inputs": [
+   "vital records"
+  ],
+  "outputs": [
+   "proved or unproved link"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.CT21-9999",
+  "field": "HI",
+  "node": "LCC:CT21-9999",
+  "name": "Biography",
+  "taxonomy_cell": "HI.O.A1",
+  "solves": [
+   "learn about a group from the lives of its members"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Prosopography",
+    "does": "studies a group through many careers",
+    "hypotheses": [
+     "the group is defined",
+     "comparable records exist for many members"
+    ]
+   }
+  ],
+  "inputs": [
+   "records of individuals"
+  ],
+  "outputs": [
+   "patterns across the group"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.D1-2009",
+  "field": "HI",
+  "node": "LCC:D1-2009",
+  "name": "History (General)",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "establish what happened from surviving accounts"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "explain",
+    "verify"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "data": [
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Triangulation of independent records",
+    "does": "accepts a fact when separate records agree",
+    "hypotheses": [
+     "the records do not derive from one another"
+    ]
+   },
+   {
+    "name": "Source criticism",
+    "does": "tests each record before use",
+    "hypotheses": [
+     "the record's origin can be investigated"
+    ]
+   }
+  ],
+  "inputs": [
+   "surviving records"
+  ],
+  "outputs": [
+   "account with evidence and gaps stated"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DA1-995",
+  "field": "HI",
+  "node": "LCC:DA1-995",
+  "name": "History of Great Britain",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DA900-908.7",
+  "field": "HI",
+  "node": "LCC:DA900-908.7",
+  "name": "General",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DA909-965",
+  "field": "HI",
+  "node": "LCC:DA909-965",
+  "name": "History",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DA969-988",
+  "field": "HI",
+  "node": "LCC:DA969-988",
+  "name": "Description and travel",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DA990-995",
+  "field": "HI",
+  "node": "LCC:DA990-995",
+  "name": "Local history and description",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DAW1001-1051",
+  "field": "HI",
+  "node": "LCC:DAW1001-1051",
+  "name": "History of Central Europe",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DB1-3150",
+  "field": "HI",
+  "node": "LCC:DB1-3150",
+  "name": "History of Austria. Liechtenstein. Hungary. Czechoslovakia",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DB2300-2650",
+  "field": "HI",
+  "node": "LCC:DB2300-2650",
+  "name": "Local history and description of Czech lands",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DB2700-3150",
+  "field": "HI",
+  "node": "LCC:DB2700-3150",
+  "name": "Slovakia",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DC1-947",
+  "field": "HI",
+  "node": "LCC:DC1-947",
+  "name": "History of France",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DD1-21",
+  "field": "HI",
+  "node": "LCC:DD1-21",
+  "name": "General",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DD21.5-43",
+  "field": "HI",
+  "node": "LCC:DD21.5-43",
+  "name": "Description and travel",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DD51-78",
+  "field": "HI",
+  "node": "LCC:DD51-78",
+  "name": "Antiquities. Social life and customs. Ethnography",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DD84-257.4",
+  "field": "HI",
+  "node": "LCC:DD84-257.4",
+  "name": "History",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DD258-262",
+  "field": "HI",
+  "node": "LCC:DD258-262",
+  "name": "West Germany",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DD280-289.5",
+  "field": "HI",
+  "node": "LCC:DD280-289.5",
+  "name": "East Germany",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DD301-454",
+  "field": "HI",
+  "node": "LCC:DD301-454",
+  "name": "Prussia",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DD701-901",
+  "field": "HI",
+  "node": "LCC:DD701-901",
+  "name": "Local history and description",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DE1-100",
+  "field": "HI",
+  "node": "LCC:DE1-100",
+  "name": "History of the Greco-Roman world",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DF10-951",
+  "field": "HI",
+  "node": "LCC:DF10-951",
+  "name": "History of Greece",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DG11-999",
+  "field": "HI",
+  "node": "LCC:DG11-999",
+  "name": "History of Italy",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DG600-684.72",
+  "field": "HI",
+  "node": "LCC:DG600-684.72",
+  "name": "Northern Italy",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DG691-817.3",
+  "field": "HI",
+  "node": "LCC:DG691-817.3",
+  "name": "Central Italy",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DG819-875",
+  "field": "HI",
+  "node": "LCC:DG819-875",
+  "name": "Southern Italy",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DG975",
+  "field": "HI",
+  "node": "LCC:DG975",
+  "name": "Other cities (non-metropolitan), provinces, etc., A-Z",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DG987-999",
+  "field": "HI",
+  "node": "LCC:DG987-999",
+  "name": "Malta. Maltese Islands",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DH1-925",
+  "field": "HI",
+  "node": "LCC:DH1-925",
+  "name": "History of Low Countries. Benelux Countries",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DJ1-30",
+  "field": "HI",
+  "node": "LCC:DJ1-30",
+  "name": "General",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DJ33-41",
+  "field": "HI",
+  "node": "LCC:DJ33-41",
+  "name": "Description and travel",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DJ51-92",
+  "field": "HI",
+  "node": "LCC:DJ51-92",
+  "name": "Antiquities. Social life and customs. Ethnography",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DJ95-292",
+  "field": "HI",
+  "node": "LCC:DJ95-292",
+  "name": "History",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DJ401-411",
+  "field": "HI",
+  "node": "LCC:DJ401-411",
+  "name": "Local history and description",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DJK1-77",
+  "field": "HI",
+  "node": "LCC:DJK1-77",
+  "name": "History of Eastern Europe (General)",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DK1-949.5",
+  "field": "HI",
+  "node": "LCC:DK1-949.5",
+  "name": "History of Russia. Soviet Union. Former Soviet Republics",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DK4010-4800",
+  "field": "HI",
+  "node": "LCC:DK4010-4800",
+  "name": "History of Poland",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DK4123-4452",
+  "field": "HI",
+  "node": "LCC:DK4123-4452",
+  "name": "History",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DK4600-4800",
+  "field": "HI",
+  "node": "LCC:DK4600-4800",
+  "name": "Local history and description",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DL1-1180",
+  "field": "HI",
+  "node": "LCC:DL1-1180",
+  "name": "History of Northern Europe. Scandinavia",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DP1-402",
+  "field": "HI",
+  "node": "LCC:DP1-402",
+  "name": "History of Spain",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DP702-802",
+  "field": "HI",
+  "node": "LCC:DP702-802",
+  "name": "Local history and description",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DQ1-851",
+  "field": "HI",
+  "node": "LCC:DQ1-851",
+  "name": "History of Switzerland",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DR1-2285",
+  "field": "HI",
+  "node": "LCC:DR1-2285",
+  "name": "History of Balkan Peninsula",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DS1-937",
+  "field": "HI",
+  "node": "LCC:DS1-937",
+  "name": "History of Asia",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT1-3415",
+  "field": "HI",
+  "node": "LCC:DT1-3415",
+  "name": "History of Africa",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT1701-2405",
+  "field": "HI",
+  "node": "LCC:DT1701-2405",
+  "name": "South Africa",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT2421-2525",
+  "field": "HI",
+  "node": "LCC:DT2421-2525",
+  "name": "Botswana. Bechuanaland",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT2541-2686",
+  "field": "HI",
+  "node": "LCC:DT2541-2686",
+  "name": "Lesotho. Basutoland",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT2701-2825",
+  "field": "HI",
+  "node": "LCC:DT2701-2825",
+  "name": "Swaziland",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT2831-2864",
+  "field": "HI",
+  "node": "LCC:DT2831-2864",
+  "name": "British Central Africa. Federation of Rhodesia and Nyasaland",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT2871-3025",
+  "field": "HI",
+  "node": "LCC:DT2871-3025",
+  "name": "Zimbabwe. Southern Rhodesia",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT3031-3145",
+  "field": "HI",
+  "node": "LCC:DT3031-3145",
+  "name": "Zambia. Northern Rhodesia",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT3161-3257",
+  "field": "HI",
+  "node": "LCC:DT3161-3257",
+  "name": "Malawi. Nyasaland",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DT3291-3415",
+  "field": "HI",
+  "node": "LCC:DT3291-3415",
+  "name": "Mozambique",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DU1-950",
+  "field": "HI",
+  "node": "LCC:DU1-950",
+  "name": "History of Oceania (South Seas)",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.DX101-301",
+  "field": "HI",
+  "node": "LCC:DX101-301",
+  "name": "History of Gypsies",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.E11-143",
+  "field": "HI",
+  "node": "LCC:E11-143",
+  "name": "America",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.E151-889",
+  "field": "HI",
+  "node": "LCC:E151-889",
+  "name": "United States",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.E441-453",
+  "field": "HI",
+  "node": "LCC:E441-453",
+  "name": "Slavery in the United States. Antislavery",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.E456-655",
+  "field": "HI",
+  "node": "LCC:E456-655",
+  "name": "Civil War period, 1861-1865",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.E660-738",
+  "field": "HI",
+  "node": "LCC:E660-738",
+  "name": "Late nineteenth century, 1865-1900",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.E895-904",
+  "field": "HI",
+  "node": "LCC:E895-904",
+  "name": "Twenty-first century",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "HI.TK.F1-975",
+  "field": "HI",
+  "node": "LCC:F1-975",
+  "name": "United States local history",
+  "taxonomy_cell": "HI.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A regional or period catalogue heading. Methods sit at C, CC and D in level 1. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

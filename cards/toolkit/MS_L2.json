@@ -1,0 +1,4181 @@
+[
+ {
+  "id": "MS.TK.320901",
+  "field": "MS",
+  "node": "ANZSRC:320901",
+  "name": "Autonomic nervous system",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "regulation of involuntary physiological functions",
+   "homeostatic response to stressors"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Heart rate variability analysis",
+    "does": "Estimates autonomic modulation from beat-to-beat interval variation",
+    "hypotheses": [
+     "sinus beats only (ectopics removed)",
+     "reasonably stationary recording",
+     "adequate recording length for chosen measure"
+    ]
+   },
+   {
+    "name": "Baroreflex sensitivity (sequence method)",
+    "does": "Estimates reflex gain from spontaneous blood pressure and interval changes",
+    "hypotheses": [
+     "beat-to-beat pressure and intervals recorded",
+     "stable physiological state"
+    ]
+   }
+  ],
+  "inputs": [
+   "inter-beat intervals",
+   "blood pressure",
+   "skin conductance",
+   "pupil diameter"
+  ],
+  "outputs": [
+   "autonomic balance indices",
+   "baroreflex gain",
+   "stress indicators"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed Polyvagal Theory (contested, not a measurement tool); added baroreflex sensitivity). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.320902",
+  "field": "MS",
+  "node": "ANZSRC:320902",
+  "name": "Cellular nervous system",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "predict the electrical behaviour of a single nerve cell"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hodgkin–Huxley model",
+    "does": "predicts the action potential from ion currents",
+    "hypotheses": [
+     "a uniform patch of membrane",
+     "ion channels act as independent gates",
+     "parameters fitted to the cell type"
+    ]
+   },
+   {
+    "name": "Cable equation",
+    "does": "predicts passive spread of voltage along a fibre",
+    "hypotheses": [
+     "passive membrane",
+     "a uniform cylinder",
+     "current flows along the axis"
+    ]
+   }
+  ],
+  "inputs": [
+   "voltage and current recordings"
+  ],
+  "outputs": [
+   "predicted voltage over time and distance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320903",
+  "field": "MS",
+  "node": "ANZSRC:320903",
+  "name": "Central nervous system",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "neural signal processing",
+   "brain-behaviour relationships"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hodgkin-Huxley model",
+    "does": "Models action potentials via voltage-gated sodium and potassium conductances",
+    "hypotheses": [
+     "isopotential membrane patch (space clamp)",
+     "constant temperature",
+     "independent voltage-gated conductances"
+    ]
+   },
+   {
+    "name": "Cable theory",
+    "does": "Describes passive spread of voltage along dendrites and axons",
+    "hypotheses": [
+     "uniform cylindrical core conductor",
+     "passive membrane properties",
+     "small voltage changes"
+    ]
+   },
+   {
+    "name": "General linear model for fMRI",
+    "does": "Fits modelled haemodynamic responses to voxel time series",
+    "hypotheses": [
+     "linear time-invariant haemodynamic response",
+     "known stimulus timing",
+     "noise autocorrelation modelled"
+    ]
+   }
+  ],
+  "inputs": [
+   "membrane voltage",
+   "ion concentrations",
+   "BOLD time series"
+  ],
+  "outputs": [
+   "action potential waveforms",
+   "neural activation maps"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (fMRI is a technique, not a model; replaced with GLM analysis; added cable theory). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.320904",
+  "field": "MS",
+  "node": "ANZSRC:320904",
+  "name": "Computational neuroscience (incl. mathematical neuroscience and theoretical neuroscience)",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "explain how networks of nerve cells compute"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Integrate-and-fire neuron model",
+    "does": "simulates spiking with a threshold rule",
+    "hypotheses": [
+     "spike shape is ignored",
+     "the membrane is a single compartment"
+    ]
+   },
+   {
+    "name": "Temporal-difference learning model",
+    "does": "explains reward learning by prediction error",
+    "hypotheses": [
+     "learning is driven by the gap between expected and received reward"
+    ]
+   }
+  ],
+  "inputs": [
+   "spike trains",
+   "behaviour records"
+  ],
+  "outputs": [
+   "simulated activity",
+   "fitted learning parameters"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320905",
+  "field": "MS",
+  "node": "ANZSRC:320905",
+  "name": "Neurology and neuromuscular diseases",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "diagnosing nervous system disorders",
+   "assessing neuromuscular dysfunction"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Needle electromyography",
+    "does": "Records muscle fibre electrical activity to separate neurogenic from myopathic change",
+    "hypotheses": [
+     "needle electrode correctly placed in muscle",
+     "patient can activate muscle voluntarily"
+    ]
+   },
+   {
+    "name": "Nerve conduction study",
+    "does": "Measures conduction velocity and amplitude along peripheral nerves",
+    "hypotheses": [
+     "limb temperature kept warm",
+     "supramaximal stimulation",
+     "standardised electrode placement and distance measurement"
+    ]
+   }
+  ],
+  "inputs": [
+   "electrical impulses",
+   "clinical symptoms",
+   "patient responses"
+  ],
+  "outputs": [
+   "conduction velocity",
+   "response amplitudes",
+   "neuropathy or myopathy classification"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced irrelevant hypotheses with real technical conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.320906",
+  "field": "MS",
+  "node": "ANZSRC:320906",
+  "name": "Peripheral nervous system",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "sensory signal transmission",
+   "motor control of muscles and glands"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Nernst equation",
+    "does": "Gives equilibrium potential of one ion from its concentration ratio",
+    "hypotheses": [
+     "electrochemical equilibrium (no net ion flux)",
+     "membrane permeable to that ion",
+     "ideal dilute solution"
+    ]
+   },
+   {
+    "name": "Goldman-Hodgkin-Katz equation",
+    "does": "Gives membrane potential from several ions' concentrations and permeabilities",
+    "hypotheses": [
+     "constant electric field across membrane",
+     "independent ion movement",
+     "steady state"
+    ]
+   },
+   {
+    "name": "Hodgkin-Huxley model",
+    "does": "Models action potential initiation and propagation",
+    "hypotheses": [
+     "isopotential membrane patch",
+     "constant temperature"
+    ]
+   }
+  ],
+  "inputs": [
+   "ion concentrations",
+   "membrane voltage",
+   "membrane conductance"
+  ],
+  "outputs": [
+   "equilibrium potentials",
+   "resting potential",
+   "action potential waveforms"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Nernst needs equilibrium, not steady state; added GHK). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.320907",
+  "field": "MS",
+  "node": "ANZSRC:320907",
+  "name": "Sensory systems",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "relate physical stimulus strength to what is sensed"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Psychometric function fitting",
+    "does": "estimates a detection threshold",
+    "hypotheses": [
+     "responses are independent across trials",
+     "the observer's criterion is stable"
+    ]
+   },
+   {
+    "name": "Weber's law",
+    "does": "says the just-noticeable change is a constant fraction of intensity",
+    "hypotheses": [
+     "mid-range intensities",
+     "it fails near threshold and at extremes"
+    ]
+   }
+  ],
+  "inputs": [
+   "responses at several stimulus levels"
+  ],
+  "outputs": [
+   "threshold",
+   "Weber fraction"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.320999",
+  "field": "MS",
+  "node": "ANZSRC:320999",
+  "name": "Neurosciences not elsewhere classified",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440101",
+  "field": "MS",
+  "node": "ANZSRC:440101",
+  "name": "Anthropology of development",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "critique of top-down development interventions",
+   "power dynamics in international aid"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Participatory rural appraisal",
+    "does": "Elicits local knowledge through community-led visual and group methods",
+    "hypotheses": [
+     "community willing to participate",
+     "facilitators defer to local knowledge"
+    ]
+   },
+   {
+    "name": "Multi-sited ethnography",
+    "does": "Follows people, things or policies across linked field sites",
+    "hypotheses": [
+     "object of study distributed across sites",
+     "connections between sites traceable"
+    ]
+   }
+  ],
+  "inputs": [
+   "field observations",
+   "interviews",
+   "institutional records"
+  ],
+  "outputs": [
+   "thick description",
+   "critiques of development policy",
+   "local perspectives on progress"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic ethnographic fieldwork with development-specific methods). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440102",
+  "field": "MS",
+  "node": "ANZSRC:440102",
+  "name": "Anthropology of gender and sexuality",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "cultural construction of gender roles",
+   "social organisation of sexuality and kinship"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories jointly shape disadvantage",
+    "hypotheses": [
+     "categories interact rather than add",
+     "structural power relations considered"
+    ]
+   },
+   {
+    "name": "Genealogical method (Rivers)",
+    "does": "Records kinship through informants' recalled genealogies",
+    "hypotheses": [
+     "informants can recall relatives",
+     "kin terms recorded in local language"
+    ]
+   }
+  ],
+  "inputs": [
+   "participant observations",
+   "interviews",
+   "cultural artefacts"
+  ],
+  "outputs": [
+   "ethnographic accounts",
+   "kinship diagrams",
+   "cross-cultural comparisons"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed generic ethnography; added genealogical method). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440103",
+  "field": "MS",
+  "node": "ANZSRC:440103",
+  "name": "Biological (physical) anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "human biological evolution",
+   "variation in primate and human anatomy"
+  ],
+  "signature": {
+   "task": [
+    "infer"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Osteometry",
+    "does": "Quantifies skeletal dimensions to estimate sex, stature or ancestry",
+    "hypotheses": [
+     "remains sufficiently preserved",
+     "standard landmarks measured",
+     "reference sample matches target population"
+    ]
+   },
+   {
+    "name": "Geometric morphometrics",
+    "does": "Analyses shape from landmark coordinates after Procrustes superimposition",
+    "hypotheses": [
+     "landmarks homologous across specimens",
+     "enough landmarks to capture shape"
+    ]
+   }
+  ],
+  "inputs": [
+   "skeletal measurements",
+   "craniofacial landmarks",
+   "fossil specimens"
+  ],
+  "outputs": [
+   "demographic profiles",
+   "morphological variation data",
+   "phylogenetic inferences"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses corrected). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440104",
+  "field": "MS",
+  "node": "ANZSRC:440104",
+  "name": "Environmental anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "human-environment interactions",
+   "cultural adaptation to ecological constraints"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cultural ecology (Steward)",
+    "does": "Explains cultural features as adaptations to local environments",
+    "hypotheses": [
+     "environment constrains subsistence practices",
+     "subsistence shapes core social features (contested)"
+    ]
+   },
+   {
+    "name": "Political ecology",
+    "does": "Analyses environmental change through power and political economy",
+    "hypotheses": [
+     "environmental change linked to political-economic structures",
+     "resource access unevenly distributed"
+    ]
+   },
+   {
+    "name": "Marginal value theorem",
+    "does": "Predicts when foragers leave a resource patch",
+    "hypotheses": [
+     "patches differ in returns",
+     "forager maximises long-term net energy rate",
+     "travel time between patches known"
+    ]
+   }
+  ],
+  "inputs": [
+   "ecological data",
+   "land-use records",
+   "interviews"
+  ],
+  "outputs": [
+   "socio-ecological models",
+   "descriptions of resource management",
+   "policy critiques"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced generic ethnographic fieldwork with marginal value theorem). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440105",
+  "field": "MS",
+  "node": "ANZSRC:440105",
+  "name": "Linguistic anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "language and cultural cognition",
+   "social identity and linguistic variation"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Linguistic relativity (Sapir-Whorf hypothesis)",
+    "does": "Proposes language structure influences habitual thought",
+    "hypotheses": [
+     "languages differ in categorisation",
+     "effect tested with non-linguistic tasks (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Ethnography of communication (Hymes)",
+    "does": "Analyses speech events by setting, participants, ends, norms",
+    "hypotheses": [
+     "speech patterned by community norms",
+     "speech events identifiable in context"
+    ]
+   },
+   {
+    "name": "Conversation analysis",
+    "does": "Analyses sequential organisation of recorded talk",
+    "hypotheses": [
+     "naturally occurring talk recorded",
+     "talk transcribed in detail"
+    ]
+   }
+  ],
+  "inputs": [
+   "speech corpora",
+   "field notes",
+   "recorded interaction"
+  ],
+  "outputs": [
+   "cultural models",
+   "sociolinguistic profiles",
+   "descriptions of communicative norms"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added conversation analysis; reframed Sapir-Whorf hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440106",
+  "field": "MS",
+  "node": "ANZSRC:440106",
+  "name": "Medical anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "cultural interpretation of illness",
+   "social determinants of health"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Explanatory models (Kleinman)",
+    "does": "Elicits patients' and clinicians' beliefs about cause, course and treatment",
+    "hypotheses": [
+     "patient can articulate beliefs",
+     "illness distinguished from disease"
+    ]
+   },
+   {
+    "name": "Syndemic theory (Singer)",
+    "does": "Analyses interacting epidemics driven by shared social conditions",
+    "hypotheses": [
+     "two or more health conditions cluster",
+     "social conditions drive the clustering",
+     "conditions interact biologically or socially"
+    ]
+   }
+  ],
+  "inputs": [
+   "interviews",
+   "participant observation",
+   "clinical records"
+  ],
+  "outputs": [
+   "cultural taxonomies of illness",
+   "thick description",
+   "healthcare policy recommendations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed generic ethnography; added syndemic theory). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440107",
+  "field": "MS",
+  "node": "ANZSRC:440107",
+  "name": "Social and cultural anthropology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "describe how a group lives from inside it"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "data": [
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Participant observation",
+    "does": "builds an account from long stays with a group",
+    "hypotheses": [
+     "prolonged immersion",
+     "the observer's effect and position are reported"
+    ]
+   }
+  ],
+  "inputs": [
+   "field notes"
+  ],
+  "outputs": [
+   "ethnographic account"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440199",
+  "field": "MS",
+  "node": "ANZSRC:440199",
+  "name": "Anthropology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440301",
+  "field": "MS",
+  "node": "ANZSRC:440301",
+  "name": "Family and household studies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "family dynamics and stability",
+   "household resource allocation"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bowen family systems theory",
+    "does": "Treats the family as an interconnected emotional unit",
+    "hypotheses": [
+     "members emotionally interdependent",
+     "anxiety transmitted within the family"
+    ]
+   },
+   {
+    "name": "Collective model of household behaviour (Chiappori)",
+    "does": "Models household decisions as Pareto-efficient outcomes of members' preferences",
+    "hypotheses": [
+     "each member has own preferences",
+     "decisions are Pareto efficient",
+     "income pooling not assumed"
+    ]
+   }
+  ],
+  "inputs": [
+   "household expenditure records",
+   "intergenerational data",
+   "relational patterns"
+  ],
+  "outputs": [
+   "resource distribution patterns",
+   "models of family functioning"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Chiappori model is cooperative/efficient, not non-cooperative; fixed). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440302",
+  "field": "MS",
+  "node": "ANZSRC:440302",
+  "name": "Fertility",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "summarise the level of childbearing"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Total fertility rate",
+    "does": "sums age-specific birth rates",
+    "hypotheses": [
+     "a period measure: it assumes today's rates hold through a woman's life"
+    ]
+   }
+  ],
+  "inputs": [
+   "births and women by age"
+  ],
+  "outputs": [
+   "total fertility rate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440303",
+  "field": "MS",
+  "node": "ANZSRC:440303",
+  "name": "Migration",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "predict movement between places"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "graph_network"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gravity model of migration",
+    "does": "predicts flows from population sizes and distance",
+    "hypotheses": [
+     "the relation is empirical",
+     "it is fitted to past flows"
+    ]
+   }
+  ],
+  "inputs": [
+   "populations, distances, past flows"
+  ],
+  "outputs": [
+   "predicted flows"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440304",
+  "field": "MS",
+  "node": "ANZSRC:440304",
+  "name": "Mortality",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "summarise survival by age"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Life table",
+    "does": "turns age-specific death rates into life expectancy",
+    "hypotheses": [
+     "a period table assumes today's rates hold through a lifetime"
+    ]
+   },
+   {
+    "name": "Direct age standardisation",
+    "does": "compares death rates between populations of different age make-up",
+    "hypotheses": [
+     "age-specific rates are stable enough in each group",
+     "a standard population is chosen"
+    ]
+   }
+  ],
+  "inputs": [
+   "deaths and population by age"
+  ],
+  "outputs": [
+   "life expectancy",
+   "standardised rates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440305",
+  "field": "MS",
+  "node": "ANZSRC:440305",
+  "name": "Population trends and policies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "project population size and age make-up"
+  ],
+  "signature": {
+   "task": [
+    "predict"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cohort-component projection",
+    "does": "projects a population by age and sex",
+    "hypotheses": [
+     "stated assumptions for fertility, mortality and migration"
+    ]
+   }
+  ],
+  "inputs": [
+   "base population",
+   "assumed rates"
+  ],
+  "outputs": [
+   "projected population"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440399",
+  "field": "MS",
+  "node": "ANZSRC:440399",
+  "name": "Demography not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440501",
+  "field": "MS",
+  "node": "ANZSRC:440501",
+  "name": "Feminist and queer theory",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "power dynamics and marginalisation",
+   "critique of heteronormative structures"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories shape discrimination",
+    "hypotheses": [
+     "categories interact",
+     "power operates structurally"
+    ]
+   },
+   {
+    "name": "Gender performativity (Butler)",
+    "does": "Treats gender as constituted by repeated acts rather than essence",
+    "hypotheses": [
+     "gender not a natural essence (theoretical premise)",
+     "norms reiterated through practice"
+    ]
+   }
+  ],
+  "inputs": [
+   "social texts",
+   "legal frameworks",
+   "cultural norms",
+   "lived experiences"
+  ],
+  "outputs": [
+   "critiques of inequality",
+   "reconceptualised identities",
+   "equity policy recommendations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced 'Queer Theory' (a field) with performativity). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440502",
+  "field": "MS",
+  "node": "ANZSRC:440502",
+  "name": "Feminist methodologies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "gender power imbalances in research",
+   "androcentric bias in knowledge"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories shape discrimination",
+    "hypotheses": [
+     "categories interact",
+     "power operates structurally"
+    ]
+   },
+   {
+    "name": "Standpoint theory (Harding, Hartsock)",
+    "does": "Treats marginalised positions as epistemically valuable vantage points",
+    "hypotheses": [
+     "knowledge socially situated",
+     "standpoint achieved through critical reflection, not automatic"
+    ]
+   }
+  ],
+  "inputs": [
+   "social data",
+   "lived experiences",
+   "institutional power structures"
+  ],
+  "outputs": [
+   "critiques of dominant narratives",
+   "emancipatory knowledge",
+   "inclusive research designs"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Trivial edits). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440503",
+  "field": "MS",
+  "node": "ANZSRC:440503",
+  "name": "Feminist theory",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "gender-based power imbalances",
+   "systemic marginalisation of women"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "goal_quality": [
+    "qualitative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories jointly shape disadvantage",
+    "hypotheses": [
+     "categories interact rather than add",
+     "structural power relations considered"
+    ]
+   },
+   {
+    "name": "Standpoint theory",
+    "does": "Treats marginalised social positions as sources of critical knowledge",
+    "hypotheses": [
+     "knowledge socially situated",
+     "standpoint achieved through critical reflection"
+    ]
+   }
+  ],
+  "inputs": [
+   "social structures",
+   "lived experiences",
+   "legal and cultural texts"
+  ],
+  "outputs": [
+   "critiques of power",
+   "frameworks for equity",
+   "reinterpreted historical narratives"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses reworded). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440504",
+  "field": "MS",
+  "node": "ANZSRC:440504",
+  "name": "Gender relations",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "power imbalances between genders",
+   "effect of gender roles on social structures"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories jointly shape disadvantage",
+    "hypotheses": [
+     "categories interact rather than add",
+     "structural power relations considered"
+    ]
+   },
+   {
+    "name": "Gender mainstreaming",
+    "does": "Assesses gender implications of all policies at every stage",
+    "hypotheses": [
+     "policy affects men and women differently",
+     "institutional commitment to gender analysis"
+    ]
+   },
+   {
+    "name": "Harvard analytical framework",
+    "does": "Profiles gendered activities, access to and control over resources",
+    "hypotheses": [
+     "data separable by sex",
+     "household or community unit analysable"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "policy documents",
+   "labour market statistics"
+  ],
+  "outputs": [
+   "equity impact assessments",
+   "stratification models",
+   "policy recommendations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Harvard analytical framework; fixed hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440505",
+  "field": "MS",
+  "node": "ANZSRC:440505",
+  "name": "Intersectional studies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "examine outcomes at combinations of social categories"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectional analysis",
+    "does": "compares outcomes across combined categories",
+    "hypotheses": [
+     "the categories are recorded in the data",
+     "subgroups are large enough to compare"
+    ]
+   }
+  ],
+  "inputs": [
+   "records with category labels"
+  ],
+  "outputs": [
+   "subgroup comparisons"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440506",
+  "field": "MS",
+  "node": "ANZSRC:440506",
+  "name": "Sexualities",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "classifying sexual orientation",
+   "analysing sexual identity and behaviour"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Kinsey scale",
+    "does": "Rates sexual orientation on a seven-point heterosexual-homosexual continuum",
+    "hypotheses": [
+     "orientation placed on one continuum (a contested assumption)",
+     "based on self-reported behaviour and attraction"
+    ]
+   },
+   {
+    "name": "Klein sexual orientation grid",
+    "does": "Rates seven orientation variables for past, present and ideal",
+    "hypotheses": [
+     "variables rated separately",
+     "self-report across time periods"
+    ]
+   }
+  ],
+  "inputs": [
+   "self-reported behaviour",
+   "attraction data",
+   "personal history"
+  ],
+  "outputs": [
+   "orientation classification",
+   "profiles of change over time"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses corrected to conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440507",
+  "field": "MS",
+  "node": "ANZSRC:440507",
+  "name": "Studies of men and masculinities",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "construction of gender roles",
+   "masculine norms and health or social behaviour"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hegemonic masculinity (Connell)",
+    "does": "Analyses the culturally dominant masculinity that legitimises gender hierarchy",
+    "hypotheses": [
+     "multiple masculinities coexist in a hierarchy",
+     "dominant form tied to legitimating patriarchy"
+    ]
+   },
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories jointly shape disadvantage",
+    "hypotheses": [
+     "categories interact rather than add",
+     "structural power relations considered"
+    ]
+   }
+  ],
+  "inputs": [
+   "sociological data",
+   "cultural texts",
+   "biographical narratives"
+  ],
+  "outputs": [
+   "gender identity frameworks",
+   "critiques of patriarchal structures",
+   "policy recommendations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses reworded). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440508",
+  "field": "MS",
+  "node": "ANZSRC:440508",
+  "name": "Transgender studies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "analysis of gender identity and expression",
+   "critique of cisnormative structures"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [
+   "historical archives",
+   "lived experience narratives",
+   "sociological data"
+  ],
+  "outputs": [
+   "theoretical frameworks",
+   "policy recommendations",
+   "cultural critiques"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (No specific named tool belongs here; draft was already empty). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440509",
+  "field": "MS",
+  "node": "ANZSRC:440509",
+  "name": "Women's studies (incl. girls' studies)",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "gender-based inequalities",
+   "marginalisation of women and girls"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories jointly shape disadvantage",
+    "hypotheses": [
+     "categories interact rather than add",
+     "structural power relations considered"
+    ]
+   },
+   {
+    "name": "Standpoint theory",
+    "does": "Treats marginalised social positions as sources of critical knowledge",
+    "hypotheses": [
+     "knowledge socially situated",
+     "standpoint achieved through critical reflection"
+    ]
+   }
+  ],
+  "inputs": [
+   "sociological data",
+   "historical records",
+   "lived experience narratives",
+   "policy documents"
+  ],
+  "outputs": [
+   "critiques of power structures",
+   "gender-sensitive policy recommendations",
+   "theoretical frameworks"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses reworded). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440599",
+  "field": "MS",
+  "node": "ANZSRC:440599",
+  "name": "Gender studies not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440901",
+  "field": "MS",
+  "node": "ANZSRC:440901",
+  "name": "Clinical social work practice",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "judge whether support for one person is working"
+  ],
+  "signature": {
+   "task": [
+    "verify"
+   ],
+   "data": [
+    "data_poor"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Single-case design",
+    "does": "tests an intervention on one case by repeated measurement",
+    "hypotheses": [
+     "a stable baseline is recorded first",
+     "the outcome is measured the same way each time"
+    ]
+   }
+  ],
+  "inputs": [
+   "repeated outcome measures"
+  ],
+  "outputs": [
+   "evidence of change"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440902",
+  "field": "MS",
+  "node": "ANZSRC:440902",
+  "name": "Counselling, wellbeing and community services",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "psychological distress and maladaptive behaviour",
+   "social dysfunction and community instability"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cognitive behavioural therapy",
+    "does": "Changes unhelpful thoughts and behaviours to improve emotion",
+    "hypotheses": [
+     "thoughts, feelings and behaviours interact",
+     "client engages in collaborative homework"
+    ]
+   },
+   {
+    "name": "Motivational interviewing",
+    "does": "Resolves ambivalence to strengthen commitment to change",
+    "hypotheses": [
+     "client ambivalent about change",
+     "client autonomy respected"
+    ]
+   },
+   {
+    "name": "Biopsychosocial model (Engel)",
+    "does": "Explains health through interacting biological, psychological and social factors",
+    "hypotheses": [
+     "health multi-determined",
+     "factors interact"
+    ]
+   }
+  ],
+  "inputs": [
+   "client history",
+   "symptom reports",
+   "social environment data"
+  ],
+  "outputs": [
+   "treatment plans",
+   "coping strategies",
+   "psychosocial assessments"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses reworded). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.440903",
+  "field": "MS",
+  "node": "ANZSRC:440903",
+  "name": "Social program evaluation",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "find whether a social programme achieved its aims"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Theory of change with outcome evaluation",
+    "does": "tests each link from activity to outcome",
+    "hypotheses": [
+     "the intended chain is stated in advance",
+     "outcomes are measured for a comparison group or period"
+    ]
+   }
+  ],
+  "inputs": [
+   "programme records",
+   "outcome data"
+  ],
+  "outputs": [
+   "evaluation findings"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.440999",
+  "field": "MS",
+  "node": "ANZSRC:440999",
+  "name": "Social work not elsewhere classified",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441001",
+  "field": "MS",
+  "node": "ANZSRC:441001",
+  "name": "Applied sociology, program evaluation and social impact assessment",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "foresee how a proposal will affect people"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "verify"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Social impact assessment",
+    "does": "identifies who is affected and how, before a decision",
+    "hypotheses": [
+     "affected groups are identified and consulted",
+     "baseline conditions are described"
+    ]
+   }
+  ],
+  "inputs": [
+   "proposal",
+   "baseline",
+   "consultation records"
+  ],
+  "outputs": [
+   "impact statement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441002",
+  "field": "MS",
+  "node": "ANZSRC:441002",
+  "name": "Environmental sociology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "social drivers of environmental degradation",
+   "environmental inequality"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Treadmill of production (Schnaiberg)",
+    "does": "Explains degradation as driven by growth-seeking production and investment",
+    "hypotheses": [
+     "capitalist industrial economy",
+     "state supports growth"
+    ]
+   },
+   {
+    "name": "Ecological modernisation",
+    "does": "Argues institutional reform can decouple growth from environmental harm",
+    "hypotheses": [
+     "advanced industrial society",
+     "effective environmental institutions",
+     "technological innovation available"
+    ]
+   },
+   {
+    "name": "STIRPAT",
+    "does": "Regresses environmental impact on population, affluence and technology",
+    "hypotheses": [
+     "multiplicative form (log-linear)",
+     "national-level data available"
+    ]
+   }
+  ],
+  "inputs": [
+   "economic growth data",
+   "resource consumption",
+   "policy frameworks"
+  ],
+  "outputs": [
+   "causal models of impact",
+   "sustainability assessments",
+   "policy recommendations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added STIRPAT). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441003",
+  "field": "MS",
+  "node": "ANZSRC:441003",
+  "name": "Rural sociology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "rural social structure",
+   "agricultural community dynamics"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Diffusion of innovations (Rogers)",
+    "does": "Explains adoption of new practices through social channels over time",
+    "hypotheses": [
+     "innovation communicated through channels",
+     "adopters differ in timing",
+     "social system boundary defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "land tenure records",
+   "socio-economic surveys"
+  ],
+  "outputs": [
+   "adoption curves",
+   "rural development frameworks",
+   "community impact analyses"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Draft had no tools; added diffusion of innovations, a rural-sociology staple). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441004",
+  "field": "MS",
+  "node": "ANZSRC:441004",
+  "name": "Social change",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "drivers of societal transformation",
+   "shifts in social structures and norms"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "dynamics": [
+    "dynamic_stochastic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Diffusion of innovations (Rogers)",
+    "does": "Explains spread of ideas through a social system over time",
+    "hypotheses": [
+     "communication channels exist",
+     "adoption occurs over time within a social system"
+    ]
+   },
+   {
+    "name": "Resource mobilisation theory",
+    "does": "Explains movement emergence by organisation and available resources",
+    "hypotheses": [
+     "grievances relatively constant",
+     "movement organisations exist",
+     "resources obtainable"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "social networks",
+   "resource availability"
+  ],
+  "outputs": [
+   "adoption rates",
+   "movement trajectories",
+   "models of social shift"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses corrected). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441005",
+  "field": "MS",
+  "node": "ANZSRC:441005",
+  "name": "Social theory",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "explaining social structures",
+   "analysing collective behaviour"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ],
+   "goal_quality": [
+    "qualitative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bourdieu's theory of practice",
+    "does": "Explains social reproduction through habitus, capital and field",
+    "hypotheses": [
+     "agents have embodied dispositions",
+     "structured social fields exist"
+    ]
+   },
+   {
+    "name": "Structuration theory (Giddens)",
+    "does": "Treats structure as both medium and outcome of action",
+    "hypotheses": [
+     "agents knowledgeable",
+     "structure reproduced through practice"
+    ]
+   }
+  ],
+  "inputs": [
+   "social observations",
+   "cultural data",
+   "institutional frameworks"
+  ],
+  "outputs": [
+   "theoretical frameworks",
+   "causal explanations",
+   "models of power"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses reworded). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441006",
+  "field": "MS",
+  "node": "ANZSRC:441006",
+  "name": "Sociological methodology and research methods",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "estimate what a population thinks or does from a part of it"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Probability survey sampling",
+    "does": "estimates population values with known error",
+    "hypotheses": [
+     "every unit has a known non-zero chance of selection",
+     "non-response is small or adjusted for"
+    ]
+   },
+   {
+    "name": "Grounded theory",
+    "does": "builds categories from qualitative data",
+    "hypotheses": [
+     "sampling continues until new cases add no new categories"
+    ]
+   },
+   {
+    "name": "Multilevel regression",
+    "does": "separates effects at individual and group level",
+    "hypotheses": [
+     "groups are a sample from a population of groups",
+     "residuals at each level are independent of predictors"
+    ]
+   }
+  ],
+  "inputs": [
+   "survey responses",
+   "interviews"
+  ],
+  "outputs": [
+   "estimates with error",
+   "category scheme"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441007",
+  "field": "MS",
+  "node": "ANZSRC:441007",
+  "name": "Sociology and social studies of science and technology",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "social construction of scientific knowledge",
+   "technology's impact on social structures"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Actor-network theory",
+    "does": "Maps relations among human and non-human actors",
+    "hypotheses": [
+     "generalised symmetry between human and non-human actors",
+     "actors defined by their relations"
+    ]
+   },
+   {
+    "name": "Social construction of technology (SCOT)",
+    "does": "Explains artefact design through relevant social groups' meanings",
+    "hypotheses": [
+     "relevant social groups identifiable",
+     "interpretive flexibility exists"
+    ]
+   }
+  ],
+  "inputs": [
+   "historical archives",
+   "ethnographic observations",
+   "technical specifications",
+   "practitioner interviews"
+  ],
+  "outputs": [
+   "network maps",
+   "explanations of technological adoption",
+   "critiques of scientific objectivity"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed outcome ('closure') listed as hypothesis). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441008",
+  "field": "MS",
+  "node": "ANZSRC:441008",
+  "name": "Sociology of culture",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "cultural reproduction",
+   "relation of social structure to symbolic meaning"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bourdieu's cultural capital and distinction",
+    "does": "Links class position to taste and cultural competence",
+    "hypotheses": [
+     "social space structured by capital volume and composition",
+     "cultural competence recognised as legitimate"
+    ]
+   },
+   {
+    "name": "Omnivore thesis (Peterson-Kern)",
+    "does": "Tests whether high-status groups have broad cross-genre taste",
+    "hypotheses": [
+     "taste measured across genres",
+     "survey data on cultural participation"
+    ]
+   },
+   {
+    "name": "Production of culture perspective",
+    "does": "Explains cultural content by organisations and markets making it",
+    "hypotheses": [
+     "culture produced in institutional settings",
+     "production constraints identifiable"
+    ]
+   }
+  ],
+  "inputs": [
+   "consumption patterns",
+   "educational attainment",
+   "survey data"
+  ],
+  "outputs": [
+   "class distinctions",
+   "cultural hierarchies",
+   "stratification patterns"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Merged duplicate Bourdieu entries; added omnivore thesis and production of culture). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441009",
+  "field": "MS",
+  "node": "ANZSRC:441009",
+  "name": "Sociology of family and relationships",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "kinship and domestic structures",
+   "formation and dissolution of relationships"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Social exchange theory",
+    "does": "Explains relationship stability by perceived rewards, costs and alternatives",
+    "hypotheses": [
+     "actors weigh rewards and costs",
+     "comparison with alternatives matters"
+    ]
+   },
+   {
+    "name": "Life course perspective (Elder)",
+    "does": "Places family transitions in historical time, timing and linked lives",
+    "hypotheses": [
+     "lives embedded in historical context",
+     "linked lives across members"
+    ]
+   }
+  ],
+  "inputs": [
+   "interaction data",
+   "demographic trends",
+   "household structures"
+  ],
+  "outputs": [
+   "models of family stability",
+   "links between structure and relationship outcomes"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced therapy-origin family systems with life course perspective). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441010",
+  "field": "MS",
+  "node": "ANZSRC:441010",
+  "name": "Sociology of gender",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "social construction of gender",
+   "gender inequality and power"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories jointly shape disadvantage",
+    "hypotheses": [
+     "categories interact rather than add",
+     "structural power relations considered"
+    ]
+   },
+   {
+    "name": "Doing gender (West-Zimmerman)",
+    "does": "Treats gender as an interactional accomplishment",
+    "hypotheses": [
+     "gender produced in interaction",
+     "people held accountable to normative conceptions"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "social interactions",
+   "institutional policies"
+  ],
+  "outputs": [
+   "models of stratification",
+   "critiques of gender norms",
+   "equity policy recommendations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses reworded). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441011",
+  "field": "MS",
+  "node": "ANZSRC:441011",
+  "name": "Sociology of health",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "social determinants of health",
+   "inequalities in healthcare access"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "compare"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Fundamental cause theory (Link-Phelan)",
+    "does": "Explains persistent health inequality by unequal flexible resources",
+    "hypotheses": [
+     "resources help avoid risks and use knowledge",
+     "health knowledge or technology keeps changing"
+    ]
+   },
+   {
+    "name": "Social ecological model",
+    "does": "Analyses health influences across individual to societal levels",
+    "hypotheses": [
+     "nested levels of influence",
+     "levels interact reciprocally"
+    ]
+   },
+   {
+    "name": "Sick role (Parsons)",
+    "does": "Describes social expectations of the ill person",
+    "hypotheses": [
+     "illness accepted as legitimate",
+     "person seeks competent help"
+    ]
+   }
+  ],
+  "inputs": [
+   "socioeconomic indicators",
+   "health policy documents",
+   "demographic data"
+  ],
+  "outputs": [
+   "explanations of health disparities",
+   "intervention frameworks"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added sick role; fixed fundamental cause hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441012",
+  "field": "MS",
+  "node": "ANZSRC:441012",
+  "name": "Sociology of inequalities",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "measure how unequally something is shared"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gini coefficient",
+    "does": "summarises inequality as one number from the Lorenz curve",
+    "hypotheses": [
+     "the unit and the income concept are stated",
+     "values are non-negative"
+    ]
+   },
+   {
+    "name": "Intergenerational mobility table",
+    "does": "compares parents' and children's positions",
+    "hypotheses": [
+     "positions are measured comparably across generations"
+    ]
+   }
+  ],
+  "inputs": [
+   "incomes",
+   "paired positions"
+  ],
+  "outputs": [
+   "inequality index",
+   "mobility rates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441013",
+  "field": "MS",
+  "node": "ANZSRC:441013",
+  "name": "Sociology of migration, ethnicity and multiculturalism",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "integration of migrants",
+   "ethnic identity and multicultural policy"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Segmented assimilation theory (Portes-Zhou)",
+    "does": "Explains divergent immigrant adaptation paths by context of reception",
+    "hypotheses": [
+     "groups differ in human capital and reception",
+     "second-generation outcomes diverge"
+    ]
+   },
+   {
+    "name": "Intersectionality",
+    "does": "Analyses how overlapping social categories jointly shape disadvantage",
+    "hypotheses": [
+     "categories interact rather than add",
+     "structural power relations considered"
+    ]
+   },
+   {
+    "name": "Contact hypothesis (Allport)",
+    "does": "Predicts intergroup contact reduces prejudice under favourable conditions",
+    "hypotheses": [
+     "equal status",
+     "common goals",
+     "institutional support"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "socio-economic indicators",
+   "interviews",
+   "policy documents"
+  ],
+  "outputs": [
+   "integration patterns",
+   "marginalisation risk assessments",
+   "social cohesion metrics"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added contact hypothesis; fixed hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441014",
+  "field": "MS",
+  "node": "ANZSRC:441014",
+  "name": "Sociology of religion",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "religion's role in social structure",
+   "secularisation and modernity"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Secularisation thesis",
+    "does": "Holds modernisation erodes religion's social authority",
+    "hypotheses": [
+     "modernisation proceeds (differentiation, rationalisation)",
+     "scope mainly Western Europe (contested)"
+    ]
+   },
+   {
+    "name": "Religious economies model (Stark-Finke)",
+    "does": "Treats religious participation as shaped by supply-side competition",
+    "hypotheses": [
+     "individuals weigh costs and benefits",
+     "religious market unregulated and pluralist"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "institutional records",
+   "belief and practice surveys"
+  ],
+  "outputs": [
+   "trends in affiliation",
+   "links of faith to behaviour",
+   "models of cohesion"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Renamed rational choice entry; fixed hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.441015",
+  "field": "MS",
+  "node": "ANZSRC:441015",
+  "name": "Sociology of the life course",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "analyse the timing of events in people's lives"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Event history analysis (Cox model)",
+    "does": "relates the hazard of an event to covariates",
+    "hypotheses": [
+     "hazards are proportional over time",
+     "censoring is unrelated to the event"
+    ]
+   }
+  ],
+  "inputs": [
+   "dated life events"
+  ],
+  "outputs": [
+   "hazard ratios"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441016",
+  "field": "MS",
+  "node": "ANZSRC:441016",
+  "name": "Urban sociology and community studies",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "measure how separately groups live"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "compare"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Index of dissimilarity",
+    "does": "gives the share of a group that would have to move for an even spread",
+    "hypotheses": [
+     "two groups",
+     "results depend on the size of the areal units used"
+    ]
+   }
+  ],
+  "inputs": [
+   "group counts by area"
+  ],
+  "outputs": [
+   "segregation index"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.441099",
+  "field": "MS",
+  "node": "ANZSRC:441099",
+  "name": "Sociology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.449901",
+  "field": "MS",
+  "node": "ANZSRC:449901",
+  "name": "Studies of Asian society",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "social structures in Asian contexts",
+   "cross-cultural comparison"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [],
+  "inputs": [
+   "ethnographic observations",
+   "demographic statistics",
+   "sociological data"
+  ],
+  "outputs": [
+   "cultural analyses",
+   "comparative accounts",
+   "policy recommendations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Area-studies heading; no specific named tool; draft already empty). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.449999",
+  "field": "MS",
+  "node": "ANZSRC:449999",
+  "name": "Other human society not elsewhere classified",
+  "taxonomy_cell": "MS.O.A5",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520101",
+  "field": "MS",
+  "node": "ANZSRC:520101",
+  "name": "Child and adolescent development",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "track change in children over time"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Longitudinal design",
+    "does": "measures the same children repeatedly",
+    "hypotheses": [
+     "the measure means the same thing at each age",
+     "drop-out is random or modelled"
+    ]
+   }
+  ],
+  "inputs": [
+   "repeated measures"
+  ],
+  "outputs": [
+   "growth curves"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520102",
+  "field": "MS",
+  "node": "ANZSRC:520102",
+  "name": "Educational psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "optimising learning outcomes",
+   "cognitive development in education"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Bloom's taxonomy",
+    "does": "Classifies learning objectives by cognitive complexity",
+    "hypotheses": [
+     "outcomes stated observably",
+     "levels treated as cumulative (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Zone of proximal development (Vygotsky)",
+    "does": "Defines the gap between independent and assisted performance",
+    "hypotheses": [
+     "more knowledgeable other available",
+     "task just beyond independent ability"
+    ]
+   },
+   {
+    "name": "Self-determination theory",
+    "does": "Explains motivation through autonomy, competence and relatedness",
+    "hypotheses": [
+     "basic psychological needs universal",
+     "social context can support or thwart needs"
+    ]
+   }
+  ],
+  "inputs": [
+   "learner performance data",
+   "instructional goals",
+   "environmental constraints"
+  ],
+  "outputs": [
+   "curriculum frameworks",
+   "instructional interventions",
+   "assessment criteria"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses tightened). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520103",
+  "field": "MS",
+  "node": "ANZSRC:520103",
+  "name": "Forensic psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "assessing criminal responsibility",
+   "predicting recidivism"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ],
+   "constraints": [
+    "legal_or_normative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Psychopathy Checklist-Revised (PCL-R)",
+    "does": "Scores psychopathic traits from interview and file review",
+    "hypotheses": [
+     "trained rater",
+     "semi-structured interview plus collateral records",
+     "adult forensic or offender population"
+    ]
+   },
+   {
+    "name": "HCR-20",
+    "does": "Structures professional judgement of violence risk",
+    "hypotheses": [
+     "structured professional judgement",
+     "sufficient interview and file information"
+    ]
+   }
+  ],
+  "inputs": [
+   "criminal history",
+   "test scores",
+   "case files"
+  ],
+  "outputs": [
+   "risk classification",
+   "competency determinations",
+   "psychopathy scores"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses reworded). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520104",
+  "field": "MS",
+  "node": "ANZSRC:520104",
+  "name": "Industrial and organisational psychology (incl. human factors)",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "select people and design work by evidence"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Validated selection methods",
+    "does": "predict job performance",
+    "hypotheses": [
+     "a job analysis defines what is assessed",
+     "validity evidence exists for this kind of role"
+    ]
+   }
+  ],
+  "inputs": [
+   "applicant data",
+   "job analysis"
+  ],
+  "outputs": [
+   "ranked candidates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520105",
+  "field": "MS",
+  "node": "ANZSRC:520105",
+  "name": "Psychological methodology, design and analysis",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "design a study that can answer its question"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "verify"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Statistical power analysis",
+    "does": "gives the sample needed to detect a stated effect",
+    "hypotheses": [
+     "the smallest effect of interest is set in advance",
+     "significance level and power are chosen"
+    ]
+   },
+   {
+    "name": "Preregistration",
+    "does": "fixes hypotheses and analysis before data are seen",
+    "hypotheses": [
+     "the plan is registered before data collection or access"
+    ]
+   }
+  ],
+  "inputs": [
+   "expected effect",
+   "design"
+  ],
+  "outputs": [
+   "sample size",
+   "registered plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520106",
+  "field": "MS",
+  "node": "ANZSRC:520106",
+  "name": "Psychology of ageing",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "cognitive decline and mental health in older adults",
+   "psychosocial adaptation to ageing"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Selection, optimisation and compensation (SOC) model",
+    "does": "Explains adaptation to age-related loss by selecting goals and compensating",
+    "hypotheses": [
+     "resources decline with age",
+     "goals can be chosen and pursued"
+    ]
+   },
+   {
+    "name": "Rowe-Kahn model of successful ageing",
+    "does": "Defines successful ageing as low disease risk, high function and engagement",
+    "hypotheses": [
+     "disease and disability avoidable",
+     "high function can be maintained",
+     "active life engagement"
+    ]
+   },
+   {
+    "name": "Socioemotional selectivity theory (Carstensen)",
+    "does": "Explains shifting goals as perceived time horizons shorten",
+    "hypotheses": [
+     "time horizon perceived as limited",
+     "goals reprioritised accordingly"
+    ]
+   }
+  ],
+  "inputs": [
+   "longitudinal cognitive data",
+   "surveys",
+   "functional assessments"
+  ],
+  "outputs": [
+   "age-related cognitive profiles",
+   "well-being indicators",
+   "adaptive strategy frameworks"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added socioemotional selectivity theory). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520107",
+  "field": "MS",
+  "node": "ANZSRC:520107",
+  "name": "Sport and exercise psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "athletic performance",
+   "competitive anxiety and motivation"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Self-determination theory",
+    "does": "Explains motivation through autonomy, competence and relatedness",
+    "hypotheses": [
+     "basic psychological needs universal",
+     "coaching climate supports or thwarts needs"
+    ]
+   },
+   {
+    "name": "Individual zones of optimal functioning (Hanin)",
+    "does": "Identifies each athlete's optimal pre-performance anxiety range",
+    "hypotheses": [
+     "optimal state differs by individual",
+     "state measured before performance"
+    ]
+   },
+   {
+    "name": "Yerkes-Dodson law",
+    "does": "Relates performance to arousal with an optimal moderate level",
+    "hypotheses": [
+     "task complexity affects optimum",
+     "arousal measurable"
+    ]
+   }
+  ],
+  "inputs": [
+   "athlete profiles",
+   "performance metrics",
+   "emotion reports"
+  ],
+  "outputs": [
+   "motivational strategies",
+   "performance plans",
+   "mental skills interventions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Removed 'Crossover Effect' (not a sport psychology tool); added Yerkes-Dodson). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520108",
+  "field": "MS",
+  "node": "ANZSRC:520108",
+  "name": "Testing, assessment and psychometrics",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "build and check a scale that measures a mental attribute"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "verify"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Item response theory",
+    "does": "models the chance of a response from a latent trait",
+    "hypotheses": [
+     "one dimension underlies the responses",
+     "responses are independent given the trait",
+     "the chance rises with the trait"
+    ]
+   },
+   {
+    "name": "Cronbach's alpha",
+    "does": "estimates internal consistency",
+    "hypotheses": [
+     "the items measure one dimension",
+     "items are roughly equally related to it"
+    ]
+   }
+  ],
+  "inputs": [
+   "item responses"
+  ],
+  "outputs": [
+   "item parameters",
+   "reliability"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520199",
+  "field": "MS",
+  "node": "ANZSRC:520199",
+  "name": "Applied and developmental psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520201",
+  "field": "MS",
+  "node": "ANZSRC:520201",
+  "name": "Behavioural genetics",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "separate inherited from environmental sources of difference"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "infer"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Classical twin design",
+    "does": "splits trait variance into genetic and environmental parts",
+    "hypotheses": [
+     "identical and fraternal twins share environments equally",
+     "no assortative mating",
+     "estimates apply to the population studied"
+    ]
+   }
+  ],
+  "inputs": [
+   "twin-pair data"
+  ],
+  "outputs": [
+   "variance components"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520202",
+  "field": "MS",
+  "node": "ANZSRC:520202",
+  "name": "Behavioural neuroscience",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "biological basis of behaviour",
+   "neural mechanisms of cognition"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Optogenetics",
+    "does": "Controls genetically targeted neurons with light",
+    "hypotheses": [
+     "opsin expressed in target cells",
+     "light delivered at suitable wavelength and intensity",
+     "heating artefacts controlled"
+    ]
+   },
+   {
+    "name": "BOLD functional MRI",
+    "does": "Infers neural activity from blood oxygenation changes",
+    "hypotheses": [
+     "neurovascular coupling intact",
+     "haemodynamic response approximately linear"
+    ]
+   }
+  ],
+  "inputs": [
+   "neural activity",
+   "stimuli",
+   "behavioural responses"
+  ],
+  "outputs": [
+   "brain-behaviour correlations",
+   "causal neural pathways",
+   "functional maps"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses corrected). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520203",
+  "field": "MS",
+  "node": "ANZSRC:520203",
+  "name": "Cognitive neuroscience",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "map where and when the brain responds during a task"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "General linear model for functional imaging",
+    "does": "maps where a signal follows a task",
+    "hypotheses": [
+     "the signal responds linearly to neural activity",
+     "the assumed response shape fits the region",
+     "multiple comparisons are corrected"
+    ]
+   }
+  ],
+  "inputs": [
+   "image series",
+   "task timing"
+  ],
+  "outputs": [
+   "activation maps"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520204",
+  "field": "MS",
+  "node": "ANZSRC:520204",
+  "name": "Evolutionary psychological studies",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "origins of cognitive traits",
+   "adaptive functions of social behaviour"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Parental investment theory (Trivers)",
+    "does": "Predicts sex differences in mating from differential offspring investment",
+    "hypotheses": [
+     "sexes differ in minimum investment",
+     "investment is limited"
+    ]
+   },
+   {
+    "name": "Error management theory",
+    "does": "Predicts biases that minimise the costlier error",
+    "hypotheses": [
+     "error costs asymmetric",
+     "recurring ancestral decision problem"
+    ]
+   },
+   {
+    "name": "Hamilton's rule",
+    "does": "Predicts altruism when relatedness times benefit exceeds cost",
+    "hypotheses": [
+     "fitness effects additive",
+     "relatedness well defined"
+    ]
+   }
+  ],
+  "inputs": [
+   "behavioural data",
+   "cross-cultural surveys",
+   "fitness cost-benefit estimates"
+  ],
+  "outputs": [
+   "adaptive explanations",
+   "behavioural predictions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Hamilton's rule). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520205",
+  "field": "MS",
+  "node": "ANZSRC:520205",
+  "name": "Psychopharmacology",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "chemical modulation of mental processes",
+   "drug treatment of psychiatric disorders"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Dose-response (Hill equation)",
+    "does": "Describes effect as a sigmoid function of dose or concentration",
+    "hypotheses": [
+     "response graded and monotonic",
+     "effect related to occupancy (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Clark occupancy theory",
+    "does": "Relates effect to the fraction of receptors bound",
+    "hypotheses": [
+     "law of mass action",
+     "reversible binding at equilibrium",
+     "drug concentration far exceeds receptor concentration"
+    ]
+   },
+   {
+    "name": "One-compartment pharmacokinetic model",
+    "does": "Describes drug concentration with first-order elimination",
+    "hypotheses": [
+     "instant distribution",
+     "first-order elimination"
+    ]
+   }
+  ],
+  "inputs": [
+   "drug concentration",
+   "binding affinity",
+   "symptom scales"
+  ],
+  "outputs": [
+   "therapeutic dose",
+   "efficacy profiles",
+   "side-effect probability"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added pharmacokinetic model; corrected occupancy hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520206",
+  "field": "MS",
+  "node": "ANZSRC:520206",
+  "name": "Psychophysiology",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "mapping psychological processes to physiology",
+   "quantifying biological correlates of mental states"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Electrodermal activity analysis",
+    "does": "Measures skin conductance responses as sympathetic arousal index",
+    "hypotheses": [
+     "palmar electrodes",
+     "controlled temperature and humidity",
+     "responses time-locked to stimuli"
+    ]
+   },
+   {
+    "name": "Heart rate variability analysis",
+    "does": "Estimates autonomic modulation from beat-to-beat intervals",
+    "hypotheses": [
+     "sinus beats only",
+     "reasonably stationary recording"
+    ]
+   },
+   {
+    "name": "EEG spectral analysis",
+    "does": "Decomposes EEG into frequency bands",
+    "hypotheses": [
+     "stationary epochs",
+     "ocular and muscle artefacts removed"
+    ]
+   }
+  ],
+  "inputs": [
+   "biometric signals",
+   "stimulus timing",
+   "self-reports"
+  ],
+  "outputs": [
+   "arousal levels",
+   "cognitive load metrics",
+   "autonomic state"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced interpretive claims with technical conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520207",
+  "field": "MS",
+  "node": "ANZSRC:520207",
+  "name": "Social and affective neuroscience",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "neural mechanisms of social interaction",
+   "biological basis of emotion"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "infer"
+   ]
+  },
+  "tools": [
+   {
+    "name": "BOLD functional MRI",
+    "does": "Infers neural activation from blood oxygenation changes",
+    "hypotheses": [
+     "neurovascular coupling intact",
+     "task timing known"
+    ]
+   },
+   {
+    "name": "Hyperscanning",
+    "does": "Records brain activity from interacting people simultaneously",
+    "hypotheses": [
+     "recordings time-locked across participants",
+     "genuine live interaction",
+     "synchrony controls for shared stimuli (UNVERIFIED)"
+    ]
+   }
+  ],
+  "inputs": [
+   "BOLD signals",
+   "social stimuli",
+   "behavioural responses"
+  ],
+  "outputs": [
+   "activation maps",
+   "connectivity patterns",
+   "inter-brain coherence"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses corrected). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520299",
+  "field": "MS",
+  "node": "ANZSRC:520299",
+  "name": "Biological psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A2",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520301",
+  "field": "MS",
+  "node": "ANZSRC:520301",
+  "name": "Clinical neuropsychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "diagnosing cognitive impairment",
+   "mapping brain dysfunction to deficits"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Halstead-Reitan Neuropsychological Battery",
+    "does": "Assesses cognitive function and brain impairment across subtests",
+    "hypotheses": [
+     "standardised administration",
+     "norms matched to patient",
+     "adequate effort"
+    ]
+   },
+   {
+    "name": "WAIS-IV",
+    "does": "Measures adult intelligence and cognitive strengths and weaknesses",
+    "hypotheses": [
+     "standardised administration",
+     "age-appropriate norms",
+     "adequate effort"
+    ]
+   }
+  ],
+  "inputs": [
+   "patient responses",
+   "test scores",
+   "clinical history"
+  ],
+  "outputs": [
+   "cognitive profile",
+   "functional diagnosis",
+   "rehabilitation plan"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added effort condition; note WAIS-V now exists). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520302",
+  "field": "MS",
+  "node": "ANZSRC:520302",
+  "name": "Clinical psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "decide whether a person's change is real and meaningful"
+  ],
+  "signature": {
+   "task": [
+    "verify",
+    "estimate"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Reliable change index",
+    "does": "tests whether a score change exceeds measurement error",
+    "hypotheses": [
+     "the test-retest reliability of the scale is known"
+    ]
+   }
+  ],
+  "inputs": [
+   "scores before and after"
+  ],
+  "outputs": [
+   "change verdict"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520303",
+  "field": "MS",
+  "node": "ANZSRC:520303",
+  "name": "Counselling psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "emotional distress",
+   "maladaptive interpersonal patterns"
+  ],
+  "signature": {
+   "task": [
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cognitive behavioural therapy",
+    "does": "Changes unhelpful thoughts and behaviours to improve emotion",
+    "hypotheses": [
+     "thoughts, feelings and behaviours interact",
+     "client engages collaboratively"
+    ]
+   },
+   {
+    "name": "Person-centred therapy (Rogers)",
+    "does": "Promotes change through empathy, congruence and unconditional positive regard",
+    "hypotheses": [
+     "client in psychological contact",
+     "therapist congruent, empathic and accepting"
+    ]
+   },
+   {
+    "name": "Motivational interviewing",
+    "does": "Resolves ambivalence to strengthen commitment to change",
+    "hypotheses": [
+     "client ambivalent",
+     "client autonomy respected"
+    ]
+   }
+  ],
+  "inputs": [
+   "client narratives",
+   "behavioural patterns",
+   "emotional states"
+  ],
+  "outputs": [
+   "coping strategies",
+   "behaviour change",
+   "wellbeing"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Replaced with Rogers's conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520304",
+  "field": "MS",
+  "node": "ANZSRC:520304",
+  "name": "Health psychology",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "psychological influences on physical health",
+   "behavioural drivers of illness and recovery"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Health belief model",
+    "does": "Limits short-term memory to about seven chunks",
+    "hypotheses": [
+     "items unrehearsed",
+     "information recoded into chunks",
+     "later work suggests about four chunks (Cowan) (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Theory of planned behaviour",
+    "does": "Predicts behaviour from attitude, subjective norm and perceived control",
+    "hypotheses": [
+     "behaviour under volitional control",
+     "intention and behaviour measured at matching specificity"
+    ]
+   },
+   {
+    "name": "Biopsychosocial model (Engel)",
+    "does": "Explains health through interacting biological, psychological and social factors",
+    "hypotheses": [
+     "health multi-determined",
+     "factors interact"
+    ]
+   }
+  ],
+  "inputs": [
+   "patient perceptions",
+   "social environment data",
+   "biological markers"
+  ],
+  "outputs": [
+   "behavioural predictions",
+   "intervention strategies",
+   "risk assessments"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses corrected). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520399",
+  "field": "MS",
+  "node": "ANZSRC:520399",
+  "name": "Clinical and health psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A3",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520401",
+  "field": "MS",
+  "node": "ANZSRC:520401",
+  "name": "Cognition",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "information processing",
+   "mental representation and decision-making"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Working memory model (Baddeley-Hitch)",
+    "does": "Describes a limited-capacity system with specialised stores and a central executive",
+    "hypotheses": [
+     "limited capacity",
+     "separable verbal and visuospatial stores"
+    ]
+   },
+   {
+    "name": "Dual process theory",
+    "does": "Distinguishes fast autonomous from slow deliberative processing",
+    "hypotheses": [
+     "two types of processing separable by working memory demand (contested)"
+    ]
+   },
+   {
+    "name": "Signal detection theory",
+    "does": "Separates sensitivity from response bias in detection",
+    "hypotheses": [
+     "signal and noise distributions defined",
+     "independent trials",
+     "equal-variance Gaussian (basic form)"
+    ]
+   }
+  ],
+  "inputs": [
+   "sensory stimuli",
+   "prior knowledge",
+   "response data"
+  ],
+  "outputs": [
+   "perceptual interpretations",
+   "decisions",
+   "sensitivity measures"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added signal detection theory). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520402",
+  "field": "MS",
+  "node": "ANZSRC:520402",
+  "name": "Decision making",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "describe how people actually choose under risk"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Prospect theory",
+    "does": "models choice with reference points, loss aversion and probability weighting",
+    "hypotheses": [
+     "outcomes are framed as gains or losses from a reference point",
+     "parameters are fitted to the group studied"
+    ]
+   },
+   {
+    "name": "Drift-diffusion model",
+    "does": "explains choice and response time by noisy evidence accumulation",
+    "hypotheses": [
+     "two-choice decisions",
+     "fast single-stage decisions",
+     "constant drift within a trial"
+    ]
+   }
+  ],
+  "inputs": [
+   "choices",
+   "response times"
+  ],
+  "outputs": [
+   "fitted parameters"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520403",
+  "field": "MS",
+  "node": "ANZSRC:520403",
+  "name": "Learning, motivation and emotion",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "predict how associations form"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Rescorla–Wagner model",
+    "does": "updates associative strength by prediction error",
+    "hypotheses": [
+     "learning is driven by the gap between expected and actual outcome",
+     "cues present together share one error term"
+    ]
+   }
+  ],
+  "inputs": [
+   "trial records"
+  ],
+  "outputs": [
+   "predicted response strength"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520404",
+  "field": "MS",
+  "node": "ANZSRC:520404",
+  "name": "Memory and attention",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "information retention and retrieval",
+   "allocation of cognitive resources"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Miller's magical number seven",
+    "does": "Limits short-term memory to about seven chunks",
+    "hypotheses": [
+     "items unrehearsed",
+     "information recoded into chunks",
+     "later work suggests about four chunks (Cowan) (UNVERIFIED)"
+    ]
+   },
+   {
+    "name": "Ebbinghaus forgetting curve",
+    "does": "Describes exponential-like decline of retention over time",
+    "hypotheses": [
+     "no further rehearsal",
+     "material learned to a known criterion"
+    ]
+   },
+   {
+    "name": "Stroop task",
+    "does": "Measures interference between automatic reading and colour naming",
+    "hypotheses": [
+     "word reading automatic",
+     "congruent and incongruent trials compared"
+    ]
+   }
+  ],
+  "inputs": [
+   "stimuli",
+   "time intervals",
+   "reaction times"
+  ],
+  "outputs": [
+   "retention rates",
+   "interference effects",
+   "capacity limits"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed names and conditions). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520405",
+  "field": "MS",
+  "node": "ANZSRC:520405",
+  "name": "Psycholinguistics (incl. speech production and comprehension)",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "language processing",
+   "mapping between representation and speech"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "structure": [
+    "text_language"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cohort model (Marslen-Wilson)",
+    "does": "Describes word recognition through narrowing sets of candidates from word onset",
+    "hypotheses": [
+     "incremental left-to-right processing",
+     "candidate set activated by initial sounds"
+    ]
+   },
+   {
+    "name": "Garden-path model (Frazier)",
+    "does": "Explains parsing of ambiguous sentences by initial structural preferences",
+    "hypotheses": [
+     "serial first-pass parsing",
+     "minimal attachment and late closure apply"
+    ]
+   },
+   {
+    "name": "Levelt's model of speech production",
+    "does": "Stages of conceptualisation, formulation and articulation",
+    "hypotheses": [
+     "serial or cascaded stages",
+     "lexical access from concept to form"
+    ]
+   }
+  ],
+  "inputs": [
+   "acoustic signals",
+   "text strings",
+   "reaction times",
+   "eye-tracking data"
+  ],
+  "outputs": [
+   "lexical access latency",
+   "parsing errors",
+   "comprehension accuracy"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Added Levelt's model). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520406",
+  "field": "MS",
+  "node": "ANZSRC:520406",
+  "name": "Sensory processes, perception and performance",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "separate ability to detect from willingness to respond"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Signal detection theory",
+    "does": "separates sensitivity from response bias",
+    "hypotheses": [
+     "the sensitivity index assumes equal-variance Gaussian evidence"
+    ]
+   },
+   {
+    "name": "Fitts's law",
+    "does": "predicts movement time from distance and target size",
+    "hypotheses": [
+     "rapid aimed movements",
+     "coefficients fitted for the task"
+    ]
+   }
+  ],
+  "inputs": [
+   "hit and false-alarm rates",
+   "movement times"
+  ],
+  "outputs": [
+   "sensitivity and bias",
+   "predicted time"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520499",
+  "field": "MS",
+  "node": "ANZSRC:520499",
+  "name": "Cognitive and computational psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520501",
+  "field": "MS",
+  "node": "ANZSRC:520501",
+  "name": "Community psychology",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "systemic social inequality",
+   "community mental health disparities"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "design"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ecological systems theory (Bronfenbrenner)",
+    "does": "Analyses development within nested environmental systems",
+    "hypotheses": [
+     "nested systems interact",
+     "person and environment influence each other"
+    ]
+   },
+   {
+    "name": "Community-based participatory research",
+    "does": "Partners researchers and community members in all research stages",
+    "hypotheses": [
+     "power shared",
+     "community partners engaged"
+    ]
+   }
+  ],
+  "inputs": [
+   "demographic data",
+   "community narratives",
+   "policy frameworks"
+  ],
+  "outputs": [
+   "intervention strategies",
+   "policy recommendations",
+   "empowerment plans"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses reworded). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520502",
+  "field": "MS",
+  "node": "ANZSRC:520502",
+  "name": "Gender psychology",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "psychological differences between genders",
+   "gender roles and mental health"
+  ],
+  "signature": {
+   "task": [
+    "compare",
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Gender schema theory (Bem)",
+    "does": "Explains sex-typed behaviour through gender-based information processing",
+    "hypotheses": [
+     "children learn gender categories",
+     "categories organise information"
+    ]
+   },
+   {
+    "name": "Social role theory (Eagly)",
+    "does": "Attributes gender differences to the division of labour",
+    "hypotheses": [
+     "sex-typed division of labour exists",
+     "people infer traits from roles"
+    ]
+   }
+  ],
+  "inputs": [
+   "behavioural data",
+   "role distributions",
+   "cognitive measures"
+  ],
+  "outputs": [
+   "explanatory models",
+   "gender-trait correlations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Hypotheses reworded). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520503",
+  "field": "MS",
+  "node": "ANZSRC:520503",
+  "name": "Personality and individual differences",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "describe stable differences between people with a few dimensions"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "estimate"
+   ],
+   "scale": [
+    "high_dimensional"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Factor analysis",
+    "does": "finds latent dimensions behind correlated items",
+    "hypotheses": [
+     "a linear common-factor model",
+     "an adequate sample",
+     "measurement invariance before groups are compared"
+    ]
+   }
+  ],
+  "inputs": [
+   "item responses"
+  ],
+  "outputs": [
+   "factor scores"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.520504",
+  "field": "MS",
+  "node": "ANZSRC:520504",
+  "name": "Psychology of religion",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "cognitive mechanisms of belief",
+   "psychological effects of religious practice"
+  ],
+  "signature": {
+   "task": [
+    "explain"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Hyperactive agency detection (Barrett)",
+    "does": "Proposes bias to detect agents explains supernatural belief",
+    "hypotheses": [
+     "detection errs towards false positives",
+     "ambiguous stimuli present (contested)"
+    ]
+   },
+   {
+    "name": "Minimally counterintuitive concepts (Boyer)",
+    "does": "Predicts memorable concepts violate few intuitive expectations",
+    "hypotheses": [
+     "concepts violate few expectations",
+     "cultural transmission over time"
+    ]
+   },
+   {
+    "name": "Terror management theory",
+    "does": "Predicts worldview defence under reminders of mortality",
+    "hypotheses": [
+     "mortality salience induced",
+     "cultural worldview available"
+    ]
+   }
+  ],
+  "inputs": [
+   "behavioural data",
+   "belief measures",
+   "demographic profiles"
+  ],
+  "outputs": [
+   "causal models of belief",
+   "belief-wellbeing correlations"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (CSR is a field; replaced with its named theories). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520505",
+  "field": "MS",
+  "node": "ANZSRC:520505",
+  "name": "Social psychology",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "interpersonal influence and groups",
+   "social perception"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "predict"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Cognitive dissonance theory (Festinger)",
+    "does": "Predicts attitude change to reduce inconsistency",
+    "hypotheses": [
+     "cognitions relevant and inconsistent",
+     "freedom of choice perceived"
+    ]
+   },
+   {
+    "name": "Social identity theory (Tajfel-Turner)",
+    "does": "Explains intergroup behaviour via categorisation and positive distinctiveness",
+    "hypotheses": [
+     "group membership salient",
+     "status comparison possible"
+    ]
+   },
+   {
+    "name": "Asch conformity paradigm",
+    "does": "Measures conformity to unanimous group judgements",
+    "hypotheses": [
+     "unanimous confederate majority",
+     "public responses",
+     "unambiguous task"
+    ]
+   }
+  ],
+  "inputs": [
+   "beliefs",
+   "group composition",
+   "behavioural responses"
+  ],
+  "outputs": [
+   "predictive models",
+   "explanations of social influence"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "gemma4:31b (local, on Chris's Mac); reviewed by claude-sonnet-5-5",
+  "date": "2026-11-19",
+  "notes": "Drafted by a local model from general knowledge, then reviewed and corrected in session (Fixed Asch hypotheses). No source checked except spot checks; needs specialist review."
+ },
+ {
+  "id": "MS.TK.520599",
+  "field": "MS",
+  "node": "ANZSRC:520599",
+  "name": "Social and personality psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "MS.TK.529999",
+  "field": "MS",
+  "node": "ANZSRC:529999",
+  "name": "Other psychology not elsewhere classified",
+  "taxonomy_cell": "MS.O.A1",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "Residual class of the scheme (not elsewhere classified). It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

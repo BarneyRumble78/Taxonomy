@@ -1,0 +1,172 @@
+[
+ {
+  "id": "IS.TK.4605",
+  "field": "IS",
+  "node": "ANZSRC:4605",
+  "name": "Data management and data science",
+  "taxonomy_cell": "IS.O.A4",
+  "solves": [
+   "store facts once so they cannot contradict each other",
+   "estimate how well a fitted model will do on new cases"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "estimate",
+    "verify"
+   ],
+   "structure": [
+    "set"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Relational normalisation",
+    "does": "removes redundancy by splitting tables",
+    "hypotheses": [
+     "the functional dependencies among attributes are known"
+    ]
+   },
+   {
+    "name": "Cross-validation",
+    "does": "estimates out-of-sample error by holding data out in turn",
+    "hypotheses": [
+     "observations are independent or exchangeable",
+     "no information leaks between folds"
+    ]
+   }
+  ],
+  "inputs": [
+   "attributes and their dependencies",
+   "a dataset and a model"
+  ],
+  "outputs": [
+   "a normalised schema",
+   "error estimate"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.4609",
+  "field": "IS",
+  "node": "ANZSRC:4609",
+  "name": "Information systems",
+  "taxonomy_cell": "IS.O.A3",
+  "solves": [
+   "describe an organisation's information so a system can hold it",
+   "predict whether people will take up a system"
+  ],
+  "signature": {
+   "task": [
+    "design",
+    "predict"
+   ],
+   "structure": [
+    "graph_network"
+   ],
+   "agents": [
+    "single_decision_maker"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Entity-relationship modelling",
+    "does": "describes a domain as things and the links between them",
+    "hypotheses": [
+     "the domain can be described as entities with relationships"
+    ]
+   },
+   {
+    "name": "Technology acceptance model",
+    "does": "predicts use from perceived usefulness and ease of use",
+    "hypotheses": [
+     "perceptions are self-reported in a valid survey",
+     "use is voluntary"
+    ]
+   }
+  ],
+  "inputs": [
+   "requirements",
+   "survey responses"
+  ],
+  "outputs": [
+   "data model",
+   "predicted uptake"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "IS.TK.4610",
+  "field": "IS",
+  "node": "ANZSRC:4610",
+  "name": "Library and information studies",
+  "taxonomy_cell": "IS.O.A2",
+  "solves": [
+   "organise a collection so items can be found",
+   "measure how well a search finds what is wanted"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "verify",
+    "estimate"
+   ],
+   "structure": [
+    "hierarchy_tree",
+    "set"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Faceted classification",
+    "does": "describes each item by independent facets",
+    "hypotheses": [
+     "mutually exclusive facets can be defined for the subject"
+    ]
+   },
+   {
+    "name": "Precision and recall evaluation",
+    "does": "scores a search system against known relevant items",
+    "hypotheses": [
+     "relevance judgements exist for a test collection"
+    ]
+   },
+   {
+    "name": "Bradford's law",
+    "does": "says a few sources carry most of the papers on a subject",
+    "hypotheses": [
+     "it is an empirical regularity",
+     "a large bibliography on one subject"
+    ]
+   }
+  ],
+  "inputs": [
+   "a collection",
+   "queries with relevance judgements"
+  ],
+  "outputs": [
+   "classification scheme",
+   "precision and recall",
+   "core source list"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]

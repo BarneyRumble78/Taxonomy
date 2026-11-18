@@ -1,0 +1,1024 @@
+[
+ {
+  "id": "EA.TK.AGRICULTURE",
+  "field": "EA",
+  "node": "GCMD:a956d045-3b12-441c-8a18-fac7d33b2b4e",
+  "name": "Agriculture",
+  "taxonomy_cell": "EA.O.A5",
+  "solves": [
+   "monitor plant cover over large areas from a distance"
+  ],
+  "signature": {
+   "task": [
+    "estimate",
+    "classify"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "data": [
+    "data_rich"
+   ],
+   "direction": [
+    "inverse"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Normalised difference vegetation index",
+    "does": "indicates green plant cover from red and near-infrared reflectance",
+    "hypotheses": [
+     "reflectance is corrected for the atmosphere",
+     "cover is not so dense that the index saturates"
+    ]
+   }
+  ],
+  "inputs": [
+   "multispectral images"
+  ],
+  "outputs": [
+   "maps of plant cover"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.ATMOSPHERE",
+  "field": "EA",
+  "node": "GCMD:c47f6052-634e-40ef-a5ac-13f69f6f4c2a",
+  "name": "Atmosphere",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "forecast the state of a rotating stratified fluid",
+   "infer wind from pressure"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "linearity": [
+    "nonlinear"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Numerical weather prediction",
+    "does": "integrates the governing equations forward from an analysed state",
+    "hypotheses": [
+     "the initial state comes from data assimilation",
+     "the forecast is inside the predictability horizon"
+    ]
+   },
+   {
+    "name": "Geostrophic balance",
+    "does": "gives wind from the pressure gradient",
+    "hypotheses": [
+     "small Rossby number",
+     "away from the equator",
+     "above the boundary layer"
+    ]
+   },
+   {
+    "name": "Hydrostatic approximation",
+    "does": "balances pressure gradient against gravity in the vertical",
+    "hypotheses": [
+     "horizontal scale is much larger than vertical scale"
+    ]
+   }
+  ],
+  "inputs": [
+   "observations of pressure, wind, temperature and moisture"
+  ],
+  "outputs": [
+   "forecast fields",
+   "wind estimates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.BIOLOGICAL CLASSIFICATION",
+  "field": "EA",
+  "node": "GCMD:fbec5145-79e6-4ed0-a804-6228aa6daba5",
+  "name": "Biological Classification",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A catalogue of organisms used to index data. Tools sit in biology. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.BIOSPHERE",
+  "field": "EA",
+  "node": "GCMD:91c64c46-d040-4daa-b26c-61952fdfaf50",
+  "name": "Biosphere",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "predict where a kind of organism can live"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "classify"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Species distribution model",
+    "does": "relates occurrence records to environmental layers",
+    "hypotheses": [
+     "the species is at equilibrium with its environment",
+     "occurrence records are not strongly biased in space"
+    ]
+   }
+  ],
+  "inputs": [
+   "occurrence records",
+   "environmental layers"
+  ],
+  "outputs": [
+   "suitability map"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.CLIMATE INDICATORS",
+  "field": "EA",
+  "node": "GCMD:23703b6b-ee15-4512-b5b2-f441547e2edf",
+  "name": "Climate Indicators",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "detect a trend in a long noisy record"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Mann–Kendall trend test",
+    "does": "tests for a monotonic trend without assuming a distribution",
+    "hypotheses": [
+     "observations are serially independent, or the series is pre-whitened",
+     "the record is homogeneous"
+    ]
+   }
+  ],
+  "inputs": [
+   "a long homogeneous record"
+  ],
+  "outputs": [
+   "trend verdict with significance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.CRYOSPHERE",
+  "field": "EA",
+  "node": "GCMD:fa0a36c3-2503-4662-98cd-7f3e74ce9f80",
+  "name": "Cryosphere",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "predict the slow flow and mass change of large ice bodies"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "linearity": [
+    "nonlinear"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Glen's flow law",
+    "does": "relates strain rate in ice to stress by a power law",
+    "hypotheses": [
+     "polycrystalline ice",
+     "steady secondary creep"
+    ]
+   },
+   {
+    "name": "Shallow ice approximation",
+    "does": "simplifies ice flow to vertical shear",
+    "hypotheses": [
+     "thickness is small against horizontal extent",
+     "sliding does not dominate"
+    ]
+   }
+  ],
+  "inputs": [
+   "ice geometry and temperature",
+   "accumulation and melt"
+  ],
+  "outputs": [
+   "flow speed",
+   "mass balance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.HUMAN DIMENSIONS",
+  "field": "EA",
+  "node": "GCMD:fb93d937-c17c-45d0-a9e3-ca5c8a800ca8",
+  "name": "Human Dimensions",
+  "taxonomy_cell": "EA.O.A5",
+  "solves": [
+   "relate human activity to change in a physical system"
+  ],
+  "signature": {
+   "task": [
+    "explain",
+    "estimate"
+   ],
+   "agents": [
+    "multiple_cooperative"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A crossing-point class. Tools sit in economics, demography and environment. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.LAND SURFACE",
+  "field": "EA",
+  "node": "GCMD:6a426480-c58f-4b6b-8e35-0975b7f6edb5",
+  "name": "Land Surface",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "label every part of a surface by type",
+   "route flow across terrain"
+  ],
+  "signature": {
+   "task": [
+    "classify",
+    "predict"
+   ],
+   "structure": [
+    "field_spatial",
+    "grid_lattice"
+   ],
+   "data": [
+    "data_rich"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Supervised land-cover classification",
+    "does": "assigns a class to each image cell",
+    "hypotheses": [
+     "training samples represent every class",
+     "classes are separable in the measured bands"
+    ]
+   },
+   {
+    "name": "Steepest-descent flow routing (D8)",
+    "does": "derives drainage paths from an elevation grid",
+    "hypotheses": [
+     "surface water follows the steepest slope",
+     "the elevation grid has no false pits"
+    ]
+   }
+  ],
+  "inputs": [
+   "images",
+   "elevation grid"
+  ],
+  "outputs": [
+   "land-cover map",
+   "drainage network"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.OCEANS",
+  "field": "EA",
+  "node": "GCMD:91697b7d-8f2b-4954-850e-61d5f61c867d",
+  "name": "Oceans",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "predict large-scale currents and tides"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ekman transport",
+    "does": "gives net wind-driven flow at right angles to the wind",
+    "hypotheses": [
+     "steady wind",
+     "water much deeper than the Ekman layer",
+     "away from coasts and the equator"
+    ]
+   },
+   {
+    "name": "Tidal harmonic analysis",
+    "does": "predicts tides as a sum of known frequencies",
+    "hypotheses": [
+     "the record is long enough to separate the constituents",
+     "local response is stationary"
+    ]
+   },
+   {
+    "name": "Thermal wind relation",
+    "does": "gives vertical change of current from horizontal density gradients",
+    "hypotheses": [
+     "geostrophic and hydrostatic balance"
+    ]
+   }
+  ],
+  "inputs": [
+   "wind stress",
+   "sea-level record",
+   "density sections"
+  ],
+  "outputs": [
+   "transport",
+   "tide predictions",
+   "current shear"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.PALEOCLIMATE",
+  "field": "EA",
+  "node": "GCMD:c7245882-84a1-4192-acfa-a758b5b9c151",
+  "name": "Paleoclimate",
+  "taxonomy_cell": "EA.O.A3",
+  "solves": [
+   "date past events and rebuild past conditions from preserved material"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "structure": [
+    "time_series"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Radiocarbon dating",
+    "does": "dates organic material from remaining carbon-14",
+    "hypotheses": [
+     "the sample has been a closed system since death",
+     "a calibration curve is applied",
+     "age is within about 50,000 years"
+    ]
+   },
+   {
+    "name": "Oxygen-isotope proxies",
+    "does": "infer past temperature or ice volume from isotope ratios",
+    "hypotheses": [
+     "a calibrated relation between ratio and condition",
+     "the material is not chemically altered after deposition"
+    ]
+   },
+   {
+    "name": "Tree-ring cross-dating",
+    "does": "assigns exact years by matching ring patterns",
+    "hypotheses": [
+     "rings are annual",
+     "samples overlap in time"
+    ]
+   }
+  ],
+  "inputs": [
+   "cores, shells, wood"
+  ],
+  "outputs": [
+   "dated sequence",
+   "reconstructed conditions"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.SOLID EARTH",
+  "field": "EA",
+  "node": "GCMD:2b9ad978-d986-4d63-b477-0f5efc8ace72",
+  "name": "Solid Earth",
+  "taxonomy_cell": "EA.O.A2",
+  "solves": [
+   "image an interior that cannot be visited",
+   "date rock",
+   "state how often large events occur"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "scale": [
+    "large"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Seismic travel-time tomography",
+    "does": "maps wave speed inside the body",
+    "hypotheses": [
+     "ray theory holds",
+     "ray coverage is adequate for the stated resolution"
+    ]
+   },
+   {
+    "name": "Radiometric dating",
+    "does": "dates rock from parent and daughter isotopes",
+    "hypotheses": [
+     "a closed system since formation",
+     "the decay constant is known",
+     "initial daughter content is known or found by isochron"
+    ]
+   },
+   {
+    "name": "Gutenberg–Richter relation",
+    "does": "gives event frequency as a function of magnitude",
+    "hypotheses": [
+     "the catalogue is complete above a stated magnitude",
+     "a large region and long period"
+    ]
+   },
+   {
+    "name": "Rigid-plate kinematics (Euler poles)",
+    "does": "describes plate motion as rotation on a sphere",
+    "hypotheses": [
+     "plates are rigid away from their boundaries"
+    ]
+   }
+  ],
+  "inputs": [
+   "arrival times",
+   "isotope ratios",
+   "event catalogue"
+  ],
+  "outputs": [
+   "interior image",
+   "ages",
+   "recurrence rates"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.SPECTRAL/ENGINEERING",
+  "field": "EA",
+  "node": "GCMD:83150c54-5da8-4ee8-9579-19b95a8dc10c",
+  "name": "Spectral/Engineering",
+  "taxonomy_cell": "EA.O.A1",
+  "solves": [
+   "retrieve the state of a distant medium from radiation reaching a sensor"
+  ],
+  "signature": {
+   "task": [
+    "infer",
+    "estimate"
+   ],
+   "direction": [
+    "inverse"
+   ],
+   "uncertainty": [
+    "noise"
+   ],
+   "structure": [
+    "field_spatial"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Radiative transfer retrieval",
+    "does": "inverts measured radiance for properties of the medium",
+    "hypotheses": [
+     "a forward model of the radiation exists",
+     "prior information regularises the ill-posed inversion"
+    ]
+   },
+   {
+    "name": "Stefan–Boltzmann and Planck laws",
+    "does": "relate emitted radiation to temperature",
+    "hypotheses": [
+     "a black body, or a body of known emissivity"
+    ]
+   },
+   {
+    "name": "Synthetic-aperture radar interferometry",
+    "does": "measures surface height or movement from phase differences",
+    "hypotheses": [
+     "the surface stays coherent between passes",
+     "atmospheric delay is corrected or small"
+    ]
+   }
+  ],
+  "inputs": [
+   "calibrated radiance or phase"
+  ],
+  "outputs": [
+   "temperature",
+   "composition",
+   "height or displacement"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.SUN-EARTH INTERACTIONS",
+  "field": "EA",
+  "node": "GCMD:57383ac5-614c-4b84-9202-e137b000422b",
+  "name": "Sun-Earth Interactions",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "predict how a stream of charged particles and fields disturbs a planet's surroundings"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "explain"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Frozen-in flux (ideal magnetohydrodynamics)",
+    "does": "ties the magnetic field to the plasma flow",
+    "hypotheses": [
+     "very high electrical conductivity",
+     "scales large against particle gyroradii"
+    ]
+   },
+   {
+    "name": "Chapman layer",
+    "does": "gives the height profile of ionisation",
+    "hypotheses": [
+     "monochromatic radiation",
+     "an isothermal single-species atmosphere",
+     "plane-parallel layering"
+    ]
+   }
+  ],
+  "inputs": [
+   "upstream particle and field measurements"
+  ],
+  "outputs": [
+   "field configuration",
+   "ionisation profile"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.TERRESTRIAL HYDROSPHERE",
+  "field": "EA",
+  "node": "GCMD:885735f3-121e-4ca0-ac8b-f37dbc972f03",
+  "name": "Terrestrial Hydrosphere",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "predict flow through ground and channels",
+   "account for water entering and leaving an area"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "constraints": [
+    "physical_law"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Darcy's law",
+    "does": "gives flow through a porous medium from the head gradient",
+    "hypotheses": [
+     "slow laminar flow",
+     "a saturated medium"
+    ]
+   },
+   {
+    "name": "Water balance",
+    "does": "equates storage change to inflow minus outflow",
+    "hypotheses": [
+     "the catchment boundary is closed and known",
+     "every flux is measured or estimated"
+    ]
+   },
+   {
+    "name": "Manning's equation",
+    "does": "estimates open-channel flow speed",
+    "hypotheses": [
+     "steady uniform flow",
+     "roughness coefficient chosen empirically"
+    ]
+   },
+   {
+    "name": "Unit hydrograph",
+    "does": "predicts runoff from rainfall",
+    "hypotheses": [
+     "the catchment responds linearly",
+     "the response does not change with time"
+    ]
+   }
+  ],
+  "inputs": [
+   "heads, rainfall and channel geometry"
+  ],
+  "outputs": [
+   "flow rates",
+   "storage change",
+   "runoff series"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.DATA ANALYSIS AND VISUALIZATION",
+  "field": "EA",
+  "node": "GCMD:41adc080-c182-4753-9666-435f8b1c913f",
+  "name": "Data Analysis And Visualization",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "estimate a value everywhere from scattered measurements"
+  ],
+  "signature": {
+   "task": [
+    "estimate"
+   ],
+   "structure": [
+    "field_spatial"
+   ],
+   "uncertainty": [
+    "noise"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Kriging",
+    "does": "gives the best linear unbiased estimate between sample points",
+    "hypotheses": [
+     "the field is second-order or intrinsically stationary",
+     "the variogram is known or well estimated"
+    ]
+   }
+  ],
+  "inputs": [
+   "point measurements"
+  ],
+  "outputs": [
+   "gridded estimate with variance"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.DATA MANAGEMENT/DATA HANDLING",
+  "field": "EA",
+  "node": "GCMD:02d92216-70c6-437c-8c15-2b76f2132921",
+  "name": "Data Management/Data Handling",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A service keyword of the scheme, not a subject area. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.EDUCATION/OUTREACH",
+  "field": "EA",
+  "node": "GCMD:dc2088f9-ffb7-41c3-b0a1-856ecfec89de",
+  "name": "Education/Outreach",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A service keyword of the scheme, not a subject area. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.ENVIRONMENTAL ADVISORIES",
+  "field": "EA",
+  "node": "GCMD:09d00879-6d96-4df4-9f50-73bd761118d9",
+  "name": "Environmental Advisories",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A service keyword of the scheme, not a subject area. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.HAZARDS MANAGEMENT",
+  "field": "EA",
+  "node": "GCMD:464de0a5-2bb9-4172-9fd3-1634cbc4e739",
+  "name": "Hazards Management",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A service keyword of the scheme, not a subject area. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.MACHINE LEARNING TRAINING DATA",
+  "field": "EA",
+  "node": "GCMD:676bb4aa-1452-4527-aa05-83233ad5d01d",
+  "name": "Machine Learning Training Data",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A service keyword of the scheme, not a subject area. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.METADATA HANDLING",
+  "field": "EA",
+  "node": "GCMD:a1fedfa9-569f-4313-8ce1-db95513c5469",
+  "name": "Metadata Handling",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A service keyword of the scheme, not a subject area. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.MODELS",
+  "field": "EA",
+  "node": "GCMD:e1f20631-b5b9-438c-b5c2-b1fa0fce100a",
+  "name": "Models",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "state how uncertain a simulated forecast is"
+  ],
+  "signature": {
+   "task": [
+    "predict",
+    "estimate"
+   ],
+   "uncertainty": [
+    "probabilistic_model"
+   ],
+   "dynamics": [
+    "dynamic_deterministic"
+   ]
+  },
+  "tools": [
+   {
+    "name": "Ensemble forecasting",
+    "does": "runs many simulations to estimate forecast spread",
+    "hypotheses": [
+     "members sample the uncertainty in initial state and model",
+     "the ensemble is calibrated against past outcomes"
+    ]
+   }
+  ],
+  "inputs": [
+   "perturbed initial states or model variants"
+  ],
+  "outputs": [
+   "forecast distribution"
+  ],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.REFERENCE AND INFORMATION SERVICES",
+  "field": "EA",
+  "node": "GCMD:a3a5d0dd-0e8f-4649-8a55-25f9251e1008",
+  "name": "Reference And Information Services",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A service keyword of the scheme, not a subject area. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ },
+ {
+  "id": "EA.TK.WEB SERVICES",
+  "field": "EA",
+  "node": "GCMD:1d550f3a-1c8c-4ef5-beff-74cfe7794f12",
+  "name": "Web Services",
+  "taxonomy_cell": "EA.O.A4",
+  "solves": [
+   "locate work on this subject within the field's catalogue"
+  ],
+  "signature": {
+   "task": [
+    "classify"
+   ]
+  },
+  "tools": [],
+  "inputs": [],
+  "outputs": [],
+  "cross_uses": [],
+  "status": "draft",
+  "generated_by": "claude-fable-5-2",
+  "date": "2026-11-11",
+  "notes": "A service keyword of the scheme, not a subject area. It holds no tools of its own. Drafted in session by a model from general knowledge; no source checked; needs specialist review"
+ }
+]
