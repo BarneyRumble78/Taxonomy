@@ -16,6 +16,36 @@
   ]
  },
  {
+  "id": "AG.O.A1.1.1",
+  "label": "Realised heritability",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": [
+   "BI.O.A4.2"
+  ]
+ },
+ {
+  "id": "AG.O.A1.1.2",
+  "label": "Annual genetic gain",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A1.1.3",
+  "label": "Selection index",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A1.1.4",
+  "label": "Breeding value prediction",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "AG.O.A1.2",
   "label": "Genetic improvement",
   "owner": "AG",
@@ -26,8 +56,71 @@
   ]
  },
  {
+  "id": "AG.O.A1.2.1",
+  "label": "Heterosis",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A1.2.2",
+  "label": "Marker-assisted and genomic selection",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": [
+   "BI.O.A1.3"
+  ]
+ },
+ {
+  "id": "AG.O.A1.2.3",
+  "label": "Gene editing",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": [
+   "BI.O.A1.4",
+   "LA.O.A1.1"
+  ]
+ },
+ {
+  "id": "AG.O.A1.2.4",
+  "label": "Transgenic events",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "AG.O.A1.3",
   "label": "Genetic resources",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A1.3.1",
+  "label": "Seed storage",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A1.3.2",
+  "label": "Effective population size and inbreeding",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": [
+   "BI.O.A4.1"
+  ]
+ },
+ {
+  "id": "AG.O.A1.3.3",
+  "label": "Landraces",
+  "owner": "AG",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A1.3.4",
+  "label": "Core collections",
   "owner": "AG",
   "home": "O/A1",
   "uses": []
@@ -49,12 +142,75 @@
   ]
  },
  {
+  "id": "AG.O.A2.1.1",
+  "label": "Law of the minimum",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.1.2",
+  "label": "Response curves",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.1.3",
+  "label": "Soil test calibration",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.5",
+   "CH.O.A5.3"
+  ]
+ },
+ {
+  "id": "AG.O.A2.1.4",
+  "label": "Nutrient recovery",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "AG.O.A2.2",
   "label": "Water and irrigation",
   "owner": "AG",
   "home": "O/A2",
   "uses": [
    "EA"
+  ]
+ },
+ {
+  "id": "AG.O.A2.2.1",
+  "label": "Crop water requirement",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.2"
+  ]
+ },
+ {
+  "id": "AG.O.A2.2.2",
+  "label": "Yield response to water",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.2.3",
+  "label": "Irrigation scheduling",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.2.4",
+  "label": "Salinity and sodicity",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.5"
   ]
  },
  {
@@ -65,11 +221,73 @@
   "uses": []
  },
  {
+  "id": "AG.O.A2.3.1",
+  "label": "Rotation",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.3.2",
+  "label": "Tillage",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.3.3",
+  "label": "Intercropping",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.3.4",
+  "label": "Phenology and sowing date",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.3"
+  ]
+ },
+ {
   "id": "AG.O.A2.4",
   "label": "Animal husbandry",
   "owner": "AG",
   "home": "O/A2",
   "uses": []
+ },
+ {
+  "id": "AG.O.A2.4.1",
+  "label": "Energy requirement",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.4.2",
+  "label": "Stocking rate",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.4.3",
+  "label": "Rumen digestion and methane",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": [
+   "EV"
+  ]
+ },
+ {
+  "id": "AG.O.A2.4.4",
+  "label": "Welfare measurement",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": [
+   "LA.O.A1.1"
+  ]
  },
  {
   "id": "AG.O.A2.5",
@@ -79,6 +297,36 @@
   "uses": [
    "BI"
   ]
+ },
+ {
+  "id": "AG.O.A2.5.1",
+  "label": "Surplus production",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": [
+   "BI.O.A5.1"
+  ]
+ },
+ {
+  "id": "AG.O.A2.5.2",
+  "label": "Catch per unit effort",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.5.3",
+  "label": "Forest stand growth",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A2.5.4",
+  "label": "Feed conversion in aquaculture",
+  "owner": "AG",
+  "home": "O/A2",
+  "uses": []
  },
  {
   "id": "AG.O.A3",
@@ -97,8 +345,74 @@
   ]
  },
  {
+  "id": "AG.O.A3.1.1",
+  "label": "Economic injury level",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A3.1.2",
+  "label": "Resistance management",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "BI.O.A4.1"
+  ]
+ },
+ {
+  "id": "AG.O.A3.1.3",
+  "label": "Biological control",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "BI.O.A5.2"
+  ]
+ },
+ {
+  "id": "AG.O.A3.1.4",
+  "label": "Critical period of weed control",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
   "id": "AG.O.A3.2",
   "label": "Veterinary medicine",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A3.2.1",
+  "label": "Test accuracy in animals",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "MD.O.A3.2"
+  ]
+ },
+ {
+  "id": "AG.O.A3.2.2",
+  "label": "Withholding periods",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "MD.O.A4.4.1"
+  ]
+ },
+ {
+  "id": "AG.O.A3.2.3",
+  "label": "Antimicrobial use and resistance",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "MD.O.A2.1.1"
+  ]
+ },
+ {
+  "id": "AG.O.A3.2.4",
+  "label": "Trials in veterinary practice",
   "owner": "AG",
   "home": "O/A3",
   "uses": []
@@ -113,12 +427,81 @@
   ]
  },
  {
+  "id": "AG.O.A3.3.1",
+  "label": "Inspection and sampling",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "AG.O.A3.3.2",
+  "label": "Surveillance sensitivity",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "AG.O.A3.3.3",
+  "label": "Eradication feasibility",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "MD.O.A5.2",
+   "MD.O.A5.2.3"
+  ]
+ },
+ {
+  "id": "AG.O.A3.3.4",
+  "label": "Establishment of introduced pests",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "EV.O.A1.4"
+  ]
+ },
+ {
   "id": "AG.O.A3.4",
   "label": "Zoonoses",
   "owner": "AG",
   "home": "O/A3",
   "uses": [
    "MD"
+  ]
+ },
+ {
+  "id": "AG.O.A3.4.1",
+  "label": "Reservoirs",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A3.4.2",
+  "label": "Control at source",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "MD.O.A5.1"
+  ]
+ },
+ {
+  "id": "AG.O.A3.4.3",
+  "label": "Spillover",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A3.4.4",
+  "label": "Foodborne zoonoses",
+  "owner": "AG",
+  "home": "O/A3",
+  "uses": [
+   "MD.O.A5.1"
   ]
  },
  {
@@ -139,6 +522,41 @@
   ]
  },
  {
+  "id": "AG.O.A4.1.1",
+  "label": "Proximate analysis",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": [
+   "CH.O.A5.3"
+  ]
+ },
+ {
+  "id": "AG.O.A4.1.2",
+  "label": "Natural variation",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A4.1.3",
+  "label": "Retention in processing",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": [
+   "CH.O.A4.1"
+  ]
+ },
+ {
+  "id": "AG.O.A4.1.4",
+  "label": "Food security measures",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": [
+   "EC",
+   "MD"
+  ]
+ },
+ {
   "id": "AG.O.A4.2",
   "label": "Processing and preservation",
   "owner": "AG",
@@ -149,8 +567,71 @@
   ]
  },
  {
+  "id": "AG.O.A4.2.1",
+  "label": "Thermal death time",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": [
+   "CH.O.A4.2"
+  ]
+ },
+ {
+  "id": "AG.O.A4.2.2",
+  "label": "Water activity",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A4.2.3",
+  "label": "Pasteurisation",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A4.2.4",
+  "label": "Fermentation yield and growth",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": [
+   "CH.O.A1.2",
+   "BI.O.A2.3"
+  ]
+ },
+ {
   "id": "AG.O.A4.3",
   "label": "Food safety",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A4.3.1",
+  "label": "HACCP principles",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A4.3.2",
+  "label": "End-product testing",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "AG.O.A4.3.3",
+  "label": "Predictive microbiology",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A4.3.4",
+  "label": "Chemical hazards",
   "owner": "AG",
   "home": "O/A4",
   "uses": []
@@ -163,6 +644,40 @@
   "uses": [
    "LA"
   ]
+ },
+ {
+  "id": "AG.O.A4.4.1",
+  "label": "Codex Alimentarius",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": [
+   "LA.O.A1.4"
+  ]
+ },
+ {
+  "id": "AG.O.A4.4.2",
+  "label": "Australia New Zealand Food Standards Code",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": [
+   "LA.O.A1.1"
+  ]
+ },
+ {
+  "id": "AG.O.A4.4.3",
+  "label": "Maximum residue limits",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": [
+   "MD"
+  ]
+ },
+ {
+  "id": "AG.O.A4.4.4",
+  "label": "Labelling and certification",
+  "owner": "AG",
+  "home": "O/A4",
+  "uses": []
  },
  {
   "id": "AG.O.A5",
@@ -181,6 +696,29 @@
   ]
  },
  {
+  "id": "AG.O.A5.1.1",
+  "label": "Partial and total productivity",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": [
+   "EC.O.A4.1"
+  ]
+ },
+ {
+  "id": "AG.O.A5.1.2",
+  "label": "Yield gap",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A5.1.3",
+  "label": "Livestock system efficiency",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "AG.O.A5.2",
   "label": "Farm management",
   "owner": "AG",
@@ -190,12 +728,80 @@
   ]
  },
  {
+  "id": "AG.O.A5.2.1",
+  "label": "Gross margin and partial budget",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": [
+   "EC"
+  ]
+ },
+ {
+  "id": "AG.O.A5.2.2",
+  "label": "Investment appraisal",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A5.2.3",
+  "label": "Income risk",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "AG.O.A5.2.4",
+  "label": "Whole-farm models",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": [
+   "MA"
+  ]
+ },
+ {
   "id": "AG.O.A5.3",
   "label": "Environmental effect of farming",
   "owner": "AG",
   "home": "O/A5",
   "uses": [
    "EV"
+  ]
+ },
+ {
+  "id": "AG.O.A5.3.1",
+  "label": "Nitrogen balance",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": [
+   "EV.O.A2.2"
+  ]
+ },
+ {
+  "id": "AG.O.A5.3.2",
+  "label": "Methane intensity and total",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": [
+   "EV.O.A1.1"
+  ]
+ },
+ {
+  "id": "AG.O.A5.3.3",
+  "label": "Mitigation effect",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "AG.O.A5.3.4",
+  "label": "Soil carbon change",
+  "owner": "AG",
+  "home": "O/A5",
+  "uses": [
+   "EA.O.A4.5"
   ]
  },
  {
@@ -1459,6 +2065,472 @@
   "uses": []
  },
  {
+  "id": "BU.O.A1.1.1",
+  "label": "Trial balance limits",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.1.2",
+  "label": "Accrual basis",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.1.3",
+  "label": "Profit versus cash flow",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.2.1",
+  "label": "Conceptual framework",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.2.2",
+  "label": "Measurement bases and fair value",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.2.3",
+  "label": "Jurisdiction sets the standard",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": [
+   "LA.O.A1.1"
+  ]
+ },
+ {
+  "id": "BU.O.A1.3.1",
+  "label": "Cost-volume-profit analysis",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.3.2",
+  "label": "Activity-based costing",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.3.3",
+  "label": "Variance analysis",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.4.1",
+  "label": "Audit risk model",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.4.2",
+  "label": "Statistical audit sampling",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A1.4.3",
+  "label": "Auditor independence",
+  "owner": "BU",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.1.1",
+  "label": "NPV versus IRR ranking",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.1.2",
+  "label": "Terminal value sensitivity",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.1.3",
+  "label": "Real options (CONTESTED)",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": [
+   "MA.B.C4"
+  ]
+ },
+ {
+  "id": "BU.O.A2.2.1",
+  "label": "Trade-off theory",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.2.2",
+  "label": "Pecking-order theory",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": [
+   "EC.O.A2.3"
+  ]
+ },
+ {
+  "id": "BU.O.A2.2.3",
+  "label": "WACC and constant leverage",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.3.1",
+  "label": "Mean–variance portfolio selection",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.3.2",
+  "label": "Multi-factor models (CONTESTED)",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.3.3",
+  "label": "Value at risk",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.4.1",
+  "label": "Put–call parity",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.4.2",
+  "label": "Implied volatility smile",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.4.3",
+  "label": "Hedging and basis risk",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": [
+   "BU.O.A1.2"
+  ]
+ },
+ {
+  "id": "BU.O.A2.5.1",
+  "label": "Event study",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.5.2",
+  "label": "Anomalies and joint hypothesis (CONTESTED)",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A2.5.3",
+  "label": "Duration",
+  "owner": "BU",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.1.1",
+  "label": "M/M/1 waiting and utilisation",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "BU.O.A3.1.2",
+  "label": "Theory of constraints",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.1.3",
+  "label": "Control charts",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.2.1",
+  "label": "Economic order quantity",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.2.2",
+  "label": "Newsvendor model",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.2.3",
+  "label": "Shared demand data and bullwhip",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.3.1",
+  "label": "Corporate governance remedies",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.3.2",
+  "label": "Make-or-buy boundary",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": [
+   "EC.O.A3.3"
+  ]
+ },
+ {
+  "id": "BU.O.A3.3.3",
+  "label": "Contingency theory (CONTESTED)",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.4.1",
+  "label": "Structured selection",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.4.2",
+  "label": "Hierarchy of controls",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.4.3",
+  "label": "Employment duty versus practice",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": [
+   "LA.O.A2.1"
+  ]
+ },
+ {
+  "id": "BU.O.A3.5.1",
+  "label": "Bass diffusion model",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.5.2",
+  "label": "Resource-based view (VRIO)",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A3.5.3",
+  "label": "New-firm survival (UNVERIFIED NZ)",
+  "owner": "BU",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A4.1.1",
+  "label": "Customer lifetime value",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A4.1.2",
+  "label": "A/B testing",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A4.1.3",
+  "label": "Segmentation conditions",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A4.2.1",
+  "label": "Conjoint analysis",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A4.2.2",
+  "label": "SERVQUAL (CONTESTED)",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A4.3.1",
+  "label": "Price elasticity of demand",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": [
+   "EC.O.A1.1"
+  ]
+ },
+ {
+  "id": "BU.O.A4.3.2",
+  "label": "Littlewood's rule",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A4.3.3",
+  "label": "Van Westendorp meter",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A4.4.1",
+  "label": "Channel conflict",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A4.4.2",
+  "label": "Digital attribution",
+  "owner": "BU",
+  "home": "O/A4",
+  "uses": [
+   "BU.O.A4.1.2"
+  ]
+ },
+ {
+  "id": "BU.O.A5.1.1",
+  "label": "Incoterms by incorporation",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A5.1.2",
+  "label": "Risk passing in F and C rules",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": [
+   "LA.O.A2.1"
+  ]
+ },
+ {
+  "id": "BU.O.A5.2.1",
+  "label": "Harmonized System digits",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A5.2.2",
+  "label": "Preferential rules of origin",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A5.3.1",
+  "label": "VAT credit chain",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A5.3.2",
+  "label": "Taxable income versus profit",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": [
+   "BU.O.A1.2"
+  ]
+ },
+ {
+  "id": "BU.O.A5.3.3",
+  "label": "Incidence, duty and computation",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": [
+   "EC.O.A2.5",
+   "LA.O.A2.5"
+  ]
+ },
+ {
+  "id": "BU.O.A5.4.1",
+  "label": "Comparable uncontrolled price",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A5.4.2",
+  "label": "Advance pricing agreements",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A5.5.1",
+  "label": "Documentary credit compliance",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "BU.O.A5.5.2",
+  "label": "Open account and credit risk",
+  "owner": "BU",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "CH.O.A1",
   "label": "Composition and identity",
   "owner": "CH",
@@ -1778,6 +2850,529 @@
   ]
  },
  {
+  "id": "CH.O.A1.1.2",
+  "label": "Periodic trends",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.1.3",
+  "label": "Relativistic effects",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": [
+   "PH.O.A2.1"
+  ]
+ },
+ {
+  "id": "CH.O.A1.1.4",
+  "label": "Placement of hydrogen and of the group 3 elements in the table is...",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.2.2",
+  "label": "Conservation of mass in a chemical reaction holds to within measur...",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.2.3",
+  "label": "An empirical formula follows from elemental analysis; a molecular...",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.2.4",
+  "label": "Limiting reagent",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.3.3",
+  "label": "Azeotropes",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.3.4",
+  "label": "Real solutions are described by activity coefficients",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.4.1",
+  "label": "One structure has one standard InChI, given the layer options",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.4.2",
+  "label": "The Cahn–Ingold–Prelog rules assign R or S to each stereocentre fr...",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.5.1",
+  "label": "Isotope ratios are reported as δ values against named reference ma...",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.5.2",
+  "label": "Mass-dependent fractionation scales with the mass difference of th...",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A1.5.3",
+  "label": "Isotope labelling (²H, ¹³C, ¹⁵N, ¹⁸O) traces atoms through a react...",
+  "owner": "CH",
+  "home": "O/A1",
+  "uses": [
+   "BI.O.A2.3"
+  ]
+ },
+ {
+  "id": "CH.O.A2.1.3",
+  "label": "Born–Oppenheimer fails where electronic states come close, as at c...",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": [
+   "PH.O.A2.4"
+  ]
+ },
+ {
+  "id": "CH.O.A2.1.4",
+  "label": "Bond order from molecular orbital theory predicts that O₂ is param...",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A2.1.5",
+  "label": "Ionic lattice energies follow the Born–Haber cycle, given Hess's l...",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": [
+   "CH.O.A3.1"
+  ]
+ },
+ {
+  "id": "CH.O.A2.2.2",
+  "label": "Point-group symmetry predicts which vibrations are IR or Raman active",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": [
+   "MA.O.A2"
+  ]
+ },
+ {
+  "id": "CH.O.A2.2.3",
+  "label": "Conformer populations follow a Boltzmann distribution when interco...",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": [
+   "PH.O.A4.2"
+  ]
+ },
+ {
+  "id": "CH.O.A2.2.4",
+  "label": "Atropisomers are stereoisomers from hindered rotation",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A2.3.2",
+  "label": "Ligand field splitting orders ligands in the spectrochemical series",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A2.3.3",
+  "label": "The Jahn–Teller theorem: a non-linear molecule in an orbitally deg...",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": [
+   "MA.O.A2"
+  ]
+ },
+ {
+  "id": "CH.O.A2.3.4",
+  "label": "Band structure describes metals and semiconductors",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": [
+   "PH.O.A4.4"
+  ]
+ },
+ {
+  "id": "CH.O.A2.4.1",
+  "label": "Boiling points within a homologous series rise with chain length,...",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A2.4.2",
+  "label": "The hydrophobic effect is largely entropic at room temperature, fr...",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A2.4.3",
+  "label": "Supramolecular assembly (host–guest binding) is driven by many wea...",
+  "owner": "CH",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.1.1",
+  "label": "Standard enthalpies of formation, at a stated standard state, comb...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": [
+   "PH.O.A4.1"
+  ]
+ },
+ {
+  "id": "CH.O.A3.1.2",
+  "label": "Bond enthalpies are averages over compounds",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.1.3",
+  "label": "Calorimetry measures heat at constant pressure (ΔH) or constant vo...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.2.2",
+  "label": "K is written with activities",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.2.3",
+  "label": "Solubility product Ksp predicts precipitation when the ion activit...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.2.4",
+  "label": "Gibbs phase rule F = C − P + 2 gives the degrees of freedom of a s...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": [
+   "PH.O.A4.3"
+  ]
+ },
+ {
+  "id": "CH.O.A3.3.2",
+  "label": "ΔG = −nFE links cell potential to reaction free energy",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.3.3",
+  "label": "Faraday's laws: charge passed is proportional to amount of substan...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.3.4",
+  "label": "The Butler–Volmer equation gives current versus overpotential for...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": [
+   "CH.O.A4",
+   "CH.O.A4.2"
+  ]
+ },
+ {
+  "id": "CH.O.A3.4.1",
+  "label": "The Henderson–Hasselbalch equation gives buffer pH, assuming activ...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.4.2",
+  "label": "Levelling",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.4.3",
+  "label": "Hard–soft acid–base (HSAB) theory predicts preferred pairings qual...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.5.1",
+  "label": "Coupled free energies add only when the steps share a common inter...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A3.5.2",
+  "label": "Electrolysis couples electrical work to a reaction with positive Δ...",
+  "owner": "CH",
+  "home": "O/A3",
+  "uses": [
+   "CH.O.A3.3"
+  ]
+ },
+ {
+  "id": "CH.O.A4.1.1",
+  "label": "Integrated rate laws give linear plots for each order",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A4"
+  ]
+ },
+ {
+  "id": "CH.O.A4.1.2",
+  "label": "Pseudo-first-order conditions hold when one reagent is in large ex...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.1.3",
+  "label": "The method of initial rates finds order in each reagent, given no...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.2.1",
+  "label": "Eyring analysis gives activation enthalpy and entropy",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.2.2",
+  "label": "Tunnelling makes rates exceed transition-state theory for light-at...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.2.3",
+  "label": "Collision theory under-predicts or over-predicts rates by a steric...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.3.2",
+  "label": "The principle of microscopic reversibility: at equilibrium, forwar...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.3.3",
+  "label": "Linear free-energy relations (Hammett equation) correlate rates wi...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.3.4",
+  "label": "Curtin–Hammett principle: when conformers interconvert faster than...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.4.1",
+  "label": "Sabatier principle: the best heterogeneous catalyst binds intermed...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.4.2",
+  "label": "Langmuir adsorption assumes equivalent sites, a monolayer and no i...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.4.3",
+  "label": "Turnover number and turnover frequency state catalyst productivity...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.4.4",
+  "label": "Enzyme rate enhancement as transition-state stabilisation is the s...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.5.1",
+  "label": "Stark–Einstein law: one absorbed photon excites one molecule in th...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.5.2",
+  "label": "Kasha's rule: emission comes mainly from the lowest excited state...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A4.5.3",
+  "label": "The Woodward–Hoffmann rules predict allowed pericyclic reactions u...",
+  "owner": "CH",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.1.2",
+  "label": "Overall yield of a linear route is the product of step yields",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.1.3",
+  "label": "Asymmetric catalysis gives one enantiomer in excess",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.1.4",
+  "label": "Reproducibility of a reported yield is OPEN as a field-wide questi...",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.2.1",
+  "label": "Chromatographic retention depends on the partition coefficient bet...",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.2.2",
+  "label": "Fractional distillation separates by volatility, limited by azeotr...",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": [
+   "CH.O.A1.3"
+  ]
+ },
+ {
+  "id": "CH.O.A5.2.3",
+  "label": "Recrystallisation purifies when impurities stay in solution at the...",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.3.2",
+  "label": "NMR chemical shift and coupling identify local structure",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.3.3",
+  "label": "High-resolution mass spectrometry gives an elemental formula from...",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.3.4",
+  "label": "Calibration by standard addition corrects for matrix effects, give...",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.4.1",
+  "label": "Polymer properties depend on molar-mass distribution",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.4.2",
+  "label": "Step-growth polymerisation reaches high molar mass only at high co...",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.4.3",
+  "label": "Glass transition temperature marks a change in chain mobility; it...",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": [
+   "EN.O.A5"
+  ]
+ },
+ {
+  "id": "CH.O.A5.5.1",
+  "label": "Atom economy is computed from the balanced equation",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.5.2",
+  "label": "The E-factor is mass of waste per mass of product",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CH.O.A5.5.3",
+  "label": "Whether a lower metric means lower environmental harm is EV's clai...",
+  "owner": "CH",
+  "home": "O/A5",
+  "uses": [
+   "EV.O.A3"
+  ]
+ },
+ {
   "id": "CS.O.A1",
   "label": "Correctness",
   "owner": "CS",
@@ -2013,6 +3608,640 @@
   ]
  },
  {
+  "id": "CS.O.A1.1.1",
+  "label": "Operational semantics",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.1.2",
+  "label": "Denotational semantics",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": [
+   "MA.O.A2"
+  ]
+ },
+ {
+  "id": "CS.O.A1.1.3",
+  "label": "Adequacy",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.1.4",
+  "label": "Church–Turing thesis",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": [
+   "PL.O.A5"
+  ]
+ },
+ {
+  "id": "CS.O.A1.2.1",
+  "label": "Hoare triples",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.2.2",
+  "label": "Termination",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "CS.O.A1.2.3",
+  "label": "Model checking",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.2.4",
+  "label": "Separation logic",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.3.1",
+  "label": "Progress and preservation",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.3.2",
+  "label": "Type inference",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.3.3",
+  "label": "Curry–Howard correspondence",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "CS.O.A1.4.1",
+  "label": "Coverage criteria",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.4.2",
+  "label": "Property-based testing",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.4.3",
+  "label": "Mutation testing",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.5.1",
+  "label": "Halting problem",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "CS.O.A1.5.2",
+  "label": "Sound but incomplete analysis",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A1.5.3",
+  "label": "Specification gap",
+  "owner": "CS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.1.1",
+  "label": "Asymptotic cost",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.1.2",
+  "label": "Design paradigms",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.1.3",
+  "label": "Randomised algorithms",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "CS.O.A2.1.4",
+  "label": "Approximation",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": [
+   "MA.B.C3"
+  ]
+ },
+ {
+  "id": "CS.O.A2.2.1",
+  "label": "Amortised analysis",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.2.2",
+  "label": "Hashing",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.2.3",
+  "label": "Balanced search trees",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.2.4",
+  "label": "External memory",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.3.1",
+  "label": "Reductions in practice",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.3.2",
+  "label": "Hardness assumptions as engineering inputs",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": [
+   "MA.B.C3"
+  ]
+ },
+ {
+  "id": "CS.O.A2.3.3",
+  "label": "Parameterised complexity",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.4.1",
+  "label": "Locality",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.4.2",
+  "label": "Gustafson's law",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.4.3",
+  "label": "Instruction-level parallelism",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.4.4",
+  "label": "Accelerators",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A2.5.1",
+  "label": "End of Dennard scaling",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": [
+   "PH.O.A4"
+  ]
+ },
+ {
+  "id": "CS.O.A2.5.2",
+  "label": "Landauer's bound",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": [
+   "PH.O.A4"
+  ]
+ },
+ {
+  "id": "CS.O.A2.5.3",
+  "label": "Energy as a cost measure",
+  "owner": "CS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.1.1",
+  "label": "Coffman conditions",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.1.2",
+  "label": "Linearisability",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.1.3",
+  "label": "Memory models",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.1.4",
+  "label": "Wait-free hierarchy",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": [
+   "MA.B.C3"
+  ]
+ },
+ {
+  "id": "CS.O.A3.2.1",
+  "label": "Partial synchrony",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.2.2",
+  "label": "Crash-fault consensus protocols",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.2.3",
+  "label": "Randomised consensus",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.2.4",
+  "label": "Signed messages",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.3.1",
+  "label": "Scope of CAP",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.3.2",
+  "label": "Latency trade-off",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.3.3",
+  "label": "Convergent replicated data types",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.4.1",
+  "label": "Layering",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.4.2",
+  "label": "End-to-end argument",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.4.3",
+  "label": "Congestion control",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.4.4",
+  "label": "Two Generals problem",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.5.1",
+  "label": "Relational model",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "CS.O.A3.5.2",
+  "label": "Serialisability",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.5.3",
+  "label": "Weaker isolation",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A3.5.4",
+  "label": "Query optimisation",
+  "owner": "CS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.1.1",
+  "label": "Sample complexity",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.1.2",
+  "label": "Bias–variance trade-off",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.1.3",
+  "label": "Online learning",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.1.4",
+  "label": "Generalisation of deep networks",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.2.1",
+  "label": "Gradient-based training",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A4"
+  ]
+ },
+ {
+  "id": "CS.O.A4.2.2",
+  "label": "Scaling laws",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.2.3",
+  "label": "Architectures",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.2.4",
+  "label": "Regularisation",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.3.1",
+  "label": "Heuristic search",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.3.2",
+  "label": "SAT solving",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.3.3",
+  "label": "Markov decision processes",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.3.4",
+  "label": "Probabilistic inference",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": [
+   "MA.B.C3"
+  ]
+ },
+ {
+  "id": "CS.O.A4.4.1",
+  "label": "Benchmark performance",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.4.2",
+  "label": "Language models",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.4.3",
+  "label": "Adversarial examples",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.5.1",
+  "label": "Specification gaming",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.5.2",
+  "label": "Learning from human feedback",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.5.3",
+  "label": "Interpretability",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A4.5.4",
+  "label": "Evaluation validity",
+  "owner": "CS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.1.1",
+  "label": "Reduction-based security",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": [
+   "MA.B.C3"
+  ]
+ },
+ {
+  "id": "CS.O.A5.1.2",
+  "label": "Composition",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.1.3",
+  "label": "Implementation gap",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.2.1",
+  "label": "Memory safety",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.2.2",
+  "label": "Least privilege",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.2.3",
+  "label": "Side channels",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.2.4",
+  "label": "Information-flow control",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.3.1",
+  "label": "Composition of privacy loss",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "CS.O.A5.3.2",
+  "label": "Failure of de-identification",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.3.3",
+  "label": "Privacy–utility trade-off",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.4.1",
+  "label": "Grover's speed-up",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.4.2",
+  "label": "Post-quantum cryptography",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "CS.O.A5.4.3",
+  "label": "Harvest now, decrypt later",
+  "owner": "CS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "CS.M.1–5",
   "label": "Method roles",
   "owner": "CS",
@@ -2045,8 +4274,52 @@
   ]
  },
  {
+  "id": "DE.O.A1.1.1",
+  "label": "User research samples",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A1.1.2",
+  "label": "Activities and behaviour settings",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": [
+   "MS.O.A4.4"
+  ]
+ },
+ {
+  "id": "DE.O.A1.1.3",
+  "label": "Variation among users",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "DE.O.A1.2",
   "label": "The brief",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A1.2.1",
+  "label": "Programme and adjacency",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A1.2.2",
+  "label": "The agreed brief as stipulation",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A1.2.3",
+  "label": "Problem framing and process models",
   "owner": "DE",
   "home": "O/A1",
   "uses": []
@@ -2059,6 +4332,38 @@
   "uses": [
    "LA"
   ]
+ },
+ {
+  "id": "DE.O.A1.3.1",
+  "label": "Universal design principles",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A1.3.2",
+  "label": "Dimensional envelopes and percentile design",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": [
+   "LA.O.A1.1"
+  ]
+ },
+ {
+  "id": "DE.O.A1.3.3",
+  "label": "Sensory and cognitive access",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": [
+   "MS.O.A1.1"
+  ]
+ },
+ {
+  "id": "DE.O.A1.3.4",
+  "label": "Models of disability",
+  "owner": "DE",
+  "home": "O/A1",
+  "uses": []
  },
  {
   "id": "DE.O.A2",
@@ -2077,11 +4382,69 @@
   ]
  },
  {
+  "id": "DE.O.A2.1.1",
+  "label": "Adjacency and plan graphs",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": [
+   "MA.O.A2"
+  ]
+ },
+ {
+  "id": "DE.O.A2.1.2",
+  "label": "Depth and circulation",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A2.1.3",
+  "label": "Section and plan depth",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A2.1.4",
+  "label": "Visibility and enclosure",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "DE.O.A2.2",
   "label": "Typology",
   "owner": "DE",
   "home": "O/A2",
   "uses": []
+ },
+ {
+  "id": "DE.O.A2.2.1",
+  "label": "Types as classes",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A2.2.2",
+  "label": "Persistence and transformation",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": [
+   "to housing is common. A claim that form constrains use must name the constraint",
+   "such as plan depth",
+   "structural grid or floor-to-floor height. The history of a type is traced through dated buildings (W7",
+   "W6"
+  ]
+ },
+ {
+  "id": "DE.O.A2.2.3",
+  "label": "Product types and dominant designs",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": [
+   "BU"
+  ]
  },
  {
   "id": "DE.O.A2.3",
@@ -2090,6 +4453,41 @@
   "home": "O/A2",
   "uses": [
    "AR.O.A5"
+  ]
+ },
+ {
+  "id": "DE.O.A2.3.1",
+  "label": "Composition and proportion",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A2.3.2",
+  "label": "Colour and light",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": [
+   "MS.O.A1.1"
+  ]
+ },
+ {
+  "id": "DE.O.A2.3.3",
+  "label": "Material selection and expression",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": [
+   "CH.O.A5.4",
+   "EN.M.B3"
+  ]
+ },
+ {
+  "id": "DE.O.A2.3.4",
+  "label": "Visual communication and legibility",
+  "owner": "DE",
+  "home": "O/A2",
+  "uses": [
+   "MS.O.A1.1"
   ]
  },
  {
@@ -2110,12 +4508,81 @@
   ]
  },
  {
+  "id": "DE.O.A3.1.1",
+  "label": "Thermal comfort",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": [
+   "PH.O.A4.1"
+  ]
+ },
+ {
+  "id": "DE.O.A3.1.2",
+  "label": "Heat, moisture and air through the envelope",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": [
+   "EN.O.A3.3",
+   "EV.O.A2.1"
+  ]
+ },
+ {
+  "id": "DE.O.A3.1.3",
+  "label": "Acoustic comfort",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": [
+   "EN.O.A2.4"
+  ]
+ },
+ {
+  "id": "DE.O.A3.1.4",
+  "label": "Daylight and glare",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": [
+   "PH.O.A1.2.3"
+  ]
+ },
+ {
   "id": "DE.O.A3.2",
   "label": "Wayfinding and usability",
   "owner": "DE",
   "home": "O/A3",
   "uses": [
    "MS"
+  ]
+ },
+ {
+  "id": "DE.O.A3.2.1",
+  "label": "Wayfinding in buildings and cities",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": [
+   "MS.O.A1.5"
+  ]
+ },
+ {
+  "id": "DE.O.A3.2.2",
+  "label": "Usability evaluation methods",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A3.2.3",
+  "label": "Usability measures",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A3.2.4",
+  "label": "Affordance and signifiers",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": [
+   "MS.O.A1.1"
   ]
  },
  {
@@ -2129,8 +4596,63 @@
   ]
  },
  {
+  "id": "DE.O.A3.3.1",
+  "label": "Egress time",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": [
+   "EN.O.A3.4"
+  ]
+ },
+ {
+  "id": "DE.O.A3.3.2",
+  "label": "Falls and stairs",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A3.3.3",
+  "label": "Environmental crime prevention",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": [
+   "MS"
+  ]
+ },
+ {
+  "id": "DE.O.A3.3.4",
+  "label": "Prescriptive and performance codes",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": [
+   "LA.O.A1.1"
+  ]
+ },
+ {
   "id": "DE.O.A3.4",
   "label": "Post-occupancy evaluation",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A3.4.1",
+  "label": "Occupant surveys",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A3.4.2",
+  "label": "Measured against predicted performance",
+  "owner": "DE",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A3.4.3",
+  "label": "Feedback into practice",
   "owner": "DE",
   "home": "O/A3",
   "uses": []
@@ -2152,8 +4674,63 @@
   ]
  },
  {
+  "id": "DE.O.A4.1.1",
+  "label": "Site analysis",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A4.1.2",
+  "label": "Orientation and solar access",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": [
+   "PH"
+  ]
+ },
+ {
+  "id": "DE.O.A4.1.3",
+  "label": "Hazard-informed siting",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": [
+   "EV.O.A2.6"
+  ]
+ },
+ {
   "id": "DE.O.A4.2",
   "label": "Urban form",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A4.2.1",
+  "label": "Density measures",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A4.2.2",
+  "label": "Street networks and connectivity",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A2"
+  ]
+ },
+ {
+  "id": "DE.O.A4.2.3",
+  "label": "Mixed use and diversity",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A4.2.4",
+  "label": "Urban morphology",
   "owner": "DE",
   "home": "O/A4",
   "uses": []
@@ -2166,6 +4743,31 @@
   "uses": []
  },
  {
+  "id": "DE.O.A4.3.1",
+  "label": "Landscape character and visual effect",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A4.3.2",
+  "label": "Green infrastructure and stormwater",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": [
+   "EA.O.A4.2"
+  ]
+ },
+ {
+  "id": "DE.O.A4.3.3",
+  "label": "Planting and ecological function",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": [
+   "BI.O.A5.3"
+  ]
+ },
+ {
   "id": "DE.O.A4.4",
   "label": "Planning",
   "owner": "DE",
@@ -2174,6 +4776,42 @@
    "LA",
    "PO"
   ]
+ },
+ {
+  "id": "DE.O.A4.4.1",
+  "label": "Zoning and land-use control",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": [
+   "or limits height",
+   "coverage or floor area ratio. Rules may regulate by activity",
+   "by effect or by built form",
+   "and which applies is jurisdiction-specific (uses LA.O.A4.2",
+   "EC.O.A2.4"
+  ]
+ },
+ {
+  "id": "DE.O.A4.4.2",
+  "label": "Land suitability analysis",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A4.4.3",
+  "label": "Participation",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": [
+   "PO.O.A4.1"
+  ]
+ },
+ {
+  "id": "DE.O.A4.4.4",
+  "label": "Travel demand and land use",
+  "owner": "DE",
+  "home": "O/A4",
+  "uses": []
  },
  {
   "id": "DE.O.A5",
@@ -2190,6 +4828,39 @@
   "uses": []
  },
  {
+  "id": "DE.O.A5.1.1",
+  "label": "Layers of change",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A5.1.2",
+  "label": "Service life and maintenance",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": [
+   "EC"
+  ]
+ },
+ {
+  "id": "DE.O.A5.1.3",
+  "label": "Adaptive reuse",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A5.1.4",
+  "label": "Weathertightness and moisture durability",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": [
+   "PH",
+   "EN"
+  ]
+ },
+ {
   "id": "DE.O.A5.2",
   "label": "Sustainability",
   "owner": "DE",
@@ -2199,12 +4870,76 @@
   ]
  },
  {
+  "id": "DE.O.A5.2.1",
+  "label": "Operational energy and carbon",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": [
+   "EV.O.A1.1"
+  ]
+ },
+ {
+  "id": "DE.O.A5.2.2",
+  "label": "Embodied carbon and life cycle assessment",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A5.2.3",
+  "label": "Standards and rating tools",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A5.2.4",
+  "label": "Circularity and disassembly",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "DE.O.A5.3",
   "label": "Built heritage conservation",
   "owner": "DE",
   "home": "O/A5",
   "uses": [
    "HI.O.A5.3"
+  ]
+ },
+ {
+  "id": "DE.O.A5.3.1",
+  "label": "Cultural significance",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": [
+   "HI.O.A5.3"
+  ]
+ },
+ {
+  "id": "DE.O.A5.3.2",
+  "label": "Authenticity and principles of intervention",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "DE.O.A5.3.3",
+  "label": "Compatibility of repair materials",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": [
+   "CH.O.A5.4"
+  ]
+ },
+ {
+  "id": "DE.O.A5.3.4",
+  "label": "Strengthening and significance",
+  "owner": "DE",
+  "home": "O/A5",
+  "uses": [
+   "LA.O.A4.2"
   ]
  },
  {
@@ -2881,6 +5616,510 @@
   ]
  },
  {
+  "id": "EC.O.A1.1.1",
+  "label": "Utility representation",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": [
+   "MA.O.A3"
+  ]
+ },
+ {
+  "id": "EC.O.A1.1.2",
+  "label": "Slutsky decomposition",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A1.1.3",
+  "label": "Revealed preference",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": [
+   "MA"
+  ]
+ },
+ {
+  "id": "EC.O.A1.2.1",
+  "label": "Representation and uniqueness",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "EC.O.A1.2.2",
+  "label": "Risk aversion",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A1.3.1",
+  "label": "Allais pattern",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A1.3.2",
+  "label": "Reference dependence",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": [
+   "MS.O.A1"
+  ]
+ },
+ {
+  "id": "EC.O.A1.3.3",
+  "label": "Endowment effect",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A1.4.1",
+  "label": "Exponential discounting",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A1.4.2",
+  "label": "Present bias",
+  "owner": "EC",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.1.1",
+  "label": "Existence",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": [
+   "MA.B.C4",
+   "MA.O.A3"
+  ]
+ },
+ {
+  "id": "EC.O.A2.1.2",
+  "label": "Indeterminacy of aggregate demand",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": [
+   "MA"
+  ]
+ },
+ {
+  "id": "EC.O.A2.1.3",
+  "label": "Partial equilibrium",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.2.1",
+  "label": "Monopoly markup",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.2.2",
+  "label": "Bertrand outcome",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.2.3",
+  "label": "Cournot outcome",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.3.1",
+  "label": "Unravelling",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.3.2",
+  "label": "Signalling",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.3.3",
+  "label": "Moral hazard",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.4.1",
+  "label": "Competitive factor pricing",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.4.2",
+  "label": "Monopsony",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.5.1",
+  "label": "Elasticity rule",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A2.5.2",
+  "label": "Excess burden",
+  "owner": "EC",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.1.1",
+  "label": "Revelation principle",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": [
+   "MA.B.C4"
+  ]
+ },
+ {
+  "id": "EC.O.A3.1.2",
+  "label": "Second-price auction",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.1.3",
+  "label": "Revenue equivalence",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.1.4",
+  "label": "Bilateral trade impossibility",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": [
+   "MA"
+  ]
+ },
+ {
+  "id": "EC.O.A3.2.1",
+  "label": "Unique immediate agreement",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": [
+   "ST.O.A2"
+  ]
+ },
+ {
+  "id": "EC.O.A3.2.2",
+  "label": "Patience advantage",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.2.3",
+  "label": "Nash bargaining solution",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.3.1",
+  "label": "Coase benchmark",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.3.2",
+  "label": "Costly exchange",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": [
+   "LA"
+  ]
+ },
+ {
+  "id": "EC.O.A3.4.1",
+  "label": "Boundaries of the firm",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.4.2",
+  "label": "Hold-up",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.4.3",
+  "label": "Institutions and growth",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.5.1",
+  "label": "Folk theorem",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.5.2",
+  "label": "Finite horizon",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A3.5.3",
+  "label": "Collusion conditions",
+  "owner": "EC",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.1.1",
+  "label": "Steady state",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A4"
+  ]
+ },
+ {
+  "id": "EC.O.A4.1.2",
+  "label": "Conditional convergence",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.1.3",
+  "label": "Endogenous growth",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.2.1",
+  "label": "Phillips instability",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.2.2",
+  "label": "Okun's relation",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.2.3",
+  "label": "Sources of shocks",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.3.1",
+  "label": "Identity versus theory",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.3.2",
+  "label": "Long-run neutrality",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.3.3",
+  "label": "Taylor principle",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.4.1",
+  "label": "Comparative advantage",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.4.2",
+  "label": "Heckscher–Ohlin",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.4.3",
+  "label": "Stolper–Samuelson",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.4.4",
+  "label": "Gravity",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.5.1",
+  "label": "Lucas critique",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.5.2",
+  "label": "Time inconsistency",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A4.5.3",
+  "label": "Rational expectations",
+  "owner": "EC",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A5.1.1",
+  "label": "Statement",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": [
+   "MA.B.C4"
+  ]
+ },
+ {
+  "id": "EC.O.A5.1.2",
+  "label": "Failure conditions",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A5.2.1",
+  "label": "Statement",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": [
+   "MA.B.C4"
+  ]
+ },
+ {
+  "id": "EC.O.A5.2.2",
+  "label": "Practical limit",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A5.3.1",
+  "label": "Pigouvian correction",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A5.3.2",
+  "label": "Public goods",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A5.3.3",
+  "label": "Common pool resources",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": [
+   "EV.O.A3"
+  ]
+ },
+ {
+  "id": "EC.O.A5.4.1",
+  "label": "VAT mechanics",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A5.4.2",
+  "label": "Single-stage sales tax",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": [
+   "BU.O.A5.3"
+  ]
+ },
+ {
+  "id": "EC.O.A5.4.3",
+  "label": "Ramsey rule",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A5.5.1",
+  "label": "Arrow's theorem",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": [
+   "MA.B.C4"
+  ]
+ },
+ {
+  "id": "EC.O.A5.5.2",
+  "label": "Median voter",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EC.O.A5.5.3",
+  "label": "Manipulability",
+  "owner": "EC",
+  "home": "O/A5",
+  "uses": [
+   "MA"
+  ]
+ },
+ {
   "id": "ED.O.A1",
   "label": "Aims and curricula",
   "owner": "ED",
@@ -2897,6 +6136,31 @@
   ]
  },
  {
+  "id": "ED.O.A1.1.1",
+  "label": "Stated aims of a framework",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": [
+   "PO.O.A4.3"
+  ]
+ },
+ {
+  "id": "ED.O.A1.1.2",
+  "label": "Aim families",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": [
+   "PL.O.A4"
+  ]
+ },
+ {
+  "id": "ED.O.A1.1.3",
+  "label": "Aims and what is measured",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "ED.O.A1.2",
   "label": "Curriculum content",
   "owner": "ED",
@@ -2907,8 +6171,50 @@
   ]
  },
  {
+  "id": "ED.O.A1.2.1",
+  "label": "Intended, implemented and attained curriculum",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A1.2.2",
+  "label": "Opportunity to learn",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A1.2.3",
+  "label": "Simple view of reading",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "ED.O.A1.3",
   "label": "Sequence and progression",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A1.3.1",
+  "label": "Prerequisite structure",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A1.3.2",
+  "label": "Learning progressions",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A1.3.3",
+  "label": "Spiral curriculum",
   "owner": "ED",
   "home": "O/A1",
   "uses": []
@@ -2921,6 +6227,27 @@
   "uses": [
    "IK"
   ]
+ },
+ {
+  "id": "ED.O.A1.4.1",
+  "label": "The New Zealand Curriculum (2007)",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A1.4.2",
+  "label": "Australian Curriculum general capabilities",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A1.4.3",
+  "label": "Level-based and year-based frameworks",
+  "owner": "ED",
+  "home": "O/A1",
+  "uses": []
  },
  {
   "id": "ED.O.A2",
@@ -2940,6 +6267,27 @@
   ]
  },
  {
+  "id": "ED.O.A2.1.1",
+  "label": "Prior knowledge effect",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A2.1.2",
+  "label": "Force Concept Inventory",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A2.1.3",
+  "label": "Conceptual change",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "ED.O.A2.2",
   "label": "Development",
   "owner": "ED",
@@ -2947,6 +6295,31 @@
   "uses": [
    "MS"
   ]
+ },
+ {
+  "id": "ED.O.A2.2.1",
+  "label": "Zone of proximal development",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": [
+   "MS.O.A3.3"
+  ]
+ },
+ {
+  "id": "ED.O.A2.2.2",
+  "label": "Stage theories in teaching",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": [
+   "MS.O.A3.3.1"
+  ]
+ },
+ {
+  "id": "ED.O.A2.2.3",
+  "label": "Cumulative advantage in reading",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": []
  },
  {
   "id": "ED.O.A2.3",
@@ -2958,11 +6331,64 @@
   ]
  },
  {
+  "id": "ED.O.A2.3.1",
+  "label": "Self-determination theory",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": [
+   "MS.O.A1.4.2"
+  ]
+ },
+ {
+  "id": "ED.O.A2.3.2",
+  "label": "Expectancy–value model",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A2.3.3",
+  "label": "Mindset interventions",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "ED.O.A2.4",
   "label": "Diversity and learning need",
   "owner": "ED",
   "home": "O/A2",
   "uses": []
+ },
+ {
+  "id": "ED.O.A2.4.1",
+  "label": "Identification thresholds",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A2.4.2",
+  "label": "Response to intervention",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A2.4.3",
+  "label": "Learning styles",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A2.4.4",
+  "label": "Stereotype threat",
+  "owner": "ED",
+  "home": "O/A2",
+  "uses": [
+   "MS.O.A4.5"
+  ]
  },
  {
   "id": "ED.O.A3",
@@ -2979,8 +6405,59 @@
   "uses": []
  },
  {
+  "id": "ED.O.A3.1.1",
+  "label": "Cognitive load theory",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": [
+   "MS.O.A1.3.4"
+  ]
+ },
+ {
+  "id": "ED.O.A3.1.2",
+  "label": "Worked-example and expertise reversal",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.1.3",
+  "label": "Guidance debate",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.1.4",
+  "label": "Active learning in undergraduate STEM",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
   "id": "ED.O.A3.2",
   "label": "Feedback",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.2.1",
+  "label": "Feedback interventions",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.2.2",
+  "label": "Levels of feedback",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.2.3",
+  "label": "Timing of feedback",
   "owner": "ED",
   "home": "O/A3",
   "uses": []
@@ -2995,12 +6472,72 @@
   ]
  },
  {
+  "id": "ED.O.A3.3.1",
+  "label": "Spacing effect",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.3.2",
+  "label": "Testing effect",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.3.3",
+  "label": "Transfer of practice gains",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.3.4",
+  "label": "Interleaving",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
   "id": "ED.O.A3.4",
   "label": "Technology in teaching",
   "owner": "ED",
   "home": "O/A3",
   "uses": [
    "CS"
+  ]
+ },
+ {
+  "id": "ED.O.A3.4.1",
+  "label": "Intelligent tutoring systems",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": [
+   "CS.O.A4"
+  ]
+ },
+ {
+  "id": "ED.O.A3.4.2",
+  "label": "Device provision",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.4.3",
+  "label": "Multimedia design",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.4.4",
+  "label": "Generative AI tutors",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": [
+   "CS.O.A4"
   ]
  },
  {
@@ -3011,6 +6548,27 @@
   "uses": [
    "IK"
   ]
+ },
+ {
+  "id": "ED.O.A3.5.1",
+  "label": "Culturally relevant pedagogy",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.5.2",
+  "label": "Culturally sustaining pedagogy",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A3.5.3",
+  "label": "Bilingual and immersion programmes",
+  "owner": "ED",
+  "home": "O/A3",
+  "uses": []
  },
  {
   "id": "ED.O.A4",
@@ -3027,6 +6585,34 @@
   "uses": []
  },
  {
+  "id": "ED.O.A4.1.1",
+  "label": "Unified validity",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A4.1.2",
+  "label": "Argument-based validation",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A4.1.3",
+  "label": "Construct-irrelevant variance",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A4.1.4",
+  "label": "Predictive validity",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
   "id": "ED.O.A4.2",
   "label": "Reliability",
   "owner": "ED",
@@ -3036,8 +6622,63 @@
   ]
  },
  {
+  "id": "ED.O.A4.2.1",
+  "label": "Classical test theory",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "ED.O.A4.2.2",
+  "label": "Coefficient alpha",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "ED.O.A4.2.3",
+  "label": "Item response theory",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "ED.O.A4.2.4",
+  "label": "Rater agreement",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
   "id": "ED.O.A4.3",
   "label": "Formative assessment",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A4.3.1",
+  "label": "Reported effect sizes",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A4.3.2",
+  "label": "The feedback loop",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A4.3.3",
+  "label": "Diagnostic items",
   "owner": "ED",
   "home": "O/A4",
   "uses": []
@@ -3050,6 +6691,36 @@
   "uses": [
    "PO"
   ]
+ },
+ {
+  "id": "ED.O.A4.4.1",
+  "label": "Score inflation",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A4.4.2",
+  "label": "Narrowing",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": [
+   "PO.O.A4.4"
+  ]
+ },
+ {
+  "id": "ED.O.A4.4.3",
+  "label": "Value-added accountability",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A4.4.4",
+  "label": "Standard setting",
+  "owner": "ED",
+  "home": "O/A4",
+  "uses": []
  },
  {
   "id": "ED.O.A5",
@@ -3066,6 +6737,34 @@
   "uses": []
  },
  {
+  "id": "ED.O.A5.1.1",
+  "label": "Coleman Report",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.1.2",
+  "label": "Class size",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.1.3",
+  "label": "Teacher effects",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.1.4",
+  "label": "Leadership and teacher learning",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "ED.O.A5.2",
   "label": "School systems",
   "owner": "ED",
@@ -3073,8 +6772,66 @@
   "uses": []
  },
  {
+  "id": "ED.O.A5.2.1",
+  "label": "PISA",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.2.2",
+  "label": "TIMSS and PIRLS",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.2.3",
+  "label": "Rank uncertainty",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.2.4",
+  "label": "Cause from comparison",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "ED.O.A5.3",
   "label": "Higher education",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.3.1",
+  "label": "Integration model of persistence",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.3.2",
+  "label": "Massification",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.3.3",
+  "label": "Learning gains in college",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": [
+   "EC.O.A2.3"
+  ]
+ },
+ {
+  "id": "ED.O.A5.3.4",
+  "label": "Student ratings of teaching",
   "owner": "ED",
   "home": "O/A5",
   "uses": []
@@ -3088,6 +6845,34 @@
    "EC",
    "LA"
   ]
+ },
+ {
+  "id": "ED.O.A5.4.1",
+  "label": "Measuring a gap",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.4.2",
+  "label": "Summer learning loss",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.4.3",
+  "label": "Early childhood programmes",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "ED.O.A5.4.4",
+  "label": "Compulsory schooling",
+  "owner": "ED",
+  "home": "O/A5",
+  "uses": []
  },
  {
   "id": "EN.O.A1",
@@ -4105,6 +7890,38 @@
   ]
  },
  {
+  "id": "EV.O.A1.1.1",
+  "label": "Greenhouse gas inventories",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A1.1.2",
+  "label": "Warming potential metrics",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "EA.O.A4.3"
+  ]
+ },
+ {
+  "id": "EV.O.A1.1.3",
+  "label": "Primary and secondary pollutants",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "CH.O.A4.5"
+  ]
+ },
+ {
+  "id": "EV.O.A1.1.4",
+  "label": "Point and diffuse discharges",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "EV.O.A1.2",
   "label": "Land and sea use change",
   "owner": "EV",
@@ -4114,11 +7931,80 @@
   ]
  },
  {
+  "id": "EV.O.A1.2.1",
+  "label": "Cover conversion from imagery",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A1.2.2",
+  "label": "Habitat loss and fragmentation",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "BI.O.A5.5"
+  ]
+ },
+ {
+  "id": "EV.O.A1.2.3",
+  "label": "Hydrological modification",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "EA.O.A4.2"
+  ]
+ },
+ {
+  "id": "EV.O.A1.2.4",
+  "label": "Seabed and coastal disturbance",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "EV.O.A1.3",
   "label": "Extraction",
   "owner": "EV",
   "home": "O/A1",
   "uses": []
+ },
+ {
+  "id": "EV.O.A1.3.1",
+  "label": "Water abstraction",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "EA.O.A4.2"
+  ]
+ },
+ {
+  "id": "EV.O.A1.3.2",
+  "label": "Harvest of living stocks",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "BI.O.A5.1",
+   "AG.O.A2.5"
+  ]
+ },
+ {
+  "id": "EV.O.A1.3.3",
+  "label": "Mineral and aggregate extraction",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "EA.O.A1.5"
+  ]
+ },
+ {
+  "id": "EV.O.A1.3.4",
+  "label": "Forest and biomass removal",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "EC"
+  ]
  },
  {
   "id": "EV.O.A1.4",
@@ -4127,6 +8013,38 @@
   "home": "O/A1",
   "uses": [
    "BI"
+  ]
+ },
+ {
+  "id": "EV.O.A1.4.1",
+  "label": "Pathways and vectors",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A1.4.2",
+  "label": "Propagule pressure",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "AG.O.A3.3"
+  ]
+ },
+ {
+  "id": "EV.O.A1.4.3",
+  "label": "Invasion stages",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A1.4.4",
+  "label": "Pest density as pressure",
+  "owner": "EV",
+  "home": "O/A1",
+  "uses": [
+   "BI.O.A5.2"
   ]
  },
  {
@@ -4147,12 +8065,78 @@
   ]
  },
  {
+  "id": "EV.O.A2.1.1",
+  "label": "Particulate matter",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "MD.O.A2.4"
+  ]
+ },
+ {
+  "id": "EV.O.A2.1.2",
+  "label": "Averaging time and exceedance",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A2.1.3",
+  "label": "Dispersion and airsheds",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.3"
+  ]
+ },
+ {
+  "id": "EV.O.A2.1.4",
+  "label": "Source apportionment",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "EV.O.A2.2",
   "label": "Freshwater quality",
   "owner": "EV",
   "home": "O/A2",
   "uses": [
    "EA"
+  ]
+ },
+ {
+  "id": "EV.O.A2.2.1",
+  "label": "Nutrients and algal response",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A2.2.2",
+  "label": "Faecal indicators",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "MD.O.A5.1"
+  ]
+ },
+ {
+  "id": "EV.O.A2.2.3",
+  "label": "Oxygen and organic load",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "CH.O.A4.1"
+  ]
+ },
+ {
+  "id": "EV.O.A2.2.4",
+  "label": "Sediment and clarity",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.1"
   ]
  },
  {
@@ -4165,6 +8149,38 @@
   ]
  },
  {
+  "id": "EV.O.A2.3.1",
+  "label": "Acidification",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "CH.O.A3.4"
+  ]
+ },
+ {
+  "id": "EV.O.A2.3.2",
+  "label": "Warming and marine heatwaves",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.3"
+  ]
+ },
+ {
+  "id": "EV.O.A2.3.3",
+  "label": "Coastal habitat extent",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A2.3.4",
+  "label": "Marine debris",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "EV.O.A2.4",
   "label": "Soil state",
   "owner": "EV",
@@ -4174,6 +8190,31 @@
   ]
  },
  {
+  "id": "EV.O.A2.4.1",
+  "label": "Contaminant concentration and availability",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "CH"
+  ]
+ },
+ {
+  "id": "EV.O.A2.4.2",
+  "label": "Erosion rate",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.1"
+  ]
+ },
+ {
+  "id": "EV.O.A2.4.3",
+  "label": "Soil organic carbon stock",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "EV.O.A2.5",
   "label": "Biodiversity status",
   "owner": "EV",
@@ -4181,6 +8222,36 @@
   "uses": [
    "BI"
   ]
+ },
+ {
+  "id": "EV.O.A2.5.1",
+  "label": "Threat categories",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A2.5.2",
+  "label": "Abundance and detection",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A2.5.3",
+  "label": "Richness and diversity indices",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "BI.O.A5.3"
+  ]
+ },
+ {
+  "id": "EV.O.A2.5.4",
+  "label": "Extinction declarations",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
  },
  {
   "id": "EV.O.A2.6",
@@ -4193,11 +8264,71 @@
   ]
  },
  {
+  "id": "EV.O.A2.6.1",
+  "label": "Geological events",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A2",
+   "EA.O.A2.5",
+   "EA.O.A5.5"
+  ]
+ },
+ {
+  "id": "EV.O.A2.6.2",
+  "label": "Hydro-meteorological events and return periods",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.2"
+  ]
+ },
+ {
+  "id": "EV.O.A2.6.3",
+  "label": "Wildfire",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A2.6.4",
+  "label": "Biogeochemical episodes",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "BI.O.A5.4",
+   "EA.O.A4.2"
+  ]
+ },
+ {
   "id": "EV.O.A2.7",
   "label": "Measured conditions",
   "owner": "EV",
   "home": "O/A2",
   "uses": []
+ },
+ {
+  "id": "EV.O.A2.7.1",
+  "label": "Reference condition",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A2.7.2",
+  "label": "Composite indices",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A2.7.3",
+  "label": "Trend detection",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "MA.O.A5"
+  ]
  },
  {
   "id": "EV.O.A2.8",
@@ -4209,6 +8340,40 @@
  {
   "id": "EV.O.A2.9",
   "label": "Natural resources",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A2.9.1",
+  "label": "Stock and renewal",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A4.2"
+  ]
+ },
+ {
+  "id": "EV.O.A2.9.2",
+  "label": "Resources and reserves",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A1.5"
+  ]
+ },
+ {
+  "id": "EV.O.A2.9.3",
+  "label": "Status of harvested stocks",
+  "owner": "EV",
+  "home": "O/A2",
+  "uses": [
+   "BI.O.A5.1"
+  ]
+ },
+ {
+  "id": "EV.O.A2.9.4",
+  "label": "Natural capital accounts",
   "owner": "EV",
   "home": "O/A2",
   "uses": []
@@ -4239,12 +8404,80 @@
   ]
  },
  {
+  "id": "EV.O.A3.1.1",
+  "label": "Toxic effect and species sensitivity",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A3.1.2",
+  "label": "Eutrophication effects",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "BI.O.A5.4"
+  ]
+ },
+ {
+  "id": "EV.O.A3.1.3",
+  "label": "Extinction debt",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "BI.O.A5.5"
+  ]
+ },
+ {
+  "id": "EV.O.A3.1.4",
+  "label": "Critical loads",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "CH.O.A3.4"
+  ]
+ },
+ {
   "id": "EV.O.A3.2",
   "label": "Human health impact",
   "owner": "EV",
   "home": "O/A3",
   "uses": [
    "MD"
+  ]
+ },
+ {
+  "id": "EV.O.A3.2.1",
+  "label": "Exposure assessment",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "MD.O.A5.1"
+  ]
+ },
+ {
+  "id": "EV.O.A3.2.2",
+  "label": "Reference doses",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "MD.O.A2.4"
+  ]
+ },
+ {
+  "id": "EV.O.A3.2.3",
+  "label": "Low-dose radiation",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A3.2.4",
+  "label": "Attributable fraction of illness",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "MD.O.A5.1"
   ]
  },
  {
@@ -4257,12 +8490,77 @@
   ]
  },
  {
+  "id": "EV.O.A3.3.1",
+  "label": "Detection and attribution",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "EA.O.A4.3"
+  ]
+ },
+ {
+  "id": "EV.O.A3.3.2",
+  "label": "Event attribution",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "EA.O.A4.3"
+  ]
+ },
+ {
+  "id": "EV.O.A3.3.3",
+  "label": "Ecological attribution by design",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A3.3.4",
+  "label": "Interacting pressures",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
   "id": "EV.O.A3.4",
   "label": "Ecosystem services",
   "owner": "EV",
   "home": "O/A3",
   "uses": [
    "EC"
+  ]
+ },
+ {
+  "id": "EV.O.A3.4.1",
+  "label": "Service classification",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A3.4.2",
+  "label": "Biophysical supply",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A3.4.3",
+  "label": "Valuation methods",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "EC.O.A1.4",
+   "EC.O.A5.3"
+  ]
+ },
+ {
+  "id": "EV.O.A3.4.4",
+  "label": "Trade-offs between services",
+  "owner": "EV",
+  "home": "O/A3",
+  "uses": [
+   "AG.O.A5.3"
   ]
  },
  {
@@ -4280,11 +8578,71 @@
   "uses": []
  },
  {
+  "id": "EV.O.A4.1.1",
+  "label": "Recovery trajectories",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A4.1.2",
+  "label": "Active and passive restoration",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A4.1.3",
+  "label": "Success criteria",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A4.1.4",
+  "label": "Bioremediation",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": [
+   "BI.O.A2.3"
+  ]
+ },
+ {
   "id": "EV.O.A4.2",
   "label": "Conservation",
   "owner": "EV",
   "home": "O/A4",
   "uses": []
+ },
+ {
+  "id": "EV.O.A4.2.1",
+  "label": "Protected area effect",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A4.2.2",
+  "label": "Systematic conservation planning",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A4.2.3",
+  "label": "Eradication and suppression",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A4.2.4",
+  "label": "Translocation and viability analysis",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": [
+   "BI.O.A5.1"
+  ]
  },
  {
   "id": "EV.O.A4.3",
@@ -4295,6 +8653,42 @@
    "PO",
    "EC",
    "LA"
+  ]
+ },
+ {
+  "id": "EV.O.A4.3.1",
+  "label": "Compliance and outcome",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A4.3.2",
+  "label": "Caps and leakage",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": [
+   "EC.O.A5.3",
+   "PO.O.A4.4"
+  ]
+ },
+ {
+  "id": "EV.O.A4.3.3",
+  "label": "Impact assessment as procedure",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": [
+   "LA.O.A1.1"
+  ]
+ },
+ {
+  "id": "EV.O.A4.3.4",
+  "label": "Treaties and controlled substances",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": [
+   "LA.O.A1.4",
+   "PO.O.A5.2"
   ]
  },
  {
@@ -4309,6 +8703,38 @@
  {
   "id": "EV.O.A4.7",
   "label": "Environmental engineering",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A4.7.1",
+  "label": "Treatment performance",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": [
+   "CH.O.A4.1"
+  ]
+ },
+ {
+  "id": "EV.O.A4.7.2",
+  "label": "Comparing options by life cycle",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A4.7.3",
+  "label": "Stormwater and flood works",
+  "owner": "EV",
+  "home": "O/A4",
+  "uses": [
+   "EN.O.A2.3"
+  ]
+ },
+ {
+  "id": "EV.O.A4.7.4",
+  "label": "Waste flows",
   "owner": "EV",
   "home": "O/A4",
   "uses": []
@@ -4330,6 +8756,41 @@
   ]
  },
  {
+  "id": "EV.O.A5.1.1",
+  "label": "Alternative stable states",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": [
+   "MA.O.A4"
+  ]
+ },
+ {
+  "id": "EV.O.A5.1.2",
+  "label": "Hysteresis",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A5.1.3",
+  "label": "Early warning signals",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": [
+   "MA.O.A4"
+  ]
+ },
+ {
+  "id": "EV.O.A5.1.4",
+  "label": "Climate tipping elements",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": [
+   "EA.O.A4.4",
+   "EA.O.A4.3"
+  ]
+ },
+ {
   "id": "EV.O.A5.2",
   "label": "Standards and bottom lines",
   "owner": "EV",
@@ -4339,8 +8800,68 @@
   ]
  },
  {
+  "id": "EV.O.A5.2.1",
+  "label": "Health-based standards",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A5.2.2",
+  "label": "Ecosystem-based standards",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A5.2.3",
+  "label": "Numeric bottom lines",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A5.2.4",
+  "label": "Compliance statistics",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
   "id": "EV.O.A5.3",
   "label": "Planetary boundaries",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A5.3.1",
+  "label": "Carrying capacity",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": [
+   "BI.O.A5.1"
+  ]
+ },
+ {
+  "id": "EV.O.A5.3.2",
+  "label": "The nine boundary processes",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A5.3.3",
+  "label": "Boundary and uncertainty",
+  "owner": "EV",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "EV.O.A5.3.4",
+  "label": "Catchment and regional limits",
   "owner": "EV",
   "home": "O/A5",
   "uses": []
@@ -4557,6 +9078,438 @@
   ]
  },
  {
+  "id": "HI.O.A1.1.1",
+  "label": "Event boundaries are stipulated",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A1.1.2",
+  "label": "Selection is not fabrication",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A1.1.3",
+  "label": "An argument from silence needs an expected record",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A1.2.1",
+  "label": "Identity across records is a linkage claim",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A1.2.2",
+  "label": "Prosopography infers group patterns from many careers",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A1.2.3",
+  "label": "A collective actor is a shorthand",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A1.3.1",
+  "label": "Historical place names need identification",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A1.3.2",
+  "label": "The coordinates are borrowed",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": [
+   "EA.O.A5"
+  ]
+ },
+ {
+  "id": "HI.O.A1.4.1",
+  "label": "Anachronism defeats a claimed date",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": [
+   "LN.O.A5"
+  ]
+ },
+ {
+  "id": "HI.O.A1.4.2",
+  "label": "Diplomatics tests a document by its form",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A1.4.3",
+  "label": "Interpolation is local forgery",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A1.4.4",
+  "label": "Provenance is evidence of authenticity, not proof",
+  "owner": "HI",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.1.1",
+  "label": "Calendar conversion holds only with known rules",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.1.2",
+  "label": "Reform dates differ by place",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.1.3",
+  "label": "The start of the year varies",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.2.1",
+  "label": "A latest dated element sets the earliest date",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.2.2",
+  "label": "Stratigraphy orders deposits",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A3"
+  ]
+ },
+ {
+  "id": "HI.O.A2.2.3",
+  "label": "Seriation orders assemblages by style",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.3.1",
+  "label": "Shared datable phenomena anchor alignment",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.3.2",
+  "label": "King lists are not independent clocks",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.4.1",
+  "label": "Period boundaries vary by region and theme",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.4.2",
+  "label": "Labels carry judgements",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.5.1",
+  "label": "Radiocarbon dates are calibrated ranges",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": [
+   "EA.O.A3"
+  ]
+ },
+ {
+  "id": "HI.O.A2.5.2",
+  "label": "The sample dates the organism, not the event",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A2.5.3",
+  "label": "Dendrochronology gives a felling date only with bark edge",
+  "owner": "HI",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.1.1",
+  "label": "Stated reasons are evidence, not proof",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.1.2",
+  "label": "Reasons must be available at the time",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.1.3",
+  "label": "Re-enactment is a method of interpretation",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.2.1",
+  "label": "A necessary condition claim must survive comparison",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.2.2",
+  "label": "Structural and intentional explanations can combine",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.2.3",
+  "label": "Multiple causes need weighting reasons",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.3.1",
+  "label": "Contingency is relative to a description",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.3.2",
+  "label": "Contingency claims need a plausible alternative",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.4.1",
+  "label": "Minimal rewrite constrains the antecedent",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.4.2",
+  "label": "Confidence falls with distance",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.4.3",
+  "label": "Comparative cases discipline counterfactuals",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.5.1",
+  "label": "Historical series carry construction error",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A3.5.2",
+  "label": "Causal identification is borrowed",
+  "owner": "HI",
+  "home": "O/A3",
+  "uses": [
+   "EC"
+  ]
+ },
+ {
+  "id": "HI.O.A4.1.1",
+  "label": "Time-scales are analytic choices",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A4.1.2",
+  "label": "Slow change needs long series",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A4.2.1",
+  "label": "A process name is not an explanation",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A4.2.2",
+  "label": "Stage theories are CONTESTED",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A4.2.3",
+  "label": "Demographic models are cited",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": [
+   "MS.O.A5"
+  ]
+ },
+ {
+  "id": "HI.O.A4.3.1",
+  "label": "Persistence needs a continuity criterion",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A4.3.2",
+  "label": "Environmental history uses borrowed proxies",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": [
+   "EA",
+   "EA.O.A3"
+  ]
+ },
+ {
+  "id": "HI.O.A4.4.1",
+  "label": "Cases must be comparable on stated dimensions",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A4.4.2",
+  "label": "Connection is not comparison",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A4.4.3",
+  "label": "Few cases limit inference",
+  "owner": "HI",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "HI.O.A5.1.1",
+  "label": "Meaning is read from contemporary usage",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": [
+   "LN.O.A4"
+  ]
+ },
+ {
+  "id": "HI.O.A5.1.2",
+  "label": "Literate records over-represent some groups",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A5.2.1",
+  "label": "Memory is dated too",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A5.2.2",
+  "label": "Memory is evidence of the rememberers",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A5.3.1",
+  "label": "Significance assessments are W12 judgements",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A5.3.2",
+  "label": "A monument dates its makers",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A5.4.1",
+  "label": "Interpretations are tested against shared records",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A5.4.2",
+  "label": "New sources and new questions both move interpretations",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A5.4.3",
+  "label": "Presentism is a defeater, not a ban",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A5.5.1",
+  "label": "The interview is the record",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "HI.O.A5.5.2",
+  "label": "Testimony is tested like documents",
+  "owner": "HI",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "IK.O.A1",
   "label": "Ordering principles",
   "owner": "IK",
@@ -4746,12 +9699,65 @@
   "uses": []
  },
  {
+  "id": "IS.O.A1.1.1",
+  "label": "Work and expression",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A1.1.2",
+  "label": "Manifestation and item",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A1.1.3",
+  "label": "BIBFRAME entities",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "IS.O.A1.2",
   "label": "Records as evidence",
   "owner": "IS",
   "home": "O/A1",
   "uses": [
    "HI"
+  ]
+ },
+ {
+  "id": "IS.O.A1.2.1",
+  "label": "Record characteristics",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A1.2.2",
+  "label": "Life cycle and continuum",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A1.2.3",
+  "label": "Diplomatics",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": [
+   "HI.O.A1.4"
+  ]
+ },
+ {
+  "id": "IS.O.A1.2.4",
+  "label": "Appraisal values",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": [
+   "LA"
   ]
  },
  {
@@ -4762,8 +9768,59 @@
   "uses": []
  },
  {
+  "id": "IS.O.A1.3.1",
+  "label": "Versioned citation",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A1.3.2",
+  "label": "FAIR principles",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A1.3.3",
+  "label": "Data set boundary",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A1.3.4",
+  "label": "Provenance model",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "IS.O.A1.4",
   "label": "Persistent identifiers",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A1.4.1",
+  "label": "Check digits",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": [
+   "MA.O.A2"
+  ]
+ },
+ {
+  "id": "IS.O.A1.4.2",
+  "label": "Persistence as service",
+  "owner": "IS",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A1.4.3",
+  "label": "Identifier scope",
   "owner": "IS",
   "home": "O/A1",
   "uses": []
@@ -4783,8 +9840,64 @@
   "uses": []
  },
  {
+  "id": "IS.O.A2.1.1",
+  "label": "Dublin Core elements",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.1.2",
+  "label": "MARC 21 structure",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.1.3",
+  "label": "Crosswalks",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.1.4",
+  "label": "Application profiles",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "IS.O.A2.2",
   "label": "Cataloguing rules",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.2.1",
+  "label": "User tasks",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.2.2",
+  "label": "Authority control",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.2.3",
+  "label": "Content, media and carrier types",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.2.4",
+  "label": "Cataloguer consistency",
   "owner": "IS",
   "home": "O/A2",
   "uses": []
@@ -4797,6 +9910,34 @@
   "uses": []
  },
  {
+  "id": "IS.O.A2.3.1",
+  "label": "Thesaurus relations",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.3.2",
+  "label": "Pre- and post-coordination",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.3.3",
+  "label": "Exhaustivity and specificity",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.3.4",
+  "label": "Indexing consistency",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "IS.O.A2.4",
   "label": "Linked data",
   "owner": "IS",
@@ -4804,6 +9945,36 @@
   "uses": [
    "MA.O.A1"
   ]
+ },
+ {
+  "id": "IS.O.A2.4.1",
+  "label": "Four principles",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.4.2",
+  "label": "SKOS hierarchy",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A2.4.3",
+  "label": "Open-world reading",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "IS.O.A2.4.4",
+  "label": "Identity links",
+  "owner": "IS",
+  "home": "O/A2",
+  "uses": []
  },
  {
   "id": "IS.O.A3",
@@ -4820,6 +9991,34 @@
   "uses": []
  },
  {
+  "id": "IS.O.A3.1.1",
+  "label": "Dewey Decimal",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.1.2",
+  "label": "Library of Congress",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.1.3",
+  "label": "Exclusivity test",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.1.4",
+  "label": "Single location",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
   "id": "IS.O.A3.2",
   "label": "Faceted classification",
   "owner": "IS",
@@ -4827,8 +10026,64 @@
   "uses": []
  },
  {
+  "id": "IS.O.A3.2.1",
+  "label": "PMEST",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.2.2",
+  "label": "Facet independence",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.2.3",
+  "label": "Citation order",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.2.4",
+  "label": "Faceted search",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
   "id": "IS.O.A3.3",
   "label": "Archival arrangement",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.3.1",
+  "label": "Provenance",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.3.2",
+  "label": "Original order",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.3.3",
+  "label": "Multilevel description",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.3.4",
+  "label": "Digital original order",
   "owner": "IS",
   "home": "O/A3",
   "uses": []
@@ -4843,8 +10098,69 @@
   ]
  },
  {
+  "id": "IS.O.A3.4.1",
+  "label": "Definition and test",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.4.2",
+  "label": "OWL 2 DL",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": [
+   "MA.O.A1",
+   "CS.O.A2.3"
+  ]
+ },
+ {
+  "id": "IS.O.A3.4.3",
+  "label": "Upper-level ontologies",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": [
+   "PL.O.A1.1"
+  ]
+ },
+ {
+  "id": "IS.O.A3.4.4",
+  "label": "Alignment",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
   "id": "IS.O.A3.5",
   "label": "This taxonomy",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.5.1",
+  "label": "Unit of claim",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.5.2",
+  "label": "One home",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.5.3",
+  "label": "Key-line discipline",
+  "owner": "IS",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A3.5.4",
+  "label": "Protocol reliability",
   "owner": "IS",
   "home": "O/A3",
   "uses": []
@@ -4866,6 +10182,34 @@
   ]
  },
  {
+  "id": "IS.O.A4.1.1",
+  "label": "Precision and recall",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.1.2",
+  "label": "Cranfield design",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.1.3",
+  "label": "Pooling",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.1.4",
+  "label": "Rank-based measures",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
   "id": "IS.O.A4.2",
   "label": "Relevance",
   "owner": "IS",
@@ -4873,8 +10217,66 @@
   "uses": []
  },
  {
+  "id": "IS.O.A4.2.1",
+  "label": "Topical and user relevance",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.2.2",
+  "label": "Assessor disagreement",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.2.3",
+  "label": "Graded relevance",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.2.4",
+  "label": "Relevance feedback",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": [
+   "CS"
+  ]
+ },
+ {
   "id": "IS.O.A4.3",
   "label": "Bibliometrics",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.3.1",
+  "label": "Lotka's law",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.3.2",
+  "label": "Bradford's law",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.3.3",
+  "label": "Citation analysis",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.3.4",
+  "label": "Indicators",
   "owner": "IS",
   "home": "O/A4",
   "uses": []
@@ -4887,6 +10289,34 @@
   "uses": [
    "MS"
   ]
+ },
+ {
+  "id": "IS.O.A4.4.1",
+  "label": "Information search process",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.4.2",
+  "label": "Berrypicking",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.4.3",
+  "label": "Information foraging",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A4.4.4",
+  "label": "Information need",
+  "owner": "IS",
+  "home": "O/A4",
+  "uses": []
  },
  {
   "id": "IS.O.A5",
@@ -4905,6 +10335,38 @@
   ]
  },
  {
+  "id": "IS.O.A5.1.1",
+  "label": "Agents of deterioration",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A5.1.2",
+  "label": "Storage conditions",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": [
+   "CH.O.A4.2"
+  ]
+ },
+ {
+  "id": "IS.O.A5.1.3",
+  "label": "Intervention",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A5.1.4",
+  "label": "Media decay",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": [
+   "CH.O.A4"
+  ]
+ },
+ {
   "id": "IS.O.A5.2",
   "label": "Digital preservation",
   "owner": "IS",
@@ -4912,8 +10374,63 @@
   "uses": []
  },
  {
+  "id": "IS.O.A5.2.1",
+  "label": "OAIS entities",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A5.2.2",
+  "label": "Designated community",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A5.2.3",
+  "label": "Migration and emulation",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A5.2.4",
+  "label": "Fixity and copies",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": [
+   "CS.O.A5.1"
+  ]
+ },
+ {
   "id": "IS.O.A5.3",
   "label": "Access and rights",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": [
+   "LA"
+  ]
+ },
+ {
+  "id": "IS.O.A5.3.1",
+  "label": "Gold and green",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "IS.O.A5.3.2",
+  "label": "Licence statements",
+  "owner": "IS",
+  "home": "O/A5",
+  "uses": [
+   "LA"
+  ]
+ },
+ {
+  "id": "IS.O.A5.3.3",
+  "label": "Conditions of access",
   "owner": "IS",
   "home": "O/A5",
   "uses": [
@@ -5128,6 +10645,437 @@
   "uses": []
  },
  {
+  "id": "LA.O.A1.1.1",
+  "label": "Parliamentary sovereignty in NZ",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.1.2",
+  "label": "Delegated legislation within parent power",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.1.3",
+  "label": "Text read with purpose and context",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.1.4",
+  "label": "Later statute prevails; implied repeal",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.2.1",
+  "label": "Only the ratio binds",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.2.2",
+  "label": "Apex courts may depart from own precedent",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.2.3",
+  "label": "Jurisprudence constante in civil law",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.4.1",
+  "label": "Custom needs practice and opinio juris",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.4.2",
+  "label": "NZ dualism and consistent reading",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.4.3",
+  "label": "Jus cogens voids conflicting treaties",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A1.5.1",
+  "label": "Ranking of sources",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": [
+   "PL"
+  ]
+ },
+ {
+  "id": "LA.O.A1.5.2",
+  "label": "Validity distinct from efficacy",
+  "owner": "LA",
+  "home": "O/A1",
+  "uses": [
+   "PO",
+   "MS"
+  ]
+ },
+ {
+  "id": "LA.O.A2.1.1",
+  "label": "Remoteness limits contract damages",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.1.2",
+  "label": "Vitiating factors",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.1.3",
+  "label": "Privity and third-party beneficiaries",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.2.1",
+  "label": "Torrens indefeasibility",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.2.2",
+  "label": "Nemo dat",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.2.3",
+  "label": "Relative title and priority",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.3.1",
+  "label": "Three certainties",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.3.2",
+  "label": "Fiduciary loyalty",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.3.3",
+  "label": "Mandatory trustee duties",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.4.1",
+  "label": "Equal sharing of relationship property",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.4.2",
+  "label": "Paramountcy of child welfare",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.4.3",
+  "label": "Family protection claims",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.5.1",
+  "label": "No tax without statute",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A2.5.2",
+  "label": "General anti-avoidance rule",
+  "owner": "LA",
+  "home": "O/A2",
+  "uses": [
+   "BU",
+   "EC"
+  ]
+ },
+ {
+  "id": "LA.O.A3.1.1",
+  "label": "Reasonable person standard",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A3.1.2",
+  "label": "But-for causation",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A3.1.3",
+  "label": "Scope of the ACC bar",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A3.1.4",
+  "label": "Pure economic loss",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": [
+   "EC"
+  ]
+ },
+ {
+  "id": "LA.O.A3.2.1",
+  "label": "Prosecution burden of proof",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A3.2.2",
+  "label": "Presumption of fault; strict liability",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A3.2.3",
+  "label": "Criminal defences",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A3.3.1",
+  "label": "Measures of damages",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A3.3.2",
+  "label": "Discretionary equitable remedies",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A3.3.3",
+  "label": "Sentencing purposes and principles",
+  "owner": "LA",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A4.1.1",
+  "label": "Electoral entrenchment",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A4.1.2",
+  "label": "Conventions not court-enforced",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": [
+   "PO"
+  ]
+ },
+ {
+  "id": "LA.O.A4.1.3",
+  "label": "Self-entrenchment",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": [
+   "PL"
+  ]
+ },
+ {
+  "id": "LA.O.A4.2.1",
+  "label": "Review of process, not merits",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A4.2.2",
+  "label": "Natural justice",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A4.2.3",
+  "label": "Legitimate expectation",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A4.3.1",
+  "label": "Consistent interpretation",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A4.3.2",
+  "label": "Declarations of inconsistency",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A4.3.3",
+  "label": "Proportionality under s 5",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": [
+   "PL"
+  ]
+ },
+ {
+  "id": "LA.O.A4.4.1",
+  "label": "Statutory Treaty clauses reviewable",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A4.4.2",
+  "label": "Binding Tribunal powers",
+  "owner": "LA",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.1.1",
+  "label": "NZ court hierarchy",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.1.2",
+  "label": "Forum non conveniens",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.1.3",
+  "label": "Choice of law",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.2.1",
+  "label": "Adversarial and inquisitorial procedure",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.2.2",
+  "label": "Res judicata and issue estoppel",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.2.3",
+  "label": "Leave to appeal to the Supreme Court",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.3.1",
+  "label": "Relevance and unfair prejudice",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.3.2",
+  "label": "Hearsay",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.3.3",
+  "label": "Improperly obtained evidence",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.4.1",
+  "label": "Limited refusal of foreign awards",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.4.2",
+  "label": "Competence-competence",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "LA.O.A5.4.3",
+  "label": "Mediated settlement as contract",
+  "owner": "LA",
+  "home": "O/A5",
+  "uses": [
+   "LA.O.A2.1"
+  ]
+ },
+ {
   "id": "LN.O.A1",
   "label": "Signal",
   "owner": "LN",
@@ -5144,11 +11092,73 @@
   ]
  },
  {
+  "id": "LN.O.A1.1.1",
+  "label": "Articulatory classes",
+  "owner": "LN",
+  "home": "O/A1.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.1.2",
+  "label": "Source–filter model",
+  "owner": "LN",
+  "home": "O/A1.1",
+  "uses": [
+   "PH"
+  ]
+ },
+ {
+  "id": "LN.O.A1.1.3",
+  "label": "Acoustic correlates",
+  "owner": "LN",
+  "home": "O/A1.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.1.4",
+  "label": "Speech perception",
+  "owner": "LN",
+  "home": "O/A1.1",
+  "uses": [
+   "MS.O.A1.1"
+  ]
+ },
+ {
   "id": "LN.O.A1.2",
   "label": "Phonology",
   "owner": "LN",
   "home": "O/A1",
   "uses": []
+ },
+ {
+  "id": "LN.O.A1.2.1",
+  "label": "Phoneme and allophone",
+  "owner": "LN",
+  "home": "O/A1.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.2.2",
+  "label": "Distinctive features",
+  "owner": "LN",
+  "home": "O/A1.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.2.3",
+  "label": "Optimality Theory",
+  "owner": "LN",
+  "home": "O/A1.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.2.4",
+  "label": "Syllable, stress and tone",
+  "owner": "LN",
+  "home": "O/A1.2",
+  "uses": [
+   "AR.O.A2.1"
+  ]
  },
  {
   "id": "LN.O.A1.3",
@@ -5158,10 +11168,68 @@
   "uses": []
  },
  {
+  "id": "LN.O.A1.3.1",
+  "label": "Parameters",
+  "owner": "LN",
+  "home": "O/A1.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.3.2",
+  "label": "Duality of patterning",
+  "owner": "LN",
+  "home": "O/A1.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.3.3",
+  "label": "Modality effects",
+  "owner": "LN",
+  "home": "O/A1.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.3.4",
+  "label": "Independent sign languages",
+  "owner": "LN",
+  "home": "O/A1.3",
+  "uses": []
+ },
+ {
   "id": "LN.O.A1.4",
   "label": "Writing systems",
   "owner": "LN",
   "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.4.1",
+  "label": "Script types",
+  "owner": "LN",
+  "home": "O/A1.4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.4.2",
+  "label": "Orthographic depth",
+  "owner": "LN",
+  "home": "O/A1.4",
+  "uses": [
+   "MS.O.A1.5.3"
+  ]
+ },
+ {
+  "id": "LN.O.A1.4.3",
+  "label": "Phonetic notation",
+  "owner": "LN",
+  "home": "O/A1.4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A1.4.4",
+  "label": "Writing is secondary",
+  "owner": "LN",
+  "home": "O/A1.4",
   "uses": []
  },
  {
@@ -5179,10 +11247,70 @@
   "uses": []
  },
  {
+  "id": "LN.O.A2.1.1",
+  "label": "Morpheme and exponence",
+  "owner": "LN",
+  "home": "O/A2.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A2.1.2",
+  "label": "Inflection and derivation",
+  "owner": "LN",
+  "home": "O/A2.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A2.1.3",
+  "label": "Productivity",
+  "owner": "LN",
+  "home": "O/A2.1",
+  "uses": [
+   "MS.O.A1.5.3"
+  ]
+ },
+ {
+  "id": "LN.O.A2.1.4",
+  "label": "Degree of synthesis",
+  "owner": "LN",
+  "home": "O/A2.1",
+  "uses": []
+ },
+ {
   "id": "LN.O.A2.2",
   "label": "Syntax",
   "owner": "LN",
   "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A2.2.1",
+  "label": "Constituency tests",
+  "owner": "LN",
+  "home": "O/A2.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A2.2.2",
+  "label": "Phrase structure and dependency",
+  "owner": "LN",
+  "home": "O/A2.2",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "LN.O.A2.2.3",
+  "label": "Recursion",
+  "owner": "LN",
+  "home": "O/A2.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A2.2.4",
+  "label": "Alignment and agreement",
+  "owner": "LN",
+  "home": "O/A2.2",
   "uses": []
  },
  {
@@ -5193,12 +11321,76 @@
   "uses": []
  },
  {
+  "id": "LN.O.A2.3.1",
+  "label": "Word classes",
+  "owner": "LN",
+  "home": "O/A2.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A2.3.2",
+  "label": "Argument structure",
+  "owner": "LN",
+  "home": "O/A2.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A2.3.3",
+  "label": "Frequency laws",
+  "owner": "LN",
+  "home": "O/A2.3",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "LN.O.A2.3.4",
+  "label": "Idioms and constructions",
+  "owner": "LN",
+  "home": "O/A2.3",
+  "uses": []
+ },
+ {
   "id": "LN.O.A2.4",
   "label": "Formal grammars",
   "owner": "LN",
   "home": "O/A2",
   "uses": [
    "MA.O.A1"
+  ]
+ },
+ {
+  "id": "LN.O.A2.4.1",
+  "label": "Non-regularity",
+  "owner": "LN",
+  "home": "O/A2.4",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "LN.O.A2.4.2",
+  "label": "Cross-serial dependencies",
+  "owner": "LN",
+  "home": "O/A2.4",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "LN.O.A2.4.3",
+  "label": "Mild context-sensitivity",
+  "owner": "LN",
+  "home": "O/A2.4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A2.4.4",
+  "label": "Probabilistic grammars",
+  "owner": "LN",
+  "home": "O/A2.4",
+  "uses": [
+   "CS.O.A4.4"
   ]
  },
  {
@@ -5216,6 +11408,36 @@
   "uses": []
  },
  {
+  "id": "LN.O.A3.1.1",
+  "label": "Sense relations",
+  "owner": "LN",
+  "home": "O/A3.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A3.1.2",
+  "label": "Arbitrariness",
+  "owner": "LN",
+  "home": "O/A3.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A3.1.3",
+  "label": "Polysemy and homonymy",
+  "owner": "LN",
+  "home": "O/A3.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A3.1.4",
+  "label": "Colour terms and categories",
+  "owner": "LN",
+  "home": "O/A3.1",
+  "uses": [
+   "MS.O.A1.1"
+  ]
+ },
+ {
   "id": "LN.O.A3.2",
   "label": "Compositional semantics",
   "owner": "LN",
@@ -5223,6 +11445,40 @@
   "uses": [
    "PL"
   ]
+ },
+ {
+  "id": "LN.O.A3.2.1",
+  "label": "Compositionality as a hypothesis",
+  "owner": "LN",
+  "home": "O/A3.2",
+  "uses": [
+   "PL.O.A3.1"
+  ]
+ },
+ {
+  "id": "LN.O.A3.2.2",
+  "label": "Montague grammar",
+  "owner": "LN",
+  "home": "O/A3.2",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "LN.O.A3.2.3",
+  "label": "Generalised quantifiers",
+  "owner": "LN",
+  "home": "O/A3.2",
+  "uses": [
+   "MA.O.A1"
+  ]
+ },
+ {
+  "id": "LN.O.A3.2.4",
+  "label": "Entailment and polarity",
+  "owner": "LN",
+  "home": "O/A3.2",
+  "uses": []
  },
  {
   "id": "LN.O.A3.3",
@@ -5234,11 +11490,71 @@
   ]
  },
  {
+  "id": "LN.O.A3.3.1",
+  "label": "Implicature",
+  "owner": "LN",
+  "home": "O/A3.3",
+  "uses": [
+   "PL.O.A3.1"
+  ]
+ },
+ {
+  "id": "LN.O.A3.3.2",
+  "label": "Presupposition",
+  "owner": "LN",
+  "home": "O/A3.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A3.3.3",
+  "label": "Deixis",
+  "owner": "LN",
+  "home": "O/A3.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A3.3.4",
+  "label": "Speech acts and politeness",
+  "owner": "LN",
+  "home": "O/A3.3",
+  "uses": []
+ },
+ {
   "id": "LN.O.A3.4",
   "label": "Grammaticalised meaning",
   "owner": "LN",
   "home": "O/A3",
   "uses": []
+ },
+ {
+  "id": "LN.O.A3.4.1",
+  "label": "Person and number",
+  "owner": "LN",
+  "home": "O/A3.4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A3.4.2",
+  "label": "Tense, aspect and mood",
+  "owner": "LN",
+  "home": "O/A3.4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A3.4.3",
+  "label": "Evidentiality",
+  "owner": "LN",
+  "home": "O/A3.4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A3.4.4",
+  "label": "Spatial reference",
+  "owner": "LN",
+  "home": "O/A3.4",
+  "uses": [
+   "MS"
+  ]
  },
  {
   "id": "LN.O.A4",
@@ -5257,10 +11573,66 @@
   ]
  },
  {
+  "id": "LN.O.A4.1.1",
+  "label": "The variable",
+  "owner": "LN",
+  "home": "O/A4.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.1.2",
+  "label": "Stratification",
+  "owner": "LN",
+  "home": "O/A4.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.1.3",
+  "label": "Apparent time",
+  "owner": "LN",
+  "home": "O/A4.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.1.4",
+  "label": "Gender, age and ethnicity",
+  "owner": "LN",
+  "home": "O/A4.1",
+  "uses": []
+ },
+ {
   "id": "LN.O.A4.2",
   "label": "Register and genre",
   "owner": "LN",
   "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.2.1",
+  "label": "Diglossia",
+  "owner": "LN",
+  "home": "O/A4.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.2.2",
+  "label": "Register",
+  "owner": "LN",
+  "home": "O/A4.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.2.3",
+  "label": "Style and audience",
+  "owner": "LN",
+  "home": "O/A4.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.2.4",
+  "label": "Address terms",
+  "owner": "LN",
+  "home": "O/A4.2",
   "uses": []
  },
  {
@@ -5271,6 +11643,36 @@
   "uses": []
  },
  {
+  "id": "LN.O.A4.3.1",
+  "label": "Borrowing",
+  "owner": "LN",
+  "home": "O/A4.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.3.2",
+  "label": "Code-switching",
+  "owner": "LN",
+  "home": "O/A4.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.3.3",
+  "label": "Pidgins and creoles",
+  "owner": "LN",
+  "home": "O/A4.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.3.4",
+  "label": "Bilingualism",
+  "owner": "LN",
+  "home": "O/A4.3",
+  "uses": [
+   "MS.O.A1.5.3"
+  ]
+ },
+ {
   "id": "LN.O.A4.4",
   "label": "Endangerment and revitalisation",
   "owner": "LN",
@@ -5278,6 +11680,36 @@
   "uses": [
    "IK"
   ]
+ },
+ {
+  "id": "LN.O.A4.4.1",
+  "label": "Language shift",
+  "owner": "LN",
+  "home": "O/A4.4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.4.2",
+  "label": "Counting languages",
+  "owner": "LN",
+  "home": "O/A4.4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A4.4.3",
+  "label": "Documentation",
+  "owner": "LN",
+  "home": "O/A4.4",
+  "uses": [
+   "IK.O.A5.2"
+  ]
+ },
+ {
+  "id": "LN.O.A4.4.4",
+  "label": "Revitalisation outcomes",
+  "owner": "LN",
+  "home": "O/A4.4",
+  "uses": []
  },
  {
   "id": "LN.O.A5",
@@ -5294,6 +11726,34 @@
   "uses": []
  },
  {
+  "id": "LN.O.A5.1.1",
+  "label": "Neogrammarian hypothesis",
+  "owner": "LN",
+  "home": "O/A5.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A5.1.2",
+  "label": "Grimm's and Verner's laws",
+  "owner": "LN",
+  "home": "O/A5.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A5.1.3",
+  "label": "Grammaticalisation",
+  "owner": "LN",
+  "home": "O/A5.1",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A5.1.4",
+  "label": "Rates and sources",
+  "owner": "LN",
+  "home": "O/A5.1",
+  "uses": []
+ },
+ {
   "id": "LN.O.A5.2",
   "label": "Descent and families",
   "owner": "LN",
@@ -5303,11 +11763,71 @@
   ]
  },
  {
+  "id": "LN.O.A5.2.1",
+  "label": "Comparative method",
+  "owner": "LN",
+  "home": "O/A5.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A5.2.2",
+  "label": "Subgrouping",
+  "owner": "LN",
+  "home": "O/A5.2",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A5.2.3",
+  "label": "Phylogenetic models",
+  "owner": "LN",
+  "home": "O/A5.2",
+  "uses": [
+   "BI.O.A4.4"
+  ]
+ },
+ {
+  "id": "LN.O.A5.2.4",
+  "label": "Limits of the method",
+  "owner": "LN",
+  "home": "O/A5.2",
+  "uses": []
+ },
+ {
   "id": "LN.O.A5.3",
   "label": "Typology and universals",
   "owner": "LN",
   "home": "O/A5",
   "uses": []
+ },
+ {
+  "id": "LN.O.A5.3.1",
+  "label": "Word order and implication",
+  "owner": "LN",
+  "home": "O/A5.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A5.3.2",
+  "label": "Sampling",
+  "owner": "LN",
+  "home": "O/A5.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A5.3.3",
+  "label": "Hierarchies",
+  "owner": "LN",
+  "home": "O/A5.3",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A5.3.4",
+  "label": "Explaining universals",
+  "owner": "LN",
+  "home": "O/A5.3",
+  "uses": [
+   "MS.O.A3.3"
+  ]
  },
  {
   "id": "LN.O.A5.4",
@@ -5317,6 +11837,38 @@
   "uses": [
    "BI"
   ]
+ },
+ {
+  "id": "LN.O.A5.4.1",
+  "label": "Evidence limits",
+  "owner": "LN",
+  "home": "O/A5.4",
+  "uses": [
+   "BI.O.A4.5"
+  ]
+ },
+ {
+  "id": "LN.O.A5.4.2",
+  "label": "Rival programmes",
+  "owner": "LN",
+  "home": "O/A5.4",
+  "uses": []
+ },
+ {
+  "id": "LN.O.A5.4.3",
+  "label": "Comparative evidence",
+  "owner": "LN",
+  "home": "O/A5.4",
+  "uses": [
+   "BI.O.A3.4"
+  ]
+ },
+ {
+  "id": "LN.O.A5.4.4",
+  "label": "Emerging languages",
+  "owner": "LN",
+  "home": "O/A5.4",
+  "uses": []
  },
  {
   "id": "MD.O.A1",
@@ -5354,6 +11906,20 @@
   ]
  },
  {
+  "id": "MD.O.A1.1.3",
+  "label": "A disease entity is individuated by at least one of aetiology",
+  "owner": "MD",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A1.1.4",
+  "label": "Harm is part of the working definition",
+  "owner": "MD",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "MD.O.A1.2",
   "label": "Classification",
   "owner": "MD",
@@ -5363,6 +11929,20 @@
  {
   "id": "MD.O.A1.2.1",
   "label": "Diagnostic thresholds, such as HbA1c for diabetes, are conventions set",
+  "owner": "MD",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A1.2.2",
+  "label": "A change in a threshold changes measured prevalence without any",
+  "owner": "MD",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A1.2.3",
+  "label": "Inter-rater reliability, usually reported as Cohen's kappa, is a",
   "owner": "MD",
   "home": "O/A1",
   "uses": []
@@ -5385,8 +11965,36 @@
   "uses": []
  },
  {
+  "id": "MD.O.A1.3.2",
+  "label": "Most DSM categories are defined by symptom criteria, not by a known",
+  "owner": "MD",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A1.3.3",
+  "label": "Comorbidity between psychiatric categories is common",
+  "owner": "MD",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
   "id": "MD.O.A1.4",
   "label": "Syndromes and multimorbidity",
+  "owner": "MD",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A1.4.1",
+  "label": "A syndrome is a recurring cluster of signs and symptoms whose",
+  "owner": "MD",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A1.4.2",
+  "label": "Multimorbidity, two or more chronic conditions in one person, rises",
   "owner": "MD",
   "home": "O/A1",
   "uses": []
@@ -5415,6 +12023,20 @@
   ]
  },
  {
+  "id": "MD.O.A2.1.2",
+  "label": "Molecular criteria, based on finding pathogen nucleic acid in",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A2.1.3",
+  "label": "Host factors change the outcome of exposure to the same agent",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "MD.O.A2.2",
   "label": "Genetic causes",
   "owner": "MD",
@@ -5422,8 +12044,43 @@
   "uses": []
  },
  {
+  "id": "MD.O.A2.2.1",
+  "label": "Penetrance, the fraction of carriers who develop the disorder, is",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A2.2.2",
+  "label": "A polygenic score built in one ancestry group usually predicts less",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A2.2.3",
+  "label": "Mendelian randomisation uses genetic variants as instruments for an",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "MD.O.A2.3",
   "label": "Pathophysiology",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A2.3.1",
+  "label": "A mechanism shown in cells or animals is a hypothesis about",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A2.3.2",
+  "label": "Many chronic disorders arise from several interacting mechanisms",
   "owner": "MD",
   "home": "O/A2",
   "uses": []
@@ -5439,6 +12096,27 @@
   ]
  },
  {
+  "id": "MD.O.A2.4.1",
+  "label": "The link between smoking and lung cancer is a model case of causal",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A2.4.2",
+  "label": "Socioeconomic gradients in health hold across many conditions",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A2.4.3",
+  "label": "Exposure–response functions for air pollutants are estimated in",
+  "owner": "MD",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
   "id": "MD.O.A3",
   "label": "Diagnosis and prognosis",
   "owner": "MD",
@@ -5448,6 +12126,20 @@
  {
   "id": "MD.O.A3.1",
   "label": "Signs, symptoms and tests",
+  "owner": "MD",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A3.1.1",
+  "label": "History taking supplies much of the information used in many",
+  "owner": "MD",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A3.1.2",
+  "label": "Laboratory reference intervals are usually the central 95 per cent",
   "owner": "MD",
   "home": "O/A3",
   "uses": []
@@ -5469,6 +12161,20 @@
   "uses": []
  },
  {
+  "id": "MD.O.A3.2.2",
+  "label": "A receiver operating characteristic curve shows sensitivity against",
+  "owner": "MD",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A3.2.3",
+  "label": "Spectrum bias arises when accuracy is measured in very sick cases",
+  "owner": "MD",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
   "id": "MD.O.A3.3",
   "label": "Prognosis",
   "owner": "MD",
@@ -5476,8 +12182,45 @@
   "uses": []
  },
  {
+  "id": "MD.O.A3.3.1",
+  "label": "The Kaplan–Meier estimator gives survival over time",
+  "owner": "MD",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A3.3.2",
+  "label": "A model with good discrimination can be poorly calibrated in a new",
+  "owner": "MD",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A3.3.3",
+  "label": "Cancer staging, such as TNM, is a prognostic classification",
+  "owner": "MD",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
   "id": "MD.O.A3.4",
   "label": "Screening tests",
+  "owner": "MD",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A3.4.1",
+  "label": "At low prevalence, even a highly specific test yields many false",
+  "owner": "MD",
+  "home": "O/A3",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "MD.O.A3.4.2",
+  "label": "Overdiagnosis is the detection of disease that would never have",
   "owner": "MD",
   "home": "O/A3",
   "uses": []
@@ -5520,8 +12263,29 @@
   "uses": []
  },
  {
+  "id": "MD.O.A4.1.4",
+  "label": "The Hill dose–response model fits effect as a saturating function",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
   "id": "MD.O.A4.2",
   "label": "Surgery and procedures.",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A4.2.1",
+  "label": "Surgical outcomes depend on operator and centre volume for many",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A4.2.2",
+  "label": "Sham-controlled trials are possible for some procedures",
   "owner": "MD",
   "home": "O/A4",
   "uses": []
@@ -5534,6 +12298,20 @@
   "uses": [
    "MS"
   ]
+ },
+ {
+  "id": "MD.O.A4.3.1",
+  "label": "Blinding of patients is rarely possible in psychological therapy",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A4.3.2",
+  "label": "Rehabilitation outcomes are measured as function and participation",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": []
  },
  {
   "id": "MD.O.A4.4",
@@ -5552,6 +12330,22 @@
   ]
  },
  {
+  "id": "MD.O.A4.4.2",
+  "label": "Rare adverse effects are often undetectable in pre-approval trials",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": [
+   "MA.O.A5"
+  ]
+ },
+ {
+  "id": "MD.O.A4.4.3",
+  "label": "Spontaneous reporting systems detect signals, not rates",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
   "id": "MD.O.A4.5",
   "label": "Drug development and regulation",
   "owner": "MD",
@@ -5559,6 +12353,27 @@
   "uses": [
    "LA"
   ]
+ },
+ {
+  "id": "MD.O.A4.5.1",
+  "label": "Phase I establishes safety and dose, phase II early efficacy, phase",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A4.5.2",
+  "label": "Effects on a surrogate endpoint do not guarantee effects on patient",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A4.5.3",
+  "label": "The randomised controlled trial estimates the average effect of a",
+  "owner": "MD",
+  "home": "O/A4",
+  "uses": []
  },
  {
   "id": "MD.O.A5",
@@ -5575,6 +12390,27 @@
   "uses": []
  },
  {
+  "id": "MD.O.A5.1.1",
+  "label": "Prevalence approximates incidence times mean duration in a steady",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A5.1.2",
+  "label": "Relative risk alone does not convey benefit",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A5.1.3",
+  "label": "Direct age standardisation compares rates across populations of",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "MD.O.A5.2",
   "label": "Transmission",
   "owner": "MD",
@@ -5582,8 +12418,52 @@
   "uses": []
  },
  {
+  "id": "MD.O.A5.2.1",
+  "label": "The SIR compartmental model describes susceptible, infected and",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": [
+   "MA.O.A4"
+  ]
+ },
+ {
+  "id": "MD.O.A5.2.2",
+  "label": "The effective reproduction number Rt falls as immunity rises and",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A5.2.3",
+  "label": "Heterogeneous contact can lower the herd-immunity threshold below 1",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "MD.O.A5.3",
   "label": "Prevention and screening programmes",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A5.3.1",
+  "label": "Vaccine efficacy is measured in trials; vaccine effectiveness is",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A5.3.2",
+  "label": "Screening benefit is shown by reduced disease-specific or all-cause",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A5.3.3",
+  "label": "Programme criteria, such as those of Wilson and Jungner, are guides",
   "owner": "MD",
   "home": "O/A5",
   "uses": []
@@ -5600,6 +12480,20 @@
   ]
  },
  {
+  "id": "MD.O.A5.4.1",
+  "label": "The Donabedian framework assesses quality by structure, process and",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A5.4.2",
+  "label": "Comparisons of providers need risk adjustment for patient mix",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
   "id": "MD.O.A5.5",
   "label": "Global and Māori health",
   "owner": "MD",
@@ -5607,6 +12501,20 @@
   "uses": [
    "IK"
   ]
+ },
+ {
+  "id": "MD.O.A5.5.1",
+  "label": "Inequity is stated as an absolute and a relative gap in a named",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "MD.O.A5.5.2",
+  "label": "Differences in access, quality and outcome of care between",
+  "owner": "MD",
+  "home": "O/A5",
+  "uses": []
  },
  {
   "id": "MS.O.A1",
@@ -7310,6 +14218,471 @@
   "home": "O/A5",
   "uses": [
    "ST"
+  ]
+ },
+ {
+  "id": "PO.O.A1.1.1",
+  "label": "State capacity as a degree",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A1.1.2",
+  "label": "Four components of sovereignty (Krasner)",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A1.1.3",
+  "label": "Bellicist thesis of state formation",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": [
+   "HI"
+  ]
+ },
+ {
+  "id": "PO.O.A1.2.1",
+  "label": "Measuring legitimacy by belief and compliance",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A1.2.2",
+  "label": "Weber's three grounds of legitimacy",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": [
+   "PL"
+  ]
+ },
+ {
+  "id": "PO.O.A1.2.3",
+  "label": "Diffuse and specific support (Easton)",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A1.3.1",
+  "label": "Minimal and thick definitions of democracy",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A1.3.2",
+  "label": "Competitive authoritarianism",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A1.3.3",
+  "label": "Modernisation hypothesis",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": [
+   "EC"
+  ]
+ },
+ {
+  "id": "PO.O.A1.3.4",
+  "label": "Democratic erosion by executives",
+  "owner": "PO",
+  "home": "O/A1",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.1.1",
+  "label": "Presidentialism and breakdown",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.1.2",
+  "label": "Federalism and conflict",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.1.3",
+  "label": "Judicial review and court independence",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": [
+   "LA.O.A4.1"
+  ]
+ },
+ {
+  "id": "PO.O.A2.2.1",
+  "label": "Mechanical and psychological effects",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.2.2",
+  "label": "Effective number of parties; M+1 rule",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.2.3",
+  "label": "Proportionality and district magnitude",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.2.4",
+  "label": "New Zealand's change to MMP",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.3.1",
+  "label": "Cleavages and the freezing hypothesis",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.3.2",
+  "label": "Cartel party thesis",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.3.3",
+  "label": "Party identification and vote choice",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": [
+   "MS"
+  ]
+ },
+ {
+  "id": "PO.O.A2.4.1",
+  "label": "Agenda setter in the veto-player model",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.4.2",
+  "label": "Riker's size principle",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": [
+   "MA.B.C4"
+  ]
+ },
+ {
+  "id": "PO.O.A2.4.3",
+  "label": "Divided government and lawmaking",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.5.1",
+  "label": "Public goods rise with W",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.5.2",
+  "label": "Small-W leaders survive longer",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A2.5.3",
+  "label": "Measuring W apart from regime type",
+  "owner": "PO",
+  "home": "O/A2",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A3.1.1",
+  "label": "Downsian convergence",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": [
+   "MA.B.C4"
+  ]
+ },
+ {
+  "id": "PO.O.A3.1.2",
+  "label": "Multidimensional instability",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": [
+   "MA.B.C4",
+   "EC.O.A5.5"
+  ]
+ },
+ {
+  "id": "PO.O.A3.1.3",
+  "label": "Retrospective economic voting",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A3.1.4",
+  "label": "Paradox of voting",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A3.2.1",
+  "label": "Receive–accept–sample model",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": [
+   "MS.O.A1"
+  ]
+ },
+ {
+  "id": "PO.O.A3.2.2",
+  "label": "Thermostatic model of opinion",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A3.2.3",
+  "label": "Framing effects",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": [
+   "MS.O.A1"
+  ]
+ },
+ {
+  "id": "PO.O.A3.3.1",
+  "label": "Selective incentives in large groups",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": [
+   "EC.O.A5.3"
+  ]
+ },
+ {
+  "id": "PO.O.A3.3.2",
+  "label": "Resource model of participation",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A3.3.3",
+  "label": "Social pressure raises turnout",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A3.3.4",
+  "label": "Nonviolent campaign success",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A3.4.1",
+  "label": "Correlates of civil war onset",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A3.4.2",
+  "label": "Hybrid regimes and civil war",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A3.4.3",
+  "label": "Coup-proofing",
+  "owner": "PO",
+  "home": "O/A3",
+  "uses": [
+   "ST"
+  ]
+ },
+ {
+  "id": "PO.O.A4.1.1",
+  "label": "Leptokurtic budget changes",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A4.1.2",
+  "label": "Multiple streams as framework",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A4.1.3",
+  "label": "Incrementalism",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A4.2.1",
+  "label": "Bureaucratic drift",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": [
+   "EC.O.A2.3"
+  ]
+ },
+ {
+  "id": "PO.O.A4.2.2",
+  "label": "Police-patrol and fire-alarm oversight",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A4.2.3",
+  "label": "Weberian bureaucracy and growth",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": [
+   "EC"
+  ]
+ },
+ {
+  "id": "PO.O.A4.3.1",
+  "label": "Clearance points and delivery",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A4.3.2",
+  "label": "Street-level bureaucrats",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A4.4.1",
+  "label": "Partisan effects on policy",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A4.4.2",
+  "label": "Policy feedback",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A4.4.3",
+  "label": "Policy diffusion",
+  "owner": "PO",
+  "home": "O/A4",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A5.1.1",
+  "label": "Balancing and bandwagoning",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A5.1.2",
+  "label": "Hegemonic stability theory",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A5.1.3",
+  "label": "Power transition theory",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A5.2.1",
+  "label": "Institutions lower transaction costs",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": [
+   "EC.O.A3.3"
+  ]
+ },
+ {
+  "id": "PO.O.A5.2.2",
+  "label": "Cooperation under repeated play",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": [
+   "EC.O.A3.5"
+  ]
+ },
+ {
+  "id": "PO.O.A5.2.3",
+  "label": "Alliance reliability",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A5.3.1",
+  "label": "Democratic peace is dyadic",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A5.3.2",
+  "label": "Bargaining model of war",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": [
+   "ST.O.A3.1",
+   "ST.O.A3.4"
+  ]
+ },
+ {
+  "id": "PO.O.A5.3.3",
+  "label": "Audience costs",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": []
+ },
+ {
+  "id": "PO.O.A5.3.4",
+  "label": "Capitalist peace",
+  "owner": "PO",
+  "home": "O/A5",
+  "uses": [
+   "EC"
   ]
  },
  {
