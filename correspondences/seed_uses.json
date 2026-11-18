@@ -1421,12 +1421,12 @@
     "locators": [
      {
       "file": "pyramids/MS.md",
-      "line": 70,
+      "line": 72,
       "quote": "- The equilibrium potential (Nernst, GHK) uses CH.O.A3.3. The cell as a cell is BI; electrical signalling is native here."
      },
      {
       "file": "pyramids/MS.md",
-      "line": 197,
+      "line": 246,
       "quote": "2. The ion channel and the spike are MS.O.A2.1. The cell as a living unit is BI. The equilibrium potential uses CH.O.A3.3."
      }
     ]
@@ -1906,7 +1906,7 @@
     "locators": [
      {
       "file": "pyramids/MS.md",
-      "line": 93,
+      "line": 99,
       "quote": "ion in a stated population, environment and time, broad (H²) or narrow (h²). The quantitative-genetics result uses BI.O.A4."
      }
     ]
@@ -3709,7 +3709,7 @@
     "locators": [
      {
       "file": "pyramids/MS.md",
-      "line": 203,
+      "line": 252,
       "quote": "ng a norm or organisation is MS.O.A5.5. A movement contesting authority uses PO.O.A3.3. The free-rider result uses EC.O.A5.3."
      }
     ]
@@ -4654,6 +4654,36 @@
    }
   },
   {
+   "id": "CE-74d71ba19d",
+   "source": "MA.O.A5",
+   "target": "MS.O.A5.1.2",
+   "kind": "transfer",
+   "directed": true,
+   "mapping": {
+    "objects": [],
+    "methods": [],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [],
+   "status": "asserted",
+   "status_note": "Stated as a 'uses' citation in the pyramid text. Not independently checked.",
+   "provenance": {
+    "origin": "pyramid-uses-citation",
+    "date": "2026-11-10",
+    "generated_by": "scripts/build_correspondences.py",
+    "target_resolution": "line-heading",
+    "kind_assigned_by": "seed-rule",
+    "locators": [
+     {
+      "file": "pyramids/MS.md",
+      "line": 148,
+      "quote": "ols for measured characteristics is estimated by the Oaxaca–Blinder decomposition (Blinder 1973; Oaxaca 1973; uses MA.O.A5 for the regression). Hypothesis: linear wage equations for each group, measured characteristics and a stated"
+     }
+    ]
+   }
+  },
+  {
    "id": "CE-759de05478",
    "source": "BI.O.A4.5",
    "target": "LN.O.A5.4.1",
@@ -4917,7 +4947,7 @@
     "locators": [
      {
       "file": "pyramids/PH.md",
-      "line": 94,
+      "line": 107,
       "quote": "ld and Kerr solutions. Singularity theorems (Penrose, Hawking) assume energy conditions and trapped surfaces (uses MA.O.A3)."
      }
     ]
@@ -4947,7 +4977,7 @@
     "locators": [
      {
       "file": "pyramids/MS.md",
-      "line": 203,
+      "line": 252,
       "quote": "8. A movement targeting a norm or organisation is MS.O.A5.5. A movement contesting authority uses PO.O.A3.3. The free-rider result uses EC.O.A5.3."
      }
     ]
@@ -5339,6 +5369,36 @@
       "file": "pyramids/PL.md",
       "line": 107,
       "quote": "- PL.O.A3.2 uses MA.O.A1 for metatheorems. Gödel's first incompleteness theorem holds for a consistent, effectively axiomatised theory"
+     }
+    ]
+   }
+  },
+  {
+   "id": "CE-89aad078c3",
+   "source": "MD.O.A1",
+   "target": "MS.O.A5.3.3",
+   "kind": "transfer",
+   "directed": true,
+   "mapping": {
+    "objects": [],
+    "methods": [],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [],
+   "status": "asserted",
+   "status_note": "Stated as a 'uses' citation in the pyramid text. Not independently checked.",
+   "provenance": {
+    "origin": "pyramid-uses-citation",
+    "date": "2026-11-10",
+    "generated_by": "scripts/build_correspondences.py",
+    "target_resolution": "line-heading",
+    "kind_assigned_by": "seed-rule",
+    "locators": [
+     {
+      "file": "pyramids/MS.md",
+      "line": 157,
+      "quote": "Durkheim 1897). Undercount and changes of definition are the main defeaters. The clinical account is MD.O.A1 (uses MD.O.A1). An aggregate rate alone does not license a claim about individuals."
      }
     ]
    }
@@ -5744,6 +5804,36 @@
    }
   },
   {
+   "id": "CE-97f8a20a16",
+   "source": "CH.O.A3",
+   "target": "PH",
+   "kind": "transfer",
+   "directed": true,
+   "mapping": {
+    "objects": [],
+    "methods": [],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [],
+   "status": "asserted",
+   "status_note": "Stated as a 'uses' citation in the pyramid text. Not independently checked.",
+   "provenance": {
+    "origin": "pyramid-uses-citation",
+    "date": "2026-11-10",
+    "generated_by": "scripts/build_correspondences.py",
+    "target_resolution": "field-only",
+    "kind_assigned_by": "seed-rule",
+    "locators": [
+     {
+      "file": "pyramids/PH.md",
+      "line": 126,
+      "quote": "n of phase change, and the physics of ordered and quantum condensed states. CH owns reaction thermochemistry (uses CH.O.A3)."
+     }
+    ]
+   }
+  },
+  {
    "id": "CE-9840c6d36a",
    "source": "MS.O.A1",
    "target": "EC.O.A1.3.2",
@@ -5799,6 +5889,36 @@
       "file": "pyramids/BU.md",
       "line": 92,
       "quote": "- BU.O.A3.3.2 The make-or-buy boundary of the firm draws on transaction cost economics (uses EC.O.A3.3). The firm's sourcing decision is BU."
+     }
+    ]
+   }
+  },
+  {
+   "id": "CE-99241f15ba",
+   "source": "MS.O.A5",
+   "target": "RE",
+   "kind": "transfer",
+   "directed": true,
+   "mapping": {
+    "objects": [],
+    "methods": [],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [],
+   "status": "asserted",
+   "status_note": "Stated as a 'uses' citation in the pyramid text. Not independently checked.",
+   "provenance": {
+    "origin": "pyramid-uses-citation",
+    "date": "2026-11-10",
+    "generated_by": "scripts/build_correspondences.py",
+    "target_resolution": "field-only",
+    "kind_assigned_by": "seed-rule",
+    "locators": [
+     {
+      "file": "pyramids/RE.md",
+      "line": 244,
+      "quote": "one church (·T). C5: the comparison of forms of a rite across communities. C6: ethnography of a congregation (uses MS.O.A5). C7: a typology of rites of passage (RE.O.A3.1.5) over several traditions. C8: the history of the Reformatio"
      }
     ]
    }
@@ -6702,8 +6822,8 @@
     "locators": [
      {
       "file": "pyramids/PH.md",
-      "line": 57,
-      "quote": "rvation.** Noether: each continuous symmetry of a local action yields a conserved current. The theorem is MA (uses MA.O.A4); the physical conservation law is PH."
+      "line": 59,
+      "quote": "rvation. Noether: each continuous symmetry of a local action yields a conserved current.** The theorem is MA (uses MA.O.A4); the physical conservation law is PH. A conservation law holds for the closed system. A driven subsystem, wi"
      }
     ]
    }
@@ -7314,6 +7434,36 @@
    }
   },
   {
+   "id": "CE-cae61eaf61",
+   "source": "MA.O.A4",
+   "target": "PH.O.A5.5.2",
+   "kind": "transfer",
+   "directed": true,
+   "mapping": {
+    "objects": [],
+    "methods": [],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [],
+   "status": "asserted",
+   "status_note": "Stated as a 'uses' citation in the pyramid text. Not independently checked.",
+   "provenance": {
+    "origin": "pyramid-uses-citation",
+    "date": "2026-11-10",
+    "generated_by": "scripts/build_correspondences.py",
+    "target_resolution": "line-heading",
+    "kind_assigned_by": "seed-rule",
+    "locators": [
+     {
+      "file": "pyramids/PH.md",
+      "line": 173,
+      "quote": "ariant measure and a record long enough for the average to converge. Noise also produces apparent separation (uses MA.O.A4)."
+     }
+    ]
+   }
+  },
+  {
    "id": "CE-cb2e2c8d0d",
    "source": "EN.O.A3.3",
    "target": "DE.O.A3.1.2",
@@ -7549,6 +7699,36 @@
       "file": "pyramids/LN.md",
       "line": 165,
       "quote": "rsion is specific to humans (Hauser, Chomsky and Fitch, 2002) is CONTESTED. The animal evidence is BI.O.A3.4 (uses BI.O.A3.4)."
+     }
+    ]
+   }
+  },
+  {
+   "id": "CE-d3d2f5c6aa",
+   "source": "EC.O.A5.3",
+   "target": "MS.O.A5.5.1",
+   "kind": "transfer",
+   "directed": true,
+   "mapping": {
+    "objects": [],
+    "methods": [],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [],
+   "status": "asserted",
+   "status_note": "Stated as a 'uses' citation in the pyramid text. Not independently checked.",
+   "provenance": {
+    "origin": "pyramid-uses-citation",
+    "date": "2026-11-10",
+    "generated_by": "scripts/build_correspondences.py",
+    "target_resolution": "line-heading",
+    "kind_assigned_by": "seed-rule",
+    "locators": [
+     {
+      "file": "pyramids/MS.md",
+      "line": 164,
+      "quote": "ED). Hypothesis: grievance is roughly constant across the cases compared. The free-rider result is EC.O.A5.3 (uses EC.O.A5.3)."
      }
     ]
    }
@@ -7997,7 +8177,12 @@
     "locators": [
      {
       "file": "pyramids/MS.md",
-      "line": 201,
+      "line": 109,
+      "quote": "tor). Heritability of intelligence (MS.O.A3.2.2; a variance fraction for a stated population and environment; uses BI.O.A4). Attachment classification (MS.O.A3.3.2; the Strange Situation procedure with infant and caregiver in a stat"
+     },
+     {
+      "file": "pyramids/MS.md",
+      "line": 250,
       "quote": "6. Heritability as a quantitative-genetic quantity is owned by BI.O.A4. MS.O.A3.2.2 uses BI.O.A4."
      }
     ]
@@ -8123,6 +8308,36 @@
     ],
     "cited_as": [
      "PH.O.A1.2c"
+    ]
+   }
+  },
+  {
+   "id": "CE-e249cebd4c",
+   "source": "BI.O.A3.2",
+   "target": "PH.O.A5.5.3",
+   "kind": "transfer",
+   "directed": true,
+   "mapping": {
+    "objects": [],
+    "methods": [],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [],
+   "status": "asserted",
+   "status_note": "Stated as a 'uses' citation in the pyramid text. Not independently checked.",
+   "provenance": {
+    "origin": "pyramid-uses-citation",
+    "date": "2026-11-10",
+    "generated_by": "scripts/build_correspondences.py",
+    "target_resolution": "line-heading",
+    "kind_assigned_by": "seed-rule",
+    "locators": [
+     {
+      "file": "pyramids/PH.md",
+      "line": 174,
+      "quote": "ns have been reported. Whether it explains a given biological pattern is CONTESTED, and that placement is BI (uses BI.O.A3.2)."
+     }
     ]
    }
   },
@@ -9000,6 +9215,36 @@
    }
   },
   {
+   "id": "CE-fce7841275",
+   "source": "MA.O.A4",
+   "target": "PH.O.A1.1",
+   "kind": "transfer",
+   "directed": true,
+   "mapping": {
+    "objects": [],
+    "methods": [],
+    "warrants": []
+   },
+   "holds_under": [],
+   "breaks_where": [],
+   "status": "asserted",
+   "status_note": "Stated as a 'uses' citation in the pyramid text. Not independently checked.",
+   "provenance": {
+    "origin": "pyramid-uses-citation",
+    "date": "2026-11-10",
+    "generated_by": "scripts/build_correspondences.py",
+    "target_resolution": "line-heading",
+    "kind_assigned_by": "seed-rule",
+    "locators": [
+     {
+      "file": "pyramids/PH.md",
+      "line": 48,
+      "quote": "ust be added. Trajectories are unique given initial data only where the forces satisfy a Lipschitz condition (uses MA.O.A4)."
+     }
+    ]
+   }
+  },
+  {
    "id": "CE-fd19adc2df",
    "source": "EC.O.A2.4",
    "target": "DE.O.A4.4.1",
@@ -9327,7 +9572,7 @@
   },
   {
    "file": "pyramids/MS.md",
-   "line": 240,
+   "line": 289,
    "cited": "MS.O.A1.5",
    "reason": "cites its own field"
   },

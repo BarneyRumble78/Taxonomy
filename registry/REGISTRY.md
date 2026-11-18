@@ -1653,6 +1653,8 @@
 | MS.O.A2.1.3 | Glia | MS | O/A2.1 | — |
 | MS.O.A2.2 | Plasticity | MS | O/A2 | — |
 | MS.O.A2.2.1 | LTP and LTD | MS | O/A2.2 | — |
+| MS.O.A2.2.2 | Hebbian rule and spike-timing dependence | MS | O/A2.2 | — |
+| MS.O.A2.2.3 | Homeostatic regulation (synaptic scaling) | MS | O/A2.2 | — |
 | MS.O.A2.3 | Circuits and systems | MS | O/A2 | — |
 | MS.O.A2.3.1 | Sensory and motor pathways | MS | O/A2.3 | — |
 | MS.O.A2.3.2 | Hypothalamus and homeostasis | MS | O/A2.3 | — |
@@ -1677,16 +1679,47 @@
 | MS.O.A3.4.2 | RDoC | MS | O/A3.4 | — |
 | MS.O.A4 | Interactions | MS | O/A4 | — |
 | MS.O.A4.1 | Social influence | MS | O/A4 | — |
+| MS.O.A4.1.1 | Conformity to a unanimous majority | MS | O/A4.1 | — |
+| MS.O.A4.1.2 | Obedience to an experimenter | MS | O/A4.1 | — |
+| MS.O.A4.1.3 | Bystander response | MS | O/A4.1 | — |
 | MS.O.A4.2 | Social cognition | MS | O/A4 | — |
+| MS.O.A4.2.1 | Correspondence bias | MS | O/A4.2 | — |
+| MS.O.A4.2.2 | Actor–observer asymmetry | MS | O/A4.2 | — |
+| MS.O.A4.2.3 | Implicit association measures | MS | O/A4.2 | — |
 | MS.O.A4.3 | Attitudes | MS | O/A4 | — |
+| MS.O.A4.3.1 | Insufficient justification; self-perception rival | MS | O/A4.3 | — |
+| MS.O.A4.3.2 | Attitude–behaviour correspondence; planned behaviour | MS | O/A4.3 | — |
+| MS.O.A4.3.3 | Dual-process persuasion | MS | O/A4.3 | — |
 | MS.O.A4.4 | Groups and relationships | MS | O/A4 | — |
+| MS.O.A4.4.1 | Social loafing | MS | O/A4.4 | — |
+| MS.O.A4.4.2 | Intergroup contact | MS | O/A4.4 | — |
+| MS.O.A4.4.3 | Conversational timing | MS | O/A4.4 | — |
 | MS.O.A4.5 | Self and identity | MS | O/A4 | — |
+| MS.O.A4.5.1 | Looking-glass self | MS | O/A4.5 | — |
+| MS.O.A4.5.2 | Minimal group effect; social identity theory | MS | O/A4.5 | — |
+| MS.O.A4.5.3 | Bodily self (rubber-hand illusion) | MS | O/A4.5 | MS.O.A2.3 |
 | MS.O.A5 | Social structures | MS | O/A5 | — |
 | MS.O.A5.1 | Positions and inequality | MS | O/A5 | — |
+| MS.O.A5.1.1 | Status attainment | MS | O/A5.1 | — |
+| MS.O.A5.1.2 | Residual group gaps (Oaxaca–Blinder) | MS | O/A5.1 | MA.O.A5 |
+| MS.O.A5.1.3 | Distribution and mobility measures | MS | O/A5.1 | — |
 | MS.O.A5.2 | Organisations | MS | O/A5 | — |
+| MS.O.A5.2.1 | Dimensions of formal structure | MS | O/A5.2 | — |
+| MS.O.A5.2.2 | Weak ties | MS | O/A5.2 | — |
+| MS.O.A5.2.3 | Institutional isomorphism | MS | O/A5.2 | — |
 | MS.O.A5.3 | Institutions and culture | MS | O/A5 | — |
+| MS.O.A5.3.1 | Secularisation | MS | O/A5.3 | — |
+| MS.O.A5.3.2 | Taste and position | MS | O/A5.3 | — |
+| MS.O.A5.3.3 | Social integration and rates | MS | O/A5.3 | MD.O.A1 |
 | MS.O.A5.4 | Populations | MS | O/A5 | — |
+| MS.O.A5.4.1 | Fertility measures | MS | O/A5.4 | — |
+| MS.O.A5.4.2 | Survival measures; Gompertz law | MS | O/A5.4 | — |
+| MS.O.A5.4.3 | Migration flows (gravity model) | MS | O/A5.4 | — |
+| MS.O.A5.4.4 | Projection and stable population theory | MS | O/A5.4 | — |
 | MS.O.A5.5 | Collective action and change | MS | O/A5 | PO.O.A3.3, EC.O.A5.3 |
+| MS.O.A5.5.1 | Resource mobilisation | MS | O/A5.5 | EC.O.A5.3 |
+| MS.O.A5.5.2 | Diffusion of practices | MS | O/A5.5 | — |
+| MS.O.A5.5.3 | Theories of long-run change | MS | O/A5.5 | HI |
 | MS.M.1 | Measure | MS | M | — |
 | MS.M.2 | Perturb | MS | M | — |
 | MS.M.3 | Compare and interpret | MS | M | — |
@@ -1729,11 +1762,15 @@
 | PH.O.A2.3.2 | The Higgs boson was observed in 2012 (ATLAS and CMS). | PH | O/A2 | — |
 | PH.O.A2.3.3 | Neutrino oscillation implies non-zero neutrino masses | PH | O/A2 | — |
 | PH.O.A2.3.4 | Renormalisation | PH | O/A2 | — |
+| PH.O.A2.3.5 | Nuclear structure and decay | PH | O/A2 | EA |
 | PH.O.A2.4 | Atomic, molecular and optical physics | PH | O/A2 | CH |
 | PH.O.A2.4.1 | Lasers | PH | O/A2 | — |
 | PH.O.A2.4.2 | Laser cooling and Bose–Einstein condensation of dilute gases (first ac | PH | O/A2 | — |
 | PH.O.A2.4.3 | Atomic clocks and precision measurement | PH | O/A2 | — |
 | PH.O.A2.5 | Interpretation of quantum mechanics | PH | O/A2 | PL |
+| PH.O.A2.5.1 | Interpretations without new dynamics agree on statistics | PH | O/A2 | PL |
+| PH.O.A2.5.2 | Collapse models and experimental bounds | PH | O/A2 | PL |
+| PH.O.A2.5.3 | Matter-wave interference of large molecules | PH | O/A2 | — |
 | PH.O.A3 | Gravitation and the cosmos | PH | O/A3 | — |
 | PH.O.A3.1 | Newtonian gravity | PH | O/A3 | — |
 | PH.O.A3.1.1 | Kepler's laws follow for two point masses. | PH | O/A3 | — |
@@ -1792,6 +1829,9 @@
 | PH.O.A5.4.3 | Nuclear decay and radiation interaction with matter | PH | O/A5 | — |
 | PH.O.A5.5 | Nonlinear dynamics and complex systems | PH | O/A5 | MA.O.A4 |
 | PH.O.A5.5.1 | Non-equilibrium fluctuation theorems (Jarzynski, Crooks) for systems d | PH | O/A5 | — |
+| PH.O.A5.5.2 | Lyapunov exponent from a time series | PH | O/A5 | MA.O.A4 |
+| PH.O.A5.5.3 | Turing instability and pattern formation | PH | O/A5 | BI.O.A3.2 |
+| PH.O.A5.5.4 | Long-range order in two-dimensional active matter | PH | O/A5 | PH.O.A4.3.4 |
 | PL.O.A1 | Being | PL | Face O | — |
 | PL.O.A1.1 | Ontology and existence | PL | O/A1 | — |
 | PL.O.A1.2 | Modality | PL | O/A1 | MA.O.A1 |
